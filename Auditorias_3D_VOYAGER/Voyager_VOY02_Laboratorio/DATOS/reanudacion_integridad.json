@@ -1,0 +1,1859 @@
+{
+  "time": "2026-10-21T11:26:55.307701+00:00",
+  "baseline": "TRASPASO/INVENTARIO_ARCHIVOS.csv (unchanged)",
+  "inventory": [
+    {
+      "path": "CAPTURAS/A01_puente_completo.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/A02_puente_humanos.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/A03_planta_acotada.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/A04_seccion_alturas.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/A05_escalas_comparadas.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B00_catalogo_ensayos.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B01_CORTO_LARGO_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B01_CORTO_LARGO_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B02_DOS_RECTOS_CURVA_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B02_DOS_RECTOS_CURVA_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B03_RECTA_T_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B03_RECTA_T_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B04_CUATRO_VIAS_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B04_CUATRO_VIAS_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B05_MODULO_PUERTAS_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B05_MODULO_PUERTAS_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B06_TURBOLIFT_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B06_TURBOLIFT_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B07_RESIDENCIAL_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/B07_RESIDENCIAL_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/C01_puente_pasillo.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/C02_detalle_adaptador.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/D01_interior_camarote.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/D02_planta_camarote.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/D03_camarote_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/E01_puertas_cerradas.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/E02_puertas_intermedias.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/E03_puertas_abiertas.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/E04_sillas_grupos.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/G01_conjunto_completo.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/G02_conjunto_planta.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/G03_conjunto_perspectiva.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "CAPTURAS/G04_cruce_y_turbolift.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/candidatos_accesos_y_muebles.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/capturas_manifest.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/comparacion_escala_max_obj.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/correspondencias_max_obj.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/ensamblajes_pruebas.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/entradas_antes.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/ergonomia_inicial.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/escenas_manifest.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/habitaciones_sondeo.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/interfaces_modulos.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/max_geometria.npz",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/max_objetos.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/modulos_geometria.npz",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/modulos_objetos.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/modulos_sondeo.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/obj_geometria.npz",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/obj_objetos.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/planos_horizontales_obj.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/preparacion_funcional.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/prototipo_conjunto.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/prototipo_geometria.npz",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/puertas_medidas.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/transitos_puente.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p0.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p15.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p2.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "ESCENAS/VOY02_Laboratorio.blend",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/COLECCION/coleccion_original.blend",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/MAX/puente_max_conversion.blend",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/puente_base_importado.blend",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/Voyager Bridge.obj",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VoyagerB.Mtl",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/alumb_t.tga",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/alumin.JPG",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/BM_DISP.tif",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/BM_NRM.tif",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/BNC.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/BURLAP01.JPG",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/DP_01.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/LEATH01.JPG",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/Metal_Al.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/Metal_Co.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/MVS.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/n006.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/n011.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.2_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.3.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.3_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.4.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.4_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.5.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.5_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.6.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.6_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.7.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn1.7_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.2_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.3.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.3_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.4.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.4_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.5.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.5_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.6.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn10.6_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn12.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn12_RA.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.3.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.3_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.5.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.5_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.7.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.7_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.8.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.8_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.9.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn2.9_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.2_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.3.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.3_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.4.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn3.4_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn4.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn4.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn4.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn4.2_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn5.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn5.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.4.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.4_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.5.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.5_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.6.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.6_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.7.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.7_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.8.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.8_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.9.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn6.9_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.1.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.1_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.2.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.2_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.4.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.4_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.5.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.5_i.PNG",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.6.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.6_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.7.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn7.7_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn8.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn8_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn9.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/scn9_i.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/Voygray.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/VP_bump.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/VP_col.png",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/XYT.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "FUENTES/OBJ/VOYBRIDGETEX-1/Textures/yale8_desat.jpg",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/01_sondeo.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/01_sondeo_max.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/03_interfaces.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/04_ergonomia.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/05_correspondencias.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/06_puertas_escala.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/07_ensamblajes.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/08_transitos_1.0.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/08_transitos_1.15.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/08_transitos_1.2.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/08_transitos_puente.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/09_prototipo.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/10_funcional.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/11_construir_escenas.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "LOGS/12_capturas.log",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/01_RESUMEN_EJECUTIVO.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/02_INVENTARIO.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/03_GEOMETRIA.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/04_MATERIALES_TEXTURAS.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/05_INTERACTIVIDAD.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/06_MODULOS_ADICIONALES.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/07_COMPARATIVA_VERSIONES.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/08_PLAN_FUTURO.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/09_METODO_FUENTES_LIMITACIONES.md",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "REFERENCIAS/PR32.json",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/00_preparar.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/01_sondeo.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/02_mediciones_iniciales.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/03_interfaces.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/04_ergonomia.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/05_correspondencias.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/06_puertas_escala.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/07_ensamblajes.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/08_transitos_puente.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/09_prototipo.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/10_funcional.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/11_construir_escenas.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/12_capturas.py",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/__pycache__/geom.cpython-313.pyc",
+      "exists": true,
+      "matches": true
+    },
+    {
+      "path": "SCRIPTS/geom.py",
+      "exists": true,
+      "matches": true
+    }
+  ],
+  "sources": [
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\Voyager Bridge.obj",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VoyagerB.Mtl",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\GitHub\\3D Star Trek\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star-trek-voyager-collection\\source\\StarTrekVoyagerCollection.blend",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Voyager_Bridge_Recovery\\originales\\Voyager_Bridge_MAX_Trabajo.blend",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\alumb_t.tga",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\alumin.JPG",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_DISP.tif",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_NRM.tif",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\BNC.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Al.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\MVS.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\n006.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12_RA.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5_i.PNG",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9_i.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_bump.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\XYT.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\VOYBRIDGETEX-1\\Textures\\yale8_desat.jpg",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\01_RESUMEN_EJECUTIVO.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\02_INVENTARIO.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\03_GEOMETRIA.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\04_MATERIALES_TEXTURAS.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\05_INTERACTIVIDAD.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\06_MODULOS_ADICIONALES.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\07_COMPARATIVA_VERSIONES.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\08_PLAN_FUTURO.md",
+      "matches": true,
+      "copy_matches": true
+    },
+    {
+      "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\09_METODO_FUENTES_LIMITACIONES.md",
+      "matches": true,
+      "copy_matches": true
+    }
+  ],
+  "formats": [
+    {
+      "path": "DATOS/candidatos_accesos_y_muebles.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/capturas_manifest.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/comparacion_escala_max_obj.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/correspondencias_max_obj.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/ensamblajes_pruebas.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/entradas_antes.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/ergonomia_inicial.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/escenas_manifest.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/habitaciones_sondeo.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/interfaces_modulos.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/max_geometria.npz",
+      "readable": true
+    },
+    {
+      "path": "DATOS/max_objetos.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/modulos_geometria.npz",
+      "readable": true
+    },
+    {
+      "path": "DATOS/modulos_objetos.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/modulos_sondeo.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/obj_geometria.npz",
+      "readable": true
+    },
+    {
+      "path": "DATOS/obj_objetos.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/planos_horizontales_obj.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/preparacion_funcional.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/prototipo_conjunto.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/prototipo_geometria.npz",
+      "readable": true
+    },
+    {
+      "path": "DATOS/puertas_medidas.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/transitos_puente.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p0.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p15.json",
+      "readable": true
+    },
+    {
+      "path": "DATOS/transitos_puente_1p2.json",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/A01_puente_completo.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/A02_puente_humanos.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/A03_planta_acotada.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/A04_seccion_alturas.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/A05_escalas_comparadas.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B00_catalogo_ensayos.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B01_CORTO_LARGO_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B01_CORTO_LARGO_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B02_DOS_RECTOS_CURVA_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B02_DOS_RECTOS_CURVA_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B03_RECTA_T_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B03_RECTA_T_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B04_CUATRO_VIAS_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B04_CUATRO_VIAS_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B05_MODULO_PUERTAS_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B05_MODULO_PUERTAS_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B06_TURBOLIFT_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B06_TURBOLIFT_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B07_RESIDENCIAL_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/B07_RESIDENCIAL_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/C01_puente_pasillo.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/C02_detalle_adaptador.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/D01_interior_camarote.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/D02_planta_camarote.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/D03_camarote_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/E01_puertas_cerradas.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/E02_puertas_intermedias.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/E03_puertas_abiertas.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/E04_sillas_grupos.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/G01_conjunto_completo.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/G02_conjunto_planta.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/G03_conjunto_perspectiva.png",
+      "readable": true
+    },
+    {
+      "path": "CAPTURAS/G04_cruce_y_turbolift.png",
+      "readable": true
+    }
+  ],
+  "all_inventory_match": true,
+  "all_originals_match": true,
+  "all_copies_match": true
+}

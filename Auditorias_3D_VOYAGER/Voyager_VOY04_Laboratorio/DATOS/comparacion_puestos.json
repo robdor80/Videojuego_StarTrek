@@ -1,0 +1,47 @@
+[
+  {
+    "id": "NAVEGACION",
+    "parts": 8,
+    "seat_height_m": 0.6298896762556753,
+    "geometry_family": "pedestal_8",
+    "grade": "C",
+    "reason": "Intervencion local: altura, apoyo, respaldo y mecanismo nuevo; prototipo muestreado positivo, ergonomia completa pendiente",
+    "reusable_method": true
+  },
+  {
+    "id": "LATERAL_DER",
+    "parts": 31,
+    "seat_height_m": 0.5988697051673713,
+    "geometry_family": "ruedas_31",
+    "grade": "E",
+    "reason": "Inventario y dimensiones, sin prueba articulada completa de entrada/trabajo/salida; no promover a A",
+    "reusable_method": true
+  },
+  {
+    "id": "LATERAL_IZQ",
+    "parts": 31,
+    "seat_height_m": 0.5988697753760169,
+    "geometry_family": "ruedas_31",
+    "grade": "E",
+    "reason": "Inventario y dimensiones, sin prueba articulada completa de entrada/trabajo/salida; no promover a A",
+    "reusable_method": true
+  },
+  {
+    "id": "MANDO_IZQ",
+    "parts": 11,
+    "seat_height_m": 0.49153499020681685,
+    "geometry_family": "mando_11",
+    "grade": "E",
+    "reason": "Inventario y dimensiones, sin prueba articulada completa de entrada/trabajo/salida; no promover a A",
+    "reusable_method": true
+  },
+  {
+    "id": "MANDO_DER",
+    "parts": 11,
+    "seat_height_m": 0.49153497557304876,
+    "geometry_family": "mando_11",
+    "grade": "E",
+    "reason": "Inventario y dimensiones, sin prueba articulada completa de entrada/trabajo/salida; no promover a A",
+    "reusable_method": true
+  }
+]

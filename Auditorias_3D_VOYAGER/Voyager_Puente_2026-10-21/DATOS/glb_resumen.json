@@ -1,0 +1,2569 @@
+[
+  {
+    "path": "C:\\Users\\andro\\Documents\\GitHub\\3D Star Trek\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+    "header": {
+      "magic": "glTF",
+      "version": 2,
+      "declared_bytes": 4262160,
+      "actual_bytes": 4262160
+    },
+    "chunks": [
+      {
+        "type": 1313821514,
+        "bytes": 263696
+      },
+      {
+        "type": 5130562,
+        "bytes": 3998436
+      }
+    ],
+    "asset": {
+      "extras": {
+        "author": "scrimshawsean (https://sketchfab.com/scrimshawsean)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/star-trek-voyager-collection-f467d602a8a54ae3bf32f8bdd47278cf",
+        "title": "Star Trek Voyager Collection"
+      },
+      "generator": "Sketchfab-12.68.0",
+      "version": "2.0"
+    },
+    "counts": {
+      "scenes": 1,
+      "nodes": 488,
+      "meshes": 317,
+      "materials": 8,
+      "textures": 0,
+      "images": 0,
+      "animations": 0,
+      "skins": 0,
+      "cameras": 0,
+      "accessors": 1268
+    },
+    "extensionsUsed": [],
+    "extensionsRequired": [],
+    "primitives": 317,
+    "vertices_primitive_sum": 99615,
+    "triangles_primitive_sum": 67563,
+    "uv_primitives": 317,
+    "attributes": [
+      "NORMAL",
+      "POSITION",
+      "TEXCOORD_0"
+    ],
+    "buffers": [
+      {
+        "byteLength": 3998436
+      }
+    ],
+    "images": [],
+    "materials": [
+      {
+        "doubleSided": true,
+        "name": "FrontColor",
+        "pbrMetallicRoughness": {
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "cTerminal",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Airway___Upper_Struts",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.117647,
+            0.117647,
+            0.117647,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Ground_Skirting___Lighting",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.447059,
+            0.447059,
+            0.447059,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Upper_Border___Lower_Recess",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.227451,
+            0.227451,
+            0.227451,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Light_Detailing",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Color_E01",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            1.0,
+            1.0,
+            0.0,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      },
+      {
+        "doubleSided": true,
+        "name": "Color_H04",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "metallicFactor": 0.0,
+          "roughnessFactor": 0.552786
+        }
+      }
+    ],
+    "mesh_names": [
+      "Object_0",
+      "Object_1",
+      "Object_2",
+      "Object_3",
+      "Object_4",
+      "Object_5",
+      "Object_6",
+      "Object_7",
+      "Object_8",
+      "Object_9",
+      "Object_10",
+      "Object_11",
+      "Object_12",
+      "Object_13",
+      "Object_14",
+      "Object_15",
+      "Object_16",
+      "Object_17",
+      "Object_18",
+      "Object_19",
+      "Object_20",
+      "Object_21",
+      "Object_22",
+      "Object_23",
+      "Object_24",
+      "Object_25",
+      "Object_26",
+      "Object_27",
+      "Object_28",
+      "Object_29",
+      "Object_30",
+      "Object_31",
+      "Object_32",
+      "Object_33",
+      "Object_34",
+      "Object_35",
+      "Object_36",
+      "Object_37",
+      "Object_38",
+      "Object_39",
+      "Object_40",
+      "Object_41",
+      "Object_42",
+      "Object_43",
+      "Object_44",
+      "Object_45",
+      "Object_46",
+      "Object_47",
+      "Object_48",
+      "Object_49",
+      "Object_50",
+      "Object_51",
+      "Object_52",
+      "Object_53",
+      "Object_54",
+      "Object_55",
+      "Object_56",
+      "Object_57",
+      "Object_58",
+      "Object_59",
+      "Object_60",
+      "Object_61",
+      "Object_62",
+      "Object_63",
+      "Object_64",
+      "Object_65",
+      "Object_66",
+      "Object_67",
+      "Object_68",
+      "Object_69",
+      "Object_70",
+      "Object_71",
+      "Object_72",
+      "Object_73",
+      "Object_74",
+      "Object_75",
+      "Object_76",
+      "Object_77",
+      "Object_78",
+      "Object_79",
+      "Object_80",
+      "Object_81",
+      "Object_82",
+      "Object_83",
+      "Object_84",
+      "Object_85",
+      "Object_86",
+      "Object_87",
+      "Object_88",
+      "Object_89",
+      "Object_90",
+      "Object_91",
+      "Object_92",
+      "Object_93",
+      "Object_94",
+      "Object_95",
+      "Object_96",
+      "Object_97",
+      "Object_98",
+      "Object_99",
+      "Object_100",
+      "Object_101",
+      "Object_102",
+      "Object_103",
+      "Object_104",
+      "Object_105",
+      "Object_106",
+      "Object_107",
+      "Object_108",
+      "Object_109",
+      "Object_110",
+      "Object_111",
+      "Object_112",
+      "Object_113",
+      "Object_114",
+      "Object_115",
+      "Object_116",
+      "Object_117",
+      "Object_118",
+      "Object_119",
+      "Object_120",
+      "Object_121",
+      "Object_122",
+      "Object_123",
+      "Object_124",
+      "Object_125",
+      "Object_126",
+      "Object_127",
+      "Object_128",
+      "Object_129",
+      "Object_130",
+      "Object_131",
+      "Object_132",
+      "Object_133",
+      "Object_134",
+      "Object_135",
+      "Object_136",
+      "Object_137",
+      "Object_138",
+      "Object_139",
+      "Object_140",
+      "Object_141",
+      "Object_142",
+      "Object_143",
+      "Object_144",
+      "Object_145",
+      "Object_146",
+      "Object_147",
+      "Object_148",
+      "Object_149",
+      "Object_150",
+      "Object_151",
+      "Object_152",
+      "Object_153",
+      "Object_154",
+      "Object_155",
+      "Object_156",
+      "Object_157",
+      "Object_158",
+      "Object_159",
+      "Object_160",
+      "Object_161",
+      "Object_162",
+      "Object_163",
+      "Object_164",
+      "Object_165",
+      "Object_166",
+      "Object_167",
+      "Object_168",
+      "Object_169",
+      "Object_170",
+      "Object_171",
+      "Object_172",
+      "Object_173",
+      "Object_174",
+      "Object_175",
+      "Object_176",
+      "Object_177",
+      "Object_178",
+      "Object_179",
+      "Object_180",
+      "Object_181",
+      "Object_182",
+      "Object_183",
+      "Object_184",
+      "Object_185",
+      "Object_186",
+      "Object_187",
+      "Object_188",
+      "Object_189",
+      "Object_190",
+      "Object_191",
+      "Object_192",
+      "Object_193",
+      "Object_194",
+      "Object_195",
+      "Object_196",
+      "Object_197",
+      "Object_198",
+      "Object_199",
+      "Object_200",
+      "Object_201",
+      "Object_202",
+      "Object_203",
+      "Object_204",
+      "Object_205",
+      "Object_206",
+      "Object_207",
+      "Object_208",
+      "Object_209",
+      "Object_210",
+      "Object_211",
+      "Object_212",
+      "Object_213",
+      "Object_214",
+      "Object_215",
+      "Object_216",
+      "Object_217",
+      "Object_218",
+      "Object_219",
+      "Object_220",
+      "Object_221",
+      "Object_222",
+      "Object_223",
+      "Object_224",
+      "Object_225",
+      "Object_226",
+      "Object_227",
+      "Object_228",
+      "Object_229",
+      "Object_230",
+      "Object_231",
+      "Object_232",
+      "Object_233",
+      "Object_234",
+      "Object_235",
+      "Object_236",
+      "Object_237",
+      "Object_238",
+      "Object_239",
+      "Object_240",
+      "Object_241",
+      "Object_242",
+      "Object_243",
+      "Object_244",
+      "Object_245",
+      "Object_246",
+      "Object_247",
+      "Object_248",
+      "Object_249",
+      "Object_250",
+      "Object_251",
+      "Object_252",
+      "Object_253",
+      "Object_254",
+      "Object_255",
+      "Object_256",
+      "Object_257",
+      "Object_258",
+      "Object_259",
+      "Object_260",
+      "Object_261",
+      "Object_262",
+      "Object_263",
+      "Object_264",
+      "Object_265",
+      "Object_266",
+      "Object_267",
+      "Object_268",
+      "Object_269",
+      "Object_270",
+      "Object_271",
+      "Object_272",
+      "Object_273",
+      "Object_274",
+      "Object_275",
+      "Object_276",
+      "Object_277",
+      "Object_278",
+      "Object_279",
+      "Object_280",
+      "Object_281",
+      "Object_282",
+      "Object_283",
+      "Object_284",
+      "Object_285",
+      "Object_286",
+      "Object_287",
+      "Object_288",
+      "Object_289",
+      "Object_290",
+      "Object_291",
+      "Object_292",
+      "Object_293",
+      "Object_294",
+      "Object_295",
+      "Object_296",
+      "Object_297",
+      "Object_298",
+      "Object_299",
+      "Object_300",
+      "Object_301",
+      "Object_302",
+      "Object_303",
+      "Object_304",
+      "Object_305",
+      "Object_306",
+      "Object_307",
+      "Object_308",
+      "Object_309",
+      "Object_310",
+      "Object_311",
+      "Object_312",
+      "Object_313",
+      "Object_314",
+      "Object_315",
+      "Object_316"
+    ]
+  },
+  {
+    "path": "C:\\Users\\andro\\Desktop\\Nueva carpeta\\TrekmeshesEU_Chainsaw_USSVoyagerBridge_OBJ\\Voyager_Bridge_Trabajo.glb",
+    "header": {
+      "magic": "glTF",
+      "version": 2,
+      "declared_bytes": 24583620,
+      "actual_bytes": 24583620
+    },
+    "chunks": [
+      {
+        "type": 1313821514,
+        "bytes": 104688
+      },
+      {
+        "type": 5130562,
+        "bytes": 24478904
+      }
+    ],
+    "asset": {
+      "generator": "Khronos glTF Blender I/O v5.2.40",
+      "version": "2.0"
+    },
+    "counts": {
+      "scenes": 1,
+      "nodes": 1,
+      "meshes": 1,
+      "materials": 102,
+      "textures": 50,
+      "images": 49,
+      "animations": 0,
+      "skins": 0,
+      "cameras": 0,
+      "accessors": 374
+    },
+    "extensionsUsed": [
+      "KHR_materials_specular"
+    ],
+    "extensionsRequired": [],
+    "primitives": 102,
+    "vertices_primitive_sum": 255754,
+    "triangles_primitive_sum": 271705,
+    "uv_primitives": 102,
+    "attributes": [
+      "NORMAL",
+      "POSITION",
+      "TEXCOORD_0"
+    ],
+    "buffers": [
+      {
+        "byteLength": 24478904
+      }
+    ],
+    "images": [
+      {
+        "bufferView": 8,
+        "mimeType": "image/jpeg",
+        "name": "Voygray"
+      },
+      {
+        "bufferView": 25,
+        "mimeType": "image/jpeg",
+        "name": "n011"
+      },
+      {
+        "bufferView": 38,
+        "mimeType": "image/png",
+        "name": "scn4.2"
+      },
+      {
+        "bufferView": 43,
+        "mimeType": "image/png",
+        "name": "scn4.1"
+      },
+      {
+        "bufferView": 48,
+        "mimeType": "image/png",
+        "name": "scn2.7"
+      },
+      {
+        "bufferView": 52,
+        "mimeType": "image/png",
+        "name": "scn10.3"
+      },
+      {
+        "bufferView": 56,
+        "mimeType": "image/png",
+        "name": "scn10.4"
+      },
+      {
+        "bufferView": 60,
+        "mimeType": "image/png",
+        "name": "scn10.5"
+      },
+      {
+        "bufferView": 64,
+        "mimeType": "image/png",
+        "name": "scn3.3"
+      },
+      {
+        "bufferView": 69,
+        "mimeType": "image/png",
+        "name": "scn3.1"
+      },
+      {
+        "bufferView": 73,
+        "mimeType": "image/png",
+        "name": "scn5.1"
+      },
+      {
+        "bufferView": 77,
+        "mimeType": "image/png",
+        "name": "scn3.2"
+      },
+      {
+        "bufferView": 82,
+        "mimeType": "image/png",
+        "name": "scn3.4"
+      },
+      {
+        "bufferView": 86,
+        "mimeType": "image/png",
+        "name": "scn6.1"
+      },
+      {
+        "bufferView": 90,
+        "mimeType": "image/png",
+        "name": "scn1.5"
+      },
+      {
+        "bufferView": 143,
+        "mimeType": "image/png",
+        "name": "DP_01"
+      },
+      {
+        "bufferView": 152,
+        "mimeType": "image/png",
+        "name": "VP_col"
+      },
+      {
+        "bufferView": 201,
+        "mimeType": "image/jpeg",
+        "name": "Metal_Co"
+      },
+      {
+        "bufferView": 218,
+        "mimeType": "image/png",
+        "name": "alumb_t"
+      },
+      {
+        "bufferView": 227,
+        "mimeType": "image/jpeg",
+        "name": "LEATH01"
+      },
+      {
+        "bufferView": 276,
+        "mimeType": "image/jpeg",
+        "name": "BURLAP01"
+      },
+      {
+        "bufferView": 293,
+        "mimeType": "image/png",
+        "name": "scn6.9"
+      },
+      {
+        "bufferView": 298,
+        "mimeType": "image/png",
+        "name": "scn7.4"
+      },
+      {
+        "bufferView": 302,
+        "mimeType": "image/png",
+        "name": "scn7.1"
+      },
+      {
+        "bufferView": 307,
+        "mimeType": "image/png",
+        "name": "scn1.1"
+      },
+      {
+        "bufferView": 312,
+        "mimeType": "image/png",
+        "name": "scn1.4"
+      },
+      {
+        "bufferView": 317,
+        "mimeType": "image/png",
+        "name": "scn2.5"
+      },
+      {
+        "bufferView": 322,
+        "mimeType": "image/png",
+        "name": "scn2.1"
+      },
+      {
+        "bufferView": 327,
+        "mimeType": "image/png",
+        "name": "scn9"
+      },
+      {
+        "bufferView": 331,
+        "mimeType": "image/png",
+        "name": "scn2.8"
+      },
+      {
+        "bufferView": 335,
+        "mimeType": "image/png",
+        "name": "scn6.2"
+      },
+      {
+        "bufferView": 339,
+        "mimeType": "image/png",
+        "name": "scn1.2"
+      },
+      {
+        "bufferView": 343,
+        "mimeType": "image/png",
+        "name": "scn1.6"
+      },
+      {
+        "bufferView": 347,
+        "mimeType": "image/png",
+        "name": "scn7.2"
+      },
+      {
+        "bufferView": 354,
+        "mimeType": "image/png",
+        "name": "scn7.5"
+      },
+      {
+        "bufferView": 358,
+        "mimeType": "image/png",
+        "name": "scn8"
+      },
+      {
+        "bufferView": 362,
+        "mimeType": "image/png",
+        "name": "scn7.6"
+      },
+      {
+        "bufferView": 366,
+        "mimeType": "image/png",
+        "name": "scn7.7"
+      },
+      {
+        "bufferView": 370,
+        "mimeType": "image/png",
+        "name": "scn6.7"
+      },
+      {
+        "bufferView": 374,
+        "mimeType": "image/png",
+        "name": "scn6.8"
+      },
+      {
+        "bufferView": 378,
+        "mimeType": "image/png",
+        "name": "scn6.6"
+      },
+      {
+        "bufferView": 382,
+        "mimeType": "image/png",
+        "name": "scn6.4"
+      },
+      {
+        "bufferView": 386,
+        "mimeType": "image/png",
+        "name": "scn6.5"
+      },
+      {
+        "bufferView": 393,
+        "mimeType": "image/png",
+        "name": "scn2.3"
+      },
+      {
+        "bufferView": 403,
+        "mimeType": "image/png",
+        "name": "scn1.7"
+      },
+      {
+        "bufferView": 407,
+        "mimeType": "image/png",
+        "name": "scn1.3"
+      },
+      {
+        "bufferView": 414,
+        "mimeType": "image/png",
+        "name": "scn10.1"
+      },
+      {
+        "bufferView": 418,
+        "mimeType": "image/png",
+        "name": "scn10.2"
+      },
+      {
+        "bufferView": 422,
+        "mimeType": "image/png",
+        "name": "scn10.6"
+      }
+    ],
+    "materials": [
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_196088225",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7686280012130737,
+            0.34509798884391785,
+            0.8823530077934265,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Voygray",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 0
+          },
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5270580053329468
+          }
+        },
+        "name": "DimGray",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2941179871559143,
+            0.2941179871559143,
+            0.2941179871559143,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_225088199",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8823530077934265,
+            0.34509798884391785,
+            0.7803919911384583,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5058820247650146
+          }
+        },
+        "name": "Material__53",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.09019599854946136,
+            0.09019599854946136,
+            0.09019599854946136,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8297061324119568
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.5388240218162537
+          }
+        },
+        "name": "Chairgray",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 1
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9051316976547241
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.3162359893321991
+          }
+        },
+        "name": "Color_00",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.22745099663734436,
+            0.22745099663734436,
+            0.22745099663734436,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8450806736946106
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.6588240265846252
+          }
+        },
+        "name": "Color_H1",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.49803900718688965,
+            0.6000000238418579,
+            0.6000000238418579,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn4_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 2
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn4_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 3
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_7",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 4
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_3",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 5
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_4",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 6
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_5",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 7
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn3_3",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 8
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn3_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 9
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn5_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 10
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn3_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 11
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn3_4",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 12
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "scrn6_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 13
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_5",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 14
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Materi04",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6274510025978088,
+            0.5607839822769165,
+            0.49803900718688965,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "LightGr",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6627449989318848,
+            0.6627449989318848,
+            0.6627449989318848,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Color_03",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6666669845581055,
+            0.6666669845581055,
+            0.6666669845581055,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_088177026",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.34509798884391785,
+            0.6941180229187012,
+            0.10196100175380707,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Charcoal",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.137254998087883,
+            0.137254998087883,
+            0.137254998087883,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9051316976547241
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Light_TL",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6039220094680786,
+            0.282353013753891,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "alphaMode": "BLEND",
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "Window",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            0.20000000298023224
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.06588199734687805
+          }
+        },
+        "name": "Color_A0",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.9051316976547241
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1647060066461563
+          }
+        },
+        "name": "black2",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "Mainscreen",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.2549020051956177,
+            0.274509996175766,
+            0.36470600962638855,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_224198087",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8784310221672058,
+            0.7764710187911987,
+            0.34117600321769714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn12red",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "Doorpanel01",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 15
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_085028177",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33333298563957214,
+            0.10980399698019028,
+            0.6941180229187012,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularColorFactor": [
+              1.2599999904632568,
+              1.2599999904632568,
+              1.2599999904632568
+            ]
+          }
+        },
+        "name": "Plaque",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 16
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8025158047676086
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_229166215",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8980389833450317,
+            0.6509799957275391,
+            0.8431370258331299,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Burnt",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.02745099924504757,
+            0.01176500041037798,
+            0.007842999882996082,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.2635299861431122
+          }
+        },
+        "name": "Color_C2",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.20000000298023224,
+            0.1568630039691925,
+            0.11764699965715408,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8297061324119568
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_008008136",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.031373001635074615,
+            0.031373001635074615,
+            0.5333330035209656,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "Black1",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "White",
+        "pbrMetallicRoughness": {
+          "metallicFactor": 0
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "light_white_on_to_off",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.5879999995231628,
+            0.5879999995231628,
+            0.5879999995231628,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_177088026",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6941180229187012,
+            0.34509798884391785,
+            0.10196100175380707,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0
+          }
+        },
+        "name": "Lights",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            1,
+            0.9725490212440491,
+            0.9137259721755981,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_087224087",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.34117600321769714,
+            0.8784310221672058,
+            0.34117600321769714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_057008136",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.22352899610996246,
+            0.031373001635074615,
+            0.5333330035209656,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.3294120132923126
+          }
+        },
+        "name": "Metal_Co",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 17
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8025158047676086
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_224143087",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8784310221672058,
+            0.5607839822769165,
+            0.34117600321769714,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_006134113",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.02352900058031082,
+            0.5254899859428406,
+            0.443136990070343,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_184228153",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7215690016746521,
+            0.8941180109977722,
+            0.6000000238418579,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.3294120132923126
+          }
+        },
+        "name": "Metal_Steelplate",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 18
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8025158047676086
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Material.001",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.800000011920929,
+            0.6941180229187012,
+            0.5529410243034363,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Leather",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 19
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_153228184",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6000000238418579,
+            0.8941180109977722,
+            0.7215690016746521,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_154185229",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.6039220094680786,
+            0.7254899740219116,
+            0.8980389833450317,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_184155229",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7215690016746521,
+            0.6078429818153381,
+            0.8980389833450317,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_228153184",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.8941180109977722,
+            0.6000000238418579,
+            0.7215690016746521,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Color_01",
+        "pbrMetallicRoughness": {
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Color_A1",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.4000000059604645,
+            0.23921599984169006,
+            0.23921599984169006,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.1317639946937561
+          }
+        },
+        "name": "Color_04",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.11764699965715408,
+            0.11764699965715408,
+            0.11764699965715408,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Color_06",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.33725500106811523,
+            0.33725500106811523,
+            0.33725500106811523,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Color_05",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.556863009929657,
+            0.556863009929657,
+            0.556863009929657,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.19764800369739532
+          }
+        },
+        "name": "Color_07",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.7764710187911987,
+            0.7764710187911987,
+            0.7764710187911987,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.828000009059906
+          }
+        },
+        "name": "Leather2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 20
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8621594905853271
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.14399999380111694
+          }
+        },
+        "name": "fabric_brown",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 21
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8999999761581421
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_061134006",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.23921599984169006,
+            0.5254899859428406,
+            0.02352900058031082,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_141007058",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.5529410243034363,
+            0.02745099924504757,
+            0.22745099663734436,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.699999988079071
+          }
+        },
+        "name": "wire_138008110",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.5411760210990906,
+            0.031373001635074615,
+            0.4313730001449585,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.8239318132400513
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_9",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 22
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_4",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 23
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 24
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 25
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_4",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 26
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_5",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 27
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 28
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn9",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 29
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_8",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 30
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 31
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 32
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_6",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 33
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 34
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_3",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_5",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 35
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn8",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 36
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_6",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 37
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn7_7",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 38
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_7",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 39
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_8",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 40
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_6",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 41
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_4",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 42
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_5",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 43
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_2",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_3",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 44
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_4",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn2_6",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_7",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 45
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn1_3",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 46
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn6_3",
+        "pbrMetallicRoughness": {
+          "baseColorFactor": [
+            0.00392200006172061,
+            0.00392200006172061,
+            0.00392200006172061,
+            1
+          ],
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_1",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 47
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_2",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 48
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      },
+      {
+        "doubleSided": true,
+        "extensions": {
+          "KHR_materials_specular": {
+            "specularFactor": 0.8999999165534973
+          }
+        },
+        "name": "scrn10_6",
+        "pbrMetallicRoughness": {
+          "baseColorTexture": {
+            "index": 49
+          },
+          "metallicFactor": 0,
+          "roughnessFactor": 0.7763931751251221
+        }
+      }
+    ],
+    "mesh_names": [
+      "Voyager Bridge"
+    ]
+  }
+]

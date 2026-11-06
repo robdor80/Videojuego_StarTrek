@@ -1,0 +1,77 @@
+[
+  {
+    "id": "NAVEGACION",
+    "reference_basis_forward": [
+      0.016400236786563754,
+      -0.9998655070724985,
+      0.0
+    ],
+    "independent_seat_minus_back_forward": [
+      0.016400203207406355,
+      -0.9998655076232782,
+      0.0
+    ],
+    "difference_deg": 1.9090959104164224e-06,
+    "basis_note": "Coordinate frame retained for comparability, not a hinge axis inferred from object origin."
+  },
+  {
+    "id": "LATERAL_DER",
+    "reference_basis_forward": [
+      -0.5208034041144602,
+      -0.8536766450259666,
+      0.0
+    ],
+    "independent_seat_minus_back_forward": [
+      -0.5208039483650005,
+      -0.853676312994232,
+      0.0
+    ],
+    "difference_deg": 3.652315530498142e-05,
+    "basis_note": "Coordinate frame retained for comparability, not a hinge axis inferred from object origin."
+  },
+  {
+    "id": "LATERAL_IZQ",
+    "reference_basis_forward": [
+      -0.1871937382998412,
+      -0.9823230142582074,
+      0.0
+    ],
+    "independent_seat_minus_back_forward": [
+      -0.18719372792223027,
+      -0.9823230162357889,
+      0.0
+    ],
+    "difference_deg": 8.537736462515939e-07,
+    "basis_note": "Coordinate frame retained for comparability, not a hinge axis inferred from object origin."
+  },
+  {
+    "id": "MANDO_IZQ",
+    "reference_basis_forward": [
+      0.10291520291979947,
+      -0.9946901331610646,
+      0.0
+    ],
+    "independent_seat_minus_back_forward": [
+      0.12146228472805294,
+      -0.9925960474375471,
+      0.0
+    ],
+    "difference_deg": 1.06943697206694,
+    "basis_note": "Coordinate frame retained for comparability, not a hinge axis inferred from object origin."
+  },
+  {
+    "id": "MANDO_DER",
+    "reference_basis_forward": [
+      -0.10291523398899738,
+      -0.9946901299465025,
+      0.0
+    ],
+    "independent_seat_minus_back_forward": [
+      -0.12147091340290171,
+      -0.9925949915232621,
+      0.0
+    ],
+    "difference_deg": 1.0699332570654934,
+    "basis_note": "Coordinate frame retained for comparability, not a hinge axis inferred from object origin."
+  }
+]

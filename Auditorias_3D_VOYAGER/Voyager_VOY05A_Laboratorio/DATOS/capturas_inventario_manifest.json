@@ -1,0 +1,4087 @@
+[
+  {
+    "id": "AC_Mesh1_00",
+    "image": "CAPTURAS/AC_Mesh1_00.png",
+    "source": "coleccion",
+    "center": [
+      81.551365,
+      11.83397,
+      1.315475
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.4710650000000003,
+    "visible_meshes": [
+      "Mesh1"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh10_00",
+    "image": "CAPTURAS/AC_Mesh10_00.png",
+    "source": "coleccion",
+    "center": [
+      -34.324545,
+      -15.084515000000001,
+      1.339685
+    ],
+    "direction": [
+      -0.7071054352861718,
+      -0.7071081270843614,
+      0.0
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh10"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh10_01",
+    "image": "CAPTURAS/AC_Mesh10_01.png",
+    "source": "coleccion",
+    "center": [
+      -18.98363,
+      -8.231685,
+      1.33969
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh10"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh103_01",
+    "image": "CAPTURAS/AC_Mesh103_01.png",
+    "source": "coleccion",
+    "center": [
+      -41.651785000000004,
+      -8.93194,
+      1.33969
+    ],
+    "direction": [
+      0.3624010735948976,
+      -0.9320222432202279,
+      0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh103"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh103_02",
+    "image": "CAPTURAS/AC_Mesh103_02.png",
+    "source": "coleccion",
+    "center": [
+      -41.651785000000004,
+      8.918135000000001,
+      1.33969
+    ],
+    "direction": [
+      0.3623970994158567,
+      0.9320237885027258,
+      0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh103"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh103_05",
+    "image": "CAPTURAS/AC_Mesh103_05.png",
+    "source": "coleccion",
+    "center": [
+      -37.05399,
+      -5.188740000000001,
+      2.28974
+    ],
+    "direction": [
+      0.8420252764701832,
+      -0.5394380722430626,
+      -0.0
+    ],
+    "orthographic_span": 3.066882,
+    "visible_meshes": [
+      "Mesh103"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh11_03",
+    "image": "CAPTURAS/AC_Mesh11_03.png",
+    "source": "coleccion",
+    "center": [
+      -41.651785000000004,
+      8.918135000000001,
+      1.33969
+    ],
+    "direction": [
+      -0.3623970994158567,
+      -0.9320237885027258,
+      -0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh11"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh11_04",
+    "image": "CAPTURAS/AC_Mesh11_04.png",
+    "source": "coleccion",
+    "center": [
+      -39.854870000000005,
+      9.71508,
+      1.33969
+    ],
+    "direction": [
+      0.9266861688547736,
+      -0.3758360606078961,
+      -0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh11"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh12_00",
+    "image": "CAPTURAS/AC_Mesh12_00.png",
+    "source": "coleccion",
+    "center": [
+      15.685405000000001,
+      4.20742,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh12"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh12_01",
+    "image": "CAPTURAS/AC_Mesh12_01.png",
+    "source": "coleccion",
+    "center": [
+      15.685405000000001,
+      5.5239,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh12"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh13_00",
+    "image": "CAPTURAS/AC_Mesh13_00.png",
+    "source": "coleccion",
+    "center": [
+      24.564655000000002,
+      4.20742,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh13"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh13_01",
+    "image": "CAPTURAS/AC_Mesh13_01.png",
+    "source": "coleccion",
+    "center": [
+      24.564655000000002,
+      8.596540000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh13"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh14_00",
+    "image": "CAPTURAS/AC_Mesh14_00.png",
+    "source": "coleccion",
+    "center": [
+      29.004285000000003,
+      4.22884,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh14"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh14_01",
+    "image": "CAPTURAS/AC_Mesh14_01.png",
+    "source": "coleccion",
+    "center": [
+      29.004285000000003,
+      6.423400000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh14"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh15_00",
+    "image": "CAPTURAS/AC_Mesh15_00.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      11.79629,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh15"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh15_01",
+    "image": "CAPTURAS/AC_Mesh15_01.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      13.625090000000002,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh15"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh16_00",
+    "image": "CAPTURAS/AC_Mesh16_00.png",
+    "source": "coleccion",
+    "center": [
+      50.00005,
+      20.472430000000003,
+      0.6523300000000001
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 1.5276040000000017,
+    "visible_meshes": [
+      "Mesh16"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh16_03",
+    "image": "CAPTURAS/AC_Mesh16_03.png",
+    "source": "coleccion",
+    "center": [
+      51.56939500000001,
+      19.150630000000003,
+      1.077225
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh16"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh16_04",
+    "image": "CAPTURAS/AC_Mesh16_04.png",
+    "source": "coleccion",
+    "center": [
+      53.151450000000004,
+      20.472430000000003,
+      0.6523300000000001
+    ],
+    "direction": [
+      0.9998796199107756,
+      0.0,
+      0.015515981666754188
+    ],
+    "orthographic_span": 1.5276040000000017,
+    "visible_meshes": [
+      "Mesh16"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh17_00",
+    "image": "CAPTURAS/AC_Mesh17_00.png",
+    "source": "coleccion",
+    "center": [
+      71.07755500000002,
+      13.61209,
+      1.077225
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh17"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh18_00",
+    "image": "CAPTURAS/AC_Mesh18_00.png",
+    "source": "coleccion",
+    "center": [
+      20.125035000000004,
+      4.103280000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh18"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh18_01",
+    "image": "CAPTURAS/AC_Mesh18_01.png",
+    "source": "coleccion",
+    "center": [
+      20.125035000000004,
+      6.297840000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh18"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh19_00",
+    "image": "CAPTURAS/AC_Mesh19_00.png",
+    "source": "coleccion",
+    "center": [
+      51.384175,
+      13.85369,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.5275909999999975,
+    "visible_meshes": [
+      "Mesh19"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh19_02",
+    "image": "CAPTURAS/AC_Mesh19_02.png",
+    "source": "coleccion",
+    "center": [
+      51.384175,
+      14.073150000000002,
+      0.78634
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 1.3,
+    "visible_meshes": [
+      "Mesh19"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh2_00",
+    "image": "CAPTURAS/AC_Mesh2_00.png",
+    "source": "coleccion",
+    "center": [
+      1.3385200000000002,
+      3.5416250000000007,
+      1.388625
+    ],
+    "direction": [
+      -0.7067457789006467,
+      -0.707467576208692,
+      -0.00018060873927670804
+    ],
+    "orthographic_span": 3.849756218289445,
+    "visible_meshes": [
+      "Mesh2"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh2_01",
+    "image": "CAPTURAS/AC_Mesh2_01.png",
+    "source": "coleccion",
+    "center": [
+      1.3385200000000002,
+      6.569485,
+      1.388625
+    ],
+    "direction": [
+      -0.7067459716273053,
+      0.7074673835098142,
+      -0.00018126873383761402
+    ],
+    "orthographic_span": 3.84976540004146,
+    "visible_meshes": [
+      "Mesh2"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh2_07",
+    "image": "CAPTURAS/AC_Mesh2_07.png",
+    "source": "coleccion",
+    "center": [
+      5.574140000000001,
+      5.055560000000001,
+      1.388625
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497420000000004,
+    "visible_meshes": [
+      "Mesh2"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh20_00",
+    "image": "CAPTURAS/AC_Mesh20_00.png",
+    "source": "coleccion",
+    "center": [
+      52.301190000000005,
+      9.094365,
+      0.8594900000000001
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 1.520440999999998,
+    "visible_meshes": [
+      "Mesh20"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh20_07",
+    "image": "CAPTURAS/AC_Mesh20_07.png",
+    "source": "coleccion",
+    "center": [
+      52.934735,
+      9.727910000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 1.5204410000000004,
+    "visible_meshes": [
+      "Mesh20"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh21_00",
+    "image": "CAPTURAS/AC_Mesh21_00.png",
+    "source": "coleccion",
+    "center": [
+      50.109475,
+      4.068175,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.7071033394798901,
+      -0.7071102228764531,
+      0.0
+    ],
+    "orthographic_span": 1.529264078294729,
+    "visible_meshes": [
+      "Mesh21"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh21_07",
+    "image": "CAPTURAS/AC_Mesh21_07.png",
+    "source": "coleccion",
+    "center": [
+      51.07652,
+      5.328470000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.500001046793064,
+      0.8660247994173379,
+      0.0
+    ],
+    "orthographic_span": 1.5292706524643016,
+    "visible_meshes": [
+      "Mesh21"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh24_00",
+    "image": "CAPTURAS/AC_Mesh24_00.png",
+    "source": "coleccion",
+    "center": [
+      63.17539500000001,
+      10.41394,
+      1.388625
+    ],
+    "direction": [
+      -0.99102000978622,
+      -0.13365009035142925,
+      -0.004122323662151544
+    ],
+    "orthographic_span": 3.8625603743393095,
+    "visible_meshes": [
+      "Mesh24"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh24_01",
+    "image": "CAPTURAS/AC_Mesh24_01.png",
+    "source": "coleccion",
+    "center": [
+      66.36439000000001,
+      10.41394,
+      1.388625
+    ],
+    "direction": [
+      0.9910203715597661,
+      -0.13364740947612952,
+      -0.004122268048433453
+    ],
+    "orthographic_span": 3.8625584126036503,
+    "visible_meshes": [
+      "Mesh24"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh25_00",
+    "image": "CAPTURAS/AC_Mesh25_00.png",
+    "source": "coleccion",
+    "center": [
+      29.008855000000004,
+      7.947400000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.861637000000002,
+    "visible_meshes": [
+      "Mesh25"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh25_01",
+    "image": "CAPTURAS/AC_Mesh25_01.png",
+    "source": "coleccion",
+    "center": [
+      29.004285000000003,
+      10.141960000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh25"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh26_00",
+    "image": "CAPTURAS/AC_Mesh26_00.png",
+    "source": "coleccion",
+    "center": [
+      29.008855000000004,
+      11.66596,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.861637000000002,
+    "visible_meshes": [
+      "Mesh26"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh26_01",
+    "image": "CAPTURAS/AC_Mesh26_01.png",
+    "source": "coleccion",
+    "center": [
+      29.008855000000004,
+      12.982565000000001,
+      1.388625
+    ],
+    "direction": [
+      -5.916570340682398e-06,
+      0.9999999998226077,
+      -1.7882363892440804e-05
+    ],
+    "orthographic_span": 3.8616369999324145,
+    "visible_meshes": [
+      "Mesh26"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh27_00",
+    "image": "CAPTURAS/AC_Mesh27_00.png",
+    "source": "coleccion",
+    "center": [
+      45.488260000000004,
+      14.414605000000002,
+      1.388625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh27"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh28_01",
+    "image": "CAPTURAS/AC_Mesh28_01.png",
+    "source": "coleccion",
+    "center": [
+      34.906715000000005,
+      4.097695,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -0.9999999999932195,
+      -3.682534076898669e-06
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh28"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh28_02",
+    "image": "CAPTURAS/AC_Mesh28_02.png",
+    "source": "coleccion",
+    "center": [
+      34.906715000000005,
+      6.292260000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh28"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh29_00",
+    "image": "CAPTURAS/AC_Mesh29_00.png",
+    "source": "coleccion",
+    "center": [
+      49.260580000000004,
+      36.605545000000006,
+      0.7863450000000001
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 1.3,
+    "visible_meshes": [
+      "Mesh29"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh29_02",
+    "image": "CAPTURAS/AC_Mesh29_02.png",
+    "source": "coleccion",
+    "center": [
+      51.033865000000006,
+      35.50795,
+      1.388635
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh29"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh29_03",
+    "image": "CAPTURAS/AC_Mesh29_03.png",
+    "source": "coleccion",
+    "center": [
+      51.033865000000006,
+      37.702510000000004,
+      1.388635
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh29"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh3_00",
+    "image": "CAPTURAS/AC_Mesh3_00.png",
+    "source": "coleccion",
+    "center": [
+      4.15245,
+      12.934305000000002,
+      1.315475
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.4710650000000003,
+    "visible_meshes": [
+      "Mesh3"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh35_00",
+    "image": "CAPTURAS/AC_Mesh35_00.png",
+    "source": "coleccion",
+    "center": [
+      45.48825,
+      9.709800000000001,
+      1.388625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849742,
+    "visible_meshes": [
+      "Mesh35"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh37_00",
+    "image": "CAPTURAS/AC_Mesh37_00.png",
+    "source": "coleccion",
+    "center": [
+      71.31922500000002,
+      4.430300000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh37"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh37_01",
+    "image": "CAPTURAS/AC_Mesh37_01.png",
+    "source": "coleccion",
+    "center": [
+      71.319885,
+      7.57558,
+      1.07722
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516020000000006,
+    "visible_meshes": [
+      "Mesh37"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh38_00",
+    "image": "CAPTURAS/AC_Mesh38_00.png",
+    "source": "coleccion",
+    "center": [
+      38.943270000000005,
+      5.9180850000000005,
+      1.388625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh38"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh38_03",
+    "image": "CAPTURAS/AC_Mesh38_03.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      4.097695,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -0.9999999999932195,
+      -3.682534076898669e-06
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh38"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh38_04",
+    "image": "CAPTURAS/AC_Mesh38_04.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      7.738480000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh38"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh38_09",
+    "image": "CAPTURAS/AC_Mesh38_09.png",
+    "source": "coleccion",
+    "center": [
+      42.58406,
+      5.9180850000000005,
+      1.388625
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh38"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh39_00",
+    "image": "CAPTURAS/AC_Mesh39_00.png",
+    "source": "coleccion",
+    "center": [
+      51.34817,
+      7.365035000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.25881798511023146,
+      -0.9659261103119428,
+      1.058719172499509e-06
+    ],
+    "orthographic_span": 1.52927428231815,
+    "visible_meshes": [
+      "Mesh39"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh39_01",
+    "image": "CAPTURAS/AC_Mesh39_01.png",
+    "source": "coleccion",
+    "center": [
+      51.38353000000001,
+      7.63365,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 1.529267999999994,
+    "visible_meshes": [
+      "Mesh39"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh4_00",
+    "image": "CAPTURAS/AC_Mesh4_00.png",
+    "source": "coleccion",
+    "center": [
+      -19.03207,
+      0.04418999999999998,
+      2.211875
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh4"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh40_00",
+    "image": "CAPTURAS/AC_Mesh40_00.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      9.26248,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh40"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh40_01",
+    "image": "CAPTURAS/AC_Mesh40_01.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      12.903270000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh40"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh40_04",
+    "image": "CAPTURAS/AC_Mesh40_04.png",
+    "source": "coleccion",
+    "center": [
+      42.58406,
+      11.082875000000001,
+      1.388625
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh40"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh41_00",
+    "image": "CAPTURAS/AC_Mesh41_00.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      19.59206,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh41"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh41_03",
+    "image": "CAPTURAS/AC_Mesh41_03.png",
+    "source": "coleccion",
+    "center": [
+      42.58406,
+      21.412445,
+      1.38863
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh41"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh42_00",
+    "image": "CAPTURAS/AC_Mesh42_00.png",
+    "source": "coleccion",
+    "center": [
+      70.902645,
+      9.22747,
+      1.2789
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.3759700000000006,
+    "visible_meshes": [
+      "Mesh42"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh42_01",
+    "image": "CAPTURAS/AC_Mesh42_01.png",
+    "source": "coleccion",
+    "center": [
+      70.902645,
+      12.37274,
+      1.077225
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh42"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh45_00",
+    "image": "CAPTURAS/AC_Mesh45_00.png",
+    "source": "coleccion",
+    "center": [
+      62.29757500000001,
+      5.986155,
+      1.388625
+    ],
+    "direction": [
+      -0.9910200276544229,
+      -0.13364992182802504,
+      -0.0041234916260227865
+    ],
+    "orthographic_span": 3.8625474769241697,
+    "visible_meshes": [
+      "Mesh45"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh45_01",
+    "image": "CAPTURAS/AC_Mesh45_01.png",
+    "source": "coleccion",
+    "center": [
+      67.24221500000002,
+      5.986155,
+      1.388625
+    ],
+    "direction": [
+      0.9910203297859369,
+      -0.13364767970088307,
+      -0.004123549629027646
+    ],
+    "orthographic_span": 3.8625472893302986,
+    "visible_meshes": [
+      "Mesh45"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh5_00",
+    "image": "CAPTURAS/AC_Mesh5_00.png",
+    "source": "coleccion",
+    "center": [
+      -23.159620000000004,
+      -1.234175,
+      2.211875
+    ],
+    "direction": [
+      -0.0,
+      0.9999999999967082,
+      2.5658784781334987e-06
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh5"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh50_00",
+    "image": "CAPTURAS/AC_Mesh50_00.png",
+    "source": "coleccion",
+    "center": [
+      45.48825,
+      5.461540000000001,
+      1.2789
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.3759700000000006,
+    "visible_meshes": [
+      "Mesh50"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh51_00",
+    "image": "CAPTURAS/AC_Mesh51_00.png",
+    "source": "coleccion",
+    "center": [
+      45.562760000000004,
+      23.970515,
+      1.38863
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh51"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh52_00",
+    "image": "CAPTURAS/AC_Mesh52_00.png",
+    "source": "coleccion",
+    "center": [
+      76.79468500000002,
+      4.703690000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh52"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh52_06",
+    "image": "CAPTURAS/AC_Mesh52_06.png",
+    "source": "coleccion",
+    "center": [
+      81.55136,
+      10.195670000000002,
+      1.315475
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.4710650000000003,
+    "visible_meshes": [
+      "Mesh52"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh52_09",
+    "image": "CAPTURAS/AC_Mesh52_09.png",
+    "source": "coleccion",
+    "center": [
+      86.30803,
+      4.703690000000001,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497419999999907,
+    "visible_meshes": [
+      "Mesh52"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh54_00",
+    "image": "CAPTURAS/AC_Mesh54_00.png",
+    "source": "coleccion",
+    "center": [
+      29.004285000000003,
+      14.5067,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh54"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh54_01",
+    "image": "CAPTURAS/AC_Mesh54_01.png",
+    "source": "coleccion",
+    "center": [
+      29.004285000000003,
+      15.823300000000001,
+      1.388625
+    ],
+    "direction": [
+      -1.660597323060291e-05,
+      0.999999999688578,
+      -1.863023905945838e-05
+    ],
+    "orthographic_span": 3.8497549994691966,
+    "visible_meshes": [
+      "Mesh54"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh56_00",
+    "image": "CAPTURAS/AC_Mesh56_00.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      8.463555000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      -0.9999999999452917,
+      -1.0460251961608156e-05
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh56"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh56_01",
+    "image": "CAPTURAS/AC_Mesh56_01.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      9.730640000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh56"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh56_14",
+    "image": "CAPTURAS/AC_Mesh56_14.png",
+    "source": "coleccion",
+    "center": [
+      52.017720000000004,
+      9.097095,
+      0.8594900000000001
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 1.527591,
+    "visible_meshes": [
+      "Mesh56"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh57_00",
+    "image": "CAPTURAS/AC_Mesh57_00.png",
+    "source": "coleccion",
+    "center": [
+      34.906715000000005,
+      7.816255000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -0.9999999999932195,
+      -3.68253407645458e-06
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh57"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh57_01",
+    "image": "CAPTURAS/AC_Mesh57_01.png",
+    "source": "coleccion",
+    "center": [
+      34.906715000000005,
+      10.01082,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh57"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh58_00",
+    "image": "CAPTURAS/AC_Mesh58_00.png",
+    "source": "coleccion",
+    "center": [
+      51.384175,
+      9.90895,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.5275909999999975,
+    "visible_meshes": [
+      "Mesh58"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh58_01",
+    "image": "CAPTURAS/AC_Mesh58_01.png",
+    "source": "coleccion",
+    "center": [
+      51.384175,
+      10.366150000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.5275909999999975,
+    "visible_meshes": [
+      "Mesh58"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh59_00",
+    "image": "CAPTURAS/AC_Mesh59_00.png",
+    "source": "coleccion",
+    "center": [
+      20.125035000000004,
+      7.01158,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh59"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh59_01",
+    "image": "CAPTURAS/AC_Mesh59_01.png",
+    "source": "coleccion",
+    "center": [
+      20.125035000000004,
+      9.206140000000001,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh59"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh59_02",
+    "image": "CAPTURAS/AC_Mesh59_02.png",
+    "source": "coleccion",
+    "center": [
+      21.71544,
+      8.108865000000002,
+      1.2789
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.3759700000000006,
+    "visible_meshes": [
+      "Mesh59"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh6_00",
+    "image": "CAPTURAS/AC_Mesh6_00.png",
+    "source": "coleccion",
+    "center": [
+      -27.877250000000004,
+      -1.234175,
+      2.211875
+    ],
+    "direction": [
+      0.0,
+      0.9999999999967082,
+      2.5658784781861265e-06
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh6"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh62_00",
+    "image": "CAPTURAS/AC_Mesh62_00.png",
+    "source": "coleccion",
+    "center": [
+      64.338885,
+      14.378890000000002,
+      1.388625
+    ],
+    "direction": [
+      -0.9909457541515768,
+      -0.1341936418151371,
+      -0.004310316154728653
+    ],
+    "orthographic_span": 3.8626052783795495,
+    "visible_meshes": [
+      "Mesh62"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh62_01",
+    "image": "CAPTURAS/AC_Mesh62_01.png",
+    "source": "coleccion",
+    "center": [
+      65.77224000000001,
+      14.378890000000002,
+      1.388625
+    ],
+    "direction": [
+      0.9909454062241076,
+      -0.13419615655025743,
+      -0.004312012346601623
+    ],
+    "orthographic_span": 3.862607228039942,
+    "visible_meshes": [
+      "Mesh62"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh63_00",
+    "image": "CAPTURAS/AC_Mesh63_00.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      10.64872,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh63"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh63_01",
+    "image": "CAPTURAS/AC_Mesh63_01.png",
+    "source": "coleccion",
+    "center": [
+      51.38418,
+      11.563120000000001,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 1.5275779999999934,
+    "visible_meshes": [
+      "Mesh63"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh64_00",
+    "image": "CAPTURAS/AC_Mesh64_00.png",
+    "source": "coleccion",
+    "center": [
+      45.488260000000004,
+      37.865465,
+      1.388635
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755000000004,
+    "visible_meshes": [
+      "Mesh64"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh64_01",
+    "image": "CAPTURAS/AC_Mesh64_01.png",
+    "source": "coleccion",
+    "center": [
+      46.29415,
+      36.055600000000005,
+      0.9531800000000001
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 1.647229999999999,
+    "visible_meshes": [
+      "Mesh64"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh64_02",
+    "image": "CAPTURAS/AC_Mesh64_02.png",
+    "source": "coleccion",
+    "center": [
+      46.29415,
+      39.675320000000006,
+      0.9531800000000001
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.647229999999999,
+    "visible_meshes": [
+      "Mesh64"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh65_00",
+    "image": "CAPTURAS/AC_Mesh65_00.png",
+    "source": "coleccion",
+    "center": [
+      50.31127000000001,
+      27.213565000000003,
+      1.40313
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.0227080000000006,
+    "visible_meshes": [
+      "Mesh65"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh65_03",
+    "image": "CAPTURAS/AC_Mesh65_03.png",
+    "source": "coleccion",
+    "center": [
+      51.51586,
+      25.907380000000003,
+      1.40313
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.0227080000000006,
+    "visible_meshes": [
+      "Mesh65"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh66_00",
+    "image": "CAPTURAS/AC_Mesh66_00.png",
+    "source": "coleccion",
+    "center": [
+      51.076530000000005,
+      6.014265,
+      0.8594900000000001
+    ],
+    "direction": [
+      -0.49999990462432575,
+      -0.8660254588496029,
+      -0.0
+    ],
+    "orthographic_span": 1.5220661539476397,
+    "visible_meshes": [
+      "Mesh66"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh66_03",
+    "image": "CAPTURAS/AC_Mesh66_03.png",
+    "source": "coleccion",
+    "center": [
+      51.34818,
+      6.670085,
+      0.8594900000000001
+    ],
+    "direction": [
+      0.25881883891343416,
+      0.9659258815312289,
+      3.408843678644191e-06
+    ],
+    "orthographic_span": 1.5220592019152441,
+    "visible_meshes": [
+      "Mesh66"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh67_02",
+    "image": "CAPTURAS/AC_Mesh67_02.png",
+    "source": "coleccion",
+    "center": [
+      51.74085000000001,
+      15.366030000000002,
+      1.077225
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh67"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh68_00",
+    "image": "CAPTURAS/AC_Mesh68_00.png",
+    "source": "coleccion",
+    "center": [
+      45.48825,
+      47.27507,
+      1.388635
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849742,
+    "visible_meshes": [
+      "Mesh68"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh69_00",
+    "image": "CAPTURAS/AC_Mesh69_00.png",
+    "source": "coleccion",
+    "center": [
+      45.48825,
+      33.160665,
+      1.38863
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh69"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh69_01",
+    "image": "CAPTURAS/AC_Mesh69_01.png",
+    "source": "coleccion",
+    "center": [
+      46.294145,
+      34.97052,
+      0.9531800000000001
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 1.6472170000000042,
+    "visible_meshes": [
+      "Mesh69"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh7_00",
+    "image": "CAPTURAS/AC_Mesh7_00.png",
+    "source": "coleccion",
+    "center": [
+      -37.05399,
+      -5.188740000000001,
+      2.28974
+    ],
+    "direction": [
+      -0.8420252764701832,
+      0.5394380722430626,
+      0.0
+    ],
+    "orthographic_span": 3.066882,
+    "visible_meshes": [
+      "Mesh7"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh7_01",
+    "image": "CAPTURAS/AC_Mesh7_01.png",
+    "source": "coleccion",
+    "center": [
+      -27.877250000000004,
+      -1.234175,
+      2.211875
+    ],
+    "direction": [
+      0.0,
+      0.9999999999967082,
+      2.5658784781861265e-06
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh7"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh7_02",
+    "image": "CAPTURAS/AC_Mesh7_02.png",
+    "source": "coleccion",
+    "center": [
+      -24.748895000000005,
+      1.3225600000000002,
+      2.211875
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh7"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh7_03",
+    "image": "CAPTURAS/AC_Mesh7_03.png",
+    "source": "coleccion",
+    "center": [
+      -23.159620000000004,
+      -1.234175,
+      2.211875
+    ],
+    "direction": [
+      0.0,
+      0.9999999999967082,
+      2.5658784781861265e-06
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh7"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh7_04",
+    "image": "CAPTURAS/AC_Mesh7_04.png",
+    "source": "coleccion",
+    "center": [
+      -19.03207,
+      0.04418999999999998,
+      2.211875
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh7"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh70_00",
+    "image": "CAPTURAS/AC_Mesh70_00.png",
+    "source": "coleccion",
+    "center": [
+      45.562760000000004,
+      19.119405,
+      1.388625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh70"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh71_02",
+    "image": "CAPTURAS/AC_Mesh71_02.png",
+    "source": "coleccion",
+    "center": [
+      63.036840000000005,
+      31.445370000000004,
+      4.44175
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh71"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh71_03",
+    "image": "CAPTURAS/AC_Mesh71_03.png",
+    "source": "coleccion",
+    "center": [
+      63.036840000000005,
+      37.385755,
+      4.44175
+    ],
+    "direction": [
+      0.0,
+      0.9999999999366158,
+      1.1259156424525685e-05
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh71"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh72_01",
+    "image": "CAPTURAS/AC_Mesh72_01.png",
+    "source": "coleccion",
+    "center": [
+      60.370245000000004,
+      36.256505000000004,
+      4.44175
+    ],
+    "direction": [
+      -0.9659346354506098,
+      0.2587861662010347,
+      1.4827949742496325e-05
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh72"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh72_03",
+    "image": "CAPTURAS/AC_Mesh72_03.png",
+    "source": "coleccion",
+    "center": [
+      60.70597000000001,
+      36.212295,
+      4.44175
+    ],
+    "direction": [
+      0.9999999995097151,
+      -1.6334915102724615e-05,
+      -2.6715922350653303e-05
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh72"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh73_02",
+    "image": "CAPTURAS/AC_Mesh73_02.png",
+    "source": "coleccion",
+    "center": [
+      86.19171,
+      32.88904,
+      1.0772300000000001
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516020000000006,
+    "visible_meshes": [
+      "Mesh73"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh74_01",
+    "image": "CAPTURAS/AC_Mesh74_01.png",
+    "source": "coleccion",
+    "center": [
+      76.14689000000001,
+      35.15853,
+      4.44175
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh74"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh74_03",
+    "image": "CAPTURAS/AC_Mesh74_03.png",
+    "source": "coleccion",
+    "center": [
+      78.585185,
+      35.15853,
+      4.44175
+    ],
+    "direction": [
+      0.9999999999366157,
+      -0.0,
+      1.125915642505125e-05
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh74"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh75_01",
+    "image": "CAPTURAS/AC_Mesh75_01.png",
+    "source": "coleccion",
+    "center": [
+      51.120430000000006,
+      30.839560000000002,
+      1.162595
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022721,
+    "visible_meshes": [
+      "Mesh75"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh75_04",
+    "image": "CAPTURAS/AC_Mesh75_04.png",
+    "source": "coleccion",
+    "center": [
+      52.6328,
+      32.35192,
+      1.162595
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.022721,
+    "visible_meshes": [
+      "Mesh75"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh76_01",
+    "image": "CAPTURAS/AC_Mesh76_01.png",
+    "source": "coleccion",
+    "center": [
+      50.09953,
+      23.88747,
+      1.143035
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.0227210000000007,
+    "visible_meshes": [
+      "Mesh76"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh76_06",
+    "image": "CAPTURAS/AC_Mesh76_06.png",
+    "source": "coleccion",
+    "center": [
+      52.71190000000001,
+      23.88747,
+      1.143035
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.0227210000000007,
+    "visible_meshes": [
+      "Mesh76"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh77_01",
+    "image": "CAPTURAS/AC_Mesh77_01.png",
+    "source": "coleccion",
+    "center": [
+      81.69227500000001,
+      36.22907,
+      4.44175
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh77"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh77_04",
+    "image": "CAPTURAS/AC_Mesh77_04.png",
+    "source": "coleccion",
+    "center": [
+      83.20464000000001,
+      34.716710000000006,
+      4.44175
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh77"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh78_01",
+    "image": "CAPTURAS/AC_Mesh78_01.png",
+    "source": "coleccion",
+    "center": [
+      66.03707,
+      34.30977,
+      4.44175
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh78"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh78_06",
+    "image": "CAPTURAS/AC_Mesh78_06.png",
+    "source": "coleccion",
+    "center": [
+      68.64944000000001,
+      34.30977,
+      4.44175
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh78"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh79_00",
+    "image": "CAPTURAS/AC_Mesh79_00.png",
+    "source": "coleccion",
+    "center": [
+      53.376960000000004,
+      26.731210000000004,
+      4.44175
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh79"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh80_00",
+    "image": "CAPTURAS/AC_Mesh80_00.png",
+    "source": "coleccion",
+    "center": [
+      89.00779000000001,
+      2.8832950000000004,
+      1.388625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.849755,
+    "visible_meshes": [
+      "Mesh80"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh80_07",
+    "image": "CAPTURAS/AC_Mesh80_07.png",
+    "source": "coleccion",
+    "center": [
+      95.58486,
+      10.195670000000002,
+      1.315475
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.4710650000000003,
+    "visible_meshes": [
+      "Mesh80"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh80_14",
+    "image": "CAPTURAS/AC_Mesh80_14.png",
+    "source": "coleccion",
+    "center": [
+      102.16192000000001,
+      2.8832950000000004,
+      1.388625
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.849755,
+    "visible_meshes": [
+      "Mesh80"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh81_00",
+    "image": "CAPTURAS/AC_Mesh81_00.png",
+    "source": "coleccion",
+    "center": [
+      7.80039,
+      9.56549,
+      1.077225
+    ],
+    "direction": [
+      0.707105264511842,
+      -0.707108297858,
+      0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh81"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh82_00",
+    "image": "CAPTURAS/AC_Mesh82_00.png",
+    "source": "coleccion",
+    "center": [
+      85.02417000000001,
+      34.299155,
+      4.44175
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh82"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh83_02",
+    "image": "CAPTURAS/AC_Mesh83_02.png",
+    "source": "coleccion",
+    "center": [
+      54.54451,
+      25.32109,
+      1.077225
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh83"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh84_01",
+    "image": "CAPTURAS/AC_Mesh84_01.png",
+    "source": "coleccion",
+    "center": [
+      71.08802,
+      34.83682,
+      4.44175
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh84"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh84_04",
+    "image": "CAPTURAS/AC_Mesh84_04.png",
+    "source": "coleccion",
+    "center": [
+      72.60039,
+      36.349180000000004,
+      4.44175
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh84"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh84_06",
+    "image": "CAPTURAS/AC_Mesh84_06.png",
+    "source": "coleccion",
+    "center": [
+      74.11276000000001,
+      34.83682,
+      4.44175
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022708,
+    "visible_meshes": [
+      "Mesh84"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh9_03",
+    "image": "CAPTURAS/AC_Mesh9_03.png",
+    "source": "coleccion",
+    "center": [
+      -41.651785000000004,
+      -8.93194,
+      1.33969
+    ],
+    "direction": [
+      -0.3624010735948976,
+      0.9320222432202279,
+      -0.0
+    ],
+    "orthographic_span": 2.8644460000000005,
+    "visible_meshes": [
+      "Mesh9"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh9_04",
+    "image": "CAPTURAS/AC_Mesh9_04.png",
+    "source": "coleccion",
+    "center": [
+      -34.324545,
+      -15.084515000000001,
+      1.339685
+    ],
+    "direction": [
+      0.7071054352861718,
+      0.7071081270843614,
+      -0.0
+    ],
+    "orthographic_span": 2.8644330000000005,
+    "visible_meshes": [
+      "Mesh9"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh91_00",
+    "image": "CAPTURAS/AC_Mesh91_00.png",
+    "source": "coleccion",
+    "center": [
+      45.488260000000004,
+      42.570275,
+      1.388635
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh91"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh91_01",
+    "image": "CAPTURAS/AC_Mesh91_01.png",
+    "source": "coleccion",
+    "center": [
+      46.29415,
+      40.76041,
+      0.9531800000000001
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.647229999999999,
+    "visible_meshes": [
+      "Mesh91"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh91_02",
+    "image": "CAPTURAS/AC_Mesh91_02.png",
+    "source": "coleccion",
+    "center": [
+      46.29415,
+      44.380120000000005,
+      0.9531800000000001
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 1.647229999999999,
+    "visible_meshes": [
+      "Mesh91"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh92_00",
+    "image": "CAPTURAS/AC_Mesh92_00.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      14.427270000000002,
+      1.388625
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh92"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh92_01",
+    "image": "CAPTURAS/AC_Mesh92_01.png",
+    "source": "coleccion",
+    "center": [
+      40.763665,
+      18.068060000000003,
+      1.388625
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999947,
+    "visible_meshes": [
+      "Mesh92"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh92_02",
+    "image": "CAPTURAS/AC_Mesh92_02.png",
+    "source": "coleccion",
+    "center": [
+      42.58406,
+      16.24766,
+      1.388625
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.8497419999999978,
+    "visible_meshes": [
+      "Mesh92"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh94_00",
+    "image": "CAPTURAS/AC_Mesh94_00.png",
+    "source": "coleccion",
+    "center": [
+      68.66022000000001,
+      20.36174,
+      1.28017
+    ],
+    "direction": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.849742,
+    "visible_meshes": [
+      "Mesh94"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh94_01",
+    "image": "CAPTURAS/AC_Mesh94_01.png",
+    "source": "coleccion",
+    "center": [
+      71.80550000000001,
+      20.361085000000003,
+      0.9687650000000002
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 2.8516150000000007,
+    "visible_meshes": [
+      "Mesh94"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh95_00",
+    "image": "CAPTURAS/AC_Mesh95_00.png",
+    "source": "coleccion",
+    "center": [
+      45.48825,
+      28.455855,
+      1.38863
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.8497549999999996,
+    "visible_meshes": [
+      "Mesh95"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh96_02",
+    "image": "CAPTURAS/AC_Mesh96_02.png",
+    "source": "coleccion",
+    "center": [
+      58.628465000000006,
+      30.937110000000004,
+      1.143035
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.0227210000000007,
+    "visible_meshes": [
+      "Mesh96"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh96_03",
+    "image": "CAPTURAS/AC_Mesh96_03.png",
+    "source": "coleccion",
+    "center": [
+      58.628465000000006,
+      33.37541,
+      1.143035
+    ],
+    "direction": [
+      0.0,
+      0.9999999999425087,
+      1.0722996393597304e-05
+    ],
+    "orthographic_span": 3.0227210000000007,
+    "visible_meshes": [
+      "Mesh96"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh97_02",
+    "image": "CAPTURAS/AC_Mesh97_02.png",
+    "source": "coleccion",
+    "center": [
+      53.56412,
+      32.35192,
+      1.162595
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022721,
+    "visible_meshes": [
+      "Mesh97"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh97_04",
+    "image": "CAPTURAS/AC_Mesh97_04.png",
+    "source": "coleccion",
+    "center": [
+      55.076480000000004,
+      30.839550000000003,
+      1.162595
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.022721,
+    "visible_meshes": [
+      "Mesh97"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh97_07",
+    "image": "CAPTURAS/AC_Mesh97_07.png",
+    "source": "coleccion",
+    "center": [
+      56.58885000000001,
+      32.35192,
+      1.162595
+    ],
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "orthographic_span": 3.022721,
+    "visible_meshes": [
+      "Mesh97"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh16_01",
+    "image": "CAPTURAS/AC_Mesh16_01.png",
+    "source": "coleccion",
+    "center": [
+      51.56939500000001,
+      20.958630000000003,
+      -0.07035000000000001
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh16"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh16_02",
+    "image": "CAPTURAS/AC_Mesh16_02.png",
+    "source": "coleccion",
+    "center": [
+      51.56939500000001,
+      20.958630000000003,
+      3.0386300000000004
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh16"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh65_01",
+    "image": "CAPTURAS/AC_Mesh65_01.png",
+    "source": "coleccion",
+    "center": [
+      51.515855,
+      27.699855,
+      1e-05
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh65"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh65_02",
+    "image": "CAPTURAS/AC_Mesh65_02.png",
+    "source": "coleccion",
+    "center": [
+      51.515855,
+      27.699855,
+      3.1229400000000003
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh65"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh67_00",
+    "image": "CAPTURAS/AC_Mesh67_00.png",
+    "source": "coleccion",
+    "center": [
+      51.74085000000001,
+      17.174030000000002,
+      -0.07035000000000001
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh67"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh67_01",
+    "image": "CAPTURAS/AC_Mesh67_01.png",
+    "source": "coleccion",
+    "center": [
+      51.74085000000001,
+      17.174030000000002,
+      3.0386300000000004
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh67"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh73_00",
+    "image": "CAPTURAS/AC_Mesh73_00.png",
+    "source": "coleccion",
+    "center": [
+      86.22875,
+      34.39683,
+      -0.26008000000000003
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh73"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh73_01",
+    "image": "CAPTURAS/AC_Mesh73_01.png",
+    "source": "coleccion",
+    "center": [
+      86.22875,
+      34.39683,
+      3.0386300000000004
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh73"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh76_03",
+    "image": "CAPTURAS/AC_Mesh76_03.png",
+    "source": "coleccion",
+    "center": [
+      51.40571,
+      24.373765,
+      -0.26008000000000003
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh76"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh76_04",
+    "image": "CAPTURAS/AC_Mesh76_04.png",
+    "source": "coleccion",
+    "center": [
+      51.40571,
+      24.373765,
+      2.59972
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh76"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh78_03",
+    "image": "CAPTURAS/AC_Mesh78_03.png",
+    "source": "coleccion",
+    "center": [
+      67.34326,
+      34.796060000000004,
+      3.0386300000000004
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh78"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh78_04",
+    "image": "CAPTURAS/AC_Mesh78_04.png",
+    "source": "coleccion",
+    "center": [
+      67.34326,
+      34.796060000000004,
+      5.89843
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh78"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh79_01",
+    "image": "CAPTURAS/AC_Mesh79_01.png",
+    "source": "coleccion",
+    "center": [
+      54.58155000000001,
+      26.828885,
+      3.0386300000000004
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh79"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh79_02",
+    "image": "CAPTURAS/AC_Mesh79_02.png",
+    "source": "coleccion",
+    "center": [
+      54.58155000000001,
+      26.828885,
+      6.161560000000001
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh79"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh82_01",
+    "image": "CAPTURAS/AC_Mesh82_01.png",
+    "source": "coleccion",
+    "center": [
+      86.228755,
+      34.39683,
+      3.0386300000000004
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812000000000012,
+    "visible_meshes": [
+      "Mesh82"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh82_02",
+    "image": "CAPTURAS/AC_Mesh82_02.png",
+    "source": "coleccion",
+    "center": [
+      86.228755,
+      34.39682500000001,
+      6.161560000000001
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9811870000000065,
+    "visible_meshes": [
+      "Mesh82"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh83_00",
+    "image": "CAPTURAS/AC_Mesh83_00.png",
+    "source": "coleccion",
+    "center": [
+      54.58155000000001,
+      26.828885,
+      -0.26008000000000003
+    ],
+    "direction": [
+      -0.0,
+      -0.0,
+      -1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh83"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh83_01",
+    "image": "CAPTURAS/AC_Mesh83_01.png",
+    "source": "coleccion",
+    "center": [
+      54.58155000000001,
+      26.828885,
+      3.0386300000000004
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.9812130000000008,
+    "visible_meshes": [
+      "Mesh83"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "AC_Mesh54_TECHO",
+    "image": "CAPTURAS/AC_Mesh54_TECHO.png",
+    "source": "coleccion",
+    "center": [
+      28.210305,
+      15.164935,
+      3.0574100000000004
+    ],
+    "direction": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "orthographic_span": 1.5212210000000008,
+    "visible_meshes": [
+      "Mesh54"
+    ],
+    "overlay": "yellow actual source boundary segments"
+  },
+  {
+    "id": "PT_Mesh14_01",
+    "image": "CAPTURAS/PT_Mesh14_01.png",
+    "source": "coleccion",
+    "center": [
+      30.777568817138672,
+      5.325475454330444,
+      1.0772224850952625
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.851607345789671,
+    "visible_meshes": [
+      "Mesh14"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh14_02",
+    "image": "CAPTURAS/PT_Mesh14_02.png",
+    "source": "coleccion",
+    "center": [
+      27.23100471496582,
+      5.325475454330444,
+      1.0772224850952625
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      0.0
+    ],
+    "orthographic_span": 2.851607345789671,
+    "visible_meshes": [
+      "Mesh14"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh25_01",
+    "image": "CAPTURAS/PT_Mesh25_01.png",
+    "source": "coleccion",
+    "center": [
+      30.777568817138672,
+      9.04403829574585,
+      1.0772231416776776
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516074983403086,
+    "visible_meshes": [
+      "Mesh25"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh26_01",
+    "image": "CAPTURAS/PT_Mesh26_01.png",
+    "source": "coleccion",
+    "center": [
+      30.777568817138672,
+      12.323683261871338,
+      1.0772236762568355
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516073482111097,
+    "visible_meshes": [
+      "Mesh26"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh54_01",
+    "image": "CAPTURAS/PT_Mesh54_01.png",
+    "source": "coleccion",
+    "center": [
+      30.777568817138672,
+      15.16442060470581,
+      1.0772240934893489
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516075031831862,
+    "visible_meshes": [
+      "Mesh54"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh54_02",
+    "image": "CAPTURAS/PT_Mesh54_02.png",
+    "source": "coleccion",
+    "center": [
+      27.23100471496582,
+      15.16442060470581,
+      1.0772240934893489
+    ],
+    "direction": [
+      -1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 2.8516075031831862,
+    "visible_meshes": [
+      "Mesh54"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh51_01",
+    "image": "CAPTURAS/PT_Mesh51_01.png",
+    "source": "coleccion",
+    "center": [
+      46.294145584106445,
+      25.63406753540039,
+      1.0772258806973696
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.851607195660472,
+    "visible_meshes": [
+      "Mesh51"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh51_02",
+    "image": "CAPTURAS/PT_Mesh51_02.png",
+    "source": "coleccion",
+    "center": [
+      46.294145584106445,
+      22.306957244873047,
+      1.0772253712639213
+    ],
+    "direction": [
+      -0.0,
+      -1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.851607280410826,
+    "visible_meshes": [
+      "Mesh51"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh28_01",
+    "image": "CAPTURAS/PT_Mesh28_01.png",
+    "source": "coleccion",
+    "center": [
+      37.243626413246,
+      4.992454471687481,
+      1.2423222856596112
+    ],
+    "direction": [
+      0.7071067811865476,
+      -0.7071067811865476,
+      -0.0
+    ],
+    "orthographic_span": 3.280867132358253,
+    "visible_meshes": [
+      "Mesh28"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh28_02",
+    "image": "CAPTURAS/PT_Mesh28_02.png",
+    "source": "coleccion",
+    "center": [
+      32.569807084401454,
+      4.992453368504846,
+      1.2423222856596112
+    ],
+    "direction": [
+      -0.7071067811865476,
+      -0.7071067811865476,
+      0.0
+    ],
+    "orthographic_span": 3.280867132358253,
+    "visible_meshes": [
+      "Mesh28"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh57_01",
+    "image": "CAPTURAS/PT_Mesh57_01.png",
+    "source": "coleccion",
+    "center": [
+      32.56980828179254,
+      9.116052828894723,
+      1.2423231778666377
+    ],
+    "direction": [
+      -0.7071067811865476,
+      0.7071067811865476,
+      -0.0
+    ],
+    "orthographic_span": 3.2808672921732067,
+    "visible_meshes": [
+      "Mesh57"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh57_02",
+    "image": "CAPTURAS/PT_Mesh57_02.png",
+    "source": "coleccion",
+    "center": [
+      37.24363059656961,
+      8.711016467639377,
+      1.2423229962587357
+    ],
+    "direction": [
+      0.7071067811865476,
+      -0.7071067811865476,
+      -0.0
+    ],
+    "orthographic_span": 3.2808671444654465,
+    "visible_meshes": [
+      "Mesh57"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh52_01",
+    "image": "CAPTURAS/PT_Mesh52_01.png",
+    "source": "coleccion",
+    "center": [
+      77.63950359159047,
+      9.403871900505493,
+      1.0772230690345168
+    ],
+    "direction": [
+      -0.7071067811865476,
+      0.7071067811865476,
+      0.0
+    ],
+    "orthographic_span": 2.8516070673242213,
+    "visible_meshes": [
+      "Mesh52"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh52_02",
+    "image": "CAPTURAS/PT_Mesh52_02.png",
+    "source": "coleccion",
+    "center": [
+      85.46321099145074,
+      9.403871944972451,
+      1.0772231882438064
+    ],
+    "direction": [
+      0.7071067811865476,
+      0.7071067811865476,
+      0.0
+    ],
+    "orthographic_span": 2.851607377268374,
+    "visible_meshes": [
+      "Mesh52"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh80_01",
+    "image": "CAPTURAS/PT_Mesh80_01.png",
+    "source": "coleccion",
+    "center": [
+      91.67300228940118,
+      9.403873874081512,
+      1.0772230830043554
+    ],
+    "direction": [
+      -0.7071067811865476,
+      0.7071067811865476,
+      -0.0
+    ],
+    "orthographic_span": 2.851607031002641,
+    "visible_meshes": [
+      "Mesh80"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh80_02",
+    "image": "CAPTURAS/PT_Mesh80_02.png",
+    "source": "coleccion",
+    "center": [
+      99.49671443009085,
+      9.403870897528577,
+      1.077223202213645
+    ],
+    "direction": [
+      0.7071067811865476,
+      0.7071067811865476,
+      -0.0
+    ],
+    "orthographic_span": 2.8516073409467935,
+    "visible_meshes": [
+      "Mesh80"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh27_01",
+    "image": "CAPTURAS/PT_Mesh27_01.png",
+    "source": "coleccion",
+    "center": [
+      47.15355296012683,
+      14.414601802825928,
+      1.3873472549021244
+    ],
+    "direction": [
+      1.0,
+      -0.0,
+      -0.0
+    ],
+    "orthographic_span": 3.2841979108750823,
+    "visible_meshes": [
+      "Mesh27"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh53_01",
+    "image": "CAPTURAS/PT_Mesh53_01.png",
+    "source": "coleccion",
+    "center": [
+      54.348838806152344,
+      47.13603591918945,
+      1.3873449005186558
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.2841972135007382,
+    "visible_meshes": [
+      "Mesh53"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh55_01",
+    "image": "CAPTURAS/PT_Mesh55_01.png",
+    "source": "coleccion",
+    "center": [
+      46.35922622680664,
+      1.6600388097174374,
+      1.242901206947863
+    ],
+    "direction": [
+      -0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 3.282373354397714,
+    "visible_meshes": [
+      "Mesh55"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "PT_Mesh93_01",
+    "image": "CAPTURAS/PT_Mesh93_01.png",
+    "source": "coleccion",
+    "center": [
+      54.35922622680664,
+      46.005741119384766,
+      1.0783800492063165
+    ],
+    "direction": [
+      0.0,
+      1.0,
+      -0.0
+    ],
+    "orthographic_span": 2.85160723682493,
+    "visible_meshes": [
+      "Mesh93"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "BR_01",
+    "image": "CAPTURAS/BR_01.png",
+    "source": "puente_obj",
+    "center": [
+      -6.303850769996643,
+      0.18381483107805252,
+      0.9089929706931946
+    ],
+    "direction": [
+      0.8787416796781866,
+      -0.4772976643525079,
+      0.0
+    ],
+    "orthographic_span": 2.308248730261109,
+    "visible_meshes": [
+      "BNC_2",
+      "door_2",
+      "Doorpanel_8",
+      "floorfront_1",
+      "lightringback_1",
+      "Mesh_1736",
+      "Mesh_1737",
+      "Mesh_1738",
+      "Mesh_1739",
+      "Mesh_1740",
+      "Mesh_1742",
+      "Mesh_1754",
+      "Mesh_1756",
+      "Mesh_1757",
+      "Mesh_1758",
+      "Mesh_1759",
+      "Mesh_1760",
+      "Mesh_1761",
+      "Mesh_1762",
+      "Mesh_1763",
+      "Mesh_1798",
+      "Mesh_1799",
+      "Mesh_1800",
+      "Mesh_1809",
+      "Mesh_1821",
+      "Mesh_1822",
+      "Mesh_1823",
+      "Mesh_1825",
+      "Mesh_1836",
+      "Mesh_1837",
+      "Mesh_1840",
+      "Mesh_1849",
+      "Mesh_1853",
+      "Mesh_1855",
+      "Mesh_1856",
+      "Mesh_1859",
+      "Mesh_1861",
+      "Mesh_1863",
+      "Mesh_1865",
+      "Mesh_1870",
+      "Mesh_1873",
+      "Mesh_1875",
+      "Mesh_1876",
+      "Mesh_1877",
+      "Mesh_1878",
+      "Mesh_1879",
+      "Mesh_1880",
+      "Mesh_1881",
+      "Mesh_1882",
+      "Mesh_1947",
+      "Mesh_1948",
+      "Mesh_1976",
+      "Mesh_2019",
+      "Mesh_2020",
+      "Mesh_2021",
+      "Mesh_2022",
+      "Mesh_2023",
+      "Mesh_2024",
+      "Mesh_2025",
+      "Mesh_2026",
+      "Mesh_2027",
+      "Mesh_2028",
+      "Mesh_2029",
+      "Mesh_2030",
+      "Mesh_2031",
+      "Mesh_2032",
+      "Mesh_2033",
+      "Mesh_2034",
+      "Mesh_2035",
+      "Mesh_2036",
+      "Mesh_2037",
+      "Mesh_2038",
+      "Mesh_2054",
+      "Mesh_2055",
+      "Mesh_2056",
+      "Mesh_2057",
+      "Mesh_2065",
+      "Mesh_2067",
+      "Mesh_2094",
+      "Mesh_2135",
+      "Mesh_2136",
+      "Object_119",
+      "Object_78",
+      "Object_81",
+      "Plane_111",
+      "Plane_112",
+      "Plane_113",
+      "Plane_128",
+      "Plane_129",
+      "Plane_130",
+      "Plane_131",
+      "Plane_132",
+      "Plane_134",
+      "Plane_136",
+      "Plane_93",
+      "scn12a_1",
+      "Top_ring_1"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "BR_02",
+    "image": "CAPTURAS/BR_02.png",
+    "source": "puente_obj",
+    "center": [
+      6.316095471382141,
+      0.1844528205692768,
+      0.9089929709603278
+    ],
+    "direction": [
+      -0.878739258359524,
+      -0.4773021221592815,
+      -0.0
+    ],
+    "orthographic_span": 2.308248729566561,
+    "visible_meshes": [
+      "BCN_3",
+      "Doorpanel_7",
+      "floorfront_1",
+      "lightringback_1",
+      "Mesh_1735",
+      "Mesh_1752",
+      "Mesh_1754",
+      "Mesh_1755",
+      "Mesh_1795",
+      "Mesh_1796",
+      "Mesh_1797",
+      "Mesh_1807",
+      "Mesh_1808",
+      "Mesh_1818",
+      "Mesh_1819",
+      "Mesh_1820",
+      "Mesh_1828",
+      "Mesh_1841",
+      "Mesh_1849",
+      "Mesh_1851",
+      "Mesh_1856",
+      "Mesh_1858",
+      "Mesh_1859",
+      "Mesh_1860",
+      "Mesh_1862",
+      "Mesh_1864",
+      "Mesh_1868",
+      "Mesh_1874",
+      "Mesh_1943",
+      "Mesh_1944",
+      "Mesh_1945",
+      "Mesh_1946",
+      "Mesh_1975",
+      "Mesh_1995",
+      "Mesh_1996",
+      "Mesh_1997",
+      "Mesh_1998",
+      "Mesh_1999",
+      "Mesh_2000",
+      "Mesh_2001",
+      "Mesh_2002",
+      "Mesh_2003",
+      "Mesh_2004",
+      "Mesh_2005",
+      "Mesh_2006",
+      "Mesh_2007",
+      "Mesh_2008",
+      "Mesh_2009",
+      "Mesh_2010",
+      "Mesh_2051",
+      "Mesh_2052",
+      "Mesh_2053",
+      "Mesh_2057",
+      "Mesh_2064",
+      "Mesh_2066",
+      "Mesh_2094",
+      "Mesh_2126",
+      "Object_119",
+      "Object_80",
+      "Object_82",
+      "Object_83",
+      "Plane_109",
+      "Plane_114",
+      "Plane_122",
+      "Plane_123",
+      "Plane_124",
+      "Plane_125",
+      "Plane_126",
+      "Plane_127",
+      "Plane_133",
+      "Plane_137",
+      "scn12b_1",
+      "Top_ring_1"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "BR_03",
+    "image": "CAPTURAS/BR_03.png",
+    "source": "puente_obj",
+    "center": [
+      1.1911309957504272,
+      6.38205099105835,
+      1.6000840783740617
+    ],
+    "direction": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "orthographic_span": 2.3082501576715315,
+    "visible_meshes": [
+      "Doorpanel_6",
+      "hallwayfloor_1",
+      "hallwaypanels_1",
+      "hallwaysubframe_1",
+      "hallwaysupports_3",
+      "hallwaysupports_4",
+      "lightringback_1",
+      "Mesh_1729",
+      "Mesh_1733",
+      "Mesh_1754",
+      "Mesh_1832",
+      "Mesh_1833",
+      "Mesh_1859",
+      "Mesh_1925",
+      "Mesh_1926",
+      "Mesh_1927",
+      "Mesh_1928",
+      "Mesh_1961",
+      "Mesh_1965",
+      "Mesh_1966",
+      "Mesh_1979",
+      "Mesh_1980",
+      "Mesh_1981",
+      "Mesh_1982",
+      "Mesh_1983",
+      "Mesh_1984",
+      "Mesh_1985",
+      "Mesh_1986",
+      "Mesh_1987",
+      "Mesh_1988",
+      "Mesh_1989",
+      "Mesh_1990",
+      "Mesh_1991",
+      "Mesh_1992",
+      "Mesh_1993",
+      "Mesh_1994",
+      "Mesh_2040",
+      "Mesh_2041",
+      "Mesh_2042",
+      "Mesh_2045",
+      "Mesh_2046",
+      "Mesh_2047",
+      "Mesh_2091",
+      "Mesh_2094",
+      "Mesh_2125",
+      "Object_114",
+      "Object_115",
+      "Object_116",
+      "Object_118",
+      "Object_130",
+      "Object_86",
+      "Object_87",
+      "Plane_101",
+      "Plane_102",
+      "Plane_105",
+      "Plane_107",
+      "Plane_92",
+      "Top_ring_1"
+    ],
+    "overlay": "none"
+  },
+  {
+    "id": "BR_04",
+    "image": "CAPTURAS/BR_04.png",
+    "source": "puente_obj",
+    "center": [
+      -4.20138,
+      3.512995,
+      1.600085
+    ],
+    "direction": [
+      0.5755224671799172,
+      -0.8177646263847259,
+      -0.005908096562432284
+    ],
+    "orthographic_span": 2.308241,
+    "visible_meshes": [
+      "BNC_2",
+      "Doorpanel_5",
+      "lightring_4",
+      "lightringback_1",
+      "Mainroof_1",
+      "Mesh_1729",
+      "Mesh_1730",
+      "Mesh_1733",
+      "Mesh_1737",
+      "Mesh_1738",
+      "Mesh_1743",
+      "Mesh_1750",
+      "Mesh_1754",
+      "Mesh_1764",
+      "Mesh_1765",
+      "Mesh_1770",
+      "Mesh_1771",
+      "Mesh_1772",
+      "Mesh_1773",
+      "Mesh_1774",
+      "Mesh_1775",
+      "Mesh_1776",
+      "Mesh_1777",
+      "Mesh_1778",
+      "Mesh_1779",
+      "Mesh_1780",
+      "Mesh_1781",
+      "Mesh_1782",
+      "Mesh_1798",
+      "Mesh_1799",
+      "Mesh_1800",
+      "Mesh_1803",
+      "Mesh_1836",
+      "Mesh_1838",
+      "Mesh_1839",
+      "Mesh_1849",
+      "Mesh_1859",
+      "Mesh_1866",
+      "Mesh_1919",
+      "Mesh_1920",
+      "Mesh_1929",
+      "Mesh_1930",
+      "Mesh_1933",
+      "Mesh_1934",
+      "Mesh_1948",
+      "Mesh_1960",
+      "Mesh_1962",
+      "Mesh_1963",
+      "Mesh_1964",
+      "Mesh_1976",
+      "Mesh_1977",
+      "Mesh_2011",
+      "Mesh_2012",
+      "Mesh_2013",
+      "Mesh_2014",
+      "Mesh_2015",
+      "Mesh_2016",
+      "Mesh_2017",
+      "Mesh_2018",
+      "Mesh_2019",
+      "Mesh_2020",
+      "Mesh_2021",
+      "Mesh_2022",
+      "Mesh_2023",
+      "Mesh_2024",
+      "Mesh_2025",
+      "Mesh_2026",
+      "Mesh_2027",
+      "Mesh_2028",
+      "Mesh_2029",
+      "Mesh_2030",
+      "Mesh_2031",
+      "Mesh_2032",
+      "Mesh_2033",
+      "Mesh_2034",
+      "Mesh_2035",
+      "Mesh_2036",
+      "Mesh_2037",
+      "Mesh_2038",
+      "Mesh_2043",
+      "Mesh_2048",
+      "Mesh_2049",
+      "Mesh_2050",
+      "Mesh_2057",
+      "Mesh_2062",
+      "Mesh_2091",
+      "Mesh_2094",
+      "Mesh_2113",
+      "Mesh_2114",
+      "Mesh_2115",
+      "Mesh_2116",
+      "Mesh_2117",
+      "Mesh_2118",
+      "Mesh_2119",
+      "Mesh_2136",
+      "Object_100",
+      "Object_101",
+      "Object_111",
+      "Object_112",
+      "Object_113",
+      "Object_78",
+      "Object_81",
+      "Object_98",
+      "Object_99",
+      "Plane_103",
+      "Plane_104",
+      "Plane_108",
+      "Plane_111",
+      "Plane_112",
+      "Plane_113",
+      "Plane_128",
+      "Plane_129",
+      "Plane_130",
+      "Plane_131",
+      "Plane_132",
+      "Plane_136",
+      "Plane_93",
+      "Plane_97",
+      "Plane_98",
+      "Plane_99",
+      "Top_ring_1"
+    ],
+    "overlay": "none"
+  }
+]

@@ -1,0 +1,710 @@
+[
+  {
+    "H": 1.6,
+    "D": 0.4,
+    "drop": 0.2153641328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 10,
+    "failures": [
+      {
+        "frame": 55,
+        "u": 1.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008290975378850922,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008290975378850922,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.329273447205683e-08,
+          "PIE_1": -0.008290975378850922
+        }
+      },
+      {
+        "frame": 56,
+        "u": 1.8333333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.344961879009345e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 57,
+        "u": 1.8666666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.360650310813007e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 58,
+        "u": 1.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.3733666200685963e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 59,
+        "u": 1.9333333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.007660100669185377,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.007660100669185377,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.4231747367274856e-08,
+          "PIE_1": -0.007660100669185377
+        }
+      },
+      {
+        "frame": 243,
+        "u": 8.066666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.007660100669185342,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.007660100669185342,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.4231747367274856e-08,
+          "PIE_1": -0.007660100669185342
+        }
+      },
+      {
+        "frame": 244,
+        "u": 8.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.3733666200685963e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 245,
+        "u": 8.133333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.360650310813007e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 246,
+        "u": 8.166666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009000000000000105,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.009000000000000105,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.344961879009345e-08,
+          "PIE_1": -0.009000000000000105
+        }
+      },
+      {
+        "frame": 247,
+        "u": 8.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008290975378851012,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008290975378851012,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.329273447205683e-08,
+          "PIE_1": -0.008290975378851012
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false
+  },
+  {
+    "H": 1.75,
+    "D": 0.4,
+    "drop": 0.1783141328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 12,
+    "failures": [
+      {
+        "frame": 54,
+        "u": 1.7666666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.0038921543688137175,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.0038921543688137175,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.874436216132592e-08,
+          "PIE_1": -0.0038921543688137175
+        }
+      },
+      {
+        "frame": 55,
+        "u": 1.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.890124647936254e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 56,
+        "u": 1.8333333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.9058130790460268e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 57,
+        "u": 1.8666666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.965814978328485e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 58,
+        "u": 1.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.992076307550828e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 59,
+        "u": 1.9333333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005011753771676973,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.005011753771676973,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.007163804774615e-08,
+          "PIE_1": -0.005011753771676973
+        }
+      },
+      {
+        "frame": 243,
+        "u": 8.066666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005011753771676904,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.005011753771676904,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 3.007163804774615e-08,
+          "PIE_1": -0.005011753771676904
+        }
+      },
+      {
+        "frame": 244,
+        "u": 8.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.992076307550828e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 245,
+        "u": 8.133333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.965814978328485e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 246,
+        "u": 8.166666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.9058130790460268e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 247,
+        "u": 8.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.890124647936254e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 248,
+        "u": 8.233333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.003892154368813981,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.003892154368813981,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.874436216132592e-08,
+          "PIE_1": -0.003892154368813981
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false
+  },
+  {
+    "H": 1.9,
+    "D": 0.4,
+    "drop": 0.14126413287425443,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 10,
+    "failures": [
+      {
+        "frame": 54,
+        "u": 1.7666666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.007285027799874971,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.007285027799874971,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.435287405760933e-08,
+          "PIE_1": -0.007285027799874971
+        }
+      },
+      {
+        "frame": 55,
+        "u": 1.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.450975837564595e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 56,
+        "u": 1.8333333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.5458903693542645e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 57,
+        "u": 1.8666666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.5609778665780514e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 58,
+        "u": 1.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008761311726852697,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008761311726852697,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.576065365189617e-08,
+          "PIE_1": -0.008761311726852697
+        }
+      },
+      {
+        "frame": 244,
+        "u": 8.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008761311726852662,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008761311726852662,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.576065365189617e-08,
+          "PIE_1": -0.008761311726852662
+        }
+      },
+      {
+        "frame": 245,
+        "u": 8.133333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.5609778665780514e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 246,
+        "u": 8.166666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.5458903693542645e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 247,
+        "u": 8.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008999999999999994,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.008999999999999994,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.450975837564595e-08,
+          "PIE_1": -0.008999999999999994
+        }
+      },
+      {
+        "frame": 248,
+        "u": 8.233333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.007285027799875124,
+        "interferences": [
+          {
+            "part": "PIE_1",
+            "objects": [
+              "VOY04_GUIA_NUEVA"
+            ],
+            "clearance_m": -0.007285027799875124,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PIE_-1": 2.435287405760933e-08,
+          "PIE_1": -0.007285027799875124
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false
+  }
+]

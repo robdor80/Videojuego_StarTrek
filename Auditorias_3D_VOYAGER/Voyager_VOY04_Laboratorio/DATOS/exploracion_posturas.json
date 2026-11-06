@@ -1,0 +1,2854 @@
+[
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.23768967625567522,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.13768967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.00035557708181492564,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.6,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.05768967625567534,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.046400000000000004,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 61
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.046400000000000004,
+        "triangles": 83
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0015537529676138695,
+      "MUSLO_-1": -0.0003554279551581663,
+      "PANTORRILLA_-1": -0.046400000000000004,
+      "MUSLO_1": -0.0003555770818149534,
+      "PANTORRILLA_1": -0.046400000000000004
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.036791440585379434
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.036791440585379434
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.036791440585379434
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.036791440585379434
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685861157929903,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0026858602938582485,
+        "triangles": 1
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "PIE_-1": -0.002685861157929903,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.036791440585379434,
+      "PIE_1": -0.0026858602938582485
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.036791440585379434,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685861157929903,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.036791440585379434,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0026858602938582485,
+        "triangles": 1
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "PIE_-1": -0.002685861157929903,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.036791440585379434,
+      "PIE_1": -0.0026858602938582485
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.03679144058537943
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.03679144058537943
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.03679144058537943
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.03679144058537943
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0026858527422153056,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685852898527734,
+        "triangles": 3
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "PIE_-1": -0.0026858527422153056,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.03679144058537943,
+      "PIE_1": -0.002685852898527734
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03679144058537943,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.034141686755449124,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0026858527422153056,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.03679144058537943,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685852898527734,
+        "triangles": 3
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096842,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.034141686755449124,
+      "PIE_-1": -0.0026858527422153056,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.03679144058537943,
+      "PIE_1": -0.002685852898527734
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685844326500708,
+        "triangles": 2
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685845503197219,
+        "triangles": 4
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "PIE_-1": -0.002685844326500708,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794,
+      "PIE_1": -0.002685845503197219
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685844326500708,
+        "triangles": 2
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.002685845503197219,
+        "triangles": 4
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "PIE_-1": -0.002685844326500708,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794,
+      "PIE_1": -0.002685845503197219
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.2006396762556753,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.10063967625567527,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.000669809661335008,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "MUSLO_1": -0.0008522638532719451,
+      "PANTORRILLA_1": -0.0367914405853794
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.0026858359107861107,
+        "triangles": 11
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.002685836788918129,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "PIE_-1": -0.0026858359107861107,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794,
+      "PIE_1": -0.002685836788918129
+    }
+  },
+  {
+    "H": 1.75,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.02063967625567531,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0367914405853794,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0341416867554491,
+        "triangles": 50
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.0026858359107861107,
+        "triangles": 11
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0367914405853794,
+        "triangles": 54
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.002685836788918129,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.0009491190644096703,
+      "MUSLO_-1": -0.0006698096613350218,
+      "PANTORRILLA_-1": -0.0341416867554491,
+      "PIE_-1": -0.0026858359107861107,
+      "MUSLO_1": -0.0008522638532719728,
+      "PANTORRILLA_1": -0.0367914405853794,
+      "PIE_1": -0.002685836788918129
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.02591534407959807,
+    "interferences": [
+      {
+        "part": "MUSLO_-1",
+        "objects": [
+          "Object_129"
+        ],
+        "clearance_m": -0.02591534407959807,
+        "triangles": 2
+      },
+      {
+        "part": "MUSLO_1",
+        "objects": [
+          "Object_129"
+        ],
+        "clearance_m": -0.023150660533177533,
+        "triangles": 2
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298782,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.02591534407959807,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.023150660533177533,
+      "PANTORRILLA_1": -0.004050839000298782
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.02591534407959807,
+    "interferences": [
+      {
+        "part": "MUSLO_-1",
+        "objects": [
+          "Object_129"
+        ],
+        "clearance_m": -0.02591534407959807,
+        "triangles": 2
+      },
+      {
+        "part": "MUSLO_1",
+        "objects": [
+          "Object_129"
+        ],
+        "clearance_m": -0.023150660533177533,
+        "triangles": 2
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298782,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.02591534407959807,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.023150660533177533,
+      "PANTORRILLA_1": -0.004050839000298782
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298782,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298782,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.000984191367511919,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634753,
+      "PANTORRILLA_1": -0.004050839000298782
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298782,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298782,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.000984191367511919,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634753,
+      "PANTORRILLA_1": -0.004050839000298782
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.039735865318039215,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335852526153154,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735865318039215,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.009335852843704119,
+        "triangles": 9
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0397358640846064,
+        "triangles": 3
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335852526153154,
+      "PIE_-1": -0.039735865318039215,
+      "MUSLO_1": -0.0011439912303633365,
+      "PANTORRILLA_1": -0.009335852843704119,
+      "PIE_1": -0.0397358640846064
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.039735865318039215,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335852526153154,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735865318039215,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.009335852843704119,
+        "triangles": 9
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.0397358640846064,
+        "triangles": 3
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335852526153154,
+      "PIE_-1": -0.039735865318039215,
+      "MUSLO_1": -0.0011439912303633365,
+      "PANTORRILLA_1": -0.009335852843704119,
+      "PIE_1": -0.0397358640846064
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298789,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298789,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.004050839000298789
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298789,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298789,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.004050839000298789
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298789,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298789,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.004050839000298789
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.004050839000298789,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.004050839000298789,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.0012019240826378688,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.004050839000298789
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.039735856902324625,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335844110438564,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735856902324625,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.009335845448373611,
+        "triangles": 10
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735856689275886,
+        "triangles": 4
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335844110438564,
+      "PIE_-1": -0.039735856902324625,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.009335845448373611,
+      "PIE_1": -0.039735856689275886
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.1,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.039735856902324625,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335844110438564,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735856902324625,
+        "triangles": 1
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.009335845448373611,
+        "triangles": 10
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735856689275886,
+        "triangles": 4
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335844110438564,
+      "PIE_-1": -0.039735856902324625,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.009335845448373611,
+      "PIE_1": -0.039735856689275886
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03973584929394537,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335835694723973,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735848486610034,
+        "triangles": 5
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.0093358364755382,
+        "triangles": 11
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.03973584929394537,
+        "triangles": 5
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335835694723973,
+      "PIE_-1": -0.039735848486610034,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0093358364755382,
+      "PIE_1": -0.03973584929394537
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.2,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03973584929394537,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.009335835694723973,
+        "triangles": 1
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.039735848486610034,
+        "triangles": 5
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_77"
+        ],
+        "clearance_m": -0.0093358364755382,
+        "triangles": 11
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728"
+        ],
+        "clearance_m": -0.03973584929394537,
+        "triangles": 5
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335835694723973,
+      "PIE_-1": -0.039735848486610034,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0093358364755382,
+      "PIE_1": -0.03973584929394537
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.16358967625567533,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0.1,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": 0.06358967625567524,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.0040508390002987615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Object_77"
+        ],
+        "clearance_m": -0.0040508390002987615,
+        "triangles": 8
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.001201924082637855,
+      "MUSLO_1": -0.0011439912303634198,
+      "PANTORRILLA_1": -0.0040508390002987615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03973584151688615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.009335827279009376,
+        "triangles": 10
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.03973584007089544,
+        "triangles": 30
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_75",
+          "Object_77"
+        ],
+        "clearance_m": -0.00933582702135162,
+        "triangles": 13
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.03973584151688615,
+        "triangles": 26
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335827279009376,
+      "PIE_-1": -0.03973584007089544,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.00933582702135162,
+      "PIE_1": -0.03973584151688615
+    }
+  },
+  {
+    "H": 1.9,
+    "retreat": 0.3,
+    "drop": 0.18,
+    "lean": 0.15,
+    "foot_sole_above_floor_m": -0.016410323744324717,
+    "clear": false,
+    "invalid_ik": [],
+    "minimum_clearance_m": -0.03973584151688615,
+    "interferences": [
+      {
+        "part": "PANTORRILLA_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.009335827279009376,
+        "triangles": 10
+      },
+      {
+        "part": "PIE_-1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.03973584007089544,
+        "triangles": 30
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "objects": [
+          "ChamferBox_22",
+          "Mesh_1728",
+          "Object_75",
+          "Object_77"
+        ],
+        "clearance_m": -0.00933582702135162,
+        "triangles": 13
+      },
+      {
+        "part": "PIE_1",
+        "objects": [
+          "Mesh_1728",
+          "Object_75"
+        ],
+        "clearance_m": -0.03973584151688615,
+        "triangles": 26
+      }
+    ],
+    "minima": {
+      "PELVIS": 0.000344485161205485,
+      "MUSLO_-1": -0.0009841913675119052,
+      "PANTORRILLA_-1": -0.009335827279009376,
+      "PIE_-1": -0.03973584007089544,
+      "MUSLO_1": -0.0011439912303634059,
+      "PANTORRILLA_1": -0.00933582702135162,
+      "PIE_1": -0.03973584151688615
+    }
+  }
+]

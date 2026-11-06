@@ -1,0 +1,677 @@
+{
+  "schema": 2,
+  "status": "FUNCTIONAL_WITH_DOCUMENTED_LIMITATIONS",
+  "inventory_exhaustive": true,
+  "total_real_doors": null,
+  "confirmed_with_identified_leaves": 4,
+  "implemented_mechanisms": 4,
+  "unresolved_signposted_memory_accesses": 0,
+  "stair_frame_instances_reviewed": 12,
+  "stair_frame_definition": "Component#10",
+  "stair_leaf_mapping_complete": false,
+  "blender_objects_inspected": 16840,
+  "evaluated_mesh_placements": 16304,
+  "source_sha256": "e55df3cf537365ac8e145b9a7cd96605f5b0edaa5537473a734f090f931a8670",
+  "doors": [
+    {
+      "id": "D01",
+      "actor_id": "VALHALLA_SC_EXTERIOR_D01",
+      "position_cm": [
+        3121.583251953125,
+        248.1314239501953,
+        36.999996185302734
+      ],
+      "yaw_deg": 0,
+      "type": "exterior",
+      "connects": "vestibulo principal / corredor exterior construido",
+      "leaves": 2,
+      "mechanism": "deslizamiento lateral original V06",
+      "source_components": [
+        "Component#130 / Component_435035",
+        "Component#131 / Component_435936"
+      ],
+      "previous": "automatica V06",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validation": "preserved_and_regression_validated; artistic_leaf_inventory_not_certified",
+      "width_cm": 181.9236297607422,
+      "height_cm": 203.54461669921875,
+      "travel_cm": 90.76179504394531,
+      "static_frame_components": [
+        "revestimientos #120 ranurados heredados V06"
+      ]
+    },
+    {
+      "id": "D02",
+      "actor_id": "V07_D02",
+      "position_cm": [
+        1545.5031394958496,
+        249.27908182144165,
+        36.9999885559082
+      ],
+      "yaw_deg": 0,
+      "type": "exterior",
+      "connects": "vestibulo occidental / destino no construido",
+      "leaves": 2,
+      "mechanism": "retraccion normal 20 cm, deslizamiento lateral, retorno inverso",
+      "source_components": [
+        "#118 / Component_437343"
+      ],
+      "width_cm": 86.39671802520752,
+      "height_cm": 186.6391658782959,
+      "travel_cm": 47.19835901260376,
+      "collision_inset_cm": 1,
+      "previous": "estatica; hojas integradas en una malla",
+      "final": "mecanismo preparado; bloqueo de seguridad conservado",
+      "blocked_unbuilt": true,
+      "validation": "preserved_and_regression_validated; artistic_leaf_inventory_not_certified",
+      "surface_area_partition_error_cm2": 3.637978807091713e-11,
+      "clearance_offset_cm": [
+        -20,
+        0,
+        0
+      ],
+      "static_frame_components": [
+        "#118: particion estatica conservada"
+      ]
+    },
+    {
+      "id": "D03",
+      "actor_id": "V07_D03",
+      "position_cm": [
+        5219.759941101074,
+        121.65740132331848,
+        37.0000034570694
+      ],
+      "yaw_deg": 90,
+      "type": "exterior",
+      "connects": "corredor este, lateral Y menor / destino no construido",
+      "leaves": 2,
+      "mechanism": "retraccion normal 20 cm, deslizamiento lateral, retorno inverso",
+      "source_components": [
+        "#58 / Component_381616"
+      ],
+      "width_cm": 183.9954376220703,
+      "height_cm": 203.54462563991547,
+      "travel_cm": 95.99771881103516,
+      "collision_inset_cm": 3.2,
+      "previous": "estatica; hojas integradas en una malla",
+      "final": "mecanismo preparado; bloqueo de seguridad conservado",
+      "blocked_unbuilt": true,
+      "validation": "preserved_and_regression_validated; artistic_leaf_inventory_not_certified",
+      "surface_area_partition_error_cm2": 8.731149137020111e-11,
+      "clearance_offset_cm": [
+        -20,
+        0,
+        0
+      ],
+      "static_frame_components": [
+        "#51: marco original conservado"
+      ]
+    },
+    {
+      "id": "D04",
+      "actor_id": "V07_D04",
+      "position_cm": [
+        5219.759941101074,
+        374.27566051483154,
+        37.0000034570694
+      ],
+      "yaw_deg": 90,
+      "type": "exterior",
+      "connects": "corredor este, lateral Y mayor / destino no construido",
+      "leaves": 2,
+      "mechanism": "retraccion normal 20 cm, deslizamiento lateral, retorno inverso",
+      "source_components": [
+        "#58 / Component_381616.001"
+      ],
+      "width_cm": 183.9954376220703,
+      "height_cm": 203.54462563991547,
+      "travel_cm": 95.99771881103516,
+      "collision_inset_cm": 3.2,
+      "previous": "estatica; hojas integradas en una malla",
+      "final": "mecanismo preparado; bloqueo de seguridad conservado",
+      "blocked_unbuilt": true,
+      "validation": "preserved_and_regression_validated; artistic_leaf_inventory_not_certified",
+      "surface_area_partition_error_cm2": 1.4551915228366852e-10,
+      "clearance_offset_cm": [
+        20,
+        0,
+        0
+      ],
+      "static_frame_components": [
+        "#51: marco original conservado"
+      ]
+    }
+  ],
+  "memory_candidates": [
+    {
+      "id": "MEM_C01",
+      "source_marker": "DECK 00 DOOR 00.001",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        3226.2102127075195,
+        -773.6140489578247,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627",
+        "face_center_cm": [
+          3127.6986122131348,
+          -861.0517263412476,
+          202.81746685504913
+        ]
+      },
+      "approach_start_cm": [
+        2977.962909936905,
+        -960.9477686882019,
+        37
+      ],
+      "approach_target_cm": [
+        3277.4343144893646,
+        -761.1556839942932,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_182",
+      "blocking_instance": 24,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    },
+    {
+      "id": "MEM_C02",
+      "source_marker": "DECK 00 DOOR 00.002",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        1122.6855278015137,
+        -1631.39009475708,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627.002",
+        "face_center_cm": [
+          1256.3663482666016,
+          -1634.1124534606934,
+          202.81751155853271
+        ]
+      },
+      "approach_start_cm": [
+        1432.7770805358887,
+        -1598.3457890152931,
+        37
+      ],
+      "approach_target_cm": [
+        1079.9556159973145,
+        -1669.8791179060936,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_191",
+      "blocking_instance": 1322,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    },
+    {
+      "id": "MEM_C03",
+      "source_marker": "DECK 00 DOOR 00.003",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        3414.2810821533203,
+        -1631.39009475708,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627.003",
+        "face_center_cm": [
+          3280.600166320801,
+          -1634.1125965118408,
+          202.8174877166748
+        ]
+      },
+      "approach_start_cm": [
+        3104.1894125938416,
+        -1598.3459535241127,
+        37
+      ],
+      "approach_target_cm": [
+        3457.01092004776,
+        -1669.879239499569,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_184",
+      "blocking_instance": 114,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    },
+    {
+      "id": "MEM_C04",
+      "source_marker": "DECK 00 DOOR 00.004",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        3226.2102127075195,
+        1268.3632850646973,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627.004",
+        "face_center_cm": [
+          3127.6986122131348,
+          1355.8009147644043,
+          202.81744599342346
+        ]
+      },
+      "approach_start_cm": [
+        2977.962899208069,
+        1455.6969571113586,
+        37
+      ],
+      "approach_target_cm": [
+        3277.4343252182007,
+        1255.90487241745,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_224",
+      "blocking_instance": 24,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    },
+    {
+      "id": "MEM_C05",
+      "source_marker": "DECK 00 DOOR 00.005",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        1122.6855278015137,
+        2126.1391639709473,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627.006",
+        "face_center_cm": [
+          1256.3663005828857,
+          2128.861618041992,
+          202.8174877166748
+        ]
+      },
+      "approach_start_cm": [
+        1432.777054309845,
+        2093.095103800297,
+        37
+      ],
+      "approach_target_cm": [
+        1079.9555468559265,
+        2164.6281322836876,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_233",
+      "blocking_instance": 1322,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    },
+    {
+      "id": "MEM_C06",
+      "source_marker": "DECK 00 DOOR 00.006",
+      "source_definition": "DECK 00 DOOR 00",
+      "marker_position_cm": [
+        3414.2810821533203,
+        2126.1391639709473,
+        152.12385058403015
+      ],
+      "door_position_cm": null,
+      "door_yaw_deg": null,
+      "leaf_count": null,
+      "type": "static_closed_memory_candidate",
+      "status": "resolved_D_keep_original_static_closure",
+      "automated": false,
+      "validated": true,
+      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
+      "practical_option": "D",
+      "required_for_finished_internal_route": false,
+      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "wall_reference": {
+        "source_definition": "Component#197",
+        "parent": "Component_457627.007",
+        "face_center_cm": [
+          3280.600166320801,
+          2128.8615226745605,
+          202.81751155853271
+        ]
+      },
+      "approach_start_cm": [
+        3104.1894340515137,
+        2093.0948582291603,
+        37
+      ],
+      "approach_target_cm": [
+        3457.010898590088,
+        2164.628187119961,
+        37
+      ],
+      "blocking_component": "InstancedStaticMeshComponent_226",
+      "blocking_instance": 114,
+      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
+      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
+      "independent_leaf_identified": false,
+      "easy_adaptation_confirmed": false
+    }
+  ],
+  "exclusions_and_open_questions": [
+    {
+      "components": [
+        "Component#167"
+      ],
+      "instances": 20,
+      "classification": "paneles del corredor; no hay evidencia de hojas moviles"
+    },
+    {
+      "components": [
+        "Component#197",
+        "Component#198",
+        "Component#201"
+      ],
+      "classification": "revestimientos y marcos; no confundir los paneles oscuros con hojas por proximidad a un rotulo"
+    },
+    {
+      "components": [
+        "V04E_APOYO_*"
+      ],
+      "classification": "variantes de arquitectura #200/#202; contienen superficies integradas y no se recortan para inventar puertas"
+    },
+    {
+      "components": [
+        "Component#206 / V04E_P01..P08"
+      ],
+      "classification": "ocho modulos de banco; no son una pareja de hojas de paso demostrada"
+    }
+  ],
+  "validated_identified_doors": 4,
+  "inventory_scope": "22 puntos de control de la sala V07: 4 puertas, 6 candidatas senalizadas de memoria, 8 bocas de escalera y 4 extremos de corredor. No inventario de toda la nave.",
+  "total_control_points": 22,
+  "total_real_doors_definition": "No se afirma el total artistico de hojas integradas. Se cierra el inventario practico de 22 puntos de control; cuatro puertas con hojas independientes estan identificadas.",
+  "practical_resolution_complete": true,
+  "formal_closure_pending": true,
+  "automatic_mechanisms": 4,
+  "automatic_enabled_in_main_map": 1,
+  "open_without_door": 3,
+  "intentionally_closed_control_points": 18,
+  "count_breakdown": {
+    "automatic_enabled": 1,
+    "automatic_security_locked": 3,
+    "memory_original_static_closures": 6,
+    "stair_open_entries": 3,
+    "stair_closed_unbuilt": 5,
+    "corridor_end_closures": 4
+  },
+  "stair_accesses": [
+    {
+      "id": "S01_Sur_Entrada",
+      "position_cm": [
+        3204,
+        -62.76,
+        37
+      ],
+      "source_frame_halves": [
+        "Component_494994.001",
+        "Component_494994.002"
+      ],
+      "state": "open",
+      "closure_id": null,
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Entrada a peldaños construidos; recorrido de ida y vuelta conservado."
+    },
+    {
+      "id": "S02_Sur_Bajo_Tramo",
+      "position_cm": [
+        3353.18,
+        -62.76,
+        37
+      ],
+      "source_frame_halves": [
+        "Component_494994",
+        "Component_494994.003"
+      ],
+      "state": "closed",
+      "closure_id": "B08_Bajo_Escalera_Sur",
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Hueco bajo tramo o destino sin cubierta de continuacion; conservar cerrado."
+    },
+    {
+      "id": "S03_Norte_Subida",
+      "position_cm": [
+        3204,
+        557.48,
+        37
+      ],
+      "source_frame_halves": [
+        "Component_494994.005",
+        "Component_494994.006"
+      ],
+      "state": "open",
+      "closure_id": null,
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Entrada a peldaños construidos; recorrido de ida y vuelta conservado."
+    },
+    {
+      "id": "S04_Norte_Bajada",
+      "position_cm": [
+        3353.18,
+        557.48,
+        37
+      ],
+      "source_frame_halves": [
+        "Component_494994.004",
+        "Component_494994.007"
+      ],
+      "state": "open",
+      "closure_id": null,
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Entrada a peldaños construidos; recorrido de ida y vuelta conservado."
+    },
+    {
+      "id": "S05_Norte_Salida_Inferior",
+      "position_cm": [
+        3204,
+        557.48,
+        -305.635
+      ],
+      "source_frame_halves": [
+        "Component_494994.009",
+        "Component_494994.010"
+      ],
+      "state": "closed",
+      "closure_id": "B07_Inferior_Norte",
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Hueco bajo tramo o destino sin cubierta de continuacion; conservar cerrado."
+    },
+    {
+      "id": "S06_Norte_Bajo_Tramo",
+      "position_cm": [
+        3353.18,
+        557.48,
+        -305.635
+      ],
+      "source_frame_halves": [
+        "Component_494994.008",
+        "Component_494994.011"
+      ],
+      "state": "closed",
+      "closure_id": "B09_Bajo_Escalera_Norte",
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Hueco bajo tramo o destino sin cubierta de continuacion; conservar cerrado."
+    },
+    {
+      "id": "S07_Sur_Salida_Superior",
+      "position_cm": [
+        3353.18,
+        -66.43587,
+        379.635
+      ],
+      "source_frame_halves": [],
+      "state": "closed",
+      "closure_id": "B05_Superior_Sur",
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Hueco bajo tramo o destino sin cubierta de continuacion; conservar cerrado."
+    },
+    {
+      "id": "S08_Norte_Salida_Superior",
+      "position_cm": [
+        3353.18,
+        561.15857,
+        379.635
+      ],
+      "source_frame_halves": [],
+      "state": "closed",
+      "closure_id": "B06_Superior_Norte",
+      "automated": false,
+      "original_independent_leaves_identified": 0,
+      "reason": "Hueco bajo tramo o destino sin cubierta de continuacion; conservar cerrado."
+    }
+  ],
+  "corridor_terminal_accesses": [
+    {
+      "id": "B01_Oeste_C02",
+      "position_cm": [
+        1225,
+        1926.1851,
+        37
+      ],
+      "state": "closed",
+      "reason": "Salida radial sin continuacion construida; caida reproducida con Quinn"
+    },
+    {
+      "id": "B02_Curva_Norte",
+      "position_cm": [
+        3502.093375495612,
+        2295.285275589417,
+        37
+      ],
+      "state": "closed",
+      "reason": "Extremo real del pasillo curvo sin suelo de continuacion; caida reproducida"
+    },
+    {
+      "id": "B04_Curva_Sur",
+      "position_cm": [
+        3499.053835145269,
+        -1798.6885147759258,
+        37
+      ],
+      "state": "closed",
+      "reason": "Extremo real del pasillo curvo sin suelo de continuacion; caida reproducida"
+    },
+    {
+      "id": "B03_Pasillo_Este",
+      "position_cm": [
+        5560,
+        247.36,
+        37
+      ],
+      "state": "closed",
+      "reason": "Fin real del corredor recto; caida reproducida al cruzar el borde"
+    }
+  ],
+  "architectural_leaf_inventory_exhaustive": false,
+  "stair_practical_classification_complete": true,
+  "unattributed_memory_leaf_architecture": 6,
+  "unresolved_practical_accesses": 0,
+  "requires_memory_leaf_reconstruction_for_current_play": false,
+  "stair_leaf_mapping_note": "Las doce colocaciones de Component#10 se emparejan en seis marcos; no se les atribuyen hojas artisticas ficticias. Tres entradas quedan abiertas y las otras bocas permanecen cerradas. La clasificacion practica esta completa.",
+  "regression_results": {
+    "map_runtime": {
+      "passed": 49,
+      "total": 49
+    },
+    "rig_runtime": {
+      "passed": 27,
+      "total": 27
+    },
+    "new_closure_runtime": {
+      "passed": 18,
+      "total": 18
+    },
+    "door_physics": {
+      "passed": 88,
+      "total": 88
+    },
+    "closure_physics": {
+      "passed": 12,
+      "total": 12
+    },
+    "map_check_errors": 0,
+    "map_check_warnings": 0,
+    "manual_personal_playtest": "pending"
+  }
+}

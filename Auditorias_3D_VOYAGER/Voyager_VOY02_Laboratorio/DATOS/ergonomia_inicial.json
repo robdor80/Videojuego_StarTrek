@@ -1,0 +1,2888 @@
+{
+  "floor_and_capsules": [
+    {
+      "zone": "navegacion",
+      "xy": [
+        0,
+        -2.67
+      ],
+      "floor_z": 0.021205201939887175,
+      "floor_object": "Mesh_1728",
+      "first_surface_above": {
+        "distance": 0.5052415552700946,
+        "point": [
+          0.0,
+          -2.67,
+          0.5364467572099818
+        ],
+        "triangle": 88850
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 10017,
+            "blocking_objects": [
+              "ChamferBox_22",
+              "Layer__3",
+              "MSB_30191",
+              "MSB_30192",
+              "MSB_30193",
+              "MSB_30194",
+              "Object_76",
+              "Object_77"
+            ],
+            "blocking_triangles": 9964
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 10017,
+            "blocking_objects": [
+              "ChamferBox_22",
+              "Layer__3",
+              "MSB_30191",
+              "MSB_30192",
+              "MSB_30193",
+              "MSB_30194",
+              "Object_76",
+              "Object_77"
+            ],
+            "blocking_triangles": 9964
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 10017,
+            "blocking_objects": [
+              "ChamferBox_22",
+              "Layer__3",
+              "MSB_30191",
+              "MSB_30192",
+              "MSB_30193",
+              "MSB_30194",
+              "Object_76",
+              "Object_77"
+            ],
+            "blocking_triangles": 9964
+          }
+        }
+      ]
+    },
+    {
+      "zone": "estacion_derecha",
+      "xy": [
+        4.75,
+        -2.7
+      ],
+      "floor_z": 0.29763922601063597,
+      "floor_object": "floorfront_1",
+      "first_surface_above": {
+        "distance": 0.07262079036577848,
+        "point": [
+          4.75,
+          -2.7,
+          0.3802600163764145
+        ],
+        "triangle": 92239
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 4290,
+            "blocking_objects": [
+              "ChamferBox_37",
+              "Layer__4",
+              "MSB0030110_MSB_30119",
+              "MSB0030116_MSB_30180",
+              "MSB0030117_MSB_30139",
+              "MSB0030119_MSB_30131",
+              "MSB_30195",
+              "MSB_30197",
+              "MSB_30198",
+              "MSB_30199",
+              "MSB_30200",
+              "MSB_30205",
+              "Object_120",
+              "Object_121"
+            ],
+            "blocking_triangles": 2883
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 4332,
+            "blocking_objects": [
+              "ChamferBox_37",
+              "Layer__4",
+              "MSB0030110_MSB_30119",
+              "MSB0030116_MSB_30180",
+              "MSB0030117_MSB_30139",
+              "MSB0030119_MSB_30131",
+              "MSB_30195",
+              "MSB_30197",
+              "MSB_30198",
+              "MSB_30199",
+              "MSB_30200",
+              "MSB_30205",
+              "Object_120",
+              "Object_121"
+            ],
+            "blocking_triangles": 2883
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 4332,
+            "blocking_objects": [
+              "ChamferBox_37",
+              "Layer__4",
+              "MSB0030110_MSB_30119",
+              "MSB0030116_MSB_30180",
+              "MSB0030117_MSB_30139",
+              "MSB0030119_MSB_30131",
+              "MSB_30195",
+              "MSB_30197",
+              "MSB_30198",
+              "MSB_30199",
+              "MSB_30200",
+              "MSB_30205",
+              "Object_120",
+              "Object_121"
+            ],
+            "blocking_triangles": 2883
+          }
+        }
+      ]
+    },
+    {
+      "zone": "estacion_izquierda",
+      "xy": [
+        -4.18,
+        -2.53
+      ],
+      "floor_z": 0.2976392110646031,
+      "floor_object": "floorfront_1",
+      "first_surface_above": {
+        "distance": 0.07310328474494328,
+        "point": [
+          -4.18,
+          -2.53,
+          0.3807424958095464
+        ],
+        "triangle": 95451
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 3746,
+            "blocking_objects": [
+              "ChamferBox_38",
+              "Layer__5",
+              "MSB0030110_MSB_30123",
+              "MSB0030116_MSB_30184",
+              "MSB0030117_MSB_30144",
+              "MSB0030119_MSB_30135",
+              "MSB_30206",
+              "MSB_30208",
+              "MSB_30209",
+              "MSB_30210",
+              "MSB_30211",
+              "MSB_30216",
+              "Object_122",
+              "Object_123"
+            ],
+            "blocking_triangles": 2940
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 3746,
+            "blocking_objects": [
+              "ChamferBox_38",
+              "Layer__5",
+              "MSB0030110_MSB_30123",
+              "MSB0030116_MSB_30184",
+              "MSB0030117_MSB_30144",
+              "MSB0030119_MSB_30135",
+              "MSB_30206",
+              "MSB_30208",
+              "MSB_30209",
+              "MSB_30210",
+              "MSB_30211",
+              "MSB_30216",
+              "Object_122",
+              "Object_123"
+            ],
+            "blocking_triangles": 2940
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 3746,
+            "blocking_objects": [
+              "ChamferBox_38",
+              "Layer__5",
+              "MSB0030110_MSB_30123",
+              "MSB0030116_MSB_30184",
+              "MSB0030117_MSB_30144",
+              "MSB0030119_MSB_30135",
+              "MSB_30206",
+              "MSB_30208",
+              "MSB_30209",
+              "MSB_30210",
+              "MSB_30211",
+              "MSB_30216",
+              "Object_122",
+              "Object_123"
+            ],
+            "blocking_triangles": 2940
+          }
+        }
+      ]
+    },
+    {
+      "zone": "centro",
+      "xy": [
+        0,
+        0
+      ],
+      "floor_z": 0.43585601805712915,
+      "floor_object": "Mesh_1857",
+      "first_surface_above": {
+        "distance": 2.3825508364737686,
+        "point": [
+          0.0,
+          0.0,
+          2.828406854530898
+        ],
+        "triangle": 143033
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        }
+      ]
+    },
+    {
+      "zone": "paso_frontal",
+      "xy": [
+        0,
+        -4.5
+      ],
+      "floor_z": 0.2976393561391213,
+      "floor_object": "floorfront_1",
+      "first_surface_above": {
+        "distance": 2.6073096577621446,
+        "point": [
+          0.0,
+          -4.5,
+          2.914949013901266
+        ],
+        "triangle": 142863
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": true,
+            "min_clearance": null,
+            "candidate_triangles": 0,
+            "blocking_objects": []
+          }
+        }
+      ]
+    },
+    {
+      "zone": "paso_posterior",
+      "xy": [
+        0,
+        4
+      ],
+      "floor_z": 0.7122957110404968,
+      "floor_object": "Mesh_1859",
+      "first_surface_above": {
+        "distance": 0.46844493262815246,
+        "point": [
+          0.0,
+          4.0,
+          1.1907406436686494
+        ],
+        "triangle": 220390
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 498,
+            "blocking_objects": [
+              "Mesh_1729",
+              "Mesh_1733",
+              "Mesh_1961",
+              "Mesh_2041",
+              "Mesh_2125",
+              "Object_114",
+              "Object_86",
+              "Object_87",
+              "Plane_92"
+            ],
+            "blocking_triangles": 391
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 510,
+            "blocking_objects": [
+              "Mesh_1729",
+              "Mesh_1733",
+              "Mesh_1961",
+              "Mesh_2041",
+              "Mesh_2125",
+              "Object_114",
+              "Object_86",
+              "Object_87",
+              "Plane_92"
+            ],
+            "blocking_triangles": 393
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.35,
+            "candidate_triangles": 549,
+            "blocking_objects": [
+              "Mesh_1729",
+              "Mesh_1733",
+              "Mesh_1961",
+              "Mesh_2041",
+              "Mesh_2091",
+              "Mesh_2125",
+              "Object_114",
+              "Object_86",
+              "Object_87",
+              "Plane_92"
+            ],
+            "blocking_triangles": 421
+          }
+        }
+      ]
+    },
+    {
+      "zone": "lado_der",
+      "xy": [
+        5.8,
+        0.2
+      ],
+      "floor_z": 0.02120498542587701,
+      "floor_object": "Mesh_1858",
+      "first_surface_above": {
+        "distance": 1.8506350051899676,
+        "point": [
+          5.8,
+          0.2,
+          1.8818399906158445
+        ],
+        "triangle": 245417
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.10279070473571839,
+            "candidate_triangles": 296,
+            "blocking_objects": [
+              "Mesh_1874",
+              "Object_82",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 70
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.1285288631849154,
+            "candidate_triangles": 354,
+            "blocking_objects": [
+              "Mesh_1874",
+              "Object_82",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 81
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.14422947529003116,
+            "candidate_triangles": 571,
+            "blocking_objects": [
+              "Mesh_1874",
+              "Object_82",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 167
+          }
+        }
+      ]
+    },
+    {
+      "zone": "lado_izq",
+      "xy": [
+        -5.8,
+        0.2
+      ],
+      "floor_z": 0.021204985631812168,
+      "floor_object": "Mesh_1855",
+      "first_surface_above": {
+        "distance": 1.8506290284695688,
+        "point": [
+          -5.8,
+          0.2,
+          1.881834014101381
+        ],
+        "triangle": 244698
+      },
+      "standing_capsules": [
+        {
+          "height": 1.6,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.08780152701521499,
+            "candidate_triangles": 412,
+            "blocking_objects": [
+              "Mesh_1873",
+              "Object_81",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 53
+          }
+        },
+        {
+          "height": 1.75,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.11003672781442889,
+            "candidate_triangles": 485,
+            "blocking_objects": [
+              "Mesh_1873",
+              "Object_81",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 65
+          }
+        },
+        {
+          "height": 1.9,
+          "result": {
+            "clear": false,
+            "min_clearance": -0.13298155373320544,
+            "candidate_triangles": 705,
+            "blocking_objects": [
+              "Mesh_1873",
+              "Object_81",
+              "floorfront_1"
+            ],
+            "blocking_triangles": 152
+          }
+        }
+      ]
+    }
+  ],
+  "door_probes": [
+    {
+      "id": "D_LATERAL_IZQ",
+      "center": [
+        -6.3035,
+        0.184,
+        0.021204999838636107
+      ],
+      "outward_normal": [
+        -0.8660254028383291,
+        0.5000000016387101,
+        0.0
+      ],
+      "tangent": [
+        -0.5000000016387101,
+        -0.8660254028383291,
+        0.0
+      ],
+      "floor_source": {
+        "distance": 0.7787950001613639,
+        "point": [
+          -6.000391109006585,
+          0.008999999426451494,
+          0.021204999838636107
+        ],
+        "triangle": 273
+      },
+      "excluded_leaves_only": [
+        "door_2",
+        "Mesh_1757"
+      ],
+      "width_profiles": [
+        {
+          "height_above_floor": 0.1,
+          "width": 0.00106122400339866,
+          "left": {
+            "distance": 0.00020031725600633496,
+            "point": [
+              -6.303399841371668,
+              0.18417347983232835,
+              0.12120499983863611
+            ],
+            "triangle": 143385
+          },
+          "right": {
+            "distance": 0.0008609067473923249,
+            "point": [
+              -6.303930453375107,
+              0.18325443288728333,
+              0.12120499983863611
+            ],
+            "triangle": 177548
+          }
+        },
+        {
+          "height_above_floor": 0.5,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.0,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.5,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.7,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.9,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 2.1,
+          "width": null,
+          "left": null,
+          "right": null
+        }
+      ],
+      "scale_tests": [
+        {
+          "scale": 1.0,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.332201215745753,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1876",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3322012208746119,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1876",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33220122600347074,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1837",
+                "Mesh_1840",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882",
+                "Object_81"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.1,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33042133304627924,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3304213381751381,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.330421343303997,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.15,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32953139169654233,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3295313968254012,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3295314019542601,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1865",
+                "Mesh_1873",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.2,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3286414503468055,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32864145547566437,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3286414606045232,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.25,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3277515089970685,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32775151412592746,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32775151925478635,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.3,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32686156764733176,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1879",
+                "Mesh_1881"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3268615727761906,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3268615779050495,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.508135,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32315700879078196,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1879",
+                "Mesh_1881"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32315701391964086,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1879",
+                "Mesh_1881"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32315701904849975,
+              "blocking_objects": [
+                "Mesh_1756",
+                "Mesh_1758",
+                "Mesh_1759",
+                "Mesh_1760",
+                "Mesh_1761",
+                "Mesh_1762",
+                "Mesh_1763",
+                "Mesh_1875",
+                "Mesh_1877",
+                "Mesh_1878",
+                "Mesh_1879",
+                "Mesh_1880",
+                "Mesh_1881",
+                "Mesh_1882"
+              ],
+              "samples": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D_LATERAL_DER",
+      "center": [
+        6.316,
+        0.184,
+        0.021205000487929948
+      ],
+      "outward_normal": [
+        0.8660254028383291,
+        0.5000000016387101,
+        0.0
+      ],
+      "tangent": [
+        -0.5000000016387101,
+        0.8660254028383291,
+        0.0
+      ],
+      "floor_source": {
+        "distance": 0.7787949995120701,
+        "point": [
+          6.012891109006585,
+          0.008999999426451494,
+          0.021205000487929948
+        ],
+        "triangle": 657
+      },
+      "excluded_leaves_only": [
+        "Mesh_1995",
+        "Mesh_2003"
+      ],
+      "width_profiles": [
+        {
+          "height_above_floor": 0.1,
+          "width": 0.0010666433389285518,
+          "left": {
+            "distance": 0.00018176677105322548,
+            "point": [
+              6.316090883385824,
+              0.18384258535887602,
+              0.12120500048792995
+            ],
+            "triangle": 199530
+          },
+          "right": {
+            "distance": 0.0008848765678753263,
+            "point": [
+              6.315557561714612,
+              0.18476632558615644,
+              0.12120500048792995
+            ],
+            "triangle": 199934
+          }
+        },
+        {
+          "height_above_floor": 0.5,
+          "width": 0.7574994053471549,
+          "left": {
+            "distance": 0.3784042160895436,
+            "point": [
+              6.505202108664866,
+              -0.14370766367466914,
+              0.52120500048793
+            ],
+            "triangle": 245226
+          },
+          "right": {
+            "distance": 0.3790951892576113,
+            "point": [
+              6.126452404749967,
+              0.5123060639908954,
+              0.52120500048793
+            ],
+            "triangle": 245173
+          }
+        },
+        {
+          "height_above_floor": 1.0,
+          "width": 0.7574994014716052,
+          "left": {
+            "distance": 0.3784041812159811,
+            "point": [
+              6.505202091228085,
+              -0.14370763347327808,
+              1.0212050004879298
+            ],
+            "triangle": 245226
+          },
+          "right": {
+            "distance": 0.3790952202556242,
+            "point": [
+              6.126452389250961,
+              0.512306090835962,
+              1.0212050004879298
+            ],
+            "triangle": 245173
+          }
+        },
+        {
+          "height_above_floor": 1.5,
+          "width": 0.7574993975960553,
+          "left": {
+            "distance": 0.37840414634241837,
+            "point": [
+              6.505202073791303,
+              -0.14370760327188692,
+              1.5212050004879298
+            ],
+            "triangle": 245225
+          },
+          "right": {
+            "distance": 0.379095251253637,
+            "point": [
+              6.126452373751954,
+              0.5123061176810286,
+              1.5212050004879298
+            ],
+            "triangle": 245174
+          }
+        },
+        {
+          "height_above_floor": 1.7,
+          "width": 0.7564024152320965,
+          "left": {
+            "distance": 0.3777814437540504,
+            "point": [
+              6.504890722496099,
+              -0.14316832701194704,
+              1.72120500048793
+            ],
+            "triangle": 245223
+          },
+          "right": {
+            "distance": 0.3786209714780462,
+            "point": [
+              6.126689513640526,
+              0.5118953793473144,
+              1.72120500048793
+            ],
+            "triangle": 245176
+          }
+        },
+        {
+          "height_above_floor": 1.9,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 2.1,
+          "width": null,
+          "left": null,
+          "right": null
+        }
+      ],
+      "scale_tests": [
+        {
+          "scale": 1.0,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3322797727303392,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33227977785608404,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3322797829818288,
+              "blocking_objects": [
+                "Mesh_1841",
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010",
+                "Object_82"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.1,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33050774573191916,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3305077508576639,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3305077559834087,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.15,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32962173223270913,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32962173735845396,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3296217424841987,
+              "blocking_objects": [
+                "Mesh_1864",
+                "Mesh_1874",
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.2,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3287357187334991,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3287357238592439,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3287357289849887,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.25,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.327849705234289,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32784971036003374,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32784971548577857,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.3,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.326963691735079,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1999",
+                "Mesh_2002",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32696369686082377,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3269637019865686,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.508135,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3232754833419173,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1999",
+                "Mesh_2002",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32327548846766213,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1999",
+                "Mesh_2002",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32327549359340696,
+              "blocking_objects": [
+                "Mesh_1996",
+                "Mesh_1997",
+                "Mesh_1998",
+                "Mesh_1999",
+                "Mesh_2000",
+                "Mesh_2001",
+                "Mesh_2002",
+                "Mesh_2004",
+                "Mesh_2005",
+                "Mesh_2006",
+                "Mesh_2007",
+                "Mesh_2008",
+                "Mesh_2009",
+                "Mesh_2010"
+              ],
+              "samples": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D_POSTERIOR",
+      "center": [
+        1.191,
+        6.382,
+        0.7122955573667352
+      ],
+      "outward_normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "tangent": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "floor_source": {
+        "distance": 0.08770444263326486,
+        "point": [
+          1.191,
+          6.032,
+          0.7122955573667352
+        ],
+        "triangle": 2348
+      },
+      "excluded_leaves_only": [
+        "Mesh_1979",
+        "Mesh_1987"
+      ],
+      "width_profiles": [
+        {
+          "height_above_floor": 0.1,
+          "width": 0.001061081886291504,
+          "left": {
+            "distance": 0.0006630268096923241,
+            "point": [
+              1.1916630268096924,
+              6.382,
+              0.8122955573667352
+            ],
+            "triangle": 198895
+          },
+          "right": {
+            "distance": 0.0003980550765991797,
+            "point": [
+              1.1906019449234009,
+              6.382,
+              0.8122955573667352
+            ],
+            "triangle": 199191
+          }
+        },
+        {
+          "height_above_floor": 0.5,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.0,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.5,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.7,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 1.9,
+          "width": null,
+          "left": null,
+          "right": null
+        },
+        {
+          "height_above_floor": 2.1,
+          "width": null,
+          "left": null,
+          "right": null
+        }
+      ],
+      "scale_tests": [
+        {
+          "scale": 1.0,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3320158873426997,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3320158873426997,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3320158873426997,
+              "blocking_objects": [
+                "Mesh_1832",
+                "Mesh_1833",
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.1,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33021747607696966,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33021747607696966,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.33021747607696966,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.15,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32931827044410467,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32931827044410467,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32931827044410467,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.2,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32841906481123967,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32841906481123967,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32841906481123967,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.25,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3275198591783746,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3275198591783746,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3275198591783746,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.3,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3266206535455097,
+              "blocking_objects": [
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1991",
+                "Mesh_1992"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3266206535455097,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.3266206535455097,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.508135,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32287753025758237,
+              "blocking_objects": [
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1991",
+                "Mesh_1992"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32287753025758237,
+              "blocking_objects": [
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1991",
+                "Mesh_1992"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.32287753025758237,
+              "blocking_objects": [
+                "Mesh_1980",
+                "Mesh_1981",
+                "Mesh_1982",
+                "Mesh_1983",
+                "Mesh_1984",
+                "Mesh_1985",
+                "Mesh_1986",
+                "Mesh_1988",
+                "Mesh_1989",
+                "Mesh_1990",
+                "Mesh_1991",
+                "Mesh_1992",
+                "Mesh_1993",
+                "Mesh_1994"
+              ],
+              "samples": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D_TURBO",
+      "center": [
+        -3.95,
+        3.6,
+        0.7122957394453077
+      ],
+      "outward_normal": [
+        -0.5821873113450549,
+        0.8130546934301629,
+        0.0
+      ],
+      "tangent": [
+        -0.8130546934301629,
+        -0.5821873113450549,
+        0.0
+      ],
+      "floor_source": {
+        "distance": 0.08770426055469234,
+        "point": [
+          -3.746234441029231,
+          3.315430857299443,
+          0.7122957394453077
+        ],
+        "triangle": 1239
+      },
+      "excluded_leaves_only": [],
+      "width_profiles": [
+        {
+          "height_above_floor": 0.1,
+          "width": 1.0804854602477407,
+          "left": {
+            "distance": 0.123341949471676,
+            "point": [
+              -3.849716249085228,
+              3.6718081179389728,
+              0.8122957394453076
+            ],
+            "triangle": 152485
+          },
+          "right": {
+            "distance": 0.9571435107760646,
+            "point": [
+              -4.728210023722704,
+              3.0427631928899164,
+              0.8122957394453076
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 0.5,
+          "width": 1.080485465455423,
+          "left": {
+            "distance": 0.12334198182576564,
+            "point": [
+              -3.8497162227795836,
+              3.6718081367751134,
+              1.2122957394453078
+            ],
+            "triangle": 152485
+          },
+          "right": {
+            "distance": 0.9571434836296573,
+            "point": [
+              -4.728210001651189,
+              3.0427632086942102,
+              1.2122957394453078
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 1.0,
+          "width": 1.0804854719650259,
+          "left": {
+            "distance": 0.12334202226837768,
+            "point": [
+              -3.849716189897528,
+              3.6718081603202886,
+              1.7122957394453078
+            ],
+            "triangle": 152485
+          },
+          "right": {
+            "distance": 0.9571434496966481,
+            "point": [
+              -4.728209974061797,
+              3.042763228449578,
+              1.7122957394453078
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 1.5,
+          "width": 1.0804854784746285,
+          "left": {
+            "distance": 0.12334206271098973,
+            "point": [
+              -3.8497161570154725,
+              3.671808183865464,
+              2.2122957394453078
+            ],
+            "triangle": 152485
+          },
+          "right": {
+            "distance": 0.9571434157636388,
+            "point": [
+              -4.728209946472404,
+              3.0427632482049454,
+              2.2122957394453078
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 1.7,
+          "width": 1.079866717446421,
+          "left": {
+            "distance": 0.12272331525598586,
+            "point": [
+              -3.8502192325378113,
+              3.671447956948234,
+              2.4122957394453075
+            ],
+            "triangle": 152488
+          },
+          "right": {
+            "distance": 0.957143402190435,
+            "point": [
+              -4.728209935436648,
+              3.0427632561070923,
+              2.4122957394453075
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 1.9,
+          "width": 0.9783293817706417,
+          "left": {
+            "distance": 0.02118599315341046,
+            "point": [
+              -3.9327746288316403,
+              3.612334216392159,
+              2.6122957394453077
+            ],
+            "triangle": 152542
+          },
+          "right": {
+            "distance": 0.9571433886172312,
+            "point": [
+              -4.728209924400891,
+              3.0427632640092392,
+              2.6122957394453077
+            ],
+            "triangle": 152537
+          }
+        },
+        {
+          "height_above_floor": 2.1,
+          "width": null,
+          "left": null,
+          "right": null
+        }
+      ],
+      "scale_tests": [
+        {
+          "scale": 1.0,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.22666479322932354,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.22666479322932354,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.22666479322932354,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.1,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.21433127539111677,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.21433127539111677,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.21433127539111677,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.15,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.20816451647201342,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.20816451647201342,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.20816451647201342,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.2,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.2019977575529101,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.2019977575529101,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.2019977575529101,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.25,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.19583099863380665,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.19583099863380665,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.19583099863380665,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.3,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.18966423971470314,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.18966423971470314,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.18966423971470314,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        },
+        {
+          "scale": 1.508135,
+          "results": [
+            {
+              "human_height_m": 1.6,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.16399387236215093,
+              "blocking_objects": [
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.75,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.16399387236215093,
+              "blocking_objects": [
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            },
+            {
+              "human_height_m": 1.9,
+              "clear": false,
+              "minimum_clearance_scaled_m": -0.16399387236215093,
+              "blocking_objects": [
+                "Doorpanel_5",
+                "Mesh_1730",
+                "Mesh_1782",
+                "Mesh_1836",
+                "Mesh_1866",
+                "Mesh_1960"
+              ],
+              "samples": 29
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "capsule_hypothesis": {
+    "radius_m": 0.35,
+    "heights_m": [
+      1.6,
+      1.75,
+      1.9
+    ],
+    "final_character_config": "not established; Sutherland test scripts use r35/h90 cm but final Voyager character not established"
+  },
+  "analytic_tests": {
+    "analytic_cases": 5,
+    "passed": 5
+  }
+}

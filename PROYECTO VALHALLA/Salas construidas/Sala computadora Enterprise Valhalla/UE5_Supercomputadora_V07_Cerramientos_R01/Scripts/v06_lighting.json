@@ -1,0 +1,362 @@
+[
+  {
+    "actor": "V06_TECH_Fill_01",
+    "location_cm": [
+      1668.4832999999999,
+      -2031.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_02",
+    "location_cm": [
+      1668.4832999999999,
+      -1431.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_03",
+    "location_cm": [
+      1668.4832999999999,
+      -831.4359999999999,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_04",
+    "location_cm": [
+      2268.4833,
+      -2031.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_05",
+    "location_cm": [
+      2268.4833,
+      -1431.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_06",
+    "location_cm": [
+      2268.4833,
+      -831.4359999999999,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_07",
+    "location_cm": [
+      2868.4833,
+      -2031.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_08",
+    "location_cm": [
+      2868.4833,
+      -1431.436,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_09",
+    "location_cm": [
+      2868.4833,
+      -831.4359999999999,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_10",
+    "location_cm": [
+      1668.4834,
+      1326.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_11",
+    "location_cm": [
+      1668.4834,
+      1926.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_12",
+    "location_cm": [
+      1668.4834,
+      2526.1850999999997,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_13",
+    "location_cm": [
+      2268.4834,
+      1326.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_14",
+    "location_cm": [
+      2268.4834,
+      1926.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_15",
+    "location_cm": [
+      2268.4834,
+      2526.1850999999997,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_16",
+    "location_cm": [
+      2868.4834,
+      1326.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_17",
+    "location_cm": [
+      2868.4834,
+      1926.1851,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_18",
+    "location_cm": [
+      2868.4834,
+      2526.1850999999997,
+      280
+    ],
+    "radius_cm": 850,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Fill_19",
+    "location_cm": [
+      1700,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_20",
+    "location_cm": [
+      2300,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_21",
+    "location_cm": [
+      2900,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_22",
+    "location_cm": [
+      3500,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_23",
+    "location_cm": [
+      4100,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_24",
+    "location_cm": [
+      4700,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_25",
+    "location_cm": [
+      5300,
+      248,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1600
+  },
+  {
+    "actor": "V06_TECH_Fill_26",
+    "location_cm": [
+      3613.805970149254,
+      -1600,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1700
+  },
+  {
+    "actor": "V06_TECH_Fill_27",
+    "location_cm": [
+      3869.915254237288,
+      -1000,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1700
+  },
+  {
+    "actor": "V06_TECH_Fill_28",
+    "location_cm": [
+      3975.4384176535173,
+      1000,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1700
+  },
+  {
+    "actor": "V06_TECH_Fill_29",
+    "location_cm": [
+      3832.8123406898217,
+      1600,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1700
+  },
+  {
+    "actor": "V06_TECH_Fill_30",
+    "location_cm": [
+      3560.714163658208,
+      2200,
+      280
+    ],
+    "radius_cm": 800,
+    "lumens": 1700
+  },
+  {
+    "actor": "V06_TECH_Stair_1",
+    "location_cm": [
+      3204,
+      -190,
+      300
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Stair_2",
+    "location_cm": [
+      3353,
+      -190,
+      480
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Stair_3",
+    "location_cm": [
+      3204,
+      690,
+      300
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Stair_4",
+    "location_cm": [
+      3353,
+      690,
+      480
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Stair_5",
+    "location_cm": [
+      3204,
+      690,
+      -60
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  },
+  {
+    "actor": "V06_TECH_Stair_6",
+    "location_cm": [
+      3353,
+      690,
+      110
+    ],
+    "radius_cm": 400,
+    "lumens": 1800
+  }
+]

@@ -1,0 +1,762 @@
+{
+  "label": "puente_blend",
+  "path": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY05A_Laboratorio\\FUENTES\\PUENTE\\Voyager_Bridge_Trabajo.blend",
+  "blender": "5.2.2 LTS",
+  "unit_system": "METRIC",
+  "scale_length": 1.0,
+  "scenes": [
+    "Scene"
+  ],
+  "objects": [
+    {
+      "object": "Voyager Bridge",
+      "mesh": "Voyager Bridge",
+      "parent": null,
+      "scenes": [
+        "Scene"
+      ],
+      "collections": [
+        "Collection"
+      ],
+      "matrix_world": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_mode": "XYZ",
+      "rotation_euler": [
+        1.570796251296997,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "origin_world": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "vertices": 254270,
+      "polygons": 271705,
+      "triangles": 271705,
+      "bounds_min": [
+        -6.574792861938477,
+        -6.505252838134766,
+        2.0725185834180593e-07
+      ],
+      "bounds_max": [
+        6.57479190826416,
+        6.505252838134766,
+        3.8399064540863037
+      ],
+      "materials": [
+        "wire_196088225",
+        "Voygray",
+        "DimGray",
+        "wire_225088199",
+        "Material__53",
+        "Chairgray",
+        "Color_00",
+        "Color_H1",
+        "scrn4_2",
+        "scrn4_1",
+        "scrn2_7",
+        "scrn10_3",
+        "scrn10_4",
+        "scrn10_5",
+        "scrn3_3",
+        "scrn3_1",
+        "scrn5_1",
+        "scrn3_2",
+        "scrn3_4",
+        "scrn6_1",
+        "scrn1_5",
+        "Materi04",
+        "LightGr",
+        "Color_03",
+        "wire_088177026",
+        "Charcoal",
+        "Light_TL",
+        "Window",
+        "Color_A0",
+        "black2",
+        "Mainscreen",
+        "wire_224198087",
+        "scrn12red",
+        "Doorpanel01",
+        "wire_085028177",
+        "Plaque",
+        "wire_229166215",
+        "Burnt",
+        "Color_C2",
+        "wire_008008136",
+        "Black1",
+        "White",
+        "light_white_on_to_off",
+        "wire_177088026",
+        "Lights",
+        "wire_087224087",
+        "wire_057008136",
+        "Metal_Co",
+        "wire_224143087",
+        "wire_006134113",
+        "wire_184228153",
+        "Metal_Steelplate",
+        "Material.001",
+        "Leather",
+        "wire_153228184",
+        "wire_154185229",
+        "wire_184155229",
+        "wire_228153184",
+        "Color_01",
+        "Color_A1",
+        "Color_04",
+        "Color_06",
+        "Color_05",
+        "Color_07",
+        "Leather2",
+        "fabric_brown",
+        "wire_061134006",
+        "wire_141007058",
+        "wire_138008110",
+        "scrn6_9",
+        "scrn7_4",
+        "scrn7_1",
+        "scrn1_1",
+        "scrn1_4",
+        "scrn2_5",
+        "scrn2_1",
+        "scrn9",
+        "scrn2_8",
+        "scrn6_2",
+        "scrn1_2",
+        "scrn1_6",
+        "scrn7_2",
+        "scrn7_3",
+        "scrn7_5",
+        "scrn8",
+        "scrn7_6",
+        "scrn7_7",
+        "scrn6_7",
+        "scrn6_8",
+        "scrn6_6",
+        "scrn6_4",
+        "scrn6_5",
+        "scrn2_2",
+        "scrn2_3",
+        "scrn2_4",
+        "scrn2_6",
+        "scrn1_7",
+        "scrn1_3",
+        "scrn6_3",
+        "scrn10_1",
+        "scrn10_2",
+        "scrn10_6"
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "material_triangles": {
+        "wire_196088225": 2688,
+        "Voygray": 2501,
+        "DimGray": 43330,
+        "wire_225088199": 316,
+        "Material__53": 19926,
+        "Chairgray": 4740,
+        "Color_00": 11572,
+        "Color_H1": 14379,
+        "scrn4_2": 54,
+        "scrn4_1": 6,
+        "scrn2_7": 2,
+        "scrn10_3": 2,
+        "scrn10_4": 2,
+        "scrn10_5": 2,
+        "scrn3_3": 2,
+        "scrn3_1": 8,
+        "scrn5_1": 2,
+        "scrn3_2": 8,
+        "scrn3_4": 4,
+        "scrn6_1": 2,
+        "scrn1_5": 2,
+        "Materi04": 718,
+        "LightGr": 23136,
+        "Color_03": 4667,
+        "wire_088177026": 62,
+        "Charcoal": 7303,
+        "Light_TL": 108,
+        "Window": 245,
+        "Color_A0": 1419,
+        "black2": 100,
+        "Mainscreen": 236,
+        "wire_224198087": 100,
+        "scrn12red": 100,
+        "Doorpanel01": 104,
+        "wire_085028177": 76,
+        "Plaque": 10,
+        "wire_229166215": 48,
+        "Burnt": 1000,
+        "Color_C2": 710,
+        "wire_008008136": 34,
+        "Black1": 1310,
+        "White": 619,
+        "light_white_on_to_off": 1353,
+        "wire_177088026": 3124,
+        "Lights": 330,
+        "wire_087224087": 2172,
+        "wire_057008136": 18635,
+        "Metal_Co": 1682,
+        "wire_224143087": 408,
+        "wire_006134113": 3754,
+        "wire_184228153": 5528,
+        "Metal_Steelplate": 272,
+        "Material.001": 136,
+        "Leather": 102,
+        "wire_153228184": 196,
+        "wire_154185229": 168,
+        "wire_184155229": 699,
+        "wire_228153184": 185,
+        "Color_01": 2,
+        "Color_A1": 1097,
+        "Color_04": 74,
+        "Color_06": 3838,
+        "Color_05": 2896,
+        "Color_07": 8438,
+        "Leather2": 68392,
+        "fabric_brown": 4200,
+        "wire_061134006": 153,
+        "wire_141007058": 1606,
+        "wire_138008110": 19,
+        "scrn6_9": 48,
+        "scrn7_4": 268,
+        "scrn7_1": 2,
+        "scrn1_1": 3,
+        "scrn1_4": 76,
+        "scrn2_5": 46,
+        "scrn2_1": 48,
+        "scrn9": 50,
+        "scrn2_8": 2,
+        "scrn6_2": 2,
+        "scrn1_2": 2,
+        "scrn1_6": 2,
+        "scrn7_2": 2,
+        "scrn7_3": 2,
+        "scrn7_5": 2,
+        "scrn8": 2,
+        "scrn7_6": 2,
+        "scrn7_7": 2,
+        "scrn6_7": 2,
+        "scrn6_8": 2,
+        "scrn6_6": 2,
+        "scrn6_4": 2,
+        "scrn6_5": 2,
+        "scrn2_2": 2,
+        "scrn2_3": 2,
+        "scrn2_4": 2,
+        "scrn2_6": 2,
+        "scrn1_7": 2,
+        "scrn1_3": 2,
+        "scrn6_3": 4,
+        "scrn10_1": 2,
+        "scrn10_2": 2,
+        "scrn10_6": 2
+      },
+      "boundary_edges": 211205,
+      "nonmanifold_edges": 211220,
+      "weld_10um_boundary": 19580,
+      "weld_10um_nonmanifold": 31474,
+      "fingerprint_translation_only": "9ad8a587b32566f150b779092fc2ee5f6513ebbddc56999da97842c0c2e1baea",
+      "modifiers": [],
+      "animation": false
+    }
+  ],
+  "images": [
+    {
+      "name": "alumb_t.tga",
+      "path": "//VOYBRIDGETEX-1\\Textures\\alumb_t.tga",
+      "packed": false,
+      "size": [
+        312,
+        196
+      ]
+    },
+    {
+      "name": "BURLAP01.JPG",
+      "path": "//VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+      "packed": false,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "DP_01.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\DP_01.png",
+      "packed": false,
+      "size": [
+        571,
+        1711
+      ]
+    },
+    {
+      "name": "LEATH01.JPG",
+      "path": "//VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+      "packed": false,
+      "size": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Metal_Co.jpg",
+      "path": "//VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+      "packed": false,
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "name": "n011.jpg",
+      "path": "//VOYBRIDGETEX-1\\Textures\\n011.jpg",
+      "packed": false,
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "name": "Render Result",
+      "path": "",
+      "packed": false,
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "scn1.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.1.png",
+      "packed": false,
+      "size": [
+        4304,
+        1569
+      ]
+    },
+    {
+      "name": "scn1.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+      "packed": false,
+      "size": [
+        2268,
+        4266
+      ]
+    },
+    {
+      "name": "scn1.3.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.3.png",
+      "packed": false,
+      "size": [
+        3814,
+        2429
+      ]
+    },
+    {
+      "name": "scn1.4.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.4.png",
+      "packed": false,
+      "size": [
+        2182,
+        2182
+      ]
+    },
+    {
+      "name": "scn1.5.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.5.png",
+      "packed": false,
+      "size": [
+        3775,
+        4266
+      ]
+    },
+    {
+      "name": "scn1.6.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.6.png",
+      "packed": false,
+      "size": [
+        4267,
+        1708
+      ]
+    },
+    {
+      "name": "scn1.7.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn1.7.png",
+      "packed": false,
+      "size": [
+        4267,
+        1944
+      ]
+    },
+    {
+      "name": "scn10.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.1.png",
+      "packed": false,
+      "size": [
+        4066,
+        4264
+      ]
+    },
+    {
+      "name": "scn10.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.2.png",
+      "packed": false,
+      "size": [
+        3997,
+        4266
+      ]
+    },
+    {
+      "name": "scn10.3.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.3.png",
+      "packed": false,
+      "size": [
+        4266,
+        2704
+      ]
+    },
+    {
+      "name": "scn10.4.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.4.png",
+      "packed": false,
+      "size": [
+        4266,
+        2702
+      ]
+    },
+    {
+      "name": "scn10.5.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.5.png",
+      "packed": false,
+      "size": [
+        4229,
+        4266
+      ]
+    },
+    {
+      "name": "scn10.6.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn10.6.png",
+      "packed": false,
+      "size": [
+        3954,
+        4264
+      ]
+    },
+    {
+      "name": "scn2.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn2.1.png",
+      "packed": false,
+      "size": [
+        1456,
+        2706
+      ]
+    },
+    {
+      "name": "scn2.3.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn2.3.png",
+      "packed": false,
+      "size": [
+        6546,
+        5056
+      ]
+    },
+    {
+      "name": "scn2.5.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn2.5.png",
+      "packed": false,
+      "size": [
+        1291,
+        2706
+      ]
+    },
+    {
+      "name": "scn2.7.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn2.7.png",
+      "packed": false,
+      "size": [
+        5336,
+        1964
+      ]
+    },
+    {
+      "name": "scn2.8.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn2.8.png",
+      "packed": false,
+      "size": [
+        4266,
+        1248
+      ]
+    },
+    {
+      "name": "scn3.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn3.1.png",
+      "packed": false,
+      "size": [
+        1661,
+        4267
+      ]
+    },
+    {
+      "name": "scn3.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn3.2.png",
+      "packed": false,
+      "size": [
+        3789,
+        4267
+      ]
+    },
+    {
+      "name": "scn3.3.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn3.3.png",
+      "packed": false,
+      "size": [
+        2173,
+        1458
+      ]
+    },
+    {
+      "name": "scn3.4.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn3.4.png",
+      "packed": false,
+      "size": [
+        4183,
+        1226
+      ]
+    },
+    {
+      "name": "scn4.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+      "packed": false,
+      "size": [
+        10933,
+        2917
+      ]
+    },
+    {
+      "name": "scn4.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn4.2.png",
+      "packed": false,
+      "size": [
+        4268,
+        1796
+      ]
+    },
+    {
+      "name": "scn5.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn5.1.png",
+      "packed": false,
+      "size": [
+        2173,
+        1458
+      ]
+    },
+    {
+      "name": "scn6.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.1.png",
+      "packed": false,
+      "size": [
+        5336,
+        1964
+      ]
+    },
+    {
+      "name": "scn6.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.2.png",
+      "packed": false,
+      "size": [
+        4266,
+        1248
+      ]
+    },
+    {
+      "name": "scn6.4.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.4.png",
+      "packed": false,
+      "size": [
+        7536,
+        5056
+      ]
+    },
+    {
+      "name": "scn6.5.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.5.png",
+      "packed": false,
+      "size": [
+        1291,
+        2706
+      ]
+    },
+    {
+      "name": "scn6.6.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.6.png",
+      "packed": false,
+      "size": [
+        3792,
+        5056
+      ]
+    },
+    {
+      "name": "scn6.7.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.7.png",
+      "packed": false,
+      "size": [
+        6546,
+        5056
+      ]
+    },
+    {
+      "name": "scn6.8.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.8.png",
+      "packed": false,
+      "size": [
+        3792,
+        5056
+      ]
+    },
+    {
+      "name": "scn6.9.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn6.9.png",
+      "packed": false,
+      "size": [
+        1456,
+        2706
+      ]
+    },
+    {
+      "name": "scn7.1.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.1.png",
+      "packed": false,
+      "size": [
+        4304,
+        1569
+      ]
+    },
+    {
+      "name": "scn7.2.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.2.png",
+      "packed": false,
+      "size": [
+        2268,
+        4266
+      ]
+    },
+    {
+      "name": "scn7.4.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.4.png",
+      "packed": false,
+      "size": [
+        2242,
+        2250
+      ]
+    },
+    {
+      "name": "scn7.5.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.5.png",
+      "packed": false,
+      "size": [
+        3775,
+        4266
+      ]
+    },
+    {
+      "name": "scn7.6.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.6.png",
+      "packed": false,
+      "size": [
+        4267,
+        1708
+      ]
+    },
+    {
+      "name": "scn7.7.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn7.7.png",
+      "packed": false,
+      "size": [
+        3786,
+        1708
+      ]
+    },
+    {
+      "name": "scn8.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn8.png",
+      "packed": false,
+      "size": [
+        4266,
+        1398
+      ]
+    },
+    {
+      "name": "scn9.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\scn9.png",
+      "packed": false,
+      "size": [
+        4266,
+        3589
+      ]
+    },
+    {
+      "name": "Viewer Node",
+      "path": "",
+      "packed": false,
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Voygray.jpg",
+      "path": "//VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+      "packed": false,
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "name": "VP_col.png",
+      "path": "//VOYBRIDGETEX-1\\Textures\\VP_col.png",
+      "packed": false,
+      "size": [
+        1290,
+        928
+      ]
+    }
+  ]
+}

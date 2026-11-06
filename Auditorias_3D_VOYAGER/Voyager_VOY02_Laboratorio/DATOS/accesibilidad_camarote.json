@@ -1,0 +1,178 @@
+{
+  "turning_spaces": [
+    {
+      "id": "CRUCE",
+      "center_m": [
+        0.0,
+        8.209514617919922,
+        0.0020009724675151812
+      ],
+      "diameter_m": 1.5,
+      "vertical_envelope_m": 1.35,
+      "clear": true,
+      "blocking_objects": [],
+      "ring_support_hits": 8,
+      "ring_probes": 8,
+      "note": "Vertical cylinder from foot+25mm to 1.35m; clipped triangle surfaces projected in XY. Eight support probes only. Not wheelchair kinematics or full solid containment."
+    },
+    {
+      "id": "CABINA",
+      "center_m": [
+        7.9824090003967285,
+        8.209514617919922,
+        0.0020017330008038608
+      ],
+      "diameter_m": 1.5,
+      "vertical_envelope_m": 1.35,
+      "clear": true,
+      "blocking_objects": [],
+      "ring_support_hits": 8,
+      "ring_probes": 8,
+      "note": "Vertical cylinder from foot+25mm to 1.35m; clipped triangle surfaces projected in XY. Eight support probes only. Not wheelchair kinematics or full solid containment."
+    },
+    {
+      "id": "CAMAROTE_CENTRO",
+      "center_m": [
+        2.641626876502853e-16,
+        18.538572788238525,
+        0.0020016073579575116
+      ],
+      "diameter_m": 1.5,
+      "vertical_envelope_m": 1.35,
+      "clear": true,
+      "blocking_objects": [],
+      "ring_support_hits": 8,
+      "ring_probes": 8,
+      "note": "Vertical cylinder from foot+25mm to 1.35m; clipped triangle surfaces projected in XY. Eight support probes only. Not wheelchair kinematics or full solid containment."
+    },
+    {
+      "id": "CAMAROTE_JUNTO_CAMA",
+      "center_m": [
+        0.7000000000000002,
+        20.038572788238525,
+        0.0020016073579575116
+      ],
+      "diameter_m": 1.5,
+      "vertical_envelope_m": 1.35,
+      "clear": false,
+      "blocking_objects": [
+        "REF_CAMA"
+      ],
+      "ring_support_hits": 8,
+      "ring_probes": 8,
+      "note": "Vertical cylinder from foot+25mm to 1.35m; clipped triangle surfaces projected in XY. Eight support probes only. Not wheelchair kinematics or full solid containment."
+    },
+    {
+      "id": "CENTRO_PUENTE",
+      "center_m": [
+        -1.3102440953254701,
+        -7.790256090164185,
+        -0.3020835118119736
+      ],
+      "diameter_m": 1.5,
+      "vertical_envelope_m": 1.35,
+      "clear": true,
+      "blocking_objects": [],
+      "ring_support_hits": 8,
+      "ring_probes": 8,
+      "note": "Vertical cylinder from foot+25mm to 1.35m; clipped triangle surfaces projected in XY. Eight support probes only. Not wheelchair kinematics or full solid containment."
+    }
+  ],
+  "bed_side_rays": [
+    {
+      "side": "IZQUIERDA",
+      "probes": [
+        {
+          "z_above_floor_m": 0.1,
+          "free_ray_m": 3.2239999999999998,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 0.4,
+          "free_ray_m": 3.2239999999999998,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.0,
+          "free_ray_m": 4.437234371227521,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.7,
+          "free_ray_m": 4.437234250426468,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        }
+      ]
+    },
+    {
+      "side": "DERECHA",
+      "probes": [
+        {
+          "z_above_floor_m": 0.1,
+          "free_ray_m": 1.1372340842205941,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 0.4,
+          "free_ray_m": 1.1372341359924691,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.0,
+          "free_ray_m": 1.1372342395362196,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.7,
+          "free_ray_m": 1.1372343603372617,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        }
+      ]
+    },
+    {
+      "side": "PIES",
+      "probes": [
+        {
+          "z_above_floor_m": 0.1,
+          "free_ray_m": 4.623188613891602,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 0.4,
+          "free_ray_m": 4.623188613891602,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.0,
+          "free_ray_m": 4.623188613891602,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        },
+        {
+          "z_above_floor_m": 1.7,
+          "free_ray_m": 4.623188613891602,
+          "label": "Surface ray only; full transfer rectangle not certified"
+        }
+      ]
+    }
+  ],
+  "physical_accessibility_grade": "E",
+  "reason": "No continuous accessible route from central bridge, stair changes and narrow adaptive throat. Room clearances alone cannot certify disability access.",
+  "benchmark": "CTE DB-SUA used only as human-scale design reference for 0.80m door, 1.50m turn, 0.90m bed transfer, 2.00m door height. No legal applicability to a game is asserted.",
+  "room_options": [
+    {
+      "option": "A_ADAPTAR_MESH4",
+      "grade": "C",
+      "recommendation": "Preferred spatial basis: existing shell, selected capsule route and floor/ceiling evidence; supply artistic fit, independent furniture, door and collision design."
+    },
+    {
+      "option": "B_FABRICAR_CON_MODULOS",
+      "grade": "E",
+      "recommendation": "Not fabricated in VOY-02; measured corridor interfaces can supply access, not proof of a complete room."
+    },
+    {
+      "option": "C_ESTANCIA_NUEVA",
+      "grade": "E",
+      "recommendation": "Artistically flexible; would require new room construction, UV/PBR, architecture and full spatial tests. No new production room created."
+    }
+  ]
+}

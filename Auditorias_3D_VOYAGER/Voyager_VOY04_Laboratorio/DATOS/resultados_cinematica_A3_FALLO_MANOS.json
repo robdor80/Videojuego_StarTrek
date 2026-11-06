@@ -1,0 +1,1044 @@
+[
+  {
+    "H": 1.6,
+    "D": 0.4,
+    "drop": 0.2153641328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 10,
+    "failures": [
+      {
+        "frame": 145,
+        "u": 4.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005614556195786387,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.005614556195786387,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "MANO_-1": -0.005614556195786387,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "MANO_1": -0.00024511685270020567
+        }
+      },
+      {
+        "frame": 146,
+        "u": 4.833333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.021549674317071752,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.021549674317071752,
+            "triangles": 3
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.017137392318908356,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.030245473258009366,
+          "MANO_-1": -0.021549674317071752,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "MANO_1": -0.017137392318908356
+        }
+      },
+      {
+        "frame": 147,
+        "u": 4.866666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.019391508138868266,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.019391508138868266,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.018963624510799512,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.017205587825026257,
+          "MANO_-1": -0.019391508138868266,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.021650282791369643,
+          "MANO_1": -0.018963624510799512
+        }
+      },
+      {
+        "frame": 148,
+        "u": 4.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.014678851550747765,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.013003499114906222,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.014678851550747765,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.008958014845244437,
+          "MANO_-1": -0.013003499114906222,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.011924769529436587,
+          "MANO_1": -0.014678851550747765
+        }
+      },
+      {
+        "frame": 149,
+        "u": 4.933333333333334,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005770987993615046,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Plane_95"
+            ],
+            "clearance_m": -0.005770987993615046,
+            "triangles": 1
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.005556306776885678,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.008541098747430032,
+          "MANO_-1": -0.005770987993615046,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.009151073982546054,
+          "MANO_1": -0.005556306776885678
+        }
+      },
+      {
+        "frame": 153,
+        "u": 5.066666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005770987993615046,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Plane_95"
+            ],
+            "clearance_m": -0.005770987993615046,
+            "triangles": 1
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.005556306776885678,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.008541098747430032,
+          "MANO_-1": -0.005770987993615046,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.009151073982546054,
+          "MANO_1": -0.005556306776885678
+        }
+      },
+      {
+        "frame": 154,
+        "u": 5.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.014678851550747765,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.013003499114906222,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.014678851550747765,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.008958014845244437,
+          "MANO_-1": -0.013003499114906222,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.011924769529436587,
+          "MANO_1": -0.014678851550747765
+        }
+      },
+      {
+        "frame": 155,
+        "u": 5.133333333333334,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.019391508138868266,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.019391508138868266,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.018963624510799512,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.017205587825026257,
+          "MANO_-1": -0.019391508138868266,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "ANTEBRAZO_1": 0.021650282791369643,
+          "MANO_1": -0.018963624510799512
+        }
+      },
+      {
+        "frame": 156,
+        "u": 5.166666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.021549674317071752,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.021549674317071752,
+            "triangles": 3
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.017137392318908356,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "ANTEBRAZO_-1": 0.030245473258009366,
+          "MANO_-1": -0.021549674317071752,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "MANO_1": -0.017137392318908356
+        }
+      },
+      {
+        "frame": 157,
+        "u": 5.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.005614556195786387,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.005614556195786387,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.002446419676237474,
+          "MUSLO_-1": 0.0006977063233789965,
+          "PIE_-1": 8.706389428847494e-10,
+          "MANO_-1": -0.005614556195786387,
+          "MUSLO_1": 0.0004388548560386729,
+          "PIE_1": 2.095014349501323e-09,
+          "MANO_1": -0.00024511685270020567
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  },
+  {
+    "H": 1.75,
+    "D": 0.4,
+    "drop": 0.1783141328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 10,
+    "failures": [
+      {
+        "frame": 145,
+        "u": 4.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.00909408158222269,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.00909408158222269,
+            "triangles": 2
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.004079660584926571,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "MANO_-1": -0.00909408158222269,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "MANO_1": -0.004079660584926571
+        }
+      },
+      {
+        "frame": 146,
+        "u": 4.833333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.016380959362296776,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.016380959362296776,
+            "triangles": 4
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.014630560701653122,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.034230063311662964,
+          "MANO_-1": -0.016380959362296776,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "MANO_1": -0.014630560701653122
+        }
+      },
+      {
+        "frame": 147,
+        "u": 4.866666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.013896817842722557,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.013896817842722557,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.013433474460686105,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.022750533966367656,
+          "MANO_-1": -0.013896817842722557,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.026909121171343524,
+          "MANO_1": -0.013433474460686105
+        }
+      },
+      {
+        "frame": 148,
+        "u": 4.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.010179865883833319,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.008549460750203543,
+            "triangles": 5
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.010179865883833319,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.015143191189197887,
+          "MANO_-1": -0.008549460750203543,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.01797421273781423,
+          "MANO_1": -0.010179865883833319
+        }
+      },
+      {
+        "frame": 149,
+        "u": 4.933333333333334,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.003023281156571654,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Plane_95"
+            ],
+            "clearance_m": -0.003023281156571654,
+            "triangles": 1
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Plane_94"
+            ],
+            "clearance_m": -0.0027908261665950777,
+            "triangles": 1
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.013274714021364285,
+          "MANO_-1": -0.003023281156571654,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.014210391970778141,
+          "MANO_1": -0.0027908261665950777
+        }
+      },
+      {
+        "frame": 153,
+        "u": 5.066666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.003023281156571654,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Plane_95"
+            ],
+            "clearance_m": -0.003023281156571654,
+            "triangles": 1
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Plane_94"
+            ],
+            "clearance_m": -0.0027908261665950777,
+            "triangles": 1
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.013274714021364285,
+          "MANO_-1": -0.003023281156571654,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.014210391970778141,
+          "MANO_1": -0.0027908261665950777
+        }
+      },
+      {
+        "frame": 154,
+        "u": 5.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.010179865883833319,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.008549460750203543,
+            "triangles": 5
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.010179865883833319,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.015143191189197887,
+          "MANO_-1": -0.008549460750203543,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.01797421273781423,
+          "MANO_1": -0.010179865883833319
+        }
+      },
+      {
+        "frame": 155,
+        "u": 5.133333333333334,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.013896817842722557,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.013896817842722557,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129",
+              "Plane_94"
+            ],
+            "clearance_m": -0.013433474460686105,
+            "triangles": 6
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.022750533966367656,
+          "MANO_-1": -0.013896817842722557,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "ANTEBRAZO_1": 0.026909121171343524,
+          "MANO_1": -0.013433474460686105
+        }
+      },
+      {
+        "frame": 156,
+        "u": 5.166666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.016380959362296776,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.016380959362296776,
+            "triangles": 4
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.014630560701653122,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "ANTEBRAZO_-1": 0.034230063311662964,
+          "MANO_-1": -0.016380959362296776,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "MANO_1": -0.014630560701653122
+        }
+      },
+      {
+        "frame": 157,
+        "u": 5.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.00909408158222269,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.00909408158222269,
+            "triangles": 2
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.004079660584926571,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024418699050458847,
+          "MUSLO_-1": 0.000391387602252255,
+          "PIE_-1": -3.289470369705061e-09,
+          "MANO_-1": -0.00909408158222269,
+          "MUSLO_1": 0.0001471274789474064,
+          "PIE_1": -1.9490042357794835e-09,
+          "MANO_1": -0.004079660584926571
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  },
+  {
+    "H": 1.9,
+    "D": 0.4,
+    "drop": 0.14126413287425443,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 8,
+    "failures": [
+      {
+        "frame": 145,
+        "u": 4.8,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.006848783836761605,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.006848783836761605,
+            "triangles": 2
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.0030515710230217367,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "MANO_-1": -0.006848783836761605,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "MANO_1": -0.0030515710230217367
+        }
+      },
+      {
+        "frame": 146,
+        "u": 4.833333333333333,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009536945857946108,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.009536945857946108,
+            "triangles": 4
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.008787948632489523,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.03939061261276836,
+          "MANO_-1": -0.009536945857946108,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "MANO_1": -0.008787948632489523
+        }
+      },
+      {
+        "frame": 147,
+        "u": 4.866666666666666,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008402127546576856,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.008402127546576856,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.007903324410572687,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.028860699843869082,
+          "MANO_-1": -0.008402127546576856,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "ANTEBRAZO_1": 0.03278738079550431,
+          "MANO_1": -0.007903324410572687
+        }
+      },
+      {
+        "frame": 148,
+        "u": 4.9,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.0056782654811531955,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.004095422385500886,
+            "triangles": 3
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.0056782654811531955,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.021375044579165677,
+          "MANO_-1": -0.004095422385500886,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "ANTEBRAZO_1": 0.024123993593963673,
+          "MANO_1": -0.0056782654811531955
+        }
+      },
+      {
+        "frame": 154,
+        "u": 5.1,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.0056782654811531955,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.004095422385500886,
+            "triangles": 3
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.0056782654811531955,
+            "triangles": 4
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.021375044579165677,
+          "MANO_-1": -0.004095422385500886,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "ANTEBRAZO_1": 0.024123993593963673,
+          "MANO_1": -0.0056782654811531955
+        }
+      },
+      {
+        "frame": 155,
+        "u": 5.133333333333334,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.008402127546576856,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129",
+              "Plane_95"
+            ],
+            "clearance_m": -0.008402127546576856,
+            "triangles": 6
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.007903324410572687,
+            "triangles": 5
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.028860699843869082,
+          "MANO_-1": -0.008402127546576856,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "ANTEBRAZO_1": 0.03278738079550431,
+          "MANO_1": -0.007903324410572687
+        }
+      },
+      {
+        "frame": 156,
+        "u": 5.166666666666667,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.009536945857946108,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.009536945857946108,
+            "triangles": 4
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.008787948632489523,
+            "triangles": 3
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "ANTEBRAZO_-1": 0.03939061261276836,
+          "MANO_-1": -0.009536945857946108,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "MANO_1": -0.008787948632489523
+        }
+      },
+      {
+        "frame": 157,
+        "u": 5.2,
+        "clear": false,
+        "invalid_ik": [],
+        "minimum_clearance_m": -0.006848783836761605,
+        "interferences": [
+          {
+            "part": "MANO_-1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.006848783836761605,
+            "triangles": 2
+          },
+          {
+            "part": "MANO_1",
+            "objects": [
+              "Object_129"
+            ],
+            "clearance_m": -0.0030515710230217367,
+            "triangles": 2
+          }
+        ],
+        "minima": {
+          "PELVIS": 0.0024373201338543232,
+          "MUSLO_-1": 8.506888112540245e-05,
+          "PIE_-1": -7.4495798002560676e-09,
+          "MANO_-1": -0.006848783836761605,
+          "MUSLO_1": -0.000144599898143985,
+          "PIE_1": -5.994216567550836e-09,
+          "MANO_1": -0.0030515710230217367
+        }
+      }
+    ],
+    "complete_sampled_body_clear": false,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  }
+]

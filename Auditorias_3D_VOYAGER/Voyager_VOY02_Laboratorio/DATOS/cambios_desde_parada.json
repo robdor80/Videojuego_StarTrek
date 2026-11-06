@@ -1,0 +1,375 @@
+{
+  "baseline_preserved": "TRASPASO/INVENTARIO_ARCHIVOS.csv",
+  "original_file_count": 207,
+  "changed_existing_files": [
+    {
+      "file": "CAPTURAS/A01_puente_completo.png",
+      "before_sha256": "e2c686957e6e7be7683305cf601b3031b2e173d8e6b10d797da589291afd0000",
+      "after_sha256": "96d02df84eca86324773487d34e893573a9ee1819371f2dbb1cd70d3d690de98",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/A02_puente_humanos.png",
+      "before_sha256": "6fe94276d1293e0d4ef38ca2e4430684ed9cdc18ab54b25d549e63f6bd2f6733",
+      "after_sha256": "a4d6062fcd5f830993b3d10cb02059dfe0bc5e15166b2f38be22cc8dcc1563a5",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/A03_planta_acotada.png",
+      "before_sha256": "d4b87d0cb71494e517a2cd73c5a08b48514ed4be2aacababbdfcc58723cc1176",
+      "after_sha256": "012feccf0069503389798a6a41cadadf69987a19b8a2de9a0d8dea96629d5f20",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/A04_seccion_alturas.png",
+      "before_sha256": "6fb43de413bdc464bbffda2119fca98329779619503b6c6ac7a1a9b9206a0df1",
+      "after_sha256": "58e32a786cce9327eb67c616eba3bef93c34d1ad832a8df40ceee5a1b29adaec",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/A05_escalas_comparadas.png",
+      "before_sha256": "70453302700e3290cb96b50743b5b6022dd66bc36b9bc99db187e4c2a66aa63b",
+      "after_sha256": "697a556e876f8b9c034ebffeeda4f3278d83c014f1d1a9aa92cae8f9e042a60a",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B00_catalogo_ensayos.png",
+      "before_sha256": "408486841c96dd2fc9492e5c165151a46e9f0af32387f2e2e14cecbb7ffbf298",
+      "after_sha256": "b027fe40d1123f2aead29544531a9a7c3eed58f740cd8217b2c7fc76a1d41882",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B01_CORTO_LARGO_perspectiva.png",
+      "before_sha256": "75240f795779a16090eb5cccd9c1e0997345fcebfd529f733586fedc872d125e",
+      "after_sha256": "20b7962b73fd3f1c50a8f38d5aa8542658e3c3df1de398442a0de81e03ea59d9",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B01_CORTO_LARGO_planta.png",
+      "before_sha256": "42041df17289a1f577bc620b4c4eeb93a8e0017e8a170ba2f54e1a853aa3d7e3",
+      "after_sha256": "fc49ef172e29ae75807469fded7f9ce67e20b1f270230d339b217625de9b387a",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B02_DOS_RECTOS_CURVA_perspectiva.png",
+      "before_sha256": "dac3692362e1084323e0bc3ea58c676e8450428103ca2dc3153418492dcd2478",
+      "after_sha256": "227523f460767777ca99d47c669b9056c3baf75c3650915be1384a2e134a86cf",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B02_DOS_RECTOS_CURVA_planta.png",
+      "before_sha256": "f472fd2303b6c5f0c41f17e580b45cdc9cbd665aea468612e9f5f0b3da559bce",
+      "after_sha256": "3ef4fe4c88fdab5179aecd303de9193da80118ea6365abf897df6ffa52d0cf3a",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B03_RECTA_T_perspectiva.png",
+      "before_sha256": "1e44fdce3071d9eb1675ca63bc843416f50543a7339c8fc94d9e90bbdcf8b24e",
+      "after_sha256": "2a0d63402c9b72dad8cca1cc51497588ba118ac4e0fb720a812ede92f3b6fe45",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B03_RECTA_T_planta.png",
+      "before_sha256": "8d6bc1fa8ff881438d62bcbbf479b893737f9ee74d5a5c89956766b629834033",
+      "after_sha256": "7c186ba989b284950e8ee95563d8cae61d8c2f209812176aa5a54f9023ba5cdd",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B04_CUATRO_VIAS_perspectiva.png",
+      "before_sha256": "1a10a2fe13bc510be6d8a9fbbbae06bdb3ee38ad5ea15abfabbd3078b0737205",
+      "after_sha256": "b540f87786d5945ddf82a9d3e740d4633808474aed601c1b943996aca206db30",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B04_CUATRO_VIAS_planta.png",
+      "before_sha256": "277cef9d3af213738f14807ffb51a9c273e02ff26fbf3b33fdaf30461b566088",
+      "after_sha256": "b38ee7a13897e0572b5393883ee77483d42f858e224a1a2f29e1051fffc6f764",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B05_MODULO_PUERTAS_perspectiva.png",
+      "before_sha256": "d2beed9cd8704dac719f52f41b98122c3bf6492766dccee9441ef5826483495e",
+      "after_sha256": "fc69876f64717cee8657bb2aa42b3ab2734ceceafd96b9c609a37b028fe96b2b",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B05_MODULO_PUERTAS_planta.png",
+      "before_sha256": "f14ff70882469e3e1c223260d78bc329c6c5398bf71a8322cda0fa58adc98c61",
+      "after_sha256": "ea0f204556c43e9b8a63c8cf1e769be955ed1d8ca6ed51440d37a536d907c1a5",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B06_TURBOLIFT_perspectiva.png",
+      "before_sha256": "dd6eedb4c77d866e219e89b6610fdea3e7789bb754bcdd4e7bf6b9895201eb6c",
+      "after_sha256": "7bb3c25962cae8acf270b28414a8cfae91fe7b1169a27a98a2de35febc2421ad",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B06_TURBOLIFT_planta.png",
+      "before_sha256": "c86760f65b87784840bca7024b6c4ac144a19608cd76943948066ae04733ad98",
+      "after_sha256": "982d2b04657f2487a5b0d92fc6343475fd062633228df065c20de5f3ecd03dcc",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B07_RESIDENCIAL_perspectiva.png",
+      "before_sha256": "2fdd2b2095156eafa15f8d1ace04983acc7ba13e2ad82b279a9dab1796424f3d",
+      "after_sha256": "1e4f4136d472f66276adc19402919c3558f4690d58c464ae9e814d330d58c5fd",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/B07_RESIDENCIAL_planta.png",
+      "before_sha256": "2720f9b3c91cc54d9b70a6daba80650b26d968790a7ea178fa52afe980e80095",
+      "after_sha256": "f7195397e0b9ce579f87b58c68717c3f51d950bd02f98c85800522884349f264",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/C01_puente_pasillo.png",
+      "before_sha256": "c91be44ca4f0a71998319e7d08d1bfaa08454838a4f80bd9a6be84da4aef6681",
+      "after_sha256": "535c7fc0f5d4dd607ccf2866a1ae774b4a9a32bb94145da556048e6516bfc748",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/C02_detalle_adaptador.png",
+      "before_sha256": "22ec5beddd614765d741fff6be7079b5cfcb275c407482e6bdd70a46db4ba998",
+      "after_sha256": "1f3d095b152693b995bc9cc9529daee6b2aa1c26bc63f6b3b89335ff2ea63c45",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/D01_interior_camarote.png",
+      "before_sha256": "0a75d7cda741c7d0941b06a80b73f3f5ca527591e2402837f9f8cd2acc5d93b2",
+      "after_sha256": "002f9ee627b8295917ef4e03861ce5bc01990866f973b9672170a7ad10c32502",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/D02_planta_camarote.png",
+      "before_sha256": "f77c714c0d79bb55e0a75853abda4271c7eed2814ced9049c644dd290b99bfe6",
+      "after_sha256": "c0462a65b57a8fc1141994131786dd31e46de0a89142194373e70c08903b736b",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/D03_camarote_perspectiva.png",
+      "before_sha256": "7fe4a7a9479eb4c06e27616f7084948718ec20681bdf64e18e7f2c84beefbe2f",
+      "after_sha256": "aa531ba5b6668c841f02312bf9a555b5b09dd717dc58c216a7222d492dc9a7dc",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/E01_puertas_cerradas.png",
+      "before_sha256": "570fb3b89dc44fa57387efcd084abc412ac40576180df99f900443da70b0fc59",
+      "after_sha256": "b9464b72678a6c149abfda2cda5ecb3680a7cddfc9c197481fdb81b74e18de8f",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/E02_puertas_intermedias.png",
+      "before_sha256": "c70d63f0fdea7ec7da2197c27bd323e14e7af4274fc2e0d16a9bad74c2f01306",
+      "after_sha256": "ad42c4bd5e557910e844097bd1124d8560f7789cbf9a994fd60b1fe379fc4290",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/E03_puertas_abiertas.png",
+      "before_sha256": "07530bbea0ea84b22643bea877ea900d0827cb98c1b7571c9aff03739316c295",
+      "after_sha256": "a1ac0fcdf7aea4b9885c79d99840836cd2009e4d6f06df6eed9f0f53781e9144",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/E04_sillas_grupos.png",
+      "before_sha256": "c121e5b2b2e71935f207ef83e06c4177e8aace320c5902e1eeae746273eb67fa",
+      "after_sha256": "e43551335180d08db43ac61e0a5fa33008ce0b92e701f91bf514e09288602728",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/G01_conjunto_completo.png",
+      "before_sha256": "a806cbfc88fa76687558755975e63d248f4db590585bfef0adcc52aaaddc2ddf",
+      "after_sha256": "c92a516167f5cce2944b826eca921d9570ec9bd3c09cec2fb2273d40d539754d",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/G02_conjunto_planta.png",
+      "before_sha256": "3a3748637f1571da6672824ebc05f18763a22d99a95847a1025438c6fcf094da",
+      "after_sha256": "8f79b600fab1e2a934a8a92d6bcb9420b85a334954f80195c4b4762b0cdce99e",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/G03_conjunto_perspectiva.png",
+      "before_sha256": "7145898718223ab046db9369507991271114ade46786f7849176a7aff8b06cf1",
+      "after_sha256": "f2dad4315a4578b10abc0f3d9fdf22a75cc5d898badf8075f1fb81afc9adda65",
+      "exists": true
+    },
+    {
+      "file": "CAPTURAS/G04_cruce_y_turbolift.png",
+      "before_sha256": "5c59650c93d35741d42e99742c1dc8333d04662036c9be826225ae13f878319f",
+      "after_sha256": "310175fc192d453060505cf9c642b35689a13daa6e018628d17ca9a9aeb1d22b",
+      "exists": true
+    },
+    {
+      "file": "DATOS/capturas_manifest.json",
+      "before_sha256": "381388fe08acab21ccb07905ecdbc444a56d1ea5804754f067440b1c4fc8a79e",
+      "after_sha256": "ba4373c8819f5a909957940bc80268aa3a023a3c749ccc5b156fdd1523b4c20a",
+      "exists": true
+    },
+    {
+      "file": "DATOS/prototipo_conjunto.json",
+      "before_sha256": "3fc799471699930b695d98e8d9fbbe4a233bf996e02b3f5280cdba20a81b3e0b",
+      "after_sha256": "d72685e3e2d4479df96d88f9ae8e68bb703d81110d9f3f5d657bac95a0af2387",
+      "exists": true
+    },
+    {
+      "file": "DATOS/prototipo_geometria.npz",
+      "before_sha256": "1de04e9d0756dd761d355b97fe374aa8c55e069199df73314b6b69bed603be68",
+      "after_sha256": "0b6c6bea93a34aa985c55afbbd0440de2b33f342774745038938dee462fc140c",
+      "exists": true
+    },
+    {
+      "file": "ESCENAS/VOY02_Laboratorio.blend",
+      "before_sha256": "05c0384d8fae3ba35e4f863350874074f7acaa6ec1933b902d03a4ddedc2a08e",
+      "after_sha256": "15a1f59850ccca78dc371bae6035bd785e7a36bf852b48943ab4f6a897d10eba",
+      "exists": true
+    },
+    {
+      "file": "SCRIPTS/11_construir_escenas.py",
+      "before_sha256": "9f3e74cbc53a62906ab637e1ffdb271e3c02ffc0328d04f139a6b647fda32066",
+      "after_sha256": "498efb13a99d2e681483f6e7ebc48c8ee13b2e8e99f8fb00421e73cfaf77dff1",
+      "exists": true
+    },
+    {
+      "file": "SCRIPTS/12_capturas.py",
+      "before_sha256": "efac7cfbd261ae137a6109853c18819c168335d7f306687839027c88b1444e84",
+      "after_sha256": "e4e67b4fa4d88907ae8511696b094fdfd3fd477c87853b633a3a1c04eb009a78",
+      "exists": true
+    }
+  ],
+  "new_paths": [
+    "00_RESUMEN_EJECUTIVO.md",
+    "01_ESCALAS_ERGONOMIA.md",
+    "02_MODULARIDAD_PASILLOS.md",
+    "03_CONEXION_PUENTE_PASILLOS.md",
+    "04_CAMAROTE_JUGADOR.md",
+    "05_PUERTAS_SILLAS_CONSOLAS.md",
+    "06_MATERIALES_RENDIMIENTO.md",
+    "07_HOJA_DE_RUTA_RECOMENDADA.md",
+    "08_PRUEBAS_Y_LIMITACIONES.md",
+    "DATOS/accesibilidad_camarote.json",
+    "DATOS/acceso_central_revision.json",
+    "DATOS/adaptadores.csv",
+    "DATOS/alturas_zonas.csv",
+    "DATOS/cambios_desde_parada.json",
+    "DATOS/capturas_qa.json",
+    "DATOS/carreras_investigacion.json",
+    "DATOS/clasificacion_final.csv",
+    "DATOS/clasificacion_modulos.csv",
+    "DATOS/clasificacion_modulos.json",
+    "DATOS/compatibilidades.csv",
+    "DATOS/contactos_puertas.csv",
+    "DATOS/contraste_blend.json",
+    "DATOS/correccion_base_obj.json",
+    "DATOS/encuentros_adaptadores.csv",
+    "DATOS/encuentros_adaptadores.json",
+    "DATOS/ergonomia_detallada.json",
+    "DATOS/giros_accesibilidad.csv",
+    "DATOS/incidencias.csv",
+    "DATOS/integridad_fuentes_final.json",
+    "DATOS/interfaces.csv",
+    "DATOS/leyendas_sillas.json",
+    "DATOS/materiales_canales.csv",
+    "DATOS/materiales_rendimiento_revision.json",
+    "DATOS/materiales_triangulos.csv",
+    "DATOS/matrices_instancias.csv",
+    "DATOS/matrices_instancias.json",
+    "DATOS/medidas_puertas.csv",
+    "DATOS/medidas_puestos.csv",
+    "DATOS/pantallas.csv",
+    "DATOS/presentacion_revision.json",
+    "DATOS/pruebas_acceso_central.csv",
+    "DATOS/pruebas_rutas.csv",
+    "DATOS/puestos_revision.json",
+    "DATOS/reanudacion_integridad.json",
+    "DATOS/retranqueo_adaptador.json",
+    "DATOS/secciones_niveles.csv",
+    "DATOS/texturas_presupuesto.csv",
+    "GALERIA.html",
+    "LAMINAS/CONTACTO_01.jpg",
+    "LAMINAS/CONTACTO_02.jpg",
+    "LAMINAS/CONTACTO_03.jpg",
+    "LAMINAS/CONTACTO_04.jpg",
+    "LAMINAS/L01_acceso_central.png",
+    "LAMINAS/L02_carreras_contactos.png",
+    "LAMINAS/L03_asientos_medidos.png",
+    "LAMINAS/L04_texturas_hipotesis.png",
+    "LOGS/12_capturas_finales.log",
+    "LOGS/12_capturas_geometria_corregida.log",
+    "LOGS/12_capturas_R1_finales.log",
+    "LOGS/12_capturas_revision.log",
+    "LOGS/12_cuatro_detalles_finales.log",
+    "LOGS/12_sillas_leyenda_final.log",
+    "LOGS/14_contraste_blend.log",
+    "LOGS/14_contraste_blend_correspondencia.log",
+    "LOGS/14_contraste_blend_final.log",
+    "LOGS/14_contraste_blend_revision.log",
+    "LOGS/14_contraste_blend_tolerancia_float32.log",
+    "LOGS/14_contraste_cierre.log",
+    "LOGS/14_contraste_entrega.log",
+    "LOGS/14_contraste_R1_final.log",
+    "LOGS/14c_reparar_transformacion_obj.log",
+    "LOGS/15_ergonomia_cojines_reales.log",
+    "LOGS/15_ergonomia_detallada.log",
+    "LOGS/15_ergonomia_detallada_revision.log",
+    "LOGS/16_investigar_carreras.log",
+    "LOGS/16_umbral_metrico_final.log",
+    "LOGS/17_acceso_central.log",
+    "LOGS/18_puestos_suelo_pies.log",
+    "LOGS/18_puestos_y_accesibilidad.log",
+    "LOGS/19_cierre.log",
+    "LOGS/19_consolidacion_final.log",
+    "LOGS/19_consolidar_tablas.log",
+    "LOGS/20_presentacion_grupos.log",
+    "LOGS/21_accesibilidad_camarote.log",
+    "LOGS/22_encuentros_adaptadores.log",
+    "LOGS/22_encuentros_R1.log",
+    "LOGS/23_cierre.log",
+    "LOGS/23_galeria_final.log",
+    "LOGS/23_laminas_y_galeria.log",
+    "LOGS/24_retranqueo_adaptador.log",
+    "LOGS/25_cierre.log",
+    "LOGS/25_informes.log",
+    "LOGS/26_leyendas_sillas.log",
+    "LOGS/27_primer_cierre.log",
+    "README.md",
+    "SCRIPTS/13_verificar_reanudacion.py",
+    "SCRIPTS/14_contraste_blend.py",
+    "SCRIPTS/14b_diagnostico_transformaciones.py",
+    "SCRIPTS/14c_reparar_transformacion_obj.py",
+    "SCRIPTS/15_ergonomia_detallada.py",
+    "SCRIPTS/16_investigar_carreras.py",
+    "SCRIPTS/17_acceso_central.py",
+    "SCRIPTS/18_puestos_y_accesibilidad.py",
+    "SCRIPTS/19_consolidar_tablas.py",
+    "SCRIPTS/20_presentacion_grupos.py",
+    "SCRIPTS/21_accesibilidad_camarote.py",
+    "SCRIPTS/22_encuentros_adaptadores.py",
+    "SCRIPTS/23_laminas_y_galeria.py",
+    "SCRIPTS/24_retranqueo_adaptador.py",
+    "SCRIPTS/25_informes.py",
+    "SCRIPTS/26_leyendas_sillas.py",
+    "SCRIPTS/27_cierre_y_paquete.py",
+    "TRASPASO/ANTES_RETRANQUEO_encuentros_adaptadores.json",
+    "TRASPASO/ANTES_RETRANQUEO_prototipo_conjunto.json",
+    "TRASPASO/ANTES_RETRANQUEO_prototipo_geometria.npz",
+    "TRASPASO/CAPTURAS_Y_SCRIPT_ANTES_CORRECCION.zip",
+    "TRASPASO/COMPROBACION_ENTRADAS.json",
+    "TRASPASO/contacto_capturas_corregidas.png",
+    "TRASPASO/contacto_capturas_revision.png",
+    "TRASPASO/contraste_preliminar_ordenacion_flotantes.json",
+    "TRASPASO/ergonomia_preliminar_shell_no_asiento.json",
+    "TRASPASO/ESTADO_PARADA.json",
+    "TRASPASO/INVENTARIO_ARCHIVOS.csv",
+    "TRASPASO/MANIFIESTO_TRASPASO.json",
+    "TRASPASO/registrar_estado.py",
+    "TRASPASO/SUTHERLAND_ESTADO_FINAL.md",
+    "TRASPASO/UE5_ENTORNO_COMPARTIDO.md",
+    "TRASPASO/VERIFICACION_CIERRE_TRASPASO.json",
+    "TRASPASO/VOY02_Laboratorio_ANTES_CORRECCION_OBJ.blend",
+    "TRASPASO/VOYAGER_HANDOFF.md",
+    "TRASPASO/VOYAGER_NUEVO_HILO.md",
+    "VERIFICACION_ENTREGA.md"
+  ],
+  "explanation": "Derived laboratory blend, scripts, renders and prototype data intentionally revised. Baselines/original resources not replaced. Backups and superseded results retained in TRASPASO."
+}

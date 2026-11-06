@@ -1,0 +1,3917 @@
+[
+  {
+    "H": 1.6,
+    "poses": [
+      {
+        "retreat": 0.0,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.005,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.01,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.015,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.02,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.025,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.03,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.035,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.04,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.045,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.05,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.055,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.06,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.065,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.07,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.075,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.08,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.085,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.09,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.095,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.1,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.105,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.11,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.115,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.12,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.125,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.13,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.135,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.14,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.145,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.15,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.155,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.16,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.165,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.18,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.185,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.19,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.195,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.2,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.20500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.21,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.215,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.22,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.225,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23500000000000001,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.24,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.245,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.25,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.255,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.26,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.265,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.27,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.275,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.29,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.295,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.3,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.305,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.31,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.315,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.32,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.325,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.33,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.335,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.35000000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.355,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.36,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.365,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.37,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.375,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.38,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.385,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.39,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.395,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.4,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      }
+    ],
+    "external_contact_poses": 0,
+    "external_transverse_poses": 0,
+    "sampling_m": 0.005,
+    "continuous_sweep_certified": false
+  },
+  {
+    "H": 1.75,
+    "poses": [
+      {
+        "retreat": 0.0,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.005,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.01,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.015,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.02,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.025,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.03,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.035,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.04,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.045,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.05,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.055,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.06,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.065,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.07,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.075,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.08,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.085,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.09,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.095,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.1,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.105,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.11,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.115,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.12,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.125,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.13,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.135,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.14,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.145,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.15,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.155,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.16,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.165,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.18,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.185,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.19,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.195,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.2,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.20500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.21,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.215,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.22,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.225,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23500000000000001,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.24,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.245,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.25,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.255,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.26,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.265,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.27,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.275,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.29,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.295,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.3,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.305,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.31,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.315,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.32,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.325,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.33,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.335,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.35000000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.355,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.36,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.365,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.37,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.375,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.38,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.385,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.39,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.395,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.4,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      }
+    ],
+    "external_contact_poses": 0,
+    "external_transverse_poses": 0,
+    "sampling_m": 0.005,
+    "continuous_sweep_certified": false
+  },
+  {
+    "H": 1.9,
+    "poses": [
+      {
+        "retreat": 0.0,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.005,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.01,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.015,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.02,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.025,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.03,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.035,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.04,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.045,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.05,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.055,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.06,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.065,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.07,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.075,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.08,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.085,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.09,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.095,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.1,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.105,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.11,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.115,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.12,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.125,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.13,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.135,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.14,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.145,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.15,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.155,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.16,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.165,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.17500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.18,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.185,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.19,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.195,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.2,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.20500000000000002,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.21,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.215,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.22,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.225,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.23500000000000001,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.24,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.245,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.25,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.255,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.26,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.265,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.27,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.275,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.28500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.29,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.295,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.3,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.305,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.31,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.315,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.32,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.325,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.33,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.335,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.34500000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.35000000000000003,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.355,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.36,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.365,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.37,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.375,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.38,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.385,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.39,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.395,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      },
+      {
+        "retreat": 0.4,
+        "bvh_pairs": 2,
+        "pairs": 2,
+        "external": [],
+        "mechanical_interface": [
+          {
+            "object": "VOY04_GUIA_NUEVA",
+            "pairs": 2,
+            "transverse": 0,
+            "moving_parts": [
+              "VOY04_CARRO_NUEVO"
+            ]
+          }
+        ]
+      }
+    ],
+    "external_contact_poses": 0,
+    "external_transverse_poses": 0,
+    "sampling_m": 0.005,
+    "continuous_sweep_certified": false
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "full_package": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\PAQUETE\\VOY03_Entrega.zip",
+  "full_package_sha256": "504f85db2c992cdebd6cf2d3890b065c5368ca370de164fe1f7d7bc1af094368",
+  "original_entries": 185,
+  "complete_coverage": true,
+  "packages": [
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\PAQUETE\\VOY03_01_Informes_Datos_Escenas.zip",
+      "bytes": 60342915,
+      "sha256": "c22acabaa2656a4728c4037823c0de20ced6cd8d2017474c70426b2325c53983",
+      "original_entries": 141,
+      "crc_passed": true,
+      "all_entries_identical_to_full_package": true,
+      "drive": {
+        "id": "1tGIrPY5CaN6Y335_qsBbwEkZS94mkr_a",
+        "url": "https://drive.google.com/file/d/1tGIrPY5CaN6Y335_qsBbwEkZS94mkr_a/view?usp=drivesdk",
+        "size_verified_by_metadata": 60342915,
+        "shared": false,
+        "visibility": "not_shared",
+        "readback_verified": true
+      }
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\PAQUETE\\VOY03_02_Capturas_Laminas.zip",
+      "bytes": 85354237,
+      "sha256": "bb9b2270534f13b221f82f226f1f8f06a1987bef4923f72aa89c907019d83ace",
+      "original_entries": 44,
+      "crc_passed": true,
+      "all_entries_identical_to_full_package": true,
+      "drive": {
+        "id": "1SBxZ6tzUBtU7ZbI5lmTj4_IlVSrQAaxu",
+        "url": "https://drive.google.com/file/d/1SBxZ6tzUBtU7ZbI5lmTj4_IlVSrQAaxu/view?usp=drivesdk",
+        "size_verified_by_metadata": 85354237,
+        "shared": false,
+        "visibility": "not_shared",
+        "readback_verified": true
+      }
+    }
+  ],
+  "remote_sha256_available": false,
+  "note": "Local ZIP CRC and hashes verified before upload. Remote connector metadata confirms IDs, names, matching byte sizes and private visibility; remote checksum was not exposed."
+}

@@ -1,0 +1,153 @@
+{
+  "adapters": [
+    {
+      "id": "AD_PUENTE",
+      "surface_pairs": 16,
+      "contacts": [
+        {
+          "object": "PASILLO_PRINCIPAL",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 0.0
+        },
+        {
+          "object": "PUENTE:Mesh_1832",
+          "pairs": 4,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 4,
+          "maximum_plane_crossing_m": 2.6362754868003435e-08
+        },
+        {
+          "object": "PUENTE:hallwayfloor_1",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 2.6362754868003435e-08
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    },
+    {
+      "id": "AD_CRUCE",
+      "surface_pairs": 18,
+      "contacts": [
+        {
+          "object": "CRUCE_CUATRO",
+          "pairs": 12,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 12,
+          "maximum_plane_crossing_m": 0.0
+        },
+        {
+          "object": "PASILLO_PRINCIPAL",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 0.0
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    },
+    {
+      "id": "AD_RAMAL_TURBO",
+      "surface_pairs": 20,
+      "contacts": [
+        {
+          "object": "ACCESO_TURBO",
+          "pairs": 4,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 4,
+          "maximum_plane_crossing_m": 0.0
+        },
+        {
+          "object": "CRUCE_CUATRO",
+          "pairs": 16,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 16,
+          "maximum_plane_crossing_m": 0.0
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    },
+    {
+      "id": "AD_GARGANTA_TURBO",
+      "surface_pairs": 2,
+      "contacts": [
+        {
+          "object": "ACCESO_TURBO",
+          "pairs": 2,
+          "transverse": 0,
+          "coplanar": 2,
+          "other": 0,
+          "maximum_plane_crossing_m": 0.0
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    },
+    {
+      "id": "AD_RAMAL_CAMAROTE",
+      "surface_pairs": 22,
+      "contacts": [
+        {
+          "object": "CRUCE_CUATRO",
+          "pairs": 16,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 16,
+          "maximum_plane_crossing_m": 0.0
+        },
+        {
+          "object": "PASILLO_CAMAROTE",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 0.0
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    },
+    {
+      "id": "AD_CAMAROTE",
+      "surface_pairs": 12,
+      "contacts": [
+        {
+          "object": "CAMAROTE_EXISTENTE",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 0.0
+        },
+        {
+          "object": "PASILLO_CAMAROTE",
+          "pairs": 6,
+          "transverse": 0,
+          "coplanar": 0,
+          "other": 6,
+          "maximum_plane_crossing_m": 0.0
+        }
+      ],
+      "grade": "C",
+      "interpretation": "Structural ends overlap/contact by construction; selected walking surface tests are separate. These counts do not approve moldings, watertight volumes or manufacturing clearance."
+    }
+  ],
+  "analytic_capsule_controls": {
+    "analytic_cases": 5,
+    "passed": 5
+  },
+  "method": "All prototype triangles with BVH/SAT and same transverse/coplanar classification as door investigation. No architecture removed. Interior containment not solved."
+}

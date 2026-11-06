@@ -1,0 +1,2176 @@
+[
+  {
+    "id": "B01_CORTO_LARGO",
+    "placements": [
+      {
+        "id": "corto",
+        "source": "Mesh12",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -15.68540334701538,
+          -4.865658760070801,
+          0.01954948995266248
+        ]
+      },
+      {
+        "id": "largo",
+        "source": "Mesh13",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.8527982234954834,
+          4.3867632026906023e-07
+        ],
+        "original_to_canonical": [
+          -24.564659118652344,
+          -6.401981592178345,
+          0.019549248740115877
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "corto",
+        "a_port": "Y+",
+        "b": "largo",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 9.5367431640625e-07,
+        "ceiling_delta_m": 2.4044319513194523e-07,
+        "profile_sampled_hausdorff_m": 0.0824408706727394,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.762628927489914e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2203286214873543e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078127344105e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.762628927489914e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2203286214873543e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078127344105e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.762628927489914e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2203286214873543e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078127344105e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "B",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 130,
+        "clear_samples": 130,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.30823745727539065,
+            0.0019999059147036684
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 130,
+        "clear_samples": 130,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.30823745727539065,
+            0.0019999059147036684
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 130,
+        "clear_samples": 130,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.30823745727539065,
+            0.0019999059147036684
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ],
+          [
+            0.0,
+            2.8527982234954834,
+            0.002000438676320269
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 67,
+      "support_probes": 335,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.0020000506740349166,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B02_DOS_RECTOS_CURVA",
+    "placements": [
+      {
+        "id": "largo",
+        "source": "Mesh13",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -24.564659118652344,
+          -6.401981592178345,
+          0.019549248740115877
+        ]
+      },
+      {
+        "id": "curva",
+        "source": "Mesh41",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          4.027973890304565,
+          6.307793594118039e-07
+        ],
+        "original_to_canonical": [
+          -40.75064468383789,
+          -21.425469398498535,
+          0.019546779539149406
+        ]
+      },
+      {
+        "id": "salida",
+        "source": "Mesh18",
+        "yaw": -1.5707963267948966,
+        "translation": [
+          2.930692672729492,
+          4.027973890304565,
+          7.965439524637574e-07
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "largo",
+        "a_port": "Y+",
+        "b": "curva",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.36576080322265625,
+        "ceiling_delta_m": 5.599893699859138e-07,
+        "profile_sampled_hausdorff_m": 0.095441388884515,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662512977514e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2216556433131132e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.773245102095984e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662512977514e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078127344105e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2216556433131132e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.773245102095984e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662401955212e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2216556433131132e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.773245102095984e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      },
+      {
+        "a": "curva",
+        "a_port": "X+",
+        "b": "salida",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 6.123233995736766e-17,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.36576271057128906,
+        "ceiling_delta_m": 2.752774608261177e-07,
+        "profile_sampled_hausdorff_m": 0.041337756885032384,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.4615546528595758e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.4615546528595758e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 5.551115123125783e-17
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 5.551115123125783e-17
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.4615546528595758e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.4615546528595758e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 356,
+        "clear_samples": 356,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -1.8445607662200927,
+            0.0019996554089758405
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            4.027973890304565,
+            0.002000630779359412
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 356,
+        "clear_samples": 356,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -1.8445607662200927,
+            0.0019996554089758405
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            4.027973890304565,
+            0.002000630779359412
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 356,
+        "clear_samples": 356,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -1.8445607662200927,
+            0.0019996554089758405
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            4.027973890304565,
+            0.002000630779359412
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ],
+          [
+            2.930692672729492,
+            4.027973890304565,
+            0.002000796543952464
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 179,
+      "support_probes": 895,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.002000133635986441,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B03_RECTA_T",
+    "placements": [
+      {
+        "id": "recto",
+        "source": "Mesh18",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      },
+      {
+        "id": "T",
+        "source": "Mesh40",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.9176735877990723,
+          4.4981282643075104e-07
+        ],
+        "original_to_canonical": [
+          -40.75064468383789,
+          -11.082873821258545,
+          0.019548415206372738
+        ]
+      },
+      {
+        "id": "ramal",
+        "source": "Mesh18",
+        "yaw": -1.5707963267948966,
+        "translation": [
+          2.930692672729492,
+          2.9176735877990723,
+          6.161063189624727e-07
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "recto",
+        "a_port": "Y+",
+        "b": "T",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.3657646179199219,
+        "ceiling_delta_m": 5.942903422706536e-07,
+        "profile_sampled_hausdorff_m": 0.09538117132278319,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2240154445564144e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.792123556451315e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2240154445564144e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.792123556451315e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2240154445564144e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.792123556451315e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      },
+      {
+        "a": "T",
+        "a_port": "X+",
+        "b": "ramal",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 6.123233995736766e-17,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.36576271057128906,
+        "ceiling_delta_m": 1.1668427379873947e-07,
+        "profile_sampled_hausdorff_m": 0.08243314878929121,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.4657452540589588e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.466163204177917e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -2.9540969670449613e-10
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -4.611544479615759e-10
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.458597562176145e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.4569401141084626e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 267,
+        "clear_samples": 267,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.002000449812826431
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 267,
+        "clear_samples": 267,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.002000449812826431
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 267,
+        "clear_samples": 267,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.002000449812826431
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ],
+          [
+            2.930692672729492,
+            2.9176735877990723,
+            0.0020006161063189625
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 135,
+      "support_probes": 675,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.0020001334467756155,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B04_CUATRO_VIAS",
+    "placements": [
+      {
+        "id": "recto",
+        "source": "Mesh18",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      },
+      {
+        "id": "cruce",
+        "source": "Mesh38",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.9176735877990723,
+          4.490625566955231e-07
+        ],
+        "original_to_canonical": [
+          -40.763662338256836,
+          -5.918087959289551,
+          0.019549369812041584
+        ]
+      },
+      {
+        "id": "este",
+        "source": "Mesh18",
+        "yaw": -1.5707963267948966,
+        "translation": [
+          2.917675018310547,
+          2.9176735877990723,
+          6.150722836606448e-07
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "recto",
+        "a_port": "Y+",
+        "b": "cruce",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.36576080322265625,
+        "ceiling_delta_m": 3.5493957772914086e-07,
+        "profile_sampled_hausdorff_m": 0.03852178178686405,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.207046140816459e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.65636903771383e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2070461297142288e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.656369148736133e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2070461297142288e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.656369148736133e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      },
+      {
+        "a": "cruce",
+        "a_port": "X+",
+        "b": "este",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 6.123233995736766e-17,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.36576271057128906,
+        "ceiling_delta_m": 3.560342052288945e-07,
+        "profile_sampled_hausdorff_m": 0.03851902715596215,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.4703424966455714e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.470893148391994e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.5883683257555958e-10
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -2.1390211824012795e-10
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.4669586145821256e-07
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.466615107692526e-07
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 266,
+        "clear_samples": 266,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.0020004490625566956
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 266,
+        "clear_samples": 266,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.0020004490625566956
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 266,
+        "clear_samples": 266,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.9176735877990723,
+            0.0020004490625566956
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ],
+          [
+            2.917675018310547,
+            2.9176735877990723,
+            0.0020006150722836607
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 135,
+      "support_probes": 675,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.0020001337853965983,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B05_MODULO_PUERTAS",
+    "placements": [
+      {
+        "id": "recto",
+        "source": "Mesh18",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      },
+      {
+        "id": "puertas",
+        "source": "Mesh14",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.194561004638672,
+          3.315541795556598e-07
+        ],
+        "original_to_canonical": [
+          -29.004286766052246,
+          -5.326122283935547,
+          0.01954948715869509
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "recto",
+        "a_port": "Y+",
+        "b": "puertas",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.21945571899414062,
+        "ceiling_delta_m": 4.7551027471115503e-07,
+        "profile_sampled_hausdorff_m": 0.0824396575701141,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.777662457466363e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "B",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541795557
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 61,
+      "support_probes": 305,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.002000042666163501,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B06_TURBOLIFT",
+    "placements": [
+      {
+        "id": "recto",
+        "source": "Mesh18",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      },
+      {
+        "id": "acceso",
+        "source": "Mesh37",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.669917345046997,
+          4.0870725814823317e-07
+        ],
+        "original_to_canonical": [
+          -71.3192253112793,
+          -6.002938985824585,
+          0.019549370906762897
+        ]
+      },
+      {
+        "id": "cabina",
+        "source": "Mesh17",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          6.0092949867248535,
+          9.260777413810928e-07
+        ],
+        "original_to_canonical": [
+          -71.07756042480469,
+          -15.378829956054688,
+          0.019547849962139985
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "recto",
+        "a_port": "Y+",
+        "b": "acceso",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.14630126953125,
+        "ceiling_delta_m": 0.26060335042258576,
+        "profile_sampled_hausdorff_m": 0.08244344067773705,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2206426980299057e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.765141584239245e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2206426980299057e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.765141584239245e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2206426980299057e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.765141584239245e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "B",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      },
+      {
+        "a": "acceso",
+        "a_port": "Y+",
+        "b": "cabina",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.42228553321286233,
+        "ceiling_delta_m": 0.03933375857945709,
+        "profile_sampled_hausdorff_m": 0.37626968735059574,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.533237033121367e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.1916546360790647e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2163695273237352e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.730956262998802e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": false,
+            "floor_error": null
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": false,
+            "floor_error": null
+          }
+        ],
+        "floor_continuous_sampled": false,
+        "grade_geometric_interface": "C",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 273,
+        "clear_samples": 273,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.669917345046997,
+            0.0020004087072581483
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 273,
+        "clear_samples": 273,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.669917345046997,
+            0.0020004087072581483
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 273,
+        "clear_samples": 273,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.669917345046997,
+            0.0020004087072581483
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ],
+          [
+            0.0,
+            6.0092949867248535,
+            0.002000926077741381
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 138,
+      "support_probes": 690,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.0020000454645168458,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  },
+  {
+    "id": "B07_RESIDENCIAL",
+    "placements": [
+      {
+        "id": "recto",
+        "source": "Mesh18",
+        "yaw": 0,
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "original_to_canonical": [
+          -20.125030517578125,
+          -5.2005615234375,
+          0.019549489021340127
+        ]
+      },
+      {
+        "id": "residencial",
+        "source": "Mesh57",
+        "yaw": 0.0,
+        "translation": [
+          0.0,
+          2.194561004638672,
+          3.315541797777044e-07
+        ],
+        "original_to_canonical": [
+          -34.90671730041504,
+          -8.913535118103027,
+          0.019548889249602075
+        ]
+      }
+    ],
+    "joins": [
+      {
+        "a": "recto",
+        "a_port": "Y+",
+        "b": "residencial",
+        "b_port": "Y-",
+        "anchor_residual_m": 0.0,
+        "normal_residual": 0.0,
+        "floor_delta_m": 0.0,
+        "width_delta_m": 0.21945762634277344,
+        "ceiling_delta_m": 3.5816363030960474e-07,
+        "profile_sampled_hausdorff_m": 0.08244231400698751,
+        "profile_sampling_m": 0.01,
+        "floor_probes": [
+          {
+            "offset_normal": -0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": -0.9,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          },
+          {
+            "offset_normal": -0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 9.777662457466363e-09
+          },
+          {
+            "offset_normal": -0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": 1.2222078071832954e-08
+          },
+          {
+            "offset_normal": 0.005,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -1.2222078016321802e-08
+          },
+          {
+            "offset_normal": 0.02,
+            "lateral": 0.9,
+            "hit": true,
+            "floor_error": -9.77766234644406e-09
+          }
+        ],
+        "floor_continuous_sampled": true,
+        "grade_geometric_interface": "B",
+        "method": "opposing actual interface anchors + section profiles at 2mm inside + floor samples; no unmeasured visual-fit acceptance"
+      }
+    ],
+    "routes": [
+      {
+        "height": 1.6,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.75,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      },
+      {
+        "height": 1.9,
+        "radius": 0.35,
+        "spacing_max": 0.025,
+        "margin": 0.0125,
+        "samples": 120,
+        "clear_samples": 120,
+        "clear": true,
+        "minimum_clearance": null,
+        "failures": [],
+        "points": [
+          [
+            0.0,
+            -0.747280502319336,
+            0.0019998342229101667
+          ],
+          [
+            0.0,
+            0.0,
+            0.002
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ],
+          [
+            0.0,
+            2.194561004638672,
+            0.0020003315541797777
+          ]
+        ],
+        "method": "exact segment-triangle distance on broadphase candidates; discrete translation poses; support surfaces below foot+2mm excluded; not CharacterMovement"
+      }
+    ],
+    "floor_support": {
+      "samples": 61,
+      "support_probes": 305,
+      "disk_probe_radius": 0.2,
+      "spacing": 0.05,
+      "clear": true,
+      "maximum_accepted_floor_error_m": 0.0020000426661635124,
+      "failures": [],
+      "note": "Five supports per pose; not a full continuous contact or CharacterMovement solver."
+    },
+    "note": "Route uses centers; endpoint remains inside last module. Doors in side recesses stay as source geometry."
+  }
+]

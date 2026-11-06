@@ -1,0 +1,83 @@
+{
+  "main_file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\ESCENAS\\VOY02_Laboratorio.blend",
+  "scenes": [
+    "A_ESCALA_HUMANA_110",
+    "A_COMPARACION_ESCALAS",
+    "B_PASILLOS_UNIONES",
+    "C_UNION_PUENTE_PASILLO",
+    "D_CAMAROTE_ENSAYO",
+    "E_PUERTAS_CARRERA_PRUEBA",
+    "E_SILLAS_GRUPOS",
+    "G_INTERIORES_CONECTADOS"
+  ],
+  "case_offsets": {
+    "B01_CORTO_LARGO": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "B02_DOS_RECTOS_CURVA": [
+      19.0,
+      0.0,
+      0.0
+    ],
+    "B03_RECTA_T": [
+      0.0,
+      12.0,
+      0.0
+    ],
+    "B04_CUATRO_VIAS": [
+      19.0,
+      12.0,
+      0.0
+    ],
+    "B05_MODULO_PUERTAS": [
+      0.0,
+      24.0,
+      0.0
+    ],
+    "B06_TURBOLIFT": [
+      19.0,
+      24.0,
+      0.0
+    ],
+    "B07_RESIDENCIAL": [
+      0.0,
+      36.0,
+      0.0
+    ]
+  },
+  "human_references": [
+    {
+      "height_m": 1.6,
+      "foot": [
+        -1.8149999999999877,
+        -4.7849999999999975,
+        0.32960328138551387
+      ],
+      "scale_bridge": 1.1
+    },
+    {
+      "height_m": 1.75,
+      "foot": [
+        1.6608936448392344e-14,
+        -0.8249999999999874,
+        0.48164167870064234
+      ],
+      "scale_bridge": 1.1
+    },
+    {
+      "height_m": 1.9,
+      "foot": [
+        3.960000000000026,
+        2.970000000000022,
+        0.7857253790520965
+      ],
+      "scale_bridge": 1.1
+    }
+  ],
+  "packed_images": 49,
+  "source_geometry_shared_datablocks": true,
+  "prototype_scale": 1.1,
+  "warning": "Scenes are technical laboratory only; door intermediate collisions remain and central bridge circulation not demonstrated."
+}

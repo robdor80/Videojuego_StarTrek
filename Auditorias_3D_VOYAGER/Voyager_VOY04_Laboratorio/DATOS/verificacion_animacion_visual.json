@@ -1,0 +1,419 @@
+{
+  "PNG_frames": 101,
+  "unique_pixel_frames": 51,
+  "GIF_frames": 101,
+  "WebP_frames": 101,
+  "GIF_duration_ms": 12620,
+  "GIF_size": [
+    900,
+    680
+  ],
+  "pass_check": true,
+  "source": "Real Blender PNG, active scene and refreshed dependency graph; no generated visual evidence",
+  "files": [
+    {
+      "path": "VOY04_001.png",
+      "pixel_sha256": "186e8e8fc8f2d44461d3ab0ea0af3dc3558fb55159587f3f40e03a41cdcf14df"
+    },
+    {
+      "path": "VOY04_004.png",
+      "pixel_sha256": "443ea5be912f981529a1d47b8f1008193d9f29efb5ceb2185bcf290c9a76e64c"
+    },
+    {
+      "path": "VOY04_007.png",
+      "pixel_sha256": "bef9a9ae21146df7bb2a47d96bb0b35b63c49ee9ba0cdb7da6e41a1ad9091241"
+    },
+    {
+      "path": "VOY04_010.png",
+      "pixel_sha256": "450bf2a1acb27187a86394177fd2f8083b566da84c950838d68b7935acc65622"
+    },
+    {
+      "path": "VOY04_013.png",
+      "pixel_sha256": "ac7c38a55a4762c15403f840be39a9f727ce8ad8543d4d58848381574a84fd37"
+    },
+    {
+      "path": "VOY04_016.png",
+      "pixel_sha256": "a8638e14a1754c9885923a4bf251ca2d9e58b62ac987424856ff04c1712ce996"
+    },
+    {
+      "path": "VOY04_019.png",
+      "pixel_sha256": "a622b8377c413ca920981e9501395343cc37844a4676642a3b17b333b4c38a75"
+    },
+    {
+      "path": "VOY04_022.png",
+      "pixel_sha256": "39d759bfd5a26ca16cd48afa24c1b26cb8a79a9e3c99ba66ee16573706d741c4"
+    },
+    {
+      "path": "VOY04_025.png",
+      "pixel_sha256": "f5df24d21159f658f544823cc73e35cec7294a9edec65deeec410d460a7b9c32"
+    },
+    {
+      "path": "VOY04_028.png",
+      "pixel_sha256": "8a98df60212f4a82f66ac97a635a6f5b1ded06be5ed766062ebc65d4c967da42"
+    },
+    {
+      "path": "VOY04_031.png",
+      "pixel_sha256": "49837ab9546c27f2fda10f2fbdc65c03c4101394a8c2baac5b1ddedf9a098b68"
+    },
+    {
+      "path": "VOY04_034.png",
+      "pixel_sha256": "0e6bace9d284705ffd2bb180483aaf1ad479c9a50f4a54850a6910a7955a16f1"
+    },
+    {
+      "path": "VOY04_037.png",
+      "pixel_sha256": "efc08c804938204b90f6a709a86a6ed74baa29f08287d79bf70e83a147a77f47"
+    },
+    {
+      "path": "VOY04_040.png",
+      "pixel_sha256": "c7378b3e0301215f14a61d0d12d2b3b52c541fb891789f49408c6bba68dbc52c"
+    },
+    {
+      "path": "VOY04_043.png",
+      "pixel_sha256": "e559d65d7eab5b328be9075c6d17b39a6d5e244557fe3630f5dadc642fa95b01"
+    },
+    {
+      "path": "VOY04_046.png",
+      "pixel_sha256": "12dfe18824e6e6947087f3d47f040374404c2711d3634788eff1af07f86c958a"
+    },
+    {
+      "path": "VOY04_049.png",
+      "pixel_sha256": "600482273fb822faef82cc7eaf5563d30f2874d30283f12f4d3314df1b31a443"
+    },
+    {
+      "path": "VOY04_052.png",
+      "pixel_sha256": "13de33548d473920e097774ac3eaf5d602b8bd391e6a28ac93fd30cb9deaa77b"
+    },
+    {
+      "path": "VOY04_055.png",
+      "pixel_sha256": "fbb3ab9571f7aaeb748373796d69302143159d09a9acad5a62ca5bb68b1402f9"
+    },
+    {
+      "path": "VOY04_058.png",
+      "pixel_sha256": "9c41367fd574eee575260f3277071b957e0446c33499bf1c46381bd97bb730f4"
+    },
+    {
+      "path": "VOY04_061.png",
+      "pixel_sha256": "17d51468884dff683da649239b74a17f99e3dd09c7c95724043c4fa2ef61c481"
+    },
+    {
+      "path": "VOY04_064.png",
+      "pixel_sha256": "212d5a43c0e1ad993b435758b923cc55942f3218af6ba941aea578a5b65c9c8c"
+    },
+    {
+      "path": "VOY04_067.png",
+      "pixel_sha256": "f4f9e1c2767ee87b4299557905f00c2b8de6bdd83aead69bcb4adb3aa5033acb"
+    },
+    {
+      "path": "VOY04_070.png",
+      "pixel_sha256": "221768c165850f8b804ab2428c849327ed5c9e136cc3db3e7dfee1962d776143"
+    },
+    {
+      "path": "VOY04_073.png",
+      "pixel_sha256": "ae7cb39c18cae3d59b55682b91393f40e5fac2a8d3ec7f48ca04c24422dd3e06"
+    },
+    {
+      "path": "VOY04_076.png",
+      "pixel_sha256": "f01a133ba1a50ddc4151ff001d47efb46916b3ea722d55b21e126823c620e399"
+    },
+    {
+      "path": "VOY04_079.png",
+      "pixel_sha256": "f6c7b2b23a604213a5d5ce09aec7ecc43850033a666aea45dce3be6406eaaded"
+    },
+    {
+      "path": "VOY04_082.png",
+      "pixel_sha256": "82822a7cfbf429c4f7dec6e7c8f88b5590fa7f0b8c314284c8880afbe7e9e115"
+    },
+    {
+      "path": "VOY04_085.png",
+      "pixel_sha256": "f5f0d5a64366cef3089c01ee08dc794aeb6b61d4c21feb9d14d7ad653c7a2c46"
+    },
+    {
+      "path": "VOY04_088.png",
+      "pixel_sha256": "a4a61700d45538a84b7608e055aa741c88f0a636f590b51a682cd54f221ef107"
+    },
+    {
+      "path": "VOY04_091.png",
+      "pixel_sha256": "f0b23706431a99626145026d1c437bac0eccc390ee1f42513d85a5c1575a64d2"
+    },
+    {
+      "path": "VOY04_094.png",
+      "pixel_sha256": "3130a438c944dbbdc706ac64ae97ae452d2ba02aee3bb4d749524869f3bfe7ea"
+    },
+    {
+      "path": "VOY04_097.png",
+      "pixel_sha256": "f6bb6a1673e1b580b69b47fdfb19918b995a1842ac8beee3fbdfa03afaa3129e"
+    },
+    {
+      "path": "VOY04_100.png",
+      "pixel_sha256": "fe67e20175f42ffa1837bd46e61bce34aca09d74367145c544b1df92713ec65b"
+    },
+    {
+      "path": "VOY04_103.png",
+      "pixel_sha256": "478c5607da013bcd0ed7bdd441e6d09dfa6b51999ecf3f6f7e67249fd3c99851"
+    },
+    {
+      "path": "VOY04_106.png",
+      "pixel_sha256": "e8e93a3dc3ea0aae75a2e224320ebeda52d675d98ff59a686fa7ae8fffcbe7c2"
+    },
+    {
+      "path": "VOY04_109.png",
+      "pixel_sha256": "ccd6d767366c4242c8b85b6a780df7aaf604667e70d798a45adc0cff49eef89d"
+    },
+    {
+      "path": "VOY04_112.png",
+      "pixel_sha256": "eb42051712c8e800f7be153efc04bcc00659315acb675bc21e0984715a7b58a3"
+    },
+    {
+      "path": "VOY04_115.png",
+      "pixel_sha256": "e1f936252182210436b68fe71923285578714ba6b5b426204691224055cba43c"
+    },
+    {
+      "path": "VOY04_118.png",
+      "pixel_sha256": "b36a2ad1a6e82edbfc57210055091c8c87d2f2dd767712853571d56f1c335c57"
+    },
+    {
+      "path": "VOY04_121.png",
+      "pixel_sha256": "344ef0d2f7d6f4f1438ece955def23498e0ae719221ffc36de870f1344304e0e"
+    },
+    {
+      "path": "VOY04_124.png",
+      "pixel_sha256": "e718509ca61bfedd1c62f51a57f185a41cb4da470cf126156e8626b43f04eb2f"
+    },
+    {
+      "path": "VOY04_127.png",
+      "pixel_sha256": "a188b012cecba08b6805946104472d5acec8935d416f5e13c63cf2eeeb2715d5"
+    },
+    {
+      "path": "VOY04_130.png",
+      "pixel_sha256": "dc0a712c536d69f36a7d341992f6e6ed886ae31fa69b652bba20953a34723f4c"
+    },
+    {
+      "path": "VOY04_133.png",
+      "pixel_sha256": "6aa1cc158408d2ef853973532b598d33ff65149e905a70e60ff4424ca6dcbcd9"
+    },
+    {
+      "path": "VOY04_136.png",
+      "pixel_sha256": "37f9dd3362d7b98a601f16442b26e60db958e9c5398eeb5ab18ad9e9e1e2b494"
+    },
+    {
+      "path": "VOY04_139.png",
+      "pixel_sha256": "f320d7acdb5b345642e511d6b4bf685ac95aa9102512b11dd80a2ea368212077"
+    },
+    {
+      "path": "VOY04_142.png",
+      "pixel_sha256": "ac849e7f04820e3ba8abf6f109cb181f6a2fca87bcc6ec8ee237c59efea92840"
+    },
+    {
+      "path": "VOY04_145.png",
+      "pixel_sha256": "c5a15fcce5c34a265de2a9118c81fda4545450f8d89a9e3fb4139a41eca53fa3"
+    },
+    {
+      "path": "VOY04_148.png",
+      "pixel_sha256": "1b460da72eefdefbe5357a10d731a4c18c86f6252cf9f65cfc76b74cccb187d7"
+    },
+    {
+      "path": "VOY04_151.png",
+      "pixel_sha256": "52d04a054ba6bc57a33aeef38fbb9aee7b23370c91765fa3305fed5e20f2d881"
+    },
+    {
+      "path": "VOY04_154.png",
+      "pixel_sha256": "1b460da72eefdefbe5357a10d731a4c18c86f6252cf9f65cfc76b74cccb187d7"
+    },
+    {
+      "path": "VOY04_157.png",
+      "pixel_sha256": "c5a15fcce5c34a265de2a9118c81fda4545450f8d89a9e3fb4139a41eca53fa3"
+    },
+    {
+      "path": "VOY04_160.png",
+      "pixel_sha256": "ac849e7f04820e3ba8abf6f109cb181f6a2fca87bcc6ec8ee237c59efea92840"
+    },
+    {
+      "path": "VOY04_163.png",
+      "pixel_sha256": "f320d7acdb5b345642e511d6b4bf685ac95aa9102512b11dd80a2ea368212077"
+    },
+    {
+      "path": "VOY04_166.png",
+      "pixel_sha256": "37f9dd3362d7b98a601f16442b26e60db958e9c5398eeb5ab18ad9e9e1e2b494"
+    },
+    {
+      "path": "VOY04_169.png",
+      "pixel_sha256": "6aa1cc158408d2ef853973532b598d33ff65149e905a70e60ff4424ca6dcbcd9"
+    },
+    {
+      "path": "VOY04_172.png",
+      "pixel_sha256": "dc0a712c536d69f36a7d341992f6e6ed886ae31fa69b652bba20953a34723f4c"
+    },
+    {
+      "path": "VOY04_175.png",
+      "pixel_sha256": "a188b012cecba08b6805946104472d5acec8935d416f5e13c63cf2eeeb2715d5"
+    },
+    {
+      "path": "VOY04_178.png",
+      "pixel_sha256": "e718509ca61bfedd1c62f51a57f185a41cb4da470cf126156e8626b43f04eb2f"
+    },
+    {
+      "path": "VOY04_181.png",
+      "pixel_sha256": "344ef0d2f7d6f4f1438ece955def23498e0ae719221ffc36de870f1344304e0e"
+    },
+    {
+      "path": "VOY04_184.png",
+      "pixel_sha256": "b36a2ad1a6e82edbfc57210055091c8c87d2f2dd767712853571d56f1c335c57"
+    },
+    {
+      "path": "VOY04_187.png",
+      "pixel_sha256": "e1f936252182210436b68fe71923285578714ba6b5b426204691224055cba43c"
+    },
+    {
+      "path": "VOY04_190.png",
+      "pixel_sha256": "eb42051712c8e800f7be153efc04bcc00659315acb675bc21e0984715a7b58a3"
+    },
+    {
+      "path": "VOY04_193.png",
+      "pixel_sha256": "ccd6d767366c4242c8b85b6a780df7aaf604667e70d798a45adc0cff49eef89d"
+    },
+    {
+      "path": "VOY04_196.png",
+      "pixel_sha256": "e8e93a3dc3ea0aae75a2e224320ebeda52d675d98ff59a686fa7ae8fffcbe7c2"
+    },
+    {
+      "path": "VOY04_199.png",
+      "pixel_sha256": "478c5607da013bcd0ed7bdd441e6d09dfa6b51999ecf3f6f7e67249fd3c99851"
+    },
+    {
+      "path": "VOY04_202.png",
+      "pixel_sha256": "fe67e20175f42ffa1837bd46e61bce34aca09d74367145c544b1df92713ec65b"
+    },
+    {
+      "path": "VOY04_205.png",
+      "pixel_sha256": "f6bb6a1673e1b580b69b47fdfb19918b995a1842ac8beee3fbdfa03afaa3129e"
+    },
+    {
+      "path": "VOY04_208.png",
+      "pixel_sha256": "3130a438c944dbbdc706ac64ae97ae452d2ba02aee3bb4d749524869f3bfe7ea"
+    },
+    {
+      "path": "VOY04_211.png",
+      "pixel_sha256": "f0b23706431a99626145026d1c437bac0eccc390ee1f42513d85a5c1575a64d2"
+    },
+    {
+      "path": "VOY04_214.png",
+      "pixel_sha256": "a4a61700d45538a84b7608e055aa741c88f0a636f590b51a682cd54f221ef107"
+    },
+    {
+      "path": "VOY04_217.png",
+      "pixel_sha256": "f5f0d5a64366cef3089c01ee08dc794aeb6b61d4c21feb9d14d7ad653c7a2c46"
+    },
+    {
+      "path": "VOY04_220.png",
+      "pixel_sha256": "82822a7cfbf429c4f7dec6e7c8f88b5590fa7f0b8c314284c8880afbe7e9e115"
+    },
+    {
+      "path": "VOY04_223.png",
+      "pixel_sha256": "f6c7b2b23a604213a5d5ce09aec7ecc43850033a666aea45dce3be6406eaaded"
+    },
+    {
+      "path": "VOY04_226.png",
+      "pixel_sha256": "f01a133ba1a50ddc4151ff001d47efb46916b3ea722d55b21e126823c620e399"
+    },
+    {
+      "path": "VOY04_229.png",
+      "pixel_sha256": "ae7cb39c18cae3d59b55682b91393f40e5fac2a8d3ec7f48ca04c24422dd3e06"
+    },
+    {
+      "path": "VOY04_232.png",
+      "pixel_sha256": "221768c165850f8b804ab2428c849327ed5c9e136cc3db3e7dfee1962d776143"
+    },
+    {
+      "path": "VOY04_235.png",
+      "pixel_sha256": "f4f9e1c2767ee87b4299557905f00c2b8de6bdd83aead69bcb4adb3aa5033acb"
+    },
+    {
+      "path": "VOY04_238.png",
+      "pixel_sha256": "212d5a43c0e1ad993b435758b923cc55942f3218af6ba941aea578a5b65c9c8c"
+    },
+    {
+      "path": "VOY04_241.png",
+      "pixel_sha256": "17d51468884dff683da649239b74a17f99e3dd09c7c95724043c4fa2ef61c481"
+    },
+    {
+      "path": "VOY04_244.png",
+      "pixel_sha256": "9c41367fd574eee575260f3277071b957e0446c33499bf1c46381bd97bb730f4"
+    },
+    {
+      "path": "VOY04_247.png",
+      "pixel_sha256": "fbb3ab9571f7aaeb748373796d69302143159d09a9acad5a62ca5bb68b1402f9"
+    },
+    {
+      "path": "VOY04_250.png",
+      "pixel_sha256": "13de33548d473920e097774ac3eaf5d602b8bd391e6a28ac93fd30cb9deaa77b"
+    },
+    {
+      "path": "VOY04_253.png",
+      "pixel_sha256": "600482273fb822faef82cc7eaf5563d30f2874d30283f12f4d3314df1b31a443"
+    },
+    {
+      "path": "VOY04_256.png",
+      "pixel_sha256": "12dfe18824e6e6947087f3d47f040374404c2711d3634788eff1af07f86c958a"
+    },
+    {
+      "path": "VOY04_259.png",
+      "pixel_sha256": "e559d65d7eab5b328be9075c6d17b39a6d5e244557fe3630f5dadc642fa95b01"
+    },
+    {
+      "path": "VOY04_262.png",
+      "pixel_sha256": "c7378b3e0301215f14a61d0d12d2b3b52c541fb891789f49408c6bba68dbc52c"
+    },
+    {
+      "path": "VOY04_265.png",
+      "pixel_sha256": "efc08c804938204b90f6a709a86a6ed74baa29f08287d79bf70e83a147a77f47"
+    },
+    {
+      "path": "VOY04_268.png",
+      "pixel_sha256": "0e6bace9d284705ffd2bb180483aaf1ad479c9a50f4a54850a6910a7955a16f1"
+    },
+    {
+      "path": "VOY04_271.png",
+      "pixel_sha256": "49837ab9546c27f2fda10f2fbdc65c03c4101394a8c2baac5b1ddedf9a098b68"
+    },
+    {
+      "path": "VOY04_274.png",
+      "pixel_sha256": "8a98df60212f4a82f66ac97a635a6f5b1ded06be5ed766062ebc65d4c967da42"
+    },
+    {
+      "path": "VOY04_277.png",
+      "pixel_sha256": "f5df24d21159f658f544823cc73e35cec7294a9edec65deeec410d460a7b9c32"
+    },
+    {
+      "path": "VOY04_280.png",
+      "pixel_sha256": "39d759bfd5a26ca16cd48afa24c1b26cb8a79a9e3c99ba66ee16573706d741c4"
+    },
+    {
+      "path": "VOY04_283.png",
+      "pixel_sha256": "a622b8377c413ca920981e9501395343cc37844a4676642a3b17b333b4c38a75"
+    },
+    {
+      "path": "VOY04_286.png",
+      "pixel_sha256": "a8638e14a1754c9885923a4bf251ca2d9e58b62ac987424856ff04c1712ce996"
+    },
+    {
+      "path": "VOY04_289.png",
+      "pixel_sha256": "ac7c38a55a4762c15403f840be39a9f727ce8ad8543d4d58848381574a84fd37"
+    },
+    {
+      "path": "VOY04_292.png",
+      "pixel_sha256": "450bf2a1acb27187a86394177fd2f8083b566da84c950838d68b7935acc65622"
+    },
+    {
+      "path": "VOY04_295.png",
+      "pixel_sha256": "bef9a9ae21146df7bb2a47d96bb0b35b63c49ee9ba0cdb7da6e41a1ad9091241"
+    },
+    {
+      "path": "VOY04_298.png",
+      "pixel_sha256": "443ea5be912f981529a1d47b8f1008193d9f29efb5ceb2185bcf290c9a76e64c"
+    },
+    {
+      "path": "VOY04_301.png",
+      "pixel_sha256": "186e8e8fc8f2d44461d3ab0ea0af3dc3558fb55159587f3f40e03a41cdcf14df"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "NAVEGACION",
+    "under_chair_bearing_object": "Object_75",
+    "under_chair_bearing_z_m": 2.384185791015625e-07,
+    "floor_reference_z_m": 2.384185791015625e-07,
+    "note": "Bearing under chair and floor reached by feet are separate measurements."
+  },
+  {
+    "id": "LATERAL_DER",
+    "under_chair_bearing_object": "floorfront_1",
+    "under_chair_bearing_z_m": 0.3274031741134551,
+    "floor_reference_z_m": 0.32740317411345554,
+    "note": "Bearing under chair and floor reached by feet are separate measurements."
+  },
+  {
+    "id": "LATERAL_IZQ",
+    "under_chair_bearing_object": "floorfront_1",
+    "under_chair_bearing_z_m": 0.32740316496469324,
+    "floor_reference_z_m": 0.32740316496469324,
+    "note": "Bearing under chair and floor reached by feet are separate measurements."
+  },
+  {
+    "id": "MANDO_IZQ",
+    "under_chair_bearing_object": "Mesh_2093",
+    "under_chair_bearing_z_m": 0.8653919100761414,
+    "floor_reference_z_m": 0.47944156138822097,
+    "note": "Bearing under chair and floor reached by feet are separate measurements."
+  },
+  {
+    "id": "MANDO_DER",
+    "under_chair_bearing_object": "Mesh_2093",
+    "under_chair_bearing_z_m": 0.8653919100761414,
+    "floor_reference_z_m": 0.4794415613906157,
+    "note": "Bearing under chair and floor reached by feet are separate measurements."
+  }
+]
