@@ -13,9 +13,10 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  }
  if(type(w,id,"f06_timed_scan")) {
   allowed={F06_TIMED_KEY,F06_TIMED_PUBLIC,F06_TIMED_START,F06_TIMED_DUE,F06_TIMED_NOMINAL,
-   F06_TIMED_COST,F06_TIMED_STATUS,F06_TIMED_RESULT};
+   F06_TIMED_COST,F06_TIMED_STATUS,F06_TIMED_RESULT,F06_TIMED_AUTO,F06_TIMED_GEN};
   required=allowed;required.erase(F06_TIMED_RESULT);
-  ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
+  required.erase(F06_TIMED_AUTO);required.erase(F06_TIMED_GEN);
+  ar={SHIP,PERSON,F06_CONTACT_REF};rr={SHIP,F06_CONTACT_REF};return true;
  }
  if(type(w,id,"f06_science_report")) {
   allowed={F06_SCI_KEY,F06_SCI_PUBLIC,F06_SCI_INSTRUMENT,F06_SCI_TICK,
@@ -46,7 +47,7 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  if(type(w,id,"f06_observation")) {
   allowed={F06_O_PUBLIC,F06_O_TICK,F06_O_CONF,F06_O_DISTANCE,
     F06_O_CLASS,F06_O_X,F06_O_Y,F06_O_Z};
-  required=allowed;ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
+  required=allowed;ar={SHIP,PERSON,F06_CONTACT_REF};rr={SHIP,F06_CONTACT_REF};return true;
  }
  if(type(w,id,"f06_configuration")) {
   allowed={F06_CONFIG_SENS,F06_CONFIG_RES,F06_CONFIG_COMP,
@@ -67,9 +68,10 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  if(type(w,id,"f06_contact")) {
   allowed={F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,
    F06_SEEN_CLASS,F06_SEEN_TRANSPONDER,F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON,F06_PUBLIC_ID,
-   F06_TRACK_MODE,F06_TRACK_UPDATED,F06_SEEN_CATEGORY};
+   F06_TRACK_MODE,F06_TRACK_UPDATED,F06_SEEN_CATEGORY,F06_AUTO_GEN};
   required=allowed;
   required.erase(F06_TRACK_MODE);required.erase(F06_TRACK_UPDATED);required.erase(F06_SEEN_CATEGORY);
+  required.erase(F06_AUTO_GEN);
   ar={SHIP,F06_SIGNAL_REF};rr=ar;return true;
  }
  return false;
@@ -120,6 +122,9 @@ bool f06_schema(const Campaign& c) {
    start>c.time.now() || due<=start || due-start>3600 ||
    val(w,id,F06_TIMED_NOMINAL)<30 || val(w,id,F06_TIMED_NOMINAL)>900 ||
    val(w,id,F06_TIMED_COST)<50 || val(w,id,F06_TIMED_COST)>500 ||
+   val(w,id,F06_TIMED_AUTO)>1 ||
+   (val(w,id,F06_TIMED_AUTO)==1)!=(ref(w,id,PERSON)==0) ||
+   (val(w,id,F06_TIMED_AUTO)==0 && val(w,id,F06_TIMED_GEN)!=0) ||
    status<F06_TIMED_QUEUED || status>F06_TIMED_CANCELLED ||
    (has(w,id,F06_TIMED_RESULT) != (status==F06_TIMED_FINISHED)))return false;
  }
@@ -227,6 +232,7 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_LOSS_REASON)>F06_EXIT_SENSOR_OFFLINE ||
    val(w,id,F06_DISTANCE)>50000 ||
    val(w,id,F06_TRACK_MODE)>F06_TRACK_PRIORITY ||
+   val(w,id,F06_AUTO_GEN)>1000000 ||
    val(w,id,F06_SEEN_CATEGORY)>F06_CATEGORY_ASTEROID ||
    (has(w,id,F06_TRACK_UPDATED) && val(w,id,F06_TRACK_UPDATED)>c.time.now()))return false; // classification remains historical even if the source changes
  }

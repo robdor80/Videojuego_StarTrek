@@ -1,5 +1,6 @@
 #include "f06_sensors.h"
 #include "f06_bis.h"
+#include "f06_autonomy.h"
 #include "f06_aster_science_generated.h"
 #include "f05_orders.h"
 #include "f06_demo_system_generated.h"
@@ -820,6 +821,113 @@ void run(const std::string& scenario){
     "detached battle focus cannot be used by saucer observer");
   ok(f06_focus(l.s,l.h.ensign,l.stats().revision,before[0].contact_id,&result)==F04_UNAVAILABLE,
     "focused operation denied when only detached section has a focal array");
+ } else if(scenario=="computer_empty") {
+  F06ProfileInstall install{l.stats().revision,5,0};F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,"modern ship auto on");
+  F06ComputerStatus status{};
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.autonomous && status.active_contacts==0 && !status.analyses_running,
+    "computer on, no invented contacts");
+  const auto checkpoint=l.save();
+  l.advance(28800);
+  ok(l.contacts().empty(),"eight hours without world objects cannot invent any");
+  const auto done=l.save();
+  Lab another;another.load(checkpoint);another.advance(28800);
+  ok(done==another.save(),"autonomous empty guard deterministic after save/load");
+ } else if(scenario=="computer_focus") {
+  F06ProfileInstall install{l.stats().revision,5,0};F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,"autonomy profile");
+  auto in=l.signal(920,100,0,0);in.signature_category=F06_CATEGORY_STARSHIP;
+  const auto sig=l.upsert(in);
+  F06ComputerStatus status{};
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.autonomous && status.active_contacts==1 &&
+    status.analyses_running==1 && !status.needs_attention,
+    "computer starts focused analysis before bothering the officer");
+  const U contact=l.contacts()[0].contact_id;
+  std::array<F06TimedScanView,10> jobs{};U written=0,total=0;
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),
+    &written,&total)==F04_OK && total==1 && jobs[0].status==F06_TIMED_QUEUED,
+    "autonomous job belongs to shared Core campaign");
+  const auto base=l.save();l.load(base);
+  const U due=jobs[0].finishes_at;
+  l.advance(due-1);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.analyses_running==1,"computer waits for real Core time");
+  l.advance(due);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.analyses_completed==1 && !status.analyses_running,
+    "computer performs actual completed focused scan without officer input");
+  std::array<F06ResultView,5> results{};written=total=0;
+  ok(f06_results_page(l.s,l.h.captain,contact,0,results.data(),
+    results.size(),&written,&total)==F04_OK && total==1,
+    "science has real autonomous focused observation");
+  std::array<F06ComputerEvent,12> events{};written=0;uint32_t more=0;
+  ok(f06_computer_events_page(l.s,l.h.captain,0,events.data(),events.size(),
+    &written,&more)==F04_OK && written>=3 && !more,
+    "human-facing events include detection, autonomous start and result");
+  bool acquired=false,started=false,finished=false;
+  for(U i=0;i<written;++i){
+   acquired|=events[i].kind==F06_COMPUTER_CONTACT;
+   started|=events[i].kind==F06_COMPUTER_ANALYSIS_STARTED;
+   finished|=events[i].kind==F06_COMPUTER_ANALYSIS_DONE;
+   ok(events[i].contact_id==contact,"no world EntityId leakage in computer report");
+  }
+  ok(acquired && started && finished,"automatic sequence explained to operator");
+  const U last=events[written-1].event_token;
+  ok(f06_computer_events_page(l.s,l.h.captain,last,events.data(),
+    events.size(),&written,&more)==F04_OK && !written,
+    "opaque cursor yields no duplicate messages");
+  const auto saved=l.save();l.load(saved);l.advance(due+3600);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.analyses_completed==1,"auto analysis not repeated without a new incident");
+  // Real loss and reacquisition are legitimate reasons for new analysis.
+  in.signal_id=sig.signal_id;in.expected_revision=l.stats().revision;in.active=0;
+  l.upsert(in);
+  in.expected_revision=l.stats().revision;in.active=1;
+  l.upsert(in);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.analyses_running==1,"computer automatically reassesses reacquired contact");
+ } else if(scenario=="computer_interference") {
+  F06ProfileInstall install{l.stats().revision,5,0};F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,"auto ship");
+  F06EnvironmentInput noisy{l.stats().revision,1,550,0,0,0,0,0};
+  F06EnvironmentView view{};
+  ok(f06_host_environment(l.s,&noisy,&view)==F04_OK,"real EM interference");
+  auto in=l.signal(760,1400,0,0);in.signature_category=F06_CATEGORY_STARSHIP;
+  l.upsert(in);
+  F06ComputerStatus status{};
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    !status.active_contacts && !status.analyses_running,
+    "computer must not scan hidden signal through interference");
+  noisy={l.stats().revision,2,0,0,0,0,0,0};
+  ok(f06_host_environment(l.s,&noisy,&view)==F04_OK,"interference lifted");
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.active_contacts==1 && status.analyses_running==1,
+    "automated analysis starts after real acquisition");
+  const auto s=l.save();l.load(s);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.analyses_running==1,"queued analysis survives Core save/load");
+ } else if(scenario=="computer_failure") {
+  F06ProfileInstall install{l.stats().revision,5,0};F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,"auto ship");
+  auto in=l.signal(960,150,0,0);in.signature_category=F06_CATEGORY_PLANET;
+  l.upsert(in);
+  std::array<F06TimedScanView,5> jobs{};U written=0,total=0;
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),
+    &written,&total)==F04_OK && total==1,"computer scheduled real job");
+  F06ArrayInput damaged{l.stats().revision,1000,0,1000,1,1,1,0};
+  F06ArrayView hw{};
+  ok(f06_host_array_state(l.s,&damaged,&hw)==F04_OK,"real engineering outage");
+  l.advance(jobs[0].finishes_at);
+  F06ComputerStatus status{};
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    !status.passive_operational && status.equipment_offline &&
+    !status.analyses_completed && !status.analyses_running,
+    "computer admits failure instead of fabricating a scan");
+  auto saved=l.save();l.load(saved);
+  ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
+    status.equipment_offline,"fault and failed analysis persist");
  } else if(scenario=="mini_system") {
   // Genuine native Core campaign fed by independent, bounded spatial-world
   // fixtures. Planetary science truth is deliberately absent from this ABI.
