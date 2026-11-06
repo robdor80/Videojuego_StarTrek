@@ -5,7 +5,7 @@
   "patches": [
     {
       "old": "#include \"f04_bridge.h\"\n#ifdef F05_ENABLE_ORDERS\n#include \"f05_orders.h\"\n#include \"f05_delegation.h\"",
-      "new": "#include \"f04_bridge.h\"\n#ifdef F06_ENABLE_SENSORS\n#include \"f06_sensors.h\"\n#endif\n#ifdef F05_ENABLE_ORDERS\n#include \"f05_orders.h\"\n#include \"f05_delegation.h\""
+      "new": "#include \"f04_bridge.h\"\n#ifdef F06_ENABLE_SENSORS\n#include \"f06_sensors.h\"\n#include \"f06_bis.h\"\n#endif\n#ifdef F05_ENABLE_ORDERS\n#include \"f05_orders.h\"\n#include \"f05_delegation.h\""
     },
     {
       "old": "#include <corerpg/history.hpp>\n#endif\n#include <algorithm>\n#include <array>\n#include <atomic>\n#include <cstring>",
