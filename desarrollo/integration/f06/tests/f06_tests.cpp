@@ -108,6 +108,29 @@ void run(const std::string& scenario){
   l.load(bytes);
   ok(l.contacts().size()==before.size() && l.contacts()[0].contact_id==before[0].contact_id,"Core persistent dossier");
   ok(l.save()==bytes,"byte-identical Core roundtrip");
+ } else if(scenario=="degraded") {
+  l.ready();l.upsert(l.signal());
+  F06ArrayView initial{};
+  ok(f06_array_status(l.s,l.h.ensign,&initial)==F04_OK &&
+     initial.power_permille==1000 && initial.long_enabled,"initial matrix nominal");
+  auto id=l.contacts()[0].contact_id;
+  F06ArrayInput disabled{l.stats().revision,1000,0,1000,1,1,1,0};
+  F06ArrayView affected{};
+  ok(f06_host_array_state(l.s,&disabled,&affected)==F04_OK && !affected.power_permille,
+     "power outage committed in Core");
+  auto lost=l.contacts(F06_LOST);
+  ok(lost.size()==1 && lost[0].loss_cause==F06_EXIT_SENSOR_OFFLINE,
+     "known matrix outage does not invent cloaking");
+  ok(l.notices().back().kind==F06_CONTACT_LOST,"no anomalous loss due to known outage");
+  F06ContactView focal{};
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&focal)==F04_UNAVAILABLE,
+     "focused scan forbidden without matrix power");
+  auto snapshot=l.save();
+  l.load(snapshot);ok(l.contacts(F06_LOST).size()==1,"hardware and loss persist");
+  disabled.expected_revision=l.stats().revision;disabled.power_permille=1000;
+  ok(f06_host_array_state(l.s,&disabled,&affected)==F04_OK,"restore power");
+  ok(l.contacts(F06_ACTIVE).size()==1 && l.contacts()[0].contact_id==id,
+     "reacquisition after actual repair preserves contact identity");
  } else if(scenario=="eight_hours") {
   l.upsert(l.signal());auto checkpoint=l.save();
   l.advance(28800);auto after=l.save();auto current=l.contacts()[0];
