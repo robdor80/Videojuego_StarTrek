@@ -75,7 +75,7 @@ F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
 typedef struct {
  uint64_t expected_revision;
  int64_t center_x_milli_au,center_y_milli_au,center_z_milli_au;
- uint32_t radius_milli_au,priority;
+ uint32_t radius_milli_au,reserved;
 } F06AreaRequest;
 typedef struct {
  uint64_t revision,observed_contacts,new_contacts;
