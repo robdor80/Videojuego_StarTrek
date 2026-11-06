@@ -1,4 +1,7 @@
 #include "f04_bridge.h"
+#ifdef F06_ENABLE_SENSORS
+#include "f06_sensors.h"
+#endif
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.h"
 #include "f05_delegation.h"
@@ -14,6 +17,7 @@
 #include <corerpg/history.hpp>
 #endif
 #include <algorithm>
+#include <cmath>
 #include <array>
 #include <atomic>
 #include <cstring>
@@ -33,7 +37,7 @@ constexpr U FOREVER=(1ULL<<48)-1;
 // references use fixed kinds. Core owns both, without interpreting domain data.
 enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN,
  F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF,F05_DELEGATION_REF,F05_HOLDER_REF,F05_EXECUTOR_REF,F05_APPROVAL_REF,
- F05_NEED_REF,F05_DETECTION_REF,F05_AI_DECISION_REF };
+ F05_NEED_REF,F05_DETECTION_REF,F05_AI_DECISION_REF,F06_SIGNAL_REF };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
@@ -41,7 +45,10 @@ enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP,
  SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END,
  F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM,F05_MODE,
- F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT };
+ F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT,
+ F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,
+ F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,F06_SEEN_CLASS,F06_SEEN_TRANSPONDER,
+ F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -149,6 +156,10 @@ CatalogBuildResult catalog() {
 #ifdef F05_ENABLE_ORDERS
  for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event","f05_delegation_event","f05_approval",
    "f05_player","f05_scan_need","f05_brief","f05_detection","f05_decision","f05_ai_request"})
+  defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
+#endif
+#ifdef F06_ENABLE_SENSORS
+ for(const char* t:{"f06_signal","f06_contact"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
 #endif
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
@@ -315,6 +326,9 @@ bool roster_schema(const WorldState& w);
 #ifdef F05_ENABLE_ORDERS
 #include "f05_schema.inc"
 #endif
+#ifdef F06_ENABLE_SENSORS
+#include "f06_schema.inc"
+#endif
 // Strict relational schema. It rejects undeclared labels/fields and duplicate
 // scalar/reference fields before any restored graph becomes live.
 bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
@@ -364,6 +378,9 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
   else if(type(w,id,"event")) { allowed={OP,CODE,CAUSE,TICK};required=allowed;ar={SHIP,PERSON,TARGET};rr={SHIP}; }
 #ifdef F05_ENABLE_ORDERS
   else if(f05_shape(w,id,allowed,required,ar,rr)) {}
+#endif
+#ifdef F06_ENABLE_SENSORS
+  else if(f06_shape(w,id,allowed,required,ar,rr)) {}
 #endif
   else return false;
   for(const auto& r:w.relations_from(EntityId{id})) {
@@ -431,6 +448,9 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
  return organization_schema(w) && roster_schema(w) && valhalla_schema(w)
 #ifdef F05_ENABLE_ORDERS
   && f05_schema(c)
+#endif
+#ifdef F06_ENABLE_SENSORS
+  && f06_schema(c)
 #endif
  ;
 }
@@ -719,6 +739,9 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  default:need(false,F04_ARGUMENT);return 0;
  }
 }
+#ifdef F06_ENABLE_SENSORS
+void f06_poll(Campaign&,const ContentCatalog&,U,bool);
+#endif
 std::atomic<U> scopes{1};
 }
 struct F04Session {
@@ -825,6 +848,9 @@ uint32_t f04_advance(F04Session* s,U horizon,U budget,U* processed) {
   }
   const bool more=tasks.size()>done;
   if(!more)clock_to(horizon);
+#ifdef F06_ENABLE_SENSORS
+  f06_poll(*next,*s->content.catalog(),0,false);
+#endif
   need(schema(*next),F04_INTERNAL);s->c.swap(next);*processed=done;return more?F04_CAPACITY:F04_OK;
  });
 }
@@ -952,4 +978,8 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.inc"
 #include "f05_ai.inc"
+#endif
+
+#ifdef F06_ENABLE_SENSORS
+#include "f06_runtime.inc"
 #endif
