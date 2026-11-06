@@ -69,6 +69,20 @@ F04_API uint32_t f06_notices_page(F04Session*,F04Ref observer,uint64_t after_eve
  * known contact may be targeted. No operator booleans or raw entity IDs. */
 F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
  uint64_t contact_id,F06ContactView*);
+/* Focused scan of a coordinate/area is possible without an existing contact.
+ * The result reports ONLY actually observed detections, never world signature
+ * counts or internal IDs. Coordinates are milli-AU in the ship reference frame. */
+typedef struct {
+ uint64_t expected_revision;
+ int64_t center_x_milli_au,center_y_milli_au,center_z_milli_au;
+ uint32_t radius_milli_au,priority;
+} F06AreaRequest;
+typedef struct {
+ uint64_t revision,observed_contacts,new_contacts;
+} F06AreaReceipt;
+F04_API uint32_t f06_scan_area(F04Session*,F04Ref operator_ref,
+ const F06AreaRequest*,F06AreaReceipt*);
+
 /* F06 dedicated tracking is a finite resource; passive monitoring remains ON.
  * Modes: 0 passive automatic; 1 explicit normal tracking; 2 priority tracking.
  * Power/damage may reduce capacity, but never creates or deletes real contacts. */
