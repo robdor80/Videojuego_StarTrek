@@ -250,6 +250,8 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   need(observer(s,who),F04_DENIED);need(revision==s->c->world.revision(),F04_STALE);
   auto next=std::make_unique<Campaign>(*s->c);
   (void)scan_station(*next,who.id); // F04 present, qualified and on duty
+  const auto hw=f06_array_state(next->world);
+  need(hw.focused_enabled && hw.capability_permille && hw.power_permille && hw.integrity_permille,F04_UNAVAILABLE);
   const U internal=f06_contact_for_public(next->world,contact);
   need(internal,F04_UNAVAILABLE);
   f06_poll(*next,*s->content.catalog(),internal,true);
