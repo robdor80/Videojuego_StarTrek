@@ -11,11 +11,7 @@ No hay nave enemiga improvisada, planetas engendrados por una consola ni resulta
 ## Cómo abrirlo en el MSI
 
 1. En **GitHub Desktop**, seleccionar la rama `feat/f06-sensores-core` una vez integrada PR #94, y usar **Fetch/Pull**. Esto no requiere fusionar F06 con `main`.
-2. Desde el Explorador de Windows, abrir PowerShell en `desarrollo/integration/f06` y ejecutar:
-
-   ```powershell
-   powershell -NoProfile -ExecutionPolicy Bypass -File .\INICIAR_PRUEBA_ASTER.ps1
-   ```
+2. Abrir la carpeta `desarrollo/integration/f06` y hacer **doble clic en `INICIAR_PRUEBA_ASTER.cmd`**. No hay que copiar comandos ni abrir Unreal. Alternativa por PowerShell: `powershell -NoProfile -ExecutionPolicy Bypass -File .\INICIAR_PRUEBA_ASTER.ps1`.
 
 3. Se compila el ejecutable nativo y se abre la ventana. El script usa CoreRPG en la **revisión exacta aprobada**; si no hay una copia compatible, descarga otra dentro de `laboratorios/f06/qa/deps`. Todo lo descargado y compilado queda bajo `laboratorios`, fuera del control de versiones y sin modificar los assets 3D.
 
