@@ -90,3 +90,11 @@ Operaciones pueden aprobar/rechazar. El reloj Core caduca pendientes. La
 aprobación NO modifica potencia material: el Host fiable de Ingeniería/
 Operaciones debe aplicar asignación real tras verificar presupuesto energético.
 Nunca permitir al operador de Sensores seleccionar subsistema donante.
+
+## Prueba cruzada F05–F06
+
+El escenario nativo `f06.f05_order` ejecuta el flujo completo
+emisión → aceptación → ejecución F05 sobre una firma que los sensores pasivos
+no podían resolver. Comprueba que solo la ejecución autorizada produce un
+contacto observable, sin revelar clase/transpondedor ni duplicar el barrido
+en reintentos de una orden terminada.

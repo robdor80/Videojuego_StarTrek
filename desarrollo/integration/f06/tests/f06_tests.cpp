@@ -1,4 +1,5 @@
 #include "f06_sensors.h"
+#include "f05_orders.h"
 #include <array>
 #include <cstdint>
 #include <iostream>
@@ -237,6 +238,27 @@ void run(const std::string& scenario){
   req.expected_revision=l.stats().revision;
   ok(f06_scan_area(l.s,l.h.ensign,&req,&result)==F04_OK &&
      result.observed_contacts==1 && !result.new_contacts,"no duplicate dossier");
+ } else if(scenario=="f05_order") {
+  l.ready();l.upsert(l.signal(280,5000,4,999));
+  ok(l.contacts().empty(),"passive signal invisible before authorized order");
+  F05OrderRequest q{l.h.captain,l.h.ensign,l.h.ship,
+    {l.h.ship.scope,l.h.sensors},3001,l.stats().revision,100,50501,F04_SCAN,0};
+  F05Receipt r{};
+  ok(f05_submit(l.s,&q,&r)==F04_OK && r.state==F05_ISSUED,
+     "captain submits Core F05 order");
+  ok(l.contacts().empty(),"request cannot cause scan");
+  ok(f05_receive(l.s,l.h.ensign,l.stats().revision,r.order,&r)==F04_OK &&
+     r.state==F05_ACCEPTED,"sensor operator acknowledges order");
+  ok(l.contacts().empty(),"acknowledge cannot cause scan");
+  ok(f05_execute_order(l.s,l.h.ensign,l.stats().revision,r.order,&r)==F04_OK &&
+     r.state==F05_COMPLETED,"F05 authorized order actually executed");
+  auto observed=l.contacts();
+  ok(observed.size()==1 && observed[0].status==F06_ACTIVE &&
+     !observed[0].class_id && !observed[0].transponder_id,
+     "F05 scan observes weaker signal but does not leak identity");
+  const auto saved=l.save();
+  ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
+     saved==l.save(),"replayed F05 order does not scan twice");
  } else if(scenario=="science_queue") {
   l.ready();l.upsert(l.signal(580,5000,4,999));
   const U id=l.contacts()[0].contact_id;
