@@ -131,6 +131,40 @@ void run(const std::string& scenario){
   ok(f06_host_array_state(l.s,&disabled,&affected)==F04_OK,"restore power");
   ok(l.contacts(F06_ACTIVE).size()==1 && l.contacts()[0].contact_id==id,
      "reacquisition after actual repair preserves contact identity");
+ } else if(scenario=="power_queue") {
+  l.ready();
+  F06PowerRequest request{l.stats().revision,8010,180,900};
+  F06PowerView view{};auto before=l.save();
+  ok(f06_request_power(l.s,l.h.captain,&request,&view)==F04_QUALIFICATION,
+     "captain cannot impersonate sensor officer");
+  ok(before==l.save(),"denied request changes nothing");
+  ok(f06_request_power(l.s,l.h.ensign,&request,&view)==F04_OK &&
+    view.request_id && view.state==F06_POWER_QUEUED,"queued Core request");
+  F06ArrayView array{};
+  ok(f06_array_status(l.s,l.h.captain,&array)==F04_OK &&
+     array.power_permille==1000,"request cannot change actual power");
+  auto saved=l.save();const U id=view.request_id;
+  ok(f06_request_power(l.s,l.h.ensign,&request,&view)==F04_OK &&
+     view.request_id==id && l.save()==saved,"idempotent request");
+  ok(f06_decide_power(l.s,l.h.ensign,l.stats().revision,id,
+     F06_POWER_APPROVED,&view)==F04_DENIED,"sensor officer cannot approve power");
+  ok(f06_decide_power(l.s,l.h.captain,l.stats().revision,id,
+     F06_POWER_APPROVED,&view)==F04_OK && view.state==F06_POWER_APPROVED,
+     "commander approves request");
+  ok(f06_array_status(l.s,l.h.captain,&array)==F04_OK &&
+     array.power_permille==1000,"approval not fabricated power grant");
+  saved=l.save();l.load(saved);
+  F06PowerView rows[4]{};U count=0,total=0;
+  ok(f06_power_requests_page(l.s,l.h.captain,0,rows,4,&count,&total)==F04_OK &&
+     count==1 && total==1 && rows[0].state==F06_POWER_APPROVED,
+     "power request persists across Core save/load");
+  F06PowerRequest due{l.stats().revision,8011,100,10};
+  ok(f06_request_power(l.s,l.h.ensign,&due,&view)==F04_OK,"second request");
+  l.advance(30);
+  count=total=0;
+  ok(f06_power_requests_page(l.s,l.h.captain,0,rows,4,&count,&total)==F04_OK &&
+     total==2 && rows[1].state==F06_POWER_EXPIRED,
+     "pending power request expires on Core clock");
  } else if(scenario=="tracking") {
   l.ready();auto first=l.upsert(l.signal());
   const auto id=l.contacts()[0].contact_id;

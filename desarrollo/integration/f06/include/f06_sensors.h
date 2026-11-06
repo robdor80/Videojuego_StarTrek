@@ -69,6 +69,26 @@ F04_API uint32_t f06_notices_page(F04Session*,F04Ref observer,uint64_t after_eve
  * known contact may be targeted. No operator booleans or raw entity IDs. */
 F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
  uint64_t contact_id,F06ContactView*);
+/* A power request never changes the actual ship power allocation.
+ * Only Command / Operations can approve or reject. The trusted power host
+ * must separately implement a physical grant before Sensors uses it. */
+enum F06PowerState { F06_POWER_QUEUED=1,F06_POWER_APPROVED=2,
+ F06_POWER_DENIED=3,F06_POWER_EXPIRED=4 };
+typedef struct {
+ uint64_t expected_revision,request_key;
+ uint32_t extra_power_permille,duration_seconds;
+} F06PowerRequest;
+typedef struct {
+ uint64_t request_id,created_at,expires_at,decision_at;
+ uint32_t extra_power_permille,state;
+} F06PowerView;
+F04_API uint32_t f06_request_power(F04Session*,F04Ref sensor_operator,
+ const F06PowerRequest*,F06PowerView*);
+F04_API uint32_t f06_decide_power(F04Session*,F04Ref command_or_ops,
+ uint64_t expected_revision,uint64_t request_id,uint32_t decision,F06PowerView*);
+F04_API uint32_t f06_power_requests_page(F04Session*,F04Ref observer,uint64_t offset,
+ F06PowerView*,uint64_t capacity,uint64_t* written,uint64_t* total);
+
 /* Focused scan of a coordinate/area is possible without an existing contact.
  * The result reports ONLY actually observed detections, never world signature
  * counts or internal IDs. Coordinates are milli-AU in the ship reference frame. */

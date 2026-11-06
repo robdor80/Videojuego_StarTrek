@@ -173,6 +173,13 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
   f06_apply(c,cat,source,true,true);return;
  }
  for(U signal:signals)f06_apply(c,cat,signal,active,false);
+ for(U id:all(c.world,"f06_power_request")) {
+  if(val(c.world,id,F06_PWR_STATE)==F06_POWER_QUEUED &&
+     val(c.world,id,F06_PWR_EXPIRY)<=c.time.now()) {
+   f06_set(c,id,F06_PWR_STATE,F06_POWER_EXPIRED);
+   (void)event(c,cat,0,6032,F04_OK,0,id);
+  }
+ }
 }
 } // namespace
 namespace {
@@ -252,6 +259,89 @@ uint32_t f06_science_queue_page(F04Session* s,F04Ref who,U offset,
  });
 }
 
+
+namespace {
+F06PowerView f06_power_view(const WorldState& w,U id) {
+ return {val(w,id,F06_PWR_PUBLIC),val(w,id,F06_PWR_CREATED),
+  val(w,id,F06_PWR_EXPIRY),val(w,id,F06_PWR_DECIDED),
+  static_cast<uint32_t>(val(w,id,F06_PWR_AMOUNT)),
+  static_cast<uint32_t>(val(w,id,F06_PWR_STATE))};
+}
+U f06_power_by_public(const WorldState& w,U public_id) {
+ for(U id:all(w,"f06_power_request"))if(val(w,id,F06_PWR_PUBLIC)==public_id)return id;
+ return 0;
+}
+}
+uint32_t f06_request_power(F04Session* s,F04Ref who,const F06PowerRequest* req,F06PowerView* out) {
+ if(!req || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  need(req->request_key && req->request_key<=FOREVER &&
+   req->extra_power_permille>=1 && req->extra_power_permille<=1000 &&
+   req->duration_seconds>=1 && req->duration_seconds<=28800,F04_ARGUMENT);
+  const auto& w=s->c->world;
+  for(U id:all(w,"f06_power_request"))if(val(w,id,F06_PWR_KEY)==req->request_key) {
+   need(ref(w,id,PERSON)==who.id && val(w,id,F06_PWR_AMOUNT)==req->extra_power_permille &&
+    val(w,id,F06_PWR_EXPIRY)-val(w,id,F06_PWR_CREATED)==req->duration_seconds,F04_OVERLAP);
+   *out=f06_power_view(w,id);return F04_OK;
+  }
+  need(req->expected_revision==w.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  need(all(next->world,"f06_power_request").size()<256,F04_CAPACITY);
+  const U now=next->time.now();need(now<=FOREVER-req->duration_seconds,F04_ARGUMENT);
+  const U id=make(*next,*s->content.catalog(),"f06_power_request");
+  link(*next,id,SHIP,1);link(*next,id,PERSON,who.id);
+  const U public_id=f06_public(req->request_key,val(next->world,1,SHIP_ID));
+  need(!f06_power_by_public(next->world,public_id),F04_CAPACITY);
+  f06_set(*next,id,F06_PWR_KEY,req->request_key);
+  f06_set(*next,id,F06_PWR_PUBLIC,public_id);
+  f06_set(*next,id,F06_PWR_CREATED,now);
+  f06_set(*next,id,F06_PWR_EXPIRY,now+req->duration_seconds);
+  f06_set(*next,id,F06_PWR_AMOUNT,req->extra_power_permille);
+  f06_set(*next,id,F06_PWR_STATE,F06_POWER_QUEUED);
+  (void)event(*next,*s->content.catalog(),who.id,6030,F04_OK,req->request_key,id);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_power_view(s->c->world,id);return F04_OK;
+ });
+}
+uint32_t f06_decide_power(F04Session* s,F04Ref who,U revision,U public_id,
+ uint32_t decision,F06PowerView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  need(decision==F06_POWER_APPROVED || decision==F06_POWER_DENIED,F04_ARGUMENT);
+  const auto& w=s->c->world;const U id=f06_power_by_public(w,public_id);
+  need(id,F04_UNAVAILABLE);
+  const U now=s->c->time.now();
+  need(commander(w,now)==who.id || head(w,who.id,F04_OPERATIONS,now),F04_DENIED);
+  const U old=val(w,id,F06_PWR_STATE);
+  if(old==decision && ref(w,id,ISSUER)==who.id) {
+   *out=f06_power_view(w,id);return F04_OK;
+  }
+  need(old==F06_POWER_QUEUED && now<val(w,id,F06_PWR_EXPIRY),F04_EXPIRED);
+  need(revision==w.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  link(*next,id,ISSUER,who.id);f06_set(*next,id,F06_PWR_STATE,decision);
+  f06_set(*next,id,F06_PWR_DECIDED,now);
+  (void)event(*next,*s->content.catalog(),who.id,6031,F04_OK,decision,id);
+  // Approval does not assign actual power. Engineering/Operations host must.
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_power_view(s->c->world,id);return F04_OK;
+ });
+}
+uint32_t f06_power_requests_page(F04Session* s,F04Ref who,U offset,F06PowerView* out,
+ U capacity,U* written,U* total) {
+ if(!written || !total || (!out && capacity))return F04_ARGUMENT;*written=*total=0;
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  const auto ids=all(s->c->world,"f06_power_request");
+  *total=ids.size();need(offset<=*total,F04_ARGUMENT);
+  *written=std::min<U>(capacity,*total-offset);
+  for(U i=0;i<*written;++i)out[i]=f06_power_view(s->c->world,ids[static_cast<size_t>(offset+i)]);
+  return F04_OK;
+ });
+}
 uint32_t f06_tracking_status(F04Session* s,F04Ref who,F06TrackView* out) {
  if(!out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {

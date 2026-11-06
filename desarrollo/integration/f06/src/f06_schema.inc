@@ -2,6 +2,13 @@
 namespace {
 bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  std::set<U>& required,std::set<U>& ar,std::set<U>& rr) {
+ if(type(w,id,"f06_power_request")) {
+  allowed={F06_PWR_KEY,F06_PWR_PUBLIC,F06_PWR_CREATED,F06_PWR_EXPIRY,
+   F06_PWR_AMOUNT,F06_PWR_STATE,F06_PWR_DECIDED};
+  required={F06_PWR_KEY,F06_PWR_PUBLIC,F06_PWR_CREATED,F06_PWR_EXPIRY,
+   F06_PWR_AMOUNT,F06_PWR_STATE};
+  ar={SHIP,PERSON,ISSUER};rr={SHIP,PERSON};return true;
+ }
  if(type(w,id,"f06_handoff")) {
   allowed={F06_H_KEY,F06_H_PUBLIC,F06_H_TIME,F06_H_OBSERVED,F06_H_PRIORITY,F06_H_KIND,
    F06_H_STATUS,F06_H_CLASS,F06_H_CONFIDENCE,F06_H_TRANSPONDER,F06_H_X,F06_H_Y,F06_H_Z};
@@ -30,6 +37,23 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
 bool f06_schema(const Campaign& c) {
  const auto& w=c.world;
  std::set<U> signals,public_ids;
+ std::set<U> power_keys,power_ids;
+ const auto power=all(w,"f06_power_request");
+ if(power.size()>256)return false;
+ for(U id:power) {
+  const U status=val(w,id,F06_PWR_STATE),start=val(w,id,F06_PWR_CREATED),
+    expiry=val(w,id,F06_PWR_EXPIRY);
+  if(!val(w,id,F06_PWR_KEY) || !power_keys.insert(val(w,id,F06_PWR_KEY)).second ||
+     !val(w,id,F06_PWR_PUBLIC) || !power_ids.insert(val(w,id,F06_PWR_PUBLIC)).second ||
+     start>c.time.now() || expiry<=start || expiry-start>28800 ||
+     val(w,id,F06_PWR_AMOUNT)<1 || val(w,id,F06_PWR_AMOUNT)>1000 ||
+     status<F06_POWER_QUEUED || status>F06_POWER_EXPIRED)return false;
+  const bool decided=(status==F06_POWER_APPROVED || status==F06_POWER_DENIED);
+  if(decided != bool(ref(w,id,ISSUER)) || decided != has(w,id,F06_PWR_DECIDED))return false;
+  if(decided && (val(w,id,F06_PWR_DECIDED)<start ||
+     val(w,id,F06_PWR_DECIDED)>=expiry ||
+     val(w,id,F06_PWR_DECIDED)>c.time.now()))return false;
+ }
  std::set<U> handoff_keys,handoff_ids;
  if(all(w,"f06_handoff").size()>512)return false;
  for(U id:all(w,"f06_handoff")) {

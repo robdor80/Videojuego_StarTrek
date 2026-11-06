@@ -81,3 +81,12 @@ barrido periódico. No revelar firmas no detectadas por los paginadores.
 3. La adquisición manual es inmediata en este incremento; duración, colas de recursos, cancelación, fallo de matrices y prioridad avanzada deben integrarse antes de certificar P04.
 4. No alterar CoreRPG compartido para resolver reglas específicas de Star Trek.
 5. No fusionar una PR con fallos CI, ni utilizar el resultado como base para marcar F06 global CERRADA.
+
+## P04 — Solicitudes de potencia a Operaciones
+
+Sensor cualificado puede registrar peticiones de potencia en WorldState con
+clave idempotente, fecha límite y estado. Solo mando efectivo o jefatura de
+Operaciones pueden aprobar/rechazar. El reloj Core caduca pendientes. La
+aprobación NO modifica potencia material: el Host fiable de Ingeniería/
+Operaciones debe aplicar asignación real tras verificar presupuesto energético.
+Nunca permitir al operador de Sensores seleccionar subsistema donante.
