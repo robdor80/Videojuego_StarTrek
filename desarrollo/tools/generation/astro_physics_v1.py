@@ -185,16 +185,29 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
         greenhouse = float(recipe.get("greenhouse_k", min(55,pressure * rng.between(9,22))))
         if not 0 <= greenhouse <= 90:
             raise ValueError("greenhouse offset outside bounded ordinary-climate model")
+        # Very cold N2/CO2-bearing rocky atmospheres cannot stay at 1 bar.
+        # Simplified volatile freeze-out; not a pressure-temperature chemistry solver.
+        if eq_temp < 65:
+            pressure=0.0
+        elif eq_temp < 185:
+            pressure=min(pressure,.50)
+            greenhouse=min(greenhouse,10.0)
         surface_temp = eq_temp+greenhouse
         if pressure == 0:
             greenhouse=0.0
             surface_temp=eq_temp
             gases={}
+            volatile_regime="collapsed_or_airless"
+        elif eq_temp < 185:
+            # Avoid gaseous CO2 and H2O in frozen outer terrestrial worlds.
+            gases={"N2":.98,"Ar":.02} if eq_temp<90 else {"N2":.94,"CH4":.04,"Ar":.02}
+            volatile_regime="cold_nitrogen_regime"
         else:
             co2=rounded(rng.between(.008,.12))
             h2o=rounded(rng.between(.0001,.02))
             ar=rounded(.01)
             gases={"N2":rounded(1-co2-h2o-ar),"CO2":co2,"H2O":h2o,"Ar":ar}
+            volatile_regime="warm_or_hot_rocky_regime"
     else:
         pressure = None  # no single meaningful "surface pressure" for gas envelopes
         greenhouse = None
@@ -203,6 +216,7 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
             gases={"H2":.86,"He":.13,"CH4":.01}
         else:
             gases={"H2":.77,"He":.21,"CH4":.02}
+        volatile_regime="deep_gas_envelope"
     if family == "lava" and (not has_surface or eq_temp < 700):
         raise ValueError("lava world requires sufficient stellar irradiation")
     if family == "ocean" and (surface_temp is None or not 273 <= surface_temp <= 335 or pressure < .3):
@@ -290,7 +304,8 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
         "interior":{"core_materials":["iron","silicates"] if has_surface else ["rock","high_pressure_ices"],
                     "tectonics":"possible" if has_surface and .4<mass<4 else "not_surface_applicable"},
         "atmosphere":{"surface_pressure_bar":rounded(pressure) if pressure is not None else None,
-                      "mole_fraction":gases,"has_solid_surface":has_surface},
+                      "mole_fraction":gases,"has_solid_surface":has_surface,
+                      "volatile_regime":volatile_regime},
         "hydrosphere":{"water_inventory_index":rounded(water_inventory),
                       "surface_liquid_fraction":liquid_water,"surface_ice_fraction":frozen_water},
         "surface":{"exists":has_surface,"terrain":terrain,
