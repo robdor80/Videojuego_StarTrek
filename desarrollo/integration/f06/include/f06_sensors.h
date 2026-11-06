@@ -14,7 +14,7 @@ enum F06ContactStatus { F06_ACTIVE=1, F06_LOST=2 };
 enum F06NoticeKind { F06_NEW_CONTACT=1, F06_CONTACT_LOST=2,
  F06_ANOMALOUS_LOSS=3, F06_REACQUIRED=4, F06_IDENTIFIED=5 };
 enum F06ExitEvidence { F06_EXIT_UNKNOWN=0, F06_EXIT_OBSERVED_WARP=1,
- F06_EXIT_OBSERVED_OCCLUSION=2, F06_EXIT_OBSERVED_OUT_OF_RANGE=3 };
+ F06_EXIT_OBSERVED_OCCLUSION=2, F06_EXIT_OBSERVED_OUT_OF_RANGE=3, F06_EXIT_SENSOR_OFFLINE=4 };
 typedef struct {
  uint64_t expected_revision;
  uint64_t signal_id; /* zero creates; nonzero updates existing world signature */
@@ -40,6 +40,21 @@ typedef struct {
  uint64_t event_id,contact_id,tick;
  uint32_t kind;
 } F06NoticeView;
+/* Actual sensor hardware state, supplied ONLY by the trusted engineering/
+ * operations host. No UI/AI claims repairs or power assignments directly.
+ * Missing explicit override means the ship's installed nominal configuration. */
+typedef struct {
+ uint64_t expected_revision;
+ uint32_t capability_permille,power_permille,integrity_permille;
+ uint32_t short_enabled,long_enabled,focused_enabled;
+ uint32_t reserved;
+} F06ArrayInput;
+typedef struct {
+ uint32_t capability_permille,power_permille,integrity_permille;
+ uint32_t short_enabled,long_enabled,focused_enabled;
+} F06ArrayView;
+F04_API uint32_t f06_host_array_state(F04Session*,const F06ArrayInput*,F06ArrayView*);
+F04_API uint32_t f06_array_status(F04Session*,F04Ref observer,F06ArrayView*);
 /* Privileged domain host: materialize/change a physical signature in Core state.
  * Does not fabricate mission events, execute a scan, or grant observer knowledge.
  * Revalidation/commit occurs against the current Core revision atomically. */
