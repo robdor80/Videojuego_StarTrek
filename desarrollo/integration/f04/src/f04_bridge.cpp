@@ -48,7 +48,8 @@ enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT,
  F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,
  F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,F06_SEEN_CLASS,F06_SEEN_TRANSPONDER,
- F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON,F06_PUBLIC_ID };
+ F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON,F06_PUBLIC_ID,
+ F06_ARRAY_CAPABILITY,F06_ARRAY_POWER,F06_ARRAY_INTEGRITY,F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -159,7 +160,7 @@ CatalogBuildResult catalog() {
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
 #endif
 #ifdef F06_ENABLE_SENSORS
- for(const char* t:{"f06_signal","f06_contact"})
+ for(const char* t:{"f06_signal","f06_contact","f06_array"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
 #endif
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
