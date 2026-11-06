@@ -253,3 +253,12 @@ Formato para añadir una propuesta:
 - **Documento histórico preservado:** [IDEA-0004_yate_del_capitan_desacople_simulado.md](IDEA-0004_yate_del_capitan_desacople_simulado.md).
 - **Reutilización:** persistencia, maniobras y transiciones se reaprovechan mediante IDEA-0003 e IDEA-0010, no como un yate vigente.
 - **Ejecución:** nunca implementada; no requiere desinstalación ni cambios en modelos 3D.
+
+### IDEA-0018 — Visor de modelos 3D para contactos identificados por Sensores
+- **Fecha de aprobación conceptual:** 2026-11-06.
+- **Estado:** PLANIFICADA; implementación pendiente.
+- **Propuesta:** presentar dentro de la consola un modelo 3D de la nave o clase de nave suficientemente identificada, reutilizando el inventario local de modelos 3D de Star Trek.
+- **Reparto:** F06-P03 catálogo JSON/IDs y reglas de revelación, F06-P04 acciones de consulta; F07 visor LCARS/Unreal y carga de GLB o assets importados; F08 prueba jugable.
+- **Ficha:** [IDEA-0018_identificacion_sensorial_visor_naves_3d.md](IDEA-0018_identificacion_sensorial_visor_naves_3d.md).
+- **Invariante:** el visor no revela clases, identidades o naves que los sensores todavía no puedan conocer.
+- **Ejecución:** NO_INICIADA; no incluir modelos 3D pesados ni modificar el runtime en este registro.
