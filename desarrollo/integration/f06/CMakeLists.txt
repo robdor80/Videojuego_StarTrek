@@ -49,6 +49,18 @@ add_executable(f06_tests tests/f06_tests.cpp)
 target_link_libraries(f06_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
 target_compile_features(f06_tests PRIVATE cxx_std_20)
 target_include_directories(f06_tests PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/generated")
+# Live Aster interactive QA. Uses the same native bridge, Core clock and
+# test-only world frames; no Unreal/LCARS is needed to run the first watch.
+add_executable(f06_aster_runner qa/aster_runner.cpp)
+target_link_libraries(f06_aster_runner PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
+target_compile_features(f06_aster_runner PRIVATE cxx_std_20)
+target_include_directories(f06_aster_runner PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/generated")
+set_target_properties(f06_aster_runner PROPERTIES
+ RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+add_test(NAME f06.aster_runner_protocol COMMAND
+ "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_aster_runner.py"
+ --runner "$<TARGET_FILE:f06_aster_runner>")
+
 # Windows needs the F04 DLL beside the test executable.
 set_target_properties(f06_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
 foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking tracking_capacity_recovery area_scan notices_cursor power_queue f05_order world_feed profiles configuration config_live search diagnostics results_compare categories mini_system bis_science bis_science_corrob bis_timed bis_timed_interrupt bis_environment bis_power bis_sections bis_sections_modes computer_empty computer_focus computer_interference computer_failure)
