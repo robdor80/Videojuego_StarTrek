@@ -55,6 +55,7 @@ El objetivo de los diez menús permanece: Estado; Barridos; Búsqueda/localizaci
 
 ### Corrección de cupos de seguimiento (F06 BIS)
 
+- Una configuración válida actualiza inmediatamente los dossiers del **barrido pasivo que ya está activo**; si la sensibilidad deja de justificar una señal, el contacto se marca perdido, y puede recuperarse al restaurarla. No se ordena ningún barrido activo, no se inventan entidades y no se cambia potencia física. Se comprueba mediante `f06.config_live`, incluido guardado/carga en el mismo tick Core.
 - `F06TrackView.available_slots` informa los **cupos libres efectivos** (`max(0, capacidad − usados)`), no la capacidad total instalada. El indicador `overloaded` queda activo mientras `usados > capacidad`.
 - Si una avería reduce la capacidad mientras hay seguimientos prioritarios, el operador puede **rebajar o desactivar** esos seguimientos, incluso si la reducción parcial todavía deja la matriz sobrecargada. No se admite incrementar el consumo por encima de la capacidad física.
 - El escenario nativo `f06.tracking_capacity_recovery` cubre el balance 15/16, avería a 8, liberación progresiva, denegación atómica de aumento y continuidad tras guardar/cargar Core.

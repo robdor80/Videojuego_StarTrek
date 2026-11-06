@@ -518,7 +518,10 @@ uint32_t f06_configure(F04Session* s,F04Ref who,
   f06_set(*next,id,F06_CONFIG_COMP,req->compensation_permille);
   f06_set(*next,id,F06_CONFIG_PRESET,req->preset_id);
   f06_set(*next,id,F06_CONFIG_INTERVAL,req->preferred_update_seconds);
-  // Configuration does not execute scans or gain power automatically.
+  // Hardware power is unchanged. Re-evaluate the already-running passive
+  // watch now, so a weaker setting cannot leave stale "active" contacts until
+  // a later clock advance. This is NOT a commanded/active scan or world spawn.
+  f06_poll(*next,*s->content.catalog(),0,false);
   (void)event(*next,*s->content.catalog(),who.id,6041,F04_OK,req->preset_id,0);
   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
   *out=f06_current_config(s->c->world);return F04_OK;

@@ -352,6 +352,27 @@ void run(const std::string& scenario){
   ok(f06_configuration_status(l.s,l.h.captain,&current)==F04_OK &&
      current.sensitivity_permille==800 && current.preset_id==2,
      "configuration survives Core save/load");
+ } else if(scenario=="config_live") {
+  l.ready();
+  l.upsert(l.signal(580,5000,4,999));
+  ok(l.contacts(F06_ACTIVE).size()==1,"initial weak but real passive contact");
+  const U first=l.contacts()[0].contact_id;
+  F06ConfigView applied{};
+  F06ConfigRequest weak{l.stats().revision,400,400,0,0,60,0};
+  ok(f06_configure(l.s,l.h.ensign,&weak,&applied)==F04_OK &&
+    l.stats().now==0 && l.contacts(F06_ACTIVE).empty() &&
+    l.contacts(F06_LOST).size()==1,
+    "passive contact must immediately reflect reduced sensitivity without advancing Core time");
+  ok(l.contacts(F06_LOST)[0].contact_id==first,
+    "configuration changes do not delete a known contact");
+  F06ConfigRequest restored{l.stats().revision,1000,1000,0,0,60,0};
+  ok(f06_configure(l.s,l.h.ensign,&restored,&applied)==F04_OK &&
+    l.stats().now==0 && l.contacts(F06_ACTIVE).size()==1 &&
+    l.contacts()[0].contact_id==first,
+    "automatic passive watch reacquires on improved configuration without spawning a new ship");
+  auto checkpoint=l.save();l.load(checkpoint);
+  ok(l.save()==checkpoint && l.contacts(F06_ACTIVE).size()==1 &&
+     l.contacts()[0].contact_id==first,"recomputed contact state survives deterministic Core save/load");
  } else if(scenario=="search") {
   l.upsert(l.signal(960,100,1,101));
   l.upsert(l.signal(580,5000,4,900));
