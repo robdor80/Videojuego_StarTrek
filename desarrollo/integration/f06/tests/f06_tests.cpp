@@ -60,7 +60,7 @@ void run(const std::string& scenario){
  if(scenario=="quiet") {
   l.advance(28800);ok(l.contacts().empty() && l.notices().empty(),"quiet eight-hour watch cannot spawn encounters");
  } else if(scenario=="detection") {
-  l.upsert(l.signal());auto contacts=l.contacts(),notices=l.notices();
+  l.upsert(l.signal());auto contacts=l.contacts();auto notices=l.notices();
   ok(contacts.size()==1 && contacts[0].status==F06_ACTIVE,"real materialized signature detected");
   ok(contacts[0].class_id==1 && contacts[0].transponder_id==127,"resolved class and transponder");
   ok(notices.size()==2 && notices[0].kind==F06_NEW_CONTACT && notices[1].kind==F06_IDENTIFIED,"significant events");
@@ -104,7 +104,7 @@ void run(const std::string& scenario){
   auto invalid=l.h.captain;invalid.scope++;
   U total=0,written=0;ok(f06_contacts_page(l.s,invalid,0,0,nullptr,0,&written,&total)==F04_DENIED,"scope enforced");
  } else if(scenario=="save_load") {
-  l.upsert(l.signal());auto before=l.contacts(),bytes=l.save();
+  l.upsert(l.signal());auto before=l.contacts();auto bytes=l.save();
   l.load(bytes);
   ok(l.contacts().size()==before.size() && l.contacts()[0].contact_id==before[0].contact_id,"Core persistent dossier");
   ok(l.save()==bytes,"byte-identical Core roundtrip");
