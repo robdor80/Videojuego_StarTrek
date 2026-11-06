@@ -500,8 +500,11 @@ def validate_planet(p: dict, star_mass: float, luminosity: float, age_gyr: float
     atm=p["atmosphere"]
     water=p["hydrosphere"]
     bio=p["biosphere"]
-    if not math.isclose(sum(atm["mole_fraction"].values()),1.0,abs_tol=.00001):
-        errors.append("atmospheric fractions do not total 1")
+    if atm["mole_fraction"]:
+        if not math.isclose(sum(atm["mole_fraction"].values()),1.0,abs_tol=.00001):
+            errors.append("atmospheric fractions do not total 1")
+    elif atm["surface_pressure_bar"] != 0:
+        errors.append("atmosphere without gas composition")
     if not surface:
         if atm["has_solid_surface"] or atm["surface_pressure_bar"] is not None or p["surface"]["exists"]:
             errors.append("gas envelope cannot have accessible solid surface")

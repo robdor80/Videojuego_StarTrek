@@ -26,7 +26,7 @@ RECIPES = {
 }
 # Stable and conservative orbit ratios; each moon has a physically plausible
 # near-parent position instead of the oversized illustrative old offsets.
-MOON_OFFSETS = {301:(.0015,.0005), 302:(.012,.004), 303:(-.010,-.006), 304:(.003,.001)}
+MOON_OFFSETS = {301:(2,1), 302:(12,4), 303:(-10,-6), 304:(3,1)}
 
 def enrich(base: dict) -> dict:
     if base["scenario_id"]!="aster_f06_qa" or base["schema_version"]!=1:
@@ -73,8 +73,8 @@ def enrich(base: dict) -> dict:
             if not min_dist<distance<max_dist:
                 raise ValueError(f"moon {e['key']} outside stable Hill/size band")
             e["position_milli_au"]=[
-                round(parent["position_milli_au"][0]+dx*1000),
-                round(parent["position_milli_au"][1]+dy*1000), 0]
+                parent["position_milli_au"][0]+dx,
+                parent["position_milli_au"][1]+dy, 0]
             e["science_truth"]={
                 "physical_model":"trek_astro_physical_v1",
                 "parent_key":parent_key,"orbital_distance_au":distance,
