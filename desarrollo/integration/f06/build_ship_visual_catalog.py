@@ -38,12 +38,12 @@ def build(root: Path = ROOT) -> dict[str, Any]:
         geometry = []
         for f in raw_files:
             ext = str(f.get("extension") or "").lower()
-            if ext not in {".glb", ".gltf", ".fbx", ".obj", ".blend"}:
+            if ext != ".glb":
                 continue
             name = f.get("path")
             if not isinstance(name, str) or not name or Path(name).name != name:
                 raise ValueError(f"Unsafe geometry filename in {path}")
-            geometry.append({"name": name, "format": ext, "size_bytes": f.get("size_bytes")})
+            geometry.append({"name": name, "format": ext})
         proven = metadata.get("provenance") or {}
         assets.append({
             "visual_asset_id": asset_id,
@@ -63,16 +63,16 @@ def build(root: Path = ROOT) -> dict[str, Any]:
                 and bool(geometry)
             ),
         })
-    assets.sort(key=lambda row: row["visual_asset_id"])
+    assets.sort(key=lambda row: row["metadata_path"])
     return {
         "schema_version": "0.1.0",
         "catalog_id": "f06_ship_visual_catalog",
         "source": "assets/naves/**/metadata.json",
         "status": "METADATA_INVENTORY_ONLY",
-        "note": ("Only an approved observed class_id can select a class preview. "
-                 "A catalog entry does NOT reveal any real-world ship identity. "
-                 "No model is bundled, UE5 import validated or redistribution authorized here."),
         "models_count": len(assets),
+        "note": ("25 fichas de metadatos ya existentes; los GLB no están en este commit ni su presencia local, licencia, geometría o importación en Unreal se ha validado. Los IDs no conceden conocimiento a Sensores."),
+        "reveal_policy": {"unknown":"no exact model","partial":"generic silhouette","class_probable":"unconfirmed label only",
+                          "class_confirmed":"only validated class asset in F07","identity_confirmed":"vessel-specific model only with observed identity"},
         "assets": assets,
     }
 
@@ -84,7 +84,7 @@ def main() -> int:
     result = build()
     text = json.dumps(result, sort_keys=True, ensure_ascii=False, indent=2) + "\n"
     if args.check:
-        if args.check.read_text(encoding="utf-8") != text:
+        if json.loads(args.check.read_text(encoding="utf-8")) != result:
             raise SystemExit(f"Catalog stale: {args.check}")
         print(f"F06 catalog verified: {result['models_count']} models")
     else:
