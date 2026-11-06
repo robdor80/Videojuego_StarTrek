@@ -69,6 +69,24 @@ F04_API uint32_t f06_notices_page(F04Session*,F04Ref observer,uint64_t after_eve
  * known contact may be targeted. No operator booleans or raw entity IDs. */
 F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
  uint64_t contact_id,F06ContactView*);
+/* Real persistent SENSOR -> SCIENCE queue on the same Core campaign.
+ * Analysis is a request, not a fabricated scientific conclusion.
+ * F06 science kinds: 1 classify contact; 2 investigate anomaly;
+ * 3 study emissions; 4 map local environment.
+ * Priority: 1 routine; 2 normal; 3 high; 4 urgent. */
+typedef struct {
+ uint64_t expected_revision,request_key,contact_id;
+ uint32_t priority,analysis_kind;
+} F06ScienceRequest;
+typedef struct {
+ uint64_t handoff_id,contact_id,created_at,observed_at,transponder_id;
+ int64_t observed_x_milli_au,observed_y_milli_au,observed_z_milli_au;
+ uint32_t priority,analysis_kind,status,class_id,confidence_permille;
+} F06ScienceView;
+F04_API uint32_t f06_science_handoff(F04Session*,F04Ref operator_ref,
+ const F06ScienceRequest*,F06ScienceView*);
+F04_API uint32_t f06_science_queue_page(F04Session*,F04Ref observer,
+ uint64_t offset,F06ScienceView*,uint64_t capacity,uint64_t* written,uint64_t* total);
 /* Read-only numeric catalog resolution belongs to Star Trek, not CoreRPG. */
 #ifdef __cplusplus
 }
