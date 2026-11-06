@@ -252,6 +252,17 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** «guárdala como nueva idea».
 - **Ejecución:** NO INICIADA; no altera F05 ni el Plan Maestro.
 
+### IDEA-0020 — Cartografía interior real, localización y guiado inteligente
+- **Fecha de aprobación expresa:** 2026-11-06.
+- **Estado:** APROBADA; **implementación autorizada y progresiva**, pendiente de geometría y pruebas integradas.
+- **Propuesta:** cartografía de **nuestra Enterprise-D modernizada**, no de la original; cada sala, puerta, camarote, pasillo y turboascensor tiene identidad y conexiones verificadas. La computadora conoce la posición autorizada del jugador y de NPC según World State y ofrece rutas habladas o LCARS.
+- **Seguridad y coherencia:** accesos, bloqueos, privacidad, localización desconocida, conectores virtuales entre escenas y replanificación; no inventar rutas, ocupantes ni conocimiento.
+- **Ficha detallada:** [IDEA-0020_cartografia_interior_localizacion_y_guiado_inteligente.md](IDEA-0020_cartografia_interior_localizacion_y_guiado_inteligente.md).
+- **Relación:** [IDEA-0015 — Turboascensores](IDEA-0015_turboascensores_inteligentes_lenguaje_natural.md), [IDEA-0016 — Insignias](IDEA-0016_insignias_starfleet_comunicaciones_universales.md), [IDEA-0019 — Starfleet PADD](IDEA-0019_starfleet_padd_consulta_android_partida.md), CoreRPG, F03–F05, F07, F12, F14–F15.
+- **Etapas candidatas:** MAP-01–MAP-08. Empezar por contrato/validador, completar planos solo cuando existan salas y conexiones reales.
+- **Decisión del autor:** «esta ... también ... implémentala».
+- **Ejecución:** autorizada; el registro por sí solo no significa cartografía UE5 terminada.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
