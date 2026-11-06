@@ -260,7 +260,7 @@ void run(const std::string& scenario){
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
  } else if(scenario=="results_compare") {
-  l.ready();const auto source=l.upsert(l.signal(550,5000,4,999));
+  l.ready();const auto source=l.upsert(l.signal(500,5000,4,999));
   const U id=l.contacts()[0].contact_id;
   F06ContactView inspected{};
   ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&inspected)==F04_OK,
