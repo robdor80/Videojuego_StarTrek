@@ -23,6 +23,18 @@
 
 La primera integración nativa usa **puntuaciones enteras normalizadas y milésimas de UA** a modo de prueba determinista, sin presentarlas como potencia o alcance canon del universo. El Host debe aportar posición relativa, firma, camuflaje/interferencia y transpondedor provenientes de su World State y de las reglas físicas disponibles.
 
+## F06-BIS — siete mejoras nativas sin MSI (PR #93)
+
+La lógica aprobada de Ciencia, historial, barridos con reloj, interferencias por banda,
+transferencias a Ciencia/Ingeniería, matrices independientes de platillo/cuerpo
+y sus pruebas nativas está en
+[F06_BIS_SIETE_TRABAJOS_2026-11-06.md](F06_BIS_SIETE_TRABAJOS_2026-11-06.md).
+Se añade a la **misma** sesión CoreRPG, con ABI `include/f06_bis.h`
+y runtime `src/f06_bis.inc`. Los instrumentos de Aster son **solo de test**,
+y la lectura científica no se filtra por la API básica de Sensores.
+**F06 continúa sin cerrar**: faltan la fuente viva F13, una consola de Ciencia
+completa y la prueba real UE5/MSI.
+
 ## Perfiles físicos Aster — generador v1
 El paso de CMake `enrich_aster_f06_v1.py` calcula en el árbol ignorado las propiedades físicas de seis planetas antes de generar los snapshots nativos F06. No cambia la fixture histórica ni expone atmósferas, vida o clases al puerto de sensores. Las antiguas etiquetas manuales Y/L de mundos muy distantes no superaban una comprobación térmica; ahora se clasifican provisionalmente desde la física, no por decoración. La luna de cada planeta se aproxima a una distancia acotada por la esfera de Hill. No existe aún dinámica orbital ni ciencia interactiva completa.
 

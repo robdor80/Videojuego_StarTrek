@@ -14,7 +14,7 @@ Transformar las capacidades ya implementadas de F06 en una cadena verificable: m
 | 4. Interferencias | `f06_host_environment`: cinco bandas independientes EM, térmica, gravimétrica, subespacial y biológica (0–550), revisión estrictamente creciente, penalizaciones por categoría, reescaneo pasivo y persistencia Core. | El Host F13 debe calcular la posición respecto de la nebulosa/tormenta y publicar su estado real. No hay simulación de camuflaje óptico o subespacial complejo. |
 | 5. Ciencia e Ingeniería | Handoff existente `f06_science_handoff` pasa de `queued` a `completed` solo con un informe respaldado por observación focal; `f06_host_apply_power` aplica una asignación real **solo tras** aprobación en Core y comprobando cantidad y vencimiento. | Comprobar presupuesto energético global y seleccionar donante corresponde a Ingeniería/Operaciones del Host, no a Sensores; jamás una aprobación lógica crea potencia por sí sola. |
 | 6. Secciones de Enterprise-D | Dos entidades Core `f06_section_array` de platillo/cuerpo de batalla, cada una con potencia, integridad, funciones y conectividad. Selección de la mejor matriz **conectada**; no utiliza hardware de una sección separada. Solo instalables con perfil 5, Enterprise-D reconstruida individual. | La separación real, tripulación y sensores de la nave secundaria como **observador diferente** requieren estados de naves independientes del mundo/Host y F13. No se afirma que exista otra nave Core jugable. |
-| 7. Validación | Cinco nuevos escenarios nativos; cobertura de F06 preexistente y regresión F05, Linux+Windows, pruebas de determinismo, idempotencia y guardado/carga, README, CI. | Pruebas UE5/MSI/LCARS, aceptación de jugador y tiempos reales de simulación permanecen pendientes. |
+| 7. Validación | Ocho escenarios nativos; cobertura de F06 preexistente y regresión F05, Linux+Windows, pruebas de determinismo, idempotencia y guardado/carga, README, CI. | Pruebas UE5/MSI/LCARS, aceptación de jugador y tiempos reales de simulación permanecen pendientes. |
 
 ## Invariantes innegociables
 
@@ -36,7 +36,7 @@ Transformar las capacidades ya implementadas de F06 en una cadena verificable: m
 
 ## Plan real de aceptación
 
-1. Ejecutar toda la CI nativa F06 en Ubuntu y Windows del **mismo commit**, incluyendo `bis_science`, `bis_timed`, `bis_environment`, `bis_power`, `bis_sections`.
+1. Ejecutar toda la CI nativa F06 en Ubuntu y Windows del **mismo commit**, incluyendo `bis_science`, `bis_science_corrob`, `bis_timed`, `bis_timed_interrupt`, `bis_environment`, `bis_power`, `bis_sections` y `bis_sections_modes`.
 2. Verificar regresiones F02–F05 y los tests ASTRO, referenciales.
 3. Registrar el resultado de cada CI; no afirmar PASS hasta que Actions lo reporte.
 4. Fase posterior, sin Codex obligatorio para el código: enlazar fuente espacial F13 y proveedor de datos científicos; validar entre dos naves observadoras.
