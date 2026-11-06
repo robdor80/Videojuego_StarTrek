@@ -165,6 +165,28 @@ void run(const std::string& scenario){
   l.upsert(world);ok(l.contacts(F06_LOST).size()==1,"old target lost");
   ok(f06_tracking_status(l.s,l.h.captain,&stats)==F04_OK && stats.used_slots==12,
      "lost contact releases dedicated tracking budget automatically");
+ } else if(scenario=="area_scan") {
+  l.ready();l.upsert(l.signal(280,5000,4,999));
+  ok(l.contacts().empty(),"weak signal genuinely below passive threshold");
+  F06AreaRequest req{l.stats().revision,5000,0,0,1000,0};
+  F06AreaReceipt result{};
+  auto snap=l.save();
+  ok(f06_scan_area(l.s,l.h.captain,&req,&result)==F04_QUALIFICATION,
+     "only qualified Sensors operator may focus volume");
+  ok(snap==l.save(),"rejection without mutation or leaked contact");
+  req.center_x_milli_au=10000;
+  ok(f06_scan_area(l.s,l.h.ensign,&req,&result)==F04_OK &&
+     !result.observed_contacts && !result.new_contacts && l.contacts().empty(),
+     "wrong area cannot reveal unobserved source");
+  req.center_x_milli_au=5000;req.expected_revision=l.stats().revision;
+  ok(f06_scan_area(l.s,l.h.ensign,&req,&result)==F04_OK &&
+     result.observed_contacts==1 && result.new_contacts==1,"focused area discovers signal");
+  auto contact=l.contacts();
+  ok(contact.size()==1 && !contact[0].class_id && !contact[0].transponder_id,
+     "area scan preserves limited identification");
+  req.expected_revision=l.stats().revision;
+  ok(f06_scan_area(l.s,l.h.ensign,&req,&result)==F04_OK &&
+     result.observed_contacts==1 && !result.new_contacts,"no duplicate dossier");
  } else if(scenario=="science_queue") {
   l.ready();l.upsert(l.signal(580,5000,4,999));
   const U id=l.contacts()[0].contact_id;
