@@ -390,13 +390,26 @@ def generate_system(seed: str, sector: str = "041", era: str = "tng_ds9_voyager"
             physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
                 a,family,f"{root}|planet:{i}")
         if previous:
-            mass_sum=previous[1]["mass_earth"]+physics["mass_earth"]
-            mutual=(previous[0]+a)*.5*(mass_sum/(3*total_mass*M_EARTH_PER_SUN))**(1/3)
-            while (a-previous[0])/mutual < 9.0:
-                a*=1.20
-                physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
-                    a,family,f"{root}|planet:{i}")
+            # Recompute Hill separation with BOTH current planet masses after
+            # each new orbit proposal. A new radius can change composition/mass;
+            # the earlier frozen mass_sum underestimated some giant encounters.
+            for attempt in range(80):
+                mass_sum=previous[1]["mass_earth"]+physics["mass_earth"]
                 mutual=(previous[0]+a)*.5*(mass_sum/(3*total_mass*M_EARTH_PER_SUN))**(1/3)
+                if (a-previous[0])/mutual >= 9.1:
+                    break
+                a*=1.22
+                try:
+                    physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
+                        a,family,f"{root}|planet:{i}")
+                except ValueError:
+                    if family!="ocean":
+                        raise
+                    family="rocky"
+                    physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
+                        a,family,f"{root}|planet:{i}")
+            else:
+                raise ValueError("cannot allocate safely separated planet orbit")
         angle=planet_rng.between(0,2*math.pi)
         xyz=[a*math.cos(angle),a*math.sin(angle),0.0]
         e=body_entity(root,f"PROC-{sector}-{i}","planet",i,system_id,xyz,physics,
