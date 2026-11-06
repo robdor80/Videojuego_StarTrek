@@ -6,7 +6,7 @@ U f06_public(U source,U ship_identity) {
  U z=source+UINT64_C(0x9e3779b97f4a7c15)+(ship_identity<<1);
  z=(z^(z>>30))*UINT64_C(0xbf58476d1ce4e5b9);
  z=(z^(z>>27))*UINT64_C(0x94d049bb133111eb);
- return ((z^(z>>31))&FOREVER)?:1;
+ const U id=(z^(z>>31))&FOREVER;return id?id:1;
 }
 int64_t f06_unzigzag(U x) {return (x&1)?-int64_t(x/2)-1:int64_t(x/2);}
 void f06_set(Campaign& c,U id,Field field,U v) {
