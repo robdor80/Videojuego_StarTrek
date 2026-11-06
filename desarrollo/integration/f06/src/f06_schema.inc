@@ -21,7 +21,9 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
   allowed={F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,
    F06_SEEN_CLASS,F06_SEEN_TRANSPONDER,F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON,F06_PUBLIC_ID,
    F06_TRACK_MODE,F06_TRACK_UPDATED};
-  required=allowed;ar={SHIP,F06_SIGNAL_REF};rr=ar;return true;
+  required=allowed;
+  required.erase(F06_TRACK_MODE);required.erase(F06_TRACK_UPDATED);
+  ar={SHIP,F06_SIGNAL_REF};rr=ar;return true;
  }
  return false;
 }
