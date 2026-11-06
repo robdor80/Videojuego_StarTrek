@@ -773,6 +773,37 @@ void run(const std::string& scenario){
     "a broken matrix cannot fabricate delayed science results");
   const auto saved=l.save();l.load(saved);
   ok(l.save()==saved,"failed scan persists and does not retry magically");
+ } else if(scenario=="bis_sections_modes") {
+  l.ready();
+  F06ProfileInstall install{l.stats().revision,5,0};F06ProfileView installed{};
+  ok(f06_host_install_profile(l.s,&install,&installed)==F04_OK,"Enterprise-D profile");
+  // Superior but nonfocused saucer cannot lend its performance to the weaker
+  // battle focused array: the scan must use the physically available hardware.
+  F06SectionInput saucer{l.stats().revision,1,1,1000,1000,1000,1,1,0};
+  F06SectionView sectionView{};
+  ok(f06_host_section_array(l.s,&saucer,&sectionView)==F04_OK,"saucer short+long only");
+  F06SectionInput battle{l.stats().revision,2,1,650,900,1000,0,0,1};
+  ok(f06_host_section_array(l.s,&battle,&sectionView)==F04_OK,"battle focus only");
+  auto sig=l.signal(1000,100,0,0);sig.signature_category=F06_CATEGORY_PLANET;
+  l.upsert(sig);
+  const auto before=l.contacts(F06_ACTIVE);
+  ok(before.size()==1,"short range saucer acquired the contact");
+  F06ArrayView combined{};
+  ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
+    combined.focused_enabled && combined.short_enabled,
+    "combined capabilities list the independent available modes");
+  F06ContactView result{};
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,before[0].contact_id,&result)==F04_OK &&
+    result.confidence_permille<before[0].confidence_permille,
+    "focused scan uses weaker battle hardware, not stronger saucer power");
+  // Physically disconnect the focused battle array: only passive saucer remains.
+  battle.expected_revision=l.stats().revision;battle.linked=0;
+  ok(f06_host_section_array(l.s,&battle,&sectionView)==F04_OK,"battle physically detached");
+  ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
+    !combined.focused_enabled && combined.short_enabled,
+    "detached battle focus cannot be used by saucer observer");
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,before[0].contact_id,&result)==F04_UNAVAILABLE,
+    "focused operation denied when only detached section has a focal array");
  } else if(scenario=="mini_system") {
   // Genuine native Core campaign fed by independent, bounded spatial-world
   // fixtures. Planetary science truth is deliberately absent from this ABI.
