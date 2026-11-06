@@ -527,6 +527,9 @@ uint32_t f06_host_array_state(F04Session* s,const F06ArrayInput* in,F06ArrayView
    in->power_permille<=1000 && in->integrity_permille<=1000 &&
    in->short_enabled<=1 && in->long_enabled<=1 && in->focused_enabled<=1,
    F04_ARGUMENT);
+  // Once individual physical arrays are installed, their Host is the only
+  // authority. A legacy aggregate write must not silently be ignored.
+  need(all(s->c->world,"f06_section_array").empty(),F04_SCOPE);
   auto next=std::make_unique<Campaign>(*s->c);
   const auto rows=all(next->world,"f06_array");
   U id=rows.empty()?0:rows[0];
@@ -643,6 +646,7 @@ uint32_t f06_host_install_profile(F04Session* s,const F06ProfileInstall* in,F06P
  return call(s,[&]()->uint32_t{
   need(!in->reserved && in->profile_id<=5,F04_ARGUMENT);
   need(in->expected_revision==s->c->world.revision(),F04_STALE);
+  need(all(s->c->world,"f06_section_array").empty() || in->profile_id==5,F04_SCOPE);
   auto next=std::make_unique<Campaign>(*s->c);
   auto arrays=all(next->world,"f06_array");
   U id=arrays.empty()?0:arrays[0];
