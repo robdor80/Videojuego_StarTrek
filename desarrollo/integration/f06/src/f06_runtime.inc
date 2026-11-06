@@ -29,6 +29,20 @@ F06ArrayView f06_array_state(const WorldState& w) {
   static_cast<uint32_t>(val(w,id,F06_ARRAY_LONG)),
   static_cast<uint32_t>(val(w,id,F06_ARRAY_FOCUS))};
 }
+
+U f06_tracking_capacity(const WorldState& w) {
+ const auto hw=f06_array_state(w);
+ // Ship-specific equipment can replace this normalized nominal ceiling later.
+ return (U(16)*hw.capability_permille*hw.power_permille*hw.integrity_permille)/
+   U(1000000000);
+}
+U f06_track_cost(U mode) {return mode==F06_TRACK_PRIORITY?3:mode==F06_TRACK_NORMAL?1:0;}
+U f06_tracking_used(const WorldState& w) {
+ U used=0;
+ for(U id:all(w,"f06_contact"))if(val(w,id,F06_STATUS)==F06_ACTIVE)
+  used+=f06_track_cost(val(w,id,F06_TRACK_MODE));
+ return used;
+}
 U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  const auto array=f06_array_state(w);
  if(!array.capability_permille || !array.power_permille || !array.integrity_permille)return 0;
@@ -83,7 +97,13 @@ F06ContactView f06_view(const WorldState& w,U id) {
 void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focused) {
  U contact=f06_contact_for(c.world,sig);
  U d=f06_distance(c.world,sig);
- U score=f06_score(c.world,sig,d,active,focused),rank=f06_rank(score);
+ 
+ U score=f06_score(c.world,sig,d,active,focused);
+ // Dedicated tracking gives a modest evidence improvement ONLY when an actual
+ // sensor signal already passed the passive minimum, and no array overload exists.
+ if(contact && score>=240 && f06_tracking_used(c.world)<=f06_tracking_capacity(c.world))
+  score=std::min<U>(1000,score+(val(c.world,contact,F06_TRACK_MODE)==F06_TRACK_PRIORITY?60:0));
+ U rank=f06_rank(score);
  // An active focused request must never create a contact out of hidden truth.
  if(!rank && !contact)return;
  if(!rank) {
@@ -93,7 +113,10 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
    const bool unavailable=!hw.capability_permille || !hw.power_permille || !hw.integrity_permille ||
     (!hw.long_enabled && !hw.short_enabled);
    const U cause=unavailable?F06_EXIT_SENSOR_OFFLINE:val(c.world,sig,F06_EXIT);
+   
    f06_set(c,contact,F06_STATUS,F06_LOST);
+   // An unavailable contact may not consume finite dedicated-tracking slots.
+   f06_set(c,contact,F06_TRACK_MODE,F06_TRACK_PASSIVE);
    f06_set(c,contact,F06_LOSS_REASON,cause);
    f06_notice(c,cat,contact,(!cause && previous>=500)?F06_ANOMALOUS_LOSS:F06_CONTACT_LOST);
   }
@@ -225,6 +248,49 @@ uint32_t f06_science_queue_page(F04Session* s,F04Ref who,U offset,
   *written=std::min(capacity,*total-offset);
   for(U i=0;i<*written;++i)out[i]=f06_science_view(s->c->world,
    handoffs[static_cast<size_t>(offset+i)]);
+  return F04_OK;
+ });
+}
+
+uint32_t f06_tracking_status(F04Session* s,F04Ref who,F06TrackView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  const auto& w=s->c->world;
+  const U cap=f06_tracking_capacity(w),used=f06_tracking_used(w);
+  *out={0,0,0,static_cast<uint32_t>(used),static_cast<uint32_t>(cap),
+   static_cast<uint32_t>(used>cap)};
+  return F04_OK;
+ });
+}
+uint32_t f06_set_tracking(F04Session* s,F04Ref who,U revision,U public_id,
+ uint32_t mode,F06TrackView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  need(mode<=F06_TRACK_PRIORITY,F04_ARGUMENT);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  const U contact=f06_contact_for_public(next->world,public_id);
+  need(contact,F04_UNAVAILABLE);
+  const U current=val(next->world,contact,F06_TRACK_MODE);
+  need(mode==F06_TRACK_PASSIVE ||
+   val(next->world,contact,F06_STATUS)==F06_ACTIVE,F04_UNAVAILABLE);
+  const U cap=f06_tracking_capacity(next->world),used=f06_tracking_used(next->world);
+  if(current!=mode){
+   need(revision==next->world.revision(),F04_STALE);
+   need(used>=f06_track_cost(current),F04_INTERNAL);
+   const U requested=used-f06_track_cost(current)+f06_track_cost(mode);
+   need(requested<=cap,F04_CAPACITY);
+   f06_set(*next,contact,F06_TRACK_MODE,mode);
+   f06_set(*next,contact,F06_TRACK_UPDATED,next->time.now());
+   (void)event(*next,*s->content.catalog(),who.id,6020,F04_OK,mode,contact);
+   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  }
+  const auto& w=s->c->world;const U capacity=f06_tracking_capacity(w),allocated=f06_tracking_used(w);
+  *out={public_id,val(w,contact,F06_TRACK_UPDATED),static_cast<uint32_t>(val(w,contact,F06_TRACK_MODE)),
+   static_cast<uint32_t>(allocated),static_cast<uint32_t>(capacity),
+   static_cast<uint32_t>(allocated>capacity)};
   return F04_OK;
  });
 }
