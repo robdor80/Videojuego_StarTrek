@@ -18,7 +18,22 @@ U f06_distance(const WorldState& w,U s) {
  const long double z=f06_unzigzag(val(w,s,F06_Z));
  return static_cast<U>(std::sqrt(x*x+y*y+z*z));
 }
+F06ArrayView f06_array_state(const WorldState& w) {
+ const auto rows=all(w,"f06_array");
+ if(rows.empty())return {1000,1000,1000,1,1,1}; // nominal installed profile
+ const U id=rows[0];
+ return {static_cast<uint32_t>(val(w,id,F06_ARRAY_CAPABILITY)),
+  static_cast<uint32_t>(val(w,id,F06_ARRAY_POWER)),
+  static_cast<uint32_t>(val(w,id,F06_ARRAY_INTEGRITY)),
+  static_cast<uint32_t>(val(w,id,F06_ARRAY_SHORT)),
+  static_cast<uint32_t>(val(w,id,F06_ARRAY_LONG)),
+  static_cast<uint32_t>(val(w,id,F06_ARRAY_FOCUS))};
+}
 U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
+ const auto array=f06_array_state(w);
+ if(!array.capability_permille || !array.power_permille || !array.integrity_permille)return 0;
+ if(focused && !array.focused_enabled)return 0;
+ if(!focused && !array.long_enabled && !array.short_enabled)return 0;
  if(!val(w,s,F06_ACTIVE_FLAG))return 0;
  const U limit=focused?50000:30000;
  if(distance>limit)return 0;
@@ -32,8 +47,11 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
   if(focused)score=std::min<U>(1000,score+160);
   return score>mask?score-mask:0;
  };
- U score=measure(limit,false);
- if(!focused)score=std::max(score,measure(2000,true));
+ U score=(focused || array.long_enabled)?measure(limit,false):0;
+ if(!focused && array.short_enabled)score=std::max(score,measure(2000,true));
+ score=score*array.capability_permille/1000;
+ score=score*array.power_permille/1000;
+ score=score*array.integrity_permille/1000;
  return std::min<U>(1000,score);
 }
 U f06_rank(U score) {
@@ -71,7 +89,10 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
  if(!rank) {
   if(val(c.world,contact,F06_STATUS)==F06_ACTIVE) {
    const U previous=val(c.world,contact,F06_CONFIDENCE);
-   const U cause=val(c.world,sig,F06_EXIT);
+   const auto hw=f06_array_state(c.world);
+   const bool unavailable=!hw.capability_permille || !hw.power_permille || !hw.integrity_permille ||
+    (!hw.long_enabled && !hw.short_enabled);
+   const U cause=unavailable?F06_EXIT_SENSOR_OFFLINE:val(c.world,sig,F06_EXIT);
    f06_set(c,contact,F06_STATUS,F06_LOST);
    f06_set(c,contact,F06_LOSS_REASON,cause);
    f06_notice(c,cat,contact,(!cause && previous>=500)?F06_ANOMALOUS_LOSS:F06_CONTACT_LOST);
@@ -131,6 +152,38 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
  for(U signal:signals)f06_apply(c,cat,signal,active,false);
 }
 } // namespace
+uint32_t f06_host_array_state(F04Session* s,const F06ArrayInput* in,F06ArrayView* out) {
+ if(!in || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(in->expected_revision==s->c->world.revision(),F04_STALE);
+  need(!in->reserved && in->capability_permille<=1000 &&
+   in->power_permille<=1000 && in->integrity_permille<=1000 &&
+   in->short_enabled<=1 && in->long_enabled<=1 && in->focused_enabled<=1,
+   F04_ARGUMENT);
+  auto next=std::make_unique<Campaign>(*s->c);
+  const auto rows=all(next->world,"f06_array");
+  U id=rows.empty()?0:rows[0];
+  if(!id) {id=make(*next,*s->content.catalog(),"f06_array");link(*next,id,SHIP,1);}
+  f06_set(*next,id,F06_ARRAY_CAPABILITY,in->capability_permille);
+  f06_set(*next,id,F06_ARRAY_POWER,in->power_permille);
+  f06_set(*next,id,F06_ARRAY_INTEGRITY,in->integrity_permille);
+  f06_set(*next,id,F06_ARRAY_SHORT,in->short_enabled);
+  f06_set(*next,id,F06_ARRAY_LONG,in->long_enabled);
+  f06_set(*next,id,F06_ARRAY_FOCUS,in->focused_enabled);
+  f06_poll(*next,*s->content.catalog(),0,false);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_array_state(s->c->world);
+  return F04_OK;
+ });
+}
+uint32_t f06_array_status(F04Session* s,F04Ref who,F06ArrayView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  *out=f06_array_state(s->c->world);
+  return F04_OK;
+ });
+}
 uint32_t f06_host_signal(F04Session* s,const F06SignalInput* in,F06SignalReceipt* out) {
  if(!in || !out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {
