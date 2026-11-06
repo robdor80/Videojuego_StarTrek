@@ -32,8 +32,7 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_STATUS)<F06_ACTIVE || val(w,id,F06_STATUS)>F06_LOST ||
    val(w,id,F06_CONFIDENCE)>1000 ||
    val(w,id,F06_LOSS_REASON)>F06_EXIT_OBSERVED_OUT_OF_RANGE ||
-   val(w,id,F06_DISTANCE)>50000 ||
-   false)return false; // classification remains historical even if the source changes
+   val(w,id,F06_DISTANCE)>50000)return false; // classification remains historical even if the source changes
  }
  return true;
 }
