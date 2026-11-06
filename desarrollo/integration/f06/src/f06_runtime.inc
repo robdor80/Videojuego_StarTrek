@@ -152,6 +152,82 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
  for(U signal:signals)f06_apply(c,cat,signal,active,false);
 }
 } // namespace
+namespace {
+F06ScienceView f06_science_view(const WorldState& w,U id) {
+ const U contact=ref(w,id,F06_CONTACT_REF);
+ return {val(w,id,F06_H_PUBLIC),val(w,contact,F06_PUBLIC_ID),
+  val(w,id,F06_H_TIME),val(w,id,F06_H_OBSERVED),val(w,id,F06_H_TRANSPONDER),
+  f06_unzigzag(val(w,id,F06_H_X)),f06_unzigzag(val(w,id,F06_H_Y)),
+  f06_unzigzag(val(w,id,F06_H_Z)),
+  static_cast<uint32_t>(val(w,id,F06_H_PRIORITY)),
+  static_cast<uint32_t>(val(w,id,F06_H_KIND)),static_cast<uint32_t>(val(w,id,F06_H_STATUS)),
+  static_cast<uint32_t>(val(w,id,F06_H_CLASS)),
+  static_cast<uint32_t>(val(w,id,F06_H_CONFIDENCE))};
+}
+} // namespace
+uint32_t f06_science_handoff(F04Session* s,F04Ref who,
+ const F06ScienceRequest* req,F06ScienceView* out) {
+ if(!req || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  const auto& w=s->c->world;
+  need(req->request_key && req->request_key<=FOREVER &&
+   req->priority>=1 && req->priority<=4 &&
+   req->analysis_kind>=1 && req->analysis_kind<=4,F04_ARGUMENT);
+  // Idempotency is campaign-wide: it works after save/load and even if
+  // world revision changed. A conflicting duplicate must not reveal its task.
+  for(U h:all(w,"f06_handoff"))if(val(w,h,F06_H_KEY)==req->request_key) {
+   need(ref(w,h,PERSON)==who.id &&
+    val(w,ref(w,h,F06_CONTACT_REF),F06_PUBLIC_ID)==req->contact_id &&
+    val(w,h,F06_H_PRIORITY)==req->priority &&
+    val(w,h,F06_H_KIND)==req->analysis_kind,F04_OVERLAP);
+   *out=f06_science_view(w,h);return F04_OK;
+  }
+  need(req->expected_revision==w.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  const U c=f06_contact_for_public(next->world,req->contact_id);
+  need(c,F04_UNAVAILABLE); // no handoff of unknown truth
+  need(all(next->world,"f06_handoff").size()<512,F04_CAPACITY);
+  const U id=make(*next,*s->content.catalog(),"f06_handoff");
+  link(*next,id,SHIP,1);link(*next,id,PERSON,who.id);
+  link(*next,id,F06_CONTACT_REF,c);
+  const U public_id=f06_public(req->contact_id^req->request_key,
+   val(next->world,1,SHIP_ID));
+  for(U previous:all(next->world,"f06_handoff"))if(previous!=id)
+   need(val(next->world,previous,F06_H_PUBLIC)!=public_id,F04_CAPACITY);
+  f06_set(*next,id,F06_H_KEY,req->request_key);
+  f06_set(*next,id,F06_H_PUBLIC,public_id);
+  f06_set(*next,id,F06_H_TIME,next->time.now());
+  f06_set(*next,id,F06_H_OBSERVED,val(next->world,c,F06_LAST));
+  f06_set(*next,id,F06_H_PRIORITY,req->priority);
+  f06_set(*next,id,F06_H_KIND,req->analysis_kind);
+  f06_set(*next,id,F06_H_STATUS,1); // queued: Science has NOT analyzed it
+  f06_set(*next,id,F06_H_CLASS,val(next->world,c,F06_SEEN_CLASS));
+  f06_set(*next,id,F06_H_CONFIDENCE,val(next->world,c,F06_CONFIDENCE));
+  f06_set(*next,id,F06_H_TRANSPONDER,val(next->world,c,F06_SEEN_TRANSPONDER));
+  f06_set(*next,id,F06_H_X,val(next->world,c,F06_VISIBLE_X));
+  f06_set(*next,id,F06_H_Y,val(next->world,c,F06_VISIBLE_Y));
+  f06_set(*next,id,F06_H_Z,val(next->world,c,F06_VISIBLE_Z));
+  (void)event(*next,*s->content.catalog(),who.id,6010,F04_OK,req->request_key,id);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_science_view(s->c->world,id);
+  return F04_OK;
+ });
+}
+uint32_t f06_science_queue_page(F04Session* s,F04Ref who,U offset,
+ F06ScienceView* out,U capacity,U* written,U* total) {
+ if(!written || !total || (!out && capacity))return F04_ARGUMENT;*written=*total=0;
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  const auto handoffs=all(s->c->world,"f06_handoff");
+  *total=handoffs.size();need(offset<=*total,F04_ARGUMENT);
+  *written=std::min(capacity,*total-offset);
+  for(U i=0;i<*written;++i)out[i]=f06_science_view(s->c->world,
+   handoffs[static_cast<size_t>(offset+i)]);
+  return F04_OK;
+ });
+}
 uint32_t f06_host_array_state(F04Session* s,const F06ArrayInput* in,F06ArrayView* out) {
  if(!in || !out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {
