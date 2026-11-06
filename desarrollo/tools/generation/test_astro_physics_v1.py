@@ -112,6 +112,16 @@ class AstroV1Tests(unittest.TestCase):
         self.assertAlmostEqual(p["radiation"]["stellar_flux_earth"],1,places=7)
         self.assertTrue(p["hydrosphere"]["surface_liquid_fraction"]>.0)
 
+    def test_very_cold_rocky_atmospheres_collapse(self):
+        frozen=astro.planet_physics(1.0,1.0,4.6,30.0,"ice_rock","condensation",
+                                   {"mass_earth":1.0,"pressure_bar":1.0,
+                                    "greenhouse_k":50})
+        self.assertEqual(frozen["atmosphere"]["surface_pressure_bar"],0)
+        self.assertEqual(frozen["atmosphere"]["mole_fraction"],{})
+        self.assertEqual(frozen["atmosphere"]["volatile_regime"],"collapsed_or_airless")
+        self.assertEqual(frozen["hydrosphere"]["surface_liquid_fraction"],0)
+        self.assertEqual(astro.validate_planet(frozen,1.0,1.0,4.6),[])
+
     def test_aster_six_planets_and_host_only_truth(self):
         src=ROOT/"integration/f06/fixtures/aster_f06_qa.json"
         base=json.loads(src.read_text(encoding="utf-8"))
