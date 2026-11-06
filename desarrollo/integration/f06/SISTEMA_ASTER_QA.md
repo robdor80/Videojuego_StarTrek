@@ -2,7 +2,21 @@
 
 **Estado:** fixture determinista para pruebas del motor CoreRPG + F06; no es una localización aprobada del lore ni sustituye a F13.
 
-**Composición en el fichero JSON:** 1 estrella, 6 planetas (H, M, Y, J, P, L), 4 lunas, 1 nebulosa, 1 cinturón de asteroides representativo, 1 estación, 1 carguero civil, 1 nave científica de la Federación (Intrepid), 1 crucero klingon (Vor'cha), 1 nave romulana (D'deridex), 1 lanzadera y 1 sonda. Total **20 entidades**. Todos los nombres son provisionales.
+**Composición en el fichero JSON:** 1 estrella, 6 planetas con diversidad física, 4 lunas, 1 nebulosa, 1 cinturón de asteroides representativo, 1 estación, 1 carguero civil, 1 nave científica de la Federación (Intrepid), 1 crucero klingon (Vor'cha), 1 nave romulana (D'deridex), 1 lanzadera y 1 sonda. Total **20 entidades**. Todos los nombres son provisionales.
+
+## Clases provisionales: calculadas, no asignadas a mano
+
+El fichero de prueba histórico incluye etiquetas iniciales H/M/Y/J/P/L, pero **son antecedentes del ensayo y no mandan**. El adaptador `enrich_aster_f06_v1.py` calcula masa, órbita, radiación, temperatura, presión, agua y composición; su resultado reemplaza las etiquetas a nivel de ciencia privada del Host.
+
+- **Aster I:** rocoso árido caliente → clase H candidata.
+- **Aster II:** rocoso templado con agua superficial → clase M candidata.
+- **Aster III:** mundo muy frío por su órbita de 3,1 UA → clase P candidata, **no Y**, aunque la ficha antigua pusiera Y.
+- **Aster IV:** gigante gaseoso sin superficie terrestre → clase J.
+- **Aster V y VI:** mundos helados exteriores → clase P candidata.
+
+Son **resultados físicos aproximados** con los parámetros de la fixture; no hechos canon ni lecturas públicas. El rango de gases, presión y biología necesita un modelo avanzado y no permite inferencias arbitrarias.
+
+Los instrumentos de prueba de Ciencia se derivan exclusivamente de ese perfil privado en `build_aster_science.py` y se compilan **solo dentro de `f06_tests`**, nunca como fuente de verdad de la consola LCARS ni del jugador. Para publicar una conclusión, el sistema nativo exige una observación focal y un handoff de Ciencia persistentes.
 
 ## Las ocho horas de guardia
 
