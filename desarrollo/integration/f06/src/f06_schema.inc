@@ -17,7 +17,8 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  if(type(w,id,"f06_array")) {
   allowed={F06_ARRAY_CAPABILITY,F06_ARRAY_POWER,F06_ARRAY_INTEGRITY,
    F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS,F06_ARRAY_PROFILE};
-  required=allowed;ar={SHIP};rr=ar;return true;
+  required=allowed;required.erase(F06_ARRAY_PROFILE);
+  ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_world_feed")) {
   allowed={F06_WORLD_REV,F06_WORLD_TICK,F06_WORLD_ORIGIN_X,
@@ -27,7 +28,8 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  if(type(w,id,"f06_signal")) {
   allowed={F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,
    F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,F06_WORLD_ID,F06_WORLD_TICK};
-  required=allowed;ar={SHIP};rr=ar;return true;
+  required=allowed;required.erase(F06_WORLD_ID);required.erase(F06_WORLD_TICK);
+  ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_contact")) {
   allowed={F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,
