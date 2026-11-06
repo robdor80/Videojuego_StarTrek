@@ -597,6 +597,12 @@ void run(const std::string& scenario){
   ok(f06_begin_timed_scan(l.s,l.h.ensign,&req,&scan)==F04_OK &&
     scan.status==F06_TIMED_QUEUED && scan.finishes_at>=120 &&
     !scan.result_id,"scan queued and has no premature result");
+  F06TimedScanRequest conflicting=req;conflicting.nominal_seconds=240;
+  F06TimedScanView replay{};
+  ok(f06_begin_timed_scan(l.s,l.h.ensign,&conflicting,&replay)==F04_OVERLAP,
+    "same idempotency key cannot silently change the scan duration");
+  ok(f06_begin_timed_scan(l.s,l.h.ensign,&req,&replay)==F04_OK &&
+    replay.scan_id==scan.scan_id,"true duplicate timed scan is idempotent");
   std::array<F06ResultView,3> results{};U written=0,total=0;
   ok(f06_results_page(l.s,l.h.captain,contact,0,results.data(),results.size(),
    &written,&total)==F04_OK && !total,"no observation before clock advances");

@@ -12,7 +12,7 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
   required=allowed;ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_timed_scan")) {
-  allowed={F06_TIMED_KEY,F06_TIMED_PUBLIC,F06_TIMED_START,F06_TIMED_DUE,
+  allowed={F06_TIMED_KEY,F06_TIMED_PUBLIC,F06_TIMED_START,F06_TIMED_DUE,F06_TIMED_NOMINAL,
    F06_TIMED_COST,F06_TIMED_STATUS,F06_TIMED_RESULT};
   required=allowed;required.erase(F06_TIMED_RESULT);
   ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
@@ -118,6 +118,7 @@ bool f06_schema(const Campaign& c) {
    !val(w,id,F06_TIMED_PUBLIC) || !timed_public.insert(val(w,id,F06_TIMED_PUBLIC)).second ||
    !type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") ||
    start>c.time.now() || due<=start || due-start>3600 ||
+   val(w,id,F06_TIMED_NOMINAL)<30 || val(w,id,F06_TIMED_NOMINAL)>900 ||
    val(w,id,F06_TIMED_COST)<50 || val(w,id,F06_TIMED_COST)>500 ||
    status<F06_TIMED_QUEUED || status>F06_TIMED_CANCELLED ||
    (has(w,id,F06_TIMED_RESULT) != (status==F06_TIMED_FINISHED)))return false;

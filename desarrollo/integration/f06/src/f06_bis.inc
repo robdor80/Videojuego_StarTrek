@@ -204,7 +204,8 @@ uint32_t f06_begin_timed_scan(F04Session* s,F04Ref who,
   for(U job:all(s->c->world,"f06_timed_scan"))
    if(val(s->c->world,job,F06_TIMED_KEY)==req->request_key) {
     need(ref(s->c->world,job,PERSON)==who.id &&
-     val(s->c->world,ref(s->c->world,job,F06_CONTACT_REF),F06_PUBLIC_ID)==req->contact_id,
+     val(s->c->world,ref(s->c->world,job,F06_CONTACT_REF),F06_PUBLIC_ID)==req->contact_id &&
+     val(s->c->world,job,F06_TIMED_NOMINAL)==req->nominal_seconds,
      F04_OVERLAP);
     *out=f06_timed_view(s->c->world,job);return F04_OK;
    }
@@ -236,6 +237,7 @@ uint32_t f06_begin_timed_scan(F04Session* s,F04Ref who,
   f06_set(*next,id,F06_TIMED_PUBLIC,pub);
   f06_set(*next,id,F06_TIMED_START,now);
   f06_set(*next,id,F06_TIMED_DUE,now+duration);
+  f06_set(*next,id,F06_TIMED_NOMINAL,req->nominal_seconds);
   f06_set(*next,id,F06_TIMED_COST,cost);
   f06_set(*next,id,F06_TIMED_STATUS,F06_TIMED_QUEUED);
   (void)event(*next,*s->content.catalog(),who.id,6060,F04_OK,req->request_key,id);
