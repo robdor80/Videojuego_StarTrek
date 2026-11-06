@@ -401,3 +401,44 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   *out=f06_view(s->c->world,internal);return F04_OK;
  });
 }
+
+uint32_t f06_scan_area(F04Session* s,F04Ref who,
+ const F06AreaRequest* req,F06AreaReceipt* out) {
+ if(!req || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);
+  need(!req->reserved && req->radius_milli_au>=1 &&
+   req->radius_milli_au<=3000,F04_ARGUMENT);
+  const auto valid_coordinate=[](int64_t n){return n>=-50000 && n<=50000;};
+  need(valid_coordinate(req->center_x_milli_au) &&
+   valid_coordinate(req->center_y_milli_au) &&
+   valid_coordinate(req->center_z_milli_au),F04_ARGUMENT);
+  const long double cx=req->center_x_milli_au,cy=req->center_y_milli_au,cz=req->center_z_milli_au;
+  need(cx*cx+cy*cy+cz*cz<=static_cast<long double>(50000)*50000,F04_ARGUMENT);
+  need(req->expected_revision==s->c->world.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  const auto hw=f06_array_state(next->world);
+  need(hw.focused_enabled && hw.capability_permille &&
+    hw.power_permille && hw.integrity_permille,F04_UNAVAILABLE);
+  U observed=0,created=0;
+  for(U signal:all(next->world,"f06_signal")) {
+   const int64_t dx=f06_unzigzag(val(next->world,signal,F06_X))-req->center_x_milli_au;
+   const int64_t dy=f06_unzigzag(val(next->world,signal,F06_Y))-req->center_y_milli_au;
+   const int64_t dz=f06_unzigzag(val(next->world,signal,F06_Z))-req->center_z_milli_au;
+   const uint64_t sq=uint64_t(dx*dx)+uint64_t(dy*dy)+uint64_t(dz*dz);
+   if(sq>U(req->radius_milli_au)*req->radius_milli_au)continue;
+   const U before=f06_contact_for(next->world,signal);
+   f06_apply(*next,*s->content.catalog(),signal,true,true);
+   const U after=f06_contact_for(next->world,signal);
+   if(after && val(next->world,after,F06_STATUS)==F06_ACTIVE) {
+    ++observed;
+    if(!before)++created;
+   }
+  }
+  // This is an explicit operator action, unlike free continuous watch.
+  (void)event(*next,*s->content.catalog(),who.id,6021,F04_OK,0,0);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out={s->c->world.revision(),observed,created};return F04_OK;
+ });
+}
