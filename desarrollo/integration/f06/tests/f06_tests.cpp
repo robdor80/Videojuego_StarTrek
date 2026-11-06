@@ -259,6 +259,56 @@ void run(const std::string& scenario){
   const auto saved=l.save();
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
+ } else if(scenario=="configuration") {
+  l.ready();
+  F06ConfigView current{};
+  ok(f06_configuration_status(l.s,l.h.captain,&current)==F04_OK &&
+    current.sensitivity_permille==1000 && current.resolution_permille==1000,
+    "legacy configurations nominal until explicitly installed");
+  const auto original=l.save();
+  F06ConfigRequest invalid{l.stats().revision,1000,1000,500,1,20,0};
+  ok(f06_configure(l.s,l.h.ensign,&invalid,&current)==F04_ARGUMENT &&
+    l.save()==original,"unbounded simultaneous maximization rejected atomically");
+  F06ConfigRequest request{l.stats().revision,800,800,200,2,30,0};
+  ok(f06_configure(l.s,l.h.captain,&request,&current)==F04_QUALIFICATION &&
+    l.save()==original,"captain cannot configure unoccupied station");
+  ok(f06_configure(l.s,l.h.ensign,&request,&current)==F04_OK &&
+    current.compensation_permille==200 && current.preferred_update_seconds==30,
+    "configuration persists and respects trade-offs");
+  ok(l.contacts().empty(),"changing configuration cannot create contacts");
+  const auto snapshot=l.save();l.load(snapshot);
+  ok(f06_configuration_status(l.s,l.h.captain,&current)==F04_OK &&
+     current.sensitivity_permille==800 && current.preset_id==2,
+     "configuration survives Core save/load");
+ } else if(scenario=="search") {
+  l.upsert(l.signal(960,100,1,101));
+  l.upsert(l.signal(580,5000,4,900));
+  F06ContactView matches[4]{};U n=0,total=0;
+  F06ContactQuery q{F06_ACTIVE,4,0,0};
+  ok(f06_search_contacts_page(l.s,l.h.captain,&q,0,matches,4,&n,&total)==F04_OK &&
+    total==0 && !n,"search must not see undiscovered Defiant class from world truth");
+  q.confirmed_class_id=1;
+  ok(f06_search_contacts_page(l.s,l.h.captain,&q,0,matches,4,&n,&total)==F04_OK &&
+    total==1 && n==1 && matches[0].class_id==1,"known Galaxy class searchable");
+  q.confirmed_class_id=0;q.max_distance_milli_au=200;
+  ok(f06_search_contacts_page(l.s,l.h.captain,&q,0,matches,4,&n,&total)==F04_OK &&
+    total==1 && matches[0].distance_milli_au<=200,"range search uses observed distance");
+ } else if(scenario=="diagnostics") {
+  l.ready();
+  F06DiagnosticView diag{};
+  ok(f06_diagnostics(l.s,l.h.captain,&diag)==F04_OK &&
+    diag.state==1 && diag.configuration_budget_remaining==100,
+    "nominal equipment and default config");
+  const auto before=l.save();
+  ok(f06_run_self_test(l.s,l.h.captain,l.stats().revision,&diag)==F04_QUALIFICATION &&
+    before==l.save(),"self test requires sensor post");
+  ok(f06_run_self_test(l.s,l.h.ensign,l.stats().revision,&diag)==F04_OK &&
+    diag.state==1,"self-test recorded against real sensor hardware");
+  F06ArrayInput failure{l.stats().revision,1000,0,1000,1,1,1,0};
+  F06ArrayView after{};
+  ok(f06_host_array_state(l.s,&failure,&after)==F04_OK,"trusted physical power loss");
+  ok(f06_diagnostics(l.s,l.h.captain,&diag)==F04_OK &&
+    diag.state==3,"offline status is not mistaken for an anomaly");
  } else if(scenario=="profiles") {
   F06ProfileView previous{};U last_short=0,last_long=0,last_focus=0,last_slots=0;
   for(uint32_t id=1;id<=5;++id) {

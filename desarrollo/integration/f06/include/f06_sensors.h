@@ -115,6 +115,42 @@ F04_API uint32_t f06_notices_page(F04Session*,F04Ref observer,uint64_t after_eve
  * known contact may be targeted. No operator booleans or raw entity IDs. */
 F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
  uint64_t contact_id,F06ContactView*);
+/* Persistent per-ship sensor operations profile, not the installed hardware.
+ * Configuring changes neither World Truth nor physical power allocation.
+ * Precision/interference compensation trade against sensor sensitivity. */
+typedef struct {
+ uint64_t expected_revision;
+ uint32_t sensitivity_permille,resolution_permille,compensation_permille;
+ uint32_t preset_id,preferred_update_seconds,reserved;
+} F06ConfigRequest;
+typedef struct {
+ uint32_t sensitivity_permille,resolution_permille,compensation_permille;
+ uint32_t preset_id,preferred_update_seconds;
+} F06ConfigView;
+F04_API uint32_t f06_configure(F04Session*,F04Ref operator_ref,
+ const F06ConfigRequest*,F06ConfigView*);
+F04_API uint32_t f06_configuration_status(F04Session*,F04Ref observer,F06ConfigView*);
+
+/* Search is performed strictly on ALREADY OBSERVED contact dossiers.
+ * Filters cannot query unknown world signatures or infer hidden class IDs. */
+typedef struct {
+ uint32_t status,confirmed_class_id,min_confidence_permille,max_distance_milli_au;
+} F06ContactQuery;
+F04_API uint32_t f06_search_contacts_page(F04Session*,F04Ref observer,
+ const F06ContactQuery*,uint64_t offset,F06ContactView*,
+ uint64_t capacity,uint64_t* written,uint64_t* total);
+
+/* Self-tests inspect actual sensor hardware; no external-world discovery.
+ * State: 1 nominal, 2 degraded, 3 offline, 4 misconfigured. */
+typedef struct {
+ uint64_t tested_at;
+ uint32_t state,capability_permille,power_permille,integrity_permille;
+ uint32_t configured_sensitivity_permille,configuration_budget_remaining;
+} F06DiagnosticView;
+F04_API uint32_t f06_diagnostics(F04Session*,F04Ref observer,F06DiagnosticView*);
+F04_API uint32_t f06_run_self_test(F04Session*,F04Ref operator_ref,
+ uint64_t expected_revision,F06DiagnosticView*);
+
 /* A power request never changes the actual ship power allocation.
  * Only Command / Operations can approve or reject. The trusted power host
  * must separately implement a physical grant before Sensors uses it. */

@@ -31,6 +31,30 @@ F06ArrayView f06_array_state(const WorldState& w) {
   static_cast<uint32_t>(val(w,id,F06_ARRAY_FOCUS))};
 }
 
+F06ConfigView f06_current_config(const WorldState& w) {
+ const auto rows=all(w,"f06_configuration");
+ if(rows.empty())return {1000,1000,0,0,60}; // unchanged default
+ const U id=rows[0];
+ return {static_cast<uint32_t>(val(w,id,F06_CONFIG_SENS)),
+  static_cast<uint32_t>(val(w,id,F06_CONFIG_RES)),
+  static_cast<uint32_t>(val(w,id,F06_CONFIG_COMP)),
+  static_cast<uint32_t>(val(w,id,F06_CONFIG_PRESET)),
+  static_cast<uint32_t>(val(w,id,F06_CONFIG_INTERVAL))};
+}
+F06DiagnosticView f06_diagnostic_state(const Campaign& c) {
+ const auto hw=f06_array_state(c.world);
+ const auto cfg=f06_current_config(c.world);
+ U state=1;
+ if(!hw.power_permille || !hw.integrity_permille || !hw.capability_permille ||
+    (!hw.short_enabled && !hw.long_enabled))state=3;
+ else if(hw.power_permille<750 || hw.integrity_permille<750 ||
+    hw.capability_permille<750)state=2;
+ else if(cfg.sensitivity_permille<500 || cfg.resolution_permille<500)state=4;
+ return {c.time.now(),static_cast<uint32_t>(state),hw.capability_permille,
+   hw.power_permille,hw.integrity_permille,cfg.sensitivity_permille,
+   static_cast<uint32_t>(2100-cfg.sensitivity_permille-cfg.resolution_permille-
+     2*cfg.compensation_permille)};
+}
 F06ProfileNumbers f06_profile_numbers(const WorldState& w) {
  const auto arrays=all(w,"f06_array");
  const U id=arrays.empty()?0:val(w,arrays[0],F06_ARRAY_PROFILE);
@@ -65,8 +89,10 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  if(distance>limit)return 0;
  const auto profile=f06_profile_numbers(w);
  const U strength=val(w,s,F06_STRENGTH);
- const U mask=U(val(w,s,F06_INTERFERENCE))*
+ const auto config=f06_current_config(w);
+ U mask=U(val(w,s,F06_INTERFERENCE))*
   (1000-profile.interference_resistance_permille)/1000;
+ mask=mask*(1000-config.compensation_permille)/1000;
  auto measure=[&](U range,bool near_bonus)->U {
   if(distance>range)return 0;
   // Fixed-point gameplay abstraction. Distances are milli-AU.
@@ -83,6 +109,7 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  score=score*array.capability_permille/1000;
  score=score*array.power_permille/1000;
  score=score*array.integrity_permille/1000;
+ score=score*config.sensitivity_permille/1000;
  return std::min<U>(1000,score);
 }
 U f06_rank(U score) {
@@ -120,7 +147,7 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
  // sensor signal already passed the passive minimum, and no array overload exists.
  if(contact && score>=240 && f06_tracking_used(c.world)<=f06_tracking_capacity(c.world))
   score=std::min<U>(1000,score+(val(c.world,contact,F06_TRACK_MODE)==F06_TRACK_PRIORITY?60:0));
- U rank=f06_rank(score);
+ U rank=f06_rank(score*f06_current_config(c.world).resolution_permille/1000);
  // An active focused request must never create a contact out of hidden truth.
  if(!rank && !contact)return;
  if(!rank) {
@@ -435,6 +462,87 @@ uint32_t f06_array_status(F04Session* s,F04Ref who,F06ArrayView* out) {
 }
 /* The spatial feed never exposes world keys or signal EntityIds to operator
  * APIs. All writes and resulting detections commit with one Core revision. */
+uint32_t f06_configuration_status(F04Session* s,F04Ref who,F06ConfigView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  *out=f06_current_config(s->c->world);return F04_OK;
+ });
+}
+uint32_t f06_configure(F04Session* s,F04Ref who,
+ const F06ConfigRequest* req,F06ConfigView* out) {
+ if(!req || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  need(req->sensitivity_permille>=400 && req->sensitivity_permille<=1000 &&
+   req->resolution_permille>=400 && req->resolution_permille<=1000 &&
+   req->compensation_permille<=500 &&
+   U(req->sensitivity_permille)+req->resolution_permille+2*U(req->compensation_permille)<=2100 &&
+   req->preset_id<=6 && req->preferred_update_seconds>=1 &&
+   req->preferred_update_seconds<=900 && !req->reserved,F04_ARGUMENT);
+  need(req->expected_revision==s->c->world.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  const auto arrays=f06_array_state(next->world);
+  need(arrays.capability_permille && arrays.power_permille &&
+    arrays.integrity_permille,F04_UNAVAILABLE);
+  auto rows=all(next->world,"f06_configuration");
+  U id=rows.empty()?0:rows[0];
+  if(!id){id=make(*next,*s->content.catalog(),"f06_configuration");link(*next,id,SHIP,1);}
+  f06_set(*next,id,F06_CONFIG_SENS,req->sensitivity_permille);
+  f06_set(*next,id,F06_CONFIG_RES,req->resolution_permille);
+  f06_set(*next,id,F06_CONFIG_COMP,req->compensation_permille);
+  f06_set(*next,id,F06_CONFIG_PRESET,req->preset_id);
+  f06_set(*next,id,F06_CONFIG_INTERVAL,req->preferred_update_seconds);
+  // Configuration does not execute scans or gain power automatically.
+  (void)event(*next,*s->content.catalog(),who.id,6041,F04_OK,req->preset_id,0);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_current_config(s->c->world);return F04_OK;
+ });
+}
+uint32_t f06_search_contacts_page(F04Session* s,F04Ref who,const F06ContactQuery* q,
+ U offset,F06ContactView* out,U capacity,U* written,U* total) {
+ if(!q || !written || !total || (!out && capacity))return F04_ARGUMENT;
+ *written=*total=0;
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  need(q->status<=F06_LOST && q->min_confidence_permille<=1000 &&
+    q->max_distance_milli_au<=50000,F04_ARGUMENT);
+  std::vector<U> ids;
+  for(U id:all(s->c->world,"f06_contact")){
+   const auto c=f06_view(s->c->world,id);
+   if(q->status && c.status!=q->status)continue;
+   if(q->confirmed_class_id && c.class_id!=q->confirmed_class_id)continue;
+   if(c.confidence_permille<q->min_confidence_permille)continue;
+   if(q->max_distance_milli_au && c.distance_milli_au>q->max_distance_milli_au)continue;
+   ids.push_back(id);
+  }
+  *total=ids.size();need(offset<=*total,F04_ARGUMENT);
+  *written=std::min<U>(capacity,*total-offset);
+  for(U i=0;i<*written;++i)out[i]=f06_view(s->c->world,ids[static_cast<size_t>(offset+i)]);
+  return F04_OK;
+ });
+}
+uint32_t f06_diagnostics(F04Session* s,F04Ref who,F06DiagnosticView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  *out=f06_diagnostic_state(*s->c);return F04_OK;
+ });
+}
+uint32_t f06_run_self_test(F04Session* s,F04Ref who,U revision,F06DiagnosticView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  need(revision==s->c->world.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  (void)scan_station(*next,who.id);
+  const auto state=f06_diagnostic_state(*next);
+  (void)event(*next,*s->content.catalog(),who.id,6040,F04_OK,state.state,0);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=state;return F04_OK;
+ });
+}
 uint32_t f06_host_install_profile(F04Session* s,const F06ProfileInstall* in,F06ProfileView* out) {
  if(!in || !out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t{

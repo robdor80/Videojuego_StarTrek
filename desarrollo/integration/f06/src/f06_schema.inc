@@ -20,6 +20,11 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
   required=allowed;required.erase(F06_ARRAY_PROFILE);
   ar={SHIP};rr=ar;return true;
  }
+ if(type(w,id,"f06_configuration")) {
+  allowed={F06_CONFIG_SENS,F06_CONFIG_RES,F06_CONFIG_COMP,
+   F06_CONFIG_PRESET,F06_CONFIG_INTERVAL};
+  required=allowed;ar={SHIP};rr=ar;return true;
+ }
  if(type(w,id,"f06_world_feed")) {
   allowed={F06_WORLD_REV,F06_WORLD_TICK,F06_WORLD_ORIGIN_X,
    F06_WORLD_ORIGIN_Y,F06_WORLD_ORIGIN_Z};
@@ -73,6 +78,15 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_H_KIND)<1 || val(w,id,F06_H_KIND)>4 ||
    val(w,id,F06_H_STATUS)!=1 ||
    val(w,id,F06_H_CONFIDENCE)>1000)return false;
+ }
+ const auto cfg=all(w,"f06_configuration");
+ if(cfg.size()>1)return false;
+ for(U id:cfg){
+  const U sens=val(w,id,F06_CONFIG_SENS),res=val(w,id,F06_CONFIG_RES),
+   comp=val(w,id,F06_CONFIG_COMP);
+  if(sens<400 || sens>1000 || res<400 || res>1000 || comp>500 ||
+   sens+res+2*comp>2100 || val(w,id,F06_CONFIG_PRESET)>6 ||
+   val(w,id,F06_CONFIG_INTERVAL)<1 || val(w,id,F06_CONFIG_INTERVAL)>900)return false;
  }
  const auto arrays=all(w,"f06_array");
  if(arrays.size()>1)return false;
