@@ -321,6 +321,22 @@ void run(const std::string& scenario){
   q.confirmed_class_id=0;q.max_distance_milli_au=200;
   ok(f06_search_contacts_page(l.s,l.h.captain,&q,0,matches,4,&n,&total)==F04_OK &&
     total==1 && matches[0].distance_milli_au<=200,"range search uses observed distance");
+ } else if(scenario=="categories") {
+  auto galaxy=l.signal(960,100,1,101);
+  galaxy.signature_category=F06_CATEGORY_STARSHIP;
+  l.upsert(galaxy);
+  auto shuttle=l.signal(580,3000,0,0);
+  shuttle.signature_category=F06_CATEGORY_SHUTTLE;
+  l.upsert(shuttle);
+  const auto contacts=l.contacts();
+  ok(contacts.size()==2 && contacts[0].observed_category==F06_CATEGORY_STARSHIP &&
+     contacts[1].observed_category==F06_CATEGORY_SHUTTLE,
+    "observed signatures give category without inventing class");
+  F06ContactQuery query{F06_ACTIVE,0,0,0,F06_CATEGORY_SHUTTLE};
+  F06ContactView out[3]{};U count=0,total=0;
+  ok(f06_search_contacts_page(l.s,l.h.captain,&query,0,out,3,&count,&total)==F04_OK &&
+     count==1 && total==1 && out[0].observed_category==F06_CATEGORY_SHUTTLE &&
+     !out[0].class_id,"category filtering does not leak unknown class");
  } else if(scenario=="diagnostics") {
   l.ready();
   F06DiagnosticView diag{};

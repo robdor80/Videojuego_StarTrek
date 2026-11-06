@@ -37,16 +37,16 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  }
  if(type(w,id,"f06_signal")) {
   allowed={F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,
-   F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,F06_WORLD_ID,F06_WORLD_TICK};
-  required=allowed;required.erase(F06_WORLD_ID);required.erase(F06_WORLD_TICK);
+   F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,F06_WORLD_ID,F06_WORLD_TICK,F06_CATEGORY};
+  required=allowed;required.erase(F06_WORLD_ID);required.erase(F06_WORLD_TICK);required.erase(F06_CATEGORY);
   ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_contact")) {
   allowed={F06_FIRST,F06_LAST,F06_STATUS,F06_CONFIDENCE,F06_DISTANCE,
    F06_SEEN_CLASS,F06_SEEN_TRANSPONDER,F06_VISIBLE_X,F06_VISIBLE_Y,F06_VISIBLE_Z,F06_LOSS_REASON,F06_PUBLIC_ID,
-   F06_TRACK_MODE,F06_TRACK_UPDATED};
+   F06_TRACK_MODE,F06_TRACK_UPDATED,F06_SEEN_CATEGORY};
   required=allowed;
-  required.erase(F06_TRACK_MODE);required.erase(F06_TRACK_UPDATED);
+  required.erase(F06_TRACK_MODE);required.erase(F06_TRACK_UPDATED);required.erase(F06_SEEN_CATEGORY);
   ar={SHIP,F06_SIGNAL_REF};rr=ar;return true;
  }
  return false;
@@ -123,6 +123,7 @@ bool f06_schema(const Campaign& c) {
  for(U id:source) {
   if(val(w,id,F06_STRENGTH)>1000 || val(w,id,F06_INTERFERENCE)>550 ||
    val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_SENSOR_OFFLINE ||
+   val(w,id,F06_CATEGORY)>F06_CATEGORY_ANOMALY ||
    (has(w,id,F06_WORLD_ID) &&
     (!val(w,id,F06_WORLD_ID) || feeds.size()!=1 ||
       !has(w,id,F06_WORLD_TICK) || val(w,id,F06_WORLD_TICK)>c.time.now() ||
@@ -139,6 +140,7 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_LOSS_REASON)>F06_EXIT_SENSOR_OFFLINE ||
    val(w,id,F06_DISTANCE)>50000 ||
    val(w,id,F06_TRACK_MODE)>F06_TRACK_PRIORITY ||
+   val(w,id,F06_SEEN_CATEGORY)>F06_CATEGORY_ANOMALY ||
    (has(w,id,F06_TRACK_UPDATED) && val(w,id,F06_TRACK_UPDATED)>c.time.now()))return false; // classification remains historical even if the source changes
  }
  return true;

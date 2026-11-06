@@ -10,6 +10,12 @@ extern "C" {
  * Distances and positions are fixed-point milli-AU relative to the observing
  * ship. Strength/interference are normalized gameplay scores, not canon.
  */
+enum F06SignatureCategory {
+ F06_CATEGORY_UNKNOWN=0,F06_CATEGORY_STARSHIP=1,F06_CATEGORY_SHUTTLE=2,
+ F06_CATEGORY_PROBE=3,F06_CATEGORY_LIFEFORM=4,F06_CATEGORY_ARTIFICIAL=5,
+ F06_CATEGORY_ENERGY=6,F06_CATEGORY_WARP=7,F06_CATEGORY_SUBSPACE=8,
+ F06_CATEGORY_SIGNAL=9,F06_CATEGORY_PARTICLES=10,F06_CATEGORY_ANOMALY=11
+};
 enum F06ContactStatus { F06_ACTIVE=1, F06_LOST=2 };
 enum F06NoticeKind { F06_NEW_CONTACT=1, F06_CONTACT_LOST=2,
  F06_ANOMALOUS_LOSS=3, F06_REACQUIRED=4, F06_IDENTIFIED=5 };
@@ -25,7 +31,7 @@ typedef struct {
  uint32_t class_id; /* catalog numeric class identifier, 0=unknown */
  uint32_t active; /* 0 or 1 */
  uint32_t observed_exit_evidence; /* trusted observation, 0 when not established */
- uint32_t reserved;
+ uint32_t reserved,signature_category; /* append-only ABI extension */
 } F06SignalInput;
 typedef struct {
  uint64_t signal_id,revision;
@@ -35,6 +41,7 @@ typedef struct {
  int64_t observed_x_milli_au,observed_y_milli_au,observed_z_milli_au;
  uint64_t transponder_id;
  uint32_t status,confidence_permille,distance_milli_au,class_id,loss_cause;
+ uint32_t observed_category; /* unknown until evidence sufficient */
 } F06ContactView;
 typedef struct {
  uint64_t event_id,contact_id,tick;
@@ -71,6 +78,7 @@ typedef struct {
  uint64_t transponder_id;
  uint32_t class_id,strength_permille,interference_permille;
  uint32_t active,observed_exit_evidence; /* 0..1; 0..F06_EXIT_OBSERVED_OUT_OF_RANGE */
+ uint32_t signature_category; /* must come from authoritative world, not guessed */
 } F06WorldEntity;
 typedef struct {
  uint64_t expected_revision; /* current Core World revision */
@@ -135,6 +143,7 @@ F04_API uint32_t f06_configuration_status(F04Session*,F04Ref observer,F06ConfigV
  * Filters cannot query unknown world signatures or infer hidden class IDs. */
 typedef struct {
  uint32_t status,confirmed_class_id,min_confidence_permille,max_distance_milli_au;
+ uint32_t observed_category;
 } F06ContactQuery;
 F04_API uint32_t f06_search_contacts_page(F04Session*,F04Ref observer,
  const F06ContactQuery*,uint64_t offset,F06ContactView*,

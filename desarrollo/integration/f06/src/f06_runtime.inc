@@ -136,7 +136,8 @@ F06ContactView f06_view(const WorldState& w,U id) {
    static_cast<uint32_t>(val(w,id,F06_CONFIDENCE)),
    static_cast<uint32_t>(val(w,id,F06_DISTANCE)),
    static_cast<uint32_t>(val(w,id,F06_SEEN_CLASS)),
-   static_cast<uint32_t>(val(w,id,F06_LOSS_REASON))};
+   static_cast<uint32_t>(val(w,id,F06_LOSS_REASON)),
+   static_cast<uint32_t>(val(w,id,F06_SEEN_CATEGORY))};
 }
 void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focused) {
  U contact=f06_contact_for(c.world,sig);
@@ -187,6 +188,8 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
  f06_set(c,contact,F06_DISTANCE,d);
  // Truth at sensor range is NOT automatically observed. Exact identity is
  // projected only on a resolved reading, never by catalogue lookup.
+ if(rank>=2 && val(c.world,sig,F06_CATEGORY))
+  f06_set(c,contact,F06_SEEN_CATEGORY,val(c.world,sig,F06_CATEGORY));
  if(rank>=4) {
   f06_set(c,contact,F06_SEEN_CLASS,val(c.world,sig,F06_CLASS));
   f06_set(c,contact,F06_SEEN_TRANSPONDER,val(c.world,sig,F06_TRANSPONDER));
@@ -507,12 +510,13 @@ uint32_t f06_search_contacts_page(F04Session* s,F04Ref who,const F06ContactQuery
  return call(s,[&]()->uint32_t{
   need(observer(s,who),F04_DENIED);
   need(q->status<=F06_LOST && q->min_confidence_permille<=1000 &&
-    q->max_distance_milli_au<=50000,F04_ARGUMENT);
+    q->max_distance_milli_au<=50000 && q->observed_category<=F06_CATEGORY_ANOMALY,F04_ARGUMENT);
   std::vector<U> ids;
   for(U id:all(s->c->world,"f06_contact")){
    const auto c=f06_view(s->c->world,id);
    if(q->status && c.status!=q->status)continue;
    if(q->confirmed_class_id && c.class_id!=q->confirmed_class_id)continue;
+   if(q->observed_category && c.observed_category!=q->observed_category)continue;
    if(c.confidence_permille<q->min_confidence_permille)continue;
    if(q->max_distance_milli_au && c.distance_milli_au>q->max_distance_milli_au)continue;
    ids.push_back(id);
@@ -593,6 +597,7 @@ uint32_t f06_host_world_snapshot(F04Session* s,const F06WorldSnapshot* in,F06Wor
      e.transponder_id<=FOREVER && e.strength_permille<=1000 &&
      e.interference_permille<=550 && e.active<=1 &&
      e.observed_exit_evidence<=F06_EXIT_OBSERVED_OUT_OF_RANGE &&
+     e.signature_category<=F06_CATEGORY_ANOMALY &&
      valid(e.absolute_x_milli_au) && valid(e.absolute_y_milli_au) &&
      valid(e.absolute_z_milli_au) &&
      valid(e.absolute_x_milli_au-in->observer_x_milli_au) &&
@@ -636,6 +641,7 @@ uint32_t f06_host_world_snapshot(F04Session* s,const F06WorldSnapshot* in,F06Wor
    f06_set(*next,id,F06_INTERFERENCE,source->interference_permille);
    f06_set(*next,id,F06_CLASS,source->class_id);
    f06_set(*next,id,F06_TRANSPONDER,source->transponder_id);
+   f06_set(*next,id,F06_CATEGORY,source->signature_category);
    f06_set(*next,id,F06_ACTIVE_FLAG,source->active);
    f06_set(*next,id,F06_EXIT,source->observed_exit_evidence);
   }
@@ -660,7 +666,8 @@ uint32_t f06_host_signal(F04Session* s,const F06SignalInput* in,F06SignalReceipt
  return call(s,[&]()->uint32_t {
   need(in->expected_revision==s->c->world.revision(),F04_STALE);
   need(!in->reserved && in->strength_permille<=1000 && in->interference_permille<=550 &&
-   in->active<=1 && in->observed_exit_evidence<=F06_EXIT_OBSERVED_OUT_OF_RANGE,
+   in->active<=1 && in->observed_exit_evidence<=F06_EXIT_OBSERVED_OUT_OF_RANGE &&
+   in->signature_category<=F06_CATEGORY_ANOMALY,
    F04_ARGUMENT);
   for(int64_t coordinate:{in->relative_x_milli_au,in->relative_y_milli_au,in->relative_z_milli_au})
    need(coordinate>=-100000000 && coordinate<=100000000,F04_ARGUMENT);
@@ -679,6 +686,7 @@ uint32_t f06_host_signal(F04Session* s,const F06SignalInput* in,F06SignalReceipt
   f06_set(*next,id,F06_INTERFERENCE,in->interference_permille);
   f06_set(*next,id,F06_CLASS,in->class_id);
   f06_set(*next,id,F06_TRANSPONDER,in->transponder_id);
+  f06_set(*next,id,F06_CATEGORY,in->signature_category);
   f06_set(*next,id,F06_ACTIVE_FLAG,in->active);
   f06_set(*next,id,F06_EXIT,in->observed_exit_evidence);
   f06_poll(*next,*s->content.catalog(),0,false);
