@@ -32,12 +32,20 @@ F06ArrayView f06_array_state(const WorldState& w) {
    if(!best || q>quality){best=id;quality=q;}
   }
   if(!best)return {0,0,0,0,0,0};
-  return {static_cast<uint32_t>(val(w,best,F06_SEC_CAP)),
+  F06ArrayView effective{
+   static_cast<uint32_t>(val(w,best,F06_SEC_CAP)),
    static_cast<uint32_t>(val(w,best,F06_SEC_PWR)),
-   static_cast<uint32_t>(val(w,best,F06_SEC_INT)),
-   static_cast<uint32_t>(val(w,best,F06_SEC_SHORT)),
-   static_cast<uint32_t>(val(w,best,F06_SEC_LONG)),
-   static_cast<uint32_t>(val(w,best,F06_SEC_FOCUS))};
+   static_cast<uint32_t>(val(w,best,F06_SEC_INT)),0,0,0};
+  // Flags represent modes available SOMEWHERE on the linked ship. Actual
+  // strength is always computed independently for each hardware array.
+  for(U id:sections)if(val(w,id,F06_SEC_LINK) &&
+    val(w,id,F06_SEC_CAP) && val(w,id,F06_SEC_PWR) &&
+    val(w,id,F06_SEC_INT)){
+    effective.short_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_SHORT));
+    effective.long_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_LONG));
+    effective.focused_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_FOCUS));
+  }
+  return effective;
  }
  const auto rows=all(w,"f06_array");
  if(rows.empty())return {1000,1000,1000,1,1,1}; // nominal installed profile
@@ -98,8 +106,8 @@ U f06_tracking_used(const WorldState& w) {
   used+=f06_track_cost(val(w,id,F06_TRACK_MODE));
  return used;
 }
-U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
- const auto array=f06_array_state(w);
+U f06_score_from_array(const WorldState& w,U s,U distance,bool active,bool focused,
+ const F06ArrayView& array) {
  if(!array.capability_permille || !array.power_permille || !array.integrity_permille)return 0;
  if(focused && !array.focused_enabled)return 0;
  if(!focused && !array.long_enabled && !array.short_enabled)return 0;
@@ -148,6 +156,28 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  score=score*config.sensitivity_permille/1000;
  return std::min<U>(1000,score);
 }
+
+U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
+ const auto sections=all(w,"f06_section_array");
+ if(sections.empty())
+  return f06_score_from_array(w,s,distance,active,focused,f06_array_state(w));
+ U strongest=0;
+ for(U id:sections){
+  if(!val(w,id,F06_SEC_LINK))continue;
+  const F06ArrayView hw{
+   static_cast<uint32_t>(val(w,id,F06_SEC_CAP)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_PWR)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_INT)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_SHORT)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_LONG)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_FOCUS))
+  };
+  strongest=std::max<U>(strongest,
+   f06_score_from_array(w,s,distance,active,focused,hw));
+ }
+ return strongest;
+}
+
 U f06_rank(U score) {
  if(score>=720)return 4;if(score>=540)return 3;
  if(score>=380)return 2;if(score>=240)return 1;return 0;
