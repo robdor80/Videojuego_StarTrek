@@ -412,7 +412,8 @@ uint32_t f06_tracking_status(F04Session* s,F04Ref who,F06TrackView* out) {
   need(observer(s,who),F04_DENIED);
   const auto& w=s->c->world;
   const U cap=f06_tracking_capacity(w),used=f06_tracking_used(w);
-  *out={0,0,0,static_cast<uint32_t>(used),static_cast<uint32_t>(cap),
+  // "available" means FREE slots, not total installed capacity.
+  *out={0,0,0,static_cast<uint32_t>(used),static_cast<uint32_t>(cap>used?cap-used:0),
    static_cast<uint32_t>(used>cap)};
   return F04_OK;
  });
@@ -435,7 +436,10 @@ uint32_t f06_set_tracking(F04Session* s,F04Ref who,U revision,U public_id,
    need(revision==next->world.revision(),F04_STALE);
    need(used>=f06_track_cost(current),F04_INTERNAL);
    const U requested=used-f06_track_cost(current)+f06_track_cost(mode);
-   need(requested<=cap,F04_CAPACITY);
+   // After physical damage, used may exceed capacity. Always permit a
+   // reduction to release slots, even if the remaining total is overloaded.
+   // Never permit increases above the actual current hardware capacity.
+   need(requested<=used || requested<=cap,F04_CAPACITY);
    f06_set(*next,contact,F06_TRACK_MODE,mode);
    f06_set(*next,contact,F06_TRACK_UPDATED,next->time.now());
    (void)event(*next,*s->content.catalog(),who.id,6020,F04_OK,mode,contact);
@@ -443,7 +447,7 @@ uint32_t f06_set_tracking(F04Session* s,F04Ref who,U revision,U public_id,
   }
   const auto& w=s->c->world;const U capacity=f06_tracking_capacity(w),allocated=f06_tracking_used(w);
   *out={public_id,val(w,contact,F06_TRACK_UPDATED),static_cast<uint32_t>(val(w,contact,F06_TRACK_MODE)),
-   static_cast<uint32_t>(allocated),static_cast<uint32_t>(capacity),
+   static_cast<uint32_t>(allocated),static_cast<uint32_t>(capacity>allocated?capacity-allocated:0),
    static_cast<uint32_t>(allocated>capacity)};
   return F04_OK;
  });

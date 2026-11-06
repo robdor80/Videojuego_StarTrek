@@ -200,6 +200,50 @@ void run(const std::string& scenario){
   l.upsert(world);ok(l.contacts(F06_LOST).size()==1,"old target lost");
   ok(f06_tracking_status(l.s,l.h.captain,&stats)==F04_OK && stats.used_slots==12,
      "lost contact releases dedicated tracking budget automatically");
+ } else if(scenario=="tracking_capacity_recovery") {
+  l.ready();l.upsert(l.signal());
+  for(int i=0;i<4;++i)l.upsert(l.signal(960,120+20*i,1,128+i));
+  const auto all_contacts=l.contacts();
+  ok(all_contacts.size()==5,"five independently observed contacts");
+  for(const auto& c:all_contacts) {
+   F06TrackView selected{};
+   ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,c.contact_id,
+     F06_TRACK_PRIORITY,&selected)==F04_OK,"allocate dedicated tracking while nominal");
+  }
+  F06TrackView current{};
+  ok(f06_tracking_status(l.s,l.h.captain,&current)==F04_OK &&
+    current.used_slots==15 && current.available_slots==1 && !current.overloaded,
+    "available slots must be the unallocated remainder, not nominal capacity");
+  F06ArrayInput degraded{l.stats().revision,500,1000,1000,1,1,1,0};
+  F06ArrayView hardware{};
+  ok(f06_host_array_state(l.s,&degraded,&hardware)==F04_OK,
+    "trusted host materializes damaged sensor capacity");
+  ok(l.contacts(F06_ACTIVE).size()==5,
+    "partial damage must not invent lost contacts while they remain detectable");
+  ok(f06_tracking_status(l.s,l.h.captain,&current)==F04_OK &&
+    current.used_slots==15 && current.available_slots==0 && current.overloaded,
+    "overcommitted hardware reports no free slots and explicit overload");
+  F06TrackView changed{};
+  const U first=all_contacts.front().contact_id;
+  ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,first,
+    F06_TRACK_NORMAL,&changed)==F04_OK &&
+    changed.used_slots==13 && !changed.available_slots && changed.overloaded,
+    "reducing priority always frees slots even while still overloaded");
+  auto checkpoint=l.save();
+  ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,first,
+    F06_TRACK_PRIORITY,&changed)==F04_CAPACITY && l.save()==checkpoint,
+    "increasing resource use above hardware capacity is denied atomically");
+  for(size_t i=1;i<=2;++i)
+   ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,
+     all_contacts[i].contact_id,F06_TRACK_PASSIVE,&changed)==F04_OK,
+     "progressive release must be allowed even if intermediate result remains overloaded");
+  ok(f06_tracking_status(l.s,l.h.captain,&current)==F04_OK &&
+    current.used_slots==7 && current.available_slots==1 && !current.overloaded,
+    "releasing resource slots clears overload with accurate free capacity");
+  checkpoint=l.save();l.load(checkpoint);
+  ok(f06_tracking_status(l.s,l.h.captain,&current)==F04_OK &&
+    current.used_slots==7 && current.available_slots==1 && !current.overloaded,
+    "hardware degradation and recovered tracking budget persist across Core save/load");
  } else if(scenario=="notices_cursor") {
   l.upsert(l.signal());
   F06NoticeView rows[1]{};U written=0;uint32_t more=0;

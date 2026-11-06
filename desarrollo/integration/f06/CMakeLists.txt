@@ -31,6 +31,6 @@ target_link_libraries(f06_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
 target_compile_features(f06_tests PRIVATE cxx_std_20)
 # Windows needs the F04 DLL beside the test executable.
 set_target_properties(f06_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
-foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking area_scan notices_cursor power_queue f05_order world_feed profiles configuration search diagnostics results_compare categories)
+foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking tracking_capacity_recovery area_scan notices_cursor power_queue f05_order world_feed profiles configuration search diagnostics results_compare categories)
  add_test(NAME f06.${scenario} COMMAND f06_tests ${scenario})
 endforeach()

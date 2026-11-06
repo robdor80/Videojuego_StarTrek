@@ -53,6 +53,12 @@ El objetivo de los diez menús permanece: Estado; Barridos; Búsqueda/localizaci
 - F06 focal exige ocupación real de Sensores y rechaza un contacto perdido.
 - **Implementación nueva:** seguimiento con cupos, zonas de búsqueda, configuración con intercambios de sensibilidad/resolución/compensación, búsqueda por tipo y clase realmente observados, autodiagnósticos y resultados focalizados persistentes y comparables. **Pendiente:** asignación física de potencia, bandas espectrales específicas, cuotas temporales completas y rutinas de separación por secciones. No atribuir autorización a parámetros booleanos suministrados por la UI.
 
+### Corrección de cupos de seguimiento (F06 BIS)
+
+- `F06TrackView.available_slots` informa los **cupos libres efectivos** (`max(0, capacidad − usados)`), no la capacidad total instalada. El indicador `overloaded` queda activo mientras `usados > capacidad`.
+- Si una avería reduce la capacidad mientras hay seguimientos prioritarios, el operador puede **rebajar o desactivar** esos seguimientos, incluso si la reducción parcial todavía deja la matriz sobrecargada. No se admite incrementar el consumo por encima de la capacidad física.
+- El escenario nativo `f06.tracking_capacity_recovery` cubre el balance 15/16, avería a 8, liberación progresiva, denegación atómica de aumento y continuidad tras guardar/cargar Core.
+
 ## P05 — Pruebas, rendimiento y cierre
 
 Compilación del incremento, usando el pin verificado de Core de F05:
