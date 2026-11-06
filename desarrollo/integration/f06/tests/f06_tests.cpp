@@ -260,7 +260,7 @@ void run(const std::string& scenario){
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
  } else if(scenario=="results_compare") {
-  l.ready();l.upsert(l.signal(550,5000,4,999));
+  l.ready();const auto source=l.upsert(l.signal(550,5000,4,999));
   const U id=l.contacts()[0].contact_id;
   F06ContactView inspected{};
   ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&inspected)==F04_OK,
@@ -271,13 +271,9 @@ void run(const std::string& scenario){
      "first observed snapshot has no invented Defiant identity");
   const U first=results[0].result_id;
   auto world=l.signal(960,5000,4,999);
-  auto current=l.contacts();
-  // Existing signal was materialized by first Host upsert; find its ID from
-  // a new independent trusted update, without exposing it in the public API.
-  // Use a dedicated second Lab when class labels cannot be recovered via UI.
-  // Here a new brighter world source may be independently seen.
-  auto receipt=l.upsert(world);
-  (void)receipt;
+  world.signal_id=source.signal_id;
+  world.expected_revision=l.stats().revision;
+  l.upsert(world); // update the exact same source; never add a second ship
   ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&inspected)==F04_OK,
     "second focused readout");
   n=total=0;
