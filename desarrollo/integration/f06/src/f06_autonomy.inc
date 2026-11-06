@@ -163,7 +163,7 @@ uint32_t f06_computer_events_page(F04Session* s,F04Ref who,U after,
    }
    if(!type(w,contact,"f06_contact"))continue;
    out[(*written)++]={token,val(w,contact,F06_PUBLIC_ID),
-      val(w,id,TICK),kind};
+      val(w,id,TICK),static_cast<uint32_t>(kind)};
   }
   need(past,F04_ARGUMENT);
   return F04_OK;
