@@ -278,7 +278,10 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
   f06_set(c,contact,field,f06_zigzag(approx));
  }
  if(fresh)f06_notice(c,cat,contact,F06_NEW_CONTACT);
- else if(reacquired)f06_notice(c,cat,contact,F06_REACQUIRED);
+ else if(reacquired) {
+  f06_set(c,contact,F06_AUTO_GEN,val(c.world,contact,F06_AUTO_GEN)+1);
+  f06_notice(c,cat,contact,F06_REACQUIRED);
+ }
  if(rank>=4 && !previous_class && val(c.world,contact,F06_SEEN_CLASS))
   f06_notice(c,cat,contact,F06_IDENTIFIED);
 }
@@ -843,7 +846,8 @@ U f06_result_by_public(const WorldState& w,U id) {
 void f06_record_focus(Campaign& c,const ContentCatalog& cat,U contact,U actor) {
  need(all(c.world,"f06_observation").size()<1024,F04_CAPACITY);
  const U id=make(c,cat,"f06_observation");
- link(c,id,SHIP,1);link(c,id,PERSON,actor);link(c,id,F06_CONTACT_REF,contact);
+ link(c,id,SHIP,1);if(actor)link(c,id,PERSON,actor);
+ link(c,id,F06_CONTACT_REF,contact);
  const auto view=f06_view(c.world,contact);
  const U pub=f06_public(id^UINT64_C(0x205c0de),val(c.world,1,SHIP_ID));
  need(!f06_result_by_public(c.world,pub),F04_CAPACITY);

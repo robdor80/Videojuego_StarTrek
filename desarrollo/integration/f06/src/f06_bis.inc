@@ -2,6 +2,7 @@
 // This file is appended after f06_runtime.inc. No second world/clock/save stack.
 #include "f06_bis.h"
 namespace {
+void f06_autonomy_plan(Campaign&,const ContentCatalog&);
 U f06_bis_public(const WorldState& w,U raw) {
  return f06_public(raw^UINT64_C(0x0b157e5715),val(w,1,SHIP_ID));
 }
@@ -101,7 +102,7 @@ void f06_bis_tick(Campaign& c,const ContentCatalog& cat) {
   bool permitted=val(c.world,contact,F06_STATUS)==F06_ACTIVE &&
     hw.focused_enabled && hw.capability_permille && hw.power_permille &&
     hw.integrity_permille;
-  if(permitted) {
+  if(permitted && !val(c.world,job,F06_TIMED_AUTO)) {
    try {(void)scan_station(c,actor);}catch(const Denial&){permitted=false;}
   }
   if(permitted){
@@ -118,12 +119,13 @@ void f06_bis_tick(Campaign& c,const ContentCatalog& cat) {
    need(!obs.empty(),F04_INTERNAL);
    f06_set(c,job,F06_TIMED_RESULT,val(c.world,obs.back(),F06_O_PUBLIC));
    f06_set(c,job,F06_TIMED_STATUS,F06_TIMED_FINISHED);
-   (void)event(c,cat,actor,6061,F04_OK,0,job);
+   (void)event(c,cat,actor,val(c.world,job,F06_TIMED_AUTO)?6091:6061,F04_OK,0,job);
   }else{
    f06_set(c,job,F06_TIMED_STATUS,F06_TIMED_FAILED);
-   (void)event(c,cat,actor,6062,F04_UNAVAILABLE,0,job);
+   (void)event(c,cat,actor,val(c.world,job,F06_TIMED_AUTO)?6092:6062,F04_UNAVAILABLE,0,job);
   }
  }
+ f06_autonomy_plan(c,cat); // plan next actions from observed evidence only
 }
 } // namespace
 
@@ -438,3 +440,5 @@ uint32_t f06_power_application_status(F04Session* s,F04Ref who,U request,
   *out=f06_apply_power_view(s->c->world,id);return F04_OK;
  });
 }
+
+#include "f06_autonomy.inc"
