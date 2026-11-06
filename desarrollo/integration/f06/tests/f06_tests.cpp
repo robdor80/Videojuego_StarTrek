@@ -842,7 +842,8 @@ void run(const std::string& scenario){
   F06ComputerStatus status{};
   ok(f06_computer_status(l.s,l.h.captain,&status)==F04_OK &&
     status.autonomous && status.active_contacts==1 &&
-    status.analyses_running==1,"computer starts focused analysis without officer");
+    status.analyses_running==1 && !status.needs_attention,
+    "computer starts focused analysis before bothering the officer");
   const U contact=l.contacts()[0].contact_id;
   std::array<F06TimedScanView,10> jobs{};U written=0,total=0;
   ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),

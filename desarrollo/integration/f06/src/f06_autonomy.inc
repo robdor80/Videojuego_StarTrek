@@ -124,11 +124,23 @@ uint32_t f06_computer_status(F04Session* s,F04Ref who,F06ComputerStatus* out) {
   for(U c:all(w,"f06_contact"))if(val(w,c,F06_STATUS)==F06_ACTIVE){
    ++out->active_contacts;
    const U category=val(w,c,F06_SEEN_CATEGORY);
+   // Do not disturb the officer while the computer is still working or
+   // waiting for its limited analysis slots. Escalate only AFTER an actual
+   // automated attempt could not identify an important contact.
    if((category==F06_CATEGORY_ANOMALY ||
       category==F06_CATEGORY_STARSHIP ||
       category==F06_CATEGORY_SUBSPACE ||
       category==F06_CATEGORY_UNKNOWN) &&
-     !val(w,c,F06_SEEN_CLASS))++out->needs_attention;
+      !val(w,c,F06_SEEN_CLASS)){
+     bool attempted=false,pending=false;
+     for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO) &&
+        ref(w,job,F06_CONTACT_REF)==c &&
+        val(w,job,F06_TIMED_GEN)==val(w,c,F06_AUTO_GEN)){
+       if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)pending=true;
+       else attempted=true;
+     }
+     if(attempted && !pending)++out->needs_attention;
+   }
   }
   for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO)){
    if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)++out->analyses_running;
