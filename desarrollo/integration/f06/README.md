@@ -67,6 +67,13 @@ Las pruebas cubren guardia vacía de ocho horas, detección, clasificación parc
 
 **Para cerrar F06** faltará ejecutar/validar los escenarios con Unreal Engine 5.8.2 en el MSI, los diez menús funcionales, transferencias reales y la cobertura de capacidades/recursos propia de la Enterprise-D modernizada. Ningún check de referencia o compilación aislada es certificado de fase completa.
 
+## Cursores y paginación de alertas
+
+Los identificadores y cursores de avisos son opacos; no representan ID de
+entidades CoreRPG. Un cursor de aviso desconocido se rechaza. El historial de
+avisos conserva el orden y los duplicados de eventos significativos, no cada
+barrido periódico. No revelar firmas no detectadas por los paginadores.
+
 ## Límites operativos expresos
 
 1. La API `f06_host_signal` es un puerto exclusivo del servicio nativo fiable; no debe estar expuesto como función accesible por jugadores, web, IA ni Blueprints.

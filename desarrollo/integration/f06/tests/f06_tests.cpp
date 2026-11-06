@@ -165,6 +165,22 @@ void run(const std::string& scenario){
   l.upsert(world);ok(l.contacts(F06_LOST).size()==1,"old target lost");
   ok(f06_tracking_status(l.s,l.h.captain,&stats)==F04_OK && stats.used_slots==12,
      "lost contact releases dedicated tracking budget automatically");
+ } else if(scenario=="notices_cursor") {
+  l.upsert(l.signal());
+  F06NoticeView rows[1]{};U written=0;uint32_t more=0;
+  ok(f06_notices_page(l.s,l.h.captain,0,rows,1,&written,&more)==F04_OK &&
+     written==1 && more && rows[0].kind==F06_NEW_CONTACT,"first opaque notice");
+  const U cursor=rows[0].event_id;
+  written=0;more=0;
+  ok(f06_notices_page(l.s,l.h.captain,cursor,rows,1,&written,&more)==F04_OK &&
+     written==1 && !more && rows[0].kind==F06_IDENTIFIED,
+     "opaque cursor fetches next notice without Core entity IDs");
+  const U next=rows[0].event_id;
+  written=0;more=0;
+  ok(f06_notices_page(l.s,l.h.captain,next,rows,1,&written,&more)==F04_OK &&
+     !written && !more,"cursor at end of stream");
+  ok(f06_notices_page(l.s,l.h.captain,UINT64_MAX,rows,1,&written,&more)==F04_ARGUMENT,
+     "forged notice cursor is invalid");
  } else if(scenario=="area_scan") {
   l.ready();l.upsert(l.signal(280,5000,4,999));
   ok(l.contacts().empty(),"weak signal genuinely below passive threshold");

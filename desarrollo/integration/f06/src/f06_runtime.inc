@@ -376,13 +376,19 @@ uint32_t f06_notices_page(F04Session* s,F04Ref who,U after,
  if(!written || !more || (!out && capacity))return F04_ARGUMENT;*written=0;*more=0;
  return call(s,[&]()->uint32_t {
   need(observer(s,who),F04_DENIED);
-  for(U id:all(s->c->world,"event")) {
-   const U op=val(s->c->world,id,OP);
-   if(id<=after || op<6001 || op>6005)continue;
+  const auto& w=s->c->world;
+  // Cursor is opaque. No raw Core EntityId ever leaves this sensor endpoint.
+  bool past=after==0;
+  for(U id:all(w,"event")) {
+   const U op=val(w,id,OP);
+   if(op<6001 || op>6005)continue;
+   const U token=f06_public(id,val(w,1,SHIP_ID));
+   if(!past) {if(token==after)past=true;continue;}
    if(*written>=capacity){*more=1;break;}
-   out[(*written)++]={id,val(s->c->world,ref(s->c->world,id,TARGET),F06_PUBLIC_ID),val(s->c->world,id,TICK),
-     static_cast<uint32_t>(op-6000)};
+   out[(*written)++]={token,val(w,ref(w,id,TARGET),F06_PUBLIC_ID),
+     val(w,id,TICK),static_cast<uint32_t>(op-6000)};
   }
+  need(past,F04_ARGUMENT);
   return F04_OK;
  });
 }
