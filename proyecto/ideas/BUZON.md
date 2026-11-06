@@ -240,6 +240,18 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** aprobado expresamente tras ampliar la propuesta para incluir soltería y vida de picaflor/mujeriego.
 - **Ejecución:** NO INICIADA por registrar la idea; ni matrimonios ni hijos jugables declarados implementados.
 
+### IDEA-0019 — Starfleet PADD: terminal Android de consulta de la última partida
+- **Fecha de aprobación expresa:** 2026-11-06.
+- **Estado:** APROBADA CONCEPTUALMENTE; implementación pendiente.
+- **Propuesta:** app Android LCARS para móvil y tablet que muestra el estado **de la última partida guardada**, con expediente del jugador, retrato, departamento, dotación, turnos, órdenes, bitácora, planos reales de la nave y registros de mando autorizados.
+- **Permisos:** rango, puesto, destino, autoridad, habilitación y conocimiento reales; un teniente jefe de Sensores, primer oficial y capitán ven información distinta. Los documentos clasificados y datos privados se filtran **antes** de exportar.
+- **Arquitectura candidata:** CoreRPG/Star Trek → snapshot JSON filtrado y versionado → Firebase Auth + Firestore/Storage → aplicación Kotlin/Compose LCARS; lectura offline con fecha de última sincronización. GitHub no se usará para exponer información privada de partidas.
+- **Invariante:** **solo consulta**. Android no cambia la partida, no da órdenes y no avanza el tiempo mientras el juego está cerrado.
+- **Ficha detallada:** [IDEA-0019_starfleet_padd_consulta_android_partida.md](IDEA-0019_starfleet_padd_consulta_android_partida.md).
+- **Etapas candidatas:** PADD-01–PADD-06. Dependencias F02–F07, F09, F11–F12, F14–F15; planificación definitiva pendiente.
+- **Decisión del autor:** «guárdala como nueva idea».
+- **Ejecución:** NO INICIADA; no altera F05 ni el Plan Maestro.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
