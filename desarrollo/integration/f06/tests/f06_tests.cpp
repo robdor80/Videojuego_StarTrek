@@ -731,6 +731,16 @@ void run(const std::string& scenario){
   ok(f06_host_complete_science(l.s,&sample,&published)==F04_ARGUMENT,
     "life cannot be confirmed from a single observation");
   sample.biological_evidence=2;
+  // Unphysical water is rejected before any report/WorldState modification.
+  F06ScienceSample impossible=sample;
+  impossible.temperature_k=500;
+  impossible.expected_revision=l.stats().revision;
+  ok(f06_host_complete_science(l.s,&impossible,&published)==F04_ARGUMENT,
+    "no warm surface ocean at 500 K without an exceptional physics rule");
+  impossible=sample;impossible.pressure_mbar=0;
+  impossible.expected_revision=l.stats().revision;
+  ok(f06_host_complete_science(l.s,&impossible,&published)==F04_ARGUMENT,
+    "surface liquid oceans cannot exist in a hard vacuum");
   sample.expected_revision=l.stats().revision;
   ok(f06_host_complete_science(l.s,&sample,&published)==F04_OK &&
     published.biological_evidence==2,"possible biosignature recorded, not confirmed");

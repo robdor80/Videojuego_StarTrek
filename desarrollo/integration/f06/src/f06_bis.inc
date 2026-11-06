@@ -314,8 +314,12 @@ uint32_t f06_host_complete_science(F04Session* s,const F06ScienceSample* in,
   if(in->solid_surface && !in->pressure_mbar)
    need(!in->nitrogen_permille && !in->oxygen_permille && !in->co2_permille,
     F04_ARGUMENT);
-  if(in->solid_surface && in->temperature_k<273)
-   need(!in->water_permille,F04_ARGUMENT);
+  // Ordinary surface liquid water cannot be claimed in vacuum or outside
+  // a deliberately bounded temperature range. Subsurface oceans require a
+  // distinct evidence type and must never be spoofed as surface coverage.
+  if(in->water_permille)
+   need(in->solid_surface && in->pressure_mbar>=100 &&
+    in->temperature_k>=273 && in->temperature_k<=355,F04_ARGUMENT);
   if(!in->solid_surface)
    need(!in->water_permille && !in->biological_evidence,F04_ARGUMENT);
   if(in->biological_evidence>=2)
