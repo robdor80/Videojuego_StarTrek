@@ -2,9 +2,32 @@
 namespace {
 bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  std::set<U>& required,std::set<U>& ar,std::set<U>& rr) {
+ if(type(w,id,"f06_environment")) {
+  allowed={F06_ENV_REV,F06_ENV_EM,F06_ENV_THERM,F06_ENV_GRAV,F06_ENV_SUB,F06_ENV_BIO};
+  required=allowed;ar={SHIP};rr=ar;return true;
+ }
+ if(type(w,id,"f06_section_array")) {
+  allowed={F06_SEC_ID,F06_SEC_LINK,F06_SEC_CAP,F06_SEC_PWR,F06_SEC_INT,
+   F06_SEC_SHORT,F06_SEC_LONG,F06_SEC_FOCUS};
+  required=allowed;ar={SHIP};rr=ar;return true;
+ }
+ if(type(w,id,"f06_timed_scan")) {
+  allowed={F06_TIMED_KEY,F06_TIMED_PUBLIC,F06_TIMED_START,F06_TIMED_DUE,
+   F06_TIMED_COST,F06_TIMED_STATUS,F06_TIMED_RESULT};
+  required=allowed;required.erase(F06_TIMED_RESULT);
+  ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
+ }
+ if(type(w,id,"f06_science_report")) {
+  allowed={F06_SCI_KEY,F06_SCI_PUBLIC,F06_SCI_INSTRUMENT,F06_SCI_TICK,
+   F06_SCI_TEMP,F06_SCI_PRESS,F06_SCI_WATER,F06_SCI_N2,F06_SCI_O2,
+   F06_SCI_CO2,F06_SCI_SOLID,F06_SCI_BIO,F06_SCI_QUALITY,F06_SCI_CONF,
+   F06_SCI_PLANET};
+  required=allowed;
+  ar={SHIP,F06_HANDOFF_REF,F06_OBSERVATION_REF};rr=ar;return true;
+ }
  if(type(w,id,"f06_power_request")) {
   allowed={F06_PWR_KEY,F06_PWR_PUBLIC,F06_PWR_CREATED,F06_PWR_EXPIRY,
-   F06_PWR_AMOUNT,F06_PWR_STATE,F06_PWR_DECIDED};
+   F06_PWR_AMOUNT,F06_PWR_STATE,F06_PWR_DECIDED,F06_PWR_APPLIED,F06_PWR_ALLOC_REV,F06_PWR_APPLIED_AT};
   required={F06_PWR_KEY,F06_PWR_PUBLIC,F06_PWR_CREATED,F06_PWR_EXPIRY,
    F06_PWR_AMOUNT,F06_PWR_STATE};
   ar={SHIP,PERSON,ISSUER};rr={SHIP,PERSON};return true;
@@ -65,6 +88,60 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_O_CONF)>1000 ||
    val(w,id,F06_O_DISTANCE)>50000)return false;
  }
+ std::set<U> environment_revisions;
+ const auto env=all(w,"f06_environment");
+ if(env.size()>1)return false;
+ for(U id:env){
+  if(!val(w,id,F06_ENV_REV) || !environment_revisions.insert(val(w,id,F06_ENV_REV)).second ||
+   val(w,id,F06_ENV_EM)>550 || val(w,id,F06_ENV_THERM)>550 ||
+   val(w,id,F06_ENV_GRAV)>550 || val(w,id,F06_ENV_SUB)>550 ||
+   val(w,id,F06_ENV_BIO)>550)return false;
+ }
+ std::set<U> section_ids;
+ const auto sections=all(w,"f06_section_array");
+ if(sections.size()>2)return false;
+ for(U id:sections){
+  const U k=val(w,id,F06_SEC_ID);
+  if(k<F06_SECTION_SAUCER || k>F06_SECTION_BATTLE ||
+   !section_ids.insert(k).second ||
+   val(w,id,F06_SEC_LINK)>1 || val(w,id,F06_SEC_CAP)>1000 ||
+   val(w,id,F06_SEC_PWR)>1000 || val(w,id,F06_SEC_INT)>1000 ||
+   val(w,id,F06_SEC_SHORT)>1 || val(w,id,F06_SEC_LONG)>1 ||
+   val(w,id,F06_SEC_FOCUS)>1)return false;
+ }
+ std::set<U> timed_keys,timed_public;
+ if(all(w,"f06_timed_scan").size()>256)return false;
+ for(U id:all(w,"f06_timed_scan")){
+  const U status=val(w,id,F06_TIMED_STATUS),start=val(w,id,F06_TIMED_START),
+   due=val(w,id,F06_TIMED_DUE);
+  if(!val(w,id,F06_TIMED_KEY) || !timed_keys.insert(val(w,id,F06_TIMED_KEY)).second ||
+   !val(w,id,F06_TIMED_PUBLIC) || !timed_public.insert(val(w,id,F06_TIMED_PUBLIC)).second ||
+   !type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") ||
+   start>c.time.now() || due<=start || due-start>3600 ||
+   val(w,id,F06_TIMED_COST)<50 || val(w,id,F06_TIMED_COST)>500 ||
+   status<F06_TIMED_QUEUED || status>F06_TIMED_CANCELLED ||
+   (has(w,id,F06_TIMED_RESULT) != (status==F06_TIMED_FINISHED)))return false;
+ }
+ std::set<U> report_keys,report_public,reported_handoffs;
+ if(all(w,"f06_science_report").size()>512)return false;
+ for(U id:all(w,"f06_science_report")){
+  const U h=ref(w,id,F06_HANDOFF_REF),o=ref(w,id,F06_OBSERVATION_REF);
+  if(!type(w,h,"f06_handoff") || !type(w,o,"f06_observation") ||
+   !val(w,id,F06_SCI_KEY) || !report_keys.insert(val(w,id,F06_SCI_KEY)).second ||
+   !val(w,id,F06_SCI_PUBLIC) || !report_public.insert(val(w,id,F06_SCI_PUBLIC)).second ||
+   !reported_handoffs.insert(h).second ||
+   ref(w,h,F06_CONTACT_REF)!=ref(w,o,F06_CONTACT_REF) ||
+   val(w,h,F06_H_STATUS)!=F06_SCIENCE_COMPLETED ||
+   val(w,id,F06_SCI_TICK)>c.time.now() ||
+   !val(w,id,F06_SCI_INSTRUMENT) ||
+   val(w,id,F06_SCI_TEMP)<50 || val(w,id,F06_SCI_TEMP)>2000 ||
+   val(w,id,F06_SCI_PRESS)>100000 ||
+   val(w,id,F06_SCI_WATER)>1000 ||
+   val(w,id,F06_SCI_N2)+val(w,id,F06_SCI_O2)+val(w,id,F06_SCI_CO2)>1000 ||
+   val(w,id,F06_SCI_SOLID)>1 || val(w,id,F06_SCI_BIO)>3 ||
+   val(w,id,F06_SCI_QUALITY)>1000 || val(w,id,F06_SCI_CONF)>1000 ||
+   val(w,id,F06_SCI_PLANET)>F06_PLANET_Y)return false;
+ }
  std::set<U> power_keys,power_ids;
  const auto power=all(w,"f06_power_request");
  if(power.size()>256)return false;
@@ -76,6 +153,12 @@ bool f06_schema(const Campaign& c) {
      start>c.time.now() || expiry<=start || expiry-start>28800 ||
      val(w,id,F06_PWR_AMOUNT)<1 || val(w,id,F06_PWR_AMOUNT)>1000 ||
      status<F06_POWER_QUEUED || status>F06_POWER_EXPIRED)return false;
+  const bool applied=has(w,id,F06_PWR_APPLIED);
+  if(applied && (status!=F06_POWER_APPROVED ||
+    !val(w,id,F06_PWR_ALLOC_REV) || !has(w,id,F06_PWR_APPLIED_AT) ||
+    val(w,id,F06_PWR_APPLIED)>1000 ||
+    val(w,id,F06_PWR_APPLIED_AT)>c.time.now()))return false;
+  if(!applied && (has(w,id,F06_PWR_ALLOC_REV)||has(w,id,F06_PWR_APPLIED_AT)))return false;
   const bool decided=(status==F06_POWER_APPROVED || status==F06_POWER_DENIED);
   if(decided != bool(ref(w,id,ISSUER)) || decided != has(w,id,F06_PWR_DECIDED))return false;
   if(decided && (val(w,id,F06_PWR_DECIDED)<start ||
@@ -92,8 +175,10 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_H_OBSERVED)>val(w,id,F06_H_TIME) ||
    val(w,id,F06_H_PRIORITY)<1 || val(w,id,F06_H_PRIORITY)>4 ||
    val(w,id,F06_H_KIND)<1 || val(w,id,F06_H_KIND)>4 ||
-   val(w,id,F06_H_STATUS)!=1 ||
-   val(w,id,F06_H_CONFIDENCE)>1000)return false;
+   (val(w,id,F06_H_STATUS)!=F06_SCIENCE_QUEUED && val(w,id,F06_H_STATUS)!=F06_SCIENCE_COMPLETED) ||
+   val(w,id,F06_H_CONFIDENCE)>1000 ||
+   ((val(w,id,F06_H_STATUS)==F06_SCIENCE_COMPLETED)!=
+     reported_handoffs.contains(id)))return false;
  }
  const auto cfg=all(w,"f06_configuration");
  if(cfg.size()>1)return false;
@@ -106,6 +191,7 @@ bool f06_schema(const Campaign& c) {
  }
  const auto arrays=all(w,"f06_array");
  if(arrays.size()>1)return false;
+ if(!sections.empty() && (arrays.empty() || val(w,arrays[0],F06_ARRAY_PROFILE)!=5))return false;
  for(U id:arrays) {
   if(val(w,id,F06_ARRAY_PROFILE)>5 || val(w,id,F06_ARRAY_CAPABILITY)>1000 ||
    val(w,id,F06_ARRAY_POWER)>1000 ||
