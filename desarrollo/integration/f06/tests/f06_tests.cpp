@@ -131,6 +131,30 @@ void run(const std::string& scenario){
   ok(f06_host_array_state(l.s,&disabled,&affected)==F04_OK,"restore power");
   ok(l.contacts(F06_ACTIVE).size()==1 && l.contacts()[0].contact_id==id,
      "reacquisition after actual repair preserves contact identity");
+ } else if(scenario=="science_queue") {
+  l.ready();l.upsert(l.signal(580,5000,4,999));
+  const U id=l.contacts()[0].contact_id;
+  ok(l.contacts()[0].class_id==0,"contact class remains unknown");
+  F06ScienceRequest req{l.stats().revision,123456,id,2,1};
+  F06ScienceView sent{};
+  auto before=l.save();
+  ok(f06_science_handoff(l.s,l.h.captain,&req,&sent)==F04_QUALIFICATION,
+    "unqualified captain cannot send a sensor report");
+  ok(before==l.save(),"denial cannot mutate campaign");
+  ok(f06_science_handoff(l.s,l.h.ensign,&req,&sent)==F04_OK,
+    "qualified sensor operator queues actual Core Science task");
+  ok(sent.handoff_id && sent.contact_id==id && sent.status==1 &&
+    sent.class_id==0 && !sent.transponder_id,"only observed knowledge leaves sensors");
+  F06ScienceView read{};U n=0,total=0;
+  ok(f06_science_queue_page(l.s,l.h.captain,0,&read,1,&n,&total)==F04_OK &&
+     n==1 && total==1 && read.handoff_id==sent.handoff_id,"Science queue query");
+  auto stable=l.save();F06ScienceView replay{};
+  ok(f06_science_handoff(l.s,l.h.ensign,&req,&replay)==F04_OK &&
+    replay.handoff_id==sent.handoff_id && stable==l.save(),"idempotent duplicate without mutation");
+  l.load(stable);l.op(l.h.ensign,F04_SCAN); // only real authorized scan, no truth without signature permission override
+  n=total=0;
+  ok(f06_science_queue_page(l.s,l.h.captain,0,&read,1,&n,&total)==F04_OK &&
+     n==1 && read.class_id==0,"snapshot survives Core save/load without invented class");
  } else if(scenario=="eight_hours") {
   l.upsert(l.signal());auto checkpoint=l.save();
   l.advance(28800);auto after=l.save();auto current=l.contacts()[0];
