@@ -40,6 +40,7 @@ jobs:
         shell: bash
         run: |
           python3 desarrollo/integration/f06/build_ship_visual_catalog.py --output "${RUNNER_TEMP:-$TEMP}/f06_ship_catalog.json"
+          python3 desarrollo/integration/f06/build_ship_visual_catalog.py --check sistemas/gameplay/ship_operations/consoles/sensors/ships_visual_catalog.json
           python3 -c "import json,sys; c=json.load(open(sys.argv[1],encoding='utf-8')); assert c['models_count']>=20; assert all(not x['ready_for_sensor_viewer'] for x in c['assets']); print('metadata candidates:',c['models_count'])" "${RUNNER_TEMP:-$TEMP}/f06_ship_catalog.json"
       - name: Build F06 on the same F04/F05 Core library
         shell: bash
