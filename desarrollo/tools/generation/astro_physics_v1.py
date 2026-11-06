@@ -76,7 +76,7 @@ def stellar_luminosity(mass: float) -> float:
         return mass ** 4.0
     if mass < 20:
         return 1.5 * mass ** 3.5
-    return 3200.0 * mass
+    return 1.5 * mass ** 3.5
 
 def stellar_age_limit(mass: float) -> float:
     return min(13.7, 10.0 * mass / stellar_luminosity(mass))
@@ -286,6 +286,28 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
         "visual":{"asset_id":None,"surface_mesh_allowed":has_surface}
     }
 
+def environmental_region(seed: str, kind: str, *, trek_provenance: str | None = None) -> dict:
+    """Standalone environmental truth. A Star Trek anomaly needs a specific cause."""
+    rng=Rng(seed,"region",kind)
+    if kind in ("nebula","supernova_remnant","protoplanetary_disk"):
+        return {"kind":kind,"radius_light_years":rounded(rng.between(.3,25.0)),
+                "density_particles_cm3":rounded(rng.between(10,10000)),
+                "composition":{"H2":.70,"He":.28,"dust_metals":.02},
+                "ionizing_radiation":"elevated" if kind=="supernova_remnant" else "background",
+                "sensor_interference_possible":True,"world_truth_only":True}
+    if kind=="radiation_region":
+        return {"kind":kind,"radius_au":rounded(rng.between(.2,50.0)),
+                "flux_relative_index":rounded(rng.between(1,10)),
+                "cause":"unresolved_host_cause_requires_validation","world_truth_only":True}
+    if kind in ("subspace_anomaly","wormhole"):
+        if not trek_provenance:
+            raise ValueError("Star Trek anomalies require explicit lore/event provenance")
+        return {"kind":kind,"provenance":trek_provenance,"stability":"undetermined",
+                "spatial_extent":"undetermined","world_truth_only":True,
+                "not_a_scientific_phenomenon_model":True}
+    raise ValueError("unknown region type")
+
+
 def body_entity(seed: str, name: str, entity_kind: str, ordinal: int,
                 system_id: str, position_au: list[float], properties: dict,
                 signatures: list[dict], *, parent_id: str | None = None) -> dict:
@@ -357,8 +379,16 @@ def generate_system(seed: str, sector: str = "041", era: str = "tng_ds9_voyager"
                                         ("gas_giant",27),("mini_neptune",8)])
         if family=="ocean" and not (.45<=total_luminosity/a**2<=2):
             family="rocky"
-        physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
-            a,family,f"{root}|planet:{i}")
+        try:
+            physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
+                a,family,f"{root}|planet:{i}")
+        except ValueError:
+            if family!="ocean":
+                raise
+            # A world too hot/cold for liquid oceans is rocky, not a magical ocean world.
+            family="rocky"
+            physics=planet_physics(total_mass,total_luminosity,primary["age_gyr"],
+                a,family,f"{root}|planet:{i}")
         if previous:
             mass_sum=previous[1]["mass_earth"]+physics["mass_earth"]
             mutual=(previous[0]+a)*.5*(mass_sum/(3*total_mass*M_EARTH_PER_SUN))**(1/3)
