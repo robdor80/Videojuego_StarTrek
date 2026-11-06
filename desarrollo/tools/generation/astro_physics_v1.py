@@ -257,13 +257,31 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
         trek="L_candidate"
     orbital_period=math.sqrt(orbit_au**3/star_mass)
     hill=orbit_au*(mass/(3*star_mass*M_EARTH_PER_SUN))**(1/3)
+    # These attributes are broad, explicitly approximate feature seeds.
+    # Rotation, tides and magnetic fields need a later temporal/thermal solver.
+    tidally_locked=has_surface and orbit_au<.12*math.sqrt(luminosity)
+    rotation_hours=orbital_period*365.25*24 if tidally_locked else rng.between(9,110)
+    axial_tilt=0 if tidally_locked else rng.between(0,45)
+    magnetosphere="possible" if has_surface and mass>=.45 and not tidally_locked else "undetermined"
+    ringed=not has_surface and rng.u()<.30
+    resource_families=(["iron","silicates","sulfides"] if has_surface
+                      else ["hydrogen","helium","volatile_ices"])
     return {
         "family":family, "mass_earth":rounded(mass),"radius_earth":rounded(radius),
         "bulk_density_g_cm3":rounded(5.514*mass/radius**3),
         "gravity_earth":rounded(gravity),"escape_velocity_km_s":rounded(11.186*math.sqrt(mass/radius)),
         "orbit":{"semi_major_au":rounded(orbit_au),"eccentricity":rounded(rng.between(0,.08)),
+                 "inclination_degrees":rounded(rng.between(0,4)),
                  "period_years":rounded(orbital_period),"hill_radius_au":rounded(hill),
                  "reference_frame":"system_barycentric_approx"},
+        "rotation":{"period_hours":rounded(rotation_hours),
+                    "axial_tilt_degrees":rounded(axial_tilt),
+                    "tidally_locked_heuristic":tidally_locked},
+        "field":{"magnetosphere":magnetosphere,
+                 "estimated_radiation_exposure":radiation},
+        "ring_system":{"exists":ringed,"source":"illustrative_optional_icy_debris" if ringed else None},
+        "resources":{"potential_bulk_families":resource_families,
+                     "deposits_surveyed":False,"extraction_sites":[]},
         "radiation":{"stellar_flux_earth":rounded(flux),"level":radiation},
         "climate":{"albedo":rounded(albedo),"equilibrium_temperature_k":rounded(eq_temp),
                    "greenhouse_delta_k":rounded(greenhouse) if greenhouse is not None else None,
