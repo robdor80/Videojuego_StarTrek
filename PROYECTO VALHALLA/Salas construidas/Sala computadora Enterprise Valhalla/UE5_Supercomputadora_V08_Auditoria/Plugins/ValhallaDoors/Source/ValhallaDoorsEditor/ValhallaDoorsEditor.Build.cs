@@ -1,0 +1,2 @@
+using UnrealBuildTool;
+public class ValhallaDoorsEditor:ModuleRules{public ValhallaDoorsEditor(ReadOnlyTargetRules Target):base(Target){PCHUsage=PCHUsageMode.UseExplicitOrSharedPCHs;PublicDependencyModuleNames.AddRange(new string[]{"Core","CoreUObject","Engine","ValhallaDoors"});PrivateDependencyModuleNames.AddRange(new string[]{"UnrealEd","Json","JsonUtilities","MeshDescription","StaticMeshDescription","PhysicsCore","AssetRegistry","ImageWrapper","RenderCore","MessageLog","RHI"});}}
