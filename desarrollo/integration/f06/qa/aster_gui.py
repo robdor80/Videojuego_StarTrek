@@ -302,6 +302,12 @@ class Panel:
                         f"N₂ {report[7] / 10:.1f}%; O₂ {report[8] / 10:.1f}%; "
                         f"CO₂ {report[9] / 10:.1f}%; biosignales: {bio}."
                     )
+                    if report[8] < 100 or report[5] < 300:
+                        details += "\nAtmósfera: NO se considera respirable sin asistencia "
+                        details += "(oxígeno o presión medidos insuficientes)."
+                    else:
+                        details += "\nAtmósfera: respirabilidad NO confirmada. "
+                        details += "Faltan análisis de posibles gases nocivos y condiciones locales."
                 elif contact[1] in (12, 13):
                     details += "\nSin informe espectral/científico autorizado todavía. No se muestra ciencia privada del escenario."
                 if contact[1] == 13:
@@ -435,6 +441,11 @@ class Panel:
                 designation = self.designations.get(report[0], "contacto " + str(report[0])[-6:])
                 self.append(t, f"Atención científica: indicios de biosignales en {designation}. "
                             "Vida inteligente y civilización NO determinadas.")
+            for report in state["science"]:
+                if report[1] == 1 and report[8] < 100:
+                    designation = self.designations.get(report[0], "contacto " + str(report[0])[-6:])
+                    self.append(t, f"Precaución: {designation} presenta clasificación M provisional, "
+                                "pero el oxígeno medido no permite asumir una atmósfera respirable.")
             unidentified = sum(1 for c in visible if c[1] == 1 and c[3] == 0)
             if unidentified:
                 self.append(t, f"{unidentified} contacto(s) navales sin clase confirmada. "
