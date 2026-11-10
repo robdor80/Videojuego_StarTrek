@@ -85,6 +85,8 @@ class Panel:
         self.state: dict = {}
         self.contact_map: dict[str, list] = {}
         self.designations: dict[int, str] = {}
+        self.saved_lines: list[str] | None = None
+        self.saved_notes = ""
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.apply(self._read(), reset=True)
@@ -478,6 +480,9 @@ class Panel:
         self.button_play.configure(state="normal", text="Iniciar")
         self.lines.clear()
         self.record.clear()
+        self.saved_lines = None
+        self.saved_notes = ""
+        self.state = {}
         self.log.configure(state="normal")
         self.log.delete("1.0", "end")
         self.log.configure(state="disabled")
@@ -488,14 +493,32 @@ class Panel:
 
     def checkpoint(self, op: str) -> None:
         self.playing = False
-        self.button_play.configure(text="Reanudar")
+        self.button_play.configure(state="normal", text="Reanudar")
         try:
-            self.apply(self.command(op))
-            self.append(self.state["tick"],
-                "Punto de guardado conservado en CoreRPG." if op == "SAVE" else
-                "Guardia recuperada desde CoreRPG.")
+            if op == "SAVE":
+                state = self.command(op)
+                self.saved_lines = list(self.lines)
+                self.saved_notes = self.notes.get("1.0", "end").strip()
+                self.apply(state)
+                self.append(state["tick"], "Bitácora y estado de guardia conservados.")
+            else:
+                if self.saved_lines is None:
+                    messagebox.showinfo("Sensores", "Todavía no hay ningún punto guardado.", parent=self.root)
+                    return
+                state = self.command(op)
+                self.lines = list(self.saved_lines)
+                self.record.clear()
+                self.state = {}  # loading must not create a false state-transition alarm
+                self.log.configure(state="normal")
+                self.log.delete("1.0", "end")
+                self.log.insert("end", "\n".join(self.lines) + ("\n" if self.lines else ""))
+                self.log.configure(state="disabled")
+                self.notes.delete("1.0", "end")
+                self.notes.insert("1.0", self.saved_notes)
+                self.apply(state)
+                self.append(state["tick"], "Guardia recuperada desde el estado persistido en CoreRPG.")
         except Exception as exc:
-            messagebox.showwarning("Prueba F06", str(exc), parent=self.root)
+            messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
     def export(self) -> None:
         path = filedialog.asksaveasfilename(
