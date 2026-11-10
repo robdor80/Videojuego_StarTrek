@@ -183,7 +183,15 @@ struct Watch {
   // The next saved revision defines a stable unique request in this QA session.
   F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,120,0};
   F06TimedScanView started{};
-  check(f06_begin_timed_scan(s,h.ensign,&request,&started),"focused scientific scan");
+  const auto code=f06_begin_timed_scan(s,h.ensign,&request,&started);
+  if(code==F04_CAPACITY)
+   throw std::runtime_error("Los sensores ya están ocupados con análisis del oficial. "
+     "No hace falta pausar la guardia; solicita otro cuando termine alguno.");
+  if(code==F04_UNAVAILABLE)
+   throw std::runtime_error("No hay señal o capacidad de sensores suficiente para este análisis.");
+  if(code==F04_DENIED)
+   throw std::runtime_error("La orden no está autorizada para este puesto de guardia.");
+  check(code,"focused scientific scan");
  }
  void configure(int preset){
   F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
@@ -358,7 +366,15 @@ int main(){
     watch.emit();
    }catch(const std::exception& e){
     std::cerr<<"QA command: "<<e.what()<<"\n";
-    std::cout<<"{\"ok\":false,\"error\":\"No se pudo ejecutar la orden\"}"<<std::endl;
+    // The user receives actionable, safe messages for supported failure
+    // conditions, not native exception details or a meaningless generic box.
+    const std::string reason=e.what();
+    if(action=="SCAN" && (reason.find("Los sensores ya") == 0 ||
+                            reason.find("No hay señal") == 0 ||
+                            reason.find("La orden no") == 0))
+      std::cout<<"{\"ok\":false,\"error\":\""<<reason<<"\"}"<<std::endl;
+    else
+      std::cout<<"{\"ok\":false,\"error\":\"No se pudo ejecutar la orden; revisa el estado de los sensores.\"}"<<std::endl;
    }
   }
   return 0;
