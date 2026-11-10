@@ -256,6 +256,17 @@ struct Watch {
    std::cout<<'['<<ev[i].kind<<','<<ev[i].contact_id<<','<<ev[i].tick<<','
     <<category<<','<<klass<<']';
   }
+  std::cout<<"],\"attention_contacts\":[";
+  std::array<U,64> attention_ids{};
+  U attention_n=0,attention_total=0;
+  check(f06_computer_attention_contacts_page(s,h.captain,0,attention_ids.data(),
+    attention_ids.size(),&attention_n,&attention_total),"operator attention contacts");
+  if(attention_total!=state.needs_attention || attention_total>attention_ids.size())
+    throw std::runtime_error("inconsistent public operator attention projection");
+  for(U i=0;i<attention_n;++i){
+    if(i)std::cout<<',';
+    std::cout<<attention_ids[i];
+  }
   std::cout<<"],\"scans\":[";
   std::array<F06TimedScanView,256> jobs{};
   U jobs_n=0,jobs_total=0;
