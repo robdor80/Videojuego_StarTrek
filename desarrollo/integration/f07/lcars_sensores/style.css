@@ -21,9 +21,9 @@ button:disabled{cursor:not-allowed;opacity:.38}
 .panel-heading{height:15%;min-height:18px;display:flex;align-items:center;justify-content:space-between;gap:1em;white-space:nowrap;padding:0 2%;font-weight:900;color:#b1e7ff;font-size:1.04em;background:linear-gradient(90deg,#07132b 0,#07132b 75%,#20549a);border-bottom:1px solid #144b83}
 #contact-state{color:#64d8ff}
 .map-view{height:85%;position:relative;overflow:hidden;background-image:radial-gradient(#34648d55 .7px,transparent .8px);background-size:27px 27px}
-.radar-rings{position:absolute;width:93%;aspect-ratio:1;pointer-events:none}
-.ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #1470a58b;border-radius:50%;aspect-ratio:1}
-.ring-1{width:25%}.ring-2{width:50%}.ring-3{width:75%}.ring-4{width:100%}
+.radar-rings{position:absolute;width:92%;height:92%;transform:translate(-50%,-50%);pointer-events:none}
+.ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:1px solid #1470a58b;border-radius:50%}
+.ring-1{width:25%;height:25%}.ring-2{width:50%;height:50%}.ring-3{width:75%;height:75%}.ring-4{width:100%;height:100%}
 .axis{position:absolute;background:#1986b87d}
 .axis-x{height:1px;width:100%;top:50%}
 .axis-y{width:1px;height:100%;left:50%}
