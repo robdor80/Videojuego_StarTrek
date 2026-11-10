@@ -32,6 +32,8 @@ struct NavTrack {
  int trend=0; // 1 closing, 2 opening, 0 insufficient evidence.
  int intercept=0; // projected closest approach within the safety threshold.
  int cpa=0; // closest projected approach, milli-AU.
+ int64_t speed_micro_au_s=0; // 1e-6 AU/s, derived from observed displacement.
+ int64_t closing_micro_au_s=0; // positive means approach.
 };
 struct Watch {
  F04Session* s=nullptr;
@@ -91,6 +93,11 @@ struct Watch {
    const double new_r=std::sqrt(double(now.x)*now.x+
       double(now.y)*now.y+double(now.z)*now.z);
    now.trend=new_r+0.1<old_r?1:new_r>old_r+0.1?2:0;
+   const double interval=static_cast<double>(now.tick-prior.tick);
+   now.speed_micro_au_s=static_cast<int64_t>(std::llround(
+     moved*1000.0/interval));
+   now.closing_micro_au_s=static_cast<int64_t>(std::llround(
+     (old_r-new_r)*1000.0/interval));
    now.heading=static_cast<int>(std::lround(
      std::fmod(std::atan2(dx,dy)*180.0/pi+360.0,360.0)))%360;
    const double dot=double(now.x)*dx+double(now.y)*dy+double(now.z)*dz;
@@ -428,7 +435,8 @@ struct Watch {
    first_nav=false;
    const auto& n=it->second;
    std::cout<<'['<<contacts[i].contact_id<<','<<n.tick<<','<<n.heading
-    <<','<<n.trend<<','<<n.intercept<<','<<n.cpa<<']';
+    <<','<<n.trend<<','<<n.intercept<<','<<n.cpa
+    <<','<<n.speed_micro_au_s<<','<<n.closing_micro_au_s<<']';
   }
   std::cout<<"],\"navigation_alerts\":[";
   for(size_t i=0;i<nav_events.size();++i){
