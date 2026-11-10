@@ -31,6 +31,11 @@ def start(runner: Path):
     assert any(r[1]==3 for r in initial["science"]), "Core must report a measured gas giant as class J"
     assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
     assert all(c[3]==0 for c in initial["contacts"] if c[1]==13),"planet class cannot occupy ship class field"
+    assert all(c[3]!=0 for c in initial["contacts"] if c[1] in (1,2)), (
+        "The Enterprise-D must classify every observable uncloaked ship at first detection",
+        initial["contacts"])
+    assert any(c[1]==1 and c[3]==18 for c in initial["contacts"]), (
+        "The civilian transport must be identified without waiting for a long scan")
     return p,initial
 
 def say(p,command: str):
@@ -141,16 +146,19 @@ def run(runner: Path):
         loaded_observations,saved_observations)
     finish(p)
 
-    # The native attention list identifies the exact observed contact that
-    # the automatic computer unsuccessfully tried to classify.
-    p,_=start(runner)
-    incident=say(p,"STEP 2400")
-    assert incident["attention"] >= 1, incident
-    assert len(incident["attention_contacts"]) == incident["attention"], incident
-    for cid in incident["attention_contacts"]:
-        match = next((c for c in incident["contacts"] if c[0] == cid), None)
-        assert match is not None and match[2] == 1 and match[3] == 0, (cid, match)
-        assert match[1] in (0, 1, 8, 11), match
+    # A Klingon cruiser arrives exactly at hour 1. Its classification must
+    # be available in that *same* Core observation, with no timed scan.
+    p,starting=start(runner)
+    starting_naval={c[0] for c in starting["contacts"] if c[1]==1 and c[2]==1}
+    incident=say(p,"STEP 3600")
+    klingons=[c for c in incident["contacts"]
+              if c[1]==1 and c[2]==1 and c[3]==16
+              and c[0] not in starting_naval]
+    assert len(klingons)==1,("new Klingon cruiser not identified immediately",incident)
+    assert any(ev[0]==1 and ev[1]==klingons[0][0] for ev in incident["events"]), (
+        "arrival notification missing", incident["events"])
+    assert all(c[3]!=0 for c in incident["contacts"] if c[1]==1 and c[2]==1), (
+        "uncloaked naval class still pending after acquisition",incident["contacts"])
     finish(p)
 
     p,_=start(runner)
