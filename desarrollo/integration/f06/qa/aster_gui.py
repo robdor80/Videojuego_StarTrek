@@ -308,9 +308,7 @@ class Panel:
                                      command=self.contacts_table.yview)
         tree_scroll.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=tree_scroll.set)
-        self.contacts_table.bind(
-            "<<TreeviewSelect>>", lambda _: (
-                self.show_selected(), self._draw_map(), self._update_main_content()))
+        self.contacts_table.bind("<<TreeviewSelect>>", self._on_contact_selected)
         self.contacts_table.bind("<<TreeviewOpen>>", self._remember_group)
         self.contacts_table.bind("<<TreeviewClose>>", self._remember_group)
 
@@ -683,8 +681,18 @@ class Panel:
         name = self.designations.get(contact[0], "Contacto C-" + str(contact[0])[-6:])
         return f"{name} · {kind}: {known}. Distancia a la nave {distance}. Confianza {confidence}. Estado {status}."
 
+    def _on_contact_selected(self, event: tk.Event | None = None) -> None:
+        selected = self.contacts_table.selection()
+        if selected and selected[0] in self.contact_map:
+            self.map_overview = False
+            self.map_zoom = 1.0
+            self.map_button.configure(text="Ver todos")
+        self.show_selected()
+        self._draw_map()
+        self._update_main_content()
+
     def _draw_map(self) -> None:
-        """XY projection of observed positions; no hidden world coordinates."""
+        """Map with selectable contact focus and zoom; only public readings."""
         if not hasattr(self, "map_canvas"):
             return
         cv = self.map_canvas
@@ -695,50 +703,65 @@ class Panel:
         cx, cy = w / 2, h / 2
         cv.create_line(12, cy, w - 12, cy, fill="#cbd5e1")
         cv.create_line(cx, 12, cx, h - 12, fill="#cbd5e1")
-        cv.create_text(16, 14, text="Y+", anchor="w", fill="#475569")
-        cv.create_text(w - 16, cy - 12, text="X+", anchor="e", fill="#475569")
-        cv.create_text(cx + 5, cy + 12, text="NAVE", anchor="nw",
-                       fill="#1e40af")
-        cv.create_polygon(cx, cy - 6, cx - 5, cy + 5, cx + 5, cy + 5,
-                          fill="#1e40af")
+        cv.create_text(14, 13, text="Y+", anchor="w", fill="#64748b")
+        cv.create_text(w-14, cy-12, text="X+", anchor="e", fill="#64748b")
+        cv.create_polygon(cx, cy-10, cx-7, cy+7, cx+7, cy+7,
+                          fill="#2563eb")
+        cv.create_text(cx + 9, cy + 12, text="ENTERPRISE-D",
+                       anchor="nw", fill="#1d4ed8")
         self.map_positions = []
         if not self.state:
             return
-        rows = [self.contact_map[k] for group in self.contacts_table.get_children()
-                for k in self.contacts_table.get_children(group)
-                if k in self.contact_map]
+        selection = self.contacts_table.selection()
+        chosen_id = (selection[0] if selection and selection[0] in self.contact_map
+                     else None)
+        focused = chosen_id and not self.map_overview
+        if focused:
+            rows = [self.contact_map[chosen_id]]
+        else:
+            rows = [c for c in self.state["contacts"] if c[2] == 1]
         if not rows:
-            cv.create_text(w / 2, h - 18, text="Sin contactos visibles en este filtro")
+            cv.create_text(cx, h - 20, text="Sin contactos en el alcance actual")
             return
-        radius = max(100, max(abs(c[8]) for c in rows), max(abs(c[9]) for c in rows))
-        scale = 0.44 * min(w, h) / radius
-        cv.create_text(w - 10, h - 9,
-                       text=f"±{radius / 1000:.2f} UA · plano XY",
+        radius = max(100, max(abs(c[8]) for c in rows),
+                     max(abs(c[9]) for c in rows))
+        scale = 0.42 * min(w,h) / radius * self.map_zoom
+        cv.create_text(w-10, h-9,
+                       text=f"Escala ±{radius / (1000*self.map_zoom):.2f} UA · XY",
                        anchor="se", fill="#475569")
-        selected = self.contacts_table.selection()
-        selected_id = selected[0] if selected else None
         for c in rows:
             key = str(c[0])
-            px, py = cx + c[8] * scale, cy - c[9] * scale
-            size = 6 if c[1] in (1, 2) else 4
+            px, py = cx + c[8]*scale, cy-c[9]*scale
+            sz = 7 if c[1] in (1,2) else 5
             color = "#155e75" if c[2] == 1 else "#9ca3af"
-            if c[1] in (12, 13, 14):
-                color = "#64748b" if c[2] == 1 else "#cbd5e1"
-            if key == selected_id:
-                cv.create_oval(px - 10, py - 10, px + 10, py + 10,
-                              outline="#2563eb", width=2)
-                size = 7
+            if c[1] in (12,13,14):
+                color = "#64748b"
+            if key == chosen_id:
+                cv.create_line(cx,cy,px,py,fill="#0891b2",
+                               width=2,dash=(5,4))
+                cv.create_oval(px-10,py-10,px+10,py+10,
+                              outline="#2563eb",width=2)
             if c[2] != 1:
-                cv.create_line(px - size, py - size, px + size, py + size,
-                               fill=color, width=2)
-                cv.create_line(px - size, py + size, px + size, py - size,
-                               fill=color, width=2)
+                cv.create_line(px-sz,py-sz,px+sz,py+sz,fill=color)
+                cv.create_line(px-sz,py+sz,px+sz,py-sz,fill=color)
             else:
-                cv.create_oval(px - size, py - size, px + size, py + size,
-                              fill=color, outline="")
-            self.map_positions.append((px, py, key))
-        cv.create_text(10, h - 9, text=f"{len(rows)} contactos representados",
-                       anchor="sw", fill="#475569")
+                cv.create_oval(px-sz,py-sz,px+sz,py+sz,fill=color,outline="")
+            if focused and key == chosen_id:
+                name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1,2) else None
+                name = name or self.designations.get(c[0],TYPES.get(c[1],"Contacto"))
+                # Move labels left if the object is close to the right edge.
+                anchor = "e" if px > w*0.73 else "w"
+                offset = -12 if anchor == "e" else 12
+                cv.create_text(px+offset,py-18,text=name,anchor=anchor,
+                               fill="#0f172a")
+                cv.create_text(px+offset,py+6,
+                               text=f"{c[5]/1000:.3f} UA",anchor=anchor,
+                               fill="#475569")
+            self.map_positions.append((px,py,key))
+        cv.create_text(12,h-9,
+                       text=(f"{len(rows)} objetos observados" if not focused
+                             else "Vista relativa · contacto seleccionado"),
+                       anchor="sw",fill="#475569")
 
     def _select_map_contact(self, event: tk.Event) -> None:
         if not self.map_positions:
