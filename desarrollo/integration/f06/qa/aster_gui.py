@@ -241,9 +241,8 @@ class Panel:
         selected = self.contacts_table.selection()
         selected_id = selected[0] if selected else None
         self.contact_map = {str(row[0]): row for row in state["contacts"]}
-        self.designations = {}
-        stars = [c for c in state["contacts"] if c[1] == 12 and c[2] == 1]
-        planets = [c for c in state["contacts"] if c[1] == 13 and c[2] == 1]
+        stars = [c for c in state["contacts"] if c[1] == 12]
+        planets = [c for c in state["contacts"] if c[1] == 13]
         if stars:
             star = stars[0]
             planets.sort(key=lambda c:
@@ -251,10 +250,10 @@ class Panel:
             roman = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII",
                      "IX", "X", "XI", "XII")
             for i, planet in enumerate(planets):
-                self.designations[planet[0]] = (
-                    "Aster " + (roman[i] if i < len(roman) else str(i + 1))
+                self.designations.setdefault(
+                    planet[0], "Aster " + (roman[i] if i < len(roman) else str(i + 1))
                 )
-            self.designations[star[0]] = "Aster (estrella central)"
+            self.designations.setdefault(star[0], "Aster (estrella central)")
 
         self.contacts_table.delete(*self.contacts_table.get_children())
         categories = {
@@ -523,6 +522,7 @@ class Panel:
         self.button_play.configure(state="normal", text="Iniciar")
         self.lines.clear()
         self.record.clear()
+        self.designations = {}
         self.saved_lines = None
         self.saved_notes = ""
         self.state = {}
