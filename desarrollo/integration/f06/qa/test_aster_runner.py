@@ -14,6 +14,12 @@ def start(runner: Path):
     assert initial["ok"] and initial["tick"]==0,initial
     assert initial["automatic"]==1 and initial["active"]>=15,initial
     assert initial["running"] in (1,2),initial
+    assert initial["interference_em"]==0,initial
+    assert all(len(c)==12 for c in initial["contacts"]),initial
+    assert initial["science"],"Aster should publish only Core-verified instrument reports"
+    assert any(r[1]==1 and r[3]==1 for r in initial["science"]), "provisional M class must come from Core"
+    assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
+    assert all(c[3]==0 for c in initial["contacts"] if c[1]==13),"planet class cannot occupy ship class field"
     return p,initial
 
 def say(p,command: str):
@@ -32,6 +38,9 @@ def finish(p):
 
 def run(runner: Path):
     p,initial=start(runner)
+    planet = next(r[0] for r in initial["science"] if r[1] == 1)
+    focused=say(p,f"FOCUS {planet}")
+    assert any(r[0]==planet for r in focused["science"]),focused
     first=say(p,"STEP 300")
     assert first["tick"]==300 and first["completed"]>=1,first
     saved=say(p,"SAVE")
@@ -49,6 +58,9 @@ def run(runner: Path):
 
     # Precisely the same input cadence produces the same complete Core result.
     p,repeat=start(runner)
+    second_planet=next(r[0] for r in repeat["science"] if r[1]==1)
+    assert second_planet==planet
+    say(p,f"FOCUS {second_planet}")
     same=say(p,"STEP 300")
     say(p,"SAVE")
     copy=say(p,"STEP 600")
@@ -64,9 +76,9 @@ def run(runner: Path):
     change=say(p,"RESTART 2")
     assert change["mode"]==2
     change=say(p,"STEP 3600")
-    assert change["tick"]==3600
+    assert change["tick"]==3600 and change["interference_em"]==550,change
     change=say(p,"STEP 3600")
-    assert change["tick"]==7200
+    assert change["tick"]==7200 and change["interference_em"]==0,change
     finish(p)
 
     p,_=start(runner)
