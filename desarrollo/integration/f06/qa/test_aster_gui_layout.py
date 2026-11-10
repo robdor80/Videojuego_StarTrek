@@ -53,12 +53,23 @@ def main() -> None:
         root.update()
         assert snapshot["attention"] > 0, snapshot
         assert panel.alert_bar.winfo_viewable(), "big alert is not visible"
+        assert panel.footer.winfo_viewable(), "alert displaced the watch footer"
+        assert panel.notice_bar.winfo_viewable(), "alert displaced the system notice"
+        assert (panel.footer.winfo_y() + panel.footer.winfo_height()
+                <= root.winfo_height()), "watch controls extend below the window"
         assert panel.alert_ids == [str(cid) for cid in snapshot["attention_contacts"]]
         subject = panel.alert_ids[0]
         panel.open_alert_contact()
         assert panel.contacts_table.selection() == (subject,), "alert has no direct action"
         assert subject in panel.contact_map
-        assert "IDENTIFICACIÓN" in panel.detail_text.get("1.0", "end")
+        dossier=panel.detail_text.get("1.0", "end")
+        assert "IDENTIFICACIÓN NAVAL" in dossier
+        assert "Operador o afiliación actual" in dossier
+        assert "Origen del diseño" in dossier
+        panel.contact_action("FOCUS")
+        assert "Lectura rápida" in panel.notice_label.cget("text") or (
+            "Identificación rápida" in panel.notice_label.cget("text"))
+        assert panel.footer.winfo_viewable(), "quick scan broke layout"
 
         # The usual views must remain filterable and retain real observation data.
         panel.navigate("contacts")
@@ -99,7 +110,15 @@ def main() -> None:
         root.update_idletasks()
         assert panel.map_box.winfo_manager(), "on-demand spatial map unavailable"
         assert len(panel.map_positions) >= 0
-        print("PASS native Core / six task groups / hierarchy / big alert / dossier / quiet notices")
+        # Regress the actual user failure: narrow/short window, map and
+        # priority banner all visible while the guard's bottom controls stay put.
+        root.geometry("1150x700")
+        root.update_idletasks()
+        root.update()
+        assert panel.footer.winfo_viewable(), "watch controls hidden in short viewport"
+        assert (panel.footer.winfo_y() + panel.footer.winfo_height()
+                <= root.winfo_height()), "footer clipped in short viewport"
+        print("PASS native Core / priority alert / footer visible / rapid identification / archive")
     finally:
         if panel:
             panel.close()
