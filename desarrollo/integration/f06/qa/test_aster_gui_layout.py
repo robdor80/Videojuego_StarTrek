@@ -46,6 +46,23 @@ def main() -> None:
         label = panel.contacts_table.item("group:planet", "text")
         assert "6" in label and "clase" in label, label
 
+        # Class capabilities belong in the contact itself, not in a dead-end
+        # instruction to look for a separate tactical file.
+        intrepid = next(
+            str(c[0]) for c in panel.state["contacts"]
+            if c[1] == 1 and c[3] == 6
+        )
+        panel.contacts_table.selection_set(intrepid)
+        panel.show_selected()
+        intrepid_dossier = panel.detail_text.get("1.0", "end")
+        assert "INTREPID" in intrepid_dossier, intrepid_dossier
+        assert "Baterías fáser y torpedos de fotones" in intrepid_dossier, intrepid_dossier
+        assert "Escudos deflectores" in intrepid_dossier, intrepid_dossier
+        assert "consultar el archivo" not in intrepid_dossier.lower(), intrepid_dossier
+        assert "no verificados" not in intrepid_dossier.lower(), intrepid_dossier
+        panel.contacts_table.selection_remove(intrepid)
+        panel.show_selected()
+
         # A new uncloaked Klingon must be identified on detection,
         # visibly notify the officer and bring the running guard to ×1.
         snapshot = panel.command("STEP 3600")
