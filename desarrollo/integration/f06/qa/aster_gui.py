@@ -139,6 +139,8 @@ class Panel:
         self.section_id = "summary"
         self.contact_subset = "all"
         self.map_positions: list[tuple[float, float, str]] = []
+        self.alert_ids: list[str] = []
+        self.alert_cursor = 0
         self.navigation_buttons = {}
         self.section_buttons = []
 
@@ -151,8 +153,32 @@ class Panel:
         self.important = ttk.Label(header, text="")
         self.important.pack(side="right")
 
+        # Operational incident: wide, high-contrast, actionable; hidden if nominal.
+        # Navigation is a direct Core contact ID, not guessed from text or severity.
+        self.alert_bar = tk.Frame(self.root, background="#ffe4a3",
+                                  highlightbackground="#b45309", highlightthickness=3)
+        self.alert_copy = tk.Frame(self.alert_bar, background="#ffe4a3")
+        self.alert_copy.pack(side="left", fill="both", expand=True, padx=16, pady=11)
+        self.alert_title = tk.Label(self.alert_copy, background="#ffe4a3",
+                                    foreground="#7c2d12", anchor="w",
+                                    font=("Segoe UI", 16, "bold"), text="")
+        self.alert_title.pack(fill="x")
+        self.alert_description = tk.Label(self.alert_copy, background="#ffe4a3",
+                                          foreground="#451a03", anchor="w",
+                                          font=("Segoe UI", 11), wraplength=940,
+                                          justify="left", text="")
+        self.alert_description.pack(fill="x", pady=(5, 0))
+        self.alert_button = tk.Button(
+            self.alert_bar, text="ABRIR CONTACTO",
+            command=self.open_alert_contact,
+            font=("Segoe UI", 11, "bold"), background="#92400e",
+            foreground="#ffffff", activebackground="#78350f",
+            activeforeground="#ffffff", padx=16, pady=10, relief="flat")
+        self.alert_button.pack(side="right", padx=14, pady=12)
+
         columns = ttk.Panedwindow(self.root, orient="horizontal")
         columns.pack(fill="both", expand=True, padx=9, pady=(2, 5))
+        self.workspace_panes = columns
         left = ttk.Frame(columns, width=200, padding=5)
         center = ttk.Frame(columns, width=700, padding=(6, 4))
         right = ttk.Frame(columns, width=400, padding=(6, 4))
@@ -298,6 +324,67 @@ class Panel:
         self.notes = tk.Text(note, height=2, font=("Segoe UI", 9), wrap="word")
         self.notes.pack(fill="x")
         self.navigate("status")
+
+    def _update_alert(self, state: dict) -> None:
+        """Show actual actionable contacts from the native computer watch."""
+        ids = [str(cid) for cid in state.get("attention_contacts", [])]
+        if state.get("attention", 0) != len(ids):
+            raise RuntimeError("El motor no ha proporcionado los contactos de la alerta.")
+        prior = tuple(self.alert_ids)
+        self.alert_ids = ids
+        if not ids:
+            if self.alert_bar.winfo_manager():
+                self.alert_bar.pack_forget()
+            return
+        if prior != tuple(ids):
+            self.alert_cursor = 0
+        self.alert_cursor %= len(ids)
+        item = self.contact_map.get(ids[self.alert_cursor])
+        if item is not None:
+            label = self.designations.get(item[0], "C-" + ids[self.alert_cursor][-6:])
+            kind = TYPES.get(item[1], "señal desconocida")
+            intro = f"{label} · {kind} · a {item[5] / 1000:.3f} UA · confianza {item[4] / 10:.1f}%."
+        else:
+            intro = "Contacto registrado por CoreRPG; ficha no disponible temporalmente."
+        n = len(ids)
+        self.alert_title.configure(text=(
+            f"ATENCIÓN DEL OPERADOR · {n} CONTACTO{'S' if n != 1 else ''} POR EVALUAR"))
+        self.alert_description.configure(text=(
+            intro + "\nLa computadora ha intentado identificarlo automáticamente, "
+            "pero su clase sigue sin confirmar. Requiere evaluación del oficial."
+        ))
+        self.alert_button.configure(
+            text=("ABRIR CONTACTO" if n == 1 else
+                  f"ABRIR CONTACTO {self.alert_cursor + 1}/{n}"))
+        if not self.alert_bar.winfo_manager():
+            self.alert_bar.pack(fill="x", padx=9, pady=(0, 7),
+                                before=self.workspace_panes)
+
+    def open_alert_contact(self) -> None:
+        """One click: official flagged ID -> contact row -> observed dossier."""
+        if not self.alert_ids:
+            return
+        contact_id = self.alert_ids[self.alert_cursor]
+        if contact_id not in self.contact_map:
+            messagebox.showwarning(
+                "Sensores", "El contacto señalado ya no figura entre las observaciones.",
+                parent=self.root)
+            return
+        self.navigate("contacts")
+        self.contact_filter.set("Todos")
+        self._refresh_contacts(self.state)
+        if not self.contacts_table.exists(contact_id):
+            messagebox.showwarning(
+                "Sensores", "No se ha podido localizar el contacto en el listado actual.",
+                parent=self.root)
+            return
+        self.contacts_table.selection_set(contact_id)
+        self.contacts_table.focus(contact_id)
+        self.contacts_table.see(contact_id)
+        self.show_selected()
+        self._draw_map()
+        if len(self.alert_ids) > 1:
+            self.alert_cursor = (self.alert_cursor + 1) % len(self.alert_ids)
 
     def navigate(self, view: str) -> None:
         """Navigation never issues orders and never pauses the sensor watch."""
@@ -708,11 +795,12 @@ class Panel:
         else:
             status = f"Vigilancia activa · {state['active']} contactos"
         self.summary.configure(text=status)
+        # The old tiny header label is NOT an operator alert.
         self.important.configure(text=(
-            f"Atención: {state['attention']} contactos relevantes requieren evaluación."
-            if state["attention"] else "Sin incidencias que requieran intervención."
+            "Incidencia activa" if state["attention"] else "Sin incidencias activas"
         ))
         self._refresh_contacts(state)
+        self._update_alert(state)
         self._update_view_content()
         current = [c for c in state["contacts"] if c[2] == 1]
         kinds = Counter(c[1] for c in current)
