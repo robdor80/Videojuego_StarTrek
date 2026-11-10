@@ -15,6 +15,8 @@ def start(runner: Path):
     assert initial["automatic"]==1 and initial["active"]>=15,initial
     assert initial["running"] in (1,2),initial
     assert initial["interference_em"]==0,initial
+    assert initial["config"][:3] == [1000, 1000, 0], initial
+    assert initial["diagnostic"][0] == 1, initial
     assert all(len(c)==12 for c in initial["contacts"]),initial
     assert len(initial["science"]) == 6, (
         "The six observed Aster planets must have published Core reports or a recorded failure",
@@ -45,6 +47,12 @@ def run(runner: Path):
     planet = next(r[0] for r in initial["science"] if r[1] == 1)
     focused=say(p,f"FOCUS {planet}")
     assert any(r[0]==planet for r in focused["science"]),focused
+    diagnostic=say(p,"DIAG")
+    assert diagnostic["diagnostic"][0] == 1,diagnostic
+    tuned=say(p,"CONFIG 2")
+    assert tuned["config"][:4] == [700, 550, 400, 2],tuned
+    normal=say(p,"CONFIG 0")
+    assert normal["config"][:4] == [1000, 1000, 0, 0],normal
     first=say(p,"STEP 300")
     assert first["tick"]==300 and first["completed"]>=1,first
     saved=say(p,"SAVE")
@@ -65,6 +73,9 @@ def run(runner: Path):
     second_planet=next(r[0] for r in repeat["science"] if r[1]==1)
     assert second_planet==planet
     say(p,f"FOCUS {second_planet}")
+    say(p,"DIAG")
+    say(p,"CONFIG 2")
+    say(p,"CONFIG 0")
     same=say(p,"STEP 300")
     say(p,"SAVE")
     copy=say(p,"STEP 600")
