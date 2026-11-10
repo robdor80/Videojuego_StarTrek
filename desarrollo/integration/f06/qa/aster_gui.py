@@ -40,6 +40,7 @@ STARSHIP_CLASSES = {
     9: "Bird-of-Prey", 10: "Cubo Borg", 11: "Danube",
     12: "Olympic", 13: "Lanzadera tipo 6", 14: "D'Kyr",
     15: "D5", 16: "Vor'cha", 17: "K't'inga",
+    18: "Transporte civil de clase Aster",
 }
 PLANET_CLASSES = {0: "sin determinar", 1: "M", 2: "H", 3: "J",
                   4: "L", 5: "P", 6: "Y"}
@@ -62,6 +63,7 @@ STARSHIP_DESIGNS = {
     15: ("Crucero", "Imperio Klingon"),
     16: ("Crucero de batalla", "Imperio Klingon"),
     17: ("Crucero de batalla", "Imperio Klingon"),
+    18: ("Transporte de mercancías", "Diseño civil del escenario Aster"),
 }
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
@@ -101,6 +103,9 @@ class Panel:
         self.speed = tk.StringVar(value="×30")
         self.mode = tk.StringVar(value=MODES[0])
         self.playing = False
+        self.speed_before_alert = "×30"
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
         self.lines: list[str] = []
         self.record: list[dict] = []
         self.state: dict = {}
@@ -316,6 +321,8 @@ class Panel:
         self.progress.pack(side="left", padx=(6, 14))
         self.button_play = ttk.Button(footer, text="Iniciar", command=self.toggle)
         self.button_play.pack(side="left")
+        self.restore_speed_button = ttk.Button(
+            footer, text="Volver a ×30", command=self.restore_watch_speed)
         ttk.Button(footer, text="Opciones de prueba", command=self.toggle_test_options
                    ).pack(side="right")
 
@@ -479,9 +486,17 @@ class Panel:
             title = "ALERTA PRIORITARIA · CONTACTO BORG"
             explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
         elif chosen == arrival:
-            title = "NUEVA NAVE DETECTADA"
-            explanation = ("Contacto naval recién observado. La computadora mantiene "
-                           "la vigilancia y realiza la identificación en automático.")
+            arriving = observed.get(chosen)
+            class_name = STARSHIP_CLASSES.get(arriving[3]) if arriving else None
+            title = ("NAVE DETECTADA · " + class_name.upper()
+                     if class_name else "NUEVA NAVE DETECTADA")
+            design = STARSHIP_DESIGNS.get(arriving[3]) if arriving else None
+            explanation = (
+                "Identificación inmediata completada. "
+                + (f"Diseño: {design[1]}. " if design else "")
+                + "Afiliación actual sin verificar. Velocidad de guardia reducida a ×1."
+                if class_name else
+                "Detección naval bajo investigación. Velocidad ×1; revisar sensores.")
         else:
             title = "ATENCIÓN · NAVE SIN IDENTIFICAR"
             explanation = ("La computadora intentó identificar este contacto "
@@ -1126,6 +1141,16 @@ class Panel:
                 if (observed and observed[2] == 1 and
                         candidate not in self.acknowledged_arrivals):
                     self.arrival_id = candidate
+                    if not self.slowed_for_alert:
+                        self.speed_before_alert = self.speed.get()
+                    self.slowed_for_alert = True
+                    self.speed.set("×1")
+                    self.sim_half_seconds = 0
+                    self.restore_speed_button.configure(
+                        text=f"Volver a {self.speed_before_alert}")
+                    if not self.restore_speed_button.winfo_manager():
+                        self.restore_speed_button.pack(
+                            side="left", padx=(12, 0))
             contact = self.contact_map.get(str(contact_id))
             ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
             short_ref = "C-" + str(contact_id)[-6:]
@@ -1181,11 +1206,25 @@ class Panel:
             self.button_play.configure(text="Guardia finalizada", state="disabled")
             self.append(t, "Guardia finalizada. Exporta el informe cuando quieras.")
 
+    def restore_watch_speed(self) -> None:
+        """A new ship slows the clock, but the operator chooses when to accelerate."""
+        self.speed.set(self.speed_before_alert)
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
+        self.restore_speed_button.pack_forget()
+        self.append(self.state.get("tick", 0),
+                    f"Guardia a velocidad {self.speed.get()} por decisión del oficial.")
+
     def tick(self) -> None:
         if self.playing and self.state.get("tick", 0) < 28800:
             try:
-                sim_seconds=int(self.speed.get()[1:]) // 2
-                self.apply(self.command(f"STEP {sim_seconds}"))
+                # Advance one simulated second every two 500-ms ticks at ×1.
+                # Integer half-seconds also preserve exact ×15 cadence.
+                self.sim_half_seconds += int(self.speed.get()[1:])
+                sim_seconds, self.sim_half_seconds = divmod(
+                    self.sim_half_seconds, 2)
+                if sim_seconds:
+                    self.apply(self.command(f"STEP {sim_seconds}"))
             except Exception as exc:
                 self.playing = False
                 self.button_play.configure(text="Reanudar")
@@ -1200,6 +1239,11 @@ class Panel:
 
     def restart(self) -> None:
         self.playing = False
+        self.speed.set("×30")
+        self.speed_before_alert = "×30"
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
+        self.restore_speed_button.pack_forget()
         self.button_play.configure(state="normal", text="Iniciar")
         self.lines.clear()
         self.record.clear()
