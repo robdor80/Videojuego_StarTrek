@@ -170,7 +170,33 @@ def main() -> None:
         assert panel.speed.get() == "×30", "officer cannot restore accelerated guard"
         assert (panel.footer.winfo_y() + panel.footer.winfo_height()
                 <= root.winfo_height()), "footer clipped in short viewport"
-        print("PASS native Core / priority alert / footer visible / rapid identification / archive")
+
+        # At 02:00, the Romulan becomes detectable. Its dossier must
+        # include known weapons AND its first movement reading within 5s;
+        # the completed study indicator must disappear instead of staying
+        # as permanent green decoration.
+        panel.apply(panel.command("STEP 3595"))
+        warbird = next(str(c[0]) for c in panel.state["contacts"]
+                       if c[1] == 1 and c[3] == 8 and c[2] == 1)
+        panel.navigate("contacts")
+        panel.select_section("all")
+        panel.contacts_table.selection_set(warbird)
+        panel.show_selected()
+        dossier = panel.detail_text.get("1.0", "end")
+        assert "D'DERIDEX" in dossier.upper(), dossier
+        assert "disruptores" in dossier.lower(), dossier
+        assert "torpedos de fotones" in dossier.lower(), dossier
+        assert "camuflaje" in dossier.lower(), dossier
+        assert "consultar catálogo táctico" not in dossier.lower(), dossier
+        assert "Rumbo de desplazamiento:" in dossier, dossier
+        assert "Movimiento: Se acerca" in dossier, dossier
+        panel.contact_action("SCAN")
+        assert panel.scan_progress.winfo_manager(), (
+            "manual detailed analysis should show live progress")
+        panel.apply(panel.command("STEP 25"))
+        assert not panel.scan_progress.winfo_manager(), (
+            "finished analysis must not leave a permanent green bar")
+        print("PASS native Core / priority alert / 20s scan / Romulan navigation / compact dossier")
     finally:
         if panel:
             panel.close()
