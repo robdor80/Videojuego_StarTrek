@@ -1767,6 +1767,10 @@ class Panel:
                 self.lines = list(self.saved_lines)
                 self.manual_jobs = dict(self.saved_manual_jobs)
                 self.operator_scan_ids = set(self.saved_operator_scan_ids)
+                self.new_contact_ids = set(self.saved_operator_views.get("new", set()))
+                self.followed_ids = set(self.saved_operator_views.get("followed", set()))
+                self.analyzed_ids = set(self.saved_operator_views.get("analysed", set()))
+                self.tactical_qa_ids = set(self.saved_operator_views.get("tactical", set()))
                 self.record.clear()
                 self.state = {}  # loading must not create a false state-transition alarm
                 self.arrival_id = None
