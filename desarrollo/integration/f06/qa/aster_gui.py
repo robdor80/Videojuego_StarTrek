@@ -431,6 +431,11 @@ class Panel:
                     for cls, n in sorted(classes.items())
                 )
                 self.append(t, "Informe científico inicial autorizado: " + found + ".")
+            interesting = [r for r in state["science"] if r[10] >= 2 and r[2] >= 650]
+            for report in interesting:
+                designation = self.designations.get(report[0], "contacto " + str(report[0])[-6:])
+                self.append(t, f"Atención científica: indicios de biosignales en {designation}. "
+                            "Vida inteligente y civilización NO determinadas.")
             unidentified = sum(1 for c in visible if c[1] == 1 and c[3] == 0)
             if unidentified:
                 self.append(t, f"{unidentified} contacto(s) navales sin clase confirmada. "
