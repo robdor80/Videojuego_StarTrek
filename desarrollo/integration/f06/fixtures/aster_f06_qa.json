@@ -16,6 +16,12 @@
   "time_frames_seconds": [
     0,
     3600,
+    3605,
+    3610,
+    3620,
+    3630,
+    3650,
+    3680,
     7200,
     14400,
     28800
@@ -518,6 +524,30 @@
             900,
             0
           ]
+        },
+        {
+          "tick": 3605,
+          "position_milli_au": [7150, 900, 0]
+        },
+        {
+          "tick": 3610,
+          "position_milli_au": [7000, 900, 0]
+        },
+        {
+          "tick": 3620,
+          "position_milli_au": [6700, 855, 0]
+        },
+        {
+          "tick": 3630,
+          "position_milli_au": [6400, 810, 0]
+        },
+        {
+          "tick": 3650,
+          "position_milli_au": [5900, 1200, 0]
+        },
+        {
+          "tick": 3680,
+          "position_milli_au": [5700, 1500, 0]
         },
         {
           "tick": 14400,
