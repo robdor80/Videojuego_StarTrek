@@ -91,6 +91,25 @@ def run(runner: Path):
     assert final["contacts"]==ending["contacts"]
     finish(p)
 
+    # An actual officer study must reserve a native Core timed job,
+    # progress on the shared clock, and yield an observed result.
+    p,study_initial=start(runner)
+    planet_id=study_initial["science"][0][0]
+    for _ in range(42):
+        say(p,"STEP 30")
+    before=say(p,"STATUS")
+    known={j[0] for j in before["scans"]}
+    scheduled=say(p,f"SCAN {planet_id}")
+    manual=[j for j in scheduled["scans"] if j[0] not in known and j[1]==planet_id]
+    assert len(manual)==1 and manual[0][5]==1,scheduled
+    for _ in range(8):
+        after=say(p,"STEP 30")
+        current=next(j for j in after["scans"] if j[0]==manual[0][0])
+        if current[5]!=1:
+            break
+    assert current[5]==2 and current[4]!=0,after
+    finish(p)
+
     p,_=start(runner)
     change=say(p,"RESTART 2")
     assert change["mode"]==2
