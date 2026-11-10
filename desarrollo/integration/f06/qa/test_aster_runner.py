@@ -193,6 +193,24 @@ def run(runner: Path):
     assert restored["navigation_alerts"]==saved["navigation_alerts"]
     finish(p)
 
+    # Romulan warbird: visible when emissions start at 02:00, and actionable
+    # course/approach data must be available within 5 s of acquisition.
+    p,initial_romulan=start(runner)
+    assert not any(c[3]==8 and c[2]==1 for c in initial_romulan["contacts"])
+    revealed=say(p,"STEP 7200")
+    active_warbirds=[c for c in revealed["contacts"]
+                     if c[3]==8 and c[1]==1 and c[2]==1]
+    assert len(active_warbirds)==1,("Romulan did not become visible",revealed["contacts"])
+    warbird_id=active_warbirds[0][0]
+    tracked=say(p,"STEP 5")
+    nav=next((n for n in tracked["navigation"] if n[0]==warbird_id),None)
+    assert nav is not None and nav[3]==1 and nav[2]==270,nav
+    again=say(p,"STEP 25")
+    nav=next(n for n in again["navigation"] if n[0]==warbird_id)
+    assert nav[1]==7230 and nav[3]==1 and 300<=nav[2]<=320,nav
+    assert say(p,"TACTICAL")["navigation"]==again["navigation"]
+    finish(p)
+
     p,_=start(runner)
     change=say(p,"RESTART 2")
     assert change["mode"]==2
