@@ -406,37 +406,51 @@ class Panel:
         if previous and previous.get("offline", 0) != state["offline"]:
             self.append(t, "Avería: sensores sin servicio." if state["offline"] else
                         "Sensores nuevamente operativos.")
-        new_ids = {contact for kind, contact, *_ in state["events"] if kind == 1}
+        background_losses: Counter = Counter()
+        background_reacquired: Counter = Counter()
         for kind, contact_id, when, category, klass in state["events"]:
             contact = self.contact_map.get(str(contact_id))
             ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
             short_ref = "C-" + str(contact_id)[-6:]
-            if reset and kind == 1:
-                continue
+            if reset and kind in (1, 4):
+                continue  # the initial panoramic briefing already covers these
             if kind == 1 and category in (12, 13, 14, 15, 17):
-                continue
+                continue  # normal astronomical detections are inventory, not alarms
             if kind == 1:
-                msg = f"Nuevo contacto {short_ref}: {ident}. Seguimiento automático."
+                label = TYPES.get(category, "señal de naturaleza desconocida")
+                msg = f"Nuevo contacto {short_ref}: {label}. Identificación bajo vigilancia."
             elif kind == 2:
+                if category in (12, 13, 14, 15, 17) and state.get("interference_em", 0):
+                    background_losses[when] += 1
+                    continue
                 cause = LOSS_CAUSES.get(contact[7], "causa no determinada") if contact else "causa no determinada"
                 if cause == "causa no determinada" and state.get("interference_em", 0):
                     cause = "interferencias presentes; relación causal no confirmada"
-                msg = f"Pérdida del contacto {short_ref} ({ident}). {cause}."
+                msg = f"Se pierde el contacto {short_ref} ({ident}). Causa: {cause}."
             elif kind == 3:
+                if category in (12, 13, 14, 15, 17):
+                    background_reacquired[when] += 1
+                    continue
                 msg = f"Contacto recuperado {short_ref}: {ident}."
             elif kind == 4:
-                if contact_id in new_ids:
-                    continue
                 if not klass:
                     continue
-                msg = f"Contacto {short_ref} identificado: {ident}."
+                msg = f"Identificación: contacto {short_ref}, {ident}."
             elif kind in (5, 6):
-                continue  # backend: do not narrate ordinary automatic work
+                continue  # automatic routine operations are recorded only in Core
             elif kind == 7:
-                msg = f"Análisis del contacto {short_ref} no disponible. Comprobar sensores."
+                if category in (12, 13, 14, 15, 17):
+                    continue
+                msg = f"No ha sido posible completar el análisis de {short_ref}. Consultar expediente."
             else:
                 continue
             self.append(when, msg)
+        for when, count in sorted(background_losses.items()):
+            self.append(when, f"Vigilancia astronómica degradada: {count} señales temporalmente no detectables. "
+                        "Revisar condiciones de los sensores.")
+        for when, count in sorted(background_reacquired.items()):
+            self.append(when, f"Vigilancia astronómica restablecida: {count} señales recuperadas.")
+
         if t >= 28800:
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
