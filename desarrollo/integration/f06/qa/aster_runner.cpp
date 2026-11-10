@@ -25,6 +25,7 @@ struct Watch {
  F04Session* s=nullptr;
  F04Handles h{};
  U event_cursor=0;
+ U checkpoint_event_cursor=0;
  size_t next_frame=0;
  int mode=0;
  std::vector<uint8_t> checkpoint;
@@ -47,7 +48,7 @@ struct Watch {
  void reset(int new_mode){
   if(s){check(f04_destroy(s),"destroy");s=nullptr;}
   if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
-  mode=new_mode;event_cursor=0;next_frame=0;checkpoint.clear();
+  mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();
   check(f04_create(1,"miranda",&s),"create");
   check(f04_handles(s,&h),"handles");
   // A real F04 console operator is available for optional supervised actions;
@@ -103,6 +104,7 @@ struct Watch {
   if(status!=F04_CAPACITY || !n)throw std::runtime_error("save length");
   checkpoint.resize(static_cast<size_t>(n));
   check(f04_save(s,checkpoint.data(),n,&n),"save");
+  checkpoint_event_cursor=event_cursor;
  }
  void load(){
   if(checkpoint.empty())throw std::runtime_error("no checkpoint");
@@ -112,7 +114,7 @@ struct Watch {
   const U now=stats().now;
   while(next_frame<std::size(F06_DEMO_FRAMES) &&
      F06_DEMO_FRAMES[next_frame].tick<=now)++next_frame;
-  event_cursor=0;
+  event_cursor=checkpoint_event_cursor;
  }
  std::vector<F06ContactView> visible_contacts() {
   std::array<F06ContactView,64> rows{};
