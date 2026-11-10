@@ -87,6 +87,7 @@ class Panel:
         self.designations: dict[int, str] = {}
         self.saved_lines: list[str] | None = None
         self.saved_notes = ""
+        self.sensor_preset = tk.StringVar(value="Estándar")
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.apply(self._read(), reset=True)
@@ -119,6 +120,15 @@ class Panel:
         ttk.Label(controls, text="Velocidad").pack(side="left")
         ttk.Combobox(controls, textvariable=self.speed, values=("×15", "×30", "×60"),
                      state="readonly", width=5).pack(side="left", padx=6)
+
+        engineering = ttk.Frame(self.root, padding=(15, 2))
+        engineering.pack(fill="x")
+        ttk.Label(engineering, text="Configuración de sensores").pack(side="left")
+        ttk.Combobox(engineering, textvariable=self.sensor_preset,
+                     values=("Estándar", "Alta resolución", "Antinterferencias", "Máxima detección"),
+                     state="readonly", width=19).pack(side="left", padx=8)
+        ttk.Button(engineering, text="Aplicar perfil", command=self.apply_preset).pack(side="left")
+        ttk.Button(engineering, text="Autodiagnóstico", command=self.diagnostic).pack(side="left", padx=9)
 
         clockframe = ttk.Frame(self.root, padding=(15, 2))
         clockframe.pack(fill="x")
@@ -307,6 +317,31 @@ class Panel:
         self.detail_text.insert("end", details)
         self.detail_text.configure(state="disabled")
 
+    def apply_preset(self) -> None:
+        name = self.sensor_preset.get()
+        presets = {"Estándar": 0, "Alta resolución": 1,
+                   "Antinterferencias": 2, "Máxima detección": 3}
+        try:
+            state = self.command(f"CONFIG {presets[name]}")
+            self.apply(state)
+            self.append(state["tick"], f"Configuración {name} aplicada mediante CoreRPG. "
+                        "Sensores recalibrados; comprobar cambios en los contactos.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", f"No se pudo aplicar el perfil: {exc}", parent=self.root)
+
+    def diagnostic(self) -> None:
+        try:
+            state = self.command("DIAG")
+            self.apply(state)
+            names = {1: "nominal", 2: "degradado", 3: "fuera de servicio",
+                     4: "configuración deficiente"}
+            code, capability, power, integrity = state["diagnostic"]
+            self.append(state["tick"], f"Autodiagnóstico CoreRPG: {names.get(code, 'desconocido')}. "
+                        f"Capacidad {capability / 10:.1f}%; alimentación {power / 10:.1f}%; "
+                        f"integridad {integrity / 10:.1f}%.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", f"Autodiagnóstico no disponible: {exc}", parent=self.root)
+
     def contact_action(self, action: str) -> None:
         selected = self.contacts_table.selection()
         if not selected:
@@ -361,6 +396,9 @@ class Panel:
             f"informes CoreRPG. {groups or 'Sin clasificación autorizada todavía.'}\n"
             f"Contactos navales observados: {naval}.\n"
             f"Estado: {'SENSORES NO DISPONIBLES' if state['offline'] else 'vigilancia autónoma continua'}"
+            f" · perfil {state['config'][3]}"
+            f" · compensación {state['config'][2] / 10:.0f}%"
+            f" · diagnóstico {('nominal', 'degradado', 'sin servicio', 'revisar configuración')[state['diagnostic'][0] - 1] if 1 <= state['diagnostic'][0] <= 4 else 'no disponible'}"
             f"{' · interferencia EM activa' if state.get('interference_em', 0) else ''}."
         )
         self.overview.configure(state="normal")
