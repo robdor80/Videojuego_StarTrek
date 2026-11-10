@@ -120,7 +120,7 @@ bool f06_schema(const Campaign& c) {
    !val(w,id,F06_TIMED_PUBLIC) || !timed_public.insert(val(w,id,F06_TIMED_PUBLIC)).second ||
    !type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") ||
    start>c.time.now() || due<=start || due-start>3600 ||
-   val(w,id,F06_TIMED_NOMINAL)<30 || val(w,id,F06_TIMED_NOMINAL)>900 ||
+   val(w,id,F06_TIMED_NOMINAL)<20 || val(w,id,F06_TIMED_NOMINAL)>900 ||
    val(w,id,F06_TIMED_COST)<50 || val(w,id,F06_TIMED_COST)>500 ||
    val(w,id,F06_TIMED_AUTO)>1 ||
    (val(w,id,F06_TIMED_AUTO)==1)!=(ref(w,id,PERSON)==0) ||
