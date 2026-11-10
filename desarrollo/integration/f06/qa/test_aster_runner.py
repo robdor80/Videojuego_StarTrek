@@ -113,6 +113,16 @@ def run(runner: Path):
         if current[5]!=1:
             break
     assert current[5]==2 and current[4]!=0,after
+    # Recent comparisons are produced from Core's archived observations,
+    # not differences invented in the Python window.
+    row=next((r for r in after["comparisons"] if r[0]==planet_id),None)
+    assert row is not None and row[1]>=2,row
+    assert row[2]<=row[3],row
+    saved_observations=say(p,"SAVE")["comparisons"]
+    say(p,"STEP 30")
+    loaded_observations=say(p,"LOAD")["comparisons"]
+    assert loaded_observations==saved_observations,(
+        loaded_observations,saved_observations)
     finish(p)
 
     # The native attention list identifies the exact observed contact that
