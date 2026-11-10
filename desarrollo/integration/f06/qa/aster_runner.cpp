@@ -167,7 +167,15 @@ struct Watch {
    // Never display host-only science when the native authorization/evidence
    // check rejects it. In that case the dossier remains unclassified.
    const auto report_code=f06_host_complete_science(s,&sample,&published);
-   if(report_code!=F04_OK)science_issues.push_back({contact.contact_id,6,report_code});
+   if(report_code!=F04_OK){
+    science_issues.push_back({contact.contact_id,6,report_code});
+    std::cerr<<"QA science observation rejected for world key "
+      <<source->world_entity_key<<": temp="<<sample.temperature_k
+      <<"K, pressure="<<sample.pressure_mbar<<"mbar, water="
+      <<sample.water_permille<<", bio="<<sample.biological_evidence
+      <<", confidence="<<focused.confidence_permille
+      <<", status="<<report_code<<"\n";
+   }
   }
  }
  void configure(int preset){
