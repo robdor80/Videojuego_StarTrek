@@ -385,6 +385,7 @@ class Panel:
         self._draw_map()
         if len(self.alert_ids) > 1:
             self.alert_cursor = (self.alert_cursor + 1) % len(self.alert_ids)
+            self._update_alert(self.state)
 
     def navigate(self, view: str) -> None:
         """Navigation never issues orders and never pauses the sensor watch."""
