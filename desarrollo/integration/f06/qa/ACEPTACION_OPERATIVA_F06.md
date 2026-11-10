@@ -27,6 +27,16 @@ En segundos, reconocer el sistema *observable* y consultar el inventario obtenid
 - **Cobertura científica aún pendiente:** la operación detallada registra una observación de sensores, pero **no crea por sí sola** una ficha espectral estelar ni un nuevo informe químico. Para considerar completa la experiencia solicitada hacen falta instrumentos y publicaciones científicas adicionales para estrellas, lunas y anomalías. El archivo de la partida definitiva debe integrar estas observaciones en el guardado persistente a disco, no limitarse al checkpoint del banco QA.
 - **Tiempo objetivo jugable para lectura rápida:** 2–5 segundos de tiempo real en el MSI, que deberá comprobarse con la ejecución interactiva; no se introduce un retardo artificial.
 
+## Criterio irrenunciable de la Enterprise-D — identificación naval en segundos (10/11/2026)
+
+**Regla de aceptación aprobada:** toda nave o lanzadera detectable, con emisiones presentes y sin camuflaje, debe aparecer con su clase o modelo **en un máximo de 5 segundos**, sin esperar a ningún estudio temporizado. El perfil de sensores Enterprise-D (ID 5) realiza el reconocimiento a partir de la firma observada en el mismo acto de adquisición; el perfil histórico de otras naves conserva sus umbrales de observación. Una señal oculta/inactiva no se revela.
+
+**Contrato del mundo:** la fuente espacial de una nave no camuflada debe aportar una firma de clase catalogada; si falta ese dato, es un **defecto del escenario o del Host**, no un motivo para mantener a la Enterprise-D eternamente esperando. El fixture Aster ahora rechaza naves de tipo `starship` sin clase y registra el transporte civil ficticio de ensayo (ID 18). La procedencia del diseño no equivale automáticamente a su operador actual.
+
+**Reloj jugable:** cualquier llegada nueva de nave o lanzadera provoca aviso prioritario y reducción automática a **×1** (NO pausa). La consola ofrece «Volver a ×30» o a la velocidad previa, a voluntad del oficial. El ritmo ×1 usa un segundo simulado por segundo real, alternando pasos cada 500 ms. El origen de cada aviso es el evento de detección de Core, no un contador ficticio de la GUI.
+
+**Invariante QA:** el transporte civil se identifica al iniciar; el crucero klingon que entra en alcance en la primera hora se identifica **en ese mismo evento**, sin esperar 45 segundos ni dos minutos. Las identificaciones y avisos deben funcionar durante la guardia acelerada; un análisis detallado nunca obliga a pausar.
+
 ## Límites que NO deben ocultarse
 1. **Aster es una fuente QA repetible**: la geometría, emisiones y mediciones de laboratorio se generan desde la ficha física del Host. No constituye el universo persistente F13. Las observaciones y los informes publicados sí atraviesan operaciones nativas de CoreRPG.
 2. El barrido inicial y el enfoque inmediato utilizan las operaciones existentes, cuya escala temporal detallada todavía requiere calibración. No se ha validado que una Galaxy real complete espectroscopia de seis planetas en un tiempo concreto; la fase de ensayos debe hacerlo antes de declarar la simulación equilibrada.
