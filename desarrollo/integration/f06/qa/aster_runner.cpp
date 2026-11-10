@@ -29,6 +29,7 @@ struct Watch {
  size_t next_frame=0;
  int mode=0;
  std::vector<uint8_t> checkpoint;
+ std::vector<std::array<U,3>> science_issues;
  ~Watch(){if(s)f04_destroy(s);}
  F04Stats stats() {
   F04Stats v{};check(f04_stats(s,&v),"stats");return v;
@@ -48,7 +49,7 @@ struct Watch {
  void reset(int new_mode){
   if(s){check(f04_destroy(s),"destroy");s=nullptr;}
   if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
-  mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();
+  mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();science_issues.clear();
   check(f04_create(1,"miranda",&s),"create");
   check(f04_handles(s,&h),"handles");
   // A real F04 console operator is available for optional supervised actions;
@@ -137,21 +138,25 @@ struct Watch {
      source=&entity;break;
     }
    }
-   if(!source)continue;
+   if(!source){science_issues.push_back({contact.contact_id,1,0});continue;}
    const F06AsterInstrument* instrument=nullptr;
    for(const auto& reading:F06_ASTER_INSTRUMENTS)
     if(reading.key==source->world_entity_key){instrument=&reading;break;}
-   if(!instrument)continue;
+   if(!instrument){science_issues.push_back({contact.contact_id,2,0});continue;}
    F06ContactView focused{};
-   if(f06_focus(s,h.ensign,stats().revision,contact.contact_id,&focused)!=F04_OK)continue;
+   const auto focus_code=f06_focus(s,h.ensign,stats().revision,contact.contact_id,&focused);
+   if(focus_code!=F04_OK){science_issues.push_back({contact.contact_id,3,focus_code});continue;}
    std::array<F06ResultView,16> observations{};
    U n=0,total=0;
    if(f06_results_page(s,h.captain,contact.contact_id,0,observations.data(),
-       observations.size(),&n,&total)!=F04_OK || !n)continue;
+       observations.size(),&n,&total)!=F04_OK || !n){
+    science_issues.push_back({contact.contact_id,4,0});continue;
+   }
    F06ScienceRequest req{stats().revision,770000+source->world_entity_key,
                          contact.contact_id,2,1};
    F06ScienceView handoff{};
-   if(f06_science_handoff(s,h.ensign,&req,&handoff)!=F04_OK)continue;
+   const auto handoff_code=f06_science_handoff(s,h.ensign,&req,&handoff);
+   if(handoff_code!=F04_OK){science_issues.push_back({contact.contact_id,5,handoff_code});continue;}
    F06ScienceSample sample{stats().revision,880000+source->world_entity_key,
      handoff.handoff_id,observations[n-1].result_id,
      1000+source->world_entity_key,
@@ -161,7 +166,8 @@ struct Watch {
    F06ScienceReportView published{};
    // Never display host-only science when the native authorization/evidence
    // check rejects it. In that case the dossier remains unclassified.
-   (void)f06_host_complete_science(s,&sample,&published);
+   const auto report_code=f06_host_complete_science(s,&sample,&published);
+   if(report_code!=F04_OK)science_issues.push_back({contact.contact_id,6,report_code});
   }
  }
  void configure(int preset){
@@ -248,6 +254,12 @@ struct Watch {
     <<','<<r.provisional<<','<<r.temperature_k<<','<<r.pressure_mbar
     <<','<<r.water_permille<<','<<r.nitrogen_permille<<','<<r.oxygen_permille
     <<','<<r.co2_permille<<','<<r.biological_evidence<<']';
+  }
+  std::cout<<"],\"science_issues\":[";
+  for(size_t i=0;i<science_issues.size();++i){
+   if(i)std::cout<<',';
+   const auto& e=science_issues[i];
+   std::cout<<'['<<e[0]<<','<<e[1]<<','<<e[2]<<']';
   }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
