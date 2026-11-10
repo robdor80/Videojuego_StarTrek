@@ -348,9 +348,9 @@ int main(){
   watch.reset(0);watch.emit();
   std::string cmd;
   while(std::getline(std::cin,cmd)){
+   const auto n=cmd.find(' ');
+   const std::string action=cmd.substr(0,n);
    try{
-    const auto n=cmd.find(' ');
-    const std::string action=cmd.substr(0,n);
     const std::string arg=n==std::string::npos?"":cmd.substr(n+1);
     if(action=="STEP")watch.advance(std::stoull(arg));
     else if(action=="RESTART")watch.reset(std::stoi(arg));
