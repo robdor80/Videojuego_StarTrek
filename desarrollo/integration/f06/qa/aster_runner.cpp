@@ -6,9 +6,11 @@
 #include "f06_bis.h"
 #include "f06_autonomy.h"
 #include "f06_demo_system_generated.h"
+#include "f06_aster_science_generated.h"
 #include <algorithm>
 #include <array>
 #include <cstdint>
+#include <cstdlib>
 #include <iostream>
 #include <iterator>
 #include <stdexcept>
@@ -57,6 +59,7 @@ struct Watch {
   F06ProfileView profile{};
   check(f06_host_install_profile(s,&install,&profile),"modernized Enterprise-D equipment");
   publish(next_frame++);
+  initial_scientific_survey();
  }
  void scenario_event(U tick){
   if(mode==2 && (tick==3600 || tick==7200)){
@@ -111,6 +114,58 @@ struct Watch {
      F06_DEMO_FRAMES[next_frame].tick<=now)++next_frame;
   event_cursor=0;
  }
+ std::vector<F06ContactView> visible_contacts() {
+  std::array<F06ContactView,64> rows{};
+  U n=0,total=0;
+  check(f06_contacts_page(s,h.captain,0,0,rows.data(),rows.size(),&n,&total),"sensor contact page");
+  if(total>rows.size())throw std::runtime_error("QA contact limit");
+  return {rows.begin(),rows.begin()+static_cast<std::ptrdiff_t>(n)};
+ }
+ // QA trusted instrument host. The measurement source is generated from
+ // the physical Aster fixture, never read directly by the UI. Every published
+ // result must pass native Sensors observation -> Science handoff -> Core report.
+ void initial_scientific_survey() {
+  for(const auto& contact:visible_contacts()){
+   if(contact.status!=F06_ACTIVE || contact.observed_category!=F06_CATEGORY_PLANET)continue;
+   const F06WorldEntity* source=nullptr;
+   for(const auto& entity:F06_DEMO_ENTITIES_0){
+    if(entity.signature_category!=F06_CATEGORY_PLANET)continue;
+    const auto expected_x=entity.absolute_x_milli_au-F06_DEMO_OBSERVER_X;
+    if(std::llabs(contact.observed_x_milli_au-expected_x)<=100){
+     source=&entity;break;
+    }
+   }
+   if(!source)continue;
+   const F06AsterInstrument* instrument=nullptr;
+   for(const auto& reading:F06_ASTER_INSTRUMENTS)
+    if(reading.key==source->world_entity_key){instrument=&reading;break;}
+   if(!instrument)continue;
+   F06ContactView focused{};
+   if(f06_focus(s,h.ensign,stats().revision,contact.contact_id,&focused)!=F04_OK)continue;
+   std::array<F06ResultView,16> observations{};
+   U n=0,total=0;
+   if(f06_results_page(s,h.captain,contact.contact_id,0,observations.data(),
+       observations.size(),&n,&total)!=F04_OK || !n)continue;
+   F06ScienceRequest req{stats().revision,770000+source->world_entity_key,
+                         contact.contact_id,2,1};
+   F06ScienceView handoff{};
+   if(f06_science_handoff(s,h.ensign,&req,&handoff)!=F04_OK)continue;
+   F06ScienceSample sample{stats().revision,880000+source->world_entity_key,
+     handoff.handoff_id,observations[n-1].result_id,
+     1000+source->world_entity_key,
+     instrument->temp_k,instrument->pressure_mbar,instrument->water_permille,
+     instrument->n2_permille,instrument->o2_permille,instrument->co2_permille,
+     instrument->solid,instrument->bio,920,0};
+   F06ScienceReportView published{};
+   // Never display host-only science when the native authorization/evidence
+   // check rejects it. In that case the dossier remains unclassified.
+   (void)f06_host_complete_science(s,&sample,&published);
+  }
+ }
+ void focus(U contact){
+  F06ContactView updated{};
+  check(f06_focus(s,h.ensign,stats().revision,contact,&updated),"operator focus");
+ }
  void prioritize(U contact){
   F06TrackView updated{};
   check(f06_set_tracking(s,h.ensign,stats().revision,contact,
@@ -149,12 +204,29 @@ struct Watch {
    std::cout<<'['<<ev[i].kind<<','<<ev[i].contact_id<<','<<ev[i].tick<<','
     <<category<<','<<klass<<']';
   }
+  std::cout<<"],\"science\":[";
+  std::array<F06ScienceReportView,32> reports{};
+  U reports_n=0,reports_total=0;
+  check(f06_science_reports_page(s,h.captain,0,reports.data(),reports.size(),
+    &reports_n,&reports_total),"science reports");
+  if(reports_total>reports.size())throw std::runtime_error("QA report limit");
+  for(U i=0;i<reports_n;++i){
+   if(i)std::cout<<',';
+   const auto& r=reports[i];
+   std::cout<<'['<<r.contact_id<<','<<r.planet_class<<','<<r.confidence_permille
+    <<','<<r.provisional<<','<<r.temperature_k<<','<<r.pressure_mbar
+    <<','<<r.water_permille<<','<<r.nitrogen_permille<<','<<r.oxygen_permille
+    <<','<<r.co2_permille<<','<<r.biological_evidence<<']';
+  }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
    const auto& c=contacts[i];
    std::cout<<'['<<c.contact_id<<','<<c.observed_category<<','
-     <<c.status<<','<<c.class_id<<']';
+     <<c.status<<','<<c.class_id<<','<<c.confidence_permille
+     <<','<<c.distance_milli_au<<','<<c.transponder_id<<','<<c.loss_cause
+     <<','<<c.observed_x_milli_au<<','<<c.observed_y_milli_au
+     <<','<<c.observed_z_milli_au<<','<<c.last_seen<<']';
   }
   std::cout<<"]}"<<std::endl;
  }
@@ -174,6 +246,7 @@ int main(){
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
+    else if(action=="FOCUS")watch.focus(std::stoull(arg));
     else if(action=="STATUS"){}
     else throw std::runtime_error("unsupported command");
     watch.emit();
