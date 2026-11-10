@@ -178,6 +178,13 @@ struct Watch {
    }
   }
  }
+ void study(U contact) {
+  // This is a real CoreRPG timed operation, not a simulated UI progress bar.
+  // The next saved revision defines a stable unique request in this QA session.
+  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,120,0};
+  F06TimedScanView started{};
+  check(f06_begin_timed_scan(s,h.ensign,&request,&started),"focused scientific scan");
+ }
  void configure(int preset){
   F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
   if(preset==1){request.sensitivity_permille=700;request.resolution_permille=1000;
@@ -249,6 +256,17 @@ struct Watch {
    std::cout<<'['<<ev[i].kind<<','<<ev[i].contact_id<<','<<ev[i].tick<<','
     <<category<<','<<klass<<']';
   }
+  std::cout<<"],\"scans\":[";
+  std::array<F06TimedScanView,256> jobs{};
+  U jobs_n=0,jobs_total=0;
+  check(f06_timed_scans_page(s,h.captain,0,jobs.data(),jobs.size(),
+    &jobs_n,&jobs_total),"timed scan jobs");
+  for(U i=0;i<jobs_n;++i){
+   if(i)std::cout<<',';
+   const auto& j=jobs[i];
+   std::cout<<'['<<j.scan_id<<','<<j.contact_id<<','<<j.started_at
+    <<','<<j.finishes_at<<','<<j.result_id<<','<<j.status<<']';
+  }
   std::cout<<"],\"science\":[";
   std::array<F06ScienceReportView,32> reports{};
   U reports_n=0,reports_total=0;
@@ -298,6 +316,7 @@ int main(){
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
     else if(action=="FOCUS")watch.focus(std::stoull(arg));
+    else if(action=="SCAN")watch.study(std::stoull(arg));
     else if(action=="CONFIG")watch.configure(std::stoi(arg));
     else if(action=="DIAG")watch.diagnostics();
     else if(action=="STATUS"){}
