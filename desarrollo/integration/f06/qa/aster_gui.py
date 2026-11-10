@@ -909,39 +909,9 @@ class Panel:
             status = f"Vigilancia activa · {state['active']} contactos"
         self.summary.configure(text=status)
         # The old tiny header label is NOT an operator alert.
-        self.important.configure(text=(
-            "Incidencia activa" if state["attention"] else "Sin incidencias activas"
-        ))
         self._refresh_contacts(state)
         self._update_alert(state)
         self._update_view_content()
-        current = [c for c in state["contacts"] if c[2] == 1]
-        kinds = Counter(c[1] for c in current)
-        classified = Counter(r[1] for r in state["science"] if r[1] != 0 and r[3] != 0)
-        planets_covered = sum(1 for r in state["science"] if r[1] != 0)
-        fleet = [c for c in current if c[1] == 1]
-        naval = "; ".join(contact_identification(c) for c in fleet) or "sin detecciones"
-        groups = ", ".join(
-            f"{count} clase {PLANET_CLASSES.get(cls, '?')} (provisional)"
-            for cls, count in sorted(classified.items()))
-        briefing = (
-            f"SISTEMA ASTER · BARRIDO AUTOMÁTICO ACTIVO\n"
-            f"Observado: {kinds[12]} estrellas · {kinds[13]} planetas · "
-            f"{kinds[14]} satélites naturales · {kinds[15]} nebulosas · "
-            f"{kinds[16]} estaciones · {len(fleet)} naves.\n"
-            f"Ciencia planetaria: {planets_covered}/{kinds[13]} planetas con "
-            f"informes CoreRPG. {groups or 'Sin clasificación autorizada todavía.'}\n"
-            f"Contactos navales observados: {naval}.\n"
-            f"Estado: {'SENSORES NO DISPONIBLES' if state['offline'] else 'vigilancia autónoma continua'}"
-            f" · perfil {state['config'][3]}"
-            f" · compensación {state['config'][2] / 10:.0f}%"
-            f" · diagnóstico {('nominal', 'degradado', 'sin servicio', 'revisar configuración')[state['diagnostic'][0] - 1] if 1 <= state['diagnostic'][0] <= 4 else 'no disponible'}"
-            f"{' · interferencia EM activa' if state.get('interference_em', 0) else ''}."
-        )
-        self.overview.configure(state="normal")
-        self.overview.delete("1.0", "end")
-        self.overview.insert("end", briefing)
-        self.overview.configure(state="disabled")
         if reset:
             visible = [c for c in state["contacts"] if c[2] == 1]
             counts = Counter(c[1] for c in visible)
@@ -996,6 +966,12 @@ class Panel:
         background_losses: Counter = Counter()
         background_reacquired: Counter = Counter()
         for kind, contact_id, when, category, klass in state["events"]:
+            if not reset and when > 0 and kind == 1 and category in (1, 2):
+                candidate = str(contact_id)
+                observed = self.contact_map.get(candidate)
+                if (observed and observed[2] == 1 and
+                        candidate not in self.acknowledged_arrivals):
+                    self.arrival_id = candidate
             contact = self.contact_map.get(str(contact_id))
             ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
             short_ref = "C-" + str(contact_id)[-6:]
@@ -1045,6 +1021,7 @@ class Panel:
             result = {2: "completado y registrado", 3: "fallido",
                       4: "cancelado"}.get(job[5], "estado desconocido")
             self.append(t, f"Estudio solicitado de C-{str(target)[-6:]}: {result}.")
+        self._update_alert(state)
         if t >= 28800:
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
@@ -1075,12 +1052,14 @@ class Panel:
         self.manual_jobs.clear()
         self.saved_manual_jobs.clear()
         self.designations = {}
+        self.arrival_id = None
+        self.alert_ids = []
+        self.acknowledged_arrivals.clear()
+        self.group_open.clear()
         self.saved_lines = None
         self.saved_notes = ""
         self.state = {}
-        self.log.configure(state="normal")
-        self.log.delete("1.0", "end")
-        self.log.configure(state="disabled")
+        self.notice_label.configure(text="Vigilancia automática activada.")
         try:
             self.apply(self.command(f"RESTART {MODES.index(self.mode.get())}"), reset=True)
         except Exception as exc:
@@ -1106,10 +1085,9 @@ class Panel:
                 self.manual_jobs = dict(self.saved_manual_jobs)
                 self.record.clear()
                 self.state = {}  # loading must not create a false state-transition alarm
-                self.log.configure(state="normal")
-                self.log.delete("1.0", "end")
-                self.log.insert("end", "\n".join(self.lines) + ("\n" if self.lines else ""))
-                self.log.configure(state="disabled")
+                self.arrival_id = None
+                self.alert_ids = []
+                self.notice_label.configure(text=self.lines[-1] if self.lines else "")
                 self.notes.delete("1.0", "end")
                 self.notes.insert("1.0", self.saved_notes)
                 self.apply(state)
