@@ -405,7 +405,7 @@
     },
     {
       "key": 601,
-      "name": "Carguero civil",
+      "name": "Transporte civil de clase Aster",
       "kind": "starship",
       "position_milli_au": [
         2100,
@@ -414,7 +414,7 @@
       ],
       "strength_permille": 950,
       "interference_permille": 0,
-      "ship_class_id": 0,
+      "ship_class_id": 18,
       "transponder_id": 86001,
       "active": 1,
       "world_exit_evidence": 0,
@@ -591,7 +591,7 @@
       ],
       "strength_permille": 900,
       "interference_permille": 0,
-      "ship_class_id": 0,
+      "ship_class_id": 13,
       "transponder_id": 0,
       "active": 1,
       "world_exit_evidence": 0,
