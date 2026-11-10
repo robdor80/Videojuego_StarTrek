@@ -17,6 +17,16 @@ En segundos, reconocer el sistema *observable* y consultar el inventario obtenid
 - Mensajes rutinarios de trabajos automáticos quedan en backend. Avisos de nuevo contacto, identificación, recuperación, pérdidas, interferencias y avería se muestran con los datos disponibles.
 - Exportación incluye eventos, contactos observados, informes científicos devueltos por Core y notas del jugador.
 
+## Corrección de prueba de guardia — 10/11/2026
+
+- **Interfaz operable:** encabezado, aviso prioritario, área de trabajo, mensaje actual y controles de guardia usan filas independientes. El mapa y los paneles internos pueden contraerse; una alerta no debe ocultar Iniciar/Pausar, ni el acceso a las órdenes.
+- **Identificación y lectura rápida:** `FOCUS` es una operación inmediata del mismo Core; muestra en la ficha el dato realmente resuelto. No exige esperar al análisis temporizado. Si la clase/afiliación no ha podido comprobarse, se informa explícitamente en vez de inventar un origen.
+- **Fichas de naves:** clase/modelo observado, tipo y procedencia del **diseño** si la clase está resuelta, transpondedor y estado. La nacionalidad del diseño NO verifica el operador ni la afiliación actual.
+- **Análisis detallado:** `SCAN` es un trabajo temporizado auténtico de Core (actualmente 120 s de reloj de la campaña). La GUI enseña porcentaje a partir de `started_at`, `finishes_at` y `tick`; el indicador llega al 100% solo al recibir resultado terminado y reconocido.
+- **Archivo comparativo:** el runner consulta las observaciones históricas inmutables de `f06_results_page` y usa `f06_compare_results` para comparar las dos últimas del mismo contacto. Estas observaciones y los informes científicos F06 existentes pertenecen al WorldState, con guardado/carga Core; la GUI no mantiene una base paralela ni revela la verdad privada del Host. En la ficha: número de lecturas, delta de distancia, confianza y clasificación.
+- **Cobertura científica aún pendiente:** la operación detallada registra una observación de sensores, pero **no crea por sí sola** una ficha espectral estelar ni un nuevo informe químico. Para considerar completa la experiencia solicitada hacen falta instrumentos y publicaciones científicas adicionales para estrellas, lunas y anomalías. El archivo de la partida definitiva debe integrar estas observaciones en el guardado persistente a disco, no limitarse al checkpoint del banco QA.
+- **Tiempo objetivo jugable para lectura rápida:** 2–5 segundos de tiempo real en el MSI, que deberá comprobarse con la ejecución interactiva; no se introduce un retardo artificial.
+
 ## Límites que NO deben ocultarse
 1. **Aster es una fuente QA repetible**: la geometría, emisiones y mediciones de laboratorio se generan desde la ficha física del Host. No constituye el universo persistente F13. Las observaciones y los informes publicados sí atraviesan operaciones nativas de CoreRPG.
 2. El barrido inicial y el enfoque inmediato utilizan las operaciones existentes, cuya escala temporal detallada todavía requiere calibración. No se ha validado que una Galaxy real complete espectroscopia de seis planetas en un tiempo concreto; la fase de ensayos debe hacerlo antes de declarar la simulación equilibrada.
