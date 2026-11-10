@@ -181,7 +181,7 @@ struct Watch {
  void study(U contact) {
   // This is a real CoreRPG timed operation, not a simulated UI progress bar.
   // The next saved revision defines a stable unique request in this QA session.
-  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,120,0};
+  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,20,0};
   F06TimedScanView started{};
   const auto code=f06_begin_timed_scan(s,h.ensign,&request,&started);
   if(code==F04_CAPACITY)
