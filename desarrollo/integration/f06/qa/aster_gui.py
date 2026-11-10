@@ -481,10 +481,14 @@ class Panel:
             observed[self.arrival_id][2] == 1) else None
         # New arrivals must be visible even if an earlier unknown ship is
         # still awaiting operator attention. Never bury them under old alerts.
+        nav_target = (str(self.nav_priority[1]) if self.nav_priority
+                      and str(self.nav_priority[1]) in observed else None)
         if borg:
             ids = borg
         else:
-            ids = list(dict.fromkeys(([arrival] if arrival else []) + core_ids))
+            ids = list(dict.fromkeys(
+                ([nav_target] if nav_target else []) +
+                ([arrival] if arrival else []) + core_ids))
         if not ids:
             self.alert_ids = []
             self.alert_bar.grid_remove()
@@ -498,6 +502,21 @@ class Panel:
         if chosen in borg:
             title = "ALERTA PRIORITARIA · CONTACTO BORG"
             explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
+        elif chosen == nav_target and self.nav_priority:
+            nav_kind, _, _, heading, trend, intercept = self.nav_priority
+            if intercept:
+                title = "ATENCIÓN · POSIBLE CURSO DE INTERCEPTACIÓN"
+                explanation = (
+                    f"Rumbo de desplazamiento {heading:03d}°. "
+                    "La trayectoria observada converge hacia nuestra posición. "
+                    "Aviso disponible para Táctica. Intención no determinada.")
+            else:
+                title = "ATENCIÓN · CAMBIO DE RUMBO"
+                explanation = (
+                    f"Nuevo rumbo estimado: {heading:03d}°. "
+                    + ("El contacto se aproxima. " if trend == 1
+                       else "El contacto se aleja. " if trend == 2 else "")
+                    + "Seguimiento compartido con Táctica.")
         elif chosen == arrival:
             arriving = observed.get(chosen)
             class_name = STARSHIP_CLASSES.get(arriving[3]) if arriving else None
@@ -558,6 +577,8 @@ class Panel:
             self.contacts_table.see(cid)
             self.show_selected()
             self._draw_map()
+        if self.nav_priority and cid == str(self.nav_priority[1]):
+            self.nav_priority = None
         if cid == self.arrival_id:
             self.acknowledged_arrivals.add(cid)
             self.arrival_id = None
@@ -1124,8 +1145,35 @@ class Panel:
         else:
             status = f"Vigilancia activa · {state['active']} contactos"
         self.summary.configure(text=status)
-        # The old tiny header label is NOT an operator alert.
+        # Dynamic course and interception warnings come from consecutive
+        # observed positions in the native Core sensor projection.
         self._refresh_contacts(state)
+        for evt in state.get("navigation_alerts", []):
+            kind, cid, when, heading, trend, intercept = evt
+            key = (kind, cid, when)
+            if key in self.nav_events_seen:
+                continue
+            self.nav_events_seen.add(key)
+            contact = self.contact_map.get(str(cid))
+            if not contact:
+                continue
+            klass = STARSHIP_CLASSES.get(contact[3], "nave")
+            if kind == 2:
+                msg = (f"ALERTA DE SENSORES: {klass}, posible rumbo de "
+                       f"interceptación ({heading:03d}°). Informar a Táctica.")
+                self.nav_priority = evt
+            elif kind == 1:
+                msg = (f"Maniobra detectada: {klass} cambia de rumbo a "
+                       f"{heading:03d}°. "
+                       + ("Se aproxima." if trend == 1 else
+                          "Se aleja." if trend == 2 else
+                          "Trayectoria lateral."))
+                self.nav_priority = evt
+            elif kind == 3:
+                msg = f"Seguimiento: {klass} se aproxima. Rumbo {heading:03d}°."
+            else:
+                msg = f"Seguimiento: {klass} se aleja. Rumbo {heading:03d}°."
+            self.append(when, msg)
         self._update_alert(state)
         self._update_view_content()
         if reset:
@@ -1302,6 +1350,8 @@ class Panel:
         self.arrival_id = None
         self.alert_ids = []
         self.acknowledged_arrivals.clear()
+        self.nav_events_seen.clear()
+        self.nav_priority = None
         self.group_open.clear()
         self.saved_lines = None
         self.saved_notes = ""
