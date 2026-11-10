@@ -422,17 +422,13 @@ class Panel:
                 if c[1] == 1 and c[2] == 1 and c[3] == 10]
         arrival = self.arrival_id if self.arrival_id in observed and (
             observed[self.arrival_id][2] == 1) else None
+        # New arrivals must be visible even if an earlier unknown ship is
+        # still awaiting operator attention. Never bury them under old alerts.
         if borg:
-            ids, severity, title = borg, "critical", "ATENCIÓN · CONTACTO BORG"
-            explanation = "Clase Borg identificada por los sensores. Evaluación prioritaria inmediata."
-        elif core_ids:
-            ids, severity, title = core_ids, "warning", "ATENCIÓN · NAVE SIN IDENTIFICAR"
-            explanation = ("La computadora ha intentado identificar un contacto relevante "
-                           "y no ha conseguido confirmar su clase.")
-        elif arrival:
-            ids, severity, title = [arrival], "warning", "NUEVO CONTACTO NAVAL"
-            explanation = "Nave recién detectada. La vigilancia y la identificación siguen en automático."
+            ids = borg
         else:
+            ids = list(dict.fromkeys(([arrival] if arrival else []) + core_ids))
+        if not ids:
             self.alert_ids = []
             self.alert_bar.pack_forget()
             return
@@ -440,7 +436,20 @@ class Panel:
             self.alert_cursor = 0
         self.alert_ids = ids
         self.alert_cursor %= len(ids)
-        contact = observed.get(ids[self.alert_cursor])
+        chosen = ids[self.alert_cursor]
+        severity = "critical" if chosen in borg else "warning"
+        if chosen in borg:
+            title = "ALERTA PRIORITARIA · CONTACTO BORG"
+            explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
+        elif chosen == arrival:
+            title = "NUEVA NAVE DETECTADA"
+            explanation = ("Contacto naval recién observado. La computadora mantiene "
+                           "la vigilancia y realiza la identificación en automático.")
+        else:
+            title = "ATENCIÓN · NAVE SIN IDENTIFICAR"
+            explanation = ("La computadora intentó identificar este contacto "
+                           "y no ha conseguido confirmar su clase.")
+        contact = observed.get(chosen)
         if contact:
             label = self.designations.get(contact[0], "C-" + ids[self.alert_cursor][-6:])
             identity = contact_identification(contact)
@@ -669,7 +678,7 @@ class Panel:
                     extra = "   ·   " + ", ".join(
                         f"{n} clase {cls}" for cls, n in sorted(classes.items()))
             groupid = "group:" + key
-            is_open = self.group_open.get(groupid, key in ("star", "planet", "ship"))
+            is_open = self.group_open.get(groupid, False)
             tree.insert("", "end", iid=groupid, text=(
                 f"{names[key].upper()}  ·  {len(rows)}{extra}"),
                 open=is_open, tags=("group",))
