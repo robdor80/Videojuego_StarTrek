@@ -296,6 +296,7 @@ class Panel:
             return
         self.current_view = view
         self.section_id = "summary"
+        self.contact_subset = "all"
         for name, btn in self.navigation_buttons.items():
             btn.state(["disabled"] if name == view else ["!disabled"])
         for child in self.secondary_frame.winfo_children():
@@ -318,6 +319,7 @@ class Panel:
 
     def select_section(self, section: str) -> None:
         self.section_id = section
+        self.contact_subset = section if section in ("unidentified", "identified", "lost", "active") else "all"
         filters = {"all": "Todos", "planets": "Planetas", "ships": "Naves",
                    "moons": "Satélites", "artificial": "Artificiales",
                    "stars": "Estrellas"}
@@ -357,6 +359,8 @@ class Panel:
             elif self.current_view == "configuration":
                 details["configuration"] += " Perfil actual (Core): " + str(state.get("config", [0, 0, 0, 0])[3]) + "."
         self.section_info.configure(text=details[self.current_view])
+        if hasattr(self, "detail_text") and not self.contacts_table.selection():
+            self.show_selected()
 
     def _read(self) -> dict:
         assert self.process.stdout is not None
@@ -423,6 +427,16 @@ class Panel:
         for row in state["contacts"]:
             if allowed is not None and row[1] not in allowed:
                 continue
+            if self.contact_subset == "unidentified" and row[1] == 1 and row[3] != 0:
+                continue
+            if self.contact_subset == "unidentified" and row[1] != 1:
+                continue
+            if self.contact_subset == "identified" and not (row[1] == 1 and row[3] != 0):
+                continue
+            if self.contact_subset == "lost" and row[2] != 2:
+                continue
+            if self.contact_subset == "active" and row[2] != 1:
+                continue
             rid = str(row[0])
             short_ref = "C-" + rid[-6:]
             self.contacts_table.insert("", "end", iid=rid, values=(
@@ -435,9 +449,70 @@ class Panel:
             self.contacts_table.see(selected_id)
         self.show_selected()
 
+    def _no_selection_dossier(self) -> str:
+        """Show operational sensor data even before a contact is selected."""
+        state = self.state
+        if not state:
+            return "Esperando el primer panorama de CoreRPG."
+        d = state.get("diagnostic", [0, 0, 0, 0])
+        c = state.get("config", [0, 0, 0, 0, 0])
+        e = state.get("interference_em", 0)
+        if self.current_view in ("status", "diagnostics", "configuration"):
+            code = {1: "Nominal", 2: "Degradado", 3: "Fuera de servicio",
+                    4: "Configuración limitada"}.get(d[0], "No determinado")
+            return (
+                "ESTADO DEL EQUIPO · lectura CoreRPG\n\n"
+                f"Diagnóstico: {code}\n"
+                f"Capacidad: {d[1] / 10:.1f}%\n"
+                f"Potencia: {d[2] / 10:.1f}%\n"
+                f"Integridad: {d[3] / 10:.1f}%\n"
+                f"Sensibilidad: {c[0] / 10:.1f}%\n"
+                f"Resolución: {c[1] / 10:.1f}%\n"
+                f"Compensación: {c[2] / 10:.1f}%\n"
+                f"Interferencia EM: {e}/550\n\n"
+                "Selecciona un contacto del centro para consultar su expediente."
+            )
+        if self.current_view == "interference":
+            return (
+                "CONDICIONES DE OBSERVACIÓN\n\n"
+                f"Interferencia electromagnética: {e}/550.\n"
+                f"Compensación configurada: {c[2] / 10:.1f}%.\n"
+                f"Matriz: {'fuera de servicio' if state.get('offline') else 'operativa'}.\n\n"
+                "Puedes cambiar el perfil de sensores en esta misma columna. "
+                "Un contacto perdido no implica necesariamente destrucción."
+            )
+        if self.current_view == "results":
+            reports = state.get("science", [])
+            jobs = state.get("scans", [])
+            running = sum(j[5] == 1 for j in jobs)
+            finished = sum(j[5] == 2 for j in jobs)
+            return (
+                "RESULTADOS AUTORIZADOS\n\n"
+                f"Informes científicos CoreRPG: {len(reports)}\n"
+                f"Estudios focales en curso: {running}\n"
+                f"Estudios focales terminados: {finished}\n\n"
+                "Selecciona un contacto para consultar sus resultados."
+            )
+        if self.current_view == "scans":
+            return (
+                "OPERACIONES DE SENSORES\n\n"
+                "El barrido pasivo automático continúa sin intervención.\n\n"
+                "ENFOCAR / IDENTIFICAR: lectura focal inmediata.\n"
+                "ESTUDIO DETALLADO: operación temporizada de CoreRPG.\n"
+                "SEGUIMIENTO PRIORITARIO: cambia el seguimiento de un contacto.\n\n"
+                "Selecciona un contacto activo para ordenar una operación."
+            )
+        return (
+            "INFORMACIÓN ESPECIALIZADA\n\n"
+            f"Contactos observados: {state.get('active', 0)}\n"
+            f"Contactos que requieren atención: {state.get('attention', 0)}\n\n"
+            "Selecciona un contacto de la columna central. "
+            "Los datos provienen exclusivamente de CoreRPG."
+        )
+
     def show_selected(self) -> None:
         selection = self.contacts_table.selection()
-        details = "Selecciona un contacto para consultar su expediente observado y sus resultados científicos."
+        details = self._no_selection_dossier()
         if selection:
             contact = self.contact_map.get(selection[0])
             if contact:
@@ -557,6 +632,7 @@ class Panel:
             if state["attention"] else "Sin incidencias que requieran intervención."
         ))
         self._refresh_contacts(state)
+        self._update_view_content()
         current = [c for c in state["contacts"] if c[2] == 1]
         kinds = Counter(c[1] for c in current)
         classified = Counter(r[1] for r in state["science"] if r[1] != 0 and r[3] != 0)
