@@ -37,7 +37,8 @@ def main() -> None:
         assert panel.contacts_table.winfo_width() >= 250, "system hierarchy too narrow"
         assert not panel.map_box.winfo_manager(), "map must be optional"
         assert not panel.test_area.winfo_manager(), "QA machinery must be hidden"
-        assert not panel.alert_bar.winfo_manager(), "no initial attention before auto attempt"
+        assert not panel.alert_bar.winfo_manager(), "no new ship alert on initial inventory"
+        assert all(c[3] for c in panel.state["contacts"] if c[1]==1 and c[2]==1)
         assert len(panel.state.get("science", [])) == 6, "six scientific reports missing"
 
         # Expand/collapse categories; simple labels instead of backend dumps.
@@ -45,20 +46,25 @@ def main() -> None:
         label = panel.contacts_table.item("group:planet", "text")
         assert "6" in label and "clase" in label, label
 
-        # A new observer-relevant contact should generate a prominent alert
-        # that opens the exact CoreRPG observed ID, not a guessed name.
-        snapshot = panel.command("STEP 2400")
+        # A new uncloaked Klingon must be identified on detection,
+        # visibly notify the officer and bring the running guard to ×1.
+        snapshot = panel.command("STEP 3600")
         panel.apply(snapshot)
         root.update_idletasks()
         root.update()
-        assert snapshot["attention"] > 0, snapshot
+        assert panel.arrival_id is not None, "new ship arrival not highlighted"
+        subject = panel.arrival_id
+        assert panel.contact_map[subject][3] == 16, (
+            "Klingon was not identified at first acquisition")
+        assert panel.speed.get() == "×1", "new naval arrival did not slow to ×1"
+        assert panel.restore_speed_button.winfo_viewable(), "officer cannot resume speed"
         assert panel.alert_bar.winfo_viewable(), "big alert is not visible"
+        assert "VOR'CHA" in panel.alert_title.cget("text"), "alert omits identified ship"
         assert panel.footer.winfo_viewable(), "alert displaced the watch footer"
         assert panel.notice_bar.winfo_viewable(), "alert displaced the system notice"
         assert (panel.footer.winfo_y() + panel.footer.winfo_height()
                 <= root.winfo_height()), "watch controls extend below the window"
-        assert panel.alert_ids == [str(cid) for cid in snapshot["attention_contacts"]]
-        subject = panel.alert_ids[0]
+        assert subject in panel.alert_ids
         panel.open_alert_contact()
         assert panel.contacts_table.selection() == (subject,), "alert has no direct action"
         assert subject in panel.contact_map
@@ -66,9 +72,9 @@ def main() -> None:
         assert "IDENTIFICACIÓN NAVAL" in dossier
         assert "Operador o afiliación actual" in dossier
         assert "Origen del diseño" in dossier
+        assert "Vor'cha" in dossier
         panel.contact_action("FOCUS")
-        assert "Lectura rápida" in panel.notice_label.cget("text") or (
-            "Identificación rápida" in panel.notice_label.cget("text"))
+        assert "Identificación rápida" in panel.notice_label.cget("text")
         assert panel.footer.winfo_viewable(), "quick scan broke layout"
 
         # BUG F06-UX-03: a live 500-ms refresh must not jump the contact
@@ -93,9 +99,7 @@ def main() -> None:
         panel.navigate("contacts")
         panel.select_section("unidentified")
         unidentified = visible_contacts(panel)
-        assert unidentified, "expected an unidentified ship after the automated attempt"
-        assert all(panel.contact_map[k][1] == 1 and panel.contact_map[k][3] == 0
-                   for k in unidentified)
+        assert not unidentified, "uncloaked ships must not remain unidentified"
         panel.select_section("all")
         panel.navigate("results")
         panel.select_section("planets")
@@ -134,6 +138,8 @@ def main() -> None:
         root.update_idletasks()
         root.update()
         assert panel.footer.winfo_viewable(), "watch controls hidden in short viewport"
+        panel.restore_watch_speed()
+        assert panel.speed.get() == "×30", "officer cannot restore accelerated guard"
         assert (panel.footer.winfo_y() + panel.footer.winfo_height()
                 <= root.winfo_height()), "footer clipped in short viewport"
         print("PASS native Core / priority alert / footer visible / rapid identification / archive")
