@@ -37,6 +37,18 @@ En segundos, reconocer el sistema *observable* y consultar el inventario obtenid
 
 **Invariante QA:** el transporte civil se identifica al iniciar; el crucero klingon que entra en alcance en la primera hora se identifica **en ese mismo evento**, sin esperar 45 segundos ni dos minutos. Las identificaciones y avisos deben funcionar durante la guardia acelerada; un análisis detallado nunca obliga a pausar.
 
+## Prueba operativa de navegación y conexión con Táctica — 10/11/2026
+
+**Criterio del oficial:** al examinar una nave, la ficha enseña lo que afecta a las decisiones: clase, función, armamento habitual, distancia, rumbo de trayectoria y si se acerca o se aleja. Desaparecen de la ficha naval los ID internos, transpondedores, fiabilidad de detección, estado trivial y contadores de estudios. Los detalles instrumentales permanecen consultables mediante «Consultar datos técnicos».
+
+**Tiempo máximo:** la orden del QA «ANÁLISIS DETALLADO» solicita 20 segundos de reloj Core, sin retrasos artificiales; a ×1 transcurren 20 segundos reales. El porcentaje usa la tarea nativa y la hora del resultado. La respuesta no promete información que todavía no se ha medido.
+
+**Movimiento observado:** Aster genera fotogramas adicionales de posición pública en el escenario QA, a +5, +10, +20, +30, +50 y +80 segundos tras entrar el crucero Vor'cha. Un rastreador del runner utiliza solo `f06_contacts_page` de Core, calcula el rumbo de **trayectoria observada** (proyección XY, no orientación de proa), diferencia acercamiento/alejamiento y estima el punto de máxima aproximación. El umbral QA de posible interceptación es un paso a menos de 250 milli-UA de nuestra posición, **no una afirmación de hostilidad**. Aster avisa al cambiar de curso, especialmente al aparecer una trayectoria convergente.
+
+**Compartición de datos:** la lectura de prueba `TACTICAL` devuelve la MISMA proyección viva de Core (identificación, posiciones y seguimiento) que `STATUS` utiliza para Sensores, sin segunda fuente de verdad ni recálculos privados en otra consola. El test exige igualdad, incluyendo la recuperación tras SAVE/LOAD. La **consola táctica definitiva**, sus permisos específicos y su consumo UI se conectarán a este contrato compartido en la fase correspondiente; esta lectura QA es un adaptador, no una consola táctica completa.
+
+**Armas:** los datos mostrados para el Vor'cha describen la **dotación conocida de su clase** (disruptores, torpedos de fotones, escudos). No garantizan que los sistemas de esa unidad concreta estén operativos, cargados o listos para disparar.
+
 ## Límites que NO deben ocultarse
 1. **Aster es una fuente QA repetible**: la geometría, emisiones y mediciones de laboratorio se generan desde la ficha física del Host. No constituye el universo persistente F13. Las observaciones y los informes publicados sí atraviesan operaciones nativas de CoreRPG.
 2. El barrido inicial y el enfoque inmediato utilizan las operaciones existentes, cuya escala temporal detallada todavía requiere calibración. No se ha validado que una Galaxy real complete espectroscopia de seis planetas en un tiempo concreto; la fase de ensayos debe hacerlo antes de declarar la simulación equilibrada.
