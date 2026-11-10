@@ -164,6 +164,23 @@ struct Watch {
    (void)f06_host_complete_science(s,&sample,&published);
   }
  }
+ void configure(int preset){
+  F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
+  if(preset==1){request.sensitivity_permille=700;request.resolution_permille=1000;
+                request.compensation_permille=150;}
+  else if(preset==2){request.sensitivity_permille=700;request.resolution_permille=550;
+                     request.compensation_permille=400;}
+  else if(preset==3){request.sensitivity_permille=1000;request.resolution_permille=600;
+                     request.compensation_permille=150;}
+  else if(preset!=0)throw std::runtime_error("invalid sensor configuration");
+  request.preset_id=static_cast<uint32_t>(preset);
+  F06ConfigView applied{};
+  check(f06_configure(s,h.ensign,&request,&applied),"sensor configuration");
+ }
+ void diagnostics(){
+  F06DiagnosticView result{};
+  check(f06_run_self_test(s,h.ensign,stats().revision,&result),"sensor diagnostics");
+ }
  void focus(U contact){
   F06ContactView updated{};
   check(f06_focus(s,h.ensign,stats().revision,contact,&updated),"operator focus");
@@ -178,6 +195,10 @@ struct Watch {
   check(f06_computer_status(s,h.captain,&state),"computer");
   F06EnvironmentView environment{};
   check(f06_environment_status(s,h.captain,&environment),"sensor environment");
+  F06ConfigView config{};
+  check(f06_configuration_status(s,h.captain,&config),"sensor configuration");
+  F06DiagnosticView diagnostic{};
+  check(f06_diagnostics(s,h.captain,&diagnostic),"sensor diagnostics");
   std::array<F06ContactView,64> contacts{};
   U written=0,total=0;
   check(f06_contacts_page(s,h.captain,0,0,contacts.data(),contacts.size(),
@@ -197,6 +218,11 @@ struct Watch {
     <<",\"offline\":"<<state.equipment_offline
     <<",\"automatic\":"<<state.autonomous
     <<",\"interference_em\":"<<environment.em_permille
+    <<",\"config\":["<<config.sensitivity_permille<<','<<config.resolution_permille
+      <<','<<config.compensation_permille<<','<<config.preset_id<<','
+      <<config.preferred_update_seconds<<']'
+    <<",\"diagnostic\":["<<diagnostic.state<<','<<diagnostic.capability_permille
+      <<','<<diagnostic.power_permille<<','<<diagnostic.integrity_permille<<']'
     <<",\"events\":[";
   for(U i=0;i<event_n;++i){
    if(i)std::cout<<',';
@@ -252,6 +278,8 @@ int main(){
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
     else if(action=="FOCUS")watch.focus(std::stoull(arg));
+    else if(action=="CONFIG")watch.configure(std::stoi(arg));
+    else if(action=="DIAG")watch.diagnostics();
     else if(action=="STATUS"){}
     else throw std::runtime_error("unsupported command");
     watch.emit();
