@@ -97,368 +97,400 @@ class Panel:
         self.root.after(500, self.tick)
 
     def _render(self) -> None:
-        """One functional Sensors console, three permanent logical areas.
+        """F06: quiet, task-first console with no decorative LCARS skin.
 
-        Left: canonical primary/secondary navigation (F07 sensor menu contract).
-        Centre: sensor situation, real contacts and important notices.
-        Right: selected contact dossier and context-dependent Core actions.
-        No demo decorations, no fabricated measurements or LCARS graphics.
+        Overview is an expandable human-readable system inventory.
+        A single current notice replaces the previous notice; history is optional.
+        Native Core alerts pre-empt everything else, with direct contact access.
         """
-        self.root.geometry("1380x860")
-        self.root.minsize(1050, 680)
+        self.root.geometry("1330x850")
+        self.root.minsize(1020, 640)
         self.current_view = "status"
         self.workspace_labels = {
-            "status": "ESTADO DE SENSORES",
-            "scans": "BARRIDOS",
-            "search_localize": "BÚSQUEDA / LOCALIZACIÓN",
+            "status": "SISTEMA",
             "contacts": "CONTACTOS",
+            "scans": "BARRIDOS",
             "tracking": "SEGUIMIENTO",
-            "sensor_readout": "LECTURA SENSORIAL",
-            "interference": "INTERFERENCIAS / COMPENSACIÓN",
-            "configuration": "CONFIGURACIÓN",
             "results": "RESULTADOS",
-            "diagnostics": "DIAGNÓSTICO",
-        }
-        self.view_submenus = {
-            "status": [("Resumen", "summary"), ("Actividad", "activity")],
-            "scans": [("Todos los contactos", "all"), ("Planetas", "planets"),
-                      ("Naves", "ships")],
-            "search_localize": [("Todos", "all"), ("Naves", "ships"),
-                                ("Planetas", "planets"), ("Satélites", "moons"),
-                                ("Artificiales", "artificial")],
-            "contacts": [("Todos", "all"), ("Sin identificar", "unidentified"),
-                         ("Identificados", "identified"), ("Perdidos", "lost")],
-            "tracking": [("Contactos activos", "active"), ("Contactos perdidos", "lost")],
-            "sensor_readout": [("Todos", "all"), ("Planetas", "planets"),
-                               ("Estrellas", "stars")],
-            "interference": [("Entorno", "environment"), ("Sensores", "hardware")],
-            "configuration": [("Perfiles", "profiles"), ("Diagnóstico", "hardware")],
-            "results": [("Estudios actuales", "studies"), ("Ciencia planetaria", "planets")],
-            "diagnostics": [("Estado del equipo", "hardware"), ("Incidencias", "activity")],
+            "configuration": "EQUIPO",
         }
         self.section_id = "summary"
         self.contact_subset = "all"
+        self.group_open: dict[str, bool] = {}
         self.map_positions: list[tuple[float, float, str]] = []
+        self.map_visible = False
         self.alert_ids: list[str] = []
         self.alert_cursor = 0
-        self.navigation_buttons = {}
-        self.section_buttons = []
+        self.arrival_id: str | None = None
+        self.acknowledged_arrivals: set[str] = set()
+        self.navigation_buttons: dict[str, ttk.Button] = {}
+        self.section_buttons: list[ttk.Button] = []
+        self.contact_filter = tk.StringVar(value="Todos")
+        self.search_text = tk.StringVar()
+        self.search_text.trace_add("write", lambda *_: self._refresh_contacts(self.state) if self.state else None)
 
-        header = ttk.Frame(self.root, padding=(12, 9, 12, 7))
+        header = ttk.Frame(self.root, padding=(14, 11, 14, 7))
         header.pack(fill="x")
-        ttk.Label(header, text="USS ENTERPRISE-D · SENSORES",
-                  font=("Segoe UI", 16, "bold")).pack(side="left")
-        self.summary = ttk.Label(header, text="Conectando con CoreRPG...")
-        self.summary.pack(side="left", padx=(22, 8))
-        self.important = ttk.Label(header, text="")
-        self.important.pack(side="right")
+        ttk.Label(header, text="USS ENTERPRISE-D  /  SENSORES",
+                  font=("Segoe UI", 17, "bold")).pack(side="left")
+        self.summary = ttk.Label(header, text="Vigilancia automática")
+        self.summary.pack(side="right", padx=4)
 
-        # Operational incident: wide, high-contrast, actionable; hidden if nominal.
-        # Navigation is a direct Core contact ID, not guessed from text or severity.
-        self.alert_bar = tk.Frame(self.root, background="#ffe4a3",
-                                  highlightbackground="#b45309", highlightthickness=3)
-        self.alert_copy = tk.Frame(self.alert_bar, background="#ffe4a3")
-        self.alert_copy.pack(side="left", fill="both", expand=True, padx=16, pady=11)
-        self.alert_title = tk.Label(self.alert_copy, background="#ffe4a3",
-                                    foreground="#7c2d12", anchor="w",
-                                    font=("Segoe UI", 16, "bold"), text="")
+        # A priority alert fills the entire console width, never a header footnote.
+        self.alert_bar = tk.Frame(self.root, background="#ffe2a1",
+                                  highlightbackground="#b45309",
+                                  highlightthickness=3)
+        alert_copy = tk.Frame(self.alert_bar, background="#ffe2a1")
+        alert_copy.pack(side="left", fill="both", expand=True, padx=17, pady=13)
+        self.alert_title = tk.Label(alert_copy, text="", anchor="w",
+                                    font=("Segoe UI", 19, "bold"),
+                                    background="#ffe2a1", foreground="#7c2d12")
         self.alert_title.pack(fill="x")
-        self.alert_description = tk.Label(self.alert_copy, background="#ffe4a3",
-                                          foreground="#451a03", anchor="w",
-                                          font=("Segoe UI", 11), wraplength=940,
-                                          justify="left", text="")
-        self.alert_description.pack(fill="x", pady=(5, 0))
+        self.alert_description = tk.Label(
+            alert_copy, text="", anchor="w", justify="left",
+            wraplength=960, font=("Segoe UI", 12),
+            background="#ffe2a1", foreground="#451a03")
+        self.alert_description.pack(fill="x", pady=(6, 0))
         self.alert_button = tk.Button(
-            self.alert_bar, text="ABRIR CONTACTO",
-            command=self.open_alert_contact,
-            font=("Segoe UI", 11, "bold"), background="#92400e",
-            foreground="#ffffff", activebackground="#78350f",
-            activeforeground="#ffffff", padx=16, pady=10, relief="flat")
-        self.alert_button.pack(side="right", padx=14, pady=12)
+            self.alert_bar, text="VER CONTACTO", command=self.open_alert_contact,
+            font=("Segoe UI", 12, "bold"), background="#92400e",
+            foreground="white", activebackground="#78350f",
+            activeforeground="white", padx=14, pady=12, relief="flat")
+        self.alert_button.pack(side="right", padx=15, pady=14)
 
-        columns = ttk.Panedwindow(self.root, orient="horizontal")
-        columns.pack(fill="both", expand=True, padx=9, pady=(2, 5))
-        self.workspace_panes = columns
-        left = ttk.Frame(columns, width=200, padding=5)
-        center = ttk.Frame(columns, width=700, padding=(6, 4))
-        right = ttk.Frame(columns, width=400, padding=(6, 4))
-        columns.add(left, weight=0)
-        columns.add(center, weight=3)
-        columns.add(right, weight=2)
+        panes = ttk.Panedwindow(self.root, orient="horizontal")
+        panes.pack(fill="both", expand=True, padx=12, pady=(3, 7))
+        self.workspace_panes = panes
+        left = ttk.Frame(panes, width=180, padding=(0, 5))
+        center = ttk.Frame(panes, width=710, padding=(8, 3))
+        right = ttk.Frame(panes, width=440, padding=(8, 3))
+        panes.add(left, weight=0)
+        panes.add(center, weight=3)
+        panes.add(right, weight=2)
 
-        # LEFT — exactly the ten approved first-level Sensors menu entries.
-        ttk.Label(left, text="MENÚ PRINCIPAL",
-                  font=("Segoe UI", 11, "bold")).pack(anchor="w", pady=(3, 7))
-        for view, title in self.workspace_labels.items():
-            b = ttk.Button(left, text=title, command=lambda key=view: self.navigate(key))
-            b.pack(fill="x", pady=2)
-            self.navigation_buttons[view] = b
-        ttk.Separator(left, orient="horizontal").pack(fill="x", pady=10)
-        ttk.Label(left, text="SUBMENÚ / SELECCIÓN",
-                  font=("Segoe UI", 9, "bold")).pack(anchor="w")
+        # The operator sees six task groups, not every technical F06 contract.
+        ttk.Label(left, text="OPERACIONES", font=("Segoe UI", 12, "bold")
+                  ).pack(anchor="w", pady=(0, 13))
+        for view, name in self.workspace_labels.items():
+            btn = ttk.Button(left, text=name, command=lambda key=view: self.navigate(key))
+            btn.pack(fill="x", pady=4)
+            self.navigation_buttons[view] = btn
+        ttk.Separator(left).pack(fill="x", pady=(16, 9))
         self.secondary_frame = ttk.Frame(left)
-        self.secondary_frame.pack(fill="x", pady=6)
-        ttk.Label(left, text="La vigilancia continúa\nal cambiar de pantalla.",
-                  justify="left").pack(anchor="w", pady=(16, 3))
+        self.secondary_frame.pack(fill="x")
+        ttk.Button(left, text="HISTORIAL DE AVISOS", command=self.open_history
+                   ).pack(fill="x", pady=(20, 5))
 
-        # CENTRE — system-wide situational picture.
-        self.workspace_title = ttk.Label(center, text="ESTADO DE SENSORES",
-                                          font=("Segoe UI", 13, "bold"))
-        self.workspace_title.pack(anchor="w", pady=(2, 4))
-        overview_frame = ttk.LabelFrame(center, text="Situación general del sistema Aster", padding=6)
-        overview_frame.pack(fill="x", pady=(0, 6))
-        self.overview = tk.Text(overview_frame, height=4, wrap="word",
-                                font=("Segoe UI", 10), state="disabled", relief="flat")
-        self.overview.pack(fill="x")
-        self.section_info = ttk.Label(center, text="", justify="left", wraplength=690)
-        self.section_info.pack(fill="x", pady=(2, 5))
+        # CENTRE: the default view is a concise, expandable inventory.
+        titlebar = ttk.Frame(center)
+        titlebar.pack(fill="x", pady=(2, 9))
+        self.workspace_title = ttk.Label(titlebar, text="SISTEMA ASTER",
+                                          font=("Segoe UI", 16, "bold"))
+        self.workspace_title.pack(side="left")
+        self.map_button = ttk.Button(titlebar, text="Ver mapa", command=self.toggle_map)
+        self.map_button.pack(side="right")
+        self.section_info = ttk.Label(center, text="", font=("Segoe UI", 10))
+        self.section_info.pack(fill="x", pady=(0, 9))
 
-        map_box = ttk.LabelFrame(center, text="Proyección espacial 2D · posiciones observadas", padding=4)
-        map_box.pack(fill="x", pady=(0, 6))
-        self.map_canvas = tk.Canvas(map_box, height=170, background="#f8fafc",
+        self.map_box = ttk.Frame(center)
+        self.map_canvas = tk.Canvas(self.map_box, height=170, background="#f8fafc",
                                     highlightthickness=0)
-        self.map_canvas.pack(fill="x")
+        self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
         self.map_canvas.bind("<Button-1>", self._select_map_contact)
 
-        contact_frame = ttk.LabelFrame(center, text="CONTACTOS OBSERVADOS · CoreRPG", padding=7)
-        contact_frame.pack(fill="both", expand=True)
-        filter_row = ttk.Frame(contact_frame)
-        filter_row.pack(fill="x", pady=(0, 5))
-        ttk.Label(filter_row, text="Filtro").pack(side="left")
-        self.contact_filter = tk.StringVar(value="Todos")
-        choices = ("Todos", "Planetas", "Naves", "Estrellas", "Satélites", "Artificiales")
-        selector = ttk.Combobox(filter_row, textvariable=self.contact_filter,
-                                 values=choices, state="readonly", width=15)
-        selector.pack(side="left", padx=7)
-        selector.bind("<<ComboboxSelected>>", lambda _: self._refresh_contacts(self.state))
-        ttk.Label(filter_row, text="Selecciona una fila para abrir su expediente →"
-                  ).pack(side="left", padx=(10, 0))
-        colnames = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
-        table_area = ttk.Frame(contact_frame)
-        table_area.pack(fill="both", expand=True)
-        self.contacts_table = ttk.Treeview(table_area, columns=colnames,
-                                            show="headings", height=12)
-        headings = {"ref": "Contacto", "tipo": "Tipo", "identificacion": "Identificación",
-                    "distancia": "Distancia", "confianza": "Confianza", "estado": "Estado"}
-        widths = {"ref": 92, "tipo": 90, "identificacion": 220,
-                  "distancia": 99, "confianza": 80, "estado": 78}
-        for name in colnames:
-            self.contacts_table.heading(name, text=headings[name])
-            self.contacts_table.column(name, width=widths[name], minwidth=60, anchor="w")
+        list_area = ttk.Frame(center)
+        list_area.pack(fill="both", expand=True)
+        self.contacts_table = ttk.Treeview(
+            list_area, show="tree", height=19, selectmode="browse")
+        self.contacts_table.heading("#0", text="Sistema estelar observado")
+        self.contacts_table.column("#0", minwidth=290, width=550, stretch=True)
+        self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
+        self.contacts_table.tag_configure("contact", font=("Segoe UI", 11))
+        self.contacts_table.tag_configure("lost", foreground="#7d8289")
+        self.contacts_table.tag_configure("alert", foreground="#9a3412")
         self.contacts_table.pack(side="left", fill="both", expand=True)
-        scrollbar = ttk.Scrollbar(table_area, orient="vertical", command=self.contacts_table.yview)
-        scrollbar.pack(side="right", fill="y")
-        self.contacts_table.configure(yscrollcommand=scrollbar.set)
-        self.contacts_table.bind("<<TreeviewSelect>>", lambda _: (self.show_selected(), self._draw_map()))
+        tree_scroll = ttk.Scrollbar(list_area, orient="vertical",
+                                     command=self.contacts_table.yview)
+        tree_scroll.pack(side="right", fill="y")
+        self.contacts_table.configure(yscrollcommand=tree_scroll.set)
+        self.contacts_table.bind(
+            "<<TreeviewSelect>>", lambda _: (self.show_selected(), self._draw_map()))
+        self.contacts_table.bind("<<TreeviewOpen>>", self._remember_group)
+        self.contacts_table.bind("<<TreeviewClose>>", self._remember_group)
 
-        logframe = ttk.LabelFrame(center, text="Avisos operativos · solo lo relevante", padding=6)
-        logframe.pack(fill="x", pady=(7, 0))
-        self.log = tk.Text(logframe, height=4, wrap="word", state="disabled",
-                           font=("Segoe UI", 9), relief="flat")
-        self.log.pack(fill="x")
-
-        # RIGHT — selected-object dossier; never replaced by generic backend logs.
-        ttk.Label(right, text="EXPEDIENTE / ANÁLISIS ESPECIALIZADO",
-                  font=("Segoe UI", 11, "bold")).pack(anchor="w", pady=(2, 6))
-        detail_box = ttk.LabelFrame(right, text="Información del contacto seleccionado", padding=8)
+        # RIGHT: nothing but the selected item, and its available actions.
+        ttk.Label(right, text="INFORMACIÓN DEL CONTACTO",
+                  font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 10))
+        detail_box = ttk.Frame(right)
         detail_box.pack(fill="both", expand=True)
-        self.detail_text = tk.Text(detail_box, height=21, wrap="word", state="disabled",
-                                   font=("Segoe UI", 10), relief="flat")
+        self.detail_text = tk.Text(
+            detail_box, height=24, state="disabled", relief="flat",
+            background="#ffffff", font=("Segoe UI", 12),
+            wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
+        self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
         self.detail_text.pack(side="left", fill="both", expand=True)
-        detail_scroll = ttk.Scrollbar(detail_box, orient="vertical", command=self.detail_text.yview)
-        detail_scroll.pack(side="right", fill="y")
-        self.detail_text.configure(yscrollcommand=detail_scroll.set)
+        details_scroll = ttk.Scrollbar(detail_box, orient="vertical",
+                                        command=self.detail_text.yview)
+        details_scroll.pack(side="right", fill="y")
+        self.detail_text.configure(yscrollcommand=details_scroll.set)
 
-        actions = ttk.LabelFrame(right, text="Acciones sobre el contacto", padding=7)
-        actions.pack(fill="x", pady=(6, 4))
-        ttk.Button(actions, text="ENFOCAR / IDENTIFICAR",
-                   command=lambda: self.contact_action("FOCUS")).pack(fill="x", pady=2)
-        ttk.Button(actions, text="ESTUDIO DETALLADO (2 MIN)",
-                   command=lambda: self.contact_action("SCAN")).pack(fill="x", pady=2)
-        ttk.Button(actions, text="SEGUIMIENTO PRIORITARIO",
-                   command=lambda: self.contact_action("PRIORITY")).pack(fill="x", pady=2)
+        self.action_area = ttk.LabelFrame(right, text="ÓRDENES", padding=8)
+        ttk.Button(self.action_area, text="IDENTIFICAR",
+                   command=lambda: self.contact_action("FOCUS")).pack(
+                       side="left", expand=True, fill="x", padx=2)
+        ttk.Button(self.action_area, text="ESTUDIAR · 2 MIN",
+                   command=lambda: self.contact_action("SCAN")).pack(
+                       side="left", expand=True, fill="x", padx=2)
+        ttk.Button(self.action_area, text="SEGUIR",
+                   command=lambda: self.contact_action("PRIORITY")).pack(
+                       side="left", expand=True, fill="x", padx=2)
+        self.technical_button = ttk.Button(
+            right, text="Consultar datos técnicos del contacto",
+            command=self.open_contact_details)
 
-        engineering = ttk.LabelFrame(right, text="Equipo de sensores", padding=7)
-        engineering.pack(fill="x", pady=(4, 5))
-        self.sensor_preset = tk.StringVar(value="Estándar")
-        ttk.Combobox(engineering, textvariable=self.sensor_preset,
-                     values=("Estándar", "Alta resolución", "Antinterferencias", "Máxima detección"),
-                     state="readonly").pack(fill="x", pady=2)
-        buttonrow = ttk.Frame(engineering)
-        buttonrow.pack(fill="x", pady=3)
-        ttk.Button(buttonrow, text="Aplicar perfil", command=self.apply_preset
-                   ).pack(side="left")
-        ttk.Button(buttonrow, text="Autodiagnóstico", command=self.diagnostic
-                   ).pack(side="left", padx=8)
+        self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
+        ttk.Combobox(
+            self.engineering, textvariable=self.sensor_preset,
+            values=("Estándar", "Alta resolución", "Antinterferencias", "Máxima detección"),
+            state="readonly").pack(fill="x", pady=4)
+        ttk.Button(self.engineering, text="Aplicar perfil",
+                   command=self.apply_preset).pack(side="left")
+        ttk.Button(self.engineering, text="Autodiagnóstico",
+                   command=self.diagnostic).pack(side="left", padx=8)
 
-        # FOOTER — clock and scenario controls belong to the QA envelope,
-        # not to Sensors: actual time management remains entirely in CoreRPG.
-        footer = ttk.Frame(self.root, padding=(12, 6, 12, 9))
+        # One live message, never an endless log at the centre of the console.
+        notice_bar = ttk.Frame(self.root, padding=(13, 5, 13, 5))
+        notice_bar.pack(fill="x")
+        ttk.Label(notice_bar, text="COMPUTADORA:", font=("Segoe UI", 10, "bold")
+                  ).pack(side="left")
+        self.notice_label = ttk.Label(notice_bar, text="Vigilancia automática activada.",
+                                      font=("Segoe UI", 11))
+        self.notice_label.pack(side="left", fill="x", expand=True, padx=(9, 0))
+        ttk.Button(notice_bar, text="Ver avisos anteriores",
+                   command=self.open_history).pack(side="right")
+
+        footer = ttk.Frame(self.root, padding=(13, 6, 13, 10))
         footer.pack(fill="x")
-        ttk.Label(footer, text="GUARDIA").pack(side="left")
-        self.timelabel = ttk.Label(footer, text="00:00:00 / 08:00:00", width=26)
-        self.timelabel.pack(side="left", padx=(5, 6))
-        self.progress = ttk.Progressbar(footer, maximum=28800, value=0, length=135)
-        self.progress.pack(side="left", padx=(0, 12))
+        self.timelabel = ttk.Label(footer, text="00:00 / 08:00", width=21,
+                                   font=("Segoe UI", 11, "bold"))
+        self.timelabel.pack(side="left")
+        self.progress = ttk.Progressbar(footer, maximum=28800, value=0, length=160)
+        self.progress.pack(side="left", padx=(6, 14))
         self.button_play = ttk.Button(footer, text="Iniciar", command=self.toggle)
-        self.button_play.pack(side="left", padx=2)
-        ttk.Button(footer, text="Reiniciar", command=self.restart).pack(side="left", padx=2)
-        ttk.Button(footer, text="Guardar", command=lambda: self.checkpoint("SAVE")
-                   ).pack(side="left", padx=2)
-        ttk.Button(footer, text="Recuperar", command=lambda: self.checkpoint("LOAD")
-                   ).pack(side="left", padx=2)
-        ttk.Label(footer, text="Velocidad").pack(side="left", padx=(14, 2))
-        ttk.Combobox(footer, textvariable=self.speed, values=("×15", "×30", "×60"),
-                     state="readonly", width=5).pack(side="left")
-        ttk.Label(footer, text="Incidencia").pack(side="left", padx=(14, 2))
-        scenario = ttk.Combobox(footer, textvariable=self.mode, values=MODES,
-                                state="readonly", width=20)
-        scenario.pack(side="left")
-        scenario.bind("<<ComboboxSelected>>", lambda _: self.restart())
-        ttk.Button(footer, text="Exportar informe", command=self.export
+        self.button_play.pack(side="left")
+        ttk.Button(footer, text="Opciones de prueba", command=self.toggle_test_options
                    ).pack(side="right")
 
-        note = ttk.LabelFrame(self.root, text="Bitácora del oficial (opcional)", padding=4)
-        note.pack(fill="x", padx=12, pady=(0, 5))
-        self.notes = tk.Text(note, height=2, font=("Segoe UI", 9), wrap="word")
+        # The scenario machinery stays accessible, but out of the operator's way.
+        self.test_area = ttk.LabelFrame(self.root, text="Opciones de prueba F06", padding=8)
+        testrow = ttk.Frame(self.test_area)
+        testrow.pack(fill="x")
+        ttk.Label(testrow, text="Velocidad").pack(side="left")
+        ttk.Combobox(testrow, textvariable=self.speed, values=("×15", "×30", "×60"),
+                     state="readonly", width=5).pack(side="left", padx=(4, 15))
+        ttk.Label(testrow, text="Incidencia").pack(side="left")
+        scenario = ttk.Combobox(testrow, textvariable=self.mode, values=MODES,
+                                state="readonly", width=24)
+        scenario.pack(side="left", padx=(5, 12))
+        scenario.bind("<<ComboboxSelected>>", lambda _: self.restart())
+        ttk.Button(testrow, text="Reiniciar", command=self.restart).pack(side="left", padx=3)
+        ttk.Button(testrow, text="Guardar", command=lambda: self.checkpoint("SAVE")
+                   ).pack(side="left", padx=3)
+        ttk.Button(testrow, text="Recuperar", command=lambda: self.checkpoint("LOAD")
+                   ).pack(side="left", padx=3)
+        ttk.Button(testrow, text="Exportar informe", command=self.export
+                   ).pack(side="left", padx=3)
+        ttk.Label(self.test_area, text="Notas del oficial (opcionales)"
+                  ).pack(anchor="w", pady=(9, 1))
+        self.notes = tk.Text(self.test_area, height=2, font=("Segoe UI", 10))
         self.notes.pack(fill="x")
+
         self.navigate("status")
 
-    def _update_alert(self, state: dict) -> None:
-        """Show actual actionable contacts from the native computer watch."""
-        ids = [str(cid) for cid in state.get("attention_contacts", [])]
-        if state.get("attention", 0) != len(ids):
-            raise RuntimeError("El motor no ha proporcionado los contactos de la alerta.")
-        prior = tuple(self.alert_ids)
-        self.alert_ids = ids
-        if not ids:
-            if self.alert_bar.winfo_manager():
-                self.alert_bar.pack_forget()
-            return
-        if prior != tuple(ids):
-            self.alert_cursor = 0
-        self.alert_cursor %= len(ids)
-        item = self.contact_map.get(ids[self.alert_cursor])
-        if item is not None:
-            label = self.designations.get(item[0], "C-" + ids[self.alert_cursor][-6:])
-            kind = TYPES.get(item[1], "señal desconocida")
-            intro = f"{label} · {kind} · a {item[5] / 1000:.3f} UA · confianza {item[4] / 10:.1f}%."
+    def toggle_test_options(self) -> None:
+        if self.test_area.winfo_manager():
+            self.test_area.pack_forget()
         else:
-            intro = "Contacto registrado por CoreRPG; ficha no disponible temporalmente."
-        n = len(ids)
-        self.alert_title.configure(text=(
-            f"ATENCIÓN DEL OPERADOR · {n} CONTACTO{'S' if n != 1 else ''} POR EVALUAR"))
-        self.alert_description.configure(text=(
-            intro + "\nLa computadora ha intentado identificarlo automáticamente, "
-            "pero su clase sigue sin confirmar. Requiere evaluación del oficial."
-        ))
-        self.alert_button.configure(
-            text=("ABRIR CONTACTO" if n == 1 else
-                  f"ABRIR CONTACTO {self.alert_cursor + 1}/{n}"))
-        if not self.alert_bar.winfo_manager():
-            self.alert_bar.pack(fill="x", padx=9, pady=(0, 7),
-                                before=self.workspace_panes)
+            self.test_area.pack(fill="x", padx=12, pady=(0, 7))
 
-    def open_alert_contact(self) -> None:
-        """One click: official flagged ID -> contact row -> observed dossier."""
-        if not self.alert_ids:
-            return
-        contact_id = self.alert_ids[self.alert_cursor]
-        if contact_id not in self.contact_map:
-            messagebox.showwarning(
-                "Sensores", "El contacto señalado ya no figura entre las observaciones.",
-                parent=self.root)
-            return
-        self.navigate("contacts")
-        self.contact_filter.set("Todos")
-        self._refresh_contacts(self.state)
-        if not self.contacts_table.exists(contact_id):
-            messagebox.showwarning(
-                "Sensores", "No se ha podido localizar el contacto en el listado actual.",
-                parent=self.root)
-            return
-        self.contacts_table.selection_set(contact_id)
-        self.contacts_table.focus(contact_id)
-        self.contacts_table.see(contact_id)
-        self.show_selected()
-        self._draw_map()
-        if len(self.alert_ids) > 1:
-            self.alert_cursor = (self.alert_cursor + 1) % len(self.alert_ids)
-            self._update_alert(self.state)
+    def toggle_map(self) -> None:
+        self.map_visible = not self.map_visible
+        self.map_button.configure(text="Ocultar mapa" if self.map_visible else "Ver mapa")
+        if self.map_visible:
+            self.map_box.pack(fill="x", after=self.section_info, pady=(0, 8))
+            self._draw_map()
+        else:
+            self.map_box.pack_forget()
+
+    def open_history(self) -> None:
+        window = tk.Toplevel(self.root)
+        window.title("Sensores · Historial de avisos")
+        window.geometry("850x500")
+        area = ttk.Frame(window, padding=12)
+        area.pack(fill="both", expand=True)
+        ttk.Label(area, text="Avisos de la guardia",
+                  font=("Segoe UI", 15, "bold")).pack(anchor="w", pady=(0, 8))
+        box = tk.Text(area, wrap="word", font=("Segoe UI", 11))
+        box.pack(side="left", fill="both", expand=True)
+        scroll = ttk.Scrollbar(area, command=box.yview)
+        scroll.pack(side="right", fill="y")
+        box.configure(yscrollcommand=scroll.set)
+        box.insert("1.0", "\n".join(self.lines) or "No hay avisos registrados.")
+        box.configure(state="disabled")
+        box.see("end")
+
+    def _remember_group(self, event: tk.Event) -> None:
+        key = self.contacts_table.focus()
+        if key.startswith("group:"):
+            # Open/Close events fire before the Tk tree changes the -open flag.
+            self.group_open[key] = not bool(self.contacts_table.item(key, "open"))
 
     def navigate(self, view: str) -> None:
-        """Navigation never issues orders and never pauses the sensor watch."""
+        """Switch only the operator's view; never stop autonomous sensors."""
         if view not in self.workspace_labels:
             return
         self.current_view = view
-        self.section_id = "summary"
         self.contact_subset = "all"
+        self.section_id = "summary"
         self.contact_filter.set("Todos")
-        for name, btn in self.navigation_buttons.items():
-            btn.state(["disabled"] if name == view else ["!disabled"])
+        for key, button in self.navigation_buttons.items():
+            button.state(["disabled"] if key == view else ["!disabled"])
         for child in self.secondary_frame.winfo_children():
             child.destroy()
-        self.section_buttons = []
-        for label, section in self.view_submenus[view]:
-            button = ttk.Button(self.secondary_frame, text=label,
-                                command=lambda key=section: self.select_section(key))
-            button.pack(fill="x", pady=2)
-            self.section_buttons.append(button)
-        self.workspace_title.configure(text=self.workspace_labels[view])
-        presets = {"scans": "Todos", "search_localize": "Todos",
-                   "contacts": "Todos", "sensor_readout": "Todos",
-                   "results": "Todos"}
-        if view in presets:
-            self.contact_filter.set(presets[view])
-        self._update_view_content()
+        options = {
+            "status": [("Todo el sistema", "all")],
+            "contacts": [("Todos", "all"), ("Naves", "ships"),
+                         ("Planetas", "planets"), ("Sin identificar", "unidentified"),
+                         ("Perdidos", "lost")],
+            "scans": [("Todos", "all"), ("Naves", "ships"), ("Planetas", "planets")],
+            "tracking": [("Todos", "all"), ("Naves", "ships"), ("Perdidos", "lost")],
+            "results": [("Todos", "all"), ("Planetas", "planets")],
+            "configuration": [("Todos", "all")],
+        }
+        for label, section in options[view]:
+            b = ttk.Button(self.secondary_frame, text=label,
+                           command=lambda k=section: self.select_section(k))
+            b.pack(fill="x", pady=3)
+        self.workspace_title.configure(text={
+            "status": "SISTEMA ASTER", "contacts": "CONTACTOS",
+            "scans": "BARRIDOS", "tracking": "SEGUIMIENTO",
+            "results": "RESULTADOS", "configuration": "EQUIPO",
+        }[view])
         if self.state:
             self._refresh_contacts(self.state)
+        self._update_view_content()
+        self.show_selected()
 
     def select_section(self, section: str) -> None:
         self.section_id = section
         self.contact_subset = section if section in ("unidentified", "identified", "lost", "active") else "all"
         filters = {"all": "Todos", "planets": "Planetas", "ships": "Naves",
-                   "moons": "Satélites", "artificial": "Artificiales",
-                   "stars": "Estrellas"}
-        if section in filters:
-            self.contact_filter.set(filters[section])
-        self._update_view_content()
+                   "moons": "Satélites", "artificial": "Artificiales", "stars": "Estrellas"}
+        self.contact_filter.set(filters.get(section, "Todos"))
         if self.state:
             self._refresh_contacts(self.state)
+        self._update_view_content()
 
     def _update_view_content(self) -> None:
         if not hasattr(self, "section_info"):
             return
         state = self.state
-        details = {
-            "status": "Estado del equipo, alcance, vigilancia y avisos de la sesión CoreRPG.",
-            "scans": "Selecciona un contacto. Enfocar produce una observación; el estudio detallado reserva dos minutos reales de simulación.",
-            "search_localize": "La lista muestra únicamente contactos observados. Los filtros no revelan objetos ocultos.",
-            "contacts": "Consulta identidad, confianza, distancia y antecedentes del elemento seleccionado.",
-            "tracking": "El seguimiento continúa en segundo plano; marca un contacto para darle prioridad.",
-            "sensor_readout": "Abre un expediente para ver todas las lecturas autorizadas, incluidas las mediciones científicas.",
-            "interference": "Las interferencias pueden reducir las detecciones. Consulta el estado y cambia la compensación del equipo.",
-            "configuration": "Los perfiles cambian parámetros auténticos de la matriz de sensores.",
-            "results": "Los estudios terminados y los informes científicos registrados están asociados a sus contactos.",
-            "diagnostics": "El autodiagnóstico utiliza la matriz y la configuración reales de CoreRPG.",
-        }
         if state:
-            if self.current_view == "results":
-                jobs = state.get("scans", [])
-                active = sum(j[5] == 1 for j in jobs)
-                done = sum(j[5] == 2 for j in jobs)
-                details["results"] += f" Estudios: {active} activos, {done} terminados. Informes científicos: {len(state.get('science', []))}."
-            elif self.current_view == "diagnostics":
-                d = state.get("diagnostic", [0, 0, 0, 0])
-                details["diagnostics"] += f" Capacidad {d[1] / 10:.0f}%, alimentación {d[2] / 10:.0f}%, integridad {d[3] / 10:.0f}%."
-            elif self.current_view == "interference":
-                details["interference"] += f" Índice EM observado: {state.get('interference_em', 0)}/550."
-            elif self.current_view == "configuration":
-                details["configuration"] += " Perfil actual (Core): " + str(state.get("config", [0, 0, 0, 0])[3]) + "."
-        self.section_info.configure(text=details[self.current_view])
+            self.section_info.configure(text=(
+                f"{state.get('active', 0)} contactos detectados"
+                "   ·   vigilancia automática "
+                + ("NO DISPONIBLE" if state.get("offline") else "ACTIVA")
+            ))
+        else:
+            self.section_info.configure(text="Iniciando lectura del sistema...")
+        if self.current_view == "configuration":
+            if not self.engineering.winfo_manager():
+                self.engineering.pack(fill="x", pady=(9, 0))
+        else:
+            self.engineering.pack_forget()
         if hasattr(self, "detail_text") and not self.contacts_table.selection():
             self.show_selected()
+
+    def _update_alert(self, state: dict) -> None:
+        """Large, persistent, direct-entry warning for observed sensor threats."""
+        core_ids = [str(x) for x in state.get("attention_contacts", [])]
+        if len(core_ids) != state.get("attention", 0):
+            raise RuntimeError("Incoherencia en los contactos señalados por CoreRPG.")
+        observed = {str(c[0]): c for c in state.get("contacts", [])}
+        borg = [str(c[0]) for c in state.get("contacts", [])
+                if c[1] == 1 and c[2] == 1 and c[3] == 10]
+        arrival = self.arrival_id if self.arrival_id in observed and (
+            observed[self.arrival_id][2] == 1) else None
+        if borg:
+            ids, severity, title = borg, "critical", "ATENCIÓN · CONTACTO BORG"
+            explanation = "Clase Borg identificada por los sensores. Evaluación prioritaria inmediata."
+        elif core_ids:
+            ids, severity, title = core_ids, "warning", "ATENCIÓN · NAVE SIN IDENTIFICAR"
+            explanation = ("La computadora ha intentado identificar un contacto relevante "
+                           "y no ha conseguido confirmar su clase.")
+        elif arrival:
+            ids, severity, title = [arrival], "warning", "NUEVO CONTACTO NAVAL"
+            explanation = "Nave recién detectada. La vigilancia y la identificación siguen en automático."
+        else:
+            self.alert_ids = []
+            self.alert_bar.pack_forget()
+            return
+        if tuple(ids) != tuple(self.alert_ids):
+            self.alert_cursor = 0
+        self.alert_ids = ids
+        self.alert_cursor %= len(ids)
+        contact = observed.get(ids[self.alert_cursor])
+        if contact:
+            label = self.designations.get(contact[0], "C-" + ids[self.alert_cursor][-6:])
+            identity = contact_identification(contact)
+            summary = (f"{label}  ·  {identity}  ·  "
+                       f"{contact[5] / 1000:.3f} UA")
+        else:
+            summary = "Señal observada: ficha no disponible temporalmente."
+        bg, ink, stroke = (
+            ("#fecaca", "#7f1d1d", "#b91c1c") if severity == "critical"
+            else ("#ffe2a1", "#78350f", "#b45309")
+        )
+        for widget in (self.alert_bar, self.alert_title, self.alert_description):
+            widget.configure(background=bg)
+        self.alert_bar.configure(highlightbackground=stroke)
+        self.alert_title.configure(text=title, foreground=ink)
+        self.alert_description.configure(text=summary + "\n" + explanation,
+                                          foreground=ink)
+        self.alert_button.configure(text=(
+            "ABRIR CONTACTO" if len(ids) == 1 else
+            f"ABRIR CONTACTO {self.alert_cursor + 1}/{len(ids)}"),
+            background=stroke, activebackground=ink)
+        if not self.alert_bar.winfo_manager():
+            self.alert_bar.pack(fill="x", padx=12, pady=(0, 8),
+                                before=self.workspace_panes)
+
+    def open_alert_contact(self) -> None:
+        if not self.alert_ids:
+            return
+        cid = self.alert_ids[self.alert_cursor]
+        if cid not in self.contact_map:
+            return
+        self.navigate("contacts")
+        self.select_section("all")
+        if self.contacts_table.exists(cid):
+            parent = self.contacts_table.parent(cid)
+            if parent:
+                self.contacts_table.item(parent, open=True)
+                self.group_open[parent] = True
+            self.contacts_table.selection_set(cid)
+            self.contacts_table.focus(cid)
+            self.contacts_table.see(cid)
+            self.show_selected()
+            self._draw_map()
+        if cid == self.arrival_id:
+            self.acknowledged_arrivals.add(cid)
+            self.arrival_id = None
+        if len(self.alert_ids) > 1:
+            self.alert_cursor = (self.alert_cursor + 1) % len(self.alert_ids)
+        self._update_alert(self.state)
+
 
     def _read(self) -> dict:
         assert self.process.stdout is not None
