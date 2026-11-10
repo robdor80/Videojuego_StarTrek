@@ -593,8 +593,21 @@ class Panel:
             "CONTACTOS REALMENTE OBSERVADOS POR CORERPG:",
             *[self._contact_description(c) for c in self.state.get("contacts", [])], "",
             "INFORMES CIENTÍFICOS REGISTRADOS EN CORERPG:",
-            *[f"Contacto {r[0]} · clase {PLANET_CLASSES.get(r[1], '?')} · confianza {r[2] / 10:.1f}% · provisional={bool(r[3])}"
-              for r in self.state.get("science", [])], "",
+            *[
+                f"{self.designations.get(r[0], str(r[0]))}: clase {PLANET_CLASSES.get(r[1], '?')} "
+                f"({'provisional' if r[3] else 'confirmada'}); confianza {r[2] / 10:.1f}%; "
+                f"T={r[4]} K; P={r[5]} mbar; agua {r[6] / 10:.1f}%; "
+                f"N2={r[7] / 10:.1f}%; O2={r[8] / 10:.1f}%; CO2={r[9] / 10:.1f}%; "
+                f"biosignales={r[10]}."
+                for r in self.state.get("science", [])
+            ], "",
+            "MEDICIONES SIN INFORME (diagnóstico técnico):",
+            *[f"Contacto={e[0]}, fase={e[1]}, codigo_Core={e[2]}"
+              for e in self.state.get("science_issues", [])], "",
+            "ESTADO ACTUAL:",
+            f"Sensores fuera de servicio: {bool(self.state.get('offline'))}",
+            f"Interferencias EM: {self.state.get('interference_em', 0)}/550",
+            f"Configuración: {self.state.get('config')}", "",
             "IMPRESIONES DEL JUGADOR:",
             self.notes.get("1.0", "end").strip(), "",
             "NOTA: prueba de CoreRPG con fixture QA Aster, no universo F13 ni UI LCARS final.",
