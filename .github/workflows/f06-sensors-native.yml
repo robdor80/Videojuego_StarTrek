@@ -56,7 +56,7 @@ jobs:
       - name: Validate QA Python and Windows launch scripts
         shell: pwsh
         run: |
-          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/test_aster_runner.py
+          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/test_aster_runner.py desarrollo/integration/f06/qa/test_aster_gui_layout.py
           foreach($script in @('run_f06_msi.ps1','INICIAR_PRUEBA_ASTER.ps1')){
             $tokens=$null;$errors=$null
             $path=Join-Path $PWD "desarrollo/integration/f06/$script"
