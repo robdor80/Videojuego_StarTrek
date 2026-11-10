@@ -138,6 +138,7 @@ class Panel:
         }
         self.section_id = "summary"
         self.contact_subset = "all"
+        self.map_positions: list[tuple[float, float, str]] = []
         self.navigation_buttons = {}
         self.section_buttons = []
 
@@ -180,11 +181,19 @@ class Panel:
         self.workspace_title.pack(anchor="w", pady=(2, 4))
         overview_frame = ttk.LabelFrame(center, text="Situación general del sistema Aster", padding=6)
         overview_frame.pack(fill="x", pady=(0, 6))
-        self.overview = tk.Text(overview_frame, height=6, wrap="word",
+        self.overview = tk.Text(overview_frame, height=4, wrap="word",
                                 font=("Segoe UI", 10), state="disabled", relief="flat")
         self.overview.pack(fill="x")
         self.section_info = ttk.Label(center, text="", justify="left", wraplength=690)
         self.section_info.pack(fill="x", pady=(2, 5))
+
+        map_box = ttk.LabelFrame(center, text="Proyección espacial 2D · posiciones observadas", padding=4)
+        map_box.pack(fill="x", pady=(0, 6))
+        self.map_canvas = tk.Canvas(map_box, height=170, background="#f8fafc",
+                                    highlightthickness=0)
+        self.map_canvas.pack(fill="x")
+        self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
+        self.map_canvas.bind("<Button-1>", self._select_map_contact)
 
         contact_frame = ttk.LabelFrame(center, text="CONTACTOS OBSERVADOS · CoreRPG", padding=7)
         contact_frame.pack(fill="both", expand=True)
@@ -215,11 +224,11 @@ class Panel:
         scrollbar = ttk.Scrollbar(table_area, orient="vertical", command=self.contacts_table.yview)
         scrollbar.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=scrollbar.set)
-        self.contacts_table.bind("<<TreeviewSelect>>", lambda _: self.show_selected())
+        self.contacts_table.bind("<<TreeviewSelect>>", lambda _: (self.show_selected(), self._draw_map()))
 
         logframe = ttk.LabelFrame(center, text="Avisos operativos · solo lo relevante", padding=6)
         logframe.pack(fill="x", pady=(7, 0))
-        self.log = tk.Text(logframe, height=6, wrap="word", state="disabled",
+        self.log = tk.Text(logframe, height=4, wrap="word", state="disabled",
                            font=("Segoe UI", 9), relief="flat")
         self.log.pack(fill="x")
 
@@ -297,6 +306,7 @@ class Panel:
         self.current_view = view
         self.section_id = "summary"
         self.contact_subset = "all"
+        self.contact_filter.set("Todos")
         for name, btn in self.navigation_buttons.items():
             btn.state(["disabled"] if name == view else ["!disabled"])
         for child in self.secondary_frame.winfo_children():
@@ -399,6 +409,76 @@ class Panel:
         name = self.designations.get(contact[0], "Contacto C-" + str(contact[0])[-6:])
         return f"{name} · {kind}: {known}. Distancia a la nave {distance}. Confianza {confidence}. Estado {status}."
 
+    def _draw_map(self) -> None:
+        """XY projection of observed positions; no hidden world coordinates."""
+        if not hasattr(self, "map_canvas"):
+            return
+        cv = self.map_canvas
+        cv.delete("all")
+        w, h = cv.winfo_width(), cv.winfo_height()
+        if w < 60 or h < 60:
+            return
+        cx, cy = w / 2, h / 2
+        cv.create_line(12, cy, w - 12, cy, fill="#cbd5e1")
+        cv.create_line(cx, 12, cx, h - 12, fill="#cbd5e1")
+        cv.create_text(16, 14, text="Y+", anchor="w", fill="#475569")
+        cv.create_text(w - 16, cy - 12, text="X+", anchor="e", fill="#475569")
+        cv.create_text(cx + 5, cy + 12, text="NAVE", anchor="nw",
+                       fill="#1e40af")
+        cv.create_polygon(cx, cy - 6, cx - 5, cy + 5, cx + 5, cy + 5,
+                          fill="#1e40af")
+        self.map_positions = []
+        if not self.state:
+            return
+        rows = [self.contact_map[k] for k in self.contacts_table.get_children()
+                if k in self.contact_map]
+        if not rows:
+            cv.create_text(w / 2, h - 18, text="Sin contactos visibles en este filtro")
+            return
+        radius = max(100, max(abs(c[8]) for c in rows), max(abs(c[9]) for c in rows))
+        scale = 0.44 * min(w, h) / radius
+        cv.create_text(w - 10, h - 9,
+                       text=f"±{radius / 1000:.2f} UA · plano XY",
+                       anchor="se", fill="#475569")
+        selected = self.contacts_table.selection()
+        selected_id = selected[0] if selected else None
+        for c in rows:
+            key = str(c[0])
+            px, py = cx + c[8] * scale, cy - c[9] * scale
+            size = 6 if c[1] in (1, 2) else 4
+            color = "#155e75" if c[2] == 1 else "#9ca3af"
+            if c[1] in (12, 13, 14):
+                color = "#64748b" if c[2] == 1 else "#cbd5e1"
+            if key == selected_id:
+                cv.create_oval(px - 10, py - 10, px + 10, py + 10,
+                              outline="#2563eb", width=2)
+                size = 7
+            if c[2] != 1:
+                cv.create_line(px - size, py - size, px + size, py + size,
+                               fill=color, width=2)
+                cv.create_line(px - size, py + size, px + size, py - size,
+                               fill=color, width=2)
+            else:
+                cv.create_oval(px - size, py - size, px + size, py + size,
+                              fill=color, outline="")
+            self.map_positions.append((px, py, key))
+        cv.create_text(10, h - 9, text=f"{len(rows)} contactos representados",
+                       anchor="sw", fill="#475569")
+
+    def _select_map_contact(self, event: tk.Event) -> None:
+        if not self.map_positions:
+            return
+        distances = [( (x - event.x) ** 2 + (y - event.y) ** 2, key)
+                     for x, y, key in self.map_positions]
+        d2, key = min(distances)
+        if d2 > 15 ** 2:
+            return
+        if self.contacts_table.exists(key):
+            self.contacts_table.selection_set(key)
+            self.contacts_table.see(key)
+            self.show_selected()
+            self._draw_map()
+
     def _refresh_contacts(self, state: dict) -> None:
         selected = self.contacts_table.selection()
         selected_id = selected[0] if selected else None
@@ -448,6 +528,7 @@ class Panel:
             self.contacts_table.selection_set(selected_id)
             self.contacts_table.see(selected_id)
         self.show_selected()
+        self._draw_map()
 
     def _no_selection_dossier(self) -> str:
         """Show operational sensor data even before a contact is selected."""
