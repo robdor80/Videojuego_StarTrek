@@ -174,6 +174,8 @@ struct Watch {
  void emit(){
   F06ComputerStatus state{};
   check(f06_computer_status(s,h.captain,&state),"computer");
+  F06EnvironmentView environment{};
+  check(f06_environment_status(s,h.captain,&environment),"sensor environment");
   std::array<F06ContactView,64> contacts{};
   U written=0,total=0;
   check(f06_contacts_page(s,h.captain,0,0,contacts.data(),contacts.size(),
@@ -192,6 +194,7 @@ struct Watch {
     <<",\"attention\":"<<state.needs_attention
     <<",\"offline\":"<<state.equipment_offline
     <<",\"automatic\":"<<state.autonomous
+    <<",\"interference_em\":"<<environment.em_permille
     <<",\"events\":[";
   for(U i=0;i<event_n;++i){
    if(i)std::cout<<',';
