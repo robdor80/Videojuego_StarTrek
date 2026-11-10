@@ -821,6 +821,13 @@ class Panel:
         }.get(self.contact_filter.get())
         needle = self.search_text.get().strip().casefold()
         for c in state["contacts"]:
+            cid = str(c[0])
+            if self.current_view == "contacts" and cid not in self.new_contact_ids:
+                continue
+            if self.current_view == "tracking" and cid not in self.followed_ids:
+                continue
+            if self.current_view == "results" and cid not in self.analyzed_ids:
+                continue
             if filter_kind is not None and c[1] not in filter_kind:
                 continue
             if self.contact_subset == "unidentified" and not (
@@ -888,27 +895,34 @@ class Panel:
         # Auto updates must never call .see() or change their viewport.
         self.show_selected()
         self._draw_map()
+        self._update_main_content()
 
     def _tree_contact_label(self, contact: list, reports: dict) -> str:
-        name = self.designations.get(
-            contact[0], "C-" + str(contact[0])[-6:])
+        name = self.designations.get(contact[0])
         kind, status = contact[1], contact[2]
-        suffix = ""
-        if kind == 13 and contact[0] in reports:
-            r = reports[contact[0]]
-            if r[1]:
-                suffix = "   ·   clase " + PLANET_CLASSES.get(r[1], "?")
-                if r[3]:
-                    suffix += " (provisional)"
+        if kind == 13:
+            classification = reports.get(contact[0])
+            label = name or "Planeta"
+            if classification and classification[1]:
+                label += " · clase " + PLANET_CLASSES.get(classification[1], "?")
+                if classification[3]:
+                    label += " (provisional)"
         elif kind in (1, 2):
-            klass = STARSHIP_CLASSES.get(contact[3]) if contact[3] else None
-            suffix = "   ·   " + (klass or "sin identificar")
-            if contact[6]:
-                suffix += f"   ·   TP {contact[6]}"
+            klass = STARSHIP_CLASSES.get(contact[3])
+            design = STARSHIP_DESIGNS.get(contact[3])
+            label = (klass or ("Nave no identificada" if kind == 1
+                               else "Lanzadera no identificada"))
+            if design:
+                label += " · " + design[1]
+        elif kind == 12:
+            label = name or "Estrella"
+        else:
+            label = name or TYPES.get(kind, "Objeto detectado").capitalize()
         if status != 1:
-            suffix += "   ·   SEÑAL PERDIDA"
-        return name + suffix
-
+            label += " · SEÑAL PERDIDA"
+        if str(contact[0]) in self.shared_report_ids and self.current_view == "contacts":
+            label += " · COMUNICADO"
+        return label
 
     def _no_selection_dossier(self) -> str:
         state = self.state
