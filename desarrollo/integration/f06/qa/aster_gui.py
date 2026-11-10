@@ -69,8 +69,8 @@ def clock(tick: int) -> str:
 class Panel:
     def __init__(self, root: tk.Tk, runner: Path) -> None:
         self.root = root
-        root.title("Enterprise-D · Prueba F06 — Sistema Aster")
-        root.geometry("1000x900")
+        root.title("USS Enterprise-D · Sensores · Sistema Aster")
+        root.geometry("1100x960")
         root.minsize(820, 700)
         self.process = subprocess.Popen(
             [str(runner)], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
@@ -84,6 +84,7 @@ class Panel:
         self.record: list[dict] = []
         self.state: dict = {}
         self.contact_map: dict[str, list] = {}
+        self.designations: dict[int, str] = {}
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.apply(self._read(), reset=True)
@@ -93,16 +94,22 @@ class Panel:
         pad = {"padx": 15, "pady": 5}
         header = ttk.Frame(self.root, padding=15)
         header.pack(fill="x")
-        ttk.Label(header, text="COMPUTADORA · SENSORES", font=("Segoe UI", 17, "bold")).pack(anchor="w")
+        ttk.Label(header, text="USS ENTERPRISE-D  /  DEPARTAMENTO DE SENSORES", font=("Segoe UI", 17, "bold")).pack(anchor="w")
         self.summary = ttk.Label(header, text="Preparando vigilancia automática…",
                                  font=("Segoe UI", 11))
         self.summary.pack(anchor="w", pady=(8, 0))
         self.important = ttk.Label(header, text="Sin avisos que requieran intervención.")
         self.important.pack(anchor="w", pady=(3, 0))
 
+        overview_frame = ttk.LabelFrame(self.root, text="Informe panorámico de sistema", padding=8)
+        overview_frame.pack(fill="x", padx=15, pady=(2, 6))
+        self.overview = tk.Text(overview_frame, height=5, wrap="word", state="disabled",
+                                font=("Segoe UI", 10), relief="flat")
+        self.overview.pack(fill="both")
+
         controls = ttk.Frame(self.root, padding=(15, 4))
         controls.pack(fill="x")
-        ttk.Label(controls, text="Prueba").pack(side="left")
+        ttk.Label(controls, text="Incidencia de guardia").pack(side="left")
         selector = ttk.Combobox(controls, textvariable=self.mode, values=MODES,
                                 state="readonly", width=23)
         selector.pack(side="left", padx=(7, 16))
@@ -156,14 +163,14 @@ class Panel:
                                    state="disabled", font=("Segoe UI", 10))
         self.detail_text.pack(fill="x")
 
-        note = ttk.LabelFrame(self.root, text="Tus impresiones (opcional)", padding=10)
+        note = ttk.LabelFrame(self.root, text="Bitácora del oficial (opcional)", padding=10)
         note.pack(fill="x", **pad)
         self.notes = tk.Text(note, height=3, font=("Segoe UI", 10), wrap="word")
         self.notes.pack(fill="x")
         footer = ttk.Frame(self.root, padding=(15, 2))
         footer.pack(fill="x")
         ttk.Button(footer, text="Exportar informe", command=self.export).pack(side="right")
-        ttk.Label(footer, text="Prueba técnica: datos reales de CoreRPG · Sin gráficos definitivos",
+        ttk.Label(footer, text="Fuente: observaciones y expedientes autorizados por CoreRPG",
                   foreground="#555555").pack(side="left")
 
     def _read(self) -> dict:
@@ -200,18 +207,34 @@ class Panel:
         distance = f"{contact[5] / 1000:.3f} UA"
         confidence = f"{contact[4] / 10:.1f}%"
         status = "activo" if contact[2] == 1 else "perdido"
-        return f"{kind}: {known}. Distancia {distance}. Confianza {confidence}. Estado {status}."
+        name = self.designations.get(contact[0], "Contacto C-" + str(contact[0])[-6:])
+        return f"{name} · {kind}: {known}. Distancia a la nave {distance}. Confianza {confidence}. Estado {status}."
 
     def _refresh_contacts(self, state: dict) -> None:
         selected = self.contacts_table.selection()
         selected_id = selected[0] if selected else None
         self.contact_map = {str(row[0]): row for row in state["contacts"]}
+        self.designations = {}
+        stars = [c for c in state["contacts"] if c[1] == 12 and c[2] == 1]
+        planets = [c for c in state["contacts"] if c[1] == 13 and c[2] == 1]
+        if stars:
+            star = stars[0]
+            planets.sort(key=lambda c:
+                         sum((c[8 + i] - star[8 + i]) ** 2 for i in range(3)))
+            roman = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII",
+                     "IX", "X", "XI", "XII")
+            for i, planet in enumerate(planets):
+                self.designations[planet[0]] = (
+                    "Aster " + (roman[i] if i < len(roman) else str(i + 1))
+                )
+            self.designations[star[0]] = "Aster (estrella central)"
+
         self.contacts_table.delete(*self.contacts_table.get_children())
         for row in state["contacts"]:
             rid = str(row[0])
             short_ref = "C-" + rid[-6:]
             self.contacts_table.insert("", "end", iid=rid, values=(
-                short_ref, TYPES.get(row[1], "desconocido"),
+                self.designations.get(row[0], short_ref), TYPES.get(row[1], "desconocido"),
                 contact_identification(row), f"{row[5] / 1000:.3f} UA",
                 f"{row[4] / 10:.1f}%", "Activo" if row[2] == 1 else "Perdido",
             ))
@@ -247,6 +270,11 @@ class Panel:
                     )
                 elif contact[1] in (12, 13):
                     details += "\nSin informe espectral/científico autorizado todavía. No se muestra ciencia privada del escenario."
+                if contact[1] == 13:
+                    details += "\nHabitabilidad: la clase M provisional NO confirma habitantes. "
+                    details += "Civilización: sin informe verificable en este motor."
+                if contact[1] == 12:
+                    details += "\nClase espectral: sin análisis estelar publicado en CoreRPG."
                 if contact[1] == 1 and contact[3] == 0:
                     details += "\nAcciones: análisis focalizado, seguimiento prioritario. La causa de la incertidumbre puede requerir nuevas mediciones."
         self.detail_text.configure(state="normal")
@@ -290,6 +318,30 @@ class Panel:
             if state["attention"] else "Sin incidencias que requieran intervención."
         ))
         self._refresh_contacts(state)
+        current = [c for c in state["contacts"] if c[2] == 1]
+        kinds = Counter(c[1] for c in current)
+        classified = Counter(r[1] for r in state["science"] if r[1] != 0 and r[3] != 0)
+        planets_covered = sum(1 for r in state["science"] if r[1] != 0)
+        fleet = [c for c in current if c[1] == 1]
+        naval = "; ".join(contact_identification(c) for c in fleet) or "sin detecciones"
+        groups = ", ".join(
+            f"{count} clase {PLANET_CLASSES.get(cls, '?')} (provisional)"
+            for cls, count in sorted(classified.items()))
+        briefing = (
+            f"SISTEMA ASTER · BARRIDO AUTOMÁTICO ACTIVO\n"
+            f"Observado: {kinds[12]} estrellas · {kinds[13]} planetas · "
+            f"{kinds[14]} satélites naturales · {kinds[15]} nebulosas · "
+            f"{kinds[16]} estaciones · {len(fleet)} naves.\n"
+            f"Ciencia planetaria: {planets_covered}/{kinds[13]} planetas con "
+            f"informes CoreRPG. {groups or 'Sin clasificación autorizada todavía.'}\n"
+            f"Contactos navales observados: {naval}.\n"
+            f"Estado: {'SENSORES NO DISPONIBLES' if state['offline'] else 'vigilancia autónoma continua'}"
+            f"{' · interferencia EM activa' if state.get('interference_em', 0) else ''}."
+        )
+        self.overview.configure(state="normal")
+        self.overview.delete("1.0", "end")
+        self.overview.insert("end", briefing)
+        self.overview.configure(state="disabled")
         if reset:
             visible = [c for c in state["contacts"] if c[2] == 1]
             counts = Counter(c[1] for c in visible)
