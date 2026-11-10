@@ -1750,6 +1750,12 @@ class Panel:
                 self.saved_lines = list(self.lines)
                 self.saved_manual_jobs = dict(self.manual_jobs)
                 self.saved_operator_scan_ids = set(self.operator_scan_ids)
+                self.saved_operator_views = {
+                    "new": set(self.new_contact_ids),
+                    "followed": set(self.followed_ids),
+                    "analysed": set(self.analyzed_ids),
+                    "tactical": set(self.tactical_qa_ids),
+                }
                 self.saved_notes = self.notes.get("1.0", "end").strip()
                 self.apply(state)
                 self.append(state["tick"], "Bitácora y estado de guardia conservados.")
