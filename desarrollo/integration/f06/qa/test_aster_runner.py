@@ -96,6 +96,22 @@ def run(runner: Path):
     assert final["contacts"]==ending["contacts"]
     finish(p)
 
+    # Regression from the live human guard: requesting a detailed scan
+    # while automatic Aster work is active must NOT require pausing time.
+    p,running=start(runner)
+    running=say(p,"STEP 15")
+    auto_running=[j for j in running["scans"] if j[5]==1]
+    assert auto_running, "fixture must exercise a busy computer"
+    manual_contact=running["science"][0][0]
+    active_ids={j[0] for j in running["scans"]}
+    admitted=say(p,f"SCAN {manual_contact}")
+    manual=[j for j in admitted["scans"]
+            if j[0] not in active_ids and j[1]==manual_contact]
+    assert len(manual)==1 and manual[0][5]==1,admitted
+    assert admitted["tick"]==running["tick"],(
+        "an officer's order must not pause or advance the guard")
+    finish(p)
+
     # An actual officer study must reserve a native Core timed job,
     # progress on the shared clock, and yield an observed result.
     p,study_initial=start(runner)
