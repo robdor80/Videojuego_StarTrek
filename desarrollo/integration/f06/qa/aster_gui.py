@@ -141,6 +141,17 @@ class Panel:
         self.saved_manual_jobs: dict[int, int] = {}
         self.operator_scan_ids: set[int] = set()
         self.saved_operator_scan_ids: set[int] = set()
+        # F06 3-zone operator UX state. None of these collections changes
+        # Core's authoritative contacts, sensor truth, clock or duty rules.
+        self.new_contact_ids: set[str] = set()
+        self.followed_ids: set[str] = set()
+        self.analyzed_ids: set[str] = set()
+        self.shared_report_ids: set[str] = set()
+        self.saved_operator_views: dict[str, set[str]] = {}
+        self.map_zoom = 1.0
+        self.map_overview = False
+        self.technical_expanded = False
+        self.motion_samples: dict[str, tuple] = {}
         self.sensor_preset = tk.StringVar(value="Estándar")
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -154,25 +165,23 @@ class Panel:
         A single current notice replaces the previous notice; history is optional.
         Native Core alerts pre-empt everything else, with direct contact access.
         """
-        self.root.geometry("1330x850")
-        self.root.minsize(1020, 640)
+        self.root.geometry("1460x825")
+        self.root.minsize(1130, 660)
         # The operating rows stay visible even when a priority alert appears.
         self.root.grid_columnconfigure(0, weight=1)
         self.root.grid_rowconfigure(2, weight=1)
         self.current_view = "status"
         self.workspace_labels = {
-            "status": "SISTEMA",
+            "status": "GENERAL",
             "contacts": "CONTACTOS",
-            "scans": "BARRIDOS",
             "tracking": "SEGUIMIENTO",
-            "results": "RESULTADOS",
-            "configuration": "EQUIPO",
+            "results": "ANÁLISIS",
         }
         self.section_id = "summary"
         self.contact_subset = "all"
         self.group_open: dict[str, bool] = {}
         self.map_positions: list[tuple[float, float, str]] = []
-        self.map_visible = False
+        self.map_visible = True
         self.alert_ids: list[str] = []
         self.alert_cursor = 0
         self.arrival_id: str | None = None
@@ -215,50 +224,81 @@ class Panel:
         panes = ttk.Panedwindow(self.root, orient="horizontal")
         panes.grid(row=2, column=0, sticky="nsew", padx=12, pady=(3, 5))
         self.workspace_panes = panes
-        left = ttk.Frame(panes, width=180, padding=(0, 5))
-        center = ttk.Frame(panes, width=710, padding=(8, 3))
-        right = ttk.Frame(panes, width=440, padding=(8, 3))
-        panes.add(left, weight=0)
-        panes.add(center, weight=3)
-        panes.add(right, weight=2)
+        left = ttk.Frame(panes, width=350, padding=(0, 5))
+        center = ttk.Frame(panes, width=690, padding=(8, 3))
+        right = ttk.Frame(panes, width=365, padding=(8, 3))
+        panes.add(left, weight=2)
+        panes.add(center, weight=5)
+        panes.add(right, weight=3)
 
-        # The operator sees six task groups, not every technical F06 contract.
+        # Four operator workflows; engineering adjustments are a separate utility.
         ttk.Label(left, text="OPERACIONES", font=("Segoe UI", 12, "bold")
                   ).pack(anchor="w", pady=(0, 13))
         for view, name in self.workspace_labels.items():
             btn = ttk.Button(left, text=name, command=lambda key=view: self.navigate(key))
             btn.pack(fill="x", pady=4)
             self.navigation_buttons[view] = btn
-        ttk.Separator(left).pack(fill="x", pady=(16, 9))
+        ttk.Separator(left).pack(fill="x", pady=(10, 6))
         self.secondary_frame = ttk.Frame(left)
         self.secondary_frame.pack(fill="x")
-        ttk.Button(left, text="HISTORIAL DE AVISOS", command=self.open_history
-                   ).pack(fill="x", pady=(20, 5))
+        tools_row = ttk.Frame(left)
+        tools_row.pack(fill="x", pady=(8, 6))
+        ttk.Button(tools_row, text="EQUIPO", command=lambda: self.navigate("configuration")
+                   ).pack(side="left", expand=True, fill="x", padx=(0, 3))
+        ttk.Button(tools_row, text="HISTORIAL", command=self.open_history
+                   ).pack(side="left", expand=True, fill="x", padx=(3, 0))
+        ttk.Label(left, text="OBJETOS", font=("Segoe UI", 11, "bold")).pack(
+            anchor="w", pady=(4, 4))
 
-        # CENTRE: the default view is a concise, expandable inventory.
+        # CENTRAL WORKSPACE: the largest column follows the active operation.
+        # Maps and sensor activity live here, not in the small navigation rail.
         titlebar = ttk.Frame(center)
         titlebar.pack(fill="x", pady=(2, 9))
         self.workspace_title = ttk.Label(titlebar, text="SISTEMA ASTER",
                                           font=("Segoe UI", 16, "bold"))
         self.workspace_title.pack(side="left")
-        self.map_button = ttk.Button(titlebar, text="Ver mapa", command=self.toggle_map)
-        self.map_button.pack(side="right")
+        self.map_button = ttk.Button(titlebar, text="Ver todos",
+                                      command=self.toggle_map)
+        self.map_button.pack(side="right", padx=(4, 0))
+        ttk.Button(titlebar, text="Zoom −", command=lambda: self.zoom_map(0.75)
+                   ).pack(side="right", padx=(4, 0))
+        ttk.Button(titlebar, text="Zoom +", command=lambda: self.zoom_map(1.33)
+                   ).pack(side="right", padx=(4, 0))
         self.section_info = ttk.Label(center, text="", font=("Segoe UI", 10))
         self.section_info.pack(fill="x", pady=(0, 9))
 
         self.map_box = ttk.Frame(center)
-        self.map_canvas = tk.Canvas(self.map_box, height=126, background="#f8fafc",
+        self.map_box.pack(fill="both", expand=True, pady=(0, 7))
+        self.map_canvas = tk.Canvas(self.map_box, height=340, background="#f8fafc",
                                     highlightthickness=0)
         self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
         self.map_canvas.bind("<Button-1>", self._select_map_contact)
+        self.map_canvas.bind("<MouseWheel>", lambda event:
+                             self.zoom_map(1.2 if event.delta > 0 else 1 / 1.2))
 
-        list_area = ttk.Frame(center)
+        main_box = ttk.Frame(center)
+        main_box.pack(fill="both", expand=True)
+        self.main_text = tk.Text(
+            main_box, height=11, background="#ffffff", relief="flat",
+            font=("Segoe UI", 11), padx=15, pady=12, wrap="word",
+            state="disabled", spacing2=3, spacing3=3)
+        self.main_text.tag_configure("heading", font=("Segoe UI", 15, "bold"))
+        self.main_text.tag_configure("priority", foreground="#9a3412",
+                                     font=("Segoe UI", 11, "bold"))
+        self.main_text.pack(side="left", fill="both", expand=True)
+        main_scroll = ttk.Scrollbar(main_box, orient="vertical",
+                                    command=self.main_text.yview)
+        main_scroll.pack(side="right", fill="y")
+        self.main_text.configure(yscrollcommand=main_scroll.set)
+
+        # Contact list belongs in OPERACIONES, never in the central workspace.
+        list_area = ttk.Frame(left)
         list_area.pack(fill="both", expand=True)
         self.contacts_table = ttk.Treeview(
             list_area, show="tree", height=7, selectmode="browse")
         self.contacts_table.heading("#0", text="Sistema estelar observado")
-        self.contacts_table.column("#0", minwidth=290, width=550, stretch=True)
+        self.contacts_table.column("#0", minwidth=225, width=320, stretch=True)
         self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
         self.contacts_table.tag_configure("contact", font=("Segoe UI", 11))
         self.contacts_table.tag_configure("lost", foreground="#7d8289")
@@ -269,7 +309,8 @@ class Panel:
         tree_scroll.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=tree_scroll.set)
         self.contacts_table.bind(
-            "<<TreeviewSelect>>", lambda _: (self.show_selected(), self._draw_map()))
+            "<<TreeviewSelect>>", lambda _: (
+                self.show_selected(), self._draw_map(), self._update_main_content()))
         self.contacts_table.bind("<<TreeviewOpen>>", self._remember_group)
         self.contacts_table.bind("<<TreeviewClose>>", self._remember_group)
 
@@ -310,8 +351,11 @@ class Panel:
             self.scan_progress, maximum=100, value=0)
         self.scan_progress_value.pack(fill="x")
         self.technical_button = ttk.Button(
-            right, text="Consultar datos técnicos del contacto",
+            right, text="Ver ficha técnica",
             command=self.open_contact_details)
+        self.tactical_report_button = ttk.Button(
+            right, text="Compartir análisis con Táctica (QA)",
+            command=self.send_analysis_to_tactical)
 
         self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
         ttk.Combobox(
@@ -355,7 +399,7 @@ class Panel:
         testrow = ttk.Frame(self.test_area)
         testrow.pack(fill="x")
         ttk.Label(testrow, text="Velocidad").pack(side="left")
-        ttk.Combobox(testrow, textvariable=self.speed, values=("×15", "×30", "×60"),
+        ttk.Combobox(testrow, textvariable=self.speed, values=("×1", "×15", "×30", "×60"),
                      state="readonly", width=5).pack(side="left", padx=(4, 15))
         ttk.Label(testrow, text="Incidencia").pack(side="left")
         scenario = ttk.Combobox(testrow, textvariable=self.mode, values=MODES,
