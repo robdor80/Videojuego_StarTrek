@@ -427,13 +427,15 @@ class Panel:
             self.test_area.grid(row=5, column=0, sticky="ew", padx=12, pady=(0, 7))
 
     def toggle_map(self) -> None:
-        self.map_visible = not self.map_visible
-        self.map_button.configure(text="Ocultar mapa" if self.map_visible else "Ver mapa")
-        if self.map_visible:
-            self.map_box.pack(fill="x", after=self.section_info, pady=(0, 8))
-            self._draw_map()
-        else:
-            self.map_box.pack_forget()
+        """Switch between the operator's focused contact and system overview."""
+        self.map_overview = not self.map_overview
+        self.map_button.configure(
+            text="Enfocar contacto" if self.map_overview else "Ver todos")
+        self._draw_map()
+
+    def zoom_map(self, factor: float) -> None:
+        self.map_zoom = max(0.35, min(50.0, self.map_zoom * factor))
+        self._draw_map()
 
     def open_history(self) -> None:
         window = tk.Toplevel(self.root)
@@ -459,39 +461,43 @@ class Panel:
             self.group_open[key] = not bool(self.contacts_table.item(key, "open"))
 
     def navigate(self, view: str) -> None:
-        """Switch only the operator's view; never stop autonomous sensors."""
-        if view not in self.workspace_labels:
+        """Choose the officer's job, leaving automatic watch active."""
+        if view not in self.workspace_labels and view != "configuration":
             return
         self.current_view = view
-        self.contact_subset = "all"
         self.section_id = "summary"
+        self.contact_subset = "all"
         self.contact_filter.set("Todos")
         for key, button in self.navigation_buttons.items():
             button.state(["disabled"] if key == view else ["!disabled"])
         for child in self.secondary_frame.winfo_children():
             child.destroy()
-        options = {
+        filters = {
             "status": [("Todo el sistema", "all")],
-            "contacts": [("Todos", "all"), ("Naves", "ships"),
-                         ("Planetas", "planets"), ("Sin identificar", "unidentified"),
+            "contacts": [("Todos los nuevos", "all"), ("Naves", "ships"),
                          ("Perdidos", "lost")],
-            "scans": [("Todos", "all"), ("Naves", "ships"), ("Planetas", "planets")],
-            "tracking": [("Todos", "all"), ("Naves", "ships"), ("Perdidos", "lost")],
-            "results": [("Todos", "all"), ("Planetas", "planets")],
-            "configuration": [("Todos", "all")],
+            "tracking": [("En seguimiento", "all")],
+            "results": [("Analizados", "all")],
+            "configuration": [("Equipo de sensores", "all")],
         }
-        for label, section in options[view]:
-            b = ttk.Button(self.secondary_frame, text=label,
-                           command=lambda k=section: self.select_section(k))
-            b.pack(fill="x", pady=3)
+        for label, section in filters[view]:
+            ttk.Button(self.secondary_frame, text=label,
+                       command=lambda k=section: self.select_section(k)).pack(
+                           fill="x", pady=2)
         self.workspace_title.configure(text={
-            "status": "SISTEMA ASTER", "contacts": "CONTACTOS",
-            "scans": "BARRIDOS", "tracking": "SEGUIMIENTO",
-            "results": "RESULTADOS", "configuration": "EQUIPO",
+            "status": "GENERAL · SISTEMA ASTER",
+            "contacts": "CONTACTOS NUEVOS",
+            "tracking": "SEGUIMIENTO PRIORITARIO",
+            "results": "ANÁLISIS SOLICITADOS",
+            "configuration": "EQUIPO DE SENSORES",
         }[view])
+        self.map_overview = view in ("status", "configuration")
+        self.map_button.configure(
+            text="Enfocar contacto" if self.map_overview else "Ver todos")
         if self.state:
             self._refresh_contacts(self.state)
         self._update_view_content()
+        self._update_main_content()
         self.show_selected()
 
     def select_section(self, section: str) -> None:
@@ -523,6 +529,8 @@ class Panel:
             self.engineering.pack_forget()
         if hasattr(self, "detail_text") and not self.contacts_table.selection():
             self.show_selected()
+        if hasattr(self, "main_text"):
+            self._update_main_content()
 
     def _update_alert(self, state: dict) -> None:
         """Large, persistent, direct-entry warning for observed sensor threats."""
