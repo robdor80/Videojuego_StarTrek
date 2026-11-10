@@ -14,6 +14,7 @@ def start(runner: Path):
     assert initial["ok"] and initial["tick"]==0,initial
     assert initial["automatic"]==1 and initial["active"]>=15,initial
     assert initial["running"] in (1,2),initial
+    assert len(initial["attention_contacts"]) == initial["attention"], initial
     assert initial["interference_em"]==0,initial
     assert initial["config"][:3] == [1000, 1000, 0], initial
     assert initial["diagnostic"][0] == 1, initial
@@ -70,6 +71,10 @@ def run(runner: Path):
     assert repeated["running"]==mid["running"]
     ending=say(p,"STEP 28800")
     assert ending["tick"]==28800 and ending["active"]>=15,ending
+    assert len(ending["attention_contacts"]) == ending["attention"], ending
+    assert all(any(c[0] == cid and c[2] == 1 and c[3] == 0
+                   for c in ending["contacts"])
+               for cid in ending["attention_contacts"]), ending
     finish(p)
 
     # Precisely the same input cadence produces the same complete Core result.
@@ -108,6 +113,18 @@ def run(runner: Path):
         if current[5]!=1:
             break
     assert current[5]==2 and current[4]!=0,after
+    finish(p)
+
+    # The native attention list identifies the exact observed contact that
+    # the automatic computer unsuccessfully tried to classify.
+    p,_=start(runner)
+    incident=say(p,"STEP 2400")
+    assert incident["attention"] >= 1, incident
+    assert len(incident["attention_contacts"]) == incident["attention"], incident
+    for cid in incident["attention_contacts"]:
+        match = next((c for c in incident["contacts"] if c[0] == cid), None)
+        assert match is not None and match[2] == 1 and match[3] == 0, (cid, match)
+        assert match[1] in (0, 1, 8, 11), match
     finish(p)
 
     p,_=start(runner)
