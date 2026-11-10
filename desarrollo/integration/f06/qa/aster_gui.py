@@ -79,6 +79,9 @@ NAVAL_CAPABILITIES = {
     6: ("Explorador de largo alcance de la Flota Estelar",
         "Baterías fáser y torpedos de fotones",
         "Escudos deflectores"),
+    8: ("Ave de guerra romulana",
+        "Baterías de disruptores y lanzadores de torpedos de fotones",
+        "Escudos deflectores y dispositivo de camuflaje"),
     16: ("Crucero de batalla klingon",
          "Disruptores y torpedos de fotones",
          "Escudos deflectores; capacidad de camuflaje"),
@@ -918,11 +921,8 @@ class Panel:
                         f"Armamento habitual: {profile[1]}\n"
                         f"Defensas habituales: {profile[2]}\n"
                     )
-                details += (
-                    "\nTÁCTICA\n"
-                    "Seguimiento compartido con el canal de sensores.\n"
-                    "Esta ficha no confirma intenciones hostiles.\n"
-                )
+                # The sensor feed is already shared with Tactical; a
+                # permanent label saying so serves no operator purpose.
             else:
                 details = f"{heading}\n\n"
                 details += f"Distancia: {c[5] / 1000:.3f} UA\n"
@@ -1002,7 +1002,7 @@ class Panel:
             self.detail_text.delete("1.0", "end")
             self.detail_text.insert("1.0", details)
             self.detail_text.tag_add("heading", "1.0", "1.end")
-            for section in ("CAPACIDADES CONOCIDAS DE LA CLASE", "TÁCTICA",
+            for section in ("CAPACIDADES CONOCIDAS DE LA CLASE",
                             "DATOS PLANETARIOS",
                             "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
                             "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL",
@@ -1043,6 +1043,12 @@ class Panel:
         percent = min(100, max(0, round(
             100 * (self.state["tick"] - job[2]) / duration)))
         if job[5] == 2:
+            # A finished scan must not occupy the main operator display
+            # indefinitely. Keep the result archived, but hide the progress
+            # shortly after completion.
+            if self.state["tick"] - job[3] >= 5:
+                self.scan_progress.pack_forget()
+                return
             percent = 100
             label = "Análisis detallado · 100 % · lectura conservada"
         elif job[5] == 1:
