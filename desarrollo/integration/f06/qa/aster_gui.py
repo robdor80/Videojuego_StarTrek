@@ -97,112 +97,266 @@ class Panel:
         self.root.after(500, self.tick)
 
     def _render(self) -> None:
-        pad = {"padx": 15, "pady": 5}
-        header = ttk.Frame(self.root, padding=15)
+        """One functional Sensors console, three permanent logical areas.
+
+        Left: canonical primary/secondary navigation (F07 sensor menu contract).
+        Centre: sensor situation, real contacts and important notices.
+        Right: selected contact dossier and context-dependent Core actions.
+        No demo decorations, no fabricated measurements or LCARS graphics.
+        """
+        self.root.geometry("1380x860")
+        self.root.minsize(1050, 680)
+        self.current_view = "status"
+        self.workspace_labels = {
+            "status": "ESTADO DE SENSORES",
+            "scans": "BARRIDOS",
+            "search_localize": "BÚSQUEDA / LOCALIZACIÓN",
+            "contacts": "CONTACTOS",
+            "tracking": "SEGUIMIENTO",
+            "sensor_readout": "LECTURA SENSORIAL",
+            "interference": "INTERFERENCIAS / COMPENSACIÓN",
+            "configuration": "CONFIGURACIÓN",
+            "results": "RESULTADOS",
+            "diagnostics": "DIAGNÓSTICO",
+        }
+        self.view_submenus = {
+            "status": [("Resumen", "summary"), ("Actividad", "activity")],
+            "scans": [("Todos los contactos", "all"), ("Planetas", "planets"),
+                      ("Naves", "ships")],
+            "search_localize": [("Todos", "all"), ("Naves", "ships"),
+                                ("Planetas", "planets"), ("Satélites", "moons"),
+                                ("Artificiales", "artificial")],
+            "contacts": [("Todos", "all"), ("Sin identificar", "unidentified"),
+                         ("Identificados", "identified"), ("Perdidos", "lost")],
+            "tracking": [("Contactos activos", "active"), ("Contactos perdidos", "lost")],
+            "sensor_readout": [("Todos", "all"), ("Planetas", "planets"),
+                               ("Estrellas", "stars")],
+            "interference": [("Entorno", "environment"), ("Sensores", "hardware")],
+            "configuration": [("Perfiles", "profiles"), ("Diagnóstico", "hardware")],
+            "results": [("Estudios actuales", "studies"), ("Ciencia planetaria", "planets")],
+            "diagnostics": [("Estado del equipo", "hardware"), ("Incidencias", "activity")],
+        }
+        self.section_id = "summary"
+        self.contact_subset = "all"
+        self.navigation_buttons = {}
+        self.section_buttons = []
+
+        header = ttk.Frame(self.root, padding=(12, 9, 12, 7))
         header.pack(fill="x")
-        ttk.Label(header, text="USS ENTERPRISE-D  /  DEPARTAMENTO DE SENSORES", font=("Segoe UI", 17, "bold")).pack(anchor="w")
-        self.summary = ttk.Label(header, text="Preparando vigilancia automática…",
-                                 font=("Segoe UI", 11))
-        self.summary.pack(anchor="w", pady=(8, 0))
-        self.important = ttk.Label(header, text="Sin avisos que requieran intervención.")
-        self.important.pack(anchor="w", pady=(3, 0))
+        ttk.Label(header, text="USS ENTERPRISE-D · SENSORES",
+                  font=("Segoe UI", 16, "bold")).pack(side="left")
+        self.summary = ttk.Label(header, text="Conectando con CoreRPG...")
+        self.summary.pack(side="left", padx=(22, 8))
+        self.important = ttk.Label(header, text="")
+        self.important.pack(side="right")
 
-        overview_frame = ttk.LabelFrame(self.root, text="Informe panorámico de sistema", padding=8)
-        overview_frame.pack(fill="x", padx=15, pady=(2, 6))
-        self.overview = tk.Text(overview_frame, height=5, wrap="word", state="disabled",
-                                font=("Segoe UI", 10), relief="flat")
-        self.overview.pack(fill="both")
+        columns = ttk.Panedwindow(self.root, orient="horizontal")
+        columns.pack(fill="both", expand=True, padx=9, pady=(2, 5))
+        left = ttk.Frame(columns, width=200, padding=5)
+        center = ttk.Frame(columns, width=700, padding=(6, 4))
+        right = ttk.Frame(columns, width=400, padding=(6, 4))
+        columns.add(left, weight=0)
+        columns.add(center, weight=3)
+        columns.add(right, weight=2)
 
-        controls = ttk.Frame(self.root, padding=(15, 4))
-        controls.pack(fill="x")
-        ttk.Label(controls, text="Incidencia de guardia").pack(side="left")
-        selector = ttk.Combobox(controls, textvariable=self.mode, values=MODES,
-                                state="readonly", width=23)
-        selector.pack(side="left", padx=(7, 16))
-        selector.bind("<<ComboboxSelected>>", lambda _: self.restart())
-        ttk.Label(controls, text="Velocidad").pack(side="left")
-        ttk.Combobox(controls, textvariable=self.speed, values=("×15", "×30", "×60"),
-                     state="readonly", width=5).pack(side="left", padx=6)
+        # LEFT — exactly the ten approved first-level Sensors menu entries.
+        ttk.Label(left, text="MENÚ PRINCIPAL",
+                  font=("Segoe UI", 11, "bold")).pack(anchor="w", pady=(3, 7))
+        for view, title in self.workspace_labels.items():
+            b = ttk.Button(left, text=title, command=lambda key=view: self.navigate(key))
+            b.pack(fill="x", pady=2)
+            self.navigation_buttons[view] = b
+        ttk.Separator(left, orient="horizontal").pack(fill="x", pady=10)
+        ttk.Label(left, text="SUBMENÚ / SELECCIÓN",
+                  font=("Segoe UI", 9, "bold")).pack(anchor="w")
+        self.secondary_frame = ttk.Frame(left)
+        self.secondary_frame.pack(fill="x", pady=6)
+        ttk.Label(left, text="La vigilancia continúa\nal cambiar de pantalla.",
+                  justify="left").pack(anchor="w", pady=(16, 3))
 
-        engineering = ttk.Frame(self.root, padding=(15, 2))
-        engineering.pack(fill="x")
-        ttk.Label(engineering, text="Configuración de sensores").pack(side="left")
-        ttk.Combobox(engineering, textvariable=self.sensor_preset,
-                     values=("Estándar", "Alta resolución", "Antinterferencias", "Máxima detección"),
-                     state="readonly", width=19).pack(side="left", padx=8)
-        ttk.Button(engineering, text="Aplicar perfil", command=self.apply_preset).pack(side="left")
-        ttk.Button(engineering, text="Autodiagnóstico", command=self.diagnostic).pack(side="left", padx=9)
+        # CENTRE — system-wide situational picture.
+        self.workspace_title = ttk.Label(center, text="ESTADO DE SENSORES",
+                                          font=("Segoe UI", 13, "bold"))
+        self.workspace_title.pack(anchor="w", pady=(2, 4))
+        overview_frame = ttk.LabelFrame(center, text="Situación general del sistema Aster", padding=6)
+        overview_frame.pack(fill="x", pady=(0, 6))
+        self.overview = tk.Text(overview_frame, height=6, wrap="word",
+                                font=("Segoe UI", 10), state="disabled", relief="flat")
+        self.overview.pack(fill="x")
+        self.section_info = ttk.Label(center, text="", justify="left", wraplength=690)
+        self.section_info.pack(fill="x", pady=(2, 5))
 
-        clockframe = ttk.Frame(self.root, padding=(15, 2))
-        clockframe.pack(fill="x")
-        self.timelabel = ttk.Label(clockframe, text="Guardia: 00:00 / 08:00", font=("Segoe UI", 11))
-        self.timelabel.pack(anchor="w")
-        self.progress = ttk.Progressbar(clockframe, maximum=28800, value=0)
-        self.progress.pack(fill="x", pady=6)
-
-        buttons = ttk.Frame(self.root, padding=(15, 4))
-        buttons.pack(fill="x")
-        self.button_play = ttk.Button(buttons, text="Iniciar", command=self.toggle)
-        self.button_play.pack(side="left")
-        ttk.Button(buttons, text="Reiniciar", command=self.restart).pack(side="left", padx=7)
-        ttk.Button(buttons, text="Guardar punto", command=lambda: self.checkpoint("SAVE")).pack(side="left")
-        ttk.Button(buttons, text="Recuperar punto", command=lambda: self.checkpoint("LOAD")).pack(side="left", padx=7)
-
-        logframe = ttk.LabelFrame(self.root, text="Lo importante que comunica la computadora", padding=10)
-        logframe.pack(fill="x", **pad)
-        self.log = tk.Text(logframe, height=6, wrap="word", state="disabled",
-                           font=("Segoe UI", 10), relief="flat")
-        self.log.pack(fill="both", expand=True)
-
-
-        contact_frame = ttk.LabelFrame(self.root, text="Contactos reales observados por CoreRPG", padding=8)
-        contact_frame.pack(fill="both", expand=True, **pad)
-        toolbar = ttk.Frame(contact_frame)
-        toolbar.pack(fill="x", pady=(0, 5))
-        ttk.Label(toolbar, text="Mostrar").pack(side="left")
+        contact_frame = ttk.LabelFrame(center, text="CONTACTOS OBSERVADOS · CoreRPG", padding=7)
+        contact_frame.pack(fill="both", expand=True)
+        filter_row = ttk.Frame(contact_frame)
+        filter_row.pack(fill="x", pady=(0, 5))
+        ttk.Label(filter_row, text="Filtro").pack(side="left")
         self.contact_filter = tk.StringVar(value="Todos")
         choices = ("Todos", "Planetas", "Naves", "Estrellas", "Satélites", "Artificiales")
-        selector = ttk.Combobox(toolbar, textvariable=self.contact_filter,
-                                values=choices, state="readonly", width=18)
-        selector.pack(side="left", padx=8)
+        selector = ttk.Combobox(filter_row, textvariable=self.contact_filter,
+                                 values=choices, state="readonly", width=15)
+        selector.pack(side="left", padx=7)
         selector.bind("<<ComboboxSelected>>", lambda _: self._refresh_contacts(self.state))
-        ttk.Label(toolbar, text="Selecciona una fila para consultar su expediente").pack(side="left", padx=12)
-        columns = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
+        ttk.Label(filter_row, text="Selecciona una fila para abrir su expediente →"
+                  ).pack(side="left", padx=(10, 0))
+        colnames = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
         table_area = ttk.Frame(contact_frame)
         table_area.pack(fill="both", expand=True)
-        self.contacts_table = ttk.Treeview(table_area, columns=columns,
-                                           show="headings", height=8)
+        self.contacts_table = ttk.Treeview(table_area, columns=colnames,
+                                            show="headings", height=12)
         headings = {"ref": "Contacto", "tipo": "Tipo", "identificacion": "Identificación",
                     "distancia": "Distancia", "confianza": "Confianza", "estado": "Estado"}
-        widths = {"ref": 88, "tipo": 112, "identificacion": 300,
-                  "distancia": 102, "confianza": 95, "estado": 90}
-        for key in columns:
-            self.contacts_table.heading(key, text=headings[key])
-            self.contacts_table.column(key, width=widths[key], anchor="w")
+        widths = {"ref": 92, "tipo": 90, "identificacion": 220,
+                  "distancia": 99, "confianza": 80, "estado": 78}
+        for name in colnames:
+            self.contacts_table.heading(name, text=headings[name])
+            self.contacts_table.column(name, width=widths[name], minwidth=60, anchor="w")
         self.contacts_table.pack(side="left", fill="both", expand=True)
         scrollbar = ttk.Scrollbar(table_area, orient="vertical", command=self.contacts_table.yview)
         scrollbar.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=scrollbar.set)
         self.contacts_table.bind("<<TreeviewSelect>>", lambda _: self.show_selected())
-        actions = ttk.Frame(contact_frame)
-        actions.pack(fill="x", pady=(7, 3))
-        ttk.Button(actions, text="Análisis focalizado", command=lambda: self.contact_action("FOCUS")).pack(side="left")
-        ttk.Button(actions, text="Estudio detallado (2 min)", command=lambda: self.contact_action("SCAN")).pack(side="left", padx=7)
-        ttk.Button(actions, text="Seguimiento prioritario",
-                   command=lambda: self.contact_action("PRIORITY")).pack(side="left", padx=7)
-        self.detail_text = tk.Text(contact_frame, height=5, wrap="word",
-                                   state="disabled", font=("Segoe UI", 10))
-        self.detail_text.pack(fill="x")
 
-        note = ttk.LabelFrame(self.root, text="Bitácora del oficial (opcional)", padding=10)
-        note.pack(fill="x", **pad)
-        self.notes = tk.Text(note, height=2, font=("Segoe UI", 10), wrap="word")
-        self.notes.pack(fill="x")
-        footer = ttk.Frame(self.root, padding=(15, 2))
+        logframe = ttk.LabelFrame(center, text="Avisos operativos · solo lo relevante", padding=6)
+        logframe.pack(fill="x", pady=(7, 0))
+        self.log = tk.Text(logframe, height=6, wrap="word", state="disabled",
+                           font=("Segoe UI", 9), relief="flat")
+        self.log.pack(fill="x")
+
+        # RIGHT — selected-object dossier; never replaced by generic backend logs.
+        ttk.Label(right, text="EXPEDIENTE / ANÁLISIS ESPECIALIZADO",
+                  font=("Segoe UI", 11, "bold")).pack(anchor="w", pady=(2, 6))
+        detail_box = ttk.LabelFrame(right, text="Información del contacto seleccionado", padding=8)
+        detail_box.pack(fill="both", expand=True)
+        self.detail_text = tk.Text(detail_box, height=21, wrap="word", state="disabled",
+                                   font=("Segoe UI", 10), relief="flat")
+        self.detail_text.pack(side="left", fill="both", expand=True)
+        detail_scroll = ttk.Scrollbar(detail_box, orient="vertical", command=self.detail_text.yview)
+        detail_scroll.pack(side="right", fill="y")
+        self.detail_text.configure(yscrollcommand=detail_scroll.set)
+
+        actions = ttk.LabelFrame(right, text="Acciones sobre el contacto", padding=7)
+        actions.pack(fill="x", pady=(6, 4))
+        ttk.Button(actions, text="ENFOCAR / IDENTIFICAR",
+                   command=lambda: self.contact_action("FOCUS")).pack(fill="x", pady=2)
+        ttk.Button(actions, text="ESTUDIO DETALLADO (2 MIN)",
+                   command=lambda: self.contact_action("SCAN")).pack(fill="x", pady=2)
+        ttk.Button(actions, text="SEGUIMIENTO PRIORITARIO",
+                   command=lambda: self.contact_action("PRIORITY")).pack(fill="x", pady=2)
+
+        engineering = ttk.LabelFrame(right, text="Equipo de sensores", padding=7)
+        engineering.pack(fill="x", pady=(4, 5))
+        self.sensor_preset = tk.StringVar(value="Estándar")
+        ttk.Combobox(engineering, textvariable=self.sensor_preset,
+                     values=("Estándar", "Alta resolución", "Antinterferencias", "Máxima detección"),
+                     state="readonly").pack(fill="x", pady=2)
+        buttonrow = ttk.Frame(engineering)
+        buttonrow.pack(fill="x", pady=3)
+        ttk.Button(buttonrow, text="Aplicar perfil", command=self.apply_preset
+                   ).pack(side="left")
+        ttk.Button(buttonrow, text="Autodiagnóstico", command=self.diagnostic
+                   ).pack(side="left", padx=8)
+
+        # FOOTER — clock and scenario controls belong to the QA envelope,
+        # not to Sensors: actual time management remains entirely in CoreRPG.
+        footer = ttk.Frame(self.root, padding=(12, 6, 12, 9))
         footer.pack(fill="x")
-        ttk.Button(footer, text="Exportar informe", command=self.export).pack(side="right")
-        ttk.Label(footer, text="Fuente: observaciones y expedientes autorizados por CoreRPG",
-                  foreground="#555555").pack(side="left")
+        ttk.Label(footer, text="GUARDIA").pack(side="left")
+        self.timelabel = ttk.Label(footer, text="00:00:00 / 08:00:00", width=26)
+        self.timelabel.pack(side="left", padx=(5, 6))
+        self.progress = ttk.Progressbar(footer, maximum=28800, value=0, length=135)
+        self.progress.pack(side="left", padx=(0, 12))
+        self.button_play = ttk.Button(footer, text="Iniciar", command=self.toggle)
+        self.button_play.pack(side="left", padx=2)
+        ttk.Button(footer, text="Reiniciar", command=self.restart).pack(side="left", padx=2)
+        ttk.Button(footer, text="Guardar", command=lambda: self.checkpoint("SAVE")
+                   ).pack(side="left", padx=2)
+        ttk.Button(footer, text="Recuperar", command=lambda: self.checkpoint("LOAD")
+                   ).pack(side="left", padx=2)
+        ttk.Label(footer, text="Velocidad").pack(side="left", padx=(14, 2))
+        ttk.Combobox(footer, textvariable=self.speed, values=("×15", "×30", "×60"),
+                     state="readonly", width=5).pack(side="left")
+        ttk.Label(footer, text="Incidencia").pack(side="left", padx=(14, 2))
+        scenario = ttk.Combobox(footer, textvariable=self.mode, values=MODES,
+                                state="readonly", width=20)
+        scenario.pack(side="left")
+        scenario.bind("<<ComboboxSelected>>", lambda _: self.restart())
+        ttk.Button(footer, text="Exportar informe", command=self.export
+                   ).pack(side="right")
+
+        note = ttk.LabelFrame(self.root, text="Bitácora del oficial (opcional)", padding=4)
+        note.pack(fill="x", padx=12, pady=(0, 5))
+        self.notes = tk.Text(note, height=2, font=("Segoe UI", 9), wrap="word")
+        self.notes.pack(fill="x")
+        self.navigate("status")
+
+    def navigate(self, view: str) -> None:
+        """Navigation never issues orders and never pauses the sensor watch."""
+        if view not in self.workspace_labels:
+            return
+        self.current_view = view
+        self.section_id = "summary"
+        for name, btn in self.navigation_buttons.items():
+            btn.state(["disabled"] if name == view else ["!disabled"])
+        for child in self.secondary_frame.winfo_children():
+            child.destroy()
+        self.section_buttons = []
+        for label, section in self.view_submenus[view]:
+            button = ttk.Button(self.secondary_frame, text=label,
+                                command=lambda key=section: self.select_section(key))
+            button.pack(fill="x", pady=2)
+            self.section_buttons.append(button)
+        self.workspace_title.configure(text=self.workspace_labels[view])
+        presets = {"scans": "Todos", "search_localize": "Todos",
+                   "contacts": "Todos", "sensor_readout": "Todos",
+                   "results": "Todos"}
+        if view in presets:
+            self.contact_filter.set(presets[view])
+        self._update_view_content()
+        if self.state:
+            self._refresh_contacts(self.state)
+
+    def select_section(self, section: str) -> None:
+        self.section_id = section
+        filters = {"all": "Todos", "planets": "Planetas", "ships": "Naves",
+                   "moons": "Satélites", "artificial": "Artificiales",
+                   "stars": "Estrellas"}
+        if section in filters:
+            self.contact_filter.set(filters[section])
+        self._update_view_content()
+        if self.state:
+            self._refresh_contacts(self.state)
+
+    def _update_view_content(self) -> None:
+        if not hasattr(self, "section_info"):
+            return
+        state = self.state
+        details = {
+            "status": "Estado del equipo, alcance, vigilancia y avisos de la sesión CoreRPG.",
+            "scans": "Selecciona un contacto. Enfocar produce una observación; el estudio detallado reserva dos minutos reales de simulación.",
+            "search_localize": "La lista muestra únicamente contactos observados. Los filtros no revelan objetos ocultos.",
+            "contacts": "Consulta identidad, confianza, distancia y antecedentes del elemento seleccionado.",
+            "tracking": "El seguimiento continúa en segundo plano; marca un contacto para darle prioridad.",
+            "sensor_readout": "Abre un expediente para ver todas las lecturas autorizadas, incluidas las mediciones científicas.",
+            "interference": "Las interferencias pueden reducir las detecciones. Consulta el estado y cambia la compensación del equipo.",
+            "configuration": "Los perfiles cambian parámetros auténticos de la matriz de sensores.",
+            "results": "Los estudios terminados y los informes científicos registrados están asociados a sus contactos.",
+            "diagnostics": "El autodiagnóstico utiliza la matriz y la configuración reales de CoreRPG.",
+        }
+        if state:
+            if self.current_view == "results":
+                jobs = state.get("scans", [])
+                active = sum(j[5] == 1 for j in jobs)
+                done = sum(j[5] == 2 for j in jobs)
+                details["results"] += f" Estudios: {active} activos, {done} terminados. Informes científicos: {len(state.get('science', []))}."
+            elif self.current_view == "diagnostics":
+                d = state.get("diagnostic", [0, 0, 0, 0])
+                details["diagnostics"] += f" Capacidad {d[1] / 10:.0f}%, alimentación {d[2] / 10:.0f}%, integridad {d[3] / 10:.0f}%."
+            elif self.current_view == "interference":
+                details["interference"] += f" Índice EM observado: {state.get('interference_em', 0)}/550."
+            elif self.current_view == "configuration":
+                details["configuration"] += " Perfil actual (Core): " + str(state.get("config", [0, 0, 0, 0])[3]) + "."
+        self.section_info.configure(text=details[self.current_view])
 
     def _read(self) -> dict:
         assert self.process.stdout is not None
