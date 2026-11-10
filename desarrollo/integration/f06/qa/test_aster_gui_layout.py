@@ -69,12 +69,23 @@ def main() -> None:
         assert panel.contacts_table.selection() == (subject,), "alert has no direct action"
         assert subject in panel.contact_map
         dossier=panel.detail_text.get("1.0", "end")
-        assert "IDENTIFICACIÓN NAVAL" in dossier
-        assert "Operador o afiliación actual" in dossier
-        assert "Origen del diseño" in dossier
-        assert "Vor'cha" in dossier
+        assert "Crucero de batalla klingon" in dossier, dossier
+        assert "CAPACIDADES CONOCIDAS DE LA CLASE" in dossier, dossier
+        assert "Disruptores y torpedos de fotones" in dossier, dossier
+        assert "Transpondedor observado" not in dossier, dossier
+        assert "Fiabilidad de la detección" not in dossier, dossier
+        assert "Referencia:" not in dossier, dossier
+        assert "ESTUDIOS" not in dossier, dossier
         panel.contact_action("FOCUS")
         assert "Identificación rápida" in panel.notice_label.cget("text")
+        panel.apply(panel.command("STEP 20"))
+        root.update_idletasks()
+        assert "INTERCEPTACIÓN" in panel.alert_title.cget("text"), (
+            "course converging on our ship must be prominent")
+        intercept_dossier=panel.detail_text.get("1.0", "end")
+        assert "Rumbo de desplazamiento" in intercept_dossier
+        assert "Se acerca" in intercept_dossier
+        assert "TRAYECTORIA DE INTERCEPTACIÓN" in intercept_dossier
         assert panel.footer.winfo_viewable(), "quick scan broke layout"
 
         # BUG F06-UX-03: a live 500-ms refresh must not jump the contact
