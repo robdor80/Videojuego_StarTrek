@@ -16,8 +16,12 @@ def start(runner: Path):
     assert initial["running"] in (1,2),initial
     assert initial["interference_em"]==0,initial
     assert all(len(c)==12 for c in initial["contacts"]),initial
-    assert initial["science"],"Aster should publish only Core-verified instrument reports"
+    assert len(initial["science"]) == 6, (
+        "The six observed Aster planets must have published Core reports or a recorded failure",
+        initial["science"],
+    )
     assert any(r[1]==1 and r[3]==1 for r in initial["science"]), "provisional M class must come from Core"
+    assert any(r[1]==3 for r in initial["science"]), "Core must report a measured gas giant as class J"
     assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
     assert all(c[3]==0 for c in initial["contacts"] if c[1]==13),"planet class cannot occupy ship class field"
     return p,initial
