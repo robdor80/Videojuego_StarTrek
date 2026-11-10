@@ -113,6 +113,8 @@ def run(runner: Path):
     manual=[j for j in admitted["scans"]
             if j[0] not in active_ids and j[1]==manual_contact]
     assert len(manual)==1 and manual[0][5]==1,admitted
+    assert manual[0][3]-manual[0][2] == 20, (
+        "detailed sensor analysis must finish within 20 Core seconds")
     assert admitted["tick"]==running["tick"],(
         "an officer's order must not pause or advance the guard")
     finish(p)
