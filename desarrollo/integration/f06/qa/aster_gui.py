@@ -254,6 +254,8 @@ class Panel:
             background="#ffffff", font=("Segoe UI", 12),
             wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
         self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
+        self.detail_text.tag_configure(
+            "section", font=("Segoe UI", 11, "bold"), foreground="#155e75")
         self.detail_text.pack(side="left", fill="both", expand=True)
         details_scroll = ttk.Scrollbar(detail_box, orient="vertical",
                                         command=self.detail_text.yview)
@@ -265,7 +267,7 @@ class Panel:
             self.action_area, text="IDENTIFICAR",
             command=lambda: self.contact_action("FOCUS"))
         self.identify_button.pack(side="left", expand=True, fill="x", padx=2)
-        ttk.Button(self.action_area, text="ANÁLISIS DETALLADO · 2 MIN",
+        ttk.Button(self.action_area, text="ANÁLISIS DETALLADO",
                    command=lambda: self.contact_action("SCAN")).pack(
                        side="left", expand=True, fill="x", padx=2)
         ttk.Button(self.action_area, text="SEGUIR",
@@ -792,20 +794,31 @@ class Panel:
         if c is not None:
             name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
             typ = TYPES.get(c[1], "Señal desconocida")
+            klass_name = STARSHIP_CLASSES.get(c[3]) if c[1] == 1 else None
+            heading = (f"NAVE · CLASE {klass_name.upper()}" if klass_name else
+                       "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
             details = (
-                f"{name.upper()}\n\n"
-                f"{typ.capitalize()}\n"
+                f"{heading}\n\n"
+                f"Referencia: {name}\n"
+                f"Tipo observado: {typ}\n"
                 f"Distancia: {c[5] / 1000:.3f} UA\n"
-                f"Confianza: {c[4] / 10:.1f}%\n"
+                f"Fiabilidad de la detección: {c[4] / 10:.1f}%\n"
                 f"Estado: {'Activo' if c[2] == 1 else 'Señal perdida'}\n"
             )
             if c[1] == 1:
                 klass = STARSHIP_CLASSES.get(c[3]) if c[3] else None
+                design = STARSHIP_DESIGNS.get(c[3])
                 details += (
-                    "\nIDENTIFICACIÓN\n"
-                    f"Clase: {klass or 'Sin confirmar'}\n"
-                    f"Transpondedor: {c[6] or 'No confirmado'}\n"
+                    "\nIDENTIFICACIÓN NAVAL\n"
+                    f"Clase/modelo: {klass or 'Sin confirmar'}\n"
+                    f"Tipo de nave: {design[0] if design else 'Sin determinar'}\n"
+                    f"Origen del diseño: {design[1] if design else 'Sin determinar'}\n"
+                    "Operador o afiliación actual: No confirmados\n"
+                    f"Transpondedor observado: {c[6] or 'No confirmado'}\n"
                 )
+                if not klass:
+                    details += ("La firma disponible no permite confirmar la clase.\n"
+                                "Un identificador de transpondedor NO certifica la afiliación.\n")
             if c[2] == 2:
                 details += ("\nSEÑAL PERDIDA\n"
                             + LOSS_CAUSES.get(c[7], "Causa desconocida") + "\n")
@@ -849,6 +862,19 @@ class Panel:
                 if complete:
                     details += (f"Terminados: {len(complete)}\n"
                                 f"Último: {clock(complete[-1][3])}\n")
+            comparison = next(
+                (row for row in self.state.get("comparisons", [])
+                 if row[0] == c[0]), None)
+            if comparison:
+                _, count, old_tick, new_tick, dc, dd, changed = comparison
+                details += (
+                    "\nARCHIVO DE SENSORES · COMPARACIÓN\n"
+                    f"{count} observaciones conservadas en CoreRPG.\n"
+                    f"Comparadas: {clock(old_tick)} y {clock(new_tick)}\n"
+                    f"Variación de distancia: {dd / 1000:+.3f} UA\n"
+                    f"Variación de fiabilidad: {dc / 10:+.1f} puntos\n"
+                    f"Clasificación: {'Ha cambiado' if changed else 'Sin cambios confirmados'}\n"
+                )
             if str(c[0]) in self.alert_ids:
                 details += "\nREQUIERE ATENCIÓN DEL OFICIAL\n"
             self.technical_details += self._contact_description(c) + "\n"
@@ -863,9 +889,18 @@ class Panel:
         self.detail_text.delete("1.0", "end")
         self.detail_text.insert("1.0", details)
         self.detail_text.tag_add("heading", "1.0", "1.end")
+        for section in ("IDENTIFICACIÓN NAVAL", "DATOS PLANETARIOS",
+                        "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
+                        "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL"):
+            start = self.detail_text.search(section, "2.0", "end")
+            if start:
+                self.detail_text.tag_add(
+                    "section", start, f"{start}+{len(section)}c")
         self.detail_text.configure(state="disabled")
         if c is not None:
             if c[2] == 1:
+                self.identify_button.configure(
+                    text="IDENTIFICAR" if c[1] in (1, 2) else "ANÁLISIS RÁPIDO")
                 if not self.action_area.winfo_manager():
                     self.action_area.pack(fill="x", pady=(7, 4))
             else:
@@ -875,6 +910,34 @@ class Panel:
         else:
             self.action_area.pack_forget()
             self.technical_button.pack_forget()
+        self._update_scan_progress(c)
+
+    def _update_scan_progress(self, contact: list | None) -> None:
+        """Only operator-requested long scans get a progress indicator."""
+        if contact is None:
+            self.scan_progress.pack_forget()
+            return
+        jobs = [j for j in self.state.get("scans", [])
+                if j[1] == contact[0] and j[0] in self.operator_scan_ids]
+        if not jobs:
+            self.scan_progress.pack_forget()
+            return
+        job = max(jobs, key=lambda row: (row[2], row[0]))
+        duration = max(1, job[3] - job[2])
+        percent = min(100, max(0, round(
+            100 * (self.state["tick"] - job[2]) / duration)))
+        if job[5] == 2:
+            percent = 100
+            label = "Análisis detallado · 100 % · lectura conservada"
+        elif job[5] == 1:
+            label = f"Análisis detallado · {percent} % · en curso"
+        else:
+            label = "Análisis interrumpido · sin resultado confirmado"
+            percent = 0
+        self.scan_progress_label.configure(text=label)
+        self.scan_progress_value["value"] = percent
+        if not self.scan_progress.winfo_manager():
+            self.scan_progress.pack(fill="x", pady=(3, 6))
 
     def open_contact_details(self) -> None:
         if not self.technical_details:
@@ -926,17 +989,34 @@ class Panel:
             old_jobs = {j[0] for j in self.state.get("scans", [])}
             state = self.command(f"{action} {contact[0]}")
             if action == "SCAN":
-                created = [j for j in state["scans"] if j[0] not in old_jobs and j[1] == contact[0]]
+                created = [j for j in state["scans"]
+                           if j[0] not in old_jobs and j[1] == contact[0]]
                 for job in created:
                     self.manual_jobs[job[0]] = contact[0]
+                    self.operator_scan_ids.add(job[0])
             self.apply(state)
-            verb = {
-                "FOCUS": "Observación focal inmediata registrada sobre ",
-                "PRIORITY": "Seguimiento prioritario establecido sobre ",
-                "SCAN": "Estudio detallado de dos minutos iniciado sobre ",
-            }[action]
-            self.append(state["tick"], verb + "C-" + selected[0][-6:] +
-                        ". Consulta el expediente para ver su estado.")
+            reference = "C-" + selected[0][-6:]
+            if action == "FOCUS":
+                updated = self.contact_map.get(str(contact[0]), contact)
+                if updated[1] == 1:
+                    klass = STARSHIP_CLASSES.get(updated[3])
+                    message = (
+                        f"Identificación rápida de {reference}: clase {klass}."
+                        if klass else
+                        f"Lectura rápida de {reference} terminada: clase sin confirmar. "
+                        "No hay firma suficiente para identificarla.")
+                else:
+                    message = (
+                        f"Análisis rápido de {reference}: "
+                        f"{TYPES.get(updated[1], 'señal')} observado. "
+                        "El expediente contiene los datos disponibles.")
+            elif action == "SCAN":
+                message = (
+                    f"Análisis detallado de {reference} iniciado. "
+                    "Progreso y resultados en el expediente del contacto.")
+            else:
+                message = f"Seguimiento prioritario establecido sobre {reference}."
+            self.append(state["tick"], message)
         except Exception as exc:
             messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
 
@@ -1095,6 +1175,8 @@ class Panel:
         self.record.clear()
         self.manual_jobs.clear()
         self.saved_manual_jobs.clear()
+        self.operator_scan_ids.clear()
+        self.saved_operator_scan_ids.clear()
         self.designations = {}
         self.arrival_id = None
         self.alert_ids = []
@@ -1117,6 +1199,7 @@ class Panel:
                 state = self.command(op)
                 self.saved_lines = list(self.lines)
                 self.saved_manual_jobs = dict(self.manual_jobs)
+                self.saved_operator_scan_ids = set(self.operator_scan_ids)
                 self.saved_notes = self.notes.get("1.0", "end").strip()
                 self.apply(state)
                 self.append(state["tick"], "Bitácora y estado de guardia conservados.")
@@ -1127,6 +1210,7 @@ class Panel:
                 state = self.command(op)
                 self.lines = list(self.saved_lines)
                 self.manual_jobs = dict(self.saved_manual_jobs)
+                self.operator_scan_ids = set(self.saved_operator_scan_ids)
                 self.record.clear()
                 self.state = {}  # loading must not create a false state-transition alarm
                 self.arrival_id = None
