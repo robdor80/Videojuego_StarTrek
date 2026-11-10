@@ -68,13 +68,21 @@ STARSHIP_DESIGNS = {
 # Tactical class data are *known catalog capabilities*, not live proof of
 # activated weapons. Keep the operator's panel focused on decisions.
 NAVAL_CAPABILITIES = {
+    # Database of known class specifications, directly visible from Sensors.
+    # Typical class capabilities are NOT observations of this specific vessel.
+    1: ("Crucero de exploración de la Flota Estelar",
+        "Baterías fáser y torpedos de fotones",
+        "Escudos deflectores"),
+    4: ("Escolta táctica de la Flota Estelar",
+        "Cañones fáser de pulsos y torpedos de fotones/cuánticos",
+        "Escudos deflectores y blindaje ablativo"),
+    6: ("Explorador de largo alcance de la Flota Estelar",
+        "Baterías fáser y torpedos de fotones",
+        "Escudos deflectores"),
     16: ("Crucero de batalla klingon",
          "Disruptores y torpedos de fotones",
          "Escudos deflectores; capacidad de camuflaje"),
     18: ("Transporte civil", "Armamento no acreditado", "Defensas no acreditadas"),
-    6: ("Explorador científico de la Flota Estelar",
-        "Capacidades tácticas: consultar el archivo de la clase",
-        "Escudos: no verificados"),
 }
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
@@ -909,11 +917,6 @@ class Panel:
                         "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
                         f"Armamento habitual: {profile[1]}\n"
                         f"Defensas habituales: {profile[2]}\n"
-                    )
-                else:
-                    details += (
-                        "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
-                        "Armamento: consultar catálogo táctico.\n"
                     )
                 details += (
                     "\nTÁCTICA\n"
