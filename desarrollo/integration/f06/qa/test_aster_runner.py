@@ -31,6 +31,11 @@ def start(runner: Path):
     assert any(r[1]==3 for r in initial["science"]), "Core must report a measured gas giant as class J"
     assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
     assert all(c[3]==0 for c in initial["contacts"] if c[1]==13),"planet class cannot occupy ship class field"
+    assert all(c[3]!=0 for c in initial["contacts"] if c[1] in (1,2)), (
+        "The Enterprise-D must classify every observable uncloaked ship at first detection",
+        initial["contacts"])
+    assert any(c[1]==1 and c[3]==18 for c in initial["contacts"]), (
+        "The civilian transport must be identified without waiting for a long scan")
     return p,initial
 
 def say(p,command: str):
@@ -48,6 +53,25 @@ def finish(p):
     assert rc==0,(rc,p.stderr.read() if p.stderr else "")
 
 def run(runner: Path):
+    # A contact briefing is a genuine QA runner operation: one delivery,
+    # persistent across native save/load, never a decorative Tk message.
+    p,first_watch=start(runner)
+    assert first_watch.get("contact_briefs") == []
+    candidate=next(c[0] for c in first_watch["contacts"]
+                   if c[1] == 1 and c[2] == 1)
+    first_report=say(p,f"REPORT {candidate}")
+    assert len(first_report["contact_briefs"])==1,first_report["contact_briefs"]
+    assert first_report["contact_briefs"][0][0]==candidate
+    duplicate=say(p,f"REPORT {candidate}")
+    assert duplicate["contact_briefs"]==first_report["contact_briefs"],(
+        "duplicated report must not produce multiple captain briefings")
+    checkpoint=say(p,"SAVE")
+    say(p,"STEP 60")
+    restored=say(p,"LOAD")
+    assert restored["contact_briefs"]==checkpoint["contact_briefs"],(
+        "reported contacts must survive restore")
+    finish(p)
+
     p,initial=start(runner)
     planet = next(r[0] for r in initial["science"] if r[1] == 1)
     focused=say(p,f"FOCUS {planet}")
@@ -96,6 +120,24 @@ def run(runner: Path):
     assert final["contacts"]==ending["contacts"]
     finish(p)
 
+    # Regression from the live human guard: requesting a detailed scan
+    # while automatic Aster work is active must NOT require pausing time.
+    p,running=start(runner)
+    running=say(p,"STEP 15")
+    auto_running=[j for j in running["scans"] if j[5]==1]
+    assert auto_running, "fixture must exercise a busy computer"
+    manual_contact=running["science"][0][0]
+    active_ids={j[0] for j in running["scans"]}
+    admitted=say(p,f"SCAN {manual_contact}")
+    manual=[j for j in admitted["scans"]
+            if j[0] not in active_ids and j[1]==manual_contact]
+    assert len(manual)==1 and manual[0][5]==1,admitted
+    assert manual[0][3]-manual[0][2] == 20, (
+        "detailed sensor analysis must finish within 20 Core seconds")
+    assert admitted["tick"]==running["tick"],(
+        "an officer's order must not pause or advance the guard")
+    finish(p)
+
     # An actual officer study must reserve a native Core timed job,
     # progress on the shared clock, and yield an observed result.
     p,study_initial=start(runner)
@@ -113,18 +155,79 @@ def run(runner: Path):
         if current[5]!=1:
             break
     assert current[5]==2 and current[4]!=0,after
+    # Recent comparisons are produced from Core's archived observations,
+    # not differences invented in the Python window.
+    row=next((r for r in after["comparisons"] if r[0]==planet_id),None)
+    assert row is not None and row[1]>=2,row
+    assert row[2]<=row[3],row
+    saved_observations=say(p,"SAVE")["comparisons"]
+    say(p,"STEP 30")
+    loaded_observations=say(p,"LOAD")["comparisons"]
+    assert loaded_observations==saved_observations,(
+        loaded_observations,saved_observations)
     finish(p)
 
-    # The native attention list identifies the exact observed contact that
-    # the automatic computer unsuccessfully tried to classify.
-    p,_=start(runner)
-    incident=say(p,"STEP 2400")
-    assert incident["attention"] >= 1, incident
-    assert len(incident["attention_contacts"]) == incident["attention"], incident
-    for cid in incident["attention_contacts"]:
-        match = next((c for c in incident["contacts"] if c[0] == cid), None)
-        assert match is not None and match[2] == 1 and match[3] == 0, (cid, match)
-        assert match[1] in (0, 1, 8, 11), match
+    # A Klingon cruiser arrives exactly at hour 1. Its classification must
+    # be available in that *same* Core observation, with no timed scan.
+    p,starting=start(runner)
+    starting_naval={c[0] for c in starting["contacts"] if c[1]==1 and c[2]==1}
+    incident=say(p,"STEP 3600")
+    klingons=[c for c in incident["contacts"]
+              if c[1]==1 and c[2]==1 and c[3]==16
+              and c[0] not in starting_naval]
+    assert len(klingons)==1,("new Klingon cruiser not identified immediately",incident)
+    assert any(ev[0]==1 and ev[1]==klingons[0][0] for ev in incident["events"]), (
+        "arrival notification missing", incident["events"])
+    assert all(c[3]!=0 for c in incident["contacts"] if c[1]==1 and c[2]==1), (
+        "uncloaked naval class still pending after acquisition",incident["contacts"])
+
+    # New observations, not the hidden host route, drive motion. The first
+    # change is closing without intercept; at 20 seconds Klingon alters its
+    # actual course toward our own ship.
+    t5=say(p,"STEP 5")
+    tracked=next(row for row in t5["navigation"] if row[0]==klingons[0][0])
+    assert tracked[2]==270 and tracked[3]==1 and tracked[4]==0,tracked
+    t10=say(p,"STEP 5")
+    tracked=next(row for row in t10["navigation"] if row[0]==klingons[0][0])
+    assert tracked[3]==1 and tracked[4]==0,tracked
+    t20=say(p,"STEP 10")
+    tracked=next(row for row in t20["navigation"] if row[0]==klingons[0][0])
+    assert tracked[3]==1 and tracked[4]==1,tracked
+    assert any(e[0]==2 and e[1]==klingons[0][0] and e[2]==3620
+               for e in t20["navigation_alerts"]), t20["navigation_alerts"]
+    tactical=say(p,"TACTICAL")
+    assert tactical["navigation"]==t20["navigation"],(
+        "tactical must see the identical Core sensor snapshot")
+    assert tactical["navigation_alerts"]==t20["navigation_alerts"],(
+        "tactical must see the same maneuver alerts")
+    assert tactical["contacts"]==t20["contacts"],(
+        "sensor identity must not be reinterpreted by Tactical")
+    saved=say(p,"SAVE")
+    s30=say(p,"STEP 30")
+    assert any(e[0]==1 and e[1]==klingons[0][0]
+               for e in s30["navigation_alerts"]), (
+        "new course change not announced")
+    restored=say(p,"LOAD")
+    assert restored["navigation"]==saved["navigation"]
+    assert restored["navigation_alerts"]==saved["navigation_alerts"]
+    finish(p)
+
+    # Romulan warbird: visible when emissions start at 02:00, and actionable
+    # course/approach data must be available within 5 s of acquisition.
+    p,initial_romulan=start(runner)
+    assert not any(c[3]==8 and c[2]==1 for c in initial_romulan["contacts"])
+    revealed=say(p,"STEP 7200")
+    active_warbirds=[c for c in revealed["contacts"]
+                     if c[3]==8 and c[1]==1 and c[2]==1]
+    assert len(active_warbirds)==1,("Romulan did not become visible",revealed["contacts"])
+    warbird_id=active_warbirds[0][0]
+    tracked=say(p,"STEP 5")
+    nav=next((n for n in tracked["navigation"] if n[0]==warbird_id),None)
+    assert nav is not None and nav[3]==1 and nav[2]==270,nav
+    again=say(p,"STEP 25")
+    nav=next(n for n in again["navigation"] if n[0]==warbird_id)
+    assert nav[1]==7230 and nav[3]==1 and 300<=nav[2]<=320,nav
+    assert say(p,"TACTICAL")["navigation"]==again["navigation"]
     finish(p)
 
     p,_=start(runner)

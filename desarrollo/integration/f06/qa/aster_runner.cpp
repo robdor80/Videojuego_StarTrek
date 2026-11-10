@@ -11,6 +11,8 @@
 #include <array>
 #include <cstdint>
 #include <cstdlib>
+#include <cmath>
+#include <map>
 #include <iostream>
 #include <iterator>
 #include <stdexcept>
@@ -21,8 +23,25 @@ using U=uint64_t;
 static void check(uint32_t result,const char* op) {
  if(result!=F04_OK)throw std::runtime_error(std::string(op)+" returned "+std::to_string(result));
 }
+// QA motion is derived solely from successive PUBLIC Core sensor observations.
+// A future F07 tactical console can consume exactly the same read-only feed.
+struct NavTrack {
+ U tick=0;
+ int64_t x=0,y=0,z=0;
+ int heading=-1; // projected course from displacement; NOT the vessel's bow.
+ int trend=0; // 1 closing, 2 opening, 0 insufficient evidence.
+ int intercept=0; // projected closest approach within the safety threshold.
+ int cpa=0; // closest projected approach, milli-AU.
+ int64_t speed_micro_au_s=0; // 1e-6 AU/s, derived from observed displacement.
+ int64_t closing_micro_au_s=0; // positive means approach.
+};
 struct Watch {
  F04Session* s=nullptr;
+ std::map<U,NavTrack> tracks,saved_tracks;
+ std::vector<std::array<int64_t,6>> nav_events,saved_nav_events;
+ // QA communications ledger: a contact brief sent to the duty officer.
+ // It is an actual runner action, not an inert GUI toast or an NPC dialogue.
+ std::vector<std::array<U,3>> contact_briefs,saved_contact_briefs;
  F04Handles h{};
  U event_cursor=0;
  U checkpoint_event_cursor=0;
@@ -45,11 +64,72 @@ struct Watch {
     frame.count,frame.entities};
   F06WorldReceipt receipt{};
   check(f06_host_world_snapshot(s,&snapshot,&receipt),"host world");
+  update_navigation(frame.tick);
+ }
+ void update_navigation(U tick) {
+  std::array<F06ContactView,64> contacts{};
+  U written=0,total=0;
+  check(f06_contacts_page(s,h.captain,0,0,contacts.data(),contacts.size(),
+    &written,&total),"public navigation contacts");
+  if(total>contacts.size())throw std::runtime_error("navigation contact limit");
+  constexpr double pi=3.14159265358979323846;
+  for(U i=0;i<written;++i){
+   const auto& c=contacts[i];
+   if(c.status!=F06_ACTIVE ||
+      (c.observed_category!=F06_CATEGORY_STARSHIP &&
+       c.observed_category!=F06_CATEGORY_SHUTTLE))continue;
+   NavTrack now{tick,c.observed_x_milli_au,c.observed_y_milli_au,
+                c.observed_z_milli_au,-1,0,0,0};
+   auto it=tracks.find(c.contact_id);
+   if(it==tracks.end()){tracks.emplace(c.contact_id,now);continue;}
+   auto& prior=it->second;
+   if(tick<=prior.tick)continue;
+   const double dx=double(now.x-prior.x),dy=double(now.y-prior.y),
+                dz=double(now.z-prior.z);
+   const double moved=std::sqrt(dx*dx+dy*dy+dz*dz);
+   if(moved<0.001)continue; // no observed movement means no new trajectory.
+   const double old_r=std::sqrt(double(prior.x)*prior.x+
+      double(prior.y)*prior.y+double(prior.z)*prior.z);
+   const double new_r=std::sqrt(double(now.x)*now.x+
+      double(now.y)*now.y+double(now.z)*now.z);
+   now.trend=new_r+0.1<old_r?1:new_r>old_r+0.1?2:0;
+   const double interval=static_cast<double>(now.tick-prior.tick);
+   now.speed_micro_au_s=static_cast<int64_t>(std::llround(
+     moved*1000.0/interval));
+   now.closing_micro_au_s=static_cast<int64_t>(std::llround(
+     (old_r-new_r)*1000.0/interval));
+   now.heading=static_cast<int>(std::lround(
+     std::fmod(std::atan2(dx,dy)*180.0/pi+360.0,360.0)))%360;
+   const double dot=double(now.x)*dx+double(now.y)*dy+double(now.z)*dz;
+   const double time_to_closest=-dot/(moved*moved);
+   const double cx=now.x+time_to_closest*dx;
+   const double cy=now.y+time_to_closest*dy;
+   const double cz=now.z+time_to_closest*dz;
+   const double closest=std::sqrt(cx*cx+cy*cy+cz*cz);
+   now.cpa=static_cast<int>(std::lround(closest));
+   // An inbound course can cross a 0.25 AU sphere around our own ship.
+   // A heading toward the observer is NOT proof of hostile intention.
+   now.intercept=(now.trend==1 && time_to_closest>0.0 &&
+                  closest<=250.0)?1:0;
+   const int delta=prior.heading<0?0:std::abs(now.heading-prior.heading);
+   const bool changed=prior.heading>=0 && std::min(delta,360-delta)>=5;
+   int notice=0;
+   if(now.intercept && !prior.intercept)notice=2;
+   else if(changed)notice=1;
+   else if(prior.trend!=now.trend && now.trend==1)notice=3;
+   else if(prior.trend!=now.trend && now.trend==2)notice=4;
+   if(notice && nav_events.size()<128)
+    nav_events.push_back({notice,static_cast<int64_t>(c.contact_id),
+      static_cast<int64_t>(tick),now.heading,now.trend,now.intercept});
+   prior=now;
+  }
  }
  void reset(int new_mode){
   if(s){check(f04_destroy(s),"destroy");s=nullptr;}
   if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
   mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();science_issues.clear();
+  tracks.clear();saved_tracks.clear();nav_events.clear();saved_nav_events.clear();
+  contact_briefs.clear();saved_contact_briefs.clear();
   check(f04_create(1,"miranda",&s),"create");
   check(f04_handles(s,&h),"handles");
   // A real F04 console operator is available for optional supervised actions;
@@ -106,6 +186,9 @@ struct Watch {
   checkpoint.resize(static_cast<size_t>(n));
   check(f04_save(s,checkpoint.data(),n,&n),"save");
   checkpoint_event_cursor=event_cursor;
+  saved_tracks=tracks;
+  saved_nav_events=nav_events;
+  saved_contact_briefs=contact_briefs;
  }
  void load(){
   if(checkpoint.empty())throw std::runtime_error("no checkpoint");
@@ -116,6 +199,9 @@ struct Watch {
   while(next_frame<std::size(F06_DEMO_FRAMES) &&
      F06_DEMO_FRAMES[next_frame].tick<=now)++next_frame;
   event_cursor=checkpoint_event_cursor;
+  tracks=saved_tracks;
+  nav_events=saved_nav_events;
+  contact_briefs=saved_contact_briefs;
  }
  std::vector<F06ContactView> visible_contacts() {
   std::array<F06ContactView,64> rows{};
@@ -181,9 +267,17 @@ struct Watch {
  void study(U contact) {
   // This is a real CoreRPG timed operation, not a simulated UI progress bar.
   // The next saved revision defines a stable unique request in this QA session.
-  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,120,0};
+  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,20,0};
   F06TimedScanView started{};
-  check(f06_begin_timed_scan(s,h.ensign,&request,&started),"focused scientific scan");
+  const auto code=f06_begin_timed_scan(s,h.ensign,&request,&started);
+  if(code==F04_CAPACITY)
+   throw std::runtime_error("Los sensores ya están ocupados con análisis del oficial. "
+     "No hace falta pausar la guardia; solicita otro cuando termine alguno.");
+  if(code==F04_UNAVAILABLE)
+   throw std::runtime_error("No hay señal o capacidad de sensores suficiente para este análisis.");
+  if(code==F04_DENIED)
+   throw std::runtime_error("La orden no está autorizada para este puesto de guardia.");
+  check(code,"focused scientific scan");
  }
  void configure(int preset){
   F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
@@ -210,6 +304,16 @@ struct Watch {
   F06TrackView updated{};
   check(f06_set_tracking(s,h.ensign,stats().revision,contact,
     F06_TRACK_PRIORITY,&updated),"operator priority");
+ }
+ void report_contact(U contact){
+  const auto contacts=visible_contacts();
+  const auto it=std::find_if(contacts.begin(),contacts.end(),
+      [contact](const auto& row){return row.contact_id==contact;});
+  if(it==contacts.end() || it->status!=F06_ACTIVE)
+    throw std::runtime_error("contact not currently observable");
+  for(const auto& report:contact_briefs)
+    if(report[0]==contact)return; // One delivered report per contact per watch.
+  contact_briefs.push_back({contact,stats().now,it->class_id});
  }
  void emit(){
   F06ComputerStatus state{};
@@ -298,6 +402,54 @@ struct Watch {
    const auto& e=science_issues[i];
    std::cout<<'['<<e[0]<<','<<e[1]<<','<<e[2]<<']';
   }
+  // Two most recent immutable Core observations per contact, compared by Core.
+  // This is the saved sensor archive, not a GUI-side cache or host-only truth.
+  std::cout<<"],\"comparisons\":[";
+  bool first_comparison=true;
+  for(U i=0;i<written;++i){
+   U count=0,total_results=0;
+   check(f06_results_page(s,h.captain,contacts[i].contact_id,0,nullptr,0,
+     &count,&total_results),"observation count");
+   if(total_results<2)continue;
+   std::array<F06ResultView,2> last{};
+   check(f06_results_page(s,h.captain,contacts[i].contact_id,total_results-2,
+     last.data(),last.size(),&count,&total_results),"recent observations");
+   if(count!=2)throw std::runtime_error("recent observation page incomplete");
+   F06ComparisonView compared{};
+   check(f06_compare_results(s,h.captain,last[0].result_id,
+     last[1].result_id,&compared),"compare saved Core observations");
+   if(!first_comparison)std::cout<<',';
+   first_comparison=false;
+   std::cout<<'['<<compared.contact_id<<','<<total_results<<','
+      <<last[0].tick<<','<<last[1].tick<<','
+      <<compared.confidence_delta<<','<<compared.distance_delta_milli_au
+      <<','<<compared.class_changed<<']';
+  }
+  std::cout<<"],\"navigation\":[";
+  bool first_nav=true;
+  for(U i=0;i<written;++i){
+   if(contacts[i].status!=F06_ACTIVE)continue;
+   auto it=tracks.find(contacts[i].contact_id);
+   if(it==tracks.end() || it->second.heading<0)continue;
+   if(!first_nav)std::cout<<',';
+   first_nav=false;
+   const auto& n=it->second;
+   std::cout<<'['<<contacts[i].contact_id<<','<<n.tick<<','<<n.heading
+    <<','<<n.trend<<','<<n.intercept<<','<<n.cpa
+    <<','<<n.speed_micro_au_s<<','<<n.closing_micro_au_s<<']';
+  }
+  std::cout<<"],\"navigation_alerts\":[";
+  for(size_t i=0;i<nav_events.size();++i){
+   if(i)std::cout<<',';
+   const auto& a=nav_events[i];
+   std::cout<<'['<<a[0]<<','<<a[1]<<','<<a[2]<<','<<a[3]<<','<<a[4]<<','<<a[5]<<']';
+  }
+  std::cout<<"],\"contact_briefs\":[";
+  for(size_t i=0;i<contact_briefs.size();++i){
+   if(i)std::cout<<',';
+   const auto& brief=contact_briefs[i];
+   std::cout<<'['<<brief[0]<<','<<brief[1]<<','<<brief[2]<<']';
+  }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
@@ -317,25 +469,34 @@ int main(){
   watch.reset(0);watch.emit();
   std::string cmd;
   while(std::getline(std::cin,cmd)){
+   const auto n=cmd.find(' ');
+   const std::string action=cmd.substr(0,n);
    try{
-    const auto n=cmd.find(' ');
-    const std::string action=cmd.substr(0,n);
     const std::string arg=n==std::string::npos?"":cmd.substr(n+1);
     if(action=="STEP")watch.advance(std::stoull(arg));
     else if(action=="RESTART")watch.reset(std::stoi(arg));
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
+    else if(action=="REPORT")watch.report_contact(std::stoull(arg));
     else if(action=="FOCUS")watch.focus(std::stoull(arg));
     else if(action=="SCAN")watch.study(std::stoull(arg));
     else if(action=="CONFIG")watch.configure(std::stoi(arg));
     else if(action=="DIAG")watch.diagnostics();
-    else if(action=="STATUS"){}
+    else if(action=="STATUS" || action=="TACTICAL"){} // same read-only Core feed
     else throw std::runtime_error("unsupported command");
     watch.emit();
    }catch(const std::exception& e){
     std::cerr<<"QA command: "<<e.what()<<"\n";
-    std::cout<<"{\"ok\":false,\"error\":\"No se pudo ejecutar la orden\"}"<<std::endl;
+    // The user receives actionable, safe messages for supported failure
+    // conditions, not native exception details or a meaningless generic box.
+    const std::string reason=e.what();
+    if(action=="SCAN" && (reason.find("Los sensores ya") == 0 ||
+                            reason.find("No hay señal") == 0 ||
+                            reason.find("La orden no") == 0))
+      std::cout<<"{\"ok\":false,\"error\":\""<<reason<<"\"}"<<std::endl;
+    else
+      std::cout<<"{\"ok\":false,\"error\":\"No se pudo ejecutar la orden; revisa el estado de los sensores.\"}"<<std::endl;
    }
   }
   return 0;

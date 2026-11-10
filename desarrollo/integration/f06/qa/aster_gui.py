@@ -40,9 +40,53 @@ STARSHIP_CLASSES = {
     9: "Bird-of-Prey", 10: "Cubo Borg", 11: "Danube",
     12: "Olympic", 13: "Lanzadera tipo 6", 14: "D'Kyr",
     15: "D5", 16: "Vor'cha", 17: "K't'inga",
+    18: "Transporte civil de clase Aster",
 }
 PLANET_CLASSES = {0: "sin determinar", 1: "M", 2: "H", 3: "J",
                   4: "L", 5: "P", 6: "Y"}
+# Describe la procedencia del DISEÑO, no la identidad del operador.
+STARSHIP_DESIGNS = {
+    1: ("Crucero de exploración", "Flota Estelar"),
+    2: ("Crucero de exploración", "Flota Estelar"),
+    3: ("Crucero de exploración", "Flota Estelar"),
+    4: ("Escolta táctica", "Flota Estelar"),
+    5: ("Crucero ligero", "Flota Estelar"),
+    6: ("Nave de exploración científica", "Flota Estelar"),
+    7: ("Crucero de escolta", "Flota Estelar"),
+    8: ("Ave de guerra", "Imperio Romulano"),
+    9: ("Ave de presa", "Diseño asociado al Imperio Klingon"),
+    10: ("Nave colectiva", "Colectivo Borg"),
+    11: ("Nave auxiliar", "Flota Estelar"),
+    12: ("Nave médica", "Flota Estelar"),
+    13: ("Lanzadera", "Flota Estelar"),
+    14: ("Nave vulcana", "Vulcano"),
+    15: ("Crucero", "Imperio Klingon"),
+    16: ("Crucero de batalla", "Imperio Klingon"),
+    17: ("Crucero de batalla", "Imperio Klingon"),
+    18: ("Transporte de mercancías", "Diseño civil del escenario Aster"),
+}
+# Tactical class data are *known catalog capabilities*, not live proof of
+# activated weapons. Keep the operator's panel focused on decisions.
+NAVAL_CAPABILITIES = {
+    # Database of known class specifications, directly visible from Sensors.
+    # Typical class capabilities are NOT observations of this specific vessel.
+    1: ("Crucero de exploración de la Flota Estelar",
+        "Baterías fáser y torpedos de fotones",
+        "Escudos deflectores"),
+    4: ("Escolta táctica de la Flota Estelar",
+        "Cañones fáser de pulsos y torpedos de fotones/cuánticos",
+        "Escudos deflectores y blindaje ablativo"),
+    6: ("Explorador de largo alcance de la Flota Estelar",
+        "Baterías fáser y torpedos de fotones",
+        "Escudos deflectores"),
+    8: ("Ave de guerra romulana",
+        "Baterías de disruptores y lanzadores de torpedos de fotones",
+        "Escudos deflectores y dispositivo de camuflaje"),
+    16: ("Crucero de batalla klingon",
+         "Disruptores y torpedos de fotones",
+         "Escudos deflectores; capacidad de camuflaje"),
+    18: ("Transporte civil", "Armamento no acreditado", "Defensas no acreditadas"),
+}
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
     3: "fuera del alcance de los sensores", 4: "sensores sin servicio",
@@ -81,6 +125,11 @@ class Panel:
         self.speed = tk.StringVar(value="×30")
         self.mode = tk.StringVar(value=MODES[0])
         self.playing = False
+        self.speed_before_alert = "×30"
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
+        self.nav_events_seen: set[tuple[int, int, int]] = set()
+        self.nav_priority: list[int] | None = None
         self.lines: list[str] = []
         self.record: list[dict] = []
         self.state: dict = {}
@@ -90,6 +139,20 @@ class Panel:
         self.saved_notes = ""
         self.manual_jobs: dict[int, int] = {}
         self.saved_manual_jobs: dict[int, int] = {}
+        self.operator_scan_ids: set[int] = set()
+        self.saved_operator_scan_ids: set[int] = set()
+        # F06 3-zone operator UX state. None of these collections changes
+        # Core's authoritative contacts, sensor truth, clock or duty rules.
+        self.new_contact_ids: set[str] = set()
+        self.followed_ids: set[str] = set()
+        self.analyzed_ids: set[str] = set()
+        self.shared_report_ids: set[str] = set()
+        self.tactical_qa_ids: set[str] = set()
+        self.saved_operator_views: dict[str, set[str]] = {}
+        self.map_zoom = 1.0
+        self.map_overview = False
+        self.technical_expanded = False
+        self.motion_samples: dict[str, tuple] = {}
         self.sensor_preset = tk.StringVar(value="Estándar")
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -103,22 +166,23 @@ class Panel:
         A single current notice replaces the previous notice; history is optional.
         Native Core alerts pre-empt everything else, with direct contact access.
         """
-        self.root.geometry("1330x850")
-        self.root.minsize(1020, 640)
+        self.root.geometry("1460x825")
+        self.root.minsize(1130, 660)
+        # The operating rows stay visible even when a priority alert appears.
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_rowconfigure(2, weight=1)
         self.current_view = "status"
         self.workspace_labels = {
-            "status": "SISTEMA",
+            "status": "GENERAL",
             "contacts": "CONTACTOS",
-            "scans": "BARRIDOS",
             "tracking": "SEGUIMIENTO",
-            "results": "RESULTADOS",
-            "configuration": "EQUIPO",
+            "results": "ANÁLISIS",
         }
         self.section_id = "summary"
         self.contact_subset = "all"
         self.group_open: dict[str, bool] = {}
         self.map_positions: list[tuple[float, float, str]] = []
-        self.map_visible = False
+        self.map_visible = True
         self.alert_ids: list[str] = []
         self.alert_cursor = 0
         self.arrival_id: str | None = None
@@ -130,7 +194,7 @@ class Panel:
         self.search_text.trace_add("write", lambda *_: self._refresh_contacts(self.state) if self.state else None)
 
         header = ttk.Frame(self.root, padding=(14, 11, 14, 7))
-        header.pack(fill="x")
+        header.grid(row=0, column=0, sticky="ew")
         ttk.Label(header, text="USS ENTERPRISE-D  /  SENSORES",
                   font=("Segoe UI", 17, "bold")).pack(side="left")
         self.summary = ttk.Label(header, text="Vigilancia automática")
@@ -141,70 +205,101 @@ class Panel:
                                   highlightbackground="#b45309",
                                   highlightthickness=3)
         alert_copy = tk.Frame(self.alert_bar, background="#ffe2a1")
-        alert_copy.pack(side="left", fill="both", expand=True, padx=17, pady=13)
+        alert_copy.pack(side="left", fill="both", expand=True, padx=13, pady=8)
         self.alert_title = tk.Label(alert_copy, text="", anchor="w",
-                                    font=("Segoe UI", 19, "bold"),
+                                    font=("Segoe UI", 16, "bold"),
                                     background="#ffe2a1", foreground="#7c2d12")
         self.alert_title.pack(fill="x")
         self.alert_description = tk.Label(
             alert_copy, text="", anchor="w", justify="left",
-            wraplength=960, font=("Segoe UI", 12),
+            wraplength=960, font=("Segoe UI", 10),
             background="#ffe2a1", foreground="#451a03")
-        self.alert_description.pack(fill="x", pady=(6, 0))
+        self.alert_description.pack(fill="x", pady=(3, 0))
         self.alert_button = tk.Button(
             self.alert_bar, text="VER CONTACTO", command=self.open_alert_contact,
-            font=("Segoe UI", 12, "bold"), background="#92400e",
+            font=("Segoe UI", 10, "bold"), background="#92400e",
             foreground="white", activebackground="#78350f",
-            activeforeground="white", padx=14, pady=12, relief="flat")
-        self.alert_button.pack(side="right", padx=15, pady=14)
+            activeforeground="white", padx=12, pady=8, relief="flat")
+        self.alert_button.pack(side="right", padx=12, pady=9)
 
         panes = ttk.Panedwindow(self.root, orient="horizontal")
-        panes.pack(fill="both", expand=True, padx=12, pady=(3, 7))
+        panes.grid(row=2, column=0, sticky="nsew", padx=12, pady=(3, 5))
         self.workspace_panes = panes
-        left = ttk.Frame(panes, width=180, padding=(0, 5))
-        center = ttk.Frame(panes, width=710, padding=(8, 3))
-        right = ttk.Frame(panes, width=440, padding=(8, 3))
-        panes.add(left, weight=0)
-        panes.add(center, weight=3)
-        panes.add(right, weight=2)
+        left = ttk.Frame(panes, width=350, padding=(0, 5))
+        center = ttk.Frame(panes, width=690, padding=(8, 3))
+        right = ttk.Frame(panes, width=365, padding=(8, 3))
+        panes.add(left, weight=2)
+        panes.add(center, weight=5)
+        panes.add(right, weight=3)
 
-        # The operator sees six task groups, not every technical F06 contract.
+        # Four operator workflows; engineering adjustments are a separate utility.
         ttk.Label(left, text="OPERACIONES", font=("Segoe UI", 12, "bold")
                   ).pack(anchor="w", pady=(0, 13))
         for view, name in self.workspace_labels.items():
             btn = ttk.Button(left, text=name, command=lambda key=view: self.navigate(key))
             btn.pack(fill="x", pady=4)
             self.navigation_buttons[view] = btn
-        ttk.Separator(left).pack(fill="x", pady=(16, 9))
+        ttk.Separator(left).pack(fill="x", pady=(10, 6))
         self.secondary_frame = ttk.Frame(left)
         self.secondary_frame.pack(fill="x")
-        ttk.Button(left, text="HISTORIAL DE AVISOS", command=self.open_history
-                   ).pack(fill="x", pady=(20, 5))
+        tools_row = ttk.Frame(left)
+        tools_row.pack(fill="x", pady=(8, 6))
+        ttk.Button(tools_row, text="EQUIPO", command=lambda: self.navigate("configuration")
+                   ).pack(side="left", expand=True, fill="x", padx=(0, 3))
+        ttk.Button(tools_row, text="HISTORIAL", command=self.open_history
+                   ).pack(side="left", expand=True, fill="x", padx=(3, 0))
+        ttk.Label(left, text="OBJETOS", font=("Segoe UI", 11, "bold")).pack(
+            anchor="w", pady=(4, 4))
 
-        # CENTRE: the default view is a concise, expandable inventory.
+        # CENTRAL WORKSPACE: the largest column follows the active operation.
+        # Maps and sensor activity live here, not in the small navigation rail.
         titlebar = ttk.Frame(center)
         titlebar.pack(fill="x", pady=(2, 9))
         self.workspace_title = ttk.Label(titlebar, text="SISTEMA ASTER",
                                           font=("Segoe UI", 16, "bold"))
         self.workspace_title.pack(side="left")
-        self.map_button = ttk.Button(titlebar, text="Ver mapa", command=self.toggle_map)
-        self.map_button.pack(side="right")
+        self.map_button = ttk.Button(titlebar, text="Ver todos",
+                                      command=self.toggle_map)
+        self.map_button.pack(side="right", padx=(4, 0))
+        ttk.Button(titlebar, text="Zoom −", command=lambda: self.zoom_map(0.75)
+                   ).pack(side="right", padx=(4, 0))
+        ttk.Button(titlebar, text="Zoom +", command=lambda: self.zoom_map(1.33)
+                   ).pack(side="right", padx=(4, 0))
         self.section_info = ttk.Label(center, text="", font=("Segoe UI", 10))
         self.section_info.pack(fill="x", pady=(0, 9))
 
         self.map_box = ttk.Frame(center)
-        self.map_canvas = tk.Canvas(self.map_box, height=170, background="#f8fafc",
+        self.map_box.pack(fill="both", expand=True, pady=(0, 7))
+        self.map_canvas = tk.Canvas(self.map_box, height=340, background="#f8fafc",
                                     highlightthickness=0)
         self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
         self.map_canvas.bind("<Button-1>", self._select_map_contact)
+        self.map_canvas.bind("<MouseWheel>", lambda event:
+                             self.zoom_map(1.2 if event.delta > 0 else 1 / 1.2))
 
-        list_area = ttk.Frame(center)
+        main_box = ttk.Frame(center)
+        main_box.pack(fill="both", expand=True)
+        self.main_text = tk.Text(
+            main_box, height=11, background="#ffffff", relief="flat",
+            font=("Segoe UI", 11), padx=15, pady=12, wrap="word",
+            state="disabled", spacing2=3, spacing3=3)
+        self.main_text.tag_configure("heading", font=("Segoe UI", 15, "bold"))
+        self.main_text.tag_configure("priority", foreground="#9a3412",
+                                     font=("Segoe UI", 11, "bold"))
+        self.main_text.pack(side="left", fill="both", expand=True)
+        main_scroll = ttk.Scrollbar(main_box, orient="vertical",
+                                    command=self.main_text.yview)
+        main_scroll.pack(side="right", fill="y")
+        self.main_text.configure(yscrollcommand=main_scroll.set)
+
+        # Contact list belongs in OPERACIONES, never in the central workspace.
+        list_area = ttk.Frame(left)
         list_area.pack(fill="both", expand=True)
         self.contacts_table = ttk.Treeview(
-            list_area, show="tree", height=19, selectmode="browse")
+            list_area, show="tree", height=7, selectmode="browse")
         self.contacts_table.heading("#0", text="Sistema estelar observado")
-        self.contacts_table.column("#0", minwidth=290, width=550, stretch=True)
+        self.contacts_table.column("#0", minwidth=225, width=320, stretch=True)
         self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
         self.contacts_table.tag_configure("contact", font=("Segoe UI", 11))
         self.contacts_table.tag_configure("lost", foreground="#7d8289")
@@ -214,8 +309,7 @@ class Panel:
                                      command=self.contacts_table.yview)
         tree_scroll.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=tree_scroll.set)
-        self.contacts_table.bind(
-            "<<TreeviewSelect>>", lambda _: (self.show_selected(), self._draw_map()))
+        self.contacts_table.bind("<<TreeviewSelect>>", self._on_contact_selected)
         self.contacts_table.bind("<<TreeviewOpen>>", self._remember_group)
         self.contacts_table.bind("<<TreeviewClose>>", self._remember_group)
 
@@ -225,10 +319,12 @@ class Panel:
         detail_box = ttk.Frame(right)
         detail_box.pack(fill="both", expand=True)
         self.detail_text = tk.Text(
-            detail_box, height=24, state="disabled", relief="flat",
+            detail_box, height=7, state="disabled", relief="flat",
             background="#ffffff", font=("Segoe UI", 12),
             wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
         self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
+        self.detail_text.tag_configure(
+            "section", font=("Segoe UI", 11, "bold"), foreground="#155e75")
         self.detail_text.pack(side="left", fill="both", expand=True)
         details_scroll = ttk.Scrollbar(detail_box, orient="vertical",
                                         command=self.detail_text.yview)
@@ -236,18 +332,32 @@ class Panel:
         self.detail_text.configure(yscrollcommand=details_scroll.set)
 
         self.action_area = ttk.LabelFrame(right, text="ÓRDENES", padding=8)
-        ttk.Button(self.action_area, text="IDENTIFICAR",
-                   command=lambda: self.contact_action("FOCUS")).pack(
-                       side="left", expand=True, fill="x", padx=2)
-        ttk.Button(self.action_area, text="ESTUDIAR · 2 MIN",
+        self.identify_button = ttk.Button(
+            self.action_area, text="IDENTIFICAR",
+            command=lambda: self.contact_action("FOCUS"))
+        self.identify_button.pack(fill="x", pady=2)
+        ttk.Button(self.action_area, text="ANÁLISIS DETALLADO",
                    command=lambda: self.contact_action("SCAN")).pack(
-                       side="left", expand=True, fill="x", padx=2)
+                       fill="x", pady=2)
         ttk.Button(self.action_area, text="SEGUIR",
                    command=lambda: self.contact_action("PRIORITY")).pack(
-                       side="left", expand=True, fill="x", padx=2)
+                       fill="x", pady=2)
+        self.contact_report_button = ttk.Button(
+            right, text="COMUNICAR CONTACTO AL OFICIAL",
+            command=self.report_contact_to_officer)
+        # The progress indicator is based on actual Core start/end ticks.
+        self.scan_progress = ttk.Frame(right)
+        self.scan_progress_label = ttk.Label(self.scan_progress, text="")
+        self.scan_progress_label.pack(fill="x", pady=(0, 3))
+        self.scan_progress_value = ttk.Progressbar(
+            self.scan_progress, maximum=100, value=0)
+        self.scan_progress_value.pack(fill="x")
         self.technical_button = ttk.Button(
-            right, text="Consultar datos técnicos del contacto",
+            right, text="Ver ficha técnica",
             command=self.open_contact_details)
+        self.tactical_report_button = ttk.Button(
+            right, text="Preparar informe para Táctica (QA)",
+            command=self.send_analysis_to_tactical)
 
         self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
         ttk.Combobox(
@@ -261,7 +371,8 @@ class Panel:
 
         # One live message, never an endless log at the centre of the console.
         notice_bar = ttk.Frame(self.root, padding=(13, 5, 13, 5))
-        notice_bar.pack(fill="x")
+        notice_bar.grid(row=3, column=0, sticky="ew")
+        self.notice_bar = notice_bar
         ttk.Label(notice_bar, text="COMPUTADORA:", font=("Segoe UI", 10, "bold")
                   ).pack(side="left")
         self.notice_label = ttk.Label(notice_bar, text="Vigilancia automática activada.",
@@ -271,7 +382,8 @@ class Panel:
                    command=self.open_history).pack(side="right")
 
         footer = ttk.Frame(self.root, padding=(13, 6, 13, 10))
-        footer.pack(fill="x")
+        footer.grid(row=4, column=0, sticky="ew")
+        self.footer = footer
         self.timelabel = ttk.Label(footer, text="00:00 / 08:00", width=21,
                                    font=("Segoe UI", 11, "bold"))
         self.timelabel.pack(side="left")
@@ -279,6 +391,8 @@ class Panel:
         self.progress.pack(side="left", padx=(6, 14))
         self.button_play = ttk.Button(footer, text="Iniciar", command=self.toggle)
         self.button_play.pack(side="left")
+        self.restore_speed_button = ttk.Button(
+            footer, text="Volver a ×30", command=self.restore_watch_speed)
         ttk.Button(footer, text="Opciones de prueba", command=self.toggle_test_options
                    ).pack(side="right")
 
@@ -287,7 +401,7 @@ class Panel:
         testrow = ttk.Frame(self.test_area)
         testrow.pack(fill="x")
         ttk.Label(testrow, text="Velocidad").pack(side="left")
-        ttk.Combobox(testrow, textvariable=self.speed, values=("×15", "×30", "×60"),
+        ttk.Combobox(testrow, textvariable=self.speed, values=("×1", "×15", "×30", "×60"),
                      state="readonly", width=5).pack(side="left", padx=(4, 15))
         ttk.Label(testrow, text="Incidencia").pack(side="left")
         scenario = ttk.Combobox(testrow, textvariable=self.mode, values=MODES,
@@ -310,18 +424,20 @@ class Panel:
 
     def toggle_test_options(self) -> None:
         if self.test_area.winfo_manager():
-            self.test_area.pack_forget()
+            self.test_area.grid_remove()
         else:
-            self.test_area.pack(fill="x", padx=12, pady=(0, 7))
+            self.test_area.grid(row=5, column=0, sticky="ew", padx=12, pady=(0, 7))
 
     def toggle_map(self) -> None:
-        self.map_visible = not self.map_visible
-        self.map_button.configure(text="Ocultar mapa" if self.map_visible else "Ver mapa")
-        if self.map_visible:
-            self.map_box.pack(fill="x", after=self.section_info, pady=(0, 8))
-            self._draw_map()
-        else:
-            self.map_box.pack_forget()
+        """Switch between the operator's focused contact and system overview."""
+        self.map_overview = not self.map_overview
+        self.map_button.configure(
+            text="Enfocar contacto" if self.map_overview else "Ver todos")
+        self._draw_map()
+
+    def zoom_map(self, factor: float) -> None:
+        self.map_zoom = max(0.35, min(50.0, self.map_zoom * factor))
+        self._draw_map()
 
     def open_history(self) -> None:
         window = tk.Toplevel(self.root)
@@ -347,39 +463,43 @@ class Panel:
             self.group_open[key] = not bool(self.contacts_table.item(key, "open"))
 
     def navigate(self, view: str) -> None:
-        """Switch only the operator's view; never stop autonomous sensors."""
-        if view not in self.workspace_labels:
+        """Choose the officer's job, leaving automatic watch active."""
+        if view not in self.workspace_labels and view != "configuration":
             return
         self.current_view = view
-        self.contact_subset = "all"
         self.section_id = "summary"
+        self.contact_subset = "all"
         self.contact_filter.set("Todos")
         for key, button in self.navigation_buttons.items():
             button.state(["disabled"] if key == view else ["!disabled"])
         for child in self.secondary_frame.winfo_children():
             child.destroy()
-        options = {
+        filters = {
             "status": [("Todo el sistema", "all")],
-            "contacts": [("Todos", "all"), ("Naves", "ships"),
-                         ("Planetas", "planets"), ("Sin identificar", "unidentified"),
+            "contacts": [("Todos los nuevos", "all"), ("Naves", "ships"),
                          ("Perdidos", "lost")],
-            "scans": [("Todos", "all"), ("Naves", "ships"), ("Planetas", "planets")],
-            "tracking": [("Todos", "all"), ("Naves", "ships"), ("Perdidos", "lost")],
-            "results": [("Todos", "all"), ("Planetas", "planets")],
-            "configuration": [("Todos", "all")],
+            "tracking": [("En seguimiento", "all")],
+            "results": [("Analizados", "all")],
+            "configuration": [("Equipo de sensores", "all")],
         }
-        for label, section in options[view]:
-            b = ttk.Button(self.secondary_frame, text=label,
-                           command=lambda k=section: self.select_section(k))
-            b.pack(fill="x", pady=3)
+        for label, section in filters[view]:
+            ttk.Button(self.secondary_frame, text=label,
+                       command=lambda k=section: self.select_section(k)).pack(
+                           fill="x", pady=2)
         self.workspace_title.configure(text={
-            "status": "SISTEMA ASTER", "contacts": "CONTACTOS",
-            "scans": "BARRIDOS", "tracking": "SEGUIMIENTO",
-            "results": "RESULTADOS", "configuration": "EQUIPO",
+            "status": "GENERAL · SISTEMA ASTER",
+            "contacts": "CONTACTOS NUEVOS",
+            "tracking": "SEGUIMIENTO PRIORITARIO",
+            "results": "ANÁLISIS SOLICITADOS",
+            "configuration": "EQUIPO DE SENSORES",
         }[view])
+        self.map_overview = view in ("status", "configuration")
+        self.map_button.configure(
+            text="Enfocar contacto" if self.map_overview else "Ver todos")
         if self.state:
             self._refresh_contacts(self.state)
         self._update_view_content()
+        self._update_main_content()
         self.show_selected()
 
     def select_section(self, section: str) -> None:
@@ -411,6 +531,8 @@ class Panel:
             self.engineering.pack_forget()
         if hasattr(self, "detail_text") and not self.contacts_table.selection():
             self.show_selected()
+        if hasattr(self, "main_text"):
+            self._update_main_content()
 
     def _update_alert(self, state: dict) -> None:
         """Large, persistent, direct-entry warning for observed sensor threats."""
@@ -424,13 +546,17 @@ class Panel:
             observed[self.arrival_id][2] == 1) else None
         # New arrivals must be visible even if an earlier unknown ship is
         # still awaiting operator attention. Never bury them under old alerts.
+        nav_target = (str(self.nav_priority[1]) if self.nav_priority
+                      and str(self.nav_priority[1]) in observed else None)
         if borg:
             ids = borg
         else:
-            ids = list(dict.fromkeys(([arrival] if arrival else []) + core_ids))
+            ids = list(dict.fromkeys(
+                ([nav_target] if nav_target else []) +
+                ([arrival] if arrival else []) + core_ids))
         if not ids:
             self.alert_ids = []
-            self.alert_bar.pack_forget()
+            self.alert_bar.grid_remove()
             return
         if tuple(ids) != tuple(self.alert_ids):
             self.alert_cursor = 0
@@ -441,10 +567,33 @@ class Panel:
         if chosen in borg:
             title = "ALERTA PRIORITARIA · CONTACTO BORG"
             explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
+        elif chosen == nav_target and self.nav_priority:
+            nav_kind, _, _, heading, trend, intercept = self.nav_priority
+            if intercept:
+                title = "ATENCIÓN · POSIBLE CURSO DE INTERCEPTACIÓN"
+                explanation = (
+                    f"Rumbo de desplazamiento {heading:03d}°. "
+                    "La trayectoria observada converge hacia nuestra posición. "
+                    "Aviso disponible para Táctica. Intención no determinada.")
+            else:
+                title = "ATENCIÓN · CAMBIO DE RUMBO"
+                explanation = (
+                    f"Nuevo rumbo estimado: {heading:03d}°. "
+                    + ("El contacto se aproxima. " if trend == 1
+                       else "El contacto se aleja. " if trend == 2 else "")
+                    + "Seguimiento compartido con Táctica.")
         elif chosen == arrival:
-            title = "NUEVA NAVE DETECTADA"
-            explanation = ("Contacto naval recién observado. La computadora mantiene "
-                           "la vigilancia y realiza la identificación en automático.")
+            arriving = observed.get(chosen)
+            class_name = STARSHIP_CLASSES.get(arriving[3]) if arriving else None
+            title = ("NAVE DETECTADA · " + class_name.upper()
+                     if class_name else "NUEVA NAVE DETECTADA")
+            design = STARSHIP_DESIGNS.get(arriving[3]) if arriving else None
+            explanation = (
+                "Identificación inmediata completada. "
+                + (f"Diseño: {design[1]}. " if design else "")
+                + "Afiliación actual sin verificar. Velocidad de guardia reducida a ×1."
+                if class_name else
+                "Detección naval bajo investigación. Velocidad ×1; revisar sensores.")
         else:
             title = "ATENCIÓN · NAVE SIN IDENTIFICAR"
             explanation = ("La computadora intentó identificar este contacto "
@@ -472,8 +621,8 @@ class Panel:
             f"ABRIR CONTACTO {self.alert_cursor + 1}/{len(ids)}"),
             background=stroke, activebackground=ink)
         if not self.alert_bar.winfo_manager():
-            self.alert_bar.pack(fill="x", padx=12, pady=(0, 8),
-                                before=self.workspace_panes)
+            self.alert_bar.grid(row=1, column=0, sticky="ew",
+                                padx=12, pady=(0, 6))
 
     def open_alert_contact(self) -> None:
         if not self.alert_ids:
@@ -493,6 +642,8 @@ class Panel:
             self.contacts_table.see(cid)
             self.show_selected()
             self._draw_map()
+        if self.nav_priority and cid == str(self.nav_priority[1]):
+            self.nav_priority = None
         if cid == self.arrival_id:
             self.acknowledged_arrivals.add(cid)
             self.arrival_id = None
@@ -534,8 +685,18 @@ class Panel:
         name = self.designations.get(contact[0], "Contacto C-" + str(contact[0])[-6:])
         return f"{name} · {kind}: {known}. Distancia a la nave {distance}. Confianza {confidence}. Estado {status}."
 
+    def _on_contact_selected(self, event: tk.Event | None = None) -> None:
+        selected = self.contacts_table.selection()
+        if selected and selected[0] in self.contact_map:
+            self.map_overview = False
+            self.map_zoom = 1.0
+            self.map_button.configure(text="Ver todos")
+        self.show_selected()
+        self._draw_map()
+        self._update_main_content()
+
     def _draw_map(self) -> None:
-        """XY projection of observed positions; no hidden world coordinates."""
+        """Map with selectable contact focus and zoom; only public readings."""
         if not hasattr(self, "map_canvas"):
             return
         cv = self.map_canvas
@@ -546,50 +707,65 @@ class Panel:
         cx, cy = w / 2, h / 2
         cv.create_line(12, cy, w - 12, cy, fill="#cbd5e1")
         cv.create_line(cx, 12, cx, h - 12, fill="#cbd5e1")
-        cv.create_text(16, 14, text="Y+", anchor="w", fill="#475569")
-        cv.create_text(w - 16, cy - 12, text="X+", anchor="e", fill="#475569")
-        cv.create_text(cx + 5, cy + 12, text="NAVE", anchor="nw",
-                       fill="#1e40af")
-        cv.create_polygon(cx, cy - 6, cx - 5, cy + 5, cx + 5, cy + 5,
-                          fill="#1e40af")
+        cv.create_text(14, 13, text="Y+", anchor="w", fill="#64748b")
+        cv.create_text(w-14, cy-12, text="X+", anchor="e", fill="#64748b")
+        cv.create_polygon(cx, cy-10, cx-7, cy+7, cx+7, cy+7,
+                          fill="#2563eb")
+        cv.create_text(cx + 9, cy + 12, text="ENTERPRISE-D",
+                       anchor="nw", fill="#1d4ed8")
         self.map_positions = []
         if not self.state:
             return
-        rows = [self.contact_map[k] for group in self.contacts_table.get_children()
-                for k in self.contacts_table.get_children(group)
-                if k in self.contact_map]
+        selection = self.contacts_table.selection()
+        chosen_id = (selection[0] if selection and selection[0] in self.contact_map
+                     else None)
+        focused = chosen_id and not self.map_overview
+        if focused:
+            rows = [self.contact_map[chosen_id]]
+        else:
+            rows = [c for c in self.state["contacts"] if c[2] == 1]
         if not rows:
-            cv.create_text(w / 2, h - 18, text="Sin contactos visibles en este filtro")
+            cv.create_text(cx, h - 20, text="Sin contactos en el alcance actual")
             return
-        radius = max(100, max(abs(c[8]) for c in rows), max(abs(c[9]) for c in rows))
-        scale = 0.44 * min(w, h) / radius
-        cv.create_text(w - 10, h - 9,
-                       text=f"±{radius / 1000:.2f} UA · plano XY",
+        radius = max(100, max(abs(c[8]) for c in rows),
+                     max(abs(c[9]) for c in rows))
+        scale = 0.42 * min(w,h) / radius * self.map_zoom
+        cv.create_text(w-10, h-9,
+                       text=f"Escala ±{radius / (1000*self.map_zoom):.2f} UA · XY",
                        anchor="se", fill="#475569")
-        selected = self.contacts_table.selection()
-        selected_id = selected[0] if selected else None
         for c in rows:
             key = str(c[0])
-            px, py = cx + c[8] * scale, cy - c[9] * scale
-            size = 6 if c[1] in (1, 2) else 4
+            px, py = cx + c[8]*scale, cy-c[9]*scale
+            sz = 7 if c[1] in (1,2) else 5
             color = "#155e75" if c[2] == 1 else "#9ca3af"
-            if c[1] in (12, 13, 14):
-                color = "#64748b" if c[2] == 1 else "#cbd5e1"
-            if key == selected_id:
-                cv.create_oval(px - 10, py - 10, px + 10, py + 10,
-                              outline="#2563eb", width=2)
-                size = 7
+            if c[1] in (12,13,14):
+                color = "#64748b"
+            if key == chosen_id:
+                cv.create_line(cx,cy,px,py,fill="#0891b2",
+                               width=2,dash=(5,4))
+                cv.create_oval(px-10,py-10,px+10,py+10,
+                              outline="#2563eb",width=2)
             if c[2] != 1:
-                cv.create_line(px - size, py - size, px + size, py + size,
-                               fill=color, width=2)
-                cv.create_line(px - size, py + size, px + size, py - size,
-                               fill=color, width=2)
+                cv.create_line(px-sz,py-sz,px+sz,py+sz,fill=color)
+                cv.create_line(px-sz,py+sz,px+sz,py-sz,fill=color)
             else:
-                cv.create_oval(px - size, py - size, px + size, py + size,
-                              fill=color, outline="")
-            self.map_positions.append((px, py, key))
-        cv.create_text(10, h - 9, text=f"{len(rows)} contactos representados",
-                       anchor="sw", fill="#475569")
+                cv.create_oval(px-sz,py-sz,px+sz,py+sz,fill=color,outline="")
+            if focused and key == chosen_id:
+                name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1,2) else None
+                name = name or self.designations.get(c[0],TYPES.get(c[1],"Contacto"))
+                # Move labels left if the object is close to the right edge.
+                anchor = "e" if px > w*0.73 else "w"
+                offset = -12 if anchor == "e" else 12
+                cv.create_text(px+offset,py-18,text=name,anchor=anchor,
+                               fill="#0f172a")
+                cv.create_text(px+offset,py+6,
+                               text=f"{c[5]/1000:.3f} UA",anchor=anchor,
+                               fill="#475569")
+            self.map_positions.append((px,py,key))
+        cv.create_text(12,h-9,
+                       text=(f"{len(rows)} objetos observados" if not focused
+                             else "Vista relativa · contacto seleccionado"),
+                       anchor="sw",fill="#475569")
 
     def _select_map_contact(self, event: tk.Event) -> None:
         if not self.map_positions:
@@ -649,6 +825,13 @@ class Panel:
         }.get(self.contact_filter.get())
         needle = self.search_text.get().strip().casefold()
         for c in state["contacts"]:
+            cid = str(c[0])
+            if self.current_view == "contacts" and cid not in self.new_contact_ids:
+                continue
+            if self.current_view == "tracking" and cid not in self.followed_ids:
+                continue
+            if self.current_view == "results" and cid not in self.analyzed_ids:
+                continue
             if filter_kind is not None and c[1] not in filter_kind:
                 continue
             if self.contact_subset == "unidentified" and not (
@@ -664,8 +847,11 @@ class Panel:
             if needle and needle not in self._tree_contact_label(c, reports).casefold():
                 continue
             grouped[kind_groups.get(c[1], "other")].append(c)
-        tree.delete(*tree.get_children())
-        for key in ordered:
+        # Incremental reconciliation: the real-time Core clock refreshes every
+        # 500 ms. Rebuilding the Treeview or calling .see() on each tick jumps
+        # to the selected contact and makes manual scrolling impossible.
+        retained_groups: set[str] = set()
+        for group_index, key in enumerate(ordered):
             rows = grouped[key]
             if not rows:
                 continue
@@ -678,42 +864,279 @@ class Panel:
                     extra = "   ·   " + ", ".join(
                         f"{n} clase {cls}" for cls, n in sorted(classes.items()))
             groupid = "group:" + key
-            is_open = self.group_open.get(groupid, False)
-            tree.insert("", "end", iid=groupid, text=(
-                f"{names[key].upper()}  ·  {len(rows)}{extra}"),
-                open=is_open, tags=("group",))
-            for c in rows:
-                label = self._tree_contact_label(c, reports)
-                tags = ("alert",) if str(c[0]) in self.alert_ids else (
-                    ("lost",) if c[2] != 1 else ("contact",))
-                tree.insert(groupid, "end", iid=str(c[0]), text=label, tags=tags)
+            retained_groups.add(groupid)
+            heading = f"{names[key].upper()}  ·  {len(rows)}{extra}"
+            if not tree.exists(groupid):
+                tree.insert("", "end", iid=groupid, text=heading,
+                            open=self.group_open.get(groupid, False),
+                            tags=("group",))
+            elif tree.item(groupid, "text") != heading:
+                tree.item(groupid, text=heading)
 
-        if selected_id and tree.exists(selected_id):
-            tree.selection_set(selected_id)
-            tree.see(selected_id)
+            desired_rows: set[str] = set()
+            for index, c in enumerate(rows):
+                cid = str(c[0])
+                desired_rows.add(cid)
+                label = self._tree_contact_label(c, reports)
+                tags = ("alert",) if cid in self.alert_ids else (
+                    ("lost",) if c[2] != 1 else ("contact",))
+                if not tree.exists(cid):
+                    tree.insert(groupid, index, iid=cid, text=label, tags=tags)
+                else:
+                    if tree.parent(cid) != groupid or tree.index(cid) != index:
+                        tree.move(cid, groupid, index)
+                    if tree.item(cid, "text") != label:
+                        tree.item(cid, text=label)
+                    if tuple(tree.item(cid, "tags")) != tags:
+                        tree.item(cid, tags=tags)
+            for cid in tree.get_children(groupid):
+                if cid not in desired_rows:
+                    tree.delete(cid)
+        for groupid in tree.get_children():
+            if groupid not in retained_groups:
+                tree.delete(groupid)
+        # Existing selection and scroll position belong to the operator.
+        # Auto updates must never call .see() or change their viewport.
         self.show_selected()
         self._draw_map()
+        self._update_main_content()
 
     def _tree_contact_label(self, contact: list, reports: dict) -> str:
-        name = self.designations.get(
-            contact[0], "C-" + str(contact[0])[-6:])
+        name = self.designations.get(contact[0])
         kind, status = contact[1], contact[2]
-        suffix = ""
-        if kind == 13 and contact[0] in reports:
-            r = reports[contact[0]]
-            if r[1]:
-                suffix = "   ·   clase " + PLANET_CLASSES.get(r[1], "?")
-                if r[3]:
-                    suffix += " (provisional)"
-        elif kind == 1:
-            klass = STARSHIP_CLASSES.get(contact[3]) if contact[3] else None
-            suffix = "   ·   " + (klass or "sin identificar")
-            if contact[6]:
-                suffix += f"   ·   TP {contact[6]}"
+        if kind == 13:
+            classification = reports.get(contact[0])
+            label = name or "Planeta"
+            if classification and classification[1]:
+                label += " · clase " + PLANET_CLASSES.get(classification[1], "?")
+                if classification[3]:
+                    label += " (provisional)"
+        elif kind in (1, 2):
+            klass = STARSHIP_CLASSES.get(contact[3])
+            design = STARSHIP_DESIGNS.get(contact[3])
+            label = (klass or ("Nave no identificada" if kind == 1
+                               else "Lanzadera no identificada"))
+            if design:
+                label += " · " + design[1]
+        elif kind == 12:
+            label = name or "Estrella"
+        else:
+            label = name or TYPES.get(kind, "Objeto detectado").capitalize()
         if status != 1:
-            suffix += "   ·   SEÑAL PERDIDA"
-        return name + suffix
+            label += " · SEÑAL PERDIDA"
+        if str(contact[0]) in self.shared_report_ids and self.current_view == "contacts":
+            label += " · COMUNICADO"
+        return label
 
+    @staticmethod
+    def _bearing(contact: list) -> tuple[int, int]:
+        """Azimuth/elevation in the observer's sensor XY frame, NOT ship bow."""
+        from math import atan2, degrees, hypot
+        bearing = round((degrees(atan2(contact[8], contact[9])) + 360) % 360) % 360
+        elevation = round(degrees(atan2(
+            contact[10], hypot(contact[8], contact[9]))))
+        return bearing, elevation
+
+    def _navigation_data(self, contact: list) -> list | None:
+        return next((n for n in self.state.get("navigation", [])
+                     if n[0] == contact[0] and
+                     0 <= self.state["tick"] - n[1] <= 300), None)
+
+    def _operational_name(self, contact: list) -> str:
+        klass = STARSHIP_CLASSES.get(contact[3]) if contact[1] in (1, 2) else None
+        design = STARSHIP_DESIGNS.get(contact[3])
+        if klass:
+            return (f"{design[0]}, clase {klass}"
+                    if design else f"Nave de clase {klass}")
+        return self.designations.get(
+            contact[0], TYPES.get(contact[1], "Objeto detectado").capitalize())
+
+    def _report_script(self, contact: list) -> str:
+        """A Starfleet-ready briefing based only on observed Core projections."""
+        az, elevation = self._bearing(contact)
+        lines = [
+            f"Capitán, nuevo contacto de sensores. {self._operational_name(contact)}.",
+            f"Azimut {az:03d} grados, elevación {elevation:+d} grados "
+            f"en el marco de sensores. "
+            f"Distancia {contact[5] / 1000:.3f} unidades astronómicas.",
+        ]
+        nav = self._navigation_data(contact)
+        if nav:
+            trend = {1: "Se aproxima.", 2: "Se aleja.",
+                     0: "Movimiento radial no determinado."}.get(
+                         nav[3], "Movimiento no determinado.")
+            lines.append(f"Trayectoria estimada {nav[2]:03d} grados. {trend}")
+            if len(nav) > 6:
+                lines.append(f"Velocidad de desplazamiento relativa estimada "
+                             f"{nav[6] / 1000000:.6f} UA por segundo.")
+            if nav[4]:
+                lines.append("Posible trayectoria de interceptación. "
+                             "No se han determinado intenciones hostiles.")
+        else:
+            lines.append("Vector de movimiento todavía no determinado.")
+        return " ".join(lines)
+
+    def _update_main_content(self) -> None:
+        """Main zone is a playable task display rather than a duplicated list."""
+        if not hasattr(self, "main_text") or not self.state:
+            return
+        selection = self.contacts_table.selection()
+        c = self.contact_map.get(selection[0]) if selection else None
+        title = {"status": "PANORAMA DEL SISTEMA",
+                 "contacts": "CONTACTOS NUEVOS",
+                 "tracking": "SEGUIMIENTO DE CONTACTOS",
+                 "results": "ANÁLISIS CIENTÍFICO Y NAVAL",
+                 "configuration": "EQUIPO DE SENSORES"}.get(
+                     self.current_view, "SENSORES")
+        lines = [title, ""]
+        if self.current_view == "status":
+            counts = Counter(x[1] for x in self.state["contacts"] if x[2] == 1)
+            for kind, name in ((12,"Estrellas"),(13,"Planetas"),(14,"Lunas"),
+                               (17,"Asteroides"),(15,"Nebulosas"),
+                               (16,"Estaciones"),(1,"Naves"),(2,"Lanzaderas"),
+                               (3,"Sondas")):
+                if counts[kind]:
+                    lines.append(f"{name}: {counts[kind]}")
+            lines.extend(["", "Vigilancia automática activa.",
+                          "Selecciona un elemento para acercar el mapa a su posición."])
+        elif self.current_view == "contacts":
+            if not c:
+                lines.extend([f"Contactos nuevos durante la guardia: "
+                              f"{len(self.new_contact_ids)}",
+                              "Selecciona un contacto y prepara el parte al oficial."])
+            else:
+                lines.extend(["PARTE PREPARADO PARA EL OFICIAL", "",
+                              self._report_script(c), ""])
+                lines.append(
+                    "Comunicado en la prueba."
+                    if str(c[0]) in self.shared_report_ids else
+                    "Pulsa COMUNICAR CONTACTO AL OFICIAL para transmitirlo.")
+        elif self.current_view == "tracking":
+            if not c:
+                lines.extend(["Selecciona un contacto previamente marcado con SEGUIR.",
+                              f"En seguimiento: {len(self.followed_ids)}"])
+            else:
+                lines.append(self._operational_name(c))
+                lines.append(f"Distancia actual: {c[5] / 1000:.3f} UA")
+                nav = self._navigation_data(c)
+                if nav:
+                    lines.append(f"Trayectoria: {nav[2]:03d}° (marco de sensores)")
+                    lines.append({1:"Se aproxima",2:"Se aleja",
+                                  0:"Movimiento radial sin determinar"}.get(
+                                      nav[3],"Movimiento indeterminado"))
+                    if len(nav) > 6:
+                        lines.append(
+                            f"Desplazamiento relativo: {nav[6] / 1000000:.6f} UA/s")
+                    if nav[4]:
+                        lines.append("")
+                        lines.append("ATENCIÓN: posible interceptación de nuestra nave")
+                    else:
+                        lines.append("Sin trayectoria de interceptación confirmada.")
+                else:
+                    lines.append("Esperando segundo punto de trayectoria observado.")
+                lines.extend(["", "Táctica accede al mismo feed de sensores (QA)."])
+        elif self.current_view == "results":
+            if not c:
+                lines.extend([
+                    f"Objetos estudiados por el oficial: {len(self.analyzed_ids)}",
+                    "Selecciona un expediente para revisar la observación obtenida."])
+            else:
+                jobs = [j for j in self.state.get("scans", [])
+                        if j[1] == c[0] and j[0] in self.operator_scan_ids]
+                completed = [j for j in jobs if j[5] == 2]
+                active = [j for j in jobs if j[5] == 1]
+                lines.append(self._operational_name(c))
+                if active:
+                    lines.append("Análisis detallado en marcha.")
+                if completed:
+                    lines.append(
+                        f"Observación Core completada a las "
+                        f"{clock(max(j[3] for j in completed))}.")
+                if c[1] in (1,2):
+                    profile = NAVAL_CAPABILITIES.get(c[3])
+                    if profile:
+                        lines += ["", "CAPACIDADES CONOCIDAS DE LA CLASE",
+                                  f"Armamento habitual: {profile[1]}",
+                                  f"Defensas habituales: {profile[2]}"]
+                    lines += ["", "Estado actual de armas, escudos, propulsión y "
+                               "tripulación: no medidos por este banco F06.",
+                               "No confundir datos de catálogo con una lectura del buque."]
+                else:
+                    reports=[r for r in self.state.get("science", []) if r[0] == c[0]]
+                    if reports:
+                        p=reports[-1]
+                        lines += ["", f"Clase planetaria: "
+                                  f"{PLANET_CLASSES.get(p[1], 'sin determinar')}",
+                                  f"Temperatura: {p[4]} K",
+                                  f"Presión: {p[5]} mbar",
+                                  f"Oxígeno: {p[8]/10:.1f}%"]
+                    else:
+                        lines.append("Sin informe científico adicional.")
+                lines += ["", "Informe disponible en el archivo de CoreRPG."]
+        else:
+            lines.append("Revisa el estado de los equipos en el panel derecho.")
+        text="\n".join(lines)
+        if self.main_text.get("1.0", "end-1c") == text:
+            return
+        pos=self.main_text.yview()[0]
+        self.main_text.configure(state="normal")
+        self.main_text.delete("1.0", "end")
+        self.main_text.insert("1.0", text)
+        self.main_text.tag_add("heading", "1.0", "1.end")
+        for match in ("ATENCIÓN:", "PARTE PREPARADO PARA EL OFICIAL"):
+            found=self.main_text.search(match, "2.0", "end")
+            if found:
+                self.main_text.tag_add("priority", found,
+                                       f"{found}+{len(match)}c")
+        self.main_text.configure(state="disabled")
+        self.main_text.yview_moveto(pos)
+
+    def report_contact_to_officer(self) -> None:
+        selected=self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map:
+            messagebox.showinfo("Sensores", "Selecciona un contacto.", parent=self.root)
+            return
+        cid=selected[0]
+        contact=self.contact_map[cid]
+        if cid in self.shared_report_ids:
+            return
+        try:
+            message=self._report_script(contact)
+            response=self.command(f"REPORT {contact[0]}")
+            self.apply(response)
+            if cid in self.shared_report_ids:
+                self.append(response["tick"],
+                            "Parte al oficial registrado en la simulación: " + message)
+                self._update_main_content()
+        except Exception as exc:
+            messagebox.showwarning(
+                "Sensores", f"No se pudo comunicar el contacto: {exc}",
+                parent=self.root)
+
+    def send_analysis_to_tactical(self) -> None:
+        selected=self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map:
+            return
+        cid=selected[0]
+        contact=self.contact_map[cid]
+        has_report=any(
+            j[1]==contact[0] and j[5]==2 and j[0] in self.operator_scan_ids
+            for j in self.state.get("scans", []))
+        if not has_report:
+            messagebox.showinfo("Sensores", "No hay análisis terminado.",
+                                parent=self.root)
+            return
+        try:
+            tactical=self.command("TACTICAL")
+            if tactical["contacts"]!=self.state["contacts"]:
+                raise RuntimeError("El feed no coincide con el de Sensores.")
+            self.tactical_qa_ids.add(cid)
+            self.append(self.state["tick"],
+                        f"Expediente de {self._operational_name(contact)} "
+                        "preparado para consulta táctica en el banco QA. "
+                        "La consola táctica final está pendiente de integración.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
     def _no_selection_dossier(self) -> str:
         state = self.state
@@ -757,20 +1180,55 @@ class Panel:
         if c is not None:
             name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
             typ = TYPES.get(c[1], "Señal desconocida")
-            details = (
-                f"{name.upper()}\n\n"
-                f"{typ.capitalize()}\n"
-                f"Distancia: {c[5] / 1000:.3f} UA\n"
-                f"Confianza: {c[4] / 10:.1f}%\n"
-                f"Estado: {'Activo' if c[2] == 1 else 'Señal perdida'}\n"
-            )
-            if c[1] == 1:
-                klass = STARSHIP_CLASSES.get(c[3]) if c[3] else None
-                details += (
-                    "\nIDENTIFICACIÓN\n"
-                    f"Clase: {klass or 'Sin confirmar'}\n"
-                    f"Transpondedor: {c[6] or 'No confirmado'}\n"
+            klass_name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1, 2) else None
+            heading = (
+                f"{'LANZADERA' if c[1] == 2 else 'NAVE'} · CLASE {klass_name.upper()}"
+                if klass_name else
+                "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
+            if c[1] in (1, 2):
+                klass = STARSHIP_CLASSES.get(c[3])
+                profile = NAVAL_CAPABILITIES.get(c[3])
+                description = profile[0] if profile else (
+                    STARSHIP_DESIGNS.get(c[3], ("Clase de nave no catalogada",))[0])
+                heading = (
+                    f"{description.upper()} · {klass.upper()}"
+                    if klass else "NAVE · IDENTIFICACIÓN PENDIENTE"
                 )
+                nav = next(
+                    (row for row in self.state.get("navigation", [])
+                     if row[0] == c[0]), None)
+                details = f"{heading}\n\n"
+                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
+                if nav and c[2] == 1:
+                    _, measured_at, direction, tendency, intercept, closest = nav[:6]
+                    age = max(0, self.state["tick"] - measured_at)
+                    if age <= 300:
+                        tendency_es = {1: "Se acerca", 2: "Se aleja",
+                                       0: "Sin variación apreciable"}
+                        details += (
+                            f"Rumbo de desplazamiento: {direction:03d}° (estimado)\n"
+                            f"Movimiento: {tendency_es.get(tendency, 'Sin determinar')}\n"
+                        )
+                        if intercept:
+                            details += (
+                                "\n¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!\n"
+                                "La trayectoria observada apunta hacia nuestra posición.\n"
+                            )
+                    else:
+                        details += "Trayectoria: esperando actualización de sensores.\n"
+                else:
+                    details += "Rumbo y movimiento: calculando trayectoria…\n"
+                if profile:
+                    details += (
+                        "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
+                        f"Armamento habitual: {profile[1]}\n"
+                        f"Defensas habituales: {profile[2]}\n"
+                    )
+                # The sensor feed is already shared with Tactical; a
+                # permanent label saying so serves no operator purpose.
+            else:
+                details = f"{heading}\n\n"
+                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
             if c[2] == 2:
                 details += ("\nSEÑAL PERDIDA\n"
                             + LOSS_CAUSES.get(c[7], "Causa desconocida") + "\n")
@@ -807,13 +1265,26 @@ class Panel:
             jobs = [j for j in self.state.get("scans", []) if j[1] == c[0]]
             active = [j for j in jobs if j[5] == 1]
             complete = [j for j in jobs if j[5] == 2]
-            if jobs:
+            # Routine job counts are backend metadata, never part of the
+            # operator's naval or astronomical decision panel.
+            if jobs and self.current_view == "results" and c[1] not in (1, 2):
                 details += "\nESTUDIOS\n"
                 if active:
                     details += f"En curso: {len(active)}\n"
                 if complete:
                     details += (f"Terminados: {len(complete)}\n"
                                 f"Último: {clock(complete[-1][3])}\n")
+            comparison = next(
+                (row for row in self.state.get("comparisons", [])
+                 if row[0] == c[0]), None)
+            if comparison and c[1] not in (1, 2):
+                _, count, old_tick, new_tick, dc, dd, changed = comparison
+                details += (
+                    "\nARCHIVO DE SENSORES · COMPARACIÓN\n"
+                    f"Comparadas: {clock(old_tick)} y {clock(new_tick)}\n"
+                    f"Variación de distancia: {dd / 1000:+.3f} UA\n"
+                    f"Clasificación: {'Ha cambiado' if changed else 'Sin cambios confirmados'}\n"
+                )
             if str(c[0]) in self.alert_ids:
                 details += "\nREQUIERE ATENCIÓN DEL OFICIAL\n"
             self.technical_details += self._contact_description(c) + "\n"
@@ -824,33 +1295,118 @@ class Panel:
                     f"resultado Core {j[4]}."
                 )
 
-        self.detail_text.configure(state="normal")
-        self.detail_text.delete("1.0", "end")
-        self.detail_text.insert("1.0", details)
-        self.detail_text.tag_add("heading", "1.0", "1.end")
-        self.detail_text.configure(state="disabled")
+        if c is not None and self.technical_expanded:
+            az, elev = self._bearing(c)
+            details += (
+                "\nLECTURAS COMPLEMENTARIAS\n"
+                f"Azimut en marco de sensores: {az:03d}°\n"
+                f"Elevación en marco de sensores: {elev:+d}°\n"
+            )
+            motion = self._navigation_data(c)
+            if motion and len(motion) > 6:
+                details += (
+                    f"Desplazamiento relativo: {motion[6]/1000000:.6f} UA/s\n"
+                    f"Variación radial: {motion[7]/1000000:+.6f} UA/s\n"
+                )
+            else:
+                details += "Velocidad relativa: sin segunda observación válida.\n"
+        # Leave the dossier scroll where the officer placed it. Its text
+        # may change as Core publishes new readings, but the 500-ms refresh
+        # must not forcibly jump to the first line.
+        old_details = self.detail_text.get("1.0", "end-1c")
+        if old_details != details:
+            y_before = self.detail_text.yview()[0]
+            self.detail_text.configure(state="normal")
+            self.detail_text.delete("1.0", "end")
+            self.detail_text.insert("1.0", details)
+            self.detail_text.tag_add("heading", "1.0", "1.end")
+            for section in ("CAPACIDADES CONOCIDAS DE LA CLASE",
+                            "DATOS PLANETARIOS",
+                            "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
+                            "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL",
+                            "¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!"):
+                start = self.detail_text.search(section, "2.0", "end")
+                if start:
+                    self.detail_text.tag_add(
+                        "section", start, f"{start}+{len(section)}c")
+            self.detail_text.configure(state="disabled")
+            self.detail_text.yview_moveto(y_before)
         if c is not None:
             if c[2] == 1:
+                self.identify_button.configure(
+                    text="IDENTIFICAR" if c[1] in (1, 2) else "ANÁLISIS RÁPIDO")
                 if not self.action_area.winfo_manager():
                     self.action_area.pack(fill="x", pady=(7, 4))
             else:
                 self.action_area.pack_forget()
             if not self.technical_button.winfo_manager():
                 self.technical_button.pack(fill="x", pady=4)
+            if self.current_view == "contacts" and str(c[0]) in self.new_contact_ids:
+                self.contact_report_button.configure(
+                    text=("CONTACTO COMUNICADO" if str(c[0]) in self.shared_report_ids
+                          else "COMUNICAR CONTACTO AL OFICIAL"),
+                    state=("disabled" if str(c[0]) in self.shared_report_ids else "normal"))
+                if not self.contact_report_button.winfo_manager():
+                    self.contact_report_button.pack(fill="x", pady=(5, 2))
+            else:
+                self.contact_report_button.pack_forget()
+            completed = any(
+                j[1] == c[0] and j[0] in self.operator_scan_ids and j[5] == 2
+                for j in self.state.get("scans", []))
+            if self.current_view == "results" and completed:
+                if not self.tactical_report_button.winfo_manager():
+                    self.tactical_report_button.pack(fill="x", pady=(4, 2))
+            else:
+                self.tactical_report_button.pack_forget()
         else:
             self.action_area.pack_forget()
             self.technical_button.pack_forget()
+            self.contact_report_button.pack_forget()
+            self.tactical_report_button.pack_forget()
+        self._update_scan_progress(c)
+
+    def _update_scan_progress(self, contact: list | None) -> None:
+        """Only operator-requested long scans get a progress indicator."""
+        if contact is None:
+            self.scan_progress.pack_forget()
+            return
+        jobs = [j for j in self.state.get("scans", [])
+                if j[1] == contact[0] and j[0] in self.operator_scan_ids]
+        if not jobs:
+            self.scan_progress.pack_forget()
+            return
+        job = max(jobs, key=lambda row: (row[2], row[0]))
+        duration = max(1, job[3] - job[2])
+        percent = min(100, max(0, round(
+            100 * (self.state["tick"] - job[2]) / duration)))
+        if job[5] == 2:
+            # A finished scan must not occupy the main operator display
+            # indefinitely. Keep the result archived, but hide the progress
+            # shortly after completion.
+            if self.state["tick"] - job[3] >= 5:
+                self.scan_progress.pack_forget()
+                return
+            percent = 100
+            label = "Análisis detallado · 100 % · lectura conservada"
+        elif job[5] == 1:
+            label = f"Análisis detallado · {percent} % · en curso"
+        else:
+            label = "Análisis interrumpido · sin resultado confirmado"
+            percent = 0
+        self.scan_progress_label.configure(text=label)
+        self.scan_progress_value["value"] = percent
+        if not self.scan_progress.winfo_manager():
+            self.scan_progress.pack(fill="x", pady=(3, 6))
 
     def open_contact_details(self) -> None:
-        if not self.technical_details:
+        """Reveal meaningful readings in the RIGHT pane, not debug popups."""
+        if not self.contacts_table.selection():
             return
-        window = tk.Toplevel(self.root)
-        window.title("Sensores · Datos de la observación")
-        window.geometry("730x420")
-        area = tk.Text(window, font=("Segoe UI", 11), wrap="word", padx=15, pady=15)
-        area.pack(fill="both", expand=True)
-        area.insert("1.0", self.technical_details)
-        area.configure(state="disabled")
+        self.technical_expanded = not self.technical_expanded
+        self.technical_button.configure(
+            text="Ocultar lecturas complementarias" if self.technical_expanded
+            else "Ver ficha técnica")
+        self.show_selected()
 
 
     def apply_preset(self) -> None:
@@ -891,25 +1447,82 @@ class Panel:
             old_jobs = {j[0] for j in self.state.get("scans", [])}
             state = self.command(f"{action} {contact[0]}")
             if action == "SCAN":
-                created = [j for j in state["scans"] if j[0] not in old_jobs and j[1] == contact[0]]
+                created = [j for j in state["scans"]
+                           if j[0] not in old_jobs and j[1] == contact[0]]
                 for job in created:
                     self.manual_jobs[job[0]] = contact[0]
+                    self.operator_scan_ids.add(job[0])
+                if created:
+                    self.analyzed_ids.add(selected[0])
+            elif action == "PRIORITY":
+                self.followed_ids.add(selected[0])
             self.apply(state)
-            verb = {
-                "FOCUS": "Observación focal inmediata registrada sobre ",
-                "PRIORITY": "Seguimiento prioritario establecido sobre ",
-                "SCAN": "Estudio detallado de dos minutos iniciado sobre ",
-            }[action]
-            self.append(state["tick"], verb + "C-" + selected[0][-6:] +
-                        ". Consulta el expediente para ver su estado.")
+            if action == "SCAN" and created:
+                self.navigate("results")
+                self._choose_contact(selected[0])
+            elif action == "PRIORITY":
+                self.navigate("tracking")
+                self._choose_contact(selected[0])
+            reference = "C-" + selected[0][-6:]
+            if action == "FOCUS":
+                updated = self.contact_map.get(str(contact[0]), contact)
+                if updated[1] in (1, 2):
+                    klass = STARSHIP_CLASSES.get(updated[3])
+                    message = (
+                        f"Identificación rápida de {reference}: clase {klass}."
+                        if klass else
+                        f"Lectura rápida de {reference} terminada: clase sin confirmar. "
+                        "No hay firma suficiente para identificarla.")
+                else:
+                    message = (
+                        f"Análisis rápido de {reference}: "
+                        f"{TYPES.get(updated[1], 'señal')} observado. "
+                        "El expediente contiene los datos disponibles.")
+            elif action == "SCAN":
+                message = (
+                    f"Análisis detallado de {reference} iniciado. "
+                    "Progreso y resultados en el expediente del contacto.")
+            else:
+                message = f"Seguimiento prioritario establecido sobre {reference}."
+            self.append(state["tick"], message)
         except Exception as exc:
             messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
+
+    def _choose_contact(self, cid: str) -> None:
+        tree=self.contacts_table
+        if tree.exists(cid):
+            parent=tree.parent(cid)
+            if parent:
+                tree.item(parent, open=True)
+                self.group_open[parent]=True
+            tree.selection_set(cid)
+            tree.focus(cid)
+            tree.see(cid)
+        self.show_selected()
+        self._update_main_content()
+        self._draw_map()
 
     def apply(self, state: dict, reset: bool = False) -> None:
         previous = self.state
         self.state = state
         self.record.append(state)
         t = state["tick"]
+        self.shared_report_ids={
+            str(item[0]) for item in state.get("contact_briefs", [])}
+        new_arrivals=[]
+        if not reset:
+            for event in state.get("events", []):
+                kind, cid, when, category, klass=event
+                if kind==1 and category in (1,2):
+                    key=str(cid)
+                    observed=next((c for c in state["contacts"]
+                                   if c[0]==cid and c[2]==1),None)
+                    if observed and key not in self.new_contact_ids:
+                        self.new_contact_ids.add(key)
+                        new_arrivals.append(key)
+        if new_arrivals:
+            self.navigate("contacts")
+            self._choose_contact(new_arrivals[-1])
         self.progress["value"] = t
         self.timelabel.configure(text=f"Guardia: {clock(t)} / 08:00:00")
         if state["offline"]:
@@ -917,8 +1530,35 @@ class Panel:
         else:
             status = f"Vigilancia activa · {state['active']} contactos"
         self.summary.configure(text=status)
-        # The old tiny header label is NOT an operator alert.
+        # Dynamic course and interception warnings come from consecutive
+        # observed positions in the native Core sensor projection.
         self._refresh_contacts(state)
+        for evt in state.get("navigation_alerts", []):
+            kind, cid, when, heading, trend, intercept = evt
+            key = (kind, cid, when)
+            if key in self.nav_events_seen:
+                continue
+            self.nav_events_seen.add(key)
+            contact = self.contact_map.get(str(cid))
+            if not contact:
+                continue
+            klass = STARSHIP_CLASSES.get(contact[3], "nave")
+            if kind == 2:
+                msg = (f"ALERTA DE SENSORES: {klass}, posible rumbo de "
+                       f"interceptación ({heading:03d}°). Informar a Táctica.")
+                self.nav_priority = evt
+            elif kind == 1:
+                msg = (f"Maniobra detectada: {klass} cambia de rumbo a "
+                       f"{heading:03d}°. "
+                       + ("Se aproxima." if trend == 1 else
+                          "Se aleja." if trend == 2 else
+                          "Trayectoria lateral."))
+                self.nav_priority = evt
+            elif kind == 3:
+                msg = f"Seguimiento: {klass} se aproxima. Rumbo {heading:03d}°."
+            else:
+                msg = f"Seguimiento: {klass} se aleja. Rumbo {heading:03d}°."
+            self.append(when, msg)
         self._update_alert(state)
         self._update_view_content()
         if reset:
@@ -981,6 +1621,16 @@ class Panel:
                 if (observed and observed[2] == 1 and
                         candidate not in self.acknowledged_arrivals):
                     self.arrival_id = candidate
+                    if not self.slowed_for_alert:
+                        self.speed_before_alert = self.speed.get()
+                    self.slowed_for_alert = True
+                    self.speed.set("×1")
+                    self.sim_half_seconds = 0
+                    self.restore_speed_button.configure(
+                        text=f"Volver a {self.speed_before_alert}")
+                    if not self.restore_speed_button.winfo_manager():
+                        self.restore_speed_button.pack(
+                            side="left", padx=(12, 0))
             contact = self.contact_map.get(str(contact_id))
             ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
             short_ref = "C-" + str(contact_id)[-6:]
@@ -1036,11 +1686,25 @@ class Panel:
             self.button_play.configure(text="Guardia finalizada", state="disabled")
             self.append(t, "Guardia finalizada. Exporta el informe cuando quieras.")
 
+    def restore_watch_speed(self) -> None:
+        """A new ship slows the clock, but the operator chooses when to accelerate."""
+        self.speed.set(self.speed_before_alert)
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
+        self.restore_speed_button.pack_forget()
+        self.append(self.state.get("tick", 0),
+                    f"Guardia a velocidad {self.speed.get()} por decisión del oficial.")
+
     def tick(self) -> None:
         if self.playing and self.state.get("tick", 0) < 28800:
             try:
-                sim_seconds=int(self.speed.get()[1:]) // 2
-                self.apply(self.command(f"STEP {sim_seconds}"))
+                # Advance one simulated second every two 500-ms ticks at ×1.
+                # Integer half-seconds also preserve exact ×15 cadence.
+                self.sim_half_seconds += int(self.speed.get()[1:])
+                sim_seconds, self.sim_half_seconds = divmod(
+                    self.sim_half_seconds, 2)
+                if sim_seconds:
+                    self.apply(self.command(f"STEP {sim_seconds}"))
             except Exception as exc:
                 self.playing = False
                 self.button_play.configure(text="Reanudar")
@@ -1055,15 +1719,32 @@ class Panel:
 
     def restart(self) -> None:
         self.playing = False
+        self.speed.set("×30")
+        self.speed_before_alert = "×30"
+        self.slowed_for_alert = False
+        self.sim_half_seconds = 0
+        self.restore_speed_button.pack_forget()
         self.button_play.configure(state="normal", text="Iniciar")
         self.lines.clear()
         self.record.clear()
         self.manual_jobs.clear()
         self.saved_manual_jobs.clear()
+        self.operator_scan_ids.clear()
+        self.saved_operator_scan_ids.clear()
+        self.new_contact_ids.clear()
+        self.followed_ids.clear()
+        self.analyzed_ids.clear()
+        self.shared_report_ids.clear()
+        self.tactical_qa_ids.clear()
+        self.saved_operator_views.clear()
+        self.map_zoom=1.0
+        self.map_overview=True
         self.designations = {}
         self.arrival_id = None
         self.alert_ids = []
         self.acknowledged_arrivals.clear()
+        self.nav_events_seen.clear()
+        self.nav_priority = None
         self.group_open.clear()
         self.saved_lines = None
         self.saved_notes = ""
@@ -1082,6 +1763,13 @@ class Panel:
                 state = self.command(op)
                 self.saved_lines = list(self.lines)
                 self.saved_manual_jobs = dict(self.manual_jobs)
+                self.saved_operator_scan_ids = set(self.operator_scan_ids)
+                self.saved_operator_views = {
+                    "new": set(self.new_contact_ids),
+                    "followed": set(self.followed_ids),
+                    "analysed": set(self.analyzed_ids),
+                    "tactical": set(self.tactical_qa_ids),
+                }
                 self.saved_notes = self.notes.get("1.0", "end").strip()
                 self.apply(state)
                 self.append(state["tick"], "Bitácora y estado de guardia conservados.")
@@ -1092,6 +1780,11 @@ class Panel:
                 state = self.command(op)
                 self.lines = list(self.saved_lines)
                 self.manual_jobs = dict(self.saved_manual_jobs)
+                self.operator_scan_ids = set(self.saved_operator_scan_ids)
+                self.new_contact_ids = set(self.saved_operator_views.get("new", set()))
+                self.followed_ids = set(self.saved_operator_views.get("followed", set()))
+                self.analyzed_ids = set(self.saved_operator_views.get("analysed", set()))
+                self.tactical_qa_ids = set(self.saved_operator_views.get("tactical", set()))
                 self.record.clear()
                 self.state = {}  # loading must not create a false state-transition alarm
                 self.arrival_id = None

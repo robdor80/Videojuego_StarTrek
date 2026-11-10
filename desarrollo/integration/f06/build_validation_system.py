@@ -14,8 +14,10 @@ def build(source: Path) -> str:
     if data.get("schema_version") != 1 or data.get("status") != "FIXTURE_NON_CANON_NOT_A_PERSISTENT_GALAXY":
         raise ValueError("only the non-canonical F06 QA fixture is supported")
     ticks = data["time_frames_seconds"]
-    if ticks != [0, 3600, 7200, 14400, 28800]:
-        raise ValueError("fixed eight-hour schedule required")
+    if (len(ticks) > 32 or sorted(set(ticks)) != ticks or
+            not {0, 3600, 7200, 14400, 28800}.issubset(ticks) or
+            ticks[-1] != 28800):
+        raise ValueError("invalid ordered eight-hour observation schedule")
     entities = data["entities"]
     if not (15 <= len(entities) <= 48):
         raise ValueError("small bounded system required")
@@ -34,8 +36,10 @@ def build(source: Path) -> str:
             raise ValueError("out-of-range coordinates")
         if e["kind"] == "planet" and not e.get("science_truth", {}).get("planet_class"):
             raise ValueError("planet fixture needs separate host-only classification")
-        if e["kind"] == "starship" and e["ship_class_id"] not in (0, 6, 8, 16):
-            raise ValueError("test ship class not verified in Star Trek registry")
+        if e["kind"] == "starship" and e["ship_class_id"] not in (6, 8, 16, 18):
+            raise ValueError("every uncamouflaged QA starship must have a valid class")
+        if e["kind"] == "shuttle" and e["ship_class_id"] != 13:
+            raise ValueError("QA shuttle must have an identified design")
         if not (0 <= e["strength_permille"] <= 1000 and 0 <= e["interference_permille"] <= 550):
             raise ValueError("non-normalized sensor signature")
         seen_ticks = set()

@@ -42,10 +42,15 @@ void f06_autonomy_plan(Campaign& c,const ContentCatalog& cat) {
  std::set<std::pair<U,U>> attempted;
  for(U id:ids){
   if(val(c.world,id,F06_TIMED_STATUS)==F06_TIMED_QUEUED)++running;
-  if(val(c.world,id,F06_TIMED_AUTO))
+  if(val(c.world,id,F06_TIMED_AUTO) &&
+     val(c.world,id,F06_TIMED_STATUS)!=F06_TIMED_CANCELLED)
    attempted.emplace(ref(c.world,id,F06_CONTACT_REF),val(c.world,id,F06_TIMED_GEN));
  }
- if(running>=2)return; // all manual + automatic scans share equipment slots
+ // Leave one hardware lane available for an officer whenever possible.
+ // On a single-lane array, automatic work is allowed but is preemptible.
+ const U capacity=std::max<U>(1,hw.power_permille/350);
+ const U auto_ceiling=std::min<U>(2,capacity>1?capacity-1:1);
+ if(running>=auto_ceiling)return;
  std::vector<U> candidates;
  for(U contact:all(c.world,"f06_contact")){
   if(val(c.world,contact,F06_STATUS)!=F06_ACTIVE)continue;
@@ -65,7 +70,7 @@ void f06_autonomy_plan(Campaign& c,const ContentCatalog& cat) {
   return pa!=pb?pa>pb:val(c.world,a,F06_PUBLIC_ID)<val(c.world,b,F06_PUBLIC_ID);
  });
  for(U contact:candidates){
-  if(running>=2 || all(c.world,"f06_timed_scan").size()>=240)break;
+  if(running>=auto_ceiling || all(c.world,"f06_timed_scan").size()>=240)break;
   const U generation=val(c.world,contact,F06_AUTO_GEN);
   const U confidence=val(c.world,contact,F06_CONFIDENCE);
   const U nominal=90+(1000-confidence)/10;
@@ -123,7 +128,7 @@ bool f06_computer_requires_attention(const WorldState& w,U c) {
     ref(w,job,F06_CONTACT_REF)==c &&
     val(w,job,F06_TIMED_GEN)==val(w,c,F06_AUTO_GEN)){
    if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)pending=true;
-   else attempted=true;
+   else if(val(w,job,F06_TIMED_STATUS)!=F06_TIMED_CANCELLED)attempted=true;
  }
  return attempted && !pending;
 }

@@ -202,7 +202,7 @@ uint32_t f06_begin_timed_scan(F04Session* s,F04Ref who,
  return call(s,[&]()->uint32_t{
   need(observer(s,who),F04_DENIED);
   need(req->request_key && req->request_key<=FOREVER && !req->reserved &&
-   req->nominal_seconds>=30 && req->nominal_seconds<=900,F04_ARGUMENT);
+   req->nominal_seconds>=20 && req->nominal_seconds<=900,F04_ARGUMENT);
   for(U job:all(s->c->world,"f06_timed_scan"))
    if(val(s->c->world,job,F06_TIMED_KEY)==req->request_key) {
     need(ref(s->c->world,job,PERSON)==who.id &&
@@ -219,14 +219,32 @@ uint32_t f06_begin_timed_scan(F04Session* s,F04Ref who,
   const auto hw=f06_array_state(next->world);
   need(hw.focused_enabled && hw.power_permille>=400 && hw.integrity_permille &&
    hw.capability_permille,F04_UNAVAILABLE);
-  U ongoing=0;
-  for(U job:all(next->world,"f06_timed_scan"))
-   if(val(next->world,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)++ongoing;
-  need(ongoing<std::max<U>(1,hw.power_permille/350),F04_CAPACITY);
+  // Orders from a qualified on-duty officer take precedence over
+  // unattended automatic jobs. Keep everything in a single atomic Core
+  // transaction: preempt at most one *automatic* reservation if hardware
+  // is saturated; never silently cancel another officer's study.
+  U ongoing=0, preemptible_auto=0;
+  const U parallel_limit=std::max<U>(1,hw.power_permille/350);
+  for(U job:all(next->world,"f06_timed_scan")) {
+   if(val(next->world,job,F06_TIMED_STATUS)!=F06_TIMED_QUEUED)continue;
+   ++ongoing;
+   if(val(next->world,job,F06_TIMED_AUTO))preemptible_auto=job;
+  }
   need(all(next->world,"f06_timed_scan").size()<256,F04_CAPACITY);
+  if(ongoing>=parallel_limit) {
+   need(preemptible_auto,F04_CAPACITY); // only manual work remains
+   f06_set(*next,preemptible_auto,F06_TIMED_STATUS,F06_TIMED_CANCELLED);
+   (void)event(*next,*s->content.catalog(),who.id,6093,F04_OK,0,
+               preemptible_auto); // archived: operator takes resource slot
+   --ongoing;
+  }
+  need(ongoing<parallel_limit,F04_CAPACITY);
   const U sig=ref(next->world,contact,F06_SIGNAL_REF);
   const U pen=val(next->world,sig,F06_INTERFERENCE);
-  const U duration=(U(req->nominal_seconds)*(1000+pen)+999)/1000;
+  // Aster's high-priority fast detailed review is capped at 20 Core seconds.
+  // Interference can degrade or fail the measurement, not stretch the wait.
+  const U duration=req->nominal_seconds<=20 ? U(20) :
+    (U(req->nominal_seconds)*(1000+pen)+999)/1000;
   const U cost=std::min<U>(500,100+duration/6);
   const U now=next->time.now();
   need(now<=FOREVER-duration,F04_ARGUMENT);

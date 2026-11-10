@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""MSI acceptance: real native Core Aster with the quiet, task-first Tk console.
-
-This test needs a Windows desktop and the compiled f06_aster_runner. It is
-separate from the headless Core unit tests, which cannot assess visual layout.
-"""
+"""F06 MSI human-interface contract using the actual native Aster Core runner."""
 from __future__ import annotations
 
 import argparse
@@ -20,86 +16,130 @@ def visible_contacts(panel: Panel) -> list[str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
+    parser=argparse.ArgumentParser()
     parser.add_argument("--runner", required=True, type=Path)
-    args = parser.parse_args()
+    args=parser.parse_args()
     assert args.runner.is_file(), args.runner
-    root = tk.Tk()
-    panel = None
+    root=tk.Tk()
+    panel=None
     try:
-        panel = Panel(root, args.runner.resolve())
+        panel=Panel(root, args.runner.resolve())
         root.update_idletasks()
         root.update()
+        assert len(panel.navigation_buttons)==4, "four operator tasks required"
+        assert panel.map_box.winfo_viewable(), "main map must be visible"
+        assert panel.main_text.winfo_viewable(), "central operating zone missing"
+        assert panel.contacts_table.winfo_viewable(), "left operator list missing"
+        assert panel.detail_text.winfo_viewable(), "right dossier missing"
+        assert not panel.test_area.winfo_manager(), "QA-only options must be hidden"
+        assert len(visible_contacts(panel))>=18, "GENERAL inventory missing"
+        assert len(panel.state["science"])==6, "Core planetary readings missing"
+        assert "PANORAMA" in panel.main_text.get("1.0","end")
 
-        assert len(panel.navigation_buttons) == 6, "human-sized operating groups"
-        assert len(visible_contacts(panel)) >= 18, "real Core contacts missing"
-        assert panel.contacts_table.winfo_viewable(), "system hierarchy is hidden"
-        assert panel.contacts_table.winfo_width() >= 250, "system hierarchy too narrow"
-        assert not panel.map_box.winfo_manager(), "map must be optional"
-        assert not panel.test_area.winfo_manager(), "QA machinery must be hidden"
-        assert not panel.alert_bar.winfo_manager(), "no initial attention before auto attempt"
-        assert len(panel.state.get("science", [])) == 6, "six scientific reports missing"
-
-        # Expand/collapse categories; simple labels instead of backend dumps.
-        assert panel.contacts_table.exists("group:planet")
-        label = panel.contacts_table.item("group:planet", "text")
-        assert "6" in label and "clase" in label, label
-
-        # A new observer-relevant contact should generate a prominent alert
-        # that opens the exact CoreRPG observed ID, not a guessed name.
-        snapshot = panel.command("STEP 2400")
-        panel.apply(snapshot)
-        root.update_idletasks()
+        # Focused map is exactly Enterprise + ONE observed object; overview
+        # exposes everything and never replaces the central workspace.
+        intrepid=next(str(c[0]) for c in panel.state["contacts"]
+                     if c[1]==1 and c[3]==6)
+        panel.contacts_table.selection_set(intrepid)
         root.update()
-        assert snapshot["attention"] > 0, snapshot
-        assert panel.alert_bar.winfo_viewable(), "big alert is not visible"
-        assert panel.alert_ids == [str(cid) for cid in snapshot["attention_contacts"]]
-        subject = panel.alert_ids[0]
-        panel.open_alert_contact()
-        assert panel.contacts_table.selection() == (subject,), "alert has no direct action"
-        assert subject in panel.contact_map
-        assert "IDENTIFICACIÓN" in panel.detail_text.get("1.0", "end")
-
-        # The usual views must remain filterable and retain real observation data.
-        panel.navigate("contacts")
-        panel.select_section("unidentified")
-        unidentified = visible_contacts(panel)
-        assert unidentified, "expected an unidentified ship after the automated attempt"
-        assert all(panel.contact_map[k][1] == 1 and panel.contact_map[k][3] == 0
-                   for k in unidentified)
-        panel.select_section("all")
-        panel.navigate("results")
-        panel.select_section("planets")
-        planets = visible_contacts(panel)
-        assert len(planets) == 6, "planet summary lost a Core contact"
-        sample = planets[0]
-        panel.contacts_table.selection_set(sample)
-        panel.show_selected()
-        dossier = panel.detail_text.get("1.0", "end")
-        assert "DATOS PLANETARIOS" in dossier and "Oxígeno:" in dossier, dossier
-
-        # Opening a category is not selecting a sensor object or issuing orders.
-        panel.contacts_table.selection_set("group:planet")
-        panel.show_selected()
-        assert not panel.action_area.winfo_manager(), "group header has contact actions"
-
-        panel.contacts_table.selection_remove("group:planet")
-        panel.navigate("configuration")
-        panel.show_selected()
-        assert panel.engineering.winfo_manager(), "profiles must be reachable"
-        assert "EQUIPO DE SENSORES" in panel.detail_text.get("1.0", "end")
-
-        # The one live line is replaceable. Historical messages remain available.
-        previous = len(panel.lines)
-        panel.append(snapshot["tick"], "Mensaje operativo actual de prueba")
-        assert len(panel.lines) == previous + 1
-        assert "Mensaje operativo actual de prueba" in panel.notice_label.cget("text")
-        assert not hasattr(panel, "log"), "legacy scrolling log is still on-screen"
+        panel._draw_map()
+        assert len(panel.map_positions)==1, panel.map_positions
+        assert panel.map_positions[0][2]==intrepid
+        initial_zoom=panel.map_zoom
+        panel.zoom_map(1.33)
+        assert panel.map_zoom>initial_zoom
         panel.toggle_map()
-        root.update_idletasks()
-        assert panel.map_box.winfo_manager(), "on-demand spatial map unavailable"
-        assert len(panel.map_positions) >= 0
-        print("PASS native Core / six task groups / hierarchy / big alert / dossier / quiet notices")
+        assert len(panel.map_positions)>=18
+        panel.navigate("contacts")
+        assert not visible_contacts(panel), "CONTACTOS must not repeat inventory"
+        panel.navigate("status")
+
+        # A new Klingon causes automatic CONTACTOS selection and slowdown.
+        panel.apply(panel.command("STEP 3600"))
+        root.update()
+        assert panel.current_view=="contacts", "new ship must open CONTACTOS"
+        assert panel.arrival_id is not None, "naval arrival not alerted"
+        subject=panel.arrival_id
+        assert panel.contacts_table.selection()==(subject,), (
+            "incoming ship must be selected automatically")
+        klingon=panel.contact_map[subject]
+        assert klingon[3]==16, "uncloaked cruiser not identified on detection"
+        assert panel.speed.get()=="×1", "time must slow, not pause"
+        assert panel.footer.winfo_viewable()
+        assert panel.alert_bar.winfo_viewable()
+        assert "VOR'CHA" in panel.alert_title.cget("text")
+        assert panel.contact_report_button.winfo_manager(), (
+            "communicate-to-officer action missing")
+        briefing=panel.main_text.get("1.0","end")
+        assert "Capitán" in briefing and "Azimut" in briefing, briefing
+        assert "unidades astronómicas" in briefing
+        panel.report_contact_to_officer()
+        assert subject in panel.shared_report_ids
+        assert panel.state["contact_briefs"][-1][0]==klingon[0]
+        first_count=len(panel.state["contact_briefs"])
+        panel.report_contact_to_officer()
+        assert len(panel.state["contact_briefs"])==first_count, (
+            "same detection reported twice")
+
+        # Follow is a real Core order; the dedicated SEGUIMIENTO list contains
+        # only selected contacts, not a copy of the system inventory.
+        panel.contact_action("PRIORITY")
+        assert panel.current_view=="tracking"
+        assert visible_contacts(panel)==[subject],visible_contacts(panel)
+        panel.apply(panel.command("STEP 20"))
+        root.update()
+        operative=panel.main_text.get("1.0","end")
+        assert "Trayectoria:" in operative and "Se aproxima" in operative, operative
+        assert "interceptación" in operative.lower(), operative
+        assert panel.alert_bar.winfo_viewable()
+
+        # The detailed Core scan runs during watch and opens ANÁLISIS.
+        panel.contact_action("SCAN")
+        assert panel.current_view=="results"
+        assert visible_contacts(panel)==[subject]
+        assert panel.scan_progress.winfo_manager()
+        panel.apply(panel.command("STEP 25"))
+        root.update()
+        result=panel.main_text.get("1.0","end")
+        assert "Análisis" in result or "ANÁLISIS" in result
+        assert "Disruptores y torpedos de fotones" in result, result
+        assert "no medidos" in result, "class catalogue must not fake measurements"
+        assert not panel.scan_progress.winfo_manager(), (
+            "completed analysis must not leave permanent progress bar")
+        assert panel.tactical_report_button.winfo_manager()
+        panel.send_analysis_to_tactical()
+        assert subject in panel.tactical_qa_ids
+
+        # The UI-only operator selections survive native QA checkpoints.
+        panel.checkpoint("SAVE")
+        panel.apply(panel.command("STEP 10"))
+        panel.checkpoint("LOAD")
+        assert subject in panel.followed_ids
+        assert subject in panel.analyzed_ids
+        assert subject in panel.shared_report_ids
+
+        # Romulan reveal at 02:00 and actual motion in <=5 Core seconds.
+        remaining=7205-panel.state["tick"]
+        assert remaining>0
+        panel.apply(panel.command(f"STEP {remaining}"))
+        root.update()
+        warbird=next(str(c[0]) for c in panel.state["contacts"]
+                     if c[1]==1 and c[3]==8 and c[2]==1)
+        assert panel.current_view=="contacts"
+        assert panel.contacts_table.selection()==(warbird,)
+        dossier=panel.detail_text.get("1.0","end").lower()
+        assert "disruptores" in dossier and "camuflaje" in dossier,dossier
+        assert "rumbo de desplazamiento" in dossier,dossier
+        assert "consultar catálogo" not in dossier,dossier
+
+        # Layout remains usable with a real priority banner at MSI resolution.
+        root.geometry("1150x700")
+        root.update()
+        assert panel.footer.winfo_viewable()
+        assert panel.notice_bar.winfo_viewable()
+        assert panel.footer.winfo_y()+panel.footer.winfo_height()<=root.winfo_height()
+        print("PASS F06 3 zones / interactive navigation / contact briefing /"
+              " tracking / deep scan / tactile sharing / QA restore")
     finally:
         if panel:
             panel.close()
@@ -107,5 +147,5 @@ def main() -> None:
             root.destroy()
 
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()

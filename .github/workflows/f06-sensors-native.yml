@@ -53,6 +53,13 @@ jobs:
         run: |
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f06\.' --no-tests=error --output-on-failure --output-junit f06.xml
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f05\.(scenario|determinism|duplicate|stale|corrupt)$' --no-tests=error --output-on-failure --output-junit f05-regression.xml
+      - name: Verify playable Tk console under virtual display (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          command -v xvfb-run || (sudo apt-get update -qq && sudo apt-get install -y xvfb)
+          xvfb-run -a python desarrollo/integration/f06/qa/test_aster_gui_layout.py \
+            --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner"
       - name: Validate QA Python and Windows launch scripts
         shell: pwsh
         run: |
