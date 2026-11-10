@@ -780,7 +780,7 @@ class Panel:
                 suffix = "   ·   clase " + PLANET_CLASSES.get(r[1], "?")
                 if r[3]:
                     suffix += " (provisional)"
-        elif kind == 1:
+        elif kind in (1, 2):
             klass = STARSHIP_CLASSES.get(contact[3]) if contact[3] else None
             suffix = "   ·   " + (klass or "sin identificar")
             if contact[6]:
@@ -832,9 +832,11 @@ class Panel:
         if c is not None:
             name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
             typ = TYPES.get(c[1], "Señal desconocida")
-            klass_name = STARSHIP_CLASSES.get(c[3]) if c[1] == 1 else None
-            heading = (f"NAVE · CLASE {klass_name.upper()}" if klass_name else
-                       "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
+            klass_name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1, 2) else None
+            heading = (
+                f"{'LANZADERA' if c[1] == 2 else 'NAVE'} · CLASE {klass_name.upper()}"
+                if klass_name else
+                "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
             details = (
                 f"{heading}\n\n"
                 f"Referencia: {name}\n"
@@ -843,7 +845,7 @@ class Panel:
                 f"Fiabilidad de la detección: {c[4] / 10:.1f}%\n"
                 f"Estado: {'Activo' if c[2] == 1 else 'Señal perdida'}\n"
             )
-            if c[1] == 1:
+            if c[1] in (1, 2):
                 klass = STARSHIP_CLASSES.get(c[3]) if c[3] else None
                 design = STARSHIP_DESIGNS.get(c[3])
                 details += (
@@ -1043,7 +1045,7 @@ class Panel:
             reference = "C-" + selected[0][-6:]
             if action == "FOCUS":
                 updated = self.contact_map.get(str(contact[0]), contact)
-                if updated[1] == 1:
+                if updated[1] in (1, 2):
                     klass = STARSHIP_CLASSES.get(updated[3])
                     message = (
                         f"Identificación rápida de {reference}: clase {klass}."
