@@ -71,6 +71,24 @@ def main() -> None:
             "Identificación rápida" in panel.notice_label.cget("text"))
         assert panel.footer.winfo_viewable(), "quick scan broke layout"
 
+        # BUG F06-UX-03: a live 500-ms refresh must not jump the contact
+        # list back to the selected item or to the first category.
+        tree = panel.contacts_table
+        for group in tree.get_children():
+            tree.item(group, open=True)
+        root.update_idletasks()
+        tree.yview_moveto(1.0)
+        root.update_idletasks()
+        old_scroll = tree.yview()[0]
+        assert old_scroll > 0, "test must have enough rows to scroll"
+        panel.apply(panel.command("STEP 15"))
+        root.update_idletasks()
+        new_scroll = tree.yview()[0]
+        assert abs(new_scroll - old_scroll) < 0.02, (
+            "live refresh hijacked manual contact scrolling",
+            old_scroll, new_scroll)
+        assert panel.footer.winfo_viewable()
+
         # The usual views must remain filterable and retain real observation data.
         panel.navigate("contacts")
         panel.select_section("unidentified")
