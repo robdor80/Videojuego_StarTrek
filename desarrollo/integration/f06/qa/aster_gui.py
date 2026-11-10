@@ -701,8 +701,11 @@ class Panel:
             if needle and needle not in self._tree_contact_label(c, reports).casefold():
                 continue
             grouped[kind_groups.get(c[1], "other")].append(c)
-        tree.delete(*tree.get_children())
-        for key in ordered:
+        # Incremental reconciliation: the real-time Core clock refreshes every
+        # 500 ms. Rebuilding the Treeview or calling .see() on each tick jumps
+        # to the selected contact and makes manual scrolling impossible.
+        retained_groups: set[str] = set()
+        for group_index, key in enumerate(ordered):
             rows = grouped[key]
             if not rows:
                 continue
@@ -715,19 +718,39 @@ class Panel:
                     extra = "   ·   " + ", ".join(
                         f"{n} clase {cls}" for cls, n in sorted(classes.items()))
             groupid = "group:" + key
-            is_open = self.group_open.get(groupid, False)
-            tree.insert("", "end", iid=groupid, text=(
-                f"{names[key].upper()}  ·  {len(rows)}{extra}"),
-                open=is_open, tags=("group",))
-            for c in rows:
-                label = self._tree_contact_label(c, reports)
-                tags = ("alert",) if str(c[0]) in self.alert_ids else (
-                    ("lost",) if c[2] != 1 else ("contact",))
-                tree.insert(groupid, "end", iid=str(c[0]), text=label, tags=tags)
+            retained_groups.add(groupid)
+            heading = f"{names[key].upper()}  ·  {len(rows)}{extra}"
+            if not tree.exists(groupid):
+                tree.insert("", "end", iid=groupid, text=heading,
+                            open=self.group_open.get(groupid, False),
+                            tags=("group",))
+            elif tree.item(groupid, "text") != heading:
+                tree.item(groupid, text=heading)
 
-        if selected_id and tree.exists(selected_id):
-            tree.selection_set(selected_id)
-            tree.see(selected_id)
+            desired_rows: set[str] = set()
+            for index, c in enumerate(rows):
+                cid = str(c[0])
+                desired_rows.add(cid)
+                label = self._tree_contact_label(c, reports)
+                tags = ("alert",) if cid in self.alert_ids else (
+                    ("lost",) if c[2] != 1 else ("contact",))
+                if not tree.exists(cid):
+                    tree.insert(groupid, index, iid=cid, text=label, tags=tags)
+                else:
+                    if tree.parent(cid) != groupid or tree.index(cid) != index:
+                        tree.move(cid, groupid, index)
+                    if tree.item(cid, "text") != label:
+                        tree.item(cid, text=label)
+                    if tuple(tree.item(cid, "tags")) != tags:
+                        tree.item(cid, tags=tags)
+            for cid in tree.get_children(groupid):
+                if cid not in desired_rows:
+                    tree.delete(cid)
+        for groupid in tree.get_children():
+            if groupid not in retained_groups:
+                tree.delete(groupid)
+        # Existing selection and scroll position belong to the operator.
+        # Auto updates must never call .see() or change their viewport.
         self.show_selected()
         self._draw_map()
 
@@ -885,18 +908,25 @@ class Panel:
                     f"resultado Core {j[4]}."
                 )
 
-        self.detail_text.configure(state="normal")
-        self.detail_text.delete("1.0", "end")
-        self.detail_text.insert("1.0", details)
-        self.detail_text.tag_add("heading", "1.0", "1.end")
-        for section in ("IDENTIFICACIÓN NAVAL", "DATOS PLANETARIOS",
-                        "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
-                        "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL"):
-            start = self.detail_text.search(section, "2.0", "end")
-            if start:
-                self.detail_text.tag_add(
-                    "section", start, f"{start}+{len(section)}c")
-        self.detail_text.configure(state="disabled")
+        # Leave the dossier scroll where the officer placed it. Its text
+        # may change as Core publishes new readings, but the 500-ms refresh
+        # must not forcibly jump to the first line.
+        old_details = self.detail_text.get("1.0", "end-1c")
+        if old_details != details:
+            y_before = self.detail_text.yview()[0]
+            self.detail_text.configure(state="normal")
+            self.detail_text.delete("1.0", "end")
+            self.detail_text.insert("1.0", details)
+            self.detail_text.tag_add("heading", "1.0", "1.end")
+            for section in ("IDENTIFICACIÓN NAVAL", "DATOS PLANETARIOS",
+                            "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
+                            "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL"):
+                start = self.detail_text.search(section, "2.0", "end")
+                if start:
+                    self.detail_text.tag_add(
+                        "section", start, f"{start}+{len(section)}c")
+            self.detail_text.configure(state="disabled")
+            self.detail_text.yview_moveto(y_before)
         if c is not None:
             if c[2] == 1:
                 self.identify_button.configure(
