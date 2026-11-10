@@ -1,0 +1,41 @@
+name: F07 LCARS Sensors UI
+on:
+  push:
+    paths:
+      - "desarrollo/integration/f07/lcars_sensores/**"
+      - ".github/workflows/f07-lcars-ui.yml"
+  pull_request:
+    paths:
+      - "desarrollo/integration/f07/lcars_sensores/**"
+      - ".github/workflows/f07-lcars-ui.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  observer-ui:
+    name: Observer contract and LCARS shell
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate JavaScript syntax
+        run: |
+          node --check desarrollo/integration/f07/lcars_sensores/core.mjs
+          node --check desarrollo/integration/f07/lcars_sensores/demo.mjs
+          node --check desarrollo/integration/f07/lcars_sensores/app.mjs
+      - name: Test observer projection, intents and LCARS controls
+        run: node --test desarrollo/integration/f07/lcars_sensores/tests/*.test.mjs
+      - name: Validate preview launcher without generating artefacts
+        run: |
+          python3 - <<'PY'
+          import ast
+          from pathlib import Path
+          source = Path("desarrollo/integration/f07/lcars_sensores/preview.py").read_text(encoding="utf-8")
+          ast.parse(source)
+          print("Python preview syntax PASS")
+          PY
