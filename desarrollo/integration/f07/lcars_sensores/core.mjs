@@ -61,11 +61,11 @@ export function normalizeSnapshot(raw) {
       last_seen:c.last_seen,tracking_mode:c.tracking_mode,model
     });
   });
-  const notices=Array.isArray(raw.notices)?raw.notices.slice(0,120).filter(n=>
+  const notices=Array.isArray(raw.notices)?raw.notices.slice(-120).filter(n=>
     n && validLabel(n.id,40) && ALLOWED_NOTICES.has(n.kind) &&
     validInteger(n.tick,0,s.tick) && (!n.contact_id || seen.has(n.contact_id))
   ).map(n=>({id:n.id,kind:n.kind,tick:n.tick,contact_id:n.contact_id||null})):[];
-  const results=Array.isArray(raw.results)?raw.results.slice(0,200).filter(x=>
+  const results=Array.isArray(raw.results)?raw.results.slice(-200).filter(x=>
     x && validLabel(x.id,40) && seen.has(x.contact_id) &&
     validInteger(x.tick,0,s.tick) && validInteger(x.confidence_permille,0,1000) &&
     validInteger(x.distance_milli_au,0,1e9)
@@ -136,7 +136,7 @@ export function makeIntent(snapshot,command,contact) {
 export function acceptSnapshot(current,incoming) {
   const next=normalizeSnapshot(incoming);
   if(current && current.session.source==="CORE_F06" &&
-    next.session.source==="CORE_F06" &&
-    next.session.revision<current.session.revision) return current;
+    (next.session.source!=="CORE_F06" ||
+     next.session.revision<current.session.revision)) return current;
   return next;
 }
