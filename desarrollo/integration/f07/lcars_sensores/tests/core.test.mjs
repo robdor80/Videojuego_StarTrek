@@ -132,3 +132,24 @@ test("invalid data never spoofs confirmed labels",()=>{
   assert.equal(s.contacts[0].class_label,null);
   assert.equal(s.contacts[0].transponder_id,null);
 });
+
+test("live Core view cannot be replaced by demo projection",()=>{
+  const live=copy();live.session.source="CORE_F06";live.session.revision=100;
+  const cur=normalizeSnapshot(live);
+  assert.strictEqual(acceptSnapshot(cur,copy()),cur);
+});
+test("notices and results retain latest observations, not oldest",()=>{
+  const v=copy();
+  v.notices=Array.from({length:140},(_,i)=>({
+    id:"N-"+i,kind:"new",tick:100+i,contact_id:"C-001"
+  }));
+  v.results=Array.from({length:220},(_,i)=>({
+    id:"R-"+i,tick:100+i,contact_id:"C-001",
+    confidence_permille:500,distance_milli_au:10
+  }));
+  const s=normalizeSnapshot(v);
+  assert.equal(s.notices.length,120);
+  assert.equal(s.notices[0].id,"N-20");
+  assert.equal(s.results.length,200);
+  assert.equal(s.results[0].id,"R-20");
+});
