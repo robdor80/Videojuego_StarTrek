@@ -71,8 +71,8 @@ class Panel:
     def __init__(self, root: tk.Tk, runner: Path) -> None:
         self.root = root
         root.title("USS Enterprise-D · Sensores · Sistema Aster")
-        root.geometry("1100x960")
-        root.minsize(820, 700)
+        root.geometry("1100x840")
+        root.minsize(820, 650)
         self.process = subprocess.Popen(
             [str(runner)], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL, encoding="utf-8", bufsize=1,
@@ -149,8 +149,8 @@ class Panel:
         ttk.Button(buttons, text="Recuperar punto", command=lambda: self.checkpoint("LOAD")).pack(side="left", padx=7)
 
         logframe = ttk.LabelFrame(self.root, text="Lo importante que comunica la computadora", padding=10)
-        logframe.pack(fill="both", expand=True, **pad)
-        self.log = tk.Text(logframe, height=11, wrap="word", state="disabled",
+        logframe.pack(fill="x", **pad)
+        self.log = tk.Text(logframe, height=6, wrap="word", state="disabled",
                            font=("Segoe UI", 10), relief="flat")
         self.log.pack(fill="both", expand=True)
 
@@ -168,7 +168,9 @@ class Panel:
         selector.bind("<<ComboboxSelected>>", lambda _: self._refresh_contacts(self.state))
         ttk.Label(toolbar, text="Selecciona una fila para consultar su expediente").pack(side="left", padx=12)
         columns = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
-        self.contacts_table = ttk.Treeview(contact_frame, columns=columns,
+        table_area = ttk.Frame(contact_frame)
+        table_area.pack(fill="both", expand=True)
+        self.contacts_table = ttk.Treeview(table_area, columns=columns,
                                            show="headings", height=8)
         headings = {"ref": "Contacto", "tipo": "Tipo", "identificacion": "Identificación",
                     "distancia": "Distancia", "confianza": "Confianza", "estado": "Estado"}
@@ -177,9 +179,7 @@ class Panel:
         for key in columns:
             self.contacts_table.heading(key, text=headings[key])
             self.contacts_table.column(key, width=widths[key], anchor="w")
-        table_area = ttk.Frame(contact_frame)
-        table_area.pack(fill="both", expand=True)
-        self.contacts_table.pack(in_=table_area, side="left", fill="both", expand=True)
+        self.contacts_table.pack(side="left", fill="both", expand=True)
         scrollbar = ttk.Scrollbar(table_area, orient="vertical", command=self.contacts_table.yview)
         scrollbar.pack(side="right", fill="y")
         self.contacts_table.configure(yscrollcommand=scrollbar.set)
@@ -196,7 +196,7 @@ class Panel:
 
         note = ttk.LabelFrame(self.root, text="Bitácora del oficial (opcional)", padding=10)
         note.pack(fill="x", **pad)
-        self.notes = tk.Text(note, height=3, font=("Segoe UI", 10), wrap="word")
+        self.notes = tk.Text(note, height=2, font=("Segoe UI", 10), wrap="word")
         self.notes.pack(fill="x")
         footer = ttk.Frame(self.root, padding=(15, 2))
         footer.pack(fill="x")
