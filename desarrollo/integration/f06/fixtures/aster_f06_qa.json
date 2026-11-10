@@ -23,6 +23,12 @@
     3650,
     3680,
     7200,
+    7205,
+    7210,
+    7220,
+    7230,
+    7240,
+    7260,
     14400,
     28800
   ],
@@ -527,27 +533,51 @@
         },
         {
           "tick": 3605,
-          "position_milli_au": [7150, 900, 0]
+          "position_milli_au": [
+            7150,
+            900,
+            0
+          ]
         },
         {
           "tick": 3610,
-          "position_milli_au": [7000, 900, 0]
+          "position_milli_au": [
+            7000,
+            900,
+            0
+          ]
         },
         {
           "tick": 3620,
-          "position_milli_au": [6700, 855, 0]
+          "position_milli_au": [
+            6700,
+            855,
+            0
+          ]
         },
         {
           "tick": 3630,
-          "position_milli_au": [6400, 810, 0]
+          "position_milli_au": [
+            6400,
+            810,
+            0
+          ]
         },
         {
           "tick": 3650,
-          "position_milli_au": [5900, 1200, 0]
+          "position_milli_au": [
+            5900,
+            1200,
+            0
+          ]
         },
         {
           "tick": 3680,
-          "position_milli_au": [5700, 1500, 0]
+          "position_milli_au": [
+            5700,
+            1500,
+            0
+          ]
         },
         {
           "tick": 14400,
@@ -597,6 +627,54 @@
           "position_milli_au": [
             4500,
             -600,
+            0
+          ]
+        },
+        {
+          "tick": 7205,
+          "position_milli_au": [
+            4475,
+            -600,
+            0
+          ]
+        },
+        {
+          "tick": 7210,
+          "position_milli_au": [
+            4450,
+            -600,
+            0
+          ]
+        },
+        {
+          "tick": 7220,
+          "position_milli_au": [
+            4400,
+            -560,
+            0
+          ]
+        },
+        {
+          "tick": 7230,
+          "position_milli_au": [
+            4350,
+            -520,
+            0
+          ]
+        },
+        {
+          "tick": 7240,
+          "position_milli_au": [
+            4300,
+            -480,
+            0
+          ]
+        },
+        {
+          "tick": 7260,
+          "position_milli_au": [
+            4250,
+            -400,
             0
           ]
         },
