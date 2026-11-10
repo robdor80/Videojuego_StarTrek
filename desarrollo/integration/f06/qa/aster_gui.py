@@ -147,6 +147,7 @@ class Panel:
         self.followed_ids: set[str] = set()
         self.analyzed_ids: set[str] = set()
         self.shared_report_ids: set[str] = set()
+        self.tactical_qa_ids: set[str] = set()
         self.saved_operator_views: dict[str, set[str]] = {}
         self.map_zoom = 1.0
         self.map_overview = False
@@ -334,13 +335,16 @@ class Panel:
         self.identify_button = ttk.Button(
             self.action_area, text="IDENTIFICAR",
             command=lambda: self.contact_action("FOCUS"))
-        self.identify_button.pack(side="left", expand=True, fill="x", padx=2)
+        self.identify_button.pack(fill="x", pady=2)
         ttk.Button(self.action_area, text="ANÁLISIS DETALLADO",
                    command=lambda: self.contact_action("SCAN")).pack(
-                       side="left", expand=True, fill="x", padx=2)
+                       fill="x", pady=2)
         ttk.Button(self.action_area, text="SEGUIR",
                    command=lambda: self.contact_action("PRIORITY")).pack(
-                       side="left", expand=True, fill="x", padx=2)
+                       fill="x", pady=2)
+        self.contact_report_button = ttk.Button(
+            right, text="COMUNICAR CONTACTO AL OFICIAL",
+            command=self.report_contact_to_officer)
         # The progress indicator is based on actual Core start/end ticks.
         self.scan_progress = ttk.Frame(right)
         self.scan_progress_label = ttk.Label(self.scan_progress, text="")
@@ -352,7 +356,7 @@ class Panel:
             right, text="Ver ficha técnica",
             command=self.open_contact_details)
         self.tactical_report_button = ttk.Button(
-            right, text="Compartir análisis con Táctica (QA)",
+            right, text="Preparar informe para Táctica (QA)",
             command=self.send_analysis_to_tactical)
 
         self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
@@ -986,7 +990,7 @@ class Panel:
                 details = f"{heading}\n\n"
                 details += f"Distancia: {c[5] / 1000:.3f} UA\n"
                 if nav and c[2] == 1:
-                    _, measured_at, direction, tendency, intercept, closest = nav
+                    _, measured_at, direction, tendency, intercept, closest = nav[:6]
                     age = max(0, self.state["tick"] - measured_at)
                     if age <= 300:
                         tendency_es = {1: "Se acerca", 2: "Se aleja",
@@ -1112,9 +1116,28 @@ class Panel:
                 self.action_area.pack_forget()
             if not self.technical_button.winfo_manager():
                 self.technical_button.pack(fill="x", pady=4)
+            if self.current_view == "contacts" and str(c[0]) in self.new_contact_ids:
+                self.contact_report_button.configure(
+                    text=("CONTACTO COMUNICADO" if str(c[0]) in self.shared_report_ids
+                          else "COMUNICAR CONTACTO AL OFICIAL"),
+                    state=("disabled" if str(c[0]) in self.shared_report_ids else "normal"))
+                if not self.contact_report_button.winfo_manager():
+                    self.contact_report_button.pack(fill="x", pady=(5, 2))
+            else:
+                self.contact_report_button.pack_forget()
+            completed = any(
+                j[1] == c[0] and j[0] in self.operator_scan_ids and j[5] == 2
+                for j in self.state.get("scans", []))
+            if self.current_view == "results" and completed:
+                if not self.tactical_report_button.winfo_manager():
+                    self.tactical_report_button.pack(fill="x", pady=(4, 2))
+            else:
+                self.tactical_report_button.pack_forget()
         else:
             self.action_area.pack_forget()
             self.technical_button.pack_forget()
+            self.contact_report_button.pack_forget()
+            self.tactical_report_button.pack_forget()
         self._update_scan_progress(c)
 
     def _update_scan_progress(self, contact: list | None) -> None:
