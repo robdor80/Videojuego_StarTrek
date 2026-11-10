@@ -87,6 +87,8 @@ class Panel:
         self.designations: dict[int, str] = {}
         self.saved_lines: list[str] | None = None
         self.saved_notes = ""
+        self.manual_jobs: dict[int, int] = {}
+        self.saved_manual_jobs: dict[int, int] = {}
         self.sensor_preset = tk.StringVar(value="Estándar")
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -184,6 +186,7 @@ class Panel:
         actions = ttk.Frame(contact_frame)
         actions.pack(fill="x", pady=(7, 3))
         ttk.Button(actions, text="Análisis focalizado", command=lambda: self.contact_action("FOCUS")).pack(side="left")
+        ttk.Button(actions, text="Estudio detallado (2 min)", command=lambda: self.contact_action("SCAN")).pack(side="left", padx=7)
         ttk.Button(actions, text="Seguimiento prioritario",
                    command=lambda: self.contact_action("PRIORITY")).pack(side="left", padx=7)
         self.detail_text = tk.Text(contact_frame, height=5, wrap="word",
@@ -310,6 +313,14 @@ class Panel:
                         details += "Faltan análisis de posibles gases nocivos y condiciones locales."
                 elif contact[1] in (12, 13):
                     details += "\nSin informe espectral/científico autorizado todavía. No se muestra ciencia privada del escenario."
+                scans = [j for j in self.state.get("scans", []) if j[1] == contact[0]]
+                for scan in scans[-3:]:
+                    stage = {1: "en curso", 2: "terminado", 3: "fallido",
+                             4: "cancelado"}.get(scan[5], "desconocido")
+                    details += f"\nAnálisis especializado {stage} · "
+                    details += f"iniciado {clock(scan[2])}, final previsto {clock(scan[3])}."
+                    if scan[5] == 2:
+                        details += " Resultado observado y registrado en CoreRPG."
                 if contact[1] == 13:
                     details += "\nHabitabilidad: la clase M provisional NO confirma habitantes. "
                     details += "Civilización: sin informe verificable en este motor."
@@ -357,12 +368,20 @@ class Panel:
             messagebox.showwarning("Sensores", "Ese contacto está perdido y no puede analizarse todavía.", parent=self.root)
             return
         try:
+            old_jobs = {j[0] for j in self.state.get("scans", [])}
             state = self.command(f"{action} {contact[0]}")
+            if action == "SCAN":
+                created = [j for j in state["scans"] if j[0] not in old_jobs and j[1] == contact[0]]
+                for job in created:
+                    self.manual_jobs[job[0]] = contact[0]
             self.apply(state)
-            self.append(state["tick"], (
-                "Análisis focalizado ordenado sobre " if action == "FOCUS" else
-                "Seguimiento prioritario ordenado sobre "
-            ) + "C-" + selected[0][-6:] + ". Consulta los datos del contacto.")
+            verb = {
+                "FOCUS": "Observación focal inmediata registrada sobre ",
+                "PRIORITY": "Seguimiento prioritario establecido sobre ",
+                "SCAN": "Estudio detallado de dos minutos iniciado sobre ",
+            }[action]
+            self.append(state["tick"], verb + "C-" + selected[0][-6:] +
+                        ". Consulta el expediente para ver su estado.")
         except Exception as exc:
             messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
 
@@ -506,6 +525,13 @@ class Panel:
         for when, count in sorted(background_reacquired.items()):
             self.append(when, f"Vigilancia astronómica restablecida: {count} señales recuperadas.")
 
+        for job in state.get("scans", []):
+            if job[0] not in self.manual_jobs or job[5] == 1:
+                continue
+            target = self.manual_jobs.pop(job[0])
+            result = {2: "completado y registrado", 3: "fallido",
+                      4: "cancelado"}.get(job[5], "estado desconocido")
+            self.append(t, f"Estudio solicitado de C-{str(target)[-6:]}: {result}.")
         if t >= 28800:
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
@@ -533,6 +559,8 @@ class Panel:
         self.button_play.configure(state="normal", text="Iniciar")
         self.lines.clear()
         self.record.clear()
+        self.manual_jobs.clear()
+        self.saved_manual_jobs.clear()
         self.designations = {}
         self.saved_lines = None
         self.saved_notes = ""
@@ -552,6 +580,7 @@ class Panel:
             if op == "SAVE":
                 state = self.command(op)
                 self.saved_lines = list(self.lines)
+                self.saved_manual_jobs = dict(self.manual_jobs)
                 self.saved_notes = self.notes.get("1.0", "end").strip()
                 self.apply(state)
                 self.append(state["tick"], "Bitácora y estado de guardia conservados.")
@@ -561,6 +590,7 @@ class Panel:
                     return
                 state = self.command(op)
                 self.lines = list(self.saved_lines)
+                self.manual_jobs = dict(self.saved_manual_jobs)
                 self.record.clear()
                 self.state = {}  # loading must not create a false state-transition alarm
                 self.log.configure(state="normal")
