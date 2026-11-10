@@ -109,6 +109,24 @@ uint32_t f06_computer_kind(U op){
   default:return 0;
  }
 }
+/* Used by both the summary count and the actionable subject list. */
+bool f06_computer_requires_attention(const WorldState& w,U c) {
+ if(val(w,c,F06_STATUS)!=F06_ACTIVE)return false;
+ const U category=val(w,c,F06_SEEN_CATEGORY);
+ if(category!=F06_CATEGORY_ANOMALY &&
+    category!=F06_CATEGORY_STARSHIP &&
+    category!=F06_CATEGORY_SUBSPACE &&
+    category!=F06_CATEGORY_UNKNOWN)return false;
+ if(val(w,c,F06_SEEN_CLASS))return false;
+ bool attempted=false,pending=false;
+ for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO) &&
+    ref(w,job,F06_CONTACT_REF)==c &&
+    val(w,job,F06_TIMED_GEN)==val(w,c,F06_AUTO_GEN)){
+   if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)pending=true;
+   else attempted=true;
+ }
+ return attempted && !pending;
+}
 } // namespace
 uint32_t f06_computer_status(F04Session* s,F04Ref who,F06ComputerStatus* out) {
  if(!out)return F04_ARGUMENT;*out={};
@@ -123,28 +141,27 @@ uint32_t f06_computer_status(F04Session* s,F04Ref who,F06ComputerStatus* out) {
   out->passive_operational=out->autonomous && !out->equipment_offline;
   for(U c:all(w,"f06_contact"))if(val(w,c,F06_STATUS)==F06_ACTIVE){
    ++out->active_contacts;
-   const U category=val(w,c,F06_SEEN_CATEGORY);
-   // Do not disturb the officer while the computer is still working or
-   // waiting for its limited analysis slots. Escalate only AFTER an actual
-   // automated attempt could not identify an important contact.
-   if((category==F06_CATEGORY_ANOMALY ||
-      category==F06_CATEGORY_STARSHIP ||
-      category==F06_CATEGORY_SUBSPACE ||
-      category==F06_CATEGORY_UNKNOWN) &&
-      !val(w,c,F06_SEEN_CLASS)){
-     bool attempted=false,pending=false;
-     for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO) &&
-        ref(w,job,F06_CONTACT_REF)==c &&
-        val(w,job,F06_TIMED_GEN)==val(w,c,F06_AUTO_GEN)){
-       if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)pending=true;
-       else attempted=true;
-     }
-     if(attempted && !pending)++out->needs_attention;
-   }
+   // The autonomous computer has already attempted identification.
+   if(f06_computer_requires_attention(w,c))++out->needs_attention;
   }
   for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO)){
    if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_QUEUED)++out->analyses_running;
    if(val(w,job,F06_TIMED_STATUS)==F06_TIMED_FINISHED)++out->analyses_completed;
+  }
+  return F04_OK;
+ });
+}
+uint32_t f06_computer_attention_contacts_page(F04Session* s,F04Ref who,
+ U offset,U* out,U capacity,U* written,U* total) {
+ if(!written || !total || (!out && capacity))return F04_ARGUMENT;
+ *written=0;*total=0;
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  const auto& w=s->c->world;
+  for(U c:all(w,"f06_contact"))if(f06_computer_requires_attention(w,c)){
+   if(*total>=offset && *written<capacity)
+     out[(*written)++]=val(w,c,F06_PUBLIC_ID);
+   ++*total;
   }
   return F04_OK;
  });
