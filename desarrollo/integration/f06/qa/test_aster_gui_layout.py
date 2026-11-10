@@ -32,6 +32,17 @@ def main() -> None:
         assert len(panel.map_positions) >= 18, "map lacks the observed Core contacts"
         assert len(panel.state.get("science", [])) == 6, "six native science reports missing"
 
+        # Operational warning must be large, visible and one-click actionable.
+        alert_snapshot = panel.command("STEP 2400")
+        panel.apply(alert_snapshot)
+        assert alert_snapshot["attention"] > 0, alert_snapshot
+        assert panel.alert_bar.winfo_viewable(), "operator warning banner not visible"
+        assert panel.alert_ids == [str(cid) for cid in alert_snapshot["attention_contacts"]]
+        flagged = panel.alert_ids[0]
+        panel.open_alert_contact()
+        assert panel.contacts_table.selection() == (flagged,), "alert did not open real contact"
+        assert "ESTADO DEL EQUIPO" not in panel.detail_text.get("1.0", "end")
+
         panel.navigate("contacts")
         panel.select_section("unidentified")
         assert all(panel.contact_map[k][1] == 1 and panel.contact_map[k][3] == 0
