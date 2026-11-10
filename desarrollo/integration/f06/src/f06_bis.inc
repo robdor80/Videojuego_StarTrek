@@ -288,7 +288,7 @@ uint32_t f06_host_complete_science(F04Session* s,const F06ScienceSample* in,
   need(in->request_key && in->request_key<=FOREVER &&
    in->instrument_revision && in->instrument_revision<=FOREVER &&
    !in->reserved && in->quality_permille>=1 && in->quality_permille<=1000 &&
-   in->temperature_k>=50 && in->temperature_k<=2000 &&
+   in->temperature_k>=20 && in->temperature_k<=2000 &&
    in->pressure_mbar<=100000 && in->water_permille<=1000 &&
    in->nitrogen_permille+U(in->oxygen_permille)+in->co2_permille<=1000 &&
    in->solid_surface<=1 && in->biological_evidence<=3,F04_ARGUMENT);

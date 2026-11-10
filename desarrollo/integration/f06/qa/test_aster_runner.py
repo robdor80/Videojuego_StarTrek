@@ -14,6 +14,23 @@ def start(runner: Path):
     assert initial["ok"] and initial["tick"]==0,initial
     assert initial["automatic"]==1 and initial["active"]>=15,initial
     assert initial["running"] in (1,2),initial
+    assert len(initial["attention_contacts"]) == initial["attention"], initial
+    assert initial["interference_em"]==0,initial
+    assert initial["config"][:3] == [1000, 1000, 0], initial
+    assert initial["diagnostic"][0] == 1, initial
+    assert all(len(c)==12 for c in initial["contacts"]),initial
+    if len(initial["science"]) != 6:
+        p.terminate()
+        p.wait(timeout=5)
+        diagnostics = p.stderr.read() if p.stderr else ""
+        raise AssertionError((
+            "Aster must have six real Core reports, no skipped planet",
+            initial["science"], initial.get("science_issues"), diagnostics,
+        ))
+    assert any(r[1]==1 and r[3]==1 for r in initial["science"]), "provisional M class must come from Core"
+    assert any(r[1]==3 for r in initial["science"]), "Core must report a measured gas giant as class J"
+    assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
+    assert all(c[3]==0 for c in initial["contacts"] if c[1]==13),"planet class cannot occupy ship class field"
     return p,initial
 
 def say(p,command: str):
@@ -32,6 +49,15 @@ def finish(p):
 
 def run(runner: Path):
     p,initial=start(runner)
+    planet = next(r[0] for r in initial["science"] if r[1] == 1)
+    focused=say(p,f"FOCUS {planet}")
+    assert any(r[0]==planet for r in focused["science"]),focused
+    diagnostic=say(p,"DIAG")
+    assert diagnostic["diagnostic"][0] == 1,diagnostic
+    tuned=say(p,"CONFIG 2")
+    assert tuned["config"][:4] == [700, 550, 400, 2],tuned
+    normal=say(p,"CONFIG 0")
+    assert normal["config"][:4] == [1000, 1000, 0, 0],normal
     first=say(p,"STEP 300")
     assert first["tick"]==300 and first["completed"]>=1,first
     saved=say(p,"SAVE")
@@ -45,10 +71,20 @@ def run(runner: Path):
     assert repeated["running"]==mid["running"]
     ending=say(p,"STEP 28800")
     assert ending["tick"]==28800 and ending["active"]>=15,ending
+    assert len(ending["attention_contacts"]) == ending["attention"], ending
+    assert all(any(c[0] == cid and c[2] == 1 and c[3] == 0
+                   for c in ending["contacts"])
+               for cid in ending["attention_contacts"]), ending
     finish(p)
 
     # Precisely the same input cadence produces the same complete Core result.
     p,repeat=start(runner)
+    second_planet=next(r[0] for r in repeat["science"] if r[1]==1)
+    assert second_planet==planet
+    say(p,f"FOCUS {second_planet}")
+    say(p,"DIAG")
+    say(p,"CONFIG 2")
+    say(p,"CONFIG 0")
     same=say(p,"STEP 300")
     say(p,"SAVE")
     copy=say(p,"STEP 600")
@@ -60,13 +96,44 @@ def run(runner: Path):
     assert final["contacts"]==ending["contacts"]
     finish(p)
 
+    # An actual officer study must reserve a native Core timed job,
+    # progress on the shared clock, and yield an observed result.
+    p,study_initial=start(runner)
+    planet_id=study_initial["science"][0][0]
+    for _ in range(42):
+        say(p,"STEP 30")
+    before=say(p,"STATUS")
+    known={j[0] for j in before["scans"]}
+    scheduled=say(p,f"SCAN {planet_id}")
+    manual=[j for j in scheduled["scans"] if j[0] not in known and j[1]==planet_id]
+    assert len(manual)==1 and manual[0][5]==1,scheduled
+    for _ in range(8):
+        after=say(p,"STEP 30")
+        current=next(j for j in after["scans"] if j[0]==manual[0][0])
+        if current[5]!=1:
+            break
+    assert current[5]==2 and current[4]!=0,after
+    finish(p)
+
+    # The native attention list identifies the exact observed contact that
+    # the automatic computer unsuccessfully tried to classify.
+    p,_=start(runner)
+    incident=say(p,"STEP 2400")
+    assert incident["attention"] >= 1, incident
+    assert len(incident["attention_contacts"]) == incident["attention"], incident
+    for cid in incident["attention_contacts"]:
+        match = next((c for c in incident["contacts"] if c[0] == cid), None)
+        assert match is not None and match[2] == 1 and match[3] == 0, (cid, match)
+        assert match[1] in (0, 1, 8, 11), match
+    finish(p)
+
     p,_=start(runner)
     change=say(p,"RESTART 2")
     assert change["mode"]==2
     change=say(p,"STEP 3600")
-    assert change["tick"]==3600
+    assert change["tick"]==3600 and change["interference_em"]==550,change
     change=say(p,"STEP 3600")
-    assert change["tick"]==7200
+    assert change["tick"]==7200 and change["interference_em"]==0,change
     finish(p)
 
     p,_=start(runner)

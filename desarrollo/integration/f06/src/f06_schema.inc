@@ -140,7 +140,7 @@ bool f06_schema(const Campaign& c) {
    val(w,h,F06_H_STATUS)!=F06_SCIENCE_COMPLETED ||
    val(w,id,F06_SCI_TICK)>c.time.now() ||
    !val(w,id,F06_SCI_INSTRUMENT) ||
-   val(w,id,F06_SCI_TEMP)<50 || val(w,id,F06_SCI_TEMP)>2000 ||
+   val(w,id,F06_SCI_TEMP)<20 || val(w,id,F06_SCI_TEMP)>2000 ||
    val(w,id,F06_SCI_PRESS)>100000 ||
    val(w,id,F06_SCI_WATER)>1000 ||
    val(w,id,F06_SCI_N2)+val(w,id,F06_SCI_O2)+val(w,id,F06_SCI_CO2)>1000 ||

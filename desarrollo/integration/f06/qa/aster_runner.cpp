@@ -6,9 +6,11 @@
 #include "f06_bis.h"
 #include "f06_autonomy.h"
 #include "f06_demo_system_generated.h"
+#include "f06_aster_science_generated.h"
 #include <algorithm>
 #include <array>
 #include <cstdint>
+#include <cstdlib>
 #include <iostream>
 #include <iterator>
 #include <stdexcept>
@@ -23,9 +25,11 @@ struct Watch {
  F04Session* s=nullptr;
  F04Handles h{};
  U event_cursor=0;
+ U checkpoint_event_cursor=0;
  size_t next_frame=0;
  int mode=0;
  std::vector<uint8_t> checkpoint;
+ std::vector<std::array<U,3>> science_issues;
  ~Watch(){if(s)f04_destroy(s);}
  F04Stats stats() {
   F04Stats v{};check(f04_stats(s,&v),"stats");return v;
@@ -45,7 +49,7 @@ struct Watch {
  void reset(int new_mode){
   if(s){check(f04_destroy(s),"destroy");s=nullptr;}
   if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
-  mode=new_mode;event_cursor=0;next_frame=0;checkpoint.clear();
+  mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();science_issues.clear();
   check(f04_create(1,"miranda",&s),"create");
   check(f04_handles(s,&h),"handles");
   // A real F04 console operator is available for optional supervised actions;
@@ -57,6 +61,7 @@ struct Watch {
   F06ProfileView profile{};
   check(f06_host_install_profile(s,&install,&profile),"modernized Enterprise-D equipment");
   publish(next_frame++);
+  initial_scientific_survey();
  }
  void scenario_event(U tick){
   if(mode==2 && (tick==3600 || tick==7200)){
@@ -100,6 +105,7 @@ struct Watch {
   if(status!=F04_CAPACITY || !n)throw std::runtime_error("save length");
   checkpoint.resize(static_cast<size_t>(n));
   check(f04_save(s,checkpoint.data(),n,&n),"save");
+  checkpoint_event_cursor=event_cursor;
  }
  void load(){
   if(checkpoint.empty())throw std::runtime_error("no checkpoint");
@@ -109,7 +115,96 @@ struct Watch {
   const U now=stats().now;
   while(next_frame<std::size(F06_DEMO_FRAMES) &&
      F06_DEMO_FRAMES[next_frame].tick<=now)++next_frame;
-  event_cursor=0;
+  event_cursor=checkpoint_event_cursor;
+ }
+ std::vector<F06ContactView> visible_contacts() {
+  std::array<F06ContactView,64> rows{};
+  U n=0,total=0;
+  check(f06_contacts_page(s,h.captain,0,0,rows.data(),rows.size(),&n,&total),"sensor contact page");
+  if(total>rows.size())throw std::runtime_error("QA contact limit");
+  return {rows.begin(),rows.begin()+static_cast<std::ptrdiff_t>(n)};
+ }
+ // QA trusted instrument host. The measurement source is generated from
+ // the physical Aster fixture, never read directly by the UI. Every published
+ // result must pass native Sensors observation -> Science handoff -> Core report.
+ void initial_scientific_survey() {
+  for(const auto& contact:visible_contacts()){
+   if(contact.status!=F06_ACTIVE || contact.observed_category!=F06_CATEGORY_PLANET)continue;
+   const F06WorldEntity* source=nullptr;
+   for(const auto& entity:F06_DEMO_ENTITIES_0){
+    if(entity.signature_category!=F06_CATEGORY_PLANET)continue;
+    const auto expected_x=entity.absolute_x_milli_au-F06_DEMO_OBSERVER_X;
+    if(std::llabs(contact.observed_x_milli_au-expected_x)<=100){
+     source=&entity;break;
+    }
+   }
+   if(!source){science_issues.push_back({contact.contact_id,1,0});continue;}
+   const F06AsterInstrument* instrument=nullptr;
+   for(const auto& reading:F06_ASTER_INSTRUMENTS)
+    if(reading.key==source->world_entity_key){instrument=&reading;break;}
+   if(!instrument){science_issues.push_back({contact.contact_id,2,0});continue;}
+   F06ContactView focused{};
+   const auto focus_code=f06_focus(s,h.ensign,stats().revision,contact.contact_id,&focused);
+   if(focus_code!=F04_OK){science_issues.push_back({contact.contact_id,3,focus_code});continue;}
+   std::array<F06ResultView,16> observations{};
+   U n=0,total=0;
+   if(f06_results_page(s,h.captain,contact.contact_id,0,observations.data(),
+       observations.size(),&n,&total)!=F04_OK || !n){
+    science_issues.push_back({contact.contact_id,4,0});continue;
+   }
+   F06ScienceRequest req{stats().revision,770000+source->world_entity_key,
+                         contact.contact_id,2,1};
+   F06ScienceView handoff{};
+   const auto handoff_code=f06_science_handoff(s,h.ensign,&req,&handoff);
+   if(handoff_code!=F04_OK){science_issues.push_back({contact.contact_id,5,handoff_code});continue;}
+   F06ScienceSample sample{stats().revision,880000+source->world_entity_key,
+     handoff.handoff_id,observations[n-1].result_id,
+     1000+source->world_entity_key,
+     instrument->temp_k,instrument->pressure_mbar,instrument->water_permille,
+     instrument->n2_permille,instrument->o2_permille,instrument->co2_permille,
+     instrument->solid,instrument->bio,920,0};
+   F06ScienceReportView published{};
+   // Never display host-only science when the native authorization/evidence
+   // check rejects it. In that case the dossier remains unclassified.
+   const auto report_code=f06_host_complete_science(s,&sample,&published);
+   if(report_code!=F04_OK){
+    science_issues.push_back({contact.contact_id,6,report_code});
+    std::cerr<<"QA science observation rejected for world key "
+      <<source->world_entity_key<<": temp="<<sample.temperature_k
+      <<"K, pressure="<<sample.pressure_mbar<<"mbar, water="
+      <<sample.water_permille<<", bio="<<sample.biological_evidence
+      <<", confidence="<<focused.confidence_permille
+      <<", status="<<report_code<<"\n";
+   }
+  }
+ }
+ void study(U contact) {
+  // This is a real CoreRPG timed operation, not a simulated UI progress bar.
+  // The next saved revision defines a stable unique request in this QA session.
+  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,120,0};
+  F06TimedScanView started{};
+  check(f06_begin_timed_scan(s,h.ensign,&request,&started),"focused scientific scan");
+ }
+ void configure(int preset){
+  F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
+  if(preset==1){request.sensitivity_permille=700;request.resolution_permille=1000;
+                request.compensation_permille=150;}
+  else if(preset==2){request.sensitivity_permille=700;request.resolution_permille=550;
+                     request.compensation_permille=400;}
+  else if(preset==3){request.sensitivity_permille=1000;request.resolution_permille=600;
+                     request.compensation_permille=150;}
+  else if(preset!=0)throw std::runtime_error("invalid sensor configuration");
+  request.preset_id=static_cast<uint32_t>(preset);
+  F06ConfigView applied{};
+  check(f06_configure(s,h.ensign,&request,&applied),"sensor configuration");
+ }
+ void diagnostics(){
+  F06DiagnosticView result{};
+  check(f06_run_self_test(s,h.ensign,stats().revision,&result),"sensor diagnostics");
+ }
+ void focus(U contact){
+  F06ContactView updated{};
+  check(f06_focus(s,h.ensign,stats().revision,contact,&updated),"operator focus");
  }
  void prioritize(U contact){
   F06TrackView updated{};
@@ -119,6 +214,12 @@ struct Watch {
  void emit(){
   F06ComputerStatus state{};
   check(f06_computer_status(s,h.captain,&state),"computer");
+  F06EnvironmentView environment{};
+  check(f06_environment_status(s,h.captain,&environment),"sensor environment");
+  F06ConfigView config{};
+  check(f06_configuration_status(s,h.captain,&config),"sensor configuration");
+  F06DiagnosticView diagnostic{};
+  check(f06_diagnostics(s,h.captain,&diagnostic),"sensor diagnostics");
   std::array<F06ContactView,64> contacts{};
   U written=0,total=0;
   check(f06_contacts_page(s,h.captain,0,0,contacts.data(),contacts.size(),
@@ -137,6 +238,12 @@ struct Watch {
     <<",\"attention\":"<<state.needs_attention
     <<",\"offline\":"<<state.equipment_offline
     <<",\"automatic\":"<<state.autonomous
+    <<",\"interference_em\":"<<environment.em_permille
+    <<",\"config\":["<<config.sensitivity_permille<<','<<config.resolution_permille
+      <<','<<config.compensation_permille<<','<<config.preset_id<<','
+      <<config.preferred_update_seconds<<']'
+    <<",\"diagnostic\":["<<diagnostic.state<<','<<diagnostic.capability_permille
+      <<','<<diagnostic.power_permille<<','<<diagnostic.integrity_permille<<']'
     <<",\"events\":[";
   for(U i=0;i<event_n;++i){
    if(i)std::cout<<',';
@@ -149,12 +256,57 @@ struct Watch {
    std::cout<<'['<<ev[i].kind<<','<<ev[i].contact_id<<','<<ev[i].tick<<','
     <<category<<','<<klass<<']';
   }
+  std::cout<<"],\"attention_contacts\":[";
+  std::array<U,64> attention_ids{};
+  U attention_n=0,attention_total=0;
+  check(f06_computer_attention_contacts_page(s,h.captain,0,attention_ids.data(),
+    attention_ids.size(),&attention_n,&attention_total),"operator attention contacts");
+  if(attention_total!=state.needs_attention || attention_total>attention_ids.size())
+    throw std::runtime_error("inconsistent public operator attention projection");
+  for(U i=0;i<attention_n;++i){
+    if(i)std::cout<<',';
+    std::cout<<attention_ids[i];
+  }
+  std::cout<<"],\"scans\":[";
+  std::array<F06TimedScanView,256> jobs{};
+  U jobs_n=0,jobs_total=0;
+  check(f06_timed_scans_page(s,h.captain,0,jobs.data(),jobs.size(),
+    &jobs_n,&jobs_total),"timed scan jobs");
+  for(U i=0;i<jobs_n;++i){
+   if(i)std::cout<<',';
+   const auto& j=jobs[i];
+   std::cout<<'['<<j.scan_id<<','<<j.contact_id<<','<<j.started_at
+    <<','<<j.finishes_at<<','<<j.result_id<<','<<j.status<<']';
+  }
+  std::cout<<"],\"science\":[";
+  std::array<F06ScienceReportView,32> reports{};
+  U reports_n=0,reports_total=0;
+  check(f06_science_reports_page(s,h.captain,0,reports.data(),reports.size(),
+    &reports_n,&reports_total),"science reports");
+  if(reports_total>reports.size())throw std::runtime_error("QA report limit");
+  for(U i=0;i<reports_n;++i){
+   if(i)std::cout<<',';
+   const auto& r=reports[i];
+   std::cout<<'['<<r.contact_id<<','<<r.planet_class<<','<<r.confidence_permille
+    <<','<<r.provisional<<','<<r.temperature_k<<','<<r.pressure_mbar
+    <<','<<r.water_permille<<','<<r.nitrogen_permille<<','<<r.oxygen_permille
+    <<','<<r.co2_permille<<','<<r.biological_evidence<<']';
+  }
+  std::cout<<"],\"science_issues\":[";
+  for(size_t i=0;i<science_issues.size();++i){
+   if(i)std::cout<<',';
+   const auto& e=science_issues[i];
+   std::cout<<'['<<e[0]<<','<<e[1]<<','<<e[2]<<']';
+  }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
    const auto& c=contacts[i];
    std::cout<<'['<<c.contact_id<<','<<c.observed_category<<','
-     <<c.status<<','<<c.class_id<<']';
+     <<c.status<<','<<c.class_id<<','<<c.confidence_permille
+     <<','<<c.distance_milli_au<<','<<c.transponder_id<<','<<c.loss_cause
+     <<','<<c.observed_x_milli_au<<','<<c.observed_y_milli_au
+     <<','<<c.observed_z_milli_au<<','<<c.last_seen<<']';
   }
   std::cout<<"]}"<<std::endl;
  }
@@ -174,6 +326,10 @@ int main(){
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
+    else if(action=="FOCUS")watch.focus(std::stoull(arg));
+    else if(action=="SCAN")watch.study(std::stoull(arg));
+    else if(action=="CONFIG")watch.configure(std::stoi(arg));
+    else if(action=="DIAG")watch.diagnostics();
     else if(action=="STATUS"){}
     else throw std::runtime_error("unsupported command");
     watch.emit();

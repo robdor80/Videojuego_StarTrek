@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""MSI acceptance: real native Core Aster with the quiet, task-first Tk console.
+
+This test needs a Windows desktop and the compiled f06_aster_runner. It is
+separate from the headless Core unit tests, which cannot assess visual layout.
+"""
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+import tkinter as tk
+
+from aster_gui import Panel
+
+
+def visible_contacts(panel: Panel) -> list[str]:
+    tree = panel.contacts_table
+    return [cid for group in tree.get_children()
+            for cid in tree.get_children(group)]
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--runner", required=True, type=Path)
+    args = parser.parse_args()
+    assert args.runner.is_file(), args.runner
+    root = tk.Tk()
+    panel = None
+    try:
+        panel = Panel(root, args.runner.resolve())
+        root.update_idletasks()
+        root.update()
+
+        assert len(panel.navigation_buttons) == 6, "human-sized operating groups"
+        assert len(visible_contacts(panel)) >= 18, "real Core contacts missing"
+        assert panel.contacts_table.winfo_viewable(), "system hierarchy is hidden"
+        assert panel.contacts_table.winfo_width() >= 250, "system hierarchy too narrow"
+        assert not panel.map_box.winfo_manager(), "map must be optional"
+        assert not panel.test_area.winfo_manager(), "QA machinery must be hidden"
+        assert not panel.alert_bar.winfo_manager(), "no initial attention before auto attempt"
+        assert len(panel.state.get("science", [])) == 6, "six scientific reports missing"
+
+        # Expand/collapse categories; simple labels instead of backend dumps.
+        assert panel.contacts_table.exists("group:planet")
+        label = panel.contacts_table.item("group:planet", "text")
+        assert "6" in label and "clase" in label, label
+
+        # A new observer-relevant contact should generate a prominent alert
+        # that opens the exact CoreRPG observed ID, not a guessed name.
+        snapshot = panel.command("STEP 2400")
+        panel.apply(snapshot)
+        root.update_idletasks()
+        root.update()
+        assert snapshot["attention"] > 0, snapshot
+        assert panel.alert_bar.winfo_viewable(), "big alert is not visible"
+        assert panel.alert_ids == [str(cid) for cid in snapshot["attention_contacts"]]
+        subject = panel.alert_ids[0]
+        panel.open_alert_contact()
+        assert panel.contacts_table.selection() == (subject,), "alert has no direct action"
+        assert subject in panel.contact_map
+        assert "IDENTIFICACIÓN" in panel.detail_text.get("1.0", "end")
+
+        # The usual views must remain filterable and retain real observation data.
+        panel.navigate("contacts")
+        panel.select_section("unidentified")
+        unidentified = visible_contacts(panel)
+        assert unidentified, "expected an unidentified ship after the automated attempt"
+        assert all(panel.contact_map[k][1] == 1 and panel.contact_map[k][3] == 0
+                   for k in unidentified)
+        panel.select_section("all")
+        panel.navigate("results")
+        panel.select_section("planets")
+        planets = visible_contacts(panel)
+        assert len(planets) == 6, "planet summary lost a Core contact"
+        sample = planets[0]
+        panel.contacts_table.selection_set(sample)
+        panel.show_selected()
+        dossier = panel.detail_text.get("1.0", "end")
+        assert "DATOS PLANETARIOS" in dossier and "Oxígeno:" in dossier, dossier
+
+        # Opening a category is not selecting a sensor object or issuing orders.
+        panel.contacts_table.selection_set("group:planet")
+        panel.show_selected()
+        assert not panel.action_area.winfo_manager(), "group header has contact actions"
+
+        panel.contacts_table.selection_remove("group:planet")
+        panel.navigate("configuration")
+        panel.show_selected()
+        assert panel.engineering.winfo_manager(), "profiles must be reachable"
+        assert "EQUIPO DE SENSORES" in panel.detail_text.get("1.0", "end")
+
+        # The one live line is replaceable. Historical messages remain available.
+        previous = len(panel.lines)
+        panel.append(snapshot["tick"], "Mensaje operativo actual de prueba")
+        assert len(panel.lines) == previous + 1
+        assert "Mensaje operativo actual de prueba" in panel.notice_label.cget("text")
+        assert not hasattr(panel, "log"), "legacy scrolling log is still on-screen"
+        panel.toggle_map()
+        root.update_idletasks()
+        assert panel.map_box.winfo_manager(), "on-demand spatial map unavailable"
+        assert len(panel.map_positions) >= 0
+        print("PASS native Core / six task groups / hierarchy / big alert / dossier / quiet notices")
+    finally:
+        if panel:
+            panel.close()
+        else:
+            root.destroy()
+
+
+if __name__ == "__main__":
+    main()
