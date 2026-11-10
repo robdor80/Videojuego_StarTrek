@@ -1474,11 +1474,41 @@ class Panel:
         except Exception as exc:
             messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
 
+    def _choose_contact(self, cid: str) -> None:
+        tree=self.contacts_table
+        if tree.exists(cid):
+            parent=tree.parent(cid)
+            if parent:
+                tree.item(parent, open=True)
+                self.group_open[parent]=True
+            tree.selection_set(cid)
+            tree.focus(cid)
+            tree.see(cid)
+        self.show_selected()
+        self._update_main_content()
+        self._draw_map()
+
     def apply(self, state: dict, reset: bool = False) -> None:
         previous = self.state
         self.state = state
         self.record.append(state)
         t = state["tick"]
+        self.shared_report_ids={
+            str(item[0]) for item in state.get("contact_briefs", [])}
+        new_arrivals=[]
+        if not reset:
+            for event in state.get("events", []):
+                kind, cid, when, category, klass=event
+                if kind==1 and category in (1,2):
+                    key=str(cid)
+                    observed=next((c for c in state["contacts"]
+                                   if c[0]==cid and c[2]==1),None)
+                    if observed and key not in self.new_contact_ids:
+                        self.new_contact_ids.add(key)
+                        new_arrivals.append(key)
+        if new_arrivals:
+            self.navigate("contacts")
+            self._choose_contact(new_arrivals[-1])
         self.progress["value"] = t
         self.timelabel.configure(text=f"Guardia: {clock(t)} / 08:00:00")
         if state["offline"]:
