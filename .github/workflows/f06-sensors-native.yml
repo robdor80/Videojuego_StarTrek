@@ -1,11 +1,5 @@
 name: F06 native sensor watch (CoreRPG campaign)
 on:
-  push:
-    branches:
-      - feat/f06-guardia-operativa-sensores-20261110
-    paths:
-      - 'desarrollo/integration/f06/**'
-      - '.github/workflows/f06-sensors-native.yml'
   pull_request:
     paths:
       - 'desarrollo/integration/f06/**'
