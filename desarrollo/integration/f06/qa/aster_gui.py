@@ -1438,7 +1438,17 @@ class Panel:
                 for job in created:
                     self.manual_jobs[job[0]] = contact[0]
                     self.operator_scan_ids.add(job[0])
+                if created:
+                    self.analyzed_ids.add(selected[0])
+            elif action == "PRIORITY":
+                self.followed_ids.add(selected[0])
             self.apply(state)
+            if action == "SCAN" and created:
+                self.navigate("results")
+                self._choose_contact(selected[0])
+            elif action == "PRIORITY":
+                self.navigate("tracking")
+                self._choose_contact(selected[0])
             reference = "C-" + selected[0][-6:]
             if action == "FOCUS":
                 updated = self.contact_map.get(str(contact[0]), contact)
