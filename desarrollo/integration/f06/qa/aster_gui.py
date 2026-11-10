@@ -65,6 +65,17 @@ STARSHIP_DESIGNS = {
     17: ("Crucero de batalla", "Imperio Klingon"),
     18: ("Transporte de mercancías", "Diseño civil del escenario Aster"),
 }
+# Tactical class data are *known catalog capabilities*, not live proof of
+# activated weapons. Keep the operator's panel focused on decisions.
+NAVAL_CAPABILITIES = {
+    16: ("Crucero de batalla klingon",
+         "Disruptores y torpedos de fotones",
+         "Escudos deflectores; capacidad de camuflaje"),
+    18: ("Transporte civil", "Armamento no acreditado", "Defensas no acreditadas"),
+    6: ("Explorador científico de la Flota Estelar",
+        "Capacidades tácticas: consultar el archivo de la clase",
+        "Escudos: no verificados"),
+}
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
     3: "fuera del alcance de los sensores", 4: "sensores sin servicio",
@@ -106,6 +117,8 @@ class Panel:
         self.speed_before_alert = "×30"
         self.slowed_for_alert = False
         self.sim_half_seconds = 0
+        self.nav_events_seen: set[tuple[int, int, int]] = set()
+        self.nav_priority: list[int] | None = None
         self.lines: list[str] = []
         self.record: list[dict] = []
         self.state: dict = {}
@@ -837,28 +850,58 @@ class Panel:
                 f"{'LANZADERA' if c[1] == 2 else 'NAVE'} · CLASE {klass_name.upper()}"
                 if klass_name else
                 "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
-            details = (
-                f"{heading}\n\n"
-                f"Referencia: {name}\n"
-                f"Tipo observado: {typ}\n"
-                f"Distancia: {c[5] / 1000:.3f} UA\n"
-                f"Fiabilidad de la detección: {c[4] / 10:.1f}%\n"
-                f"Estado: {'Activo' if c[2] == 1 else 'Señal perdida'}\n"
-            )
             if c[1] in (1, 2):
-                klass = STARSHIP_CLASSES.get(c[3]) if c[3] else None
-                design = STARSHIP_DESIGNS.get(c[3])
-                details += (
-                    "\nIDENTIFICACIÓN NAVAL\n"
-                    f"Clase/modelo: {klass or 'Sin confirmar'}\n"
-                    f"Tipo de nave: {design[0] if design else 'Sin determinar'}\n"
-                    f"Origen del diseño: {design[1] if design else 'Sin determinar'}\n"
-                    "Operador o afiliación actual: No confirmados\n"
-                    f"Transpondedor observado: {c[6] or 'No confirmado'}\n"
+                klass = STARSHIP_CLASSES.get(c[3])
+                profile = NAVAL_CAPABILITIES.get(c[3])
+                description = profile[0] if profile else (
+                    STARSHIP_DESIGNS.get(c[3], ("Clase de nave no catalogada",))[0])
+                heading = (
+                    f"{description.upper()} · {klass.upper()}"
+                    if klass else "NAVE · IDENTIFICACIÓN PENDIENTE"
                 )
-                if not klass:
-                    details += ("La firma disponible no permite confirmar la clase.\n"
-                                "Un identificador de transpondedor NO certifica la afiliación.\n")
+                nav = next(
+                    (row for row in self.state.get("navigation", [])
+                     if row[0] == c[0]), None)
+                details = f"{heading}\n\n"
+                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
+                if nav and c[2] == 1:
+                    _, measured_at, direction, tendency, intercept, closest = nav
+                    age = max(0, self.state["tick"] - measured_at)
+                    if age <= 300:
+                        tendency_es = {1: "Se acerca", 2: "Se aleja",
+                                       0: "Sin variación apreciable"}
+                        details += (
+                            f"Rumbo de desplazamiento: {direction:03d}° (estimado)\n"
+                            f"Movimiento: {tendency_es.get(tendency, 'Sin determinar')}\n"
+                        )
+                        if intercept:
+                            details += (
+                                "\n¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!\n"
+                                "La trayectoria observada apunta hacia nuestra posición.\n"
+                            )
+                    else:
+                        details += "Trayectoria: esperando actualización de sensores.\n"
+                else:
+                    details += "Rumbo y movimiento: calculando trayectoria…\n"
+                if profile:
+                    details += (
+                        "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
+                        f"Armamento habitual: {profile[1]}\n"
+                        f"Defensas habituales: {profile[2]}\n"
+                    )
+                else:
+                    details += (
+                        "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
+                        "Armamento: consultar catálogo táctico.\n"
+                    )
+                details += (
+                    "\nTÁCTICA\n"
+                    "Seguimiento compartido con el canal de sensores.\n"
+                    "Esta ficha no confirma intenciones hostiles.\n"
+                )
+            else:
+                details = f"{heading}\n\n"
+                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
             if c[2] == 2:
                 details += ("\nSEÑAL PERDIDA\n"
                             + LOSS_CAUSES.get(c[7], "Causa desconocida") + "\n")
@@ -895,7 +938,9 @@ class Panel:
             jobs = [j for j in self.state.get("scans", []) if j[1] == c[0]]
             active = [j for j in jobs if j[5] == 1]
             complete = [j for j in jobs if j[5] == 2]
-            if jobs:
+            # Routine job counts are backend metadata, never part of the
+            # operator's naval or astronomical decision panel.
+            if jobs and self.current_view == "results" and c[1] not in (1, 2):
                 details += "\nESTUDIOS\n"
                 if active:
                     details += f"En curso: {len(active)}\n"
@@ -905,14 +950,12 @@ class Panel:
             comparison = next(
                 (row for row in self.state.get("comparisons", [])
                  if row[0] == c[0]), None)
-            if comparison:
+            if comparison and c[1] not in (1, 2):
                 _, count, old_tick, new_tick, dc, dd, changed = comparison
                 details += (
                     "\nARCHIVO DE SENSORES · COMPARACIÓN\n"
-                    f"{count} observaciones conservadas en CoreRPG.\n"
                     f"Comparadas: {clock(old_tick)} y {clock(new_tick)}\n"
                     f"Variación de distancia: {dd / 1000:+.3f} UA\n"
-                    f"Variación de fiabilidad: {dc / 10:+.1f} puntos\n"
                     f"Clasificación: {'Ha cambiado' if changed else 'Sin cambios confirmados'}\n"
                 )
             if str(c[0]) in self.alert_ids:
@@ -935,9 +978,11 @@ class Panel:
             self.detail_text.delete("1.0", "end")
             self.detail_text.insert("1.0", details)
             self.detail_text.tag_add("heading", "1.0", "1.end")
-            for section in ("IDENTIFICACIÓN NAVAL", "DATOS PLANETARIOS",
+            for section in ("CAPACIDADES CONOCIDAS DE LA CLASE", "TÁCTICA",
+                            "DATOS PLANETARIOS",
                             "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
-                            "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL"):
+                            "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL",
+                            "¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!"):
                 start = self.detail_text.search(section, "2.0", "end")
                 if start:
                     self.detail_text.tag_add(
