@@ -142,6 +142,16 @@ class Panel:
 
         contact_frame = ttk.LabelFrame(self.root, text="Contactos reales observados por CoreRPG", padding=8)
         contact_frame.pack(fill="both", expand=True, **pad)
+        toolbar = ttk.Frame(contact_frame)
+        toolbar.pack(fill="x", pady=(0, 5))
+        ttk.Label(toolbar, text="Mostrar").pack(side="left")
+        self.contact_filter = tk.StringVar(value="Todos")
+        choices = ("Todos", "Planetas", "Naves", "Estrellas", "Satélites", "Artificiales")
+        selector = ttk.Combobox(toolbar, textvariable=self.contact_filter,
+                                values=choices, state="readonly", width=18)
+        selector.pack(side="left", padx=8)
+        selector.bind("<<ComboboxSelected>>", lambda _: self._refresh_contacts(self.state))
+        ttk.Label(toolbar, text="Selecciona una fila para consultar su expediente").pack(side="left", padx=12)
         columns = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
         self.contacts_table = ttk.Treeview(contact_frame, columns=columns,
                                            show="headings", height=8)
@@ -152,7 +162,12 @@ class Panel:
         for key in columns:
             self.contacts_table.heading(key, text=headings[key])
             self.contacts_table.column(key, width=widths[key], anchor="w")
-        self.contacts_table.pack(fill="both", expand=True)
+        table_area = ttk.Frame(contact_frame)
+        table_area.pack(fill="both", expand=True)
+        self.contacts_table.pack(in_=table_area, side="left", fill="both", expand=True)
+        scrollbar = ttk.Scrollbar(table_area, orient="vertical", command=self.contacts_table.yview)
+        scrollbar.pack(side="right", fill="y")
+        self.contacts_table.configure(yscrollcommand=scrollbar.set)
         self.contacts_table.bind("<<TreeviewSelect>>", lambda _: self.show_selected())
         actions = ttk.Frame(contact_frame)
         actions.pack(fill="x", pady=(7, 3))
@@ -230,7 +245,15 @@ class Panel:
             self.designations[star[0]] = "Aster (estrella central)"
 
         self.contacts_table.delete(*self.contacts_table.get_children())
+        categories = {
+            "Todos": None, "Planetas": {13}, "Naves": {1, 2},
+            "Estrellas": {12}, "Satélites": {14},
+            "Artificiales": {1, 2, 3, 5, 16},
+        }
+        allowed = categories.get(self.contact_filter.get())
         for row in state["contacts"]:
+            if allowed is not None and row[1] not in allowed:
+                continue
             rid = str(row[0])
             short_ref = "C-" + rid[-6:]
             self.contacts_table.insert("", "end", iid=rid, values=(
