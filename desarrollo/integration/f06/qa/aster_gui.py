@@ -86,7 +86,6 @@ class Panel:
         self.contact_map: dict[str, list] = {}
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
-        self.root.bind("<space>", lambda _: self.toggle())
         self.apply(self._read(), reset=True)
         self.root.after(500, self.tick)
 
