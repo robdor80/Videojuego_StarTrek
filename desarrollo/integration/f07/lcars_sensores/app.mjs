@@ -227,7 +227,8 @@ function render(){
 function applyObserverSnapshot(raw){
   try{
     const next=acceptSnapshot(current,raw);
-    if(next===current){showMessage("Se ignoró una revisión Core anterior.");return false;}
+    if(next===current){showMessage("Se ignoró una proyección Core obsoleta o degradada.");return false;}
+    if(next.session.source!==current.session.source)localHistory=[];
     current=next;
     if(!getSelected())selectedId=current.contacts[0]?.id||null;
     centered=false;previewFrame=null;
@@ -278,7 +279,7 @@ function selectNext(step){
   const contacts=filtered();
   if(!contacts.length)return;
   const index=contacts.findIndex(c=>c.id===selectedId);
-  select(contacts[(index+step+contacts.length)%contacts.length].id);
+  select(contacts[index<0?(step<0?contacts.length-1:0):(index+step+contacts.length)%contacts.length].id);
 }
 function centerMap(){
   if(!getSelected())return;
