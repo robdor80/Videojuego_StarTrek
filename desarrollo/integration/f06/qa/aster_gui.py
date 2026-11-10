@@ -56,7 +56,8 @@ def contact_identification(contact: list) -> str:
         suffix = f"; transpondedor {transponder}" if transponder else "; sin transpondedor confirmado"
         return name + suffix
     if category == 1:
-        return "Nave sin clase confirmada"
+        return ("Nave de clase sin confirmar; transpondedor " + str(transponder)
+                if transponder else "Nave sin clase ni transpondedor confirmados")
     if category == 2:
         return "Lanzadera (tipo sin confirmar)"
     return TYPES.get(category, "señal desconocida")
