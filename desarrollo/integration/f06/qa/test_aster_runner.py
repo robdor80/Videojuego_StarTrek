@@ -159,6 +159,36 @@ def run(runner: Path):
         "arrival notification missing", incident["events"])
     assert all(c[3]!=0 for c in incident["contacts"] if c[1]==1 and c[2]==1), (
         "uncloaked naval class still pending after acquisition",incident["contacts"])
+
+    # New observations, not the hidden host route, drive motion. The first
+    # change is closing without intercept; at 20 seconds Klingon alters its
+    # actual course toward our own ship.
+    t5=say(p,"STEP 5")
+    tracked=next(row for row in t5["navigation"] if row[0]==klingons[0][0])
+    assert tracked[2]==270 and tracked[3]==1 and tracked[4]==0,tracked
+    t10=say(p,"STEP 5")
+    tracked=next(row for row in t10["navigation"] if row[0]==klingons[0][0])
+    assert tracked[3]==1 and tracked[4]==0,tracked
+    t20=say(p,"STEP 10")
+    tracked=next(row for row in t20["navigation"] if row[0]==klingons[0][0])
+    assert tracked[3]==1 and tracked[4]==1,tracked
+    assert any(e[0]==2 and e[1]==klingons[0][0] and e[2]==3620
+               for e in t20["navigation_alerts"]), t20["navigation_alerts"]
+    tactical=say(p,"TACTICAL")
+    assert tactical["navigation"]==t20["navigation"],(
+        "tactical must see the identical Core sensor snapshot")
+    assert tactical["navigation_alerts"]==t20["navigation_alerts"],(
+        "tactical must see the same maneuver alerts")
+    assert tactical["contacts"]==t20["contacts"],(
+        "sensor identity must not be reinterpreted by Tactical")
+    saved=say(p,"SAVE")
+    s30=say(p,"STEP 30")
+    assert any(e[0]==1 and e[1]==klingons[0][0]
+               for e in s30["navigation_alerts"]), (
+        "new course change not announced")
+    restored=say(p,"LOAD")
+    assert restored["navigation"]==saved["navigation"]
+    assert restored["navigation_alerts"]==saved["navigation_alerts"]
     finish(p)
 
     p,_=start(runner)
