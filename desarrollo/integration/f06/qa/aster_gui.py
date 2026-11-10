@@ -43,6 +43,26 @@ STARSHIP_CLASSES = {
 }
 PLANET_CLASSES = {0: "sin determinar", 1: "M", 2: "H", 3: "J",
                   4: "L", 5: "P", 6: "Y"}
+# Describe la procedencia del DISEÑO, no la identidad del operador.
+STARSHIP_DESIGNS = {
+    1: ("Crucero de exploración", "Flota Estelar"),
+    2: ("Crucero de exploración", "Flota Estelar"),
+    3: ("Crucero de exploración", "Flota Estelar"),
+    4: ("Escolta táctica", "Flota Estelar"),
+    5: ("Crucero ligero", "Flota Estelar"),
+    6: ("Nave de exploración científica", "Flota Estelar"),
+    7: ("Crucero de escolta", "Flota Estelar"),
+    8: ("Ave de guerra", "Imperio Romulano"),
+    9: ("Ave de presa", "Diseño asociado al Imperio Klingon"),
+    10: ("Nave colectiva", "Colectivo Borg"),
+    11: ("Nave auxiliar", "Flota Estelar"),
+    12: ("Nave médica", "Flota Estelar"),
+    13: ("Lanzadera", "Flota Estelar"),
+    14: ("Nave vulcana", "Vulcano"),
+    15: ("Crucero", "Imperio Klingon"),
+    16: ("Crucero de batalla", "Imperio Klingon"),
+    17: ("Crucero de batalla", "Imperio Klingon"),
+}
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
     3: "fuera del alcance de los sensores", 4: "sensores sin servicio",
@@ -90,6 +110,8 @@ class Panel:
         self.saved_notes = ""
         self.manual_jobs: dict[int, int] = {}
         self.saved_manual_jobs: dict[int, int] = {}
+        self.operator_scan_ids: set[int] = set()
+        self.saved_operator_scan_ids: set[int] = set()
         self.sensor_preset = tk.StringVar(value="Estándar")
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
@@ -105,6 +127,9 @@ class Panel:
         """
         self.root.geometry("1330x850")
         self.root.minsize(1020, 640)
+        # The operating rows stay visible even when a priority alert appears.
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_rowconfigure(2, weight=1)
         self.current_view = "status"
         self.workspace_labels = {
             "status": "SISTEMA",
@@ -130,7 +155,7 @@ class Panel:
         self.search_text.trace_add("write", lambda *_: self._refresh_contacts(self.state) if self.state else None)
 
         header = ttk.Frame(self.root, padding=(14, 11, 14, 7))
-        header.pack(fill="x")
+        header.grid(row=0, column=0, sticky="ew")
         ttk.Label(header, text="USS ENTERPRISE-D  /  SENSORES",
                   font=("Segoe UI", 17, "bold")).pack(side="left")
         self.summary = ttk.Label(header, text="Vigilancia automática")
@@ -141,25 +166,25 @@ class Panel:
                                   highlightbackground="#b45309",
                                   highlightthickness=3)
         alert_copy = tk.Frame(self.alert_bar, background="#ffe2a1")
-        alert_copy.pack(side="left", fill="both", expand=True, padx=17, pady=13)
+        alert_copy.pack(side="left", fill="both", expand=True, padx=13, pady=8)
         self.alert_title = tk.Label(alert_copy, text="", anchor="w",
-                                    font=("Segoe UI", 19, "bold"),
+                                    font=("Segoe UI", 16, "bold"),
                                     background="#ffe2a1", foreground="#7c2d12")
         self.alert_title.pack(fill="x")
         self.alert_description = tk.Label(
             alert_copy, text="", anchor="w", justify="left",
-            wraplength=960, font=("Segoe UI", 12),
+            wraplength=960, font=("Segoe UI", 10),
             background="#ffe2a1", foreground="#451a03")
-        self.alert_description.pack(fill="x", pady=(6, 0))
+        self.alert_description.pack(fill="x", pady=(3, 0))
         self.alert_button = tk.Button(
             self.alert_bar, text="VER CONTACTO", command=self.open_alert_contact,
-            font=("Segoe UI", 12, "bold"), background="#92400e",
+            font=("Segoe UI", 10, "bold"), background="#92400e",
             foreground="white", activebackground="#78350f",
-            activeforeground="white", padx=14, pady=12, relief="flat")
-        self.alert_button.pack(side="right", padx=15, pady=14)
+            activeforeground="white", padx=12, pady=8, relief="flat")
+        self.alert_button.pack(side="right", padx=12, pady=9)
 
         panes = ttk.Panedwindow(self.root, orient="horizontal")
-        panes.pack(fill="both", expand=True, padx=12, pady=(3, 7))
+        panes.grid(row=2, column=0, sticky="nsew", padx=12, pady=(3, 5))
         self.workspace_panes = panes
         left = ttk.Frame(panes, width=180, padding=(0, 5))
         center = ttk.Frame(panes, width=710, padding=(8, 3))
@@ -193,7 +218,7 @@ class Panel:
         self.section_info.pack(fill="x", pady=(0, 9))
 
         self.map_box = ttk.Frame(center)
-        self.map_canvas = tk.Canvas(self.map_box, height=170, background="#f8fafc",
+        self.map_canvas = tk.Canvas(self.map_box, height=126, background="#f8fafc",
                                     highlightthickness=0)
         self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
@@ -202,7 +227,7 @@ class Panel:
         list_area = ttk.Frame(center)
         list_area.pack(fill="both", expand=True)
         self.contacts_table = ttk.Treeview(
-            list_area, show="tree", height=19, selectmode="browse")
+            list_area, show="tree", height=7, selectmode="browse")
         self.contacts_table.heading("#0", text="Sistema estelar observado")
         self.contacts_table.column("#0", minwidth=290, width=550, stretch=True)
         self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
@@ -225,7 +250,7 @@ class Panel:
         detail_box = ttk.Frame(right)
         detail_box.pack(fill="both", expand=True)
         self.detail_text = tk.Text(
-            detail_box, height=24, state="disabled", relief="flat",
+            detail_box, height=7, state="disabled", relief="flat",
             background="#ffffff", font=("Segoe UI", 12),
             wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
         self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
@@ -236,15 +261,23 @@ class Panel:
         self.detail_text.configure(yscrollcommand=details_scroll.set)
 
         self.action_area = ttk.LabelFrame(right, text="ÓRDENES", padding=8)
-        ttk.Button(self.action_area, text="IDENTIFICAR",
-                   command=lambda: self.contact_action("FOCUS")).pack(
-                       side="left", expand=True, fill="x", padx=2)
-        ttk.Button(self.action_area, text="ESTUDIAR · 2 MIN",
+        self.identify_button = ttk.Button(
+            self.action_area, text="IDENTIFICAR",
+            command=lambda: self.contact_action("FOCUS"))
+        self.identify_button.pack(side="left", expand=True, fill="x", padx=2)
+        ttk.Button(self.action_area, text="ANÁLISIS DETALLADO · 2 MIN",
                    command=lambda: self.contact_action("SCAN")).pack(
                        side="left", expand=True, fill="x", padx=2)
         ttk.Button(self.action_area, text="SEGUIR",
                    command=lambda: self.contact_action("PRIORITY")).pack(
                        side="left", expand=True, fill="x", padx=2)
+        # The progress indicator is based on actual Core start/end ticks.
+        self.scan_progress = ttk.Frame(right)
+        self.scan_progress_label = ttk.Label(self.scan_progress, text="")
+        self.scan_progress_label.pack(fill="x", pady=(0, 3))
+        self.scan_progress_value = ttk.Progressbar(
+            self.scan_progress, maximum=100, value=0)
+        self.scan_progress_value.pack(fill="x")
         self.technical_button = ttk.Button(
             right, text="Consultar datos técnicos del contacto",
             command=self.open_contact_details)
@@ -261,7 +294,8 @@ class Panel:
 
         # One live message, never an endless log at the centre of the console.
         notice_bar = ttk.Frame(self.root, padding=(13, 5, 13, 5))
-        notice_bar.pack(fill="x")
+        notice_bar.grid(row=3, column=0, sticky="ew")
+        self.notice_bar = notice_bar
         ttk.Label(notice_bar, text="COMPUTADORA:", font=("Segoe UI", 10, "bold")
                   ).pack(side="left")
         self.notice_label = ttk.Label(notice_bar, text="Vigilancia automática activada.",
@@ -271,7 +305,8 @@ class Panel:
                    command=self.open_history).pack(side="right")
 
         footer = ttk.Frame(self.root, padding=(13, 6, 13, 10))
-        footer.pack(fill="x")
+        footer.grid(row=4, column=0, sticky="ew")
+        self.footer = footer
         self.timelabel = ttk.Label(footer, text="00:00 / 08:00", width=21,
                                    font=("Segoe UI", 11, "bold"))
         self.timelabel.pack(side="left")
@@ -310,9 +345,9 @@ class Panel:
 
     def toggle_test_options(self) -> None:
         if self.test_area.winfo_manager():
-            self.test_area.pack_forget()
+            self.test_area.grid_remove()
         else:
-            self.test_area.pack(fill="x", padx=12, pady=(0, 7))
+            self.test_area.grid(row=5, column=0, sticky="ew", padx=12, pady=(0, 7))
 
     def toggle_map(self) -> None:
         self.map_visible = not self.map_visible
@@ -430,7 +465,7 @@ class Panel:
             ids = list(dict.fromkeys(([arrival] if arrival else []) + core_ids))
         if not ids:
             self.alert_ids = []
-            self.alert_bar.pack_forget()
+            self.alert_bar.grid_remove()
             return
         if tuple(ids) != tuple(self.alert_ids):
             self.alert_cursor = 0
@@ -472,8 +507,8 @@ class Panel:
             f"ABRIR CONTACTO {self.alert_cursor + 1}/{len(ids)}"),
             background=stroke, activebackground=ink)
         if not self.alert_bar.winfo_manager():
-            self.alert_bar.pack(fill="x", padx=12, pady=(0, 8),
-                                before=self.workspace_panes)
+            self.alert_bar.grid(row=1, column=0, sticky="ew",
+                                padx=12, pady=(0, 6))
 
     def open_alert_contact(self) -> None:
         if not self.alert_ids:
