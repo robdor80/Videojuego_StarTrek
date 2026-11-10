@@ -928,6 +928,216 @@ class Panel:
             label += " · COMUNICADO"
         return label
 
+    @staticmethod
+    def _bearing(contact: list) -> tuple[int, int]:
+        """Azimuth/elevation in the observer's sensor XY frame, NOT ship bow."""
+        from math import atan2, degrees, hypot
+        bearing = round((degrees(atan2(contact[8], contact[9])) + 360) % 360) % 360
+        elevation = round(degrees(atan2(
+            contact[10], hypot(contact[8], contact[9]))))
+        return bearing, elevation
+
+    def _navigation_data(self, contact: list) -> list | None:
+        return next((n for n in self.state.get("navigation", [])
+                     if n[0] == contact[0] and
+                     0 <= self.state["tick"] - n[1] <= 300), None)
+
+    def _operational_name(self, contact: list) -> str:
+        klass = STARSHIP_CLASSES.get(contact[3]) if contact[1] in (1, 2) else None
+        design = STARSHIP_DESIGNS.get(contact[3])
+        if klass:
+            return (f"{design[0]}, clase {klass}"
+                    if design else f"Nave de clase {klass}")
+        return self.designations.get(
+            contact[0], TYPES.get(contact[1], "Objeto detectado").capitalize())
+
+    def _report_script(self, contact: list) -> str:
+        """A Starfleet-ready briefing based only on observed Core projections."""
+        az, elevation = self._bearing(contact)
+        lines = [
+            f"Capitán, nuevo contacto de sensores. {self._operational_name(contact)}.",
+            f"Azimut {az:03d} grados, elevación {elevation:+d} grados "
+            f"en el marco de sensores. "
+            f"Distancia {contact[5] / 1000:.3f} unidades astronómicas.",
+        ]
+        nav = self._navigation_data(contact)
+        if nav:
+            trend = {1: "Se aproxima.", 2: "Se aleja.",
+                     0: "Movimiento radial no determinado."}.get(
+                         nav[3], "Movimiento no determinado.")
+            lines.append(f"Trayectoria estimada {nav[2]:03d} grados. {trend}")
+            if len(nav) > 6:
+                lines.append(f"Velocidad de desplazamiento relativa estimada "
+                             f"{nav[6] / 1000000:.6f} UA por segundo.")
+            if nav[4]:
+                lines.append("Posible trayectoria de interceptación. "
+                             "No se han determinado intenciones hostiles.")
+        else:
+            lines.append("Vector de movimiento todavía no determinado.")
+        return " ".join(lines)
+
+    def _update_main_content(self) -> None:
+        """Main zone is a playable task display rather than a duplicated list."""
+        if not hasattr(self, "main_text") or not self.state:
+            return
+        selection = self.contacts_table.selection()
+        c = self.contact_map.get(selection[0]) if selection else None
+        title = {"status": "PANORAMA DEL SISTEMA",
+                 "contacts": "CONTACTOS NUEVOS",
+                 "tracking": "SEGUIMIENTO DE CONTACTOS",
+                 "results": "ANÁLISIS CIENTÍFICO Y NAVAL",
+                 "configuration": "EQUIPO DE SENSORES"}.get(
+                     self.current_view, "SENSORES")
+        lines = [title, ""]
+        if self.current_view == "status":
+            counts = Counter(x[1] for x in self.state["contacts"] if x[2] == 1)
+            for kind, name in ((12,"Estrellas"),(13,"Planetas"),(14,"Lunas"),
+                               (17,"Asteroides"),(15,"Nebulosas"),
+                               (16,"Estaciones"),(1,"Naves"),(2,"Lanzaderas"),
+                               (3,"Sondas")):
+                if counts[kind]:
+                    lines.append(f"{name}: {counts[kind]}")
+            lines.extend(["", "Vigilancia automática activa.",
+                          "Selecciona un elemento para acercar el mapa a su posición."])
+        elif self.current_view == "contacts":
+            if not c:
+                lines.extend([f"Contactos nuevos durante la guardia: "
+                              f"{len(self.new_contact_ids)}",
+                              "Selecciona un contacto y prepara el parte al oficial."])
+            else:
+                lines.extend(["PARTE PREPARADO PARA EL OFICIAL", "",
+                              self._report_script(c), ""])
+                lines.append(
+                    "Comunicado en la prueba."
+                    if str(c[0]) in self.shared_report_ids else
+                    "Pulsa COMUNICAR CONTACTO AL OFICIAL para transmitirlo.")
+        elif self.current_view == "tracking":
+            if not c:
+                lines.extend(["Selecciona un contacto previamente marcado con SEGUIR.",
+                              f"En seguimiento: {len(self.followed_ids)}"])
+            else:
+                lines.append(self._operational_name(c))
+                lines.append(f"Distancia actual: {c[5] / 1000:.3f} UA")
+                nav = self._navigation_data(c)
+                if nav:
+                    lines.append(f"Trayectoria: {nav[2]:03d}° (marco de sensores)")
+                    lines.append({1:"Se aproxima",2:"Se aleja",
+                                  0:"Movimiento radial sin determinar"}.get(
+                                      nav[3],"Movimiento indeterminado"))
+                    if len(nav) > 6:
+                        lines.append(
+                            f"Desplazamiento relativo: {nav[6] / 1000000:.6f} UA/s")
+                    if nav[4]:
+                        lines.append("")
+                        lines.append("ATENCIÓN: posible interceptación de nuestra nave")
+                    else:
+                        lines.append("Sin trayectoria de interceptación confirmada.")
+                else:
+                    lines.append("Esperando segundo punto de trayectoria observado.")
+                lines.extend(["", "Táctica accede al mismo feed de sensores (QA)."])
+        elif self.current_view == "results":
+            if not c:
+                lines.extend([
+                    f"Objetos estudiados por el oficial: {len(self.analyzed_ids)}",
+                    "Selecciona un expediente para revisar la observación obtenida."])
+            else:
+                jobs = [j for j in self.state.get("scans", [])
+                        if j[1] == c[0] and j[0] in self.operator_scan_ids]
+                completed = [j for j in jobs if j[5] == 2]
+                active = [j for j in jobs if j[5] == 1]
+                lines.append(self._operational_name(c))
+                if active:
+                    lines.append("Análisis detallado en marcha.")
+                if completed:
+                    lines.append(
+                        f"Observación Core completada a las "
+                        f"{clock(max(j[3] for j in completed))}.")
+                if c[1] in (1,2):
+                    profile = NAVAL_CAPABILITIES.get(c[3])
+                    if profile:
+                        lines += ["", "CAPACIDADES CONOCIDAS DE LA CLASE",
+                                  f"Armamento habitual: {profile[1]}",
+                                  f"Defensas habituales: {profile[2]}"]
+                    lines += ["", "Estado actual de armas, escudos, propulsión y "
+                               "tripulación: no medidos por este banco F06.",
+                               "No confundir datos de catálogo con una lectura del buque."]
+                else:
+                    reports=[r for r in self.state.get("science", []) if r[0] == c[0]]
+                    if reports:
+                        p=reports[-1]
+                        lines += ["", f"Clase planetaria: "
+                                  f"{PLANET_CLASSES.get(p[1], 'sin determinar')}",
+                                  f"Temperatura: {p[4]} K",
+                                  f"Presión: {p[5]} mbar",
+                                  f"Oxígeno: {p[8]/10:.1f}%"]
+                    else:
+                        lines.append("Sin informe científico adicional.")
+                lines += ["", "Informe disponible en el archivo de CoreRPG."]
+        else:
+            lines.append("Revisa el estado de los equipos en el panel derecho.")
+        text="\n".join(lines)
+        if self.main_text.get("1.0", "end-1c") == text:
+            return
+        pos=self.main_text.yview()[0]
+        self.main_text.configure(state="normal")
+        self.main_text.delete("1.0", "end")
+        self.main_text.insert("1.0", text)
+        self.main_text.tag_add("heading", "1.0", "1.end")
+        for match in ("ATENCIÓN:", "PARTE PREPARADO PARA EL OFICIAL"):
+            found=self.main_text.search(match, "2.0", "end")
+            if found:
+                self.main_text.tag_add("priority", found,
+                                       f"{found}+{len(match)}c")
+        self.main_text.configure(state="disabled")
+        self.main_text.yview_moveto(pos)
+
+    def report_contact_to_officer(self) -> None:
+        selected=self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map:
+            messagebox.showinfo("Sensores", "Selecciona un contacto.", parent=self.root)
+            return
+        cid=selected[0]
+        contact=self.contact_map[cid]
+        if cid in self.shared_report_ids:
+            return
+        try:
+            message=self._report_script(contact)
+            response=self.command(f"REPORT {contact[0]}")
+            self.apply(response)
+            if cid in self.shared_report_ids:
+                self.append(response["tick"],
+                            "Parte al oficial registrado en la simulación: " + message)
+                self._update_main_content()
+        except Exception as exc:
+            messagebox.showwarning(
+                "Sensores", f"No se pudo comunicar el contacto: {exc}",
+                parent=self.root)
+
+    def send_analysis_to_tactical(self) -> None:
+        selected=self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map:
+            return
+        cid=selected[0]
+        contact=self.contact_map[cid]
+        has_report=any(
+            j[1]==contact[0] and j[5]==2 and j[0] in self.operator_scan_ids
+            for j in self.state.get("scans", []))
+        if not has_report:
+            messagebox.showinfo("Sensores", "No hay análisis terminado.",
+                                parent=self.root)
+            return
+        try:
+            tactical=self.command("TACTICAL")
+            if tactical["contacts"]!=self.state["contacts"]:
+                raise RuntimeError("El feed no coincide con el de Sensores.")
+            self.tactical_qa_ids.add(cid)
+            self.append(self.state["tick"],
+                        f"Expediente de {self._operational_name(contact)} "
+                        "preparado para consulta táctica en el banco QA. "
+                        "La consola táctica final está pendiente de integración.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", str(exc), parent=self.root)
+
     def _no_selection_dossier(self) -> str:
         state = self.state
         if not state:
