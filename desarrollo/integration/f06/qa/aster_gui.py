@@ -8,6 +8,7 @@ authorized numeric event codes to short messages. No hidden scientific truth.
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from datetime import datetime
 import json
 from pathlib import Path
@@ -32,6 +33,35 @@ TYPES = {
 }
 
 
+
+STARSHIP_CLASSES = {
+    1: "Galaxy", 2: "Sovereign", 3: "Odyssey", 4: "Defiant",
+    5: "Miranda", 6: "Intrepid", 7: "Akira", 8: "D'deridex",
+    9: "Bird-of-Prey", 10: "Cubo Borg", 11: "Danube",
+    12: "Olympic", 13: "Lanzadera tipo 6", 14: "D'Kyr",
+    15: "D5", 16: "Vor'cha", 17: "K't'inga",
+}
+PLANET_CLASSES = {0: "sin determinar", 1: "M", 2: "H", 3: "J",
+                  4: "L", 5: "P", 6: "Y"}
+LOSS_CAUSES = {
+    1: "salida a curvatura observada", 2: "ocultación observada",
+    3: "fuera del alcance de los sensores", 4: "sensores sin servicio",
+}
+
+
+def contact_identification(contact: list) -> str:
+    category, ship_class, transponder = contact[1], contact[3], contact[6]
+    if category == 1 and ship_class:
+        name = STARSHIP_CLASSES.get(ship_class, f"clase #{ship_class}")
+        suffix = f"; transpondedor {transponder}" if transponder else "; sin transpondedor confirmado"
+        return name + suffix
+    if category == 1:
+        return "Nave sin clase confirmada"
+    if category == 2:
+        return "Lanzadera (tipo sin confirmar)"
+    return TYPES.get(category, "señal desconocida")
+
+
 def clock(tick: int) -> str:
     return f"{tick // 3600:02d}:{tick % 3600 // 60:02d}:{tick % 60:02d}"
 
@@ -40,8 +70,8 @@ class Panel:
     def __init__(self, root: tk.Tk, runner: Path) -> None:
         self.root = root
         root.title("Enterprise-D · Prueba F06 — Sistema Aster")
-        root.geometry("780x660")
-        root.minsize(660, 560)
+        root.geometry("1000x900")
+        root.minsize(820, 700)
         self.process = subprocess.Popen(
             [str(runner)], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL, encoding="utf-8", bufsize=1,
@@ -53,6 +83,7 @@ class Panel:
         self.lines: list[str] = []
         self.record: list[dict] = []
         self.state: dict = {}
+        self.contact_map: dict[str, list] = {}
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.root.bind("<space>", lambda _: self.toggle())
@@ -102,6 +133,30 @@ class Panel:
                            font=("Segoe UI", 10), relief="flat")
         self.log.pack(fill="both", expand=True)
 
+
+        contact_frame = ttk.LabelFrame(self.root, text="Contactos reales observados por CoreRPG", padding=8)
+        contact_frame.pack(fill="both", expand=True, **pad)
+        columns = ("ref", "tipo", "identificacion", "distancia", "confianza", "estado")
+        self.contacts_table = ttk.Treeview(contact_frame, columns=columns,
+                                           show="headings", height=8)
+        headings = {"ref": "Contacto", "tipo": "Tipo", "identificacion": "Identificación",
+                    "distancia": "Distancia", "confianza": "Confianza", "estado": "Estado"}
+        widths = {"ref": 88, "tipo": 112, "identificacion": 300,
+                  "distancia": 102, "confianza": 95, "estado": 90}
+        for key in columns:
+            self.contacts_table.heading(key, text=headings[key])
+            self.contacts_table.column(key, width=widths[key], anchor="w")
+        self.contacts_table.pack(fill="both", expand=True)
+        self.contacts_table.bind("<<TreeviewSelect>>", lambda _: self.show_selected())
+        actions = ttk.Frame(contact_frame)
+        actions.pack(fill="x", pady=(7, 3))
+        ttk.Button(actions, text="Análisis focalizado", command=lambda: self.contact_action("FOCUS")).pack(side="left")
+        ttk.Button(actions, text="Seguimiento prioritario",
+                   command=lambda: self.contact_action("PRIORITY")).pack(side="left", padx=7)
+        self.detail_text = tk.Text(contact_frame, height=5, wrap="word",
+                                   state="disabled", font=("Segoe UI", 10))
+        self.detail_text.pack(fill="x")
+
         note = ttk.LabelFrame(self.root, text="Tus impresiones (opcional)", padding=10)
         note.pack(fill="x", **pad)
         self.notes = tk.Text(note, height=3, font=("Segoe UI", 10), wrap="word")
@@ -140,55 +195,178 @@ class Panel:
         self.log.see("end")
         self.log.configure(state="disabled")
 
+    def _contact_description(self, contact: list) -> str:
+        kind = TYPES.get(contact[1], "señal desconocida")
+        known = contact_identification(contact)
+        distance = f"{contact[5] / 1000:.3f} UA"
+        confidence = f"{contact[4] / 10:.1f}%"
+        status = "activo" if contact[2] == 1 else "perdido"
+        return f"{kind}: {known}. Distancia {distance}. Confianza {confidence}. Estado {status}."
+
+    def _refresh_contacts(self, state: dict) -> None:
+        selected = self.contacts_table.selection()
+        selected_id = selected[0] if selected else None
+        self.contact_map = {str(row[0]): row for row in state["contacts"]}
+        self.contacts_table.delete(*self.contacts_table.get_children())
+        for row in state["contacts"]:
+            rid = str(row[0])
+            short_ref = "C-" + rid[-6:]
+            self.contacts_table.insert("", "end", iid=rid, values=(
+                short_ref, TYPES.get(row[1], "desconocido"),
+                contact_identification(row), f"{row[5] / 1000:.3f} UA",
+                f"{row[4] / 10:.1f}%", "Activo" if row[2] == 1 else "Perdido",
+            ))
+        if selected_id and selected_id in self.contact_map:
+            self.contacts_table.selection_set(selected_id)
+            self.contacts_table.see(selected_id)
+        self.show_selected()
+
+    def show_selected(self) -> None:
+        selection = self.contacts_table.selection()
+        details = "Selecciona un contacto para consultar su expediente observado y sus resultados científicos."
+        if selection:
+            contact = self.contact_map.get(selection[0])
+            if contact:
+                details = self._contact_description(contact)
+                if contact[2] == 2:
+                    cause = LOSS_CAUSES.get(contact[7], "causa no determinada")
+                    details += f"\nCausa de pérdida registrada: {cause}."
+                reports = [r for r in self.state.get("science", []) if r[0] == contact[0]]
+                if reports:
+                    report = reports[-1]
+                    planet_class = PLANET_CLASSES.get(report[1], "desconocida")
+                    bio = {0: "sin estudiar", 1: "sin señal detectada",
+                           2: "posible", 3: "corroborada"}.get(report[10], "sin determinar")
+                    details += (
+                        f"\nInforme científico registrado en CoreRPG: clase {planet_class} "
+                        f"({'provisional' if report[3] else 'confirmada'}), "
+                        f"confianza {report[2] / 10:.1f}%; "
+                        f"T {report[4]} K; presión {report[5]} mbar; "
+                        f"agua superficial {report[6] / 10:.1f}%; "
+                        f"N₂ {report[7] / 10:.1f}%; O₂ {report[8] / 10:.1f}%; "
+                        f"CO₂ {report[9] / 10:.1f}%; biosignales: {bio}."
+                    )
+                elif contact[1] in (12, 13):
+                    details += "\nSin informe espectral/científico autorizado todavía. No se muestra ciencia privada del escenario."
+                if contact[1] == 1 and contact[3] == 0:
+                    details += "\nAcciones: análisis focalizado, seguimiento prioritario. La causa de la incertidumbre puede requerir nuevas mediciones."
+        self.detail_text.configure(state="normal")
+        self.detail_text.delete("1.0", "end")
+        self.detail_text.insert("end", details)
+        self.detail_text.configure(state="disabled")
+
+    def contact_action(self, action: str) -> None:
+        selected = self.contacts_table.selection()
+        if not selected:
+            messagebox.showinfo("Sensores", "Selecciona primero un contacto.", parent=self.root)
+            return
+        contact = self.contact_map[selected[0]]
+        if contact[2] != 1:
+            messagebox.showwarning("Sensores", "Ese contacto está perdido y no puede analizarse todavía.", parent=self.root)
+            return
+        try:
+            state = self.command(f"{action} {contact[0]}")
+            self.apply(state)
+            self.append(state["tick"], (
+                "Análisis focalizado ordenado sobre " if action == "FOCUS" else
+                "Seguimiento prioritario ordenado sobre "
+            ) + "C-" + selected[0][-6:] + ". Consulta los datos del contacto.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
+
     def apply(self, state: dict, reset: bool = False) -> None:
+        previous = self.state
         self.state = state
         self.record.append(state)
         t = state["tick"]
         self.progress["value"] = t
         self.timelabel.configure(text=f"Guardia: {clock(t)} / 08:00:00")
         if state["offline"]:
-            status = "Sensores sin servicio. La computadora está supervisando la avería."
-        elif state["running"]:
-            status = f"Vigilancia automática · {state['running']} análisis en curso"
+            status = "Sensores fuera de servicio · vigilancia degradada"
         else:
-            status = "Vigilancia automática · Seguimiento de rutina"
+            status = f"Vigilancia activa · {state['active']} contactos"
         self.summary.configure(text=status)
         self.important.configure(text=(
-            "Intervención recomendada: contacto por identificar."
-            if state["attention"] else
-            "Sin avisos que requieran intervención."
+            f"Atención: {state['attention']} contactos relevantes requieren evaluación."
+            if state["attention"] else "Sin incidencias que requieran intervención."
         ))
+        self._refresh_contacts(state)
         if reset:
-            self.append(t, "Comienza la guardia. La computadora controla los sensores.")
-            if state["active"]:
-                self.append(t, f"Detectados {state['active']} contactos; clasificación automática iniciada.")
-        for kind, contact, when, category, klass in state["events"]:
-            label = TYPES.get(category, "señal")
+            visible = [c for c in state["contacts"] if c[2] == 1]
+            counts = Counter(c[1] for c in visible)
+            def amount(key: int, singular: str, plural: str) -> str:
+                n = counts.get(key, 0)
+                return f"{n} {singular if n == 1 else plural}"
+            summary = ", ".join([
+                amount(12, "estrella", "estrellas"),
+                amount(13, "planeta", "planetas"),
+                amount(14, "luna", "lunas"),
+                amount(15, "nebulosa", "nebulosas"),
+                amount(16, "estación", "estaciones"),
+                amount(1, "nave", "naves"),
+                amount(2, "lanzadera", "lanzaderas"),
+                amount(3, "sonda", "sondas"),
+            ])
+            self.append(t, "Barrido panorámico: " + summary + ".")
+            classes = Counter(
+                r[1] for r in state["science"] if r[1] and r[3]
+            )
+            if classes:
+                found = ", ".join(
+                    f"{n} clase {PLANET_CLASSES.get(cls, '?')} provisional"
+                    for cls, n in sorted(classes.items())
+                )
+                self.append(t, "Informe científico inicial autorizado: " + found + ".")
+            unidentified = sum(1 for c in visible if c[1] == 1 and c[3] == 0)
+            if unidentified:
+                self.append(t, f"{unidentified} contacto(s) navales sin clase confirmada. "
+                            "El operador puede consultarlos o priorizarlos.")
+            self.append(t, "Vigilancia automática establecida. Los análisis rutinarios quedan en segundo plano.")
+        if previous and previous.get("interference_em", 0) != state.get("interference_em", 0):
+            level = state["interference_em"]
+            self.append(t, (
+                f"Interferencias electromagnéticas detectadas (índice {level}/550). "
+                "La detección puede estar degradada." if level else
+                "Interferencias electromagnéticas remitidas. Sensores recuperando contactos."
+            ))
+        if previous and previous.get("offline", 0) != state["offline"]:
+            self.append(t, "Avería: sensores sin servicio." if state["offline"] else
+                        "Sensores nuevamente operativos.")
+        new_ids = {contact for kind, contact, *_ in state["events"] if kind == 1}
+        for kind, contact_id, when, category, klass in state["events"]:
+            contact = self.contact_map.get(str(contact_id))
+            ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
+            short_ref = "C-" + str(contact_id)[-6:]
             if reset and kind == 1:
-                continue  # group initial detections instead of 20 alarms
+                continue
             if kind == 1 and category in (12, 13, 14, 15, 17):
-                continue  # celestial background: routine monitoring, not an alarm
+                continue
             if kind == 1:
-                msg = f"Nuevo contacto: {label}. La computadora lo evalúa."
+                msg = f"Nuevo contacto {short_ref}: {ident}. Seguimiento automático."
             elif kind == 2:
-                msg = f"Se pierde el contacto con {label}; mantengo vigilancia."
+                cause = LOSS_CAUSES.get(contact[7], "causa no determinada") if contact else "causa no determinada"
+                if cause == "causa no determinada" and state.get("interference_em", 0):
+                    cause = "interferencias presentes; relación causal no confirmada"
+                msg = f"Pérdida del contacto {short_ref} ({ident}). {cause}."
             elif kind == 3:
-                msg = f"Contacto recuperado ({label}). Vuelvo a analizarlo."
+                msg = f"Contacto recuperado {short_ref}: {ident}."
             elif kind == 4:
-                msg = "Identificación completada; seguimiento automático."
-            elif kind == 5:
-                msg = f"Análisis automático iniciado: {label}."
-            elif kind == 6:
-                msg = f"Análisis de {label} terminado. Continúo la vigilancia."
+                if contact_id in new_ids:
+                    continue
+                if not klass:
+                    continue
+                msg = f"Contacto {short_ref} identificado: {ident}."
+            elif kind in (5, 6):
+                continue  # backend: do not narrate ordinary automatic work
             elif kind == 7:
-                msg = f"Análisis de {label} interrumpido; comprobar sensores."
+                msg = f"Análisis del contacto {short_ref} no disponible. Comprobar sensores."
             else:
                 continue
             self.append(when, msg)
         if t >= 28800:
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
-            self.append(t, "Guardia finalizada. Puedes repetir o exportar el informe.")
+            self.append(t, "Guardia finalizada. Exporta el informe cuando quieras.")
 
     def tick(self) -> None:
         if self.playing and self.state.get("tick", 0) < 28800:
@@ -247,6 +425,11 @@ class Panel:
             "",
             "EVENTOS PRESENTADOS AL OFICIAL:",
             *self.lines, "",
+            "CONTACTOS REALMENTE OBSERVADOS POR CORERPG:",
+            *[self._contact_description(c) for c in self.state.get("contacts", [])], "",
+            "INFORMES CIENTÍFICOS REGISTRADOS EN CORERPG:",
+            *[f"Contacto {r[0]} · clase {PLANET_CLASSES.get(r[1], '?')} · confianza {r[2] / 10:.1f}% · provisional={bool(r[3])}"
+              for r in self.state.get("science", [])], "",
             "IMPRESIONES DEL JUGADOR:",
             self.notes.get("1.0", "end").strip(), "",
             "NOTA: prueba de CoreRPG con fixture QA Aster, no universo F13 ni UI LCARS final.",
