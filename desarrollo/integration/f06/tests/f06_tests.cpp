@@ -967,22 +967,28 @@ void run(const std::string& scenario){
     "out-of-range Klingon and non-emitting Romulan do not leak host truth");
   const auto firstCheckpoint=l.save();l.load(firstCheckpoint);
   ok(l.save()==firstCheckpoint,"first frame persists in Core with no extra state");
-  publish(F06_DEMO_FRAMES[1]);
+  auto publish_tick=[&](U tick){
+    const auto* frame=std::find_if(std::begin(F06_DEMO_FRAMES),
+      std::end(F06_DEMO_FRAMES),[&](const auto& row){return row.tick==tick;});
+    ok(frame!=std::end(F06_DEMO_FRAMES),"expected fixture frame exists");
+    publish(*frame);
+  };
+  publish_tick(3600);
   auto afterEntry=l.contacts(F06_ACTIVE);
   auto klingon=hasClass(afterEntry,16);
   ok(klingon!=afterEntry.end(),"approaching Klingon cruiser detected");
   const U klingonId=klingon->contact_id;
-  publish(F06_DEMO_FRAMES[2]);
+  publish_tick(7200);
   auto afterReveal=l.contacts(F06_ACTIVE);
   ok(hasClass(afterReveal,8)!=afterReveal.end(),
     "Romulan becomes observable only after its real signal is active");
-  publish(F06_DEMO_FRAMES[3]);
+  publish_tick(14400);
   auto lost=l.contacts(F06_LOST);
   auto lostKlingon=hasClass(lost,16);
   ok(lostKlingon!=lost.end() && lostKlingon->contact_id==klingonId &&
     lostKlingon->loss_cause==F06_EXIT_OBSERVED_OUT_OF_RANGE,
     "Klingon signal loss preserves identity and observed exit evidence");
-  publish(F06_DEMO_FRAMES[4]);
+  publish_tick(28800);
   auto finalContacts=l.contacts(F06_ACTIVE);
   auto returned=hasClass(finalContacts,16);
   ok(returned!=finalContacts.end() && returned->contact_id==klingonId &&
