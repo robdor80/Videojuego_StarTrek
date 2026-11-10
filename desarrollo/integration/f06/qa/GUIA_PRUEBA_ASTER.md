@@ -1,55 +1,40 @@
-# F06 — Guardia autónoma del Sistema Aster (banco de pruebas)
+# F06 · Guardia de sensores Aster — prueba jugable de tres zonas
 
-**Estado:** banco de pruebas F06 preparado en PR #94 sobre F06 Draft #91; no sustituye aceptación UE5 ni las consolas F07.
+**Rama de prueba:** `fix/f06-aster-guardia-ux-ciencia-20261110`  
+**PR:** #97 (Draft, apilada sobre #96; no fusionar todavía).  
+**Objetivo:** validar que un jugador puede actuar como oficial de sensores; las pruebas del motor por sí solas no certifican jugabilidad.
 
-## Qué comprobará el jugador
+## Arranque mañana en el MSI
+1. Cierra la consola antigua y abre GitHub Desktop.
+2. Comprueba que estás en `fix/f06-aster-guardia-ux-ciencia-20261110`.
+3. Pulsa **Fetch origin** y, después, **Pull origin** (si está disponible).
+4. Abre `desarrollo/integration/f06/INICIAR_PRUEBA_ASTER.cmd` con doble clic.
+5. Pulsa **Iniciar**. Es un banco nativo real CoreRPG + interfaz temporal Tkinter, no la consola LCARS final de UE5.
 
-La computadora de la nave mantiene vigilancia pasiva continua, prioriza **contactos detectados de verdad** y, sin intervención del oficial, puede reservar un barrido focal temporal, ejecutarlo cuando avance el reloj de CoreRPG, guardar la observación y mostrar el resultado. Dos análisis focales como máximo coinciden en el tiempo (junto a las operaciones manuales). Si los sensores están averiados, reconoce el fallo; si hay interferencias, no inventa detecciones.
+El lanzador compila en `laboratorios/f06/qa/build` (fuera de Git). Usa la revisión de CoreRPG aprobada y no modifica modelos Blender/Unreal.
 
-No hay nave enemiga improvisada, planetas engendrados por una consola ni resultados científicos falsos. **El escenario es la fixture Aster de 20 entidades y cinco momentos de cambio; no es el universo F13 en funcionamiento.** El escenario de pruebas usa una sesión sintética Miranda con **perfil de sensores refit Enterprise-D 5**. Es una instalación de laboratorio, **no es una Galaxy físicamente jugable**.
+## Organización funcional actual
+- **Izquierda / OPERACIONES**: GENERAL (inventario); CONTACTOS (solo nuevas detecciones); SEGUIMIENTO (solo objetivos marcados con SEGUIR); ANÁLISIS (objetos cuyo estudio has solicitado).
+- **Centro**: mapa grande con zoom y «Ver todos / Enfocar contacto», más la pantalla del trabajo seleccionado.
+- **Derecha**: información observada, armas/defensas habituales de la clase cuando están catalogadas, órdenes y, en CONTACTOS, **COMUNICAR CONTACTO AL OFICIAL**. «Ver ficha técnica» despliega datos adicionales **en esta zona**, no registros de depuración.
+- **Avisos superiores**: nuevas naves y posibles maniobras de interceptación son importantes; el reloj baja a ×1 cuando aparece una nueva nave, sin pausar la guardia.
 
-## Cómo abrirlo en el MSI
+## Guardia de aceptación (la secuencia importante)
+1. **00:00**: GENERAL debe inventariar el sistema Aster y permitir seleccionar elementos en el mapa. Al elegir un objeto, el mapa enfoca solo Enterprise y el objeto. El zoom debe funcionar durante el avance del reloj.
+2. **01:00**: llega el crucero klingon **Vor'cha**, identificado sin esperar un escaneo detallado. Aster debe cambiar automáticamente a **CONTACTOS**, mostrar un parte en texto legible y bajar la velocidad a ×1.
+3. **COMUNICAR CONTACTO AL OFICIAL**: registra la comunicación simulada sin duplicados. El texto usa azimut y elevación **en el marco de sensores** (no «a estribor» sin tener orientación de la nave), distancia y, si existen observaciones sucesivas, rumbo de desplazamiento y velocidad relativa estimada. Este banco NO simula aún la respuesta hablada del capitán ni la interacción por voz.
+4. **SEGUIR**: el Vor'cha aparece en la sección SEGUIMIENTO. El motor debe seguir calculando acercamiento, rumbo y posible interceptación automáticamente; no hay que pulsar SEGUIR continuamente.
+5. **ANÁLISIS DETALLADO**: acepta la orden durante la guardia y termina en 20 segundos de reloj a ×1, con porcentaje real y resultado conservado. ANÁLISIS se limita a los objetivos estudiados; nunca presenta los datos teóricos de la clase como una lectura verificada de los sistemas de esa nave.
+6. **02:00**: al hacerse observable la D'deridex debe poder identificarse; al disponer de nueva posición, Aster debe calcular su movimiento. No ocultar armas conocidas detrás de «consulta el catálogo».
+7. **Guardar / Recuperar** desde Opciones de prueba: el estado de Core, las observaciones y las listas operativas temporales se recuperan. La comunicación al oficial también se conserva.
+8. Comprobar durante toda la prueba que no saltan la lista ni la ficha al hacer scroll, que las alertas no esconden el pie y que los botones siguen operativos.
 
-1. En **GitHub Desktop**, seleccionar la rama `feat/f06-sensores-core` una vez integrada PR #94, y usar **Fetch/Pull**. Esto no requiere fusionar F06 con `main`.
-2. Abrir la carpeta `desarrollo/integration/f06` y hacer **doble clic en `INICIAR_PRUEBA_ASTER.cmd`**. No hay que copiar comandos ni abrir Unreal. Alternativa por PowerShell: `powershell -NoProfile -ExecutionPolicy Bypass -File .\INICIAR_PRUEBA_ASTER.ps1`.
+## Límites explícitos
+- La comunicación con el oficial se registra **en la simulación QA**, no en un NPC/diálogo definitivo.
+- Táctica usa la misma proyección de sensores mediante `TACTICAL`; el botón «Preparar informe para Táctica (QA)» comprueba la disponibilidad de la lectura, pero **no equivale todavía a una orden táctica persistida ni a una consola de Táctica terminada**.
+- El mapa XY y sus magnitudes son las observaciones públicas del Core en el escenario. Falta la orientación real del casco para transformar el azimut en marcación relativa de proa/estribor; no inventamos la referencia.
+- La velocidad es una estimación basada en dos observaciones, expresada en UA/s; no se infiere factor warp sin medición.
+- Los escaneos detallados conservan resultados de sensores, pero aún no pueden certificar estado de todas las armas, escudos, sistemas internos y tripulación.
+- No confundir **prueba jugable en Windows** con integración visual y funcional definitiva en **UE5**.
 
-3. Se compila el ejecutable nativo y se abre la ventana. El script usa CoreRPG en la **revisión exacta aprobada**; si no hay una copia compatible, descarga otra dentro de `laboratorios/f06/qa/deps`. Todo lo descargado y compilado queda bajo `laboratorios`, fuera del control de versiones y sin modificar los assets 3D.
-
-El lanzador detecta automáticamente Visual Studio 2022 o 2026 con el componente C++ x64. Si es necesario, se puede elegir manualmente con `-Generator 'Visual Studio 17 2022'`. Requiere Python 3 con Tkinter, CMake, Git, compilador C++ y acceso a GitHub para la descarga inicial de dependencias. Una compilación previa se reutiliza en siguientes aperturas; no se realizan comprobaciones interminables en cada uso.
-
-## Lo único que debe hacer el jugador
-
-- Pulsar **Iniciar**. A velocidad **×30**, ocho horas de guardia tardan **16 minutos reales**. Se puede cambiar a ×15 o ×60, y pausar cuando algo llame la atención.
-- **Prueba 1. Guardia normal:** observar qué detecta, cómo lo estudia y si avisa lo suficiente.
-- **Prueba 2. Repetición idéntica:** mismo Sistema Aster, mismas condiciones y mismo reloj; el comportamiento debe coincidir con la prueba 1 si la cadencia de avance es idéntica.
-- **Prueba 3. Interferencias:** el Host introduce un entorno EM adverso a la hora 1 y lo retira a la hora 2.
-- **Prueba 4. Avería y recuperación:** se corta la alimentación de sensores a la hora 2 y se restaura a las 2 h 30 min.
-- **Guardar punto / Recuperar punto** usa `f04_save/f04_load` sobre la misma sesión de CoreRPG (punto de prueba en memoria, no archivo definitivo).
-- Escribir comentarios en **Tus impresiones** y pulsar **Exportar informe**. Adjuntar ese TXT a ChatGPT permite ajustar comportamiento, mensajes y prioridades con evidencia real.
-
-### Vocabulario en lenguaje corriente
-
-Un **barrido focalizado** no es más que observar con más detalle una señal determinada; la computadora puede iniciarlo por sí sola. **Contacto perdido** significa que dejamos de verlo, no que la nave haya sido destruida o saltado a warp. **Análisis completado** significa observación de sensores, **no** que Ciencia haya identificado automáticamente toda la vida, composición o historia de un planeta. Para eso se necesita equipo científico legítimo y observaciones adicionales.
-
-### Qué muestra la ventana (y qué no)
-
-La ventana solo contiene estado general, avisos importantes, pausa, velocidad, selección de escenario y controles mínimos de prueba. Los IDs, magnitudes de sensores y detalles del backend se procesan internamente. Esta ventana usa **Tkinter como interfaz temporal fuera de Unreal**, pero está conectada a un **ejecutable C++ que ejecuta CoreRPG real**. No se presenta como una consola LCARS jugable, ni como certificación del puente, FPS, Unreal D3D12, audio o tripulación. La integración UE5/LCARS y la aceptación visual quedan pendientes para fases posteriores.
-
-## Entregables técnicos
-
-- `include/f06_autonomy.h`, `src/f06_autonomy.inc`: estado y avisos de la computadora, prioridad basada en observaciones, trabajos focales temporizados de propiedad **computer**, y regeneración tras readquisición real. No usa modelos de lenguaje ni permisos humanos ficticios.
-- `src/f06_bis.inc`, `src/f06_runtime.inc`, `src/f06_schema.inc`: actualización de reloj, soporte a observaciones computer-owned, eventos semánticos, datos persistentes y validación al guardar/cargar.
-- `qa/aster_runner.cpp`: fuente de escenario autorizada del Host, pasos de reloj del Core, cuatro variantes y protocolo de estado compacto de una línea JSON; solo emite datos públicos de sensores.
-- `qa/aster_gui.py`: interfaz rudimentaria en castellano para la prueba humana.
-- `qa/test_aster_runner.py`: prueba sin pantalla de resultados del protocolo (Windows y Linux).
-- `INICIAR_PRUEBA_ASTER.ps1`: compilación segura y arranque en MSI, exclusivamente dentro de `laboratorios`.
-- `tests/f06_tests.cpp`: cuatro escenarios nuevos del supervisor y todos los tests anteriores F06/F05.
-
-## Criterio de aprobación
-
-1. CI nativa completa en Windows y Ubuntu, incluyendo casos de automatización y protocolo de la GUI, sin regenerar las auditorías históricas F04/F05.
-2. Usuario puede observar las cuatro guardias con cambios de escenario sin instalar una consola definitiva.
-3. Detección y análisis iniciados por ordenador; nunca adivinación de ciencia oculta; avisos breves; contacto perdido/reaparecido preserva identidad; fallo o interrupción hacen ruido razonable.
-4. Recoger comentarios en informe y corregir lo observado. La aceptación nativa **no cierra la integración en Unreal** ni la fuente viva de F13.
-
-**La prueba de rendimiento del MSI es independiente de este banco F06: no debe tocarse ni sustituirse con estas métricas de CoreRPG.**
+**F06 sigue abierta** hasta las pruebas reales del operador y revisión de integración/contratos reutilizables con Unreal.
