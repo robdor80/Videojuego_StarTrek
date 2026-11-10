@@ -18,10 +18,14 @@ def start(runner: Path):
     assert initial["config"][:3] == [1000, 1000, 0], initial
     assert initial["diagnostic"][0] == 1, initial
     assert all(len(c)==12 for c in initial["contacts"]),initial
-    assert len(initial["science"]) == 6, (
-        "The six observed Aster planets must have published Core reports or a recorded failure",
-        initial["science"], initial.get("science_issues"),
-    )
+    if len(initial["science"]) != 6:
+        p.terminate()
+        p.wait(timeout=5)
+        diagnostics = p.stderr.read() if p.stderr else ""
+        raise AssertionError((
+            "Aster must have six real Core reports, no skipped planet",
+            initial["science"], initial.get("science_issues"), diagnostics,
+        ))
     assert any(r[1]==1 and r[3]==1 for r in initial["science"]), "provisional M class must come from Core"
     assert any(r[1]==3 for r in initial["science"]), "Core must report a measured gas giant as class J"
     assert all(r[0] in {c[0] for c in initial["contacts"]} for r in initial["science"])
