@@ -34,8 +34,10 @@ def build(source: Path) -> str:
             raise ValueError("out-of-range coordinates")
         if e["kind"] == "planet" and not e.get("science_truth", {}).get("planet_class"):
             raise ValueError("planet fixture needs separate host-only classification")
-        if e["kind"] == "starship" and e["ship_class_id"] not in (0, 6, 8, 16):
-            raise ValueError("test ship class not verified in Star Trek registry")
+        if e["kind"] == "starship" and e["ship_class_id"] not in (6, 8, 16, 18):
+            raise ValueError("every uncamouflaged QA starship must have a valid class")
+        if e["kind"] == "shuttle" and e["ship_class_id"] != 13:
+            raise ValueError("QA shuttle must have an identified design")
         if not (0 <= e["strength_permille"] <= 1000 and 0 <= e["interference_permille"] <= 550):
             raise ValueError("non-normalized sensor signature")
         seen_ticks = set()
