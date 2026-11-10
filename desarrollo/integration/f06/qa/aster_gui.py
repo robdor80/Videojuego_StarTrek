@@ -511,14 +511,10 @@ class Panel:
         return self._read()
 
     def append(self, tick: int, message: str) -> None:
+        """One current message. Older messages remain in on-demand history."""
         line = f"{clock(tick)} · {message}"
         self.lines.append(line)
-        self.log.configure(state="normal")
-        self.log.insert("end", line + "\n")
-        if int(self.log.index("end-1c").split(".")[0]) > 60:
-            self.log.delete("1.0", "15.0")
-        self.log.see("end")
-        self.log.configure(state="disabled")
+        self.notice_label.configure(text=message[:180])
 
     def _contact_description(self, contact: list) -> str:
         kind = TYPES.get(contact[1], "señal desconocida")
@@ -550,7 +546,8 @@ class Panel:
         self.map_positions = []
         if not self.state:
             return
-        rows = [self.contact_map[k] for k in self.contacts_table.get_children()
+        rows = [self.contact_map[k] for group in self.contacts_table.get_children()
+                for k in self.contacts_table.get_children(group)
                 if k in self.contact_map]
         if not rows:
             cv.create_text(w / 2, h - 18, text="Sin contactos visibles en este filtro")
@@ -600,169 +597,252 @@ class Panel:
             self._draw_map()
 
     def _refresh_contacts(self, state: dict) -> None:
-        selected = self.contacts_table.selection()
+        """Group ACTUAL observed contacts into a compact expandable inventory."""
+        if not state:
+            return
+        tree = self.contacts_table
+        selected = tree.selection()
         selected_id = selected[0] if selected else None
-        self.contact_map = {str(row[0]): row for row in state["contacts"]}
+        for group in tree.get_children():
+            if group.startswith("group:"):
+                self.group_open[group] = bool(tree.item(group, "open"))
+        self.contact_map = {str(c[0]): c for c in state["contacts"]}
         stars = [c for c in state["contacts"] if c[1] == 12]
         planets = [c for c in state["contacts"] if c[1] == 13]
         if stars:
             star = stars[0]
-            planets.sort(key=lambda c:
-                         sum((c[8 + i] - star[8 + i]) ** 2 for i in range(3)))
+            planets.sort(key=lambda c: sum(
+                (c[8 + i] - star[8 + i]) ** 2 for i in range(3)))
             roman = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII",
                      "IX", "X", "XI", "XII")
-            for i, planet in enumerate(planets):
+            for idx, planet in enumerate(planets):
                 self.designations.setdefault(
-                    planet[0], "Aster " + (roman[i] if i < len(roman) else str(i + 1))
-                )
-            self.designations.setdefault(star[0], "Aster (estrella central)")
+                    planet[0], "Aster " + (roman[idx] if idx < len(roman)
+                                                  else str(idx + 1)))
+            self.designations.setdefault(star[0], "Aster · estrella central")
+        reports = {r[0]: r for r in state.get("science", [])}
 
-        self.contacts_table.delete(*self.contacts_table.get_children())
-        categories = {
-            "Todos": None, "Planetas": {13}, "Naves": {1, 2},
-            "Estrellas": {12}, "Satélites": {14},
-            "Artificiales": {1, 2, 3, 5, 16},
+        names = {
+            "star": "Estrellas", "planet": "Planetas", "moon": "Lunas",
+            "asteroid": "Asteroides", "nebula": "Nebulosas",
+            "station": "Estaciones", "ship": "Naves", "shuttle": "Lanzaderas",
+            "probe": "Sondas", "other": "Otras señales",
         }
-        allowed = categories.get(self.contact_filter.get())
-        for row in state["contacts"]:
-            if allowed is not None and row[1] not in allowed:
+        kind_groups = {12: "star", 13: "planet", 14: "moon", 17: "asteroid",
+                       15: "nebula", 16: "station", 1: "ship", 2: "shuttle",
+                       3: "probe"}
+        ordered = ("star", "planet", "moon", "asteroid", "nebula", "station",
+                   "ship", "shuttle", "probe", "other")
+        grouped: dict[str, list[list]] = {k: [] for k in ordered}
+        filter_kind = {
+            "Planetas": {13}, "Naves": {1, 2}, "Estrellas": {12},
+            "Satélites": {14}, "Artificiales": {1, 2, 3, 5, 16},
+        }.get(self.contact_filter.get())
+        needle = self.search_text.get().strip().casefold()
+        for c in state["contacts"]:
+            if filter_kind is not None and c[1] not in filter_kind:
                 continue
-            if self.contact_subset == "unidentified" and row[1] == 1 and row[3] != 0:
+            if self.contact_subset == "unidentified" and not (
+                    c[1] == 1 and c[3] == 0):
                 continue
-            if self.contact_subset == "unidentified" and row[1] != 1:
+            if self.contact_subset == "identified" and not (
+                    c[1] == 1 and c[3] != 0):
                 continue
-            if self.contact_subset == "identified" and not (row[1] == 1 and row[3] != 0):
+            if self.contact_subset == "lost" and c[2] != 2:
                 continue
-            if self.contact_subset == "lost" and row[2] != 2:
+            if self.contact_subset == "active" and c[2] != 1:
                 continue
-            if self.contact_subset == "active" and row[2] != 1:
+            if needle and needle not in self._tree_contact_label(c, reports).casefold():
                 continue
-            rid = str(row[0])
-            short_ref = "C-" + rid[-6:]
-            self.contacts_table.insert("", "end", iid=rid, values=(
-                self.designations.get(row[0], short_ref), TYPES.get(row[1], "desconocido"),
-                contact_identification(row), f"{row[5] / 1000:.3f} UA",
-                f"{row[4] / 10:.1f}%", "Activo" if row[2] == 1 else "Perdido",
-            ))
-        if selected_id and selected_id in self.contact_map:
-            self.contacts_table.selection_set(selected_id)
-            self.contacts_table.see(selected_id)
+            grouped[kind_groups.get(c[1], "other")].append(c)
+        tree.delete(*tree.get_children())
+        for key in ordered:
+            rows = grouped[key]
+            if not rows:
+                continue
+            extra = ""
+            if key == "planet":
+                classes = Counter(PLANET_CLASSES.get(reports[c[0]][1], "?")
+                                  for c in rows if c[0] in reports
+                                  and reports[c[0]][1] != 0)
+                if classes:
+                    extra = "   ·   " + ", ".join(
+                        f"{n} clase {cls}" for cls, n in sorted(classes.items()))
+            groupid = "group:" + key
+            is_open = self.group_open.get(groupid, key in ("star", "planet", "ship"))
+            tree.insert("", "end", iid=groupid, text=(
+                f"{names[key].upper()}  ·  {len(rows)}{extra}"),
+                open=is_open, tags=("group",))
+            for c in rows:
+                label = self._tree_contact_label(c, reports)
+                tags = ("alert",) if str(c[0]) in self.alert_ids else (
+                    ("lost",) if c[2] != 1 else ("contact",))
+                tree.insert(groupid, "end", iid=str(c[0]), text=label, tags=tags)
+
+        if selected_id and tree.exists(selected_id):
+            tree.selection_set(selected_id)
+            tree.see(selected_id)
         self.show_selected()
         self._draw_map()
 
+    def _tree_contact_label(self, contact: list, reports: dict) -> str:
+        name = self.designations.get(
+            contact[0], "C-" + str(contact[0])[-6:])
+        kind, status = contact[1], contact[2]
+        suffix = ""
+        if kind == 13 and contact[0] in reports:
+            r = reports[contact[0]]
+            if r[1]:
+                suffix = "   ·   clase " + PLANET_CLASSES.get(r[1], "?")
+                if r[3]:
+                    suffix += " (provisional)"
+        elif kind == 1:
+            klass = STARSHIP_CLASSES.get(contact[3]) if contact[3] else None
+            suffix = "   ·   " + (klass or "sin identificar")
+            if contact[6]:
+                suffix += f"   ·   TP {contact[6]}"
+        if status != 1:
+            suffix += "   ·   SEÑAL PERDIDA"
+        return name + suffix
+
+
     def _no_selection_dossier(self) -> str:
-        """Show operational sensor data even before a contact is selected."""
         state = self.state
         if not state:
-            return "Esperando el primer panorama de CoreRPG."
-        d = state.get("diagnostic", [0, 0, 0, 0])
-        c = state.get("config", [0, 0, 0, 0, 0])
-        e = state.get("interference_em", 0)
-        if self.current_view in ("status", "diagnostics", "configuration"):
-            code = {1: "Nominal", 2: "Degradado", 3: "Fuera de servicio",
-                    4: "Configuración limitada"}.get(d[0], "No determinado")
+            return "INFORMACIÓN\n\nEsperando datos del sistema."
+        if self.current_view == "configuration":
+            diagnostic = state.get("diagnostic", [0, 0, 0, 0])
+            status = {1: "Nominal", 2: "Degradado", 3: "Sin servicio",
+                      4: "Revisar configuración"}.get(diagnostic[0], "No disponible")
             return (
-                "ESTADO DEL EQUIPO · lectura CoreRPG\n\n"
-                f"Diagnóstico: {code}\n"
-                f"Capacidad: {d[1] / 10:.1f}%\n"
-                f"Potencia: {d[2] / 10:.1f}%\n"
-                f"Integridad: {d[3] / 10:.1f}%\n"
-                f"Sensibilidad: {c[0] / 10:.1f}%\n"
-                f"Resolución: {c[1] / 10:.1f}%\n"
-                f"Compensación: {c[2] / 10:.1f}%\n"
-                f"Interferencia EM: {e}/550\n\n"
-                "Selecciona un contacto del centro para consultar su expediente."
-            )
-        if self.current_view == "interference":
-            return (
-                "CONDICIONES DE OBSERVACIÓN\n\n"
-                f"Interferencia electromagnética: {e}/550.\n"
-                f"Compensación configurada: {c[2] / 10:.1f}%.\n"
-                f"Matriz: {'fuera de servicio' if state.get('offline') else 'operativa'}.\n\n"
-                "Puedes cambiar el perfil de sensores en esta misma columna. "
-                "Un contacto perdido no implica necesariamente destrucción."
+                "EQUIPO DE SENSORES\n\n"
+                f"Estado: {status}\n"
+                f"Potencia: {diagnostic[2] / 10:.1f}%\n"
+                f"Integridad: {diagnostic[3] / 10:.1f}%\n"
+                f"Capacidad: {diagnostic[1] / 10:.1f}%\n"
+                f"Interferencia EM: {state.get('interference_em', 0)}/550\n\n"
+                "Elige un perfil o ejecuta un autodiagnóstico."
             )
         if self.current_view == "results":
-            reports = state.get("science", [])
             jobs = state.get("scans", [])
-            running = sum(j[5] == 1 for j in jobs)
-            finished = sum(j[5] == 2 for j in jobs)
             return (
-                "RESULTADOS AUTORIZADOS\n\n"
-                f"Informes científicos CoreRPG: {len(reports)}\n"
-                f"Estudios focales en curso: {running}\n"
-                f"Estudios focales terminados: {finished}\n\n"
-                "Selecciona un contacto para consultar sus resultados."
-            )
-        if self.current_view == "scans":
-            return (
-                "OPERACIONES DE SENSORES\n\n"
-                "El barrido pasivo automático continúa sin intervención.\n\n"
-                "ENFOCAR / IDENTIFICAR: lectura focal inmediata.\n"
-                "ESTUDIO DETALLADO: operación temporizada de CoreRPG.\n"
-                "SEGUIMIENTO PRIORITARIO: cambia el seguimiento de un contacto.\n\n"
-                "Selecciona un contacto activo para ordenar una operación."
+                "ESTUDIOS\n\n"
+                f"En curso: {sum(j[5] == 1 for j in jobs)}\n"
+                f"Terminados: {sum(j[5] == 2 for j in jobs)}\n"
+                f"Informes planetarios: {len(state.get('science', []))}\n\n"
+                "Selecciona un objeto para consultar sus resultados."
             )
         return (
-            "INFORMACIÓN ESPECIALIZADA\n\n"
-            f"Contactos observados: {state.get('active', 0)}\n"
-            f"Contactos que requieren atención: {state.get('attention', 0)}\n\n"
-            "Selecciona un contacto de la columna central. "
-            "Los datos provienen exclusivamente de CoreRPG."
+            "SISTEMA ASTER\n\n"
+            "Selecciona un elemento de la lista para ver lo que "
+            "los sensores saben de él.\n\n"
+            "Despliega las categorías que quieras consultar. "
+            "La computadora continúa vigilando en automático."
         )
 
     def show_selected(self) -> None:
         selection = self.contacts_table.selection()
+        c = self.contact_map.get(selection[0]) if selection else None
         details = self._no_selection_dossier()
-        if selection:
-            contact = self.contact_map.get(selection[0])
-            if contact:
-                details = self._contact_description(contact)
-                if contact[2] == 2:
-                    cause = LOSS_CAUSES.get(contact[7], "causa no determinada")
-                    details += f"\nCausa de pérdida registrada: {cause}."
-                reports = [r for r in self.state.get("science", []) if r[0] == contact[0]]
-                if reports:
-                    report = reports[-1]
-                    planet_class = PLANET_CLASSES.get(report[1], "desconocida")
-                    bio = {0: "sin estudiar", 1: "sin señal detectada",
-                           2: "posible", 3: "corroborada"}.get(report[10], "sin determinar")
-                    details += (
-                        f"\nInforme científico registrado en CoreRPG: clase {planet_class} "
-                        f"({'provisional' if report[3] else 'confirmada'}), "
-                        f"confianza {report[2] / 10:.1f}%; "
-                        f"T {report[4]} K; presión {report[5]} mbar; "
-                        f"agua superficial {report[6] / 10:.1f}%; "
-                        f"N₂ {report[7] / 10:.1f}%; O₂ {report[8] / 10:.1f}%; "
-                        f"CO₂ {report[9] / 10:.1f}%; biosignales: {bio}."
-                    )
-                    if report[8] < 100 or report[5] < 300:
-                        details += "\nAtmósfera: NO se considera respirable sin asistencia "
-                        details += "(oxígeno o presión medidos insuficientes)."
-                    else:
-                        details += "\nAtmósfera: respirabilidad NO confirmada. "
-                        details += "Faltan análisis de posibles gases nocivos y condiciones locales."
-                elif contact[1] in (12, 13):
-                    details += "\nSin informe espectral/científico autorizado todavía. No se muestra ciencia privada del escenario."
-                scans = [j for j in self.state.get("scans", []) if j[1] == contact[0]]
-                for scan in scans[-3:]:
-                    stage = {1: "en curso", 2: "terminado", 3: "fallido",
-                             4: "cancelado"}.get(scan[5], "desconocido")
-                    details += f"\nAnálisis especializado {stage} · "
-                    details += f"iniciado {clock(scan[2])}, final previsto {clock(scan[3])}."
-                    if scan[5] == 2:
-                        details += " Resultado observado y registrado en CoreRPG."
-                if contact[1] == 13:
-                    details += "\nHabitabilidad: la clase M provisional NO confirma habitantes. "
-                    details += "Civilización: sin informe verificable en este motor."
-                if contact[1] == 12:
-                    details += "\nClase espectral: sin análisis estelar publicado en CoreRPG."
-                if contact[1] == 1 and contact[3] == 0:
-                    details += "\nAcciones: análisis focalizado, seguimiento prioritario. La causa de la incertidumbre puede requerir nuevas mediciones."
+        self.technical_details = ""
+        if c is not None:
+            name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
+            typ = TYPES.get(c[1], "Señal desconocida")
+            details = (
+                f"{name.upper()}\n\n"
+                f"{typ.capitalize()}\n"
+                f"Distancia: {c[5] / 1000:.3f} UA\n"
+                f"Confianza: {c[4] / 10:.1f}%\n"
+                f"Estado: {'Activo' if c[2] == 1 else 'Señal perdida'}\n"
+            )
+            if c[1] == 1:
+                klass = STARSHIP_CLASSES.get(c[3]) if c[3] else None
+                details += (
+                    "\nIDENTIFICACIÓN\n"
+                    f"Clase: {klass or 'Sin confirmar'}\n"
+                    f"Transpondedor: {c[6] or 'No confirmado'}\n"
+                )
+            if c[2] == 2:
+                details += ("\nSEÑAL PERDIDA\n"
+                            + LOSS_CAUSES.get(c[7], "Causa desconocida") + "\n")
+            reports = [r for r in self.state.get("science", []) if r[0] == c[0]]
+            if reports:
+                r = reports[-1]
+                bio = {0: "Sin estudiar", 1: "No detectadas", 2: "Posibles",
+                       3: "Corroboradas"}.get(r[10], "No determinado")
+                details += (
+                    "\nDATOS PLANETARIOS\n"
+                    f"Clase: {PLANET_CLASSES.get(r[1], '?')}"
+                    f"{' · provisional' if r[3] else ''}\n"
+                    f"Temperatura: {r[4]} K\n"
+                    f"Presión: {r[5]} mbar\n"
+                    f"Agua superficial: {r[6] / 10:.0f}%\n"
+                    f"Oxígeno: {r[8] / 10:.1f}%\n"
+                    f"Biosignales: {bio}\n"
+                )
+                if r[8] < 100 or r[5] < 300:
+                    details += "\nAVISO: atmósfera no respirable sin asistencia.\n"
+                else:
+                    details += "\nRespirabilidad: no confirmada.\n"
+                self.technical_details += (
+                    "INFORME CIENTÍFICO CORE\n"
+                    f"Confianza informe: {r[2] / 10:.1f}%\n"
+                    f"Nitrógeno: {r[7] / 10:.1f}%\n"
+                    f"CO₂: {r[9] / 10:.1f}%\n"
+                    "Habitantes y civilización: sin determinar.\n\n"
+                )
+            elif c[1] == 13:
+                details += "\nDATOS PLANETARIOS\nTodavía sin informe científico.\n"
+            elif c[1] == 12:
+                details += "\nTipo espectral: no determinado.\n"
+            jobs = [j for j in self.state.get("scans", []) if j[1] == c[0]]
+            active = [j for j in jobs if j[5] == 1]
+            complete = [j for j in jobs if j[5] == 2]
+            if jobs:
+                details += "\nESTUDIOS\n"
+                if active:
+                    details += f"En curso: {len(active)}\n"
+                if complete:
+                    details += (f"Terminados: {len(complete)}\n"
+                                f"Último: {clock(complete[-1][3])}\n")
+            if str(c[0]) in self.alert_ids:
+                details += "\nREQUIERE ATENCIÓN DEL OFICIAL\n"
+            self.technical_details += self._contact_description(c) + "\n"
+            for j in jobs:
+                self.technical_details += (
+                    f"\nEstudio {j[0]}: inicio {clock(j[2])}; "
+                    f"fin previsto {clock(j[3])}; estado {j[5]}; "
+                    f"resultado Core {j[4]}."
+                )
+
         self.detail_text.configure(state="normal")
         self.detail_text.delete("1.0", "end")
-        self.detail_text.insert("end", details)
+        self.detail_text.insert("1.0", details)
+        self.detail_text.tag_add("heading", "1.0", "1.end")
         self.detail_text.configure(state="disabled")
+        if c is not None:
+            if c[2] == 1:
+                if not self.action_area.winfo_manager():
+                    self.action_area.pack(fill="x", pady=(7, 4))
+            else:
+                self.action_area.pack_forget()
+            if not self.technical_button.winfo_manager():
+                self.technical_button.pack(fill="x", pady=4)
+        else:
+            self.action_area.pack_forget()
+            self.technical_button.pack_forget()
+
+    def open_contact_details(self) -> None:
+        if not self.technical_details:
+            return
+        window = tk.Toplevel(self.root)
+        window.title("Sensores · Datos de la observación")
+        window.geometry("730x420")
+        area = tk.Text(window, font=("Segoe UI", 11), wrap="word", padx=15, pady=15)
+        area.pack(fill="both", expand=True)
+        area.insert("1.0", self.technical_details)
+        area.configure(state="disabled")
+
 
     def apply_preset(self) -> None:
         name = self.sensor_preset.get()
