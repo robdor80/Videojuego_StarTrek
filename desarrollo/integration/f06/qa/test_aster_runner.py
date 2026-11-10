@@ -53,6 +53,25 @@ def finish(p):
     assert rc==0,(rc,p.stderr.read() if p.stderr else "")
 
 def run(runner: Path):
+    # A contact briefing is a genuine QA runner operation: one delivery,
+    # persistent across native save/load, never a decorative Tk message.
+    p,first_watch=start(runner)
+    assert first_watch.get("contact_briefs") == []
+    candidate=next(c[0] for c in first_watch["contacts"]
+                   if c[1] == 1 and c[2] == 1)
+    first_report=say(p,f"REPORT {candidate}")
+    assert len(first_report["contact_briefs"])==1,first_report["contact_briefs"]
+    assert first_report["contact_briefs"][0][0]==candidate
+    duplicate=say(p,f"REPORT {candidate}")
+    assert duplicate["contact_briefs"]==first_report["contact_briefs"],(
+        "duplicated report must not produce multiple captain briefings")
+    checkpoint=say(p,"SAVE")
+    say(p,"STEP 60")
+    restored=say(p,"LOAD")
+    assert restored["contact_briefs"]==checkpoint["contact_briefs"],(
+        "reported contacts must survive restore")
+    finish(p)
+
     p,initial=start(runner)
     planet = next(r[0] for r in initial["science"] if r[1] == 1)
     focused=say(p,f"FOCUS {planet}")
