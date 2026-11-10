@@ -259,11 +259,20 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
  f06_set(c,contact,F06_LOSS_REASON,F06_EXIT_UNKNOWN);
  f06_set(c,contact,F06_CONFIDENCE,confidence);
  f06_set(c,contact,F06_DISTANCE,d);
- // Truth at sensor range is NOT automatically observed. Exact identity is
- // projected only on a resolved reading, never by catalogue lookup.
- if(rank>=2 && val(c.world,sig,F06_CATEGORY))
-  f06_set(c,contact,F06_SEEN_CATEGORY,val(c.world,sig,F06_CATEGORY));
- if(rank>=4) {
+ // Enhanced Enterprise-D profile 5 has instant naval signature matching:
+ // if an *uncloaked, detected* ship emits a known catalogued class, class
+ // and category resolve during that same Core sensor observation (0-5 sec).
+ // This is limited to emitted/observable signatures; inactive/cloaked
+ // contacts never enter f06_apply's detectable branch. Non-naval
+ // observations keep their original evidence thresholds.
+ const U signal_category=val(c.world,sig,F06_CATEGORY);
+ const bool naval=signal_category==F06_CATEGORY_STARSHIP ||
+                  signal_category==F06_CATEGORY_SHUTTLE;
+ const bool advanced_ship_sensors=f06_profile_numbers(c.world).id==5;
+ const bool quick_naval=advanced_ship_sensors && naval && rank>=1;
+ if((rank>=2 || quick_naval) && signal_category)
+  f06_set(c,contact,F06_SEEN_CATEGORY,signal_category);
+ if(rank>=4 || quick_naval) {
   f06_set(c,contact,F06_SEEN_CLASS,val(c.world,sig,F06_CLASS));
   f06_set(c,contact,F06_SEEN_TRANSPONDER,val(c.world,sig,F06_TRANSPONDER));
  } else if(fresh) {
@@ -282,7 +291,7 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
   f06_set(c,contact,F06_AUTO_GEN,val(c.world,contact,F06_AUTO_GEN)+1);
   f06_notice(c,cat,contact,F06_REACQUIRED);
  }
- if(rank>=4 && !previous_class && val(c.world,contact,F06_SEEN_CLASS))
+ if(!previous_class && val(c.world,contact,F06_SEEN_CLASS))
   f06_notice(c,cat,contact,F06_IDENTIFIED);
 }
 // Called on Core-clock advance or a privileged world-signature material change.
