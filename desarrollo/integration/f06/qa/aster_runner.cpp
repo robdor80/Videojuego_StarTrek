@@ -298,6 +298,29 @@ struct Watch {
    const auto& e=science_issues[i];
    std::cout<<'['<<e[0]<<','<<e[1]<<','<<e[2]<<']';
   }
+  // Two most recent immutable Core observations per contact, compared by Core.
+  // This is the saved sensor archive, not a GUI-side cache or host-only truth.
+  std::cout<<"],\"comparisons\":[";
+  bool first_comparison=true;
+  for(U i=0;i<written;++i){
+   U count=0,total_results=0;
+   check(f06_results_page(s,h.captain,contacts[i].contact_id,0,nullptr,0,
+     &count,&total_results),"observation count");
+   if(total_results<2)continue;
+   std::array<F06ResultView,2> last{};
+   check(f06_results_page(s,h.captain,contacts[i].contact_id,total_results-2,
+     last.data(),last.size(),&count,&total_results),"recent observations");
+   if(count!=2)throw std::runtime_error("recent observation page incomplete");
+   F06ComparisonView compared{};
+   check(f06_compare_results(s,h.captain,last[0].result_id,
+     last[1].result_id,&compared),"compare saved Core observations");
+   if(!first_comparison)std::cout<<',';
+   first_comparison=false;
+   std::cout<<'['<<compared.contact_id<<','<<total_results<<','
+      <<last[0].tick<<','<<last[1].tick<<','
+      <<compared.confidence_delta<<','<<compared.distance_delta_milli_au
+      <<','<<compared.class_changed<<']';
+  }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
