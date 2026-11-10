@@ -1295,6 +1295,21 @@ class Panel:
                     f"resultado Core {j[4]}."
                 )
 
+        if c is not None and self.technical_expanded:
+            az, elev = self._bearing(c)
+            details += (
+                "\nLECTURAS COMPLEMENTARIAS\n"
+                f"Azimut en marco de sensores: {az:03d}°\n"
+                f"Elevación en marco de sensores: {elev:+d}°\n"
+            )
+            motion = self._navigation_data(c)
+            if motion and len(motion) > 6:
+                details += (
+                    f"Desplazamiento relativo: {motion[6]/1000000:.6f} UA/s\n"
+                    f"Variación radial: {motion[7]/1000000:+.6f} UA/s\n"
+                )
+            else:
+                details += "Velocidad relativa: sin segunda observación válida.\n"
         # Leave the dossier scroll where the officer placed it. Its text
         # may change as Core publishes new readings, but the 500-ms refresh
         # must not forcibly jump to the first line.
@@ -1384,15 +1399,14 @@ class Panel:
             self.scan_progress.pack(fill="x", pady=(3, 6))
 
     def open_contact_details(self) -> None:
-        if not self.technical_details:
+        """Reveal meaningful readings in the RIGHT pane, not debug popups."""
+        if not self.contacts_table.selection():
             return
-        window = tk.Toplevel(self.root)
-        window.title("Sensores · Datos de la observación")
-        window.geometry("730x420")
-        area = tk.Text(window, font=("Segoe UI", 11), wrap="word", padx=15, pady=15)
-        area.pack(fill="both", expand=True)
-        area.insert("1.0", self.technical_details)
-        area.configure(state="disabled")
+        self.technical_expanded = not self.technical_expanded
+        self.technical_button.configure(
+            text="Ocultar lecturas complementarias" if self.technical_expanded
+            else "Ver ficha técnica")
+        self.show_selected()
 
 
     def apply_preset(self) -> None:
