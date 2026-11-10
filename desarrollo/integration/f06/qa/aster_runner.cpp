@@ -37,6 +37,9 @@ struct Watch {
  F04Session* s=nullptr;
  std::map<U,NavTrack> tracks,saved_tracks;
  std::vector<std::array<int64_t,6>> nav_events,saved_nav_events;
+ // QA communications ledger: a contact brief sent to the duty officer.
+ // It is an actual runner action, not an inert GUI toast or an NPC dialogue.
+ std::vector<std::array<U,3>> contact_briefs,saved_contact_briefs;
  F04Handles h{};
  U event_cursor=0;
  U checkpoint_event_cursor=0;
@@ -119,6 +122,7 @@ struct Watch {
   if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
   mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();science_issues.clear();
   tracks.clear();saved_tracks.clear();nav_events.clear();saved_nav_events.clear();
+  contact_briefs.clear();saved_contact_briefs.clear();
   check(f04_create(1,"miranda",&s),"create");
   check(f04_handles(s,&h),"handles");
   // A real F04 console operator is available for optional supervised actions;
@@ -177,6 +181,7 @@ struct Watch {
   checkpoint_event_cursor=event_cursor;
   saved_tracks=tracks;
   saved_nav_events=nav_events;
+  saved_contact_briefs=contact_briefs;
  }
  void load(){
   if(checkpoint.empty())throw std::runtime_error("no checkpoint");
@@ -189,6 +194,7 @@ struct Watch {
   event_cursor=checkpoint_event_cursor;
   tracks=saved_tracks;
   nav_events=saved_nav_events;
+  contact_briefs=saved_contact_briefs;
  }
  std::vector<F06ContactView> visible_contacts() {
   std::array<F06ContactView,64> rows{};
@@ -291,6 +297,16 @@ struct Watch {
   F06TrackView updated{};
   check(f06_set_tracking(s,h.ensign,stats().revision,contact,
     F06_TRACK_PRIORITY,&updated),"operator priority");
+ }
+ void report_contact(U contact){
+  const auto contacts=visible_contacts();
+  const auto it=std::find_if(contacts.begin(),contacts.end(),
+      [contact](const auto& row){return row.contact_id==contact;});
+  if(it==contacts.end() || it->status!=F06_ACTIVE)
+    throw std::runtime_error("contact not currently observable");
+  for(const auto& report:contact_briefs)
+    if(report[0]==contact)return; // One delivered report per contact per watch.
+  contact_briefs.push_back({contact,stats().now,it->class_id});
  }
  void emit(){
   F06ComputerStatus state{};
@@ -420,6 +436,12 @@ struct Watch {
    const auto& a=nav_events[i];
    std::cout<<'['<<a[0]<<','<<a[1]<<','<<a[2]<<','<<a[3]<<','<<a[4]<<','<<a[5]<<']';
   }
+  std::cout<<"],\"contact_briefs\":[";
+  for(size_t i=0;i<contact_briefs.size();++i){
+   if(i)std::cout<<',';
+   const auto& brief=contact_briefs[i];
+   std::cout<<'['<<brief[0]<<','<<brief[1]<<','<<brief[2]<<']';
+  }
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
@@ -448,6 +470,7 @@ int main(){
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
+    else if(action=="REPORT")watch.report_contact(std::stoull(arg));
     else if(action=="FOCUS")watch.focus(std::stoull(arg));
     else if(action=="SCAN")watch.study(std::stoull(arg));
     else if(action=="CONFIG")watch.configure(std::stoi(arg));
