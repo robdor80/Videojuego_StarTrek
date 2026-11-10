@@ -1717,6 +1717,14 @@ class Panel:
         self.saved_manual_jobs.clear()
         self.operator_scan_ids.clear()
         self.saved_operator_scan_ids.clear()
+        self.new_contact_ids.clear()
+        self.followed_ids.clear()
+        self.analyzed_ids.clear()
+        self.shared_report_ids.clear()
+        self.tactical_qa_ids.clear()
+        self.saved_operator_views.clear()
+        self.map_zoom=1.0
+        self.map_overview=True
         self.designations = {}
         self.arrival_id = None
         self.alert_ids = []
