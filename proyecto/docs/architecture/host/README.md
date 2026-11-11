@@ -4,6 +4,10 @@
 
 El HOST es el coordinador local de las partidas del videojuego Star Trek RPG. Conecta Unreal Engine 5 con los puentes de las reglas Star Trek y con CoreRPG, que sigue siendo la fuente de verdad. **No existe aún un HOST de producto certificado.**
 
+## Documentación del proyecto HOST
+
+- **[Plan Maestro del HOST v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md)**: fases H00–H13, arquitectura, responsabilidades y restricciones HOST/F11.
+
 ## Documentación H00
 
 1. [Inventario y dependencias](H00_INVENTARIO_DEPENDENCIAS_2026-11-11.md): qué existe, qué podemos aprovechar y qué falta.
