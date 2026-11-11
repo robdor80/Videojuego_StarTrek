@@ -1,0 +1,32 @@
+name: HOST H01 — contratos documentales
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/**"
+      - "desarrollo/tools/validation/test_host_h01_contracts.py"
+      - ".github/workflows/host-h01-contracts.yml"
+  push:
+    branches:
+      - "design/host-h01-arquitectura-contratos-20261111"
+    paths:
+      - "proyecto/docs/architecture/host/**"
+      - "desarrollo/tools/validation/test_host_h01_contracts.py"
+      - ".github/workflows/host-h01-contracts.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  static-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar directorio local de laboratorio
+        run: mkdir -p laboratorios/host/h01/ci
+      - name: Validar contrato H01 sin modificar Core ni fuentes existentes
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          TMPDIR: laboratorios/host/h01/ci
+        run: python3 desarrollo/tools/validation/test_host_h01_contracts.py
