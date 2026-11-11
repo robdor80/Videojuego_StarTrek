@@ -226,7 +226,7 @@ def evaluate_progression(snapshot, policy=None):
                 not _int(existing.get("deadline_month")) or
                 existing["deadline_month"] != deadline):
             return _result(DENIED, "EXISTING_PLAN_STALE_OR_INCONSISTENT")
-        if s["now_month"] <= deadline:
+        if s["now_month"] < deadline:
             return _result(ACTIVE, "IDEMPOTENT_PLAN_EXISTS", plan_id=key,
                            next_rank=target, deadline_month=deadline, no_new_plan=True)
     status = URGENT if s["now_month"] >= deadline else PREPARED
