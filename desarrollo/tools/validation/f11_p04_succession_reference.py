@@ -168,7 +168,8 @@ def _npc_error(npc, target):
         return "NPC_DOES_NOT_OCCUPY_TARGET_BILLET"
     if (npc.get("service_status") != "active" or npc.get("professional_review_verified") is not True
             or not _ids(npc.get("qualifications"))
-            or not _ids(npc.get("career_motivation_event_ids"))):
+            or not _ids(npc.get("career_motivation_event_ids"))
+            or not npc.get("career_motivation_event_ids")):
         return "NPC_CAREER_EVIDENCE_INCOMPLETE"
     return None
 
