@@ -42,13 +42,14 @@ jobs:
           python-version: "3.12"
       - name: Comprobar sintaxis y JSON
         run: |
-          python -m py_compile desarrollo/tools/validation/f11_career_reference.py desarrollo/tools/validation/test_f11_career_reference.py
+          python -m py_compile desarrollo/tools/validation/f11_career_reference.py desarrollo/tools/validation/f11_p01_authority_reference.py desarrollo/tools/validation/f11_p02_assignments_reference.py desarrollo/tools/validation/test_f11_career_reference.py desarrollo/tools/validation/test_f11_p01_authority_reference.py desarrollo/tools/validation/test_f11_p02_assignments_reference.py
           python -m json.tool sistemas/gameplay/careers/starfleet_service/f11_route_plan_v0.1.json > /dev/null
+          python -m json.tool sistemas/gameplay/careers/assignments/f11_p02_billet_profiles_v0.1.json > /dev/null
           python -m json.tool desarrollo/validation/fixtures/f11/f11_career_scenarios_v0.1.json > /dev/null
       - name: Ejecutar 40 escenarios offline y emitir huella
         run: |
           python desarrollo/tools/validation/f11_career_reference.py --scenario desarrollo/validation/fixtures/f11/f11_career_scenarios_v0.1.json --output desarrollo/validation/results/f11_career_offline_report.json
-      - name: Validar 38 pruebas y barreras Core/Host
+      - name: Validar todas las pruebas F11-P01/P02 y referencias anteriores
         run: |
           python -m unittest discover -s desarrollo/tools/validation -p 'test_f11_*.py' -v
       - name: Guardar evidencia reproducible de referencia
