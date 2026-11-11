@@ -1,0 +1,124 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f11_p03_professional_progression_opportunities",
+  "maturity": "OFFLINE_REFERENCE_ONLY_NO_WORLD_STATE_MUTATION",
+  "author_approved_goal": "enterprise_d_command",
+  "policy_status": "ILLUSTRATIVE_TIMING_NOT_FINAL_GAME_DESIGN",
+  "clock_unit": "fictional_service_months",
+  "clock_note": "Pruebas y ventanas ficticias, NO tiempo real, no edad real del jugador ni contador de XP.",
+  "requirements": {
+    "no_generic_xp": true,
+    "evaluation_from_verified_world_events": true,
+    "authority_only_core_host": true,
+    "player_may_decline_or_pause": true,
+    "career_path_to_enterprise_d_requires_future_vacancies_not_bypass": true,
+    "no_discipline_or_medical_skip": true,
+    "no_npc_displacement": true,
+    "do_not_force_ship_transfer_on_normal_rank_promotion": true
+  },
+  "commissioned_rank_steps": [
+    {
+      "from_rank": "ensign",
+      "to_rank": "lieutenant_junior_grade",
+      "illustrative_min_months": 12,
+      "opportunity_kind": "routine_service_promotion"
+    },
+    {
+      "from_rank": "lieutenant_junior_grade",
+      "to_rank": "lieutenant",
+      "illustrative_min_months": 12,
+      "opportunity_kind": "routine_service_promotion"
+    },
+    {
+      "from_rank": "lieutenant",
+      "to_rank": "lieutenant_commander",
+      "illustrative_min_months": 18,
+      "opportunity_kind": "senior_officer_promotion_and_department_leadership"
+    },
+    {
+      "from_rank": "lieutenant_commander",
+      "to_rank": "commander",
+      "illustrative_min_months": 24,
+      "opportunity_kind": "senior_officer_promotion_and_department_leadership"
+    },
+    {
+      "from_rank": "commander",
+      "to_rank": "captain",
+      "illustrative_min_months": 24,
+      "opportunity_kind": "promotion_plus_real_command_assignment"
+    }
+  ],
+  "illustrative_review_window_months": 6,
+  "illustrative_remediation_review_window_months": 3,
+  "illustrative_opportunity_horizon_months": 9,
+  "illustrative_horizon_note": "Solo parámetros inyectables del prototipo de P03 para pruebas de propiedades temporales; duración definitiva se decide al ajustar el ritmo del juego.",
+  "evaluation_statuses": [
+    "satisfactory",
+    "development_needed",
+    "exceptional",
+    "adverse"
+  ],
+  "discipline_statuses": [
+    "clear",
+    "counseling",
+    "active_sanction"
+  ],
+  "player_preferences": [
+    "advance_to_enterprise_d_captain",
+    "advance_in_current_specialty",
+    "pause_progression"
+  ],
+  "review_prerequisites": [
+    "rank_event_id",
+    "source_event_ids",
+    "verified_supervisor_review",
+    "matching_world_revision",
+    "fitness_and_qualification_evidence",
+    "professional_evidence"
+  ],
+  "planning_states": [
+    "NOT_DUE",
+    "REVIEW_PREPARATION_REQUIRED",
+    "TRAINING_PREPARATION_REQUIRED",
+    "DISCIPLINE_RESOLUTION_REQUIRED",
+    "PAUSED_BY_PLAYER",
+    "PLAN_PREPARED",
+    "PLAN_URGENT",
+    "PLAN_ALREADY_ACTIVE",
+    "REFERENCE_DENIED"
+  ],
+  "progression_guarantee_definition": "A partir de cumplimiento verificable, el planificador siempre crea o conserva una propuesta de oportunidad antes de un horizonte ficticio configurable; P04 prepara sucesiones causales; P05 debe probar la oferta efectivamente emitida y la posibilidad de completar la trayectoria sin esperar indefinidamente. Ninguna propuesta equivale a ascenso formal.",
+  "scheduled_opportunity_types": [
+    "authorized_professional_review",
+    "qualification_or_mentorship_remediation",
+    "routine_rank_promotion_review",
+    "senior_officer_leadership_board",
+    "future_departmental_post_preparation",
+    "future_first_officer_succession_preparation",
+    "fleet_captain_selection_and_external_command",
+    "enterprise_d_captain_succession_preparation"
+  ],
+  "promotion_commit_requirements": [
+    "verified_actor_identity",
+    "valid_professional_review",
+    "verified_authority_order",
+    "current_world_revision",
+    "correct_adjacent_rank_transition",
+    "append_only_service_record",
+    "no_unjustified_rank_or_role_mutation"
+  ],
+  "p04_handoff": {
+    "consumes": "PLAN_PREPARED or PLAN_URGENT + goal + last rank event + requested future role",
+    "creates": "causal NPC career opportunities and future vacant billets (no immediate eviction)",
+    "must_not": "alter occupied slot without authorized departure event"
+  },
+  "references": [
+    "sistemas/gameplay/careers/evaluations/evaluation_cycle.json",
+    "sistemas/gameplay/careers/evaluations/mission_performance_evidence.json",
+    "sistemas/gameplay/careers/promotions/promotion_pipeline.json",
+    "mundo/lore/federation/starfleet/promotions/promotion_model.json",
+    "sistemas/gameplay/careers/service_record/service_record_model.json",
+    "proyecto/docs/decisions/character_growth_without_xp.md",
+    "proyecto/docs/roadmap/master/fases/F11/PLAN_F11_ACTUALIZADO_2026-11-11.md"
+  ]
+}
