@@ -10,7 +10,11 @@
 
 > **F11-P05-A01 — auditoría del código (11-11-2026):** [Inventario de capacidades reales F04/F05/CoreRPG, riesgos de integración y primer corte A02](F11-P05-A01_AUDITORIA_INTEGRACION_CORE_2026-11-11.md). A01 identifica como bloqueos el ascenso autoritativo, la autorización de Personal de Flota, la identidad inter-naves y la diferencia entre guardia descubierta y plaza libre. **Solo auditoría estática; no se ha implementado ni ejecutado aún P05.**
 
-> **F11-P05-A02-00 — contrato profesional (11-11-2026):** [Identidad de carrera, códigos de rango 1101–1106, autorización exclusiva de Personal de Flota, operación atómica de ascenso y persistencia](F11-P05-A02-00_CONTRATO_IDENTIDAD_RANGOS_AUTORIDAD_2026-11-11.md). Incluye JSON versionado y pruebas de coherencia contra el lore y F04/F05; **no se ha programado todavía el primer ascenso en C++ ni se ha ejecutado una partida. A02-01 queda pendiente.**
+> **F11-P05-A02-00 — contrato profesional (11-11-2026):** [Identidad de carrera, rangos 1101–1106 y autoridad de Personal de Flota](F11-P05-A02-00_CONTRATO_IDENTIDAD_RANGOS_AUTORIDAD_2026-11-11.md). Base contractual conservada como histórico de diseño.
+
+> **F11-P05-A02-01 — primer ascenso nativo (11-11-2026):** [PR #106 fusionada](https://github.com/robdor80/Videojuego_StarTrek/pull/106). Ascenso autoritativo **1101→1102**, expediente Core, persistencia e idempotencia; [reauditoría histórica](../../../../../../desarrollo/integration/f11/REAUDIT.md) y CI Linux/MSVC satisfactorias. **No** implica emisor institucional de producto, UE5 jugable ni la carrera completa.
+
+> **F11-P05-A02-02 — certificación de persistencia y compatibilidad (11-11-2026):** [Informe de alcance, matriz G1–G10 y nueva CI independiente](F11-P05-A02-02_CERTIFICACION_PERSISTENCIA_COMPATIBILIDAD_2026-11-11.md). Verifica integridad del árbol ya auditado y vuelve a ejecutar las regresiones sobre Linux/MSVC. **No cerrar A02-02 hasta que la PR de certificación y todos sus checks concluyan satisfactoriamente.**
 
 > **Decisión narrativa aprobada de ascensos diegéticos (11-11-2026):** [Acta permanente de comunicaciones, encuentros con superiores, ceremonias y presentación profesional diferida](../../../../decisions/f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md). [Issue abierta #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104): A02-01 aporta evento Core estable, P05-C garantiza cola/acuse persistente y P05-D implementa experiencia jugable. **No se ha implementado todavía la interfaz ni las ceremonias**. No cerrar F11 sin P05-D/E verificadas.
 
