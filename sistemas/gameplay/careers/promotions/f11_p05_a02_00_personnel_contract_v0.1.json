@@ -1,0 +1,332 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f11_p05_a02_00_personnel_identity_rank_authority",
+  "phase": "F11-P05-A02-00",
+  "maturity": "CONTRACT_AND_OFFLINE_VALIDATION_ONLY_NO_CXX_RUNTIME",
+  "created_on": "2026-11-11",
+  "implementation_boundary": "F11-P05-A02-01-CXX",
+  "runtime_system_of_record": "CoreRPG_WorldState_through_existing_F04Session",
+  "core_pinned_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "protected_interfaces": [
+    "F04Session",
+    "F04Ref",
+    "F04Person",
+    "f04_save",
+    "f04_load",
+    "f04_execute",
+    "f05_submit",
+    "f05_receive",
+    "f05_execute_order"
+  ],
+  "general_guards": {
+    "no_python_runtime_authority": true,
+    "no_llm_or_blueprint_permission_grant": true,
+    "no_parallel_personnel_database": true,
+    "no_implicit_graduation_to_commission": true,
+    "no_implicit_rank_to_position": true,
+    "no_direct_F04_ASSIGN_for_F11_succession": true,
+    "no_legacy_save_rewrite_on_read": true,
+    "opt_in_for_new_personnel_schema": true,
+    "no_interunit_transfer_in_A02": true
+  },
+  "identity": {
+    "id_name": "character_id",
+    "external_format": "lowercase_32_hex_uuid128",
+    "id_bits": 128,
+    "authoritative_issuer": "trusted_Host_Fleet_personnel_commission_or_verified_legacy_migration",
+    "storage": "CoreRPG_WorldState_Trek_F11_extension_on_person",
+    "storage_segments": [
+      {
+        "name": "CHAR_ID_HIGH_48",
+        "bits": 48
+      },
+      {
+        "name": "CHAR_ID_MID_48",
+        "bits": 48
+      },
+      {
+        "name": "CHAR_ID_LOW_32",
+        "bits": 32
+      }
+    ],
+    "person_binding": "immutable_unique_bidirectional_F11_person_link_to_identity_in_same_WorldState",
+    "semantics": [
+      "F04Ref(scope, entity_id) identifies a person only in a live F04Session; never use it as the global character_id.",
+      "The id and commission source event must be minted by trusted Host from authoritative source; never supplied as facts by UI/LLM.",
+      "Unique within a world; cross-world uniqueness is a requirement of the future Fleet coordinator, not proven by A02.",
+      "One character_id represents the same person across all eventual assignments, saves and continuity events; never recreate on transfer.",
+      "Legacy member without verified commission/identity is not silently a commissioned ensign.",
+      "Character id is immutable, not derived from name, rank, ship, slot, local entity id or session scope."
+    ],
+    "cross_ship_resolver_status": "NOT_IMPLEMENTED_UNTIL_P05_B3",
+    "previous_saves": "legacy_unmodified_load_as_before; opt_in_migration_only_with_authoritative_commission_and_backup"
+  },
+  "ranks": {
+    "semantic_source": "mundo/lore/federation/starfleet/ranks/officer_ranks.json",
+    "visual_source": "mundo/lore/federation/starfleet/ranks/rank_insignia_standard.json",
+    "rank_attribute": "F04Person.rank / Trek field RANK",
+    "numeric_namespace": "F11_COMMISSIONED_V1",
+    "source_scalars_reserved_for_legacy": [
+      0,
+      1,
+      8,
+      10
+    ],
+    "zero_means": "UNCONFIGURED_LEGACY_OR_NOT_COMMISSIONED_NOT_ENSIGN",
+    "f11_codes_not_authoritative_without_verified_commission": true,
+    "rank_table": [
+      {
+        "rank_id": "ensign",
+        "label_es": "Alférez",
+        "pips": "●",
+        "f11_rank_code": 1101,
+        "ladder_ordinal": 1,
+        "next_rank_id": "lieutenant_junior_grade"
+      },
+      {
+        "rank_id": "lieutenant_junior_grade",
+        "label_es": "Teniente júnior",
+        "pips": "●○",
+        "f11_rank_code": 1102,
+        "ladder_ordinal": 2,
+        "next_rank_id": "lieutenant"
+      },
+      {
+        "rank_id": "lieutenant",
+        "label_es": "Teniente",
+        "pips": "●●",
+        "f11_rank_code": 1103,
+        "ladder_ordinal": 3,
+        "next_rank_id": "lieutenant_commander"
+      },
+      {
+        "rank_id": "lieutenant_commander",
+        "label_es": "Teniente comandante",
+        "pips": "●●○",
+        "f11_rank_code": 1104,
+        "ladder_ordinal": 4,
+        "next_rank_id": "commander"
+      },
+      {
+        "rank_id": "commander",
+        "label_es": "Comandante",
+        "pips": "●●●",
+        "f11_rank_code": 1105,
+        "ladder_ordinal": 5,
+        "next_rank_id": "captain"
+      },
+      {
+        "rank_id": "captain",
+        "label_es": "Capitán",
+        "pips": "●●●●",
+        "f11_rank_code": 1106,
+        "ladder_ordinal": 6,
+        "next_rank_id": null
+      }
+    ],
+    "ordinary_promotion_is_one_adjacent_step": true,
+    "flag_officer_mapping": "DEFERRED_NOT_A02",
+    "exceptional_fleet_captain_mapping": "DEFERRED_NOT_A02",
+    "cannot_cast_ladder_ordinal_to_f04_rank": true,
+    "cannot_assume_existing_f04_numeric_8_means_rank_ordinal_8": true,
+    "legacy_unmapped_behavior": "DENY_PROMOTION_PENDING_EXPLICIT_AUTHORIZED_MAPPING",
+    "no_rank_code_rewrite_for_legacy_on_load": true,
+    "f11_internal_projection_requirement": "f04_person reflects new code only after authoritative commit; all existing F04 access checks must continue relying on appointment, duty, qualifications and orders not grade"
+  },
+  "commissioned_state": {
+    "required_fields": [
+      "character_id",
+      "commission_event_id",
+      "rank_event_id",
+      "current_rank_id",
+      "service_status",
+      "current_unit_id",
+      "current_billet_id",
+      "world_revision"
+    ],
+    "initial_commission_status": "ONLY_FROM_VERIFIED_GRADUATION_AND_SEPARATE_AUTHORIZED_COMMISSION",
+    "historic_rank_event_append_only": true,
+    "source_service_record": "sistemas/gameplay/careers/service_record/service_record_model.json",
+    "source_academy": "sistemas/gameplay/careers/academy_path/graduation_model.json",
+    "missing_commission_behavior": "DENY_UNCOMMISSIONED",
+    "missing_rank_event_behavior": "DENY_RANK_PROVENANCE_MISSING",
+    "no_auto_xp": true
+  },
+  "personnel_authority": {
+    "domain": "fleet_personnel_promotions",
+    "issuer_kind": "fleet_personnel_office_or_explicitly_authorized_delegate",
+    "authenticated_by": "trusted_Host_local_native_capability",
+    "trust_anchor": "bootstrap_authoritative_Fleet_grant_recorded_in_Core_WorldState",
+    "grant_record_required": true,
+    "grant_verification": [
+      "trusted_bootstrap_source",
+      "current_issuer_identity",
+      "issuer_scope",
+      "allowed_rank_transition",
+      "live_not_revoked",
+      "valid_time_window",
+      "issuer_approval_order_provenance",
+      "live_world_revision"
+    ],
+    "ship_captain_power": "RECOMMEND_ONLY_UNLESS_SEPARATE_PERSONNEL_GRANT",
+    "admiral_rank_power": "NO_AUTOMATIC_PERSONNEL_GRANT",
+    "f05_ship_orders_power": "CANNOT_BE_REINTERPRETED_AS_FLEET_PERSONNEL_ORDER",
+    "host_input_policy": "Neither client flags, text, JSON, PADD, NPC AI nor Rank/Role alone may authenticate a promotion order.",
+    "scopes": [
+      "promote_commissioned_officer"
+    ],
+    "no_ship_duty_required_for_authenticated_fleet_personnel_authority": true,
+    "grant_issuance_channel": "TRUSTED_HOST_BOOTSTRAP_ONLY_NOT_PUBLIC_F04_EXECUTE"
+  },
+  "promotion_operation": {
+    "proposed_abi": "F11PromotionRequest_and_F11PromotionReceipt_reuse_F04Session_no_independent_campaign",
+    "name": "f11_commit_promotion",
+    "atomicity": "stage_full_campaign_copy_validate_then_publish_or_no_change",
+    "eligibility": {
+      "source_rank_id": "ensign",
+      "target_rank_id": "lieutenant_junior_grade",
+      "source_rank_code": 1101,
+      "target_rank_code": 1102,
+      "other_transitions_in_A02": "REJECT_AS_OUT_OF_SCOPE",
+      "require_active_service": true,
+      "require_current_commission": true,
+      "require_current_rank_event": true,
+      "require_professional_evaluation": true,
+      "require_authorized_personnel_order": true,
+      "require_current_world_revision": true,
+      "effective_tick": "current_campaign_time_only_no_future_scheduling",
+      "source_person_keeps_same_unit": true,
+      "source_person_keeps_same_billet": true,
+      "source_person_keeps_same_department": true
+    },
+    "request_fields": [
+      "session_scope_ref",
+      "expected_world_revision",
+      "idempotency_key",
+      "subject_character_id",
+      "subject_local_ref",
+      "issuer_authority_grant_id",
+      "approved_personnel_order_id",
+      "verified_evaluation_event_id",
+      "commission_event_id",
+      "expected_rank_event_id",
+      "expected_from_rank_id",
+      "requested_to_rank_id",
+      "effective_tick",
+      "cause_event_id"
+    ],
+    "stable_receipt_fields": [
+      "status",
+      "idempotency_key",
+      "subject_character_id",
+      "promotion_event_id",
+      "from_rank_id",
+      "to_rank_id",
+      "personnel_order_id",
+      "rank_event_id",
+      "original_commit_revision"
+    ],
+    "current_revision_reported_separately": true,
+    "immutable_record_event_type": "promotion",
+    "immutable_record_required_fields": [
+      "event_id",
+      "date",
+      "event_type",
+      "authority_id",
+      "assignment_id",
+      "position_id",
+      "rank_id",
+      "reason",
+      "source_event_id",
+      "notes_structured"
+    ],
+    "event_links": [
+      "subject_character_id",
+      "previous_rank_event_id",
+      "evaluation_event_id",
+      "commission_event_id",
+      "authorization_grant_id",
+      "personnel_order_id",
+      "idempotency_key",
+      "effective_tick"
+    ],
+    "receipt_source": "original_persisted_Core_record_not_response_cache",
+    "idempotency": {
+      "fingerprint_scope": "subject_character_id_and_authoritative_order_id_and_all_semantic_request_fields",
+      "same_key_and_same_payload": "RETURN_ORIGINAL_COMMITTED_RECEIPT_WITHOUT_NEW_EVENT",
+      "same_key_conflicting_payload": "DENY_IDEMPOTENCY_CONFLICT",
+      "lookup_precedes_revision_guard": true,
+      "persistence_after_load_required": true,
+      "replay_after_authority_revocation": "RETURN_PREVIOUS_COMMITTED_RECEIPT_ONLY_NO_NEW_AUTHORITY",
+      "failed_requests": "NO_COMMITTED_PROMOTION_OR_MUTATED_WORLD"
+    },
+    "invariant_checks": [
+      "trusted_issuer_grant_and_order_exist_in_Core",
+      "valid_evaluation_for_same_character_and_current_rank_event",
+      "commission_event_valid_and_rank_code_matches",
+      "one_adjacent_rank_step_only",
+      "no_qualifications_or_position_or_department_or_assignment_mutation",
+      "revalidate_live_world_revision_at_commit",
+      "update_rank_and_append_promotion_record_atomically",
+      "no_new_ship_command_from_rank",
+      "scope_ref_revalidated_after_load",
+      "no_postdated_or_backdated_promotion",
+      "no_positive_result_without_authoritative_Core_record"
+    ]
+  },
+  "persistence": {
+    "runtime_record_location": "same_Core_WorldState_and_authoritative_history_as_F04_F05",
+    "old_archives": "exact_legacy_unchanged_when_not_opted_in",
+    "new_archives": "versioned_Trek_F11_extension_explicitly_detected_validated_no_silent_downgrade",
+    "segmented_history": "retain_commission_identity_active_rank_event_and_idempotency_tombstones_for_life_of_career",
+    "transaction_fails_closed": true,
+    "no_sidecar_json_as_sole_authoritative_state": true,
+    "after_reload_scope_tokens_must_be_refreshed": true,
+    "test_cases": [
+      "save_then_promote_save_reload",
+      "process_reload_replay_same_key",
+      "injected_failure_no_orphan_record",
+      "legacy_fixture_bit_exact",
+      "segmented_history_replay_and_generation",
+      "two_candidates_distinct_event_ids"
+    ]
+  },
+  "compatibility": {
+    "f04_legacy_rank_values_in_synthetic_source": [
+      0,
+      1,
+      8,
+      10
+    ],
+    "f04_strict_person_schema_extension_required": true,
+    "new_rank_codes_do_not_reinterpret_existing_legacy_codes": true,
+    "f04_role_captain_is_not_f11_rank_captain": true,
+    "f04_session_scope_not_global_identity": true,
+    "f04_ship_identity_not_global_character_identity": true,
+    "f04_transfer_only_within_single_ship_session": true,
+    "f05_scan_only_remains_valid": true,
+    "old_ABI_unmodified": true,
+    "graph_extensions_opt_in_and_rejected_when_unverified": true
+  },
+  "validation_status": {
+    "this_contract_only": "DOCUMENTED_WITH_OFFLINE_CONSISTENCY_TESTS",
+    "real_CXX_implementation": "NOT_STARTED",
+    "Core_world_mutation": "NOT_STARTED",
+    "native_save_load_proof": "NOT_STARTED",
+    "inter_ship_transfers": "NOT_STARTED",
+    "UE5_playable": "NOT_STARTED"
+  },
+  "sources": [
+    "proyecto/docs/roadmap/master/fases/F11/F11-P05-A01_AUDITORIA_INTEGRACION_CORE_2026-11-11.md",
+    "mundo/lore/federation/starfleet/ranks/officer_ranks.json",
+    "mundo/lore/federation/starfleet/ranks/rank_insignia_standard.json",
+    "sistemas/gameplay/careers/service_record/service_record_model.json",
+    "sistemas/gameplay/careers/academy_path/graduation_model.json",
+    "sistemas/gameplay/chain_of_command/f11_p01_personnel_authority_contract_v0.1.json",
+    "desarrollo/integration/f04/include/f04_bridge.h",
+    "desarrollo/integration/f04/src/f04_bridge.cpp",
+    "desarrollo/integration/f05/src/f05_orders.inc",
+    "desarrollo/integration/f05/include/f05_orders.h",
+    "desarrollo/integration/f05/core-revision.txt"
+  ]
+}
