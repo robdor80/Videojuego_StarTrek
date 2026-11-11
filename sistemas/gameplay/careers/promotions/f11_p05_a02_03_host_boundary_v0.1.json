@@ -1,0 +1,51 @@
+{
+  "phase": "F11-P05-A02-03",
+  "version": "0.1.0",
+  "name": "Frontera de confianza del Host institucional de Personal de Flota",
+  "maturity": "CONTRACT_ONLY",
+  "production_host_implemented": false,
+  "production_authority_emission_enabled": false,
+  "authoritative_store": "CoreRPG.WorldState via F04Session",
+  "audited_increment": "A02-01: ensign(1101) -> lieutenant_junior_grade(1102), certified in A02-02",
+  "trusted_bootstrap": {
+    "location": "native product Host, outside player/Blueprint/LLM/client APIs",
+    "root_provenance": "Host-controlled creation plus authenticated trusted save origin",
+    "actor": "institutional personnel office with explicit competency and valid delegation",
+    "commissioning": "separate verified graduation, commission order and commission fact",
+    "approval": "verified evaluation, active grant, active personnel order and documented cause",
+    "commit": "f11_commit_promotion revalidates live WorldState immediately before atomic publish",
+    "receipt": "persistent Core promotion event, same semantic idempotency key, saved through F04",
+    "evidence_policy": "No client-supplied verified flag, actor ID, JSON blob or numeric Core reference is authentication"
+  },
+  "forbidden_routes": [
+    "trial_bootstrap_exported_by_product",
+    "untrusted_archive_import_without_host_authentication",
+    "player_or_blueprint_mints_f11_grant",
+    "llm_or_dialogue_commits_rank",
+    "f05_scan_used_as_personnel_order",
+    "legacy_rank_converted_without_commission",
+    "promotion_changes_billet_or_command",
+    "promotion_after_revocation_or_expiry",
+    "sidecar_database_as_career_authority"
+  ],
+  "runtime_acceptance_gates": [
+    "HOST_01: product Host authenticates principal and archive origin, negative spoofing tests",
+    "HOST_02: trusted product bootstrap commissions one real officer without test symbols or preset identities",
+    "HOST_03: signed-off institutional grant/evaluation/order are created and revocable by privileged native service",
+    "HOST_04: first real 1101-to-1102 promotion is atomic, idempotent and persisted in WorldState",
+    "HOST_05: invalid, revoked, expired, mismatched and replay requests remain fail-closed after save/load",
+    "HOST_06: Linux/MSVC 13 native cases, historical six campaigns, F04/F05 regressions stay green",
+    "HOST_07: UE5 NullRHI/D3D12 and local MSI interactive acceptance before UE5_JUGABLE claim"
+  ],
+  "out_of_scope": [
+    "inter_ship_transfer_P05_B3",
+    "evaluation_planner_P05_B1",
+    "promotion_presentation_P05_C_D",
+    "other_rank_transitions",
+    "unreal_ceremony"
+  ],
+  "static_guard_is_not_runtime_proof": true,
+  "historical_trial_root_cause": 110501,
+  "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "immutable_history_pin": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98"
+}
