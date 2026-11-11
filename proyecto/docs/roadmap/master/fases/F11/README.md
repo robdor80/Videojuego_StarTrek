@@ -6,6 +6,8 @@
 
 > **F11-P03 — preparación de progresión (11-11-2026):** [Reglamento de evaluaciones, ascensos y oportunidades garantizadas](F11-P03_EVALUACIONES_ASCENSOS_Y_OPORTUNIDADES_V1.md). Contrato de meses ficticios **solo ilustrativos**, planificador offline no mutador, control de evaluaciones, sanciones, formación, preferencias, planes idempotentes y escalado cuando vence el horizonte. **No se han implementado todavía ascensos reales, vacantes de NPC ni integración en CoreRPG/UE5; la carrera garantizada integral depende de P04/P05.**
 
+> **F11-P04 — sucesiones causales de NPC (11-11-2026):** [Modelo de carreras de NPC, jefaturas, primer oficial y capitanía de la Enterprise-D](F11-P04_TRAYECTORIAS_NPC_Y_SUCESIONES_CAUSALES_V1.md). Incluye contrato y director Python **offline** de opciones creíbles, motivación del NPC, aceptación/rechazo, órdenes, salida y comprobación efectiva de vacante; no borra NPC ni asciende automáticamente al jugador. **NO integra CoreRPG/UE5: la garantía jugable y la persistencia son P05.**
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 
