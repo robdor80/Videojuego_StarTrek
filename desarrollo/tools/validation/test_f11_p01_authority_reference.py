@@ -194,5 +194,35 @@ class AuthorityReferenceTests(unittest.TestCase):
         self.assertFalse(c["succession"]["changes_rank"])
 
 
+    def test_31_acting_xo_can_set_course_with_valid_succession(self):
+        self.check("ship_course_change", ALLOW,
+                   changes={"rank": "commander", "position_ids": ["first_officer"],
+                            "qualifications": ["command_qualified"],
+                            "succession": {"actor_id": "officer-01", "origin_position": "first_officer",
+                                           "active": True, "order_verified": True,
+                                           "starts_at": 90, "ends_at": 110}})
+
+    def test_32_acting_xo_can_change_mission_within_valid_orders(self):
+        self.check("mission_directive_change", ALLOW,
+                   changes={"rank": "commander", "position_ids": ["first_officer"],
+                            "qualifications": ["command_qualified"],
+                            "succession": {"actor_id": "officer-01", "origin_position": "first_officer",
+                                           "active": True, "order_verified": True,
+                                           "starts_at": 90, "ends_at": 110}})
+
+    def test_33_admiral_rank_accepted_but_not_ship_command_without_position(self):
+        self.check("assume_ship_command", DENY, "POSITION_OR_VALID_DELEGATION_REQUIRED",
+                   {"rank": "admiral", "qualifications": ["command_qualified"]})
+
+    def test_34_acting_xo_cannot_override_external_orders(self):
+        self.check("mission_directive_change", DENY, "HARD_OPERATIONAL_LIMIT",
+                   {"rank": "commander", "position_ids": ["first_officer"],
+                    "qualifications": ["command_qualified"], "orders_within_scope": False,
+                    "succession": {"actor_id": "officer-01", "origin_position": "first_officer",
+                                   "active": True, "order_verified": True,
+                                   "starts_at": 90, "ends_at": 110}})
+
+
+
 if __name__ == "__main__":
     unittest.main()
