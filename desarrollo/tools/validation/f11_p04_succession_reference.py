@@ -137,6 +137,9 @@ def _snapshot_error(s, policy):
                                                          "verified_effective_departure")
             or not _valid_id(target.get("vacancy_event_id"))):
         return "VACANCY_PROVENANCE_UNVERIFIED"
+    player_claims_billet = p.get("current_billet_id") == target["billet_id"]
+    if player_claims_billet != (target.get("occupant_id") == p["character_id"]):
+        return "PLAYER_AND_CORE_BILLET_OCCUPANT_DISAGREE"
     stage = policy["target_stages"][s["stage"]]
     if p["rank"] not in stage["accepted_ranks"]:
         return "PLAYER_RANK_NOT_ELIGIBLE"
