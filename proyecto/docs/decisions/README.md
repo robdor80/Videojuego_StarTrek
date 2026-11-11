@@ -2,6 +2,10 @@
 
 Las decisiones aprobadas prevalecen sobre propuestas anteriores sólo en los aspectos que modifican expresamente. Conservar siempre el historial anterior y separar `GAME_ADDITION` de `SCREEN_CANON` y de implementación CoreRPG/Unreal.
 
+## Decisión transversal vigente 2026-11-11
+
+- **APROBADA / IMPLEMENTACIÓN PENDIENTE:** [Ascensos, propuestas y nombramientos diegéticos F11-P05](f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md). Separar efectos Core de comunicaciones, encuentros y ceremonias; implementar en A02-01/P05-C/P05-D y certificar en P05-E. [Seguimiento #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104).
+
 ## Decisión transversal vigente 2026-10-31
 
 - [DEC-0017–0019 — Proyecto Defiant, Marines Hijos de Odín, tripulación especializada y doctrina militar de Valhalla](valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md).

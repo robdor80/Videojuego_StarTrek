@@ -12,6 +12,8 @@
 
 > **F11-P05-A02-00 — contrato profesional (11-11-2026):** [Identidad de carrera, códigos de rango 1101–1106, autorización exclusiva de Personal de Flota, operación atómica de ascenso y persistencia](F11-P05-A02-00_CONTRATO_IDENTIDAD_RANGOS_AUTORIDAD_2026-11-11.md). Incluye JSON versionado y pruebas de coherencia contra el lore y F04/F05; **no se ha programado todavía el primer ascenso en C++ ni se ha ejecutado una partida. A02-01 queda pendiente.**
 
+> **Decisión narrativa aprobada de ascensos diegéticos (11-11-2026):** [Acta permanente de comunicaciones, encuentros con superiores, ceremonias y presentación profesional diferida](../../../../decisions/f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md). [Issue abierta #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104): A02-01 aporta evento Core estable, P05-C garantiza cola/acuse persistente y P05-D implementa experiencia jugable. **No se ha implementado todavía la interfaz ni las ceremonias**. No cerrar F11 sin P05-D/E verificadas.
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 
