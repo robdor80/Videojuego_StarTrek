@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "pack_id": "stnar.reference.technical",
+  "pack_version": "0.1.0",
+  "publication_status": "reference_only",
+  "title_es": "Ejemplo estructural sin argumento",
+  "description_es": "Fixture técnico; no es una temporada de juego aprobada ni instalable.",
+  "locale": "es-ES",
+  "season": {
+    "season_id": "stnar.reference.season",
+    "track": "principal",
+    "era_start": "2360-01-01",
+    "era_end": "2410-12-31",
+    "supported_player_roles": [
+      "station_or_specialist_officer"
+    ]
+  },
+  "capability_ids": [
+    "world_event_observation_v1"
+  ],
+  "activation": {
+    "origin": "existing_world_event",
+    "event_hook_id": "scientific_anomaly",
+    "authorization_capability": null
+  },
+  "chapter_files": [
+    "chapters/chapter_demo_01.json",
+    "chapters/chapter_demo_02.json"
+  ],
+  "constraints": {
+    "require_history_fact_ids": [],
+    "forbid_history_fact_ids": [],
+    "require_current_fact_ids": [],
+    "forbid_current_fact_ids": []
+  },
+  "authoring_binding": null
+}

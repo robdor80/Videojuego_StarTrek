@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://robertodorado.es/schemas/authoring/st-nar-season-manifest-v0.1.schema.json",
+  "title": "ST-NAR-00 Season Manifest — authoring reference v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pack_id",
+    "pack_version",
+    "publication_status",
+    "title_es",
+    "description_es",
+    "locale",
+    "season",
+    "capability_ids",
+    "activation",
+    "chapter_files",
+    "constraints",
+    "authoring_binding"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "pack_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+    },
+    "pack_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "publication_status": {
+      "enum": [
+        "reference_only",
+        "approved_content"
+      ]
+    },
+    "title_es": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "description_es": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 3000
+    },
+    "locale": {
+      "const": "es-ES"
+    },
+    "season": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "season_id",
+        "track",
+        "era_start",
+        "era_end",
+        "supported_player_roles"
+      ],
+      "properties": {
+        "season_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+        },
+        "track": {
+          "enum": [
+            "academy_zero",
+            "principal",
+            "secondary"
+          ]
+        },
+        "era_start": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "era_end": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "supported_player_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 128
+        }
+      }
+    },
+    "capability_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 128
+    },
+    "activation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "event_hook_id",
+        "authorization_capability"
+      ],
+      "properties": {
+        "origin": {
+          "enum": [
+            "existing_world_event",
+            "authorized_seed_candidate"
+          ]
+        },
+        "event_hook_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+        },
+        "authorization_capability": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+        }
+      }
+    },
+    "chapter_files": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^chapters/[a-z][a-z0-9_.-]{2,79}\\.json$"
+      },
+      "uniqueItems": true,
+      "maxItems": 96
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "require_history_fact_ids",
+        "forbid_history_fact_ids",
+        "require_current_fact_ids",
+        "forbid_current_fact_ids"
+      ],
+      "properties": {
+        "require_history_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 128
+        },
+        "forbid_history_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 128
+        },
+        "require_current_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 128
+        },
+        "forbid_current_fact_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "uniqueItems": true,
+          "maxItems": 128
+        }
+      }
+    },
+    "authoring_binding": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "campaign_id",
+            "snapshot_revision",
+            "catalog_revision"
+          ],
+          "properties": {
+            "campaign_id": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+            },
+            "snapshot_revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "catalog_revision": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: ST-NAR-00 — Temporadas y continuidad (offline, NO runtime)
+on:
+  push:
+    branches: [main, feat/st-nar-00]
+    paths:
+      - ".github/workflows/st-nar-00-reference.yml"
+      - "tools/validation/st_nar_00.py"
+      - "tools/validation/test_st_nar_00.py"
+      - "schemas/authoring/st_nar_*"
+      - "validation/fixtures/seasons/**"
+      - "docs/architecture/narrative/**"
+  pull_request:
+    paths:
+      - ".github/workflows/st-nar-00-reference.yml"
+      - "tools/validation/st_nar_00.py"
+      - "tools/validation/test_st_nar_00.py"
+      - "schemas/authoring/st_nar_*"
+      - "validation/fixtures/seasons/**"
+      - "docs/architecture/narrative/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  st-nar-offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python syntax and unit tests
+        run: |
+          python -m py_compile tools/validation/st_nar_00.py tools/validation/test_st_nar_00.py
+          python -m unittest discover -s tools/validation -p 'test_st_nar_00.py' -v
+      - name: Reference pack and exports
+        run: |
+          python tools/validation/st_nar_00.py check-pack --pack validation/fixtures/seasons/reference_pack
+          python tools/validation/st_nar_00.py check-context --context validation/fixtures/seasons/campaign_context_full_v0.1.json
+          python tools/validation/st_nar_00.py check-context --context validation/fixtures/seasons/campaign_context_delta_v0.1.json
+          python tools/validation/st_nar_00.py export-bundle --context validation/fixtures/seasons/campaign_context_full_v0.1.json --output /tmp/st_nar_context.zip
+          python tools/validation/st_nar_00.py verify-bundle --bundle /tmp/st_nar_context.zip
