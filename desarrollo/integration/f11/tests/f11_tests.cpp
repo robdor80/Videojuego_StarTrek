@@ -93,6 +93,32 @@ void authority() {
  auto bad=q;bad.order=scan.order;c.promote(bad,F11_ORDER);
  eq(f11_test_revoke(c.s,q.order),F04_OK,"Host order revocation");q.expected_revision=c.stats().revision;c.promote(q,F11_ORDER);
  Career d;auto p=d.promotion_request();eq(f11_test_revoke(d.s,p.grant),F04_OK,"Host grant revocation");p.expected_revision=d.stats().revision;d.promote(p,F11_AUTHORITY);
+ // Immediate revocation at execution time, including tick zero and the last
+ // tick of the grant/order window. No time advance separates revoke and call.
+ for(U tick:{0,1,99})for(bool grant:{false,true}) {
+  Career pending;if(tick)pending.advance(tick);auto request=pending.promotion_request();
+  const U revoked=grant?request.grant:request.order;
+  eq(f11_test_revoke(pending.s,revoked),F04_OK,"same-tick revocation");
+  check(pending.stats().now==request.effective_tick,"revoke and execution have exactly the same tick");
+  const auto snapshot=decode(pending.save());check(field(snapshot,revoked,267)==tick,"persisted exact revocation tick");
+  request.expected_revision=pending.stats().revision;
+  pending.promote(request,grant?F11_AUTHORITY:F11_ORDER);
+  const auto bytes=pending.save();pending.load(bytes);request.subject=pending.person(5);
+  pending.promote(request,grant?F11_AUTHORITY:F11_ORDER);
+  check(facts(decode(pending.save()),"promotion").empty(),"no promotion from same-tick revoked authority/order");
+ }
+ // Reverse ordering at the same tick: retain the past legal fact, but a revoked
+ // grant must not authorize the second, still-unpromoted candidate.
+ for(bool grant:{false,true}) {
+  Career committed;committed.advance(99);auto request=committed.promotion_request();
+  const auto original=committed.promote(request);
+  eq(f11_test_revoke(committed.s,grant?request.grant:request.order),F04_OK,"same-tick revocation after commit");
+  const auto bytes=committed.save();const auto replay=committed.promote(request);
+  check(committed.save()==bytes && replay.promotion_event_id==original.promotion_event_id,"historical replay at revoked tick is read only");
+  committed.load(bytes);request.subject=committed.person(5);committed.promote(request);
+  auto second=committed.promotion_request(8,12);
+  if(grant)committed.promote(second,F11_AUTHORITY);else committed.promote(second);
+ }
 }
 void identity() {
  Career c;auto q=c.promotion_request(),other=c.promotion_request(8,12);

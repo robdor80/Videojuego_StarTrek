@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "baseline_revision": "5c6133b402631459a4e345cb35cf45a8812a5ce5",
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "original_manifest_sha256": "3a065ade86c2d2b6a97e9ec50eaa39387aaf6060b5126ee5f65768a87e022f85",
+  "candidate_contract_files": {
+    "desarrollo/integration/f04/core-history-revision.txt": "1e9fef879e886087b2977543d308075afd06aa355ee4649cbf1e6a980da046d6",
+    "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+    "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
+    "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "00fd3c825fb69c9d5e52e3932484c51b68c2a28724b126bae7adffaa1e0e1fb1",
+    "desarrollo/integration/f04/src/f04_history.inc": "8d5a929d8ceb19ae9672b998fb4e6d0beb11af2b76dd8e92b6f845352a4c2a7b",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
+    "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
+    "desarrollo/integration/f04/src/f04_roster.inc": "5c2ca6a1eb3af6cc7a47cf3d004ba301ab09ac8ac4897a9415eb73e48eead118",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "faa1b67265b1f7aa36157a160c86239a9e84898e147f5c902046c12aa454e36a",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "42b2498992a72f092f9e60193ca5f750c8f4b6dda457efcd2fd27f4e8426353e",
+    "desarrollo/integration/f04/src/f04_templates.h": "7ea94aba17aee2c5b55ccc2b147dc1d776d4b89e668d182db925aba05bd30393",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "4cc6d52cd5b6f9da830f2955e26c4f177d56f09a97cd7a5ca0fc71d8128ab821",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "50e218a4b42e058dde7235e86d40833535fbcae5ea69745ae0babedb55cdfc19",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "0a80ddd12f0595156cf243e08470622995cff002e0c163c584f761bafc0ff898",
+    "desarrollo/integration/f04/tests/history_audit.cpp": "9775b533e36fa243f9b81fb08359d0792b7db794d91895539488654e79610fc2",
+    "desarrollo/integration/f04/tests/history_campaign.cpp": "7fadda51a12a182f89c07c39b027afb68b049a6c928236e1b0350cef56c2fc18",
+    "desarrollo/integration/f04/tests/organization_lab.h": "e5a0c3acbf847d2ccdcf9f078d0e7c16d26e72c68c9dcbc795c138601d9f9c85",
+    "mundo/lore/starships/classes/core_starship_classes.json": "9aae07144d8707d1a87e839fd9507e4f8c29bce3905f33b713b0ea716fe7f9aa",
+    "sistemas/gameplay/ship_operations/class_definition_contract.json": "ffd2be980fd600f5381b7ddf7358bb48da754484e8970dd633e5c22fd614a07a",
+    "desarrollo/integration/f04/CMakeLists.txt": "87528e8c29c90f05894938cfd557da8a4ed0e8d4843accb99266a2c4a61a5c62"
+  },
+  "previous_contract_files": {
+    "desarrollo/integration/f04/core-history-revision.txt": "1e9fef879e886087b2977543d308075afd06aa355ee4649cbf1e6a980da046d6",
+    "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+    "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
+    "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "ab30ecd6fcba4642574523d62cb74762704e759d18121ba22f8111bdaa135a63",
+    "desarrollo/integration/f04/src/f04_history.inc": "0d87e388c7c834f93b2603aa22a801ac7d85822cb7f71bf1ac368cb9f57114ee",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
+    "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
+    "desarrollo/integration/f04/src/f04_roster.inc": "5c2ca6a1eb3af6cc7a47cf3d004ba301ab09ac8ac4897a9415eb73e48eead118",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "faa1b67265b1f7aa36157a160c86239a9e84898e147f5c902046c12aa454e36a",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "42b2498992a72f092f9e60193ca5f750c8f4b6dda457efcd2fd27f4e8426353e",
+    "desarrollo/integration/f04/src/f04_templates.h": "7ea94aba17aee2c5b55ccc2b147dc1d776d4b89e668d182db925aba05bd30393",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "4cc6d52cd5b6f9da830f2955e26c4f177d56f09a97cd7a5ca0fc71d8128ab821",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "50e218a4b42e058dde7235e86d40833535fbcae5ea69745ae0babedb55cdfc19",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "0a80ddd12f0595156cf243e08470622995cff002e0c163c584f761bafc0ff898",
+    "desarrollo/integration/f04/tests/history_audit.cpp": "9775b533e36fa243f9b81fb08359d0792b7db794d91895539488654e79610fc2",
+    "desarrollo/integration/f04/tests/history_campaign.cpp": "7fadda51a12a182f89c07c39b027afb68b049a6c928236e1b0350cef56c2fc18",
+    "desarrollo/integration/f04/tests/organization_lab.h": "e5a0c3acbf847d2ccdcf9f078d0e7c16d26e72c68c9dcbc795c138601d9f9c85",
+    "mundo/lore/starships/classes/core_starship_classes.json": "9aae07144d8707d1a87e839fd9507e4f8c29bce3905f33b713b0ea716fe7f9aa",
+    "sistemas/gameplay/ship_operations/class_definition_contract.json": "ffd2be980fd600f5381b7ddf7358bb48da754484e8970dd633e5c22fd614a07a",
+    "desarrollo/integration/f04/CMakeLists.txt": "8215e9bdb7e5ade15ed95eb6c0c3c6bac2e3bb3430d8b5c186fa0d03969b1a79"
+  },
+  "preserved_evidence_files": {
+    "desarrollo/integration/f04/tests/fixtures/history_reference_v1.json": "3a065ade86c2d2b6a97e9ec50eaa39387aaf6060b5126ee5f65768a87e022f85",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/acceptance.json": "7a8422f5a6dd5335944a634828b25f250bdd343e9c977d69bfb42770c7f506e3",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/campaign-1-365.oracle": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/acceptance.json": "a968aab184dfa3f1170c54ef8d3cce71ea8390b4f7af292d75279cdba0244d62",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/campaign-2-365.oracle": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/acceptance.json": "63f1c54678884fb1265123e98b2cf018d1c03a5163de699cc2d5956f3be04b9e",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/campaign-3-365.oracle": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/acceptance.json": "dbe15b905253ce05492def18cb066a377ce78ebdfae190b1e13e624b97750e11",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/campaign-4-365.oracle": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/acceptance.json": "d06616a2c55125a9b8ee6bf0efb63aff47ce12a8867bb2ed7b71c8d036c89ee5",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/campaign-5-365.oracle": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/acceptance.json": "2075fb7cfd262eda89106a66df14c4f2e55867b171af9e34407d61894cbeb8c6",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/campaign-5-730.oracle": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/evidence-sha256.json": "f67d018d452fe162c8bebbad8b8559be641823e8e70e324be550387f9791c9d6",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/reference-fixtures/SHA256.json": "c7b5952a12b7c43a35c3031aec824fb6070c7f98612c243f04d6388ca8f36553",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json": "a984beff263a81551bddb3c0f483932416648e6918fa8ec8ae82a5d526be07fe"
+  },
+  "native_binaries": {
+    "f04_history_audit": "b3f4caa42789fea695d0f9300bf5d0fd1d0f20807c8a5b9c46bc5609e98bd16a",
+    "f04_history_campaign": "ba1c35bea47612ce8c9af2e1313484ed1e43e3f2f23f3ce44558996614266e1b",
+    "libTrekF04Bridge.so": "f2139bde1737d99f68f1fcc0f24427fe52370b9d8136db80b7dd9f3b35d89a33"
+  },
+  "campaigns": [
+    {
+      "profile": 1,
+      "days": 365,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 1,
+        "days": 365,
+        "completed": 365,
+        "maximum_resident": 1926,
+        "maximum_active_bytes": 551836,
+        "elapsed_ms": 12483.1,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 1,
+        "days": 365,
+        "blocks": 53,
+        "original_facts_verified": 41123,
+        "archived": 40309,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 372,
+      "phase_seconds": {
+        "campaign": 12.501855847000115,
+        "resume": 0.26446360499903676,
+        "audit": 1.7186568779980007
+      },
+      "elapsed_seconds": 14.488314573001844,
+      "logs": {
+        "campaign.log": "2bd88ff170dde9e783aa0e3ef45f49240bcf846a4b2d4af139812190b83894cc",
+        "resume.log": "47dd5bc1032f755a406177c0b50222cb2bbdfb0095767b8a1654cbf5f7937d29",
+        "audit.log": "1068b745117a7677633573e176ab7cadd9e514a8e376e13e567b4cfe6d3703d8"
+      }
+    },
+    {
+      "profile": 2,
+      "days": 365,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 2,
+        "days": 365,
+        "completed": 365,
+        "maximum_resident": 2234,
+        "maximum_active_bytes": 646257,
+        "elapsed_ms": 14953.6,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 2,
+        "days": 365,
+        "blocks": 53,
+        "original_facts_verified": 47500,
+        "archived": 46556,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 372,
+      "phase_seconds": {
+        "campaign": 15.007653902001039,
+        "resume": 0.31475108100130456,
+        "audit": 1.7689277429999493
+      },
+      "elapsed_seconds": 17.098355060999893,
+      "logs": {
+        "campaign.log": "bec4bd974968f87278316ff90171166c1729fbf78d5a6e4fa758f44ec32fc492",
+        "resume.log": "8d0c7262e6cb27e591e551cb47bd2d86a269c60bd22f91a7cc59895360871103",
+        "audit.log": "cb793ed341fc1d5e478aad80cbb212319a73c858c5479de9bdb73f7171de1d4c"
+      }
+    },
+    {
+      "profile": 3,
+      "days": 365,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 3,
+        "days": 365,
+        "completed": 365,
+        "maximum_resident": 8492,
+        "maximum_active_bytes": 2587327,
+        "elapsed_ms": 72590.8,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 3,
+        "days": 365,
+        "blocks": 53,
+        "original_facts_verified": 177697,
+        "archived": 174137,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 372,
+      "phase_seconds": {
+        "campaign": 72.66625035000106,
+        "resume": 4.049267874001089,
+        "audit": 27.10026132400162
+      },
+      "elapsed_seconds": 103.81880983899828,
+      "logs": {
+        "campaign.log": "c8552648d7b16387b3cf565be43921f87da28190ceb459e6d0d84ff72a6de84f",
+        "resume.log": "62372f24f31af218a6479368421935c708799621247e393101fbd8ec4d5638d8",
+        "audit.log": "205a657581978dee633832ae3dfccbc912530c2cc8337f4a81fe5a385655bde7"
+      }
+    },
+    {
+      "profile": 4,
+      "days": 365,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 4,
+        "days": 365,
+        "completed": 365,
+        "maximum_resident": 18348,
+        "maximum_active_bytes": 5649296,
+        "elapsed_ms": 196507,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 4,
+        "days": 365,
+        "blocks": 53,
+        "original_facts_verified": 382087,
+        "archived": 374435,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 372,
+      "phase_seconds": {
+        "campaign": 196.81077535200166,
+        "resume": 3.022616406000452,
+        "audit": 56.31891636
+      },
+      "elapsed_seconds": 256.15570522800044,
+      "logs": {
+        "campaign.log": "226942bfcd3e23a191a39e7432e8645f8bff5cc8b94b85350debf71ec777c970",
+        "resume.log": "43016be342756b2d291dcbf75350ddb1b76d87800c92d4dcea7d27122ee186c4",
+        "audit.log": "517e1be1814af3cad2568487fd0869bc370ac9dc33e393ab5b9d92a76f9be9eb"
+      }
+    },
+    {
+      "profile": 5,
+      "days": 365,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 5,
+        "days": 365,
+        "completed": 365,
+        "maximum_resident": 21218,
+        "maximum_active_bytes": 6662421,
+        "elapsed_ms": 240838,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 5,
+        "days": 365,
+        "blocks": 53,
+        "original_facts_verified": 433616,
+        "archived": 424908,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 372,
+      "phase_seconds": {
+        "campaign": 241.20985290799945,
+        "resume": 3.423516823000682,
+        "audit": 71.1553956730022
+      },
+      "elapsed_seconds": 315.79159376199823,
+      "logs": {
+        "campaign.log": "b4fd11cbbced7d2686f373e293d13acfa3e9396c8498af1bdfdcb14a98de0f07",
+        "resume.log": "0006287b94e5e6c359d09e3b47aa238840042e48c2f13ce4304c025fcc0e33cc",
+        "audit.log": "7104a9dea97b697384d9bff5848fefd17be4d3459897e42a9199af30da4d094e"
+      }
+    },
+    {
+      "profile": 5,
+      "days": 730,
+      "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+      "oracle_sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204",
+      "acceptance": {
+        "kind": "acceptance",
+        "profile": 5,
+        "days": 730,
+        "completed": 730,
+        "maximum_resident": 21218,
+        "maximum_active_bytes": 6662421,
+        "elapsed_ms": 522232,
+        "real_watches": true,
+        "all_blocks_equal_complete_history": true
+      },
+      "persisted_payload_audit": {
+        "kind": "persisted_payload_audit",
+        "profile": 5,
+        "days": 730,
+        "blocks": 105,
+        "original_facts_verified": 866849,
+        "archived": 858295,
+        "all_original_block_hashes_equal": true
+      },
+      "fresh_process_future_equal": true,
+      "future_day": 737,
+      "phase_seconds": {
+        "campaign": 522.5202932620014,
+        "resume": 5.937668570000824,
+        "audit": 146.87406012300198
+      },
+      "elapsed_seconds": 675.3383338720014,
+      "logs": {
+        "campaign.log": "be94920bf02450dacf92814ea7ec86db5a5ff8b54be4207cb1286bc3cd34e1e1",
+        "resume.log": "627ffdbb74cea1fb104634d90b32f9c9042c7f804e49106347b07e327b1f92e9",
+        "audit.log": "214e6e64193e14ae16a8267d05a28874d62a78216d9344aa5c590608e248ed35"
+      }
+    }
+  ],
+  "all_six_campaigns_passed": true,
+  "guard_disabled": false
+}

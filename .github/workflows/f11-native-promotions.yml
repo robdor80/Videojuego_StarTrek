@@ -1,0 +1,56 @@
+name: F11 A02-01 native promotions
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - '.github/workflows/f11-native-promotions.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    name: 13 native F11 cases (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read unchanged F05/F11 Core pin
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()
+          if($sha -ne '76a7b7b485616d8c4994f384a90f123bf333591d'){throw 'Unexpected Core pin'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: laboratorios/f11/p05-a02-01/ci/CoreRPG
+      - name: Native compiler, product exports, persistence and all 13 cases
+        run: python desarrollo/integration/f11/run_native.py --core-source laboratorios/f11/p05-a02-01/ci/CoreRPG --output laboratorios/f11/p05-a02-01/ci/native --parallel 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f11-a02-01-native-${{ matrix.os }}
+          path: |
+            laboratorios/f11/p05-a02-01/ci/native/run.json
+            laboratorios/f11/p05-a02-01/ci/native/tests.xml
+            laboratorios/f11/p05-a02-01/ci/native/*.log
+            laboratorios/f11/p05-a02-01/ci/native/build/Testing/Temporary/LastTest.log
+            laboratorios/f11/p05-a02-01/ci/native/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/f11/p05-a02-01/ci/native/build/process-before.f04
+            laboratorios/f11/p05-a02-01/ci/native/build/process-after.f04
+            laboratorios/f11/p05-a02-01/ci/native/build/process.txt

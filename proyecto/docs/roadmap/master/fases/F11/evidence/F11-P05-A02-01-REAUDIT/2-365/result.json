@@ -1,0 +1,39 @@
+{
+  "profile": 2,
+  "days": 365,
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "oracle_sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+  "acceptance": {
+    "kind": "acceptance",
+    "profile": 2,
+    "days": 365,
+    "completed": 365,
+    "maximum_resident": 2234,
+    "maximum_active_bytes": 646257,
+    "elapsed_ms": 14953.6,
+    "real_watches": true,
+    "all_blocks_equal_complete_history": true
+  },
+  "persisted_payload_audit": {
+    "kind": "persisted_payload_audit",
+    "profile": 2,
+    "days": 365,
+    "blocks": 53,
+    "original_facts_verified": 47500,
+    "archived": 46556,
+    "all_original_block_hashes_equal": true
+  },
+  "fresh_process_future_equal": true,
+  "future_day": 372,
+  "phase_seconds": {
+    "campaign": 15.007653902001039,
+    "resume": 0.31475108100130456,
+    "audit": 1.7689277429999493
+  },
+  "elapsed_seconds": 17.098355060999893,
+  "logs": {
+    "campaign.log": "bec4bd974968f87278316ff90171166c1729fbf78d5a6e4fa758f44ec32fc492",
+    "resume.log": "8d0c7262e6cb27e591e551cb47bd2d86a269c60bd22f91a7cc59895360871103",
+    "audit.log": "cb793ed341fc1d5e478aad80cbb212319a73c858c5479de9bdb73f7171de1d4c"
+  }
+}

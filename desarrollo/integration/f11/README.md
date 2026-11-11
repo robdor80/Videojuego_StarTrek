@@ -1,5 +1,10 @@
 # F11-P05-A02-01 — Primer ascenso nativo
 
+La [segunda revisión y reauditoría](REAUDIT.md) documenta la equivalencia de las
+seis campañas históricas completas, el manifiesto v2 con protección activa,
+los casos de revocación en el mismo tick y la CI nativa Linux/Windows. El
+informe `VALIDATION.md` se conserva como evidencia de la primera entrega.
+
 Implementa exclusivamente `ensign (1101) → lieutenant_junior_grade (1102)`.
 Reutiliza `F04Session`, `Campaign`, `ActionEngine`, Timeline y persistencia Core.
 No modifica CoreRPG, su pin, las estructuras C anteriores ni el estado del roadmap.

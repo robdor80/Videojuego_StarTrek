@@ -33,6 +33,9 @@ bool f11_shape(const WorldState& w,U id,std::set<U>& allowed,std::set<U>& requir
  return true;
 }
 bool f11_history_live_at(const WorldState& w,U record,U tick) {
+ // Historical validation only: a commit can precede revocation within one
+ // campaign tick. New executions use window(), which requires ACTIVE now;
+ // CANCELLED never grants new authority, even when tick == REVOKED_AT.
  return val(w,record,START)<=tick && tick<val(w,record,END) &&
   (val(w,record,STATE)==ACTIVE || (val(w,record,STATE)==CANCELLED && tick<=val(w,record,F11_REVOKED_AT)));
 }
