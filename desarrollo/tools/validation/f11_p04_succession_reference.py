@@ -104,7 +104,9 @@ def _snapshot_error(s, policy):
         return "INVALID_EPISODE_CLOCK"
     if (s["ready_since_month"] < 0 or s["now_month"] < s["ready_since_month"]
             or s["deadline_month"] < s["ready_since_month"]
-            or s["world_revision"] < 0 or s.get("live_context_verified") is not True):
+            or s["world_revision"] < 0 or s.get("live_context_verified") is not True
+            or s.get("upstream_plan_verified") is not True
+            or not _valid_id(s.get("ready_anchor_event_id"))):
         return "STALE_OR_UNVERIFIED_EPISODE"
     p = s.get("player")
     if not isinstance(p, dict) or any(not _valid_id(p.get(k)) for k in (
@@ -209,14 +211,30 @@ def _opportunity_state(option, snapshot, npc, policy):
             return "NPC_DESTINATION_NOT_GENUINELY_AVAILABLE"
         if option.get("kind") == "fleet_staff" and option.get("fleet_staff_role_verified") is not True:
             return "FLEET_STAFF_APPOINTMENT_NOT_CATALOGUED"
-        if option.get("kind") == "ship_command" and "command_qualified" not in npc["qualifications"]:
-            return "NPC_COMMAND_QUALIFICATION_MISSING"
+        if option.get("kind") == "ship_command":
+            if "command_qualified" not in npc["qualifications"]:
+                return "NPC_COMMAND_QUALIFICATION_MISSING"
+            if npc.get("rank") == "commander" and option.get("captain_promotion_board_verified") is not True:
+                return "NPC_CAPTAIN_PROMOTION_BOARD_MISSING"
+            if npc.get("rank") not in ("commander", "captain"):
+                return "NPC_RANK_NOT_PLAUSIBLE_FOR_COMMAND"
     if option["npc_decision"] in ("declined", "withdrawn"):
+        # Declining leaves the NPC at their post; choose independent alternatives.
         return "NPC_DECLINED_OR_WITHDREW"
+    # Career continuity constrains pathways; no convenient jump to an
+    # unrelated Fleet post simply because the player wants a vacancy.
+    if snapshot["stage"] == "enterprise_d_first_officer" and option["kind"] == "fleet_staff":
+        return "NPC_CAREER_ROUTE_NOT_PLAUSIBLE"
+    if snapshot["stage"] in ("enterprise_d_captain", "captain_other_ship") and option["kind"] == "ship_command":
+        return "NPC_CAREER_ROUTE_NOT_PLAUSIBLE"
     if option["npc_decision"] == "considering":
         if option.get("orders_verified") is True or option.get("departure_effective_verified") is True:
             return "UNACCEPTED_NPC_OFFER_CANNOT_BE_EXECUTED"
         return "NPC_CONSIDERING"
+    if (option.get("offer_issued_verified") is not True
+            or option.get("npc_decision_verified") is not True
+            or not _valid_id(option.get("npc_decision_event_id"))):
+        return "NPC_ACCEPTANCE_NOT_AUTHORITATIVELY_RECORDED"
     if option.get("orders_verified") is not True:
         if option.get("departure_effective_verified") is True:
             return "DEPARTURE_WITHOUT_ORDERS"
@@ -337,7 +355,8 @@ def simulate_reference_ladder():
             "episode_id":f"case-{i}","upstream_plan_id":f"p03-plan-{i}",
             "rank_event_id":f"rank-{i}","stage":stage,"now_month":90+i*12,
             "ready_since_month":84+i*12,"deadline_month":93+i*12,
-            "world_revision":42+i,"live_context_verified":True,
+            "world_revision":42+i,"live_context_verified":True,"upstream_plan_verified":True,
+            "ready_anchor_event_id":f"ready-anchor-{i}",
             "player":{"character_id":"player","rank":rank,"current_unit_id":"old-post",
                       "current_billet_id":"old-billet","current_position_id":"chief_engineering_officer",
                       "service_status":"active","professional_review_verified":True,
@@ -349,7 +368,8 @@ def simulate_reference_ladder():
                       "billet_id":f"billet-{i}","position_id":position,
                       "vacancy_state":"occupied","occupant_id":inc},
             "incumbent":{"character_id":inc,"current_unit_id":f"destination-{i}",
-                         "current_billet_id":f"billet-{i}","rank":"captain",
+                         "current_billet_id":f"billet-{i}",
+                         "rank":"lieutenant_commander" if stage=="department_head" else ("commander" if stage=="enterprise_d_first_officer" else "captain"),
                          "service_status":"active","professional_review_verified":True,
                          "qualifications":["command_qualified"],
                          "career_motivation_event_ids":[f"npc-record-{i}"]},
@@ -357,14 +377,16 @@ def simulate_reference_ladder():
                 "opportunity_id":f"fleet-op-{i}","candidate_id":inc,
                 "professional_reason_event_id":f"npc-record-{i}",
                 "professional_source_events":[f"npc-record-{i}"],
-                "kind":"fleet_staff" if stage=="enterprise_d_captain" else "ship_command",
+                "kind":"fleet_staff" if stage in ("enterprise_d_captain","captain_other_ship") else
+                       ("equivalent_transfer" if stage=="department_head" else "ship_command"),
                 "npc_decision":"considering","prepared_at_month":88+i*12,
+                "offer_issued_verified":False,"npc_decision_verified":False,
                 "effective_not_before_month":91+i*12,
                 "professional_merit_verified":True,"fleet_organizational_need_verified":True,
                 "destination_unit_id":f"another-unit-{i}","destination_billet_id":f"other-billet-{i}",
                 "destination_billet_state":"vacant","destination_operational_verified":True,
                 "destination_billet_verified":True,"npc_qualified_for_destination":True,
-                "fleet_staff_role_verified":True,
+                "fleet_staff_role_verified":True,"captain_promotion_board_verified":True,
                 "orders_verified":False,"departure_effective_verified":False
             }]
         }
