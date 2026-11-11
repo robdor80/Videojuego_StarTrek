@@ -85,7 +85,8 @@
       "duty_roles_any": [],
       "qualifications_all": [],
       "requires_on_duty": false,
-      "allows_delegation": true
+      "allows_delegation": true,
+      "allows_acting_succession": true
     },
     "mission_directive_change": {
       "domain": "ship_mission",
@@ -95,7 +96,8 @@
       "duty_roles_any": [],
       "qualifications_all": [],
       "requires_on_duty": false,
-      "allows_delegation": false
+      "allows_delegation": false,
+      "allows_acting_succession": true
     },
     "assume_ship_command": {
       "domain": "ship_command",
@@ -189,7 +191,9 @@
     "no_player_career_guarantee_bypasses_authority",
     "ai_and_offline_fixture_cannot_grant_any_right",
     "information_access_requires_both_knowledge_and_permission",
-    "world_revision_must_be_revalidated_at_execution"
+    "world_revision_must_be_revalidated_at_execution",
+    "acting_co_operational_domains_follow_verified_temporary_succession",
+    "flag_rank_does_not_auto_grant_ship_command"
   ],
   "source_refs": [
     "proyecto/docs/decisions/personnel_model.md",
@@ -199,5 +203,12 @@
     "proyecto/docs/roadmap/master/fases/F04/LIMITES_MEDICOS_NORMATIVOS_P04.md",
     "sistemas/gameplay/chain_of_command/command_decision_delegation_state_v0.1.json",
     "proyecto/docs/roadmap/master/fases/F11/F11-P01_JERARQUIA_CADENA_MANDO_V1.md"
+  ],
+  "flag_ranks": [
+    "commodore",
+    "rear_admiral",
+    "vice_admiral",
+    "admiral",
+    "fleet_admiral"
   ]
 }
