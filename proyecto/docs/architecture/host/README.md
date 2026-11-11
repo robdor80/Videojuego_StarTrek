@@ -1,48 +1,39 @@
 # Proyecto HOST — Índice técnico
 
-**Fecha:** 2026-11-11. **Repositorio único de código:** `robdor80/Videojuego_StarTrek`.
+Fecha: 2026-11-11. Repositorio único de código: robdor80/Videojuego_StarTrek.
 
-El HOST es el coordinador local de las partidas del videojuego Star Trek RPG. Conecta Unreal Engine 5 con los puentes de las reglas Star Trek y con CoreRPG, que sigue siendo la fuente de verdad. **No existe aún un HOST de producto certificado.**
+HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **No existe todavía un HOST de producto certificado.** H00 documental fusionada mediante PR #111.
 
-## Documentación del proyecto HOST
+## Documentos de gobierno
 
-- **[Plan Maestro del HOST v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md)**: fases H00–H13, arquitectura, responsabilidades y restricciones HOST/F11.
+- [Plan Maestro v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md): fases H00-H13, hitos M0/M1 y frontera con F11.
+- [H00 — Inventario](H00_INVENTARIO_DEPENDENCIAS_2026-11-11.md): componentes reales y pines.
+- [H00 — Gobierno y riesgos](H00_GOBIERNO_RIESGOS_2026-11-11.md): separación de responsabilidades y protección GitHub.
+- [H00 — Acta](H00_ACTA_2026-11-11.md): evidencia de auditoría documental. PR #111 fusionada.
 
-## Documentación H00
+## H01 — Arquitectura y contratos (entrega propuesta)
 
-1. [Inventario y dependencias](H00_INVENTARIO_DEPENDENCIAS_2026-11-11.md): qué existe, qué podemos aprovechar y qué falta.
-2. [Gobierno, riesgos y decisiones](H00_GOBIERNO_RIESGOS_2026-11-11.md): límites de propiedad, normas de GitHub, protección de main y reconciliación con F11.
-3. [Acta H00](H00_ACTA_2026-11-11.md): alcance ejecutado, evidencias y pendientes de revisión/fusión.
+1. [H01-P01 Arquitectura](H01_P01_ARQUITECTURA_v1.0_2026-11-11.md): módulos, hilos, ciclo de vida y propiedad.
+2. [H01-P02 Contratos](H01_P02_CONTRATOS_v1.0_2026-11-11.md): solicitudes, resultados, errores y versiones.
+3. [H01-P03 Confianza](H01_P03_CONFIANZA_v1.0_2026-11-11.md): principal, partida importada y límites offline.
+4. [H01-P04 Compatibilidad](H01_P04_COMPATIBILIDAD_v1.0_2026-11-11.md): pines Core, CMake, historial y no duplicación.
+5. [Matriz de conformidad H01](H01_MATRIZ_CONFORMIDAD_v1.0_2026-11-11.md): 35 casos para futuras fases; no ejecutados en runtime.
+6. [Registro de contratos v1](H01_REGISTRO_CONTRATOS_v1.json): catálogo lógico verificable, no ABI compilada.
+7. [Acta H01](H01_ACTA_2026-11-11.md): entregas, límites y transición a H02.
 
-**Baseline auditada:** Star Trek `main@816e72b2b6e2057c47b84473e616a6feda096016`, CoreRPG `main@76a7b7b485616d8c4994f384a90f123bf333591d`. Los archivos existentes conservan sus pins independientes.
+Validador estático: desarrollo/tools/validation/test_host_h01_contracts.py y CI host-h01-contracts.yml. No constituye prueba del HOST de producto.
 
-## Fases independientes de las del videojuego
+## Fases y responsables
 
-| Fase | Materia | Responsable principal |
-|---|---|---|
-| H00 | Auditoría y gobierno | ChatGPT |
-| H01 | Arquitectura y contratos | ChatGPT |
-| H02 | Núcleo y sesiones HOST | Codex |
-| H03 | Identidad del jugador y personaje | ChatGPT + Codex |
-| H04 | Guardado/recuperación | Codex |
-| H05 | Integración CoreRPG | Codex |
-| H06 | Integración Unreal Engine 5 | Codex |
-| H07 | Pasarela de consumo de F11 | ChatGPT + Codex |
-| H08 | Eventos y servicios | ChatGPT + Codex |
-| H09 | Operaciones de nave | Codex |
-| H10 | NPC, IA y computadora | ChatGPT + Codex |
-| H11 | Misiones y temporadas | ChatGPT + Codex |
-| H12 | Diagnósticos y rendimiento | ChatGPT + Codex |
-| H13 | Certificación del HOST | ChatGPT + Codex + aprobación del usuario |
+H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Codex (identidad). H04: Codex (persistencia). H05: Codex (Core/F04/F05). H06: Codex (UE real). H07: ChatGPT+Codex (lector y pasarela NO emisora de F11). H08-H11: coordinación y sistemas progresivos. H12-H13: estabilidad y certificación.
 
-La numeración `Hxx` no sustituye a las fases `Fxx` del videojuego. Cada Hxx tendrá conversación y cierre propios. **Primero se construirá el HOST mínimo funcional; no hay que desarrollar todas las funciones de nave o narrativa para crear y recuperar una partida.**
+## Restricciones vinculantes
 
-## Decisión vinculante HOST/F11
+- Solo CoreRPG conserva WorldState y tiempo autoritativo. F11 del proyecto principal desarrolla y certifica su emisor de Personal de Flota. HOST no emite comisiones, grados ni rangos, ni replica sus reglas.
+- Las APIs F04/F05/F11 usan una única F04Session en hilo propietario. ID, F04Ref, cause y CAUSE=110501 no son credenciales.
+- El proyecto principal UE todavía no dispone de StarTrekRPG.uproject; los proyectos de laboratorio no acreditan integración.
+- Los pins históricos siguen intactos. H01 propone F05/F11 Core SHA 76a7b7b485616d8c4994f384a90f123bf333591d como candidato, no upgrade automático.
+- Fases y PR independientes; solo el usuario autoriza fusiones. Estados PLANIFICADO, IMPLEMENTADO, PROBADO, CERTIFICADO y FUSIONADO no son intercambiables.
+- Logs y artefactos temporales solo en laboratorios/ dentro del repositorio, excluidos de Git. No hay dependencias permanentes hacia esos resultados.
 
-El emisor institucional de `F11-P05-A02-03`, las reglas de carrera, competencias, autorizaciones y registros autoritativos pertenecen al **proyecto principal Star Trek RPG/F11 con CoreRPG**. El HOST **no** desarrollará un segundo emisor, no duplicará los validadores de negocio ni otorgará rangos. Solo aporta sesión, identidad operativa, contexto de confianza proporcional al juego local, acceso controlado y encaminamiento hacia las interfaces de F11. Si la API de producto F11 no está disponible, la operación permanece deshabilitada.
-
-Las decisiones fundamentales y las fusiones definitivas corresponden al usuario. No se crean repositorios nuevos; no se alteran CoreRPG, pins históricos ni pruebas para obtener resultados artificialmente verdes.
-
-## Estados
-
-Distinguir siempre **PLANIFICADO, IMPLEMENTADO, PROBADO, CERTIFICADO y FUSIONADO**. El acta H00 es evidencia **documental**; no certifica ningún ejecutable HOST. La entrega de esta rama se mantiene en PR hasta revisión y autorización de fusión.
+La H01 documental necesita CI y revisión antes de considerarse cerrada; sus contratos guían H02-H07, sin sustituir la certificación de F11.
