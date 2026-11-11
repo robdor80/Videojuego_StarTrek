@@ -101,6 +101,51 @@ class ReferenceTests(unittest.TestCase):
         with self.assertRaisesRegex(reference.ReferenceError, 'Unsupported reference manifest'):
             self.verify()
 
+    def mutate_transition(self, mutate):
+        name = self.manifest['source_contract_update_f11_a02_01']['evidence']
+        path = self.root / name
+        proof = json.loads(path.read_bytes())
+        mutate(proof)
+        data = json.dumps(proof).encode()
+        path.write_bytes(data)
+        # Even rehashing an altered report must not establish compatibility.
+        self.manifest['provenance_files'][name] = reference.sha256(data)
+        (self.root / reference.MANIFEST).write_text(json.dumps(self.manifest))
+
+    def test_missing_transition(self):
+        del self.manifest['source_contract_update_f11_a02_01']
+        (self.root / reference.MANIFEST).write_text(json.dumps(self.manifest))
+        with self.assertRaisesRegex(reference.ReferenceError, 'Missing F11 reaudit'):
+            self.verify()
+
+    def test_incomplete_reaudit_even_after_rehash(self):
+        self.mutate_transition(lambda proof: proof['campaigns'].pop())
+        with self.assertRaisesRegex(reference.ReferenceError, 'missing or duplicate campaign'):
+            self.verify()
+
+    def test_disabled_guard_even_after_rehash(self):
+        self.mutate_transition(lambda proof: proof.update(guard_disabled=True))
+        with self.assertRaisesRegex(reference.ReferenceError, 'protection intact'):
+            self.verify()
+
+    def test_wrong_source_binding_even_after_rehash(self):
+        self.mutate_transition(lambda proof: proof['candidate_contract_files'].update(
+            {'desarrollo/integration/f04/src/f04_bridge.cpp': '0' * 64}))
+        with self.assertRaisesRegex(reference.ReferenceError, 'source binding mismatch'):
+            self.verify()
+
+    def test_wrong_frozen_future_even_after_rehash(self):
+        evidence = Path(self.manifest['source_contract_update_f11_a02_01']['evidence']).parent
+        name = str(evidence / '5-730/campaign-5-730.resume').replace('\\', '/')
+        fields = (self.root / name).read_text().split()
+        fields[-1] = '0' * 64
+        data = (' '.join(fields) + '\n').encode()
+        (self.root / name).write_bytes(data)
+        self.manifest['provenance_files'][name] = reference.sha256(data)
+        (self.root / reference.MANIFEST).write_text(json.dumps(self.manifest))
+        with self.assertRaisesRegex(reference.ReferenceError, 'frozen future digest mismatch'):
+            self.verify()
+
     def test_row_schema_horizon_and_watermarks(self):
         data = self.source.read_bytes()
         for invalid in (data.splitlines()[0], data + b'1 2 bogus\n',

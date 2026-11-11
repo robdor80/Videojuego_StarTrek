@@ -6,7 +6,8 @@ from pathlib import Path
 import re
 
 REPO = Path(__file__).resolve().parents[4]
-MANIFEST = 'desarrollo/integration/f04/tests/fixtures/history_reference_v1.json'
+PREVIOUS_MANIFEST = 'desarrollo/integration/f04/tests/fixtures/history_reference_v1.json'
+MANIFEST = 'desarrollo/integration/f04/tests/fixtures/history_reference_v2.json'
 
 
 class ReferenceError(ValueError):
@@ -35,9 +36,11 @@ def checked_input(repo, name, expected):
     return data
 
 
-def contract(profile, days, actual_core, repo=None):
+def contract(profile, days, actual_core, repo=None, *, manifest_name=None):
     repo = repo or REPO
-    manifest = json.loads(read_file(repo / MANIFEST))
+    selected = manifest_name or MANIFEST
+    require(selected in (PREVIOUS_MANIFEST, MANIFEST), 'Unsupported reference manifest')
+    manifest = json.loads(read_file(repo / selected))
     require(manifest['schema'] == 1, 'Unsupported reference manifest schema')
     require(actual_core in manifest['compatible_core_revisions'], 'Incompatible Core revision')
     require((repo / 'desarrollo/integration/f04/core-history-revision.txt').read_text().strip()
@@ -51,6 +54,10 @@ def contract(profile, days, actual_core, repo=None):
     require(entry['profile'] == profile and entry['days'] == days, 'Reference profile/duration mismatch')
     for name, expected in manifest['provenance_files'].items():
         checked_input(repo, name, expected)
+    if selected == MANIFEST:
+        from history_contract_transition import validate
+        require(manifest.get('manifest_version') == 2, 'Unsupported reference manifest version')
+        validate(manifest, repo, require, checked_input)
     acceptance = json.loads(checked_input(repo, entry['acceptance'], entry['acceptance_sha256']))
     require(acceptance['profile'] == profile and acceptance['days'] == days
             and acceptance['completed'] == days, 'Reference acceptance profile/duration mismatch')
@@ -81,8 +88,8 @@ def validate_rows(data, days):
         raise ReferenceError('Invalid oracle row schema') from error
 
 
-def verify(path, profile, days, actual_core, repo=None):
-    manifest, entry = contract(profile, days, actual_core, repo)
+def verify(path, profile, days, actual_core, repo=None, *, manifest_name=None):
+    manifest, entry = contract(profile, days, actual_core, repo, manifest_name=manifest_name)
     require(path.name == f'campaign-{profile}-{days}.oracle', 'Incorrect reference filename')
     data = read_file(path)
     require(sha256(data) == entry['sha256'], f'Oracle SHA-256 mismatch: {path}')
@@ -93,15 +100,16 @@ def verify(path, profile, days, actual_core, repo=None):
         'reference_origin': manifest['origin'],
         'reference_evidence_commit': manifest['evidence_commit'],
         'reference_manifest_schema': manifest['schema'],
-        'reference_manifest_sha256': sha256(read_file((repo or REPO) / MANIFEST).replace(b'\r\n', b'\n')),
+        'reference_manifest_version': manifest.get('manifest_version', 1),
+        'reference_manifest_sha256': sha256(read_file((repo or REPO) / (manifest_name or MANIFEST)).replace(b'\r\n', b'\n')),
         'reference_profile': profile,
         'reference_days': days,
         'reference_contract_verified': True,
     }
 
 
-def copy_verified(source, destination, profile, days, actual_core, repo=None):
-    data, metadata = verify(source, profile, days, actual_core, repo)
+def copy_verified(source, destination, profile, days, actual_core, repo=None, *, manifest_name=None):
+    data, metadata = verify(source, profile, days, actual_core, repo, manifest_name=manifest_name)
     require(source.resolve() != destination.resolve(), 'Cannot overwrite original reference')
     destination.parent.mkdir(parents=True, exist_ok=True)
     # Exclusive creation: existing originals, backups and laboratory files stay intact.
