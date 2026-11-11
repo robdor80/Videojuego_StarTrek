@@ -1,0 +1,541 @@
+{
+  "schema_version": "0.1.0",
+  "id": "f11_p02_departments_and_billet_profiles",
+  "maturity": "OFFLINE_REFERENCE_ONLY_NO_WORLD_STATE_MUTATION",
+  "provenance": "Starfleet specialisms + F04 seven operational departments; profiles are GAME_RULES not canonical crew appointments.",
+  "notes": [
+    "F04 f04_department_id is numeric ABI group, not equivalent to broader Starfleet specialty department id.",
+    "All profiles represent candidate standards, NOT automatically installed slots, career entitlements, or authority.",
+    "Functional roles have no existing global position identifier; conversion to F04/Core billet must be explicit in integration.",
+    "Accepted ranks and qualification IDs are design defaults subject to actual per-ship staffed billet and era; no qualification created.",
+    "Captain, first officer and department heads all need authentic appointment and active billet; F11-P01 controls permissions.",
+    "No generated headcount for Enterprise-D. F04 existing per-ship staffing profiles remain authoritative for actual slots."
+  ],
+  "groups": [
+    {
+      "id": "science_sensors",
+      "f04_department_id": 1,
+      "name_es": "Ciencias y sensores",
+      "typical_division_id": "sciences",
+      "specialty_department_ids": [
+        "science"
+      ]
+    },
+    {
+      "id": "engineering",
+      "f04_department_id": 2,
+      "name_es": "Ingeniería y mantenimiento",
+      "typical_division_id": "operations",
+      "specialty_department_ids": [
+        "engineering"
+      ]
+    },
+    {
+      "id": "command_navigation",
+      "f04_department_id": 3,
+      "name_es": "Mando y navegación",
+      "typical_division_id": "command",
+      "specialty_department_ids": [
+        "command",
+        "flight_control_navigation"
+      ]
+    },
+    {
+      "id": "medical",
+      "f04_department_id": 4,
+      "name_es": "Medicina y asistencia sanitaria",
+      "typical_division_id": "sciences",
+      "specialty_department_ids": [
+        "medical",
+        "counseling"
+      ]
+    },
+    {
+      "id": "operations_communications",
+      "f04_department_id": 5,
+      "name_es": "Operaciones y comunicaciones",
+      "typical_division_id": "operations",
+      "specialty_department_ids": [
+        "operations_management",
+        "communications",
+        "strategic_operations",
+        "intelligence"
+      ]
+    },
+    {
+      "id": "security_tactical",
+      "f04_department_id": 6,
+      "name_es": "Seguridad y táctica",
+      "typical_division_id": "operations",
+      "specialty_department_ids": [
+        "security",
+        "tactical"
+      ]
+    },
+    {
+      "id": "shuttles_logistics",
+      "f04_department_id": 7,
+      "name_es": "Lanzaderas y logística",
+      "typical_division_id": "operations",
+      "specialty_department_ids": [
+        "operations_management"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "commanding_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "commanding_officer",
+      "group_id": "command_navigation",
+      "department_id": "command",
+      "accepted_ranks": [
+        "captain"
+      ],
+      "required_qualifications": [
+        "command_qualified"
+      ],
+      "reports_to_position_id": null,
+      "is_command_post": true,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "first_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "first_officer",
+      "group_id": "command_navigation",
+      "department_id": "command",
+      "accepted_ranks": [
+        "lieutenant_commander",
+        "commander",
+        "captain"
+      ],
+      "required_qualifications": [
+        "command_qualified"
+      ],
+      "reports_to_position_id": "commanding_officer",
+      "is_command_post": true,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "second_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "second_officer",
+      "group_id": "command_navigation",
+      "department_id": "command",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "command_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": true,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "flight_control_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "flight_control_officer",
+      "group_id": "command_navigation",
+      "department_id": "flight_control_navigation",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander"
+      ],
+      "required_qualifications": [
+        "flight_control_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "chief_engineering_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "chief_engineering_officer",
+      "group_id": "engineering",
+      "department_id": "engineering",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "engineering_leadership_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "chief_science_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "chief_science_officer",
+      "group_id": "science_sensors",
+      "department_id": "science",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "science_leadership_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "chief_medical_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "chief_medical_officer",
+      "group_id": "medical",
+      "department_id": "medical",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander",
+        "captain"
+      ],
+      "required_qualifications": [
+        "medical_command_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "operations_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "operations_officer",
+      "group_id": "operations_communications",
+      "department_id": "operations_management",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander"
+      ],
+      "required_qualifications": [
+        "operations_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "communications_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "communications_officer",
+      "group_id": "operations_communications",
+      "department_id": "communications",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander"
+      ],
+      "required_qualifications": [
+        "communications_qualified"
+      ],
+      "reports_to_position_id": "operations_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "chief_security_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "chief_security_officer",
+      "group_id": "security_tactical",
+      "department_id": "security",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "security_leadership_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "chief_tactical_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "chief_tactical_officer",
+      "group_id": "security_tactical",
+      "department_id": "tactical",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "tactical_leadership_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "counselor",
+      "classification": "existing_formal_position",
+      "formal_position_id": "counselor",
+      "group_id": "medical",
+      "department_id": "counseling",
+      "accepted_ranks": [
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "counseling_qualified"
+      ],
+      "reports_to_position_id": "chief_medical_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "strategic_operations_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "strategic_operations_officer",
+      "group_id": "operations_communications",
+      "department_id": "strategic_operations",
+      "accepted_ranks": [
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "strategic_operations_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "intelligence_officer",
+      "classification": "existing_formal_position",
+      "formal_position_id": "intelligence_officer",
+      "group_id": "operations_communications",
+      "department_id": "intelligence",
+      "accepted_ranks": [
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander"
+      ],
+      "required_qualifications": [
+        "intelligence_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "science_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "science_sensors",
+      "department_id": "science",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "science_qualified"
+      ],
+      "reports_to_position_id": "chief_science_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "sensor_operator",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "science_sensors",
+      "department_id": "science",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "sensors_qualified"
+      ],
+      "reports_to_position_id": "chief_science_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "engineering_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "engineering",
+      "department_id": "engineering",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "engineering_qualified"
+      ],
+      "reports_to_position_id": "chief_engineering_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "security_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "security_tactical",
+      "department_id": "security",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "security_qualified"
+      ],
+      "reports_to_position_id": "chief_security_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "tactical_operator",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "security_tactical",
+      "department_id": "tactical",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "tactical_qualified"
+      ],
+      "reports_to_position_id": "chief_tactical_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "medical_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "medical",
+      "department_id": "medical",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "medical_qualified"
+      ],
+      "reports_to_position_id": "chief_medical_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "shuttle_pilot",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "shuttles_logistics",
+      "department_id": "operations_management",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "shuttle_pilot_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "logistics_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "shuttles_logistics",
+      "department_id": "operations_management",
+      "accepted_ranks": [
+        "ensign",
+        "lieutenant_junior_grade",
+        "lieutenant"
+      ],
+      "required_qualifications": [
+        "logistics_qualified"
+      ],
+      "reports_to_position_id": "operations_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    },
+    {
+      "profile_id": "bridge_watch_officer",
+      "classification": "functional_assignment_reference_only",
+      "formal_position_id": null,
+      "group_id": "command_navigation",
+      "department_id": "command",
+      "accepted_ranks": [
+        "lieutenant_junior_grade",
+        "lieutenant",
+        "lieutenant_commander",
+        "commander"
+      ],
+      "required_qualifications": [
+        "command_qualified"
+      ],
+      "reports_to_position_id": "first_officer",
+      "is_command_post": false,
+      "require_named_billet": true
+    }
+  ],
+  "unit_types": [
+    "starship",
+    "station",
+    "academy",
+    "starbase"
+  ],
+  "non_starship_policy": "Only live Starfleet unit records verified in Core/Host can be eligible. Ship-class/era validation applies to starships; station/base/academy require separately verified unit type and activation.",
+  "vacancy_states": [
+    "occupied",
+    "planned",
+    "reserved",
+    "vacant",
+    "suspended",
+    "decommissioned"
+  ],
+  "offer_states": [
+    "draft",
+    "screened",
+    "offered",
+    "accepted",
+    "declined",
+    "expired",
+    "withdrawn",
+    "orders_issued",
+    "effective",
+    "cancelled"
+  ],
+  "verified_order_required_before_assignment": true,
+  "final_authority": "CoreRPG via Host, not this JSON catalog",
+  "refs": [
+    "mundo/lore/federation/starfleet/positions/positions.json",
+    "mundo/lore/federation/starfleet/departments/divisions_and_departments.json",
+    "proyecto/docs/roadmap/master/fases/F04/F04-MIRANDA-01_ORGANIZACION_USS_SUTHERLAND.md",
+    "proyecto/docs/roadmap/master/fases/F11/PLAN_F11_ACTUALIZADO_2026-11-11.md",
+    "sistemas/gameplay/careers/assignments/assignment_transition.json"
+  ]
+}
