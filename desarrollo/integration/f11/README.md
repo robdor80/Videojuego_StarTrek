@@ -154,5 +154,6 @@ idempotencia, cinco fallos de preparación/publicación, archivos corruptos,
 archivos legacy, consolidación/recuperación, ABI y dos procesos guardar/cargar.
 Otra prueba enlaza el puente de producto y reproduce el mismo ascenso,
 guardado/carga y recibo sin acceso a ningún símbolo del emisor de ensayo.
-NullRHI, D3D12, MSVC/DLL e interacción UE5 requieren el MSI y deben registrarse
-como no ejecutadas desde Linux. No se declara F11 completada ni UE5 jugable.
+La CI ejecuta las pruebas nativas también en Windows/MSVC, incluyendo DLL y
+exportaciones. NullRHI, D3D12 e interacción UE5 requieren el MSI y permanecen
+sin ejecutar desde Linux. No se declara F11 completada ni UE5 jugable.

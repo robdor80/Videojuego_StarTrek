@@ -105,8 +105,30 @@ con `dlsym` o `GetProcAddress`: exige la operación de promoción y rechaza las
 exportaciones de bootstrap, revocación e inyección de fallos de ensayo. Luego
 ejecuta promoción, carga y replay contra ese puente de producto.
 
-Los resultados efectivos de GitHub Actions se enlazarán en esta entrega cuando
-terminen; añadir el workflow no se cuenta por sí solo como PASS de MSVC.
+La ejecución [43003893957](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43003893957)
+ha terminado con **SUCCESS** en ambas plataformas sobre el commit de
+implementación **1d26889fe5ea5b3390f7ba129c1fb7441c8881e8**:
+
+| Validación terminada | Resultado |
+|---|---|
+| [F11 Linux/GNU](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43003893957/job/130466472304) | PASS 13/13 |
+| [F11 Windows/MSVC](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43003893957/job/130466472326) | PASS 13/13 |
+| F04 histórico local, selección de regresión compatible | PASS 261/261 |
+| F04/F05 local, selección completa recomendada por F05 | PASS 395/395 |
+| F11 offline local | PASS 340/340 |
+| Gobernanza local | PASS |
+
+Los logs reales de los jobs confirman respectivamente
+`{"result": "PASS", "tests": 13, "compiler": "GNU"}` y
+`{"result": "PASS", "tests": 13, "compiler": "MSVC"}`. No son éxitos inferidos
+de las pruebas F05: son los 13 casos F11, incluidos puente de producto y
+persistencia. Los IDs y el commit están en `CI_EVIDENCE.json`; los artifacts
+contienen JUnit, versión del compilador, logs y los guardados de ambos procesos.
+
+La primera repetición local F05 intentó reutilizar un destino previo y su guard
+la rechazó con `fresh history output required`. Se conservaron esos resultados
+y se ejecutó de nuevo la suite completa en un destino nuevo: **395/395 PASS**.
+El guard de referencias también pasó dentro de esta nueva ejecución.
 
 ## Reproducir
 
