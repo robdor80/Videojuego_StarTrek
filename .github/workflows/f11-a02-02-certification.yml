@@ -1,0 +1,151 @@
+name: F11 A02-02 certification - persistence and compatibility
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/f11-a02-02-certification.yml'
+      - 'desarrollo/tools/validation/f11_p05_a02_02_certify.py'
+      - 'proyecto/docs/roadmap/master/fases/F11/**'
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    name: Frozen provenance, F11 references and roadmap
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fail closed on any unaudited source, pin, history or evidence change
+        run: python desarrollo/tools/validation/f11_p05_a02_02_certify.py
+      - name: All F11 reference contract checks
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f11_*.py' -v
+      - name: Roadmap governance
+        run: python desarrollo/tools/validation/validate_roadmap_state.py
+  f11-native:
+    needs: integrity
+    name: F11 native 13 cases (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 40
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/f11/p05-a02-02/ci/f11/CoreRPG
+      - name: Compile product and trial separately and execute all native cases
+        run: python desarrollo/integration/f11/run_native.py --core-source laboratorios/f11/p05-a02-02/ci/f11/CoreRPG --output laboratorios/f11/p05-a02-02/ci/f11/native --parallel 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f11-a02-02-native-${{ matrix.os }}
+          path: |
+            laboratorios/f11/p05-a02-02/ci/f11/native/run.json
+            laboratorios/f11/p05-a02-02/ci/f11/native/tests.xml
+            laboratorios/f11/p05-a02-02/ci/f11/native/*.log
+            laboratorios/f11/p05-a02-02/ci/f11/native/build/Testing/Temporary/LastTest.log
+            laboratorios/f11/p05-a02-02/ci/f11/native/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/f11/p05-a02-02/ci/f11/native/build/process-before.f04
+            laboratorios/f11/p05-a02-02/ci/f11/native/build/process-after.f04
+            laboratorios/f11/p05-a02-02/ci/f11/native/build/process.txt
+  regressions:
+    needs: integrity
+    name: F04-F05 regressions (${{ matrix.suite }}, ${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        suite: [f04, f05]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 80
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read distinct pinned Core revision
+        id: pin
+        shell: pwsh
+        run: |
+          $name=if('${{ matrix.suite }}' -eq 'f04'){'f04'}else{'f05'}
+          $sha=(Get-Content "desarrollo/integration/$name/core-revision.txt" -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid Core revision'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.pin.outputs.sha }}
+          path: laboratorios/f11/p05-a02-02/ci/regressions/CoreRPG
+      - name: Complete F04 or F05 native integration audit
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite ${{ matrix.suite }} --core-source laboratorios/f11/p05-a02-02/ci/regressions/CoreRPG --output laboratorios/f11/p05-a02-02/ci/regressions/${{ matrix.suite }}-native --parallel 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f11-a02-02-regression-${{ matrix.suite }}-${{ matrix.os }}
+          path: |
+            laboratorios/f11/p05-a02-02/ci/regressions/*-native/tests.xml
+            laboratorios/f11/p05-a02-02/ci/regressions/*-native/run.json
+            laboratorios/f11/p05-a02-02/ci/regressions/*-native/*.log
+            laboratorios/f11/p05-a02-02/ci/regressions/*-native/build/Testing/Temporary/LastTest.log
+  frozen-history:
+    needs: integrity
+    name: Six full historical campaigns (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98
+          path: laboratorios/f11/p05-a02-02/ci/history/CoreRPG
+      - name: Six full campaigns, frozen oracle, segmented save and process replay
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite history --core-source laboratorios/f11/p05-a02-02/ci/history/CoreRPG --output laboratorios/f11/p05-a02-02/ci/history/native --parallel 2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f11-a02-02-history-${{ matrix.os }}
+          path: |
+            laboratorios/f11/p05-a02-02/ci/history/native/tests.xml
+            laboratorios/f11/p05-a02-02/ci/history/native/run.json
+            laboratorios/f11/p05-a02-02/ci/history/native/*.log
+            laboratorios/f11/p05-a02-02/ci/history/native/build/history-runs/**/*.json
+            laboratorios/f11/p05-a02-02/ci/history/native/build/history-runs/**/*.log
+            laboratorios/f11/p05-a02-02/ci/history/native/build/Testing/Temporary/LastTest.log
