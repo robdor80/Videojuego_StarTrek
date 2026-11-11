@@ -1,0 +1,203 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f11_p01_personnel_authority",
+  "phase": "F11-P01",
+  "maturity": "OFFLINE_REFERENCE_ONLY_NO_AUTHORITY",
+  "authority": "NEVER_MUTATES_WORLD_STATE",
+  "objective": "Comprobar coherencia de rango, puesto, destino, aptitud, guardia, cualificacion, delegacion y sucesion. La referencia no concede permisos; Core/Host decide en vivo.",
+  "rank_progression": [
+    "ensign",
+    "lieutenant_junior_grade",
+    "lieutenant",
+    "lieutenant_commander",
+    "commander",
+    "captain"
+  ],
+  "rank_policy": {
+    "rank_never_implies_ship_command": true,
+    "rank_never_auto_grants_position": true,
+    "rank_never_auto_grants_qualification": true,
+    "rank_never_auto_reveals_classified": true,
+    "cadet_separate_from_commissioned_officers": true,
+    "flag_officers_defined_in_existing_universal_rank_insignia": true
+  },
+  "distinct_dimensions": [
+    "rank",
+    "division",
+    "department",
+    "position_ids",
+    "assignment_id",
+    "duty_role_ids",
+    "duty_station_id",
+    "qualifications",
+    "medical_duty_status",
+    "on_duty",
+    "command_designation",
+    "active_delegations"
+  ],
+  "succession": {
+    "sequence": [
+      "commanding_officer",
+      "first_officer",
+      "second_officer",
+      "designated_qualified_successor"
+    ],
+    "temporary_only": true,
+    "changes_rank": false,
+    "requires_authorized_disposition": true,
+    "requires_command_qualification": true,
+    "requires_fit_status": true,
+    "ends_when_valid_co_returns": true
+  },
+  "decisions": {
+    "sensor_read": {
+      "domain": "ship_sensors",
+      "positions_any": [],
+      "duty_roles_any": [
+        "sensor_operator"
+      ],
+      "qualifications_all": [
+        "sensors_qualified"
+      ],
+      "requires_on_duty": true,
+      "allows_delegation": false
+    },
+    "department_roster": {
+      "domain": "department_staffing",
+      "positions_any": [
+        "chief_engineering_officer",
+        "chief_science_officer",
+        "chief_security_officer",
+        "chief_medical_officer",
+        "chief_tactical_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": true,
+      "department_match_required": true
+    },
+    "ship_course_change": {
+      "domain": "ship_navigation",
+      "positions_any": [
+        "commanding_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": true
+    },
+    "mission_directive_change": {
+      "domain": "ship_mission",
+      "positions_any": [
+        "commanding_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": false
+    },
+    "assume_ship_command": {
+      "domain": "ship_command",
+      "positions_any": [
+        "commanding_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [
+        "command_qualified"
+      ],
+      "requires_on_duty": false,
+      "allows_delegation": false,
+      "allows_acting_succession": true
+    },
+    "bridge_watch_control": {
+      "domain": "bridge_watch",
+      "positions_any": [],
+      "duty_roles_any": [
+        "officer_of_watch"
+      ],
+      "qualifications_all": [
+        "command_qualified"
+      ],
+      "requires_on_duty": true,
+      "allows_delegation": false
+    },
+    "declare_unfit_for_duty": {
+      "domain": "medical_fitness",
+      "positions_any": [
+        "chief_medical_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [
+        "medical_fitness_authority"
+      ],
+      "requires_on_duty": false,
+      "allows_delegation": false
+    },
+    "recommend_first_officer": {
+      "domain": "personnel_recommendation",
+      "positions_any": [
+        "commanding_officer"
+      ],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": false,
+      "non_mutating_recommendation": true
+    },
+    "appoint_first_officer": {
+      "domain": "fleet_personnel",
+      "positions_any": [],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": false,
+      "requires_external_personnel_authority": true
+    },
+    "view_restricted_padd": {
+      "domain": "restricted_information",
+      "positions_any": [],
+      "duty_roles_any": [],
+      "qualifications_all": [],
+      "requires_on_duty": false,
+      "allows_delegation": false,
+      "requires_knowledge_and_clearance": true
+    }
+  },
+  "trusted_runtime_inputs": [
+    "authenticated_actor",
+    "live_world_revision",
+    "live_assignment",
+    "live_positions",
+    "live_duty",
+    "command_qualifications",
+    "medical_fitness",
+    "orders_and_delegations",
+    "scope",
+    "resource_state",
+    "knowledge_and_permissions"
+  ],
+  "mandatory_invariants": [
+    "missing_or_unverified_runtime_context_fails_closed",
+    "actor_must_belong_to_the_scope_unit",
+    "captain_is_a_rank_distinct_from_commanding_officer_position",
+    "temporary_command_never_mutates_rank_or_permanent_position",
+    "delegation_must_be_live_and_within_issuer_domain",
+    "medical_authority_has_professional_scope_only",
+    "recommendation_does_not_appoint",
+    "vacancy_requires_effective_order_and_departure_event",
+    "no_player_career_guarantee_bypasses_authority",
+    "ai_and_offline_fixture_cannot_grant_any_right",
+    "information_access_requires_both_knowledge_and_permission",
+    "world_revision_must_be_revalidated_at_execution"
+  ],
+  "source_refs": [
+    "proyecto/docs/decisions/personnel_model.md",
+    "proyecto/docs/decisions/universal_rank_insignia.md",
+    "mundo/lore/federation/starfleet/command_structure/succession_rules.json",
+    "proyecto/docs/roadmap/master/fases/F04/MANDO_NOMBRAMIENTOS_P03.md",
+    "proyecto/docs/roadmap/master/fases/F04/LIMITES_MEDICOS_NORMATIVOS_P04.md",
+    "sistemas/gameplay/chain_of_command/command_decision_delegation_state_v0.1.json",
+    "proyecto/docs/roadmap/master/fases/F11/F11-P01_JERARQUIA_CADENA_MANDO_V1.md"
+  ]
+}
