@@ -10,6 +10,8 @@
 
 > **F11-P05-A01 — auditoría del código (11-11-2026):** [Inventario de capacidades reales F04/F05/CoreRPG, riesgos de integración y primer corte A02](F11-P05-A01_AUDITORIA_INTEGRACION_CORE_2026-11-11.md). A01 identifica como bloqueos el ascenso autoritativo, la autorización de Personal de Flota, la identidad inter-naves y la diferencia entre guardia descubierta y plaza libre. **Solo auditoría estática; no se ha implementado ni ejecutado aún P05.**
 
+> **F11-P05-A02-00 — contrato profesional (11-11-2026):** [Identidad de carrera, códigos de rango 1101–1106, autorización exclusiva de Personal de Flota, operación atómica de ascenso y persistencia](F11-P05-A02-00_CONTRATO_IDENTIDAD_RANGOS_AUTORIDAD_2026-11-11.md). Incluye JSON versionado y pruebas de coherencia contra el lore y F04/F05; **no se ha programado todavía el primer ascenso en C++ ni se ha ejecutado una partida. A02-01 queda pendiente.**
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 
