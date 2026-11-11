@@ -37,7 +37,7 @@ def base(rank="ensign", now=12, since=0):
 
 
 class F11P03ProgressionTests(unittest.TestCase):
-    def test(self, expected, reason=None, changes=None, policy=None):
+    def check(self, expected, reason=None, changes=None, policy=None):
         s=base()
         if changes:
             s.update(copy.deepcopy(changes))
@@ -76,7 +76,7 @@ class F11P03ProgressionTests(unittest.TestCase):
                             plan_key("pc","rank-b","lieutenant","goal"))
 
     def test_07_eligible_returns_plan_not_rank(self):
-        r=self.test(PREPARED, "ELIGIBLE_WINDOW_HAS_PLANNED_CAUSAL_OPPORTUNITY")
+        r=self.check(PREPARED, "ELIGIBLE_WINDOW_HAS_PLANNED_CAUSAL_OPPORTUNITY")
         self.assertEqual(r["next_rank"],"lieutenant_junior_grade")
         self.assertNotIn("new_rank",r)
         self.assertIn("award_rank",r["must_not"])
@@ -89,140 +89,140 @@ class F11P03ProgressionTests(unittest.TestCase):
         self.assertEqual(r1,evaluate_progression(x))
 
     def test_09_service_time_not_due(self):
-        self.test(NOT_DUE,"MINIMUM_ILLUSTRATIVE_SERVICE_NOT_REACHED",
+        self.check(NOT_DUE,"MINIMUM_ILLUSTRATIVE_SERVICE_NOT_REACHED",
                   {"now_month":11,"ready_since_month":11,"review":dict(base(now=11)["review"])})
 
     def test_10_rank_clock_must_be_consistent(self):
-        self.test(DENIED,"INCONSISTENT_SERVICE_CLOCK",{"rank_since_month":13})
+        self.check(DENIED,"INCONSISTENT_SERVICE_CLOCK",{"rank_since_month":13})
 
     def test_11_missing_character_id(self):
-        self.test(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"actor_id":""})
+        self.check(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"actor_id":""})
 
     def test_12_missing_rank_event_id(self):
-        self.test(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"rank_event_id":None})
+        self.check(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"rank_event_id":None})
 
     def test_13_invalid_rank(self):
-        self.test(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"rank":"omnipotent_admiral"})
+        self.check(DENIED,"MISSING_ACTOR_OR_RANK_SOURCE",{"rank":"omnipotent_admiral"})
 
     def test_14_inactive_character_denied(self):
-        self.test(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"service_status":"retired"})
+        self.check(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"service_status":"retired"})
 
     def test_15_snapshot_unverified_denied(self):
-        self.test(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"context_verified":False})
+        self.check(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"context_verified":False})
 
     def test_16_invalid_world_revision(self):
-        self.test(DENIED,"INVALID_SERVICE_CLOCK_OR_REVISION",{"world_revision":"8"})
+        self.check(DENIED,"INVALID_SERVICE_CLOCK_OR_REVISION",{"world_revision":"8"})
 
     def test_17_negative_service_clock(self):
-        self.test(DENIED,"INCONSISTENT_SERVICE_CLOCK",{"service_start_month":-1})
+        self.check(DENIED,"INCONSISTENT_SERVICE_CLOCK",{"service_start_month":-1})
 
     def test_18_wrong_goal_denied(self):
-        self.test(DENIED,"INVALID_PREFERENCES_OR_QUALIFICATIONS",{"goal":"immediately_become_admiral"})
+        self.check(DENIED,"INVALID_PREFERENCES_OR_QUALIFICATIONS",{"goal":"immediately_become_admiral"})
 
     def test_19_player_opt_out_pauses(self):
-        self.test(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"player_opt_in":False})
+        self.check(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"player_opt_in":False})
 
     def test_20_decline_promotion_pauses(self):
-        self.test(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"goal":"pause_progression"})
+        self.check(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"goal":"pause_progression"})
 
     def test_21_pause_until_tick_pauses(self):
-        self.test(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"pause_until_month":13})
+        self.check(PAUSED,"VOLUNTARY_PLAYER_PAUSE",{"pause_until_month":13})
 
     def test_22_pause_elapsed_rechecks(self):
-        self.test(PREPARED,changes={"pause_until_month":12})
+        self.check(PREPARED,changes={"pause_until_month":12})
 
     def test_23_invalid_pause_denied(self):
-        self.test(DENIED,"INVALID_PAUSE",{"pause_until_month":"forever"})
+        self.check(DENIED,"INVALID_PAUSE",{"pause_until_month":"forever"})
 
     def test_24_active_sanction_requires_review_not_automatic_rank(self):
-        r=self.test(DISCIPLINE,"FORMAL_SANCTION_REQUIRES_REVIEW",{"conduct_status":"active_sanction"})
+        r=self.check(DISCIPLINE,"FORMAL_SANCTION_REQUIRES_REVIEW",{"conduct_status":"active_sanction"})
         self.assertGreater(r["next_review_no_later_than_month"],12)
 
     def test_25_counseling_not_permanent_block(self):
-        self.test(PREPARED,changes={"conduct_status":"counseling"})
+        self.check(PREPARED,changes={"conduct_status":"counseling"})
 
     def test_26_medical_unfit_requires_support_not_punishment(self):
-        r=self.test(FITNESS,"MEDICAL_SUPPORT_AND_FITNESS_REVIEW_REQUIRED",
+        r=self.check(FITNESS,"MEDICAL_SUPPORT_AND_FITNESS_REVIEW_REQUIRED",
                     {"medical_status":"unfit"})
         self.assertIs(r["punitive"],False)
 
     def test_27_medical_limited_does_not_automatically_sanction(self):
-        self.test(PREPARED,changes={"medical_status":"limited"})
+        self.check(PREPARED,changes={"medical_status":"limited"})
 
     def test_28_missing_training_generates_remediation(self):
-        r=self.test(TRAINING,"TRAINING_OR_MENTORSHIP_OPPORTUNITY_REQUIRED",
+        r=self.check(TRAINING,"TRAINING_OR_MENTORSHIP_OPPORTUNITY_REQUIRED",
                     {"missing_qualifications":["scientific-leadership"]})
         self.assertIn("scientific-leadership",r["missing_qualifications"])
 
     def test_29_empty_review_generates_formal_review(self):
-        self.test(REVIEW,"REVIEW_ABSENT",{"review":None})
+        self.check(REVIEW,"REVIEW_ABSENT",{"review":None})
 
     def test_30_unsigned_review_does_not_promote(self):
         rev=copy.deepcopy(base()["review"])
         rev["signed_by_authority"]=False
-        self.test(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
+        self.check(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
 
     def test_31_review_from_another_person_denied(self):
         rev=copy.deepcopy(base()["review"])
         rev["actor_id"]="npc-another"
-        self.test(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
+        self.check(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
 
     def test_32_review_from_previous_rank_denied(self):
         rev=copy.deepcopy(base()["review"])
         rev["rank_event_id"]="prior-rank"
-        self.test(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
+        self.check(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
 
     def test_33_review_must_reference_real_evidence(self):
         rev=copy.deepcopy(base()["review"])
         rev["source_event_ids"]=["invented-ai-report"]
-        self.test(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
+        self.check(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
 
     def test_34_ai_cannot_decide_review(self):
         rev=copy.deepcopy(base()["review"])
         rev["signed_by_authority"]=False
         rev["LLM_says"]="excellent"
-        self.test(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
+        self.check(REVIEW,"REVIEW_UNVERIFIED_OR_WRONG_ACTOR",{"review":rev})
 
     def test_35_review_from_future_denied(self):
         rev=copy.deepcopy(base()["review"])
         rev["review_month"]=13
-        self.test(REVIEW,"REVIEW_TIME_OR_SOURCE_INVALID",{"review":rev})
+        self.check(REVIEW,"REVIEW_TIME_OR_SOURCE_INVALID",{"review":rev})
 
     def test_36_review_revision_from_future_denied(self):
         rev=copy.deepcopy(base()["review"])
         rev["source_revision"]=9
-        self.test(REVIEW,"REVIEW_TIME_OR_SOURCE_INVALID",{"review":rev})
+        self.check(REVIEW,"REVIEW_TIME_OR_SOURCE_INVALID",{"review":rev})
 
     def test_37_review_can_survive_later_world_revision(self):
-        self.test(PREPARED,changes={"world_revision":9})
+        self.check(PREPARED,changes={"world_revision":9})
 
     def test_38_satisfactory_and_exceptional_are_both_eligible(self):
         rev=copy.deepcopy(base()["review"])
         rev["outcome"]="exceptional"
-        self.test(PREPARED,changes={"review":rev})
+        self.check(PREPARED,changes={"review":rev})
 
     def test_39_needs_improvement_generates_development(self):
         rev=copy.deepcopy(base()["review"])
         rev["outcome"]="development_needed"
-        self.test(TRAINING,"EVALUATION_REQUIRES_DEVELOPMENT_NOT_ARBITRARY_PROMOTION",
+        self.check(TRAINING,"EVALUATION_REQUIRES_DEVELOPMENT_NOT_ARBITRARY_PROMOTION",
                   {"review":rev})
 
     def test_40_adverse_review_generates_development(self):
         rev=copy.deepcopy(base()["review"])
         rev["outcome"]="adverse"
-        self.test(TRAINING,changes={"review":rev})
+        self.check(TRAINING,changes={"review":rev})
 
     def test_41_ready_timestamp_must_be_persistent(self):
-        self.test(ANCHOR,"PERSISTENT_READY_ANCHOR_REQUIRED",{"ready_since_month":None})
+        self.check(ANCHOR,"PERSISTENT_READY_ANCHOR_REQUIRED",{"ready_since_month":None})
 
     def test_42_ready_anchor_cannot_precede_review(self):
-        self.test(ANCHOR,"PERSISTENT_READY_ANCHOR_REQUIRED",{"ready_since_month":11})
+        self.check(ANCHOR,"PERSISTENT_READY_ANCHOR_REQUIRED",{"ready_since_month":11})
 
     def test_43_ready_anchor_cannot_come_from_future(self):
-        self.test(ANCHOR,changes={"ready_since_month":13})
+        self.check(ANCHOR,changes={"ready_since_month":13})
 
     def test_44_ready_anchor_reuses_finite_deadline(self):
-        r=self.test(PREPARED)
+        r=self.check(PREPARED)
         self.assertEqual(r["deadline_month"],21)
         self.assertEqual(r["ready_since_month"],12)
 
@@ -230,13 +230,13 @@ class F11P03ProgressionTests(unittest.TestCase):
         s=base(now=22)
         s["review"]["review_month"]=12
         s["ready_since_month"]=12
-        self.test(URGENT,changes=s)
+        self.check(URGENT,changes=s)
 
     def test_46_at_horizon_must_escalate(self):
         s=base(now=21)
         s["review"]["review_month"]=12
         s["ready_since_month"]=12
-        self.test(URGENT,changes=s)
+        self.check(URGENT,changes=s)
 
     def test_47_plan_not_affected_by_world_revision_change(self):
         s=base()
@@ -254,23 +254,23 @@ class F11P03ProgressionTests(unittest.TestCase):
 
     def test_49_valid_existing_plan_prevents_duplicate(self):
         p=evaluate_progression(base())
-        self.test(ACTIVE,"IDEMPOTENT_PLAN_EXISTS",
+        self.check(ACTIVE,"IDEMPOTENT_PLAN_EXISTS",
                   {"plan":{"plan_id":p["plan_id"],"rank_event_id":"event-ensign-1",
                            "target_rank":"lieutenant_junior_grade","status":"planned",
                            "created_month":12,"deadline_month":21}})
 
     def test_50_wrong_plan_id_denied(self):
-        self.test(DENIED,"EXISTING_PLAN_STALE_OR_INCONSISTENT",
+        self.check(DENIED,"EXISTING_PLAN_STALE_OR_INCONSISTENT",
                   {"plan":{"plan_id":"invented","rank_event_id":"event-ensign-1",
                            "target_rank":"lieutenant_junior_grade","status":"planned",
                            "created_month":12,"deadline_month":21}})
 
     def test_51_invalid_existing_plan_denied(self):
-        self.test(DENIED,"INVALID_EXISTING_PLAN",{"plan":"hacked"})
+        self.check(DENIED,"INVALID_EXISTING_PLAN",{"plan":"hacked"})
 
     def test_52_future_plan_creation_denied(self):
         k=evaluate_progression(base())["plan_id"]
-        self.test(DENIED,"EXISTING_PLAN_STALE_OR_INCONSISTENT",
+        self.check(DENIED,"EXISTING_PLAN_STALE_OR_INCONSISTENT",
                   {"plan":{"plan_id":k,"rank_event_id":"event-ensign-1",
                            "target_rank":"lieutenant_junior_grade","status":"planned",
                            "created_month":30,"deadline_month":21}})
@@ -278,29 +278,29 @@ class F11P03ProgressionTests(unittest.TestCase):
     def test_53_captain_promotion_requires_command_qualification(self):
         s=base(rank="commander",now=24)
         s["qualifications"]=[]
-        self.test(TRAINING,"TRAINING_OR_MENTORSHIP_OPPORTUNITY_REQUIRED",changes=s)
+        self.check(TRAINING,"TRAINING_OR_MENTORSHIP_OPPORTUNITY_REQUIRED",changes=s)
 
     def test_54_commander_promotes_to_captain_with_prepared_external_ship(self):
         s=base(rank="commander",now=24)
-        r=self.test(PREPARED,changes=s)
+        r=self.check(PREPARED,changes=s)
         self.assertEqual(r["next_rank"],"captain")
         self.assertEqual(r["opportunity_kind"],"fleet_captain_selection_and_external_command")
 
     def test_55_captain_still_needs_enterprise_d_command(self):
         s=base(rank="captain",now=80)
-        self.test(RANK_LIMIT,"CAPTAIN_RANK_NOT_ENTERPRISE_D_COMMAND",s)
+        self.check(RANK_LIMIT,"CAPTAIN_RANK_NOT_ENTERPRISE_D_COMMAND",s)
 
     def test_56_evaluation_without_xp_makes_senior_route_possible(self):
         s=base(rank="lieutenant",now=18)
-        r=self.test(PREPARED,changes=s)
+        r=self.check(PREPARED,changes=s)
         self.assertEqual(r["next_rank"],"lieutenant_commander")
         self.assertEqual(r["opportunity_kind"],"future_departmental_post_preparation")
 
     def test_57_mission_record_must_have_verified_evidence(self):
-        self.test(DENIED,"INVALID_EVIDENCE_SET",{"evidence_event_ids":None})
+        self.check(DENIED,"INVALID_EVIDENCE_SET",{"evidence_event_ids":None})
 
     def test_58_unverified_qualification_assessment_denied(self):
-        self.test(DENIED,"UNVERIFIED_QUALIFICATION_ASSESSMENT",
+        self.check(DENIED,"UNVERIFIED_QUALIFICATION_ASSESSMENT",
                   {"qualification_assessment_verified":False})
 
     def test_59_illustrative_policy_disallows_zero_horizon(self):
@@ -358,7 +358,7 @@ class F11P03ProgressionTests(unittest.TestCase):
         self.assertEqual(evaluate_progression(s)["status"],PREPARED)
 
     def test_67_retired_rank_should_not_start_new_progression(self):
-        self.test(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"service_status":"retired"})
+        self.check(DENIED,"SERVICE_OR_CONTEXT_NOT_VERIFIED",{"service_status":"retired"})
 
     def test_68_no_unverifiable_result_can_apply_effects(self):
         for status in (DENIED,NOT_DUE,REVIEW,TRAINING,DISCIPLINE,FITNESS,PAUSED,ANCHOR,
