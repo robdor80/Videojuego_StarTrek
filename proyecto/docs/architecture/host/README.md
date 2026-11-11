@@ -36,4 +36,4 @@ H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Co
 - Fases y PR independientes; solo el usuario autoriza fusiones. Estados PLANIFICADO, IMPLEMENTADO, PROBADO, CERTIFICADO y FUSIONADO no son intercambiables.
 - Logs y artefactos temporales solo en laboratorios/ dentro del repositorio, excluidos de Git. No hay dependencias permanentes hacia esos resultados.
 
-La H01 documental necesita CI y revisión antes de considerarse cerrada; sus contratos guían H02-H07, sin sustituir la certificación de F11.
+La H01 documental tiene 11/11 comprobaciones estáticas PASS (Actions run 43089381278) y requiere revisión/fusión autorizada antes de considerarse cerrada; sus contratos guían H02-H07, sin sustituir la certificación de F11.
