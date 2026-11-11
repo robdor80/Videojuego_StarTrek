@@ -361,7 +361,16 @@ class F11P04SuccessionTests(unittest.TestCase):
 
     def test_66_player_already_in_correct_position_requires_no_new_plan(self):
         self.check(ALREADY,"PLAYER_ALREADY_OCCUPIES_TARGET_BILLET",
+                   player={"current_billet_id":"xo-D-1","current_position_id":"first_officer"},
+                   target={"occupant_id":"player-1"})
+
+    def test_91_player_cannot_claim_an_npc_occupied_billet(self):
+        self.check(INVALID,"PLAYER_AND_CORE_BILLET_OCCUPANT_DISAGREE",
                    player={"current_billet_id":"xo-D-1","current_position_id":"first_officer"})
+
+    def test_92_slot_cannot_claim_player_if_player_still_elsewhere(self):
+        self.check(INVALID,"PLAYER_AND_CORE_BILLET_OCCUPANT_DISAGREE",
+                   target={"occupant_id":"player-1"})
 
     def test_67_npc_source_event_evidence_cannot_be_forged(self):
         r=self.check(ALTERNATIVE,option={"professional_source_events":["AI_invented_merit"]})
