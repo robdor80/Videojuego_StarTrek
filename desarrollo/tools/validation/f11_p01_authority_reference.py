@@ -76,7 +76,7 @@ def evaluate(action_id, ctx, request=None, contract=None):
         return result(False, "MISSING_IDENTITY_OR_ASSIGNMENT")
     if any(not valid_strings(ctx.get(key)) for key in required_lists):
         return result(False, "MISSING_ROLE_OR_QUALIFICATION_DATA")
-    if ctx["rank"] not in policy["rank_progression"]:
+    if ctx["rank"] not in policy["rank_progression"] and ctx["rank"] not in policy.get("flag_ranks", []):
         return result(False, "INVALID_RANK")
     if type(ctx.get("time_tick")) is not int or type(ctx.get("world_revision")) is not int:
         return result(False, "MISSING_TIME_OR_REVISION")
