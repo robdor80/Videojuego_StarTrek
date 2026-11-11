@@ -4,6 +4,8 @@
 
 > **F11-P02 — trabajo de referencia 11-11-2026:** [Diseño de destinos, 7 áreas de F04, perfiles de puesto y vacantes](F11-P02_DESTINOS_DEPARTAMENTOS_PUESTOS_V1.md). Incluye catálogo y evaluador Python independiente con pruebas automatizadas; **no hay plazas, destinos ni ofertas efectivas en CoreRPG/UE5**. No se da por integrada la progresión garantizada de P03/P04 ni se altera el estado global de F11.
 
+> **F11-P03 — preparación de progresión (11-11-2026):** [Reglamento de evaluaciones, ascensos y oportunidades garantizadas](F11-P03_EVALUACIONES_ASCENSOS_Y_OPORTUNIDADES_V1.md). Contrato de meses ficticios **solo ilustrativos**, planificador offline no mutador, control de evaluaciones, sanciones, formación, preferencias, planes idempotentes y escalado cuando vence el horizonte. **No se han implementado todavía ascensos reales, vacantes de NPC ni integración en CoreRPG/UE5; la carrera garantizada integral depende de P04/P05.**
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 
