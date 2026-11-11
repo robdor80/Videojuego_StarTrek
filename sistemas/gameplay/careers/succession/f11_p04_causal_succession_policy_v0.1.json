@@ -146,7 +146,8 @@
     "AWAITING_EFFECTIVE_DEPARTURE",
     "FLEET_ALTERNATIVE_REQUIRED",
     "URGENT_FLEET_ESCALATION",
-    "FUTURE_CANDIDACY_READY"
+    "FUTURE_CANDIDACY_READY",
+    "AWAITING_VACANCY_CONFIRMATION"
   ],
   "event_chain": [
     "npc_career_motivation_verified",
@@ -179,7 +180,8 @@
     "no_fleet_staff_appointments_without_catalogued_authority",
     "no_forced_departure_from_enterprise_d_to_be_captain",
     "fleet_selection_after_vacancy_requires_authority_and_player_eligibility",
-    "timeline_events_cannot_be_postdated_or_backdated_to_create_fake_history"
+    "timeline_events_cannot_be_postdated_or_backdated_to_create_fake_history",
+    "npc_acceptance_and_promotion_board_must_be_authoritatively_supported"
   ],
   "core_integration_requirements": [
     "Core WorldState owns current occupants and all unit/position IDs",
@@ -189,7 +191,9 @@
     "Persist plan episode IDs, NPC responses, rejected alternatives, source events and deadline",
     "NPC decisions are recorded before orders, and orders before effective departure",
     "F11-P05 saves/loads active plans and verifies same future and no duplicate assignments",
-    "UE5 only renders verified outcomes; AI only phrases narrative"
+    "UE5 only renders verified outcomes; AI only phrases narrative",
+    "P04 requires a verified P03 plan and its persistently recorded ready-anchor; never construct them from AI narratives",
+    "P04 proposals distinguish NPC intent, signed offer, acceptance, board decision, issued personnel order and actual release"
   ],
   "links": [
     "proyecto/docs/roadmap/master/fases/F11/PLAN_F11_ACTUALIZADO_2026-11-11.md",
