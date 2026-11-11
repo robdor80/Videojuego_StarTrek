@@ -34,6 +34,17 @@ Actúa como ingeniero C++ responsable de implementar el **primer ascenso verdade
 - Confirmación efectiva **solo en el instante actual de la campaña**. No programar ascensos futuros todavía.
 - No editar ni borrar modelos 3D, configuraciones Unreal, librerías PBR ni documentos originales. No alterar permisos del PADD.
 
+### B.1. Requisito transversal aprobado para la presentación futura del ascenso
+
+La decisión autoral [ascensos diegéticos F11-P05](../../../../decisions/f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md) y la [issue #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104) son **obligatorias**. En este corte A02-01 **NO** implementar ni dibujar ventanas/menús de «subida de nivel», escenas 3D, PADD ni colas visuales. Sí asegurar que el evento autoritativo `promotion` que ya exige este encargo posea de forma persistente:
+
+- **`promotion_event_id` estable y único** apto para deduplicar futuras comunicaciones.
+- **`subject_character_id`**, rango anterior/nuevo, referencia a orden/autoridad y **`effective_at`** (instante de campaña cuando el ascenso es legalmente válido).
+- Referencia de identidad/destino/presentación suficiente para que un futuro director consulte Core con permisos sin inventarse superior, nave o contexto. **No almacenar un diálogo fijo como verdad autoritativa.**
+- Prueba tras guardar/cargar de que el evento mantiene la misma identidad y momento efectivo.
+
+La distinción `effective_at` vs. `presented_at` es **innegociable**: que el personaje esté en combate o no se haya construido el despacho no puede retrasar el efecto legal del ascenso. La **cola/acuse persistente** se desarrolla en **F11-P05-C**, y la comunicación personal, encuentro con superior, insignias y ceremonia jugable se desarrollan en **F11-P05-D**. Las pruebas de presentación E2E son **F11-P05-E**. Este bloque es una obligación de compatibilidad futura, **sin ampliar el alcance nativo A02-01 a UI/UE5**.
+
 ### C. Pruebas nativas obligatorias
 
 1. **Positiva:** alta confiable y comisión previa de alférez, promoción autorizada; `f04_person` informa `1102` y permanecen misma identidad, nave, plaza, departamento, cualificaciones, destino y origen de mando.
