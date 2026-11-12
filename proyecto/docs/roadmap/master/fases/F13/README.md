@@ -82,3 +82,7 @@ B08, **Crisis sistémicas y consecuencias a escala galáctica**, dispone de 20 p
 ## Confirmación posfusión B08 — 12-11-2026
 
 PR #118 fusionada (commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`), 19/19 workflows del último HEAD previo y del HEAD de main en SUCCESS, incluidos [B08 posfusión](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149) y [F13 posfusión](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238). **Siguiente bloque de referencia: B09**. F13 sigue PLANIFICADA; no son pruebas de CoreRPG/HOST/UE5 reales.
+
+## Actualización P2-B09 — 12-11-2026
+
+Se añade el contrato/referencia offline **B09, misiones emergentes derivadas de necesidades externas acreditadas**, veinte paquetes EM001–EM020, con rutas, medios, permisos independientes, Primera Directriz, noticias demoradas, misiones NPC y resultado verificado. No modifica el propietario de misiones reales ni la función de referencia previa `derive_mission_candidate` de F13. [Plan B09](../../../procedural_emergent_missions_plan_v0.1.md) y [acta](../../../P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md). **B10 sigue pendiente hasta CI y fusión B09**. El estado F13 **PLANIFICADA** y las capas 119/120 no cambian; ni CoreRPG, ni HOST, ni Unreal ejecutan aún estas misiones.

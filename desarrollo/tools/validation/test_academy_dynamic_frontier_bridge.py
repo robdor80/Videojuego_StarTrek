@@ -64,7 +64,7 @@ class AcademyDynamicFrontierBridgeTests(unittest.TestCase):
 
     def test_08_real_current_references_are_valid(self):
         source = (ROOT / "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md").read_text(encoding="utf-8")
-        self.assertEqual(9, academy.dynamic_reference_frontier(source))
+        self.assertEqual(10, academy.dynamic_reference_frontier(source))
         status = json.loads((ROOT / "proyecto/docs/roadmap/academy_life_social_simulation_status_v0.1.json").read_text(encoding="utf-8"))
         self.assertEqual("READY_TO_RESUME", status["deferred_after_step_20"]["status"])
 

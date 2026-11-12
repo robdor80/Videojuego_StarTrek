@@ -13,7 +13,7 @@
 | 6 | Science, Technology & Discovery | REFERENCE_COMPLETE |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | REFERENCE_COMPLETE |
 | 8 | Systemic Crises | REFERENCE_COMPLETE |
-| 9 | Emergent Missions from World State | TODO |
+| 9 | Emergent Missions from World State | REFERENCE_COMPLETE |
 | 10 | Background Galactic Evolution | TODO |
 
 ## Block separation
@@ -72,3 +72,7 @@ Bloque 8 **REFERENCE_COMPLETE en contrato y simulación de referencia**: 20 paqu
 ## Confirmación administrativa — 12/11/2026, B08
 
 La PR #118 se fusionó en main, squash `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`; la CI previa fue 19/19 SUCCESS y la posfusión volvió a certificar 19/19 SUCCESS ([B08](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149), [F13](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238)). La **puerta B09 está abierta** para referencia; no modifica el carácter no autoritativo de B08 ni cierra B10 o F13 global.
+
+## Actualización secuencial — 12/11/2026, P2-B09
+
+**Bloque 9 — Misiones emergentes derivadas del estado del universo: REFERENCE_COMPLETE sólo en contratos y referencia offline**, 20 paquetes EM001–EM020. Requiere hechos de necesidad y consecuencia ya aceptados; proyectar un riesgo B08 no genera misión; autoridad, recursos y rutas externos, intervención prewarp con excepción independiente, NPC sin jugador, noticias retrasadas, resultado y resolución verificados. Ver [plan B09](procedural_emergent_missions_plan_v0.1.md), [estado](procedural_emergent_missions_status_v0.1.json) y [acta](P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md). **La puerta del Bloque 10 — Evolución galáctica en segundo plano se abre tras CI definitivo y fusión de B09.** F13 global PLANIFICADA, CoreRPG/HOST/UE5 sin runtime, capas 119/120 sin cambio. Declaraciones antiguas sobre bloque siguiente son fotografías históricas.

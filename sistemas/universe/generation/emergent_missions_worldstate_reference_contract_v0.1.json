@@ -1,0 +1,152 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "emergent_missions_worldstate_reference",
+  "status": "OFFLINE_REFERENCE_ONLY",
+  "owner": "Videojuego_StarTrek / Planificacion 2 / B09",
+  "classification": "STAR_TREK_SPECIFIC_NON_RUNTIME",
+  "canonical_epoch": "tng_ds9_voyager",
+  "authority": {
+    "truth": "CoreRPG is sole WorldState writer and authoritative adjudicator; fixture accepted facts are unsigned and synthetic",
+    "needs": "B01–B08 own causal consequences and accepted needs; B08 projections are not accepted needs",
+    "crisis": "B08 does not invent needs/missions; accepted external consequences may later result in a need",
+    "economy": "B04 owns resources, inventory, trade and allocation",
+    "science": "B06 owns research and certified capabilities",
+    "anomalies": "B07 owns physical anomalies and archaeology",
+    "war": "B03 owns military actions and effects",
+    "missions": "B09 screens mission candidates and records non-authoritative mission lifecycle proof only",
+    "scheduler": "B10 will own background event evaluation, not a B09 tick loop",
+    "authority_and_session": "F11 and HOST enforce authentication, orders, chain of command and player/NPC permissions; fixture grants are not live credentials",
+    "execution": "CoreRPG commands, independent facts, save/load and UE5 gameplay are not implemented here",
+    "narrative": "Scripted seasons and mission templates are separate; seasonal arcs never manufacture WorldState need to force B09 offer"
+  },
+  "references": [
+    "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+    "proyecto/docs/roadmap/master/fases/F13/README.md",
+    "desarrollo/tools/validation/f13_dynamic_universe_reference.py",
+    "sistemas/universe/generation/systemic_crises_galactic_consequences_reference_contract_v0.1.json",
+    "proyecto/docs/decisions/authoritative_observable_universe.md",
+    "AGENTS.md"
+  ],
+  "packages": [
+    "EM001_accepted_unmet_need",
+    "EM002_verifiable_consequence_cause",
+    "EM003_b08_risk_is_not_need",
+    "EM004_campaign_cutoff_and_timestamp",
+    "EM005_stable_per_need_asset_identity",
+    "EM006_delivered_need_knowledge",
+    "EM007_real_asset_capabilities_and_availability",
+    "EM008_existing_route_and_destination",
+    "EM009_jurisdiction_and_prime_directive_exception",
+    "EM010_independent_command_order",
+    "EM011_independent_asset_reservation",
+    "EM012_npc_fulfilment_without_player",
+    "EM013_player_is_not_world_critical_path",
+    "EM014_proposed_authorized_assigned_completed_cancelled",
+    "EM015_external_verified_outcome_and_need_resolution",
+    "EM016_competition_and_reopened_needs_are_not_rerolled",
+    "EM017_no_worldstate_resource_or_reward_writes",
+    "EM018_atomic_idempotent_event_log",
+    "EM019_adversarial_fixture_tests_and_ci",
+    "EM020_integration_gates_and_close"
+  ],
+  "source_requirements": {
+    "need": "Externally accepted campaign-scoped need with already accepted consequence cause, time, requester, existing location, existing open route, required capabilities and classification",
+    "forbidden_origin": "Risk/exposure projections, camera distance, player availability, quest dramatic pressure or unapproved policy",
+    "fact_maturity": "Fixture status accepted is a synthetic input and does not provide a trusted CoreRPG signature",
+    "need_resolution": "Only an accepted independent need_resolved fact establishes resolution; no auto-close when player clicks"
+  },
+  "stable_id": "p2b09:<campaign_id>:<need_ref>:<asset_ref>",
+  "screen": {
+    "result": [
+      "CANDIDATE",
+      "NO_MISSION"
+    ],
+    "required": [
+      "accepted need and accepted consequence not future",
+      "unresolved at evaluation tick",
+      "actor scope propose and delivered or previously granted knowledge",
+      "actor clearance >= need classification",
+      "real available asset with required capabilities",
+      "existing route open and ending at need location",
+      "asset not already assigned in reference",
+      "asset location matches existing route origin",
+      "one concurrent assigned resource response per accepted need in reference"
+    ],
+    "not_auto_dispatch": true,
+    "not_auto_published_to_player": true,
+    "mission_not_created_without_need": true
+  },
+  "lifecycle": {
+    "states": [
+      "proposed",
+      "authorized",
+      "assigned",
+      "completed",
+      "cancelled"
+    ],
+    "events": [
+      "propose",
+      "authorize",
+      "assign",
+      "complete",
+      "cancel",
+      "communicate"
+    ],
+    "authorize": "Independent accepted order naming mission, need, asset, responsible actor, jurisdiction, approved by separate issuer; prewarp needs independent approved_exception policy",
+    "assign": "Separate accepted order and separate accepted reservation, real available and qualified asset, no concurrent assigned same asset; no reservation created here; verified route origin equals asset location; reject parallel assignment against same need",
+    "complete": "Verified independent outcome_report for exact mission AND independently accepted need_resolved fact; rewards/migrations not written",
+    "cancel": "Accepted external cancellation decision; an already resolved need prevents further dispatch but does not rewrite prior mission history",
+    "knowledge": "Only delivered, clearance-compatible historical snapshots; a late message may remain stale"
+  },
+  "prime_directive": {
+    "prewarp_intervention": "hard refusal without accepted specific approved_exception even during emergency",
+    "nonprewarp": "no extra invented policy",
+    "contact_authority": "no automatic contact by warp threshold or rescue"
+  },
+  "determinism": {
+    "canonical_json": "sort_keys, UTF-8, compact separators, no NaN",
+    "record_digest": "SHA-256 per local event record; not CoreRPG signatures",
+    "idempotence": "same ID and body no-op even on later replay; collision raises",
+    "ordering": "monotonic tick >= cutoff except exact replay",
+    "atomicity": "failed request never modifies supplied state",
+    "prohibited_inputs": [
+      "player_presence",
+      "player_distance",
+      "camera_distance",
+      "lod",
+      "reward_grant",
+      "world_delta",
+      "inventory_delta",
+      "population_delta",
+      "damage_delta",
+      "sovereignty_delta",
+      "war_declaration",
+      "technology_unlock",
+      "create_need",
+      "create_route"
+    ]
+  },
+  "forbidden": [
+    "Generating stock shortages, injuries, NPC distress or anomalies just to spawn missions",
+    "Treating projected B08 pressures as accepted humanitarian needs",
+    "Auto-granting rank authority, Federation permissions, Prime Directive exceptions or external reservations",
+    "Forcing Enterprise-D/player involvement or success; no teleportation or phantom ship routes",
+    "Awarding credits, technology, commendations or loot in reference simulation",
+    "Claiming the Python reducer starts gameplay quests, NPCs, B10 scheduler or persistent CoreRPG events"
+  ],
+  "evidence": {
+    "simulator": "desarrollo/tools/generation/simulate_emergent_missions.py",
+    "fixture": "desarrollo/validation/fixtures/emergent_missions/verified_unmet_need_npc_response_v0.1.json",
+    "tests": "desarrollo/tools/generation/test_simulate_emergent_missions.py",
+    "workflow": ".github/workflows/p2-b09-emergent-missions.yml"
+  },
+  "runtime_gates": [
+    "CoreRPG signed accepted facts, event ownership and true session scope",
+    "F11 + HOST order and command issuer verification",
+    "Real B04 stock, logistics, route, availability and reservation integration",
+    "B01-B08 factual need production with unchanged authority",
+    "B10 offscreen scheduler, missed ticks, fair multi-agent mission arbitrator and durable replay",
+    "Persisted conflict checks, migrations, cancellation and stale-status correction",
+    "UE5 mission screens, logs, reward handling, NPC dispatch, PADD privacy and end-to-end tests"
+  ]
+}

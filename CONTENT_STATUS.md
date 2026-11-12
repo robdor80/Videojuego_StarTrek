@@ -668,3 +668,9 @@ El expediente procede de **hechos de choque existentes y ya aceptados en un fixt
 
 
 **Cierre administrativo P2-B08:** PR #118 fusionada en main (commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`). [B08 posfusión #43260787149](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149) y [F13 posfusión #43260787238](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238): SUCCESS, junto con **19/19 workflows** del HEAD de fusión. **B09 ya habilitado** para su trabajo de referencia; B10 TODO, F13 global PLANIFICADA y ninguna ejecución CoreRPG/HOST/UE5 nueva. Las puertas «pendientes» mencionadas antes conservan su valor de seguimiento previo.
+
+## P2 — Universo dinámico: Bloque 9 (2026-11-12)
+
+**Bloque 9 — Misiones emergentes derivadas del estado del universo: REFERENCE_COMPLETE en contrato y evaluador offline, 20/20 paquetes EM001–EM020.** Plan: `proyecto/docs/roadmap/procedural_emergent_missions_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_emergent_missions_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md`. Necesidades sintéticas expresamente aceptadas y derivadas de consecuencias independientes, sin crear misiones desde una proyección B08 ni por distancia del jugador. La agencia NPC puede resolver la necesidad antes de que llegue la noticia a la Enterprise-D; se exigen órdenes y reservas externas, verificación de Primera Directriz y resultado aceptado para cerrar.
+
+**No es una implementación de misiones jugables**: los datos `accepted` del fixture no están firmados por CoreRPG; no hay recursos consumidos, asignaciones ejecutadas, órdenes HOST/F11 reales, UE5, PADD ni scheduler B10. La puerta B10 se habilita sólo tras CI definitivo y fusión B09; F13 general PLANIFICADA y capas 119/120 intactas.
