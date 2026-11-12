@@ -623,3 +623,12 @@ Current layer status:
 - **120 BLOCKED_RUNTIME** — waits on CoreRPG Generic World State and later runtime capabilities.
 
 This status does **not** mean all species, planets, ships, organizations or assets are exhaustively populated. It means their governing procedural contracts and cross-domain rules now have a coherent baseline.
+
+## P2 — Universo dinámico: Bloque 4 (2026-11-12)
+
+**Bloque 4 — Economía viva interplanetaria e interestelar: COMPLETE_REFERENCE** en contratos, simulador determinista y pruebas Star Trek. Su referencia es `proyecto/docs/roadmap/procedural_living_economy_plan_v0.1.md`, con acta `proyecto/docs/roadmap/P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md` y estado `proyecto/docs/roadmap/procedural_living_economy_status_v0.1.json`.
+
+**Validación:** workflow [P2-B04 #43192447974](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43192447974) SUCCESS: 30 pruebas de economía, 62 pruebas de bloques dinámicos 1–4 (incluyendo esas 30), regresión LORE-04B y JSON. LORE-04B sigue cerrado **solo documentalmente**; sus referencias de octubre al Bloque 4 pendiente reflejan el estado anterior, no la fotografía actual.
+
+**Limitación:** no hay integración CoreRPG/UE5/HOST, ni un mercado económico ejecutándose autónomamente en la campaña. WorldState, tiempo, acciones, transacciones y guardado genéricos siguen siendo propiedad de CoreRPG. **Siguiente bloque secuencial: Bloque 5 — Historia procedural y acontecimientos importantes.**
+
