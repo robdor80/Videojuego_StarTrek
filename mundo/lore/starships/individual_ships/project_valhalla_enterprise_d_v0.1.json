@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "project_valhalla_enterprise_d_reconstruction",
+  "decision_id": "DEC-0020",
+  "decision_date": "2026-11-13",
+  "decision_status": "APPROVED_GAME_ADDITION_DOCUMENTARY_NOT_RUNTIME",
+  "canon_policy_ref": "mundo/sources/canon_policy.md",
+  "authoritative_world_state": "CoreRPG_ONLY",
+  "runtime_implemented": false,
+  "project": {
+    "project_id": "project_valhalla",
+    "official_in_game_name": "Proyecto Valhalla",
+    "kind": "INDIVIDUAL_SHIP_RECOVERY_RECONSTRUCTION_AND_REFIT",
+    "director": "geordi_la_forge",
+    "director_role_is_game_addition": true
+  },
+  "subject": {
+    "ship_id": "uss_enterprise_ncc_1701_d",
+    "registry": "NCC-1701-D",
+    "display_name": "USS Enterprise",
+    "class_id": "galaxy",
+    "configuration_intent": "galaxy_refit_a2",
+    "ship_is_renamed": false
+  },
+  "chronology": [
+    {
+      "year": 2371,
+      "event": "enterprise_d_saucer_crash_stardrive_loss_at_veridian_iii",
+      "provenance": "SCREEN_CANON",
+      "campaign_initialization": "historical_anchor",
+      "date_precision": "year"
+    },
+    {
+      "year": 2379,
+      "event": "project_valhalla_institutional_origin",
+      "provenance": "GAME_ADDITION",
+      "campaign_initialization": "authorial_backstory",
+      "date_precision": "year"
+    },
+    {
+      "year": 2380,
+      "event": "recovery_reconstruction_refit_work_starts",
+      "provenance": "GAME_ADDITION",
+      "campaign_initialization": "authorial_backstory",
+      "date_precision": "year"
+    },
+    {
+      "year": 2383,
+      "event": "academy_entry_odyssey_operational_enterprise_d_under_reconstruction",
+      "provenance": "GAME_ADDITION",
+      "campaign_initialization": "campaign_start_reference",
+      "date_precision": "year"
+    },
+    {
+      "year": 2387,
+      "event": "enterprise_d_target_readiness_not_guaranteed",
+      "provenance": "GAME_ADDITION_TARGET",
+      "campaign_initialization": "conditional_future_only",
+      "date_precision": "year"
+    },
+    {
+      "year": 2401,
+      "event": "picard_tv_restoration_with_syracuse_secondary_hull",
+      "provenance": "OFFICIAL_REFERENCE_TO_SCREEN_CANON",
+      "campaign_initialization": "NON_MANDATORY_FUTURE_TV_REFERENCE",
+      "date_precision": "year"
+    }
+  ],
+  "academy": {
+    "start_year": 2383,
+    "duration_years": 4,
+    "graduation_year_approx": 2387,
+    "player_assignment_automatic": false,
+    "captaincy_automatic": false
+  },
+  "odyssey": {
+    "in_service_by_2383": true,
+    "starfleet_technology_leader_2383": true,
+    "enterprise_f_automatically_exists": false,
+    "provenance": "GAME_ADDITION"
+  },
+  "quantum_slipstream": {
+    "experimental_operators": [
+      "odyssey_test_units"
+    ],
+    "experimental_start_year": 2383,
+    "installed_on_enterprise_d_by_default": false,
+    "installation_requires_separate_authorization": true
+  },
+  "technology_and_staffing": {
+    "historical_legacy_class": "valhalla",
+    "legacy_technical_options_not_auto_installed": true,
+    "legacy_crew_1800_starfleet_400_civilians_not_automatically_transferred": true,
+    "defiant_auxiliary_not_automatically_installed": true
+  },
+  "future": {
+    "readiness_2387_guaranteed": false,
+    "syracuse_donor_required_in_2387": false,
+    "post_2383_screen_future_forced": false,
+    "actual_service_date": null,
+    "donor_secondary_hull_in_2387": null
+  },
+  "authorities": {
+    "identity_and_research": "Videojuego_StarTrek_LORE",
+    "world_state": "CoreRPG",
+    "starship_instantiation": "F04_HOST",
+    "sensors": "F06",
+    "visuals": "F07_UE5",
+    "career": "F10_F11"
+  },
+  "legacy_references": [
+    "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md",
+    "mundo/lore/technology/valhalla_tech_decisions_v0.1.json",
+    "mundo/lore/starships/classes/core_starship_classes.json",
+    "proyecto/docs/roadmap/master/DECISIONES_Y_RIESGOS.md"
+  ],
+  "canonical_reference_links": [
+    "https://www.startrek.com/news/recap-star-trek-picard-309-vox",
+    "https://www.startrek.com/news/ships/enterprise-starfleets-finest-flagships",
+    "https://www.startrek.com/news/journey-from-generations-to-picard"
+  ]
+}

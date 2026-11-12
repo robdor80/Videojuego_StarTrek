@@ -2,6 +2,10 @@
 
 Las decisiones aprobadas prevalecen sobre propuestas anteriores sólo en los aspectos que modifican expresamente. Conservar siempre el historial anterior y separar `GAME_ADDITION` de `SCREEN_CANON` y de implementación CoreRPG/Unreal.
 
+## Decisión principal vigente — 2026-11-13 (LORE-05A)
+
+- **[DEC-0020 — Enterprise NCC-1701-D reconstruida mediante Proyecto Valhalla](enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md)**. La nave es una **Galaxy individual modernizada**; Valhalla es el **nombre del programa**, no de la clase o del buque. Conserva 2379–2387, Academia/Odyssey 2383 y continuidad divergente; supersede la identidad de «nueva clase Valhalla» del protagonista en actas históricas. **No alterar IDs legados ni asumir capacidades o disponibilidad runtime**.
+
 ## Decisión transversal vigente 2026-11-11
 
 - **APROBADA / IMPLEMENTACIÓN PENDIENTE:** [Ascensos, propuestas y nombramientos diegéticos F11-P05](f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md). Separar efectos Core de comunicaciones, encuentros y ceremonias; implementar en A02-01/P05-C/P05-D y certificar en P05-E. [Seguimiento #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104).
