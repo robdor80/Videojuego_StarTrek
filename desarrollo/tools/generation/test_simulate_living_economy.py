@@ -173,7 +173,7 @@ class LivingEconomyTests(unittest.TestCase):
             le.apply_event(s, event("deliver", tick=5, shipment_id="manifest_001"))
         self.assertEqual(s, prior)
         self.assertIn("manifest_001", s["shipments"])
-        reopen = event("set_route_access", tick=6, route_id="alpha_beta_corridor",
+        reopen = event("set_route_access", event_id="test-route-reopen", tick=6, route_id="alpha_beta_corridor",
                        open=True, legal_access=True, policy_ref="border_permission_002")
         s = le.apply_event(s, reopen)
         s = le.apply_event(s, event("deliver", tick=6, shipment_id="manifest_001"))
@@ -268,7 +268,7 @@ class LivingEconomyTests(unittest.TestCase):
         s = le.apply_event(initial(), event("consume", tick=8, store_id="colony_depot",
                                             item="ration", quantity=1, cause_ref="meal"))
         with self.assertRaisesRegex(ValueError, "time regression"):
-            le.apply_event(s, event("consume", tick=7, store_id="colony_depot",
+            le.apply_event(s, event("consume", event_id="test-consume-second", tick=7, store_id="colony_depot",
                                     item="ration", quantity=1, cause_ref="meal2"))
 
     def test_25_lod_does_not_change_physics_or_ledger(self):
