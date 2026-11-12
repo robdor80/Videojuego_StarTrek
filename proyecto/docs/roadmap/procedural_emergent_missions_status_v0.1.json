@@ -101,7 +101,7 @@
     "fixture": "desarrollo/validation/fixtures/emergent_missions/verified_unmet_need_npc_response_v0.1.json",
     "tests": "desarrollo/tools/generation/test_simulate_emergent_missions.py",
     "workflow": ".github/workflows/p2-b09-emergent-missions.yml",
-    "expected_new_tests": 57,
+    "expected_new_tests": 65,
     "ci_final_status": "PENDING_FINAL_PR_CI",
     "ci_url": null,
     "measured_tests": {
