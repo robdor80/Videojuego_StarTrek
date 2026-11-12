@@ -88,7 +88,10 @@
     "f13_regression_tests": 28,
     "preliminary_run_id": 43195328217,
     "preliminary_run_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195328217",
-    "final_validation": "REQUIRES_CI_ON_PR_HEAD"
+    "final_validation": "SUCCESS",
+    "github_actions_run_id": 43195780820,
+    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820",
+    "validation_at_sha": "c0b4dc217ad3046f67e695219f15cd966563a956"
   },
   "limits": {
     "authoritative_runtime": "NOT_IMPLEMENTED_BY_THIS_BLOCK",

@@ -25,3 +25,7 @@ La fase principal F13 permanece PLANIFICADA. El sistema de temporadas consume la
 
 ## Puerta al siguiente bloque
 Bloque 6 — Ciencia, tecnología y descubrimientos, habilitado **sólo después de la fusión y verificación final**. Los Bloques 7–10 continúan sin iniciar.
+
+## Certificación CI final
+
+Run [43195780820](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820) sobre `c0b4dc217ad3046f67e695219f15cd966563a956`: **SUCCESS**. 36/36 pruebas del Bloque 5, 98/98 regresiones B1–B5, 28/28 pruebas F13; parsing JSON y ejecución de CLI determinista también verdes. El fixture devuelve 2 acontecimientos y hash de estado `8c9c66652c053fc5944abf684c583ffdfca0d08ade8791d19c135c83451a3936`. El workflow F13 de referencia y gobierno de roadmap también finalizaron correctamente. Documento de certificación actualizado sin alterar el código verificado.
