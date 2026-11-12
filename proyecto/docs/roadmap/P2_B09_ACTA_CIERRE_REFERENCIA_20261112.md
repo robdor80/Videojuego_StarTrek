@@ -1,6 +1,6 @@
 # P2-B09 — Acta de cierre de referencia (12/11/2026)
 
-**Fase:** Planificación 2, Bloque 9/10. **Objetivo:** `REFERENCE_COMPLETE` de contratos y demostración offline. **Estado administrativo:** pendiente de CI del último HEAD y fusión de la PR de B09. **No equivale a misiones operativas en CoreRPG, HOST ni Unreal Engine.**
+**Fase:** Planificación 2, Bloque 9/10. **Objetivo:** `REFERENCE_COMPLETE` de contratos y demostración offline. **Estado administrativo:** PR [#120](https://github.com/robdor80/Videojuego_StarTrek/pull/120), pendiente de CI del HEAD documental definitivo y fusión. **No equivale a misiones operativas en CoreRPG, HOST ni Unreal Engine.**
 
 ## Auditoría de las dependencias
 
@@ -29,10 +29,10 @@ El segundo expediente afecta a un mundo prewarp: puede identificarse como candid
 
 ## Pruebas y puertas
 
-- **65 casos adversariales diseñados**: hechos no aceptados, origen independiente, confidencialidad, rutas/recursos, Primera Directriz, órdenes/reservas, cierre, replay, timeouts y atomicidad.
-- Regresiones esperadas B01–B09: **329 pruebas de simuladores** si continúan las 264 de B01–B08 y se suman las 65 B09; cifra pendiente de confirmar mediante CI.
+- **65/65 casos adversariales ejecutados y superados**: hechos no aceptados, origen independiente, confidencialidad, rutas/recursos, Primera Directriz, órdenes/reservas, cierre, replay, timeouts y atomicidad.
+- Regresiones ejecutadas B01–B09: **329/329 pruebas de simuladores** (264 B01–B08 + 65 B09); **30/30 F13** y **9/9 Academia** superadas.
 - Auditorías F13 y Academia: se actualizan sólo las expectativas de frontera 9→10 al quedar B09 en estado de referencia. F13 global sigue `PLANIFICADA`; capas 119/120 sin promoción.
-- **Puerta final:** CI de HEAD de PR, comprobaciones transversales, cambios acotados, sin archivos temporales ni intervención en ramas ajenas; después, fusión autorizada en `main`. Los recuentos anteriores son objetivos, no resultados medidos hasta constar evidencia enlazada.
+- **Puerta final:** CI de HEAD de PR, comprobaciones transversales, cambios acotados, sin archivos temporales ni intervención en ramas ajenas; después, fusión autorizada en `main`. Evidencia inicial completa: [Actions #43266460616](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266460616), HEAD `878951af8f18ad9dedae99be2db0cda5a8c0aa46`: 65/65 B09, 329/329 B01–B09, 30/30 F13 y 9/9 Academia; **20/20 workflows SUCCESS** del mismo HEAD. Esta validación es anterior a las últimas actualizaciones de acta y manifiesto; se exigirá nuevo CI verde del HEAD documental definitivo.
 
 ## Fuera de alcance
 
