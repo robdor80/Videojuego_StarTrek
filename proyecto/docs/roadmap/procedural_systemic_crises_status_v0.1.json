@@ -108,8 +108,25 @@
       "f13": 30
     },
     "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758",
-    "ci_final_status": "INITIAL_SUCCESS_PENDING_FINAL_HEAD",
-    "ci_initial_commit": "6a4c424489a12f1a16da173b42b673566d8798e1"
+    "ci_final_status": "SUCCESS_PREMERGE_AND_POSTMERGE",
+    "ci_initial_commit": "6a4c424489a12f1a16da173b42b673566d8798e1",
+    "ci_final_premerge_commit": "4d135004395dbe8c8b1c3ef55389425f6265b3aa",
+    "ci_final_premerge_workflows": {
+      "total": 19,
+      "success": 19
+    },
+    "postmerge": {
+      "pr": 118,
+      "merge_commit": "bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9",
+      "run_b08": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149",
+      "run_f13": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238",
+      "b08_conclusion": "SUCCESS",
+      "f13_conclusion": "SUCCESS",
+      "transversal_workflows": {
+        "total": 19,
+        "success": 19
+      }
+    }
   },
   "limits": {
     "sources_attested_by_corerpg": false,
@@ -124,6 +141,7 @@
     "padd_operational": false
   },
   "next_block": "9 — Emergent Missions from World State",
-  "sequential_gate": "BLOCK9_AFTER_FINAL_CI_AND_MERGE",
-  "merge_gate": "PR118_DRAFT_PENDING_FINAL_CI"
+  "sequential_gate": "BLOCK9_ELIGIBLE_FOR_REFERENCE",
+  "merge_gate": "PR118_MERGED",
+  "closed_at": "2026-11-12"
 }
