@@ -60,3 +60,9 @@ El bloque 4 de economía fue cerrado de referencia mediante PR #113 y el **bloqu
 El Bloque 6, Ciencia, tecnología y descubrimientos, dispone de contrato Star Trek y referencia Python independiente, fixture y **54/54 pruebas**; CI [#43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066) con 152/152 regresiones B1–B6 y 29/29 F13. El bloque conserva los ocho pasos aprobados de LORE-02 D y las restricciones Omega, temporalidad, astilleros y crédito NPC. Véase [plan B06](../../../procedural_science_technology_discovery_plan_v0.1.md) y [acta](../../../P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 El siguiente trabajo **secuencial de referencia** es Bloque 7 (anomalías y arqueología); B08–B10 no iniciados. F13 **PLANIFICADA**, sin integración CoreRPG/HOST/UE5, IA productiva, memoria persistida ni ejecución offscreen demostradas.
+
+## Actualización P2-B07 — 12-11-2026
+
+B07 dispone de 18 paquetes PA001–PA018 de referencia, contrato, generador Python offline, fixture de anomalía subespacial/ruinas arqueológicas, 56 pruebas adversariales y regresiones dinámicas/F13. Ver [plan B07](../../../procedural_phenomena_archaeology_plan_v0.1.md) y [acta](../../../P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md). **La frontera secuencial de referencia pasa a B08, crisis sistémicas, después de CI final y fusión PR #116.** Los párrafos anteriores son estados históricos.
+
+La fase global F13 permanece **PLANIFICADA**. El material nuevo no es un generador físico operativo de CoreRPG, ni el escáner de F06, ni arqueología UE5, ni persistencia transaccional real, ni AI de NPC ejecutiva, ni scheduler B10. No se cambia el estado de las capas 119/120.
