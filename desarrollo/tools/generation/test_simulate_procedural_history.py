@@ -100,9 +100,9 @@ class ProceduralHistoryReferenceTests(unittest.TestCase):
         self.assert_rejected_clean(s, event(), "does not exist")
 
     def test_13_major_scale_needs_accepted_evidence(self):
-        e = event()
-        e["source_refs"] = ["fact_colony_repairs"]
-        self.assert_rejected_clean(state(), e, "major event requires")
+        s = state()
+        s["facts"]["fact_factory_restored"]["major_evidence"] = False
+        self.assert_rejected_clean(s, event(), "major event requires")
 
     def test_14_major_scale_needs_multi_entity(self):
         e = event()
