@@ -13,16 +13,22 @@
       "prewarp_delta": {
         "prewarp": true,
         "jurisdiction_ref": "delta_sovereign"
+      },
+      "orion_hub": {
+        "prewarp": false,
+        "jurisdiction_ref": "federation_hub"
       }
     },
     "routes": {
       "route_lyra": {
         "destination_ref": "lyra_colony",
-        "status": "open"
+        "status": "open",
+        "origin_ref": "orion_hub"
       },
       "route_delta": {
         "destination_ref": "prewarp_delta",
-        "status": "open"
+        "status": "open",
+        "origin_ref": "orion_hub"
       }
     },
     "actors": {
@@ -63,7 +69,7 @@
     },
     "assets": {
       "npc_medical": {
-        "location_ref": "lyra_colony",
+        "location_ref": "orion_hub",
         "owner_ref": "agency",
         "available": true,
         "capabilities": [
@@ -72,7 +78,7 @@
         ]
       },
       "npc_science": {
-        "location_ref": "lyra_colony",
+        "location_ref": "orion_hub",
         "owner_ref": "agency",
         "available": true,
         "capabilities": [
@@ -81,7 +87,7 @@
         ]
       },
       "enterprise_d": {
-        "location_ref": "lyra_colony",
+        "location_ref": "orion_hub",
         "owner_ref": "starfleet",
         "available": true,
         "capabilities": [
