@@ -8,6 +8,13 @@ on:
       - "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json"
       - "proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md"
       - ".github/workflows/p2-b06-science-discovery.yml"
+      - "proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json"
+      - "proyecto/docs/roadmap/P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md"
+      - "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+      - "proyecto/docs/roadmap/README.md"
+      - "proyecto/docs/roadmap/master/fases/F13/README.md"
+      - "CONTENT_STATUS.md"
+      - "proyecto/docs/roadmap/procedural_development_master_plan_v0.1.md"
   pull_request:
     paths:
       - "desarrollo/tools/generation/simulate_science_discovery.py"
@@ -16,6 +23,13 @@ on:
       - "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json"
       - "proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md"
       - ".github/workflows/p2-b06-science-discovery.yml"
+      - "proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json"
+      - "proyecto/docs/roadmap/P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md"
+      - "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+      - "proyecto/docs/roadmap/README.md"
+      - "proyecto/docs/roadmap/master/fases/F13/README.md"
+      - "CONTENT_STATUS.md"
+      - "proyecto/docs/roadmap/procedural_development_master_plan_v0.1.md"
   workflow_dispatch:
 permissions:
   contents: read
