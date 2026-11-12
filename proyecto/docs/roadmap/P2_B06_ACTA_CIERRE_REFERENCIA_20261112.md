@@ -33,3 +33,7 @@ LORE-02 D mantiene la excepción narrativa Omega con **mínimo una misión espec
 ## Frontera secuencial
 
 Aprobado documentalmente el Bloque 6, **el siguiente elegible es el Bloque 7 — Fenómenos, anomalías y arqueología procedural**, sólo tras verificarse PR #115 fusionada y CI final. F13 principal sigue `PLANIFICADA`; ninguna condición de cierre general de F13 ha sido satisfecha por B06.
+
+## Auditoría transversal final pre-fusión
+
+Tras adaptar la prueba F13 a la nueva frontera real Bloque 7, el commit [`f81de6332ef71588e27fd20848f8b7ee12dcdfed`](https://github.com/robdor80/Videojuego_StarTrek/commit/f81de6332ef71588e27fd20848f8b7ee12dcdfed) registra **16/16 workflows SUCCESS**, incluidos [B06 #43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066), [F13 #43199307866](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199307866), auditoría LORE-02 E y roadmap. El total F13 es ahora **29 pruebas** tras añadir la comprobación explícita B06→B07; se mantienen **54 B06 y 152 B1–B6**. La revisión de esta acta es documental; verificar el último CI tras la actualización antes de fusionar.
