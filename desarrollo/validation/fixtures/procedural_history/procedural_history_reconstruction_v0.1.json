@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1.0",
+  "scenario_id": "p2_b05_rebuilding_history_synthetic_no_canon",
+  "initial_state": {
+    "campaign_id": "campaign_alpha",
+    "cutoff_tick": 100,
+    "last_tick": 103,
+    "facts": {
+      "fact_factory_restored": {
+        "tick": 101,
+        "status": "accepted",
+        "domain": "economy",
+        "campaign_id": "campaign_alpha",
+        "major_evidence": true
+      },
+      "fact_colony_repairs": {
+        "tick": 102,
+        "status": "accepted",
+        "domain": "colonization",
+        "campaign_id": "campaign_alpha"
+      },
+      "fact_political_vote": {
+        "tick": 103,
+        "status": "accepted",
+        "domain": "civilization",
+        "campaign_id": "campaign_alpha"
+      },
+      "fact_conflict_ended": {
+        "tick": 103,
+        "status": "accepted",
+        "domain": "conflict",
+        "campaign_id": "campaign_alpha"
+      },
+      "fact_debrief_correction": {
+        "tick": 105,
+        "status": "accepted",
+        "domain": "record",
+        "campaign_id": "campaign_alpha"
+      }
+    },
+    "entities": {
+      "colony_naral": {
+        "exists_tick": 90,
+        "campaign_id": "campaign_alpha"
+      },
+      "station_antares": {
+        "exists_tick": 89,
+        "campaign_id": "campaign_alpha"
+      },
+      "assembly_council": {
+        "exists_tick": 95,
+        "campaign_id": "campaign_alpha"
+      }
+    },
+    "authorities": {
+      "regional_archive": [
+        "economic_milestone",
+        "historical_record_update",
+        "infrastructure_recovery"
+      ],
+      "civilian_chancellery": [
+        "civilizational_transition",
+        "diplomatic_milestone"
+      ],
+      "colonial_administration": [
+        "colonial_milestone"
+      ],
+      "military_archive": [
+        "conflict_aftermath"
+      ]
+    },
+    "reserved_ids": [
+      "canon:romulus_2387"
+    ],
+    "history": []
+  },
+  "events": [
+    {
+      "event_id": "hist:recovery_001",
+      "tick": 104,
+      "kind": "economic_milestone",
+      "source_refs": [
+        "fact_factory_restored",
+        "fact_colony_repairs"
+      ],
+      "impact_refs": [
+        "colony_naral",
+        "station_antares"
+      ],
+      "actor_ref": "regional_archive",
+      "major": true,
+      "visibility": "public",
+      "provenance": "game_addition",
+      "trigger": "world"
+    },
+    {
+      "event_id": "hist:record_update_002",
+      "tick": 105,
+      "kind": "historical_record_update",
+      "source_refs": [
+        "fact_debrief_correction",
+        "hist:recovery_001"
+      ],
+      "impact_refs": [
+        "colony_naral"
+      ],
+      "actor_ref": "regional_archive",
+      "major": false,
+      "visibility": "restricted",
+      "provenance": "game_addition",
+      "trigger": "world",
+      "corrects_ref": "hist:recovery_001"
+    }
+  ]
+}
