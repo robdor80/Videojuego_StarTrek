@@ -66,3 +66,7 @@ El siguiente trabajo **secuencial de referencia** es Bloque 7 (anomalías y arqu
 B07 dispone de 18 paquetes PA001–PA018 de referencia, contrato, generador Python offline, fixture de anomalía subespacial/ruinas arqueológicas, 56 pruebas adversariales y regresiones dinámicas/F13. Ver [plan B07](../../../procedural_phenomena_archaeology_plan_v0.1.md) y [acta](../../../P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md). **La frontera secuencial de referencia pasa a B08, crisis sistémicas, después de CI final y fusión PR #116.** Los párrafos anteriores son estados históricos.
 
 La fase global F13 permanece **PLANIFICADA**. El material nuevo no es un generador físico operativo de CoreRPG, ni el escáner de F06, ni arqueología UE5, ni persistencia transaccional real, ni AI de NPC ejecutiva, ni scheduler B10. No se cambia el estado de las capas 119/120.
+
+## Confirmación de fusión P2-B07 (12-11-2026)
+
+La PR #116 fue fusionada en `main` (`73eb7e59e1032ac5975c9e459f27d2c1f5609522`) con B07 y F13 CI de referencia verdes. La puerta de trabajo de Planificación 2 está ahora en **B08 — Crisis sistémicas**. En ningún caso implica cierre runtime de F13. La auditoría adicional de Academia conserva su traspaso histórico B04 y debe leer el estado vivo sin exigir que B04 vuelva a ser pendiente.

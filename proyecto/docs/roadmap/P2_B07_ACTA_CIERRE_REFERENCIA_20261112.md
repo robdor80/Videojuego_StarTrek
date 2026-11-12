@@ -2,7 +2,7 @@
 
 **Objeto:** Bloque 7 de 10 — Fenómenos, anomalías y arqueología procedural.
 **Propietario:** reglas específicas Star Trek; CoreRPG conserva autoridad, estado, reloj, guardado, posesión y cambios reales.
-**Cierre técnico propuesto:** `REFERENCE_COMPLETE` de contratos, simulador offline, fixture y pruebas. Cierre administrativo sólo tras último CI verde y fusión de la PR [#116](https://github.com/robdor80/Videojuego_StarTrek/pull/116). **No** se declara F13 completada ni UE5 jugable.
+**Cierre técnico y administrativo:** `REFERENCE_COMPLETE` de contratos, simulador offline, fixture y pruebas. PR [#116](https://github.com/robdor80/Videojuego_StarTrek/pull/116) **FUSIONADA** en `main` mediante squash commit `73eb7e59e1032ac5975c9e459f27d2c1f5609522`. **No** se declara F13 completada ni UE5 jugable.
 
 ## Auditoría inicial
 
@@ -48,6 +48,6 @@ La sincronización documental final se hará en un commit posterior: **verificar
 
 ## Puerta B08 y estado global
 
-**Bloque 8 — Crisis sistémicas** será el siguiente a partir de la fusión de esta PR y del éxito final de CI. B09 misiones y B10 motor galáctico permanecen cerrados. Las 120 capas siguen 118 completas de referencia, 119 parcial y 120 bloqueada por runtime. F13 global permanece **PLANIFICADA**.
+**Bloque 8 — Crisis sistémicas** es el siguiente bloque habilitado tras la fusión y el éxito de las pruebas de B07/F13. B09 misiones y B10 motor galáctico permanecen cerrados. Las 120 capas siguen 118 completas de referencia, 119 parcial y 120 bloqueada por runtime. F13 global permanece **PLANIFICADA**.
 
-**Administración:** contenido y CI de código certificados en PR #116; fusión condicionada a CI verde del último commit documental. El cierre administrativo de esta acta se hace efectivo con la fusión, sin elevar F13 ni CoreRPG/UE5 de estado.
+**Administración:** el último commit de PR #116 superó 19/19 workflows antes de fusionar. En `main`, B07 [#43207624584](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207624584) y F13 volvieron a terminar SUCCESS. Una comprobación histórica independiente de Academia falló porque exigía que B04 siguiera `READY_TO_RESUME` pese a su cierre posterior; se trata de una puerta desactualizada, no de fallos B07. Se corrige mediante una PR independiente que conserva el acta histórica de Academia y valida la frontera actual B08. Ningún estado CoreRPG/HOST/UE5 se altera.

@@ -13,6 +13,7 @@ on:
       - 'desarrollo/tools/generation/*academy*.py'
       - 'desarrollo/tools/generation/*cadet*.py'
       - 'desarrollo/tools/generation/*step*.py'
+      - 'desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py'
       - 'desarrollo/validation/fixtures/academy_life/**'
       - 'desarrollo/validation/consistency/academy_*'
       - 'proyecto/docs/roadmap/academy_*'
@@ -27,6 +28,8 @@ on:
       - 'sistemas/gameplay/characters/wellbeing/**'
       - 'desarrollo/tools/generation/*academy*.py'
       - 'desarrollo/tools/generation/*cadet*.py'
+      - 'desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py'
+      - 'proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md'
       - 'desarrollo/validation/fixtures/academy_life/**'
       - 'desarrollo/validation/consistency/academy_*'
       - '.github/workflows/academy-life-closure.yml'
@@ -43,5 +46,7 @@ jobs:
           python-version: '3.12'
       - name: Audit Academy Life repository closure
         run: python desarrollo/tools/generation/validate_academy_life_final_step20.py
+      - name: Verify live dynamic-universe frontier without rewriting Academy's historical handoff
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_academy_dynamic_frontier_bridge.py' -v
       - name: Run Academy Life manifest suite
         run: python desarrollo/tools/generation/run_academy_life_suite.py

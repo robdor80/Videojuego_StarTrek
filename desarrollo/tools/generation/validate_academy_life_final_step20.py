@@ -34,6 +34,24 @@ def collect_file_refs(v,out):
   for x in v.values():collect_file_refs(x,out)
 def import_module(rel,name):
  p=ROOT/rel;spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);assert spec and spec.loader;spec.loader.exec_module(m);return m
+def dynamic_reference_frontier(text):
+ """Validate current live 10-block roadmap without rewriting Academy's historical hand-off."""
+ rows=re.findall(r"^\|\s*(\d+)\s*\|[^|]+\|\s*([A-Z_]+)\s*\|\s*$",text,flags=re.M)
+ if len(rows)!=10:return None
+ states={int(num):value for num,value in rows}
+ if set(states)!=set(range(1,11)) or any(states[i]!="COMPLETE" for i in (1,2,3)):
+  return None
+ complete={"COMPLETE","REFERENCE_COMPLETE"}
+ open_blocks=[i for i in range(4,11) if states[i] not in complete]
+ if not open_blocks:return 11
+ front=open_blocks[0]
+ if states[front] not in {"READY_TO_RESUME","IN_PROGRESS","TODO"}:
+  return None
+ if any(states[i] not in complete for i in range(4,front)):
+  return None
+ if any(states[i]!="TODO" for i in range(front+1,11)):
+  return None
+ return front
 def audit_repo(root=ROOT):
  global ROOT;ROOT=Path(root)
  errors=[];json_errors=[];refs=set()
@@ -93,8 +111,12 @@ def audit_repo(root=ROOT):
  dyn=(ROOT/"proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md").read_text(encoding="utf-8")
  content=(ROOT/"CONTENT_STATUS.md").read_text(encoding="utf-8")
  life=(ROOT/"sistemas/gameplay/careers/academy_path/life/README.md").read_text(encoding="utf-8")
- gate_ok=status.get("deferred_after_step_20",{}).get("status")=="READY_TO_RESUME" and "READY_TO_RESUME" in plan and "READY_TO_RESUME" in dyn and "READY_TO_RESUME" in content
- if not gate_ok:errors.append("Dynamic Universe Block 4 gate is inconsistent")
+ # Academy finished while B04 was READY_TO_RESUME; that remains a historical hand-off.
+ # The live plan later advances B04..B10 and must NOT retain that old status forever.
+ historical_gate=status.get("deferred_after_step_20",{}).get("status")=="READY_TO_RESUME" and "READY_TO_RESUME" in plan
+ current_frontier=dynamic_reference_frontier(dyn)
+ gate_ok=historical_gate and current_frontier is not None and bool(content.strip())
+ if not gate_ok:errors.append("Academy historical handoff or current dynamic-universe frontier inconsistent")
  docs_ok="Final closure remains Step 20." not in life
  if not docs_ok:errors.append("obsolete Step-20 README wording remains")
  closure=load("sistemas/gameplay/careers/academy_path/life/academy_life_final_closure_contract_v1.0.json")
