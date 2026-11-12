@@ -329,5 +329,24 @@ class PhenomenaArchaeologyReferenceTests(unittest.TestCase):
                                       "ruin_lyra"))
 
 
+    def test_55_empty_slot_materialization_decision_cannot_reroll(self):
+        s = state()
+        s["slots"]["rift_lira"]["rarity_bps"] = 0
+        s = mod.apply_event(s, events()[0])
+        e = events()[0]
+        e["event_id"] = "b07:retry_empty_slot"
+        e["tick"] = 101
+        self.reject(s, e, "slot materialization decision already recorded")
+
+    def test_56_new_physical_causes_after_campaign_cutoff_are_eligible(self):
+        s = state()
+        s["facts"]["rift_formed"]["tick"] = 103
+        e = events()[0]
+        e["tick"] = 104
+        out = mod.apply_event(s, e)
+        self.assertIn("p2b07:camp_fixture:rift_lira", out["phenomena"])
+        self.assertEqual(out["phenomena"]["p2b07:camp_fixture:rift_lira"]["origin_tick"], 103)
+
+
 if __name__ == "__main__":
     unittest.main()
