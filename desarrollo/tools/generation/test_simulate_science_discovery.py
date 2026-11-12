@@ -307,5 +307,30 @@ class ScienceReferenceTests(unittest.TestCase):
         self.reject(s, events()[0], "allocation provenance")
 
 
+    def test_51_trial_requires_authorized_source_author(self):
+        s = at(8)
+        s["facts"]["trial_1"]["actor_ref"] = "science_peer"
+        self.reject(s, events()[8], "trial provenance")
+
+    def test_52_trial_source_must_be_after_installation(self):
+        s = at(8)
+        s["facts"]["trial_1"]["tick"] = 114
+        self.reject(s, events()[8], "trial provenance")
+
+    def test_53_failed_trial_evidence_cannot_be_reused(self):
+        s = at(8)
+        s["facts"]["trial_1"]["result"] = "fail"
+        s = sci.apply_event(s, events()[8])
+        e = events()[8]
+        e["event_id"] = "science:trial_reused"
+        e["tick"] = 121
+        self.reject(s, e, "already consumed")
+
+    def test_54_duplicate_official_name_denied(self):
+        s = at(9)
+        s["recognitions"]["other_project"] = {"official_name": "filtro vesper"}
+        self.reject(s, events()[9], "duplicate honorary name")
+
+
 if __name__ == "__main__":
     unittest.main()
