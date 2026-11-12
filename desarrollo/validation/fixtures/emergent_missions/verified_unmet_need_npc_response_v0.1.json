@@ -1,0 +1,288 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "SYNTHETIC_NONCANONICAL",
+  "state": {
+    "campaign_id": "demo-2383",
+    "cutoff_tick": 0,
+    "last_tick": 0,
+    "locations": {
+      "lyra_colony": {
+        "prewarp": false,
+        "jurisdiction_ref": "federation_lyra"
+      },
+      "prewarp_delta": {
+        "prewarp": true,
+        "jurisdiction_ref": "delta_sovereign"
+      }
+    },
+    "routes": {
+      "route_lyra": {
+        "destination_ref": "lyra_colony",
+        "status": "open"
+      },
+      "route_delta": {
+        "destination_ref": "prewarp_delta",
+        "status": "open"
+      }
+    },
+    "actors": {
+      "agency": {
+        "clearance": "classified",
+        "scopes": [
+          "propose",
+          "authorize",
+          "assign",
+          "complete",
+          "cancel",
+          "communicate"
+        ],
+        "known_need_refs": [
+          "need_med",
+          "need_prewarp"
+        ]
+      },
+      "admiralty": {
+        "clearance": "classified",
+        "scopes": [
+          "grant_order"
+        ],
+        "known_need_refs": []
+      },
+      "captain": {
+        "clearance": "restricted",
+        "scopes": [
+          "propose"
+        ],
+        "known_need_refs": []
+      },
+      "observer": {
+        "clearance": "public",
+        "scopes": [],
+        "known_need_refs": []
+      }
+    },
+    "assets": {
+      "npc_medical": {
+        "location_ref": "lyra_colony",
+        "owner_ref": "agency",
+        "available": true,
+        "capabilities": [
+          "medical",
+          "transport"
+        ]
+      },
+      "npc_science": {
+        "location_ref": "lyra_colony",
+        "owner_ref": "agency",
+        "available": true,
+        "capabilities": [
+          "science",
+          "survey"
+        ]
+      },
+      "enterprise_d": {
+        "location_ref": "lyra_colony",
+        "owner_ref": "starfleet",
+        "available": true,
+        "capabilities": [
+          "medical",
+          "transport",
+          "science"
+        ]
+      }
+    },
+    "facts": {
+      "incident_medical": {
+        "kind": "consequence",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 1,
+        "description": "Independent real service deficiency, not B08 projected risk"
+      },
+      "incident_prewarp": {
+        "kind": "consequence",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 1,
+        "description": "External natural distress, not player generated"
+      },
+      "need_med": {
+        "kind": "need",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 2,
+        "location_ref": "lyra_colony",
+        "route_ref": "route_lyra",
+        "cause_ref": "incident_medical",
+        "requested_by_ref": "agency",
+        "required_capabilities": [
+          "medical"
+        ],
+        "classification": "restricted"
+      },
+      "need_prewarp": {
+        "kind": "need",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 2,
+        "location_ref": "prewarp_delta",
+        "route_ref": "route_delta",
+        "cause_ref": "incident_prewarp",
+        "requested_by_ref": "agency",
+        "required_capabilities": [
+          "science"
+        ],
+        "classification": "classified"
+      },
+      "auth_med": {
+        "kind": "order",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 5,
+        "purpose": "authorize",
+        "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+        "need_ref": "need_med",
+        "asset_ref": "npc_medical",
+        "actor_ref": "agency",
+        "approved": true,
+        "approved_by_ref": "admiralty",
+        "jurisdiction_ref": "federation_lyra"
+      },
+      "dispatch_med": {
+        "kind": "order",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "purpose": "assign",
+        "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+        "need_ref": "need_med",
+        "asset_ref": "npc_medical",
+        "actor_ref": "agency",
+        "approved": true,
+        "approved_by_ref": "admiralty",
+        "jurisdiction_ref": "federation_lyra"
+      },
+      "reservation_med": {
+        "kind": "reservation",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "purpose": "mission_assignment",
+        "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+        "asset_ref": "npc_medical",
+        "granted_by_ref": "admiralty"
+      },
+      "resolution_med": {
+        "kind": "need_resolved",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 8,
+        "need_ref": "need_med"
+      },
+      "outcome_med": {
+        "kind": "outcome_report",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 8,
+        "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+        "result": "verified"
+      },
+      "auth_prewarp": {
+        "kind": "order",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 10,
+        "purpose": "authorize",
+        "mission_ref": "p2b09:demo-2383:need_prewarp:npc_science",
+        "need_ref": "need_prewarp",
+        "asset_ref": "npc_science",
+        "actor_ref": "agency",
+        "approved": true,
+        "approved_by_ref": "admiralty",
+        "jurisdiction_ref": "delta_sovereign"
+      },
+      "policy_prewarp": {
+        "kind": "policy_review",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 10,
+        "mission_ref": "p2b09:demo-2383:need_prewarp:npc_science",
+        "decision": "approved_exception",
+        "jurisdiction_ref": "delta_sovereign"
+      }
+    },
+    "missions": {},
+    "messages": [],
+    "events": [],
+    "reserved_ids": [
+      "p2b09:demo-2383:canon_reserved:enterprise_d"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "m01",
+      "kind": "communicate",
+      "actor_ref": "agency",
+      "tick": 3,
+      "trigger": "world",
+      "need_ref": "need_med",
+      "recipient_ref": "captain",
+      "classification": "restricted",
+      "arrival_tick": 9
+    },
+    {
+      "event_id": "m02",
+      "kind": "propose",
+      "actor_ref": "agency",
+      "tick": 4,
+      "trigger": "world",
+      "need_ref": "need_med",
+      "asset_ref": "npc_medical"
+    },
+    {
+      "event_id": "m03",
+      "kind": "authorize",
+      "actor_ref": "agency",
+      "tick": 5,
+      "trigger": "world",
+      "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+      "order_ref": "auth_med",
+      "policy_ref": null
+    },
+    {
+      "event_id": "m04",
+      "kind": "assign",
+      "actor_ref": "agency",
+      "tick": 6,
+      "trigger": "world",
+      "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+      "order_ref": "dispatch_med",
+      "reservation_ref": "reservation_med",
+      "policy_ref": null
+    },
+    {
+      "event_id": "m05",
+      "kind": "complete",
+      "actor_ref": "agency",
+      "tick": 8,
+      "trigger": "world",
+      "mission_ref": "p2b09:demo-2383:need_med:npc_medical",
+      "outcome_ref": "outcome_med",
+      "resolution_ref": "resolution_med"
+    },
+    {
+      "event_id": "m06",
+      "kind": "propose",
+      "actor_ref": "agency",
+      "tick": 9,
+      "trigger": "world",
+      "need_ref": "need_prewarp",
+      "asset_ref": "npc_science"
+    }
+  ],
+  "views": [
+    "agency",
+    "captain",
+    "observer"
+  ]
+}
