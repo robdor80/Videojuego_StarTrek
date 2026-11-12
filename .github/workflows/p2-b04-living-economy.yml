@@ -27,6 +27,10 @@ jobs:
           python-version: "3.12"
       - name: Reference-level contract and behavior tests
         run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_living_economy.py' -v
+      - name: Regression — dynamic universe blocks 1–3
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: Regression — LORE-04 contextual economy
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_lore04_phase.py' -v
       - name: Parse contract and fixtures
         run: |
           python - <<'PY'
