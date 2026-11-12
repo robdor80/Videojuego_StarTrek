@@ -179,9 +179,9 @@ class PhenomenaArchaeologyReferenceTests(unittest.TestCase):
         self.reject(at(2), e, "sensor provenance mismatch")
 
     def test_27_future_evidence_unusable(self):
-        e = events()[2]
-        e["tick"] = 100
-        self.reject(at(2), e, "future source fact")
+        s = at(2)
+        s["facts"]["a_obs_1"]["tick"] = 102
+        self.reject(s, events()[2], "future source fact")
 
     def test_28_same_observation_cannot_be_reused(self):
         s = at(3)
