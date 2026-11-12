@@ -238,7 +238,7 @@ class B09Tests(unittest.TestCase):
         self.assertIn("need_already_resolved", verdict["reasons"])
 
     def test_41_no_telepathic_knowledge_before_arrival(self):
-        self.after(1)
+        self.after(6)
         self.assertEqual([], m.view(self.s, "captain", 8)["delivered"])
         self.assertEqual("need_med", m.view(self.s, "captain", 9)["delivered"][0]["need_ref"])
 
@@ -328,6 +328,60 @@ class B09Tests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "real_world_claim"):
             m.run_fixture(bogus)
 
+
+    def test_58_route_requires_existing_origin(self):
+        del self.s["routes"]["route_lyra"]["origin_ref"]
+        self.expect_rejected(self.events[1], "invalid_route")
+
+    def test_59_asset_must_be_at_route_origin(self):
+        self.s["assets"]["npc_medical"]["location_ref"] = "lyra_colony"
+        self.assertIn("asset_not_on_route_origin",
+                      m.can_screen(self.s, "agency", "need_med", "npc_medical", 4)["reasons"])
+
+    def test_60_assignment_rechecks_route_origin(self):
+        self.after(3)
+        self.s["assets"]["npc_medical"]["location_ref"] = "lyra_colony"
+        self.expect_rejected(self.events[3], "asset_not_on_route_origin")
+
+    def test_61_view_cannot_advance_world_clock(self):
+        self.after(1)
+        with self.assertRaisesRegex(ValueError, "future_view_forbidden"):
+            m.view(self.s, "captain", 9)
+
+    def test_62_assigned_need_suppresses_competing_offer(self):
+        self.after(4)
+        verdict = m.can_screen(self.s, "agency", "need_med", "enterprise_d", 6)
+        self.assertEqual("NO_MISSION", verdict["status"])
+        self.assertIn("need_already_assigned", verdict["reasons"])
+
+    def test_63_no_parallel_assignment_to_same_need(self):
+        self.after(4)
+        other = m.mission_id("demo-2383", "need_med", "enterprise_d")
+        self.s["missions"][other] = {"mission_id": other, "need_ref": "need_med",
+                                      "asset_ref": "enterprise_d", "originator_ref": "agency",
+                                      "opened_tick": 4, "state": "authorized"}
+        self.s["facts"]["order_second"] = {"kind": "order", "status": "accepted",
+            "campaign_id": "demo-2383", "tick": 7, "purpose": "assign",
+            "mission_ref": other, "need_ref": "need_med", "asset_ref": "enterprise_d",
+            "actor_ref": "agency", "approved": True, "approved_by_ref": "admiralty",
+            "jurisdiction_ref": "federation_lyra"}
+        self.s["facts"]["reservation_second"] = {"kind": "reservation", "status": "accepted",
+            "campaign_id": "demo-2383", "tick": 7, "purpose": "mission_assignment",
+            "mission_ref": other, "asset_ref": "enterprise_d", "granted_by_ref": "admiralty"}
+        req = {"event_id": "second_dispatch", "kind": "assign", "actor_ref": "agency",
+               "tick": 7, "trigger": "world", "mission_ref": other,
+               "order_ref": "order_second", "reservation_ref": "reservation_second",
+               "policy_ref": None}
+        self.expect_rejected(req, "need_already_assigned")
+
+    def test_64_consequence_cannot_postdate_need(self):
+        self.s["facts"]["incident_medical"]["tick"] = 3
+        self.expect_rejected(self.events[1], "invalid_need")
+
+    def test_65_external_reservation_must_have_independent_grant(self):
+        self.after(3)
+        self.s["facts"]["reservation_med"]["granted_by_ref"] = "agency"
+        self.expect_rejected(self.events[3], "invalid_external_reservation")
 
 if __name__ == "__main__":
     unittest.main()
