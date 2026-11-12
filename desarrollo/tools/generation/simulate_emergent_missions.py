@@ -113,6 +113,7 @@ def validate(state):
                     and fact.get("requested_by_ref") in state["actors"]
                     and fact.get("cause_ref") in state["facts"]
                     and state["facts"][fact["cause_ref"]].get("kind") == "consequence"
+                    and state["facts"][fact["cause_ref"]].get("tick", 10**30) <= fact["tick"]
                     and isinstance(fact.get("required_capabilities"), list)
                     and len(fact["required_capabilities"]) > 0
                     and all(isinstance(v, str) and bool(v) for v in fact["required_capabilities"])
@@ -325,7 +326,9 @@ def apply(state, request):
             r = source(new, request["reservation_ref"], "reservation", at)
             require(r.get("purpose") == "mission_assignment"
                     and r.get("mission_ref") == mid and r.get("asset_ref") == m["asset_ref"]
-                    and r.get("granted_by_ref") in new["actors"], "invalid_external_reservation")
+                    and r.get("granted_by_ref") in new["actors"]
+                    and "grant_order" in new["actors"][r["granted_by_ref"]]["scopes"]
+                    and r["granted_by_ref"] != actor, "invalid_external_reservation")
             require(new["assets"][m["asset_ref"]]["available"], "asset_unavailable")
             require(new["routes"][new["facts"][m["need_ref"]]["route_ref"]]["status"] == "open",
                     "route_closed")
@@ -361,7 +364,8 @@ def apply(state, request):
             require(cancellation.get("mission_ref") == mid
                     and cancellation.get("actor_ref") == actor
                     and cancellation.get("approved_by_ref") in new["actors"]
-                    and "grant_order" in new["actors"][cancellation["approved_by_ref"]]["scopes"],
+                    and "grant_order" in new["actors"][cancellation["approved_by_ref"]]["scopes"]
+                    and cancellation["approved_by_ref"] != actor,
                     "unapproved_cancellation")
             m["state"] = "cancelled"
             m["cancel_ref"] = request["cancel_ref"]
