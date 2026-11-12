@@ -10,7 +10,7 @@
 | 3 | Procedural Conflict & War | COMPLETE |
 | 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
 | 5 | Procedural History & Major Events | REFERENCE_COMPLETE |
-| 6 | Science, Technology & Discovery | TODO |
+| 6 | Science, Technology & Discovery | REFERENCE_COMPLETE |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
 | 8 | Systemic Crises | TODO |
 | 9 | Emergent Missions from World State | TODO |
@@ -48,3 +48,9 @@ Academy Life 20/20 had removed the earlier gate. **Update 2026-11-12:** Block 4 
 ## Actualización secuencial — 12/11/2026, P2-B05
 
 Bloque 5 **REFERENCE_COMPLETE** sólo a nivel de contrato, simulador histórico offline, 36 pruebas y regresiones. Ver [plan B05](procedural_history_major_events_plan_v0.1.md), [estado B05](procedural_history_major_events_status_v0.1.json) y [acta B05](P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md). **Siguiente elegible: Bloque 6 — Science, Technology & Discovery.** La fase F13 global, el runtime CoreRPG, HOST y UE5 no cambian de madurez.
+
+## Actualización secuencial — 12/11/2026, P2-B06
+
+**Bloque 6 — Ciencia, tecnología y descubrimientos: REFERENCE_COMPLETE** en los 18 paquetes ST001–ST018. Contrato, simulador de referencia y fixture científico→ingeniería→astillero→ensayo individual, con 54 pruebas nuevas, 152 regresiones dinámicas incluyendo B06 y 28 de F13 superadas en [Actions #43198790144](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43198790144). Ver [plan B06](procedural_science_technology_discovery_plan_v0.1.md), [estado B06](procedural_science_technology_discovery_status_v0.1.json) y [acta](P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible: Bloque 7 — Fenómenos, anomalías y arqueología procedural**, tras fusión y CI final de B06. Bloques 7–10 no iniciados. F13 global, CoreRPG, HOST, UE5, investigación offscreen y guardado autoritativo no cambian de estado. Las referencias anteriores que fijaban B4/B5/B6 como siguiente son fotografías históricas conservadas por trazabilidad.
