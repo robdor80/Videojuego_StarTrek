@@ -94,11 +94,11 @@
     "workflow": ".github/workflows/p2-b06-science-discovery.yml",
     "test_count_new": 54,
     "regression_dynamic_universe_total_including_new": 152,
-    "f13_regression_tests": 28,
-    "github_actions_run_id": 43198790144,
-    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43198790144",
-    "validation_at_sha": "68718aabb3119ec0a5b3fdb23089d1eafcf8e492",
-    "final_document_sync_ci": "REQUIRES_CHECK_AFTER_DOCS"
+    "f13_regression_tests": 29,
+    "github_actions_run_id": 43199308066,
+    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066",
+    "validation_at_sha": "f81de6332ef71588e27fd20848f8b7ee12dcdfed",
+    "final_document_sync_ci": "SUCCESS"
   },
   "limits": {
     "corerpg_runtime": "NOT_IMPLEMENTED",
@@ -112,5 +112,5 @@
     "no_playable_time_travel": true
   },
   "next_block": "7 — Phenomena, Anomalies & Procedural Archaeology",
-  "merge_gate": "PENDING_CI_FINAL_AND_PR_FUSION"
+  "merge_gate": "VALIDATED_READY_FOR_PR115_MERGE"
 }
