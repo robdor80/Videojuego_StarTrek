@@ -95,16 +95,19 @@
     "workflow": ".github/workflows/p2-b07-phenomena-archaeology.yml",
     "expected_new_tests": 56,
     "measured_tests": {
-      "b07_first_run": 54,
-      "dynamic_b01_to_b07_first_run": 206,
-      "f13_first_run": 29,
-      "updated_expected_b07": 56,
-      "updated_expected_dynamic": 208,
-      "updated_expected_f13": 30
+      "b07": 56,
+      "dynamic_b01_to_b07": 208,
+      "f13": 30
     },
-    "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43206224117",
-    "ci_final_status": "PENDING_LATEST_HEAD",
-    "ci_initial_commit": "5ef16d4eb1ca8c7d099a8e2f56c6a0392ab1ac99"
+    "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271",
+    "ci_final_status": "SUCCESS_ON_TEST_AND_ROADMAP_HEAD_BEFORE_FINAL_EVIDENCE_SYNC",
+    "ci_initial_commit": "5ef16d4eb1ca8c7d099a8e2f56c6a0392ab1ac99",
+    "ci_validation_commit": "ba881f723f1a2bc8180402081a42889d8388a639",
+    "cross_workflow_audit": {
+      "total": 19,
+      "success": 19,
+      "at_commit": "ba881f723f1a2bc8180402081a42889d8388a639"
+    }
   },
   "limits": {
     "sources_attested_by_corerpg": false,
@@ -118,6 +121,6 @@
     "host_commands_integrated": false
   },
   "next_block": "8 — Systemic Crises",
-  "sequential_gate": "BLOCK8_ELIGIBLE_ONLY_AFTER_FINAL_CI_AND_MERGE",
-  "merge_gate": "PR116_PENDING"
+  "sequential_gate": "BLOCK8_READY_AFTER_PR116_MERGE_AND_FINAL_DOC_CI",
+  "merge_gate": "PR116_FINAL_DOCUMENT_SYNC_PENDING"
 }
