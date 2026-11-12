@@ -609,6 +609,16 @@ Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. Registro de cierre A�
 Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md`. Los documentos con etiquetas `CANDIDATE_PENDING_MERGE` son **fotografías de sus PR anteriores**; este índice y el acta posfusión registran el estado administrativo vigente. Las ramas históricas no se eliminan automáticamente.
 
 
+## LORE-05 — Profundización documental (inicio 2026-11-13)
+
+**LORE-05A — Reconciliación y consolidación: ✅ COMPLETE_DOCUMENTARY.** [PR #124](https://github.com/robdor80/Videojuego_StarTrek/pull/124) fusionada mediante squash `05ff35625a5358944dad0bd7dc4a9a091af28387`; [CI LORE-05A postfusión #43332503938](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43332503938) **SUCCESS** junto con 9/9 workflows del commit de fusión. Acta: [cierre documental LORE-05A](proyecto/docs/roadmap/lore_05_a/ACTA_CIERRE_DOCUMENTAL_LORE05A_20261113.md).
+
+**DEC-0020 — Identidad vigente:** la nave aspiracional es la **USS Enterprise NCC-1701-D**, `class_id=galaxy`. **Proyecto Valhalla** es el programa de recuperación, reconstrucción y modernización del buque individual, dirigido por Geordi La Forge en la continuidad del videojuego. Se mantiene 2379 origen, 2380 inicio de trabajos, Academia/Odyssey 2383 y alistamiento **objetivo condicional 2387**. El relato audiovisual de *Picard* en 2401 es referencia canónica futura, **no** desenlace obligatorio de campaña. Ver [DEC-0020](proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md).
+
+**Frontera de cierre:** la antigua `class_id=valhalla`, las 16 elecciones técnicas VAL-TEC y las dotaciones F04 se conservan por compatibilidad histórica, **no** se trasladan automáticamente a Enterprise-D ni implican instalación, plaza o capitanía. Ningún runtime CoreRPG/HOST/UE5, malla, guardado o simulación se certifica por esta fusión.
+
+**LORE-05B–F:** **NO INICIADAS**; alcance por consensuar sucesivamente con el autor. LORE-05 global permanece **EN CURSO**.
+
 ## Procedural living-universe master plan
 
 Control documents:
