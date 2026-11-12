@@ -30,7 +30,7 @@ jobs:
       - name: Regression — dynamic universe blocks 1–3
         run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
       - name: Regression — LORE-04 contextual economy
-        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_lore04_phase.py' -v
+        run: python desarrollo/tools/validation/test_lore04_phase.py B
       - name: Parse contract and fixtures
         run: |
           python - <<'PY'
