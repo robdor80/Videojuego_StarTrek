@@ -76,7 +76,7 @@ def audit_layers(summary):
 
 
 def gate_dynamic_blocks(states, requested_block):
-    """P02: impide saltar del bloque 4 a 5-10 mientras 4 no esté cerrado."""
+    """P02: impide saltos a bloques posteriores sin cerrar sus predecesores."""
     if not isinstance(states, dict) or type(requested_block) is not int or requested_block not in BLOCK_ORDER:
         return outcome(BLOCKED, "invalid_block_request")
     normalized = {}
@@ -127,8 +127,12 @@ def audit_repository(root=None):
     states = {int(number): state for number, state in rows if 1 <= int(number) <= 10}
     if set(states) != set(BLOCK_ORDER):
         return outcome(BLOCKED, "dynamic_block_plan_unparseable")
-    gate = gate_dynamic_blocks(states, 4)
-    if gate["status"] != REVIEW or gate.get("active_reference_block") != 4:
+    frontier = next((b for b in range(4, 11) if states[b] not in {"COMPLETE", "REFERENCE_COMPLETE"}), None)
+    if frontier is None:
+        return outcome(REVIEW, "all_dynamic_blocks_reference_closed", complete_layers=118,
+                       partial_layers=[119], runtime_blocked_layers=[120], active_reference_block=None)
+    gate = gate_dynamic_blocks(states, frontier)
+    if gate["status"] != REVIEW or gate.get("active_reference_block") != frontier:
         return outcome(BLOCKED, "dynamic_block_frontier_changed_review_required")
     return outcome(
         REVIEW,
@@ -136,7 +140,7 @@ def audit_repository(root=None):
         complete_layers=118,
         partial_layers=[119],
         runtime_blocked_layers=[120],
-        active_reference_block=4,
+        active_reference_block=frontier,
     )
 
 
