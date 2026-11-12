@@ -102,12 +102,18 @@
     "tests": "desarrollo/tools/generation/test_simulate_emergent_missions.py",
     "workflow": ".github/workflows/p2-b09-emergent-missions.yml",
     "expected_new_tests": 65,
-    "ci_final_status": "PENDING_FINAL_PR_CI",
-    "ci_url": null,
+    "ci_final_status": "SUCCESS_ON_TEST_HEAD__FINAL_DOCUMENT_HEAD_PENDING",
+    "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266460616",
     "measured_tests": {
-      "b09": null,
-      "dynamic_b01_to_b09": null,
-      "f13": null
+      "b09": 65,
+      "dynamic_b01_to_b09": 329,
+      "f13": 30,
+      "academy": 9
+    },
+    "ci_initial_commit": "878951af8f18ad9dedae99be2db0cda5a8c0aa46",
+    "ci_initial_transversal_workflows": {
+      "total": 20,
+      "success": 20
     }
   },
   "limits": {
