@@ -1,6 +1,6 @@
 # P2-B08 — Acta de cierre de referencia (12/11/2026)
 
-**Bloque:** 8 de 10, Crisis sistémicas y consecuencias a escala galáctica. **Estado técnico:** REFERENCE_COMPLETE de la **referencia offline**; **cierre administrativo** condicionado a CI del HEAD final y fusión de [PR #118](https://github.com/robdor80/Videojuego_StarTrek/pull/118). **Prohibido interpretar** este documento como un runtime galáctico operativo.
+**Bloque:** 8 de 10, Crisis sistémicas y consecuencias a escala galáctica. **Estado técnico:** REFERENCE_COMPLETE de la **referencia offline**; **cierre administrativo: completado**, [PR #118](https://github.com/robdor80/Videojuego_StarTrek/pull/118) fusionada en main (squash bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9) tras CI final 19/19 verde. **Prohibido interpretar** este documento como un runtime galáctico operativo.
 
 ## Secuencia verificada
 
@@ -48,3 +48,10 @@ Los hechos con status accepted del fixture son **proposiciones sintéticas** no 
 ## Siguiente paso secuencial
 
 Tras CI definitivo y fusión de PR #118, **Bloque 9 — Misiones emergentes desde el estado del universo** quedará habilitado para otra fase independiente, conservando el principio de necesidades preexistentes. **B10 — Evolución galáctica en segundo plano** seguirá pendiente. No se cierran F13 global ni capas 119–120.
+
+
+## Certificación administrativa definitiva
+
+La [PR #118](https://github.com/robdor80/Videojuego_StarTrek/pull/118) fue fusionada en main el **12-11-2026**, commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`. La última revisión previa tuvo **19/19 workflows SUCCESS**, incluidos B08, F13, Academia y Lore. Tras la fusión, sobre ese mismo commit, GitHub Actions también informa **19/19 SUCCESS**, incluido [B08 #43260787149](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149) y [F13 #43260787238](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238). La evidencia demuestra coherencia de referencia, no estado CoreRPG de producción.
+
+**Decisión final:** B08 = REFERENCE_COMPLETE, bloque **9 habilitado** en la secuencia de Planificación 2. Este añadido documental de certificación se tramita mediante PR separada; el resultado probado del código se preserva. B10 sigue TODO y F13 PLANIFICADA.
