@@ -9,7 +9,7 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 - [Preparación del diseño — ocho pilares](game_design_readiness_v0_2.md): base de Academia, carrera, vida social, bienestar, lore, IA, universo y Ordenador.
 - [Vertical slice de Sensores](ship_console_vertical_slice_v0_0_1.md): árboles funcionales, resultado observable, historial y aceptación previstos; integración en UE5/Core pendiente.
 - [Plan procedural de 120 capas](procedural_layers_master_plan_v0.1.md): alcance **documental/contratos**, capa 119 parcial y 120 bloqueada por runtime.
-- [Universo dinámico — 10 bloques](procedural_dynamic_universe_10_block_plan_v0.1.md): 1–3 completos a nivel de referencia, 4 siguiente.
+- [Universo dinámico — 10 bloques](procedural_dynamic_universe_10_block_plan_v0.1.md): 1–4 completos a nivel de referencia, 5 siguiente (historia procedural); [B04 economía viva](procedural_living_economy_plan_v0.1.md).
 - [Vida en Academia — cierre 20/20](academy_life_final_closure_v1.0.md): contratos y simuladores de referencia; no equivale a la Academia 3D.
 - [Vida a bordo y generación de nave 15/15](shipboard_life_and_procedural_starship_generation_plan_v0.1.md): contrato/referencia, integración posterior.
 - [Manual de Sensores](sensors_operator_manual_plan.md) y [preparación de lore jugable](gameplay_lore_readiness.md).
