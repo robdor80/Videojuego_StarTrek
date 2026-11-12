@@ -1,6 +1,6 @@
 # Planificación 2 · Bloque 4 — Economía viva interplanetaria e interestelar v0.1
 
-**Estado:** CANDIDATO EN AUDITORÍA (no equivalente a runtime CoreRPG). **Fecha:** 2026-11-12.
+**Estado:** COMPLETE_REFERENCE (diseño, contratos y pruebas; no equivale a runtime CoreRPG). **Fecha:** 2026-11-12.
 **Secuencia:** Bloques 1, 2 y 3 COMPLETE; Bloque 4 es el único bloque activo; Bloques 5–10 no iniciados.
 
 ## Objetivo y autoridad
@@ -23,22 +23,22 @@ La autoridad del WorldState, reloj, eventos genéricos, transacciones, persisten
 
 | Código | Entrega | Estado objetivo |
 |---|---|---|
-| LE001 | Límites CoreRPG, autoría, versión y referencias | CANDIDATE |
-| LE002 | Nodos de stock, titularidad, jurisdicción e identidades | CANDIDATE |
-| LE003 | Demanda, reservas, consumo y escasez explícitas | CANDIDATE |
-| LE004 | Producción material, trabajo, capacidad e insumos | CANDIDATE |
-| LE005 | Replicación: energía, insumos, patrón, permiso | CANDIDATE |
-| LE006 | Sociedades postescasez sin convertirlas en regla universal | CANDIDATE |
-| LE007 | Operadores comerciales y acuerdos verificables | CANDIDATE |
-| LE008 | Modelos de compensación sin moneda ni tasa universal inventadas | CANDIDATE |
-| LE009 | Rutas, naves, plazas y transporte con causalidad temporal | CANDIDATE |
-| LE010 | Fronteras, legalidad, bloqueos y demoras | CANDIDATE |
-| LE011 | Flujos, pérdidas y conciliación de existencias | CANDIDATE |
-| LE012 | Presión económica y resiliencia sin crear guerras/crisis | CANDIDATE |
-| LE013 | Estado persistente, idempotencia, orden temporal y LOD | CANDIDATE |
-| LE014 | Separación entre verdad, conocimiento e IA | CANDIDATE |
-| LE015 | Simulador de referencia, fixtures y pruebas positivas/negativas | CANDIDATE |
-| LE016 | Auditoría transversal, índice y cierre administrativo | CANDIDATE |
+| LE001 | Límites CoreRPG, autoría, versión y referencias | COMPLETE_REFERENCE |
+| LE002 | Nodos de stock, titularidad, jurisdicción e identidades | COMPLETE_REFERENCE |
+| LE003 | Demanda, reservas, consumo y escasez explícitas | COMPLETE_REFERENCE |
+| LE004 | Producción material, trabajo, capacidad e insumos | COMPLETE_REFERENCE |
+| LE005 | Replicación: energía, insumos, patrón, permiso | COMPLETE_REFERENCE |
+| LE006 | Sociedades postescasez sin convertirlas en regla universal | COMPLETE_REFERENCE |
+| LE007 | Operadores comerciales y acuerdos verificables | COMPLETE_REFERENCE |
+| LE008 | Modelos de compensación sin moneda ni tasa universal inventadas | COMPLETE_REFERENCE |
+| LE009 | Rutas, naves, plazas y transporte con causalidad temporal | COMPLETE_REFERENCE |
+| LE010 | Fronteras, legalidad, bloqueos y demoras | COMPLETE_REFERENCE |
+| LE011 | Flujos, pérdidas y conciliación de existencias | COMPLETE_REFERENCE |
+| LE012 | Presión económica y resiliencia sin crear guerras/crisis | COMPLETE_REFERENCE |
+| LE013 | Estado persistente, idempotencia, orden temporal y LOD | COMPLETE_REFERENCE |
+| LE014 | Separación entre verdad, conocimiento e IA | COMPLETE_REFERENCE |
+| LE015 | Simulador de referencia, fixtures y pruebas positivas/negativas | COMPLETE_REFERENCE |
+| LE016 | Auditoría transversal, índice y cierre administrativo | COMPLETE_REFERENCE |
 
 ## Fuentes y reutilización
 
@@ -110,3 +110,7 @@ El CLI de referencia nunca escribe en el repositorio: consume un JSON y emite un
 Cerrar el **diseño de referencia Star Trek** solo si contratos, fixtures, CLI y pruebas locales/CI funcionan, índices son consistentes y la PR está fusionada. No afirmar economía viva en UE5/Host ni en CoreRPG hasta disponer de integración/runtime específico y pruebas de persistencia de campaña real.
 
 **Pendencias ajenas a este bloque:** integración CoreRPG real; generación de historia previa (B5); invención científica (B6); fenómenos (B7); crisis (B8); misiones (B9); scheduler galáctico (B10). Esas dependencias no impiden completar el alcance **de referencia** de B4.
+
+## Certificación de referencia
+
+30 pruebas nuevas de economía PASS; 62 pruebas de los bloques dinámicos 1–4 PASS y regresión LORE-04B PASS en [run #43192447974](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43192447974). Acta: `P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md`. Estado: `procedural_living_economy_status_v0.1.json`. Integración CoreRPG/UE5 pendiente por separación arquitectónica intencional.
