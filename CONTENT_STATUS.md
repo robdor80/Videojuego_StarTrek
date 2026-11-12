@@ -632,3 +632,10 @@ This status does **not** mean all species, planets, ships, organizations or asse
 
 **Limitación:** no hay integración CoreRPG/UE5/HOST, ni un mercado económico ejecutándose autónomamente en la campaña. WorldState, tiempo, acciones, transacciones y guardado genéricos siguen siendo propiedad de CoreRPG. **Siguiente bloque secuencial: Bloque 5 — Historia procedural y acontecimientos importantes.**
 
+
+
+## P2 — Universo dinámico: Bloque 5 (2026-11-12)
+
+**Bloque 5 — Historia procedural y grandes acontecimientos: COMPLETE_REFERENCE** tras contrato, generador offline de referencia, historia append-only, conocimiento filtrado, fixture y pruebas deterministas. Plan: `proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_history_major_events_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md`. PR #114.
+
+**Validación final de referencia:** [run #43195780820](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820), SUCCESS: 36/36 pruebas nuevas B05, 98/98 regresiones B1–B5, 28/28 pruebas F13, y JSON/CLI. El bloque 5 no ejecuta cambios de soberanía, guerras, producción, misiones, descubrimientos ni crisis: consume hechos aceptados. No hay CoreRPG/UE5/HOST ni save/load real integrados por este bloque. **Siguiente bloque elegible: Bloque 6 — Ciencia, tecnología y descubrimientos.**

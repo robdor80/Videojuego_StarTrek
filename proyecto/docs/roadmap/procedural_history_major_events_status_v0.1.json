@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_history_major_events_status",
+  "status": "COMPLETE_REFERENCE",
+  "runtime_implemented": false,
+  "closed_at": "2026-11-12",
+  "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+  "plan_ref": "proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md",
+  "summary": {
+    "total_packages": 16,
+    "complete_reference": 16,
+    "partial": 0,
+    "todo": 0
+  },
+  "packages": [
+    {
+      "package_id": "PH001",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH002",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH003",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH004",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH005",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH006",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH007",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH008",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH009",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH010",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH011",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH012",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH013",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH014",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH015",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "PH016",
+      "status": "COMPLETE_REFERENCE"
+    }
+  ],
+  "evidence": {
+    "reference_contract": "sistemas/universe/generation/procedural_history_major_events_reference_contract_v0.1.json",
+    "simulator": "desarrollo/tools/generation/simulate_procedural_history.py",
+    "tests": "desarrollo/tools/generation/test_simulate_procedural_history.py",
+    "fixture": "desarrollo/validation/fixtures/procedural_history/procedural_history_reconstruction_v0.1.json",
+    "test_count_new": 36,
+    "regression_dynamic_universe_total_including_new": 98,
+    "f13_regression_tests": 28,
+    "preliminary_run_id": 43195328217,
+    "preliminary_run_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195328217",
+    "final_validation": "SUCCESS",
+    "github_actions_run_id": 43195780820,
+    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820",
+    "validation_at_sha": "c0b4dc217ad3046f67e695219f15cd966563a956"
+  },
+  "limits": {
+    "authoritative_runtime": "NOT_IMPLEMENTED_BY_THIS_BLOCK",
+    "source_authenticity": "DECLARED_SYNTHETIC_INPUTS_ONLY",
+    "historical_prefix": "SEALED_AND_IMMUTABLE",
+    "corerpg_save_load": "NOT_INTEGRATED",
+    "host_unreal": "NOT_INTEGRATED",
+    "later_tv_events": "NOT_PREDETERMINED",
+    "other_blocks": "6-10 NOT IMPLEMENTED"
+  },
+  "next_block": "6 — Science, Technology & Discovery"
+}

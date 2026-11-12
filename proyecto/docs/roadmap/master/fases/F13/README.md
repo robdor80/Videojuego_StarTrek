@@ -50,3 +50,7 @@ Preparación **P01–P05** con auditoría de capas 001–120, puerta estricta de
 La preparación conserva 001–118 en su madurez declarada, 119 `PARTIAL`, 120 `BLOCKED_RUNTIME` y el **bloque 4 como siguiente bloque real**. No cierra el bloque 4 ni implementa 5–10; el uso del contrato de misión emergente solo valida la frontera causal y no adelanta el bloque 9.
 
 **No hay mutaciones de World State, integración CoreRPG, save/load real ni ejecución UE5/MSI.** F13 continúa globalmente `PLANIFICADA` y F02 sigue siendo la única fase principal `EN_CURSO`.
+
+## Actualización P2-B05 — 12-11-2026
+
+El bloque 4 de economía fue cerrado de referencia mediante PR #113 y el **bloque 5** alcanza `REFERENCE_COMPLETE` mediante PR #114 (historia procedural, causalidad, rectificaciones y conocimiento filtrado). La frontera del siguiente trabajo de referencia es el **Bloque 6**, sin ejecutar todavía sus contenidos. Las frases del acta de octubre que sitúan el bloque 4 como siguiente describen un estado histórico y se conservan para trazabilidad. F13 global permanece **PLANIFICADA** y no se atribuye a CoreRPG/HOST/UE5 esta implementación de referencia.
