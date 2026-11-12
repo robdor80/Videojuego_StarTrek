@@ -100,13 +100,21 @@
       "f13": 30
     },
     "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271",
-    "ci_final_status": "SUCCESS_ON_TEST_AND_ROADMAP_HEAD_BEFORE_FINAL_EVIDENCE_SYNC",
+    "ci_final_status": "SUCCESS_PREMERGE_AND_B07_POSTMERGE",
     "ci_initial_commit": "5ef16d4eb1ca8c7d099a8e2f56c6a0392ab1ac99",
     "ci_validation_commit": "ba881f723f1a2bc8180402081a42889d8388a639",
     "cross_workflow_audit": {
       "total": 19,
       "success": 19,
       "at_commit": "ba881f723f1a2bc8180402081a42889d8388a639"
+    },
+    "postmerge": {
+      "pr": 116,
+      "merge_commit": "73eb7e59e1032ac5975c9e459f27d2c1f5609522",
+      "b07_workflow": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207624584",
+      "b07_conclusion": "SUCCESS",
+      "f13_conclusion": "SUCCESS",
+      "academy_legacy_gate": "POSTMERGE_COMPATIBILITY_FIX_IN_SEPARATE_PR"
     }
   },
   "limits": {
@@ -121,6 +129,7 @@
     "host_commands_integrated": false
   },
   "next_block": "8 — Systemic Crises",
-  "sequential_gate": "BLOCK8_READY_AFTER_PR116_MERGE_AND_FINAL_DOC_CI",
-  "merge_gate": "PR116_FINAL_DOCUMENT_SYNC_PENDING"
+  "sequential_gate": "BLOCK8_ELIGIBLE_FOR_REFERENCE",
+  "merge_gate": "PR116_MERGED",
+  "closed_at": "2026-11-12"
 }
