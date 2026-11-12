@@ -101,12 +101,12 @@
     "fixture": "desarrollo/validation/fixtures/background_galactic_evolution/verified_npc_offscreen_catchup_v0.1.json",
     "tests": "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py",
     "workflow": ".github/workflows/p2-b10-background-galactic-evolution.yml",
-    "expected_new_tests": 50,
-    "ci_final_status": "SUCCESS_INITIAL_PENDING_FINAL_HEAD",
+    "expected_new_tests": 54,
+    "ci_final_status": "SUCCESS_HARDENED_HEAD_PENDING_FINAL_DOCUMENTATION_CI",
     "ci_final_head": null,
     "measured_tests": {
-      "b10": 50,
-      "dynamic_b01_to_b10": 379,
+      "b10": 54,
+      "dynamic_b01_to_b10": 383,
       "f13": 30,
       "academy": 9
     },
@@ -115,6 +115,12 @@
     "ci_initial_workflows": {
       "total": 5,
       "success": 5
+    },
+    "ci_hardened_commit": "7cbc4631b4cea44e7657c9115716872ad29a55a0",
+    "ci_hardened_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43278574994",
+    "ci_hardened_workflows": {
+      "total": 22,
+      "success": 22
     }
   },
   "limits": {

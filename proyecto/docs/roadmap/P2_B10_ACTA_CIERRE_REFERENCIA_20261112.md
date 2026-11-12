@@ -27,3 +27,5 @@ La fase global F13 **PLANIFICADA** y capas 119 PARTIAL/120 BLOCKED_RUNTIME no se
 ## Puerta y auditoría final
 
 Comprobar diff completo contra main, ausencia de temporales, dependencias duraderas, pruebas B10 + regresión, no corrupción de Academy/F13 y último HEAD CI transversal verde. Después fusionar la PR #122 con verificación de merge. De ser necesaria una certificación documental posfusión, registrarla en PR separada sin alterar código ni resultados previos. No atribuir CI no consultado a la rama main.
+
+**Endurecimiento y segunda auditoría:** tras proteger deduplicación del intent externo, impedir noticias anteriores a su hecho emisor, limitar configuración y comprobar prioridad envejecida, el commit `7cbc4631b4cea44e7657c9115716872ad29a55a0` superó **54/54 B10, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia** en [Actions #43278574994](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43278574994); los **22/22 workflows** asociados quedaron SUCCESS. Esta certificación es anterior al commit documental que la registra; ese commit deberá pasar sus propios checks antes de la fusión.
