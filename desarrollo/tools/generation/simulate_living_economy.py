@@ -118,7 +118,7 @@ def _production(s: dict[str, Any], e: dict[str, Any], replicate: bool) -> dict[s
         made = qty
     else:
         recipe = entry(f["production_recipes"], item, "production recipe")
-        require(label(e["labor_ref"], "labor_ref"), "labor needed")
+        require(label(e.get("labor_ref"), "labor_ref"), "labor needed")
         energy = integer(recipe["power_per_batch_unit"], "production energy", positive=True) * qty
         inputs = recipe["inputs"]
         require(inputs, "production without material inputs")
@@ -136,7 +136,7 @@ def _production(s: dict[str, Any], e: dict[str, Any], replicate: bool) -> dict[s
 
 
 def _consume(s: dict[str, Any], e: dict[str, Any], loss: bool) -> dict[str, Any]:
-    label(e["cause_ref"], "cause_ref")
+    label(e.get("cause_ref"), "cause_ref")
     store = entry(s["stores"], e["store_id"], "store")
     qty = integer(e["quantity"], "quantity", positive=True)
     item = label(e["item"], "item")
