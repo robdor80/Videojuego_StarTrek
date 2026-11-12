@@ -34,7 +34,9 @@ Dos ubicaciones **sintéticas, no canónicas**: perturbación en un sector y rui
 
 **Primera ejecución controlada:** [Actions P2-B07 #43206224117](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43206224117) **SUCCESS** sobre el commit `5ef16d4eb1ca8c7d099a8e2f56c6a0392ab1ac99`. Logs: 54/54 pruebas del primer borrador B07, 206/206 regresiones B1–B7 y 29/29 F13, sintaxis, contrato/fixture JSON y CLI sin error.
 
-**Revisión posterior:** se añaden dos pruebas (materialización de slot vacío no reintentable y formación después del corte de campaña por causa admitida), total **56 pruebas B07 previstas**, **208 regresiones B1–B7 previstas** y una prueba nueva de frontera **30 F13 previstas**. Esos números **no se certificarán hasta verificar CI sobre el último HEAD**, incluida la actualización de los documentos. La evidencia del primer commit no debe usarse como certificación del último.
+**Certificación ampliada de código y roadmap:** [Actions P2-B07 #43207092271](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271) **SUCCESS** sobre el commit `ba881f723f1a2bc8180402081a42889d8388a639`: **56/56** pruebas B07, **208/208** B01–B07, **30/30** F13, validación de JSON, sintaxis y CLI determinista. La revisión añadió generación por causa física posterior al corte, prohibición de reintentar un slot vacío y puerta estricta B07→B08. El mismo commit obtuvo **19/19 workflows SUCCESS**, incluidos F13, B06, LORE-02, auditoría y gobierno del roadmap. Ninguna de esas pruebas prueba integración de producción.
+
+La sincronización documental final se hará en un commit posterior: **verificar el CI de ese HEAD antes de fusionar**; la ejecución indicada arriba es evidencia del código y su frontera, no certificación automática de cualquier edición futura.
 
 ## Límites verificados y pendientes de ejecución real
 
@@ -48,4 +50,4 @@ Dos ubicaciones **sintéticas, no canónicas**: perturbación en un sector y rui
 
 **Bloque 8 — Crisis sistémicas** será el siguiente a partir de la fusión de esta PR y del éxito final de CI. B09 misiones y B10 motor galáctico permanecen cerrados. Las 120 capas siguen 118 completas de referencia, 119 parcial y 120 bloqueada por runtime. F13 global permanece **PLANIFICADA**.
 
-**Administración:** acta preparada, pendiente de incorporar referencia de la ejecución CI del último commit y de confirmar estado fusionado.
+**Administración:** contenido y CI de código certificados en PR #116; fusión condicionada a CI verde del último commit documental. El cierre administrativo de esta acta se hace efectivo con la fusión, sin elevar F13 ni CoreRPG/UE5 de estado.
