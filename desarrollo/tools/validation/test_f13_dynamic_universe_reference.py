@@ -76,7 +76,7 @@ class TestF13DynamicUniverseReference(unittest.TestCase):
         self.assertEqual(118, result["complete_layers"])
         self.assertEqual([119], result["partial_layers"])
         self.assertEqual([120], result["runtime_blocked_layers"])
-        self.assertEqual(9, result["active_reference_block"])
+        self.assertEqual(10, result["active_reference_block"])
 
     def test_layer_119_cannot_be_falsely_closed(self):
         self.layers["layer_119"] = "COMPLETE"
