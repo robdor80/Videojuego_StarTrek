@@ -86,3 +86,7 @@ PR #118 fusionada (commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`), 19/19 wor
 ## Actualización P2-B09 — 12-11-2026
 
 Se añade el contrato/referencia offline **B09, misiones emergentes derivadas de necesidades externas acreditadas**, veinte paquetes EM001–EM020, con rutas, medios, permisos independientes, Primera Directriz, noticias demoradas, misiones NPC y resultado verificado. No modifica el propietario de misiones reales ni la función de referencia previa `derive_mission_candidate` de F13. [Plan B09](../../../procedural_emergent_missions_plan_v0.1.md) y [acta](../../../P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md). **B10 sigue pendiente hasta CI y fusión B09**. El estado F13 **PLANIFICADA** y las capas 119/120 no cambian; ni CoreRPG, ni HOST, ni Unreal ejecutan aún estas misiones.
+
+## Cierre administrativo P2-B09 — 12-11-2026
+
+[PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fusionada (`4c8733da7cef6acf2b0a0c4259734a615ffed2d0`) tras 20/20 checks SUCCESS en el HEAD final premerge. **B10, evolución galáctica en segundo plano, pasa a ser el siguiente bloque de referencia habilitado**. La fase F13 continúa `PLANIFICADA`; la promoción del bloque B09 no cierra los pasos F13-P01–P05 ni el runtime CoreRPG/UE5.
