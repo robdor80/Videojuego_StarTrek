@@ -87,7 +87,9 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 
 **Estado de fase:** `COMPLETE` documental tras PR #31; 14 fichas iniciales + 45 fichas de ampliación (`lore02_a_system_atlas_v0.2.json`), 9 operadores, 14 familias de instalación y 50 casos negativos. La nota anterior describía el primer corte histórico. `NEEDS_REVIEW` en fichas JSON no significa autorización de importación/runtime. No altera CoreRPG ni UE5; quedan lagunas de canon y especificaciones por clase/época para implementación futura.
 
-### Clase Valhalla — decisiones de diseño aprobadas
+> **PRECEDENCIA 13/11/2026 — DEC-0020:** la nave aspiracional es la **USS Enterprise NCC-1701-D**, clase Galaxy, reconstruida mediante **Proyecto Valhalla**. El apartado «Clase Valhalla» siguiente es **histórico de diseño**, NO la identidad vigente de la nave ni equipamiento instalado. La migración de las 16 decisiones VAL-TEC necesita revisión por subsistema. [Decisión vigente](../../../proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md).
+
+### Clase Valhalla — decisiones históricas de diseño
 
 - [Perfil conceptual VAL-TEC-01 a VAL-TEC-16](valhalla_tech_profile_v0.1.md): 8 elecciones B expresas y 8 opciones B adoptadas por delegación creativa; restricciones y salvaguardas, incluido triple escudo + ablativo.
 - [Registro de aprobación y procedencia por decisión](valhalla_tech_decisions_v0.1.json): metadatos de diseño, **no** contrato de capacidades ni estado instalado.

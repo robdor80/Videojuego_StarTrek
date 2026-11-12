@@ -1,5 +1,7 @@
 # Registro de decisiones y riesgos — base 11-10-2026; actualizado 13-10-2026
 
+> **PRECEDENCIA 2026-11-13 — DEC-0020:** [Enterprise-D / Proyecto Valhalla](../../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md). Las filas antiguas DEC-0001 y DEC-0015 son históricas cuando hablan de una **nueva clase Valhalla** como buque objetivo. El objetivo vigente es **USS Enterprise NCC-1701-D**, clase Galaxy, y «Valhalla» nombra el programa de reconstrucción; se conservan fechas y demás decisiones no revocadas. No renombrar IDs ni migrar F04/UE5 en esta acta.
+
 ## Decisiones de autor y de arquitectura (no tomar por la IA sin permiso)
 
 | ID | Estado | Decisión / frontera | Etapa | Observación |
@@ -22,7 +24,7 @@
 | DEC-0016 | **APROBADA 2026-10-30 — GAME_ADDITION** | Flujo cuántico experimental en Odyssey de ensayos desde 2383; evolución y posible instalación posterior en Valhalla | F04/LORE-02/F05/F11 | **No estándar en todas las Odyssey ni obligatorio en Valhalla en 2387**; permitir misión de pruebas, incidentes, fallos y resultados causales. Detalle en acta DEC-0013–0016 |
 | DEC-0017 | **APROBADA 2026-10-31 — GAME_ADDITION** | Proyecto Defiant de Valhalla = **nave de guerra clase Defiant + destacamento de Marines «Hijos de Odín»** | F04/F09/F11/F14 | Los Marines **son soldados**, no un eufemismo de seguridad. Defiant tiene dotación naval especializada distinta. [Acta general](../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md) |
 | DEC-0018 | **APROBADA 2026-10-31 — GAME_ADDITION** | Federación y Flota conservan exploración/diplomacia y asumen explícitamente disuasión militar y capacidad de ataque contundente, con medios furtivos, militares y posibilidad narrativa de daño extremo | LORE/F09/F11 | Capacidad ≠ autorización ni empleo automático; reglas y consecuencias por diseñar. No implica arma planetaria implementada ni política sin control. [Acta](../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md) |
-| DEC-0019 | **APROBADA 2026-10-31 — GAME_ADDITION** | Dotaciones Defiant y «Hijos de Odín» **diferenciadas y contenidas en los 1.800 miembros de Flota** de Valhalla | F04/F12/F14 | 60 Marines + 40 dotación naval **solo propuesta numérica no ratificada**; cero personas duplicadas, 400 civiles aparte, mando y turnos específicos. [Acta](../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md) |
+| DEC-0020 | **APROBADA 2026-11-13 — GAME_ADDITION** | USS Enterprise NCC-1701-D modernizada, clase Galaxy; «Proyecto Valhalla» es su programa de reconstrucción dirigido por Geordi, 2379 origen, 2380 trabajos, 2383 Academia/Odyssey, objetivo condicional 2387 | LORE-05A/F04/F06/F07/F10/F11/HOST | Supersede identidad de clase nueva en DEC-0001/0015, preserva fechas, no instala sistemas ni libera plazas. [Acta](../../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) |\n| DEC-0019 | **APROBADA 2026-10-31 — GAME_ADDITION** | Dotaciones Defiant y «Hijos de Odín» **diferenciadas y contenidas en los 1.800 miembros de Flota** de Valhalla | F04/F12/F14 | 60 Marines + 40 dotación naval **solo propuesta numérica no ratificada**; cero personas duplicadas, 400 civiles aparte, mando y turnos específicos. [Acta](../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md) |
 
 ## Riesgos y mitigación
 
