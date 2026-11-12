@@ -322,3 +322,7 @@ Blocks 1–3 remain COMPLETE on the Star Trek reference side. **Block 4 — Livi
 ### Dynamic-universe sequence update — Block 6 (2026-11-12)
 
 Blocks 1–3 preserve their COMPLETE reference-level foundations; B04, B05 and **B06 are REFERENCE_COMPLETE** after PR #113/#114 and the B06 reference package, respectively. Science, technology and discoveries are covered by contract plus a deterministic, adversarial offline simulator. **B07 — Phenomena, Anomalies & Procedural Archaeology is next, only after B06 merge and CI verification.** B08–B10 remain TODO. Reference evidence does not establish autonomous NPC runtime, CoreRPG-authoritative state, HOST session commands or UE5 gameplay.
+
+### Dynamic-universe sequence update — Block 7 (2026-11-12)
+
+Blocks 1–3 remain COMPLETE at reference foundation level; B04–B07 are **REFERENCE_COMPLETE** on the Star Trek contract/offline-evidence side only (B07 pending the final CI/merge gate in PR #116). B07 formalizes anomaly/site world-generation candidates, causal life cycles, protected archaeology and observer-specific knowledge without authorizing a second WorldState writer. See `proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md`, status and closure act. **B08 — Systemic Crises** is the next sequential reference block after merge; B09–B10 are TODO. F13 overall and CoreRPG/HOST/UE5 gameplay remain pending.
