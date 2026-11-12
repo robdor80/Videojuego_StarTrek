@@ -225,5 +225,32 @@ class ProceduralHistoryReferenceTests(unittest.TestCase):
         self.assert_rejected_clean(state(), e, "impacted entities required")
 
 
+    def test_34_accepted_canonical_prefix_preserved(self):
+        s = state()
+        prefix = dict(event_id="canon:historical_anchor", tick=50, kind="canonical_anchor",
+                      source_digest="canonical_source", visibility="public", provenance="canon")
+        prefix["digest"] = h.record_digest(prefix)
+        s["history"].append(prefix)
+        result = h.apply_event(s, event())
+        self.assertEqual(prefix, result["history"][0])
+        self.assertEqual(prefix, s["history"][0])
+
+    def test_35_distinct_campaigns_derive_distinct_history_ids(self):
+        s1, s2 = state(), state()
+        s2["campaign_id"] = "campaign_beta"
+        kwargs = dict(kind="economic_milestone", source_refs=["fact_factory_restored"],
+                      impact_refs=["colony_naral"], actor_ref="regional_archive", tick_value=104)
+        self.assertNotEqual(h.proposal(s1, **kwargs)["event_id"],
+                            h.proposal(s2, **kwargs)["event_id"])
+
+    def test_36_lod_cannot_change_accepted_history(self):
+        s1, s2 = state(), state()
+        s1["lod"] = "near"
+        s2["lod"] = "dormant"
+        self.assertEqual(h.apply_event(s1, event())["history"],
+                         h.apply_event(s2, event())["history"])
+
+
+
 if __name__ == "__main__":
     unittest.main()

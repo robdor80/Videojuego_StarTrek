@@ -9,7 +9,7 @@
 | 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | COMPLETE |
 | 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
-| 5 | Procedural History & Major Events | TODO |
+| 5 | Procedural History & Major Events | REFERENCE_COMPLETE |
 | 6 | Science, Technology & Discovery | TODO |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
 | 8 | Systemic Crises | TODO |
@@ -44,3 +44,7 @@ Block 3 closes crisis/escalation, culture/faction/government conflict behaviour,
 ## Temporary priority gate — Academy Life
 
 Academy Life 20/20 had removed the earlier gate. **Update 2026-11-12:** Block 4 is now COMPLETE on the Star Trek reference-contract/test side, with [plan](procedural_living_economy_plan_v0.1.md), [status](procedural_living_economy_status_v0.1.json) and [acceptance evidence](P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md). It does not certify CoreRPG/UE5/HOST runtime. **Block 5 — Procedural History & Major Events is the next eligible block.**
+
+## Actualización secuencial — 12/11/2026, P2-B05
+
+Bloque 5 **REFERENCE_COMPLETE** sólo a nivel de contrato, simulador histórico offline, 36 pruebas y regresiones. Ver [plan B05](procedural_history_major_events_plan_v0.1.md), [estado B05](procedural_history_major_events_status_v0.1.json) y [acta B05](P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md). **Siguiente elegible: Bloque 6 — Science, Technology & Discovery.** La fase F13 global, el runtime CoreRPG, HOST y UE5 no cambian de madurez.

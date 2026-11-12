@@ -1,6 +1,6 @@
 # Planificación 2 · Bloque 5 — Historia procedural y grandes acontecimientos
 
-**Estado:** EN_VALIDACION_REFERENCIA (2026-11-12). **Alcance:** contratos, generador de propuestas de referencia, registro determinista, fixtures, pruebas y auditoría; no CoreRPG/UE5/HOST ejecutable.
+**Estado:** COMPLETE_REFERENCE (2026-11-12). **Alcance:** contratos, generador de propuestas de referencia, registro determinista, fixtures, pruebas y auditoría; no CoreRPG/UE5/HOST ejecutable.
 
 ## Propósito
 Convertir **hechos aceptados y causalmente verificados** de B1 (evolución), B2 (colonización), B3 (conflicto) y B4 (economía) en registros históricos persistentes, sin inventar sucesos por conveniencia narrativa. La historia de cada campaña diverge después de su corte temporal. La Flota Estelar conoce sólo lo comunicado y permitido.
@@ -50,3 +50,7 @@ B5 **no** desarrolla: B6 investigación y progreso científico; B7 anomalías y 
 - `.github/workflows/p2-b05-procedural-history.yml`: CI, incluyendo regresión B1–B4 y F13.
 
 **No está implementado:** precarga histórica completa desde canon, ejecución periódica de nuevos acontecimientos sin jugador, persistencia real de campañas, autorización viva por WorldState, comunicaciones intersistémicas, simulación local/galáctica ni integración con CoreRPG/HOST/UE5. Eso exige tareas de runtime posteriores y validación explícita. La referencia acepta **candidatos históricos ya causalmente sustentados**, no descubre causas por sí sola.
+
+## Certificación de referencia — 12/11/2026
+
+36 pruebas propias, 98 pruebas conjuntas de evolución civilizatoria, colonización, conflicto, economía e historia (con las 36 incluidas), y 28 pruebas F13 superadas en GitHub Actions. El fixture sintético reproduce el mismo hash en CLI. El acta y el manifiesto de estado conservan las evidencias; la PR fusionada es condición de cierre administrativo, no de integración con CoreRPG.
