@@ -314,3 +314,7 @@ This separation prevents the earlier 001–118 design-readiness closure from bei
 - Blocks 1–2 remain COMPLETE.
 - **Block 3 — Procedural Conflict & War: COMPLETE.**
 - Blocks 4–10 remain unimplemented; Block 4 is next in strict sequence.
+
+### Dynamic-universe sequence update — Block 4 (2026-11-12)
+
+Blocks 1–3 remain COMPLETE on the Star Trek reference side. **Block 4 — Living Interplanetary / Interstellar Economy is COMPLETE_REFERENCE**, backed by deterministic simulator, 30 dedicated tests, 62 regression tests across blocks 1–4 and LORE-04B regression. See `procedural_living_economy_plan_v0.1.md` and `P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md`. Blocks 5–10 remain unimplemented; Block 5 is now next. Generic runtime, event scheduling, mutation and persistence continue to belong to CoreRPG; no UE5/Host integration is claimed.

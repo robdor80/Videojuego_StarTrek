@@ -8,7 +8,7 @@
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
 | 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | COMPLETE |
-| 4 | Living Interplanetary / Interstellar Economy | READY_TO_RESUME |
+| 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
 | 5 | Procedural History & Major Events | TODO |
 | 6 | Science, Technology & Discovery | TODO |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
@@ -43,4 +43,4 @@ Block 3 closes crisis/escalation, culture/faction/government conflict behaviour,
 
 ## Temporary priority gate — Academy Life
 
-Dynamic Universe **Block 4 — Living Interplanetary / Interstellar Economy is READY_TO_RESUME and remains unstarted**. The temporary Academy gate is now closed because `Academy Life & Social Simulation` is 20/20 COMPLETE. Block 4 is the next Dynamic Universe implementation target before any Block 5 work.
+Academy Life 20/20 had removed the earlier gate. **Update 2026-11-12:** Block 4 is now COMPLETE on the Star Trek reference-contract/test side, with [plan](procedural_living_economy_plan_v0.1.md), [status](procedural_living_economy_status_v0.1.json) and [acceptance evidence](P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md). It does not certify CoreRPG/UE5/HOST runtime. **Block 5 — Procedural History & Major Events is the next eligible block.**

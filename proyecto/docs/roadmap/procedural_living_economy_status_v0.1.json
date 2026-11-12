@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_living_economy_status",
+  "status": "COMPLETE_REFERENCE",
+  "runtime_implemented": false,
+  "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+  "plan_ref": "proyecto/docs/roadmap/procedural_living_economy_plan_v0.1.md",
+  "closed_at": "2026-11-12",
+  "summary": {
+    "total_packages": 16,
+    "complete_reference": 16,
+    "partial": 0,
+    "todo": 0
+  },
+  "packages": [
+    {
+      "package_id": "LE001",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE002",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE003",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE004",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE005",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE006",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE007",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE008",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE009",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE010",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE011",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE012",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE013",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE014",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE015",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "LE016",
+      "status": "COMPLETE_REFERENCE"
+    }
+  ],
+  "evidence": {
+    "reference_contract": "sistemas/universe/generation/living_economy_reference_contract_v0.1.json",
+    "reference_simulator": "desarrollo/tools/generation/simulate_living_economy.py",
+    "executable_tests": "desarrollo/tools/generation/test_simulate_living_economy.py",
+    "fixture_dir": "desarrollo/validation/fixtures/living_economy",
+    "test_count_new": 30,
+    "regression_dynamic_universe_total_including_new": 62,
+    "lore04b_regression": "PASS",
+    "json_parse": "PASS",
+    "github_actions_run_id": 43192447974,
+    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43192447974",
+    "ci_conclusion": "success",
+    "validation_at_sha": "a82b5195fed0ee8ce76f46d9ef59c438411cc1f7"
+  },
+  "reserved_for_other_blocks": {
+    "block_5": "historical synthesis",
+    "block_6": "discoveries",
+    "block_7": "anomalies",
+    "block_8": "crisis generation",
+    "block_9": "mission generation",
+    "block_10": "galactic scheduling"
+  },
+  "limits": {
+    "corerpg_generic_runtime": "NOT_IMPLEMENTED_BY_THIS_BLOCK",
+    "unreal5_host": "NOT_INTEGRATED",
+    "universal_currency": "FORBIDDEN",
+    "auto_spawn": "FORBIDDEN",
+    "generated_history": "NOT_B4",
+    "simulation_scope": "explicit candidate events only; no general economy runtime"
+  },
+  "next_block": "5 — Procedural History & Major Events"
+}
