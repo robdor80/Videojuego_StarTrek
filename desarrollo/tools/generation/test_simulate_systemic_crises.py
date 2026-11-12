@@ -22,8 +22,10 @@ class SystemicCrisisReferenceTests(unittest.TestCase):
         return b8.replay(self.state, self.events[:count])
 
     def event(self, kind, at=15, **fields):
-        return dict(event_id="test_" + kind, kind=kind, actor_ref="agency",
-                    tick=at, trigger="world", crisis_ref=REF, **fields)
+        result = dict(event_id="test_" + kind, kind=kind, actor_ref="agency",
+                      tick=at, trigger="world", crisis_ref=REF)
+        result.update(fields)
+        return result
 
     def rejects(self, state, event):
         original = copy.deepcopy(state)
