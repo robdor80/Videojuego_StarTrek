@@ -77,3 +77,8 @@ La PR #116 fue fusionada en `main` (`73eb7e59e1032ac5975c9e459f27d2c1f5609522`) 
 B08, **Crisis sistémicas y consecuencias a escala galáctica**, dispone de 20 paquetes CR001–CR020 (referencia), contrato Star Trek sobre el contrato previo de disrupciones, evaluador Python offline, fixture de cadena causal interregional e informes retrasados. Primera evidencia [Actions #43259713758](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758): 56/56 pruebas B08, 264/264 regresiones B01–B08 y 30/30 F13. El cambio de frontera de B08 a B09 se habilita administrativamente sólo tras CI final y fusión. Ver [plan B08](../../../procedural_systemic_crises_plan_v0.1.md) y [acta B08](../../../P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 **F13 permanece PLANIFICADA** y las capas 119 (parcial) y 120 (bloqueada) no se alteran. No existe un sistema de crisis ejecutándose realmente en CoreRPG, HOST o UE5, ni ahorro de recursos, desastres o evacuaciones aplicados a un WorldState firmado; B09/B10 siguen pendientes. Los informes B08 no equivalen a misiones B09.
+
+
+## Confirmación posfusión B08 — 12-11-2026
+
+PR #118 fusionada (commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`), 19/19 workflows del último HEAD previo y del HEAD de main en SUCCESS, incluidos [B08 posfusión](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149) y [F13 posfusión](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238). **Siguiente bloque de referencia: B09**. F13 sigue PLANIFICADA; no son pruebas de CoreRPG/HOST/UE5 reales.
