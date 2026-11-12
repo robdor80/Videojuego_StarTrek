@@ -102,8 +102,8 @@
     "tests": "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py",
     "workflow": ".github/workflows/p2-b10-background-galactic-evolution.yml",
     "expected_new_tests": 54,
-    "ci_final_status": "SUCCESS_HARDENED_HEAD_PENDING_FINAL_DOCUMENTATION_CI",
-    "ci_final_head": null,
+    "ci_final_status": "SUCCESS_FINAL_PREMERGE_AND_POSTMERGE_CONFIRMED",
+    "ci_final_head": "8b1683542fdb8025f46d7322256ff99b53fefa0f",
     "measured_tests": {
       "b10": 54,
       "dynamic_b01_to_b10": 383,
@@ -121,6 +121,20 @@
     "ci_hardened_workflows": {
       "total": 22,
       "success": 22
+    },
+    "ci_final_premerge_workflows": {
+      "total": 26,
+      "success": 26
+    },
+    "ci_final_premerge_b10_url": null,
+    "postmerge": {
+      "pr": 122,
+      "merge_commit": "e3ae738d9ae14f949982b49ef3b2786dfcdf18db",
+      "workflows": {
+        "total": 21,
+        "success": 21
+      },
+      "b10_run": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43279008660"
     }
   },
   "limits": {
@@ -137,6 +151,7 @@
     "layer_120_complete": false
   },
   "next_work": "F13 / CoreRPG + HOST native integration — outside B10 reference",
-  "sequential_gate": "ALL_TEN_BLOCKS_REFERENCE_COMPLETE_ONLY",
-  "merge_gate": "PR122_PENDING_FINAL_CI"
+  "sequential_gate": "P2_B01_TO_B10_REFERENCE_CLOSED_RUNTIME_PENDING",
+  "merge_gate": "PR122_MERGED_VERIFIED",
+  "closed_at": "2026-11-12"
 }
