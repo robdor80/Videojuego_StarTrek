@@ -1,0 +1,154 @@
+{
+  "fixture_id": "living_economy_frontier_supply_v0.1",
+  "classification": "GAME_ADDITION_TEST_ONLY",
+  "note": "Fictional colony and station. Quantities are fixture values, not canon figures or universal economic policy.",
+  "initial_state": {
+    "stores": {
+      "colony_depot": {
+        "owner_ref": "colony_council",
+        "location_ref": "colony_alpha",
+        "stock": {
+          "ore": 12,
+          "spare": 0,
+          "medkit": 0,
+          "ration": 10
+        }
+      },
+      "colony_clinic": {
+        "owner_ref": "clinic",
+        "location_ref": "colony_alpha",
+        "stock": {
+          "medkit": 0,
+          "ration": 0
+        }
+      },
+      "station_warehouse": {
+        "owner_ref": "freight_company",
+        "location_ref": "station_beta",
+        "stock": {
+          "spare": 0,
+          "ration": 1
+        }
+      },
+      "colony_merchant": {
+        "owner_ref": "merchant",
+        "location_ref": "colony_alpha",
+        "stock": {
+          "ration": 4,
+          "ore": 0
+        }
+      },
+      "colony_customer": {
+        "owner_ref": "customer",
+        "location_ref": "colony_alpha",
+        "stock": {
+          "ration": 0,
+          "ore": 3
+        }
+      }
+    },
+    "facilities": {
+      "frontier_workshop": {
+        "store_id": "colony_depot",
+        "operational": true,
+        "power_units": 20,
+        "feedstock": 4,
+        "max_batch": 5,
+        "patterns": [
+          "medkit"
+        ],
+        "replication_profiles": {
+          "medkit": {
+            "power_per_unit": 2,
+            "feedstock_per_unit": 1,
+            "permitted": true
+          }
+        },
+        "production_recipes": {
+          "spare": {
+            "inputs": {
+              "ore": 2
+            },
+            "power_per_batch_unit": 1,
+            "yield_per_batch_unit": 1
+          }
+        }
+      }
+    },
+    "routes": {
+      "alpha_beta_corridor": {
+        "from_location": "colony_alpha",
+        "to_location": "station_beta",
+        "open": true,
+        "legal_access": true,
+        "capacity": 5,
+        "min_travel_ticks": 3
+      }
+    },
+    "vessels": {
+      "freighter_001": {
+        "location_ref": "colony_alpha",
+        "capacity": 5,
+        "available": true
+      }
+    },
+    "shipments": {},
+    "wallets": {
+      "customer_wallet": {
+        "unit": "latinum_strip",
+        "balance": 20
+      },
+      "merchant_wallet": {
+        "unit": "latinum_strip",
+        "balance": 2
+      },
+      "other_currency_wallet": {
+        "unit": "local_credits",
+        "balance": 20
+      }
+    },
+    "last_tick": 0,
+    "event_log": []
+  },
+  "happy_path_events": [
+    {
+      "event_id": "produce-1",
+      "kind": "produce",
+      "tick": 1,
+      "authority_ref": "workshop_authority",
+      "facility_id": "frontier_workshop",
+      "item": "spare",
+      "quantity": 3,
+      "labor_ref": "technician_shift"
+    },
+    {
+      "event_id": "ship-1",
+      "kind": "dispatch",
+      "tick": 2,
+      "authority_ref": "freight_authority",
+      "operator_ref": "freight_company",
+      "agreement_ref": "contract_001",
+      "from_store": "colony_depot",
+      "to_store": "station_warehouse",
+      "route_id": "alpha_beta_corridor",
+      "vessel_id": "freighter_001",
+      "shipment_id": "manifest_001",
+      "item": "spare",
+      "quantity": 2
+    },
+    {
+      "event_id": "arrive-1",
+      "kind": "deliver",
+      "tick": 5,
+      "authority_ref": "station_receipt",
+      "shipment_id": "manifest_001"
+    }
+  ],
+  "expected": {
+    "colony_ore": 6,
+    "colony_spares": 1,
+    "station_spares": 2,
+    "final_tick": 5,
+    "shipments_count": 0
+  }
+}
