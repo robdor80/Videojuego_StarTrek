@@ -1,0 +1,40 @@
+name: P2-B06 Science Discovery Reference
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_science_discovery.py"
+      - "desarrollo/tools/generation/test_simulate_science_discovery.py"
+      - "desarrollo/validation/fixtures/science_discovery/**"
+      - "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md"
+      - ".github/workflows/p2-b06-science-discovery.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_science_discovery.py"
+      - "desarrollo/tools/generation/test_simulate_science_discovery.py"
+      - "desarrollo/validation/fixtures/science_discovery/**"
+      - "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md"
+      - ".github/workflows/p2-b06-science-discovery.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  science-discovery-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reference science and adversarial tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_science_discovery.py' -v
+      - name: Regression of dynamic universe B1-B6
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: F13 sequential governance regression
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_dynamic_universe_reference.py' -v
+      - name: Contract and fixture schema and replay
+        run: |
+          python -m json.tool sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json >/dev/null
+          python -m json.tool desarrollo/validation/fixtures/science_discovery/science_discovery_refit_v0.1.json >/dev/null
+          python desarrollo/tools/generation/simulate_science_discovery.py --fixture desarrollo/validation/fixtures/science_discovery/science_discovery_refit_v0.1.json
