@@ -1,0 +1,116 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_science_technology_discovery_status",
+  "status": "COMPLETE_REFERENCE",
+  "runtime_implemented": false,
+  "closed_at": "2026-11-12",
+  "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+  "plan_ref": "proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md",
+  "summary": {
+    "total_packages": 18,
+    "complete_reference": 18,
+    "partial": 0,
+    "todo": 0
+  },
+  "packages": [
+    {
+      "package_id": "ST001",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST002",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST003",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST004",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST005",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST006",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST007",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST008",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST009",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST010",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST011",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST012",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST013",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST014",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST015",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST016",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST017",
+      "status": "COMPLETE_REFERENCE"
+    },
+    {
+      "package_id": "ST018",
+      "status": "COMPLETE_REFERENCE"
+    }
+  ],
+  "evidence": {
+    "contract": "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json",
+    "simulator": "desarrollo/tools/generation/simulate_science_discovery.py",
+    "tests": "desarrollo/tools/generation/test_simulate_science_discovery.py",
+    "fixture": "desarrollo/validation/fixtures/science_discovery/science_discovery_refit_v0.1.json",
+    "workflow": ".github/workflows/p2-b06-science-discovery.yml",
+    "test_count_new": 54,
+    "regression_dynamic_universe_total_including_new": 152,
+    "f13_regression_tests": 29,
+    "github_actions_run_id": 43199308066,
+    "github_actions_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066",
+    "validation_at_sha": "f81de6332ef71588e27fd20848f8b7ee12dcdfed",
+    "final_document_sync_ci": "SUCCESS"
+  },
+  "limits": {
+    "corerpg_runtime": "NOT_IMPLEMENTED",
+    "host_unreal": "NOT_INTEGRATED",
+    "source_authenticity": "SYNTHETIC_DECLARED_FACTS_ONLY",
+    "real_resource_accounting": "NOT_VERIFIED_BY_B04",
+    "real_shipyard_work_orders": "NOT_IMPLEMENTED",
+    "galactic_scheduler": "NOT_IMPLEMENTED",
+    "no_canon_future": "ENFORCED_BY_REFERENCE_CONTRACT",
+    "no_omega_general_unlock": true,
+    "no_playable_time_travel": true
+  },
+  "next_block": "7 — Phenomena, Anomalies & Procedural Archaeology",
+  "merge_gate": "VALIDATED_READY_FOR_PR115_MERGE"
+}

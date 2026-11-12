@@ -1,0 +1,321 @@
+{
+  "schema_version": "0.1.0",
+  "scenario_id": "p2_b06_synthetic_scientific_validation_and_refit_no_canon",
+  "description": "Fictional non-canonical acceptance reference, observations and allocations externally declared as accepted, no CoreRPG runtime.",
+  "initial_state": {
+    "campaign_id": "science_campaign_alpha",
+    "cutoff_tick": 90,
+    "last_tick": 100,
+    "entities": {
+      "science_lead": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "science_peer": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "review_board": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "classified"
+      },
+      "engineer": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "yard_master": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "trial_officer": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "comms_officer": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "classified"
+      },
+      "recipient": {
+        "kind": "person",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "clearance": "restricted"
+      },
+      "lab_vesper": {
+        "kind": "laboratory",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true
+      },
+      "subject_signal": {
+        "kind": "subject",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "category": "ordinary"
+      },
+      "scanner_alpha": {
+        "kind": "instrument",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "facility_ref": "lab_vesper",
+        "installed": true,
+        "calibrated": true
+      },
+      "scanner_beta": {
+        "kind": "instrument",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "facility_ref": "lab_vesper",
+        "installed": true,
+        "calibrated": true
+      },
+      "ship_observer": {
+        "kind": "ship",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true,
+        "class_ref": "Oberth"
+      },
+      "shipyard_alpha": {
+        "kind": "shipyard",
+        "exists_tick": 80,
+        "campaign_id": "science_campaign_alpha",
+        "active": true
+      }
+    },
+    "authorities": {
+      "science_lead": [
+        "start",
+        "observe",
+        "validate"
+      ],
+      "science_peer": [
+        "observe"
+      ],
+      "review_board": [
+        "review",
+        "recognize"
+      ],
+      "engineer": [
+        "engineer"
+      ],
+      "yard_master": [
+        "order_refit",
+        "complete_refit"
+      ],
+      "trial_officer": [
+        "trial"
+      ],
+      "comms_officer": [
+        "share"
+      ]
+    },
+    "allocations": {
+      "budget_lab": {
+        "accepted": true,
+        "campaign_id": "science_campaign_alpha",
+        "facility_ref": "lab_vesper",
+        "units": 3,
+        "tick": 99
+      },
+      "budget_yard": {
+        "accepted": true,
+        "campaign_id": "science_campaign_alpha",
+        "facility_ref": "shipyard_alpha",
+        "units": 2,
+        "tick": 108
+      }
+    },
+    "facts": {
+      "obs_1": {
+        "status": "accepted",
+        "campaign_id": "science_campaign_alpha",
+        "tick": 101,
+        "domain": "observation",
+        "subject_ref": "subject_signal",
+        "instrument_ref": "scanner_alpha",
+        "actor_ref": "science_lead",
+        "hypothesis": "signal_filtering",
+        "result": "supports",
+        "quality": "usable"
+      },
+      "obs_2": {
+        "status": "accepted",
+        "campaign_id": "science_campaign_alpha",
+        "tick": 102,
+        "domain": "observation",
+        "subject_ref": "subject_signal",
+        "instrument_ref": "scanner_beta",
+        "actor_ref": "science_peer",
+        "hypothesis": "signal_filtering",
+        "result": "supports",
+        "quality": "usable"
+      },
+      "trial_1": {
+        "status": "accepted",
+        "campaign_id": "science_campaign_alpha",
+        "tick": 120,
+        "domain": "trial",
+        "installation_ref": "ship_observer:design_filter",
+        "result": "pass",
+        "actor_ref": "trial_officer"
+      }
+    },
+    "reserved_ids": [
+      "canon:reserved_technology"
+    ],
+    "projects": {},
+    "designs": {},
+    "work_orders": {},
+    "installations": {},
+    "recognitions": {},
+    "knowledge": [],
+    "events": []
+  },
+  "events": [
+    {
+      "event_id": "science:start_001",
+      "tick": 100,
+      "kind": "start",
+      "actor_ref": "science_lead",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "subject_ref": "subject_signal",
+      "facility_ref": "lab_vesper",
+      "allocation_ref": "budget_lab",
+      "discipline": "sensors",
+      "hypothesis": "signal_filtering",
+      "classification": "restricted"
+    },
+    {
+      "event_id": "science:observe_001",
+      "tick": 101,
+      "kind": "observe",
+      "actor_ref": "science_lead",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "instrument_ref": "scanner_alpha",
+      "fact_ref": "obs_1"
+    },
+    {
+      "event_id": "science:observe_002",
+      "tick": 102,
+      "kind": "observe",
+      "actor_ref": "science_peer",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "instrument_ref": "scanner_beta",
+      "fact_ref": "obs_2"
+    },
+    {
+      "event_id": "science:validate_001",
+      "tick": 103,
+      "kind": "validate",
+      "actor_ref": "science_lead",
+      "trigger": "world",
+      "project_id": "project_filter"
+    },
+    {
+      "event_id": "science:review_001",
+      "tick": 104,
+      "kind": "review",
+      "actor_ref": "review_board",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "decision": "approve"
+    },
+    {
+      "event_id": "science:engineer_001",
+      "tick": 105,
+      "kind": "engineer",
+      "actor_ref": "engineer",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "design_id": "design_filter",
+      "compatible_classes": [
+        "Oberth"
+      ],
+      "era_approved": true,
+      "safety_approved": true
+    },
+    {
+      "event_id": "science:refit_001",
+      "tick": 110,
+      "kind": "order_refit",
+      "actor_ref": "yard_master",
+      "trigger": "world",
+      "design_id": "design_filter",
+      "ship_ref": "ship_observer",
+      "shipyard_ref": "shipyard_alpha",
+      "work_order_id": "work_filter",
+      "duration": 5,
+      "allocation_ref": "budget_yard"
+    },
+    {
+      "event_id": "science:finish_001",
+      "tick": 115,
+      "kind": "complete_refit",
+      "actor_ref": "yard_master",
+      "trigger": "world",
+      "work_order_id": "work_filter"
+    },
+    {
+      "event_id": "science:trial_001",
+      "tick": 120,
+      "kind": "trial",
+      "actor_ref": "trial_officer",
+      "trigger": "world",
+      "installation_ref": "ship_observer:design_filter",
+      "fact_ref": "trial_1"
+    },
+    {
+      "event_id": "science:recognize_001",
+      "tick": 121,
+      "kind": "recognize",
+      "actor_ref": "review_board",
+      "trigger": "world",
+      "project_id": "project_filter",
+      "contributors": [
+        "science_lead",
+        "science_peer"
+      ],
+      "official_name": "Filtro Vesper",
+      "institutional_approval": true
+    },
+    {
+      "event_id": "science:share_001",
+      "tick": 122,
+      "kind": "share",
+      "actor_ref": "comms_officer",
+      "trigger": "world",
+      "object_ref": "design_filter",
+      "recipient_ref": "recipient",
+      "classification": "restricted"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "p2_b06_science_technology_discovery_reference",
+  "status": "REFERENCE_ADAPTER_NOT_CORERPG_RUNTIME",
+  "authority": {
+    "star_trek": "Scientific domain rules, research evidence policy, technology/legacy constraints and offline simulation",
+    "core_rpg": "Sole owner of WorldState, time, event acceptance, knowledge, inventory, resource transaction, installed capability and save/load",
+    "host": "Future command authorization, session validation and delivery of actor-scoped projections, no separate WorldState",
+    "ue5": "Read-only presentation of consoles, labs, shipyards, instruments, equipment and effects",
+    "ai": "Evidence interpretation/dialogue proposals limited to known facts, never fact creation or certification"
+  },
+  "data_sources": [
+    "mundo/lore/science/scientific_domain_contract.json",
+    "mundo/lore/science/lore02_d_scientific_legacy_policy_v0.1.json",
+    "proyecto/docs/decisions/lore_02_d_author_decisions_v0.1.md",
+    "mundo/lore/technology/lore02_a_system_atlas_v0.2.json",
+    "sistemas/gameplay/science/sensor_analysis_model.json",
+    "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+  ],
+  "input_boundary": {
+    "campaign_id": "nonempty stable ID",
+    "cutoff_tick": "sealed pre-campaign history",
+    "event_tick": "monotonic and not before cutoff",
+    "entities": "pre-existing actor/facility/subject/instrument/ship/shipyard identities from accepted campaign snapshot",
+    "facts": "pre-accepted external source observations and trial outcomes, not independently verified by this adapter",
+    "allocations": "pre-approved budgets/resource reservations sourced from other authorities, cannot be conjured here",
+    "authorities": "explicit actor/action scope snapshot; future HOST/Core will revalidate"
+  },
+  "operations": [
+    "start",
+    "observe",
+    "validate",
+    "review",
+    "engineer",
+    "order_refit",
+    "complete_refit",
+    "trial",
+    "recognize",
+    "share"
+  ],
+  "research_states": [
+    "open",
+    "validated",
+    "approved",
+    "rejected",
+    "engineered"
+  ],
+  "technology_pipeline": [
+    "DISCOVERY",
+    "SUSTAINED_RESEARCH",
+    "INDEPENDENT_VALIDATION",
+    "FLEET_EVALUATION",
+    "ENGINEERING_ADAPTATION",
+    "SHIPYARD_INSTALLATION",
+    "POST_REFIT_TRIALS",
+    "OPTIONAL_GRADUAL_FLEET_ADOPTION"
+  ],
+  "research_areas": [
+    "sensors",
+    "materials",
+    "life_sciences",
+    "subspace"
+  ],
+  "subject_categories": [
+    "ordinary",
+    "omega",
+    "wormhole",
+    "temporal"
+  ],
+  "knowledge_levels": [
+    "public",
+    "restricted",
+    "classified"
+  ],
+  "invariants": [
+    "NO_RETROACTIVE_FUTURE_TV_CANON",
+    "NO_PLAYER_SPAWN_OR_LOD_CAUSALITY",
+    "EXISTING_TARGETS_AND_REAL_INSTRUMENTS",
+    "OBSERVATIONS_MUST_CITE_ACCEPTED_PROVENANCE",
+    "TWO_INDEPENDENT_USABLE_CORROBORATIONS",
+    "UNCERTAINTY_AND_CONTRADICTORY_EVIDENCE_BLOCK_PREMATURE_VALIDATION",
+    "FINITE_APPROVED_RESEARCH_RESOURCES",
+    "RESEARCHER_AND_INSTITUTIONAL_AUTHORITY",
+    "REVIEW_AND_ERA_SAFETY_BEFORE_ENGINEERING",
+    "NO_OMEGA_NORMAL_TRANSFER",
+    "NO_PLAYABLE_TIME_TRAVEL",
+    "NO_WORMHOLE_ROUTE_SPAWN",
+    "NO_GENERIC_NEW_ANOMALY_CREATION_BLOCK_7",
+    "NO_SYSTEMIC_CRISIS_OR_MISSION_GENERATION",
+    "NO_UNIVERSAL_TECH_ADVANCEMENT",
+    "COMPATIBLE_NAVE_AND_REAL_SHIPYARD",
+    "INSTALLATION_NOT_ACTIVE_BEFORE_TRIALS",
+    "NO_AUTOMATIC_HONORARY_NAMING",
+    "CREDIT_ALL_DISCOVERERS_INCLUDING_NPC",
+    "KNOWLEDGE_PROJECTION_NEEDS_EXPLICIT_DELIVERY_AND_CLEARANCE",
+    "EVENT_DIGEST_AND_IDEMPOTENT_REPLAY",
+    "CAMPAIGN_ISOLATION",
+    "ATOMIC_REJECTION",
+    "NO_WORLDSTATE_MUTATION"
+  ],
+  "downstream_boundary": {
+    "block_1": "Only consume accepted tech capability events; no civ-wide tech band auto-increment",
+    "block_4": "Reference uses previously accepted allocations; never creates resources or prices",
+    "block_5": "Can receive future accepted scientific history sources only after an explicit compatible interface; no mutation here",
+    "block_7": "Owns phenomena/anomalies/archaeology generation; B06 can study pre-existing subjects",
+    "block_8": "Owns systemic crises; experiments do not invent crises",
+    "block_9": "Owns derived missions; this block never creates mandatory player missions",
+    "block_10": "Owns all-world scheduler; explicit event replay only"
+  },
+  "canon_exceptions": {
+    "omega": "May be studied under special classification, never ordinary unlock; later authored mission is separate",
+    "wormhole": "Observation allowed, connectivity controlled by pre-existing astrography, no new route here",
+    "temporal": "Scientific background only, no playable time travel"
+  },
+  "acceptance_limitations": [
+    "Input fact status=accepted and actor grants are asserted within synthetic fixture; no live CoreRPG attestation",
+    "Allocations are synthetic preapproved quantities not verified with B04 economy",
+    "Cannot prove runtime persistency, interface to HOST, UE5 visuals, real shipyard jobs or effective sensors",
+    "Offline simulation models only event-ordered actions, not NPC autonomous scheduler",
+    "Class compatibility and safety approval are asserted, not a certified real Trek platform matrix"
+  ],
+  "no_runtime_claim": true
+}

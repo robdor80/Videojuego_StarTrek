@@ -76,7 +76,7 @@ class TestF13DynamicUniverseReference(unittest.TestCase):
         self.assertEqual(118, result["complete_layers"])
         self.assertEqual([119], result["partial_layers"])
         self.assertEqual([120], result["runtime_blocked_layers"])
-        self.assertEqual(6, result["active_reference_block"])
+        self.assertEqual(7, result["active_reference_block"])
 
     def test_layer_119_cannot_be_falsely_closed(self):
         self.layers["layer_119"] = "COMPLETE"
@@ -96,6 +96,14 @@ class TestF13DynamicUniverseReference(unittest.TestCase):
         self.states["4"] = "REFERENCE_COMPLETE"
         self.states["5"] = "IN_PROGRESS"
         self.assertEqual(f13.REVIEW, f13.gate_dynamic_blocks(self.states, 5)["status"])
+
+    def test_block_progression_can_advance_to_seven_after_b06(self):
+        for index in (4, 5, 6):
+            self.states[str(index)] = "REFERENCE_COMPLETE"
+        self.assertEqual(f13.REVIEW,
+                         f13.gate_dynamic_blocks(self.states, 7)["status"])
+        self.assertEqual(f13.BLOCKED,
+                         f13.gate_dynamic_blocks(self.states, 8)["status"])
 
     def test_trade_is_candidate_not_mutation(self):
         before = copy.deepcopy(self.world)

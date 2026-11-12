@@ -318,3 +318,7 @@ This separation prevents the earlier 001–118 design-readiness closure from bei
 ### Dynamic-universe sequence update — Block 4 (2026-11-12)
 
 Blocks 1–3 remain COMPLETE on the Star Trek reference side. **Block 4 — Living Interplanetary / Interstellar Economy is COMPLETE_REFERENCE**, backed by deterministic simulator, 30 dedicated tests, 62 regression tests across blocks 1–4 and LORE-04B regression. See `procedural_living_economy_plan_v0.1.md` and `P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md`. Blocks 5–10 remain unimplemented; Block 5 is now next. Generic runtime, event scheduling, mutation and persistence continue to belong to CoreRPG; no UE5/Host integration is claimed.
+
+### Dynamic-universe sequence update — Block 6 (2026-11-12)
+
+Blocks 1–3 preserve their COMPLETE reference-level foundations; B04, B05 and **B06 are REFERENCE_COMPLETE** after PR #113/#114 and the B06 reference package, respectively. Science, technology and discoveries are covered by contract plus a deterministic, adversarial offline simulator. **B07 — Phenomena, Anomalies & Procedural Archaeology is next, only after B06 merge and CI verification.** B08–B10 remain TODO. Reference evidence does not establish autonomous NPC runtime, CoreRPG-authoritative state, HOST session commands or UE5 gameplay.
