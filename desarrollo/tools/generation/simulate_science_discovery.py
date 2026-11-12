@@ -287,6 +287,10 @@ def apply_event(state, event):
                 "accepted installation trial evidence required")
         require(f.get("result") in ("pass", "fail"), "invalid trial result")
         require(t > i["installed_tick"], "instant trials forbidden")
+        require(f.get("actor_ref") == actor and f["tick"] > i["installed_tick"],
+                "trial provenance or chronology mismatch")
+        require(not any(r.get("kind") == "trial" and r.get("fact_ref") == event["fact_ref"]
+                        for r in state["events"]), "trial fact already consumed")
         i["last_trial_ref"] = event["fact_ref"]
         if f["result"] == "pass":
             i["active"] = True
@@ -304,6 +308,9 @@ def apply_event(state, event):
                 and len(credited) == len(set(credited)), "scientific credit must include full team")
         name = ident(event.get("official_name"), "official name")
         require(event.get("institutional_approval") is True, "naming requires formal approval")
+        require(not any(x["official_name"].casefold() == name.casefold()
+                        for x in next_state["recognitions"].values()),
+                "duplicate honorary name")
         next_state["recognitions"][pid] = dict(official_name=name, contributors=credited,
                                                 authority_ref=actor, tick=t)
 
