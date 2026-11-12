@@ -67,3 +67,8 @@ Bloque 7 **REFERENCE_COMPLETE** para fenómenos, anomalías y arqueología en lo
 Bloque 8 **REFERENCE_COMPLETE en contrato y simulación de referencia**: 20 paquetes CR001–CR020, crisis causales desde hechos externos aceptados, propagación controlada por redes existentes, combinación de choques, contención/recuperación verificadas y conocimiento distribuido con permisos y retraso. La PR [#118](https://github.com/robdor80/Videojuego_StarTrek/pull/118) incorpora contrato, fixture, tests y CI, con primera validación [Actions #43259713758](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758): **56/56 B08, 264/264 B01–B08 y 30/30 F13**. Ver [plan B08](procedural_systemic_crises_plan_v0.1.md), [estado](procedural_systemic_crises_status_v0.1.json) y [acta](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 **Siguiente elegible tras CI final y fusión: Bloque 9 — Misiones emergentes derivadas del estado del universo.** B10 TODO. F13 global sigue PLANIFICADA, CoreRPG mantiene única autoridad, no se ejecutan economía, población, pérdidas, decisiones de guerra, misiones o scheduler, y no hay UE5/HOST jugable. Los textos anteriores que mencionan B4–B8 como «siguiente» se conservan como instantáneas históricas.
+
+
+## Confirmación administrativa — 12/11/2026, B08
+
+La PR #118 se fusionó en main, squash `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`; la CI previa fue 19/19 SUCCESS y la posfusión volvió a certificar 19/19 SUCCESS ([B08](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149), [F13](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238)). La **puerta B09 está abierta** para referencia; no modifica el carácter no autoritativo de B08 ni cierra B10 o F13 global.
