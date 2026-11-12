@@ -8,7 +8,7 @@
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
 | 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | COMPLETE |
-| 4 | Living Interplanetary / Interstellar Economy | COMPLETE (REFERENCE) |
+| 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
 | 5 | Procedural History & Major Events | TODO |
 | 6 | Science, Technology & Discovery | TODO |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
