@@ -1,6 +1,6 @@
 # P2-B09 — Acta de cierre de referencia (12/11/2026)
 
-**Fase:** Planificación 2, Bloque 9/10. **Objetivo:** `REFERENCE_COMPLETE` de contratos y demostración offline. **Estado administrativo:** PR [#120](https://github.com/robdor80/Videojuego_StarTrek/pull/120), pendiente de CI del HEAD documental definitivo y fusión. **No equivale a misiones operativas en CoreRPG, HOST ni Unreal Engine.**
+**Fase:** Planificación 2, Bloque 9/10. **Objetivo:** `REFERENCE_COMPLETE` de contratos y demostración offline. **Estado administrativo:** [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) **fusionada en main** (`4c8733da7cef6acf2b0a0c4259734a615ffed2d0`), con **20/20 workflows SUCCESS** sobre el último HEAD anterior a la fusión (`94f71f812400e5dbbd9fd3c143a53ad01a235a68`). **No equivale a misiones operativas en CoreRPG, HOST ni Unreal Engine.**
 
 ## Auditoría de las dependencias
 
@@ -39,3 +39,9 @@ El segundo expediente afecta a un mundo prewarp: puede identificarse como candid
 No hay motor de generación de necesidades real, WorldState auténtico, órdenes F11/HOST validadas, contratación/consumo de combustible, comercio real, reservas transaccionales, despachos NPC galácticos en segundo plano, economía o daños mutados, recompensas, misiones UE5, mapas ni PADD funcional. Ninguna misión creada por crisis proyectada o por presencia del jugador; no se altera la temporada narrativa ni los hechos canónicos.
 
 **Decisión condicional de cierre:** con pruebas verificadas y PR fusionada, B09 = `REFERENCE_COMPLETE` y **B10 — Evolución galáctica en segundo plano** es el siguiente bloque elegible. De lo contrario, mantener la puerta pendiente y consignar fallos.
+
+## Certificación administrativa definitiva
+
+La [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fue fusionada con squash en `main`, commit `4c8733da7cef6acf2b0a0c4259734a615ffed2d0`, después de **20/20 workflows verdes del HEAD definitivo**; el job [P2-B09 #43266888009](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266888009) finalizó SUCCESS. El mismo código había superado 65/65 B09, 329/329 regresiones de bloque, 30/30 F13 y 9/9 Academia (Actions #43266460616). La herramienta GitHub disponible para esta auditoría sólo enumera workflows de pull requests, por lo que **no se certifica aquí CI posterior a la fusión**. Esta anotación constituye una certificación verificable del último HEAD previo a la fusión y del merge efectivo, sin resultados inventados.
+
+**Decisión:** B09 queda cerrado como `REFERENCE_COMPLETE`, EM001–EM020 (20/20); **B10 elegible para su propia planificación de referencia**. F13 global conserva `PLANIFICADA` y ninguna integración CoreRPG/HOST/UE5 se da por probada.
