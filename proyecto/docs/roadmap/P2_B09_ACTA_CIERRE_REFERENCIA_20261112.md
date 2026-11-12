@@ -29,8 +29,8 @@ El segundo expediente afecta a un mundo prewarp: puede identificarse como candid
 
 ## Pruebas y puertas
 
-- **57 casos adversariales diseñados**: hechos no aceptados, origen independiente, confidencialidad, rutas/recursos, Primera Directriz, órdenes/reservas, cierre, replay, timeouts y atomicidad.
-- Regresiones esperadas B01–B09: **321 pruebas de simuladores** si continúan las 264 de B01–B08 y se suman las 57 B09; cifra pendiente de confirmar mediante CI.
+- **65 casos adversariales diseñados**: hechos no aceptados, origen independiente, confidencialidad, rutas/recursos, Primera Directriz, órdenes/reservas, cierre, replay, timeouts y atomicidad.
+- Regresiones esperadas B01–B09: **329 pruebas de simuladores** si continúan las 264 de B01–B08 y se suman las 65 B09; cifra pendiente de confirmar mediante CI.
 - Auditorías F13 y Academia: se actualizan sólo las expectativas de frontera 9→10 al quedar B09 en estado de referencia. F13 global sigue `PLANIFICADA`; capas 119/120 sin promoción.
 - **Puerta final:** CI de HEAD de PR, comprobaciones transversales, cambios acotados, sin archivos temporales ni intervención en ramas ajenas; después, fusión autorizada en `main`. Los recuentos anteriores son objetivos, no resultados medidos hasta constar evidencia enlazada.
 
