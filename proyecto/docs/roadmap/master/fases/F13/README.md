@@ -57,6 +57,6 @@ El bloque 4 de economía fue cerrado de referencia mediante PR #113 y el **bloqu
 
 ## Actualización P2-B06 — 12-11-2026
 
-El Bloque 6, Ciencia, tecnología y descubrimientos, dispone de contrato Star Trek y referencia Python independiente, fixture y **54/54 pruebas**; CI [#43198790144](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43198790144) con 152/152 regresiones B1–B6 y 28/28 F13. El bloque conserva los ocho pasos aprobados de LORE-02 D y las restricciones Omega, temporalidad, astilleros y crédito NPC. Véase [plan B06](../../../procedural_science_technology_discovery_plan_v0.1.md) y [acta](../../../P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
+El Bloque 6, Ciencia, tecnología y descubrimientos, dispone de contrato Star Trek y referencia Python independiente, fixture y **54/54 pruebas**; CI [#43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066) con 152/152 regresiones B1–B6 y 29/29 F13. El bloque conserva los ocho pasos aprobados de LORE-02 D y las restricciones Omega, temporalidad, astilleros y crédito NPC. Véase [plan B06](../../../procedural_science_technology_discovery_plan_v0.1.md) y [acta](../../../P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 El siguiente trabajo **secuencial de referencia** es Bloque 7 (anomalías y arqueología); B08–B10 no iniciados. F13 **PLANIFICADA**, sin integración CoreRPG/HOST/UE5, IA productiva, memoria persistida ni ejecución offscreen demostradas.
