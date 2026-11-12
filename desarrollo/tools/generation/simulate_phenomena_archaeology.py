@@ -171,6 +171,8 @@ def apply_event(state, event):
         require(eid not in state["reserved_ids"], "reserved entity id")
         require(not any(e["slot_ref"] == sid for e in state["phenomena"].values()),
                 "slot already materialized")
+        require(not any(h["kind"] == "materialize" and h.get("slot_ref") == sid
+                        for h in state["events"]), "slot materialization decision already recorded")
         family = slot["family"]
         require(family not in EXCEPTIONAL, "exceptional phenomenon requires authored Core event")
         origin_kind = "archaeological_origin" if family in ARCHAEOLOGY else "formation"
@@ -292,6 +294,8 @@ def apply_event(state, event):
         "event_id": event["event_id"], "kind": kind, "actor_ref": event["actor_ref"],
         "tick": t, "outcome": outcome, "source_digest": fingerprint,
     }
+    if kind == "materialize":
+        record["slot_ref"] = sid
     record["digest"] = record_hash(record)
     new["events"].append(record)
     new["last_tick"] = t
