@@ -639,3 +639,11 @@ This status does **not** mean all species, planets, ships, organizations or asse
 **Bloque 5 — Historia procedural y grandes acontecimientos: COMPLETE_REFERENCE** tras contrato, generador offline de referencia, historia append-only, conocimiento filtrado, fixture y pruebas deterministas. Plan: `proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_history_major_events_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md`. PR #114.
 
 **Validación final de referencia:** [run #43195780820](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820), SUCCESS: 36/36 pruebas nuevas B05, 98/98 regresiones B1–B5, 28/28 pruebas F13, y JSON/CLI. El bloque 5 no ejecuta cambios de soberanía, guerras, producción, misiones, descubrimientos ni crisis: consume hechos aceptados. No hay CoreRPG/UE5/HOST ni save/load real integrados por este bloque. **Siguiente bloque elegible: Bloque 6 — Ciencia, tecnología y descubrimientos.**
+
+## P2 — Universo dinámico: Bloque 6 (2026-11-12)
+
+**Bloque 6 — Ciencia, tecnología y descubrimientos: COMPLETE_REFERENCE** en los paquetes **ST001–ST018 (18/18)**, reutilizando las decisiones de LORE-02 D. Plan: `proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md`; estado `proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json`; acta `proyecto/docs/roadmap/P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md`. Rama de cierre / PR #115.
+
+**Pruebas:** [Actions #43198790144](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43198790144) SUCCESS sobre el código de referencia: **54/54** B06, **152/152** regresiones dinámicas B1–B6 (54 incluidas), **28/28** F13, JSON y CLI deterministas. Se requiere además CI verde sobre la revisión final de documentación antes de cerrar la PR.
+
+**Frontera:** sólo hechos sintéticos offline. Ningún avance científico real, autoinstalación de mejoras, viaje temporal, misión Omega ejecutable, scheduler offscreen, guardado real, interfaz de CoreRPG/HOST o sala UE5 se declara implementado. Queda permitido el reconocimiento histórico documentado de NPC, sin atribución ni nombre automático. **Siguiente elegible tras fusión: Bloque 7 — Fenómenos, anomalías y arqueología procedural**. Bloques 8–10 sin comenzar.
