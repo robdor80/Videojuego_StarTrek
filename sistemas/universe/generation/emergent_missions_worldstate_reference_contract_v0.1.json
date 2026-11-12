@@ -68,7 +68,9 @@
       "actor clearance >= need classification",
       "real available asset with required capabilities",
       "existing route open and ending at need location",
-      "asset not already assigned in reference"
+      "asset not already assigned in reference",
+      "asset location matches existing route origin",
+      "one concurrent assigned resource response per accepted need in reference"
     ],
     "not_auto_dispatch": true,
     "not_auto_published_to_player": true,
@@ -91,7 +93,7 @@
       "communicate"
     ],
     "authorize": "Independent accepted order naming mission, need, asset, responsible actor, jurisdiction, approved by separate issuer; prewarp needs independent approved_exception policy",
-    "assign": "Separate accepted order and separate accepted reservation, real available and qualified asset, no concurrent assigned same asset; no reservation created here",
+    "assign": "Separate accepted order and separate accepted reservation, real available and qualified asset, no concurrent assigned same asset; no reservation created here; verified route origin equals asset location; reject parallel assignment against same need",
     "complete": "Verified independent outcome_report for exact mission AND independently accepted need_resolved fact; rewards/migrations not written",
     "cancel": "Accepted external cancellation decision; an already resolved need prevents further dispatch but does not rewrite prior mission history",
     "knowledge": "Only delivered, clearance-compatible historical snapshots; a late message may remain stale"
