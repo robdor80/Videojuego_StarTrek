@@ -308,5 +308,30 @@ class BackgroundGalacticEvolutionTests(unittest.TestCase):
         self.assertEqual(before, state)
 
 
+    def test_51_duplicate_external_intent_cannot_be_dispatched_twice(self):
+        state = copy.deepcopy(self.initial)
+        state["tasks"]["t_alias"] = copy.deepcopy(state["tasks"]["t_b04"])
+        with self.assertRaisesRegex(ValueError, "duplicate_external_intent"):
+            b10.validate(state)
+
+    def test_52_delivery_cannot_precede_the_external_message_fact(self):
+        state = copy.deepcopy(self.initial)
+        state["facts"]["delivery_cap"]["arrival_tick"] = 2
+        with self.assertRaisesRegex(ValueError, "premature_delivery"):
+            b10.validate(state)
+
+    def test_53_priority_aging_gives_old_background_work_a_fair_turn(self):
+        old = {"priority": "background", "due_tick": 0}
+        urgent = {"priority": "urgent", "due_tick": 7}
+        self.assertLess(b10.priority_key("old", old, 7, 2),
+                        b10.priority_key("new", urgent, 7, 2))
+
+    def test_54_hard_config_bound_prevents_unbounded_catchup(self):
+        state = copy.deepcopy(self.initial)
+        state["config"]["max_batch_ticks"] = 500000
+        with self.assertRaisesRegex(ValueError, "configuration_hard_limit"):
+            b10.validate(state)
+
+
 if __name__ == "__main__":
     unittest.main()

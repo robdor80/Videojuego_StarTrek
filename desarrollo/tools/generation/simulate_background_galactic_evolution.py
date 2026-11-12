@@ -84,6 +84,9 @@ def validate(state):
         require(positive(config[field]), "invalid_config_" + field)
     require(config["per_domain_quota"] <= config["budget_per_tick"],
             "domain_quota_exceeds_budget")
+    require(config["max_batch_ticks"] <= 4096 and config["budget_per_tick"] <= 1024
+            and config["max_pending_outbox"] <= 100000,
+            "configuration_hard_limit")
     for field in ("facts", "tasks", "viewers"):
         require(isinstance(state[field], dict), "invalid_" + field)
     for field in ("outbox", "receipts", "journal"):
@@ -95,6 +98,11 @@ def validate(state):
         require(fact.get("kind") in {"domain_intent", "need", "clock_advance",
                                       "dispatch_receipt", "delivery"},
                 "invalid_fact_kind")
+        if fact["kind"] == "delivery":
+            require(nat(fact.get("arrival_tick")) and
+                    fact["arrival_tick"] >= fact["tick"],
+                    "premature_delivery")
+    seen_intents = set()
     for task_id, task in state["tasks"].items():
         require(nonblank(task_id) and ":" not in task_id and
                 isinstance(task, dict) and set(task) == TASK_FIELDS, "invalid_task")
@@ -106,6 +114,8 @@ def validate(state):
                 and len(refs) > 0 and all(nonblank(x) for x in refs),
                 "invalid_causal_refs")
         require(task["intent_ref"] in refs, "intent_missing_from_sources")
+        require(task["intent_ref"] not in seen_intents, "duplicate_external_intent")
+        seen_intents.add(task["intent_ref"])
         intent = accepted(state, task["intent_ref"], "domain_intent")
         require(intent.get("domain") == task["domain"] and
                 intent.get("owner_ref") == task["domain"] and
