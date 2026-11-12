@@ -102,7 +102,7 @@
     "tests": "desarrollo/tools/generation/test_simulate_emergent_missions.py",
     "workflow": ".github/workflows/p2-b09-emergent-missions.yml",
     "expected_new_tests": 65,
-    "ci_final_status": "SUCCESS_ON_TEST_HEAD__FINAL_DOCUMENT_HEAD_PENDING",
+    "ci_final_status": "SUCCESS_FINAL_PREMERGE_HEAD",
     "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266460616",
     "measured_tests": {
       "b09": 65,
@@ -114,6 +114,17 @@
     "ci_initial_transversal_workflows": {
       "total": 20,
       "success": 20
+    },
+    "ci_final_premerge_commit": "94f71f812400e5dbbd9fd3c143a53ad01a235a68",
+    "ci_final_premerge_workflows": {
+      "total": 20,
+      "success": 20
+    },
+    "ci_final_premerge_b09_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266888009",
+    "postmerge": {
+      "pr": 120,
+      "merge_commit": "4c8733da7cef6acf2b0a0c4259734a615ffed2d0",
+      "checks": "NOT_ATTESTED_BY_CURRENT_CONNECTOR"
     }
   },
   "limits": {
@@ -128,6 +139,7 @@
     "f13_complete": false
   },
   "next_block": "10 — Background Galactic Evolution",
-  "sequential_gate": "BLOCK10_ELIGIBLE_AFTER_B09_FINAL_CI_AND_MERGE",
-  "merge_gate": "PENDING"
+  "sequential_gate": "BLOCK10_ELIGIBLE_FOR_REFERENCE",
+  "merge_gate": "PR120_MERGED",
+  "closed_at": "2026-11-12"
 }
