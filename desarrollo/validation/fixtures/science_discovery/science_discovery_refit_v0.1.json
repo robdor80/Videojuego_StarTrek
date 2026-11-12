@@ -182,7 +182,8 @@
         "tick": 120,
         "domain": "trial",
         "installation_ref": "ship_observer:design_filter",
-        "result": "pass"
+        "result": "pass",
+        "actor_ref": "trial_officer"
       }
     },
     "reserved_ids": [
