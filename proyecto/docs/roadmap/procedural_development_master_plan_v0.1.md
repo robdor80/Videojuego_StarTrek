@@ -331,3 +331,7 @@ Blocks 1–3 remain COMPLETE at reference foundation level; B04–B07 are **REFE
 ### Dynamic-universe sequence update — Block 8 (2026-11-12)
 
 **P2-B08 Systemic Crises: REFERENCE_COMPLETE (offline only)**, 20 CR packages, versioned crisis/network cascade contract, synthetic accepted shock facts, deterministic risk projections, verified and authorized mitigation, prewarp non-interference review, containment/recovery and delayed classified reports. [Plan](procedural_systemic_crises_plan_v0.1.md), [status](procedural_systemic_crises_status_v0.1.json), [act](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md), PR #118. First CI green: 56 dedicated, 264 B01–B08 and 30 F13 tests. **Next reference block is B09 after final CI and merge; B10 remains TODO.** CoreRPG/HOST/UE5/B10 runtime and F13 full closure remain unavailable. All earlier dated priority statements are historical, not live gates.
+
+### Dynamic-universe sequence update — Block 9 (2026-11-12)
+
+**B09 REFERENCE_COMPLETE (non-runtime)**: 20 EM packages covering mission candidates only from independently accepted real needs, external command orders and resource reservations, NPC capacity, Prime Directive constraints, delayed knowledge and outcome-backed closure, with deterministic offline validation and [plan](procedural_emergent_missions_plan_v0.1.md). **B10 — Background Galactic Evolution becomes the next reference frontier after CI and PR merge**. All prior priority statements are historical; F13 and CoreRPG/HOST/UE5 are not closed or reimplemented.
