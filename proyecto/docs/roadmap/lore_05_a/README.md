@@ -1,6 +1,6 @@
 # LORE-05A — Reconciliación y consolidación de decisiones
 
-**Fecha:** 2026-11-13 · **Estado:** `CANDIDATE_DOCUMENTARY_PENDING_CI_AND_MERGE` · **Objeto:** identidad Enterprise-D, cronología Proyecto Valhalla, precedencias e índices.  
+**Fecha:** 2026-11-13 · **Estado:** `COMPLETE_DOCUMENTARY` — PR #124 fusionada, CI posfusión verificada · **Objeto:** identidad Enterprise-D, cronología Proyecto Valhalla, precedencias e índices.  
 **No inicia automáticamente LORE-05B–F ni declara terminada LORE-05 global.**
 
 ## Entregables
@@ -13,4 +13,4 @@
 6. `desarrollo/tools/validation/validate_lore05_a.py`, `test_lore05_a.py`, CI `lore05-a-documentary.yml`.
 
 **Regla de gobierno:** esta fase consolida el **diseño vigente** y enlaza legados. No elimina la clase histórica Valhalla ni reescribe partidas, binarios F04/F06, assets Blender, fuente original o CoreRPG.  
-**Estado `CONTENT_STATUS.md`:** no marcar LORE-05A como COMPLETA hasta fusión autorizada y checks sobre `main`.
+**Estado actual:** LORE-05A fusionada por PR #124 (`05ff35625`), checks posfusión en verde. [Acta de cierre](ACTA_CIERRE_DOCUMENTAL_LORE05A_20261113.md). LORE-05B–F pendientes de concreción conjunta.
