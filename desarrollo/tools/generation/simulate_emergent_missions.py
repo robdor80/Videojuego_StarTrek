@@ -79,6 +79,7 @@ def validate(state):
         ident(route, "route")
         require(isinstance(spec, dict)
                 and spec.get("destination_ref") in state["locations"]
+                and spec.get("origin_ref") in state["locations"]
                 and spec.get("status") in {"open", "closed"}, "invalid_route")
     for actor, spec in state["actors"].items():
         ident(actor, "actor")
@@ -216,6 +217,11 @@ def can_screen(state, actor_ref, need_ref, asset_ref, at):
                 reasons.append("missing_capabilities")
             if state["routes"][need["route_ref"]]["status"] != "open":
                 reasons.append("existing_route_closed")
+            if state["routes"][need["route_ref"]]["origin_ref"] != asset["location_ref"]:
+                reasons.append("asset_not_on_route_origin")
+            if any(m["need_ref"] == need_ref and m["state"] == "assigned"
+                   for m in state["missions"].values()):
+                reasons.append("need_already_assigned")
             if any(m["asset_ref"] == asset_ref and m["state"] == "assigned"
                    for m in state["missions"].values()):
                 reasons.append("asset_already_assigned")
@@ -323,6 +329,11 @@ def apply(state, request):
             require(new["assets"][m["asset_ref"]]["available"], "asset_unavailable")
             require(new["routes"][new["facts"][m["need_ref"]]["route_ref"]]["status"] == "open",
                     "route_closed")
+            require(new["routes"][new["facts"][m["need_ref"]]["route_ref"]]["origin_ref"]
+                    == new["assets"][m["asset_ref"]]["location_ref"], "asset_not_on_route_origin")
+            require(not any(x["need_ref"] == m["need_ref"] and x["state"] == "assigned"
+                            for key, x in new["missions"].items() if key != mid),
+                    "need_already_assigned")
             require(not set(new["facts"][m["need_ref"]]["required_capabilities"])
                     - set(new["assets"][m["asset_ref"]]["capabilities"]), "asset_unqualified")
             require(not any(x["asset_ref"] == m["asset_ref"] and x["state"] == "assigned"
@@ -367,6 +378,7 @@ def view(state, actor, at):
     validate(state)
     require(actor in state["actors"], "unknown_observer")
     clock(at, "view_tick")
+    require(at <= state["last_tick"], "future_view_forbidden")
     notices = {}
     for ref in state["actors"][actor]["known_need_refs"]:
         need = state["facts"][ref]
