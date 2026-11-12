@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "systemic_crises_galactic_consequences_reference",
+  "status": "OFFLINE_REFERENCE_ONLY",
+  "classification": "STAR_TREK_SPECIFIC_NON_RUNTIME",
+  "owner": "Videojuego_StarTrek / Planificacion 2 / B08",
+  "previous_blocks": "B01-B07 reference foundations validated before B08; no backport ownership transfer",
+  "authority": {
+    "ground_truth": "Only CoreRPG is authoritative; supplied accepted fixture facts are synthetic and unsigned",
+    "networks": "network_disruption_crisis_contract defines disrupted networks; B04 owns real capacities, transfers and stocks",
+    "physical": "B07 owns anomalies and physical hazard sources; B03 owns wars and armed conflict",
+    "population": "B01/B02 own demographic and sovereignty changes",
+    "history": "B05 accepts relevant historical events",
+    "science": "B06 owns scientific research; no automatic cures or technology improvements",
+    "sessions": "F11 and HOST independently enforce authority; B08 does not grant orders or credentials",
+    "missions": "B09 alone may derive mission candidates from accepted unmet needs, never from B08 projections",
+    "scheduler": "B10 owns autonomous background ticks and offscreen catch-up",
+    "presentation": "UE5/NAP/PADD display only observer-authorized, delivered, classified knowledge"
+  },
+  "references": [
+    "sistemas/universe/generation/network_disruption_crisis_contract.json",
+    "sistemas/universe/generation/civilization_economy_governance_history_contract.json",
+    "sistemas/universe/generation/phenomena_anomalies_archaeology_reference_contract_v0.1.json",
+    "sistemas/universe/generation/living_economy_reference_contract_v0.1.json",
+    "proyecto/docs/decisions/authoritative_observable_universe.md",
+    "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+  ],
+  "packages": [
+    "CR001_authoritative_single_writer",
+    "CR002_canon_cutoff_and_reserved_refs",
+    "CR003_accepted_exogenous_causes",
+    "CR004_stable_campaign_scoped_identity",
+    "CR005_existing_network_graph",
+    "CR006_bounded_cross_region_cascades",
+    "CR007_verified_compound_shocks",
+    "CR008_active_contained_resolved",
+    "CR009_trade_energy_medical_risk",
+    "CR010_ecology_population_service_risk",
+    "CR011_governance_and_diplomacy_pressure",
+    "CR012_authorized_humanitarian_response",
+    "CR013_prime_directive_and_jurisdiction",
+    "CR014_npc_observation_and_delayed_reports",
+    "CR015_needs_b09_boundary",
+    "CR016_omega_temporal_canon_exclusions",
+    "CR017_atomic_replay_hash_and_migration",
+    "CR018_adversarial_cases_and_regression",
+    "CR019_runtime_integration_gates",
+    "CR020_ci_close_and_next_block"
+  ],
+  "facts": {
+    "shock": "Externally accepted campaign-scoped or canonical shock with real source tick, existing network, supported family and integer loss_bps 0..10000; positive to open crisis",
+    "families": [
+      "subspace",
+      "environmental",
+      "epidemic",
+      "infrastructure",
+      "economic",
+      "energy",
+      "ecological",
+      "institutional",
+      "war_aftermath"
+    ],
+    "mitigation": "Externally accepted same-crisis same-actor mitigation targeting an already shocked network; integer relief_bps 1..10000",
+    "authorization": "Separate accepted authorization for same actor/crisis/region/scope=intervene",
+    "prime_directive": "An intervened prewarp region must additionally have an accepted policy_review decision approved_exception; no self-grant",
+    "recovery": "Accept containment_report below residual pressure threshold, then independent recovery_report and zero remaining network exposure before close"
+  },
+  "propagation": {
+    "direct": "max accepted shock.loss_bps on each network minus min(10000,sum accepted relief_bps) clamped to zero",
+    "transitive": "Max propagation through declared dependencies, floor(source_exposure * weight_bps / 10000), bounded to number of existing nodes",
+    "region": "Max of network stress * existing criticality_bps / 10000 for a region",
+    "scope": "Count existing exposed regions; galaxy-wide reach only if the preexisting graph supports it",
+    "status": "Candidate risk exposure only, NEVER authoritative network capacity, lives, shortages or casualties",
+    "anti_amplification": "Cycles and compound shocks do not create unbounded risk, matter or population; max model is conservative",
+    "disallowed_inputs": [
+      "player_presence",
+      "camera_distance",
+      "lod",
+      "quest",
+      "mission",
+      "player_distance"
+    ]
+  },
+  "lifecycle": {
+    "states": [
+      "active",
+      "contained",
+      "resolved"
+    ],
+    "events": [
+      "open",
+      "add_shock",
+      "assess",
+      "mitigate",
+      "contain",
+      "resolve",
+      "communicate"
+    ],
+    "id": "p2b08:<campaign_id>:<primary_shock_ref>",
+    "containment": "Accepted independent containment_report AND projected regional max pressure < 2500 bps; threshold is synthetic reference, not Trek canon",
+    "resolution": "Previous contained state, accepted recovery_report, all_networks_restored=true, zero projected stress",
+    "no_reopening_resolved": true
+  },
+  "knowledge": {
+    "clearance": [
+      "public",
+      "restricted",
+      "classified"
+    ],
+    "delivery": "Verified sender/receiver and delayed arrival; PADD/NPC only see delivered snapshots, not ground_truth"
+  },
+  "replay": {
+    "immutable_input": true,
+    "atomic_rejection": true,
+    "idempotency": "same event ID + exact body accepted as no-op, changed body rejected",
+    "ordering": "tick >= cutoff and last committed tick",
+    "record_digest": "SHA256 deterministic JSON canonical event record, not a CoreRPG signature",
+    "separate_campaigns": true
+  },
+  "forbidden": [
+    "Generating crises, wars, disease organisms or catastrophes because a mission or player needs them",
+    "Changing CoreRPG inventories, population, ship damage, territorial borders, network routes or policy",
+    "Treating crisis projections as accepted humanitarian needs or issuing B09 missions",
+    "Rewriting protected canonical events, Omega, temporal history or existing wormhole topology",
+    "Granting access to prewarp worlds or information without validated independent permission",
+    "Publishing private information to PADD, NPC or AI before authorized delivery"
+  ],
+  "simulator": "desarrollo/tools/generation/simulate_systemic_crises.py",
+  "test": "desarrollo/tools/generation/test_simulate_systemic_crises.py",
+  "fixture": "desarrollo/validation/fixtures/systemic_crises/systemic_crisis_galactic_chain_v0.1.json",
+  "runtime_gates": [
+    "CoreRPG signed fact ingestion and WorldState-authoritative acceptance",
+    "B04 capacity/inventory/traffic integrations",
+    "B01/B02 populace and migration events",
+    "F11/HOST permissions",
+    "B09 explicit accepted-needs adapter",
+    "B10 background scheduler and save/load/migrations",
+    "UE5/PADD privacy and integration tests"
+  ]
+}

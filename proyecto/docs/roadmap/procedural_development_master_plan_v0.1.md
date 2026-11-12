@@ -326,3 +326,8 @@ Blocks 1–3 preserve their COMPLETE reference-level foundations; B04, B05 and *
 ### Dynamic-universe sequence update — Block 7 (2026-11-12)
 
 Blocks 1–3 remain COMPLETE at reference foundation level; B04–B07 are **REFERENCE_COMPLETE** on the Star Trek contract/offline-evidence side only (PR #116 merged after final CI success). B07 formalizes anomaly/site world-generation candidates, causal life cycles, protected archaeology and observer-specific knowledge without authorizing a second WorldState writer. See `proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md`, status and closure act. **B08 — Systemic Crises** is the next sequential reference block after merge; B09–B10 are TODO. F13 overall and CoreRPG/HOST/UE5 gameplay remain pending.
+
+
+### Dynamic-universe sequence update — Block 8 (2026-11-12)
+
+**P2-B08 Systemic Crises: REFERENCE_COMPLETE (offline only)**, 20 CR packages, versioned crisis/network cascade contract, synthetic accepted shock facts, deterministic risk projections, verified and authorized mitigation, prewarp non-interference review, containment/recovery and delayed classified reports. [Plan](procedural_systemic_crises_plan_v0.1.md), [status](procedural_systemic_crises_status_v0.1.json), [act](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md), PR #118. First CI green: 56 dedicated, 264 B01–B08 and 30 F13 tests. **Next reference block is B09 after final CI and merge; B10 remains TODO.** CoreRPG/HOST/UE5/B10 runtime and F13 full closure remain unavailable. All earlier dated priority statements are historical, not live gates.

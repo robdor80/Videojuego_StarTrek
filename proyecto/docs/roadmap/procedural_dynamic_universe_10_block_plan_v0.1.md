@@ -12,7 +12,7 @@
 | 5 | Procedural History & Major Events | REFERENCE_COMPLETE |
 | 6 | Science, Technology & Discovery | REFERENCE_COMPLETE |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | REFERENCE_COMPLETE |
-| 8 | Systemic Crises | TODO |
+| 8 | Systemic Crises | REFERENCE_COMPLETE |
 | 9 | Emergent Missions from World State | TODO |
 | 10 | Background Galactic Evolution | TODO |
 
@@ -60,3 +60,10 @@ Bloque 5 **REFERENCE_COMPLETE** sólo a nivel de contrato, simulador histórico 
 Bloque 7 **REFERENCE_COMPLETE** para fenómenos, anomalías y arqueología en los 18 paquetes PA001–PA018, con PR #116 **fusionada** en `main` (squash `73eb7e59e1032ac5975c9e459f27d2c1f5609522`) y CI B07/F13 de referencia exitoso. La generación/simulación Python, un caso de perturbación subespacial y ruinas protegidas, el control de canon/semillas/LOD y 56 pruebas adversariales no suponen un runtime galáctico. Ver [plan B07](procedural_phenomena_archaeology_plan_v0.1.md), [estado B07](procedural_phenomena_archaeology_status_v0.1.json) y [acta B07](P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 **Siguiente elegible: Bloque 8 — Crisis sistémicas.** Bloques 9–10 TODO; F13, CoreRPG, HOST, UE5, escáneres reales, editor procedural y guardado autoritativo NO cambian de madurez. Los párrafos anteriores que señalan B4/B5/B6/B7 como «siguiente» conservan su fecha histórica y no se han eliminado.
+
+
+## Actualización secuencial — 12/11/2026, P2-B08
+
+Bloque 8 **REFERENCE_COMPLETE en contrato y simulación de referencia**: 20 paquetes CR001–CR020, crisis causales desde hechos externos aceptados, propagación controlada por redes existentes, combinación de choques, contención/recuperación verificadas y conocimiento distribuido con permisos y retraso. La PR [#118](https://github.com/robdor80/Videojuego_StarTrek/pull/118) incorpora contrato, fixture, tests y CI, con primera validación [Actions #43259713758](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758): **56/56 B08, 264/264 B01–B08 y 30/30 F13**. Ver [plan B08](procedural_systemic_crises_plan_v0.1.md), [estado](procedural_systemic_crises_status_v0.1.json) y [acta](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible tras CI final y fusión: Bloque 9 — Misiones emergentes derivadas del estado del universo.** B10 TODO. F13 global sigue PLANIFICADA, CoreRPG mantiene única autoridad, no se ejecutan economía, población, pérdidas, decisiones de guerra, misiones o scheduler, y no hay UE5/HOST jugable. Los textos anteriores que mencionan B4–B8 como «siguiente» se conservan como instantáneas históricas.
