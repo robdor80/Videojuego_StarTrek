@@ -178,7 +178,7 @@ def apply_event(state, event):
         origin_kind = "archaeological_origin" if family in ARCHAEOLOGY else "formation"
         origin = source_fact(state, slot.get("origin_fact_ref"), t, origin_kind,
                              slot["location_ref"])
-        require(origin["tick"] < state["cutoff_tick"], "source not pre-existing")
+        require(origin["tick"] < t, "source not pre-existing before materialization")
         if family in ARCHAEOLOGY:
             require(ident(origin.get("culture_ref"), "archaeological culture"), "culture required")
             require(ident(slot.get("custodian_ref"), "custodian"), "custodian required")
