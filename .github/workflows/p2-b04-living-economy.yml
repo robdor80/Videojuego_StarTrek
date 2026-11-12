@@ -1,0 +1,38 @@
+name: P2-B04 Living Economy Reference
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_living_economy.py"
+      - "desarrollo/tools/generation/test_simulate_living_economy.py"
+      - "desarrollo/validation/fixtures/living_economy/**"
+      - "sistemas/universe/generation/living_economy_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_living_economy_plan_v0.1.md"
+      - ".github/workflows/p2-b04-living-economy.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_living_economy.py"
+      - "desarrollo/tools/generation/test_simulate_living_economy.py"
+      - "desarrollo/validation/fixtures/living_economy/**"
+      - "sistemas/universe/generation/living_economy_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_living_economy_plan_v0.1.md"
+      - ".github/workflows/p2-b04-living-economy.yml"
+  workflow_dispatch:
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reference-level contract and behavior tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_living_economy.py' -v
+      - name: Parse contract and fixtures
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for p in list(Path('desarrollo/validation/fixtures/living_economy').glob('*.json')) + [Path('sistemas/universe/generation/living_economy_reference_contract_v0.1.json')]:
+              json.loads(p.read_text(encoding='utf-8'))
+              print('OK', p)
+          PY
