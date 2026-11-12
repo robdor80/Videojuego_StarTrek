@@ -647,3 +647,12 @@ This status does **not** mean all species, planets, ships, organizations or asse
 **Pruebas:** [Actions #43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066) SUCCESS tras sincronizar F13/B07 y los documentos: **54/54** B06, **152/152** regresiones dinámicas B1–B6 (54 incluidas), **29/29** F13 tras actualización de frontera, JSON y CLI deterministas. Auditoría transversal 16/16 workflows SUCCESS en commit f81de6332ef71588e27fd20848f8b7ee12dcdfed; verificar cualquier revisión documental posterior antes de fusionar.
 
 **Frontera:** sólo hechos sintéticos offline. Ningún avance científico real, autoinstalación de mejoras, viaje temporal, misión Omega ejecutable, scheduler offscreen, guardado real, interfaz de CoreRPG/HOST o sala UE5 se declara implementado. Queda permitido el reconocimiento histórico documentado de NPC, sin atribución ni nombre automático. **Siguiente elegible tras fusión: Bloque 7 — Fenómenos, anomalías y arqueología procedural**. Bloques 8–10 sin comenzar.
+
+
+## P2 — Universo dinámico: Bloque 7 (2026-11-12)
+
+**Bloque 7 — Fenómenos, anomalías y arqueología procedural: REFERENCE_COMPLETE (pendiente CI final y fusión administrativa PR #116)** en **PA001–PA018 (18/18)**. Plan `proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md`, estado `proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json`, acta `proyecto/docs/roadmap/P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md`.
+
+**Evidencia certificada:** [Actions #43207092271](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271), SUCCESS en `ba881f723f1a2bc8180402081a42889d8388a639`: **56/56** B07, **208/208** regresiones B1–B7, **30/30** F13, JSON y CLI; auditoría 19/19 workflows SUCCESS sobre ese mismo HEAD. La sincronización documental del acta/manifiesto es posterior: exigir CI de su último commit antes de fusionar PR #116.
+
+Se define generación determinista previa a la observación, hechos causales aceptados (incluidos nuevos fenómenos durante la campaña), slots que no se rerollean, registros de sensores con autor/instrumento, evolución física, ruinas con custodia/permiso, hallazgos de estrato sin apropiación, hipótesis parciales y conocimiento filtrado. El fixture y sus `accepted` **no son WorldState real**: sin runtime CoreRPG/F06/HOST/UE5, sin contenidos 3D ni NPC autónomos demostrados. Anomalías extraordinarias/Omega requieren autoría específica; no hay viaje temporal jugable, misiones o crisis automáticas. **Tras fusión: B08 — Crisis sistémicas.**

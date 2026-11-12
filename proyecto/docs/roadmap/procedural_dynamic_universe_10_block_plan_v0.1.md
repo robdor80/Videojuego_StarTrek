@@ -11,7 +11,7 @@
 | 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
 | 5 | Procedural History & Major Events | REFERENCE_COMPLETE |
 | 6 | Science, Technology & Discovery | REFERENCE_COMPLETE |
-| 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
+| 7 | Phenomena, Anomalies & Procedural Archaeology | REFERENCE_COMPLETE |
 | 8 | Systemic Crises | TODO |
 | 9 | Emergent Missions from World State | TODO |
 | 10 | Background Galactic Evolution | TODO |
@@ -54,3 +54,9 @@ Bloque 5 **REFERENCE_COMPLETE** sólo a nivel de contrato, simulador histórico 
 **Bloque 6 — Ciencia, tecnología y descubrimientos: REFERENCE_COMPLETE** en los 18 paquetes ST001–ST018. Contrato, simulador de referencia y fixture científico→ingeniería→astillero→ensayo individual, con 54 pruebas nuevas, 152 regresiones dinámicas incluyendo B06 y 29 de F13 superadas en [Actions #43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066). Ver [plan B06](procedural_science_technology_discovery_plan_v0.1.md), [estado B06](procedural_science_technology_discovery_status_v0.1.json) y [acta](P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
 
 **Siguiente elegible: Bloque 7 — Fenómenos, anomalías y arqueología procedural**, tras fusión y CI final de B06. Bloques 7–10 no iniciados. F13 global, CoreRPG, HOST, UE5, investigación offscreen y guardado autoritativo no cambian de estado. Las referencias anteriores que fijaban B4/B5/B6 como siguiente son fotografías históricas conservadas por trazabilidad.
+
+## Actualización secuencial — 12/11/2026, P2-B07
+
+Bloque 7 **REFERENCE_COMPLETE candidato de referencia** para fenómenos, anomalías y arqueología en los 18 paquetes PA001–PA018, **condicionado a CI final y fusión de la PR #116**. La generación/simulación Python, un caso de perturbación subespacial y ruinas protegidas, el control de canon/semillas/LOD y 56 pruebas adversariales no suponen un runtime galáctico. Ver [plan B07](procedural_phenomena_archaeology_plan_v0.1.md), [estado B07](procedural_phenomena_archaeology_status_v0.1.json) y [acta B07](P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible después de fusión y CI: Bloque 8 — Crisis sistémicas.** Bloques 9–10 TODO; F13, CoreRPG, HOST, UE5, escáneres reales, editor procedural y guardado autoritativo NO cambian de madurez. Los párrafos anteriores que señalan B4/B5/B6/B7 como «siguiente» conservan su fecha histórica y no se han eliminado.

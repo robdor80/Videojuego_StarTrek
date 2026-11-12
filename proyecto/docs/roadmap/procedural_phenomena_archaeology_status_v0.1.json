@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_phenomena_archaeology_status",
+  "block": "P2-B07",
+  "status": "REFERENCE_COMPLETE",
+  "runtime_implemented": false,
+  "date": "2026-11-12",
+  "plan_ref": "proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md",
+  "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+  "summary": {
+    "total_packages": 18,
+    "prepared_reference": 18,
+    "certified_reference": 18,
+    "partial": 0
+  },
+  "packages": [
+    {
+      "package_id": "PA001",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA002",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA003",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA004",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA005",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA006",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA007",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA008",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA009",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA010",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA011",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA012",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA013",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA014",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA015",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA016",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA017",
+      "status": "REFERENCE_COMPLETE"
+    },
+    {
+      "package_id": "PA018",
+      "status": "REFERENCE_COMPLETE"
+    }
+  ],
+  "evidence": {
+    "contract": "sistemas/universe/generation/phenomena_anomalies_archaeology_reference_contract_v0.1.json",
+    "simulator": "desarrollo/tools/generation/simulate_phenomena_archaeology.py",
+    "fixture": "desarrollo/validation/fixtures/phenomena_archaeology/phenomena_archaeology_exploration_v0.1.json",
+    "tests": "desarrollo/tools/generation/test_simulate_phenomena_archaeology.py",
+    "workflow": ".github/workflows/p2-b07-phenomena-archaeology.yml",
+    "expected_new_tests": 56,
+    "measured_tests": {
+      "b07": 56,
+      "dynamic_b01_to_b07": 208,
+      "f13": 30
+    },
+    "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271",
+    "ci_final_status": "SUCCESS_ON_TEST_AND_ROADMAP_HEAD_BEFORE_FINAL_EVIDENCE_SYNC",
+    "ci_initial_commit": "5ef16d4eb1ca8c7d099a8e2f56c6a0392ab1ac99",
+    "ci_validation_commit": "ba881f723f1a2bc8180402081a42889d8388a639",
+    "cross_workflow_audit": {
+      "total": 19,
+      "success": 19,
+      "at_commit": "ba881f723f1a2bc8180402081a42889d8388a639"
+    }
+  },
+  "limits": {
+    "sources_attested_by_corerpg": false,
+    "authoritative_world_write": false,
+    "sensors_f06_runtime": false,
+    "archaeological_inventory_and_custody_runtime": false,
+    "npc_autonomy_offscreen": false,
+    "scheduler_b10": false,
+    "f13_complete": false,
+    "ue5_playable": false,
+    "host_commands_integrated": false
+  },
+  "next_block": "8 — Systemic Crises",
+  "sequential_gate": "BLOCK8_READY_AFTER_PR116_MERGE_AND_FINAL_DOC_CI",
+  "merge_gate": "PR116_FINAL_DOCUMENT_SYNC_PENDING"
+}
