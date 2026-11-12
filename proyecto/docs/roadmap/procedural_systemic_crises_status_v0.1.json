@@ -2,7 +2,7 @@
   "schema_version": "0.1.0",
   "manifest_id": "procedural_systemic_crises_status",
   "block": "P2-B08",
-  "status": "IN_PROGRESS",
+  "status": "REFERENCE_COMPLETE",
   "runtime_implemented": false,
   "date": "2026-11-12",
   "plan_ref": "proyecto/docs/roadmap/procedural_systemic_crises_plan_v0.1.md",
@@ -10,89 +10,89 @@
   "summary": {
     "total_packages": 20,
     "prepared_reference": 20,
-    "certified_reference": 0,
-    "partial": 20
+    "certified_reference": 20,
+    "partial": 0
   },
   "packages": [
     {
       "package_id": "CR001",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR002",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR003",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR004",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR005",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR006",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR007",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR008",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR009",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR010",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR011",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR012",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR013",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR014",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR015",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR016",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR017",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR018",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR019",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "CR020",
-      "status": "PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     }
   ],
   "evidence": {
@@ -102,9 +102,14 @@
     "tests": "desarrollo/tools/generation/test_simulate_systemic_crises.py",
     "workflow": ".github/workflows/p2-b08-systemic-crises.yml",
     "expected_new_tests": 56,
-    "measured_tests": {},
-    "ci_url": null,
-    "ci_final_status": "NOT_YET_VERIFIED"
+    "measured_tests": {
+      "b08": 56,
+      "dynamic_b01_to_b08": 264,
+      "f13": 30
+    },
+    "ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758",
+    "ci_final_status": "INITIAL_SUCCESS_PENDING_FINAL_HEAD",
+    "ci_initial_commit": "6a4c424489a12f1a16da173b42b673566d8798e1"
   },
   "limits": {
     "sources_attested_by_corerpg": false,
@@ -119,6 +124,6 @@
     "padd_operational": false
   },
   "next_block": "9 — Emergent Missions from World State",
-  "sequential_gate": "BLOCK9_NOT_YET_ELIGIBLE",
-  "merge_gate": "PR_NOT_YET_CREATED"
+  "sequential_gate": "BLOCK9_AFTER_FINAL_CI_AND_MERGE",
+  "merge_gate": "PR118_DRAFT_PENDING_FINAL_CI"
 }
