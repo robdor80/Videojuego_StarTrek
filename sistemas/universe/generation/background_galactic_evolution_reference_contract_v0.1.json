@@ -1,0 +1,146 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "background_galactic_evolution_reference",
+  "block": "P2-B10",
+  "status": "OFFLINE_REFERENCE_ONLY",
+  "owner": "Star Trek universe pack / Planificacion 2",
+  "authority": {
+    "sole_worldstate_writer": "CoreRPG; this code only emits nonauthoritative dispatch proposals",
+    "clock": "Host/CoreRPG-authorized virtual tick ranges; never wallclock, render frames or distance",
+    "domain_evaluators": "B01 to B09 remain domain owners; scheduler never duplicates domain rules",
+    "orders": "F11/HOST authorize commands independently; no offline grant is a live permission",
+    "facts": "Fixture status=accepted is synthetic and not cryptographic proof",
+    "runtime": "No CoreRPG transaction, persistent host daemon, UE5, galaxy-scale benchmark or network session provided"
+  },
+  "packages": [
+    "GS001_virtual_clock_authority",
+    "GS002_campaign_revision_scope",
+    "GS003_deterministic_scheduler_queue",
+    "GS004_bounded_catchup_batches",
+    "GS005_per_tick_cpu_budget",
+    "GS006_per_domain_fair_quota",
+    "GS007_priority_aging_no_starvation",
+    "GS008_outbox_backpressure",
+    "GS009_stable_dispatch_identity",
+    "GS010_external_domain_intents_only",
+    "GS011_B01_B09_ownership_preserved",
+    "GS012_B09_needs_proof_not_B08_risk",
+    "GS013_npc_offscreen_independent_of_player",
+    "GS014_lod_changes_presentation_not_truth",
+    "GS015_external_accepted_ack_receipts",
+    "GS016_save_resume_and_replay_hash_chain",
+    "GS017_delivered_knowledge_not_omniscience",
+    "GS018_atomic_failures_and_rejected_conflicts",
+    "GS019_synthetic_fixture_adversarial_regression_ci",
+    "GS020_f13_integration_gates_and_close"
+  ],
+  "inputs": {
+    "snapshot_version": "v0.1.0 with same campaign_id and world_revision",
+    "fields": [
+      "schema_version",
+      "campaign_id",
+      "world_revision",
+      "tick",
+      "config",
+      "facts",
+      "tasks",
+      "outbox",
+      "receipts",
+      "journal",
+      "trace_head",
+      "viewers"
+    ],
+    "fact_required": [
+      "kind",
+      "status",
+      "campaign_id",
+      "world_revision",
+      "tick",
+      "issuer_ref"
+    ],
+    "domains": [
+      "B01",
+      "B02",
+      "B03",
+      "B04",
+      "B05",
+      "B06",
+      "B07",
+      "B08",
+      "B09"
+    ],
+    "task_required": [
+      "domain",
+      "intent_ref",
+      "source_refs",
+      "due_tick",
+      "priority",
+      "classification"
+    ],
+    "intent": "domain_intent must be externally accepted, owned by same B01-B09 domain and causally dated",
+    "b09": "B09 task additionally requires an externally accepted need; projected B08 pressure is insufficient",
+    "clock": "clock_advance accepted fact precisely authorizes [current_tick, target_tick], independently issued by core_clock",
+    "ack": "dispatch_receipt accepted fact issued by core_writer, bound to dispatch ID and tick"
+  },
+  "configuration": {
+    "budget_per_tick": "positive bounded integer maximum number of dispatch proposals per game tick",
+    "per_domain_quota": "positive <= budget_per_tick; fairness bound within each tick",
+    "max_batch_ticks": "positive bounded limit for one catch-up call",
+    "max_pending_outbox": "positive maximum unacknowledged envelopes; backpressure must preserve tasks",
+    "aging_ticks": "positive deterministic priority aging interval",
+    "time_scaling": "game-specific CoreRPG clock policy; scheduler cannot derive elapsed time from real time"
+  },
+  "state_machine": {
+    "task": [
+      "queued",
+      "emitted_proposal",
+      "externally_acknowledged"
+    ],
+    "acknowledgements": [
+      "accepted",
+      "rejected"
+    ],
+    "outbox_record_authority": "PROPOSAL_ONLY",
+    "effect_claim": "NEVER_APPLY_WORLD_DELTA",
+    "duplicate_policy": "stable id p2b10:<campaign_id>:<task_id>; no double dispatch/ack; same receipt replays idempotently",
+    "replay_policy": "canonical JSON sha256, hash-chained journal, immutable source snapshot; runtime must add transactional snapshot fencing and signed provenance",
+    "tick_order": "strict virtual tick ascending; ready tasks sort by aging-adjusted priority, due tick, task ID",
+    "on_failure": "raise, do not commit mutated input; keep backlogged tasks and external facts"
+  },
+  "information": {
+    "view": "only actual dispatches with previously accepted, delivered recipient-specific evidence",
+    "clearance_levels": [
+      "public",
+      "restricted",
+      "classified"
+    ],
+    "no_global_omniscience": true,
+    "no_camera_based_spawns": true,
+    "no_lod_generated_world_events": true
+  },
+  "preservation": {
+    "no_new_actors_or_ships": true,
+    "no_invented_routes_or_facts": true,
+    "no_player_required": true,
+    "no_local_worldstate_mutation": true,
+    "no_narrative_season_clock": true,
+    "no_real_resource_allocation": true,
+    "no_prime_directive_bypass": true
+  },
+  "required_runtime_integration": [
+    "CoreRPG transactional, versioned source fact and command validation with real signatures",
+    "CoreRPG authoritative persistent clock/ticks, durable scheduler queue, recovery and atomic outbox",
+    "Consumer idempotency, exactly-once effects guarded by transaction IDs and revision checks",
+    "F11/HOST actor orders, game pause/sessions and multi-player authority",
+    "B01–B09 native event handlers/WorldState state transitions with rollback and audit",
+    "UE5/NAP/PADD observer-filtered knowledge, scene streaming and real save/load",
+    "Performance profiling across galaxy entity scales and catch-up windows"
+  ],
+  "test_fixture": "desarrollo/validation/fixtures/background_galactic_evolution/verified_npc_offscreen_catchup_v0.1.json",
+  "test_suite": "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py",
+  "red_lines": [
+    "No fictional fixture can attest live accepted CoreRPG facts",
+    "No changes to F13 global PLANIFICADA or layers 119 partial / 120 runtime blocked",
+    "No offscreen dispatch may directly grant rewards, war orders, population or market changes"
+  ]
+}
