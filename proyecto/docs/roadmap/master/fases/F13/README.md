@@ -90,3 +90,11 @@ Se añade el contrato/referencia offline **B09, misiones emergentes derivadas de
 ## Cierre administrativo P2-B09 — 12-11-2026
 
 [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fusionada (`4c8733da7cef6acf2b0a0c4259734a615ffed2d0`) tras 20/20 checks SUCCESS en el HEAD final premerge. **B10, evolución galáctica en segundo plano, pasa a ser el siguiente bloque de referencia habilitado**. La fase F13 continúa `PLANIFICADA`; la promoción del bloque B09 no cierra los pasos F13-P01–P05 ni el runtime CoreRPG/UE5.
+
+## Culminación Planificación 2, B10 — 12-11-2026
+
+**B10 cierra la secuencia de referencia B01–B10**, 20 paquetes GS001–GS020, scheduler virtual determinista y no autoritativo con propuestas causales externas, cuotas, presupuestos, catch-up por lotes, journal/recibos e información retrasada. [Plan B10](../../../procedural_background_galactic_evolution_plan_v0.1.md), [acta](../../../P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md). Primeras pruebas: **50/50 B10, 379/379 regresión dinámica, 30/30 F13 y 9/9 Academia** en [Actions #43277716336](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43277716336).
+
+**F13 global sigue PLANIFICADA, no CERRADA:** no se han añadido integraciones nativas a CoreRPG, HOST, Unreal ni una simulación galáctica persistida real. F11, primera directriz, economía y otros dueños conservan autoridad; las capas 119/120 siguen parcial/bloqueada. El siguiente corte habrá de ser runtime real, no otro bloque P2.
+
+**Endurecimiento y segunda auditoría:** tras proteger deduplicación del intent externo, impedir noticias anteriores a su hecho emisor, limitar configuración y comprobar prioridad envejecida, el commit `7cbc4631b4cea44e7657c9115716872ad29a55a0` superó **54/54 B10, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia** en [Actions #43278574994](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43278574994); los **22/22 workflows** asociados quedaron SUCCESS. Esta certificación es anterior al commit documental que la registra; ese commit deberá pasar sus propios checks antes de la fusión.

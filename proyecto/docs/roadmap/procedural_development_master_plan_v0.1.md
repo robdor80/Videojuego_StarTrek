@@ -335,3 +335,7 @@ Blocks 1–3 remain COMPLETE at reference foundation level; B04–B07 are **REFE
 ### Dynamic-universe sequence update — Block 9 (2026-11-12)
 
 **B09 REFERENCE_COMPLETE (non-runtime)**: 20 EM packages covering mission candidates only from independently accepted real needs, external command orders and resource reservations, NPC capacity, Prime Directive constraints, delayed knowledge and outcome-backed closure, with deterministic offline validation and [plan](procedural_emergent_missions_plan_v0.1.md). **B10 — Background Galactic Evolution becomes the next reference frontier after CI and PR merge**. All prior priority statements are historical; F13 and CoreRPG/HOST/UE5 are not closed or reimplemented.
+
+### Dynamic-universe sequence update — Block 10 (2026-11-12)
+
+**B10 REFERENCE_COMPLETE (offline reference only)**: GS001–GS020, authorized virtual-time windows, bounded galactic catch-up, priority aging, quotas, stable dispatch proposals, backpressure, read-only evidence/receipts and filtered delayed deliveries. [Plan B10](procedural_background_galactic_evolution_plan_v0.1.md), [status](procedural_background_galactic_evolution_status_v0.1.json), [act](P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md). CI initial 50 B10, 379 dynamic B01–B10, 30 F13, 9 Academy tests PASS. **Los diez bloques terminan sólo en madurez de referencia**; el siguiente gran trabajo pertenece al runtime F13/CoreRPG/HOST/UE5. Las capas 119/120 conservan su estado y los planes históricos de fases no se reescriben.

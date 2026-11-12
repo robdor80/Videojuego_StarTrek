@@ -1,0 +1,252 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "SYNTHETIC_NONCANONICAL",
+  "description": "No source is a real signed CoreRPG fact. Real player not required. News arrives after dispatch.",
+  "state": {
+    "schema_version": "0.1.0",
+    "campaign_id": "demo-2383",
+    "world_revision": "world-synthetic-r1",
+    "tick": 0,
+    "config": {
+      "budget_per_tick": 2,
+      "per_domain_quota": 1,
+      "max_batch_ticks": 4,
+      "max_pending_outbox": 6,
+      "aging_ticks": 2
+    },
+    "facts": {
+      "clock_0_3": {
+        "kind": "clock_advance",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 0,
+        "issuer_ref": "core_clock",
+        "start_tick": 0,
+        "end_tick": 3
+      },
+      "clock_3_6": {
+        "kind": "clock_advance",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 3,
+        "issuer_ref": "core_clock",
+        "start_tick": 3,
+        "end_tick": 6
+      },
+      "clock_6_8": {
+        "kind": "clock_advance",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 6,
+        "issuer_ref": "core_clock",
+        "start_tick": 6,
+        "end_tick": 8
+      },
+      "intent_b04": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 0,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B04",
+        "domain": "B04",
+        "description": "Independent already accepted supply adjustment"
+      },
+      "intent_b08": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 1,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B08",
+        "domain": "B08",
+        "description": "Existing accepted mitigation intent, not crisis generator"
+      },
+      "intent_b06": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 1,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B06",
+        "domain": "B06",
+        "description": "Externally approved research progress check"
+      },
+      "intent_b02": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 1,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B02",
+        "domain": "B02",
+        "description": "Externally accepted colony review"
+      },
+      "intent_b05": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 1,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B05",
+        "domain": "B05",
+        "description": "History indexing only"
+      },
+      "need_med": {
+        "kind": "need",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 1,
+        "issuer_ref": "fixture_core",
+        "description": "Synthetic accepted need from B09 provenance"
+      },
+      "intent_b09": {
+        "kind": "domain_intent",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 2,
+        "issuer_ref": "fixture_core",
+        "owner_ref": "B09",
+        "domain": "B09",
+        "need_ref": "need_med",
+        "description": "Externally accepted offscreen NPC mission proposal"
+      },
+      "receipt_b04": {
+        "kind": "dispatch_receipt",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 2,
+        "issuer_ref": "core_writer",
+        "dispatch_id": "p2b10:demo-2383:t_b04",
+        "result": "accepted"
+      },
+      "delivery_cap": {
+        "kind": "delivery",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "world_revision": "world-synthetic-r1",
+        "tick": 4,
+        "issuer_ref": "core_comms",
+        "recipient_ref": "captain",
+        "dispatch_id": "p2b10:demo-2383:t_b09",
+        "arrival_tick": 7
+      }
+    },
+    "tasks": {
+      "t_b04": {
+        "domain": "B04",
+        "intent_ref": "intent_b04",
+        "source_refs": [
+          "intent_b04"
+        ],
+        "due_tick": 1,
+        "priority": "urgent",
+        "classification": "restricted"
+      },
+      "t_b08": {
+        "domain": "B08",
+        "intent_ref": "intent_b08",
+        "source_refs": [
+          "intent_b08"
+        ],
+        "due_tick": 1,
+        "priority": "urgent",
+        "classification": "classified"
+      },
+      "t_b06": {
+        "domain": "B06",
+        "intent_ref": "intent_b06",
+        "source_refs": [
+          "intent_b06"
+        ],
+        "due_tick": 1,
+        "priority": "normal",
+        "classification": "restricted"
+      },
+      "t_b02": {
+        "domain": "B02",
+        "intent_ref": "intent_b02",
+        "source_refs": [
+          "intent_b02"
+        ],
+        "due_tick": 2,
+        "priority": "normal",
+        "classification": "public"
+      },
+      "t_b05": {
+        "domain": "B05",
+        "intent_ref": "intent_b05",
+        "source_refs": [
+          "intent_b05"
+        ],
+        "due_tick": 3,
+        "priority": "background",
+        "classification": "public"
+      },
+      "t_b09": {
+        "domain": "B09",
+        "intent_ref": "intent_b09",
+        "source_refs": [
+          "intent_b09",
+          "need_med"
+        ],
+        "due_tick": 2,
+        "priority": "normal",
+        "classification": "restricted"
+      }
+    },
+    "outbox": [],
+    "receipts": [],
+    "journal": [],
+    "trace_head": "1494981d1fd5c97348942218557fd076f6e091913a74faf70a4389d84f5f0c32",
+    "viewers": {
+      "captain": {
+        "clearance": "restricted"
+      },
+      "observer": {
+        "clearance": "public"
+      },
+      "agency": {
+        "clearance": "classified"
+      }
+    }
+  },
+  "actions": [
+    {
+      "kind": "advance",
+      "to_tick": 3,
+      "clock_ref": "clock_0_3"
+    },
+    {
+      "kind": "acknowledge",
+      "dispatch_ref": "p2b10:demo-2383:t_b04",
+      "receipt_ref": "receipt_b04"
+    },
+    {
+      "kind": "advance",
+      "to_tick": 6,
+      "clock_ref": "clock_3_6"
+    },
+    {
+      "kind": "advance",
+      "to_tick": 8,
+      "clock_ref": "clock_6_8"
+    }
+  ],
+  "views": [
+    "captain",
+    "observer",
+    "agency"
+  ]
+}
