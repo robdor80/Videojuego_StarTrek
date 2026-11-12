@@ -270,9 +270,11 @@ class ScienceReferenceTests(unittest.TestCase):
         self.reject(at(6), e, "real refit duration")
 
     def test_44_wrong_trial_at_older_tick(self):
+        s = at(8)
+        s["facts"]["trial_1"]["tick"] = 115
         e = events()[8]
         e["tick"] = 115
-        self.reject(at(8), e, "instant trials")
+        self.reject(s, e, "instant trials")
 
     def test_45_future_actor_cannot_act(self):
         s = state()
