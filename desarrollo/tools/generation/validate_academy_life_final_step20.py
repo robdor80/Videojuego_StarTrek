@@ -36,7 +36,7 @@ def import_module(rel,name):
  p=ROOT/rel;spec=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(spec);assert spec and spec.loader;spec.loader.exec_module(m);return m
 def dynamic_reference_frontier(text):
  """Validate current live 10-block roadmap without rewriting Academy's historical hand-off."""
- rows=re.findall(r"^\\|\\s*(\\d+)\\s*\\|[^|]+\\|\\s*([A-Z_]+)\\s*\\|\\s*$",text,flags=re.M)
+ rows=re.findall(r"^\|\s*(\d+)\s*\|[^|]+\|\s*([A-Z_]+)\s*\|\s*$",text,flags=re.M)
  if len(rows)!=10:return None
  states={int(num):value for num,value in rows}
  if set(states)!=set(range(1,11)) or any(states[i]!="COMPLETE" for i in (1,2,3)):
