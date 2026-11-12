@@ -14,7 +14,7 @@
 | 7 | Phenomena, Anomalies & Procedural Archaeology | REFERENCE_COMPLETE |
 | 8 | Systemic Crises | REFERENCE_COMPLETE |
 | 9 | Emergent Missions from World State | REFERENCE_COMPLETE |
-| 10 | Background Galactic Evolution | TODO |
+| 10 | Background Galactic Evolution | REFERENCE_COMPLETE |
 
 ## Block separation
 
@@ -80,3 +80,9 @@ La PR #118 se fusionó en main, squash `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9
 ## Confirmación administrativa — 12/11/2026, B09
 
 La [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fue **fusionada** en main (squash `4c8733da7cef6acf2b0a0c4259734a615ffed2d0`) después de CI **20/20 SUCCESS** del último HEAD premerge (`94f71f812400e5dbbd9fd3c143a53ad01a235a68`), incluyendo el workflow [B09 #43266888009](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266888009). Las ejecuciones posteriores a la fusión no han podido comprobarse con la herramienta actual y no se dan por certificadas. **B10 es el siguiente bloque secuencial de referencia**, no un scheduler ya implementado; F13 PLANIFICADA y capas 119/120 sin cambios.
+
+## Cierre secuencial — 12/11/2026, P2-B10 (referencia)
+
+**Bloque 10 — Evolución galáctica offscreen: REFERENCE_COMPLETE en alcance documental y simulación Python**, con 20 paquetes GS001–GS020. El scheduler de prueba acepta únicamente intenciones externas ya acreditadas, exige ventanas de reloj virtual autorizadas, arbitra presupuestos y prioridades con aging, aplica backpressure sin borrar cola, emite propuestas no autoritativas y conserva hash encadenado, acuses externos y entregas filtradas. Véanse [plan B10](procedural_background_galactic_evolution_plan_v0.1.md), [estado](procedural_background_galactic_evolution_status_v0.1.json) y [acta](P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+Pruebas iniciales [Actions #43277716336](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43277716336): 50/50 B10, 379/379 B01–B10, 30/30 F13, 9/9 Academia, job SUCCESS. La certificación de HEAD final y fusión se registra separadamente. **La secuencia de los 10 bloques queda agotada sólo en madurez de referencia.** F13 global permanece PLANIFICADA; las capas 119/120 y CoreRPG/HOST/UE5 runtime siguen pendientes. Los antiguos textos «siguiente bloque» son fotos históricas.

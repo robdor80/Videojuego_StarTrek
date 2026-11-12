@@ -183,12 +183,8 @@ def record(state, action):
 def priority_key(task_id, task, at, aging_ticks):
     # Aging is bounded: finite urgent work cannot indefinitely starve old low-priority tasks.
     age_bonus = (at - task["due_tick"]) // aging_ticks
-    effective = max(0, PRIORORITIES_FIX(task["priority"]) - age_bonus)
+    effective = max(0, PRIORITIES[task["priority"]] - age_bonus)
     return (effective, task["due_tick"], task_id)
-
-
-def PRIORORITIES_FIX(priority):
-    return PRIORITIES[priority]
 
 
 def advance(state, to_tick, clock_ref):

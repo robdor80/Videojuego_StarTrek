@@ -3,96 +3,96 @@
   "manifest_id": "procedural_background_galactic_evolution_status",
   "block": "P2-B10",
   "date": "2026-11-12",
-  "status": "IN_PROGRESS",
+  "status": "REFERENCE_COMPLETE",
   "runtime_implemented": false,
   "plan_ref": "proyecto/docs/roadmap/procedural_background_galactic_evolution_plan_v0.1.md",
   "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
   "summary": {
     "total_packages": 20,
     "prepared_reference": 20,
-    "certified_reference": 0,
-    "partial": 20
+    "certified_reference": 20,
+    "partial": 0
   },
   "packages": [
     {
       "package_id": "GS001",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS002",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS003",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS004",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS005",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS006",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS007",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS008",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS009",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS010",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS011",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS012",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS013",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS014",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS015",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS016",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS017",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS018",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS019",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     },
     {
       "package_id": "GS020",
-      "status": "PREPARED_PENDING_CI"
+      "status": "REFERENCE_COMPLETE"
     }
   ],
   "evidence": {
@@ -102,9 +102,20 @@
     "tests": "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py",
     "workflow": ".github/workflows/p2-b10-background-galactic-evolution.yml",
     "expected_new_tests": 50,
-    "ci_final_status": "PENDING",
+    "ci_final_status": "SUCCESS_INITIAL_PENDING_FINAL_HEAD",
     "ci_final_head": null,
-    "measured_tests": null
+    "measured_tests": {
+      "b10": 50,
+      "dynamic_b01_to_b10": 379,
+      "f13": 30,
+      "academy": 9
+    },
+    "ci_initial_commit": "56441c6792c1eb35ba4c653b58acdb22fe0d64d2",
+    "ci_initial_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43277716336",
+    "ci_initial_workflows": {
+      "total": 5,
+      "success": 5
+    }
   },
   "limits": {
     "signed_core_facts": false,
@@ -120,6 +131,6 @@
     "layer_120_complete": false
   },
   "next_work": "F13 / CoreRPG + HOST native integration — outside B10 reference",
-  "sequential_gate": "B10_REFERENCE_IN_PROGRESS",
-  "merge_gate": "PENDING_CI"
+  "sequential_gate": "ALL_TEN_BLOCKS_REFERENCE_COMPLETE_ONLY",
+  "merge_gate": "PR122_PENDING_FINAL_CI"
 }
