@@ -1,0 +1,124 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_systemic_crises_status",
+  "block": "P2-B08",
+  "status": "IN_PROGRESS",
+  "runtime_implemented": false,
+  "date": "2026-11-12",
+  "plan_ref": "proyecto/docs/roadmap/procedural_systemic_crises_plan_v0.1.md",
+  "parent_plan_ref": "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+  "summary": {
+    "total_packages": 20,
+    "prepared_reference": 20,
+    "certified_reference": 0,
+    "partial": 20
+  },
+  "packages": [
+    {
+      "package_id": "CR001",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR002",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR003",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR004",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR005",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR006",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR007",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR008",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR009",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR010",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR011",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR012",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR013",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR014",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR015",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR016",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR017",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR018",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR019",
+      "status": "PENDING_CI"
+    },
+    {
+      "package_id": "CR020",
+      "status": "PENDING_CI"
+    }
+  ],
+  "evidence": {
+    "contract": "sistemas/universe/generation/systemic_crises_galactic_consequences_reference_contract_v0.1.json",
+    "simulator": "desarrollo/tools/generation/simulate_systemic_crises.py",
+    "fixture": "desarrollo/validation/fixtures/systemic_crises/systemic_crisis_galactic_chain_v0.1.json",
+    "tests": "desarrollo/tools/generation/test_simulate_systemic_crises.py",
+    "workflow": ".github/workflows/p2-b08-systemic-crises.yml",
+    "expected_new_tests": 56,
+    "measured_tests": {},
+    "ci_url": null,
+    "ci_final_status": "NOT_YET_VERIFIED"
+  },
+  "limits": {
+    "sources_attested_by_corerpg": false,
+    "authoritative_world_write": false,
+    "real_economy_and_casualties": false,
+    "prime_directive_runtime": false,
+    "npc_autonomy_offscreen": false,
+    "scheduler_b10": false,
+    "f13_complete": false,
+    "host_commands_integrated": false,
+    "ue5_playable": false,
+    "padd_operational": false
+  },
+  "next_block": "9 — Emergent Missions from World State",
+  "sequential_gate": "BLOCK9_NOT_YET_ELIGIBLE",
+  "merge_gate": "PR_NOT_YET_CREATED"
+}
