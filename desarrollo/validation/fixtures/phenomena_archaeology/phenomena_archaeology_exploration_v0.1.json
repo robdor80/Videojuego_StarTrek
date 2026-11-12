@@ -23,7 +23,8 @@
       "generator": {
         "exists_tick": 0,
         "scopes": [
-          "materialize"
+          "materialize",
+          "advance"
         ],
         "clearance": "classified"
       },
