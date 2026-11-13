@@ -297,7 +297,7 @@ void audit_registry(const std::string& mode) {
     fs::create_directory(base/"race");
     SlotStore raced({config.root+"/race"});
     storage_test_hook([&](const char* point){if(std::string_view(point)=="registry_before_publish")put(base/"race"/"registry"/campaign,original);});
-    require(raced.save(campaign,"alpha",wrong,[](const fs::path&){throw std::runtime_error("Unexpected snapshot after collision");return Error::OK;},[](const PreparedSlot&){return Error::OK;})==Error::PUBLICATION_UNCERTAIN,"No-replace collision status");
+    require(raced.save(campaign,"alpha",wrong,[](const fs::path&){throw std::runtime_error("Unexpected snapshot after collision");return Error::OK;},[](const PreparedSlot&){return Error::OK;})==Error::PERSISTENCE_FAILED,"No-replace collision status");
     storage_test_hook({});require(get(base/"race"/"registry"/campaign)==original,"Concurrent valid registry replaced");
     SessionOwner owner(config);auto loaded=owner.restore({}, {campaign,"alpha"}).get();expect(loaded,Error::OK);check_player(owner,loaded.generation);
     native_observer=[&](F04Session* session,bool saving){if(!saving){auto bytes=active_bytes(session);require(std::string(bytes.begin(),bytes.end())==get(seed/"expected-active"),"Audit restored Core differs");}};

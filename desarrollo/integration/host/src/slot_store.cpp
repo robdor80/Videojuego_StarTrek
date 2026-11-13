@@ -262,11 +262,15 @@ Error SlotStore::save(const std::string& campaign_id,const std::string& slot,Per
             write(temporary,identity_text(identity)); // checked flush + close; partial files are never registry entries
             point("registry_before_publish");publication_started=true;
 #ifdef _WIN32
-            need(MoveFileExW(temporary.c_str(),(registry.path()/campaign_id).c_str(),MOVEFILE_WRITE_THROUGH)!=0);
+            const auto moved=MoveFileExW(temporary.c_str(),(registry.path()/campaign_id).c_str(),MOVEFILE_WRITE_THROUGH);
+            if(!moved) {const auto error=GetLastError();if(error==ERROR_ALREADY_EXISTS || error==ERROR_FILE_EXISTS)publication_started=false;}
+            need(moved!=0);
 #else
             // Linux atomic no-replace publication. Never fall back to replacing rename.
-            need(::syscall(SYS_renameat2,AT_FDCWD,temporary.c_str(),AT_FDCWD,
-                           (registry.path()/campaign_id).c_str(),1 /* RENAME_NOREPLACE */)==0);
+            const auto moved=::syscall(SYS_renameat2,AT_FDCWD,temporary.c_str(),AT_FDCWD,
+                           (registry.path()/campaign_id).c_str(),1 /* RENAME_NOREPLACE */);
+            if(moved!=0 && errno==EEXIST)publication_started=false;
+            need(moved==0);
 #endif
             point("registry_after_publish");sync_dir(registry.path());
             need(read(registry.path()/campaign_id)==identity_text(identity));
