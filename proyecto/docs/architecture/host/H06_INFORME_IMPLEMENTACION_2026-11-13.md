@@ -1,65 +1,58 @@
-# H06 — Implementación del adaptador HOST para Unreal
+# H06 — Integración del HOST en StarTrekRPG
 
-Fecha: 2026-11-13. Rama `feature/host-h06-ue-m1`. Base `5f12d9c152dd0003a6d971068d693184f45b213e` (PR #141). Código `2b68bd16a6200a86b43d5b66d535e97a28c4eb9d`. Configuración CI final `517b5adcb8d99a93dfa7ce81c698a74abfd5d6e2`. CoreRPG limpio y fijado en `76a7b7b485616d8c4994f384a90f123bf333591d`. [PR #142 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/142).
+Fecha: 2026-11-13. Rama `feature/host-h06-ue-m1`. Base `5f12d9c152dd0003a6d971068d693184f45b213e` (PR #141). Adaptador nativo `2b68bd16a6200a86b43d5b66d535e97a28c4eb9d`; código Unreal ensayado `216e2cecd0dc5c21647e8f2fd33e0862023f333d`. CoreRPG limpio y fijado en `76a7b7b485616d8c4994f384a90f123bf333591d`. [PR #142 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/142).
 
-**M1 parcial y bloqueado.** Está implementado el adaptador nativo; quedan pendientes el proyecto Unreal autorizado, su módulo y panel, el bootstrap productivo del cadete y la validación UE. [Decisión G0](H06_DECISION_PROYECTO_UE_2026-11-13.md) · [Resultados y matriz](H06_RESULTADOS_2026-11-13.md).
+**Integración mínima de diagnóstico ejecutada en el proyecto principal.** M1 permanece parcial por el bootstrap productivo del cadete y el flujo de órdenes del jugador. [Decisión G0](H06_DECISION_PROYECTO_UE_2026-11-13.md) · [Resultados HU-01–HU-25](H06_RESULTADOS_2026-11-13.md).
 
-## Cambios
+## Inventario
 
-| Archivo | Cambio |
+| Ruta | Entrega |
 |---|---|
-| `desarrollo/integration/host/include/trek/host/host_abi.h` | Contrato C v1, funciones `trek_host_*`, entrada/salida trivial, generaciones y tickets. |
-| `src/host_abi.cpp` | Traducción de solicitudes y errores, poll y proyecciones mínimas dentro de TrekHost. |
-| `src/abi_admission.h`, `src/session_owner.cpp`, `include/trek/host/session_owner.h` | Admisión inmediata sobre el mismo mutex recursivo; lectura interna de generación e ID H04 bajo guardia. El trabajador conserva su cola, estados y transiciones. |
-| `CMakeLists.txt` de HOST | Compila el consumidor C11 y mantiene una sola composición Core/F04. OFF excluye dos exportaciones de ensayo heredadas de F04. |
-| `tests/host_abi_tests.c`, `tests/abi_fixture.py`, `tests/inspect_abi.py` | CTest de producto y fixture H04/F05, negociación y carga del producto OFF. |
-| `.github/workflows/host-h02-native.yml` | Incorpora consumidor C, sanitizadores C/C++, inspección de ABI en Release OFF y artefactos H06. |
-| Tres informes H06 en `proyecto/docs/architecture/host/` | Decisión reservada, arquitectura, ejecución y trazabilidad. |
+| `desarrollo/integration/host/include/trek/host/host_abi.h`, `src/host_abi.cpp`, `src/abi_admission.h` | ABI C v1, handles opacos, tickets, proyecciones mínimas y admisión inmediata sobre SessionOwner. |
+| `desarrollo/integration/host/src/session_owner.cpp`, `include/trek/host/session_owner.h`, `CMakeLists.txt` | Misma cola, trabajador y transiciones con un mutex recursivo compartido por la admisión C. Release OFF excluye los dos exports F04 heredados de ensayo. |
+| `desarrollo/integration/host/tests/{host_abi_tests.c,abi_fixture.py,inspect_abi.py}`, `.github/workflows/host-h02-native.yml` | CTest de consumidor C y fixture H04/F05, carga Release OFF, Windows/Linux y sanitizadores. |
+| `juego/UE5/StarTrekRPG/StarTrekRPG.uproject`, `Source/*.Target.cs`, `Config/` | Proyecto Win64 limpio, asociación 5.8, targets Editor y Game, mapa predeterminado, perfil D3D12 y cook local. |
+| `Build/Prepare-Host.ps1`, `Source/StarTrekRPG/StarTrekRPG.Build.cs`, `Private/HostRuntime.*` | Build CMake Release OFF y staging de header C y las dos DLL. Carga y negociación del módulo, recibo UBT y empaquetado NonUFS. |
+| `Private/HostSessionSubsystem.*` | Un handle por GameInstance, poll por tick, proyección por UWorld, revocación y retirada del handle. |
+| `Private/HostDiagnosticGameMode.*`, `Private/HostDiagnosticMapCommandlet.*` | Panel Slate, mapa regenerable con punto de entrada y GameMode propio. La generación del mapa solo se ejecuta en Editor. |
+| `Private/HostAutomation.cpp`, `README.md` del proyecto | Automatización con botones reales, modos limpio y fixture, reconstrucción desde fuentes. |
 
-El pin, fuentes Core/F04/F05/F11, guardado H04 y oráculos históricos conservan su implementación. Ningún descriptor, mapa, asset o fuente Unreal cambió.
+Se reutilizan CoreRPG, TrekF04Bridge, H04 y la pasarela H05. El proyecto no incorpora assets artísticos, acceso directo a Core, fuente de autoridad adicional ni dependencias de laboratorios históricos.
 
-## ABI real
-
-- `trek_host_abi_version` y `trek_host_create` negocian versión 1. Los tamaños exactos en x64 con alineación por defecto son 16 bytes para `TrekHostText`, 80 para la solicitud, 24 para el estado y 120 para el resultado. Se comprueban en C y C++. Los números públicos tienen ancho fijo. Win64 usa C linkage y `__cdecl`. La biblioteca controla la vida del handle; el llamador posee buffers de entrada y salida. Las cadenas con longitud se copian en la llamada. Excepciones y objetos STL se confinan a TrekHost.
-- `trek_host_status` copia estado H02, generación y estado de identidad H03. La capacidad institucional publica `SERVICE_UNAVAILABLE`. Los diagnósticos crudos de dominio, paths y referencias Core quedan en nativo. El C ABI deja fuera el bootstrap, la ejecución por destinatario, las mutaciones institucionales y cualquier identidad seleccionada por cliente. Los exports C++ históricos siguen siendo internos y el futuro módulo UE solo usará el header C.
-- `trek_host_submit` admite OPEN, CLOSE, QUERY_VIEW, SUBMIT_SCAN, QUERY_ORDER, CANCEL_ORDER, SAVE y RESTORE. Distingue el resultado de transporte del de dominio. El ticket es de entrega y correlación; F05 conserva su key de idempotencia. SUBMIT_SCAN traduce una intención tipada a F04_SCAN. F05 decide revisión, autoridad, estación, destinatario y plazo. Los resultados de dominio se traducen explícitamente. La proyección C de consulta incluye los datos mínimos de campaña y orden, con resultado de tirada si existe.
-- `trek_host_poll` consulta el futuro a cero espera y consume el resultado una vez. Hasta ocho observaciones simultáneas y una ranura reservada para CLOSE. `trek_host_discard` libera la observación; una intención ya admitida sigue su curso en el trabajador. La adquisición del mutex con `try_lock` devuelve `RETRY` cuando está ocupado. El adaptador serializa admisión y validación de generación usando el mismo mutex de SessionOwner. Las llamadas sobre el mismo cliente se serializan por contrato del llamador. La capa C no programa tareas Core ni crea otro trabajador.
-- La comparación de generación se hace en admisión y en poll. Un resultado pendiente de entrega, aunque el trabajador ya lo haya producido, devuelve `GENERATION_EXPIRED` si un CLOSE o un LOAD válido revocó su generación. El consumidor debe revalidar el resultado entregado si se difiere su aplicación. El descarte de un resultado no implica rollback de una operación que Core o H04 ya confirmó.
-- `trek_host_destroy` libera el handle y hace join del trabajador nativo. Se deben detener las llamadas del consumidor y ejecutar el join fuera del Game Thread. Conservar ambas DLL hasta que terminen las destrucciones; el futuro módulo debe administrar también el orden de descarga.
-
-## Composición Unreal pendiente de G0
+## Frontera y vida
 
 ```text
-Game Thread: GameInstanceSubsystem -> handle C -> poll acotado por tick
-                |                                  |
-      UWorld A / UWorld B: vistas débiles      TrekHost -> SessionOwner
-                                                      -> único trabajador Core
+Slate / UWorldSubsystem  <── proyecciones débiles y efímeras
+           |                             ↑
+           v                             | Game Thread
+UGameInstanceSubsystem ─── ABI C ─── TrekHost ─── SessionOwner ─── CoreRPG/F04/F05
+       un handle           tickets                         trabajador propietario
 ```
 
-Un handle por GameInstance. Las proyecciones por UWorld se identifican por mundo y generación; comprobar weak references en Game Thread justo antes de aplicar cada resultado. Durante world cleanup y map travel se desregistran las proyecciones/tickets de ese mundo, y el nuevo mapa se suscribe a la sesión del mismo GameInstance. Tras LOAD/CLOSE se invalidan también las proyecciones de generación anterior. En Deinitialize se dejan de recibir resultados, se invalida el contexto UE y se transfiere el handle para destrucción fuera de Game Thread. El dueño del módulo retiene las DLL durante ese drenaje. El consumidor C ya comprueba exclusividad nativa; la vida real de UWorld y UObject requiere automatización UE.
+La ABI C tiene versión negociada, tipos de ancho fijo y tamaños x64 comprobados en CMake y UBT. Copia entradas y salidas, mantiene propiedad del handle y confina las excepciones a TrekHost. Las operaciones OPEN, CLOSE, VIEW, SAVE y RESTORE del panel llaman al adaptador C. El código C también ofrece SUBMIT_SCAN, QUERY_ORDER y CANCEL_ORDER por la pasarela H05. La UI actual mantiene deshabilitadas las órdenes de jugador hasta disponer de la procedencia y competencia productivas.
 
-Propuesta de staging Win64 tras G0: Build.cs con include público C, import lib `TrekHost.lib`, carga controlada de `TrekF04Bridge.dll` y `TrekHost.dll` y `RuntimeDependencies` relativas a proyecto o módulo. `TrekF04Bridge` sigue siendo dependencia privada; ningún consumidor Unreal enlaza Core directamente. Verificar el CRT del producto, carga desde staging y juego cocinado en equipo limpio. El build nativo usa la misma biblioteca para el C ABI, preserva la ABI C++ histórica para consumidores nativos y aísla de ella a Unreal. UBT/UHT y la ruta de empaquetado quedan sin validar.
+La capa UE permite hasta ocho observaciones y CLOSE conserva una ranura reservada en la ABI. `PENDING` y `RETRY` se reevalúan por tick. El Game Thread no espera futuros ni ejecuta IO de H04. La operación de cierre o carga cancela la entrega de observaciones anteriores; cada resultado consumido se vuelve a validar con un estado y una generación frescos antes de llegar a la proyección. El descarte de la entrega no revierte una operación que H04 o Core ya confirmaron. El cambio de mundo retira la proyección anterior y su panel, preserva el handle y conserva en el GameInstance la transición de sesión en curso. `Deinitialize` retira el ticker y las observaciones y transfiere el handle a un trabajo de destrucción fuera del Game Thread. La descarga final del módulo espera a que terminen esas destrucciones antes de liberar las DLL. El módulo deshabilita la recarga dinámica.
 
-## Identidad y guardado
+El cargador usa rutas relativas al proyecto, abre TrekF04Bridge y luego TrekHost, resuelve únicamente los símbolos C de HOST y exige ABI 1. La carga de producto y el pin de la biblioteca adyacente se comprobaron con inspección Release OFF; OPEN y RESTORE vuelven a contrastar el pin dentro del HOST nativo. UBT prepara las DLL como NonUFS para que se resuelvan también desde el ejecutable cocinado. Se usa MSVC Release y CRT de Windows. El MSI compiló ambos targets con MSVC 14.51.36256 y SDK 10.0.26100.0. UBT avisó que 14.50.35717 es su versión preferida. Se eligió `NoPCHs` para este módulo pequeño tras observar más de 4,68 GB de PCH regenerables con las opciones iniciales.
 
-OPEN técnico crea una población F04 sin vincular un cadete. El estado `PRINCIPAL_UNBOUND` permite diagnosticar y cerrar; las consultas privadas, órdenes y SAVE conservan las precondiciones de H03/H04/H05. RESTORE usa dirección de campaña/ranura y raíz privada autorizada por la aplicación. H04 valida registro, compatibilidad, ruta y vínculo persistido; la ABI copia la identidad únicamente cuando la pasarela la autoriza. La raíz de almacenamiento procede de configuración privada y H03 resuelve la identidad. La decisión para el futuro panel es mostrar OPEN/CLOSE, estado de identidad, capacidades, errores y vistas autorizadas, con SAVE/RESTORE sujetos a H04 y SUBMIT solo con vínculo y competencia real. El capitán de ensayo se vincula exclusivamente al preparar un fixture en otro proceso.
+## Identidad y siguiente dependencia
+
+OPEN abre una población técnica y deja `PRINCIPAL_UNBOUND`. La UI recibe únicamente el ID técnico de campaña, que carece de autoridad, y muestra estado, disponibilidad, error y campos filtrados si H03/H05 autorizan la vista. La raíz normal procede del directorio de aplicaciones del usuario. Las ranuras se recuperan con el vínculo persistido y el registro local de H04. H04 valida ruta, integridad y procedencia. SAVE confirma éxito tras COMMITTED. F11 permanece `SERVICE_UNAVAILABLE`.
+
+Para nueva campaña de producto se propone que un flujo nativo de Academia cree y valide la entidad de cadete conforme a su contrato. Su resultado interno alimentará `PlayerBootstrap::prepare` y `bind` en el mismo `SessionOwner`, con generación y revisión vigentes. UI recogerá opciones de creación y consumirá el resultado, sin seleccionar una entidad Core como credencial. H04 conservará la vinculación para el siguiente arranque. La capacidad de emitir una orden deberá derivarse del dominio F05; el panel no otorgará competencia ni comisión. Se propone probar primero continuidad de identidad y guardado entre dos procesos y luego una emisión legítima con el mismo personaje. La identidad del fixture H05 solo se usa en la batería automatizada mediante una ranura local ya registrada.
 
 ## Puertas
 
 | Puerta | Estado |
 |---|---|
-| G0 | Inventario y propuesta entregados. Bloqueada por aprobación de proyecto principal. |
-| G1 | ABI C y carga Release OFF en alcance nativo. Compatibilidad UBT y staging UE pendientes de G0. |
-| G2 | Tickets, capacidad, exclusividad y revocación verificados en nativo. Integración GameInstance/UWorld pendiente de G0. |
-| G3 | Denegación unbound y recuperación de vínculo H04 verificadas en nativo. UI y bootstrap productivo del cadete pendientes. |
-| G4 | H04/F05 ejercitados con Core fijado y fixture identificado. F11 permanece SERVICE_UNAVAILABLE. Falta ejecución de editor/juego. |
+| G0 | PASS. Aprobación expresa y proyecto principal creado. |
+| G1 | PASS para Win64 Development. UBT/UHT, ABI 1, pin y carga de ambas DLL en juego empaquetado. |
+| G2 | PASS en el diagnóstico. Dos UWorld, recarga de mapa y caducidad de vistas tras RESTORE/CLOSE en ambos RHI. |
+| G3 | PARCIAL. Denegación productiva sin identidad y recuperación de fixture verificadas. Pendiente bootstrap del cadete y habilitación de órdenes. |
+| G4 | PASS en el alcance de diagnóstico H04 y regresión nativa. F05 interactivo de jugador depende de G3. |
 
-## Disco y laboratorios
+## Disco y reconstrucción
 
-La raíz de trabajo fue el checkout exigido por AGENTS, `C:/Users/andro/Documents/GitHub/Videojuego_StarTrek`. Se partió de `origin/main` en una rama nueva, desde el checkout limpio de la rama H03. Se reutilizaron el motor instalado, el checkout limpio existente de CoreRPG y la misma descarga jsoncons para los builds locales. El build OFF es independiente para comprobar el grafo de producto. Las regresiones Windows/Linux y ASan se ejecutaron en runners desechables de Actions.
+Inicio de la continuación: C: 333 794 549 760 bytes libres; laboratorio H06 400 576 052 bytes. Las cinco carpetas mayores medidas fueron `valhalla` (81 116 120 197), `f05` (16 346 639 383), `Enterprise_G` (8 450 867 006), `F04` (1 845 442 528) y `host` (1 292 196 195). Al cierre de las pruebas, el conjunto de laboratorios registró 113 426 260 750 bytes lógicos y C: 343 843 880 960 bytes libres. El H06 completo quedó en aproximadamente 2,28 GB, incluidos 363 470 317 bytes del único paquete Win64, 290 366 233 bytes de DDC local y 257 834 776 bytes de cook. Se conservaron salidas de diagnóstico y un juego anterior de binarios regenerados, con 708 095 404 bytes. Se retiraron los dos PCH propios de las primeras compilaciones y se apartaron los cachés de proyecto. Una revisión automática rechazó la limpieza recursiva de la salida propia supersedida; esa carpeta queda conservada dentro de H06. Las carpetas históricas y los originales se conservaron.
 
-Medición inicial en bytes lógicos: `laboratorios/` 111 120 157 391, H06 inexistente, C: 337 702 273 024 bytes libres. Las cinco carpetas mayores fueron `valhalla` (81 116 120 197), `f05` (16 346 639 383), `Enterprise_G` (8 450 867 006), `F04` (1 845 442 528) y `galaxia` (1 216 505 407).
-
-Medición al cierre de las pruebas: `laboratorios/` 111 545 966 751 bytes lógicos, C: 335 436 910 592 bytes libres. H06 ocupa 400 576 052 bytes en 6 227 archivos, incluidos 360 680 772 bytes del build nativo y sus ensayos y 34 362 836 bytes del build Release OFF. El total del volumen también refleja actividad ajena a H06; el tamaño propio se midió directamente.
-
-`laboratorios/host/h06/` contiene builds, logs, JUnit, guardados de ensayo y temporales. Está ignorada y es eliminable en bloque tras conservar las evidencias deseadas. Los builds se regeneran desde Git y Core, con el destino temporal a elección del operador. Se conservaron laboratorios previos y originales. La evidencia permanente de las ejecuciones se enlaza en el informe de resultados.
+UBT creó temporalmente `Binaries` e `Intermediate` en el proyecto, y UBT/UAT escribieron también su traza o log de herramienta en rutas propias del motor o de usuario. Los binarios reconstruidos de uso local ocupan 459 124 607 bytes bajo `Binaries`, ignorados. Los informes de aceptación, cook, stage, DDC y archivos de ensayo se concentran en H06. Sus carpetas se pueden retirar sin afectar las fuentes o los binarios listos para abrir el proyecto; las instrucciones reconstruyen los componentes desde el checkout y el motor instalados. No se duplicó el motor ni el checkout Core. Se comprobó la reconstrucción apartando `Binaries`, `Intermediate`, `Saved` y el mapa, regenerando ambos targets y el mapa y arrancando una raíz H04 vacía. Git contiene exclusivamente el descriptor, la configuración, el generador, el código y las instrucciones.

@@ -1,57 +1,68 @@
 # H06 — Resultados de verificación
 
-Fecha: 2026-11-13. Base `5f12d9c152dd0003a6d971068d693184f45b213e`. Código final `2b68bd16a6200a86b43d5b66d535e97a28c4eb9d`. Configuración CI final `517b5adcb8d99a93dfa7ce81c698a74abfd5d6e2`. CoreRPG limpio `76a7b7b485616d8c4994f384a90f123bf333591d`; jsoncons `bcb44594c50c495ee1e690602cdd71455942ad0e`. [PR #142 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/142) · [Implementación](H06_INFORME_IMPLEMENTACION_2026-11-13.md) · [Decisión G0](H06_DECISION_PROYECTO_UE_2026-11-13.md).
+Fecha: 2026-11-13. Base `5f12d9c152dd0003a6d971068d693184f45b213e`. Código Unreal y CI ensayado `216e2cecd0dc5c21647e8f2fd33e0862023f333d`. Adaptador nativo `2b68bd16a6200a86b43d5b66d535e97a28c4eb9d`. CoreRPG limpio `76a7b7b485616d8c4994f384a90f123bf333591d`; jsoncons `bcb44594c50c495ee1e690602cdd71455942ad0e`. [PR #142 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/142) · [Implementación](H06_INFORME_IMPLEMENTACION_2026-11-13.md) · [Decisión G0](H06_DECISION_PROYECTO_UE_2026-11-13.md).
 
-## Ejecuciones
+## MSI y Unreal
 
-MSI Windows 11 Pro 10.0.26200, MSVC 19.51.36256.0 x64, SDK 10.0.26100.0, CMake 4.4.3, VS 18 2026, Python 3.10.11. Unreal 5.8.2 CL 56702186 instalado. Los resultados siguientes usan el ejecutable C, CTest y el cargador del SO. La ejecución UE, la prueba de memoria dentro del motor y las mediciones RHI siguen pendientes. La RAM física está registrada en el inventario G0.
+MSI Raider GE78 HX 14VGG, Windows 11 Pro 10.0.26200, MSVC 19.51.36256.0 x64, SDK 10.0.26100.0, CMake 4.4.3. Unreal Engine **5.8.2 CL 56702186**, D3D12 SM6 en NVIDIA GeForce RTX 4070 Laptop, driver 621.14 (32.0.16.2114). UE confirmó el adaptador NVIDIA elegido y la API activa dentro de la prueba. El escenario automatizado invoca botones Slate del viewport mediante `SButton::SimulateClick`; en D3D12 se ejecutó con ventana y render. El segundo UWorld inicia y termina su ciclo real de juego. La prueba de travel llama `UEngine::LoadMap` y verifica un UWorld nuevo con el mismo GameInstance, handle y generación.
 
-| Entorno y ejecución | Resultado | Evidencia |
+El fixture H04 se preparó en otro proceso con el escritor nativo existente de H05. Se usó una raíz privada de ensayo distinta por ejecución. El fixture contiene una campaña local registrada con PERSON 3, nave 1, tick 28800 y orden completada 375/resultado 381. La vista UE compara identidad, nave, tick y revisión tras restaurar; la comparación del recibo y resultado Core se ejecutó en CTest nativo. La variante sin fixture abrió una campaña técnica y comprobó denegaciones de identidad, error de ruta y cierre.
+
+| Ejecución local | Resultado | Evidencia en `laboratorios/host/h06/ue-product/` |
 |---|---|---|
-| MSI Windows x64, selección HOST final, CTest Release ON | 83/83 PASS, 0 FAIL, 0 omitidos, 8,67 s. SHA de código final. | JUnit local `host-verified.xml`, SHA-256 `4b3c5e59f93b60a65f534f166df37d6c315082e31ec02332f99eb3ca1688e88f`. |
-| MSI Windows x64, Release OFF, C ABI y pin cargados | PASS, dos inspecciones. SHA de código final. | `product-inspection.log`, `product-abi.log`. TrekHost.dll 202 240 bytes, SHA-256 `1aba798bcabcc9ee1c85717eec28420b8a20a910b525320872a975aa76198dc0`. TrekF04Bridge.dll 924 160 bytes, SHA-256 `e5a2d58730a14ea49965f547185bc6879261cdaab9d8bd8479a4aeb052b12a63`. |
-| Ubuntu 26.04.1, GCC 15.2.0, Release ON | 238/238 PASS, 0 FAIL, 0 omitidos, 15,32 s. | [Job](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/job/132103921311) · [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/artifacts/14069575830) |
-| Windows runner 10.0.26100, MSVC 19.51.36260.0, Release ON | 238/238 PASS, 0 FAIL, 0 omitidos, 25,25 s. | [Job](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/job/132103921305) · [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/artifacts/14067978789) |
-| Ubuntu 26.04.1, Clang 21.1.8, ASan/UBSan C/C++ | 83/83 PASS, 0 FAIL, 0 omitidos, 14,00 s. Sin diagnóstico sanitizador. | [Job](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/job/132103921137) · [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/artifacts/14068721427) |
-| Linux Release OFF, GCC 15.2.0 | PASS, exports, dependencias, pin, carga y negociación C. | [Job](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/job/132103920796) · [Logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/artifacts/14068661332) |
-| Windows Release OFF, MSVC 19.51.36260.0 | PASS, exports, dependencias, pin, carga y negociación C. | [Job](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/job/132103921294) · [Logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758/artifacts/14068666374) |
-| F11 aislado y H01 documental | 17/17 F11 y 11/11 H01 por SO. H01 local 11/11. | `f11/tests.xml`, `f11/run.json` y `h01.log` en los dos artefactos nativos. |
+| Editor Development Win64, reconstrucción limpia | UBT/UHT PASS, 15,88 s. UHT escribió 8 archivos. | `rebuild-ubt-editor.log`, SHA-256 `2a99f0171b2bc5f8aa083e09ae262b8d387b7e2c948eba0ebf78daf9cf9bab55` |
+| Game Development Win64, reconstrucción limpia | UBT/UHT PASS, 15,61 s. UHT escribió 8 archivos. | `rebuild-ubt-game.log`, SHA-256 `ed2d1fe55dd69582969ec11c52b6a993999494dcb30b3dec55ae2e2f622dd590` |
+| Generación de mapa | PASS, 8 456 bytes, ruta de mapa predeterminada. Map Check del editor registró cero errores y advertencias. | `rebuild-map.log`, SHA-256 `744104275e23c19223c34065340d080e7448cc48755f344cad96e1044b5a0d04`; `editor-null.log` |
+| `UnrealEditor-Cmd -game -nullrhi`, fixture | 1/1 PASS, 0 fallos/advertencias/omitidos, 0,285 s, pico de working set 1 025,3 MiB. | `null-verified-report/index.json`, SHA-256 `44732f9ed43cf401c2f2117befa87dd1bd7260095ded112a211de5dba4a49ec3` |
+| `UnrealEditor-Cmd -game -d3d12`, fixture | 1/1 PASS, 0 fallos/advertencias/omitidos, 0,348 s, pico de working set 1 930,9 MiB. | `dx-verified-report/index.json`, SHA-256 `93d20621982adfc8d00834a005e7a0dcdcb726331d615c1c1e0ee02590b32a56` |
+| Win64 cocinado y empaquetado, NullRHI, fixture | 1/1 PASS, 0 fallos/advertencias/omitidos, 0,206 s, pico de working set 278,3 MiB. | `pack-null-report/index.json`, SHA-256 `8b211d8deaad77880c2dfd99d468634b0e77fa07df1ab75eef7182d6904cf930` |
+| Win64 cocinado y empaquetado, D3D12, fixture | 1/1 PASS, 0 fallos/advertencias/omitidos, 0,288 s, pico de working set 1 552,8 MiB. | `pack-dx-report/index.json`, SHA-256 `8af556a5287cd4f0e2d3449ca10d36553035329c2826febbbebb0ef41bd88886` |
+| Juego en NullRHI reconstruido, raíz vacía | 1/1 PASS, 0 fallos/advertencias/omitidos, 0,005 s de test. | `rebuild-unbound-report/index.json`, SHA-256 `497b78d97600a9b22298c0f8fbe2e335a880a5ad6e910cda6a0c1f89792b0ce8` |
 
-El [run nativo final](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758) usa `517b5adcb8d99a93dfa7ce81c698a74abfd5d6e2`, que añade el smoke C al job Windows OFF sin cambiar el código de producto. Se contrastaron artefactos y JUnit. Los 238 casos incluyen 83 HOST, 134 F05 y 21 F04. H01 y F11 se ejecutan en los dos jobs nativos y quedan fuera de la selección de sanitizadores. La memoria por caso queda sin medición. El workflow terminó con cinco jobs correctos. El [run precedente](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488002379) ya pasó los cinco jobs sobre el SHA de código final.
+Las duraciones de automatización miden el escenario tras iniciar el juego, y las memorias son el pico del proceso. El primer arranque D3D12 con DDC frío empleó 149,09 s de inicialización, con compilación de shaders. El cook local procesó 197 paquetes de proyecto/motor en 184,57 s y el stage IoStore salió con código 0. El recibo UBT y el stage contienen las dos DLL NonUFS. El arranque empaquetado cargó ABI 1 y ejecutó OPEN/RESTORE con el Core fijado. SHA-256 del TrekHost empaquetado `1aba798bcabcc9ee1c85717eec28420b8a20a910b525320872a975aa76198dc0`; TrekF04Bridge `d38a6b103756d831e00f1f1c745c223b7ebd1549db401f74afe1f46ee883bbdd`. Los informes crudos quedan locales; esta tabla conserva las observaciones y hashes en GitHub.
 
-La evidencia CTest incluye `host.abi.lifecycle` y `host.abi.roundtrip`. En el segundo, `host_m0_tests write` crea una ranura H04 local en proceso independiente. El consumidor enlaza solo TrekHost. Recupera el fixture PERSON 3, campaña tick 28800, orden 375 y resultado Core 381 con tirada 99. Prueba reenvío idempotente, rechazo stale, emisión/cancelación reales, SAVE con marcador COMMITTED, error de ruta, RESTORE con nueva generación, rechazo de mutación antigua y expiración de resultados retenidos tras RESTORE/CLOSE. Los oráculos históricos H05, ejecutados en esta rama, verifican además bytes, competencia, observador y RNG.
+## Regresión nativa
+
+El [run 43495407748](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748) verificó el commit Unreal indicado arriba. Se contrastaron los JUnit y logs de los cinco jobs. `host.abi.lifecycle` comprueba ABI, exclusividad, ausencia de identidad, tickets y CLOSE. `host.abi.roundtrip` comprueba recuperación del fixture, emisión/replay/cancelación, revisión caducada, publicación, ruta, LOAD y resultado Core. F11 y H01 se ejecutan en los dos jobs nativos.
+
+| Entorno | Resultado | Evidencia |
+|---|---|---|
+| Windows MSVC 19.51.36260.0 | 238/238 PASS, 0 omitidos, 23,41 s | [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748/artifacts/14071312799) |
+| Ubuntu GCC 15.2.0 | 238/238 PASS, 0 omitidos, 11,99 s | [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748/artifacts/14071821892) |
+| Ubuntu Clang 21.1.8, ASan/UBSan C/C++ | 83/83 PASS, 0 omitidos, 11,37 s | [JUnit y logs](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748/artifacts/14071877262) |
+| Release OFF, Windows y Linux | PASS en ambos. ABI 1 negociada, carga, pin y exports inspeccionados. | [Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748/artifacts/14071487010) · [Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43495407748/artifacts/14071741633) |
+| F11 aislado y H01 documental | 17/17 F11 y 11/11 H01 por SO | `f11/tests.xml` y `h01.log` en los artefactos nativos |
+| MSI, selección HOST nativa previa al módulo Unreal | 83/83 PASS, 8,67 s, SHA nativo final | JUnit `host-verified.xml`, SHA-256 `4b3c5e59f93b60a65f534f166df37d6c315082e31ec02332f99eb3ca1688e88f` |
 
 ## Matriz HU-01–HU-25
 
-La columna estado corresponde al oráculo completo de la matriz H06. Cada evidencia parcial queda acotada al SHA y entorno de la sección de ejecuciones.
-
-| Caso | Estado | Evidencia |
+| Caso | Estado | Evidencia y alcance |
 |---|---|---|
-| HU-01 | BLOCKED | Inventario remoto/local y README comprobados. Falta la elección aprobada. |
-| HU-02 | PASS | Diff acotado a HOST/CI e informes. Descriptores, laboratorios históricos, assets y originales fuera del diff. |
-| HU-03 | BLOCKED | Proyecto principal pendiente. UBT/UHT Editor y Game pendientes. |
-| HU-04 | BLOCKED | Release OFF y carga nativa de ambas bibliotecas, pin y dependencias comprobados. Falta carga desde staging UE. |
-| HU-05 | BLOCKED | C11 y C++20 comprueban layout. PASS nativo de versión/tamaños/ownership/errores y exports C. Compilación UBT pendiente. |
-| HU-06 | BLOCKED | `host.abi.lifecycle` comprueba OPEN, duplicado, exclusividad entre dos clientes y reapertura. Falta GameInstance. |
-| HU-07 | BLOCKED | `host.abi.lifecycle` comprueba PRINCIPAL_UNBOUND en estado, vista, orden y SAVE; resultados vacíos. Falta arranque UE. |
-| HU-08 | BLOCKED | H04 restaura el vínculo H03 del fixture. El bootstrap productivo del cadete sigue pendiente. |
-| HU-09 | BLOCKED | `host.abi.roundtrip` copia la vista autorizada; `host.m0.readonly` y `host.m0.observer` pasan oráculos de bytes y acceso en nativo. Falta UE. |
-| HU-10 | BLOCKED | Emisión ISSUED y replay/cancelación mediante ABI probados con identidad de fixture. Falta vía de identidad productiva y UE. |
-| HU-11 | BLOCKED | La superficie C excluye receptor/ejecutor y el producto OFF carece de hooks HOST y diagnósticos F04 de ensayo. Falta verificación de Blueprint. |
-| HU-12 | BLOCKED | REVISION_STALE comprobado por ABI; `host.m0.authority` verifica falta de competencia y REFUSED sin intento/RNG. Falta UI. |
-| HU-13 | BLOCKED | CTest roundtrip confirma SAVE tras H04 y verifica COMMITTED. Falta UI. |
-| HU-14 | BLOCKED | Roundtrip nativo recupera generación, identidad, revisión, reloj y resultado del fixture. Falta UE. |
-| HU-15 | BLOCKED | Ticket de vista retenido hasta después de RESTORE devuelve GENERATION_EXPIRED; la ABI rechaza consulta y mutación con token anterior. Falta callback HUD. |
-| HU-16 | BLOCKED | CLOSE admite ranura reservada con todas las observaciones ocupadas; ticket de orden previamente autorizado caduca. Join comprobado en nativo. Falta destrucción de UObject. |
-| HU-17 | BLOCKED | Exclusividad nativa comprobada con dos clientes. Falta prueba real con dos UWorld. |
-| HU-18 | BLOCKED | Falta map travel del proyecto principal. |
-| HU-19 | BLOCKED | CTest roundtrip rechaza traversal y ranura ausente; conserva generación y permite SAVE/RESTORE posterior. Falta prueba UE. |
-| HU-20 | PASS | Capacidad SERVICE_UNAVAILABLE observada por C y ctypes; ausencia de emisor y trial de F11 en producto, y `host.m0.institutional` ejecutada. |
-| HU-21 | BLOCKED | Panel y despacho al Game Thread pendientes de G0. |
-| HU-22 | NOT_RUN | UE 5.8.2 disponible. Falta proyecto autorizado y suite de editor/juego. |
-| HU-23 | NOT_RUN | GPU y driver disponibles. Falta proyecto autorizado e interacción D3D12 real. |
-| HU-24 | PASS | CTest Windows/Linux/ASan y Release OFF de acuerdo con ejecuciones de arriba. |
-| HU-25 | PASS | Medidas y cinco carpetas mayores en informe de implementación. El diff solo versiona entregables permanentes; el laboratorio no es requisito del producto. |
+| HU-01 | PASS | Inventario, aprobación G0 y descriptor versionado. |
+| HU-02 | PASS | Proyecto nuevo desde fuentes. Diff sin cambios en originales, labs históricos ni assets. |
+| HU-03 | PASS | UBT/UHT Editor y Game Development x64 desde salidas apartadas. |
+| HU-04 | PASS | Carga Release OFF en juego empaquetado, dos DLL NonUFS, Core pin verificado. |
+| HU-05 | PASS | Consumidor C11, UBT C++ y negociación/carga ABI; tamaños fijos, datos copiados. |
+| HU-06 | PASS | OPEN con generación activa, un handle de GameInstance compartido entre dos mundos; duplicado/exclusividad en CTest nativo. |
+| HU-07 | PASS | Raíz limpia: `PRINCIPAL_UNBOUND` para vista y SAVE, con proyección vacía. |
+| HU-08 | BLOCKED | Pendiente el bootstrap productivo de Academia. El fixture únicamente prueba el vínculo persistido recuperado por H04. |
+| HU-09 | PASS | Con fixture, vista autorizada en Unreal, identidad y revisión iguales entre mundos. `host.m0.readonly` y `host.m0.observer` verifican invariancia y acceso en nativo. |
+| HU-10 | BLOCKED | SUBMIT del jugador requiere G3. Emisión ISSUED real en C ABI con fixture nativo. |
+| HU-11 | PASS | UI C++ y cabecera C sin recepción/ejecución, ningún UFUNCTION ni enlace directo a Core. Release OFF sin exports de ensayo. |
+| HU-12 | BLOCKED | UI de órdenes pendiente. Stale y falta de competencia verificadas por CTest nativo. |
+| HU-13 | PASS | SAVE desde Slate con fixture, confirmación H04 y marcador COMMITTED inspeccionado. |
+| HU-14 | PASS | RESTORE desde Slate con fixture, generación nueva y vista preservada; la prueba nativa verifica además recibo y resultado Core. |
+| HU-15 | PASS | Se deja una consulta del segundo mundo pendiente de entrega al solicitar LOAD; se invalida y su respuesta queda sin efecto. Generación antigua rechazada en ABI. |
+| HU-16 | PASS | CLOSE con consulta pendiente revoca la vista y la generación. Travel destruye la proyección anterior con consulta pendiente; el proceso sale tras cerrar. |
+| HU-17 | PASS | Dos UWorld simultáneos, dos proyecciones y una sesión con la misma identidad y revisión. |
+| HU-18 | PASS | `UEngine::LoadMap` crea UWorld nuevo, invalida el panel anterior y permite consultar la misma sesión. |
+| HU-19 | PASS | RESTORE con traversal devuelve PATH_REJECTED y conserva generación. El nativo comprueba también SAVE inválido y conservación de la ranura. |
+| HU-20 | PASS | SERVICE_UNAVAILABLE en estado y panel, sin emisor ni trial F11. |
+| HU-21 | PASS | Panel Slate accesible desde el viewport, callbacks en Game Thread y resultados por poll; sin join en `Deinitialize`. |
+| HU-22 | PASS | NullRHI real en juego desde el editor y juego Win64 empaquetado. |
+| HU-23 | PASS | D3D12 SM6 real en RTX 4070, interacción automatizada con Slate, cierre y recuperación en ambos ejecutables. |
+| HU-24 | PASS | 238/238 Windows y Linux, 83/83 ASan/UBSan, Release OFF en ambos y regresiones F11/H01. |
+| HU-25 | PASS | Medidas y ubicación en [implementación](H06_INFORME_IMPLEMENTACION_2026-11-13.md). Regeneración del mapa y build sin dependencia de archivos anteriores. |
 
 ## Reproducción nativa
 
@@ -76,23 +87,41 @@ python desarrollo/integration/host/tests/inspect_abi.py "$lab/product"
 
 En el MSI el segundo configure reutilizó `-DFETCHCONTENT_SOURCE_DIR_JSONCONS=$lab/native/_deps/jsoncons-src` tras confirmar el pin. Ambos DLLs están juntos en la salida Release de F04; la import lib de TrekHost queda en el directorio Release de HOST. Los JUnit locales quedan en el laboratorio. El smoke OFF carga y negocia la ABI sin ejecutables de test.
 
-## Unreal tras G0
+## Reproducción Unreal
 
-Esquema de comandos para el MSI una vez creados y aprobados el descriptor, los targets, el módulo, el staging y la suite. `$engine` apunta al motor 5.8.2 existente, `$project` al descriptor definitivo, `$lab` a los temporales autorizados y `$map` al mapa de diagnóstico. Definir el prefijo de automatización al implementar el módulo.
+Aplicar primero el [procedimiento de reconstrucción del proyecto](../../../../juego/UE5/StarTrekRPG/README.md). Los comandos siguientes usan `$engine` como instalación de UE 5.8.2, `$project` como ruta absoluta al descriptor y `$lab` como destino temporal autorizado. Usar un `$user` nuevo por pasada y conservar las variables TEMP y DDC del README. Para la prueba de apertura sin identidad, usar raíz vacía y omitir el argumento de fixture. Para la prueba positiva, `$writer` es el `host_m0_tests.exe` compilado con el CMake de HOST en modo tests ON.
 
 ```powershell
-& "$engine/Engine/Build/BatchFiles/Build.bat" StarTrekRPGEditor Win64 Development "-Project=$project" -WaitMutex
-& "$engine/Engine/Build/BatchFiles/Build.bat" StarTrekRPG Win64 Development "-Project=$project" -WaitMutex
-& "$engine/Engine/Binaries/Win64/UnrealEditor-Cmd.exe" $project -unattended -nullrhi "-ExecCmds=Automation RunTests $suite" '-TestExit=Automation Test Queue Empty' "-ReportExportPath=$lab/nullrhi" "-AbsLog=$lab/nullrhi.log"
-& "$engine/Engine/Binaries/Win64/UnrealEditor.exe" $project $map -game -d3d12 -log "-AbsLog=$lab/d3d12.log"
+$root = Join-Path $user 'Saved/HostSlots'
+New-Item -ItemType Directory -Path $root -Force | Out-Null
+& $writer write $root
+if ($LASTEXITCODE) { throw 'H04 fixture preparation failed' }
+$campaign = Get-Content "$root/campaign-id" -Raw
+$common = @('-unattended','-nop4','-nosound','-nosplash','-windowed','-resx=960','-resy=650',
+    "-UserDir=$user","-H06FixtureCampaign=$campaign",
+    '-ExecCmds=Automation RunTests StarTrek.H06.DiagnosticFlow',
+    '-TestExit=Automation Test Queue Empty')
+# Elegir -nullrhi o -d3d12 para $rhi, con destino nuevo por ejecución.
+& "$engine/Engine/Binaries/Win64/UnrealEditor-Cmd.exe" $project -game $rhi @common -NoZenAutoLaunch -ddc=NoZenLocalFallback "-AbsLog=$lab/game.log" "-ReportExportPath=$lab/game-report"
 ```
 
-Registrar UBT/UHT, dependencia y carga de DLL del juego empaquetado, entorno RHI, tests de actores/mundos y captura de interacción con el diagnóstico. En D3D12 comprobar cierre y recuperación con una ranura H04 autorizada. La creación de campaña vinculada queda condicionada al bootstrap productivo.
+Para cook y stage IoStore, el cooker de 5.8.2 usa el directorio exacto que se le pasa. Se ejecutó primero el cook a disco y después el stage con la estructura por plataforma esperada por UAT. Los comandos equivalentes colocan el cook directamente bajo `Windows`.
 
-## Incidencias
+```powershell
+$uat = "$engine/Engine/Build/BatchFiles/RunUAT.bat"
+$env:uebp_LogFolder = "$lab/uat"
+& $uat BuildCookRun "-project=$project" -target=StarTrekRPG -platform=Win64 -clientconfig=Development -skipbuild -cook -unattended -nop4 -NoZenAutoLaunch -ddc=NoZenLocalFallback "-CookOutputDir=$lab/cooked/Windows" "-AdditionalCookerOptions=-NoZenAutoLaunch -ddc=NoZenLocalFallback -UserDir=$lab/user-cook"
+& $uat BuildCookRun "-project=$project" -target=StarTrekRPG -platform=Win64 -clientconfig=Development -skipbuild -skipcook -stage -pak -iostore -nodebuginfo -unattended -nop4 -NoZenAutoLaunch "-CookOutputDir=$lab/cooked" "-stagingdirectory=$lab/staged"
+$exe = "$lab/staged/Windows/StarTrekRPG/Binaries/Win64/StarTrekRPG.exe"
+# Preparar $common con un $user nuevo y su fixture para cada modo.
+& $exe $rhi @common "-AbsLog=$lab/packaged.log" "-ReportExportPath=$lab/packaged-report"
+```
 
-- Primera compilación local: dos aserciones de layout fallaron por el byte NUL del ID de campaña y la alineación a ocho bytes. El layout v1 publicado se fijó en 120 bytes para la respuesta con payload en offset 72 y se verificó en C y C++.
-- Primera suite local, 237/238 en 16,57 s. El nuevo oráculo comparaba la revisión global de la consulta con una tomada antes de emitir y cancelar otras órdenes. F05 devuelve la revisión de campaña actual junto al recibo. Se corrigió la referencia al instante de SAVE y se mantuvo una comprobación independiente de ID y valor de la tirada. Los 236 casos históricos pasaron en esa primera ejecución. La repetición HOST final y CI se detallan arriba.
-- La revisión de la composición heredada encontró `f04_history_test_delta` y `f04_history_test_validate_full` en la biblioteca F04 de producto H05. Se conserva la flag para los ensayos históricos y se retira de la composición HOST con tests OFF. Se verificó por carga dinámica. Las fuentes y pruebas F04 siguen intactas.
+Comprobar que cada `index.json` contiene exactamente `StarTrek.H06.DiagnosticFlow`, estado Success, `succeeded=1`, `failed=0` y `notRun=0`. El proceso puede salir con código cero incluso si falla una aserción de Automation. La primera pasada se clasificó por el JSON y el log.
 
-**M1 parcial y bloqueado.** Falta la decisión sobre el proyecto principal y la integración UE, incluida la evidencia NullRHI/D3D12. La aprobación y auditoría independiente quedan pendientes.
+## Incidencias y límites
+
+- ABI nativa inicial: se corrigió la aserción de layout por terminador y padding. En el primer CTest el nuevo oráculo de revisión comparaba instantes distintos. Se fijó la comparación en el instante de SAVE y se conservó el oráculo del resultado Core. Los 236 casos históricos pasaron en esa ejecución. El [run nativo anterior al módulo](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43488721758) documenta la repetición.
+- UBT exigió BuildSettings V7 en 5.8.2. Se corrigieron dependencias de includes, el guardado del mapa con flags `RF_Public | RF_Standalone` y la declaración reflejada del commandlet para Game. La primera recuperación desde UE falló por separadores de ruta: el adaptador UE convierte la raíz al formato nativo antes de entregarla a H04. H04 conserva su implementación y política.
+- El cook inicial intentó usar Zen Store por defecto. Se configuró `bUseZenStore=False`; el segundo cook terminó correctamente y el stage separado exigió ubicar su salida bajo `Windows`. Se trasladó esa salida dentro de H06 y se obtuvo un solo paquete final. El editor standalone cargó el mapa y completó Map Check; el comando `Quit` no cerró ese primer smoke desatendido y se detuvo el proceso propio. Los cinco flujos de Automation de arriba exportaron resultados y cerraron.
+- Los resultados UE positivos de persistencia y vista usan fixture explícito. Las órdenes del jugador productivo y los rechazos desde su UI siguen bloqueados por H03/Academia. Las pruebas automatizadas de D3D12 actuaron sobre los widgets reales, sin sesión de aceptación manual. H06 queda pendiente de auditoría independiente y M1 permanece parcial.
