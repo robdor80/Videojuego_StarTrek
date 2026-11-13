@@ -17,7 +17,8 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 - [LORE-01–04 — Estado documental definitivo](../../../CONTENT_STATUS.md): todas las fases A–E correspondientes cerradas documentalmente; no equivale a runtime.
 - [LORE-05A — Reconciliación Enterprise-D / Proyecto Valhalla](lore_05_a/README.md): **fusionada y cerrada documentalmente**; [DEC-0020](../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) prevalece en la identidad del buque.
 - [LORE-05B — Doce NPC legendarios](../../mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md): **fusionada y cerrada documentalmente**; sin ampliar elenco.
-- [LORE-05C — Mundos, colonias y localizaciones](lore_05_c/README.md): **cierre documental candidato**, 16 fichas y validación de 12 escenarios; no hay destinos nuevos ejecutables. LORE-05D–F pendientes.
+- [LORE-05C — Mundos, colonias y localizaciones](lore_05_c/README.md): **fusionada y cerrada documentalmente**, 16 fichas y 12 escenarios; sin destinos nuevos ejecutables.
+- [LORE-05D — Naves, instalaciones y organizaciones](lore_05_d/README.md): **cierre documental candidato**, 8 naves, 12 instalaciones, 8 potencias y 2 instituciones; sin integración del runtime. LORE-05E–F pendientes.
 - [LORE-03 — Historia, conflictos y continuidad](lore_03_master_plan_v0.1.md): cerrada documentalmente desde octubre, con anotaciones históricas preservadas; sin runtime.
 
 ## Regla de gestión
