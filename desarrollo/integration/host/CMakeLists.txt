@@ -151,5 +151,7 @@ if(TREK_HOST_TESTS)
   add_test(NAME host.abi.roundtrip COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/abi_fixture.py"
     "$<TARGET_FILE:host_m0_tests>" "$<TARGET_FILE:host_abi_tests>" "${CMAKE_CURRENT_BINARY_DIR}/abi")
   set_tests_properties(host.abi.lifecycle PROPERTIES TIMEOUT 45 LABELS "h06;native")
+  add_test(NAME host.abi.unsupported_academy_open COMMAND host_abi_tests unsupported_academy_open)
+  set_tests_properties(host.abi.unsupported_academy_open PROPERTIES TIMEOUT 45 LABELS "h06-p06;native")
   set_tests_properties(host.abi.roundtrip PROPERTIES TIMEOUT 135 LABELS "h06;native;fixture")
 endif()

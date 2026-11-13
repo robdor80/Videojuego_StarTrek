@@ -198,6 +198,26 @@ static void lifecycle(void)
     puts("PASS ABI lifecycle, product exclusivity, unbound, capacity and late results after CLOSE");
 }
 
+static void unsupported_academy_open(void)
+{
+    TrekHostClient* client = create("");
+    run(client, open_request("academy"), TREK_HOST_INVALID_ARGUMENT);
+
+    const TrekHostStatus rejected = status(client);
+    check(rejected.state == TREK_HOST_CLOSED && !rejected.generation,
+          "Unsupported campaign published a session");
+    expect(rejected.principal, TREK_HOST_SESSION_CLOSED, "no principal after rejected OPEN");
+    expect(rejected.institutional, TREK_HOST_SERVICE_UNAVAILABLE, "F11 capability");
+
+    TrekHostClient* other = create("");
+    run(other, open_request("miranda"), TREK_HOST_OK);
+    expect(status(other).principal, TREK_HOST_PRINCIPAL_UNBOUND, "legacy OPEN remains unbound");
+    run(other, request(TREK_HOST_CLOSE, 0), TREK_HOST_OK);
+    trek_host_destroy(other);
+    trek_host_destroy(client);
+    puts("PASS ABI rejects unsupported Academy OPEN without publishing a session or holding its reservation");
+}
+
 static TrekHostRequest restore(uint64_t generation, const char* campaign, const char* slot)
 {
     TrekHostRequest req = request(TREK_HOST_RESTORE, generation);
@@ -298,6 +318,7 @@ static void roundtrip(int argc, char** argv)
 int main(int argc, char** argv)
 {
     if (argc == 1) lifecycle();
+    else if (argc == 2 && strcmp(argv[1], "unsupported_academy_open") == 0) unsupported_academy_open();
     else roundtrip(argc, argv);
     return EXIT_SUCCESS;
 }
