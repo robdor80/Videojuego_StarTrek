@@ -1,5 +1,8 @@
 #include "native_session.h"
+#include "player_bootstrap.h"
 #include "test_support.h"
+
+#include "f05_orders.h"
 
 #include <atomic>
 #include <chrono>
@@ -13,7 +16,7 @@ using namespace std::chrono_literals;
 
 enum class Mode {
     normal, bad_sha, fail_create, fail_probe, pause_create, pause_probe,
-    pause_destroy, fail_destroy, fail_destroy_once
+    pause_destroy, fail_destroy, fail_destroy_once, pause_bind
 };
 
 std::atomic mode{Mode::normal};
@@ -22,6 +25,9 @@ std::atomic_int destroys{0};
 std::atomic_int probes{0};
 std::atomic_int live{0};
 std::atomic_int wrong_thread{0};
+std::atomic_int binds{0};
+std::atomic_int player_records{0};
+std::atomic_uint bind_failure{F04_OK};
 std::binary_semaphore entered{0};
 std::binary_semaphore resume{0};
 
@@ -44,6 +50,8 @@ void await_bridge()
 
 struct F04Session {
     std::thread::id owner = std::this_thread::get_id();
+    std::uint64_t revision = 1;
+    std::uint64_t player = 0;
 };
 
 namespace trek::host::detail::bridge {
@@ -96,6 +104,40 @@ std::uint32_t destroy(F04Session* session) noexcept
     }
     delete session;
     --live;
+    return F04_OK;
+}
+
+std::uint32_t resolve_person(F04Session* session, std::uint64_t person_id,
+                             F04Ref& person, std::uint64_t& revision) noexcept
+{
+    if (session->owner != std::this_thread::get_id()) {
+        ++wrong_thread;
+        return F04_THREAD;
+    }
+    person = {1, person_id};
+    revision = session->revision;
+    return F04_OK;
+}
+
+std::uint32_t bind_player(F04Session* session, F04Ref person, std::uint64_t) noexcept
+{
+    if (session->owner != std::this_thread::get_id()) {
+        ++wrong_thread;
+        return F04_THREAD;
+    }
+    ++binds;
+    if (const auto code = bind_failure.load(); code != F04_OK) {
+        return code;
+    }
+    if (session->player == 0) {
+        session->player = person.id;
+        ++session->revision;
+        ++player_records;
+    }
+    // Model a commit that finished before the F05 call returns to HOST.
+    if (mode == Mode::pause_bind) {
+        wait_in_bridge();
+    }
     return F04_OK;
 }
 
@@ -234,6 +276,95 @@ void shutdown_retry()
     expect(next.close().get(), Error::OK);
 }
 
+PlayerSelectionResult select_player(SessionOwner& owner, Generation generation)
+{
+    auto result = PlayerBootstrap::prepare(owner, generation, 4).get();
+    require(result.error == Error::OK && result.selection, "Fake bridge selection failed");
+    return result;
+}
+
+void close_during_bind()
+{
+    SessionOwner owner;
+    const auto generation = open(owner);
+    const auto selection = select_player(owner, generation);
+    mode = Mode::pause_bind;
+    auto running = PlayerBootstrap::bind(owner, generation, *selection.selection, selection.revision);
+    await_bridge();
+    const auto resolving = owner.current_player(generation);
+    require(resolving.error == Error::PRINCIPAL_UNBOUND && !resolving.player,
+            "HOST published the player before F05 returned");
+    auto queued = PlayerBootstrap::bind(owner, generation, *selection.selection, selection.revision);
+    auto pending_selection = PlayerBootstrap::prepare(owner, generation, 5);
+    const auto closing = owner.close();
+    const auto snapshot = owner.snapshot();
+    require(snapshot.state == State::CLOSING && snapshot.generation == Generation{},
+            "Close left the generation active");
+    const auto denied = owner.current_player(generation);
+    require(denied.error == Error::GENERATION_EXPIRED && !denied.player,
+            "Close left player access active");
+    require(queued.get().error == Error::GENERATION_EXPIRED, "Close kept queued bind");
+    const auto canceled = pending_selection.get();
+    require(canceled.error == Error::GENERATION_EXPIRED && !canceled.selection && canceled.revision == 0,
+            "Close kept queued selection");
+    require(player_records == 1 && binds == 1 && destroys == 0, "F05 or destroy overlapped the in-flight bind");
+    mode = Mode::normal;
+    resume.release();
+    const auto stale = running.get();
+    require(stale.error == Error::GENERATION_EXPIRED && !stale.domain_code,
+            "Late F05 success escaped invalidation");
+    expect(closing.get(), Error::OK);
+    const auto next = open(owner);
+    const auto unbound = owner.current_player(next);
+    require(unbound.error == Error::PRINCIPAL_UNBOUND && !unbound.player && destroys == 1 &&
+            player_records == 1 && binds == 1, "Close published a late result or reused the binding");
+}
+
+void bind_failure_without_mutation()
+{
+    SessionOwner owner;
+    const auto generation = open(owner);
+    const auto selection = select_player(owner, generation);
+    for (const auto failure : {F04_SCOPE, F04_INTERNAL, F04_QUALIFICATION}) {
+        bind_failure = failure;
+        const auto result = PlayerBootstrap::bind(owner, generation, *selection.selection,
+                                                  selection.revision).get();
+        const auto mapped = failure == F04_SCOPE ? Error::SCOPE_INVALID
+                          : failure == F04_INTERNAL ? Error::INTERNAL_ERROR : Error::DOMAIN_REJECTED;
+        require(result.error == mapped && result.domain_code == failure, "Core failure code was lost");
+        const auto unbound = owner.current_player(generation);
+        require(unbound.error == Error::PRINCIPAL_UNBOUND && !unbound.player &&
+                select_player(owner, generation).revision == selection.revision && player_records == 0,
+                "Failed F05 call published a player or wrote Core");
+    }
+    require(owner.snapshot().state == State::ACTIVE, "F05 failure closed a healthy session");
+    bind_failure = F04_OK;
+    const auto result = PlayerBootstrap::bind(owner, generation, *selection.selection, selection.revision).get();
+    require(result.error == Error::OK && player_records == 1, "Explicit retry failed");
+    mode = Mode::fail_probe;
+    expect(owner.check_active(generation).get(), Error::INTERNAL_ERROR);
+    const auto expired = owner.current_player(generation);
+    require(expired.error == Error::GENERATION_EXPIRED && !expired.player && owner.snapshot().state == State::FAILED,
+            "H02 failure kept the H03 binding alive");
+}
+
+void incompatible_core_binding()
+{
+    SessionOwner owner;
+    const auto generation = open(owner);
+    const auto selection = select_player(owner, generation);
+    bind_failure = F05_IDEMPOTENCY_CONFLICT;
+    const auto result = PlayerBootstrap::bind(owner, generation, *selection.selection, selection.revision).get();
+    require(result.error == Error::IDEMPOTENCY_CONFLICT && result.domain_code == F05_IDEMPOTENCY_CONFLICT,
+            "Preexisting Core conflict was lost");
+    const auto denied = owner.current_player(generation);
+    require(denied.error == Error::ACCESS_DENIED && !denied.player, "Inconsistent binding allowed access");
+    const auto retry = PlayerBootstrap::bind(owner, generation, *selection.selection, selection.revision).get();
+    require(retry.error == Error::ACCESS_DENIED && !retry.domain_code && binds == 1 && player_records == 0,
+            "An invalid binding allowed another mutation");
+    expect(owner.check_active(generation).get(), Error::OK);
+}
+
 constexpr Case cases[]{
     {"initialization", initialization},
     {"hc06_incompatible_states", incompatible},
@@ -241,6 +372,9 @@ constexpr Case cases[]{
     {"failed_destroy", failed_destroy},
     {"failed_active_probe", failed_active_probe},
     {"shutdown_retry", shutdown_retry},
+    {"hi09_close_during_bind", close_during_bind},
+    {"hi11_bind_failure", bind_failure_without_mutation},
+    {"hi19_incompatible_core_binding", incompatible_core_binding},
 };
 } // namespace
 
@@ -257,7 +391,7 @@ int main(int argc, char** argv)
                 }
             }
         }
-        throw std::runtime_error("Unknown H02 fault test");
+        throw std::runtime_error("Unknown HOST fault test");
     } catch (const std::exception& error) {
         std::cerr << "FAIL " << error.what() << '\n';
         return 1;

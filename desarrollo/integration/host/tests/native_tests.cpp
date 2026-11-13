@@ -203,8 +203,11 @@ int main(int argc, char** argv)
                     return 0;
                 }
             }
+            run_player_case(argv[1]);
+            std::cout << "PASS " << argv[1] << '\n';
+            return 0;
         }
-        throw std::runtime_error("Unknown H02 native test");
+        throw std::runtime_error("Expected a native HOST test name");
     } catch (const std::exception& error) {
         std::cerr << "FAIL " << error.what() << '\n';
         return 1;

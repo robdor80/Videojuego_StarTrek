@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <future>
 #include <memory>
+#include <optional>
 #include <string>
 
 #if defined(TREK_HOST_STATIC_TEST)
@@ -24,7 +25,8 @@ enum class State { CLOSED, OPENING, ACTIVE, SAVING, LOADING, FAILED, FAILED_RECO
 
 enum class Error {
     OK, INVALID_ARGUMENT, SESSION_CLOSED, BUSY_STATE, WRONG_THREAD,
-    GENERATION_EXPIRED, CAPACITY_LIMIT, DOMAIN_REJECTED, INTERNAL_ERROR
+    GENERATION_EXPIRED, CAPACITY_LIMIT, DOMAIN_REJECTED, INTERNAL_ERROR,
+    PRINCIPAL_UNBOUND, ACCESS_DENIED, SCOPE_INVALID, REVISION_STALE, IDEMPOTENCY_CONFLICT
 };
 
 class Generation {
@@ -58,6 +60,18 @@ struct Snapshot {
     Generation generation;
 };
 
+struct PlayerIdentity {
+    Generation generation;
+    std::uint64_t person_id;
+};
+
+struct PlayerResult {
+    Error error;
+    std::optional<PlayerIdentity> player;
+};
+
+class PlayerBootstrap;
+
 class SessionOwner final {
 public:
     TREK_HOST_API SessionOwner();
@@ -73,7 +87,12 @@ public:
     // A generation-bound liveness check for internal HOST components.
     TREK_HOST_API std::future<Result> check_active(Generation generation);
 
+    // Resolves the sole local principal of this owner. The copied ID is for
+    // projection; later operations must resolve authority on the owner again.
+    TREK_HOST_API PlayerResult current_player(Generation generation) const;
+
 private:
+    friend class PlayerBootstrap;
     struct Impl;
     std::unique_ptr<Impl> impl_;
 };
