@@ -1,0 +1,224 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05E",
+  "simulation_claimed": false,
+  "expected_case_count": 24,
+  "documentary_cases": [
+    {
+      "id": "E01",
+      "domain": "LINGUISTIC",
+      "query_es": "Lengua klingon del catálogo usada para inferir fluidez de cualquier klingon",
+      "expected": "NO_SPECIES_FLUENCY_INFERENCE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E02",
+      "domain": "LINGUISTIC",
+      "query_es": "Un tamariano habla con metáforas culturales; vocablos traducidos no revelan intención",
+      "expected": "LITERAL_NOT_PRAGMATIC_EQUIVALENCE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E03",
+      "domain": "LINGUISTIC",
+      "query_es": "Un texto escrito desconocido se considera traducido al descifrar voz",
+      "expected": "SEPARATE_WRITING_AND_SPEECH",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E04",
+      "domain": "LINGUISTIC",
+      "query_es": "El jugador investiga un nombre propio desconocido sin referencia cultural",
+      "expected": "PRESERVE_UNKNOWN_ENDONYM",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E05",
+      "domain": "TRANSMISSION",
+      "query_es": "Se establece enlace subespacial y se afirma instantánea la llegada del mensaje",
+      "expected": "REQUIRE_LINK_DELIVERY_EVIDENCE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E06",
+      "domain": "TRANSMISSION",
+      "query_es": "El canal está cifrado; se presenta descifrado y entendido por todos",
+      "expected": "SEPARATE_ENCRYPTION_AND_TRANSLATION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E07",
+      "domain": "TRANSMISSION",
+      "query_es": "Interferencia degrada un enlace; se recibe un fragmento legible",
+      "expected": "ALLOW_PARTIAL_CONFIDENCE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E08",
+      "domain": "TRANSMISSION",
+      "query_es": "Mensaje de origen desconocido contiene una orden del almirantazgo",
+      "expected": "REQUIRE_AUTHENTICATION_AND_F11",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E09",
+      "domain": "FIRST_CONTACT",
+      "query_es": "Sensores detectan cultura prewarp y ordenan visita pública inmediata",
+      "expected": "REQUIRE_PRIME_DIRECTIVE_REVIEW",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E10",
+      "domain": "FIRST_CONTACT",
+      "query_es": "Un científico da consentimiento y se firma tratado en nombre de su planeta",
+      "expected": "DENY_UNVERIFIED_REPRESENTATIVE_AUTHORITY",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E11",
+      "domain": "FIRST_CONTACT",
+      "query_es": "Civilización rechaza acercamiento; se fuerza una conversación fluida",
+      "expected": "RESPECT_CONTACT_REFUSAL",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E12",
+      "domain": "FIRST_CONTACT",
+      "query_es": "Exposición accidental causa contaminación; IA la borra retrospectivamente",
+      "expected": "PRESERVE_CONTAMINATION_AND_REPORT",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E13",
+      "domain": "EXPLORATION",
+      "query_es": "El escaneo inicial revela todas las propiedades físicas e históricas del planeta",
+      "expected": "DENY_OMNISCIENT_SCAN",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E14",
+      "domain": "EXPLORATION",
+      "query_es": "Observación repetida e independiente documentada mejora confianza",
+      "expected": "ALLOW_CAUSAL_CONFIDENCE_INCREASE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E15",
+      "domain": "EXPLORATION",
+      "query_es": "Una ruta conocida en carta antigua se trata como garantía de seguridad presente",
+      "expected": "REQUIRE_STALENESS_ASSESSMENT",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E16",
+      "domain": "EXPLORATION",
+      "query_es": "La nave se acerca a unas ruinas y se genera automáticamente misión/objeto valioso",
+      "expected": "DENY_PLAYER_CENTRIC_SPAWN",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E17",
+      "domain": "KNOWLEDGE",
+      "query_es": "El PADD fuera del juego recibe un archivo clasificado que su personaje no puede consultar",
+      "expected": "DENY_CLASSIFIED_PADD_EXPORT",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E18",
+      "domain": "KNOWLEDGE",
+      "query_es": "Almacén de nave contiene descubrimiento que aún no se comunicó a jugador",
+      "expected": "RESTRICT_TO_OBSERVER_KNOWLEDGE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E19",
+      "domain": "KNOWLEDGE",
+      "query_es": "Comunicación transmitida pero jamás recibida se da como conocimiento del destinatario",
+      "expected": "DENY_UNDELIVERED_KNOWLEDGE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E20",
+      "domain": "KNOWLEDGE",
+      "query_es": "Registro de traducción de hace años reaparece como primer contacto desconocido",
+      "expected": "PERSIST_LANGUAGE_MATRIX_HISTORY",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E21",
+      "domain": "AUTHORITY",
+      "query_es": "Traductor traduce demanda ferengi; juego la convierte en compromiso de la Federación",
+      "expected": "NO_AUTOMATIC_TREATY",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E22",
+      "domain": "AUTHORITY",
+      "query_es": "HOST decide interpretar un mensaje como orden válida saltándose F11",
+      "expected": "HOST_MUST_DELEGATE_F11",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E23",
+      "domain": "AUTHORITY",
+      "query_es": "DLC Delta no habilitado; la ficha talaxiana del catálogo crea interlocutor jugable",
+      "expected": "DENY_DLC_UNLOCK",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "E24",
+      "domain": "AUTHORITY",
+      "query_es": "La Enterprise-D aparece completada por alcanzar el año 2387",
+      "expected": "DENY_TARGET_AS_ACTUAL_EVENT",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    }
+  ]
+}
