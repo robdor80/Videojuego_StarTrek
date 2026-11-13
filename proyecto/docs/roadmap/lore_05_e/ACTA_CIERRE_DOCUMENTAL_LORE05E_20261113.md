@@ -32,3 +32,10 @@
 Reutilización de contratos exactos bajo `sistemas/gameplay/languages/`, `communications/`, `first_contact/`, `exploration/`, `knowledge/`, y generación de civilizaciones; guías vinculadas en README. La fuente oficial confirma casos de referencia pero no atribuye todo el overlay a `SCREEN_CANON`. Las decisiones de representación es-ES y escenas hipotéticas son `GAME_ADDITION`.
 
 La integración audiovisual, voz, modelo 3D, traducción efectiva, persistencia WorldState, diplomacia, políticas de PADD y ejecución de primera directriz son **pendientes de sus fases propietarias**: CoreRPG, F06, F11, HOST, P2 y UE5. `COMPLETE_DOCUMENTARY` solo podrá anotarse como cierre definitivo **después de CI verde del HEAD final y fusión de la PR #129**.
+
+## Certificación final posfusión
+- Último HEAD de PR #129: `80beb7046895af7f8600be98a3953d5c4ea62758`.
+- [LORE-05E final #43355862872](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43355862872) **SUCCESS**. Se comprobaron **7/7 workflows** asociados al último HEAD, todos `success` (LORE-05A, LORE-05E, P2-B06/B07/B08/B09/B10).
+- [PR #129](https://github.com/robdor80/Videojuego_StarTrek/pull/129) fusionada en `main` con squash `2d477179342a9f26edb46b95dc494dba8088bee5`.
+- Decisión: **LORE-05E COMPLETE_DOCUMENTARY** en su alcance de diseño e interpretación; **LORE-05F pendiente**. Cierre no implica ninguna prueba de integración CoreRPG, HOST, UE5, diálogos con IA ni PADD.
+- Esta acta se regulariza por una PR administrativa nueva y no se usa para atribuir a su último commit pruebas aún no ejecutadas.

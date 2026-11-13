@@ -623,7 +623,9 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **LORE-05D — Naves, instalaciones y organizaciones: ✅ COMPLETE_DOCUMENTARY (alcance cerrado).** [PR #128](https://github.com/robdor80/Videojuego_StarTrek/pull/128), [guía narrativa](mundo/lore/operations/LORE05D_NAVES_INSTALACIONES_ORGANIZACIONES_20261113.md), [catálogo 8/12/8+2](mundo/lore/operations/lore05d_entities_v0.1.json), [acta](proyecto/docs/roadmap/lore_05_d/ACTA_CIERRE_DOCUMENTAL_LORE05D_20261113.md) y 18 casos de seguridad documental. Validador PASS, **25/25 pruebas adversariales PASS** y [CI LORE-05D #43354375724](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354375724) SUCCESS en HEAD previo al acta `de4f7d1`; 7/7 workflows de ese HEAD verdes. **La CI del HEAD final y su fusión se comprueban por separado.** No se crea nueva nave individual, estación, permiso, guerra o misión y no hay ejecución CoreRPG/HOST/UE5. Defiant original destruida en 2375 ≠ São Paulo rebautizada; Enterprise-D permanece Galaxy bajo Proyecto Valhalla.
 
-**LORE-05E–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
+**LORE-05E — Idiomas, comunicación y exploración: ✅ COMPLETE_DOCUMENTARY (8 lenguas existentes, 18 reglas, 24 escenarios).** [PR #129](https://github.com/robdor80/Videojuego_StarTrek/pull/129) fusionada mediante squash `2d477179342a9f26edb46b95dc494dba8088bee5`; [CI HEAD final #43355862872](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43355862872) SUCCESS con validador y **24/24 pruebas**, y **7/7** workflows aplicables del HEAD definitivo en verde. [Acta de cierre](proyecto/docs/roadmap/lore_05_e/ACTA_CIERRE_DOCUMENTAL_LORE05E_20261113.md). Sin implementación CoreRPG/HOST/UE5/PADD, sin nuevo idioma jugable, contacto automático ni Delta activo.
+
+**LORE-05F:** **PENDIENTE** de auditoría y cierre transversal; LORE-05 global permanece **EN CURSO**.
 
 ## Procedural living-universe master plan
 
