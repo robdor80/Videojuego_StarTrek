@@ -2,14 +2,26 @@
 
 Fecha: 2026-11-13. Rama: `feature/host-h05-pasarela-m0`. Base `main`:
 `cf8fffe755ba04cf66ed09042858ec923d7b100b` (incluye PR #138).
-Código: `5ee7b169e87ab24aa141cd3c4f81c3bec6c37803`.
+Código inicial: `5ee7b169e87ab24aa141cd3c4f81c3bec6c37803`.
+Refuerzo RESOLVING: `0f753ad16bbea18dfbc58f57e56ef53146ed002b`.
+Código final, incluido enlace MSVC: `0b022b1188b0a3490441af0769fffcefdc6f8ce0`.
+[PR #139 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/139), sin fusionar.
 CoreRPG: `76a7b7b485616d8c4994f384a90f123bf333591d`, checkout limpio,
 comprobado por CMake y por el binario cargado. Ningún pin histórico cambia.
 
-Estado de esta primera publicación: **IMPLEMENTADO; M0 local ejecutado; CI
-multiplataforma pendiente; NO CERTIFICADO; NO FUSIONADO**. La evidencia final,
+Estado de entrega: **IMPLEMENTADO; M0 PROBADO en el alcance nativo;
+NO CERTIFICADO; NO FUSIONADO**. La evidencia final,
 comandos y ejecuciones están en [resultados M0](H05_RESULTADOS_M0_2026-11-13.md).
 La PR permanece Draft para auditoría independiente.
+
+[CI final de código, run 43467528745](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43467528745):
+cinco jobs success. GCC 15.2: **236/236**; MSVC 19.51.36260.0: **236/236**;
+Clang 21.1.8 ASan/UBSan: **81/81**. Producto Release OFF: carga/exports/pin
+**PASS Linux y Windows**. F11 aislada: **17/17 por SO**; H01: **11/11 por SO**.
+HM-01–HM-28 tienen resultado PASS en su alcance nativo, desglosado con los
+oráculos reales y las excepciones de semántica en el informe de resultados.
+El último commit de publicación solo actualiza estos dos informes; el SHA
+de código ensayado es `0b022b1188b0a3490441af0769fffcefdc6f8ce0`.
 
 ## Arquitectura y tipos reales
 
@@ -98,7 +110,7 @@ F04 de preparación son infraestructura del fixture de pruebas, no una API de ju
 | `desarrollo/integration/host/tests/m0_tests.cpp` | Fixture poblado real, escenarios M0, concurrencia, escritor y lector. |
 | `desarrollo/integration/host/tests/m0_process.py` | Procesos separados, PIDs y mediciones por contenido SHA256. |
 | `desarrollo/integration/host/tests/inspect_product.py` | Carga Release OFF, exports, dependencias y pin Linux/Windows. |
-| `desarrollo/integration/host/CMakeLists.txt` | Composición aditiva y 25 pruebas M0 separadas del DLL productivo. |
+| `desarrollo/integration/host/CMakeLists.txt` | Composición aditiva y 26 pruebas M0 separadas del DLL productivo. |
 | `.github/workflows/host-h02-native.yml` | Suite H02–H05; pruebas y artefactos M0; inspección de producto en ambos SO. |
 | Este informe y `H05_RESULTADOS_M0_2026-11-13.md` | Evidencia permanente aprobada expresamente por el encargo. |
 
@@ -120,6 +132,9 @@ ocupa 97 029 bytes y, tras recuperarla y ejecutarla, 195 374 bytes/4 objetos por
 conserva los objetos históricos previos. Ver la tabla reproducida en resultados.
 
 Los límites H04 de 64 MiB/objeto, 512 MiB/historial y 4096 entradas no cambian.
+Máximo objeto observado: 97 997 bytes; máximo historial observado: 195 100
+bytes de objetos, muy por debajo de 512 MiB; como máximo 8 archivos en la versión
+medida frente a 4096 entradas admitidas. No se extrapola ese margen al juego final.
 No aparece un hallazgo crítico en este dataset. H12-P04 debe valorar almacén de
 objetos por contenido y retención explícita, conservando publicación durable,
 validación y procedencia. No se implementa deduplicación ni se elimina generación
