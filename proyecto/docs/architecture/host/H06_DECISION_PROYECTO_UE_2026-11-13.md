@@ -1,4 +1,4 @@
-# H06 — Decisión pendiente sobre el proyecto Unreal principal
+# H06 — Decisión sobre el proyecto Unreal principal
 
 Fecha: 2026-11-13. Base `main` `5f12d9c152dd0003a6d971068d693184f45b213e`, [PR #141 fusionada](https://github.com/robdor80/Videojuego_StarTrek/pull/141). **G0 APROBADA Y EJECUTADA.** El usuario autorizó expresamente el 13-11-2026 la creación del proyecto definitivo StarTrekRPG C++ Win64 para UE 5.8.2 en la ruta indicada, con mapa de diagnóstico y sin migración artística. En la auditoría previa, el árbol Git de `juego/UE5/StarTrekRPG/` solo tenía [README.md](https://github.com/robdor80/Videojuego_StarTrek/blob/5f12d9c152dd0003a6d971068d693184f45b213e/juego/UE5/StarTrekRPG/README.md); el checkout local contenía el README y las carpetas reservadas sin archivos adicionales.
 
