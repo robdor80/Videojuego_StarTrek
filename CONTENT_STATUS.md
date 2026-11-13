@@ -619,7 +619,9 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **LORE-05B — Personajes legendarios, biografías y relaciones: ✅ COMPLETE_DOCUMENTARY (alcance 12/12).** [PR #126](https://github.com/robdor80/Videojuego_StarTrek/pull/126): 12 fichas autorales aprobadas y validadas, con 84/84 verificaciones documentales y 29 referencias internas examinadas; [elenco cerrado](mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md) y [acta de auditoría](mundo/lore/characters/LORE05B_AUDITORIA_PRECIERRE_2026-11-13.md). El cierre registra únicamente **diseño/lore**; NPC activos, eventos, cronología personal exacta, 3D, IA, HOST, CoreRPG y UE5 siguen pendientes de fases de integración. La situación administrativa de la PR, el hash de fusión y la CI posterior se verifican por separado, y **no están implícitos** en este estado documental.
 
-**LORE-05C–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
+**LORE-05C — Mundos, colonias y localizaciones: ✅ COMPLETE_DOCUMENTARY (alcance 16/16).** [Guía narrativa](mundo/lore/astrography/worlds/lore05c_guia_localizaciones_2026-11-13.md), [catálogo de referencia](mundo/lore/astrography/worlds/lore05c_priority_locations_v0.1.json) y [acta de cierre](proyecto/docs/roadmap/lore_05_c/ACTA_CIERRE_DOCUMENTAL_LORE05C_20261113.md), [PR #127](https://github.com/robdor80/Videojuego_StarTrek/pull/127). 13 anclajes ya existentes, Marte en contexto Sol y dos colonias históricas sin nueva navegación; 12 escenarios documentales y 14/14 pruebas adversariales sobre HEAD inicial 6a20c243, [CI LORE-05C #43353077576](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353077576) SUCCESS. **La CI y la fusión del HEAD documental definitivo se verificarán por separado.** No hay ejecución en CoreRPG/HOST/UE5 ni rutas, colonias o NPC nuevos instalados.
+
+**LORE-05D–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
 
 ## Procedural living-universe master plan
 
