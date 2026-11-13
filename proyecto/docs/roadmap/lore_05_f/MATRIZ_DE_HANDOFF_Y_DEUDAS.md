@@ -26,7 +26,7 @@ Primero respetar y probar **IDs, autoridad CoreRPG, F11/HOST y compatibilidad hi
 Las fases de propietario deberán mantener su propia PR, plan de pruebas y cierre; LORE-05F **no les transfiere control del estado ni define un segundo motor**.
 
 ## Fuentes de gobierno
-- [DEC-0020](../../../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md)
+- [DEC-0020](../../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md)
 - [Acta transversal](ACTA_AUDITORIA_TRANSVERSAL_20261113.md)
 - [Estado de contenido](../../../../CONTENT_STATUS.md)
 - [Arquitectura HOST](../../architecture/host/README.md)
