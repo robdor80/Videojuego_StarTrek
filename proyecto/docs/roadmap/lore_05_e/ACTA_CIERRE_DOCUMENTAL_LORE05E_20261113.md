@@ -5,7 +5,7 @@
 1. E01 inventario de 17 contratos/fuentes existentes enlazados sin duplicación.
 2. E02 ocho entradas de idiomas conservadas con nombres exactos, sin inventar gramáticas/fluidez; Kazon y Talaxiano permanecen `DLC_DELTA_FUTURE`.
 3. E03 traductor: los seis estados preexistentes se respetan; sintaxis correcta no significa intención conocida.
-4. E04 comunicaciones: once estados existentes de enlace, entrega, demoras, cifrado, autenticación y separación F11/HOST/IA.
+4. E04 comunicaciones: diez estados existentes de enlace (y once campos de entrada del contrato de subespacio), entrega, demoras, cifrado, autenticación y separación F11/HOST/IA. Fe de erratas LORE-05F: el texto original confundía el número de entradas con el número de estados.
 5. E05 exploración: verdad física separada de detección, cartografía, observador y fecha de conocimiento.
 6. E06 primer contacto: consentimiento, representantes competentes, no contaminación, revisión de Primera Directriz, posibilidad de rechazo.
 7. E07 18 reglas narrativas, 24 casos negativos/positivos documentales, validador y 24 tests con mutaciones.
