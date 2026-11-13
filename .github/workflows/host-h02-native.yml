@@ -1,4 +1,4 @@
-name: HOST H02 native
+name: HOST native H02-H04
 
 on:
   pull_request:
@@ -48,15 +48,15 @@ jobs:
         with:
           repository: robdor80/CoreRPG
           ref: ${{ env.HOST_CORE_SHA }}
-          path: laboratorios/host/h02/core
+          path: laboratorios/host/h04/core
           persist-credentials: false
-      - name: Build and test H02
+      - name: Build and test HOST
         env:
           HOST_SUITE: ${{ matrix.suite }}
           ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
           UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
         run: |
-          $lab = Join-Path $PWD 'laboratorios/host/h02'
+          $lab = Join-Path $PWD 'laboratorios/host/h04'
           $build = Join-Path $lab 'build'
           $core = Join-Path $lab 'core'
           $temp = Join-Path $lab 'tmp'
@@ -66,15 +66,16 @@ jobs:
           $env:TMP = $temp
           $env:F04_TEST_TEMP_ROOT = $temp
           $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
-          $targets = @('host_native_tests', 'host_fault_tests')
+          if ($IsWindows) { $flags += @('-A', 'x64') }
+          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
             $env:CXX = 'clang++'
             $flags += '-DCMAKE_CXX_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer'
           } else {
-            $targets += @('f04_tests', 'f04_population_tests', 'f05_tests', 'f05_delegation_tests',
+            $targets += @('f04_tests', 'f04_population_tests', 'f04_history_faults', 'f05_tests', 'f05_delegation_tests',
                           'f05_initiative_tests', 'f05_ai_tests', 'f05_integration_audit_tests')
-            $selection = '^(host\.|f05\.|f04\.(thread|scope|identity|class|buffers|determinism|population_.*|process_save|process_load)$)'
+            $selection = '^(host\.|f05\.|f04\.(history_faults|thread|scope|identity|class|buffers|determinism|population_.*|process_save|process_load)$)'
           }
           @("Star Trek: $(git rev-parse HEAD)", "CoreRPG: $(git -C $core rev-parse HEAD)",
             "System: $([System.Runtime.InteropServices.RuntimeInformation]::OSDescription)",
@@ -93,12 +94,12 @@ jobs:
         if: matrix.suite == 'native' && !cancelled()
         run: |
           python desarrollo/tools/validation/test_host_h01_contracts.py 2>&1 |
-            Tee-Object -FilePath laboratorios/host/h02/h01.log
+            Tee-Object -FilePath laboratorios/host/h04/h01.log
           exit $LASTEXITCODE
       - name: Isolated F11 regression
         if: matrix.suite == 'native' && !cancelled()
         run: |
-          $lab = Join-Path $PWD 'laboratorios/host/h02'
+          $lab = Join-Path $PWD 'laboratorios/host/h04'
           $env:TMPDIR = Join-Path $lab 'tmp'
           $env:TEMP = $env:TMPDIR
           $env:TMP = $env:TMPDIR
@@ -108,17 +109,17 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: host-h02-${{ matrix.os }}-${{ matrix.suite }}
+          name: host-h04-${{ matrix.os }}-${{ matrix.suite }}
           path: |
-            laboratorios/host/h02/*.log
-            laboratorios/host/h02/native.xml
-            laboratorios/host/h02/build/CMakeCache.txt
-            laboratorios/host/h02/build/CMakeFiles/*/CMakeCXXCompiler.cmake
-            laboratorios/host/h02/build/Testing/Temporary/LastTest.log
-            laboratorios/host/h02/f11/*.log
-            laboratorios/host/h02/f11/run.json
-            laboratorios/host/h02/f11/tests.xml
-            laboratorios/host/h02/f11/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/host/h04/*.log
+            laboratorios/host/h04/native.xml
+            laboratorios/host/h04/build/CMakeCache.txt
+            laboratorios/host/h04/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/host/h04/build/Testing/Temporary/LastTest.log
+            laboratorios/host/h04/f11/*.log
+            laboratorios/host/h04/f11/run.json
+            laboratorios/host/h04/f11/tests.xml
+            laboratorios/host/h04/f11/build/CMakeFiles/*/CMakeCXXCompiler.cmake
 
 
   # Independent product-mode smoke build: tests OFF, unlike the native suites.
@@ -134,13 +135,13 @@ jobs:
         with:
           repository: robdor80/CoreRPG
           ref: 76a7b7b485616d8c4994f384a90f123bf333591d
-          path: laboratorios/host/h02/core
+          path: laboratorios/host/h04/core
           persist-credentials: false
       - name: Build and inspect release product (tests OFF)
         shell: bash
         run: |
           set -euo pipefail
-          lab="$PWD/laboratorios/host/h02"
+          lab="$PWD/laboratorios/host/h04"
           build="$lab/product-linux"
           mkdir -p "$lab"
           echo "Star Trek $(git rev-parse HEAD)" | tee "$lab/product-linux-manifest.log"
@@ -166,6 +167,11 @@ jobs:
           grep -q 'libTrekF04Bridge.so' "$lab/product-linux-dynamic.log"
           nm -D -C --defined-only "$host_so" | tee "$lab/product-linux-symbols.log"
           grep -q 'trek::host::SessionOwner::SessionOwner' "$lab/product-linux-symbols.log"
+          grep -q 'trek::host::SessionOwner::restore' "$lab/product-linux-symbols.log"
+          if grep -q 'storage_test_hook' "$lab/product-linux-symbols.log"; then exit 1; fi
+          nm -D --defined-only "$bridge_so" | tee "$lab/product-bridge-symbols.log"
+          grep -q ' f05_player_binding$' "$lab/product-bridge-symbols.log"
+          grep -q ' f04_history_snapshot$' "$lab/product-bridge-symbols.log"
           ldd "$host_so" | tee "$lab/product-linux-dependencies.log"
           if grep -q 'not found' "$lab/product-linux-dependencies.log"; then
             echo 'FAIL: product has an unresolved runtime dependency'
@@ -187,7 +193,47 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: host-h02-product-linux
+          name: host-h04-product-linux
           path: |
-            laboratorios/host/h02/product-linux-*.log
-            laboratorios/host/h02/product-linux/CMakeCache.txt
+            laboratorios/host/h04/product-linux-*.log
+            laboratorios/host/h04/product-linux/CMakeCache.txt
+
+  product-windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/host/h04/core
+          persist-credentials: false
+      - name: MSVC x64 Release product without tests
+        shell: pwsh
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/h04'
+          $core = Join-Path $lab 'core'
+          $build = Join-Path $lab 'product-windows'
+          cmake -S desarrollo/integration/host -B $build -A x64 "-DCORERPG_SOURCE_DIR=$core" -DTREK_HOST_TESTS=OFF 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-configure.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $build --config Release --parallel 3 --target TrekHost 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-build.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          if (!(Select-String -Path "$build/CMakeCache.txt" -Pattern '^TREK_HOST_TESTS:BOOL=OFF$')) { exit 1 }
+          $dll = Get-ChildItem $build -Recurse -Filter TrekHost.dll | Select-Object -First 1
+          if (!$dll) { throw 'Missing product DLL' }
+          if (Get-ChildItem $build -Recurse -Include '*tests.exe','*TrialHost*') { throw 'Unexpected test or F11 trial binary' }
+          @("Star Trek: $(git rev-parse HEAD)", "CoreRPG: $(git -C $core rev-parse HEAD)", "DLL: $($dll.FullName)") |
+            Set-Content "$lab/product-windows-manifest.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h04-product-windows
+          path: |
+            laboratorios/host/h04/product-windows-*.log
+            laboratorios/host/h04/product-windows/CMakeCache.txt

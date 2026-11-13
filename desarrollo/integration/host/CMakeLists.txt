@@ -43,7 +43,16 @@ if(NOT F05_ENABLE_ORDERS OR NOT F04_ENABLE_HISTORY OR TARGET TrekF11TrialHost
 endif()
 message(STATUS "H02 Core ${core_head}, TrekF04Bridge flags: ${bridge_definitions}")
 
-set(host_sources src/session_owner.cpp src/native_session.cpp)
+# Extend the existing product adapter without editing historical source contracts.
+# This replaces its sole translation unit; it does not compile another bridge or Core.
+get_target_property(host_bridge_sources TrekF04Bridge SOURCES)
+if(NOT host_bridge_sources STREQUAL "src/f04_bridge.cpp")
+  message(FATAL_ERROR "Review unexpected bridge sources before composing H04")
+endif()
+set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src/f04_host_bridge.cpp")
+
+
+set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
 add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
 target_compile_definitions(TrekHost PRIVATE TREK_HOST_BUILD TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -88,4 +97,23 @@ if(TREK_HOST_TESTS)
     add_test(NAME host.fault.${case} COMMAND host_fault_tests ${case})
     set_tests_properties(host.fault.${case} PROPERTIES TIMEOUT 30 LABELS "h03;fault-injection")
   endforeach()
+endif()
+
+if(TREK_HOST_TESTS)
+  # Real bridge and product sources; failpoints exist only in this separate test executable.
+  add_executable(host_persistence_tests tests/persistence_tests.cpp ${host_sources} src/f04_session_bridge.cpp)
+  target_compile_features(host_persistence_tests PRIVATE cxx_std_20)
+  target_include_directories(host_persistence_tests PRIVATE src include)
+  target_compile_definitions(host_persistence_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_link_libraries(host_persistence_tests PRIVATE TrekF04Bridge Threads::Threads)
+  set_target_properties(host_persistence_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  find_package(Python3 REQUIRED COMPONENTS Interpreter)
+  foreach(case IN ITEMS roundtrip reader history_rng paths failures io queue double late renewal_failure busy save_close load_close manifest incompatible
+      identity import truncated altered incomplete absent_binding wrong_binding foreign_core)
+    add_test(NAME host.persistence.${case} COMMAND host_persistence_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/persistence/${case}")
+    set_tests_properties(host.persistence.${case} PROPERTIES TIMEOUT 45 LABELS "h04;native")
+  endforeach()
+  add_test(NAME host.persistence.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/persistence_process.py"
+    "$<TARGET_FILE:host_persistence_tests>" "${CMAKE_CURRENT_BINARY_DIR}/persistence/process")
+  set_tests_properties(host.persistence.process PROPERTIES TIMEOUT 240 LABELS "h04;process;fault-injection")
 endif()

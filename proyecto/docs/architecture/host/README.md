@@ -37,3 +37,12 @@ H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Co
 - Logs y artefactos temporales solo en laboratorios/ dentro del repositorio, excluidos de Git. No hay dependencias permanentes hacia esos resultados.
 
 La H01 documental tiene 11/11 comprobaciones estáticas PASS (Actions run 43089381278) y requiere revisión/fusión autorizada antes de considerarse cerrada; sus contratos guían H02-H07, sin sustituir la certificación de F11.
+
+## H04 — Guardado, recuperación y procedencia
+
+Implementación propuesta en [PR #135 Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/135).
+Estados IMPLEMENTADO y PROBADO por alcance; NO CERTIFICADO y NO FUSIONADO.
+
+- [Arquitectura H04](H04_PERSISTENCIA_2026-11-13.md): ranuras, procedencia, persistencia Core completa, publicación, recuperación e identidad H03.
+- [Matriz y evidencia H04](H04_PRUEBAS_2026-11-13.md): casos nativos, procesos, inyección, compilaciones, CI y límites.
+- [Acta técnica H04](H04_ACTA_2026-11-13.md): commits, auditoría, incidencias y riesgos pendientes.

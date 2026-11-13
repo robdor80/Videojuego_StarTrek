@@ -4,6 +4,7 @@
 #include "trek/host/session_owner.h"
 
 #include <optional>
+#include "slot_store.h"
 
 namespace trek::host::detail {
 
@@ -23,6 +24,11 @@ public:
 
     Outcome open(const PopulationConfig& config) noexcept;
     Outcome close() noexcept;
+    Outcome persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept;
+    Outcome snapshot(const std::filesystem::path&,const CampaignId&) noexcept;
+    Outcome stage(const PreparedSlot&,F04Ref& player) noexcept;
+    Outcome discard_stage() noexcept;
+    Outcome commit_stage() noexcept;
     Outcome probe() const noexcept;
     Outcome resolve_person(std::uint64_t person_id, F04Ref& person, std::uint64_t& revision) const noexcept;
     Outcome bind_player(F04Ref person, std::uint64_t revision) noexcept;
@@ -30,10 +36,15 @@ public:
 private:
     F04Session* session_ = nullptr;
     bool reserved_ = false;
+    F04Session* staged_ = nullptr;
+    std::shared_ptr<PinnedDirectory> history_pin_,staged_pin_;
 };
 
 namespace bridge {
 const char* core_sha() noexcept;
+std::uint32_t persistent_identity(F04Session*,PersistentIdentity&,F04Ref&) noexcept;
+std::uint32_t snapshot(F04Session*,const std::filesystem::path&,const CampaignId&) noexcept;
+std::uint32_t restore(const PreparedSlot&,F04Session**,F04Ref&) noexcept;
 std::uint32_t create(const PopulationConfig& config, F04Session** session) noexcept;
 std::uint32_t probe(F04Session* session) noexcept;
 std::uint32_t destroy(F04Session* session) noexcept;

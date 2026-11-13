@@ -12,6 +12,7 @@
 #include <mutex>
 #include <optional>
 #include <thread>
+#include <string_view>
 #include <utility>
 #include <variant>
 
@@ -75,7 +76,9 @@ struct SessionOwner::Impl {
         std::promise<BindPlayerResult> reply;
     };
 
-    using Request = std::variant<Check, PreparePlayer, BindPlayer>;
+    struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
+    struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load>;
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
     std::mutex mutex;
@@ -91,9 +94,12 @@ struct SessionOwner::Impl {
     std::shared_future<Result> close_result;
     std::deque<Request> requests;
     static constexpr std::size_t max_requests = 32;
+    detail::SlotStore store;
+    std::string persistent_id;
+    Provenance provenance=Provenance::REJECTED;
     std::thread owner;
 
-    Impl() : owner([this] { run(); }) {}
+    explicit Impl(StorageConfig config) : store(std::move(config)),owner([this] { run(); }) {}
 
     ~Impl()
     {
@@ -119,6 +125,8 @@ struct SessionOwner::Impl {
         campaign.reset();
         binding = Binding::UNBOUND;
         player = {};
+        persistent_id.clear();
+        provenance=Provenance::REJECTED;
         for (auto& request : requests) {
             std::visit([](auto& item) {
                 item.reply.set_value({Error::GENERATION_EXPIRED, {}});
@@ -164,6 +172,8 @@ struct SessionOwner::Impl {
             return;
         }
 
+        std::string id;
+        try {id=detail::new_campaign_id();}catch(...){state=State::CLOSED;request.reply.set_value({Error::INTERNAL_ERROR,{}});return;}
         lock.unlock();
         auto outcome = session.open(request.config);
         lock.lock();
@@ -172,6 +182,8 @@ struct SessionOwner::Impl {
             if (next != 0) {
                 generation = Generation(next);
                 campaign = std::move(request.campaign);
+                persistent_id=std::move(id);
+                provenance=Provenance::CREATED_LOCALLY;
                 state = State::ACTIVE;
                 request.reply.set_value({Error::OK, generation});
                 return;
@@ -271,6 +283,69 @@ struct SessionOwner::Impl {
         request.reply.set_value({outcome.error, outcome.domain_code});
     }
 
+    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Save& request)
+    {
+        if(binding!=Binding::BOUND){request.reply.set_value({Error::PRINCIPAL_UNBOUND,{}});return;}
+        state=State::SAVING;
+        const auto id=persistent_id;const auto expected_player=player;
+        lock.unlock();
+        Error error=Error::PERSISTENCE_FAILED;
+        try {
+            detail::PersistentIdentity identity{};F04Ref resolved{};
+            auto outcome=session.persistent_identity(identity,resolved);
+            if(outcome.error!=Error::OK || resolved.scope!=expected_player.scope || resolved.id!=expected_player.id)error=Error::IDENTITY_MISMATCH;
+            else error=store.save(id,request.slot,identity,
+                [&](const auto& path){return session.snapshot(path,detail::decode_campaign(id)).error;},
+                [&](const detail::PreparedSlot& prepared){
+                    F04Ref verified{};auto result=session.stage(prepared,verified);
+                    auto cleanup=session.discard_stage();
+                    return cleanup.error==Error::OK?result.error:cleanup.error;
+                });
+        }catch(const detail::StorageFailure& e){error=e.error;}catch(...){error=Error::PERSISTENCE_FAILED;}
+        lock.lock();
+        if(state==State::SAVING)state=State::ACTIVE;
+        if(generation!=request.generation)error=Error::GENERATION_EXPIRED;
+        request.reply.set_value({error,error==Error::OK?generation:Generation{}});
+    }
+
+    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Load& request)
+    {
+        if(state==State::CLOSING){request.reply.set_value({Error::GENERATION_EXPIRED,{}});return;}
+        state=State::LOADING;
+        lock.unlock();
+        Error error=Error::PERSISTENCE_FAILED;F04Ref restored{};
+        std::shared_ptr<const detail::ActiveCampaign> marker;
+        std::string id;std::uint64_t next=0;
+        try {
+            auto prepared=store.prepare(request.address);
+            marker=std::make_shared<const detail::ActiveCampaign>();id=prepared.campaign;
+            next=next_generation();
+            if(!next)error=Error::INTERNAL_ERROR;
+            else {
+                auto outcome=session.stage(prepared,restored);error=outcome.error;
+                if(outcome.domain_code==F04_DENIED)error=Error::IDENTITY_MISMATCH;
+                else if(outcome.domain_code==F04_SAVE)error=Error::SAVE_CORRUPT;
+            }
+        }catch(const detail::StorageFailure& e){error=e.error;}catch(...){error=Error::PERSISTENCE_FAILED;}
+        lock.lock();
+        if(state==State::CLOSING)error=Error::GENERATION_EXPIRED;
+        if(error==Error::OK) {
+            // All allocation, Core validation and scope renewal finished before
+            // this mutex-protected publication. No old request survives the swap.
+            auto outcome=session.commit_stage();error=outcome.error;
+            if(error==Error::OK) {
+                invalidate();campaign=std::move(marker);persistent_id=std::move(id);
+                provenance=Provenance::KNOWN_LOCAL;generation=Generation(next);player=restored;binding=Binding::BOUND;state=State::ACTIVE;
+            }
+        }
+        if(error!=Error::OK) {
+            lock.unlock();auto cleanup=session.discard_stage();lock.lock();
+            if(cleanup.error!=Error::OK)error=cleanup.error;
+            if(state==State::LOADING)state=request.had_active?State::ACTIVE:State::CLOSED;
+        }
+        request.reply.set_value({error,error==Error::OK?generation:Generation{}});
+    }
+
     void run()
     {
         detail::NativeSession session;
@@ -322,7 +397,8 @@ struct SessionOwner::Impl {
     }
 };
 
-SessionOwner::SessionOwner() : impl_(std::make_unique<Impl>()) {}
+SessionOwner::SessionOwner() : SessionOwner(StorageConfig{}) {}
+SessionOwner::SessionOwner(StorageConfig storage) : impl_(std::make_unique<Impl>(std::move(storage))) {}
 SessionOwner::~SessionOwner() = default;
 
 std::future<Result> SessionOwner::open(PopulationConfig config)
@@ -369,6 +445,45 @@ Snapshot SessionOwner::snapshot() const
 std::future<Result> SessionOwner::check_active(Generation generation)
 {
     return impl_->enqueue<Result>(Impl::Check{generation, {}});
+}
+
+std::string SessionOwner::campaign_id(Generation generation) const
+{
+    std::lock_guard lock(impl_->mutex);
+    return impl_->admission(generation)==Error::OK?impl_->persistent_id:std::string{};
+}
+Provenance SessionOwner::campaign_provenance(Generation generation) const
+{
+    std::lock_guard lock(impl_->mutex);
+    return impl_->admission(generation)==Error::OK?impl_->provenance:Provenance::REJECTED;
+}
+std::future<Result> SessionOwner::save(Generation generation,std::string slot)
+{
+    if(!detail::valid_slot(slot))return ready(Error::PATH_REJECTED);
+    return impl_->enqueue<Result>(Impl::Save{generation,std::move(slot),{}});
+}
+std::future<Result> SessionOwner::restore(Generation generation,SlotAddress address)
+{
+    std::lock_guard lock(impl_->mutex);
+    const bool active=impl_->state==State::ACTIVE;
+    if(impl_->state!=State::CLOSED) {
+        if(auto error=impl_->admission(generation);error!=Error::OK)return ready(error);
+    } else if(generation!=Generation{})return ready(Error::GENERATION_EXPIRED);
+    if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
+    Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
+    impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
+    impl_->work.notify_one();return result;
+}
+InspectionResult SessionOwner::inspect(const StorageConfig& config)
+{
+    return detail::SlotStore(config).inspect([](const detail::PreparedSlot& prepared){
+        const auto* sha=detail::bridge::core_sha();
+        if(!sha || std::string_view(sha)!=TREK_HOST_CORE_SHA)return Error::SAVE_INCOMPATIBLE;
+        F04Session* candidate=nullptr;F04Ref player{};
+        auto code=detail::bridge::restore(prepared,&candidate,player);
+        if(candidate)detail::bridge::destroy(candidate);
+        return code==F04_OK?Error::OK:code==F04_DENIED?Error::IDENTITY_MISMATCH:Error::SAVE_CORRUPT;
+    });
 }
 
 PlayerResult SessionOwner::current_player(Generation generation) const

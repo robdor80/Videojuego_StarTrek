@@ -56,6 +56,9 @@ struct F04Session {
 
 namespace trek::host::detail::bridge {
 
+std::uint32_t persistent_identity(F04Session*,PersistentIdentity&,F04Ref&) noexcept { return F04_SAVE; }
+std::uint32_t snapshot(F04Session*,const std::filesystem::path&,const CampaignId&) noexcept { return F04_SAVE; }
+std::uint32_t restore(const PreparedSlot&,F04Session**,F04Ref&) noexcept { return F04_SAVE; }
 const char* core_sha() noexcept
 {
     return mode == Mode::bad_sha ? "unapproved-core" : TREK_HOST_CORE_SHA;
