@@ -66,6 +66,6 @@
 
 Excluido de P06: desarrollo completo de la Academia, cursos, notas, profesores, evaluación de acceso completa, primer ascenso oficial, elección de departamento final, modificación de las reglas F11 o creación artificial de órdenes F05. La aceptación visual manual corresponde a P08.
 
-**Disco:** no borrar ni modificar laboratorios existentes durante limpieza concurrente; usar solo temporales dentro de laboratorios/host/h06-p06/, reversibles. No duplicar motores/checkout Core. Git alberga únicamente código definitivo, contratos, pruebas fuente e informes pequeños.
+**Disco:** no borrar ni modificar laboratorios existentes durante limpieza concurrente; usar únicamente temporales ignorados en la ubicación prevista por AGENTS.md, reversibles y sin dependencias desde el producto. No duplicar motores/checkout Core. Git alberga únicamente código definitivo, contratos, pruebas fuente e informes pequeños.
 
 **Siguiente encargo:** H06_P06_ENCARGO_CODEX_2026-11-13.md. Matriz de oráculos: H06_P06_MATRIZ_PRUEBAS_2026-11-13.md.
