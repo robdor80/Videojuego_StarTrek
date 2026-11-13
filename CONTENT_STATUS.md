@@ -617,7 +617,9 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **Frontera de cierre:** la antigua `class_id=valhalla`, las 16 elecciones técnicas VAL-TEC y las dotaciones F04 se conservan por compatibilidad histórica, **no** se trasladan automáticamente a Enterprise-D ni implican instalación, plaza o capitanía. Ningún runtime CoreRPG/HOST/UE5, malla, guardado o simulación se certifica por esta fusión.
 
-**LORE-05B–F:** **NO INICIADAS**; alcance por consensuar sucesivamente con el autor. LORE-05 global permanece **EN CURSO**.
+**LORE-05B — Personajes legendarios, biografías y relaciones: ✅ COMPLETE_DOCUMENTARY (alcance 12/12).** [PR #126](https://github.com/robdor80/Videojuego_StarTrek/pull/126): 12 fichas autorales aprobadas y validadas, con 84/84 verificaciones documentales y 29 referencias internas examinadas; [elenco cerrado](mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md) y [acta de auditoría](mundo/lore/characters/LORE05B_AUDITORIA_PRECIERRE_2026-11-13.md). El cierre registra únicamente **diseño/lore**; NPC activos, eventos, cronología personal exacta, 3D, IA, HOST, CoreRPG y UE5 siguen pendientes de fases de integración. La situación administrativa de la PR, el hash de fusión y la CI posterior se verifican por separado, y **no están implícitos** en este estado documental.
+
+**LORE-05C–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
 
 ## Procedural living-universe master plan
 
