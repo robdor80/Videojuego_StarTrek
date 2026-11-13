@@ -8,6 +8,8 @@
 - [24 casos adversariales documentales](../../../../mundo/lore/exploration/lore05e_acceptance_cases_v0.1.json).
 - `desarrollo/tools/validation/validate_lore05_e.py` y `test_lore05_e.py`; CI independiente `.github/workflows/lore05-e-documentary.yml`.
 
+[Acta de auditoría y cierre documental](ACTA_CIERRE_DOCUMENTAL_LORE05E_20261113.md) — evaluación de conformidad y evidencia de CI anterior al último HEAD.
+
 ## E01–E08: trazabilidad
 E01 inventario de contratos existente; E02 lenguas sin generalizaciones por especie; E03 traductor y ambigüedad; E04 transmisión, autenticación y privacidad; E05 descubrimientos observables; E06 primer contacto, consentimiento y Primera Directriz; E07 casos y validación reproducible; E08 auditoría y cierre documental después de CI final y fusión.
 
