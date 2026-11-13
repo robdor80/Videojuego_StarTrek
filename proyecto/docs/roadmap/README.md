@@ -20,7 +20,8 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 - [LORE-05C — Mundos, colonias y localizaciones](lore_05_c/README.md): **fusionada y cerrada documentalmente**, 16 fichas y 12 escenarios; sin destinos nuevos ejecutables.
 - [LORE-05D — Naves, instalaciones y organizaciones](lore_05_d/README.md): **fusionada y cerrada documentalmente**, 8 naves, 12 instalaciones, 8 potencias y 2 instituciones; sin integración del runtime.
 - [LORE-05E — Idiomas, comunicación y exploración](lore_05_e/README.md): **fusionada y cerrada documentalmente** mediante PR #129, 8 lenguas existentes, 18 reglas, 24 casos; sin cambio de contratos de lenguaje, contacto o CoreRPG.
-- [LORE-05F — Auditoría transversal y cierre global](lore_05_f/README.md): **en precierre documental**; verificación CI y fusión aún pendientes, sin implementación de runtime.\n- [LORE-03 — Historia, conflictos y continuidad](lore_03_master_plan_v0.1.md): cerrada documentalmente desde octubre, con anotaciones históricas preservadas; sin runtime.
+- [LORE-05F — Auditoría transversal y cierre global](lore_05_f/README.md): **COMPLETE_DOCUMENTARY al fusionar PR #131**, tras auditoría y autorización del autor; sin implementación de runtime.
+- [LORE-03 — Historia, conflictos y continuidad](lore_03_master_plan_v0.1.md): cerrada documentalmente desde octubre, con anotaciones históricas preservadas; sin runtime.
 
 ## Regla de gestión
 
