@@ -11,6 +11,7 @@ string(STRIP "${f05_core_sha}" f05_core_sha)
 if(NOT f05_core_sha STREQUAL host_core_sha)
   message(FATAL_ERROR "H02 requires its reviewed F05 Core revision: ${host_core_sha}")
 endif()
+
 if(F11_ENABLE_PROMOTIONS OR TARGET TrekF11TrialHost OR TARGET TrekF04Bridge)
   message(FATAL_ERROR "H02 requires a standalone F05 composition without F11 targets or a preexisting bridge")
 endif()
@@ -53,7 +54,7 @@ set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/
 
 
 set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
-add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp)
+add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
 target_compile_definitions(TrekHost PRIVATE TREK_HOST_BUILD TREK_HOST_CORE_SHA="${host_core_sha}")
 target_include_directories(TrekHost PUBLIC include)
@@ -84,7 +85,7 @@ if(TREK_HOST_TESTS)
 
   # A separate executable replaces only the private bridge bindings to force
   # lifecycle failures. The product library and real bridge are not linked.
-  add_executable(host_fault_tests tests/fault_tests.cpp ${host_sources})
+  add_executable(host_fault_tests tests/fault_tests.cpp tests/gateway_fault_bridge.cpp ${host_sources})
   target_compile_features(host_fault_tests PRIVATE cxx_std_20)
   target_include_directories(host_fault_tests PRIVATE src include ../f04/include ../f05/include)
   target_compile_definitions(host_fault_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -101,7 +102,7 @@ endif()
 
 if(TREK_HOST_TESTS)
   # Real bridge and product sources; failpoints exist only in this separate test executable.
-  add_executable(host_persistence_tests tests/persistence_tests.cpp ${host_sources} src/f04_session_bridge.cpp)
+  add_executable(host_persistence_tests tests/persistence_tests.cpp ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
   target_compile_features(host_persistence_tests PRIVATE cxx_std_20)
   target_include_directories(host_persistence_tests PRIVATE src include)
   target_compile_definitions(host_persistence_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -116,4 +117,22 @@ if(TREK_HOST_TESTS)
   add_test(NAME host.persistence.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/persistence_process.py"
     "$<TARGET_FILE:host_persistence_tests>" "${CMAKE_CURRENT_BINARY_DIR}/persistence/process")
   set_tests_properties(host.persistence.process PROPERTIES TIMEOUT 240 LABELS "h04;process;fault-injection")
+endif()
+
+if(TREK_HOST_TESTS)
+  # Same product sources/real bridge; privileged fixture access is compiled only here.
+  add_executable(host_m0_tests tests/m0_tests.cpp ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  target_compile_features(host_m0_tests PRIVATE cxx_std_20)
+  target_include_directories(host_m0_tests PRIVATE src tests include)
+  target_compile_definitions(host_m0_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_link_libraries(host_m0_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG Threads::Threads)
+  set_target_properties(host_m0_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  foreach(case IN ITEMS bound readonly submit execute replay conflict stale unbound resolving scope authority recipient unsupported
+      expired saving loading save_order close_order unknown observer institutional recover pending cancel concurrent)
+    add_test(NAME host.m0.${case} COMMAND host_m0_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/m0/${case}")
+    set_tests_properties(host.m0.${case} PROPERTIES TIMEOUT 120 LABELS "h05;native")
+  endforeach()
+  add_test(NAME host.m0.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m0_process.py"
+    "$<TARGET_FILE:host_m0_tests>" "${CMAKE_CURRENT_BINARY_DIR}/m0/process")
+  set_tests_properties(host.m0.process PROPERTIES TIMEOUT 240 LABELS "h05;process")
 endif()

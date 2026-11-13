@@ -7,6 +7,10 @@
 #include <string_view>
 
 namespace trek::host::detail {
+#ifdef TREK_HOST_GATEWAY_TESTING
+void gateway_test_after_bind();
+void gateway_test_after_dispatch(F04Session*, std::uint32_t&);
+#endif
 namespace {
 
 // The reservation covers initialization and any failed destruction.
@@ -80,7 +84,21 @@ Outcome NativeSession::resolve_person(std::uint64_t person_id, F04Ref& person,
 
 Outcome NativeSession::bind_player(F04Ref person, std::uint64_t revision) noexcept
 {
-    return normalize_identity(bridge::bind_player(session_, person, revision));
+    const auto outcome = normalize_identity(bridge::bind_player(session_, person, revision));
+#ifdef TREK_HOST_GATEWAY_TESTING
+    gateway_test_after_bind();
+#endif
+    return outcome;
+}
+
+Outcome NativeSession::dispatch(F04Ref player, const GatewayRequest& request, OperationResult& reply) noexcept
+{
+    if (request.operation == GatewayOp::INSTITUTIONAL) return {Error::SERVICE_UNAVAILABLE};
+    auto code = bridge::dispatch(session_, player, request, reply);
+#ifdef TREK_HOST_GATEWAY_TESTING
+    gateway_test_after_dispatch(session_, code);
+#endif
+    return normalize_identity(code);
 }
 
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept

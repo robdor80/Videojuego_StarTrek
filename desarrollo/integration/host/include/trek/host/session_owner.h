@@ -29,7 +29,7 @@ enum class Error {
     GENERATION_EXPIRED, CAPACITY_LIMIT, DOMAIN_REJECTED, INTERNAL_ERROR,
     PRINCIPAL_UNBOUND, ACCESS_DENIED, SCOPE_INVALID, REVISION_STALE, IDEMPOTENCY_CONFLICT,
     SAVE_INCOMPATIBLE, SAVE_UNTRUSTED, PERSISTENCE_FAILED, PUBLICATION_UNCERTAIN,
-    SAVE_CORRUPT, IDENTITY_MISMATCH, PATH_REJECTED
+    SAVE_CORRUPT, IDENTITY_MISMATCH, PATH_REJECTED, SERVICE_UNAVAILABLE
 };
 
 class Generation {
@@ -93,6 +93,43 @@ struct InspectionResult {
 };
 struct StorageConfig { std::string root; }; // Existing authorized private absolute directory, UTF-8.
 
+// Native HOST projections, semantic version 1. IDs are data, never credentials.
+struct CampaignView {
+    Generation generation;
+    std::uint64_t revision = 0, now = 0, person = 0, ship = 0;
+};
+struct OrderIntent {
+    std::uint64_t recipient = 0, station = 0;
+    std::uint64_t key = 0, expected_revision = 0, deadline = 0, cause = 0;
+    std::uint32_t operation = 0; // F04Op; F05 decides supported operations.
+};
+struct OrderReceipt {
+    std::uint64_t request = 0, order = 0, task = 0, attempt = 0, result = 0, event = 0, revision = 0;
+    std::uint32_t state = 0, code = 0;
+};
+struct ExecutionResult {
+    std::uint64_t id = 0, executor = 0, input_revision = 0, tick = 0;
+    std::uint32_t performed = 0, code = 0, core_outcome = 0, core_rejection = 0;
+    std::uint64_t core_revision_before = 0, core_revision_after = 0, stream = 0, value = 0;
+    std::uint32_t consumed_random = 0;
+};
+struct OrderView {
+    Generation generation;
+    OrderReceipt receipt;
+    std::uint64_t issuer = 0, recipient = 0, ship = 0, station = 0;
+    std::uint64_t key = 0, deadline = 0, cause = 0, input_revision = 0;
+    std::uint32_t operation = 0;
+    std::optional<ExecutionResult> execution;
+};
+struct OperationResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t correlation_id = 0; // Transport correlation only; never F05 key.
+    std::optional<CampaignView> campaign;
+    std::optional<OrderView> order;
+    std::optional<OrderReceipt> receipt;
+};
+
 class PlayerBootstrap;
 
 class SessionOwner final {
@@ -121,8 +158,18 @@ public:
     // projection; later operations must resolve authority on the owner again.
     TREK_HOST_API PlayerResult current_player(Generation generation) const;
 
+    TREK_HOST_API std::future<OperationResult> query_view(Generation, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<OperationResult> submit_order(Generation, OrderIntent, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<OperationResult> query_order(Generation, std::uint64_t order, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<OperationResult> cancel_order(Generation, std::uint64_t order,
+                                                        std::uint64_t expected_revision, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<OperationResult> institutional_command(Generation, std::uint64_t correlation_id = 0);
+
 private:
     friend class PlayerBootstrap;
+#ifdef TREK_HOST_GATEWAY_TESTING
+    friend class GatewayTestAccess;
+#endif
     struct Impl;
     std::unique_ptr<Impl> impl_;
 };
