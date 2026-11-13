@@ -42,7 +42,7 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 
 | Era | Status | Anchor |
 |---|---|---|
-| TNG + DS9 + Voyager y su continuación histórica | ✅ ÚNICA ÉPOCA JUGABLE | Ventana documental 2364–2383; Academia propuesta para 2383, día/mes pendientes |
+| TNG + DS9 + Voyager y su continuación histórica | ✅ ÚNICA ÉPOCA JUGABLE | Ventana documental 2364–2383; inicio de Academia aprobado en 2383, día/mes pendientes |
 | Pike / Strange New Worlds | 📚 SOLO REFERENCIA HISTÓRICA | Christopher Pike / NCC-1701; perfil conservado y `playable: false` |
 | Kirk / TOS + films | 📚 SOLO REFERENCIA HISTÓRICA | James T. Kirk / NCC-1701/A; perfil conservado y `playable: false` |
 
@@ -580,7 +580,7 @@ Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runt
 
 ## LORE-03 — Historia, conflictos y continuidad galáctica (inicio 2026-10-23)
 
-**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `proyecto/docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
+**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 aprobado como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `proyecto/docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
 
 | Apartado | Estado | Alcance actual |
 |---|---|---|
@@ -625,7 +625,7 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **LORE-05E — Idiomas, comunicación y exploración: ✅ COMPLETE_DOCUMENTARY (8 lenguas existentes, 18 reglas, 24 escenarios).** [PR #129](https://github.com/robdor80/Videojuego_StarTrek/pull/129) fusionada mediante squash `2d477179342a9f26edb46b95dc494dba8088bee5`; [CI HEAD final #43355862872](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43355862872) SUCCESS con validador y **24/24 pruebas**, y **7/7** workflows aplicables del HEAD definitivo en verde. [Acta de cierre](proyecto/docs/roadmap/lore_05_e/ACTA_CIERRE_DOCUMENTAL_LORE05E_20261113.md). Sin implementación CoreRPG/HOST/UE5/PADD, sin nuevo idioma jugable, contacto automático ni Delta activo.
 
-**LORE-05F:** **EN AUDITORÍA / PRECierre DOCUMENTAL PROPUESTO**. [Acta transversal](proyecto/docs/roadmap/lore_05_f/ACTA_AUDITORIA_TRANSVERSAL_20261113.md) y [matriz de deudas](proyecto/docs/roadmap/lore_05_f/MATRIZ_DE_HANDOFF_Y_DEUDAS.md) preparadas en rama independiente; falta CI del HEAD, autorización de fusión y certificación de `main`. **LORE-05 global continúa EN CURSO** hasta completar esas puertas; ningún runtime se acredita.
+**LORE-05F:** **EN AUDITORÍA / PRECIERRE DOCUMENTAL PROPUESTO**. [Acta transversal](proyecto/docs/roadmap/lore_05_f/ACTA_AUDITORIA_TRANSVERSAL_20261113.md) y [matriz de deudas](proyecto/docs/roadmap/lore_05_f/MATRIZ_DE_HANDOFF_Y_DEUDAS.md) preparadas en rama independiente; falta CI del HEAD, autorización de fusión y certificación de `main`. **LORE-05 global continúa EN CURSO** hasta completar esas puertas; ningún runtime se acredita.
 
 ## Procedural living-universe master plan
 
