@@ -1,0 +1,34 @@
+name: LORE-05F - Auditoria transversal A-E
+on:
+  push:
+    paths:
+      - 'proyecto/docs/roadmap/lore_05_f/**'
+      - 'desarrollo/tools/validation/*lore05_f.py'
+      - '.github/workflows/lore05-f-documentary.yml'
+      - 'mundo/lore/**'
+      - 'sistemas/gameplay/communications/subspace_communication_contract.json'
+      - 'sistemas/gameplay/languages/**'
+      - 'sistemas/gameplay/diplomacy/major_faction_catalogue.json'
+      - 'CONTENT_STATUS.md'
+  pull_request:
+    paths:
+      - 'proyecto/docs/roadmap/lore_05_f/**'
+      - 'desarrollo/tools/validation/*lore05_f.py'
+      - '.github/workflows/lore05-f-documentary.yml'
+      - 'mundo/lore/**'
+      - 'sistemas/gameplay/communications/subspace_communication_contract.json'
+      - 'sistemas/gameplay/languages/**'
+      - 'sistemas/gameplay/diplomacy/major_faction_catalogue.json'
+      - 'CONTENT_STATUS.md'
+jobs:
+  cross-lore-documentary-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar referencias y precedencias de LORE-05A-E
+        run: python3 desarrollo/tools/validation/validate_lore05_f.py
+      - name: Ejecutar pruebas adversariales documentales
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_lore05_f.py' -v
