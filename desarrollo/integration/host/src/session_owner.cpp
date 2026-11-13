@@ -1,5 +1,6 @@
 #include "trek/host/session_owner.h"
 
+#include "abi_admission.h"
 #include "native_session.h"
 #include "player_bootstrap.h"
 #ifdef TREK_HOST_GATEWAY_TESTING
@@ -91,8 +92,8 @@ struct SessionOwner::Impl {
 #endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
-    std::mutex mutex;
-    std::condition_variable work;
+    std::recursive_mutex mutex;
+    std::condition_variable_any work;
     State state = State::CLOSED;
     Generation generation;
     std::shared_ptr<const detail::ActiveCampaign> campaign;
@@ -189,7 +190,7 @@ struct SessionOwner::Impl {
         return reply;
     }
 
-    void finish_open(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Open request)
+    void finish_open(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Open request)
     {
         if (state == State::CLOSING) {
             request.reply.set_value({Error::BUSY_STATE, {}});
@@ -235,7 +236,7 @@ struct SessionOwner::Impl {
         request.reply.set_value({error, {}});
     }
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Check& check)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
     {
         lock.unlock();
         const auto outcome = session.probe();
@@ -252,7 +253,7 @@ struct SessionOwner::Impl {
         check.reply.set_value({result, result == Error::OK ? check.generation : Generation{}});
     }
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session,
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
                  PreparePlayer& request)
     {
         if (binding == Binding::INVALID) {
@@ -273,7 +274,7 @@ struct SessionOwner::Impl {
         }
     }
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, BindPlayer& request)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, BindPlayer& request)
     {
         if (request.selection.campaign_.lock() != campaign) {
             request.reply.set_value({Error::SCOPE_INVALID, {}});
@@ -307,7 +308,7 @@ struct SessionOwner::Impl {
         request.reply.set_value({outcome.error, outcome.domain_code});
     }
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Save& request)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Save& request)
     {
         if(binding!=Binding::BOUND){request.reply.set_value({Error::PRINCIPAL_UNBOUND,{}});return;}
         state=State::SAVING;
@@ -332,7 +333,7 @@ struct SessionOwner::Impl {
         request.reply.set_value({error,error==Error::OK?generation:Generation{}});
     }
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Dispatch& request)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Dispatch& request)
     {
         auto fail = [&](Error error) {
             request.reply.set_value({error, {}, request.request.correlation});
@@ -357,7 +358,7 @@ struct SessionOwner::Impl {
     }
 
 #ifdef TREK_HOST_GATEWAY_TESTING
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, TestVisit& request)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, TestVisit& request)
     {
         lock.unlock();
         Error error = Error::OK;
@@ -368,7 +369,7 @@ struct SessionOwner::Impl {
     }
 #endif
 
-    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Load& request)
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Load& request)
     {
         if(state==State::CLOSING){request.reply.set_value({Error::GENERATION_EXPIRED,{}});return;}
         state=State::LOADING;
@@ -456,6 +457,19 @@ struct SessionOwner::Impl {
         }
     }
 };
+
+detail::AbiAdmission::AbiAdmission(SessionOwner& owner)
+    : owner_(owner), lock_(owner.impl_->mutex, std::try_to_lock) {}
+
+std::uint64_t detail::AbiAdmission::token(Generation generation) noexcept
+{
+    return generation.value_;
+}
+
+std::string_view detail::AbiAdmission::campaign() const noexcept
+{
+    return owner_.impl_->persistent_id;
+}
 
 SessionOwner::SessionOwner() : SessionOwner(StorageConfig{}) {}
 SessionOwner::SessionOwner(StorageConfig storage) : impl_(std::make_unique<Impl>(std::move(storage))) {}

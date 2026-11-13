@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(TrekHost LANGUAGES CXX)
+project(TrekHost LANGUAGES C CXX)
 
 option(TREK_HOST_TESTS "Build native HOST tests" OFF)
 
@@ -54,7 +54,7 @@ set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/
 
 
 set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
-add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
 target_compile_definitions(TrekHost PRIVATE TREK_HOST_BUILD TREK_HOST_CORE_SHA="${host_core_sha}")
 target_include_directories(TrekHost PUBLIC include)
@@ -135,4 +135,16 @@ if(TREK_HOST_TESTS)
   add_test(NAME host.m0.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m0_process.py"
     "$<TARGET_FILE:host_m0_tests>" "${CMAKE_CURRENT_BINARY_DIR}/m0/process")
   set_tests_properties(host.m0.process PROPERTIES TIMEOUT 240 LABELS "h05;process")
+endif()
+
+if(TREK_HOST_TESTS)
+  add_executable(host_abi_tests tests/host_abi_tests.c)
+  set_target_properties(host_abi_tests PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  target_link_libraries(host_abi_tests PRIVATE TrekHost)
+  add_test(NAME host.abi.lifecycle COMMAND host_abi_tests)
+  add_test(NAME host.abi.roundtrip COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/abi_fixture.py"
+    "$<TARGET_FILE:host_m0_tests>" "$<TARGET_FILE:host_abi_tests>" "${CMAKE_CURRENT_BINARY_DIR}/abi")
+  set_tests_properties(host.abi.lifecycle PROPERTIES TIMEOUT 45 LABELS "h06;native")
+  set_tests_properties(host.abi.roundtrip PROPERTIES TIMEOUT 135 LABELS "h06;native;fixture")
 endif()
