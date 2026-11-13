@@ -1,0 +1,151 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05D",
+  "documentary_cases": [
+    {
+      "id": "D01",
+      "query": "Solicitud de alférez para comandar Enterprise-D por figurar en la ficha",
+      "expected": "DENY_ASSIGNMENT_NOT_GRANTED",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D02",
+      "query": "Autocompletar reconstrucción Enterprise-D en 2387 por objetivo de proyecto",
+      "expected": "DENY_FUTURE_TARGET_AS_FACT",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D03",
+      "query": "Sustituir clase Galaxy de NCC-1701-D por clase Valhalla",
+      "expected": "DENY_SHIP_CLASS_OVERRIDE",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D04",
+      "query": "Reutilizar ship_id de Defiant NX-74205 para Sao Paulo rebautizada",
+      "expected": "DENY_INDIVIDUAL_SHIP_IDENTITY_COLLISION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D05",
+      "query": "Crear Enterprise-F por disponer de clase Odyssey",
+      "expected": "DENY_CLASS_AS_SHIP",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D06",
+      "query": "Mostrar USS Reliant destruida en un puerto activo de 2383",
+      "expected": "DENY_HISTORICAL_SPAWN",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D07",
+      "query": "Dar orden naval al Gobierno civil de Federación sin delegación",
+      "expected": "DENY_AUTHORITY_CONTEXT_MISMATCH",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D08",
+      "query": "Conceder al usuario paso por puesto militar de Qo'noS solo por su rango de Flota",
+      "expected": "DENY_UNRELATED_JURISDICTION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D09",
+      "query": "Clonar DS9 con id y tripulación idénticos al generar tipo Terok Nor",
+      "expected": "DENY_RESERVED_FACILITY_IDENTITY",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D10",
+      "query": "Asignar automáticamente la Enterprise-D a astilleros Utopia Planitia",
+      "expected": "DENY_PROJECT_LOCATION_INFERRED",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D11",
+      "query": "Un atraque en Spacedock crea recursos y personal ilimitado",
+      "expected": "DENY_INFINITE_SERVICES",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D12",
+      "query": "NPC obtiene secretos del Tal Shiar por su especie romulana",
+      "expected": "DENY_SPECIES_AS_MEMBERSHIP",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D13",
+      "query": "Revivir Monac tras la guerra sin evento histórico del CoreRPG",
+      "expected": "DENY_UNVERIFIED_STATION_REACTIVATION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D14",
+      "query": "Dar servicios a una base del siglo XXIII sin validar su existencia en 2383",
+      "expected": "DENY_HISTORICAL_FACILITY_AUTOSTART",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D15",
+      "query": "Tratar una emisora del Dominio como orden válida sin credenciales y canal",
+      "expected": "REQUIRE_AUTHENTICATED_CHANNEL_AND_F11_AUTHORITY",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D16",
+      "query": "Acceso a registros de Voyager por saber su nombre",
+      "expected": "FILTER_KNOWLEDGE_CLASSIFICATION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D17",
+      "query": "Generar incidente militar por proximidad del jugador a instalación",
+      "expected": "DENY_PLAYER_CENTRIC_EVENT_CREATION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    },
+    {
+      "id": "D18",
+      "query": "Modificar guerra o tratados por texto narrativo de IA",
+      "expected": "DENY_NARRATIVE_WORLD_STATE_MUTATION",
+      "kind": "DOCUMENTARY_EXPECTED_BEHAVIOR",
+      "world_state_mutations": false,
+      "core_runtime_test": false
+    }
+  ],
+  "simulation_claimed": false
+}
