@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 project(TrekHost LANGUAGES CXX)
 
-option(TREK_HOST_TESTS "Build H02 lifecycle tests" OFF)
+option(TREK_HOST_TESTS "Build native HOST tests" OFF)
 
 # H02 adopts the F05 build and its candidate Core. F11 test and product
 # targets are outside this build graph.
@@ -55,7 +55,8 @@ set_target_properties(TrekHost PROPERTIES
 set_target_properties(TrekHost PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
 
 if(TREK_HOST_TESTS)
-  add_executable(host_native_tests tests/native_tests.cpp)
+  add_executable(host_native_tests tests/native_tests.cpp tests/player_native_tests.cpp)
+  target_include_directories(host_native_tests PRIVATE src)
   target_link_libraries(host_native_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads ${CMAKE_DL_LIBS})
   target_compile_definitions(host_native_tests PRIVATE TREK_HOST_CORE_SHA="${host_core_sha}")
   set_target_properties(host_native_tests PROPERTIES
@@ -65,16 +66,26 @@ if(TREK_HOST_TESTS)
     add_test(NAME host.native.${case} COMMAND host_native_tests ${case})
     set_tests_properties(host.native.${case} PROPERTIES TIMEOUT 30 LABELS "h02;native")
   endforeach()
+  foreach(case IN ITEMS hi01_first_bind hi02_unbound hi03_client_boundary hi04_replay
+      hi05_conflict hi06_foreign_campaign hi07_expired hi08_concurrent hi10_stale
+      hi11_invalid_person hi12_revision hi13_reopen hi19_validation)
+    add_test(NAME host.native.${case} COMMAND host_native_tests ${case})
+    set_tests_properties(host.native.${case} PROPERTIES TIMEOUT 30 LABELS "h03;native")
+  endforeach()
 
   # A separate executable replaces only the private bridge bindings to force
   # lifecycle failures. The product library and real bridge are not linked.
   add_executable(host_fault_tests tests/fault_tests.cpp ${host_sources})
   target_compile_features(host_fault_tests PRIVATE cxx_std_20)
-  target_include_directories(host_fault_tests PRIVATE src include ../f04/include)
+  target_include_directories(host_fault_tests PRIVATE src include ../f04/include ../f05/include)
   target_compile_definitions(host_fault_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
   target_link_libraries(host_fault_tests PRIVATE Threads::Threads)
   foreach(case IN ITEMS initialization hc06_incompatible_states pending failed_destroy failed_active_probe shutdown_retry)
     add_test(NAME host.fault.${case} COMMAND host_fault_tests ${case})
     set_tests_properties(host.fault.${case} PROPERTIES TIMEOUT 30 LABELS "h02;fault-injection")
+  endforeach()
+  foreach(case IN ITEMS hi09_close_during_bind hi11_bind_failure hi19_incompatible_core_binding)
+    add_test(NAME host.fault.${case} COMMAND host_fault_tests ${case})
+    set_tests_properties(host.fault.${case} PROPERTIES TIMEOUT 30 LABELS "h03;fault-injection")
   endforeach()
 endif()

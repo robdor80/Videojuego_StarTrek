@@ -54,4 +54,6 @@ struct Case {
     void (*run)();
 };
 
+void run_player_case(std::string_view name);
+
 } // namespace test
