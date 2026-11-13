@@ -15,6 +15,7 @@
 #include <fcntl.h>
 #include <sys/file.h>
 #include <sys/stat.h>
+#include <sys/syscall.h>
 #include <unistd.h>
 #endif
 
@@ -256,7 +257,21 @@ Error SlotStore::save(const std::string& campaign_id,const std::string& slot,Per
         ensure_dir(r->path()/"campaigns");PinnedDirectory campaigns(r->path()/"campaigns");
         ensure_dir(campaigns.path()/campaign_id);PinnedDirectory campaign(campaigns.path()/campaign_id);
         ensure_dir(r->path()/"registry");PinnedDirectory registry(r->path()/"registry");
-        if(!fs::exists(fs::symlink_status(registry.path()/campaign_id)))write(registry.path()/campaign_id,identity_text(identity));
+        if(!fs::exists(fs::symlink_status(registry.path()/campaign_id))) {
+            const auto temporary=registry.path()/("pending-"+new_campaign_id());
+            write(temporary,identity_text(identity)); // checked flush + close; partial files are never registry entries
+            point("registry_before_publish");publication_started=true;
+#ifdef _WIN32
+            need(MoveFileExW(temporary.c_str(),(registry.path()/campaign_id).c_str(),MOVEFILE_WRITE_THROUGH)!=0);
+#else
+            // Linux atomic no-replace publication. Never fall back to replacing rename.
+            need(::syscall(SYS_renameat2,AT_FDCWD,temporary.c_str(),AT_FDCWD,
+                           (registry.path()/campaign_id).c_str(),1 /* RENAME_NOREPLACE */)==0);
+#endif
+            point("registry_after_publish");sync_dir(registry.path());
+            need(read(registry.path()/campaign_id)==identity_text(identity));
+            publication_started=false;
+        }
         need(parse_identity(read(registry.path()/campaign_id))==identity,Error::IDENTITY_MISMATCH);
         sync_dir(registry.path());
         ensure_dir(campaign.path()/"slots");PinnedDirectory slots(campaign.path()/"slots");

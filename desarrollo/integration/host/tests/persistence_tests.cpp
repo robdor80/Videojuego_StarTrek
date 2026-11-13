@@ -11,6 +11,7 @@
 #include <semaphore>
 #include <thread>
 #include <map>
+#include <sstream>
 #ifdef _WIN32
 #define NOMINMAX
 #include <windows.h>
@@ -274,6 +275,34 @@ void read_process() {
     native_observer=[&](F04Session* session,bool saving){if(saving)return;auto bytes=active_bytes(session);require(std::string(bytes.begin(),bytes.end())==get(base/"expected-active"),"Cross-process Core checkpoint differs");};
     auto loaded=owner.restore({}, {campaign,"alpha"}).get();expect(loaded,Error::OK);check_player(owner,loaded.generation);expect(owner.save(loaded.generation,"alpha").get(),Error::OK);native_observer={};
 }
+// The seed is a campaign created/bound/saved through the real owner. A fresh
+// target root exercises the FIRST registry publication with the same Core UUID.
+void audit_registry(const std::string& mode) {
+    const auto seed=base/"seed";campaign=get(seed/"campaign-id");
+    std::istringstream fields(get(seed/"registry"/campaign));PersistentIdentity id{};
+    fields>>id.person>>id.record>>id.revision>>id.tick;require(bool(fields),"Seed binding");
+    if(mode=="aud_crash")storage_test_hook([](const char* p){if(std::string_view(p)=="partial_write")std::_Exit(73);});
+    const auto source=seed/"campaigns"/campaign/"slots"/"alpha"/"v1"/"history";
+    SlotStore store(config);
+    auto save=[&](PersistentIdentity identity){return store.save(campaign,"alpha",identity,
+        [&](const fs::path& target){fs::copy(source,target,fs::copy_options::recursive);return Error::OK;},
+        [](const PreparedSlot&){return Error::OK;});};
+    if(mode=="aud_crash"){save(id);throw std::runtime_error("Registry interruption not reached");}
+    require(!fs::exists(base/"registry"/campaign),"Partial registry published");
+    require(save(id)==Error::OK,"First save retry blocked");
+    const auto original=get(base/"registry"/campaign);
+    require(save(id)==Error::OK && get(base/"registry"/campaign)==original,"Valid registry overwritten");
+    auto wrong=id;++wrong.person;
+    require(save(wrong)==Error::IDENTITY_MISMATCH && get(base/"registry"/campaign)==original,"Incompatible binding overwrote registry");
+    fs::create_directory(base/"race");
+    SlotStore raced({config.root+"/race"});
+    storage_test_hook([&](const char* point){if(std::string_view(point)=="registry_before_publish")put(base/"race"/"registry"/campaign,original);});
+    require(raced.save(campaign,"alpha",wrong,[](const fs::path&){throw std::runtime_error("Unexpected snapshot after collision");return Error::OK;},[](const PreparedSlot&){return Error::OK;})==Error::PUBLICATION_UNCERTAIN,"No-replace collision status");
+    storage_test_hook({});require(get(base/"race"/"registry"/campaign)==original,"Concurrent valid registry replaced");
+    SessionOwner owner(config);auto loaded=owner.restore({}, {campaign,"alpha"}).get();expect(loaded,Error::OK);check_player(owner,loaded.generation);
+    native_observer=[&](F04Session* session,bool saving){if(!saving){auto bytes=active_bytes(session);require(std::string(bytes.begin(),bytes.end())==get(seed/"expected-active"),"Audit restored Core differs");}};
+    expect(owner.restore(loaded.generation,{campaign,"alpha"}).get(),Error::OK);native_observer={};
+}
 void crash(const std::string& point) {
     campaign=get(base/"campaign-id");SessionOwner owner(config);auto loaded=owner.restore({}, {campaign,"alpha",1}).get();expect(loaded,Error::OK);
     storage_test_hook([&](const char* name){if(std::string_view(name)==point)std::_Exit(73);});
@@ -283,7 +312,7 @@ void crash(const std::string& point) {
 int main(int argc,char** argv) {
     try {
         require(argc>=3,"usage: case root [point]");std::string name=argv[1];base=fs::absolute(argv[2]);
-        if(name!="write" && name!="read" && name!="crash")base/=new_campaign_id();
+        if(name!="write" && name!="read" && name!="crash" && !name.starts_with("aud_"))base/=new_campaign_id();
         if(!fs::exists(base))fs::create_directories(base);
         fs::permissions(base,fs::perms::owner_all,fs::perm_options::replace);config={base.string()};
 #ifdef _WIN32
@@ -294,6 +323,7 @@ int main(int argc,char** argv) {
         else if(name=="busy" || name=="save_close" || name=="load_close")storage_concurrency_case(name);
         else if(name=="io")io_failure();else if(name=="queue" || name=="double" || name=="late")queue(name);
         else if(name=="absent_binding" || name=="wrong_binding" || name=="foreign_core")core_identity(name);
+        else if(name.starts_with("aud_"))audit_registry(name);
         else if(name=="renewal_failure")renewal_failure();else if(name=="write")write_process();else if(name=="read")read_process();else if(name=="crash"){require(argc==4,"Missing point");crash(argv[3]);}
         else corruption(name);
         std::cout<<"PASS "<<name<<'\n';return 0;

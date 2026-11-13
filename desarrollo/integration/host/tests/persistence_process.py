@@ -19,3 +19,11 @@ for point in ('partial_write', 'before_snapshot', 'after_snapshot', 'after_manif
     run('crash', folder, point, expected=73)
     run('read', folder)
     print('PASS process loss:', point)
+
+# H04-AUD-01: process loss in the first registry write, then same campaign retry.
+folder = root / 'registry-first'
+run('write', folder / 'seed')
+run('aud_crash', folder, expected=73)
+assert not (folder / 'registry' / (folder / 'seed' / 'campaign-id').read_text()).exists()
+run('aud_retry', folder)
+print('PASS H04-AUD-01 first registry interruption and retry')
