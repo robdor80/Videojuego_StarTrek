@@ -240,6 +240,9 @@ jobs:
           python desarrollo/integration/host/tests/inspect_product.py $build 2>&1 |
             Tee-Object -FilePath "$lab/product-windows-inspection.log"
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          python desarrollo/integration/host/tests/inspect_abi.py $build 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-abi.log"
+          exit $LASTEXITCODE
       - uses: actions/upload-artifact@v4
         if: always()
         with:
