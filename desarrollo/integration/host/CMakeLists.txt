@@ -43,6 +43,15 @@ if(NOT F05_ENABLE_ORDERS OR NOT F04_ENABLE_HISTORY OR TARGET TrekF11TrialHost
 endif()
 message(STATUS "H02 Core ${core_head}, TrekF04Bridge flags: ${bridge_definitions}")
 
+# Extend the existing product adapter without editing historical source contracts.
+# This replaces its sole translation unit; it does not compile another bridge or Core.
+get_target_property(host_bridge_sources TrekF04Bridge SOURCES)
+if(NOT host_bridge_sources STREQUAL "src/f04_bridge.cpp")
+  message(FATAL_ERROR "Review unexpected bridge sources before composing H04")
+endif()
+set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src/f04_host_bridge.cpp")
+
+
 set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
 add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp)
 target_compile_features(TrekHost PUBLIC cxx_std_20)

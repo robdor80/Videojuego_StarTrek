@@ -1,6 +1,7 @@
 #include "native_session.h"
 
-#include "f05_initiative.h"
+#include "f05_player_binding.h"
+#include "f04_host_persistence.h"
 
 #ifdef TREK_HOST_PERSISTENCE_TESTING
 namespace trek::host::detail { void persistence_test_observe(F04Session*,bool); }

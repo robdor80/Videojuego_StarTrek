@@ -25,10 +25,6 @@ typedef struct {
  uint32_t decision,code,examined,max_facts;
 } F05DecisionView;
 F04_API uint32_t f05_bind_player(F04Session*,F04Ref player,uint64_t revision);
-/* Trusted native read only. Zero record/person means no persistent binding.
- * record identifies the immutable binding fact, not merely a reused person ID. */
-typedef struct { F04Ref person; uint64_t record,input_revision,tick; } F05PlayerBinding;
-F04_API uint32_t f05_player_binding(F04Session*,F05PlayerBinding*);
 /* An authorized one-scan-per-service obligation, not a fabricated incident.
  * Source must be a real F04 Sensores DUTY and cover [due,end). No scan yet. */
 F04_API uint32_t f05_scan_need(F04Session*,const F05ScanNeedRequest*,F05NeedView*);

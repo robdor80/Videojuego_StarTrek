@@ -1,7 +1,7 @@
 #include "test_support.h"
 #include "player_bootstrap.h"
 #include "slot_store.h"
-#include "f05_initiative.h"
+#include "f05_player_binding.h"
 #include <atomic>
 #include <chrono>
 #include <cstdlib>
@@ -194,7 +194,7 @@ void failures() {
     expect(owner.restore(restored.generation,{campaign,"alpha",1}).get(),Error::PERSISTENCE_FAILED);check_player(owner,restored.generation);
     storage_test_hook({});expect(owner.restore(restored.generation,{campaign,"alpha",1}).get(),Error::OK);
 }
-void concurrency(const std::string& kind) {
+void storage_concurrency_case(const std::string& kind) {
     SessionOwner owner(config);auto gen=start(owner);expect(owner.save(gen,"alpha").get(),Error::OK);
     std::binary_semaphore entered{0},resume{0};
     storage_test_hook([&](const char* name){if(std::string_view(name)==(kind=="load_close"?"after_copy":"before_snapshot")){entered.release();require(resume.try_acquire_for(10s),"Blocked IO timeout");}});
@@ -273,7 +273,7 @@ int main(int argc,char** argv) {
         if(!fs::exists(base))fs::create_directories(base);
         fs::permissions(base,fs::perms::owner_all,fs::perm_options::replace);config={base.string()};
         if(name=="roundtrip")roundtrip();else if(name=="reader")reader();else if(name=="paths")paths();else if(name=="history_rng")history_rng();else if(name=="failures")failures();
-        else if(name=="busy" || name=="save_close" || name=="load_close")concurrency(name);
+        else if(name=="busy" || name=="save_close" || name=="load_close")storage_concurrency_case(name);
         else if(name=="io")io_failure();else if(name=="queue" || name=="double" || name=="late")queue(name);
         else if(name=="absent_binding" || name=="wrong_binding" || name=="foreign_core")core_identity(name);
         else if(name=="renewal_failure")renewal_failure();else if(name=="write")write_process();else if(name=="read")read_process();else if(name=="crash"){require(argc==4,"Missing point");crash(argv[3]);}

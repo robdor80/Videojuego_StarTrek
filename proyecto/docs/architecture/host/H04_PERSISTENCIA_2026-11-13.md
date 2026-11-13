@@ -92,7 +92,14 @@ estar aún en modo monolítico. `f04_save/load` sirven para ese modo y rechazan 
 proyección segmentada. `f04_history_export_active` solo se usa como diagnóstico
 comparativo en pruebas: nunca alimenta una recuperación de producto.
 
-Se añaden APIs nativas aditivas en el adaptador de producto existente:
+Se añaden APIs nativas aditivas en la composición de producto del adaptador
+existente. `f04_host_bridge.cpp` incluye una sola vez el puente histórico intacto y
+las extensiones H04 de persistencia y lectura F05. CMake del HOST sustituye
+exclusivamente su unidad de compilación original, comprobando que era la única.
+Las otras composiciones F04/F05/F11 conservan sus fuentes y contratos congelados;
+no se altera el manifiesto del oráculo para admitir la extensión. Las declaraciones
+nuevas están en `f04_host_persistence.h` y `f05_player_binding.h`:
+
 
 - `f05_player_binding`: consulta de solo lectura del hecho F05, persona,
   revisión inicial y tick. Salida vacía si no hay vínculo o si se rechaza la lectura.
