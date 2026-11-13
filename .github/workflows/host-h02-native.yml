@@ -119,3 +119,75 @@ jobs:
             laboratorios/host/h02/f11/run.json
             laboratorios/host/h02/f11/tests.xml
             laboratorios/host/h02/f11/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+
+
+  # Independent product-mode smoke build: tests OFF, unlike the native suites.
+  product-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 4f5ddaf66574de169ca732f22b7466712fcb5f62
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/host/h02/core
+          persist-credentials: false
+      - name: Build and inspect release product (tests OFF)
+        shell: bash
+        run: |
+          set -euo pipefail
+          lab="$PWD/laboratorios/host/h02"
+          build="$lab/product-linux"
+          mkdir -p "$lab"
+          echo "Star Trek $(git rev-parse HEAD)" | tee "$lab/product-linux-manifest.log"
+          echo "CoreRPG $(git -C "$lab/core" rev-parse HEAD)" | tee -a "$lab/product-linux-manifest.log"
+          cmake -S desarrollo/integration/host -B "$build" \
+            -DCORERPG_SOURCE_DIR="$lab/core" \
+            -DTREK_HOST_TESTS=OFF -DCMAKE_BUILD_TYPE=Release \
+            2>&1 | tee "$lab/product-linux-configure.log"
+          grep -Fx 'TREK_HOST_TESTS:BOOL=OFF' "$build/CMakeCache.txt"
+          cmake --build "$build" --config Release --parallel 3 --target TrekHost \
+            2>&1 | tee "$lab/product-linux-build.log"
+          host_so=$(find "$build" -type f -name 'libTrekHost.so' -print -quit)
+          bridge_so=$(find "$build" -type f -name 'libTrekF04Bridge.so' -print -quit)
+          test -n "$host_so" && test -n "$bridge_so"
+          echo "TrekHost=$host_so" | tee -a "$lab/product-linux-manifest.log"
+          echo "TrekF04Bridge=$bridge_so" | tee -a "$lab/product-linux-manifest.log"
+          if find "$build" -type f \( -name host_native_tests -o -name host_fault_tests \
+              -o -name 'libTrekF11TrialHost.so' -o -name TrekF11TrialHost \) | grep -q .; then
+            echo 'FAIL: test executable or F11 trial component in product build'
+            exit 1
+          fi
+          readelf -d "$host_so" | tee "$lab/product-linux-dynamic.log"
+          grep -q 'libTrekF04Bridge.so' "$lab/product-linux-dynamic.log"
+          nm -D -C --defined-only "$host_so" | tee "$lab/product-linux-symbols.log"
+          grep -q 'trek::host::SessionOwner::SessionOwner' "$lab/product-linux-symbols.log"
+          ldd "$host_so" | tee "$lab/product-linux-dependencies.log"
+          if grep -q 'not found' "$lab/product-linux-dependencies.log"; then
+            echo 'FAIL: product has an unresolved runtime dependency'
+            exit 1
+          fi
+          python3 - "$host_so" "$bridge_so" <<'PY'
+          import ctypes
+          import os
+          import sys
+          host, bridge = (os.path.abspath(path) for path in sys.argv[1:])
+          ctypes.CDLL(host)
+          f04 = ctypes.CDLL(bridge)
+          f04.f04_core_sha.restype = ctypes.c_char_p
+          sha = f04.f04_core_sha().decode('ascii')
+          expected = '76a7b7b485616d8c4994f384a90f123bf333591d'
+          assert sha == expected, f'Unexpected loaded CoreRPG pin: {sha}'
+          print(f'PASS: Linux Release product loaded, CoreRPG {sha}, tests OFF')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h02-product-linux
+          path: |
+            laboratorios/host/h02/product-linux-*.log
+            laboratorios/host/h02/product-linux/CMakeCache.txt
