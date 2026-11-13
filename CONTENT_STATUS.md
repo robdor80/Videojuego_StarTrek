@@ -625,7 +625,7 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **LORE-05E — Idiomas, comunicación y exploración: ✅ COMPLETE_DOCUMENTARY (8 lenguas existentes, 18 reglas, 24 escenarios).** [PR #129](https://github.com/robdor80/Videojuego_StarTrek/pull/129) fusionada mediante squash `2d477179342a9f26edb46b95dc494dba8088bee5`; [CI HEAD final #43355862872](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43355862872) SUCCESS con validador y **24/24 pruebas**, y **7/7** workflows aplicables del HEAD definitivo en verde. [Acta de cierre](proyecto/docs/roadmap/lore_05_e/ACTA_CIERRE_DOCUMENTAL_LORE05E_20261113.md). Sin implementación CoreRPG/HOST/UE5/PADD, sin nuevo idioma jugable, contacto automático ni Delta activo.
 
-**LORE-05F:** **PENDIENTE** de auditoría y cierre transversal; LORE-05 global permanece **EN CURSO**.
+**LORE-05F:** **EN AUDITORÍA / PRECierre DOCUMENTAL PROPUESTO**. [Acta transversal](proyecto/docs/roadmap/lore_05_f/ACTA_AUDITORIA_TRANSVERSAL_20261113.md) y [matriz de deudas](proyecto/docs/roadmap/lore_05_f/MATRIZ_DE_HANDOFF_Y_DEUDAS.md) preparadas en rama independiente; falta CI del HEAD, autorización de fusión y certificación de `main`. **LORE-05 global continúa EN CURSO** hasta completar esas puertas; ningún runtime se acredita.
 
 ## Procedural living-universe master plan
 
