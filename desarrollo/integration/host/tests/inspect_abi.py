@@ -12,7 +12,10 @@ class Status(c.Structure):
                 ("principal", c.c_uint32), ("institutional", c.c_uint32)]
 
 
-def inspect(host):
+def inspect(host, bridge):
+    for name in ("f04_history_test_delta", "f04_history_test_validate_full"):
+        assert not hasattr(bridge, name), name
+
     handle = c.c_void_p
     code = c.c_uint32
     host.trek_host_abi_version.argtypes = []
@@ -51,9 +54,10 @@ if __name__ == "__main__":
     assert "TREK_HOST_TESTS:BOOL=OFF" in (build / "CMakeCache.txt").read_text()
     windows = os.name == "nt"
     path = next(build.rglob("TrekHost.dll" if windows else "libTrekHost.so"))
+    bridge = next(build.rglob("TrekF04Bridge.dll" if windows else "libTrekF04Bridge.so"))
     assert not any(build.rglob("host_abi_tests*"))
     if windows:
         with os.add_dll_directory(str(path.parent)):
-            inspect(c.CDLL(str(path)))
+            inspect(c.CDLL(str(path)), c.CDLL(str(bridge)))
     else:
-        inspect(c.CDLL(str(path)))
+        inspect(c.CDLL(str(path)), c.CDLL(str(bridge)))

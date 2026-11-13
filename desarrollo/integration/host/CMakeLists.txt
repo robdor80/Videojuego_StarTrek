@@ -42,6 +42,11 @@ if(NOT F05_ENABLE_ORDERS OR NOT F04_ENABLE_HISTORY OR TARGET TrekF11TrialHost
    OR bridge_definitions MATCHES "(F11_ENABLE_PROMOTIONS|F11_NATIVE_TEST_HOST)")
   message(FATAL_ERROR "Unexpected H02 bridge flags or F11 trial target")
 endif()
+if(NOT TREK_HOST_TESTS)
+  # Keep the inherited F04 history diagnostics only in test compositions.
+  list(REMOVE_ITEM bridge_definitions F04_HISTORY_TESTING=1)
+  set_property(TARGET TrekF04Bridge PROPERTY COMPILE_DEFINITIONS "${bridge_definitions}")
+endif()
 message(STATUS "H02 Core ${core_head}, TrekF04Bridge flags: ${bridge_definitions}")
 
 # Extend the existing product adapter without editing historical source contracts.
