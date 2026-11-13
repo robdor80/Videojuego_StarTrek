@@ -15,7 +15,9 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 - [Manual de Sensores](sensors_operator_manual_plan.md) y [preparación de lore jugable](gameplay_lore_readiness.md).
 
 - [LORE-01–04 — Estado documental definitivo](../../../CONTENT_STATUS.md): todas las fases A–E correspondientes cerradas documentalmente; no equivale a runtime.
-- [LORE-05A — Reconciliación Enterprise-D / Proyecto Valhalla](lore_05_a/README.md): **candidata documental, pendiente CI y fusión**; [DEC-0020](../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) prevalece en la identidad del buque. B–F no iniciadas.
+- [LORE-05A — Reconciliación Enterprise-D / Proyecto Valhalla](lore_05_a/README.md): **fusionada y cerrada documentalmente**; [DEC-0020](../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) prevalece en la identidad del buque.
+- [LORE-05B — Doce NPC legendarios](../../mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md): **fusionada y cerrada documentalmente**; sin ampliar elenco.
+- [LORE-05C — Mundos, colonias y localizaciones](lore_05_c/README.md): **cierre documental candidato**, 16 fichas y validación de 12 escenarios; no hay destinos nuevos ejecutables. LORE-05D–F pendientes.
 - [LORE-03 — Historia, conflictos y continuidad](lore_03_master_plan_v0.1.md): cerrada documentalmente desde octubre, con anotaciones históricas preservadas; sin runtime.
 
 ## Regla de gestión
