@@ -1,0 +1,193 @@
+name: HOST H02 native
+
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/host/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f11_host/**'
+      - 'proyecto/docs/architecture/host/**'
+      - 'desarrollo/tools/validation/test_host_h01_contracts.py'
+      - '.github/workflows/host-h02-native.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            suite: native
+          - os: windows-latest
+            suite: native
+          - os: ubuntu-latest
+            suite: asan-ubsan
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      HOST_CORE_SHA: 76a7b7b485616d8c4994f384a90f123bf333591d
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ env.HOST_CORE_SHA }}
+          path: laboratorios/host/h02/core
+          persist-credentials: false
+      - name: Build and test H02
+        env:
+          HOST_SUITE: ${{ matrix.suite }}
+          ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/h02'
+          $build = Join-Path $lab 'build'
+          $core = Join-Path $lab 'core'
+          $temp = Join-Path $lab 'tmp'
+          New-Item -ItemType Directory -Path $temp -Force | Out-Null
+          $env:TMPDIR = $temp
+          $env:TEMP = $temp
+          $env:TMP = $temp
+          $env:F04_TEST_TEMP_ROOT = $temp
+          $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
+          $targets = @('host_native_tests', 'host_fault_tests')
+          $selection = '^host\.'
+          if ($env:HOST_SUITE -eq 'asan-ubsan') {
+            $env:CXX = 'clang++'
+            $flags += '-DCMAKE_CXX_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer'
+          } else {
+            $targets += @('f04_tests', 'f04_population_tests', 'f05_tests', 'f05_delegation_tests',
+                          'f05_initiative_tests', 'f05_ai_tests', 'f05_integration_audit_tests')
+            $selection = '^(host\.|f05\.|f04\.(thread|scope|identity|class|buffers|determinism|population_.*|process_save|process_load)$)'
+          }
+          @("Star Trek: $(git rev-parse HEAD)", "CoreRPG: $(git -C $core rev-parse HEAD)",
+            "System: $([System.Runtime.InteropServices.RuntimeInformation]::OSDescription)",
+            "CXX override: $env:CXX", "CMake flags: $flags", "CTest selection: $selection") |
+            Tee-Object -FilePath "$lab/revisions.log"
+          cmake -S desarrollo/integration/host -B $build @flags 2>&1 |
+            Tee-Object -FilePath "$lab/configure.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $build --config Release --parallel 3 --target @targets 2>&1 |
+            Tee-Object -FilePath "$lab/build.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $build -C Release -j 3 -R $selection --no-tests=error --output-on-failure --output-junit "$lab/native.xml" 2>&1 |
+            Tee-Object -FilePath "$lab/tests.log"
+          exit $LASTEXITCODE
+      - name: H01 documentary contracts
+        if: matrix.suite == 'native' && !cancelled()
+        run: |
+          python desarrollo/tools/validation/test_host_h01_contracts.py 2>&1 |
+            Tee-Object -FilePath laboratorios/host/h02/h01.log
+          exit $LASTEXITCODE
+      - name: Isolated F11 regression
+        if: matrix.suite == 'native' && !cancelled()
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/h02'
+          $env:TMPDIR = Join-Path $lab 'tmp'
+          $env:TEMP = $env:TMPDIR
+          $env:TMP = $env:TMPDIR
+          python desarrollo/integration/f11_host/run_native.py --core-source "$lab/core" --output "$lab/f11" --parallel 3 2>&1 |
+            Tee-Object -FilePath "$lab/f11-driver.log"
+          exit $LASTEXITCODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h02-${{ matrix.os }}-${{ matrix.suite }}
+          path: |
+            laboratorios/host/h02/*.log
+            laboratorios/host/h02/native.xml
+            laboratorios/host/h02/build/CMakeCache.txt
+            laboratorios/host/h02/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/host/h02/build/Testing/Temporary/LastTest.log
+            laboratorios/host/h02/f11/*.log
+            laboratorios/host/h02/f11/run.json
+            laboratorios/host/h02/f11/tests.xml
+            laboratorios/host/h02/f11/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+
+
+  # Independent product-mode smoke build: tests OFF, unlike the native suites.
+  product-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/host/h02/core
+          persist-credentials: false
+      - name: Build and inspect release product (tests OFF)
+        shell: bash
+        run: |
+          set -euo pipefail
+          lab="$PWD/laboratorios/host/h02"
+          build="$lab/product-linux"
+          mkdir -p "$lab"
+          echo "Star Trek $(git rev-parse HEAD)" | tee "$lab/product-linux-manifest.log"
+          echo "CoreRPG $(git -C "$lab/core" rev-parse HEAD)" | tee -a "$lab/product-linux-manifest.log"
+          cmake -S desarrollo/integration/host -B "$build" \
+            -DCORERPG_SOURCE_DIR="$lab/core" \
+            -DTREK_HOST_TESTS=OFF -DCMAKE_BUILD_TYPE=Release \
+            2>&1 | tee "$lab/product-linux-configure.log"
+          grep -Fx 'TREK_HOST_TESTS:BOOL=OFF' "$build/CMakeCache.txt"
+          cmake --build "$build" --config Release --parallel 3 --target TrekHost \
+            2>&1 | tee "$lab/product-linux-build.log"
+          host_so=$(find "$build" -type f -name 'libTrekHost.so' -print -quit)
+          bridge_so=$(find "$build" -type f -name 'libTrekF04Bridge.so' -print -quit)
+          test -n "$host_so" && test -n "$bridge_so"
+          echo "TrekHost=$host_so" | tee -a "$lab/product-linux-manifest.log"
+          echo "TrekF04Bridge=$bridge_so" | tee -a "$lab/product-linux-manifest.log"
+          if find "$build" -type f \( -name host_native_tests -o -name host_fault_tests \
+              -o -name 'libTrekF11TrialHost.so' -o -name TrekF11TrialHost \) | grep -q .; then
+            echo 'FAIL: test executable or F11 trial component in product build'
+            exit 1
+          fi
+          readelf -d "$host_so" | tee "$lab/product-linux-dynamic.log"
+          grep -q 'libTrekF04Bridge.so' "$lab/product-linux-dynamic.log"
+          nm -D -C --defined-only "$host_so" | tee "$lab/product-linux-symbols.log"
+          grep -q 'trek::host::SessionOwner::SessionOwner' "$lab/product-linux-symbols.log"
+          ldd "$host_so" | tee "$lab/product-linux-dependencies.log"
+          if grep -q 'not found' "$lab/product-linux-dependencies.log"; then
+            echo 'FAIL: product has an unresolved runtime dependency'
+            exit 1
+          fi
+          python3 - "$host_so" "$bridge_so" <<'PY'
+          import ctypes
+          import os
+          import sys
+          host, bridge = (os.path.abspath(path) for path in sys.argv[1:])
+          ctypes.CDLL(host)
+          f04 = ctypes.CDLL(bridge)
+          f04.f04_core_sha.restype = ctypes.c_char_p
+          sha = f04.f04_core_sha().decode('ascii')
+          expected = '76a7b7b485616d8c4994f384a90f123bf333591d'
+          assert sha == expected, f'Unexpected loaded CoreRPG pin: {sha}'
+          print(f'PASS: Linux Release product loaded, CoreRPG {sha}, tests OFF')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h02-product-linux
+          path: |
+            laboratorios/host/h02/product-linux-*.log
+            laboratorios/host/h02/product-linux/CMakeCache.txt
