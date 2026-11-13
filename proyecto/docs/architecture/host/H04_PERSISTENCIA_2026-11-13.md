@@ -201,7 +201,12 @@ del riesgo residual offline de H01.
 formato, compatibilidad, procedencia, recuperabilidad y un `Error` normalizado.
 Valida Core en sesiones transitorias de solo lectura, creadas y destruidas en el
 hilo de inspección. No reutiliza el Core activo ni devuelve contenido bruto,
-identidades profesionales o conocimiento. Sus resultados son una observación;
+identidades profesionales o conocimiento. `compatible` indica que el sobre H04 y
+el pin declarado son compatibles; `recoverable` exige además validación completa
+de Core y del vínculo. F04 devuelve `F04_SAVE` tanto ante corrupción como ante
+algunos esquemas Core no admitidos: se conserva como `SAVE_CORRUPT` sin inventar
+una distinción que la ABI no proporciona. El sobre o pin incompatibles sí devuelven
+`SAVE_INCOMPATIBLE`. Sus resultados son una observación;
 LOAD vuelve a validar una copia aislada y no confía en una inspección anterior.
 
 ## Uso interno y límites de alcance
