@@ -83,6 +83,17 @@ Outcome NativeSession::bind_player(F04Ref person, std::uint64_t revision) noexce
     return normalize_identity(bridge::bind_player(session_, person, revision));
 }
 
+Outcome NativeSession::dispatch(F04Ref player, const GatewayRequest& request, OperationResult& reply) noexcept
+{
+    if (request.operation == GatewayOp::INSTITUTIONAL) return {Error::SERVICE_UNAVAILABLE};
+    auto code = bridge::dispatch(session_, player, request, reply);
+#ifdef TREK_HOST_GATEWAY_TESTING
+    void gateway_test_after_dispatch(F04Session*, std::uint32_t&);
+    gateway_test_after_dispatch(session_, code);
+#endif
+    return normalize_identity(code);
+}
+
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
 {
     return normalize(bridge::persistent_identity(session_,identity,player));

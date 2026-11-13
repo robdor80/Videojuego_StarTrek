@@ -2,6 +2,9 @@
 
 #include "native_session.h"
 #include "player_bootstrap.h"
+#ifdef TREK_HOST_GATEWAY_TESTING
+#include "gateway_test_access.h"
+#endif
 
 #include <atomic>
 #include <condition_variable>
@@ -12,6 +15,7 @@
 #include <mutex>
 #include <optional>
 #include <thread>
+#include <type_traits>
 #include <string_view>
 #include <utility>
 #include <variant>
@@ -44,7 +48,7 @@ std::future<Reply> ready(Error error)
 void report_failure(const char* operation, detail::Outcome outcome) noexcept
 {
     if (outcome.domain_code) {
-        std::fprintf(stderr, "TrekHost: %s failed (F04 code %u)\n",
+        std::fprintf(stderr, "TrekHost: %s failed (F04/F05 code %u)\n",
                      operation, static_cast<unsigned>(*outcome.domain_code));
     }
 }
@@ -78,7 +82,13 @@ struct SessionOwner::Impl {
 
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load>;
+    struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
+#ifdef TREK_HOST_GATEWAY_TESTING
+    struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, TestVisit>;
+#else
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch>;
+#endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
     std::mutex mutex;
@@ -129,7 +139,9 @@ struct SessionOwner::Impl {
         provenance=Provenance::REJECTED;
         for (auto& request : requests) {
             std::visit([](auto& item) {
-                item.reply.set_value({Error::GENERATION_EXPIRED, {}});
+                if constexpr (std::is_same_v<std::decay_t<decltype(item)>, Dispatch>)
+                    item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.request.correlation});
+                else item.reply.set_value({Error::GENERATION_EXPIRED, {}});
             }, request);
         }
         requests.clear();
@@ -153,11 +165,23 @@ struct SessionOwner::Impl {
     std::future<Reply> enqueue(Item request)
     {
         std::lock_guard lock(mutex);
+        auto reject = [&](Error error) {
+            if constexpr (std::is_same_v<Item, Dispatch>) {
+                std::promise<Reply> promise;
+                auto future = promise.get_future();
+                promise.set_value({error, {}, request.request.correlation});
+                return future;
+            } else return ready<Reply>(error);
+        };
         if (const auto error = admission(request.generation); error != Error::OK) {
-            return ready<Reply>(error);
+            return reject(error);
+        }
+        if constexpr (std::is_same_v<Item, Dispatch>) {
+            if (binding != Binding::BOUND)
+                return reject(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
         }
         if (requests.size() == max_requests) {
-            return ready<Reply>(Error::CAPACITY_LIMIT);
+            return reject(Error::CAPACITY_LIMIT);
         }
         auto reply = request.reply.get_future();
         requests.emplace_back(std::move(request));
@@ -308,6 +332,42 @@ struct SessionOwner::Impl {
         request.reply.set_value({error,error==Error::OK?generation:Generation{}});
     }
 
+    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Dispatch& request)
+    {
+        auto fail = [&](Error error) {
+            request.reply.set_value({error, {}, request.request.correlation});
+        };
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (binding != Binding::BOUND) {
+            fail(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND); return;
+        }
+        const auto principal = player;
+        OperationResult reply;
+        lock.unlock();
+        const auto outcome = session.dispatch(principal, request.request, reply);
+        report_failure("gateway", outcome); // Raw code remains in private native diagnostics.
+        lock.lock();
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (outcome.error != Error::OK) { fail(outcome.error); return; }
+        reply.generation = request.generation;
+        reply.correlation_id = request.request.correlation;
+        if (reply.campaign) reply.campaign->generation = request.generation;
+        if (reply.order) reply.order->generation = request.generation;
+        request.reply.set_value(std::move(reply));
+    }
+
+#ifdef TREK_HOST_GATEWAY_TESTING
+    void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, TestVisit& request)
+    {
+        lock.unlock();
+        Error error = Error::OK;
+        try { session.test_visit(request.visit); } catch (...) { error = Error::INTERNAL_ERROR; }
+        lock.lock();
+        if (const auto current = admission(request.generation); current != Error::OK) error = current;
+        request.reply.set_value({error,error == Error::OK ? request.generation : Generation{}});
+    }
+#endif
+
     void execute(std::unique_lock<std::mutex>& lock, detail::NativeSession& session, Load& request)
     {
         if(state==State::CLOSING){request.reply.set_value({Error::GENERATION_EXPIRED,{}});return;}
@@ -446,6 +506,34 @@ std::future<Result> SessionOwner::check_active(Generation generation)
 {
     return impl_->enqueue<Result>(Impl::Check{generation, {}});
 }
+
+std::future<OperationResult> SessionOwner::query_view(Generation generation, std::uint64_t correlation)
+{
+    return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::VIEW,{},0,0,correlation},{}});
+}
+std::future<OperationResult> SessionOwner::submit_order(Generation generation, OrderIntent intent, std::uint64_t correlation)
+{
+    return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::SUBMIT,intent,0,0,correlation},{}});
+}
+std::future<OperationResult> SessionOwner::query_order(Generation generation, std::uint64_t order, std::uint64_t correlation)
+{
+    return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::ORDER,{},order,0,correlation},{}});
+}
+std::future<OperationResult> SessionOwner::cancel_order(Generation generation, std::uint64_t order,
+    std::uint64_t revision, std::uint64_t correlation)
+{
+    return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::CANCEL,{},order,revision,correlation},{}});
+}
+std::future<OperationResult> SessionOwner::institutional_command(Generation generation, std::uint64_t correlation)
+{
+    return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::INSTITUTIONAL,{},0,0,correlation},{}});
+}
+#ifdef TREK_HOST_GATEWAY_TESTING
+std::future<Result> GatewayTestAccess::visit(SessionOwner& owner, Generation generation, std::function<void(F04Session*)> visit)
+{
+    return owner.impl_->enqueue<Result>(SessionOwner::Impl::TestVisit{generation,std::move(visit),{}});
+}
+#endif
 
 std::string SessionOwner::campaign_id(Generation generation) const
 {
