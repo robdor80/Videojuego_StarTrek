@@ -40,7 +40,7 @@ Outcome normalize_identity(std::uint32_t code) noexcept
 
 NativeSession::~NativeSession() noexcept
 {
-    if (session_ || reserved_) {
+    if (session_ || reserved_ || staged_) {
         std::terminate();
     }
 }
@@ -83,8 +83,41 @@ Outcome NativeSession::bind_player(F04Ref person, std::uint64_t revision) noexce
     return normalize_identity(bridge::bind_player(session_, person, revision));
 }
 
+Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
+{
+    return normalize(bridge::persistent_identity(session_,identity,player));
+}
+Outcome NativeSession::snapshot(const std::filesystem::path& path,const CampaignId& id) noexcept
+{
+    return normalize(bridge::snapshot(session_,path,id));
+}
+Outcome NativeSession::stage(const PreparedSlot& slot,F04Ref& player) noexcept
+{
+    if(staged_)return {Error::BUSY_STATE};
+    const auto* sha=bridge::core_sha();if(!sha || std::string_view(sha)!=TREK_HOST_CORE_SHA)return {Error::INTERNAL_ERROR};
+    const auto result=normalize(bridge::restore(slot,&staged_,player));
+    if(result.error==Error::OK)staged_pin_=slot.history;
+    return result;
+}
+Outcome NativeSession::discard_stage() noexcept
+{
+    if(staged_){auto result=normalize(bridge::destroy(staged_));if(result.error!=Error::OK)return result;staged_=nullptr;}
+    staged_pin_.reset();return {};
+}
+Outcome NativeSession::commit_stage() noexcept
+{
+    if(!staged_)return {Error::INTERNAL_ERROR};
+    if(!reserved_) {
+        bool available=false;
+        if(!campaign_reserved.compare_exchange_strong(available,true))return {Error::BUSY_STATE};
+        reserved_=true;
+    }
+    if(session_){auto result=normalize(bridge::destroy(session_));if(result.error!=Error::OK)return result;}
+    session_=staged_;staged_=nullptr;history_pin_=std::move(staged_pin_);return {};
+}
 Outcome NativeSession::close() noexcept
 {
+    const auto stage_result=discard_stage();if(stage_result.error!=Error::OK)return stage_result;
     if (session_) {
         const auto destroyed = normalize(bridge::destroy(session_));
         if (destroyed.error != Error::OK) {
@@ -92,6 +125,7 @@ Outcome NativeSession::close() noexcept
         }
         session_ = nullptr;
     }
+    history_pin_.reset();
     if (reserved_) {
         reserved_ = false;
         campaign_reserved.store(false);

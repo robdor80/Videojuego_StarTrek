@@ -182,6 +182,11 @@ F04_API uint32_t f04_history_open(F04Session*,const char* directory);
 F04_API uint32_t f04_history_consolidate(F04Session*,uint64_t cutoff,uint32_t fault);
 F04_API uint32_t f04_history_publish(F04Session*,uint32_t fault);
 F04_API uint32_t f04_history_stats(F04Session*,F04HistoryStats*);
+/* Additive native persistence composition. Snapshot never changes the live
+ * campaign. New destination only; copies original history objects, then uses
+ * Core recover/publish. No active-only export or domain replay. */
+F04_API uint32_t f04_history_snapshot(F04Session*,const char* directory,const uint8_t* campaign_id,uint64_t size);
+F04_API uint32_t f04_history_identity(F04Session*,uint8_t* campaign_id,uint64_t size);
 F04_API uint32_t f04_history_count(F04Session*,F04Ref,uint64_t person,uint64_t* shifts);
 F04_API uint32_t f04_history_page(F04Session*,F04Ref,uint64_t generation,uint64_t after,F04HistoryFact*,uint64_t capacity,uint64_t* written,uint32_t* more);
 F04_API uint32_t f04_history_relations(F04Session*,F04Ref,uint64_t generation,uint64_t entity,uint64_t offset,F04HistoryRelation*,uint64_t capacity,uint64_t* written,uint64_t* total);

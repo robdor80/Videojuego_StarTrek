@@ -977,6 +977,7 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
 #include "f04_roster_queries.inc"
 #include "f04_valhalla_queries.inc"
 #include "f04_history.inc"
+#include "f04_host_snapshot.inc"
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.inc"
 #include "f05_ai.inc"
