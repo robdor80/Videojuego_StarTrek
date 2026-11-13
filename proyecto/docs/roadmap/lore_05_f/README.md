@@ -1,5 +1,5 @@
 # LORE-05F — Auditoría transversal, coherencia y cierre global de LORE-05
-**13/11/2026. Estado:** **PRECIERRE DOCUMENTAL / PR PENDIENTE DE REVISIÓN Y FUSIÓN AUTORIZADA**. No se declara cerrado el proyecto jugable.
+**13/11/2026. Estado:** **COMPLETE_DOCUMENTARY, condicionado a fusión verificada de PR #131 en `main`**. La fusión fue autorizada expresamente por el autor. El proyecto jugable no está cerrado.
 
 ## Entregas
 - [Acta transversal, hallazgos y criterios de cierre](ACTA_AUDITORIA_TRANSVERSAL_20261113.md).
@@ -16,6 +16,6 @@
 ## Resultado y condiciones
 **Dictamen propuesto:** favorable al cierre **solo documental**, sujeto a verificación del HEAD definitivo y aprobación expresa de fusión. Las PR #124, #125, #126, #127, #128, #129 y #130 ya constan fusionadas para A–E. La cabecera de precierre de B es evidencia histórica anterior a su fusión, no estado vigente.
 
-El autor debe aprobar la fusión de LORE-05F por separado. Tras fusionar y verificar `main` se podrá actualizar `CONTENT_STATUS.md` a `LORE-05 COMPLETE_DOCUMENTARY`, registrar commit/CI reales y declarar terminado el bloque de documentación.
+El autor autorizó la fusión de PR #131 el 13/11/2026. El estado global `LORE-05 COMPLETE_DOCUMENTARY` queda consignado en `CONTENT_STATUS.md` y **se hace efectivo únicamente con la fusión comprobada de esta PR en `main`**. La prueba CI definitiva y el commit de integración se consultan en GitHub; ninguna prueba documental demuestra gameplay.
 
 **Fronteras:** CoreRPG escribe WorldState; F11 es autoridad de rangos/órdenes; HOST presta servicios sin duplicar F11; P2 define simulación causal futura; UE5/Blender y PADD son consumidores, no fuente autónoma de canon, conocimiento ni privilegios. No se altera ninguna de esas capas en esta subfase.
