@@ -127,7 +127,7 @@ if(TREK_HOST_TESTS)
   target_compile_definitions(host_m0_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
   target_link_libraries(host_m0_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG Threads::Threads)
   set_target_properties(host_m0_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
-  foreach(case IN ITEMS bound readonly submit execute replay conflict stale unbound scope authority recipient unsupported
+  foreach(case IN ITEMS bound readonly submit execute replay conflict stale unbound resolving scope authority recipient unsupported
       expired saving loading save_order close_order unknown observer institutional recover pending cancel concurrent)
     add_test(NAME host.m0.${case} COMMAND host_m0_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/m0/${case}")
     set_tests_properties(host.m0.${case} PROPERTIES TIMEOUT 120 LABELS "h05;native")

@@ -20,6 +20,7 @@ namespace fs = std::filesystem;
 namespace {
 using U = std::uint64_t;
 std::atomic_bool pause_dispatch{false};
+std::atomic_bool pause_bind{false};
 std::atomic_uint forced_code{F04_OK};
 std::binary_semaphore entered{0}, resume{0};
 void wait_pause() noexcept {
@@ -189,7 +190,7 @@ void refusal(Fixture& f,const std::string& name) {
 }
 
 void run_case(const std::string& name,const fs::path& root) {
-    Fixture f(root,name!="unbound",(name=="authority" || name=="observer")?4:3);
+    Fixture f(root,name!="unbound" && name!="resolving",(name=="authority" || name=="observer")?4:3);
     if(name=="bound") {
         auto v=f.view(); require(v.person==f.captain && v.ship==1,"Projection uses wrong person");
     } else if(name=="readonly") {
@@ -209,6 +210,16 @@ void run_case(const std::string& name,const fs::path& root) {
         auto before=f.bytes(); operation_error(f.owner.query_view(f.generation).get(),Error::PRINCIPAL_UNBOUND);
         operation_error(f.owner.submit_order(f.generation,{}).get(),Error::PRINCIPAL_UNBOUND);
         require(f.bytes()==before,"Unbound auto-bound or mutated");
+    } else if(name=="resolving") {
+        auto selected=PlayerBootstrap::prepare(f.owner,f.generation,f.captain).get();
+        require(selected.error==Error::OK && selected.selection,"Resolve test selection");
+        pause_bind=true;
+        auto binding=PlayerBootstrap::bind(f.owner,f.generation,*selected.selection,selected.revision);
+        await_pause();
+        operation_error(f.owner.query_view(f.generation,91).get(),Error::PRINCIPAL_UNBOUND,91);
+        operation_error(f.owner.submit_order(f.generation,{},92).get(),Error::PRINCIPAL_UNBOUND,92);
+        pause_bind=false;resume.release();require(binding.get().error==Error::OK,"Resolve test bind");
+        require(f.view().person==f.captain,"Resolve test published wrong principal");
     } else if(name=="recipient") {
         auto receipt=f.submit(f.intent());f.transition(receipt.order,false,f.captain,F04_DENIED);
         f.transition(receipt.order,true,f.captain,F04_DENIED); f.complete(receipt.order);
@@ -342,6 +353,7 @@ void reader(const fs::path& root,bool pending) {
 }
 namespace trek::host::detail {
 void persistence_test_observe(F04Session*,bool) {}
+void gateway_test_after_bind() { if(pause_bind)wait_pause(); }
 void gateway_test_after_dispatch(F04Session*,std::uint32_t& code) {
     if(forced_code!=F04_OK)code=forced_code;
     if(pause_dispatch)wait_pause();

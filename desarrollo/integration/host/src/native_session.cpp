@@ -80,7 +80,12 @@ Outcome NativeSession::resolve_person(std::uint64_t person_id, F04Ref& person,
 
 Outcome NativeSession::bind_player(F04Ref person, std::uint64_t revision) noexcept
 {
-    return normalize_identity(bridge::bind_player(session_, person, revision));
+    const auto outcome = normalize_identity(bridge::bind_player(session_, person, revision));
+#ifdef TREK_HOST_GATEWAY_TESTING
+    void gateway_test_after_bind();
+    gateway_test_after_bind();
+#endif
+    return outcome;
 }
 
 Outcome NativeSession::dispatch(F04Ref player, const GatewayRequest& request, OperationResult& reply) noexcept
