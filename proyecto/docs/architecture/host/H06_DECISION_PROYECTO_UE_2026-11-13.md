@@ -22,7 +22,7 @@ Valhalla, huellas locales SHA-256 de los descriptores versionados y variantes lo
 |---|---:|---|
 | V05 | 367 | `ac6005fbe51b28c14a0307a87195a170a3c97f9018a877d15c6ff174b6946b41` |
 | V06 | 660 | `73baf10ef20d4ca8a38667be456d1d5964b01da20cf39c8b79b6869798286b81` |
-| V07 | 674 | `3b7d7b70b37093fbf50ad3465505d3c6bf6352cd3ec2fcbaFA9d3e301541c438` |
+| V07 | 674 | `3b7d7b70b37093fbf50ad3465505d3c6bf6352cd3ec2fcbafa9d3e301541c438` |
 | V07 Cerramientos R01 | 738 | `fd0e3adb62d27016746dc98d813080b9a6da2932d5a1894e39012b2cec3d2df9` |
 | V07 Corregida | 708 | `a403cff07b421484fbc58725b3be98dc37f2072930a883f944383d9ec4089811` |
 | V07 Funcional | 690 | `dceb2e13793185bac1ca405bba18bff008ba8efe8be0a660eed0640ef1ab7ef9` |
