@@ -1,7 +1,7 @@
-# LORE-05F — Acta de auditoría transversal y propuesta de cierre global
+# LORE-05F — Acta de auditoría transversal y cierre global documental
 **Fecha:** 13 de noviembre de 2026.  
 **Repositorio:** `robdor80/Videojuego_StarTrek`.  
-**Estado de este documento:** AUDITORÍA PREPARADA / CIERRE GLOBAL PROPUESTO. **La fusión de la PR de LORE-05F exige autorización expresa del autor.**  
+**Estado de este documento:** CIERRE DOCUMENTAL APROBADO POR EL AUTOR, CON EFECTO TRAS FUSIÓN VERIFICADA DE PR #131. Autorización expresa recibida el 13/11/2026.**  
 **Alcance certificado:** documentación, identificadores y coherencia verificables; **no implementación jugable**.
 
 ## 1. Inventario de entradas y situación en GitHub
@@ -65,7 +65,7 @@ Todas esas PR constan fusionadas en GitHub cuando se redacta esta auditoría. La
 - **05C — PR #127:** último HEAD `4ea1c0871c99dcc88fba396bc2f9725232e1bf72`, **20/20 workflows de pull_request SUCCESS**; [workflow LORE-05C #43353283486](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353283486) y squash `5cecf75fa647e60c050b40c7c6d2ce87ec6e2e95`.
 - **05D — PR #128:** último HEAD `6b265245a6dbe706b71e45bbc27e04c09191a54b`, **20/20 workflows de pull_request SUCCESS**; [workflow LORE-05D #43354607817](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354607817) y squash `54de78c2240e7876d4ef3d2b1c96bbe1f55e8f29`.
 - **05A:** fusión PR #124 y regularización #125 con resultado descrito en su acta. **05E:** fusión PR #129 y regularización #130 con 7/7 workflows del HEAD final según su acta.
-- El control de **05F** (29 tests de documento y workflow propio) debe volver a verificarse tras la última edición de esta PR. Estos resultados no prueban implementación CoreRPG/HOST/UE5.
+- El control de **05F** comprende 29 pruebas documentales y workflow propio; verificar el HEAD final en GitHub Actions antes de fusionar. Estos resultados no prueban implementación CoreRPG/HOST/UE5.
 
 ## 4. Límites y trazabilidad del cierre
 - **CoreRPG:** autoridad única sobre WorldState, fechas, identidad vigente, permisos, conocimientos, agendas, recursos, eventos, ascensos y guardado.
@@ -92,4 +92,4 @@ LORE-05 quedará `COMPLETE_DOCUMENTARY` **solamente cuando**:
 3. El usuario autorice **expresamente** la fusión y esta se complete en `main`.
 4. Se actualicen `CONTENT_STATUS.md`, índices y acta posfusión con el commit real, sin dar por completados CoreRPG/HOST/UE5.
 
-**Dictamen actual:** PRECIERRE DOCUMENTAL **FAVORABLE CON CONDICIONES**. Cinco subfases A–E fusionadas; LORE-05F queda preparada para revisión y fusión autorizada. Ninguna deuda técnica diferida obliga a reabrir LORE-05 si se mantiene claramente asignada.
+**Dictamen de cierre:** **FAVORABLE — COMPLETE_DOCUMENTARY**. El autor ha autorizado la fusión de PR #131. Este cierre se hace efectivo con la integración verificada de la PR en `main`, sin certificar motores, IA, HOST o UE5. Ninguna deuda técnica diferida obliga a reabrir LORE-05 mientras permanezca asignada.
