@@ -61,6 +61,7 @@ public:
     void read(char* p,std::size_t n){DWORD got=0;need(ReadFile(fd,p,static_cast<DWORD>(n),&got,nullptr) && got==n);}
     void write(const char* p,std::size_t n){DWORD got=0;need(WriteFile(fd,p,static_cast<DWORD>(n),&got,nullptr) && got==n);}
     void sync(){need(FlushFileBuffers(fd)!=0);}
+    void close_checked(){auto held=fd;fd=INVALID_HANDLE_VALUE;need(CloseHandle(held)!=0);}
 #else
     int fd=-1;
     File(const fs::path& p,bool write,bool lock=false,bool existing_write=false) {
@@ -76,13 +77,15 @@ public:
     void read(char* p,std::size_t n){while(n){auto k=::read(fd,p,n);if(k<0 && errno==EINTR)continue;need(k>0);p+=k;n-=static_cast<std::size_t>(k);}}
     void write(const char* p,std::size_t n){while(n){auto k=::write(fd,p,n);if(k<0 && errno==EINTR)continue;need(k>0);p+=k;n-=static_cast<std::size_t>(k);}}
     void sync(){need(::fsync(fd)==0);}
+    void close_checked(){auto held=fd;fd=-1;need(::close(held)==0);}
 #endif
+    void finish(){sync();close_checked();}
     File(const File&)=delete;
 };
 void sync_dir(const fs::path& p) {
 #ifndef _WIN32
     PinnedDirectory dir(p);int fd=::open(dir.path().c_str(),O_RDONLY|O_DIRECTORY|O_CLOEXEC);
-    need(fd>=0);bool ok=::fsync(fd)==0;::close(fd);need(ok);
+    need(fd>=0);bool ok=::fsync(fd)==0;bool closed=::close(fd)==0;need(ok && closed);
 #else
     // Namespace publication on Windows uses MoveFileExW WRITE_THROUGH below.
     (void)p;
@@ -93,7 +96,7 @@ std::string read(const fs::path& p,std::uint64_t limit=4096) {
     std::string s(static_cast<std::size_t>(n),'\0');f.read(s.data(),s.size());need(f.size()==n,Error::SAVE_CORRUPT);return s;
 }
 void write(const fs::path& p,const std::string& s) {
-    File f(p,true);auto half=s.size()/2;f.write(s.data(),half);point("partial_write");f.write(s.data()+half,s.size()-half);f.sync();sync_dir(p.parent_path());
+    File f(p,true);auto half=s.size()/2;f.write(s.data(),half);point("partial_write");f.write(s.data()+half,s.size()-half);f.finish();sync_dir(p.parent_path());
 }
 std::uint64_t number(const std::string& s) {
     std::uint64_t n=0;auto r=std::from_chars(s.data(),s.data()+s.size(),n);
@@ -134,8 +137,8 @@ void tree(const fs::path& source,const fs::path& destination={},bool durable=fal
         if(!destination.empty()) {
             File out(destination/name,true);std::array<char,65536> buffer{};auto left=n;
             while(left){auto take=static_cast<std::size_t>(std::min<std::uint64_t>(left,buffer.size()));f.read(buffer.data(),take);out.write(buffer.data(),take);left-=take;}
-            need(f.size()==n,Error::SAVE_CORRUPT);out.sync();
-        } else if(durable) f.sync();
+            need(f.size()==n,Error::SAVE_CORRUPT);out.finish();
+        } else if(durable) f.finish();
     }
     need(current,Error::SAVE_CORRUPT);if(!destination.empty())sync_dir(destination);
 }
