@@ -55,7 +55,7 @@ Las suites antiguas H06 (238/238 nativo, 83/83 sanitizers) son referencia de reg
 
 ## 4. Independencia de laboratorios
 
-Los informes de resultados, la matriz consolidada y los scripts de prueba que pasen a producto deberán ser pequeños y quedar versionados bajo desarrollo/ o proyecto/docs. Compilaciones, logs, saves de ensayo y capturas: exclusivamente laboratorios/host/h06-p06/. La limpieza concurrente no borrará subcarpetas mientras haya herramientas activas. No realizar ningún borrado con esta fase.
+Los informes de resultados, la matriz consolidada y los scripts de prueba que pasen a producto deberán ser pequeños y quedar versionados bajo desarrollo/ o proyecto/docs. Compilaciones, logs, saves de ensayo y capturas: exclusivamente en la zona temporal ignorada indicada por AGENTS.md, sin dependencias desde los archivos definitivos. La limpieza concurrente no borrará subcarpetas mientras haya herramientas activas. No realizar ningún borrado con esta fase.
 
 ## 5. Criterio de cierre P06
 
