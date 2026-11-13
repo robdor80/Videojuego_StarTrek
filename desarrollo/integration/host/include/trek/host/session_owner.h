@@ -20,6 +20,7 @@
 #endif
 
 namespace trek::host {
+namespace detail { class AbiAdmission; }
 
 // Internal C++ interface for HOST modules.
 enum class State { CLOSED, OPENING, ACTIVE, SAVING, LOADING, FAILED, FAILED_RECOVERABLE, CLOSING };
@@ -39,6 +40,7 @@ public:
 
 private:
     friend class SessionOwner;
+    friend class detail::AbiAdmission;
     explicit Generation(std::uint64_t value) : value_(value) {}
     std::uint64_t value_ = 0;
 };
@@ -167,6 +169,7 @@ public:
 
 private:
     friend class PlayerBootstrap;
+    friend class detail::AbiAdmission;
 #ifdef TREK_HOST_GATEWAY_TESTING
     friend class GatewayTestAccess;
 #endif
