@@ -16,7 +16,7 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 
 - [LORE-01–04 — Estado documental definitivo](../../../CONTENT_STATUS.md): todas las fases A–E correspondientes cerradas documentalmente; no equivale a runtime.
 - [LORE-05A — Reconciliación Enterprise-D / Proyecto Valhalla](lore_05_a/README.md): **fusionada y cerrada documentalmente**; [DEC-0020](../decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) prevalece en la identidad del buque.
-- [LORE-05B — Doce NPC legendarios](../../mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md): **fusionada y cerrada documentalmente**; sin ampliar elenco.
+- [LORE-05B — Doce NPC legendarios](../../../mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md): **fusionada y cerrada documentalmente**; sin ampliar elenco.
 - [LORE-05C — Mundos, colonias y localizaciones](lore_05_c/README.md): **fusionada y cerrada documentalmente**, 16 fichas y 12 escenarios; sin destinos nuevos ejecutables.
 - [LORE-05D — Naves, instalaciones y organizaciones](lore_05_d/README.md): **fusionada y cerrada documentalmente**, 8 naves, 12 instalaciones, 8 potencias y 2 instituciones; sin integración del runtime. LORE-05E fusionada y cerrada documentalmente; LORE-05F pendiente.
 - [LORE-05E — Idiomas, comunicación y exploración](lore_05_e/README.md): **fusionada y cerrada documentalmente** mediante PR #129, 8 lenguas existentes, 18 reglas, 24 casos; sin cambio de contratos de lenguaje, contacto o CoreRPG.
