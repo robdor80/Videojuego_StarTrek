@@ -144,8 +144,9 @@ std::uint64_t version_number(const std::string& n) {
     return number(n.substr(1));
 }
 std::vector<std::uint64_t> versions(const fs::path& slot) {
-    std::vector<std::uint64_t> out;
+    std::vector<std::uint64_t> out;std::size_t entries=0;
     for(const auto& e:fs::directory_iterator(slot)) {
+        need(++entries<=10000,Error::CAPACITY_LIMIT);
         auto name=e.path().filename().string();if(name.starts_with("v")){auto n=version_number(name);if(n){need(out.size()<10000,Error::CAPACITY_LIMIT);out.push_back(n);}}
     }
     need(out.size()<=10000,Error::CAPACITY_LIMIT);std::sort(out.begin(),out.end());return out;

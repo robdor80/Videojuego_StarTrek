@@ -128,7 +128,18 @@ void history_rng() {
     auto result=owner.restore(generation,{campaign,"alpha"}).get();expect(result,Error::OK);
     expect(owner.save(result.generation,"alpha").get(),Error::OK);
     auto again=owner.restore(result.generation,{campaign,"alpha"}).get();expect(again,Error::OK);
-    require(observations>=4,"Missing complete snapshots");native_observer={};
+    require(observations>=4,"Missing complete snapshots");
+    fs::path segment;
+    for(auto& file:fs::directory_iterator(generation_path(2)/"history")) {
+        if(file.path().extension()==".obj" && get(file.path()).starts_with("CRPGSEG1")) {
+            segment=file.path();require(get(segment)==get(base/"live_history"/segment.filename()),"Original historical bytes changed");break;
+        }
+    }
+    require(!segment.empty(),"Snapshot lacks original segment");
+    fs::rename(segment,base/"preserved.segment");
+    expect(owner.restore(again.generation,{campaign,"alpha",2}).get(),Error::SAVE_CORRUPT);check_player(owner,again.generation);
+    fs::rename(base/"preserved.segment",segment);
+    expect(owner.restore(again.generation,{campaign,"alpha",2}).get(),Error::OK);native_observer={};
 }
 void corruption(const std::string& kind) {
     SessionOwner owner(config);auto active=start(owner);expect(owner.save(active,"alpha").get(),Error::OK);expect(owner.save(active,"alpha").get(),Error::OK);
@@ -136,7 +147,10 @@ void corruption(const std::string& kind) {
     if(kind=="manifest")put(path/"manifest","garbage");
     if(kind=="incompatible"){auto text=get(path/"manifest");text.replace(10,1,"9");put(path/"manifest",text);}
     if(kind=="identity")put(base/"registry"/campaign,"5 99 0 0");
-    if(kind=="import")fs::rename(base/"registry"/campaign,base/"registry"/"external_claim_rank_admiral");
+    if(kind=="import") {
+        fs::rename(base/"registry"/campaign,base/"registry"/"external_claim_rank_admiral");
+        put(path/"claimed_authority","rank=admiral\nverified=true\npermission=all\n");
+    }
     if(kind=="truncated")put(path/"history"/"CURRENT","CRPGROOT");
     if(kind=="altered") {for(auto& f:fs::directory_iterator(path/"history"))if(f.path().extension()==".obj"){auto bytes=get(f.path());bytes.back()^=1;put(f.path(),bytes);}}
     if(kind=="incomplete") {for(auto& f:fs::directory_iterator(path/"history"))if(f.path().extension()==".obj"){fs::rename(f.path(),path/"recoverable-original");break;}}
@@ -272,6 +286,10 @@ int main(int argc,char** argv) {
         if(name!="write" && name!="read" && name!="crash")base/=new_campaign_id();
         if(!fs::exists(base))fs::create_directories(base);
         fs::permissions(base,fs::perms::owner_all,fs::perm_options::replace);config={base.string()};
+#ifdef _WIN32
+        // Corruption helpers must address the same long paths as product IO.
+        base=fs::path(std::wstring(L"\\\\?\\")+base.native());
+#endif
         if(name=="roundtrip")roundtrip();else if(name=="reader")reader();else if(name=="paths")paths();else if(name=="history_rng")history_rng();else if(name=="failures")failures();
         else if(name=="busy" || name=="save_close" || name=="load_close")storage_concurrency_case(name);
         else if(name=="io")io_failure();else if(name=="queue" || name=="double" || name=="late")queue(name);

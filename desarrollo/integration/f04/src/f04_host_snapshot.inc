@@ -25,11 +25,11 @@ uint32_t f04_history_snapshot(F04Session* s,const char* directory,const uint8_t*
    const auto source=s->c->history->directory();need(fs::create_directory(target),F04_SAVE);
    U total=0,count=0;
    for(const auto& entry:fs::directory_iterator(source)) {
-    const auto name=entry.path().filename().string();
+    need(++count<=4096,F04_CAPACITY);const auto name=entry.path().filename().string();
     need(!entry.is_symlink() && entry.is_regular_file() && fs::hard_link_count(entry.path())==1,F04_SAVE);
     if(name=="writer.lock" || name.find(".tmp-")!=std::string::npos)continue;
     need(name=="CURRENT" || (name.size()==68 && name.substr(64)==".obj" && name.substr(0,64).find_first_not_of("0123456789abcdef")==std::string::npos),F04_SAVE);
-    auto bytes=entry.file_size();need(bytes<=64ULL*1024*1024 && ++count<=4096,F04_CAPACITY);total+=bytes;need(total<=512ULL*1024*1024,F04_CAPACITY);
+    auto bytes=entry.file_size();need(bytes<=64ULL*1024*1024,F04_CAPACITY);total+=bytes;need(total<=512ULL*1024*1024,F04_CAPACITY);
     need(fs::copy_file(entry.path(),target/entry.path().filename(),fs::copy_options::none),F04_SAVE);
    }
    WorldState world;RandomStreams random{0};Timeline time;
