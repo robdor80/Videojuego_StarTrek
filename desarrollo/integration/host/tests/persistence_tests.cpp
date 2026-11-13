@@ -295,7 +295,7 @@ void audit_registry(const std::string& mode) {
     auto wrong=id;++wrong.person;
     require(save(wrong)==Error::IDENTITY_MISMATCH && get(base/"registry"/campaign)==original,"Incompatible binding overwrote registry");
     fs::create_directory(base/"race");
-    SlotStore raced({config.root+"/race"});
+    SlotStore raced({(fs::path(config.root)/"race").make_preferred().string()});
     storage_test_hook([&](const char* point){if(std::string_view(point)=="registry_before_publish")put(base/"race"/"registry"/campaign,original);});
     require(raced.save(campaign,"alpha",wrong,[](const fs::path&){throw std::runtime_error("Unexpected snapshot after collision");return Error::OK;},[](const PreparedSlot&){return Error::OK;})==Error::PERSISTENCE_FAILED,"No-replace collision status");
     storage_test_hook({});require(get(base/"race"/"registry"/campaign)==original,"Concurrent valid registry replaced");
