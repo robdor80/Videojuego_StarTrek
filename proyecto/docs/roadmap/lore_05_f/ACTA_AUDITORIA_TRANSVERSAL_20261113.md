@@ -55,10 +55,17 @@ Todas esas PR constan fusionadas en GitHub cuando se redacta esta auditoría. La
 | F-02 | Enlace | `proyecto/docs/roadmap/README.md` enlaza el elenco 05B con `../../mundo/...`, que desde esa carpeta resuelve a `proyecto/mundo`. | Corregir a `../../../mundo/...` y validar la existencia de destino. |
 | F-03 | Conteo | Acta 05E menciona 11 estados de enlace; fuente y overlay tienen 10 estados, 11 entradas de configuración. | Fe de erratas explícita en el acta; no tocar JSON propietario. |
 | F-04 | Redacción | El estado global sigue llamando «propuesta» al arranque 2383 en una tabla histórica pese a DEC-0020. | Precisar que **el año 2383 está aprobado**, permaneciendo abiertos día y mes. |
-| F-05 | Certificación | Las actas de 05C/05D consignan verificaciones de un HEAD previo y avisan que el definitivo debe comprobarse aparte. | Respetar la limitación histórica; PRs fusionadas verificadas, sin afirmar una CI posfusión no consultada. |
+| F-05 | Certificación | Las actas de 05B/C/D consignaron precierre o verificaciones de un HEAD previo. | **Resuelto por esta auditoría:** el HEAD definitivo de cada una registra 20/20 workflows de PR en SUCCESS y todas las PR están fusionadas. No se confunde CI de PR con CI posfusión. |
 | F-06 | Técnico diferido | Migraciones Valhalla, implementación/activos de NPC, estado vivo de instalaciones, sensores, primera directriz y PADD no son runtime. | Matriz de responsables y puertas de integración por fases. |
 
 **Resultado editorial:** ningún conflicto irresuelto en los IDs de los cinco bloques que invalide el cierre de su biblioteca documental tras aplicar F-01 a F-04. Los huecos narrativos individuales y dependencias de runtime siguen abiertos **sin convertirlos en ficción ya materializada**.
+
+### Certificación independiente de HEAD finales A–E
+- **05B — PR #126:** último HEAD `67b1eaa6f6fa1427f22400bae0dac40fabb95564` con **20/20 workflows de pull_request SUCCESS**; squash `4df4d23f2e050bba830f6696a27bb6d4c004fd2f`. No hay workflow específico B: 84/84 son controles de la auditoría editorial de sus fichas.
+- **05C — PR #127:** último HEAD `4ea1c0871c99dcc88fba396bc2f9725232e1bf72`, **20/20 workflows de pull_request SUCCESS**; [workflow LORE-05C #43353283486](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353283486) y squash `5cecf75fa647e60c050b40c7c6d2ce87ec6e2e95`.
+- **05D — PR #128:** último HEAD `6b265245a6dbe706b71e45bbc27e04c09191a54b`, **20/20 workflows de pull_request SUCCESS**; [workflow LORE-05D #43354607817](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354607817) y squash `54de78c2240e7876d4ef3d2b1c96bbe1f55e8f29`.
+- **05A:** fusión PR #124 y regularización #125 con resultado descrito en su acta. **05E:** fusión PR #129 y regularización #130 con 7/7 workflows del HEAD final según su acta.
+- El control de **05F** (29 tests de documento y workflow propio) debe volver a verificarse tras la última edición de esta PR. Estos resultados no prueban implementación CoreRPG/HOST/UE5.
 
 ## 4. Límites y trazabilidad del cierre
 - **CoreRPG:** autoridad única sobre WorldState, fechas, identidad vigente, permisos, conocimientos, agendas, recursos, eventos, ascensos y guardado.
