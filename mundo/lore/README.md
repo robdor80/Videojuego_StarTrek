@@ -8,7 +8,7 @@
 **Mundos y colonias:** [LORE-05C — catálogo de 16 localizaciones y guía narrativa 2383](../../proyecto/docs/roadmap/lore_05_c/README.md) (fusionada y cerrada documentalmente, sin integración CoreRPG/HOST/UE5).  
 **Naves, instalaciones y organizaciones:** [LORE-05D — 8 naves, 12 instalaciones, 8 potencias y 2 instituciones](../../proyecto/docs/roadmap/lore_05_d/README.md) (fusionada y cerrada documentalmente; sin simulación ni acceso automático).  
 **Idiomas, comunicación y exploración:** [LORE-05E — 8 idiomas existentes, 18 reglas y 24 escenarios](../../proyecto/docs/roadmap/lore_05_e/README.md) (fusionada y cerrada documentalmente, PR #129; sin runtime ni desbloqueo Delta).  
-**Auditoría final:** [LORE-05F — auditoría transversal y precierre](../../proyecto/docs/roadmap/lore_05_f/README.md). Fase en revisión, pendiente de CI definitiva y fusión autorizada; no ampliar el elenco cerrado de LORE-05B.
+**Auditoría y cierre global:** [LORE-05F](../../proyecto/docs/roadmap/lore_05_f/README.md) — **COMPLETE_DOCUMENTARY al quedar integrada PR #131**, sin certificar runtime; elenco legendario de 05B cerrado en doce.
 
 Dominios: `species/`, `cultures/`, `factions/`, `astrography/`, `historical_events/`, `conflicts/`, `diplomacy/`, `technology/`, `equipment/`, `medicine/`, `science/`, `starships/`, `stations_and_facilities/` y `operations/`.
 
