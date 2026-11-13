@@ -45,7 +45,7 @@ El jugador debe poder comenzar una **campaña legítima de candidato/cadete de A
   - proyecto/docs/architecture/host/H06_P06_INFORME_IMPLEMENTACION_2026-11-13.md
   - proyecto/docs/architecture/host/H06_P06_RESULTADOS_2026-11-13.md
   Incluye commit SHA final, rutas, decisiones técnicas, evidencias, matriz CB-01..CB-24, resultados PASS/FAIL/BLOCKED/NOT_RUN, límites, dependencias externas, pruebas y reproducibilidad.
-- **Disco y limpieza concurrente:** proteger los trabajos activos H06 y terceros; no borrar, mover ni limpiar laboratorios previos. Temporales nuevos exclusivamente laboratorios/host/h06-p06/ bajo checkout existente, evitar repetir descargas y builds enormes. No duplicar motor, Core ni los assets. Medir uso y confirmar qué es regenerable; no borrar sin autorización.
+- **Disco y limpieza concurrente:** proteger los trabajos activos H06 y terceros; no borrar, mover ni limpiar laboratorios previos. Temporales nuevos exclusivamente en la zona ignorada prevista por AGENTS.md bajo el checkout existente, evitar repetir descargas y builds enormes. No duplicar motor, Core ni los assets. Medir uso y confirmar qué es regenerable; no borrar sin autorización.
 - Final: enlace PR Draft, HEAD, informes, resultados ejecutados y bloqueos. ChatGPT realizará auditoría independiente. **No declarar H06/M1 certificados ni terminados por una implementación parcial.**
 
 ### Distribución y economía de cuota
