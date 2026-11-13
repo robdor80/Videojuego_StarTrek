@@ -621,7 +621,9 @@ Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_
 
 **LORE-05C — Mundos, colonias y localizaciones: ✅ COMPLETE_DOCUMENTARY (alcance 16/16).** [Guía narrativa](mundo/lore/astrography/worlds/lore05c_guia_localizaciones_2026-11-13.md), [catálogo de referencia](mundo/lore/astrography/worlds/lore05c_priority_locations_v0.1.json) y [acta de cierre](proyecto/docs/roadmap/lore_05_c/ACTA_CIERRE_DOCUMENTAL_LORE05C_20261113.md), [PR #127](https://github.com/robdor80/Videojuego_StarTrek/pull/127). 13 anclajes ya existentes, Marte en contexto Sol y dos colonias históricas sin nueva navegación; 12 escenarios documentales y 14/14 pruebas adversariales sobre HEAD inicial 6a20c243, [CI LORE-05C #43353077576](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353077576) SUCCESS. **La CI y la fusión del HEAD documental definitivo se verificarán por separado.** No hay ejecución en CoreRPG/HOST/UE5 ni rutas, colonias o NPC nuevos instalados.
 
-**LORE-05D–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
+**LORE-05D — Naves, instalaciones y organizaciones: ✅ COMPLETE_DOCUMENTARY (alcance cerrado).** [PR #128](https://github.com/robdor80/Videojuego_StarTrek/pull/128), [guía narrativa](mundo/lore/operations/LORE05D_NAVES_INSTALACIONES_ORGANIZACIONES_20261113.md), [catálogo 8/12/8+2](mundo/lore/operations/lore05d_entities_v0.1.json), [acta](proyecto/docs/roadmap/lore_05_d/ACTA_CIERRE_DOCUMENTAL_LORE05D_20261113.md) y 18 casos de seguridad documental. Validador PASS, **25/25 pruebas adversariales PASS** y [CI LORE-05D #43354375724](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354375724) SUCCESS en HEAD previo al acta `de4f7d1`; 7/7 workflows de ese HEAD verdes. **La CI del HEAD final y su fusión se comprueban por separado.** No se crea nueva nave individual, estación, permiso, guerra o misión y no hay ejecución CoreRPG/HOST/UE5. Defiant original destruida en 2375 ≠ São Paulo rebautizada; Enterprise-D permanece Galaxy bajo Proyecto Valhalla.
+
+**LORE-05E–F:** **NO INICIADAS**; LORE-05 global permanece **EN CURSO**.
 
 ## Procedural living-universe master plan
 
