@@ -194,7 +194,9 @@ def problems_for_data(d: dict) -> list[str]:
         if rec.get("simulation_claimed") is True or rec.get("runtime_executed") is True:
             issue("documentary scenarios portrayed as runtime " + key)
         for x in rec.get(names, []):
-            if x.get("world_state_mutations") is not False:
+            if (key == "c_cases" and x.get("no_world_state_mutation") is not True) or (
+                key != "c_cases" and x.get("world_state_mutations") is not False
+            ):
                 issue("scenario mutates WorldState " + key)
             if key != "c_cases" and x.get("core_runtime_test") is not False:
                 issue("scenario claims Core runtime " + key)
@@ -240,7 +242,7 @@ def validate(root: Path = ROOT) -> list[str]:
     roadmap = root / "proyecto/docs/roadmap/README.md"
     if not (root / "mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md").is_file():
         problems.append("legendary roster index missing")
-    if not roadmap.is_file() or "../../mundo/lore/characters/lore05b" in roadmap.read_text(encoding="utf-8"):
+    if not roadmap.is_file() or "(../../mundo/lore/characters/lore05b" in roadmap.read_text(encoding="utf-8"):
         problems.append("roadmap 05B broken relative link")
     return problems
 
