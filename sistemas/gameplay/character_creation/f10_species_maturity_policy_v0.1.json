@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "f10_species_playable_maturity_policy",
-  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME_ENFORCED",
+  "status": "AUTHOR_APPROVED_PLAYER_DECLARED_AGE_GATE",
   "approved_on": "2026-11-14",
   "scope": {
     "scenario_id": "starfleet_academy",
@@ -21,22 +21,25 @@
   ],
   "rules": {
     "minimum_is_gameplay_player_eligibility_not_universal_biological_adulthood": true,
-    "minimum_not_sufficient_proof_of_maturity": true,
-    "adulthood_client_claim_not_evidence": true,
-    "applicable_species_profile_and_individual_maturity_evidence_required": true,
     "no_fixed_maximum_age": true,
     "typical_lifespan_is_not_a_hard_maximum": true,
     "under_age_with_provable_context": "CHANGES_REQUIRED",
-    "at_or_above_minimum": "REVIEW_REQUIRED_UNTIL_BOTH_F10_GATES",
+    "at_or_above_minimum": "AGE_CHECK_PASSED_OTHER_F10_GATES_INDEPENDENT",
     "date_threshold_ambiguous_without_campaign_month_day": "REVIEW_REQUIRED",
-    "unsupported_species_or_unproven_maturity": "REVIEW_REQUIRED_NO_PERSON",
     "special_rule_missing": "BLOCKED_NO_AUTOMATIC_PLAYER_ELIGIBILITY",
     "no_auto_admission_or_cadet_slot": true,
     "no_auto_professional_rank_or_capabilities": true,
     "no_species_inference_of_citizenship_culture_loyalty": true,
     "no_runtime_authority_or_core_mutation_in_this_policy": true,
     "npc_age_policy_independent_of_player_minimum": true,
-    "unchanged_provenance_and_receipt_checks_required": true
+    "unchanged_provenance_and_receipt_checks_required": true,
+    "player_declared_age_is_accepted_as_fictional_character_fact": true,
+    "age_minimum_is_sufficient_to_pass_age_check": true,
+    "no_additional_individual_maturity_evidence_required": true,
+    "adult_equivalent_status_is_compatibility_field_not_independent_proof": true,
+    "do_not_infer_exact_birth_date_from_declared_age": true,
+    "unknown_species": "CHANGES_REQUIRED",
+    "special_species_without_numeric_floor": "REVIEW_REQUIRED_UNTIL_AUTHOR_DECIDES_MINIMUM"
   },
   "content_gates": {
     "MAIN_GAME": "CONTEXT_AND_F10_ELIGIBILITY_STILL_REQUIRED",
@@ -51,7 +54,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Parentesco andoriano; telepatía contextual y accesibilidad; sin longevidad copiada automáticamente."
     },
@@ -62,7 +65,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Sin madurez social obligatoria por ritos; longevidad 120–135 orientativa, no límite."
     },
@@ -73,7 +76,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Cultura y fe no obligatorias; la experiencia de ocupación no se impone."
     },
@@ -84,7 +87,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "La necesidad de soporte respiratorio es individual."
     },
@@ -95,7 +98,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Telepatía y empatía individuales; ni lectura total ni detección de mentiras."
     },
@@ -106,7 +109,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Sin cifras universales de madurez o longevidad establecidas."
     },
@@ -117,7 +120,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Anatomía, función del traje y longevidad no se deducen por defecto."
     },
@@ -128,7 +131,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Preferencias ambientales contextuales; sin lealtad institucional implícita."
     },
@@ -139,7 +142,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "SPECIAL_REVIEW_REQUIRED",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "special_blocker": "MORPHOGENIC_MATURITY_NOT_DEFINED",
       "design_note_es": "Cambio de forma o apariencia adulta no acreditan madurez; desarrollo morfogénico por definir."
@@ -151,7 +154,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Longevidad excepcional sin maduración más tardía asumida; sin poderes de Guinan por especie."
     },
@@ -162,7 +165,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Sin comercio, riqueza ni profesión automática; resistencia telepática contextual."
     },
@@ -173,7 +176,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "DLC_DELTA",
       "design_note_es": "Fuerza, resistencia y tradiciones de caza dependen del individuo."
     },
@@ -184,7 +187,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "NPC cadetes humanos de 16–17 permitidos si admisión F10 los autoriza; no cambia mínimo jugable."
     },
@@ -195,7 +198,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "SPECIAL_REVIEW_REQUIRED",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "special_blocker": "ENGINEERED_ACCELERATED_MATURITY_NOT_DEFINED",
       "design_note_es": "Maduración acelerada y origen diseñado; edad cronológica no prueba autonomía o elegibilidad."
@@ -207,7 +210,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "DLC_DELTA",
       "design_note_es": "Ritos y afiliación a sectas requieren contexto verificable."
     },
@@ -218,7 +221,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Ritos de Ascensión no obligatorios; sin profesión o ciudadanía por especie."
     },
@@ -229,7 +232,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "DLC_DELTA",
       "design_note_es": "Dos años es umbral jugable autoral, no madurez biológica canónica ni límite de vida."
     },
@@ -240,7 +243,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "No asignar limitaciones intelectuales, engaño o hostilidad universales."
     },
@@ -251,7 +254,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Edad no concede acceso político a la Academia; no heredar medicina/telepatía vulcanas."
     },
@@ -262,7 +265,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "DLC_DELTA",
       "design_note_es": "La personalidad de Neelix no define a la especie."
     },
@@ -273,7 +276,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Madurez biológica de ~12 es referencia complementaria, no mínimo jugable."
     },
@@ -284,7 +287,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Unión con simbionte independiente; edad del anfitrión y del simbionte separadas."
     },
@@ -295,7 +298,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "DLC_DELTA",
       "design_note_es": "El Fago pertenece al estado médico individual; no se deriva moralidad."
     },
@@ -306,7 +309,7 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "SPECIAL_REVIEW_REQUIRED",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "special_blocker": "ENGINEERED_CLONING_FUNCTIONAL_MATURITY_NOT_DEFINED",
       "design_note_es": "Madurez funcional, ingeniería genética y clonación requieren modelo específico."
@@ -318,17 +321,18 @@
       "maximum_playable_age_earth_years": null,
       "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
       "automatic_player_eligibility": false,
-      "maturity_evidence_required": true,
+      "maturity_evidence_required": false,
       "content_scope": "MAIN_GAME",
       "design_note_es": "Longevidad frecuentemente >200 orientativa; ritos y disciplina no implican habilidades."
     }
   ],
   "integration": {
     "consumers": "FUTURE_F10_DOMAIN_DECISION_AND_HOST_BRIDGE_AFTER_AUDIT",
-    "current_native_host_behavior": "REVIEW_UNAVAILABLE_FOR_UNCONFIGURED_AUTHORITIES",
+    "current_native_host_behavior": "AGE_GATE_PLAYER_DECLARATION_ONLY; OTHER_OBJECTIVE_AND_SEMANTIC_CHECKS_SEPARATE",
     "existing_native_module_not_automatically_connected_to_this_CONTRACT": true,
     "semantic_ai_review_still_mandatory": true,
     "no_auto_adoption_by_core_unreal_or_h03_h04": true,
-    "future_executor": "CODEX_GPT_6_HIGH_REVIEWED_PR"
-  }
+    "future_executor": "NO_CODEX_FOR_AGE_PROOF"
+  },
+  "revised_on": "2026-11-14"
 }
