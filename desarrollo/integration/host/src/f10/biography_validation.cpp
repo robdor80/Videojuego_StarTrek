@@ -19,7 +19,7 @@ using namespace std::string_view_literals;
 
 constexpr auto max_draft_bytes = 65536U;
 constexpr auto max_findings = 32U;
-constexpr auto ruleset_version = "f10-biography/3"sv;
+constexpr auto ruleset_version = "f10-biography/4"sv;
 constexpr std::string_view adult_field = "adult_equivalent_status";
 constexpr std::string_view birth_field = "age_or_birth_date";
 constexpr std::string_view activities_field = "prior_activities_and_hobbies";
@@ -63,7 +63,7 @@ bool forbidden(std::string_view key) {
         "qualifications"sv, "skill_points"sv, "attribute_points"sv, "character_level"sv,
         "professional_f11_character_id"sv, "trusted"sv, "source_version_or_world_revision"sv,
         "evidence_decision"sv, "rule_or_fact_source_id"sv, "internal_issuer_identity"sv,
-        "draft_sha256"sv, "context_sha256"sv
+        "draft_sha256"sv, "context_sha256"sv, "security_clearance"sv
     };
     return contains(rules().at("forbidden"), key) || std::ranges::find(extra, key) != extra.end();
 }
@@ -201,6 +201,7 @@ std::string_view static_field(std::string_view field) {
 struct Checks {
     std::vector<BiographyIssue> errors;
     std::vector<BiographyIssue> pending;
+    bool personal_background_plausible{};
 
     void reject(IssueCode rule, std::string_view field) { add(errors, {rule, field}); }
     void defer(IssueCode rule, std::string_view field) { add(pending, {rule, field}); }
@@ -281,6 +282,12 @@ struct Moment {
     std::optional<int> year;
 };
 
+struct ActivityPeriod {
+    Moment start;
+    Moment end;
+    bool ongoing;
+};
+
 Moment validate_moment(const Json& entry, std::string_view key, bool end, const BiographicalAge& age,
                        const BiographyContext& context, std::string_view field, Checks& checks) {
     if (!entry.contains(key)) return {};
@@ -351,11 +358,11 @@ void validate_technology(const Json& entry, const Moment& start, std::string_vie
     checks.defer(IssueCode::TECH_AVAILABILITY_REVIEW, field);
 }
 
-void validate_entry(const Json& entry, const BiographicalAge& age, const BiographyContext& context,
-                    std::string_view field, Checks& checks) {
+std::optional<ActivityPeriod> validate_entry(const Json& entry, const BiographicalAge& age,
+                                             const BiographyContext& context, std::string_view field, Checks& checks) {
     if (!entry.is_object()) {
         if (!nonblank(text(entry))) checks.reject(IssueCode::MALFORMED_FIELD, field);
-        return;
+        return std::nullopt;
     }
     if (entry.empty()) checks.reject(IssueCode::MALFORMED_FIELD, field);
     check_evidence_ref(entry, field, checks);
@@ -378,16 +385,65 @@ void validate_entry(const Json& entry, const BiographicalAge& age, const Biograp
         }
     }
     validate_technology(entry, start, field, checks);
+    if (field != activities_field || !entry.contains("name") || !nonblank(text(entry.at("name")))) {
+        return std::nullopt;
+    }
+    // Attest only the checkable timeline of a personal activity. Additional
+    // claims about training, certification, access or competition need review.
+    static constexpr std::array personal_fields = {
+        "name"sv, "activity_id"sv, "category"sv, "started_at_or_age"sv, "ended_at_or_current"sv,
+        "typical_frequency"sv,
+    };
+    if (!std::ranges::all_of(entry.object_range(), [](const auto& member) {
+            return std::ranges::find(personal_fields, member.key()) != personal_fields.end();
+        })) return std::nullopt;
+    if (entry.contains("typical_frequency") && !nonblank(text(entry.at("typical_frequency")))) {
+        return std::nullopt;
+    }
+    const bool ongoing = entry.contains("ended_at_or_current") && text(entry.at("ended_at_or_current")) == "current";
+    if ((start.age && (ongoing || end.age)) ||
+        (!start.date.empty() && age.birth_year && (ongoing || !end.date.empty()))) {
+        return ActivityPeriod{start, end, ongoing};
+    }
+    return std::nullopt;
+}
+
+bool has_checkable_activity_budget(std::vector<ActivityPeriod>& periods) {
+    if (periods.empty()) return false;
+    const bool by_age = periods.front().start.age.has_value();
+    if (std::ranges::any_of(periods, [=](const ActivityPeriod& period) {
+            return period.start.age.has_value() != by_age;
+        })) return false;
+    std::ranges::sort(periods, [=](const ActivityPeriod& a, const ActivityPeriod& b) {
+        return by_age ? a.start.age < b.start.age : a.start.date < b.start.date;
+    });
+    // Time markers alone cannot establish a combined budget for overlapping
+    // activities. Even equal bounds might denote overlap at this precision.
+    for (std::size_t i = 1; i < periods.size(); ++i) {
+        const auto& previous = periods[i - 1];
+        const auto& next = periods[i];
+        if (previous.ongoing ||
+            (by_age ? previous.end.age >= next.start.age : previous.end.date >= next.start.date)) return false;
+    }
+    return true;
 }
 
 void validate_history(const Json& draft, std::string_view field, IssueCode evidence,
                       const BiographicalAge& age, const BiographyContext& context, Checks& checks) {
     if (!draft.contains(field)) return;
     const auto& value = draft.at(field);
+    std::vector<ActivityPeriod> periods;
+    const auto check_entry = [&](const Json& item) {
+        if (const auto period = validate_entry(item, age, context, field, checks)) periods.push_back(*period);
+    };
     if (value.is_array()) {
-        for (const auto& item : value.array_range()) validate_entry(item, age, context, field, checks);
+        for (const auto& item : value.array_range()) check_entry(item);
     } else {
-        validate_entry(value, age, context, field, checks);
+        check_entry(value);
+    }
+    if (field == activities_field) {
+        checks.personal_background_plausible = periods.size() == (value.is_array() ? value.size() : 1) &&
+                                               has_checkable_activity_budget(periods);
     }
     checks.defer(evidence, field);
 }
@@ -454,6 +510,15 @@ bool evidence_claim(BiographyIssue issue) {
     case IssueCode::TECH_AVAILABILITY_REVIEW: return history_field;
     default: return false;
     }
+}
+
+constexpr BiographyIssue personal_activity_claim{IssueCode::ACTIVITY_BUDGET_REVIEW, activities_field};
+
+bool background_prerequisite(BiographyIssue issue) {
+    return issue.code == IssueCode::AGE_OUTSIDE_CALENDAR ||
+           issue.code == IssueCode::SPECIAL_MATURITY_RULE_REQUIRED ||
+           issue.code == IssueCode::PLAYABLE_AGE_UNDECIDED ||
+           issue.code == IssueCode::CONTEXT_NOT_DECIDED;
 }
 
 bool source_origin(BiographyEvidenceOrigin origin) {
@@ -526,24 +591,43 @@ RegisteredBiographyAuthority::RegisteredBiographyAuthority(std::vector<Registere
     }
 }
 
+RegisteredBiographySource RegisteredBiographyAuthority::initial_background_source() {
+    const auto& policy = rules().at("initial_background");
+    return {{std::string(text(policy.at("id"))), std::string(text(policy.at("version"))), "F10",
+             BiographyEvidenceOrigin::VALIDATED_INITIAL_BACKGROUND},
+            {{personal_activity_claim.code, std::string(personal_activity_claim.field)}}};
+}
+
 bool RegisteredBiographyAuthority::resolves(BiographyIssue issue, const ReviewRequest& request,
                                             const BiographyContext& context) const {
-    if (sources_.empty() || evidence_.empty() || !evidence_claim(issue) ||
+    return resolves(issue, request, context, nullptr);
+}
+
+bool RegisteredBiographyAuthority::resolves(BiographyIssue issue, const ReviewRequest& request,
+                                            const BiographyContext& context,
+                                            const BiographyClaimEvidence* evaluated) const {
+    if (sources_.empty() || (evidence_.empty() && !evaluated) || !evidence_claim(issue) ||
         request.canonical_draft.empty() || request.canonical_draft.size() > max_draft_bytes || !valid_context(context) ||
         request.binding != bind_review(request.canonical_draft, context)) return false;
 
-    bool supported = false;
+    const auto registered = [&](const BiographyClaimEvidence& evidence) {
+        return BiographyIssue{evidence.claim.code, evidence.claim.field} == issue &&
+               evidence.binding == request.binding &&
+               std::ranges::any_of(sources_, [&](const RegisteredBiographySource& source) {
+                   return source.identity == evidence.source &&
+                          std::ranges::find(source.claims, evidence.claim) != source.claims.end();
+               });
+    };
+    bool supported = evaluated && !evaluated->revoked &&
+                     evaluated->decision == BiographyEvidenceDecision::SUPPORTED && registered(*evaluated);
+    const auto native_background = text(rules().at("initial_background").at("id"));
     for (const auto& evidence : evidence_) {
-        if (BiographyIssue{evidence.claim.code, evidence.claim.field} != issue || evidence.binding != request.binding) continue;
-        const bool registered = std::ranges::any_of(sources_, [&](const RegisteredBiographySource& source) {
-            return source.identity == evidence.source &&
-                   std::ranges::find(source.claims, evidence.claim) != source.claims.end();
-        });
-        if (!registered) continue;
+        if (!registered(evidence)) continue;
         if (evidence.revoked) return false;
         switch (evidence.decision) {
         case BiographyEvidenceDecision::SUPPORTED:
-            supported = true;
+            // Only the native evaluation may assert support under the built-in source ID.
+            if (evidence.source.id != native_background) supported = true;
             break;
         case BiographyEvidenceDecision::CONTRADICTED: return false;
         case BiographyEvidenceDecision::INSUFFICIENT:
@@ -561,7 +645,9 @@ DomainDecision RegisteredBiographyAuthority::verify(const ReviewRequest&, const 
     return DomainDecision::UNVERIFIED;
 }
 
-BiographyValidator::BiographyValidator() : BiographyValidator(nullptr) {}
+BiographyValidator::BiographyValidator()
+    : BiographyValidator(std::make_shared<RegisteredBiographyAuthority>(
+          std::vector{RegisteredBiographyAuthority::initial_background_source()}, std::vector<BiographyClaimEvidence>{})) {}
 
 BiographyValidator::BiographyValidator(std::shared_ptr<const RegisteredBiographyAuthority> authority)
     : registered_authority_(std::move(authority)), issuer_(std::make_shared<const int>(0)) {}
@@ -569,7 +655,7 @@ BiographyValidator::BiographyValidator(std::shared_ptr<const RegisteredBiography
 #ifdef TREK_F10_BIOGRAPHY_TESTING
 BiographyValidator::BiographyValidator(const BiographyAuthority& authority, SemanticEvaluator& evaluator,
                                        std::string reviewer, std::string reviewer_version)
-    : BiographyValidator() {
+    : BiographyValidator(nullptr) {
     test_authority_ = &authority;
     evaluator_ = &evaluator;
     reviewer_ = std::move(reviewer);
@@ -608,11 +694,22 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
     if (authority) {
         // Preserve every pending issue if the domain resolver fails partway.
         try {
+            std::optional<BiographyClaimEvidence> personal_background;
+            if (registered_authority_ && checks.personal_background_plausible &&
+                std::ranges::none_of(checks.pending, background_prerequisite)) {
+                auto source = RegisteredBiographyAuthority::initial_background_source();
+                personal_background.emplace(BiographyClaimEvidence{
+                    std::move(source.identity), std::move(source.claims.front()), binding,
+                    BiographyEvidenceDecision::SUPPORTED});
+            }
             for (const auto& issue : checks.pending) {
                 // An evidence provider cannot supply missing policy or set the campaign date.
+                const bool use_personal_background = issue == personal_activity_claim && personal_background.has_value();
                 if (issue.code == IssueCode::SPECIAL_MATURITY_RULE_REQUIRED ||
                     issue.code == IssueCode::PLAYABLE_AGE_UNDECIDED ||
-                    !authority->resolves(issue, request, frozen_context)) {
+                    !(use_personal_background
+                          ? registered_authority_->resolves(issue, request, frozen_context, &*personal_background)
+                          : authority->resolves(issue, request, frozen_context))) {
                     result.objective.issues_.push_back(issue);
                 }
             }

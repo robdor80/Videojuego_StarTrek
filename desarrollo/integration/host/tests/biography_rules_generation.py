@@ -87,6 +87,22 @@ def main(source):
         evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
         generate("Unsupported biography evidence policy")
 
+        evidence["schema_version"] = "0.1.0"
+        evidence["evidence_model"]["initial_character_bootstrap"] = (
+            evidence["evidence_model"]["initial_character_bootstrap"].removesuffix(" Revised.")
+        )
+        evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+        background_path = policy_path.with_name("f10_initial_background_policy_v0.1.json")
+        background = json.loads(background_path.read_text(encoding="utf-8"))
+        background["examples"][0]["id"] += "_revised"
+        background_path.write_text(json.dumps(background), encoding="utf-8")
+        updated = generate()
+        assert updated["initial_background"] == original["initial_background"]
+        assert updated["sources_sha256"] != original["sources_sha256"]
+        background["initial_background_attestation"]["semantic_review_still_required_after_objective_attestation"] = False
+        background_path.write_text(json.dumps(background), encoding="utf-8")
+        generate("Unsupported initial background attestation")
+
 
 if __name__ == "__main__":
     main(Path(sys.argv[1]).resolve())
