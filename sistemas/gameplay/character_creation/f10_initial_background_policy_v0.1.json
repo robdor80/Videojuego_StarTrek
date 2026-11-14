@@ -1,0 +1,427 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f10_h06_p06a5_initial_background_policy",
+  "status": "DESIGN_PROPOSAL_NOT_RUNTIME_AUTHORITY",
+  "phase": "H06-P06-A5",
+  "approved_work_scope": "CHATGPT_SAFE_DESIGN_AND_OFFLINE_REFERENCE",
+  "domain_owner": "F10",
+  "host_role": "COORDINATE_ONLY",
+  "source_refs": [
+    "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "sistemas/gameplay/character_creation/biography_validation_rules.md",
+    "sistemas/gameplay/character_creation/prior_activity_model.json",
+    "sistemas/gameplay/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json",
+    "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json",
+    "sistemas/gameplay/species/species_biology_contract.json",
+    "sistemas/gameplay/species/character_lifecycle_contract.json",
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json",
+    "desarrollo/integration/host/src/f10/biography_evidence.h"
+  ],
+  "campaign": {
+    "scenario_id": "starfleet_academy",
+    "era_id": "tng_ds9_voyager",
+    "start_year": 2383,
+    "start_month_day": "UNDECIDED_BY_AUTHOR",
+    "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d"
+  },
+  "principles": {
+    "author_may_propose_fictional_past_without_external_documents": true,
+    "player_text_is_untrusted_until_f10_domain_validation": true,
+    "internally_validated_background_may_attest_plausibility_before_person_exists": true,
+    "source_registry_and_private_attestation_mandatory_for_objective_gate": true,
+    "initial_background_proposal_is_not_a_preexisting_authoritative_world_fact": true,
+    "plausibility_does_not_equal_formal_credential_or_institutional_permission": true,
+    "no_numeric_skill_points_from_authored_text": true,
+    "no_automatic_person_rank_admission_from_biography": true,
+    "double_gate_objective_then_semantic_required": true,
+    "no_semantic_ai_self_approval": true,
+    "no_auto_rewrite_of_player_story": true,
+    "no_automatic_age_maximum": true,
+    "species_does_not_imply_culture_citizenship_or_skills": true,
+    "no_hidden_world_truth_to_semantic_provider": true
+  },
+  "claim_classes": [
+    {
+      "code": "PERSONAL_ACTIVITY",
+      "tier": "PERSONAL_BACKGROUND",
+      "examples_es": [
+        "practica karate desde los ocho años",
+        "toca un instrumento los fines de semana"
+      ],
+      "source_policy": "F10_VALIDATED_INITIAL_BACKGROUND_IF_CHRONOLOGY_AND_CONTEXT_PLAUSIBLE",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "FORMAL_CERTIFICATION",
+        "EXPERT_SKILL_LEVEL",
+        "SERVICE_RANK"
+      ]
+    },
+    {
+      "code": "PERSONAL_INTEREST",
+      "tier": "PERSONAL_BACKGROUND",
+      "examples_es": [
+        "interés por astronomía",
+        "quiere ser piloto"
+      ],
+      "source_policy": "F10_VALIDATED_INITIAL_BACKGROUND_IF_CONTEXT_PLAUSIBLE",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "EXPERT_SKILL_LEVEL",
+        "ACADEMY_ADMISSION"
+      ]
+    },
+    {
+      "code": "FAMILY_ORIGIN_CONTEXT",
+      "tier": "PERSONAL_BACKGROUND",
+      "examples_es": [
+        "creció en una colonia",
+        "sus padres se dedicaban a la ciencia"
+      ],
+      "source_policy": "F10_VALIDATED_INITIAL_BACKGROUND_WITH_WORLD_AND_CHRONOLOGY_CHECKS",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "CITIZENSHIP",
+        "ORGANIZATION_MEMBERSHIP",
+        "SECRET_RELATIONSHIPS"
+      ]
+    },
+    {
+      "code": "FORMAL_EDUCATION",
+      "tier": "SOURCE_REVIEW",
+      "examples_es": [
+        "estudios secundarios",
+        "un curso universitario"
+      ],
+      "source_policy": "VERIFY_ERA_INSTITUTION_DURATION_AND_RELEVANT_VALIDATED_BACKGROUND",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "DEGREE_NOT_ESTABLISHED",
+        "SERVICE_CREDENTIAL",
+        "PROFESSIONAL_RANK"
+      ]
+    },
+    {
+      "code": "FORMAL_CERTIFICATION",
+      "tier": "SOURCE_REVIEW",
+      "examples_es": [
+        "cinturón negro primer dan",
+        "título profesional médico"
+      ],
+      "source_policy": "VERIFY_RELEVANT_ISSUER_PATH_TRAINING_TIME_AND_INTERNAL_PROVENANCE",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "AUTOMATIC_TRAINING_MASTER",
+        "PROFESSIONAL_LICENSE",
+        "SENSITIVE_ACCESS"
+      ]
+    },
+    {
+      "code": "CIVILIAN_PROFESSIONAL_EXPERIENCE",
+      "tier": "SOURCE_REVIEW",
+      "examples_es": [
+        "trabajó en un laboratorio civil",
+        "empleo supervisado"
+      ],
+      "source_policy": "VERIFY_VALID_BACKGROUND_TIMELINE_ACCESS_AND_NONINSTITUTIONAL_FACTS",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "STARFLEET_COMMISSION",
+        "FEDERATION_CLEARANCE",
+        "GUARANTEED_PROFESSIONAL_ABILITY"
+      ]
+    },
+    {
+      "code": "CITIZENSHIP_OR_LEGAL_STATUS",
+      "tier": "LEGAL_STATUS_REVIEW",
+      "examples_es": [
+        "afirma ser ciudadano federado",
+        "residencia en una colonia"
+      ],
+      "source_policy": "VERIFY_APPLICABLE_LEGAL_RULE_OR_WORLD_FACT_NO_SPECIES_INFERENCE",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "AUTOMATIC_STARFLEET_ACCESS",
+        "LOYALTY",
+        "INTELLIGENCE_ACCESS"
+      ]
+    },
+    {
+      "code": "SPECIAL_SPECIES_ABILITY",
+      "tier": "SPECIES_RULE_REVIEW",
+      "examples_es": [
+        "dice practicar telepatía vulcana",
+        "habilidad mental ocampana"
+      ],
+      "source_policy": "VERIFY_PROFILE_INDIVIDUAL_TRAINING_AND_CONTEXT_NO_SPECIES_OMNISCIENCE",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "UNLIMITED_TELEPATHY",
+        "UNVERIFIED_POWERS",
+        "SECRET_KNOWLEDGE"
+      ]
+    },
+    {
+      "code": "STARFLEET_COMMISSION_OR_CLEARANCE",
+      "tier": "INSTITUTIONAL_AUTHORITY",
+      "examples_es": [
+        "ya es capitán de la Flota",
+        "posee autorización de seguridad de nivel máximo"
+      ],
+      "source_policy": "EXISTING_AUTHORIZED_F11_F10_OR_OTHER_DOMAIN_FACT_REQUIRED_NOT_ISSUED_FROM_INITIAL_BIOGRAPHY",
+      "external_document_required": false,
+      "no_automatic_effects": [
+        "RANK",
+        "PERMISSIONS",
+        "ACADEMY_SLOT",
+        "COMMISSION",
+        "SECURITY_CLEARANCE"
+      ]
+    }
+  ],
+  "canonical_field_links": {
+    "prior_activities_and_hobbies": [
+      "PERSONAL_ACTIVITY",
+      "PERSONAL_INTEREST",
+      "FORMAL_CERTIFICATION"
+    ],
+    "prior_education": [
+      "FORMAL_EDUCATION"
+    ],
+    "certifications": [
+      "FORMAL_CERTIFICATION"
+    ],
+    "prior_experience": [
+      "CIVILIAN_PROFESSIONAL_EXPERIENCE",
+      "STARFLEET_COMMISSION_OR_CLEARANCE"
+    ],
+    "origin": [
+      "FAMILY_ORIGIN_CONTEXT"
+    ],
+    "citizenship_context": [
+      "CITIZENSHIP_OR_LEGAL_STATUS"
+    ],
+    "initial_long_term_objective": [
+      "PERSONAL_INTEREST"
+    ],
+    "species_id": [
+      "SPECIAL_SPECIES_ABILITY"
+    ]
+  },
+  "maturity_policy_proposal": {
+    "status": "PROPOSED_NOT_NATIVE_APPROVAL",
+    "numeric_playable_floor_required": true,
+    "lifetime_stage_must_have_species_support_or_explicit_author_approved_f10_rule": true,
+    "self_declared_adult_equivalent_is_an_input_not_evidence": true,
+    "individual_adulthood_attestation_can_be_generated_from_approved_f10_rule_and_individual_context_only": true,
+    "age_at_floor_without_lifecycle_support": "REVIEW_REQUIRED_NO_PERSON",
+    "age_above_floor_without_lifecycle_support": "REVIEW_REQUIRED_NO_PERSON",
+    "birthday_at_threshold_in_2383": "REVIEW_REQUIRED_NO_PERSON",
+    "special_species_without_specific_rule": "SPECIAL_MATURITY_RULE_REQUIRED_NO_PERSON",
+    "delta_species_in_main_game": "DLC_DELTA_UNAVAILABLE_NO_PERSON",
+    "never_assume_human_maturation_for_nonhuman": true,
+    "no_documentary_id_required_for_fictional_character": true,
+    "emitted_attestation_only_after_authorized_f10_evaluation": "NOT_IMPLEMENTED"
+  },
+  "initial_background_attestation": {
+    "issuer": "F10_INTERNAL_REGISTERED_SOURCE_NOT_CLIENT",
+    "origin_type": "VALIDATED_INITIAL_BACKGROUND",
+    "pre_person_stage_supported": true,
+    "field_level_scopes": [
+      "origin",
+      "citizenship_context",
+      "prior_education",
+      "prior_experience",
+      "prior_activities_and_hobbies",
+      "certifications"
+    ],
+    "binding_required": [
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "policy",
+      "source_identity",
+      "source_version",
+      "issuer",
+      "claim_code",
+      "field"
+    ],
+    "must_recheck": [
+      "SPECIES_AND_ERA",
+      "CAMPAIGN_2383",
+      "AGE_AND_ACTIVITY_TIME",
+      "WORLD_ACCESS_AND_INSTITUTION",
+      "CLAIM_CLASS_AND_PROVENANCE",
+      "CONTRADICTIONS_AND_REVOKED_SOURCES"
+    ],
+    "may_support": "OBJECTIVE_BACKGROUND_CLAIM_ONLY",
+    "must_not_confer": [
+      "PERSON",
+      "F11_RANK",
+      "F05_BINDING",
+      "ADMISSION",
+      "SKILL_POINTS",
+      "FORGED_CERTIFICATES",
+      "SECRET_PERMISSION"
+    ],
+    "semantic_review_still_required_after_objective_attestation": true,
+    "if_no_trusted_source": "REVIEW_REQUIRED_NO_PERSON",
+    "if_issuer_or_rule_changes": "STALE_REVIEW_REQUIRED",
+    "expiry_on_draft_context_rules_generation_change": true
+  },
+  "review_outcomes": {
+    "reference_layer": [
+      "CHANGES_REQUIRED",
+      "REVIEW_REQUIRED"
+    ],
+    "real_objective_gate": [
+      "CHANGES_REQUIRED",
+      "REVIEW_REQUIRED",
+      "OBJECTIVE_VALID_ONLY_IF_TRUSTED_EVIDENCE_COMPLETE"
+    ],
+    "semantic_gate": [
+      "REVIEW_UNAVAILABLE",
+      "CHANGES_REQUIRED",
+      "VALID_ONLY_AFTER_DOMAIN_VERIFICATION"
+    ],
+    "client_cannot_claim": [
+      "VALID",
+      "PERSON_CREATED",
+      "ADMITTED",
+      "PROFESSIONAL_RANK",
+      "PERMISSIONS"
+    ]
+  },
+  "examples": [
+    {
+      "id": "karate_since_eight",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "PERSONAL_ACTIVITY",
+      "started_at_age": 8,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "BACKGROUND_INTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "id": "astronomy_hobby",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "PERSONAL_INTEREST",
+      "started_at_age": 12,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "BACKGROUND_INTERNAL_REVIEW_REQUIRED"
+    },
+    {
+      "id": "black_belt_first_dan",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "FORMAL_CERTIFICATION",
+      "started_at_age": 8,
+      "expected_tier": "SOURCE_REVIEW",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "FORMAL_ATTESTATION_REQUIRED"
+    },
+    {
+      "id": "medical_specialist_20",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "FORMAL_CERTIFICATION",
+      "started_at_age": 18,
+      "expected_tier": "SOURCE_REVIEW",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "FORMAL_ATTESTATION_REQUIRED"
+    },
+    {
+      "id": "captain_at_twenty",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "STARFLEET_COMMISSION_OR_CLEARANCE",
+      "started_at_age": 18,
+      "expected_tier": "INSTITUTIONAL_AUTHORITY",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "INSTITUTIONAL_AUTHORITY_REQUIRED"
+    },
+    {
+      "id": "trained_after_character_age",
+      "species_id": "human",
+      "age_years": 20,
+      "claim_class": "PERSONAL_ACTIVITY",
+      "started_at_age": 21,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "CHANGES_REQUIRED",
+      "issue_code": "ACTIVITY_AFTER_CURRENT_AGE"
+    },
+    {
+      "id": "vulcan_24",
+      "species_id": "vulcan",
+      "age_years": 24,
+      "claim_class": "PERSONAL_INTEREST",
+      "started_at_age": 12,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "CHANGES_REQUIRED",
+      "issue_code": "BELOW_PLAYABLE_AGE"
+    },
+    {
+      "id": "romulan_25_federation_citizen",
+      "species_id": "romulan",
+      "age_years": 25,
+      "claim_class": "CITIZENSHIP_OR_LEGAL_STATUS",
+      "started_at_age": 24,
+      "expected_tier": "LEGAL_STATUS_REVIEW",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "LEGAL_STATUS_SOURCE_REQUIRED"
+    },
+    {
+      "id": "ocampan_2_delta",
+      "species_id": "ocampan",
+      "age_years": 2,
+      "claim_class": "PERSONAL_INTEREST",
+      "started_at_age": 1,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "CHANGES_REQUIRED",
+      "issue_code": "DLC_DELTA_UNAVAILABLE"
+    },
+    {
+      "id": "changeling_100",
+      "species_id": "changeling",
+      "age_years": 100,
+      "claim_class": "PERSONAL_INTEREST",
+      "started_at_age": 10,
+      "expected_tier": "PERSONAL_BACKGROUND",
+      "reference_outcome": "REVIEW_REQUIRED",
+      "issue_code": "SPECIAL_MATURITY_RULE_REQUIRED"
+    }
+  ],
+  "guardrails": {
+    "exact_profile_and_policy_source_not_copy_of_numbers": true,
+    "preserve_historical_locked_contracts": true,
+    "without_local_semantic_provider": "REVIEW_UNAVAILABLE_NO_PERSON",
+    "only_internal_f10_may_register_sources": true,
+    "no_automatic_credential_issue_from_fiction": true,
+    "no_automatic_citizenship_from_species": true,
+    "privacy": "DO_NOT_LOG_RAW_BIOGRAPHY_MEDICAL_OR_FAMILY_CONTEXT_BY_DEFAULT",
+    "no_local_model_hardcoded": true,
+    "no_core_unreal_f11_changes": true,
+    "no_person_creation_or_admission": true,
+    "no_H07_start": true
+  },
+  "next_code_cut": {
+    "owner": "CODEX",
+    "suggested_model": "GPT-6",
+    "suggested_reasoning": "Alto",
+    "prerequisite_decisions": [
+      "APPROVE_MATURITY_RULE_SOURCES_PER_SPECIES_WHERE_EVIDENCE_EXISTS",
+      "DECIDE_PROVIDER_AND_MODEL_FOR_SEMANTIC_VALIDATION",
+      "DECIDE_CAMPAIGN_MONTH_DAY_IF_NEEDED"
+    ],
+    "scope": "IMPLEMENT_REGISTERED_F10_INITIAL_BACKGROUND_EVALUATOR_IN_CPP_AFTER_POLICY_REVIEW",
+    "explicit_not_covered": [
+      "SEMANTIC_PROVIDER_CONNECTION",
+      "CORE_PERSON_COMMIT",
+      "STARFLEET_ADMISSION",
+      "H07"
+    ],
+    "status": "PENDING"
+  }
+}
