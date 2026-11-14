@@ -35,7 +35,10 @@ for name in ("query_view", "submit_order", "query_order", "cancel_order", "resto
 for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_commit_promotion", "test_visit"):
     assert name not in symbols, name
 assert "TrekF04Bridge" in dependencies
-assert not any("TrialHost" in p.name or p.name.startswith(("host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests")) for p in build.rglob("*") if p.is_file())
+assert not any("TrialHost" in p.name or p.name.startswith((
+    "host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests",
+    "host_academy_feasibility_tests",
+)) for p in build.rglob("*") if p.is_file())
 print(symbols)
 print(dependencies)
 print("PASS: Release product loaded, exports inspected, Core pin verified, tests OFF, no HOST test hooks/F11 trial")

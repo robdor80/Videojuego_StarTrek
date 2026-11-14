@@ -67,7 +67,8 @@ jobs:
           $env:F04_TEST_TEMP_ROOT = $temp
           $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
           if ($IsWindows) { $flags += @('-A', 'x64') }
-          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests', 'host_abi_tests')
+          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
+                       'host_abi_tests', 'host_academy_feasibility_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
             $env:CC = 'clang'
@@ -164,7 +165,7 @@ jobs:
           echo "TrekHost=$host_so" | tee -a "$lab/product-linux-manifest.log"
           echo "TrekF04Bridge=$bridge_so" | tee -a "$lab/product-linux-manifest.log"
           if find "$build" -type f \( -name host_native_tests -o -name host_fault_tests \
-              -o -name 'libTrekF11TrialHost.so' -o -name TrekF11TrialHost \) | grep -q .; then
+              -o -name host_academy_feasibility_tests -o -name 'libTrekF11TrialHost.so' -o -name TrekF11TrialHost \) | grep -q .; then
             echo 'FAIL: test executable or F11 trial component in product build'
             exit 1
           fi
