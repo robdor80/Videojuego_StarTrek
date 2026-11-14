@@ -103,7 +103,6 @@ struct Evaluator final : SemanticEvaluator {
 
 struct Authority final : BiographyAuthority {
     bool has_evidence{true};
-    bool has_maturity_evidence{true};
     bool objective_throws{};
     bool semantic_throws{};
     DomainDecision decision{DomainDecision::ACCEPTED};
@@ -113,7 +112,7 @@ struct Authority final : BiographyAuthority {
         if (objective_throws && missing.code == IssueCode::PROFILE_EVIDENCE_REQUIRED) {
             throw std::runtime_error("private resolver output");
         }
-        return has_evidence && (missing.code != IssueCode::MATURITY_EVIDENCE_REQUIRED || has_maturity_evidence);
+        return has_evidence;
     }
 
     DomainDecision verify(const ReviewRequest&, const ReviewEvidence&) const override {
@@ -136,7 +135,8 @@ void production() {
     if (result.semantic != SemanticStatus::REVIEW_UNAVAILABLE) diagnostics(result);
     check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
           result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt &&
-          issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), "product draft remains pending");
+          !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status") &&
+          issue(result, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), "product pending for actual biographical sources");
     check(draft().to_string() == raw, "draft unchanged");
     static_assert(!std::is_default_constructible_v<BiographyReceipt>);
     static_assert(!std::is_copy_constructible_v<BiographyReceipt>);
@@ -202,11 +202,12 @@ void playable_age() {
             continue;
         }
         check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
-              issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
+              !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status") &&
+              issue(result, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), entry.key());
         data["age_or_birth_date"] = 1200;
         result = validator.evaluate(data.to_string(), context());
         check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
-              issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
+              !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
     }
     check(numeric == 22, "22 numeric age floors");
 
@@ -228,18 +229,17 @@ void maturity_dates() {
               issue(result, IssueCode::PLAYABLE_AGE_UNDECIDED, "age_or_birth_date"), birthday);
     }
     data["age_or_birth_date"] = "2364-12-31";
-    f.authority.has_maturity_evidence = false;
     auto result = f.validator.evaluate(data.to_string(), context());
-    check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
-          f.evaluator.calls == 0 &&
-          result.objective.issues() == std::vector<BiographyIssue>{{IssueCode::MATURITY_EVIDENCE_REQUIRED,
-                                                                  "adult_equivalent_status"}},
-          "earlier birthday clears age only");
+    check(result.objective.status() == ObjectiveStatus::OBJECTIVE_VALID && result.receipt &&
+          result.semantic == SemanticStatus::VALID && f.evaluator.calls == 1 &&
+          !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"),
+          "age past the minimum has no additional adulthood gate");
     data["age_or_birth_date"] = 18;
     result = f.validator.evaluate(data.to_string(), context());
-    check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
-          f.evaluator.calls == 0 && issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"),
-          "client declaration cannot replace missing maturity evidence");
+    check(result.objective.status() == ObjectiveStatus::OBJECTIVE_VALID && result.receipt &&
+          result.semantic == SemanticStatus::VALID && f.evaluator.calls == 2 &&
+          !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"),
+          "declared age at minimum passes age check without invented evidence");
 }
 
 void restricted_species() {
@@ -487,11 +487,10 @@ void registered_sources() {
 
     const auto records = f.support();
     const auto accepted = f.evaluate(records);
-    check(accepted.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
-          accepted.objective.issues() == std::vector<BiographyIssue>{{IssueCode::MATURITY_EVIDENCE_REQUIRED,
-                                                                    "adult_equivalent_status"}} &&
+    check(accepted.objective.status() == ObjectiveStatus::OBJECTIVE_VALID &&
+          accepted.objective.issues().empty() &&
           accepted.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !accepted.receipt,
-          "internal records cover initial background without PERSON, maturity or semantic approval");
+          "declared age passes; other trusted sources still require semantic review");
 
     const auto unavailable = BiographyValidator{}.evaluate(f.data.to_string(), f.campaign);
     check(issue(unavailable, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin") &&
@@ -637,7 +636,6 @@ void personal_background() {
               result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt,
               "only checkable personal background is supported");
         for (const BiographyIssue unresolved : {
-                 BiographyIssue{IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"},
                  {IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"},
                  {IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED, "citizenship_context"},
                  {IssueCode::EDUCATION_EVIDENCE_REQUIRED, "prior_education"},
@@ -761,7 +759,7 @@ void failure() {
     f.authority.objective_throws = true;
     const auto pending = f.validator.evaluate(raw, context());
     check(!pending.receipt && f.evaluator.calls == 0 &&
-          issue(pending, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), "resolver failure preserves pending issues");
+          issue(pending, IssueCode::PROFILE_EVIDENCE_REQUIRED, "player_profile"), "resolver failure preserves pending issues");
     f.authority.objective_throws = false;
     for (const auto mode : {Evaluator::DOWN, Evaluator::PARTIAL, Evaluator::THROW, Evaluator::GOOD}) {
         f.evaluator.mode = mode;
