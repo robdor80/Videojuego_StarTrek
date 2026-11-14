@@ -143,6 +143,20 @@ class BiographyPrecheckTests(unittest.TestCase):
         draft["appearance_profile"] = "x" * 66000
         self.assertEqual(evaluate(draft)["status"], "CHANGES_REQUIRED")
 
+    def test_deeply_nested_draft_fails_closed(self):
+        draft = example()
+        nested = {}
+        top = nested
+        for i in range(30):
+            nxt = {}
+            top["inside"] = nxt
+            top = nxt
+        draft["prior_experience"] = [nested]
+        out = evaluate(draft)
+        self.assertEqual(out["status"], "CHANGES_REQUIRED")
+        self.assertIn("MALFORMED_FIELD", [x["code"] for x in out["issues"]])
+        self.assertFalse(out["person_created"])
+
     def test_citizenship_is_not_inferred_from_human_species(self):
         draft = example()
         draft["citizenship_context"] = "por acreditar"
