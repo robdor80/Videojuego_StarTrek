@@ -59,11 +59,40 @@ set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/
 
 
 set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
-add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp)
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+get_filename_component(star_trek_root "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
+set(f10_authoring "${star_trek_root}/sistemas/gameplay")
+file(GLOB f10_species_profiles CONFIGURE_DEPENDS "${f10_authoring}/species/profiles/*_v0.1.json")
+set(f10_rules_dir "${CMAKE_CURRENT_BINARY_DIR}/generated/f10")
+set(f10_rules_header "${f10_rules_dir}/biography_rules_data.h")
+add_custom_command(OUTPUT "${f10_rules_header}"
+  COMMAND "${CMAKE_COMMAND}" -E make_directory "${f10_rules_dir}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/src/f10/embed_biography_rules.py"
+    "${star_trek_root}" "${f10_rules_header}"
+  DEPENDS src/f10/embed_biography_rules.py ${f10_species_profiles}
+    "${f10_authoring}/character_creation/character_creation_contract_v1_0.json"
+    "${f10_authoring}/character_creation/f10_biography_validation_interface_v0.1.json"
+    "${f10_authoring}/character_creation/biography_validation_rules.md"
+    "${f10_authoring}/character_creation/prior_activity_model.json"
+    "${f10_authoring}/character_creation/player_profile_contract.json"
+    "${f10_authoring}/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json"
+    "${f10_authoring}/organizations/character_affiliation_citizenship_contract.json"
+    "${f10_authoring}/species/species_biology_contract.json"
+    "${f10_authoring}/ship_operations/era_technology_matrix.json"
+  VERBATIM)
+add_custom_target(host_f10_rules DEPENDS "${f10_rules_header}")
+set(f10_sources src/f10/biography_validation.cpp)
+
+add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp
+  ${f10_sources})
+add_dependencies(TrekHost host_f10_rules)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
 target_compile_definitions(TrekHost PRIVATE TREK_HOST_BUILD TREK_HOST_CORE_SHA="${host_core_sha}")
-target_include_directories(TrekHost PUBLIC include)
-target_link_libraries(TrekHost PRIVATE TrekF04Bridge Threads::Threads)
+target_include_directories(TrekHost PUBLIC include PRIVATE "${f10_rules_dir}")
+target_link_libraries(TrekHost PRIVATE TrekF04Bridge Threads::Threads CoreRPG::CoreRPG jsoncons)
+# The validator reuses Core's pure SHA-256 implementation. Keep archive
+# symbols from the static Core library outside the shared HOST interface.
+target_link_options(TrekHost PRIVATE "$<$<PLATFORM_ID:Linux>:LINKER:--exclude-libs,libCoreRPG.a>")
 set_target_properties(TrekHost PROPERTIES
   CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN YES WINDOWS_EXPORT_ALL_SYMBOLS NO)
 # Both DLLs live beside the native consumer on Windows.
@@ -113,7 +142,6 @@ if(TREK_HOST_TESTS)
   target_compile_definitions(host_persistence_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
   target_link_libraries(host_persistence_tests PRIVATE TrekF04Bridge Threads::Threads)
   set_target_properties(host_persistence_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
-  find_package(Python3 REQUIRED COMPONENTS Interpreter)
   foreach(case IN ITEMS roundtrip reader history_rng paths failures io queue double late renewal_failure busy save_close load_close manifest incompatible
       identity import truncated altered incomplete absent_binding wrong_binding foreign_core)
     add_test(NAME host.persistence.${case} COMMAND host_persistence_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/persistence/${case}")
@@ -122,6 +150,19 @@ if(TREK_HOST_TESTS)
   add_test(NAME host.persistence.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/persistence_process.py"
     "$<TARGET_FILE:host_persistence_tests>" "${CMAKE_CURRENT_BINARY_DIR}/persistence/process")
   set_tests_properties(host.persistence.process PROPERTIES TIMEOUT 240 LABELS "h04;process;fault-injection")
+endif()
+
+if(TREK_HOST_TESTS)
+  add_executable(host_biography_tests tests/biography_tests.cpp ${f10_sources})
+  add_dependencies(host_biography_tests host_f10_rules)
+  target_include_directories(host_biography_tests PRIVATE src "${f10_rules_dir}")
+  target_link_libraries(host_biography_tests PRIVATE CoreRPG::CoreRPG jsoncons)
+  target_compile_definitions(host_biography_tests PRIVATE TREK_F10_BIOGRAPHY_TESTING)
+  foreach(case IN ITEMS production fields species chronology evidence context malformed conjunction review
+      stale evidence_stale failure privacy)
+    add_test(NAME host.biography.${case} COMMAND host_biography_tests ${case})
+    set_tests_properties(host.biography.${case} PROPERTIES TIMEOUT 20 LABELS "f10;h06-p06-a;native")
+  endforeach()
 endif()
 
 if(TREK_HOST_TESTS)

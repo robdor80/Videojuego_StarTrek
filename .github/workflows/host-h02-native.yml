@@ -8,6 +8,11 @@ on:
       - 'desarrollo/integration/f05/**'
       - 'desarrollo/integration/f11/**'
       - 'desarrollo/integration/f11_host/**'
+      - 'sistemas/gameplay/character_creation/**'
+      - 'sistemas/gameplay/species/**'
+      - 'sistemas/gameplay/organizations/character_affiliation_citizenship_contract.json'
+      - 'sistemas/gameplay/ship_operations/era_technology_matrix.json'
+      - 'sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json'
       - 'proyecto/docs/architecture/host/**'
       - 'desarrollo/tools/validation/test_host_h01_contracts.py'
       - '.github/workflows/host-h02-native.yml'
@@ -68,7 +73,7 @@ jobs:
           $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
           if ($IsWindows) { $flags += @('-A', 'x64') }
           $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
-                       'host_abi_tests', 'host_academy_feasibility_tests')
+                       'host_abi_tests', 'host_academy_feasibility_tests', 'host_biography_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
             $env:CC = 'clang'
