@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f10_h06_p06a7_individual_maturity_policy",
+  "status": "PROPOSED_DESIGN_NOT_RUNTIME_ENFORCED",
+  "phase": "H06-P06-A7",
+  "locale": "es-ES",
+  "domain_owner": "F10",
+  "orchestration_owner": "HOST",
+  "source_refs": [
+    "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "sistemas/gameplay/character_creation/biography_validation_rules.md",
+    "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json",
+    "sistemas/gameplay/character_creation/f10_initial_background_policy_v0.1.json",
+    "sistemas/gameplay/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json",
+    "sistemas/gameplay/species/species_biology_contract.json",
+    "sistemas/gameplay/species/character_lifecycle_contract.json",
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json",
+    "desarrollo/integration/host/src/f10/biography_evidence.h",
+    "desarrollo/integration/host/src/f10/biography_validation.h"
+  ],
+  "scope": {
+    "campaign_scenario_id": "starfleet_academy",
+    "campaign_era_id": "tng_ds9_voyager",
+    "campaign_start_year": 2383,
+    "campaign_start_month_day": "UNDECIDED_BY_AUTHOR",
+    "age_unit": "EARTH_YEARS",
+    "character_scope": "INITIAL_PLAYER_CANDIDATE_BEFORE_PERSON",
+    "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d"
+  },
+  "distinct_concepts": {
+    "playable_age_floor": "AUTHOR_APPROVED_NUMERIC_GAMEPLAY_MINIMUM_FROM_F10_SPECIES_MATURITY_POLICY",
+    "lifecycle_stage": "INDIVIDUAL_ADULT_EQUIVALENT_DEVELOPMENT_STAGE_REQUIRES_SUPPORTED_SPECIES_ORIGIN_RULE",
+    "trust_provenance": "REGISTERED_INTERNAL_F10_SOURCE_FOR_EXACT_BIOGRAPHY_AND_SESSION",
+    "result": "MATURITY_SUBCHECK_ONLY_NOT_ACADEMY_ADMISSION_NOT_PERSON"
+  },
+  "stage_rule_registry": {
+    "status": "NOT_POPULATED_NO_APPROVED_INDIVIDUAL_STAGE_RULES_IN_THIS_CUT",
+    "entries": [],
+    "supported_registry_entry_contract": [
+      "species_id",
+      "species_profile_ref",
+      "f10_approved_stage_rule_id",
+      "f10_approved_stage_rule_version",
+      "evidence_basis_ref",
+      "origin_mode_applicability",
+      "individual_stage_predicate",
+      "known_exceptions_and_unknowns",
+      "approved_by_author",
+      "effective_campaign_context"
+    ],
+    "registration_requirements": [
+      "AUTHOR_APPROVAL_OR_EXPLICIT_PREEXISTING_DOMAIN_AUTHORITY",
+      "ACTUAL_SPECIES_PROFILE_AND_LIFECYCLE_SOURCE_INSPECTION",
+      "NO_HUMAN_FALLBACK",
+      "NO_AGE_ONLY_PREDICATE",
+      "NO_LEGENDARY_NPC_TRAIT_GENERALIZATION",
+      "NO_APPEARANCE_ONLY_STAGE_PROOF",
+      "NO_BIOGRAPHY_CLIENT_FLAG_AS_EVIDENCE",
+      "EVIDENCE_SOURCE_REGISTRY_VERIFIED",
+      "RULE_AND_PROFILE_DIGEST_BOUND"
+    ],
+    "empty_registry_behavior": "REVIEW_REQUIRED_NO_PERSON",
+    "approval_scope": "POLICY_APPROVAL_DOES_NOT_APPROVE_EMPTY_REGISTRY_OR_MAKE_ANY_SPECIES_AUTO_MATURE",
+    "source_profile_population": "MUST_BE_ADDED_BY_SEPARATE_VERIFIABLE_AUTHOR_DECISIONS"
+  },
+  "individual_stage_claim": {
+    "draft_input_field": "adult_equivalent_status",
+    "client_true_is": "CLAIM_NOT_PROOF",
+    "client_false_is": "NON_ADULT_DECLARED_CHANGES_REQUIRED",
+    "appearance_or_uniform_is": "NOT_BIOLOGICAL_STAGE_EVIDENCE",
+    "institutional_grade_or_cadet_aspiration_is": "NOT_MATURITY_PROOF",
+    "no_real_world_documents_or_medical_files_required": true,
+    "no_existing_core_person_required": true,
+    "stage_sources_allowed_if_separately_approved": [
+      "F10_INTERNAL_APPROVED_SPECIES_DEVELOPMENT_RULE",
+      "TRUSTED_CORE_FACT_READ_IF_EXISTING_AND_APPLICABLE",
+      "F10_APPROVED_INITIAL_DEVELOPMENT_ATTESTATION"
+    ],
+    "stage_sources_never_sufficient": [
+      "PLAYER_DECLARATION",
+      "UNVERIFIED_BIOGRAPHY_TEXT",
+      "CLIENT_EVIDENCE_REF",
+      "CLIENT_APPROVED_FLAG",
+      "MODEL_GENERATED_ADULTHOOD",
+      "APPEARANCE_ADULT",
+      "SPECIES_TYPICAL_LIFESPAN",
+      "TRAINING_OR_CERTIFICATION",
+      "AGE_FLOOR_ALONE"
+    ],
+    "registration_and_binding_fields": [
+      "species_id",
+      "species_profile_ref",
+      "stage_rule_id_and_version",
+      "source_identity_and_version",
+      "issuer_identity",
+      "individual_development_fact_basis",
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "policy",
+      "campaign_generation"
+    ],
+    "contradiction_or_revocation": "MATURITY_PENDING_NO_PERSON",
+    "no_valid_stage_source": "MATURITY_EVIDENCE_REQUIRED_NO_PERSON",
+    "source_or_rule_stale": "MATURITY_PENDING_NO_PERSON",
+    "success_future": "INDIVIDUAL_STAGE_ATTESTED_AS_OBJECTIVE_SUBCHECK_ONLY"
+  },
+  "gate_order": [
+    {
+      "gate": "SCHEMA_CONTEXT",
+      "purpose": "DRAFT_AND_CAMPAIGN_VALID",
+      "failure": "CHANGES_REQUIRED_OR_REVIEW_REQUIRED"
+    },
+    {
+      "gate": "CONTENT_SCOPE",
+      "purpose": "NO_DLC_DELTA_IN_MAIN_GAME",
+      "failure": "CHANGES_REQUIRED"
+    },
+    {
+      "gate": "SPECIES_RULE",
+      "purpose": "SPECIAL_SPECIES_RULE_MUST_EXIST",
+      "failure": "REVIEW_REQUIRED"
+    },
+    {
+      "gate": "PLAYABLE_FLOOR",
+      "purpose": "MINIMUM_AS_DESIGNED_AND_2383_BIRTHDAY_HANDLING",
+      "failure": "CHANGES_REQUIRED_OR_REVIEW_REQUIRED"
+    },
+    {
+      "gate": "INDIVIDUAL_STAGE",
+      "purpose": "APPROVED_STAGE_RULE_AND_REGISTERED_EVIDENCE",
+      "failure": "REVIEW_REQUIRED"
+    },
+    {
+      "gate": "REMAINING_OBJECTIVE",
+      "purpose": "OTHER_F10_EVIDENCES_STILL_REQUIRED",
+      "failure": "REVIEW_REQUIRED"
+    },
+    {
+      "gate": "SEMANTIC",
+      "purpose": "LOCAL_SEMANTIC_REVIEW_AND_DOMAIN_VERIFICATION",
+      "failure": "REVIEW_UNAVAILABLE_OR_CHANGES_REQUIRED"
+    },
+    {
+      "gate": "FUTURE_COMMIT",
+      "purpose": "SEPARATE_AUTHORIZED_PERSON_CREATION",
+      "failure": "NO_CORE_MUTATION"
+    }
+  ],
+  "canonical_outcomes": {
+    "below_floor": "CHANGES_REQUIRED_NO_PERSON",
+    "unsupported_species": "CHANGES_REQUIRED_NO_PERSON",
+    "no_development_stage_rule": "REVIEW_REQUIRED_NO_PERSON",
+    "untrusted_client_stage_only": "REVIEW_REQUIRED_NO_PERSON",
+    "valid_stage_source_but_no_semantic_reviewer": "REVIEW_UNAVAILABLE_NO_PERSON",
+    "special_species_missing_rule": "REVIEW_REQUIRED_NO_PERSON",
+    "delta_species_in_main": "CHANGES_REQUIRED_NO_PERSON",
+    "birthday_threshold_in_2383": "REVIEW_REQUIRED_NO_PERSON",
+    "stage_conflicts": "REVIEW_REQUIRED_NO_PERSON",
+    "both_future_gates_pass": "PRIVATE_RECEIPT_ONLY_UNTIL_SEPARATE_F10_CORE_COMMIT"
+  },
+  "exceptions": {
+    "three_special_species": [
+      "changeling",
+      "jem_hadar",
+      "vorta"
+    ],
+    "five_delta_species": [
+      "hirogen",
+      "kazon",
+      "ocampan",
+      "talaxian",
+      "vidiian"
+    ],
+    "no_maturity_stage_rule_from_changeling_adult_appearance": true,
+    "no_maturity_stage_rule_from_jem_hadar_soldier_or_fast_growth": true,
+    "no_maturity_stage_rule_from_vorta_clone_or_functional_post": true,
+    "no_ocampan_adulthood_automatic_at_2": true,
+    "no_trill_symbiont_age_as_host_age": true,
+    "no_romulan_admission_from_maturity": true,
+    "no_human_npc_cadet_16_17_player_exception": true,
+    "no_fixed_maximum_playable_age": true,
+    "no_average_lifespan_as_hard_maximum": true,
+    "no_cultural_rite_as_universal_maturity": true,
+    "no_medical_disability_assumption_from_species": true
+  },
+  "review_security": {
+    "no_rule_override_by_semantic_model": true,
+    "semantic_model_not_authoritative": true,
+    "never_emit_signed_or_private_receipt_from_offline_reference": true,
+    "no_client_supplied_evidence_bypass": true,
+    "no_evidence_generation_without_registered_rule": true,
+    "no_new_credential_or_permission_from_stage": true,
+    "no_client_edit_to_authoritative_history": true,
+    "every_changed_draft_context_policy_rule_source_invalidates_review": true,
+    "mandatory_double_gate": true,
+    "only_host_session_owns_coordination": true,
+    "core_rpg_only_authoritative_world_fact_source": true,
+    "no_core_rpg_or_unreal_mutation": true,
+    "no_f11_rank_no_academy_slot_no_f05_player_binding": true,
+    "not_for_npc_admission_policy": true
+  },
+  "unresolved_before_product": [
+    "APPROVED_SPECIES_LIFECYCLE_STAGE_RULES_NOT_DEFINED_FOR_25",
+    "TRUSTED_INITIAL_STAGE_ATTESTER_NOT_IMPLEMENTED",
+    "LOCAL_SEMANTIC_PROVIDER_NOT_SELECTED",
+    "2383_START_MONTH_DAY_NOT_APPROVED",
+    "SPECIAL_SPECIES_STAGE_RULES_NOT_APPROVED",
+    "LEGAL_AND_INSTITUTIONAL_SOURCES_PARTIAL"
+  ],
+  "implementation_handoff": {
+    "owner": "CODEX",
+    "recommended_model": "GPT-6",
+    "reasoning_level": "Alto",
+    "scope": "READ_APPROVED_STAGE_RULE_REGISTRY_AND_ONLY_THEN_EMIT_PRIVATE_F10_STAGE_EVIDENCE_USING_REGISTERED_BIOGRAPHY_AUTHORITY",
+    "risk": "DO_NOT_CREATE_AN_AGE_ONLY_SHORTCUT_WHILE_REGISTRY_IS_EMPTY",
+    "release_precondition": "AUTHOR_APPROVAL_OF_ACTUAL_STAGE_RULES_AND_EVIDENCE_SOURCE",
+    "require_pr_draft_and_independent_audit": true,
+    "no_core_changes": true,
+    "no_real_ai_integration_without_SEPARATE_SELECTION": true
+  },
+  "tests_scope": "OFFLINE_REFERENCE_AND_CONTRACT_ONLY_NOT_REAL_MATURITY_ATTESTATION",
+  "phase_completion_status": {
+    "h06_p06_a": "PARTIAL",
+    "hu08": "PARTIAL",
+    "m1": "PARTIAL",
+    "h07": "NOT_STARTED"
+  }
+}
