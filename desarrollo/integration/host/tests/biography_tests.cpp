@@ -1,4 +1,4 @@
-#include "f10/biography_validation.h"
+#include "f10/biography_evidence.h"
 #include "biography_rules_data.h"
 
 #include <jsoncons/json.hpp>
@@ -407,7 +407,7 @@ void stale() {
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
     check(f.evaluator.request_binding.ruleset.starts_with(
-              "f10-biography/2:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
+              "f10-biography/3:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
     auto previous_ruleset = f.evaluator.request_binding.ruleset;
     previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
     BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));
@@ -438,6 +438,193 @@ void evidence_stale() {
         check(result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt &&
               f.authority.verified == 0, "stale or foreign evidence rejected before domain decision");
     }
+}
+
+struct InternalEvidence {
+    Json data = draft();
+    BiographyContext campaign = context();
+    BiographySourceIdentity background{"f10.history", "1", "f10.domain",
+                                       BiographyEvidenceOrigin::VALIDATED_INITIAL_BACKGROUND};
+    BiographySourceIdentity profile{"f10.profile", "1", "f10.domain", BiographyEvidenceOrigin::APPROVED_RULE};
+    std::vector<RegisteredBiographySource> sources{
+        {background, {{IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"},
+                      {IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED, "citizenship_context"},
+                      {IssueCode::EDUCATION_EVIDENCE_REQUIRED, "prior_education"},
+                      {IssueCode::EXPERIENCE_EVIDENCE_REQUIRED, "prior_experience"},
+                      {IssueCode::ACTIVITY_BUDGET_REVIEW, "prior_activities_and_hobbies"}}},
+        {profile, {{IssueCode::PROFILE_EVIDENCE_REQUIRED, "player_profile"}}},
+    };
+
+    ReviewBinding binding() const {
+        const auto result = BiographyValidator{}.evaluate(data.to_string(), campaign);
+        check(result.objective.binding().has_value(), "exact internal binding");
+        return *result.objective.binding();
+    }
+
+    std::vector<BiographyClaimEvidence> support() const {
+        const auto exact = binding();
+        std::vector<BiographyClaimEvidence> records;
+        for (const auto& source : sources) {
+            for (const auto& claim : source.claims) {
+                records.push_back({source.identity, claim, exact, BiographyEvidenceDecision::SUPPORTED});
+            }
+        }
+        return records;
+    }
+
+    BiographyEvaluation evaluate(std::vector<BiographyClaimEvidence> records) const {
+        const BiographyValidator validator(std::make_shared<RegisteredBiographyAuthority>(sources, std::move(records)));
+        return validator.evaluate(data.to_string(), campaign);
+    }
+};
+
+void registered_sources() {
+    InternalEvidence f;
+    f.data["origin"] = Json::parse(R"({"name":"fictional origin","evidence_ref":"f10.history"})");
+    const auto missing = f.evaluate({});
+    check(issue(missing, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin") && !missing.receipt,
+          "registered ID in player text is insufficient");
+
+    const auto records = f.support();
+    const auto accepted = f.evaluate(records);
+    check(accepted.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
+          accepted.objective.issues() == std::vector<BiographyIssue>{{IssueCode::MATURITY_EVIDENCE_REQUIRED,
+                                                                    "adult_equivalent_status"}} &&
+          accepted.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !accepted.receipt,
+          "internal records cover initial background without PERSON, maturity or semantic approval");
+
+    const auto unavailable = BiographyValidator{}.evaluate(f.data.to_string(), f.campaign);
+    check(issue(unavailable, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin") &&
+          unavailable.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !unavailable.receipt, "authority absent");
+
+    const RegisteredBiographyAuthority authority(f.sources, records);
+    const auto raw = f.data.to_string();
+    const auto exact = f.binding();
+    const ReviewRequest request{raw, exact};
+    const BiographyIssue origin{IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"};
+    check(authority.resolves(origin, request, f.campaign), "current source attestation");
+    check(!authority.resolves(origin, {"{}", exact}, f.campaign), "binding cannot substitute a different draft");
+    auto old = exact;
+    old.policy += ":old";
+    check(!authority.resolves(origin, {raw, old}, f.campaign), "authority rejects obsolete request policy");
+    ReviewEvidence forged{exact, ReviewCompletion::COMPLETE, "f10.domain", "1", "guess", {}};
+    check(authority.verify(request, forged) == DomainDecision::UNVERIFIED,
+          "matching strings and binding do not authenticate a semantic review");
+
+    for (const auto key : {"source_version_or_world_revision", "evidence_decision", "reviewer_identity_and_version"}) {
+        auto injected = f.data;
+        injected["origin"][key] = "forged";
+        rejected(BiographyValidator{}.evaluate(injected.to_string(), f.campaign),
+                 IssueCode::FORBIDDEN_AUTHORITY_FIELD, "origin");
+    }
+    ++f.campaign.generation;
+    check(issue(f.evaluate(records), IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), "previous generation");
+    --f.campaign.generation;
+    f.campaign.profile = "other-profile";
+    check(issue(f.evaluate(records), IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), "previous profile");
+    f.campaign = context();
+    f.campaign.campaign = "other-campaign";
+    check(issue(f.evaluate(records), IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), "previous campaign");
+    f.campaign = context();
+    f.data["display_name"] = "Edited";
+    check(issue(f.evaluate(records), IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"), "previous draft");
+}
+
+void evidence_conflicts() {
+    InternalEvidence f;
+    const auto records = f.support();
+    const auto pending_origin = [&](std::vector<BiographyClaimEvidence> evidence) {
+        const auto result = f.evaluate(std::move(evidence));
+        return result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
+               issue(result, IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin");
+    };
+    auto invalid = records;
+    invalid.front().source.id = "unregistered";
+    check(pending_origin(invalid), "unregistered source");
+    invalid = records;
+    invalid.front().source.issuer = "forged";
+    check(pending_origin(invalid), "issuer does not match registry");
+    invalid = records;
+    invalid.front().source.origin = BiographyEvidenceOrigin::WORLD_FACT_READ;
+    check(pending_origin(invalid), "origin does not match registry");
+    invalid = records;
+    invalid.front().source.version = "older-revision";
+    check(pending_origin(invalid), "source version does not match registry");
+    invalid = records;
+    invalid.front().binding.ruleset += ":older";
+    check(pending_origin(invalid), "obsolete ruleset");
+    invalid = records;
+    invalid.front().binding.policy += ":older";
+    check(pending_origin(invalid), "obsolete review policy");
+    invalid = records;
+    invalid.front().source = f.profile;
+    check(pending_origin(invalid), "registered source outside its claim scope");
+    invalid = records;
+    invalid.front().decision = BiographyEvidenceDecision::INSUFFICIENT;
+    check(pending_origin(invalid), "insufficient evidence");
+    invalid.front().decision = BiographyEvidenceDecision::NOT_APPLICABLE;
+    check(pending_origin(invalid), "inapplicable evidence");
+    invalid = records;
+    invalid.front().revoked = true;
+    invalid.push_back(records.front());
+    check(pending_origin(invalid), "revocation wins over support");
+
+    f.sources.push_back({{"f10.fact", "12", "f10.reader", BiographyEvidenceOrigin::WORLD_FACT_READ},
+                         {records.front().claim}});
+    auto conflict = records.front();
+    conflict.source = f.sources.back().identity;
+    conflict.decision = BiographyEvidenceDecision::CONTRADICTED;
+    invalid = records;
+    invalid.push_back(conflict);
+    check(pending_origin(invalid), "registered contradiction wins over support");
+    std::swap(invalid.front(), invalid.back());
+    check(pending_origin(invalid), "conflict independent of source order");
+    invalid.front().source.version = "11";
+    check(!pending_origin(invalid), "obsolete conflict ignored");
+}
+
+void evidence_policy() {
+    InternalEvidence f;
+    check(f.binding().policy.ends_with(":f10_h06_p06a3_evidence_semantic_boundary/0.1.0"),
+          "bound evidence policy");
+    for (const auto& claim : {BiographyEvidenceClaim{IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"},
+                              {IssueCode::PLAYABLE_AGE_UNDECIDED, "age_or_birth_date"},
+                              {IssueCode::SPECIAL_MATURITY_RULE_REQUIRED, "species_id"},
+                              {IssueCode::DLC_DELTA_UNAVAILABLE, "species_id"},
+                              {IssueCode::CONTEXT_NOT_DECIDED, "prior_education"},
+                              {IssueCode::ORIGIN_EVIDENCE_REQUIRED, "citizenship_context"}}) {
+        bool refused = false;
+        try {
+            const RegisteredBiographyAuthority authority({{f.background, {claim}}}, {});
+        } catch (const std::invalid_argument&) {
+            refused = true;
+        }
+        check(refused, "unsupported claim capability");
+    }
+    f.sources.push_back(f.sources.front());
+    bool duplicate_refused = false;
+    try {
+        const RegisteredBiographyAuthority authority(f.sources, {});
+    } catch (const std::invalid_argument&) {
+        duplicate_refused = true;
+    }
+    check(duplicate_refused, "ambiguous registration");
+
+    auto authority = std::make_shared<RegisteredBiographyAuthority>(std::vector<RegisteredBiographySource>{},
+                                                                    std::vector<BiographyClaimEvidence>{});
+    const BiographyValidator validator(authority);
+    auto data = maturity_draft("ocampan");
+    data["age_or_birth_date"] = 2;
+    auto result = validator.evaluate(data.to_string(), context());
+    rejected(result, IssueCode::DLC_DELTA_UNAVAILABLE, "species_id");
+    check(!result.objective.binding(), "deterministic rejection is not sent to trusted sources");
+    data["species_id"] = "changeling";
+    check(issue(validator.evaluate(data.to_string(), context()), IssueCode::SPECIAL_MATURITY_RULE_REQUIRED, "species_id"),
+          "special species stays pending");
+    data["species_id"] = "human";
+    data["age_or_birth_date"] = "2365-06-15";
+    check(issue(validator.evaluate(data.to_string(), context()), IssueCode::PLAYABLE_AGE_UNDECIDED, "age_or_birth_date"),
+          "threshold year stays pending");
 }
 
 void failure() {
@@ -484,7 +671,9 @@ int main(int argc, char** argv) {
             {"playable_age", playable_age}, {"maturity_dates", maturity_dates}, {"restricted_species", restricted_species},
             {"chronology", chronology}, {"evidence", evidence}, {"context", context_case},
             {"malformed", malformed}, {"conjunction", conjunction}, {"review", review},
-            {"stale", stale}, {"evidence_stale", evidence_stale}, {"failure", failure}, {"privacy", privacy}
+            {"stale", stale}, {"evidence_stale", evidence_stale}, {"registered_sources", registered_sources},
+            {"evidence_conflicts", evidence_conflicts}, {"evidence_policy", evidence_policy},
+            {"failure", failure}, {"privacy", privacy}
         };
         for (const auto& [name, run] : cases) {
             if (name == argv[1]) {

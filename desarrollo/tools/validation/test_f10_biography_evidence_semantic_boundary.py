@@ -41,7 +41,7 @@ class H06P06A3ContractTests(unittest.TestCase):
     def test_references_are_existing_sources(self):
         for path in self.data["source_contract_paths"]:
             self.assertTrue((ROOT / path).is_file(), path)
-        self.assertIn(str(MATURITY.relative_to(ROOT)), self.data["source_contract_paths"])
+        self.assertIn(MATURITY.relative_to(ROOT).as_posix(), self.data["source_contract_paths"])
 
     def test_both_gates_and_provenance_boundary(self):
         interface = self.data["interface_alignment"]

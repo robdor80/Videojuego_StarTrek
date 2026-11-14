@@ -97,17 +97,20 @@ public:
 };
 
 class BiographyValidator;
+class RegisteredBiographyAuthority;
 
 class ObjectiveAssessment final {
 public:
     [[nodiscard]] ObjectiveStatus status() const noexcept { return status_; }
     [[nodiscard]] const std::vector<BiographyIssue>& issues() const noexcept { return issues_; }
+    // Internal lookup data for a trusted source. A binding carries no authority.
+    [[nodiscard]] const std::optional<ReviewBinding>& binding() const noexcept { return binding_; }
 
 private:
     friend class BiographyValidator;
     ObjectiveStatus status_{ObjectiveStatus::CHANGES_REQUIRED};
     std::vector<BiographyIssue> issues_;
-    ReviewBinding binding_;
+    std::optional<ReviewBinding> binding_;
 };
 
 class BiographyReceipt final {
@@ -142,6 +145,7 @@ struct BiographyEvaluation {
 class BiographyValidator final {
 public:
     BiographyValidator();
+    explicit BiographyValidator(std::shared_ptr<const RegisteredBiographyAuthority>);
     BiographyValidator(const BiographyValidator&) = delete;
     BiographyValidator& operator=(const BiographyValidator&) = delete;
 
@@ -158,12 +162,13 @@ public:
                                 const BiographyContext& current) const;
 
 private:
-    const BiographyAuthority* authority_{};
+    std::shared_ptr<const RegisteredBiographyAuthority> registered_authority_;
+#ifdef TREK_F10_BIOGRAPHY_TESTING
+    const BiographyAuthority* test_authority_{};
+#endif
     SemanticEvaluator* evaluator_{};
     std::string reviewer_;
     std::string reviewer_version_;
-    std::string ruleset_;
-    std::string policy_;
     std::shared_ptr<const int> issuer_;
 };
 

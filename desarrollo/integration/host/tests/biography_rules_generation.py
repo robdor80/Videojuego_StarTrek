@@ -75,6 +75,18 @@ def main(source):
         policy["schema_version"] = "99.0.0"
         generate("Unsupported playable maturity contract")
 
+        policy = copy.deepcopy(approved)
+        evidence_path = policy_path.with_name("f10_biography_evidence_semantic_boundary_v0.1.json")
+        evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
+        evidence["evidence_model"]["initial_character_bootstrap"] += " Revised."
+        evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+        updated = generate()
+        assert updated["sources_sha256"] != original["sources_sha256"]
+        assert updated["evidence_policy"] == original["evidence_policy"]
+        evidence["schema_version"] = "99.0.0"
+        evidence_path.write_text(json.dumps(evidence), encoding="utf-8")
+        generate("Unsupported biography evidence policy")
+
 
 if __name__ == "__main__":
     main(Path(sys.argv[1]).resolve())
