@@ -1,0 +1,295 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f10_h06_p06a3_evidence_semantic_boundary",
+  "status": "PROPOSED_DESIGN_ONLY_NOT_RUNTIME_CONNECTED",
+  "phase": "H06-P06-A3",
+  "owner": "F10",
+  "implementer": "CODEX_REVIEWED_FUTURE_CUT",
+  "orchestration_owner": "HOST",
+  "world_authority": "CoreRPG pinned 76a7b7b485616d8c4994f384a90f123bf333591d",
+  "scope": {
+    "scenario": "starfleet_academy",
+    "era": "tng_ds9_voyager",
+    "campaign_year": 2383,
+    "campaign_month_day": "UNDECIDED_BY_AUTHOR",
+    "single_player_local": true,
+    "no_unreal_or_core_write": true
+  },
+  "source_contract_paths": [
+    "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "sistemas/gameplay/character_creation/biography_validation_rules.md",
+    "sistemas/gameplay/character_creation/f10_biography_validation_interface_v0.1.json",
+    "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json",
+    "sistemas/gameplay/character_creation/player_profile_contract.json",
+    "sistemas/gameplay/character_creation/prior_activity_model.json",
+    "sistemas/gameplay/species/character_lifecycle_contract.json",
+    "sistemas/gameplay/organizations/character_affiliation_citizenship_contract.json",
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json",
+    "desarrollo/integration/host/src/f10/biography_validation.h"
+  ],
+  "interface_alignment": {
+    "objective_port": "trek::f10::BiographyAuthority::resolves",
+    "semantic_port": "trek::f10::SemanticEvaluator::review",
+    "domain_final_review": "trek::f10::BiographyAuthority::verify",
+    "candidate_receipt_checker": "trek::f10::BiographyValidator::eligible",
+    "exact_input_binding": [
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "policy"
+    ],
+    "this_contract_does_not_change_native_abi": true,
+    "policy_must_be_included_in_future_ruleset_digest_before_runtime_use": true
+  },
+  "evidence_model": {
+    "client_payload_semantics": "UNTRUSTED_PROPOSAL_ONLY",
+    "internal_source_registry_required": true,
+    "source_ref_string_is_not_authority": true,
+    "signed_token_or_network_identity_not_required_for_local_single_player": true,
+    "accepted_internal_origin_types": [
+      "F10_RULE_EVALUATION_ON_APPROVED_SOURCE",
+      "TRUSTED_WORLD_FACT_READ",
+      "F10_VALIDATED_INITIAL_BACKGROUND_SOURCE"
+    ],
+    "explicitly_untrusted_origins": [
+      "PLAYER_DECLARATION",
+      "CLIENT_EVIDENCE_REF",
+      "CLIENT_APPROVED_FLAG",
+      "MODEL_GENERATED_FACT",
+      "MODEL_SELF_ASSERTED_CREDENTIAL",
+      "UNVERIFIED_FILE_OR_TEXT"
+    ],
+    "evidence_binding_required": [
+      "claim_field",
+      "rule_or_fact_source_id",
+      "source_version_or_world_revision",
+      "origin_type",
+      "internal_issuer_identity",
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "decision"
+    ],
+    "allowed_outcomes": [
+      "SUPPORTED",
+      "CONTRADICTED",
+      "INSUFFICIENT",
+      "NOT_APPLICABLE"
+    ],
+    "missing_or_conflicting_source": "REVIEW_REQUIRED_NO_PERSON",
+    "initial_character_bootstrap": "Initial background claims must be checked against an F10-approved provenance policy and campaign facts; no pre-existing PERSON or fabricated pre-service certificate is required.",
+    "independent_checks": [
+      "SOURCE_REGISTERED_AND_EXPECTED",
+      "EXACT_DRAFT_AND_CONTEXT_MATCH",
+      "SCENARIO_ERA_AND_DATE_APPLICABLE",
+      "WORLD_FACT_NOT_ASSUMED_FROM_SPECIES",
+      "CONFLICTS_AND_REVOKED_FACTS_REJECTED"
+    ],
+    "no_authority_from_client_strings": true
+  },
+  "objective_categories": [
+    {
+      "code": "PLAYABLE_MINIMUM",
+      "source": "F10_APPROVED_SPECIES_POLICY",
+      "effect": "REJECT_IF_PROVABLY_BELOW_MINIMUM",
+      "cannot_prove": "INDIVIDUAL_ADULTHOOD"
+    },
+    {
+      "code": "INDIVIDUAL_MATURITY",
+      "source": "F10_APPROVED_INDIVIDUAL_DEVELOPMENT_EVIDENCE_NOT_YET_DEFINED",
+      "effect": "REVIEW_REQUIRED_UNTIL_TRUSTED_EVIDENCE",
+      "cannot_prove": "SELF_DECLARED_ADULT_EQUIVALENT"
+    },
+    {
+      "code": "CAMPAIGN_CHRONOLOGY",
+      "source": "APPROVED_2383_YEAR_ONLY",
+      "effect": "AMBIGUOUS_BIRTH_YEAR_PENDING",
+      "cannot_prove": "UNKNOWN_START_MONTH_DAY"
+    },
+    {
+      "code": "ORIGIN_AND_LEGAL_STATUS",
+      "source": "VALIDATED_INITIAL_BACKGROUND_AND_APPLICABLE_WORLD_FACTS",
+      "effect": "REVIEW_REQUIRED_UNTIL_VERIFIED",
+      "cannot_prove": "CITIZENSHIP_FROM_SPECIES"
+    },
+    {
+      "code": "EDUCATION_AND_CERTIFICATION",
+      "source": "VALIDATED_INITIAL_BACKGROUND_AND_TIME_BUDGET",
+      "effect": "REVIEW_REQUIRED_UNTIL_VERIFIED",
+      "cannot_prove": "PROFESSIONAL_CERTIFICATION_FROM_HOBBY"
+    },
+    {
+      "code": "TECHNOLOGY_AND_PAST_EXPERIENCE",
+      "source": "ERA_RULES_AND_BIOGRAPHICAL_TIMELINE",
+      "effect": "REJECT_IMPOSSIBLE_CLAIMS_OR_REVIEW_UNSUPPORTED",
+      "cannot_prove": "TECH_ACCESS_FROM_PLAYER_TEXT"
+    }
+  ],
+  "non_resolvable_by_general_evidence_provider": [
+    "BELOW_PLAYABLE_AGE",
+    "DLC_DELTA_UNAVAILABLE",
+    "SPECIAL_MATURITY_RULE_REQUIRED",
+    "PLAYABLE_AGE_UNDECIDED",
+    "NON_ADULT_DECLARED",
+    "FORBIDDEN_AUTHORITY_FIELD",
+    "UNKNOWN_SPECIES"
+  ],
+  "semantic_review": {
+    "deployment_preference": "LOCAL_FIRST_OFFLINE_CAPABLE",
+    "provider_selection": "NOT_SELECTED_NOT_APPROVED",
+    "permitted_transport_if_later_authorized": "LOCAL_LOOPBACK_ONLY",
+    "external_network": "NOT_REQUIRED_AND_NOT_AUTHORIZED",
+    "model_configuration": "EXPLICIT_LOCAL_CONFIG_NOT_HARDCODED",
+    "request_minimization": "ONLY_APPROVED_BIOGRAPHY_FIELDS_AND_NECESSARY_CONTEXT",
+    "hidden_world_facts_disclosure": false,
+    "model_prompt_or_output_as_authority": false,
+    "canonical_request_binding": [
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "policy"
+    ],
+    "permitted_finding_types": [
+      "CONTRADICTION",
+      "SUGGESTION"
+    ],
+    "permitted_finding_fields": "F10_CHARACTER_CREATION_REQUIRED_OR_OPTIONAL_FIELDS_ONLY",
+    "no_arbitrary_field_or_authority_strings": true,
+    "domain_verifier_must_recheck": [
+      "EXPECTED_REGISTERED_LOCAL_PROVIDER_INSTANCE",
+      "CURRENT_MODEL_AND_REVIEW_POLICY_VERSION",
+      "FULL_COMPLETION_AND_STRICT_SCHEMA",
+      "EXACT_REQUEST_BINDING",
+      "FINDING_FIELDS_AND_TYPES",
+      "OBJECTIVE_RULES_NOT_OVERRIDDEN",
+      "NO_CONTRADICTION_BEFORE_ACCEPTED"
+    ],
+    "provider_missing_or_timeout": "REVIEW_UNAVAILABLE_NO_PERSON",
+    "invalid_schema_or_truncated_response": "REVIEW_UNAVAILABLE_NO_PERSON",
+    "semantic_contradiction": "CHANGES_REQUIRED_NO_PERSON",
+    "semantic_suggestion_alone": "DOMAIN_VERIFIER_DECIDES_NO_AUTO_EDIT",
+    "prohibited_effects": [
+      "CREATE_PERSON",
+      "ADMIT_CADET",
+      "ISSUE_RANK",
+      "MODIFY_WORLD",
+      "CHANGE_BIOGRAPHY",
+      "REVEAL_HIDDEN_FACTS"
+    ],
+    "retention_policy": "DO_NOT_LOG_RAW_BIOGRAPHY_OR_PRIVATE_MEDICAL_FAMILY_DETAILS_BY_DEFAULT"
+  },
+  "decision_matrix": [
+    {
+      "input": "VALID_NUMERIC_AGE_ONLY",
+      "objective": "REVIEW_REQUIRED",
+      "semantic": "NOT_REQUESTED_OR_UNAVAILABLE",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "PROVABLY_UNDER_MINIMUM",
+      "objective": "CHANGES_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "BIRTHDAY_THRESHOLD_IN_2383",
+      "objective": "REVIEW_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "SPECIAL_MATURITY_RULE_MISSING",
+      "objective": "REVIEW_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "DLC_DELTA_IN_MAIN_GAME",
+      "objective": "CHANGES_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "UNVERIFIED_CITIZENSHIP_OR_EDUCATION",
+      "objective": "REVIEW_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "OBJECTIVE_VALID_BUT_NO_SEMANTIC_PROVIDER",
+      "objective": "OBJECTIVE_VALID",
+      "semantic": "REVIEW_UNAVAILABLE",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "OBJECTIVE_VALID_SEMANTIC_CONTRADICTION",
+      "objective": "OBJECTIVE_VALID",
+      "semantic": "CHANGES_REQUIRED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "CLIENT_FORGED_APPROVAL",
+      "objective": "CHANGES_REQUIRED",
+      "semantic": "NOT_REQUESTED",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "STALE_DRAFT_OR_RULESET_OR_PROVIDER",
+      "objective": "REVIEW_REQUIRED",
+      "semantic": "NOT_REQUESTED_OR_UNAVAILABLE",
+      "publication": "NO_PERSON"
+    },
+    {
+      "input": "BOTH_GATES_VERIFIED_IN_FUTURE",
+      "objective": "OBJECTIVE_VALID",
+      "semantic": "VALID",
+      "publication": "PRIVATE_RECEIPT_ONLY_NO_PERSON_UNTIL_FUTURE_COMMIT"
+    }
+  ],
+  "receipt_and_lifecycle": {
+    "binding_fields": [
+      "draft_sha256",
+      "context_sha256",
+      "ruleset",
+      "policy"
+    ],
+    "additional_provenance": [
+      "registered_internal_issuer",
+      "provider_identity_and_version",
+      "review_policy_version"
+    ],
+    "stale_if": [
+      "draft_changed",
+      "campaign_context_changed",
+      "maturity_policy_changed",
+      "objective_rules_changed",
+      "semantic_policy_changed",
+      "provider_identity_or_version_changed",
+      "issuer_or_generation_changed"
+    ],
+    "evaluation_is_read_only": true,
+    "private_receipt_is_not_core_entity": true,
+    "one_person_commit_is_separate_future_operation": true,
+    "no_admission_no_rank_no_f05_binding": true,
+    "audit_log": "STATUS_AND_ISSUE_CODES_ONLY_NO_SENSITIVE_RAW_TEXT"
+  },
+  "release_gate": {
+    "current_runtime": "REVIEW_UNAVAILABLE_WITHOUT_APPROVED_PROVIDERS",
+    "no_unreviewed_writes_to_core": true,
+    "no_unlock_on_test_fixtures": true,
+    "no_dlc_unlock": true,
+    "no_h07_start": true,
+    "next_cut_requires_independent_audit": true,
+    "tests_for_this_cut": "STATIC_CONTRACT_ONLY",
+    "h06_p06_a": "PARTIAL",
+    "hu08": "PARTIAL",
+    "m1": "PARTIAL"
+  },
+  "unresolved_author_decisions": [
+    "RULE_FOR_TRUSTED_INITIAL_INDIVIDUAL_MATURITY_WITHOUT_PREEXISTING_PERSON",
+    "LOCAL_SEMANTIC_PROVIDER_AND_MODEL_APPROVAL",
+    "CAMPAIGN_START_MONTH_AND_DAY",
+    "SPECIAL_SPECIES_MATURITY_POLICIES",
+    "FUTURE_CANDIDATE_COMMIT_AND_BINDING_SCOPE"
+  ]
+}
