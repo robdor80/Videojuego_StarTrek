@@ -636,7 +636,7 @@ void personal_background() {
               result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt,
               "only checkable personal background is supported");
         for (const BiographyIssue unresolved : {
-                 {IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"},
+                 BiographyIssue{IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"},
                  {IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED, "citizenship_context"},
                  {IssueCode::EDUCATION_EVIDENCE_REQUIRED, "prior_education"},
                  {IssueCode::EXPERIENCE_EVIDENCE_REQUIRED, "prior_experience"},
