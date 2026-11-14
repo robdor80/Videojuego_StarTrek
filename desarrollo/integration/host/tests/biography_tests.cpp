@@ -1,9 +1,18 @@
 #include "f10/biography_validation.h"
+#include "biography_rules_data.h"
 
 #include <jsoncons/json.hpp>
 #include <iostream>
 #include <stdexcept>
 #include <type_traits>
+
+namespace trek::f10 {
+struct BiographyReceiptTestAccess {
+    static void change_ruleset(BiographyReceipt& receipt, std::string previous_ruleset) {
+        receipt.evidence_.binding.ruleset = std::move(previous_ruleset);
+    }
+};
+}
 
 namespace {
 using namespace trek::f10;
@@ -26,6 +35,13 @@ Json draft() {
         "prior_activities_and_hobbies":[{"name":"karate","started_at_or_age":8,"ended_at_or_current":"current"}],
         "initial_long_term_objective":"apply to Starfleet Academy"
     })");
+}
+
+Json maturity_draft(std::string_view species) {
+    auto data = draft();
+    data["species_id"] = species;
+    data["prior_activities_and_hobbies"] = "Reading";
+    return data;
 }
 
 bool issue(const BiographyEvaluation& result, IssueCode code, std::string_view field) {
@@ -73,7 +89,7 @@ struct Evaluator final : SemanticEvaluator {
         case FOREIGN: evidence.reviewer = "other"; break;
         case WRONG_VERSION: evidence.reviewer_version = "test-0"; break;
         case WRONG_POLICY: evidence.binding.policy = "old"; break;
-        case WRONG_RULESET: evidence.binding.ruleset = "old"; break;
+        case WRONG_RULESET: evidence.binding.ruleset = "f10-biography/1:previous"; break;
         case WRONG_CONTEXT: evidence.binding.context_sha256[0] ^= 1; break;
         case WRONG_DRAFT: evidence.binding.draft_sha256[0] ^= 1; break;
         case CONTRADICTION: evidence.findings = {{FindingKind::CONTRADICTION, "prior_education"}}; break;
@@ -87,6 +103,7 @@ struct Evaluator final : SemanticEvaluator {
 
 struct Authority final : BiographyAuthority {
     bool has_evidence{true};
+    bool has_maturity_evidence{true};
     bool objective_throws{};
     bool semantic_throws{};
     DomainDecision decision{DomainDecision::ACCEPTED};
@@ -96,7 +113,7 @@ struct Authority final : BiographyAuthority {
         if (objective_throws && missing.code == IssueCode::PROFILE_EVIDENCE_REQUIRED) {
             throw std::runtime_error("private resolver output");
         }
-        return has_evidence;
+        return has_evidence && (missing.code != IssueCode::MATURITY_EVIDENCE_REQUIRED || has_maturity_evidence);
     }
 
     DomainDecision verify(const ReviewRequest&, const ReviewEvidence&) const override {
@@ -119,7 +136,7 @@ void production() {
     if (result.semantic != SemanticStatus::REVIEW_UNAVAILABLE) diagnostics(result);
     check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
           result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt &&
-          issue(result, IssueCode::MATURITY_RULE_REQUIRED, "adult_equivalent_status"), "product draft remains pending");
+          issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), "product draft remains pending");
     check(draft().to_string() == raw, "draft unchanged");
     static_assert(!std::is_default_constructible_v<BiographyReceipt>);
     static_assert(!std::is_copy_constructible_v<BiographyReceipt>);
@@ -131,7 +148,8 @@ void fields() {
     data.erase("origin");
     rejected(f.validator.evaluate(data.to_string(), context()), IssueCode::MISSING_REQUIRED_FIELD, "origin");
     for (const auto key : {"nickname", "manual_skill_point_allocation", "person_id", "validated_creation_ref",
-                           "admission_authorized", "rank", "trusted"}) {
+                           "admission_authorized", "academy_population_slot_id", "rank", "authority_grant_id",
+                           "permissions", "trusted"}) {
         data = draft();
         data[key] = true;
         rejected(f.validator.evaluate(data.to_string(), context()), IssueCode::FORBIDDEN_AUTHORITY_FIELD, "draft");
@@ -145,12 +163,6 @@ void fields() {
 void species() {
     BiographyValidator validator;
     auto data = draft();
-    for (const auto id : {"human", "vulcan", "ocampan", "aenar"}) {
-        data["species_id"] = id;
-        const auto result = validator.evaluate(data.to_string(), context());
-        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
-              issue(result, IssueCode::MATURITY_RULE_REQUIRED, "adult_equivalent_status"), "no invented maturity");
-    }
     for (const auto id : {"invented_alien", "../human", "borg_assimilated_character"}) {
         data["species_id"] = id;
         rejected(validator.evaluate(data.to_string(), context()), IssueCode::UNKNOWN_SPECIES, "species_id");
@@ -163,6 +175,94 @@ void species() {
     data["age_or_birth_date"] = 2600;
     check(issue(validator.evaluate(data.to_string(), context()), IssueCode::AGE_OUTSIDE_CALENDAR, "age_or_birth_date"),
           "earlier than the supported date format is pending, without a species lifespan cap");
+}
+
+void playable_age() {
+    const BiographyValidator validator;
+    // The F10 reference regression independently pins all author-approved values.
+    const auto embedded = Json::parse(detail::biography_rules_json);
+    const auto& catalog = embedded.at("species");
+    check(catalog.size() == 25, "25 native species");
+    unsigned numeric = 0;
+    for (const auto& entry : catalog.object_range()) {
+        const auto& rule = entry.value();
+        if (rule.at("minimum").is_null()) continue;
+        ++numeric;
+        auto data = maturity_draft(entry.key());
+        const auto floor = rule.at("minimum").as<int>();
+        data["age_or_birth_date"] = floor - 1;
+        auto result = validator.evaluate(data.to_string(), context());
+        rejected(result, IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date");
+
+        data["age_or_birth_date"] = floor;
+        result = validator.evaluate(data.to_string(), context());
+        if (rule.at("delta_dlc").as<bool>()) {
+            rejected(result, IssueCode::DLC_DELTA_UNAVAILABLE, "species_id");
+            check(!issue(result, IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date"), entry.key());
+            continue;
+        }
+        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
+              issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
+        data["age_or_birth_date"] = 1200;
+        result = validator.evaluate(data.to_string(), context());
+        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
+              issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
+    }
+    check(numeric == 22, "22 numeric age floors");
+
+    for (const auto& [id, floor] : {std::pair{"human", 18}, {"vulcan", 25}, {"andorian", 20}, {"ocampan", 2}}) {
+        check(catalog.at(id).at("minimum").as<int>() == floor, id);
+    }
+}
+
+void maturity_dates() {
+    Fixture f;
+    auto data = maturity_draft("human");
+    data["age_or_birth_date"] = "2366-01-01";
+    rejected(f.validator.evaluate(data.to_string(), context()), IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date");
+    for (const auto birthday : {"2365-01-01", "2365-05-18", "2365-12-31"}) {
+        data["age_or_birth_date"] = birthday;
+        const auto result = f.validator.evaluate(data.to_string(), context());
+        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
+              result.semantic == SemanticStatus::REVIEW_REQUIRED && !result.receipt && f.evaluator.calls == 0 &&
+              issue(result, IssueCode::PLAYABLE_AGE_UNDECIDED, "age_or_birth_date"), birthday);
+    }
+    data["age_or_birth_date"] = "2364-12-31";
+    f.authority.has_maturity_evidence = false;
+    auto result = f.validator.evaluate(data.to_string(), context());
+    check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
+          f.evaluator.calls == 0 &&
+          result.objective.issues() == std::vector<BiographyIssue>{{IssueCode::MATURITY_EVIDENCE_REQUIRED,
+                                                                  "adult_equivalent_status"}},
+          "earlier birthday clears age only");
+    data["age_or_birth_date"] = 18;
+    result = f.validator.evaluate(data.to_string(), context());
+    check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
+          f.evaluator.calls == 0 && issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"),
+          "client declaration cannot replace missing maturity evidence");
+}
+
+void restricted_species() {
+    Fixture f;
+    for (const auto id : {"changeling", "jem_hadar", "vorta"}) {
+        auto data = maturity_draft(id);
+        for (const auto age : {1, 18, 1200}) {
+            data["age_or_birth_date"] = age;
+            const auto result = f.validator.evaluate(data.to_string(), context());
+            check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
+                  result.semantic == SemanticStatus::REVIEW_REQUIRED && !result.receipt &&
+                  result.objective.issues() ==
+                      std::vector<BiographyIssue>{{IssueCode::SPECIAL_MATURITY_RULE_REQUIRED, "species_id"}}, id);
+        }
+    }
+    for (const auto id : {"hirogen", "kazon", "ocampan", "talaxian", "vidiian"}) {
+        auto data = maturity_draft(id);
+        for (const Json& age : {Json(1200), Json("2350-01-01")}) {
+            data["age_or_birth_date"] = age;
+            rejected(f.validator.evaluate(data.to_string(), context()), IssueCode::DLC_DELTA_UNAVAILABLE, "species_id");
+        }
+    }
+    check(f.evaluator.calls == 0 && f.authority.verified == 0, "unavailable species never reach semantic review");
 }
 
 void chronology() {
@@ -306,6 +406,12 @@ void stale() {
     check(!other.validator.eligible(*valid.receipt, raw, context()), "foreign authority instance");
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
+    check(f.evaluator.request_binding.ruleset.starts_with(
+              "f10-biography/2:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
+    auto previous_ruleset = f.evaluator.request_binding.ruleset;
+    previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
+    BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));
+    check(!f.validator.eligible(*valid.receipt, raw, context()), "same issuer rejects a previous policy content digest");
 
     auto precise = raw;
     precise.insert(precise.size() - 1, R"(,"medical_background":{"detail":1.00000000000000000001})");
@@ -340,7 +446,7 @@ void failure() {
     f.authority.objective_throws = true;
     const auto pending = f.validator.evaluate(raw, context());
     check(!pending.receipt && f.evaluator.calls == 0 &&
-          issue(pending, IssueCode::MATURITY_RULE_REQUIRED, "adult_equivalent_status"), "resolver failure preserves pending issues");
+          issue(pending, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), "resolver failure preserves pending issues");
     f.authority.objective_throws = false;
     for (const auto mode : {Evaluator::DOWN, Evaluator::PARTIAL, Evaluator::THROW, Evaluator::GOOD}) {
         f.evaluator.mode = mode;
@@ -375,6 +481,7 @@ int main(int argc, char** argv) {
         check(argc == 2, "expected case name");
         const std::pair<std::string_view, void(*)()> cases[] = {
             {"production", production}, {"fields", fields}, {"species", species},
+            {"playable_age", playable_age}, {"maturity_dates", maturity_dates}, {"restricted_species", restricted_species},
             {"chronology", chronology}, {"evidence", evidence}, {"context", context_case},
             {"malformed", malformed}, {"conjunction", conjunction}, {"review", review},
             {"stale", stale}, {"evidence_stale", evidence_stale}, {"failure", failure}, {"privacy", privacy}
