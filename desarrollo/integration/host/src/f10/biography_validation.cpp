@@ -447,7 +447,8 @@ BiographyValidator::BiographyValidator(const BiographyAuthority& authority, Sema
 
 BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const BiographyContext& context) const {
     BiographyEvaluation result;
-    if (!valid_context(context)) {
+    const BiographyContext frozen_context = context;
+    if (!valid_context(frozen_context)) {
         result.objective.issues_.push_back({IssueCode::INVALID_CAMPAIGN_CONTEXT, "campaign_context"});
         return result;
     }
@@ -456,7 +457,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         result.objective.issues_.push_back({IssueCode::INVALID_DRAFT, "draft"});
         return result;
     }
-    auto checks = objective_checks(*parsed, context);
+    auto checks = objective_checks(*parsed, frozen_context);
     if (!checks.errors.empty()) {
         result.objective.issues_ = std::move(checks.errors);
         return result;
@@ -467,13 +468,13 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         return result;
     }
     auto& binding = result.objective.binding_;
-    binding = {digest(bytes), context_digest(context), ruleset_, policy_};
+    binding = {digest(bytes), context_digest(frozen_context), ruleset_, policy_};
     const ReviewRequest request{bytes, binding};
     if (authority_) {
         // Preserve every pending issue if the domain resolver fails partway.
         try {
             for (const auto& issue : checks.pending) {
-                if (!authority_->resolves(issue, request, context)) result.objective.issues_.push_back(issue);
+                if (!authority_->resolves(issue, request, frozen_context)) result.objective.issues_.push_back(issue);
             }
         } catch (...) {
             result.objective.issues_ = std::move(checks.pending);
@@ -541,7 +542,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         return result;
     }
     result.semantic = SemanticStatus::VALID;
-    result.receipt = BiographyReceipt(issuer_, context, std::move(evidence), std::move(bytes));
+    result.receipt = BiographyReceipt(issuer_, frozen_context, std::move(evidence), std::move(bytes));
     return result;
 }
 

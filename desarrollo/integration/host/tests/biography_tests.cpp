@@ -55,11 +55,13 @@ struct Evaluator final : SemanticEvaluator {
                 WRONG_CONTEXT, WRONG_DRAFT, CONTRADICTION, ADVICE, PRIVATE_FIELD, BAD_TRACE };
     Mode mode{GOOD};
     unsigned calls{};
+    BiographyContext* advance_generation{};
     std::string seen;
     ReviewBinding request_binding;
 
     ReviewEvidence review(const ReviewRequest& request) override {
         ++calls;
+        if (advance_generation) ++advance_generation->generation;
         seen.assign(request.canonical_draft);
         request_binding = request.binding;
         ReviewEvidence evidence{request.binding, ReviewCompletion::COMPLETE, "fixture-local", "test-1", "review-17", {}};
@@ -312,6 +314,13 @@ void stale() {
     precise.replace(precise.find("00001"), 5, "00002");
     check(!f.validator.eligible(*precision_result.receipt, precise, context()),
           "changes beyond double precision invalidate the receipt");
+
+    auto during_review = context();
+    f.evaluator.advance_generation = &during_review;
+    const auto late = f.validator.evaluate(raw, during_review);
+    check(late.receipt && !f.validator.eligible(*late.receipt, raw, during_review) &&
+          f.validator.eligible(*late.receipt, raw, context()),
+          "a review that returns after renewal remains bound to the earlier activation");
 }
 
 void evidence_stale() {
