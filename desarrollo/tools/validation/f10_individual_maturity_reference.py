@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""H06-P06-A7: triaje de madurez NO AUTORITATIVO. No emite evidencias ni PERSON."""
+"""ARCHIVO HISTÓRICO A7, sustituido por edad declarada. NO USAR en runtime F10."""
 from __future__ import annotations
 
 from datetime import date
