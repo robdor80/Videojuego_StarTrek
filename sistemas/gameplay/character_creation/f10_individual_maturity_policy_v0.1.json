@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "contract_id": "f10_h06_p06a7_individual_maturity_policy",
-  "status": "PROPOSED_DESIGN_NOT_RUNTIME_ENFORCED",
+  "status": "SUPERSEDED_HISTORICAL_DESIGN_DO_NOT_IMPLEMENT",
   "phase": "H06-P06-A7",
   "locale": "es-ES",
   "domain_owner": "F10",
@@ -212,9 +212,9 @@
     "owner": "CODEX",
     "recommended_model": "GPT-6",
     "reasoning_level": "Alto",
-    "scope": "READ_APPROVED_STAGE_RULE_REGISTRY_AND_ONLY_THEN_EMIT_PRIVATE_F10_STAGE_EVIDENCE_USING_REGISTERED_BIOGRAPHY_AUTHORITY",
+    "scope": "CANCELLED_BY_AUTHOR_SIMPLIFICATION_2026_11_14",
     "risk": "DO_NOT_CREATE_AN_AGE_ONLY_SHORTCUT_WHILE_REGISTRY_IS_EMPTY",
-    "release_precondition": "AUTHOR_APPROVAL_OF_ACTUAL_STAGE_RULES_AND_EVIDENCE_SOURCE",
+    "release_precondition": "NOT_APPLICABLE_SUPERSEDED",
     "require_pr_draft_and_independent_audit": true,
     "no_core_changes": true,
     "no_real_ai_integration_without_SEPARATE_SELECTION": true
@@ -225,5 +225,16 @@
     "hu08": "PARTIAL",
     "m1": "PARTIAL",
     "h07": "NOT_STARTED"
+  },
+  "superseded_by_author_decision": {
+    "date": "2026-11-14",
+    "rule": "PLAYER_DECLARED_AGE_IS_ACCEPTED_FOR_CHARACTER_CREATION_IF_AT_OR_ABOVE_APPROVED_SPECIES_MINIMUM",
+    "current_policy_ref": "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json",
+    "superseded_requirements": [
+      "INDIVIDUAL_STAGE_EVIDENCE",
+      "SPECIES_LIFECYCLE_STAGE_REGISTRY",
+      "MEDICAL_OR_BIOLOGICAL_MATURITY_ATTESTER"
+    ],
+    "note": "This A7 policy is archived solely for historical traceability. Do not connect to C++ or implement A8."
   }
 }
