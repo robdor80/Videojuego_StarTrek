@@ -35,18 +35,21 @@ def _canonical(value: object) -> bytes:
                       ensure_ascii=False, allow_nan=False).encode("utf-8")
 
 
-def _privileged_nested(value: object, forbidden: set[str], path: str = "") -> list[dict]:
-    """No aceptar atributos con apariencia de autoridad escondidos en subobjetos."""
+def _privileged_nested(value: object, forbidden: set[str], path: str = "",
+                       depth: int = 0) -> list[dict]:
+    """Rechazar anidamiento arbitrario además de claves privilegiadas."""
+    if depth > 12:
+        return [_issue("MALFORMED_FIELD", path)]
     problems = []
     if isinstance(value, dict):
         for key, item in value.items():
             child = f"{path}.{key}" if path else str(key)
             if key in forbidden:
                 problems.append(_issue("FORBIDDEN_AUTHORITY_FIELD", child))
-            problems.extend(_privileged_nested(item, forbidden, child))
+            problems.extend(_privileged_nested(item, forbidden, child, depth + 1))
     elif isinstance(value, list):
         for i, item in enumerate(value):
-            problems.extend(_privileged_nested(item, forbidden, f"{path}[{i}]"))
+            problems.extend(_privileged_nested(item, forbidden, f"{path}[{i}]", depth + 1))
     return problems
 
 
