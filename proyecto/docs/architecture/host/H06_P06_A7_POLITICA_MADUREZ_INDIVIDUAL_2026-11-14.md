@@ -1,3 +1,5 @@
+> **DOCUMENTO HISTÓRICO — SUSTITUIDO EL 14-11-2026.** El usuario ha decidido que el protagonista declara su edad y F10 solo comprueba el mínimo jugable de su especie. NO implementar el registro de etapas vitales, atestaciones de madurez ni el encargo Codex A8 propuesto aquí. Consultar `H06_P06_CORRECCION_EDAD_DECLARADA_2026-11-14.md`. Este texto se conserva únicamente para explicar el trabajo anterior.
+
 # H06-P06-A7 — Madurez individual y etapa vital del personaje inicial
 
 **Fecha:** 14-11-2026. **Responsable de este corte:** ChatGPT. **F10:** dueño del dominio. **Estado:** PROPUESTA DE DISEÑO, referencia offline y pruebas; pendiente de aprobación específica de reglas de madurez por especie y de implementación C++. **No certifica H06-P06-A, HU-08 ni M1.**
