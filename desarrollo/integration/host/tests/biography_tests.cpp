@@ -407,7 +407,7 @@ void stale() {
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
     check(f.evaluator.request_binding.ruleset.starts_with(
-              "f10-biography/4:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
+              "f10-biography/5:f10_species_playable_maturity_policy/0.1.1:"), "bound maturity policy version");
     auto previous_ruleset = f.evaluator.request_binding.ruleset;
     previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
     BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));
