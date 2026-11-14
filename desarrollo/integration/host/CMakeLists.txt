@@ -155,3 +155,13 @@ if(TREK_HOST_TESTS)
   set_tests_properties(host.abi.unsupported_academy_open PROPERTIES TIMEOUT 45 LABELS "h06-p06;native")
   set_tests_properties(host.abi.roundtrip PROPERTIES TIMEOUT 135 LABELS "h06;native;fixture")
 endif()
+
+if(TREK_HOST_TESTS)
+  # F10/P06 feasibility only. The fixture has no product BIO review or HOST admission path.
+  add_executable(host_academy_feasibility_tests tests/academy_core_feasibility.cpp)
+  target_link_libraries(host_academy_feasibility_tests PRIVATE CoreRPG::CoreRPG)
+  add_test(NAME host.academy.core_feasibility
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/academy_core_feasibility.py"
+      "$<TARGET_FILE:host_academy_feasibility_tests>" "${CMAKE_CURRENT_BINARY_DIR}/academy-feasibility")
+  set_tests_properties(host.academy.core_feasibility PROPERTIES TIMEOUT 75 LABELS "f10;h06-p06;process;feasibility")
+endif()
