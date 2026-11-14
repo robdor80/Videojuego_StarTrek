@@ -80,7 +80,7 @@
   },
   "semantic_gate": {
     "owner": "F10_DOMAIN_VERIFIER",
-    "assisted_by": "OPTIONAL_LOCAL_AI_REVIEWER",
+    "assisted_by": "AI_ASSISTED_REVIEW_REQUIRED_PROVIDER_NOT_SELECTED",
     "review_required": true,
     "evidence_fields": [
       "draft_sha256",
