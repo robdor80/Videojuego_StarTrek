@@ -43,10 +43,16 @@ public:
     RegisteredBiographyAuthority(std::vector<RegisteredBiographySource> sources,
                                  std::vector<BiographyClaimEvidence> evidence);
 
+    // Register alongside other trusted sources to enable this per-evaluation
+    // attestation and let the same registry apply contradictions or revocations.
+    [[nodiscard]] static RegisteredBiographySource initial_background_source();
     [[nodiscard]] bool resolves(BiographyIssue, const ReviewRequest&, const BiographyContext&) const override;
     [[nodiscard]] DomainDecision verify(const ReviewRequest&, const ReviewEvidence&) const override;
 
 private:
+    friend class BiographyValidator;
+    [[nodiscard]] bool resolves(BiographyIssue, const ReviewRequest&, const BiographyContext&,
+                                const BiographyClaimEvidence* evaluated) const;
     const std::vector<RegisteredBiographySource> sources_;
     const std::vector<BiographyClaimEvidence> evidence_;
 };

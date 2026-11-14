@@ -71,6 +71,39 @@ def maturity_rules(policy, campaign, species):
     return rules
 
 
+def initial_background_source(background, campaign):
+    background_id = background["contract_id"]
+    background_version = background["schema_version"]
+    if (background_id, background_version) != ("f10_h06_p06a5_initial_background_policy", "0.1.0"):
+        raise ValueError("Unsupported F10 initial background policy")
+    if background["campaign"] != {
+        "scenario_id": campaign["scenario_id"], "era_id": campaign["era_id"],
+        "start_year": campaign["approved_start_year"], "start_month_day": campaign["start_month_day"],
+        "core_pin": campaign["runtime_core_sha"],
+    }:
+        raise ValueError("Initial background policy does not match the supported campaign")
+    activity_field = "prior_activities_and_hobbies"
+    attestation = background["initial_background_attestation"]
+    if (attestation["origin_type"] != "VALIDATED_INITIAL_BACKGROUND"
+            or attestation["pre_person_stage_supported"] is not True
+            or attestation["semantic_review_still_required_after_objective_attestation"] is not True
+            or activity_field not in attestation["field_level_scopes"]):
+        raise ValueError("Unsupported initial background attestation")
+    classes = {item["code"]: item for item in background["claim_classes"]}
+    if len(classes) != len(background["claim_classes"]):
+        raise ValueError("Duplicate initial background claim class")
+    for code, source in (
+        ("PERSONAL_ACTIVITY", "F10_VALIDATED_INITIAL_BACKGROUND_IF_CHRONOLOGY_AND_CONTEXT_PLAUSIBLE"),
+        ("PERSONAL_INTEREST", "F10_VALIDATED_INITIAL_BACKGROUND_IF_CONTEXT_PLAUSIBLE"),
+    ):
+        claim = classes[code]
+        if (code not in background["canonical_field_links"][activity_field]
+                or claim["tier"] != "PERSONAL_BACKGROUND" or claim["source_policy"] != source
+                or claim["external_document_required"] is not False):
+            raise ValueError(f"Unsupported personal background class: {code}")
+    return {"id": background_id, "version": background_version}
+
+
 def main():
     if len(sys.argv) != 3:
         raise SystemExit("usage: embed_biography_rules.py REPOSITORY_ROOT OUTPUT_HEADER")
@@ -93,6 +126,7 @@ def main():
         raise ValueError("Unsupported biography evidence policy")
     activity = read(creation / "prior_activity_model.json")
     candidate = read(systems / "careers/academy_path/f10_host_candidate_factory_contract_v0.1.json")
+    background = read(creation / "f10_initial_background_policy_v0.1.json")
     maturity = read(creation / "f10_species_maturity_policy_v0.1.json")
     technology = read(systems / "ship_operations/era_technology_matrix.json")
     for path in (
@@ -128,6 +162,7 @@ def main():
         "species": maturity_rules(maturity, candidate["campaign"], species),
         "maturity_policy": maturity["contract_id"] + "/" + maturity["schema_version"],
         "activity_categories": activity["categories"],
+        "initial_background": initial_background_source(background, candidate["campaign"]),
         "technology": technology["profiles"],
         "scenario": candidate["campaign"],
         "policy": interface["contract_id"] + "/" + interface["schema_version"],

@@ -73,6 +73,7 @@ add_custom_command(OUTPUT "${f10_rules_header}"
     "${f10_authoring}/character_creation/character_creation_contract_v1_0.json"
     "${f10_authoring}/character_creation/f10_biography_validation_interface_v0.1.json"
     "${f10_authoring}/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json"
+    "${f10_authoring}/character_creation/f10_initial_background_policy_v0.1.json"
     "${f10_authoring}/character_creation/f10_species_maturity_policy_v0.1.json"
     "${f10_authoring}/character_creation/biography_validation_rules.md"
     "${f10_authoring}/character_creation/prior_activity_model.json"
@@ -162,7 +163,8 @@ if(TREK_HOST_TESTS)
   target_compile_definitions(host_biography_tests PRIVATE TREK_F10_BIOGRAPHY_TESTING)
   foreach(case IN ITEMS production fields species playable_age maturity_dates restricted_species
       chronology evidence context malformed conjunction review
-      stale evidence_stale registered_sources evidence_conflicts evidence_policy failure privacy)
+      stale evidence_stale registered_sources evidence_conflicts evidence_policy
+      personal_background background_boundaries background_provenance failure privacy)
     add_test(NAME host.biography.${case} COMMAND host_biography_tests ${case})
     set_tests_properties(host.biography.${case} PROPERTIES TIMEOUT 20 LABELS "f10;h06-p06-a;native")
   endforeach()

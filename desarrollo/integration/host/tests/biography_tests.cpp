@@ -407,7 +407,7 @@ void stale() {
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
     check(f.evaluator.request_binding.ruleset.starts_with(
-              "f10-biography/3:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
+              "f10-biography/4:f10_species_playable_maturity_policy/0.1.0:"), "bound maturity policy version");
     auto previous_ruleset = f.evaluator.request_binding.ruleset;
     previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
     BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));
@@ -627,6 +627,134 @@ void evidence_policy() {
           "threshold year stays pending");
 }
 
+void personal_background() {
+    const BiographyValidator validator;
+    auto data = draft();
+    const auto check_personal = [&](const Json& candidate) {
+        const auto result = validator.evaluate(candidate.to_string(), context());
+        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
+              !issue(result, IssueCode::ACTIVITY_BUDGET_REVIEW, "prior_activities_and_hobbies") &&
+              result.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !result.receipt,
+              "only checkable personal background is supported");
+        for (const BiographyIssue unresolved : {
+                 BiographyIssue{IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"},
+                 {IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin"},
+                 {IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED, "citizenship_context"},
+                 {IssueCode::EDUCATION_EVIDENCE_REQUIRED, "prior_education"},
+                 {IssueCode::EXPERIENCE_EVIDENCE_REQUIRED, "prior_experience"},
+                 {IssueCode::PROFILE_EVIDENCE_REQUIRED, "player_profile"}}) {
+            check(issue(result, unresolved.code, unresolved.field), unresolved.field);
+        }
+    };
+    check_personal(data); // Human, 20, karate from age eight.
+    data["prior_activities_and_hobbies"] = Json::parse(R"([
+        {"name":"Astronomy","category":"academic_interest","started_at_or_age":16,"ended_at_or_current":"current"},
+        {"name":"Karate","category":"martial_art","started_at_or_age":8,"ended_at_or_current":14}
+    ])");
+    check_personal(data);
+    data["age_or_birth_date"] = "2363-04-15";
+    data["prior_activities_and_hobbies"] = Json::parse(R"([
+        {"name":"Astronomy","started_at_or_age":"2375-06-01","ended_at_or_current":"2380-02-05"}
+    ])");
+    check_personal(data);
+    const BiographyValidator unavailable(nullptr);
+    const auto result = unavailable.evaluate(data.to_string(), context());
+    check(issue(result, IssueCode::ACTIVITY_BUDGET_REVIEW, "prior_activities_and_hobbies") && !result.receipt,
+          "no background source when the authority is absent");
+}
+
+void background_boundaries() {
+    const BiographyValidator validator;
+    auto data = draft();
+    const auto budget_pending = [&](const Json& candidate) {
+        auto result = validator.evaluate(candidate.to_string(), context());
+        check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED && !result.receipt &&
+              issue(result, IssueCode::ACTIVITY_BUDGET_REVIEW, "prior_activities_and_hobbies"),
+              "unchecked activity timeline remains pending");
+        return result;
+    };
+    for (const auto raw : {
+             R"("Karate since childhood")",
+             R"([{"name":"Karate","started_at_or_age":8}])",
+             R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":"long ago"}])",
+             R"([{"name":"Karate","started_at_or_age":"2370-01-01","ended_at_or_current":"current"}])",
+             R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":13},{"name":"Music","started_at_or_age":12,"ended_at_or_current":"current"}])",
+             R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":"current"},"Unverified experience"])",
+             R"([{"name":"Training","started_at_or_age":8,"ended_at_or_current":"current","training_context":"Starfleet"}])",
+             R"([{"name":"Training","started_at_or_age":8,"ended_at_or_current":"current","evidence_ref":"f10_h06_p06a5_initial_background_policy"}])",
+         }) {
+        data["prior_activities_and_hobbies"] = Json::parse(raw);
+        budget_pending(data);
+    }
+    data = draft();
+    data["prior_activities_and_hobbies"][0]["formal_certification_optional"] = "first dan";
+    check(issue(budget_pending(data), IssueCode::CERTIFICATION_EVIDENCE_REQUIRED, "prior_activities_and_hobbies"),
+          "practice cannot accredit a certification");
+    data = draft();
+    data["prior_activities_and_hobbies"][0]["started_at_or_age"] = 21;
+    rejected(validator.evaluate(data.to_string(), context()), IssueCode::PRIOR_ACTIVITY_AGE_CONFLICT,
+             "prior_activities_and_hobbies");
+    data = draft();
+    data["prior_experience"] = "I captained a Starfleet ship";
+    data["certifications"] = "Medical specialist";
+    auto result = validator.evaluate(data.to_string(), context());
+    check(issue(result, IssueCode::EXPERIENCE_EVIDENCE_REQUIRED, "prior_experience") &&
+          issue(result, IssueCode::CERTIFICATION_EVIDENCE_REQUIRED, "certifications") && !result.receipt,
+          "institutional text and certification await trusted sources");
+    data["prior_experience"] = Json::parse(R"([{"name":"Starfleet","security_clearance":"maximum"}])");
+    rejected(validator.evaluate(data.to_string(), context()), IssueCode::FORBIDDEN_AUTHORITY_FIELD, "prior_experience");
+    data = draft();
+    data["age_or_birth_date"] = "2365-08-01";
+    check(issue(budget_pending(data), IssueCode::PLAYABLE_AGE_UNDECIDED, "age_or_birth_date"), "ambiguous 2383 age");
+    data["age_or_birth_date"] = 100;
+    for (const auto species : {"changeling", "jem_hadar", "vorta"}) {
+        data["species_id"] = species;
+        check(issue(budget_pending(data), IssueCode::SPECIAL_MATURITY_RULE_REQUIRED, "species_id"), species);
+    }
+    for (const auto species : {"hirogen", "kazon", "ocampan", "talaxian", "vidiian"}) {
+        data["species_id"] = species;
+        rejected(validator.evaluate(data.to_string(), context()), IssueCode::DLC_DELTA_UNAVAILABLE, "species_id");
+    }
+}
+
+void background_provenance() {
+    const auto source = RegisteredBiographyAuthority::initial_background_source();
+    check(source.identity.id == "f10_h06_p06a5_initial_background_policy" && source.identity.version == "0.1.0" &&
+          source.identity.issuer == "F10" && source.identity.origin == BiographyEvidenceOrigin::VALIDATED_INITIAL_BACKGROUND,
+          "versioned F10 source");
+    auto data = draft();
+    auto campaign = context();
+    const auto assessed = BiographyValidator{}.evaluate(data.to_string(), campaign);
+    check(assessed.objective.binding().has_value(), "checked draft binding");
+    auto revoked = BiographyClaimEvidence{source.identity, source.claims.front(), *assessed.objective.binding(),
+                                          BiographyEvidenceDecision::SUPPORTED, true};
+    const BiographyValidator validator(std::make_shared<RegisteredBiographyAuthority>(
+        std::vector{source}, std::vector{revoked}));
+    const auto activity_pending = [&](const BiographyValidator& composed) {
+        const auto result = composed.evaluate(data.to_string(), campaign);
+        check(!result.receipt, "internal source cannot grant a receipt");
+        return issue(result, IssueCode::ACTIVITY_BUDGET_REVIEW, "prior_activities_and_hobbies");
+    };
+    check(activity_pending(validator), "revocation overrides the generated atestation");
+    ++campaign.generation;
+    check(!activity_pending(validator), "new generation is evaluated independently");
+    --campaign.generation;
+    data["prior_activities_and_hobbies"][0].erase("ended_at_or_current");
+    check(activity_pending(validator), "changed unsupported draft cannot inherit plausibility");
+    auto replayed = revoked;
+    replayed.revoked = false;
+    replayed.binding = *BiographyValidator{}.evaluate(data.to_string(), campaign).objective.binding();
+    const BiographyValidator injected(std::make_shared<RegisteredBiographyAuthority>(
+        std::vector{source}, std::vector{replayed}));
+    check(activity_pending(injected), "snapshot cannot supply a positive result under the native source ID");
+    data = draft();
+    auto stale_source = source;
+    stale_source.identity.version = "0.0.9";
+    const BiographyValidator old(std::make_shared<RegisteredBiographyAuthority>(
+        std::vector{stale_source}, std::vector<BiographyClaimEvidence>{}));
+    check(activity_pending(old), "stale source registration cannot authenticate the native result");
+}
+
 void failure() {
     Fixture f;
     const auto raw = draft().to_string();
@@ -673,6 +801,8 @@ int main(int argc, char** argv) {
             {"malformed", malformed}, {"conjunction", conjunction}, {"review", review},
             {"stale", stale}, {"evidence_stale", evidence_stale}, {"registered_sources", registered_sources},
             {"evidence_conflicts", evidence_conflicts}, {"evidence_policy", evidence_policy},
+            {"personal_background", personal_background}, {"background_boundaries", background_boundaries},
+            {"background_provenance", background_provenance},
             {"failure", failure}, {"privacy", privacy}
         };
         for (const auto& [name, run] : cases) {
