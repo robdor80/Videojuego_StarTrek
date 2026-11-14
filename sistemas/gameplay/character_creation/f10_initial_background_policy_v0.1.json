@@ -208,7 +208,7 @@
     ]
   },
   "maturity_policy_proposal": {
-    "status": "PROPOSED_NOT_NATIVE_APPROVAL",
+    "status": "SUPERSEDED_HISTORICAL_AGE_CLAUSE_DO_NOT_IMPLEMENT",
     "numeric_playable_floor_required": true,
     "lifetime_stage_must_have_species_support_or_explicit_author_approved_f10_rule": true,
     "self_declared_adult_equivalent_is_an_input_not_evidence": true,
@@ -220,7 +220,9 @@
     "delta_species_in_main_game": "DLC_DELTA_UNAVAILABLE_NO_PERSON",
     "never_assume_human_maturation_for_nonhuman": true,
     "no_documentary_id_required_for_fictional_character": true,
-    "emitted_attestation_only_after_authorized_f10_evaluation": "NOT_IMPLEMENTED"
+    "emitted_attestation_only_after_authorized_f10_evaluation": "NOT_IMPLEMENTED",
+    "superseded_by": "f10_species_playable_maturity_policy/0.1.1",
+    "note": "Only species minimum is checked for player-declared age; no independent adulthood evidence is required."
   },
   "initial_background_attestation": {
     "issuer": "F10_INTERNAL_REGISTERED_SOURCE_NOT_CLIENT",
