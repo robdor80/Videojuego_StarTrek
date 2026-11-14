@@ -88,6 +88,9 @@ def main():
 
     fields = read(creation / "character_creation_contract_v1_0.json")
     interface = read(creation / "f10_biography_validation_interface_v0.1.json")
+    evidence = read(creation / "f10_biography_evidence_semantic_boundary_v0.1.json")
+    if (evidence["contract_id"], evidence["schema_version"]) != ("f10_h06_p06a3_evidence_semantic_boundary", "0.1.0"):
+        raise ValueError("Unsupported biography evidence policy")
     activity = read(creation / "prior_activity_model.json")
     candidate = read(systems / "careers/academy_path/f10_host_candidate_factory_contract_v0.1.json")
     maturity = read(creation / "f10_species_maturity_policy_v0.1.json")
@@ -128,6 +131,7 @@ def main():
         "technology": technology["profiles"],
         "scenario": candidate["campaign"],
         "policy": interface["contract_id"] + "/" + interface["schema_version"],
+        "evidence_policy": evidence["contract_id"] + "/" + evidence["schema_version"],
         "sources_sha256": hashlib.sha256(canonical(sources).encode("ascii")).hexdigest(),
     }
     payload = canonical(data)

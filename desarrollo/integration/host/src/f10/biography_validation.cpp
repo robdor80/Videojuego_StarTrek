@@ -1,4 +1,4 @@
-#include "biography_validation.h"
+#include "biography_evidence.h"
 #include "biography_rules_data.h"
 
 #include <corerpg/history.hpp>
@@ -9,6 +9,7 @@
 #include <charconv>
 #include <chrono>
 #include <set>
+#include <stdexcept>
 #include <utility>
 
 namespace trek::f10 {
@@ -18,7 +19,7 @@ using namespace std::string_view_literals;
 
 constexpr auto max_draft_bytes = 65536U;
 constexpr auto max_findings = 32U;
-constexpr auto ruleset_version = "f10-biography/2"sv;
+constexpr auto ruleset_version = "f10-biography/3"sv;
 constexpr std::string_view adult_field = "adult_equivalent_status";
 constexpr std::string_view birth_field = "age_or_birth_date";
 constexpr std::string_view activities_field = "prior_activities_and_hobbies";
@@ -60,7 +61,9 @@ bool forbidden(std::string_view key) {
         "objective_gate"sv, "semantic_gate"sv, "review_decision"sv, "internal_provenance"sv,
         "reviewer_identity_and_version"sv, "permission"sv, "permissions"sv, "qualification"sv,
         "qualifications"sv, "skill_points"sv, "attribute_points"sv, "character_level"sv,
-        "professional_f11_character_id"sv, "trusted"sv
+        "professional_f11_character_id"sv, "trusted"sv, "source_version_or_world_revision"sv,
+        "evidence_decision"sv, "rule_or_fact_source_id"sv, "internal_issuer_identity"sv,
+        "draft_sha256"sv, "context_sha256"sv
     };
     return contains(rules().at("forbidden"), key) || std::ranges::find(extra, key) != extra.end();
 }
@@ -142,6 +145,22 @@ bool valid_context(const BiographyContext& context) {
            context.start_year == approved.at("approved_start_year").as<int>() &&
            context.start_date.empty() && opaque_id(context.campaign) && context.generation != 0 &&
            opaque_id(context.profile);
+}
+
+const std::string& ruleset_identity() {
+    static const std::string identity = std::string(ruleset_version) + ":" +
+        std::string(text(rules().at("maturity_policy"))) + ":" + std::string(text(rules().at("sources_sha256")));
+    return identity;
+}
+
+const std::string& review_policy() {
+    static const std::string identity = std::string(text(rules().at("policy"))) + ":" +
+        std::string(text(rules().at("evidence_policy")));
+    return identity;
+}
+
+ReviewBinding bind_review(std::string_view canonical_draft, const BiographyContext& context) {
+    return {digest(canonical_draft), context_digest(context), ruleset_identity(), review_policy()};
 }
 
 std::optional<int> date_year(std::string_view value) {
@@ -421,6 +440,32 @@ Checks objective_checks(const Json& draft, const BiographyContext& context) {
     return checks;
 }
 
+bool evidence_claim(BiographyIssue issue) {
+    const bool history_field = issue.field == education_field || issue.field == experience_field ||
+                               issue.field == activities_field || issue.field == certifications_field;
+    switch (issue.code) {
+    case IssueCode::PROFILE_EVIDENCE_REQUIRED: return issue.field == "player_profile";
+    case IssueCode::ORIGIN_EVIDENCE_REQUIRED: return issue.field == "origin";
+    case IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED: return issue.field == "citizenship_context";
+    case IssueCode::EDUCATION_EVIDENCE_REQUIRED: return issue.field == education_field;
+    case IssueCode::EXPERIENCE_EVIDENCE_REQUIRED: return issue.field == experience_field;
+    case IssueCode::ACTIVITY_BUDGET_REVIEW: return issue.field == activities_field;
+    case IssueCode::CERTIFICATION_EVIDENCE_REQUIRED:
+    case IssueCode::TECH_AVAILABILITY_REVIEW: return history_field;
+    default: return false;
+    }
+}
+
+bool source_origin(BiographyEvidenceOrigin origin) {
+    switch (origin) {
+    case BiographyEvidenceOrigin::UNREGISTERED: return false;
+    case BiographyEvidenceOrigin::APPROVED_RULE:
+    case BiographyEvidenceOrigin::WORLD_FACT_READ:
+    case BiographyEvidenceOrigin::VALIDATED_INITIAL_BACKGROUND: return true;
+    }
+    return false;
+}
+
 } // namespace
 
 std::string_view code_name(IssueCode code) noexcept {
@@ -462,16 +507,70 @@ std::string_view code_name(IssueCode code) noexcept {
     return {};
 }
 
-BiographyValidator::BiographyValidator()
-    : ruleset_(std::string(ruleset_version) + ":" + std::string(text(rules().at("maturity_policy"))) +
-               ":" + std::string(text(rules().at("sources_sha256")))),
-      policy_(text(rules().at("policy"))), issuer_(std::make_shared<const int>(0)) {}
+RegisteredBiographyAuthority::RegisteredBiographyAuthority(std::vector<RegisteredBiographySource> sources,
+                                                           std::vector<BiographyClaimEvidence> evidence)
+    : sources_(std::move(sources)), evidence_(std::move(evidence)) {
+    std::set<std::string_view> source_ids;
+    for (const auto& source : sources_) {
+        const auto& id = source.identity;
+        if (!opaque_id(id.id) || !opaque_id(id.version) || !opaque_id(id.issuer) || !source_origin(id.origin) ||
+            !source_ids.insert(id.id).second || source.claims.empty()) {
+            throw std::invalid_argument("Invalid F10 evidence source registration");
+        }
+        for (const auto& claim : source.claims) {
+            if (!evidence_claim({claim.code, claim.field}) ||
+                (claim.code == IssueCode::PROFILE_EVIDENCE_REQUIRED && id.origin != BiographyEvidenceOrigin::APPROVED_RULE)) {
+                throw std::invalid_argument("Unsupported F10 evidence claim scope");
+            }
+        }
+    }
+}
+
+bool RegisteredBiographyAuthority::resolves(BiographyIssue issue, const ReviewRequest& request,
+                                            const BiographyContext& context) const {
+    if (sources_.empty() || evidence_.empty() || !evidence_claim(issue) ||
+        request.canonical_draft.empty() || request.canonical_draft.size() > max_draft_bytes || !valid_context(context) ||
+        request.binding != bind_review(request.canonical_draft, context)) return false;
+
+    bool supported = false;
+    for (const auto& evidence : evidence_) {
+        if (BiographyIssue{evidence.claim.code, evidence.claim.field} != issue || evidence.binding != request.binding) continue;
+        const bool registered = std::ranges::any_of(sources_, [&](const RegisteredBiographySource& source) {
+            return source.identity == evidence.source &&
+                   std::ranges::find(source.claims, evidence.claim) != source.claims.end();
+        });
+        if (!registered) continue;
+        if (evidence.revoked) return false;
+        switch (evidence.decision) {
+        case BiographyEvidenceDecision::SUPPORTED:
+            supported = true;
+            break;
+        case BiographyEvidenceDecision::CONTRADICTED: return false;
+        case BiographyEvidenceDecision::INSUFFICIENT:
+        case BiographyEvidenceDecision::NOT_APPLICABLE:
+            break;
+        default: return false;
+        }
+    }
+    return supported;
+}
+
+DomainDecision RegisteredBiographyAuthority::verify(const ReviewRequest&, const ReviewEvidence&) const {
+    // Future F10 domain verification requires an approved provider and a trusted
+    // record of the evaluation. Self-declared reviewer strings cannot supply it.
+    return DomainDecision::UNVERIFIED;
+}
+
+BiographyValidator::BiographyValidator() : BiographyValidator(nullptr) {}
+
+BiographyValidator::BiographyValidator(std::shared_ptr<const RegisteredBiographyAuthority> authority)
+    : registered_authority_(std::move(authority)), issuer_(std::make_shared<const int>(0)) {}
 
 #ifdef TREK_F10_BIOGRAPHY_TESTING
 BiographyValidator::BiographyValidator(const BiographyAuthority& authority, SemanticEvaluator& evaluator,
                                        std::string reviewer, std::string reviewer_version)
     : BiographyValidator() {
-    authority_ = &authority;
+    test_authority_ = &authority;
     evaluator_ = &evaluator;
     reviewer_ = std::move(reviewer);
     reviewer_version_ = std::move(reviewer_version);
@@ -500,17 +599,20 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         result.objective.issues_.push_back({IssueCode::INVALID_DRAFT, "draft"});
         return result;
     }
-    auto& binding = result.objective.binding_;
-    binding = {digest(bytes), context_digest(frozen_context), ruleset_, policy_};
+    const auto& binding = result.objective.binding_.emplace(bind_review(bytes, frozen_context));
     const ReviewRequest request{bytes, binding};
-    if (authority_) {
+    const BiographyAuthority* authority = registered_authority_.get();
+#ifdef TREK_F10_BIOGRAPHY_TESTING
+    if (test_authority_) authority = test_authority_;
+#endif
+    if (authority) {
         // Preserve every pending issue if the domain resolver fails partway.
         try {
             for (const auto& issue : checks.pending) {
                 // An evidence provider cannot supply missing policy or set the campaign date.
                 if (issue.code == IssueCode::SPECIAL_MATURITY_RULE_REQUIRED ||
                     issue.code == IssueCode::PLAYABLE_AGE_UNDECIDED ||
-                    !authority_->resolves(issue, request, frozen_context)) {
+                    !authority->resolves(issue, request, frozen_context)) {
                     result.objective.issues_.push_back(issue);
                 }
             }
@@ -527,7 +629,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         result.semantic = SemanticStatus::REVIEW_UNAVAILABLE;
         result.semantic_issues = {{IssueCode::SEMANTIC_REVIEW_UNAVAILABLE, "semantic_validation"}};
     };
-    if (!evaluator_ || !authority_) {
+    if (!evaluator_ || !authority) {
         unavailable();
         return result;
     }
@@ -554,7 +656,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
                 return result;
             }
         }
-        decision = authority_->verify(request, evidence);
+        decision = authority->verify(request, evidence);
     } catch (...) {
         unavailable();
         return result;
@@ -587,7 +689,8 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
 bool BiographyValidator::eligible(const BiographyReceipt& receipt, std::string_view draft,
                                   const BiographyContext& current) const {
     if (receipt.issuer_.lock() != issuer_ || receipt.context_ != current || !valid_context(current) ||
-        receipt.evidence_.binding.ruleset != ruleset_ || receipt.evidence_.binding.policy != policy_) return false;
+        receipt.evidence_.binding.ruleset != ruleset_identity() ||
+        receipt.evidence_.binding.policy != review_policy()) return false;
     const auto parsed = parse_draft(draft);
     return parsed && canonical(*parsed) == receipt.canonical_draft_;
 }

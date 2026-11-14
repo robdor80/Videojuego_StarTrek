@@ -34,6 +34,7 @@ for name in ("query_view", "submit_order", "query_order", "cancel_order", "resto
     assert name in symbols, name
 for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_commit_promotion", "test_visit",
              "BiographyValidator", "BiographyReceipt", "SemanticEvaluator", "BiographyAuthority",
+             "RegisteredBiographyAuthority", "BiographyClaimEvidence",
              "HistoryPersistence", "WorldState"):
     assert name not in symbols, name
 assert "TrekF04Bridge" in dependencies
