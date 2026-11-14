@@ -32,12 +32,14 @@ else:
     assert "not found" not in dependencies
 for name in ("query_view", "submit_order", "query_order", "cancel_order", "restore"):
     assert name in symbols, name
-for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_commit_promotion", "test_visit"):
+for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_commit_promotion", "test_visit",
+             "BiographyValidator", "BiographyReceipt", "SemanticEvaluator", "BiographyAuthority",
+             "HistoryPersistence", "WorldState"):
     assert name not in symbols, name
 assert "TrekF04Bridge" in dependencies
 assert not any("TrialHost" in p.name or p.name.startswith((
     "host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests",
-    "host_academy_feasibility_tests",
+    "host_academy_feasibility_tests", "host_biography_tests",
 )) for p in build.rglob("*") if p.is_file())
 print(symbols)
 print(dependencies)
