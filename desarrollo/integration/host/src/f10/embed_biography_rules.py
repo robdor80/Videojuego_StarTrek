@@ -15,7 +15,7 @@ def unique_object(pairs):
 
 
 def maturity_rules(policy, campaign, species):
-    if (policy["contract_id"], policy["schema_version"]) != ("f10_species_playable_maturity_policy", "0.1.0"):
+    if (policy["contract_id"], policy["schema_version"]) != ("f10_species_playable_maturity_policy", "0.1.1"):
         raise ValueError("Unsupported playable maturity contract")
     scope = policy["scope"]
     if (scope["scenario_id"] != campaign["scenario_id"] or scope["era_id"] != campaign["era_id"]
@@ -29,8 +29,10 @@ def maturity_rules(policy, campaign, species):
     if (policy["content_gates"]["DLC_DELTA"] != "NOT_AVAILABLE_IN_MAIN_GAME_DLC_NOT_IMPLEMENTED"
             or policy["integration"]["semantic_ai_review_still_mandatory"] is not True):
         raise ValueError("Unsupported playable maturity gate")
-    for invariant in ("minimum_not_sufficient_proof_of_maturity", "adulthood_client_claim_not_evidence",
-                      "applicable_species_profile_and_individual_maturity_evidence_required", "no_fixed_maximum_age"):
+    for invariant in ("player_declared_age_is_accepted_as_fictional_character_fact",
+                      "age_minimum_is_sufficient_to_pass_age_check",
+                      "no_additional_individual_maturity_evidence_required",
+                      "no_fixed_maximum_age"):
         if policy["rules"][invariant] is not True:
             raise ValueError(f"Unsupported playable maturity invariant: {invariant}")
 
@@ -42,7 +44,7 @@ def maturity_rules(policy, campaign, species):
             raise ValueError(f"Unknown or duplicate playable species: {species_id}")
         profile_ref, profile = species[species_id]
         if (row["profile_ref"] != profile_ref or row["automatic_player_eligibility"] is not False
-                or row["maturity_evidence_required"] is not True
+                or row["maturity_evidence_required"] is not False
                 or row["maximum_playable_age_earth_years"] is not None):
             raise ValueError(f"Invalid playable maturity constraints: {species_id}")
 
