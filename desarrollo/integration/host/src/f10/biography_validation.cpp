@@ -18,13 +18,14 @@ using namespace std::string_view_literals;
 
 constexpr auto max_draft_bytes = 65536U;
 constexpr auto max_findings = 32U;
-constexpr auto ruleset_version = "f10-biography/1"sv;
+constexpr auto ruleset_version = "f10-biography/2"sv;
 constexpr std::string_view adult_field = "adult_equivalent_status";
 constexpr std::string_view birth_field = "age_or_birth_date";
 constexpr std::string_view activities_field = "prior_activities_and_hobbies";
 constexpr std::string_view education_field = "prior_education";
 constexpr std::string_view experience_field = "prior_experience";
 constexpr std::string_view certifications_field = "certifications";
+constexpr std::string_view species_field = "species_id";
 
 const Json& rules() {
     static const auto data = Json::parse(detail::biography_rules_json);
@@ -225,6 +226,36 @@ BiographicalAge validate_birth(const Json& draft, const BiographyContext& contex
     return {nullptr, birthday, year};
 }
 
+void validate_playable_maturity(const Json& draft, const BiographicalAge& age,
+                                const BiographyContext& context, Checks& checks) {
+    if (!draft.contains(species_field)) return;
+    const auto id = text(draft.at(species_field));
+    const auto& species = rules().at("species");
+    if (!species.contains(id)) {
+        checks.reject(IssueCode::UNKNOWN_SPECIES, species_field);
+        return;
+    }
+
+    const auto& rule = species.at(id);
+    if (rule.at("delta_dlc").as<bool>()) checks.reject(IssueCode::DLC_DELTA_UNAVAILABLE, species_field);
+    const auto& minimum = rule.at("minimum");
+    if (minimum.is_null()) {
+        checks.defer(IssueCode::SPECIAL_MATURITY_RULE_REQUIRED, species_field);
+        return;
+    }
+
+    const auto floor = minimum.as<int>();
+    if (age.age && age.age->as<std::uint64_t>() < static_cast<std::uint64_t>(floor)) {
+        checks.reject(IssueCode::BELOW_PLAYABLE_AGE, birth_field);
+    } else if (age.birth_year && *age.birth_year <= context.start_year) {
+        // Under the approved year-only policy, the whole threshold year needs review.
+        const auto age_reached_in_campaign_year = context.start_year - *age.birth_year;
+        if (age_reached_in_campaign_year < floor) checks.reject(IssueCode::BELOW_PLAYABLE_AGE, birth_field);
+        if (age_reached_in_campaign_year == floor) checks.defer(IssueCode::PLAYABLE_AGE_UNDECIDED, birth_field);
+    }
+    checks.defer(IssueCode::MATURITY_EVIDENCE_REQUIRED, adult_field);
+}
+
 struct Moment {
     std::optional<std::uint64_t> age;
     std::string_view date;
@@ -362,7 +393,7 @@ Checks objective_checks(const Json& draft, const BiographyContext& context) {
             const auto field = text(value);
             if (field == birth_field || field == adult_field || !draft.contains(field)) continue;
             const auto& item = draft.at(field);
-            const bool textual = field == "display_name" || field == "species_id";
+            const bool textual = field == "display_name" || field == species_field;
             if (textual ? !nonblank(text(item)) : !content_value(item)) {
                 checks.reject(IssueCode::MALFORMED_FIELD, field);
             }
@@ -370,15 +401,13 @@ Checks objective_checks(const Json& draft, const BiographyContext& context) {
     };
     check_shape(rules().at("required"));
     check_shape(rules().at("optional"));
-    if (draft.contains("species_id") && !contains(rules().at("species"), text(draft.at("species_id")))) {
-        checks.reject(IssueCode::UNKNOWN_SPECIES, "species_id");
-    }
     if (draft.contains(adult_field)) {
         const auto& adult = draft.at(adult_field);
         if (!adult.is_bool()) checks.reject(IssueCode::MALFORMED_FIELD, adult_field);
         else if (!adult.as<bool>()) checks.reject(IssueCode::NON_ADULT_DECLARED, adult_field);
     }
     const auto age = validate_birth(draft, context, checks);
+    validate_playable_maturity(draft, age, context, checks);
     for (const auto field : {"origin", "citizenship_context"}) {
         if (draft.contains(field)) check_evidence_ref(draft.at(field), field, checks);
     }
@@ -386,7 +415,6 @@ Checks objective_checks(const Json& draft, const BiographyContext& context) {
     validate_history(draft, education_field, IssueCode::EDUCATION_EVIDENCE_REQUIRED, age, context, checks);
     validate_history(draft, experience_field, IssueCode::EXPERIENCE_EVIDENCE_REQUIRED, age, context, checks);
     validate_history(draft, certifications_field, IssueCode::CERTIFICATION_EVIDENCE_REQUIRED, age, context, checks);
-    checks.defer(IssueCode::MATURITY_RULE_REQUIRED, adult_field);
     checks.defer(IssueCode::ORIGIN_EVIDENCE_REQUIRED, "origin");
     checks.defer(IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED, "citizenship_context");
     checks.defer(IssueCode::PROFILE_EVIDENCE_REQUIRED, "player_profile");
@@ -411,7 +439,11 @@ std::string_view code_name(IssueCode code) noexcept {
     case IssueCode::PRIOR_ACTIVITY_AGE_CONFLICT: return "PRIOR_ACTIVITY_AGE_CONFLICT";
     case IssueCode::CHRONOLOGY_CONFLICT: return "CHRONOLOGY_CONFLICT";
     case IssueCode::CONTEXT_NOT_DECIDED: return "CONTEXT_NOT_DECIDED";
-    case IssueCode::MATURITY_RULE_REQUIRED: return "MATURITY_RULE_REQUIRED";
+    case IssueCode::BELOW_PLAYABLE_AGE: return "BELOW_PLAYABLE_AGE";
+    case IssueCode::PLAYABLE_AGE_UNDECIDED: return "PLAYABLE_AGE_UNDECIDED";
+    case IssueCode::SPECIAL_MATURITY_RULE_REQUIRED: return "SPECIAL_MATURITY_RULE_REQUIRED";
+    case IssueCode::DLC_DELTA_UNAVAILABLE: return "DLC_DELTA_UNAVAILABLE";
+    case IssueCode::MATURITY_EVIDENCE_REQUIRED: return "MATURITY_EVIDENCE_REQUIRED";
     case IssueCode::PROFILE_EVIDENCE_REQUIRED: return "PROFILE_EVIDENCE_REQUIRED";
     case IssueCode::ORIGIN_EVIDENCE_REQUIRED: return "ORIGIN_EVIDENCE_REQUIRED";
     case IssueCode::CITIZENSHIP_EVIDENCE_REQUIRED: return "CITIZENSHIP_EVIDENCE_REQUIRED";
@@ -431,7 +463,8 @@ std::string_view code_name(IssueCode code) noexcept {
 }
 
 BiographyValidator::BiographyValidator()
-    : ruleset_(std::string(ruleset_version) + ":" + std::string(text(rules().at("sources_sha256")))),
+    : ruleset_(std::string(ruleset_version) + ":" + std::string(text(rules().at("maturity_policy"))) +
+               ":" + std::string(text(rules().at("sources_sha256")))),
       policy_(text(rules().at("policy"))), issuer_(std::make_shared<const int>(0)) {}
 
 #ifdef TREK_F10_BIOGRAPHY_TESTING
@@ -474,7 +507,12 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         // Preserve every pending issue if the domain resolver fails partway.
         try {
             for (const auto& issue : checks.pending) {
-                if (!authority_->resolves(issue, request, frozen_context)) result.objective.issues_.push_back(issue);
+                // An evidence provider cannot supply missing policy or set the campaign date.
+                if (issue.code == IssueCode::SPECIAL_MATURITY_RULE_REQUIRED ||
+                    issue.code == IssueCode::PLAYABLE_AGE_UNDECIDED ||
+                    !authority_->resolves(issue, request, frozen_context)) {
+                    result.objective.issues_.push_back(issue);
+                }
             }
         } catch (...) {
             result.objective.issues_ = std::move(checks.pending);

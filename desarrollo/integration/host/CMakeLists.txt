@@ -72,6 +72,7 @@ add_custom_command(OUTPUT "${f10_rules_header}"
   DEPENDS src/f10/embed_biography_rules.py ${f10_species_profiles}
     "${f10_authoring}/character_creation/character_creation_contract_v1_0.json"
     "${f10_authoring}/character_creation/f10_biography_validation_interface_v0.1.json"
+    "${f10_authoring}/character_creation/f10_species_maturity_policy_v0.1.json"
     "${f10_authoring}/character_creation/biography_validation_rules.md"
     "${f10_authoring}/character_creation/prior_activity_model.json"
     "${f10_authoring}/character_creation/player_profile_contract.json"
@@ -158,11 +159,16 @@ if(TREK_HOST_TESTS)
   target_include_directories(host_biography_tests PRIVATE src "${f10_rules_dir}")
   target_link_libraries(host_biography_tests PRIVATE CoreRPG::CoreRPG jsoncons)
   target_compile_definitions(host_biography_tests PRIVATE TREK_F10_BIOGRAPHY_TESTING)
-  foreach(case IN ITEMS production fields species chronology evidence context malformed conjunction review
+  foreach(case IN ITEMS production fields species playable_age maturity_dates restricted_species
+      chronology evidence context malformed conjunction review
       stale evidence_stale failure privacy)
     add_test(NAME host.biography.${case} COMMAND host_biography_tests ${case})
     set_tests_properties(host.biography.${case} PROPERTIES TIMEOUT 20 LABELS "f10;h06-p06-a;native")
   endforeach()
+  add_test(NAME host.biography.rules_generation
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/biography_rules_generation.py"
+      "${star_trek_root}")
+  set_tests_properties(host.biography.rules_generation PROPERTIES TIMEOUT 30 LABELS "f10;h06-p06-a")
 endif()
 
 if(TREK_HOST_TESTS)
