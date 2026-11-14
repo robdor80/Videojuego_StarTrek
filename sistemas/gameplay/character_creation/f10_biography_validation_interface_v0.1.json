@@ -1,0 +1,132 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f10_h06_p06a_biography_validation",
+  "status": "PROPOSED_PRECHECK_ONLY_NOT_RUNTIME_AUTHORITY",
+  "locale": "es-ES",
+  "sources": [
+    "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "sistemas/gameplay/character_creation/biography_validation_rules.md",
+    "sistemas/gameplay/character_creation/player_profile_contract.json",
+    "sistemas/gameplay/species/species_biology_contract.json",
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json"
+  ],
+  "domain_owner": "F10",
+  "orchestrator": "HOST",
+  "core_authority": "CoreRPG pinned",
+  "precheck": {
+    "purpose": "STATIC_DETERMINISTIC_REJECTION_OR_REVIEW_TRIAGE",
+    "outcomes": [
+      "CHANGES_REQUIRED",
+      "REVIEW_REQUIRED"
+    ],
+    "cannot_return": [
+      "VALID",
+      "APPROVED",
+      "ADMITTED",
+      "PERSON_CREATED"
+    ],
+    "permitted_actions": [
+      "inspect_untrusted_draft",
+      "check_required_fields",
+      "check_forbidden_client_fields",
+      "check_known_species_reference",
+      "check_year_only_birthday",
+      "check_obvious_prior_activity_age_conflict",
+      "canonical_fingerprint_untrusted"
+    ],
+    "cannot_infer": [
+      "adulthood_from_age_without_species_maturity_rules",
+      "citizenship_from_species_or_planet",
+      "qualifications_from_hobbies",
+      "professional_ranks",
+      "date_month_day_of_2383_campaign",
+      "academy_admission_from_biography"
+    ],
+    "issue_codes": [
+      "INVALID_DRAFT",
+      "INVALID_CAMPAIGN_CONTEXT",
+      "UNEXPECTED_FIELD",
+      "FORBIDDEN_AUTHORITY_FIELD",
+      "MISSING_REQUIRED_FIELD",
+      "MALFORMED_FIELD",
+      "UNKNOWN_SPECIES",
+      "UNSUPPORTED_BIRTH_VALUE",
+      "BIRTH_AFTER_CAMPAIGN_YEAR",
+      "NON_ADULT_DECLARED",
+      "PRIOR_ACTIVITY_AGE_CONFLICT",
+      "CONTEXT_NOT_DECIDED",
+      "OBJECTIVE_RULES_NOT_IMPLEMENTED",
+      "SEMANTIC_REVIEW_PENDING"
+    ]
+  },
+  "objective_gate": {
+    "owner": "F10_NATIVE",
+    "source": "PINNED_RULESET_WITH_CONTENT_PROVENANCE",
+    "requires": [
+      "complete_draft",
+      "species_profile_and_applicable_maturity_rule",
+      "era_and_chronology",
+      "citizenship_evidence_not_species_inference",
+      "education_and_certification_evidence",
+      "technical_availability_rule",
+      "consistent_prior_activity_time_budget"
+    ],
+    "statuses": [
+      "OBJECTIVE_VALID",
+      "CHANGES_REQUIRED",
+      "REVIEW_REQUIRED"
+    ],
+    "fail_closed_if_missing": "REVIEW_REQUIRED"
+  },
+  "semantic_gate": {
+    "owner": "F10_DOMAIN_VERIFIER",
+    "assisted_by": "AI_ASSISTED_REVIEW_REQUIRED_PROVIDER_NOT_SELECTED",
+    "review_required": true,
+    "evidence_fields": [
+      "draft_sha256",
+      "campaign_context_sha256",
+      "objective_ruleset_ref",
+      "objective_ruleset_version",
+      "semantic_review_policy_ref",
+      "reviewer_identity_and_version",
+      "findings",
+      "decision",
+      "internal_provenance"
+    ],
+    "proposed_decisions": [
+      "VALID",
+      "CHANGES_REQUIRED",
+      "REVIEW_UNAVAILABLE"
+    ],
+    "client_claims_do_not_authenticate": true,
+    "stale_if": [
+      "draft_changed",
+      "campaign_context_changed",
+      "rule_version_changed",
+      "review_policy_changed"
+    ],
+    "unknown_provider_behavior": "REVIEW_UNAVAILABLE_AND_NO_COMMIT",
+    "no_external_network_required": true,
+    "ai_may_propose_but_not_commit": true
+  },
+  "commit_gate": {
+    "owner": "F10_CORE_ADAPTER",
+    "inputs_required": [
+      "objective_validated_exact_draft",
+      "semantic_evidence_verified_exact_draft",
+      "source_profile_validated",
+      "campaign_context_validated",
+      "host_owned_single_intent",
+      "fresh_session_scope"
+    ],
+    "effects_on_precheck": "NONE",
+    "effects_on_failed_verification": "NONE",
+    "permitted_success_effect": "SINGLE_PERSON_CANDIDATE_AND_FACT_ATOMIC_ONLY_IN_FUTURE_NATIVE_IMPLEMENTATION",
+    "no_admission_no_f05_no_f11": true,
+    "receipt_is_private_not_client_generated": true
+  },
+  "frozen_authoritative_core_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "campaign_year_approved": 2383,
+  "campaign_month_day": "UNDECIDED_BY_AUTHOR",
+  "m1_status": "PARTIAL"
+}
