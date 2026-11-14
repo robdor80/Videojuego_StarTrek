@@ -126,5 +126,14 @@ class F10SpeciesMaturityPolicyTests(unittest.TestCase):
         self.assertNotIn("validated_creation_ref", self.policy)
 
 
+    def test_native_age_check_has_no_extra_biological_evidence_gate(self):
+        cpp = (ROOT / "desarrollo/integration/host/src/f10/biography_validation.cpp").read_text(encoding="utf-8")
+        self.assertNotIn("checks.defer(IssueCode::MATURITY_EVIDENCE_REQUIRED", cpp)
+        self.assertIn('ruleset_version = "f10-biography/5"', cpp)
+        self.assertTrue(self.policy["rules"]["age_minimum_is_sufficient_to_pass_age_check"])
+        self.assertTrue(self.policy["rules"]["no_additional_individual_maturity_evidence_required"])
+        historical = json.loads((ROOT / "sistemas/gameplay/character_creation/f10_individual_maturity_policy_v0.1.json").read_text(encoding="utf-8"))
+        self.assertEqual(historical["status"], "SUPERSEDED_HISTORICAL_DESIGN_DO_NOT_IMPLEMENT")
+
 if __name__ == "__main__":
     unittest.main()
