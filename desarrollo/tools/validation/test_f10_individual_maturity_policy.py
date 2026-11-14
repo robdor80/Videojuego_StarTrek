@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""H06-P06-A7: política y referencias seguras, sin autoridad real."""
+"""Pruebas históricas de A7: referencia retirada, no gobierna el juego actual."""
 from __future__ import annotations
 
 import json
@@ -42,7 +42,9 @@ class F10IndividualMaturityPolicyTests(unittest.TestCase):
         return r
 
     def test_design_only(self):
-        self.assertEqual(self.policy["status"], "PROPOSED_DESIGN_NOT_RUNTIME_ENFORCED")
+        self.assertEqual(self.policy["status"], "SUPERSEDED_HISTORICAL_DESIGN_DO_NOT_IMPLEMENT")
+        self.assertEqual(self.policy["superseded_by_author_decision"]["current_policy_ref"],
+                         "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json")
         self.assertEqual(self.policy["tests_scope"], "OFFLINE_REFERENCE_AND_CONTRACT_ONLY_NOT_REAL_MATURITY_ATTESTATION")
 
     def test_all_policy_refs_exist(self):

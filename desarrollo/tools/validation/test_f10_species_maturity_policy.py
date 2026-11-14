@@ -75,16 +75,17 @@ class F10SpeciesMaturityPolicyTests(unittest.TestCase):
             self.assertIsNone(row["minimum_playable_age_earth_years"])
             self.assertTrue(row["special_blocker"])
             self.assertFalse(row["automatic_player_eligibility"])
-            self.assertTrue(row["maturity_evidence_required"])
+            self.assertFalse(row["maturity_evidence_required"])
 
     def test_no_maximum_and_no_auto_approval_for_any_species(self):
         for row in self.species:
             self.assertIsNone(row["maximum_playable_age_earth_years"], row["species_id"])
             self.assertFalse(row["automatic_player_eligibility"], row["species_id"])
-            self.assertTrue(row["maturity_evidence_required"], row["species_id"])
+            self.assertFalse(row["maturity_evidence_required"], row["species_id"])
         rules = self.policy["rules"]
-        self.assertTrue(rules["minimum_not_sufficient_proof_of_maturity"])
-        self.assertTrue(rules["adulthood_client_claim_not_evidence"])
+        self.assertTrue(rules["player_declared_age_is_accepted_as_fictional_character_fact"])
+        self.assertTrue(rules["age_minimum_is_sufficient_to_pass_age_check"])
+        self.assertTrue(rules["no_additional_individual_maturity_evidence_required"])
         self.assertTrue(rules["no_auto_admission_or_cadet_slot"])
         self.assertTrue(rules["no_runtime_authority_or_core_mutation_in_this_policy"])
 
@@ -112,17 +113,27 @@ class F10SpeciesMaturityPolicyTests(unittest.TestCase):
         rules = self.policy["rules"]
         self.assertEqual(rules["date_threshold_ambiguous_without_campaign_month_day"], "REVIEW_REQUIRED")
         self.assertEqual(rules["under_age_with_provable_context"], "CHANGES_REQUIRED")
-        self.assertEqual(rules["at_or_above_minimum"], "REVIEW_REQUIRED_UNTIL_BOTH_F10_GATES")
+        self.assertEqual(rules["at_or_above_minimum"], "AGE_CHECK_PASSED_OTHER_F10_GATES_INDEPENDENT")
         self.assertTrue(rules["npc_age_policy_independent_of_player_minimum"])
         self.assertTrue(self.by_id["human"]["minimum_playable_age_earth_years"] == 18)
         self.assertTrue(self.by_id["ocampan"]["minimum_playable_age_earth_years"] == 2)
 
     def test_status_is_not_a_runtime_authority(self):
-        self.assertEqual(self.policy["status"], "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME_ENFORCED")
+        self.assertEqual(self.policy["status"], "AUTHOR_APPROVED_PLAYER_DECLARED_AGE_GATE")
+        self.assertEqual(self.policy["schema_version"], "0.1.1")
         self.assertTrue(self.policy["integration"]["semantic_ai_review_still_mandatory"])
         self.assertTrue(self.policy["integration"]["no_auto_adoption_by_core_unreal_or_h03_h04"])
         self.assertNotIn("validated_creation_ref", self.policy)
 
+
+    def test_native_age_check_has_no_extra_biological_evidence_gate(self):
+        cpp = (ROOT / "desarrollo/integration/host/src/f10/biography_validation.cpp").read_text(encoding="utf-8")
+        self.assertNotIn("checks.defer(IssueCode::MATURITY_EVIDENCE_REQUIRED", cpp)
+        self.assertIn('ruleset_version = "f10-biography/5"', cpp)
+        self.assertTrue(self.policy["rules"]["age_minimum_is_sufficient_to_pass_age_check"])
+        self.assertTrue(self.policy["rules"]["no_additional_individual_maturity_evidence_required"])
+        historical = json.loads((ROOT / "sistemas/gameplay/character_creation/f10_individual_maturity_policy_v0.1.json").read_text(encoding="utf-8"))
+        self.assertEqual(historical["status"], "SUPERSEDED_HISTORICAL_DESIGN_DO_NOT_IMPLEMENT")
 
 if __name__ == "__main__":
     unittest.main()

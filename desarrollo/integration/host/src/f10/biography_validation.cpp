@@ -19,7 +19,7 @@ using namespace std::string_view_literals;
 
 constexpr auto max_draft_bytes = 65536U;
 constexpr auto max_findings = 32U;
-constexpr auto ruleset_version = "f10-biography/4"sv;
+constexpr auto ruleset_version = "f10-biography/5"sv;
 constexpr std::string_view adult_field = "adult_equivalent_status";
 constexpr std::string_view birth_field = "age_or_birth_date";
 constexpr std::string_view activities_field = "prior_activities_and_hobbies";
@@ -273,7 +273,7 @@ void validate_playable_maturity(const Json& draft, const BiographicalAge& age,
         if (age_reached_in_campaign_year < floor) checks.reject(IssueCode::BELOW_PLAYABLE_AGE, birth_field);
         if (age_reached_in_campaign_year == floor) checks.defer(IssueCode::PLAYABLE_AGE_UNDECIDED, birth_field);
     }
-    checks.defer(IssueCode::MATURITY_EVIDENCE_REQUIRED, adult_field);
+    // Player-declared age is a creation input. Passing the species floor ends the age check.
 }
 
 struct Moment {
