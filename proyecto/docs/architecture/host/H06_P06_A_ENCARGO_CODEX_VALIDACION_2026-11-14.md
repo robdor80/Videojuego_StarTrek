@@ -7,7 +7,7 @@
 
 ## Lectura obligatoria y auditoría previa
 
-1. `AGENTS.md`, `laboratorios/README.md`, [informe de factibilidad Core #150](F10_H06_P06_FACTIBILIDAD_NATIVA_2026-11-14.md) y [contrato de alta](F10_H06_P06_CONTRATO_INTERFAZ_ACADEMIA_2026-11-14.md).
+1. `AGENTS.md` y las reglas vigentes sobre temporales, [informe de factibilidad Core #150](F10_H06_P06_FACTIBILIDAD_NATIVA_2026-11-14.md) y [contrato de alta](F10_H06_P06_CONTRATO_INTERFAZ_ACADEMIA_2026-11-14.md).
 2. [Contrato del presente corte](H06_P06_A_CONTRATO_VALIDACION_BIOGRAFIA_2026-11-14.md), `sistemas/gameplay/character_creation/f10_biography_validation_interface_v0.1.json`, y las referencias `desarrollo/tools/validation/f10_biography_precheck.py` + `test_f10_biography_precheck.py`.
 3. Reglas bloqueadas `character_creation_contract_v1_0.json`, `biography_validation_rules.md`, `prior_activity_model.json`, `player_profile_contract.json`, `character_affiliation_citizenship_contract.json`, `species_biology_contract.json` y perfiles versionados de especie.
 4. F10 (`admission_flow.json`, reglas de Academia, QA de referencia) y HOST `SessionOwner`, puente Core fijado `76a7b7b485616d8c4994f384a90f123bf333591d`.
