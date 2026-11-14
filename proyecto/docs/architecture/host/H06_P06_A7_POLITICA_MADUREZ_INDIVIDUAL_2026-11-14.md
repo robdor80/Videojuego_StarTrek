@@ -57,7 +57,7 @@ No se fija ningún máximo de edad por esperanza de vida. Ni la experiencia de u
 
 - `sistemas/gameplay/character_creation/f10_individual_maturity_policy_v0.1.json` — contrato de diseño, registro vacío y barreras explícitas.
 - `desarrollo/tools/validation/f10_individual_maturity_reference.py` — referencia offline y no autoritativa; devuelve solo `REVIEW_REQUIRED` o `CHANGES_REQUIRED`, nunca da evidencias válidas, no usa IA ni escribe Core.
-- `desarrollo/tools/validation/test_f10_individual_maturity_policy.py` — 30 tests nuevos de límites, ciclo vital, fuentes, inyección, especies y barreras.
+- `desarrollo/tools/validation/test_f10_individual_maturity_policy.py` — 31 tests nuevos de límites, ciclo vital, fuentes, inyección, especies y barreras.
 
 Comando CI: `python -m unittest discover -s desarrollo/tools/validation -p 'test_f10_*.py' -v`. Ejecutar las regresiones nativas de HOST sin afirmar que el código C++ incorpora ya la política.
 
