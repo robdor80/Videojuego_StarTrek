@@ -6,7 +6,7 @@ Rama: `codex/h06-ia01-central-ai`. [PR Draft #164](https://github.com/robdor80/V
 ## Revisión y alcance
 
 Base actualizada: `2c976b0a4a699882c545286c40aef930cce515e2`, fusión de PR #163 confirmada.
-HEAD de código auditado: `1e49c6ae4d6f3fd757a129c7d7973d15fd35ec88`.
+HEAD de código auditado en la entrega inicial: `1e49c6ae4d6f3fd757a129c7d7973d15fd35ec88`.
 El commit que incorpora este informe solo añade documentación. El HEAD de entrega se obtiene
 en la [rama de la PR](https://github.com/robdor80/Videojuego_StarTrek/tree/codex/h06-ia01-central-ai)
 y en su historial; el SHA definitivo se registra también en la descripción de la PR.
@@ -188,3 +188,31 @@ anteriores no sustituyen la evidencia de la revisión final enlazada arriba.
 No hay dependencias del producto respecto a resultados temporales. La ubicación local de
 experimentación y su carácter eliminable se comunican en la entrega; no se incorpora material
 experimental a Git. PR Draft preparada para auditoría de ChatGPT, sin fusión.
+
+
+## Corrección puntual de auditoría — PR #164
+
+Resuelve [la observación independiente](https://github.com/robdor80/Videojuego_StarTrek/pull/164#issuecomment-6895113181)
+sobre el subconjunto de esquemas de [Structured Outputs / Responses API](https://developers.openai.com/api/docs/guides/structured-outputs#supported-schemas).
+`strict_schema()` comprueba las palabras clave admitidas y rechaza composiciones incompatibles,
+esquemas booleanos, tuplas, uniones en la raíz y formatos no admitidos. Conserva `anyOf` anidado,
+objetos anulables, `$defs`, referencias locales y recursión. Aplica los límites documentados de
+propiedades, anidamiento, enumeraciones y longitud de cadenas, contando caracteres UTF-8.
+No aplica a Luna/Sol las exclusiones adicionales de modelos ajustados.
+
+La comprobación sigue en la construcción de la solicitud: cualquier incompatibilidad devuelve
+`Error::CONFIGURATION` antes de leer la credencial o llamar al transporte. La validación técnica
+y de respuestas continúa utilizando jsoncons existente; no se añade un motor ni dependencias.
+
+Pruebas simuladas ampliadas: rechazos en raíz, propiedades, definiciones y ramas `anyOf`, contador
+HTTP inalterado en todos los rechazos, objetos y referencias válidos, recursión, restricciones de
+modelos base, límites exactos y respuestas estructuradas válidas/inválidas. La suite IA pasa y
+el HOST recompila en Linux. Regresión local: 262/264 casos CTest correctos; F05 process-save
+exigía salida nueva y encontró una fixture anterior, dejando process-load sin ejecutar. Ambos
+casos se repitieron en procesos separados con una ruta nueva: **2/2 PASS**, sin borrar datos previos.
+
+La CI de esta corrección se consulta en los [checks del HEAD de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/164/checks).
+La respuesta a la observación registra el SHA definitivo, ejecución exacta y resultados reales
+Windows/Linux/sanitizadores. La evidencia anterior de este informe corresponde a la entrega inicial.
+No se realizan llamadas OpenAI reales: permanece **NOT_RUN**. El ajuste solo modifica el validador,
+sus pruebas y este informe; no cambia CoreRPG, F10, F11, credenciales, rutas, modelos ni arquitectura.

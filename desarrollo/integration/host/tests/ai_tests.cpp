@@ -111,6 +111,112 @@ void responses() {
     CHECK(run(t).error == Error::REFUSAL);
     t->answer.content_type = "text/html"; CHECK(run(t).error == Error::MALFORMED);
 }
+void structured_schemas() {
+    auto t = std::make_shared<Fake>();
+    auto wrap = [](Json child) {
+        auto root = Json::parse(schema);
+        root["properties"]["ok"] = std::move(child);
+        return root;
+    };
+    auto rejected = [&](const Json& candidate, Config c = {}) {
+        auto r = request(); r.json_schema = candidate.to_string();
+        auto before = t->calls.load();
+        const auto result = run(t, r, c);
+        CHECK(result.error == Error::CONFIGURATION && result.text.empty());
+        CHECK(t->calls == before); // Reject before contacting even the fake HTTP transport.
+    };
+    auto accepted = [&](const Json& candidate, const Json& value, Config c = {}) {
+        auto r = request(); r.json_schema = candidate.to_string();
+        response_text(*t, value.to_string());
+        auto before = t->calls.load();
+        const auto result = run(t, r, c);
+        CHECK(result.error == Error::OK && Json::parse(result.text) == value);
+        CHECK(t->calls == before + 1);
+    };
+    for (const auto* keyword : {"allOf", "not", "dependentRequired", "dependentSchemas", "if", "then", "else",
+            "oneOf", "prefixItems", "additionalItems", "contains", "minContains", "maxContains",
+            "propertyNames", "unevaluatedProperties", "unevaluatedItems", "uniqueItems", "$dynamicRef", "$recursiveRef"}) {
+        auto incompatible = Json::parse(schema);
+        incompatible[keyword] = Json::parse(R"({"type":"boolean"})");
+        rejected(incompatible);
+        auto child = Json::parse(R"({"type":"boolean"})"); child[keyword] = incompatible[keyword];
+        rejected(wrap(child));
+        auto hidden = Json::parse(schema); hidden["$defs"]["unused"] = child;
+        rejected(hidden);
+        auto choice = Json::parse(R"({"anyOf":[{"type":"boolean"},{"type":"null"}]})");
+        choice["anyOf"][0] = child; rejected(wrap(choice));
+    }
+    // Valid JSON Schema forms outside the provider subset, not just misspelled keywords.
+    for (const auto* child : {"true", "false", "{}", R"({"type":"array","items":[{"type":"boolean"}]})",
+            R"({"type":"array","items":true})", R"({"type":"array"})", R"({"type":"unknown"})",
+            R"({"anyOf":[]})", R"({"anyOf":[true,{"type":"null"}]})", R"({"type":"string","format":"uri"})",
+            R"({"$ref":"#/$defs/missing"})", R"({"type":"boolean","unknownKeyword":1})"})
+        rejected(wrap(Json::parse(child)));
+    for (const auto* fragment : {R"({"allOf":[{"type":"object"}]})", R"({"not":{"type":"string"}})",
+            R"({"dependentRequired":{"ok":["ok"]}})", R"({"dependentSchemas":{"ok":{"type":"object","properties":{"ok":{"type":"boolean"}},"required":["ok"],"additionalProperties":false}}})",
+            R"({"if":{"type":"boolean"},"then":{"type":"boolean"},"else":{"type":"boolean"}})"}) {
+        auto root = Json::parse(schema);
+        const auto composition = Json::parse(fragment);
+        for (const auto& p : composition.object_range()) root[std::string(p.key())] = p.value();
+        rejected(root);
+    }
+    auto root_union = Json::parse(schema);
+    root_union["anyOf"] = Json::array({Json::parse(schema)}); rejected(root_union);
+
+    auto compatible = Json::parse(R"({"type":"object","properties":{
+        "item":{"anyOf":[{"$ref":"#/$defs/issue"},{"type":"null"}]},
+        "issues":{"type":"array","items":{"$ref":"#/$defs/issue"},"minItems":0,"maxItems":2},
+        "score":{"type":"number","minimum":0,"maximum":10,"exclusiveMinimum":-1,"exclusiveMaximum":11,"multipleOf":2},
+        "date":{"type":"string","format":"date"},
+        "code":{"type":"string","pattern":"^[A-Z]+$","minLength":1,"maxLength":4},
+        "allOf":{"type":"string","const":"not","description":"if then else"}},
+        "required":["item","issues","score","date","code","allOf"],"additionalProperties":false,
+        "$defs":{"issue":{"type":"object","properties":{"kind":{"type":"string","enum":["SUGGESTION","CONTRADICTION"]}},
+            "required":["kind"],"additionalProperties":false}}})");
+    auto answer = Json::parse(R"({"item":{"kind":"SUGGESTION"},"issues":[{"kind":"CONTRADICTION"}],"score":4,"date":"2026-11-15","code":"AB","allOf":"not"})");
+    accepted(compatible, answer);
+    answer["item"] = Json::null(); accepted(compatible, answer);
+    auto r = request(); r.json_schema = compatible.to_string();
+    for (const auto* bad : {R"({"item":{"kind":"WRONG"},"issues":[],"score":4,"date":"2026-11-15","code":"AB","allOf":"not"})",
+            R"({"item":null,"issues":[],"score":3,"date":"2026-11-15","code":"AB","allOf":"not"})",
+            R"({"item":null,"issues":[],"score":4,"date":"2026-11-15","code":"abc","allOf":"not"})"}) {
+        response_text(*t, bad); auto result = run(t, r);
+        CHECK(result.error == Error::MALFORMED && result.text.empty());
+    }
+    auto recursive = Json::parse(R"({"type":"object","properties":{"children":{"type":"array","items":{"$ref":"#"}}},"required":["children"],"additionalProperties":false})");
+    accepted(recursive, Json::parse(R"({"children":[{"children":[]}]})"));
+    auto chain = Json::parse(R"({"type":"object","properties":{"head":{"$ref":"#/$defs/node"}},"required":["head"],"additionalProperties":false,
+        "$defs":{"node":{"type":"object","properties":{"value":{"type":"integer"},"next":{"anyOf":[{"$ref":"#/$defs/node"},{"type":"null"}]}},"required":["value","next"],"additionalProperties":false}}})");
+    accepted(chain, Json::parse(R"({"head":{"value":1,"next":{"value":2,"next":null}}})"));
+    auto nested = Json::parse(R"({"type":"boolean"})"); Json value(true);
+    for (int i = 0; i < 10; ++i) { nested = wrap(nested); Json next; next["ok"] = value; value = next; }
+    accepted(nested, value); rejected(wrap(nested));
+    auto enumeration = Json::parse(R"({"type":"integer","enum":[]})");
+    for (int i = 0; i < 1000; ++i) enumeration["enum"].push_back(i);
+    accepted(wrap(enumeration), Json::parse(R"({"ok":0})"));
+    enumeration["enum"].push_back(1000); rejected(wrap(enumeration));
+    auto strings = Json::parse(R"({"type":"string","enum":[]})");
+    for (int i = 0; i < 250; ++i) strings["enum"].push_back(std::string(61, 'a') + std::to_string(i));
+    Json string_value; string_value["ok"] = strings["enum"][0];
+    accepted(wrap(strings), string_value); strings["enum"].push_back(std::string(61, 'b')); rejected(wrap(strings));
+    // Provider aggregate limits are distinct from the configurable request-byte limit.
+    Config large; large.max_request_bytes = 1048576; large.max_response_bytes = 1048576; large.max_output_bytes = 262144;
+    auto many = Json::parse(R"({"type":"object","properties":{},"required":[],"additionalProperties":false})");
+    Json many_value;
+    for (int i = 0; i < 5000; ++i) {
+        const auto key = "p" + std::to_string(i);
+        many["properties"][key] = Json::parse(R"({"type":"boolean"})");
+        many["required"].push_back(key); many_value[key] = true;
+    }
+    accepted(many, many_value, large);
+    many["properties"]["extra"] = Json::parse(R"({"type":"boolean"})"); many["required"].push_back("extra"); rejected(many, large);
+    auto long_enum = Json::parse(R"({"type":"string","enum":[]})");
+    long_enum["enum"].push_back(std::string(119998, 'a'));
+    Json long_value; long_value["ok"] = long_enum["enum"][0];
+    accepted(wrap(long_enum), long_value, large);
+    long_enum["enum"][0] = std::string(119999, 'a'); rejected(wrap(long_enum), large);
+}
+
 void errors_and_limits() {
     auto t = std::make_shared<Fake>();
     for (auto [status, error] : {std::pair{400, Error::HTTP_ERROR}, {401, Error::INVALID_CREDENTIAL}, {403, Error::HTTP_ERROR}, {404, Error::MODEL_UNAVAILABLE}, {429, Error::RATE_LIMIT}, {500, Error::CONNECTION}, {503, Error::CONNECTION}}) {
@@ -218,7 +324,7 @@ int main(int argc, char** argv) {
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION && loaded.max_calls == 7);
         std::filesystem::remove(scratch);
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION);
-        configuration(); responses(); errors_and_limits(); cancellation(); concurrent_requests_test(); credentials(argv[0]);
+        configuration(); responses(); structured_schemas(); errors_and_limits(); cancellation(); concurrent_requests_test(); credentials(argv[0]);
         auto keys = std::make_shared<Keys>();
         CHECK(import_environment_key(*keys) == Error::MISSING_KEY);
 #ifdef _WIN32

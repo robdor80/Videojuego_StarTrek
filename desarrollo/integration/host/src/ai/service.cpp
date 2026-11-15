@@ -30,24 +30,44 @@ bool valid_config(const Config& c) {
         c.max_output_tokens >= 16 && c.max_output_tokens <= 16384 &&
         c.max_pending >= 1 && c.max_pending <= 64 && c.max_calls >= 1 && c.max_calls <= 100000;
 }
-// Restrict schema references to local definitions, preventing network resolution.
-// Every object follows the Structured Outputs strict required/no-extra-fields rule.
-bool strict_schema(const Json& node, unsigned depth = 0) {
-    if (depth > 32) return false;
-    if (node.is_bool()) return true;
-    if (!node.is_object()) return false;
-    for (const auto* ref : {"$ref", "$dynamicRef", "$recursiveRef"})
-        if (node.contains(ref) && (!node.at(ref).is_string() ||
-            (node.at(ref).as<std::string>() != "#" && !node.at(ref).as<std::string>().starts_with("#/")))) return false;
-    if (node.contains("$id") || node.contains("$schema")) return false;
-    bool object = node.contains("properties");
+// OpenAI Structured Outputs subset (base models), not general JSON Schema.
+// https://developers.openai.com/api/docs/guides/structured-outputs#supported-schemas
+struct SchemaLimits {
+    std::size_t properties{}, enums{}, characters{};
+};
+std::size_t characters(std::string_view text) {
+    return std::count_if(text.begin(), text.end(), [](unsigned char c) { return (c & 0xc0) != 0x80; });
+}
+bool strict_schema(const Json& node, SchemaLimits& limits, unsigned nesting = 0, bool root = false) {
+    if (!node.is_object()) return false; // Boolean schemas are outside the provider subset.
+    static const std::set<std::string> keywords{
+        "type", "title", "description", "properties", "required", "additionalProperties",
+        "$defs", "definitions", "$ref", "enum", "const", "anyOf", "items", "patternProperties",
+        "pattern", "format", "minLength", "maxLength", "minimum", "maximum",
+        "exclusiveMinimum", "exclusiveMaximum", "multipleOf", "minItems", "maxItems"};
+    for (const auto& p : node.object_range())
+        if (!keywords.contains(std::string(p.key()))) return false;
+    if (root && node.contains("anyOf")) return false;
+    if (!node.contains("type") && !node.contains("$ref") && !node.contains("anyOf")) return false;
+    if (node.contains("$ref") && (!node.at("$ref").is_string() ||
+        (node.at("$ref").as<std::string>() != "#" && !node.at("$ref").as<std::string>().starts_with("#/")))) return false;
+    bool object = false, array = false;
     if (node.contains("type")) {
         const auto& type = node.at("type");
-        if (type == Json("object")) object = true;
-        if (type.is_array())
-            for (const auto& member : type.array_range()) if (member == Json("object")) object = true;
+        const auto types = type.is_array() ? type : Json::array({type});
+        if (types.empty()) return false;
+        std::set<std::string> seen;
+        for (const auto& member : types.array_range()) {
+            if (!member.is_string()) return false;
+            const auto name = member.as<std::string>();
+            if (!seen.insert(name).second || (name != "object" && name != "array" && name != "string" &&
+                name != "number" && name != "integer" && name != "boolean" && name != "null")) return false;
+            object = object || name == "object";
+            array = array || name == "array";
+        }
     }
-    if (object) {
+    if ((object || array) && ++nesting > 10) return false;
+    if (object || node.contains("properties")) {
         if (!node.contains("properties") || !node.at("properties").is_object() ||
             !node.contains("additionalProperties") || node.at("additionalProperties") != Json(false) ||
             !node.contains("required") || !node.at("required").is_array()) return false;
@@ -56,32 +76,48 @@ bool strict_schema(const Json& node, unsigned depth = 0) {
             if (!v.is_string() || !required.insert(v.as<std::string>()).second) return false;
         }
         if (required.size() != node.at("properties").size()) return false;
-        for (const auto& p : node.at("properties").object_range())
+        limits.properties += required.size();
+        for (const auto& p : node.at("properties").object_range()) {
             if (!required.contains(std::string(p.key()))) return false;
+            limits.characters += characters(p.key());
+        }
     }
-    // Traverse only schema positions. Property names and enum/const values are data,
-    // even when named "properties", "required" or "$ref" themselves.
-    for (const auto* key : {"properties", "$defs", "definitions", "patternProperties", "dependentSchemas"}) {
+    if (node.contains("additionalProperties") && node.at("additionalProperties") != Json(false)) return false;
+    if (array && !node.contains("items") && !node.contains("$ref")) return false;
+    if (node.contains("format")) {
+        static const std::set<std::string> formats{"date-time", "time", "date", "duration", "email", "hostname", "ipv4", "ipv6", "uuid"};
+        if (!node.at("format").is_string() || !formats.contains(node.at("format").as<std::string>())) return false;
+    }
+    if (node.contains("enum")) {
+        const auto& values = node.at("enum");
+        if (!values.is_array() || values.empty()) return false;
+        limits.enums += values.size();
+        std::size_t length = 0;
+        for (const auto& value : values.array_range())
+            if (value.is_string()) length += characters(value.as<std::string>());
+        if (values.size() > 250 && length > 15000) return false;
+        limits.characters += length;
+    }
+    if (node.contains("const") && node.at("const").is_string())
+        limits.characters += characters(node.at("const").as<std::string>());
+    // Only schema positions are traversed. Keyword-like property names and literal
+    // enum/const data are not interpreted as schema instructions.
+    for (const auto* key : {"properties", "$defs", "definitions", "patternProperties"}) {
         if (!node.contains(key)) continue;
         if (!node.at(key).is_object()) return false;
-        for (const auto& p : node.at(key).object_range())
-            if (!strict_schema(p.value(), depth + 1)) return false;
+        for (const auto& p : node.at(key).object_range()) {
+            if (std::string_view(key) == "$defs" || std::string_view(key) == "definitions")
+                limits.characters += characters(p.key());
+            if (!strict_schema(p.value(), limits, nesting)) return false;
+        }
     }
-    for (const auto* key : {"anyOf", "oneOf", "allOf", "prefixItems"}) {
-        if (!node.contains(key)) continue;
-        if (!node.at(key).is_array()) return false;
-        for (const auto& child : node.at(key).array_range())
-            if (!strict_schema(child, depth + 1)) return false;
+    if (node.contains("anyOf")) {
+        const auto& choices = node.at("anyOf");
+        if (!choices.is_array() || choices.empty()) return false;
+        for (const auto& child : choices.array_range()) if (!strict_schema(child, limits, nesting)) return false;
     }
-    for (const auto* key : {"items", "additionalProperties", "additionalItems", "not", "if", "then", "else",
-                            "contains", "propertyNames", "unevaluatedItems", "unevaluatedProperties"}) {
-        if (!node.contains(key)) continue;
-        const auto& child = node.at(key);
-        if (child.is_array() && std::string_view(key) == "items") {
-            for (const auto& item : child.array_range()) if (!strict_schema(item, depth + 1)) return false;
-        } else if (!strict_schema(child, depth + 1)) return false;
-    }
-    return true;
+    if (node.contains("items") && !strict_schema(node.at("items"), limits, nesting)) return false;
+    return limits.properties <= 5000 && limits.enums <= 1000 && limits.characters <= 120000;
 }
 Error build(const Config& c, const Request& r, std::string& body, std::string& model) {
     if (!c.routes.contains(r.route) || r.instructions.empty() || r.input.empty()) return Error::CONFIGURATION;
@@ -98,8 +134,9 @@ Error build(const Config& c, const Request& r, std::string& body, std::string& m
     payload["max_output_tokens"] = c.max_output_tokens;
     if (!r.json_schema.empty()) {
         auto schema = Json::parse(r.json_schema);
+        SchemaLimits limits;
         if (!schema.is_object() || !schema.contains("type") || schema.at("type") != Json("object") ||
-            !strict_schema(schema)) return Error::CONFIGURATION;
+            !strict_schema(schema, limits, 0, true)) return Error::CONFIGURATION;
         (void)jsoncons::jsonschema::make_json_schema<Json>(schema);
         auto& format = payload["text"]["format"];
         format["type"] = "json_schema"; format["name"] = "host_candidate";
