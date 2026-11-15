@@ -99,7 +99,7 @@ No hay transferencia por Internet ni servidor propuesto. Compilación Android no
 using namespace trek::host::ai;
 // Bootstrap HOST: cargar un documento de configuración acotado desde disco.
 Config config;
-if (load_config(config_path, config) != Error::OK) { /* bloquear configuración */ }
+if (load_config(config_path, config) != Error::OK) return; // Bloquear hasta corregir.
 // Instancia única compartida, fuera de UWorld; no crear por petición.
 Service ai(config);
 Request request;
