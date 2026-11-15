@@ -60,6 +60,16 @@ Esta decisión **precisa y corrige** las frases anteriores que podrían interpre
 
 **Estado:** criterio **DECIDIDO / DOCUMENTADO**. IA-03A aún no ha implementado ni probado esta integración en CoreRPG, habilidades o NPC. IA-03B conservará los antecedentes; la aplicación en NPC/IA y misiones corresponde a sus fases propietarias sin duplicar reglas en HOST.
 
+## Decisión autoral aprobada — interpretación asistida del personaje en diálogos
+
+**APROBADA por el autor en la conversación de IA-03A, 15/11/2026.** El conocimiento de un personaje puede superar al del jugador humano que lo controla. Un personaje con doctorado en Física y Astronomía validado por F10 podrá participar en diálogos técnicos sin obligar al jugador a conocer física avanzada. Se adopta un sistema de **interpretación asistida del personaje**, reutilizando el servicio de IA central IA-01 y los hechos/competencias autorizativos de CoreRPG cuando las fases de diálogos y NPC los integren.
+
+**Modos previstos, intercambiables:** (1) diálogo guiado por intenciones comprensibles, con respuesta técnica redactada por IA; (2) diálogo libre por voz o texto, adaptando la intención del jugador a formación y personalidad validadas; (3) delegación de la explicación, en la que el jugador decide objetivo y el personaje expone detalles técnicos.
+
+**Límites obligatorios:** la decisión/objetivo pertenece al jugador; la IA no puede otorgar conocimientos no acreditados, inventar resultados de sensores, secretos del universo, soluciones confirmadas, acciones ejecutadas, cargos ni permisos. Las comprobaciones y consecuencias pertenecen a CoreRPG y a los servicios institucionales propietarios. La información suministrada a cada NPC respeta su conocimiento y permisos; no hay omnisciencia. La IA no modifica directamente hechos autoritativos. El sistema debe ofrecer opciones comprensibles sin exigir habilidades técnicas al usuario.
+
+**Alcance:** decisión de DISEÑO aprobada y documentada, **no implementación de diálogos ni prueba de funcionamiento**. IA-03A valida antecedentes; IA-03B los conserva en PERSON; las futuras fases de NPC/IA, diálogos y misiones implementarán esta interpretación sin duplicar la autoridad del HOST ni CoreRPG.
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
