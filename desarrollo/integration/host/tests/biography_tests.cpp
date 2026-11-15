@@ -213,13 +213,12 @@ void playable_age() {
     {
         auto hybrid = maturity_draft("human_vulcan_hybrid");
         hybrid["age_or_birth_date"] = 21;
-        rejected(f.validator.evaluate(hybrid.to_string(), context()), IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date");
+        rejected(validator.evaluate(hybrid.to_string(), context()), IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date");
         hybrid["age_or_birth_date"] = 22;
-        const auto outcome = f.validator.evaluate(hybrid.to_string(), context());
+        const auto outcome = validator.evaluate(hybrid.to_string(), context());
         check(!issue(outcome, IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date"), "hybrid 22 passes age gate");
         check(!issue(outcome, IssueCode::UNKNOWN_SPECIES, "species_id"), "hybrid species recognized");
     }
-
 
     for (const auto& [id, floor] : {std::pair{"human", 18}, {"vulcan", 25}, {"human_vulcan_hybrid", 22}, {"andorian", 20}, {"ocampan", 2}}) {
         check(catalog.at(id).at("minimum").as<int>() == floor, id);
