@@ -10,6 +10,24 @@
 
 El autor ha ampliado la primera decisión: **si la especie jugable pertenece a la Federación Unida de Planetas, el personaje tiene automáticamente ciudadanía federada**, sin importar en qué planeta nació. F10 no pedirá certificados, prueba de nacimiento, expedientes ni evaluación de OpenAI para justificarla. Humanos, vulcanos, andorianos y tellaritas son ejemplos confirmados de especies fundadoras; el catálogo concreto de otras especies federadas debe derivar de fuentes aprobadas del juego, sin inventar afiliaciones. Esta regla sustituye la excepción anterior «humano nacido en Tierra», ahora incluida en la regla general. Ciudadanía federada **no** concede automáticamente membresía de Flota Estelar, rango, plaza de Academia, destinos ni autorizaciones. Para especies sin pertenencia federada, la política de ciudadanía permanece sin decidir; no se aplica la regla por analogía. **Estado: DECIDIDO / DOCUMENTADO; comportamiento productivo NO IMPLEMENTADO aún en IA-03A.**
 
+## Decisiones autorales posteriores — alcance de especies y formulario
+
+### Ciudadanía: alcance aprobado para el primer lanzamiento
+
+El autor precisa que **las únicas especies seleccionables inicialmente son humano, vulcano e híbrido humano-vulcano**. Para las tres, la ciudadanía **Federación Unida de Planetas** es **automática**, independientemente de dónde haya nacido el personaje. No pedir documentación, certificado, registro civil, investigación o consulta a IA; no implantar ahora un catálogo de legislación ni resolver casos de especies todavía no jugables. No se conceden rangos, admisión, membresía Starfleet, plazas ni autorizaciones.
+
+Esta precisión sustituye interpretaciones anteriores que exigían nacimiento en Tierra o verificaciones para asignar ciudadanía a alguna de las tres especies. Otras especies podrán considerarse más adelante cuando el autor amplíe el elenco jugable. El catálogo técnico de 26 especies de F10 no equivale a selección inicial jugable de 26 especies.
+
+### Formulario: segunda pregunta, decisión aprobada
+
+**Formulario detallado con información personal adicional OPCIONAL.** El usuario quiere conservar riqueza de campos para quien desee crear una historia extensa, **sin obligar a rellenar familia, crianza detallada, aficiones adicionales, estudios detallados, experiencia profesional, idiomas, personalidad u otros antecedentes**. El formulario ofrecerá una biografía libre opcional y datos básicos obligatorios suficientes para crear un personaje. Los campos no introducidos no deben generar hechos ficticios, certificados, penalizaciones, errores ni requisitos de justificación adicionales.
+
+**Nota de integración técnica:** el contrato F10 `character_creation_contract_v1_0.json` mantiene campos canónicos obligatorios como `origin`, `prior_education`, `prior_experience`, `prior_activities_and_hobbies`, `culture_context`, etc. El futuro adaptador de formulario debe proponer representaciones explícitas de ausencia/no declarado/ninguna experiencia donde el tipo lo admita, **sin inventar antecedentes** y sin alterar a escondidas el contrato LOCKED. Si un valor técnico indispensable no puede representarse de manera neutral, elevar la incompatibilidad documental antes de código; evitar convertirlo en un campo libre obligatorio para el jugador.
+
+La revisión semántica solo evalúa datos realmente aportados. Aportar más narrativa no concede habilidades, méritos ni derechos. La IA no inventará biografías para superar el validador.
+
+**Estado:** ciudadanía y criterio de obligatoriedad del formulario **DECIDIDOS / DOCUMENTADOS**, aún sin implementación de IA-03A/IA-03C. Las siguientes cuestiones del autor se resolverán por separado.
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
@@ -93,7 +111,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-01 — Fondo personal ordinario:** permitir que una biografía ficticia plausible sea un antecedente narrativo inicial sin documentos reales; **no** confiere competencias, títulos o privilegios. Deriva del principio y clases de la política A5, pero su extensión productiva para origen/estudios/experiencia requiere implementación y revisión.
 
-**D-02 — Ciudadanía federada automática por especie federada: APROBADA POR EL AUTOR (15/11/2026).** Si el jugador crea un personaje de **especie perteneciente a la Federación**, F10 asignará ciudadanía de la Federación Unida de Planetas **independientemente del planeta natal**. No solicitar partida de nacimiento, certificado, expediente real, justificación adicional ni consulta OpenAI. Humanos, vulcanos, andorianos y tellaritas son especies fundadoras indiscutidas; para cualquier otra, usar pertenencia aprobada por el proyecto, no inventarla. Esta regla general **sustituye y engloba** la primera decisión humano+nacido en Tierra. No atribuye automáticamente membresía de Starfleet, rango, autorización, destino o plaza académica. La ciudadanía de especies **no** federadas se tratará por separado: no bloquear este caso por falta de una regla universal. No reintroducir comprobaciones burocráticas.
+**D-02 — Ciudadanía federada automática de las tres especies inicialmente jugables: APROBADA POR EL AUTOR (15/11/2026).** Si el jugador crea un personaje de **especie perteneciente a la Federación**, F10 asignará ciudadanía de la Federación Unida de Planetas **independientemente del planeta natal**. No solicitar partida de nacimiento, certificado, expediente real, justificación adicional ni consulta OpenAI. Humanos, vulcanos, andorianos y tellaritas son especies fundadoras indiscutidas; para cualquier otra, usar pertenencia aprobada por el proyecto, no inventarla. Esta regla general **sustituye y engloba** la primera decisión humano+nacido en Tierra. No atribuye automáticamente membresía de Starfleet, rango, autorización, destino o plaza académica. La ciudadanía de especies **no** federadas se tratará por separado: no bloquear este caso por falta de una regla universal. No reintroducir comprobaciones burocráticas.
 
 **D-03 — Educación y experiencia:** aceptar como narrativa no titulada «educación general», «afición a astronomía», «prácticas civiles supervisadas» y «sin experiencia laboral» si los datos temporales son compatibles. Los diplomas/credenciales formales o experiencia Starfleet se tratan aparte; no se acreditan automáticamente por autorrelato.
 
@@ -105,7 +123,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-07 — Composición confiable:** el perfil H03 y las fuentes F10 se obtienen desde el HOST y un catálogo/política autoral, no desde el formulario. No crear una segunda cuenta ni un servidor.
 
-**Ratificación parcial:** D-02 (especie perteneciente a la Federación => ciudadanía federada automáticamente, con independencia del nacimiento) está **APROBADA por el autor**. Las demás propuestas D-01 y D-03 a D-07 continúan pendientes de resolución individual. Este documento registra la decisión, pero no modifica aún el código, contratos bloqueados ni autoriza una certificación.
+**Ratificación parcial:** ciudadanía F10 automática para humano, vulcano e híbrido humano-vulcano; formulario detallado pero información personal adicional opcional. Ambas **APROBADAS por el autor**. Las demás decisiones se resolverán individualmente. Esta PR solo documenta, sin modificar código ni contratos históricos.
 
 ## 7. Riesgos adicionales detectados en la auditoría
 
@@ -119,7 +137,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **R-04B — Mapeos ausentes en formulario v0.3 (MEDIO):** el formulario exige `citizenship` y recoge `upbringing_place`, pero `draft_mapping` no define un enlace explícito de esos campos a `citizenship_context` y `culture_context`. Tampoco `upbringing_type` del mapping figura en `common_fields` con ese nombre. IA-03C debe definir una conversión revisada y completa, con casos de pérdida de datos, antes de usar el formulario como entrada al F10 nativo. No inventar valores por defecto ni suprimir el campo requerido del contrato bloqueado.\n\n**R-05 — Actividades simultáneas (MEDIO):** `has_checkable_activity_budget` no avala automáticamente periodos solapados, incluso si dos aficiones son compatibles. No imponer una falsa prohibición de dos actividades; usar una evaluación F10 de tiempo suficiente o conservar `REVIEW_REQUIRED`. En el caso mínimo bastará una afición estructurada verificable.
 
-**R-06 — Alcance de especies (MEDIO):** el formulario de referencia v0.3 está limitado a humano/vulcano/híbrido; el catálogo F10 nativo contiene 26 especies (22 mínimas, 3 especiales, 5 Delta). La UI definitiva no puede asumir que los 26 son elegibles a la vez. Armonizar selección y contenido aprobado en IA-03C.
+**R-06 — Alcance de especies (MEDIO):** solo humano, vulcano e híbrido humano-vulcano son seleccionables inicialmente, según decisión expresa del autor. El catálogo nativo de 26 perfiles no amplía la selección. Evitar verificaciones de ciudadanía sobre especies fuera del lanzamiento inicial.
 
 **R-07 — Pertenencia de especie a Federación (MEDIO):** la decisión autoral de ciudadanía automática exige identificar qué especies están aprobadas como federadas en el catálogo/continuidad del juego. No inventar afiliaciones, no crear procedimientos civiles ni requerir documentos. La Tierra de nacimiento no es condición; la ciudadanía no implica rangos ni permisos.
 
