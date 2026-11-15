@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "human_vulcan_hybrid",
+  "display_name_es": "Híbrido humano-vulcano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "sistemas/gameplay/species/species_biology_contract.json",
+  "baseline_refs": [
+    "sistemas/gameplay/species/profiles/human_v0.1.json",
+    "sistemas/gameplay/species/profiles/vulcan_v0.1.json",
+    "sistemas/gameplay/species/reproduction_parentage_framework.json",
+    "sistemas/gameplay/species/culture_socialization_contract.json"
+  ],
+  "identity": {
+    "ancestry": "human_and_vulcan",
+    "ancestry_definition": "hybrid_species_identity_not_a_cultural_label",
+    "federation_citizenship_implied": false,
+    "earth_upbringing_implied": false,
+    "vulcan_upbringing_implied": false
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "external_features": "individual_mixture; visible Vulcan traits possible but not mandatory in a fixed proportion",
+    "individual_variation": "required",
+    "visual_profile_ref": "PENDING_EXPLICIT_HYBRID_VISUAL_PROFILE"
+  },
+  "physiology": {
+    "strength_profile": "individual_contextual_no_fixed_average",
+    "reflex_profile": "individual_contextual_no_fixed_average",
+    "arid_environment_adaptation": "individual_not_automatically_inherited",
+    "touch_telepathy": "possible_individual_training_dependent_not_automatic",
+    "no_inferred_exact_percentages": true,
+    "unknowns": [
+      "universal strength or reflex multiplier",
+      "standard inherited mental-ability range",
+      "universal lifespan threshold",
+      "universal pon farr timing or manifestation",
+      "universal reproductive and clinical reference ranges"
+    ]
+  },
+  "capabilities": {
+    "mind_meld": {
+      "requires": [
+        "character_has_capability",
+        "sufficient_training_or_established_ability",
+        "valid_context"
+      ],
+      "consent_policy": "consent_required_when_reasonably_possible",
+      "knowledge_result": "core_resolved",
+      "omniscient": false
+    }
+  },
+  "lifecycle": {
+    "minimum_playable_age_earth_years_source": "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json#human_vulcan_hybrid",
+    "pon_farr": "individual_private_medical_state_not_assumed",
+    "exact_maturity_and_longevity": "not_locked"
+  },
+  "culture_socialization": {
+    "upbringing_options": [
+      "VULCAN_TRADITIONAL",
+      "EARTH_CULTURAL",
+      "MIXED"
+    ],
+    "rules": [
+      "A hybrid may be raised on Vulcan, Earth, elsewhere or across multiple households.",
+      "Logic and emotional control are learned cultural disciplines; emotions are biologically present.",
+      "Kahs-wan, Tal'oth, Kolinahr and traditional family ceremonies are never universal prerequisites.",
+      "Upbringing, biology, citizenship and identity are separate."
+    ]
+  },
+  "character_generation": {
+    "forced_personality_traits": [],
+    "forced_professions": [],
+    "forced_cultures": [],
+    "required_individual_variation": true,
+    "initial_background_contract_ref": "sistemas/gameplay/character_creation/background_contracts/HVA_01_HIBRIDO_HUMANO_VULCANO.md"
+  },
+  "ai_boundary": [
+    "Do not infer exact half-human/half-Vulcan powers, emotions, language or education.",
+    "Do not imply automatic mind meld, nerve pinch, Kolinahr, pon farr, Starfleet rank or Academy access.",
+    "Do not equate emotional expression with invalid hybrid biology.",
+    "A narrative account or upbringing choice is not a clinical fact or an institutional credential."
+  ],
+  "provenance": [
+    {
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "confidence": "HIGH",
+      "claim_scope": "Spock and his human-Vulcan parentage"
+    },
+    {
+      "source_id": "TOS_AMOK_TIME",
+      "confidence": "HIGH",
+      "claim_scope": "Vulcan traditions do not prescribe universal hybrid medical timing"
+    }
+  ],
+  "approval": {
+    "decision_date": "2026-11-15",
+    "playable_from_initial_version": true,
+    "minimum_playable_age_earth_years": 22,
+    "age_unit": "EARTH_YEARS",
+    "does_not_authorize_person_creation": true
+  }
+}
