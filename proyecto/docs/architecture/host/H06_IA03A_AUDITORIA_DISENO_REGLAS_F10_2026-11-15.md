@@ -8,7 +8,7 @@
 
 ## Nota de ratificación posterior — ciudadanía (decisión definitiva del autor)
 
-El usuario ha resuelto expresamente la primera duda: **personaje humano + lugar de nacimiento Tierra => ciudadanía de la Federación**, automáticamente como dato ficticio inicial. F10 no pedirá certificados ni prueba de nacimiento y no utilizará IA para cuestionarla. Esta decisión es de **producto Star Trek RPG**, no una afirmación universal sobre la legislación real. Queda reflejada en D-02, en el bloqueo de ciudadanía y en los oráculos A01/A06. **Estado: DECIDIDO / DOCUMENTADO; comportamiento productivo aún NO IMPLEMENTADO en IA-03A.**
+El autor ha ampliado la primera decisión: **si la especie jugable pertenece a la Federación Unida de Planetas, el personaje tiene automáticamente ciudadanía federada**, sin importar en qué planeta nació. F10 no pedirá certificados, prueba de nacimiento, expedientes ni evaluación de OpenAI para justificarla. Humanos, vulcanos, andorianos y tellaritas son ejemplos confirmados de especies fundadoras; el catálogo concreto de otras especies federadas debe derivar de fuentes aprobadas del juego, sin inventar afiliaciones. Esta regla sustituye la excepción anterior «humano nacido en Tierra», ahora incluida en la regla general. Ciudadanía federada **no** concede automáticamente membresía de Flota Estelar, rango, plaza de Academia, destinos ni autorizaciones. Para especies sin pertenencia federada, la política de ciudadanía permanece sin decidir; no se aplica la regla por analogía. **Estado: DECIDIDO / DOCUMENTADO; comportamiento productivo NO IMPLEMENTADO aún en IA-03A.**
 
 ## 1. Decisión arquitectónica
 
@@ -17,7 +17,7 @@ Una biografía de inicio es una **propuesta de hechos ficticios personales**, no
 Distinguir expresamente:
 
 1. **Antecedente personal narrativo**: nacido en un lugar plausible, afición, estudios generales, trabajo civil o ausencia de experiencia. Puede formar parte de la biografía tras validación sin acreditar permisos o capacidades especiales.
-2. **Afirmación reglada**: ciudadanía/estatus legal, formación formal, certificación, acceso tecnológico, capacidad especial. Exige regla/itinerario/fuente interna correspondiente; no se deriva de especie, planeta, afición o texto libre.
+2. **Afirmación reglada**: estatus legal específico, formación formal, certificación, acceso tecnológico, capacidad especial. Requiere regla/itinerario/fuente interna cuando sea pertinente; **excepción autoral explícita: la ciudadanía federada se asigna automáticamente a miembros de especies federadas, independientemente del nacimiento**. Nada de ello concede credenciales profesionales o institucionales.
 3. **Hecho institucional autoritativo**: rango F11, autorización, plaza en Academia, pertenencia real a la Flota o expediente oficial. No nace del formulario ni de OpenAI; pertenece a operaciones de dominio posteriores y autorizadas.
 
 **Regla propuesta:** el sistema puede admitir como *historia ficticia de origen* antecedentes personales comprobados sin pedir pruebas reales al usuario, pero **no** convertirlos tácitamente en credenciales, atribuciones numéricas o hechos institucionales. F10 conserva el doble filtro: puerta objetiva completa y después revisión semántica IA-02. La IA no sustituye ninguna evidencia objetiva ni escribe en CoreRPG.
@@ -63,7 +63,7 @@ No crear un segundo catálogo de edades, ni un registro de pruebas de madurez, n
 | Código pendiente | Problema real | Solución mínima PROPUESTA para IA-03A | Lo que NO autoriza |
 |---|---|---|---|
 | `ORIGIN_EVIDENCE_REQUIRED` | Origen declarativo, sin verificación interna de lugar/era | Evaluador F10 de **antecedente geográfico narrativo**: reconocer referencia conocida del universo/campaña o declarar explícitamente indeterminado; para ubicaciones nuevas, resolver mediante política de autor/catálogo, no inventar localizaciones oficiales | Ciudadanía, secretos, lealtad o pertenencia |
-| `CITIZENSHIP_EVIDENCE_REQUIRED` | El producto todavía no aplica automáticamente la decisión autoral humano+nacimiento Tierra | **Regla APROBADA:** humano nacido en Tierra => ciudadanía federada, atestada internamente por F10 sin pedir certificados. En otros supuestos, no imponer esta regla por analogía sin decisión aplicable | Membresía Starfleet, rango, admisión o permisos |
+| `CITIZENSHIP_EVIDENCE_REQUIRED` | El producto todavía no aplica la regla autoral de ciudadanía por especie federada | **Regla APROBADA:** si la especie pertenece a la Federación => ciudadanía federada automáticamente, sea cual sea el lugar de nacimiento, mediante una regla F10 simple sin certificados ni IA. Fuera de especies federadas, ninguna ciudadanía se inventa | Membresía Starfleet, rango, admisión o permisos |
 | `EDUCATION_EVIDENCE_REQUIRED` | Falta verificar trayectoria de educación antes de PERSON | Atestar educación general/civil narrativa **sin título ni habilitación**, si periodo y contexto son compatibles; títulos formales requieren trayecto/centro/criterio verificable dentro de la ficción | Doctorado, licencia, rango o puntos |
 | `EXPERIENCE_EVIDENCE_REQUIRED` | Falta distinguir trabajo/experiencia civil de servicio institucional | Permitir experiencia civil razonable o **ninguna experiencia**, conservando su carácter narrativo; para mandos, accesos o años de servicio Starfleet exigir hechos institucionales existentes, nunca fabricarlos | Experiencia militar, competencia profesional acreditada, F11 |
 | `PROFILE_EVIDENCE_REQUIRED` | Un `profile` sintácticamente válido no prueba que pertenezca a la sesión | Fuente privada HOST/H03: perfil local real del propietario de la campaña, identidad/versión/generación obtenidas de sesión confiable. **No leer `player_profile_id`, `nickname` ni identificadores autoritativos del borrador** | Identidad real de una persona, selección arbitraria de PERSON |
@@ -93,7 +93,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-01 — Fondo personal ordinario:** permitir que una biografía ficticia plausible sea un antecedente narrativo inicial sin documentos reales; **no** confiere competencias, títulos o privilegios. Deriva del principio y clases de la política A5, pero su extensión productiva para origen/estudios/experiencia requiere implementación y revisión.
 
-**D-02 — Ciudadanía de nacimiento en Tierra: APROBADA POR EL AUTOR (15/11/2026).** En la continuidad jugable de Star Trek RPG, **si el personaje es humano y declara que nació en la Tierra, F10 le asignará automáticamente ciudadanía de la Federación Unida de Planetas**. Se considera un dato del trasfondo ficticio autorizado, sin partidas de nacimiento, certificados, expedientes externos, revisión de IA ni pasos burocráticos. La declaración de nacimiento en Tierra es suficiente **para esta combinación explícita**, no se infiere de ser humano a secas. La ciudadanía federada así fijada no equivale a servicio Starfleet, admisión en Academia, rango ni acceso privilegiado. Para personajes no nacidos en Tierra se estudiarán después las reglas aplicables sin retrasar el caso humano-terrestre. No reinterpretar esta regla aprobada como una mera 'ciudadanía por determinar' ni añadir nuevas verificaciones en IA-03A.
+**D-02 — Ciudadanía federada automática por especie federada: APROBADA POR EL AUTOR (15/11/2026).** Si el jugador crea un personaje de **especie perteneciente a la Federación**, F10 asignará ciudadanía de la Federación Unida de Planetas **independientemente del planeta natal**. No solicitar partida de nacimiento, certificado, expediente real, justificación adicional ni consulta OpenAI. Humanos, vulcanos, andorianos y tellaritas son especies fundadoras indiscutidas; para cualquier otra, usar pertenencia aprobada por el proyecto, no inventarla. Esta regla general **sustituye y engloba** la primera decisión humano+nacido en Tierra. No atribuye automáticamente membresía de Starfleet, rango, autorización, destino o plaza académica. La ciudadanía de especies **no** federadas se tratará por separado: no bloquear este caso por falta de una regla universal. No reintroducir comprobaciones burocráticas.
 
 **D-03 — Educación y experiencia:** aceptar como narrativa no titulada «educación general», «afición a astronomía», «prácticas civiles supervisadas» y «sin experiencia laboral» si los datos temporales son compatibles. Los diplomas/credenciales formales o experiencia Starfleet se tratan aparte; no se acreditan automáticamente por autorrelato.
 
@@ -105,7 +105,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-07 — Composición confiable:** el perfil H03 y las fuentes F10 se obtienen desde el HOST y un catálogo/política autoral, no desde el formulario. No crear una segunda cuenta ni un servidor.
 
-**Ratificación parcial:** D-02 (humano nacido en Tierra => ciudadanía federada) está **APROBADA por el autor**. Las demás propuestas D-01 y D-03 a D-07 continúan pendientes de resolución individual. Este documento registra la decisión, pero no modifica aún el código, contratos bloqueados ni autoriza una certificación.
+**Ratificación parcial:** D-02 (especie perteneciente a la Federación => ciudadanía federada automáticamente, con independencia del nacimiento) está **APROBADA por el autor**. Las demás propuestas D-01 y D-03 a D-07 continúan pendientes de resolución individual. Este documento registra la decisión, pero no modifica aún el código, contratos bloqueados ni autoriza una certificación.
 
 ## 7. Riesgos adicionales detectados en la auditoría
 
@@ -121,7 +121,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **R-06 — Alcance de especies (MEDIO):** el formulario de referencia v0.3 está limitado a humano/vulcano/híbrido; el catálogo F10 nativo contiene 26 especies (22 mínimas, 3 especiales, 5 Delta). La UI definitiva no puede asumir que los 26 son elegibles a la vez. Armonizar selección y contenido aprobado en IA-03C.
 
-**R-07 — Fuentes de mundo y ciudadanía (ALTO):** un contrato conceptual de ciudadanía no es una ley ni prueba de una ciudadanía concreta. No inventar normativa federada ni considerar el catálogo biológico un registro civil. Un lugar narrativo válido tampoco demuestra ciudadanía.
+**R-07 — Pertenencia de especie a Federación (MEDIO):** la decisión autoral de ciudadanía automática exige identificar qué especies están aprobadas como federadas en el catálogo/continuidad del juego. No inventar afiliaciones, no crear procedimientos civiles ni requerir documentos. La Tierra de nacimiento no es condición; la ciudadanía no implica rangos ni permisos.
 
 **R-08 — Confundir validación con creación (ALTO):** IA-03A no crea `PERSON`; IA-03B debe verificar recibo y `eligible`, admitir exactamente una solicitud en SessionOwner y garantizar publicación atómica, vínculo y recuperación sin elevar derechos.
 
@@ -133,12 +133,12 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 | ID | Borrador / contexto | Resultado exigido |
 |---|---|---|
-| A01 | Humano 20, nacido en Tierra, ciudadanía Federación **derivada por la regla autoral D-02**, educación general, ninguna experiencia, karate desde 8 | `OBJECTIVE_VALID` **solo después de resolver las demás fuentes F10 y perfil auténticos**; pasa a revisión IA |
+| A01 | Humano 20, nacido en Tierra o colonia exterior, ciudadanía Federación **automática por su especie conforme D-02**, educación general, ninguna experiencia, karate desde 8 | `OBJECTIVE_VALID` **solo después de resolver las demás fuentes F10 y perfil auténticos**; pasa a revisión IA |
 | A02 | A01 sin conexión OpenAI | `REVIEW_UNAVAILABLE`, ninguna PERSON |
 | A03 | Humano 17, restante ordinario | `CHANGES_REQUIRED`, cero HTTP |
 | A04 | Vulcano 24 | `CHANGES_REQUIRED` por mínimo, cero HTTP |
 | A05 | Humano 20; karate empezó a los 21 | `CHANGES_REQUIRED`, cero HTTP |
-| A06 | Humano nacido en la Tierra con ciudadanía federada declarada | Comprobación de ciudadanía **resuelta automáticamente por F10** al aplicar la decisión autoral D-02, sin IA ni certificado; no concede rango, plaza o permisos |
+| A06 | Especie federada nacida en Tierra o fuera de su planeta natal (humano, vulcano, andoriano o tellarita) | F10 **asigna ciudadanía federada automáticamente** por pertenencia de especie, sin OpenAI ni certificado; no concede rango, plaza ni permisos |
 | A07 | A01 con diploma oficial/certificación no respaldados | `REVIEW_REQUIRED`; ningún título concedido |
 | A08 | A01 con servicio Starfleet/capitanía antigua declarados | No acreditar servicio/rango; contradicción objetiva o `REVIEW_REQUIRED` hasta verificación real, nunca aprobación ficticia |
 | A09 | A01, `profile` o generación falsificada desde cliente | `REVIEW_REQUIRED`/rechazo, ningún recibo |
@@ -161,7 +161,7 @@ Los resultados A01–A18 son **oráculos por implementar**; no figuran como PASS
 Alcance:
 1. Releer este documento y fuentes; indicar cualquier contradicción normativa antes de código.
 2. Crear únicamente los evaluadores/fuentes **internos F10/H03** necesarios para A01 y variantes, usando los puertos existentes y reglas aprobadas; ninguna fuente genérica «SUPPORTED» incondicional.
-3. Probar que un jugador corriente con ciudadanía indeterminada y sin certificados **puede** alcanzar revisión semántica; que afirmaciones formales y de permisos **no** reciben aprobación automática.
+3. Probar que un jugador de especie federada con ciudadanía inferida automáticamente y sin certificados **puede** alcanzar revisión semántica; que afirmaciones formales y de permisos **no** reciben aprobación automática.
 4. Respetar el doble filtro, binding/versiones, revocación, privacidad, cancelación, edad y política de 2383. Evitar cambiar el pin Core, F11, el servicio IA-01 o los contratos bloqueados.
 5. Añadir pruebas de producto y negativas; PR Draft con informe y evidencia, sin fusión ni creación de PERSON.
 6. Ejecutar regresiones disponibles Windows/Linux, ASan/UBSan, F10 Python, Release OFF y F11; informar explícitamente lo no ejecutado.
@@ -171,7 +171,7 @@ Alcance:
 ## 10. Estado y decisiones pendientes
 
 - **AUDITADO:** repositorio actual, reglas, interfaces, diferencias histórico/producto y puntos de bloqueo; sin ejecución nueva de tests en este documento.
-- **DISEÑO PROPUESTO:** D-01 a D-07, incluidos los estados de ciudadanía sin acreditación y los antecedentes personales narrativos.
+- **DECISIÓN DE PRODUCTO APROBADA:** D-02 ciudadanía federada automática por especie perteneciente a la Federación (cualquier lugar natal). **DISEÑO PROPUESTO:** D-01 y D-03 a D-07, incluida ciudadanía de especies no federadas y antecedentes personales narrativos.
 - **IMPLEMENTACIÓN IA-03A:** PENDIENTE.
 - **IA-03B (PERSON/H03/H04), IA-03C (Unreal), OpenAI LIVE:** PENDIENTES.
 - **H06/HU-08/M1:** NO CERTIFICADOS.
