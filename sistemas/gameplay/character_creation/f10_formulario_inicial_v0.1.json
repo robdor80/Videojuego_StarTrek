@@ -1,0 +1,652 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f10_h06_initial_player_form",
+  "status": "REFERENCE_FORM_NOT_F10_APPROVAL_OR_UE5_IMPLEMENTATION",
+  "locale": "es-ES",
+  "campaign": {
+    "scenario": "starfleet_academy",
+    "start_year": 2383,
+    "known_start_month_day": false
+  },
+  "source_of_truth": {
+    "creation": "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "age": "sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json",
+    "culture": "sistemas/gameplay/species/culture_socialization_contract.json",
+    "human": "sistemas/gameplay/character_creation/background_contracts/HUM_01_HUMANO_PREACADEMIA.md",
+    "vulcan": "sistemas/gameplay/character_creation/background_contracts/VUL_01_VULCANO_CRIADO_EN_VULCANO.md",
+    "hybrid": "sistemas/gameplay/character_creation/background_contracts/HVA_01_HIBRIDO_HUMANO_VULCANO.md"
+  },
+  "intro": "Rellena el pasado de tu aspirante antes de su ingreso en la Academia de la Flota Estelar. La historia debe ser coherente con su edad, cultura y formación. Nada de lo escrito concede rangos ni capacidades automáticas.",
+  "species": [
+    {
+      "id": "human",
+      "label": "Humano",
+      "minimum_age": 18,
+      "contract_id": "HUM-01"
+    },
+    {
+      "id": "vulcan",
+      "label": "Vulcano puro",
+      "minimum_age": 25,
+      "contract_id": "VUL-01"
+    },
+    {
+      "id": "human_vulcan_hybrid",
+      "label": "Híbrido humano-vulcano",
+      "minimum_age": 22,
+      "contract_id": "HVA-01"
+    }
+  ],
+  "common_fields": [
+    {
+      "id": "nickname",
+      "type": "text",
+      "label": "Alias del jugador",
+      "help": "Identifica tu perfil, no el nombre del personaje. Se conserva por separado.",
+      "required": true,
+      "maxlength": 64,
+      "placeholder": "Ej.: Explorador"
+    },
+    {
+      "id": "character_name",
+      "type": "text",
+      "label": "Nombre del personaje",
+      "help": "Nombre que usará tu aspirante en el universo del juego.",
+      "required": true,
+      "maxlength": 120,
+      "placeholder": "Ej.: T'Ralen"
+    },
+    {
+      "id": "species_id",
+      "type": "species",
+      "label": "Especie jugable",
+      "required": true
+    },
+    {
+      "id": "age",
+      "type": "number",
+      "label": "Edad al comenzar en 2383 (años terrestres)",
+      "help": "Mínimos: humano 18, vulcano 25, híbrido 22. No hay edad máxima automática.",
+      "required": true,
+      "min": 0,
+      "step": 1,
+      "placeholder": "Introduce edad"
+    },
+    {
+      "id": "birth_place",
+      "type": "text",
+      "label": "Lugar de nacimiento",
+      "help": "Planeta, colonia, nave o lugar conocido. No implica automáticamente ciudadanía.",
+      "required": true,
+      "maxlength": 180,
+      "placeholder": "Ej.: Vulcano, ShiKahr"
+    },
+    {
+      "id": "upbringing_place",
+      "type": "text",
+      "label": "Lugar o lugares de crianza",
+      "help": "Puede ser distinto del lugar de nacimiento; indica varios si procede.",
+      "required": true,
+      "maxlength": 240,
+      "placeholder": "Ej.: Vulcano y Tierra"
+    },
+    {
+      "id": "citizenship",
+      "type": "select",
+      "label": "Ciudadanía declarada",
+      "help": "Es una declaración, no una credencial válida de la Federación.",
+      "required": true,
+      "options": [
+        [
+          "federation_claim",
+          "Federación (declarada, pendiente de verificar)"
+        ],
+        [
+          "other",
+          "Otra situación/civilización (explicar en biografía)"
+        ],
+        [
+          "unknown",
+          "Por determinar"
+        ]
+      ]
+    },
+    {
+      "id": "physical_appearance",
+      "type": "textarea",
+      "label": "Apariencia física",
+      "help": "Descripción visual básica. El modelo 3D se asignará por catálogo después.",
+      "required": true,
+      "rows": 2,
+      "maxlength": 1200,
+      "placeholder": "Ej.: piel oliva, ojos oscuros, orejas puntiagudas..."
+    },
+    {
+      "id": "education",
+      "type": "select",
+      "label": "Formación previa",
+      "required": true,
+      "options": [
+        [
+          "general",
+          "Educación general"
+        ],
+        [
+          "technical",
+          "Estudios técnicos civiles"
+        ],
+        [
+          "higher",
+          "Estudios superiores civiles"
+        ],
+        [
+          "home_supervised",
+          "Formación familiar o supervisada"
+        ],
+        [
+          "other",
+          "Otra formación (describir)"
+        ]
+      ]
+    },
+    {
+      "id": "education_details",
+      "type": "textarea",
+      "label": "Estudios y formación: detalles",
+      "help": "Centros o maestros, materias, duración, títulos si procede.",
+      "required": false,
+      "rows": 2,
+      "maxlength": 2200,
+      "placeholder": "Ej.: estudié astronomía tres años con tutores civiles"
+    },
+    {
+      "id": "skills_narrative",
+      "type": "textarea",
+      "label": "Habilidades aprendidas y cómo las adquiriste (opcional)",
+      "help": "Describe de dónde vienen tus conocimientos y su nivel real: interés, práctica, estudios, trabajo supervisado... No asigna puntos ni títulos.",
+      "required": false,
+      "rows": 3,
+      "maxlength": 2200,
+      "placeholder": "Ej.: sé hacer pequeñas reparaciones porque ayudaba a mi familia; medito desde los 12 años"
+    },
+    {
+      "id": "civil_experience",
+      "type": "textarea",
+      "label": "Experiencia civil anterior",
+      "help": "Puede no haber experiencia laboral; nunca te atribuyas rango de Starfleet desde el formulario.",
+      "required": false,
+      "rows": 2,
+      "maxlength": 2200,
+      "placeholder": "Ej.: prácticas supervisadas en un observatorio, o ninguna"
+    },
+    {
+      "id": "certifications",
+      "type": "textarea",
+      "label": "Certificaciones y títulos (opcional)",
+      "help": "Solo declarar los realmente obtenidos en la ficción; después F10 verificará su plausibilidad.",
+      "required": false,
+      "rows": 2,
+      "maxlength": 1200,
+      "placeholder": "Ej.: habilitación civil acreditada de..."
+    },
+    {
+      "id": "languages",
+      "type": "text",
+      "label": "Idiomas aprendidos (opcional)",
+      "help": "No se heredan conocimientos lingüísticos automáticamente de la especie.",
+      "required": false,
+      "maxlength": 600,
+      "placeholder": "Ej.: vulcano básico, estándar de la Federación"
+    },
+    {
+      "id": "family_context",
+      "type": "textarea",
+      "label": "Familia y personas de crianza (opcional)",
+      "help": "La adopción, el parentesco biológico y el hogar cultural son cosas distintas.",
+      "required": false,
+      "rows": 2,
+      "maxlength": 1500
+    },
+    {
+      "id": "objective",
+      "type": "select",
+      "label": "Aspiración principal",
+      "required": true,
+      "options": [
+        [
+          "exploration",
+          "Exploración"
+        ],
+        [
+          "science",
+          "Ciencias"
+        ],
+        [
+          "engineering",
+          "Ingeniería"
+        ],
+        [
+          "navigation",
+          "Navegación y pilotaje"
+        ],
+        [
+          "medicine",
+          "Medicina"
+        ],
+        [
+          "security",
+          "Seguridad"
+        ],
+        [
+          "diplomacy",
+          "Diplomacia"
+        ],
+        [
+          "undecided",
+          "Todavía no lo tengo decidido"
+        ],
+        [
+          "other",
+          "Otra aspiración"
+        ]
+      ]
+    },
+    {
+      "id": "motivation",
+      "type": "textarea",
+      "label": "¿Por qué quieres entrar en la Academia?",
+      "required": true,
+      "rows": 2,
+      "maxlength": 1400,
+      "placeholder": "Ej.: Quiero conocer otras culturas y servir en misiones científicas."
+    },
+    {
+      "id": "biography",
+      "type": "textarea",
+      "label": "Biografía libre",
+      "help": "Cuenta tu infancia, habilidades, aficiones, educación y circunstancias especiales. La IA contrastará este texto con el contrato de tu especie.",
+      "required": true,
+      "rows": 5,
+      "maxlength": 6500,
+      "placeholder": "Nací... A los ... estudié ... Antes de entrar en la Flota..."
+    }
+  ],
+  "activity": {
+    "title": "Actividad o afición previa",
+    "help": "Al menos una afición, estudio o actividad con edad de inicio. Se pueden añadir varias. No son puntos de habilidad.",
+    "categories": [
+      [
+        "physical_training",
+        "Entrenamiento físico"
+      ],
+      [
+        "martial_art",
+        "Arte marcial"
+      ],
+      [
+        "sport",
+        "Deporte"
+      ],
+      [
+        "academic_interest",
+        "Interés académico"
+      ],
+      [
+        "science",
+        "Ciencias"
+      ],
+      [
+        "technical",
+        "Actividad técnica"
+      ],
+      [
+        "medical",
+        "Conocimientos médicos"
+      ],
+      [
+        "language",
+        "Idiomas"
+      ],
+      [
+        "artistic",
+        "Arte o música"
+      ],
+      [
+        "craft",
+        "Oficio o artesanía"
+      ],
+      [
+        "social_or_cultural",
+        "Actividad cultural/social"
+      ],
+      [
+        "outdoor",
+        "Exploración o naturaleza"
+      ],
+      [
+        "other",
+        "Otra"
+      ]
+    ],
+    "frequency": [
+      [
+        "occasional",
+        "Ocasional"
+      ],
+      [
+        "regular",
+        "Regular"
+      ],
+      [
+        "intensive",
+        "Intensiva"
+      ],
+      [
+        "historical",
+        "Ya no la practico"
+      ]
+    ],
+    "minimum": 1,
+    "maximum": 10
+  },
+  "upbringing_by_species": {
+    "human": [
+      [
+        "earth_urban",
+        "Tierra: entorno urbano"
+      ],
+      [
+        "earth_rural",
+        "Tierra: entorno rural"
+      ],
+      [
+        "colony",
+        "Colonia humana"
+      ],
+      [
+        "civil_ship",
+        "Nave o estación civil"
+      ],
+      [
+        "intercultural",
+        "Hogar intercultural"
+      ],
+      [
+        "other",
+        "Otra crianza"
+      ]
+    ],
+    "vulcan": [
+      [
+        "vulcan_traditional",
+        "En Vulcano, tradición lógica familiar"
+      ],
+      [
+        "vulcan_nontraditional",
+        "En Vulcano, familia heterodoxa"
+      ],
+      [
+        "vulcan_other",
+        "En Vulcano, otros hábitos"
+      ],
+      [
+        "offworld",
+        "Fuera de Vulcano"
+      ]
+    ],
+    "human_vulcan_hybrid": [
+      [
+        "vulcan",
+        "Predominantemente vulcana"
+      ],
+      [
+        "earth",
+        "Predominantemente terrestre"
+      ],
+      [
+        "mixed",
+        "Costumbres mixtas"
+      ],
+      [
+        "other",
+        "Otra trayectoria de crianza"
+      ]
+    ]
+  },
+  "upbringing_help": {
+    "human": "La cultura no se deduce de la especie. Una persona humana puede haber crecido fuera de la Tierra.",
+    "vulcan": "La lógica se aprende; los vulcanos sienten emociones. Kahs-wan y Kolinahr no son requisitos universales.",
+    "human_vulcan_hybrid": "Tu biología híbrida no determina cómo te educaron. Puedes haber seguido costumbres terrestres, vulcanas o ambas."
+  },
+  "special_fields": [
+    {
+      "id": "emotion_training",
+      "label": "Relación con la educación emocional vulcana",
+      "type": "select",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "required": false,
+      "options": [
+        [
+          "not_declared",
+          "Prefiero no declararla"
+        ],
+        [
+          "none",
+          "Sin formación vulcana específica"
+        ],
+        [
+          "basic",
+          "Meditación y lógica básica"
+        ],
+        [
+          "regular",
+          "Práctica habitual y guiada"
+        ],
+        [
+          "advanced",
+          "Disciplina avanzada, con trayectoria"
+        ],
+        [
+          "heterodox",
+          "Interpreto o rechazo la disciplina tradicional"
+        ]
+      ]
+    },
+    {
+      "id": "kahs_wan",
+      "label": "Kahs-wan",
+      "type": "select",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "required": false,
+      "options": [
+        [
+          "not_declared",
+          "No declarar"
+        ],
+        [
+          "not_done",
+          "No realizado"
+        ],
+        [
+          "observed",
+          "Lo conozco / presencié"
+        ],
+        [
+          "attempted",
+          "Lo intenté"
+        ],
+        [
+          "completed",
+          "Lo completé"
+        ]
+      ]
+    },
+    {
+      "id": "tal_oth",
+      "label": "Tal'oth",
+      "type": "select",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "required": false,
+      "options": [
+        [
+          "not_declared",
+          "No declarar"
+        ],
+        [
+          "not_done",
+          "No realizado"
+        ],
+        [
+          "attempted",
+          "Lo intenté"
+        ],
+        [
+          "completed",
+          "Lo completé"
+        ]
+      ]
+    },
+    {
+      "id": "kolinahr",
+      "label": "Kolinahr",
+      "type": "select",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "required": false,
+      "options": [
+        [
+          "not_declared",
+          "No declarar"
+        ],
+        [
+          "not_started",
+          "No iniciado"
+        ],
+        [
+          "studying",
+          "Interesado o en formación"
+        ],
+        [
+          "attempted",
+          "Lo intenté"
+        ],
+        [
+          "completed",
+          "Afirmo haberlo completado (extraordinario)"
+        ]
+      ]
+    },
+    {
+      "id": "telepathy_training",
+      "label": "Formación en contacto telepático",
+      "type": "select",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "required": false,
+      "options": [
+        [
+          "not_declared",
+          "No declarar"
+        ],
+        [
+          "none",
+          "Sin entrenamiento"
+        ],
+        [
+          "intro",
+          "Conocimientos introductorios"
+        ],
+        [
+          "supervised",
+          "Entrenamiento supervisado"
+        ],
+        [
+          "advanced",
+          "Formación avanzada declarada"
+        ]
+      ]
+    },
+    {
+      "id": "ritual_context",
+      "label": "Explicación de ritos o formación avanzada (opcional)",
+      "type": "textarea",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "rows": 3,
+      "maxlength": 1600,
+      "placeholder": "Ej.: quién enseñó, dónde, a qué edad, resultado..."
+    },
+    {
+      "id": "family_customs",
+      "label": "Costumbres familiares (opcional)",
+      "type": "textarea",
+      "species": [
+        "vulcan",
+        "human_vulcan_hybrid"
+      ],
+      "rows": 2,
+      "maxlength": 1300,
+      "placeholder": "Ej.: costumbres de ambas culturas, reuniones, prácticas familiares..."
+    }
+  ],
+  "visual_model": {
+    "label": "Modelo 3D de Unreal",
+    "selection_mode": "DISABLED_UNTIL_VERIFIED_CATALOG",
+    "help": "No cargar .fbx, .glb ni .uasset desde el formulario. Cuando exista catálogo UE5, asignar un identificador validado en la capa de presentación, fuera del borrador autoritativo.",
+    "display_value": "Sin asignar (catálogo 3D pendiente)"
+  },
+  "validation": {
+    "species_whitelist": [
+      "human",
+      "vulcan",
+      "human_vulcan_hybrid"
+    ],
+    "minimum_ages_earth_years": {
+      "human": 18,
+      "vulcan": 25,
+      "human_vulcan_hybrid": 22
+    },
+    "age_maximum": null,
+    "age_year_calendar_upper_bound_exclusive": 2383,
+    "no_extra_adult_proof": true,
+    "minimum_activity_entries": 1,
+    "require_biography": true,
+    "kolinahr_completed_requires_context_in_form": true,
+    "semantic_review_required": true,
+    "precheck_may_return_valid": false,
+    "client_cannot_create_person": true,
+    "model_3d_never_grants_skill_or_identity": true
+  },
+  "draft_mapping": {
+    "nickname": "player_profile_draft.nickname",
+    "character_name": "f10_draft.display_name",
+    "species_id": "f10_draft.species_id",
+    "age": "f10_draft.age_or_birth_date",
+    "birth_place": "f10_draft.origin",
+    "upbringing_type": "f10_draft.culture_context",
+    "rituals": "f10_draft.culture_context",
+    "education": "f10_draft.prior_education",
+    "activity": "f10_draft.prior_activities_and_hobbies",
+    "civil_experience": "f10_draft.prior_experience",
+    "biography": "f10_draft.prior_experience (textual note, no new disallowed field)",
+    "objective": "f10_draft.initial_long_term_objective",
+    "physical_appearance": "f10_draft.appearance_profile",
+    "visual_model": "presentation.model_3d_ref (NULL; not transmitted to F10)",
+    "skills_narrative": "f10_draft.prior_experience (declaración textual, sin otorgar habilidad automática)"
+  }
+}

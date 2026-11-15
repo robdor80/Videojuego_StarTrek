@@ -182,7 +182,7 @@ void playable_age() {
     // The F10 reference regression independently pins all author-approved values.
     const auto embedded = Json::parse(detail::biography_rules_json);
     const auto& catalog = embedded.at("species");
-    check(catalog.size() == 25, "25 native species");
+    check(catalog.size() == 26, "26 native species");
     unsigned numeric = 0;
     for (const auto& entry : catalog.object_range()) {
         const auto& rule = entry.value();
@@ -209,9 +209,18 @@ void playable_age() {
         check(result.objective.status() == ObjectiveStatus::REVIEW_REQUIRED &&
               !issue(result, IssueCode::MATURITY_EVIDENCE_REQUIRED, "adult_equivalent_status"), entry.key());
     }
-    check(numeric == 22, "22 numeric age floors");
+    check(numeric == 23, "23 numeric age floors");
+    {
+        auto hybrid = maturity_draft("human_vulcan_hybrid");
+        hybrid["age_or_birth_date"] = 21;
+        rejected(validator.evaluate(hybrid.to_string(), context()), IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date");
+        hybrid["age_or_birth_date"] = 22;
+        const auto outcome = validator.evaluate(hybrid.to_string(), context());
+        check(!issue(outcome, IssueCode::BELOW_PLAYABLE_AGE, "age_or_birth_date"), "hybrid 22 passes age gate");
+        check(!issue(outcome, IssueCode::UNKNOWN_SPECIES, "species_id"), "hybrid species recognized");
+    }
 
-    for (const auto& [id, floor] : {std::pair{"human", 18}, {"vulcan", 25}, {"andorian", 20}, {"ocampan", 2}}) {
+    for (const auto& [id, floor] : {std::pair{"human", 18}, {"vulcan", 25}, {"human_vulcan_hybrid", 22}, {"andorian", 20}, {"ocampan", 2}}) {
         check(catalog.at(id).at("minimum").as<int>() == floor, id);
     }
 }
@@ -407,7 +416,7 @@ void stale() {
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
     check(f.evaluator.request_binding.ruleset.starts_with(
-              "f10-biography/5:f10_species_playable_maturity_policy/0.1.1:"), "bound maturity policy version");
+              "f10-biography/5:f10_species_playable_maturity_policy/0.1.2:"), "bound maturity policy version");
     auto previous_ruleset = f.evaluator.request_binding.ruleset;
     previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
     BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));

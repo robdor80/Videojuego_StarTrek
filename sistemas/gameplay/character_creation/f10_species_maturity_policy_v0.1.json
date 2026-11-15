@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "contract_id": "f10_species_playable_maturity_policy",
   "status": "AUTHOR_APPROVED_PLAYER_DECLARED_AGE_GATE",
   "approved_on": "2026-11-14",
@@ -17,7 +17,8 @@
     "sistemas/gameplay/character_creation/f10_biography_validation_interface_v0.1.json",
     "sistemas/gameplay/species/species_biology_contract.json",
     "sistemas/gameplay/species/character_lifecycle_contract.json",
-    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json"
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json",
+    "sistemas/gameplay/species/profiles/human_vulcan_hybrid_v0.1.json"
   ],
   "rules": {
     "minimum_is_gameplay_player_eligibility_not_universal_biological_adulthood": true,
@@ -39,7 +40,8 @@
     "adult_equivalent_status_is_compatibility_field_not_independent_proof": true,
     "do_not_infer_exact_birth_date_from_declared_age": true,
     "unknown_species": "CHANGES_REQUIRED",
-    "special_species_without_numeric_floor": "REVIEW_REQUIRED_UNTIL_AUTHOR_DECIDES_MINIMUM"
+    "special_species_without_numeric_floor": "REVIEW_REQUIRED_UNTIL_AUTHOR_DECIDES_MINIMUM",
+    "hybrid_human_vulcan_is_independent_species_profile_not_a_human_or_vulcan_fallback": true
   },
   "content_gates": {
     "MAIN_GAME": "CONTEXT_AND_F10_ELIGIBILITY_STILL_REQUIRED",
@@ -192,6 +194,17 @@
       "design_note_es": "NPC cadetes humanos de 16–17 permitidos si admisión F10 los autoriza; no cambia mínimo jugable."
     },
     {
+      "species_id": "human_vulcan_hybrid",
+      "profile_ref": "sistemas/gameplay/species/profiles/human_vulcan_hybrid_v0.1.json",
+      "minimum_playable_age_earth_years": 22,
+      "maximum_playable_age_earth_years": null,
+      "age_rule_type": "NUMERIC_PLAYABLE_FLOOR",
+      "automatic_player_eligibility": false,
+      "maturity_evidence_required": false,
+      "content_scope": "MAIN_GAME",
+      "design_note_es": "Decisión autoral 15-11-2026: híbrido humano-vulcano jugable desde el inicio; mínimo 22 años terrestres; crianza y manifestación fisiológica individuales, sin permisos ni poderes automáticos."
+    },
+    {
       "species_id": "jem_hadar",
       "profile_ref": "sistemas/gameplay/species/profiles/jem_hadar_v0.1.json",
       "minimum_playable_age_earth_years": null,
@@ -334,5 +347,5 @@
     "no_auto_adoption_by_core_unreal_or_h03_h04": true,
     "future_executor": "NO_CODEX_FOR_AGE_PROOF"
   },
-  "revised_on": "2026-11-14"
+  "revised_on": "2026-11-15"
 }

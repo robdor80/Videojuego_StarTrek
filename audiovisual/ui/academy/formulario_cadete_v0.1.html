@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F10 — Alta de aspirante a la Academia (prototipo)</title>
+<style>
+body{font:16px/1.45 system-ui,-apple-system,sans-serif;max-width:840px;margin:24px auto;padding:0 14px;color:#171717;background:#fff}
+fieldset{border:1px solid #aaa;margin:18px 0;padding:14px}
+legend{font-weight:700;padding:0 5px}
+.field{margin:10px 0}label{display:block;font-weight:600;margin-bottom:4px}
+input:not([type=checkbox]),select,textarea{width:100%;box-sizing:border-box;padding:7px;font:inherit;border:1px solid #888;border-radius:2px}
+input[type=checkbox]{margin-right:8px}
+textarea{resize:vertical}button{font:inherit;padding:7px 12px;margin:6px 5px 6px 0;cursor:pointer}
+.hint{display:block;color:#555;font-size:.86em;margin:3px 0}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f4f4;padding:12px;border:1px solid #ccc;max-height:380px;overflow:auto}
+#issues{color:#9a2500}#status{font-weight:600}small{line-height:1.3}
+.notice{border-left:3px solid #666;padding:6px 12px;background:#f6f6f6}
+.activity{margin-top:10px}
+</style></head>
+<body>
+<h1>Registro de aspirante — Academia de la Flota Estelar</h1>
+<p id="intro"></p>
+<p class="notice">Prototipo local sin conexión a CoreRPG, Unreal ni OpenAI. «Preparar borrador» comprueba únicamente datos básicos; NO valida la biografía ni crea un personaje. No envía información a Internet.</p>
+<form id="creator" novalidate>
+<fieldset><legend>1. Identidad del jugador y del personaje</legend><div id="group-identity"></div><p id="age-min"></p></fieldset>
+<fieldset><legend>2. Origen y contexto familiar</legend><div id="group-origin"></div></fieldset>
+<fieldset><legend>3. Crianza, emociones y tradiciones</legend><div id="group-culture"></div></fieldset>
+<fieldset><legend>4. Aspecto visual</legend><div id="group-appearance"></div><div class="field"><label for="model-3d">Modelo 3D UE5</label><input id="model-3d" type="text" disabled><small class="hint">Campo informativo: se asociará un recurso 3D validado cuando exista catálogo. No se suben archivos ni se modifica la identidad del personaje.</small></div></fieldset>
+<fieldset><legend>5. Educación, experiencia y títulos</legend><div id="group-education"></div></fieldset>
+<fieldset><legend>6. Aficiones y actividades</legend><p>Indica al menos una actividad y cuándo comenzaste. No reparte puntos de habilidad.</p><div id="group-activities"></div><button id="add-activity" type="button">Añadir otra actividad</button></fieldset>
+<fieldset><legend>7. Motivaciones y biografía</legend><div id="group-objective"></div></fieldset>
+<div id="issues" role="alert" aria-live="polite"></div>
+<p><button type="submit">Comprobar campos y preparar borrador</button><button id="download" type="button" disabled>Descargar borrador JSON</button></p>
+<p id="status" role="status">Pendiente de preparar borrador.</p>
+<h2>Borrador para F10 (sin autorización)</h2>
+<p>Solo se debe remitir a F10 el objeto <code>f10_draft</code>; el alias de jugador y la futura referencia 3D se gestionan por separado.</p>
+<pre id="preview">(vacío)</pre>
+</form>
+<script id="formulario-definicion" type="application/json">{"schema_version":"0.1.0","contract_id":"f10_h06_initial_player_form","status":"REFERENCE_FORM_NOT_F10_APPROVAL_OR_UE5_IMPLEMENTATION","locale":"es-ES","campaign":{"scenario":"starfleet_academy","start_year":2383,"known_start_month_day":false},"source_of_truth":{"creation":"sistemas/gameplay/character_creation/character_creation_contract_v1_0.json","age":"sistemas/gameplay/character_creation/f10_species_maturity_policy_v0.1.json","culture":"sistemas/gameplay/species/culture_socialization_contract.json","human":"sistemas/gameplay/character_creation/background_contracts/HUM_01_HUMANO_PREACADEMIA.md","vulcan":"sistemas/gameplay/character_creation/background_contracts/VUL_01_VULCANO_CRIADO_EN_VULCANO.md","hybrid":"sistemas/gameplay/character_creation/background_contracts/HVA_01_HIBRIDO_HUMANO_VULCANO.md"},"intro":"Rellena el pasado de tu aspirante antes de su ingreso en la Academia de la Flota Estelar. La historia debe ser coherente con su edad, cultura y formación. Nada de lo escrito concede rangos ni capacidades automáticas.","species":[{"id":"human","label":"Humano","minimum_age":18,"contract_id":"HUM-01"},{"id":"vulcan","label":"Vulcano puro","minimum_age":25,"contract_id":"VUL-01"},{"id":"human_vulcan_hybrid","label":"Híbrido humano-vulcano","minimum_age":22,"contract_id":"HVA-01"}],"common_fields":[{"id":"nickname","type":"text","label":"Alias del jugador","help":"Identifica tu perfil, no el nombre del personaje. Se conserva por separado.","required":true,"maxlength":64,"placeholder":"Ej.: Explorador"},{"id":"character_name","type":"text","label":"Nombre del personaje","help":"Nombre que usará tu aspirante en el universo del juego.","required":true,"maxlength":120,"placeholder":"Ej.: T'Ralen"},{"id":"species_id","type":"species","label":"Especie jugable","required":true},{"id":"age","type":"number","label":"Edad al comenzar en 2383 (años terrestres)","help":"Mínimos: humano 18, vulcano 25, híbrido 22. No hay edad máxima automática.","required":true,"min":0,"step":1,"placeholder":"Introduce edad"},{"id":"birth_place","type":"text","label":"Lugar de nacimiento","help":"Planeta, colonia, nave o lugar conocido. No implica automáticamente ciudadanía.","required":true,"maxlength":180,"placeholder":"Ej.: Vulcano, ShiKahr"},{"id":"upbringing_place","type":"text","label":"Lugar o lugares de crianza","help":"Puede ser distinto del lugar de nacimiento; indica varios si procede.","required":true,"maxlength":240,"placeholder":"Ej.: Vulcano y Tierra"},{"id":"citizenship","type":"select","label":"Ciudadanía declarada","help":"Es una declaración, no una credencial válida de la Federación.","required":true,"options":[["federation_claim","Federación (declarada, pendiente de verificar)"],["other","Otra situación/civilización (explicar en biografía)"],["unknown","Por determinar"]]},{"id":"physical_appearance","type":"textarea","label":"Apariencia física","help":"Descripción visual básica. El modelo 3D se asignará por catálogo después.","required":true,"rows":2,"maxlength":1200,"placeholder":"Ej.: piel oliva, ojos oscuros, orejas puntiagudas..."},{"id":"education","type":"select","label":"Formación previa","required":true,"options":[["general","Educación general"],["technical","Estudios técnicos civiles"],["higher","Estudios superiores civiles"],["home_supervised","Formación familiar o supervisada"],["other","Otra formación (describir)"]]},{"id":"education_details","type":"textarea","label":"Estudios y formación: detalles","help":"Centros o maestros, materias, duración, títulos si procede.","required":false,"rows":2,"maxlength":2200,"placeholder":"Ej.: estudié astronomía tres años con tutores civiles"},{"id":"skills_narrative","type":"textarea","label":"Habilidades aprendidas y cómo las adquiriste (opcional)","help":"Describe de dónde vienen tus conocimientos y su nivel real: interés, práctica, estudios, trabajo supervisado... No asigna puntos ni títulos.","required":false,"rows":3,"maxlength":2200,"placeholder":"Ej.: sé hacer pequeñas reparaciones porque ayudaba a mi familia; medito desde los 12 años"},{"id":"civil_experience","type":"textarea","label":"Experiencia civil anterior","help":"Puede no haber experiencia laboral; nunca te atribuyas rango de Starfleet desde el formulario.","required":false,"rows":2,"maxlength":2200,"placeholder":"Ej.: prácticas supervisadas en un observatorio, o ninguna"},{"id":"certifications","type":"textarea","label":"Certificaciones y títulos (opcional)","help":"Solo declarar los realmente obtenidos en la ficción; después F10 verificará su plausibilidad.","required":false,"rows":2,"maxlength":1200,"placeholder":"Ej.: habilitación civil acreditada de..."},{"id":"languages","type":"text","label":"Idiomas aprendidos (opcional)","help":"No se heredan conocimientos lingüísticos automáticamente de la especie.","required":false,"maxlength":600,"placeholder":"Ej.: vulcano básico, estándar de la Federación"},{"id":"family_context","type":"textarea","label":"Familia y personas de crianza (opcional)","help":"La adopción, el parentesco biológico y el hogar cultural son cosas distintas.","required":false,"rows":2,"maxlength":1500},{"id":"objective","type":"select","label":"Aspiración principal","required":true,"options":[["exploration","Exploración"],["science","Ciencias"],["engineering","Ingeniería"],["navigation","Navegación y pilotaje"],["medicine","Medicina"],["security","Seguridad"],["diplomacy","Diplomacia"],["undecided","Todavía no lo tengo decidido"],["other","Otra aspiración"]]},{"id":"motivation","type":"textarea","label":"¿Por qué quieres entrar en la Academia?","required":true,"rows":2,"maxlength":1400,"placeholder":"Ej.: Quiero conocer otras culturas y servir en misiones científicas."},{"id":"biography","type":"textarea","label":"Biografía libre","help":"Cuenta tu infancia, habilidades, aficiones, educación y circunstancias especiales. La IA contrastará este texto con el contrato de tu especie.","required":true,"rows":5,"maxlength":6500,"placeholder":"Nací... A los ... estudié ... Antes de entrar en la Flota..."}],"activity":{"title":"Actividad o afición previa","help":"Al menos una afición, estudio o actividad con edad de inicio. Se pueden añadir varias. No son puntos de habilidad.","categories":[["physical_training","Entrenamiento físico"],["martial_art","Arte marcial"],["sport","Deporte"],["academic_interest","Interés académico"],["science","Ciencias"],["technical","Actividad técnica"],["medical","Conocimientos médicos"],["language","Idiomas"],["artistic","Arte o música"],["craft","Oficio o artesanía"],["social_or_cultural","Actividad cultural/social"],["outdoor","Exploración o naturaleza"],["other","Otra"]],"frequency":[["occasional","Ocasional"],["regular","Regular"],["intensive","Intensiva"],["historical","Ya no la practico"]],"minimum":1,"maximum":10},"upbringing_by_species":{"human":[["earth_urban","Tierra: entorno urbano"],["earth_rural","Tierra: entorno rural"],["colony","Colonia humana"],["civil_ship","Nave o estación civil"],["intercultural","Hogar intercultural"],["other","Otra crianza"]],"vulcan":[["vulcan_traditional","En Vulcano, tradición lógica familiar"],["vulcan_nontraditional","En Vulcano, familia heterodoxa"],["vulcan_other","En Vulcano, otros hábitos"],["offworld","Fuera de Vulcano"]],"human_vulcan_hybrid":[["vulcan","Predominantemente vulcana"],["earth","Predominantemente terrestre"],["mixed","Costumbres mixtas"],["other","Otra trayectoria de crianza"]]},"upbringing_help":{"human":"La cultura no se deduce de la especie. Una persona humana puede haber crecido fuera de la Tierra.","vulcan":"La lógica se aprende; los vulcanos sienten emociones. Kahs-wan y Kolinahr no son requisitos universales.","human_vulcan_hybrid":"Tu biología híbrida no determina cómo te educaron. Puedes haber seguido costumbres terrestres, vulcanas o ambas."},"special_fields":[{"id":"emotion_training","label":"Relación con la educación emocional vulcana","type":"select","species":["vulcan","human_vulcan_hybrid"],"required":false,"options":[["not_declared","Prefiero no declararla"],["none","Sin formación vulcana específica"],["basic","Meditación y lógica básica"],["regular","Práctica habitual y guiada"],["advanced","Disciplina avanzada, con trayectoria"],["heterodox","Interpreto o rechazo la disciplina tradicional"]]},{"id":"kahs_wan","label":"Kahs-wan","type":"select","species":["vulcan","human_vulcan_hybrid"],"required":false,"options":[["not_declared","No declarar"],["not_done","No realizado"],["observed","Lo conozco / presencié"],["attempted","Lo intenté"],["completed","Lo completé"]]},{"id":"tal_oth","label":"Tal'oth","type":"select","species":["vulcan","human_vulcan_hybrid"],"required":false,"options":[["not_declared","No declarar"],["not_done","No realizado"],["attempted","Lo intenté"],["completed","Lo completé"]]},{"id":"kolinahr","label":"Kolinahr","type":"select","species":["vulcan","human_vulcan_hybrid"],"required":false,"options":[["not_declared","No declarar"],["not_started","No iniciado"],["studying","Interesado o en formación"],["attempted","Lo intenté"],["completed","Afirmo haberlo completado (extraordinario)"]]},{"id":"telepathy_training","label":"Formación en contacto telepático","type":"select","species":["vulcan","human_vulcan_hybrid"],"required":false,"options":[["not_declared","No declarar"],["none","Sin entrenamiento"],["intro","Conocimientos introductorios"],["supervised","Entrenamiento supervisado"],["advanced","Formación avanzada declarada"]]},{"id":"ritual_context","label":"Explicación de ritos o formación avanzada (opcional)","type":"textarea","species":["vulcan","human_vulcan_hybrid"],"rows":3,"maxlength":1600,"placeholder":"Ej.: quién enseñó, dónde, a qué edad, resultado..."},{"id":"family_customs","label":"Costumbres familiares (opcional)","type":"textarea","species":["vulcan","human_vulcan_hybrid"],"rows":2,"maxlength":1300,"placeholder":"Ej.: costumbres de ambas culturas, reuniones, prácticas familiares..."}],"visual_model":{"label":"Modelo 3D de Unreal","selection_mode":"DISABLED_UNTIL_VERIFIED_CATALOG","help":"No cargar .fbx, .glb ni .uasset desde el formulario. Cuando exista catálogo UE5, asignar un identificador validado en la capa de presentación, fuera del borrador autoritativo.","display_value":"Sin asignar (catálogo 3D pendiente)"},"validation":{"species_whitelist":["human","vulcan","human_vulcan_hybrid"],"minimum_ages_earth_years":{"human":18,"vulcan":25,"human_vulcan_hybrid":22},"age_maximum":null,"age_year_calendar_upper_bound_exclusive":2383,"no_extra_adult_proof":true,"minimum_activity_entries":1,"require_biography":true,"kolinahr_completed_requires_context_in_form":true,"semantic_review_required":true,"precheck_may_return_valid":false,"client_cannot_create_person":true,"model_3d_never_grants_skill_or_identity":true},"draft_mapping":{"nickname":"player_profile_draft.nickname","character_name":"f10_draft.display_name","species_id":"f10_draft.species_id","age":"f10_draft.age_or_birth_date","birth_place":"f10_draft.origin","upbringing_type":"f10_draft.culture_context","rituals":"f10_draft.culture_context","education":"f10_draft.prior_education","activity":"f10_draft.prior_activities_and_hobbies","civil_experience":"f10_draft.prior_experience","biography":"f10_draft.prior_experience (textual note, no new disallowed field)","objective":"f10_draft.initial_long_term_objective","physical_appearance":"f10_draft.appearance_profile","visual_model":"presentation.model_3d_ref (NULL; not transmitted to F10)","skills_narrative":"f10_draft.prior_experience (declaración textual, sin otorgar habilidad automática)"}}</script>
+<script>
+function optionLabel(options,value){
+ const option=(options||[]).find(item=>item[0]===value);
+ return option?option[1]:"Sin declarar";
+}
+function validateValues(d,cfg){
+ const issues=[];
+ const sv=(id)=>String(d[id]??"").trim();
+ for(const field of cfg.common_fields){
+   if(field.required && (field.type==="number"?sv(field.id)==="":!sv(field.id)))issues.push("Falta completar: "+field.label+".");
+   if(field.maxlength && sv(field.id).length>field.maxlength)issues.push("Demasiado texto en: "+field.label+".");
+ }
+ const species=cfg.species.find(x=>x.id===sv("species_id"));
+ if(!species)issues.push("Debes seleccionar una de las tres especies autorizadas.");
+ const age=Number(sv("age"));
+ if(!Number.isSafeInteger(age)||!sv("age")||age<0||age>=cfg.campaign.start_year)issues.push("Edad no válida: introduce un número entero de años terrestres anterior al año de campaña.");
+ else if(species && age<species.minimum_age)issues.push("La edad mínima de "+species.label+" es "+species.minimum_age+" años terrestres.");
+ if(species && !(cfg.upbringing_by_species[species.id]||[]).some(x=>x[0]===sv("upbringing_type")))issues.push("Indica el tipo de crianza.");
+ if(!Array.isArray(d.activities)||d.activities.length<cfg.activity.minimum)issues.push("Declara al menos una actividad o afición previa.");
+ if(Array.isArray(d.activities)){
+  if(d.activities.length>cfg.activity.maximum)issues.push("Se permiten un máximo de "+cfg.activity.maximum+" actividades.");
+  d.activities.forEach((a,i)=>{
+   const n=i+1,start=Number(a.start_age),end=Number(a.end_age);
+   if(!String(a.name||"").trim())issues.push("Indica el nombre de la actividad "+n+".");
+   if(!cfg.activity.categories.some(x=>x[0]===a.category))issues.push("Categoría desconocida en actividad "+n+".");
+   if(String(a.start_age??"").trim()===""||!Number.isSafeInteger(start)||start<0||(Number.isSafeInteger(age)&&start>age))issues.push("Edad de inicio incorrecta en la actividad "+n+".");
+   if(a.current!==true && (String(a.end_age??"").trim()===""||!Number.isSafeInteger(end)||end<start||(Number.isSafeInteger(age)&&end>age)))issues.push("Edad de finalización incorrecta en la actividad "+n+".");
+   if(!cfg.activity.frequency.some(x=>x[0]===a.frequency))issues.push("Frecuencia desconocida en la actividad "+n+".");
+  });
+ }
+ if(species?.id!=="human" && sv("kolinahr")==="completed" && !sv("ritual_context"))issues.push("Si declaras Kolinahr completado, explica brevemente formación, maestro y trayectoria. La IA deberá revisarlo.");
+ return issues;
+}
+function buildDraft(d,cfg){
+ const problems=validateValues(d,cfg);if(problems.length)throw Error(problems.join("\n"));
+ const sv=(id)=>String(d[id]??"").trim();
+ const sid=sv("species_id"), species=cfg.species.find(s=>s.id===sid);
+ const cultural=["Crianza: "+optionLabel(cfg.upbringing_by_species[sid],sv("upbringing_type")),"Lugares de crianza: "+sv("upbringing_place")];
+ for(const field of cfg.special_fields){
+  if(!field.species.includes(sid))continue;
+  const value=sv(field.id);
+  if(!value||value==="not_declared")continue;
+  cultural.push(field.label+": "+(field.options?optionLabel(field.options,value):value));
+ }
+ const educationType=cfg.common_fields.find(f=>f.id==="education");
+ const objectiveField=cfg.common_fields.find(f=>f.id==="objective");
+ const citizenshipField=cfg.common_fields.find(f=>f.id==="citizenship");
+ const education="Formación declarada: "+optionLabel(educationType.options,sv("education"))+(sv("education_details")?" — "+sv("education_details"):"");
+ const experiences=[];
+ if(sv("skills_narrative"))experiences.push("Habilidades y su aprendizaje declarados: "+sv("skills_narrative"));
+ if(sv("civil_experience"))experiences.push("Experiencia civil: "+sv("civil_experience"));
+ else experiences.push("Sin experiencia civil profesional declarada.");
+ experiences.push("Relato biográfico del aspirante (declaración libre): "+sv("biography"));
+ const draft={
+  display_name:sv("character_name"),
+  species_id:sid,
+  age_or_birth_date:Number(sv("age")),
+  adult_equivalent_status:true,
+  origin:"Lugar de nacimiento: "+sv("birth_place")+". Crianza en: "+sv("upbringing_place")+".",
+  citizenship_context:"Ciudadanía autodeclarada, no acreditada: "+optionLabel(citizenshipField.options,sv("citizenship"))+".",
+  culture_context:cultural.join("; ")+".",
+  appearance_profile:sv("physical_appearance"),
+  prior_education:[education],
+  prior_activities_and_hobbies:d.activities.map(a=>({
+    name:String(a.name).trim(),category:a.category,started_at_or_age:Number(a.start_age),
+    ended_at_or_current:a.current?"current":Number(a.end_age),typical_frequency:a.frequency
+  })),
+  prior_experience:experiences,
+  initial_long_term_objective:optionLabel(objectiveField.options,sv("objective"))+". Motivación: "+sv("motivation")
+ };
+ if(sv("languages"))draft.languages=[sv("languages")];
+ if(sv("family_context"))draft.family_context=sv("family_context");
+ if(sv("certifications"))draft.certifications=[sv("certifications")];
+ return {
+  formulario:"F10/H06 – referencia 0.1",
+  estado:"BORRADOR_PENDIENTE_VALIDACION_F10_Y_REVISION_IA",
+  perfil_jugador_no_autoritativo:{nickname:sv("nickname")},
+  f10_draft:draft,
+  presentacion_no_autoritativa:{modelo_3d_ref:null,estado:"PENDIENTE_CATALOGO_UE5"}
+ };
+}
+
+"use strict";
+const cfg=JSON.parse(document.getElementById("formulario-definicion").textContent);
+const form=document.getElementById("creator"),output=document.getElementById("preview"),status=document.getElementById("status");
+const download=document.getElementById("download");
+let payload=null;
+const byId=(id)=>document.getElementById(id);
+function addText(parent,tag,text,klass){
+ const el=document.createElement(tag);el.textContent=text;
+ if(klass)el.className=klass;parent.appendChild(el);return el;
+}
+function renderField(def,parent){
+ const wrap=document.createElement("div");wrap.className="field";
+ const label=document.createElement("label");label.htmlFor=def.id;label.textContent=def.label+(def.required?" *":"");wrap.appendChild(label);
+ let input;
+ if(def.type==="select"||def.type==="species"){
+  input=document.createElement("select");
+  const options=def.type==="species"?cfg.species.map(s=>[s.id,s.label]):def.options;
+  input.add(new Option("— Selecciona —",""));
+  options.forEach(o=>input.add(new Option(o[1],o[0])));
+ }else if(def.type==="textarea"){
+  input=document.createElement("textarea");input.rows=def.rows||2;
+ }else{
+  input=document.createElement("input");input.type=def.type==="number"?"number":"text";
+ }
+ input.id=def.id;input.name=def.id;input.required=!!def.required;
+ if(def.placeholder)input.placeholder=def.placeholder;
+ if(def.maxlength)input.maxLength=def.maxlength;
+ if(def.min!==undefined)input.min=def.min;
+ if(def.step!==undefined)input.step=def.step;
+ wrap.appendChild(input);
+ if(def.help)addText(wrap,"small",def.help,"hint");
+ parent.appendChild(wrap);return input;
+}
+const groupLists={
+ "identity":["nickname","character_name","species_id","age"],
+ "origin":["birth_place","upbringing_place","citizenship","languages","family_context"],
+ "appearance":["physical_appearance"],
+ "education":["education","education_details","skills_narrative","civil_experience","certifications"],
+ "objective":["objective","motivation","biography"]
+};
+Object.entries(groupLists).forEach(([group,ids])=>{
+ const parent=byId("group-"+group);
+ ids.forEach(id=>{const def=cfg.common_fields.find(f=>f.id===id);if(def)renderField(def,parent)});
+});
+const model=byId("model-3d");model.value=cfg.visual_model.display_value;
+function renderCultural(){
+ const species=byId("species_id").value,container=byId("group-culture");
+ container.replaceChildren();
+ if(!species)return void addText(container,"p","Elige primero la especie.");
+ const choices=cfg.upbringing_by_species[species];
+ renderField({id:"upbringing_type",type:"select",required:true,label:"Tipo de crianza",options:choices,help:cfg.upbringing_help[species]},container);
+ cfg.special_fields.filter(f=>f.species.includes(species)).forEach(f=>renderField(f,container));
+ const age=byId("age");const spec=cfg.species.find(s=>s.id===species);
+ age.min=spec.minimum_age;
+ byId("age-min").textContent="Edad mínima de "+spec.label+": "+spec.minimum_age+" años terrestres.";
+}
+function makeActivity(){
+ const area=byId("group-activities");
+ if(area.querySelectorAll(".activity").length>=cfg.activity.maximum)return;
+ const row=document.createElement("fieldset");row.className="activity";addText(row,"legend","Actividad o afición","legend");
+ function control(text,tag,type,name,options){
+  const wrap=document.createElement("div");wrap.className="field";
+  const label=document.createElement("label");label.textContent=text;wrap.appendChild(label);
+  let input=document.createElement(tag);
+  if(tag==="select")options.forEach(o=>input.add(new Option(o[1],o[0])));
+  else if(type==="checkbox")input.type="checkbox";
+  else input.type=type;
+  input.dataset.activity=name;input.className="activity-input";
+  if(name==="current")input.checked=true;
+  if(name==="start_age"||name==="end_age"){input.min=0;input.step=1;}
+  wrap.appendChild(input);row.appendChild(wrap);return input;
+ }
+ control("Actividad o interés","input","text","name",null).placeholder="Ej.: astronomía, música, meditación...";
+ control("Categoría","select",null,"category",cfg.activity.categories);
+ control("Edad al comenzar","input","number","start_age",null).placeholder="Ej.: 8";
+ control("Frecuencia","select",null,"frequency",cfg.activity.frequency);
+ const ongoing=control("Sigo practicándola","input","checkbox","current",null);
+ const end=control("Edad al finalizar (solo si ya no la practicas)","input","number","end_age",null);
+ end.disabled=true;
+ ongoing.addEventListener("change",()=>{end.disabled=ongoing.checked;if(ongoing.checked)end.value="";});
+ const remove=document.createElement("button");remove.type="button";remove.textContent="Quitar actividad";
+ remove.addEventListener("click",()=>{if(area.querySelectorAll(".activity").length>1){row.remove();invalidate();}});
+ row.appendChild(remove);area.appendChild(row);invalidate();
+}
+function collect(){
+ const d={};
+ cfg.common_fields.forEach(f=>d[f.id]=byId(f.id)?.value??"");
+ d.upbringing_type=byId("upbringing_type")?.value||"";
+ cfg.special_fields.forEach(f=>{const input=byId(f.id);if(input)d[f.id]=input.value;});
+ d.activities=Array.from(document.querySelectorAll(".activity")).map(row=>{
+  const get=(id)=>row.querySelector('[data-activity="'+id+'"]');
+  return {name:get("name").value,category:get("category").value,
+   start_age:get("start_age").value,frequency:get("frequency").value,
+   current:get("current").checked,end_age:get("end_age").value};
+ });
+ return d;
+}
+function clearStatus(){
+ payload=null;download.disabled=true;output.textContent="";status.textContent="Pendiente de preparar borrador.";
+}
+function invalidate(){clearStatus();}
+byId("species_id").addEventListener("change",()=>{renderCultural();invalidate();});
+byId("add-activity").addEventListener("click",()=>makeActivity());
+form.addEventListener("input",invalidate);
+form.addEventListener("change",invalidate);
+function showIssues(issues){
+ const box=byId("issues");box.replaceChildren();
+ if(!issues.length)return;
+ addText(box,"strong","Revisa estos campos:");
+ const list=document.createElement("ul");
+ issues.forEach(issue=>addText(list,"li",issue));
+ box.appendChild(list);
+}
+form.addEventListener("submit",event=>{
+ event.preventDefault();
+ const draft=collect(),issues=validateValues(draft,cfg);
+ showIssues(issues);
+ if(issues.length){
+  clearStatus();
+  status.textContent="Borrador incompleto. No se ha validado ni creado ningún personaje.";
+  byId("issues").scrollIntoView({behavior:"smooth",block:"start"});
+  return;
+ }
+ try{
+  payload=buildDraft(draft,cfg);
+  output.textContent=JSON.stringify(payload,null,2);
+  download.disabled=false;
+  status.textContent="Borrador preparado. La revisión objetiva F10 y la IA todavía NO se han ejecutado.";
+ }catch(e){clearStatus();showIssues([e.message]);}
+});
+download.addEventListener("click",()=>{
+ if(!payload)return;
+ const file=new Blob([JSON.stringify(payload,null,2)+"\n"],{type:"application/json"});
+ const url=URL.createObjectURL(file);
+ const a=document.createElement("a");a.href=url;a.download="cadete_borrador_f10.json";document.body.appendChild(a);a.click();a.remove();
+ URL.revokeObjectURL(url);
+});
+renderCultural();makeActivity();
+
+</script>
+</body></html>

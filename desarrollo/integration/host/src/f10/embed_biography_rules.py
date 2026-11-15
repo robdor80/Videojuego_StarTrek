@@ -15,7 +15,7 @@ def unique_object(pairs):
 
 
 def maturity_rules(policy, campaign, species):
-    if (policy["contract_id"], policy["schema_version"]) != ("f10_species_playable_maturity_policy", "0.1.1"):
+    if (policy["contract_id"], policy["schema_version"]) != ("f10_species_playable_maturity_policy", "0.1.2"):
         raise ValueError("Unsupported playable maturity contract")
     scope = policy["scope"]
     if (scope["scenario_id"] != campaign["scenario_id"] or scope["era_id"] != campaign["era_id"]
@@ -68,8 +68,8 @@ def maturity_rules(policy, campaign, species):
             raise ValueError(f"Invalid numeric maturity floor: {species_id}")
         rules[species_id] = {"minimum": minimum, "delta_dlc": dlc}
 
-    if rules.keys() != species.keys() or (len(rules), special_count, delta_count) != (25, 3, 5):
-        raise ValueError("Playable maturity policy must cover the approved 25 species, including 3 special rules and 5 Delta profiles")
+    if rules.keys() != species.keys() or (len(rules), special_count, delta_count) != (26, 3, 5):
+        raise ValueError("Playable maturity policy must cover the approved 26 species, including 3 special rules and 5 Delta profiles")
     return rules
 
 

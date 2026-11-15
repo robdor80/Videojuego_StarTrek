@@ -22,6 +22,7 @@ EXPECTED_MINIMUMS = {
     "ferengi": 18,
     "hirogen": 20,
     "human": 18,
+    "human_vulcan_hybrid": 22,
     "kazon": 18,
     "klingon": 18,
     "ocampan": 2,
@@ -35,7 +36,7 @@ EXPECTED_MINIMUMS = {
 }
 EXPECTED_SPECIALS = set(["changeling","jem_hadar","vorta"])
 EXPECTED_DLC = set(["hirogen","kazon","ocampan","talaxian","vidiian"])
-EXPECTED_SPECIES_COUNT = 25
+EXPECTED_SPECIES_COUNT = 26
 
 
 class F10SpeciesMaturityPolicyTests(unittest.TestCase):
@@ -68,6 +69,21 @@ class F10SpeciesMaturityPolicyTests(unittest.TestCase):
             {s["species_id"] for s in self.species if s["age_rule_type"] == "SPECIAL_REVIEW_REQUIRED"},
             EXPECTED_SPECIALS,
         )
+
+    def test_hybrid_author_approved_age_22_and_unique_identity(self):
+        hybrid = self.by_id["human_vulcan_hybrid"]
+        self.assertEqual(hybrid["minimum_playable_age_earth_years"], 22)
+        self.assertEqual(hybrid["content_scope"], "MAIN_GAME")
+        self.assertEqual(hybrid["age_rule_type"], "NUMERIC_PLAYABLE_FLOOR")
+        self.assertFalse(hybrid["automatic_player_eligibility"])
+        self.assertFalse(hybrid["maturity_evidence_required"])
+        self.assertIsNone(hybrid["maximum_playable_age_earth_years"])
+        self.assertEqual(self.by_id["human"]["minimum_playable_age_earth_years"], 18)
+        self.assertEqual(self.by_id["vulcan"]["minimum_playable_age_earth_years"], 25)
+        profile = json.loads((ROOT / hybrid["profile_ref"]).read_text(encoding="utf-8"))
+        self.assertEqual(profile["species_id"], "human_vulcan_hybrid")
+        self.assertTrue(profile["approval"]["playable_from_initial_version"])
+        self.assertEqual(profile["approval"]["minimum_playable_age_earth_years"], 22)
 
     def test_specials_have_no_auto_eligibility(self):
         for species_id in EXPECTED_SPECIALS:
@@ -120,7 +136,7 @@ class F10SpeciesMaturityPolicyTests(unittest.TestCase):
 
     def test_status_is_not_a_runtime_authority(self):
         self.assertEqual(self.policy["status"], "AUTHOR_APPROVED_PLAYER_DECLARED_AGE_GATE")
-        self.assertEqual(self.policy["schema_version"], "0.1.1")
+        self.assertEqual(self.policy["schema_version"], "0.1.2")
         self.assertTrue(self.policy["integration"]["semantic_ai_review_still_mandatory"])
         self.assertTrue(self.policy["integration"]["no_auto_adoption_by_core_unreal_or_h03_h04"])
         self.assertNotIn("validated_creation_ref", self.policy)
