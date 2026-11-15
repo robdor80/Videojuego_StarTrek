@@ -79,6 +79,8 @@ ReviewEvidence OpenAiBiographyEvaluator::review(const ReviewRequest& request) {
             Request outgoing;
             outgoing.route = route_;
             outgoing.instructions = rules().at("semantic").at("instructions_es").as<std::string>();
+            if (request.binding.ruleset.ends_with(":initial-player/0.1.0"))
+                outgoing.instructions += "\n" + rules().at("initial_player").at("semantic_instructions_es").as<std::string>();
             outgoing.input = input.to_string();
             outgoing.json_schema = schema().to_string();
             outgoing.require_model_identity = true;

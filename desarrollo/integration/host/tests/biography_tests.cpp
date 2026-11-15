@@ -416,7 +416,7 @@ void stale() {
     BiographyValidator product;
     check(!product.eligible(*valid.receipt, raw, context()), "test receipt cannot enter product");
     check(f.evaluator.request_binding.ruleset.starts_with(
-              "f10-biography/5:f10_species_playable_maturity_policy/0.1.2:"), "bound maturity policy version");
+              "f10-biography/6:f10_species_playable_maturity_policy/0.1.2:"), "bound maturity policy version");
     auto previous_ruleset = f.evaluator.request_binding.ruleset;
     previous_ruleset.back() = previous_ruleset.back() == '0' ? '1' : '0';
     BiographyReceiptTestAccess::change_ruleset(*valid.receipt, std::move(previous_ruleset));
@@ -655,6 +655,10 @@ void personal_background() {
     };
     check_personal(data); // Human, 20, karate from age eight.
     data["prior_activities_and_hobbies"] = Json::parse(R"([
+        {"name":"Karate","started_at_or_age":8,"ended_at_or_current":13},
+        {"name":"Music","started_at_or_age":12,"ended_at_or_current":"current"}])");
+    check_personal(data); // Overlap alone is not a contradiction (author decision IA-03A).
+    data["prior_activities_and_hobbies"] = Json::parse(R"([
         {"name":"Astronomy","category":"academic_interest","started_at_or_age":16,"ended_at_or_current":"current"},
         {"name":"Karate","category":"martial_art","started_at_or_age":8,"ended_at_or_current":14}
     ])");
@@ -685,7 +689,6 @@ void background_boundaries() {
              R"([{"name":"Karate","started_at_or_age":8}])",
              R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":"long ago"}])",
              R"([{"name":"Karate","started_at_or_age":"2370-01-01","ended_at_or_current":"current"}])",
-             R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":13},{"name":"Music","started_at_or_age":12,"ended_at_or_current":"current"}])",
              R"([{"name":"Karate","started_at_or_age":8,"ended_at_or_current":"current"},"Unverified experience"])",
              R"([{"name":"Training","started_at_or_age":8,"ended_at_or_current":"current","training_context":"Starfleet"}])",
              R"([{"name":"Training","started_at_or_age":8,"ended_at_or_current":"current","evidence_ref":"f10_h06_p06a5_initial_background_policy"}])",

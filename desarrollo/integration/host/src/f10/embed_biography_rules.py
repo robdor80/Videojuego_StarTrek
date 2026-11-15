@@ -129,6 +129,9 @@ def main():
     semantic = read(creation / "f10_openai_semantic_policy_v0.1.json")
     if (semantic["contract_id"], semantic["schema_version"], semantic["evaluator_version"]) != ("f10_openai_semantic_review", "0.1.0", "ia02.1"):
         raise ValueError("Unsupported F10 OpenAI policy")
+    initial_player = read(creation / "f10_initial_player_rules_v0.1.json")
+    if (initial_player["contract_id"], initial_player["schema_version"]) != ("f10_initial_player_rules", "0.1.0"):
+        raise ValueError("Unsupported initial player rules")
     activity = read(creation / "prior_activity_model.json")
     candidate = read(systems / "careers/academy_path/f10_host_candidate_factory_contract_v0.1.json")
     background = read(creation / "f10_initial_background_policy_v0.1.json")
@@ -161,6 +164,7 @@ def main():
 
     data = {
         "semantic": semantic,
+        "initial_player": initial_player,
         # Static public species restrictions only: no medical/lifecycle state, private facts,
         # unrelated profiles or world records are sent by the consumer.
         "semantic_species": {
