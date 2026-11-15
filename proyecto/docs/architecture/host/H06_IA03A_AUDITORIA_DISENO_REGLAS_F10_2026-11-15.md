@@ -43,6 +43,23 @@ La revisión semántica solo evalúa datos realmente aportados. Aportar más nar
 
 Esta decisión **precisa y corrige** las frases anteriores que podrían interpretarse como «un título ficticio nunca se incorpora a la PERSON» o «toda certificación requiere un certificado histórico preexistente». La protección válida es **no conceder capacidades incongruentes sin validación**, no prohibir los antecedentes narrativos certificados. **Estado: AUTORALMENTE DECIDIDO / DOCUMENTADO, todavía NO IMPLEMENTADO ni PROBADO en IA-03A/IA-03B.**
 
+## Decisión autoral — habilidades iniciales y reacciones de NPC por formación validada
+
+**Aprobada durante la revisión IA-03A (15/11/2026).** La biografía inicial validada tiene **efectos reales de juego**. Un personaje con **doctorado en Física y Astronomía** coherente y aceptado por F10 debe conservar ese hecho en CoreRPG como antecedente y **tener capacidades iniciales acordes con su especialidad**. Lo mismo aplica, proporcionalmente, a otras titulaciones, entrenamientos y habilidades, como el 4.º dan de karate.
+
+**Consecuencias de diseño obligatorias para integraciones posteriores:**
+
+1. **Persistencia autoritativa:** CoreRPG registra el hecho biográfico inicial y lo restaura con el mismo personaje; no queda solo como texto para un prompt de IA.
+2. **Competencia inicial derivada:** reutilizar la futura/actual autoridad de habilidades del RPG para traducir formación/experiencia validada a conocimientos prácticos y posibilidades jugables. No inventar puntos ni niveles numéricos desde la IA. Si el motor de competencias aún no existe en producto, declarar la dependencia explícita, no fingir implementación.
+3. **NPC conscientes de lo que saben:** cuando un NPC conozca legítimamente el doctorado o experiencia del jugador, sus diálogos, consultas, confianza profesional y posibles encargos deben reflejarlo. Un NPC **sin** ese conocimiento no recibe información omnisciente por compartir mundo con la PERSON.
+4. **Interacciones contextuales y misiones:** la formación relevante puede desbloquear opciones de análisis, respuestas técnicas, hipótesis y planteamientos de soluciones **cuando el sistema de misiones/sensores/reglas las soporte**. No supone el éxito automático de toda acción.
+5. **Separación del ámbito institucional:** ser doctor civil no da automáticamente rango F11, plaza de Academia, autorizaciones clasificadas, pertenencia a la Flota ni destino naval.
+6. **Frontera de autoridad:** OpenAI/F10 validan coherencia; solo el dominio autorizado fija hechos y capacidades. NPC/IA consultan proyecciones de conocimiento y no modifican hechos autoritativos sin operación aprobada.
+
+**Ejemplo de aceptación futura:** ante una anomalía espacial, un personaje con doctorado en Física y Astronomía podrá proponer hipótesis especializadas; un NPC científico informado de su título podrá dirigirse a él como experto. Un personaje sin esa formación no obtiene por defecto la misma especialización. Este contraste se comprobará en fases de capacidades, NPC y misiones, **no** se simula como prueba PASS de IA-03A.
+
+**Estado:** criterio **DECIDIDO / DOCUMENTADO**. IA-03A aún no ha implementado ni probado esta integración en CoreRPG, habilidades o NPC. IA-03B conservará los antecedentes; la aplicación en NPC/IA y misiones corresponde a sus fases propietarias sin duplicar reglas en HOST.
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
