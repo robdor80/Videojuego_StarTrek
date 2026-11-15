@@ -64,7 +64,7 @@ def main(source):
         generate("Playable content scope conflicts with profile")
         policy = copy.deepcopy(approved)
         policy["species"].pop()
-        generate("must cover the approved 25 species")
+        generate("must cover the approved 26 species")
         policy["species"].append(policy["species"][0])
         generate("Unknown or duplicate playable species")
 
