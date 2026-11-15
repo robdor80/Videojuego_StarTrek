@@ -27,7 +27,7 @@ La ruta utilizada es el validador C++ existente, su registro de evidencias y el 
 
 - Selección inicial: `human`, `vulcan`, `human_vulcan_hybrid`. Mínimos 18/25/22, leídos de la política de madurez empotrada existente. Otras especies conservan sus políticas históricas y no pasan la selección inicial, incluidos los casos especiales y DLC.
 - Ciudadanía: F10 asigna `Federación Unida de Planetas` a las tres especies, independientemente del lugar. No hay petición de documentos ni validación IA de ciudadanía. Las cadenas canónicas federadas o neutrales se normalizan; una estructura de autoridad o una afirmación legal distinta no se descarta silenciosamente para conseguir aceptación.
-- Esenciales: nombre, especie, edad/fecha, condición adulta, origen, apariencia y objetivo conservan las comprobaciones existentes. Los campos canónicos complementarios omitidos `culture_context`, `prior_education`, `prior_experience`, `prior_activities_and_hobbies` reciben `No declarado`. Los demás opcionales permanecen ausentes. No se inventa educación general, familia, empleo ni afición. El borrador del llamante no se modifica.
+- Esenciales: nombre, especie, edad/fecha, condición adulta, origen, apariencia y objetivo conservan las comprobaciones existentes. Los campos canónicos complementarios omitidos o vacíos `culture_context`, `prior_education`, `prior_experience`, `prior_activities_and_hobbies` reciben `No declarado`. Los demás opcionales permanecen ausentes; cadenas vacías, colecciones vacías o null complementarios se representan como ausencia, sin convertirlos en campos obligatorios. No se inventa educación general, familia, empleo ni afición. El borrador del llamante no se modifica.
 - Origen: libre, incluso estación/nave/colonia inventada; no se consulta catálogo ni se publica un lugar en CoreRPG. La IA sigue revisando coherencia del relato con 2383.
 - Formación/experiencia/certificaciones: admite cadenas narrativas y colecciones/objetos personales reconocidos, sin diplomas ni expedientes previos. Cada colección se evalúa completa. Las fechas y edades estructuradas contradictorias se rechazan antes de IA. El doctorado civil de un personaje de 30 años puede llegar a revisión semántica y conservarse íntegro en el borrador canónico del recibo. No se convierte en texto decorativo ni en puntos numéricos.
 - Aficiones: se comprueban sus periodos individuales; el solapamiento o la cantidad por sí solos no prueban incompatibilidad. Karate desde 8, piano desde 10, natación desde 12 y astronomía desde 15 con edad 25 pasan la puerta objetiva. La plausibilidad de la carga y logros queda en la revisión semántica obligatoria.
@@ -62,9 +62,7 @@ La clasificación léxica es una defensa objetiva acotada para afirmaciones expl
 
 ## Pruebas y resultados
 
-Los resultados de compilación nativa y CI se completarán tras la ejecución en curso. No se consideran PASS por estar descritos.
-
-Resultados locales ejecutados hasta esta revisión:
+Entorno local: Linux, GCC 14.2.0, CMake 4.4.5 y Python 3.12.14. Resultados locales ejecutados sobre el código entregado:
 
 | Suite | Resultado |
 |---|---|
@@ -72,10 +70,25 @@ Resultados locales ejecutados hasta esta revisión:
 | Python HOST H01 | 11/11 PASS |
 | Python F04/F05 referencia | 22/22 + 22/22 PASS |
 | Python F11 | 355/355 PASS |
-| Ejecutable IA-03A, primera ejecución | PASS; fuentes productivas y transporte simulado |
+| Nativas Release HOST/F04/F05 | 266/266 PASS: 111 HOST (incluidos IA-01, IA-02, H02/H03/H04), 21 F04 y 134 F05 |
+| Nativas F11 aisladas y adaptador HOST | 17/17 PASS (`run_native.py`, Core fijado, GNU) |
+| F10/IA-02/IA-03A Debug ASan + UBSan | 25/25 PASS; `detect_leaks=1:halt_on_error=1`, UBSan detiene ante error |
+| Producto Linux Release, `TREK_HOST_TESTS=OFF` | Compilación, carga dinámica, pin, exportaciones, dependencias e inspección ABI 1 PASS |
 | OpenAI LIVE | NOT_RUN; no se acredita comportamiento real del modelo |
 
-El primer pase histórico detectó oráculos de versión `/5` que se actualizaron a `/6`; la coexistencia antes bloqueada también tiene nuevo oráculo. No se presenta el transporte simulado como LIVE.
+El primer pase histórico detectó oráculos de versión `/5` que se actualizaron a `/6`; la coexistencia antes bloqueada también tiene nuevo oráculo. Una repetición de F05 P05 rechazó una carpeta de historial ya usada (`fresh history output required`); su prueba dependiente no se ejecutó en ese intento. Se conservó el intento y se asignó una salida nueva **solo en el CTest generado del laboratorio**, sin alterar pruebas/producto, para el pase final 266/266. No se presenta el transporte simulado como LIVE.
+
+PR Draft: [#167](https://github.com/robdor80/Videojuego_StarTrek/pull/167), rama `codex/host-h06-ia03a-f10`. La CI conserva su matriz Windows MSVC/Linux, ASan/UBSan y producto tests-OFF de ambas plataformas. Sus resultados se consultan en la PR para el HEAD vigente; este informe no atribuye PASS a trabajos aún en curso.
+
+Reproducción y evidencia local (todo bajo el laboratorio de esta tarea):
+
+- Configuración HOST: `cmake -S desarrollo/integration/host -B <build> -DTREK_HOST_TESTS=ON -DCORERPG_SOURCE_DIR=<core-limpio-fijado> -DCMAKE_BUILD_TYPE=Release`. Construir los targets de `.github/workflows/host-h02-native.yml`, incluido `host_initial_biography_tests`, y ejecutar su misma selección CTest. Resultados: `native-final.log`, `native-final.xml`; compilación final `native-last-build.log`.
+- Sanitizadores: configuración Debug con `-fsanitize=address,undefined -fno-omit-frame-pointer` en C/C++; construir los tres ejecutables de biografía y ejecutar `ctest --test-dir <build> -R '^host.biography\.' --output-on-failure`. Resultados: `sanitizers.log`, `sanitizers.xml`, `sanitizers-last-build.log`. La CI aplica además sanitizadores a toda la suite HOST.
+- F11: `python desarrollo/integration/f11_host/run_native.py --core-source <core> --output <salida-nueva> --parallel 2`; evidencia `f11/run.json`, `f11/tests.xml` y logs. Usar salida inexistente como exige el driver.
+- Python: `python -m unittest discover -s desarrollo/tools/validation -p 'test_f10*.py'`, el patrón `test_f11*.py` y los scripts `test_host_h01_contracts.py`, `test_f04_reference.py`, `test_f05_reference.py`. Registros `python-f10-final.log`, `python-f11.log`, `python-host.log`, `python-f04.log`, `python-f05.log`.
+- Producto: configuración independiente con `TREK_HOST_TESTS=OFF`, target `TrekHost`; ejecutar `tests/inspect_product.py <build>` y `tests/inspect_abi.py <build>`. Registros `product-last-build.log`, `product-inspection.log`, `product-abi.log`.
+
+No se ejecutan campañas exhaustivas F04 de cientos de días ni pruebas LIVE; el alcance F04 es la selección de regresión de la CI HOST, no toda su colección de ensayos históricos.
 
 ### Matriz A01–A18 aplicada
 

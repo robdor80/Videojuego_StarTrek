@@ -86,6 +86,14 @@ void ordinary() {
         CHECK(!f.validator->eligible(*r.receipt, original, f.context));
         CHECK(f.finish().objective.status() == ObjectiveStatus::REVIEW_REQUIRED);
     }
+    Fixture empty;
+    empty.data["prior_experience"] = Json::array();
+    empty.data["prior_education"] = "  ";
+    empty.data["prior_activities_and_hobbies"] = Json::array();
+    empty.data["family_context"] = "";
+    empty.data["certifications"] = Json::null();
+    CHECK(empty.finish().receipt);
+    Fixture essential; essential.data.erase("display_name"); essential.blocked(ObjectiveStatus::CHANGES_REQUIRED);
     for (const auto& entry : {std::pair{"human",17}, {"vulcan",24}, {"human_vulcan_hybrid",21}}) {
         Fixture f; f.data["species_id"] = entry.first; f.data["age_or_birth_date"] = entry.second;
         f.blocked(ObjectiveStatus::CHANGES_REQUIRED);
@@ -130,6 +138,10 @@ void backgrounds() {
         R"([{"name":"Imposible","started_at_or_age":19,"ended_at_or_current":"2370-01-01"}])",
         R"([{"name":"Imposible","started_at_or_age":"2380-01-01","ended_at_or_current":10}])"}) {
         Fixture bad; bad.data["prior_experience"] = Json::parse(raw); bad.blocked(ObjectiveStatus::CHANGES_REQUIRED);
+    }
+    for (auto civil : {"Ya soy ingeniero civil", "I served as a civilian doctor", "Trabajo como deportista"}) {
+        Fixture civilian; civilian.data["prior_experience"] = civil;
+        CHECK(civilian.finish().receipt);
     }
     Fixture references;
     references.data["origin"] = "Nací en una nave de la Flota Estelar";

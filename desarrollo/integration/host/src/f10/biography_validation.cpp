@@ -550,8 +550,14 @@ void normalize_initial(Json& draft, Checks& checks) {
             checks.reject(IssueCode::MALFORMED_FIELD, "citizenship_context");
     }
     draft["citizenship_context"] = initial_rules().at("citizenship");
+    const auto absent = [](const Json& value) {
+        return value.is_null() || (value.is_string() && !nonblank(text(value))) ||
+               ((value.is_array() || value.is_object()) && value.empty());
+    };
     for (const auto& field : initial_rules().at("neutral_fields").object_range())
-        if (!draft.contains(field.key())) draft[field.key()] = field.value();
+        if (!draft.contains(field.key()) || absent(draft.at(field.key()))) draft[field.key()] = field.value();
+    for (const auto& field : rules().at("optional").array_range())
+        if (draft.contains(text(field)) && absent(draft.at(text(field)))) draft.erase(text(field));
 }
 
 bool initial_support(BiographyIssue issue, const Json& draft, const Checks& checks) {
