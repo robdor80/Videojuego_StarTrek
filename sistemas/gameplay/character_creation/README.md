@@ -26,6 +26,22 @@ ERA / FECHA
 - La ficha inicial debe superar validación objetiva y revisión semántica de coherencia.
 - Tras comenzar, la evolución ocurre mediante vida, práctica, estudio, trabajo y experiencia.
 
+## Selección inicial de especie y edad — decisión autoral 15-11-2026
+
+La primera versión del creador ofrecerá **tres identidades biológicas independientes**:
+
+| Opción | `species_id` | Edad mínima del jugador (años terrestres) |
+| --- | --- | ---: |
+| Humano | `human` | 18 |
+| Vulcano puro | `vulcan` | 25 |
+| Híbrido humano-vulcano | `human_vulcan_hybrid` | **22** |
+
+Estas edades vienen de `f10_species_maturity_policy_v0.1.json` (política versionada). No hay edad máxima automática; cumplir el mínimo **solo supera la comprobación de edad**, no confiere matrícula ni condición de oficial. La cultura y lugar de crianza se eligen aparte de la ascendencia y **no se deducen de la especie**.
+
+Los contratos narrativos preacadémicos están en `background_contracts/`: HUM-01, VUL-01 y HVA-01 (este último distingue crianza terrestre, vulcana o mixta). Son contexto para la IA y opciones del formulario, nunca un generador de permisos, habilidades o hechos autoritativos.
+
+**Estado:** diseño y datos de referencia aprobados; no implica que UE5, el HOST o CoreRPG hayan completado el flujo jugable.
+
 ## Archivos
 
 - `player_profile_contract.json` — separa nickname/perfil del personaje diegético.
