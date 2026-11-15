@@ -6,6 +6,10 @@
 **Fase:** IA-03A, primera entrega del trabajo IA-03.  
 **Restricción:** documentación aditiva; no se modifican contratos bloqueados, código, CoreRPG ni sus versiones, F11, H03/H04 o Unreal.
 
+## Nota de ratificación posterior — ciudadanía (decisión definitiva del autor)
+
+El usuario ha resuelto expresamente la primera duda: **personaje humano + lugar de nacimiento Tierra => ciudadanía de la Federación**, automáticamente como dato ficticio inicial. F10 no pedirá certificados ni prueba de nacimiento y no utilizará IA para cuestionarla. Esta decisión es de **producto Star Trek RPG**, no una afirmación universal sobre la legislación real. Queda reflejada en D-02, en el bloqueo de ciudadanía y en los oráculos A01/A06. **Estado: DECIDIDO / DOCUMENTADO; comportamiento productivo aún NO IMPLEMENTADO en IA-03A.**
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
@@ -59,7 +63,7 @@ No crear un segundo catálogo de edades, ni un registro de pruebas de madurez, n
 | Código pendiente | Problema real | Solución mínima PROPUESTA para IA-03A | Lo que NO autoriza |
 |---|---|---|---|
 | `ORIGIN_EVIDENCE_REQUIRED` | Origen declarativo, sin verificación interna de lugar/era | Evaluador F10 de **antecedente geográfico narrativo**: reconocer referencia conocida del universo/campaña o declarar explícitamente indeterminado; para ubicaciones nuevas, resolver mediante política de autor/catálogo, no inventar localizaciones oficiales | Ciudadanía, secretos, lealtad o pertenencia |
-| `CITIZENSHIP_EVIDENCE_REQUIRED` | No hay fuente legal que acredite automáticamente una ciudadanía | Distinguir `unknown`/por determinar (sin afirmación legal ni derecho) de una ciudadanía concreta. La primera puede ser un **estado no acreditado explícito** si el autor aprueba esa política; la segunda necesita norma/estado legal aplicable y procedencia | Membresía Starfleet, acceso o permisos |
+| `CITIZENSHIP_EVIDENCE_REQUIRED` | El producto todavía no aplica automáticamente la decisión autoral humano+nacimiento Tierra | **Regla APROBADA:** humano nacido en Tierra => ciudadanía federada, atestada internamente por F10 sin pedir certificados. En otros supuestos, no imponer esta regla por analogía sin decisión aplicable | Membresía Starfleet, rango, admisión o permisos |
 | `EDUCATION_EVIDENCE_REQUIRED` | Falta verificar trayectoria de educación antes de PERSON | Atestar educación general/civil narrativa **sin título ni habilitación**, si periodo y contexto son compatibles; títulos formales requieren trayecto/centro/criterio verificable dentro de la ficción | Doctorado, licencia, rango o puntos |
 | `EXPERIENCE_EVIDENCE_REQUIRED` | Falta distinguir trabajo/experiencia civil de servicio institucional | Permitir experiencia civil razonable o **ninguna experiencia**, conservando su carácter narrativo; para mandos, accesos o años de servicio Starfleet exigir hechos institucionales existentes, nunca fabricarlos | Experiencia militar, competencia profesional acreditada, F11 |
 | `PROFILE_EVIDENCE_REQUIRED` | Un `profile` sintácticamente válido no prueba que pertenezca a la sesión | Fuente privada HOST/H03: perfil local real del propietario de la campaña, identidad/versión/generación obtenidas de sesión confiable. **No leer `player_profile_id`, `nickname` ni identificadores autoritativos del borrador** | Identidad real de una persona, selección arbitraria de PERSON |
@@ -89,7 +93,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-01 — Fondo personal ordinario:** permitir que una biografía ficticia plausible sea un antecedente narrativo inicial sin documentos reales; **no** confiere competencias, títulos o privilegios. Deriva del principio y clases de la política A5, pero su extensión productiva para origen/estudios/experiencia requiere implementación y revisión.
 
-**D-02 — Ciudadanía indeterminada:** si el jugador elige «Por determinar», aceptar que **no hay ciudadanía acreditada** para la biografía de candidato; la **admisión** podrá exigir después requisitos legales propios. Si declara ciudadanía concreta, F10 deberá validar su fundamento por regla legal aprobada o dejarla pendiente. No equiparar nacimiento en Tierra con un permiso institucional.
+**D-02 — Ciudadanía de nacimiento en Tierra: APROBADA POR EL AUTOR (15/11/2026).** En la continuidad jugable de Star Trek RPG, **si el personaje es humano y declara que nació en la Tierra, F10 le asignará automáticamente ciudadanía de la Federación Unida de Planetas**. Se considera un dato del trasfondo ficticio autorizado, sin partidas de nacimiento, certificados, expedientes externos, revisión de IA ni pasos burocráticos. La declaración de nacimiento en Tierra es suficiente **para esta combinación explícita**, no se infiere de ser humano a secas. La ciudadanía federada así fijada no equivale a servicio Starfleet, admisión en Academia, rango ni acceso privilegiado. Para personajes no nacidos en Tierra se estudiarán después las reglas aplicables sin retrasar el caso humano-terrestre. No reinterpretar esta regla aprobada como una mera 'ciudadanía por determinar' ni añadir nuevas verificaciones en IA-03A.
 
 **D-03 — Educación y experiencia:** aceptar como narrativa no titulada «educación general», «afición a astronomía», «prácticas civiles supervisadas» y «sin experiencia laboral» si los datos temporales son compatibles. Los diplomas/credenciales formales o experiencia Starfleet se tratan aparte; no se acreditan automáticamente por autorrelato.
 
@@ -101,7 +105,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-07 — Composición confiable:** el perfil H03 y las fuentes F10 se obtienen desde el HOST y un catálogo/política autoral, no desde el formulario. No crear una segunda cuenta ni un servidor.
 
-Estas decisiones se recomiendan para aprobación de producto; no se convierten en nuevas reglas LOCKED por esta PR documental.
+**Ratificación parcial:** D-02 (humano nacido en Tierra => ciudadanía federada) está **APROBADA por el autor**. Las demás propuestas D-01 y D-03 a D-07 continúan pendientes de resolución individual. Este documento registra la decisión, pero no modifica aún el código, contratos bloqueados ni autoriza una certificación.
 
 ## 7. Riesgos adicionales detectados en la auditoría
 
@@ -129,12 +133,12 @@ Estas decisiones se recomiendan para aprobación de producto; no se convierten e
 
 | ID | Borrador / contexto | Resultado exigido |
 |---|---|---|
-| A01 | Humano 20, Tierra, ciudadanía `unknown`, educación general, ninguna experiencia, karate desde 8 | `OBJECTIVE_VALID` **solo después de fuentes F10 y perfil auténticos**; pasa a revisión IA |
+| A01 | Humano 20, nacido en Tierra, ciudadanía Federación **derivada por la regla autoral D-02**, educación general, ninguna experiencia, karate desde 8 | `OBJECTIVE_VALID` **solo después de resolver las demás fuentes F10 y perfil auténticos**; pasa a revisión IA |
 | A02 | A01 sin conexión OpenAI | `REVIEW_UNAVAILABLE`, ninguna PERSON |
 | A03 | Humano 17, restante ordinario | `CHANGES_REQUIRED`, cero HTTP |
 | A04 | Vulcano 24 | `CHANGES_REQUIRED` por mínimo, cero HTTP |
 | A05 | Humano 20; karate empezó a los 21 | `CHANGES_REQUIRED`, cero HTTP |
-| A06 | A01 pero ciudadanía federada autodeclarada sin norma/fuente | `REVIEW_REQUIRED`; ningún derecho ni permiso |
+| A06 | Humano nacido en la Tierra con ciudadanía federada declarada | Comprobación de ciudadanía **resuelta automáticamente por F10** al aplicar la decisión autoral D-02, sin IA ni certificado; no concede rango, plaza o permisos |
 | A07 | A01 con diploma oficial/certificación no respaldados | `REVIEW_REQUIRED`; ningún título concedido |
 | A08 | A01 con servicio Starfleet/capitanía antigua declarados | No acreditar servicio/rango; contradicción objetiva o `REVIEW_REQUIRED` hasta verificación real, nunca aprobación ficticia |
 | A09 | A01, `profile` o generación falsificada desde cliente | `REVIEW_REQUIRED`/rechazo, ningún recibo |
