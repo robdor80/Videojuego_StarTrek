@@ -148,7 +148,7 @@ void cancellation() {
     CHECK(last.result.get().error == Error::CANCELLED);
     CHECK(s.submit(request()).result.get().error == Error::CANCELLED);
 }
-void concurrency() {
+void concurrent_requests_test() {
     auto t = std::make_shared<Fake>();
     Config c; c.max_calls = 4; c.max_pending = 16;
     Service s(c, t, std::make_shared<Keys>());
@@ -210,7 +210,7 @@ int main(int argc, char** argv) {
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION && loaded.max_calls == 7);
         std::filesystem::remove(scratch);
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION);
-        configuration(); responses(); errors_and_limits(); cancellation(); concurrency(); credentials(argv[0]);
+        configuration(); responses(); errors_and_limits(); cancellation(); concurrent_requests_test(); credentials(argv[0]);
         auto keys = std::make_shared<Keys>();
         CHECK(import_environment_key(*keys) == Error::MISSING_KEY);
 #ifdef _WIN32
