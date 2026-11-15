@@ -53,10 +53,20 @@ class F10IndividualMaturityPolicyTests(unittest.TestCase):
 
     def test_25_registered_species_still_separate(self):
         rows = self.species["species"]
-        self.assertEqual(len(rows), 25)
-        self.assertEqual(sum(s["minimum_playable_age_earth_years"] is not None for s in rows), 22)
-        self.assertEqual(sum(s["minimum_playable_age_earth_years"] is None for s in rows), 3)
-        self.assertEqual(sum(s["content_scope"] == "DLC_DELTA" for s in rows), 5)
+        # Conservar el oráculo histórico de 25 especies sin contar el nuevo
+        # perfil híbrido, aprobado posteriormente para F10 el 15-11-2026.
+        historical = [s for s in rows if s["species_id"] != "human_vulcan_hybrid"]
+        self.assertEqual(len(historical), 25)
+        self.assertEqual(len(rows), 26)
+        self.assertEqual(sum(s["minimum_playable_age_earth_years"] is not None
+                             for s in historical), 22)
+        self.assertEqual(sum(s["minimum_playable_age_earth_years"] is None
+                             for s in historical), 3)
+        self.assertEqual(sum(s["content_scope"] == "DLC_DELTA"
+                             for s in historical), 5)
+        hybrid = next(s for s in rows if s["species_id"] == "human_vulcan_hybrid")
+        self.assertEqual(hybrid["minimum_playable_age_earth_years"], 22)
+        self.assertEqual(hybrid["content_scope"], "MAIN_GAME")
         for row in rows:
             self.assertTrue((ROOT / row["profile_ref"]).is_file())
 
