@@ -2,8 +2,8 @@
 
 Entrega permanente, trabajo **2 de 3**, 15/11/2026. Responsable: Codex.
 Base: `42196e4e0858eb2fc4ada3be93eb124226eec9f6` (PR #164 fusionada).
-Rama: `codex/h06-ia02-f10-openai`. PR Draft: pendiente de publicación.
-HEAD de implementación: pendiente de commit. El HEAD de entrega se registra en la PR;
+Rama: `codex/h06-ia02-f10-openai`. [PR Draft #165](https://github.com/robdor80/Videojuego_StarTrek/pull/165), sin fusionar.
+HEAD exacto de implementación: `adcfb9fc11fc9ec113562e55d8f9b943880c04fc`. El HEAD de entrega se registra en la PR;
 los commits posteriores exclusivamente documentales se distinguen del código probado.
 
 ## Arquitectura y composición interna
@@ -35,6 +35,7 @@ las versiones históricas bloqueadas ni sus pruebas. La política de edad sigue 
 sin inventar día/mes. El generador incorpora la política nueva al digest de fuentes y a
 `ReviewBinding.policy`; conserva la versión objetiva `/5`, pues las reglas objetivas no cambian.
 Una revisión anterior tiene distinta política y huella y no sirve para esta implementación.
+Huella SHA-256 de fuentes embebidas verificada: `5845a0fbe0aeacdcb0277d8af57b9b54b7fb6667ea4dc8ed15a09696ca037360`.
 
 El prompt de confianza está separado del mensaje de datos. Los textos del jugador no se
 interpolan en instrucciones. Se envían el borrador canónico, escenario/era/año autorizados,
@@ -122,7 +123,53 @@ registro inexistente/cancelado; recibo obsoleto; selección explícita Sol y pri
 Las aserciones de compilación rechazan sustitución por `SemanticEvaluator` genérico y el
 constructor privilegiado histórico. No hay API para insertar registros completos.
 
-Resultados Linux/Windows/sanitizadores/Release tests OFF y CI: pendientes de ejecución.
+Matriz de comprobación del encargo (las respuestas semánticas son controladas):
+
+| Casos | Comprobación |
+|---|---|
+| 1, 4 | `coherent` y `findings`: humano 20, karate y astronomía; solo recibo privado |
+| 2, 3 | `objective`: inicio posterior a edad y menor de especie, cero HTTP |
+| 5 | `objective`: certificación sin fuente queda pendiente, cero HTTP |
+| 6, 7 | `findings`: contradicción temporal/institucional y sugerencia; borrador intacto |
+| 8, 9, 10 | `failures`: formato, extras, enum/campo, veredicto inconsistente, incompletitud y refusal |
+| 11, 12, 13 | `failures`/`stale`: clave ausente, 401/429/500/503, timeout y cancelación |
+| 14, 15 | `replacement`/`stale`: borrador, especie, campaña, perfil, generación y cierre |
+| 16, 17, 18 | `failures`/`provenance`: modelo/versión, bindings/observaciones falsos, registro ausente/cancelado |
+| 19 | Diff y checkout limpio del Core fijado; inspección de producto carga el pin real |
+| 20 | Payload sin clave ni IDs privados; diagnósticos fijos, sin logger nuevo ni impresión de biografías |
+
+Resultados locales en Linux, GCC 14.2 y CMake 4.4.5, HEAD de implementación indicado:
+
+- Regresión nativa HOST/F10/F04/F05: **265/265 PASS** (33,61 s).
+- F10 Python de referencia: **163/163 PASS**. H01 documental: **11/11 PASS**.
+- Batería F10/IA aislada: **25/25 PASS**, antes de ejecutar la regresión completa.
+- No se modifican pruebas históricas para obtener estos resultados. La primera ejecución nueva
+  detectó un timeout de fixture inferior al mínimo de IA-01 (30 frente a 100 ms); se corrigió
+  únicamente esa fixture nueva. No se cambiaron límites ni políticas de producto para ello.
+- Compilaciones/inspecciones Release con tests OFF: **PASS Linux y Windows x64 en CI**.
+
+CI del HEAD de implementación `adcfb9fc11fc9ec113562e55d8f9b943880c04fc`:
+[ejecución 43730271106, cinco trabajos correctos](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106).
+
+| Verificación real | Resultado |
+|---|---|
+| Linux nativo (GNU) HOST/F10/F04/F05 | 265/265 PASS |
+| Windows x64 nativo (MSVC) HOST/F10/F04/F05 | 265/265 PASS |
+| Linux Clang ASan/UBSan, detección de fugas activa | 110/110 PASS |
+| F11 aislado con producto real, Linux y Windows | 17/17 PASS por plataforma |
+| Release tests OFF Linux y Windows x64 | PASS: compilación, carga, exports, pin y ABI C 1 |
+
+[H01 documental en CI](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271105): PASS.
+También pasó la regresión documental F09 activada por el cambio HOST. Los logs completos de
+los cinco trabajos se inspeccionaron; el resultado F11 identifica GNU y MSVC respectivamente.
+
+Artefactos de evidencia de esa ejecución:
+[Windows nativo](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106/artifacts/14168153483),
+[Linux nativo](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106/artifacts/14168187886),
+[ASan/UBSan](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106/artifacts/14167849341),
+[producto Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106/artifacts/14168580011),
+[producto Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43730271106/artifacts/14167923618).
+Este cierre documental posterior no cambia código, políticas ni huellas respecto al HEAD probado.
 OpenAI real: **NOT_RUN**; el entorno Cloud declara ausencia de secretos. No se realiza una
 llamada pagable. Las simulaciones no demuestran una revisión real de Luna ni calidad semántica.
 
