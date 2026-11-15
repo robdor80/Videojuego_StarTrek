@@ -70,6 +70,16 @@ Esta decisión **precisa y corrige** las frases anteriores que podrían interpre
 
 **Alcance:** decisión de DISEÑO aprobada y documentada, **no implementación de diálogos ni prueba de funcionamiento**. IA-03A valida antecedentes; IA-03B los conserva en PERSON; las futuras fases de NPC/IA, diálogos y misiones implementarán esta interpretación sin duplicar la autoridad del HOST ni CoreRPG.
 
+## Decisión autoral aprobada — origen libre, incluidos lugares inventados
+
+**APROBADO por el autor el 15/11/2026** dentro de las seis cuestiones de F10. El jugador puede declarar libremente dónde nació y se crió su personaje, incluyendo **Tierra, Vulcano, colonias, estaciones espaciales, naves y lugares de origen inventados**. No es necesario que un lugar inventado aparezca previamente en un catálogo para admitirlo como dato biográfico personal.
+
+**Única condición de validación:** la historia debe resultar razonablemente coherente con el universo Star Trek y el contexto de campaña en 2383. F10 no exigirá un registro oficial del planeta, una partida de nacimiento, una fuente histórica preexistente o pruebas documentales. La IA podrá detectar contradicciones narrativas; F10 decidirá la aceptación de los hechos del personaje.
+
+**Alcance de autoridad:** aceptar que *el personaje dice haber nacido y crecido* en un lugar inventado **no publica por sí solo** un planeta nuevo como hecho global autoritativo ni modifica las entidades de CoreRPG de terceros. No concede automáticamente membresías, cargos o permisos. Para los tres tipos inicialmente jugables (humano, vulcano, híbrido humano-vulcano), la ciudadanía federada sigue siendo automática por decisión autoral previa.
+
+**Estado:** DECIDIDO / DOCUMENTADO; todavía no IMPLEMENTADO en la ruta productiva F10. Codex IA-03A no podrá bloquear lugares originales por falta de catálogo si el relato supera la coherencia establecida.
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
@@ -122,7 +132,7 @@ No crear un segundo catálogo de edades, ni un registro de pruebas de madurez, n
 
 | Código pendiente | Problema real | Solución mínima PROPUESTA para IA-03A | Lo que NO autoriza |
 |---|---|---|---|
-| `ORIGIN_EVIDENCE_REQUIRED` | Origen declarativo, sin verificación interna de lugar/era | Evaluador F10 de **antecedente geográfico narrativo**: reconocer referencia conocida del universo/campaña o declarar explícitamente indeterminado; para ubicaciones nuevas, resolver mediante política de autor/catálogo, no inventar localizaciones oficiales | Ciudadanía, secretos, lealtad o pertenencia |
+| `ORIGIN_EVIDENCE_REQUIRED` | Falta registrar en producto la política autoral de origen narrativo libre | Aceptar lugar de nacimiento y crianza **conocido o inventado** si la biografía es coherente con 2383; no exigir catálogo ni documentación. Registrar el origen como hecho personal, no como entidad planetaria global | Cargos, secretos, rangos o permisos |
 | `CITIZENSHIP_EVIDENCE_REQUIRED` | El producto todavía no aplica la regla autoral de ciudadanía por especie federada | **Regla APROBADA:** si la especie pertenece a la Federación => ciudadanía federada automáticamente, sea cual sea el lugar de nacimiento, mediante una regla F10 simple sin certificados ni IA. Fuera de especies federadas, ninguna ciudadanía se inventa | Membresía Starfleet, rango, admisión o permisos |
 | `EDUCATION_EVIDENCE_REQUIRED` | Falta verificar trayectoria de educación antes de PERSON | Atestar educación general/civil narrativa **sin título ni habilitación**, si periodo y contexto son compatibles; títulos formales requieren trayecto/centro/criterio verificable dentro de la ficción | Doctorado, licencia, rango o puntos |
 | `EXPERIENCE_EVIDENCE_REQUIRED` | Falta distinguir trabajo/experiencia civil de servicio institucional | Permitir experiencia civil razonable o **ninguna experiencia**, conservando su carácter narrativo; para mandos, accesos o años de servicio Starfleet exigir hechos institucionales existentes, nunca fabricarlos | Experiencia militar, competencia profesional acreditada, F11 |
@@ -157,7 +167,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **D-03 — Educación y experiencia:** aceptar como narrativa no titulada «educación general», «afición a astronomía», «prácticas civiles supervisadas» y «sin experiencia laboral» si los datos temporales son compatibles. Los diplomas/credenciales formales o experiencia Starfleet se tratan aparte; no se acreditan automáticamente por autorrelato.
 
-**D-04 — Origen:** un lugar conocido y compatible se puede admitir como antecedente ficticio, sin inferir estatus legal ni canon oculto. Lugares inventados, disputados o no catalogados requieren una política explícita de creación o revisión; **no inventar registros de planetas/colonias desde un campo de texto**.
+**D-04 — Origen libre, incluidos lugares inventados: APROBADO POR EL AUTOR (15/11/2026).** Se admiten orígenes reales del universo e inventados por el jugador, sin exigir catálogo, certificado, partida de nacimiento ni expediente; basta coherencia narrativa con Star Trek y la campaña 2383. No se publican por ello nuevos planetas como hechos globales ni se conceden cargos o permisos.
 
 **D-05 — Edad:** mantener la política 0.1.2 sin pruebas de madurez; los tres casos especiales `changeling`, `jem_hadar`, `vorta` y el umbral de cumpleaños con día/mes no decidido quedan pendientes de decisión autoral. Ningún arreglo IA-03A los desbloquea indirectamente.
 
