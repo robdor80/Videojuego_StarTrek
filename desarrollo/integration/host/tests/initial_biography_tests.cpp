@@ -2,6 +2,7 @@
 #include "f10/biography_evidence.h"
 #include "f10/openai_biography.h"
 #include <jsoncons/json.hpp>
+#include <algorithm>
 #include <atomic>
 #include <iostream>
 #include <thread>
@@ -186,6 +187,51 @@ void institution_and_injection() {
     auto r = unavailable.finish(); CHECK(r.objective.status() == ObjectiveStatus::OBJECTIVE_VALID);
     CHECK(r.semantic == SemanticStatus::REVIEW_UNAVAILABLE && !r.receipt && unavailable.http->calls == 0);
 }
+void institutional_free_text_regression() {
+    // COHERENT transport is installed in every fixture: objective review must
+    // prevent HTTP and receipt issuance even with a favorable semantic answer.
+    for (const auto& entry : {
+        std::pair{"prior_experience", "Trabajé ocho años como ingeniero de la Flota Estelar"},
+        {"prior_experience", "I worked as a Starfleet engineer"},
+        {"prior_education", "Me gradué en la Academia de la Flota Estelar"},
+        {"prior_experience", "Yo trabajé como médico de la Flota Estelar"},
+        {"prior_experience", "He servido como ingeniero en Starfleet"},
+        {"prior_education", "I graduated from Starfleet Academy"},
+        {"prior_experience", "Tuve el rango de teniente de la Flota Estelar"},
+        {"prior_experience", "I held the rank of lieutenant in Starfleet"},
+        {"prior_experience", "Trabajé como civil; trabajé después en Starfleet"},
+        {"prior_experience", "Trabajé como civil y trabajé después en Starfleet"}}) {
+        for (bool structured : {false, true}) {
+            Fixture f;
+            f.data[entry.first] = structured ? Json::parse(R"([{"description":""}])") : Json(entry.second);
+            if (structured) f.data[entry.first][0]["description"] = entry.second;
+            const auto r = f.finish();
+            CHECK(r.objective.status() == ObjectiveStatus::REVIEW_REQUIRED);
+            CHECK(!r.receipt && f.http->calls == 0);
+            CHECK(std::ranges::any_of(r.objective.issues(), [](const auto& issue) {
+                return issue.code == IssueCode::INSTITUTIONAL_AUTHORITY_CLAIM;
+            }));
+        }
+    }
+    for (const auto& entry : {
+        std::pair{"family_context", "Mi padre era capitán de la Flota Estelar"},
+        {"origin", "Nací en una nave de la Flota Estelar"},
+        {"initial_long_term_objective", "Quiero llegar a ser capitán"},
+        {"prior_experience", "Trabajé ocho años como ingeniero civil"},
+        {"prior_education", "Tengo un doctorado en Física y Astronomía"},
+        {"prior_activities_and_hobbies", "Practico karate y tengo 4.º dan"},
+        {"origin", "I was born on a Starfleet ship"},
+        {"origin", "Fui criado en una nave de la Flota Estelar"},
+        {"prior_experience", "Trabajé como ingeniero civil y mi padre era capitán de la Flota Estelar"},
+        {"prior_experience", "I worked as a civilian engineer. My father served in the Flota Estelar"},
+        {"prior_experience", "Trabajé como civil. Quiero trabajar en Starfleet"}}) {
+        Fixture f; f.data["age_or_birth_date"] = 30; f.data[entry.first] = entry.second;
+        const auto r = f.finish();
+        CHECK(r.objective.status() == ObjectiveStatus::OBJECTIVE_VALID);
+        CHECK(r.semantic == SemanticStatus::VALID && r.receipt && f.http->calls == 1);
+        CHECK(f.validator->eligible(*r.receipt, f.data.to_string(), f.context));
+    }
+}
 void bindings() {
     for (int mutation = 0; mutation < 7; ++mutation) {
         Fixture f; auto r = f.finish(); CHECK(r.receipt);
@@ -228,7 +274,7 @@ int main() {
 #else
         unsetenv("OPENAI_API_KEY");
 #endif
-        ordinary(); profile_lifecycle(); backgrounds(); institution_and_injection(); bindings();
+        ordinary(); profile_lifecycle(); backgrounds(); institution_and_injection(); institutional_free_text_regression(); bindings();
         std::cout << "PASS IA03A native F10/HOST sources, simulated OpenAI transport; no PERSON or Core mutation\n";
     } catch (const std::exception& e) { std::cerr << e.what() << '\n'; return 1; }
 }

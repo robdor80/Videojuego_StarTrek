@@ -117,6 +117,39 @@ No se ejecutan campañas exhaustivas F04 de cientos de días ni pruebas LIVE; el
 - IA-03C conserva pendiente toda interfaz Unreal y la proyección visual del formulario. El prototipo histórico no se altera ni se declara productivo.
 - F11, admisión a Academia y autoridad CoreRPG no cambian.
 
+## Corrección de auditoría independiente de PR #167 (15/11/2026)
+
+Observación revisada sobre `a2b671e34c007b2c8c16dcfcc559471944951308`: el texto libre podía declarar empleo o graduación de Starfleet y alcanzar IA-02 como antecedente personal. Se amplía únicamente `institutional_claim` mediante un detector léxico de pasado en primera persona (empleo, servicio, graduación y rango) combinado con una institución nombrada en la misma cláusula. Reutiliza la normalización de mayúsculas y el recorrido de objetos/colecciones existentes, sin dependencias ni contratos nuevos. Se conserva la puerta `INSTITUTIONAL_AUTHORITY_CLAIM`: `REVIEW_REQUIRED` antes de IA-02, sin recibo.
+
+La detección se limita a formas explícitas españolas/inglesas al comienzo de cláusula, con prefijos españoles `yo`/`ya` opcionales; separa puntuación y conjunciones sencillas para no asociar un empleo civil a la mención posterior de un familiar. No usa formas genéricas `fui`/`I was` para esta ampliación porque también describen nacimiento o crianza. Los marcadores institucionales anteriores y la clasificación de roles estructurados se conservan. No se pretende comprender todas las paráfrasis; la revisión semántica obligatoria sigue evaluando la coherencia restante.
+
+`institutional_free_text_regression` añade 31 escenarios a `host.biography.initial_player`, con constructores y fuentes productivos y transporte `COHERENT` simulado:
+
+- 20 escenarios bloqueados: diez afirmaciones, cada una como cadena y como descripción dentro de una colección. Incluyen literalmente «Trabajé ocho años como ingeniero de la Flota Estelar», «I worked as a Starfleet engineer» y «Me gradué en la Academia de la Flota Estelar», además de servicio, rango y afirmaciones después de separadores. Cada escenario exige `REVIEW_REQUIRED`, incidencia institucional, cero llamadas HTTP y ausencia de recibo.
+- 11 escenarios permitidos: las seis frases solicitadas (padre capitán, nacimiento en nave, aspiración futura, ingeniero civil, doctorado y karate/4.º dan), nacimiento/crianza en inglés/español y tres narraciones con cláusulas separadas. Cada uno exige puerta objetiva válida, revisión semántica válida, una llamada simulada y recibo elegible. El doctorado usa edad 30; su plausibilidad sigue correspondiendo a IA-02.
+- Se ejecuta de nuevo la suite inicial completa: selección/ciudadanía de las tres especies, complementarios opcionales, origen inventado, formación/experiencia civil y aficiones simultáneas; conserva las negativas de identidad, procedencia, caducidad, permisos e inyección. Las suites HOST y F11 comprueban sus propias autoridades sin cambios de implementación.
+
+Resultados reales de esta corrección (Linux, GCC 14.2.0, CMake 4.4.5 y Python 3.12.14):
+
+| Comprobación | Resultado |
+|---|---|
+| Compilación Release de los diez ejecutables HOST de la CI | PASS |
+| CTest `^host\.` con `--no-tests=error --output-on-failure` | **111/111 PASS**, cero fallos |
+| Subconjunto `host.biography.*`, incluido IA-02 e IA-03A | **25/25 PASS**, incluido en los 111 anteriores |
+| Regresión nueva de texto libre | **31/31 escenarios PASS**, dentro de `initial_player` |
+| F11 aislado y adaptador HOST (`run_native.py --parallel 2`) | **17/17 PASS** |
+| Python F10 (`unittest discover`, patrón `test_f10*.py`) | **163/163 PASS** |
+| Python F11 (patrón `test_f11*.py`) | **355/355 PASS** |
+| HOST H01 (`test_host_h01_contracts.py`) | **11/11 PASS** |
+| `git diff --check`; Core fijado sin modificaciones | PASS |
+| OpenAI LIVE | **NOT_RUN**; continúa sin ejecutarse |
+
+Configuración HOST y selección de targets: las descritas en reproducción arriba, sin targets F04/F05 adicionales para este delta. Los sanitizadores y producto tests-OFF se mantienen en la CI existente; no se repiten localmente en esta corrección. La CI del nuevo HEAD se consulta en PR #167, sin trasladar a ese HEAD los resultados CI del anterior.
+
+El delta de auditoría se limita al detector, sus regresiones y este informe. No se crea PERSON ni se implementan IA-03B/IA-03C; no se modifica IA-01, H03/F11, CoreRPG, su pin, contratos bloqueados ni workflows. Se mantiene la misma rama y PR Draft, sin fusión, para segunda revisión independiente.
+
 ## Laboratorio y eliminación
 
 Por instrucción expresa de entrega se documenta la ruta temporal: `laboratorios/host/ia03a/`. Contiene checkout limpio del Core fijado, herramientas locales, compilaciones, registros y resultados de pruebas. Está ignorado y no se incluye en commits. No se borran ni modifican laboratorios históricos. El código definitivo, contratos, CMake y pruebas no leen ese laboratorio ni dependen de sus binarios o scripts; los directorios de compilación y checkout Core se suministran como entradas de prueba. Se puede eliminar el laboratorio completo cuando el propietario lo autorice. Este informe conserva resultados, no lo convierte en dependencia.
+
+La corrección de PR #167 utiliza un subdirectorio nuevo `audit-167-20261115/` dentro de esa ruta: `configure.log`, `build.log`, `native.log`, `native.xml`, `f11/run.json`, `f11/tests.xml`, `f11-driver.log` y `python-{f10,f11,host}.log`, junto con checkout Core limpio, herramientas CMake locales y temporales. No sobrescribe evidencias anteriores ni introduce dependencias de producto hacia el laboratorio.

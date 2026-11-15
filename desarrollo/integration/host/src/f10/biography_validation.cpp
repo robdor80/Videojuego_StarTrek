@@ -496,8 +496,48 @@ bool marker_in(const Json& value, const Json& markers) {
     return false;
 }
 
+bool first_person_institutional_past(std::string_view narrative) {
+    const auto lowered = lower_ascii(narrative);
+    // Deliberately bounded lexical gate, not a language parser. Keep the
+    // first-person past and the named institution in the same clause so a
+    // civilian job followed by a relative's service is not player service.
+    static constexpr std::array past = {
+        "trabajé "sv, "trabaje "sv, "he trabajado "sv, "serví "sv, "servi "sv,
+        "he servido "sv, "me gradué "sv, "me gradue "sv, "me he graduado "sv,
+        "tuve el rango "sv, "tenía el rango "sv, "ocupé el rango "sv,
+        "i worked "sv, "i have worked "sv, "i served "sv, "i have served "sv,
+        "i graduated "sv, "i have graduated "sv, "i held the rank "sv,
+    };
+    static constexpr std::array institutions = {
+        "starfleet"sv, "flota estelar"sv, "academia de la flota"sv,
+    };
+    std::size_t begin = 0;
+    while (begin < lowered.size()) {
+        auto end = lowered.find_first_of(".,;:!?\n", begin);
+        if (end == std::string::npos) end = lowered.size();
+        auto next = end + 1;
+        for (auto conjunction : {" y "sv, " and "sv, " pero "sv, " but "sv}) {
+            const auto pos = lowered.find(conjunction, begin);
+            if (pos < end) { end = pos; next = pos + conjunction.size(); }
+        }
+        auto clause = std::string_view(lowered).substr(begin, end - begin);
+        while (!clause.empty() && clause.front() == ' ') clause.remove_prefix(1);
+        if (clause.starts_with("yo "sv)) clause.remove_prefix(3);
+        if (clause.starts_with("ya "sv)) clause.remove_prefix(3);
+        if (std::ranges::any_of(past, [&](auto verb) { return clause.starts_with(verb); }) &&
+            std::ranges::any_of(institutions, [&](auto name) {
+                const auto pos = clause.find(name);
+                return pos != std::string_view::npos && (pos == 0 || clause[pos - 1] == ' ') &&
+                       (pos + name.size() == clause.size() || clause[pos + name.size()] == ' ');
+            })) return true;
+        begin = next;
+    }
+    return false;
+}
+
 bool institutional_claim(const Json& value) {
     if (marker_in(value, initial_rules().at("institutional_claim_markers"))) return true;
+    if (value.is_string()) return first_person_institutional_past(text(value));
     if (value.is_array()) return std::ranges::any_of(value.array_range(), institutional_claim);
     if (value.is_object()) return std::ranges::any_of(value.object_range(), [](const auto& member) {
         // A structured job/training role in an institution is a claim of service,
