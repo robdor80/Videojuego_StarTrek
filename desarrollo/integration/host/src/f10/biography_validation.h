@@ -60,15 +60,19 @@ struct ReviewBinding {
 struct ReviewRequest {
     std::string_view canonical_draft;
     const ReviewBinding& binding;
+    const BiographyContext* context{}; // Borrowed, owner supplied; never decoded from the draft.
 };
 
 enum class FindingKind { SUGGESTION, CONTRADICTION };
 struct ReviewFinding {
     FindingKind kind;
     std::string field;
+    std::string reason;
+    std::string suggested_correction;
+    bool operator==(const ReviewFinding&) const = default;
 };
 
-enum class ReviewCompletion { UNAVAILABLE, INCOMPLETE, COMPLETE };
+enum class ReviewCompletion { UNAVAILABLE, INCOMPLETE, COMPLETE, PENDING };
 struct ReviewEvidence {
     ReviewBinding binding;
     ReviewCompletion completion{ReviewCompletion::UNAVAILABLE};
@@ -76,12 +80,14 @@ struct ReviewEvidence {
     std::string reviewer_version;
     std::string review_ref;
     std::vector<ReviewFinding> findings;
+    bool operator==(const ReviewEvidence&) const = default;
 };
 
 class SemanticEvaluator {
 public:
     virtual ~SemanticEvaluator() = default;
-    // Synchronous, local port. The request views are borrowed for this call.
+    // Synchronous internal port. The request views are borrowed for this call.
+    // An asynchronous adapter may enqueue owned data and return PENDING; poll by reevaluating.
     // Returned findings are proposals. The registered domain authority must verify them.
     virtual ReviewEvidence review(const ReviewRequest&) = 0;
 };
@@ -139,6 +145,7 @@ struct BiographyEvaluation {
     ObjectiveAssessment objective;
     SemanticStatus semantic{SemanticStatus::NOT_REQUESTED};
     std::vector<BiographyIssue> semantic_issues;
+    std::vector<ReviewFinding> feedback; // Verified provenance, non-authoritative player information only.
     std::optional<BiographyReceipt> receipt;
 };
 

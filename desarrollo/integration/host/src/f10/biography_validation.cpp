@@ -1,4 +1,5 @@
 #include "biography_evidence.h"
+#include "openai_biography.h"
 #include "biography_rules_data.h"
 
 #include <corerpg/history.hpp>
@@ -154,7 +155,9 @@ const std::string& ruleset_identity() {
 }
 
 const std::string& review_policy() {
-    static const std::string identity = std::string(text(rules().at("policy"))) + ":" +
+    static const std::string identity = std::string(text(rules().at("semantic").at("contract_id"))) + "/" +
+        std::string(text(rules().at("semantic").at("schema_version"))) + ":" +
+        std::string(text(rules().at("policy"))) + ":" +
         std::string(text(rules().at("evidence_policy")));
     return identity;
 }
@@ -573,8 +576,9 @@ std::string_view code_name(IssueCode code) noexcept {
 }
 
 RegisteredBiographyAuthority::RegisteredBiographyAuthority(std::vector<RegisteredBiographySource> sources,
-                                                           std::vector<BiographyClaimEvidence> evidence)
-    : sources_(std::move(sources)), evidence_(std::move(evidence)) {
+                                                           std::vector<BiographyClaimEvidence> evidence,
+                                                           std::shared_ptr<OpenAiBiographyEvaluator> semantic)
+    : sources_(std::move(sources)), evidence_(std::move(evidence)), semantic_(std::move(semantic)) {
     std::set<std::string_view> source_ids;
     for (const auto& source : sources_) {
         const auto& id = source.identity;
@@ -639,10 +643,10 @@ bool RegisteredBiographyAuthority::resolves(BiographyIssue issue, const ReviewRe
     return supported;
 }
 
-DomainDecision RegisteredBiographyAuthority::verify(const ReviewRequest&, const ReviewEvidence&) const {
-    // Future F10 domain verification requires an approved provider and a trusted
-    // record of the evaluation. Self-declared reviewer strings cannot supply it.
-    return DomainDecision::UNVERIFIED;
+DomainDecision RegisteredBiographyAuthority::verify(const ReviewRequest& request, const ReviewEvidence& evidence) const {
+    if (!semantic_ || !request.context || !valid_context(*request.context) ||
+        request.binding != bind_review(request.canonical_draft, *request.context)) return DomainDecision::UNVERIFIED;
+    return semantic_->verify(request, evidence);
 }
 
 BiographyValidator::BiographyValidator()
@@ -650,7 +654,13 @@ BiographyValidator::BiographyValidator()
           std::vector{RegisteredBiographyAuthority::initial_background_source()}, std::vector<BiographyClaimEvidence>{})) {}
 
 BiographyValidator::BiographyValidator(std::shared_ptr<const RegisteredBiographyAuthority> authority)
-    : registered_authority_(std::move(authority)), issuer_(std::make_shared<const int>(0)) {}
+    : registered_authority_(std::move(authority)), issuer_(std::make_shared<const int>(0)) {
+    if (registered_authority_ && registered_authority_->semantic_) {
+        evaluator_ = registered_authority_->semantic_.get();
+        reviewer_ = OpenAiBiographyEvaluator::identity;
+        reviewer_version_ = OpenAiBiographyEvaluator::version;
+    }
+}
 
 #ifdef TREK_F10_BIOGRAPHY_TESTING
 BiographyValidator::BiographyValidator(const BiographyAuthority& authority, SemanticEvaluator& evaluator,
@@ -666,27 +676,35 @@ BiographyValidator::BiographyValidator(const BiographyAuthority& authority, Sema
 BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const BiographyContext& context) const {
     BiographyEvaluation result;
     const BiographyContext frozen_context = context;
+    // Even an objectively invalid edit must revoke an earlier semantic record.
+    const auto invalidate = [&] {
+        if (registered_authority_ && registered_authority_->semantic_) registered_authority_->semantic_->cancel();
+    };
     if (!valid_context(frozen_context)) {
+        invalidate();
         result.objective.issues_.push_back({IssueCode::INVALID_CAMPAIGN_CONTEXT, "campaign_context"});
         return result;
     }
     const auto parsed = parse_draft(draft);
     if (!parsed) {
+        invalidate();
         result.objective.issues_.push_back({IssueCode::INVALID_DRAFT, "draft"});
         return result;
     }
     auto checks = objective_checks(*parsed, frozen_context);
     if (!checks.errors.empty()) {
+        invalidate();
         result.objective.issues_ = std::move(checks.errors);
         return result;
     }
     auto bytes = canonical(*parsed);
     if (bytes.size() > max_draft_bytes) {
+        invalidate();
         result.objective.issues_.push_back({IssueCode::INVALID_DRAFT, "draft"});
         return result;
     }
     const auto& binding = result.objective.binding_.emplace(bind_review(bytes, frozen_context));
-    const ReviewRequest request{bytes, binding};
+    const ReviewRequest request{bytes, binding, &frozen_context};
     const BiographyAuthority* authority = registered_authority_.get();
 #ifdef TREK_F10_BIOGRAPHY_TESTING
     if (test_authority_) authority = test_authority_;
@@ -731,6 +749,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         return result;
     }
     if (result.objective.status_ != ObjectiveStatus::OBJECTIVE_VALID) {
+        invalidate();
         result.semantic = SemanticStatus::REVIEW_REQUIRED;
         return result;
     }
@@ -739,6 +758,10 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
     DomainDecision decision = DomainDecision::UNVERIFIED;
     try {
         evidence = evaluator_->review(request);
+        if (evidence.completion == ReviewCompletion::PENDING) {
+            result.semantic = SemanticStatus::REVIEW_REQUIRED;
+            return result;
+        }
         if (evidence.completion != ReviewCompletion::COMPLETE || evidence.binding != binding ||
             evidence.reviewer != reviewer_ || evidence.reviewer_version != reviewer_version_ ||
             !opaque_id(evidence.reviewer) || !opaque_id(evidence.reviewer_version) ||
@@ -763,6 +786,7 @@ BiographyEvaluation BiographyValidator::evaluate(std::string_view draft, const B
         unavailable();
         return result;
     }
+    result.feedback = evidence.findings;
     bool contradiction = false;
     for (const auto& finding : evidence.findings) {
         const bool conflicts = finding.kind == FindingKind::CONTRADICTION;
@@ -789,7 +813,12 @@ bool BiographyValidator::eligible(const BiographyReceipt& receipt, std::string_v
         receipt.evidence_.binding.ruleset != ruleset_identity() ||
         receipt.evidence_.binding.policy != review_policy()) return false;
     const auto parsed = parse_draft(draft);
-    return parsed && canonical(*parsed) == receipt.canonical_draft_;
+    if (!parsed || canonical(*parsed) != receipt.canonical_draft_) return false;
+    if (registered_authority_ && registered_authority_->semantic_) {
+        return registered_authority_->verify({receipt.canonical_draft_, receipt.evidence_.binding, &current},
+                                             receipt.evidence_) == DomainDecision::ACCEPTED;
+    }
+    return true;
 }
 
 } // namespace trek::f10

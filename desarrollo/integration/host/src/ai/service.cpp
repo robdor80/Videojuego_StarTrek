@@ -165,6 +165,9 @@ Result decode(const Config& c, const Request& request, HttpResponse h, std::stri
     }
     try {
         const auto j = Json::parse(h.body);
+        if (request.require_model_identity && (!j.contains("model") || j.at("model") != Json(r.model))) {
+            r.error = Error::MALFORMED; return r;
+        }
         const auto status = j.at("status").as<std::string>();
         if (status == "incomplete" || status == "queued" || status == "in_progress") { r.error = Error::INCOMPLETE; return r; }
         if (status != "completed" || (j.contains("error") && !j.at("error").is_null())) { r.error = Error::HTTP_ERROR; return r; }
@@ -249,7 +252,7 @@ std::string_view diagnostic(Error e) noexcept {
 bool retryable(Error e) noexcept { return e == Error::CONNECTION || e == Error::RATE_LIMIT || e == Error::TIMEOUT || e == Error::INCOMPLETE || e == Error::CAPACITY; }
 
 struct Service::Impl {
-    Config config;
+    const Config config;
     std::shared_ptr<Transport> transport;
     std::shared_ptr<CredentialStore> credentials;
     struct Work {
@@ -312,6 +315,12 @@ void Service::shutdown() noexcept {
     impl_->closed = true; impl_->active.request_stop();
     for (auto& work : impl_->queue) work.cancel.request_stop();
     impl_->wake.notify_one();
+}
+std::string Service::route_model(std::string_view route) const {
+    const auto& c = impl_->config;
+    const auto it = c.routes.find(std::string(route));
+    if (it == c.routes.end()) return {};
+    return it->second == "reasoning" ? c.reasoning_model : c.fast_model;
 }
 Operation Service::submit(Request request) {
     Impl::Work w{std::move(request), {}, {}, std::chrono::steady_clock::now() + impl_->config.timeout};
