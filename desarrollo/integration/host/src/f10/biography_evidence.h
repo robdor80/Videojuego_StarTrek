@@ -3,6 +3,7 @@
 #include "biography_validation.h"
 
 namespace trek::f10 {
+class OpenAiBiographyEvaluator;
 
 enum class BiographyEvidenceOrigin { UNREGISTERED, APPROVED_RULE, WORLD_FACT_READ, VALIDATED_INITIAL_BACKGROUND };
 enum class BiographyEvidenceDecision { INSUFFICIENT, SUPPORTED, CONTRADICTED, NOT_APPLICABLE };
@@ -41,7 +42,8 @@ struct BiographyClaimEvidence {
 class RegisteredBiographyAuthority final : public BiographyAuthority {
 public:
     RegisteredBiographyAuthority(std::vector<RegisteredBiographySource> sources,
-                                 std::vector<BiographyClaimEvidence> evidence);
+                                 std::vector<BiographyClaimEvidence> evidence,
+                                 std::shared_ptr<OpenAiBiographyEvaluator> semantic = {});
 
     // Register alongside other trusted sources to enable this per-evaluation
     // attestation and let the same registry apply contradictions or revocations.
@@ -55,6 +57,7 @@ private:
                                 const BiographyClaimEvidence* evaluated) const;
     const std::vector<RegisteredBiographySource> sources_;
     const std::vector<BiographyClaimEvidence> evidence_;
+    const std::shared_ptr<OpenAiBiographyEvaluator> semantic_;
 };
 
 } // namespace trek::f10

@@ -75,6 +75,7 @@ add_custom_command(OUTPUT "${f10_rules_header}"
     "${f10_authoring}/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json"
     "${f10_authoring}/character_creation/f10_initial_background_policy_v0.1.json"
     "${f10_authoring}/character_creation/f10_species_maturity_policy_v0.1.json"
+    "${f10_authoring}/character_creation/f10_openai_semantic_policy_v0.1.json"
     "${f10_authoring}/character_creation/biography_validation_rules.md"
     "${f10_authoring}/character_creation/prior_activity_model.json"
     "${f10_authoring}/character_creation/player_profile_contract.json"
@@ -84,7 +85,7 @@ add_custom_command(OUTPUT "${f10_rules_header}"
     "${f10_authoring}/ship_operations/era_technology_matrix.json"
   VERBATIM)
 add_custom_target(host_f10_rules DEPENDS "${f10_rules_header}")
-set(f10_sources src/f10/biography_validation.cpp)
+set(f10_sources src/f10/biography_validation.cpp src/f10/openai_biography.cpp)
 
 add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp
   ${f10_sources})
@@ -238,4 +239,28 @@ if(TREK_HOST_TESTS)
   # Explicit opt-in only, never registered in CTest/CI.
   add_executable(host_ai_smoke EXCLUDE_FROM_ALL tests/ai_smoke.cpp)
   target_link_libraries(host_ai_smoke PRIVATE TrekHost)
+endif()
+
+if(TREK_HOST_TESTS)
+  target_sources(host_biography_tests PRIVATE ${host_ai_sources})
+  target_include_directories(host_biography_tests PRIVATE include)
+  target_compile_definitions(host_biography_tests PRIVATE TREK_HOST_STATIC_TEST)
+  target_link_libraries(host_biography_tests PRIVATE Threads::Threads ${host_ai_platform_libraries})
+  # Product F10 sources, without TREK_F10_BIOGRAPHY_TESTING or receipt test access.
+  add_executable(host_biography_ai_tests tests/biography_ai_tests.cpp ${f10_sources} ${host_ai_sources})
+  add_dependencies(host_biography_ai_tests host_f10_rules)
+  target_compile_features(host_biography_ai_tests PRIVATE cxx_std_20)
+  target_compile_definitions(host_biography_ai_tests PRIVATE TREK_HOST_STATIC_TEST)
+  target_include_directories(host_biography_ai_tests PRIVATE src include "${f10_rules_dir}")
+  target_link_libraries(host_biography_ai_tests PRIVATE CoreRPG::CoreRPG jsoncons Threads::Threads ${host_ai_platform_libraries})
+  add_test(NAME host.biography.openai COMMAND host_biography_ai_tests)
+  set_tests_properties(host.biography.openai PROPERTIES TIMEOUT 30 LABELS "f10;ia02;native")
+endif()
+
+if(MSVC)
+  target_compile_options(TrekHost PRIVATE /utf-8)
+  if(TREK_HOST_TESTS)
+    target_compile_options(host_biography_tests PRIVATE /utf-8)
+    target_compile_options(host_biography_ai_tests PRIVATE /utf-8)
+  endif()
 endif()

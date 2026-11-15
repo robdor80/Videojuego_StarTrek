@@ -126,6 +126,9 @@ def main():
     evidence = read(creation / "f10_biography_evidence_semantic_boundary_v0.1.json")
     if (evidence["contract_id"], evidence["schema_version"]) != ("f10_h06_p06a3_evidence_semantic_boundary", "0.1.0"):
         raise ValueError("Unsupported biography evidence policy")
+    semantic = read(creation / "f10_openai_semantic_policy_v0.1.json")
+    if (semantic["contract_id"], semantic["schema_version"], semantic["evaluator_version"]) != ("f10_openai_semantic_review", "0.1.0", "ia02.1"):
+        raise ValueError("Unsupported F10 OpenAI policy")
     activity = read(creation / "prior_activity_model.json")
     candidate = read(systems / "careers/academy_path/f10_host_candidate_factory_contract_v0.1.json")
     background = read(creation / "f10_initial_background_policy_v0.1.json")
@@ -157,6 +160,15 @@ def main():
         return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True, allow_nan=False)
 
     data = {
+        "semantic": semantic,
+        # Static public species restrictions only: no medical/lifecycle state, private facts,
+        # unrelated profiles or world records are sent by the consumer.
+        "semantic_species": {
+            sid: {key: profile[key] for key in
+                  ("physiology", "capabilities", "culture_socialization", "character_generation", "ai_boundary")
+                  if key in profile}
+            for sid, (_, profile) in species.items()
+        },
         "required": fields["required_character_fields"],
         "optional": fields["optional_character_fields"],
         "forbidden": (candidate["player_input_contract"]["forbidden_client_fields"]

@@ -54,6 +54,7 @@ struct Request {
     std::string instructions; // Trusted HOST task policy only, never player text.
     std::string input; // Authorized context/player data, separated from internal instructions.
     std::string json_schema; // Optional strict schema; no remote references.
+    bool require_model_identity{}; // Consumers may require the response model to match the configured route.
 };
 // Internal HOST credential port. Do not expose read() or keys to Blueprint.
 class CredentialStore {
@@ -97,6 +98,7 @@ public:
     Service(const Service&) = delete;
     Service& operator=(const Service&) = delete;
     Operation submit(Request); // Immediate; poll future with wait_for(0) from future adapter.
+    [[nodiscard]] std::string route_model(std::string_view route) const;
     void shutdown() noexcept; // Nonblocking cancellation; rejects further submissions.
 private:
     struct Impl;
