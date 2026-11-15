@@ -1,0 +1,122 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "startrek_host_ai_openai_runtime",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME_IMPLEMENTED",
+  "date": "2026-11-15",
+  "provider": "openai",
+  "api": "Responses API",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "transport": "HTTPS",
+  "environment": "LOCAL_SINGLE_PLAYER",
+  "secrets": {
+    "runtime_key_environment": "OPENAI_API_KEY",
+    "never_in_repository": true,
+    "never_in_game_assets_or_logs": true,
+    "cloud_codex_secret_injection_only": true
+  },
+  "models": {
+    "fast": {
+      "id": "gpt-6-luna",
+      "capabilities": [
+        "FAST_LANGUAGE",
+        "DIALOGUE",
+        "BIOGRAPHY_REVIEW"
+      ],
+      "default": true
+    },
+    "reasoning": {
+      "id": "gpt-6.1-sol",
+      "capabilities": [
+        "REASONING_LANGUAGE",
+        "COMPUTER_ANALYSIS",
+        "DIALOGUE_COMPLEX",
+        "BIOGRAPHY_REVIEW_COMPLEX"
+      ],
+      "explicit_or_justified_escalation_only": true
+    }
+  },
+  "routing": {
+    "existing_capability_contract": "sistemas/ai/runtime_orchestration.md",
+    "deterministic_first": true,
+    "no_duplicate_provider_clients": true,
+    "first_product_consumer": "F10_BIOGRAPHY_REVIEW",
+    "future_consumers": [
+      "NPC_DIALOGUE",
+      "STARSHIP_COMPUTER",
+      "COMMAND_INTERPRETATION",
+      "NARRATION"
+    ],
+    "do_not_implement_all_consumers_in_initial_cut": true,
+    "single_shared_transport": true
+  },
+  "f10_semantic": {
+    "objective_checks_first": true,
+    "selected_provider": "OPENAI",
+    "default_model": "gpt-6-luna",
+    "reviewer_model_escalation": "gpt-6.1-sol",
+    "output_format": "STRUCTURED_OUTPUTS_STRICT_JSON_SCHEMA",
+    "decisions": [
+      "COHERENT",
+      "CHANGES_REQUIRED"
+    ],
+    "finding_types": [
+      "CONTRADICTION",
+      "SUGGESTION"
+    ],
+    "required_review_fields": [
+      "verdict",
+      "issues"
+    ],
+    "finding_fields": [
+      "field",
+      "kind",
+      "reason",
+      "suggested_correction"
+    ],
+    "allowable_fields_source": "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "model_provides_review_not_world_facts": true,
+    "domain_owner": "F10",
+    "existing_native_ports": [
+      "trek::f10::SemanticEvaluator::review",
+      "trek::f10::BiographyAuthority::verify",
+      "trek::f10::BiographyValidator::eligible"
+    ],
+    "original_draft_unchanged_on_suggestions": true,
+    "exact_canonical_draft_and_context_binding": true,
+    "provider_refusal_timeout_invalid_json_or_no_key": "REVIEW_UNAVAILABLE_KEEP_DRAFT_NO_PERSON",
+    "semantic_contradiction": "CHANGES_REQUIRED_WITH_ACTIONABLE_FEEDBACK",
+    "completed_coherent_and_verified": "SEMANTIC_VALID_ONLY_IF_OBJECTIVE_GATE_AND_DOMAIN_VERIFIER_ACCEPT",
+    "no_ai_authority_to_create_person_or_grant_permits": true,
+    "never_reintroduce_individual_maturity_proof": true
+  },
+  "privacy_and_reliability": {
+    "responses_store": false,
+    "minimize_sent_context": true,
+    "no_hidden_world_truth_sent": true,
+    "raw_biography_and_api_key_not_logged": true,
+    "no_tool_calling_for_biography_review": true,
+    "no_game_thread_network_wait": true,
+    "bounded_timeouts": true,
+    "bounded_retries": true,
+    "handle_rate_limit_and_api_errors": true,
+    "model_response_never_direct_core_mutation": true
+  },
+  "precedence": {
+    "author_decision": "OPENAI_CLOUD_API_ALLOWED_FOR_PRODUCT_AI_AS_OF_2026_11_15",
+    "supersedes_design_restrictions": [
+      "sistemas/gameplay/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json:semantic_review.external_network",
+      "sistemas/gameplay/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json:semantic_review.permitted_transport_if_later_authorized",
+      "sistemas/gameplay/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json:semantic_review.provider_selection"
+    ],
+    "implementation_must_align_old_f10_policy_and_refresh_digests": true,
+    "existing_gemini_holodeck_notes_are_not_game_product_runtime": true,
+    "no_alteration_of_historical_f11_or_core_pin": true
+  },
+  "scope": {
+    "in_this_document_only": "CONTRACT_AND_IMPLEMENTATION_BRIEF",
+    "immediate_codex_slice": "SHARED_OPENAI_TRANSPORT_PLUS_F10_SEMANTIC_ADAPTER",
+    "future_h10_slice": "REUSE_TRANSPORT_FOR_DIALOGUE_LATER",
+    "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d",
+    "h06_m1_status": "NOT_CERTIFIED"
+  }
+}
