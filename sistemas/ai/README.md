@@ -143,3 +143,10 @@ Inventing a plausible answer is forbidden.
 - terminology.
 
 These should converge on the authority rules above.
+
+## HOST common OpenAI service (IA-01)
+
+The shared C++20 service is implemented separately from its future gameplay consumers.
+See [implementation and credential contract](HOST_AI_SERVICE_IA01.md) and the editable
+[HOST service configuration](host_service_config_v1.json). Runtime verification and limitations
+are recorded in the permanent IA-01 delivery report under the HOST architecture documents.

@@ -55,6 +55,10 @@ jobs:
           ref: ${{ env.HOST_CORE_SHA }}
           path: laboratorios/host/h06/core
           persist-credentials: false
+      - name: Linux HTTPS build dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: sudo apt-get update -qq && sudo apt-get install -y libcurl4-openssl-dev pkg-config
       - name: Build and test HOST
         env:
           HOST_SUITE: ${{ matrix.suite }}
@@ -73,7 +77,7 @@ jobs:
           $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
           if ($IsWindows) { $flags += @('-A', 'x64') }
           $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
-                       'host_abi_tests', 'host_academy_feasibility_tests', 'host_biography_tests')
+                       'host_abi_tests', 'host_academy_feasibility_tests', 'host_biography_tests', 'host_ai_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
             $env:CC = 'clang'
@@ -148,6 +152,8 @@ jobs:
           ref: 76a7b7b485616d8c4994f384a90f123bf333591d
           path: laboratorios/host/h06/core
           persist-credentials: false
+      - name: Linux HTTPS build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y libcurl4-openssl-dev pkg-config
       - name: Build and inspect release product (tests OFF)
         shell: bash
         run: |

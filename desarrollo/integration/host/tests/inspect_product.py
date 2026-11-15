@@ -40,7 +40,7 @@ for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_comm
 assert "TrekF04Bridge" in dependencies
 assert not any("TrialHost" in p.name or p.name.startswith((
     "host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests",
-    "host_academy_feasibility_tests", "host_biography_tests",
+    "host_academy_feasibility_tests", "host_biography_tests", "host_ai_tests", "host_ai_smoke",
 )) for p in build.rglob("*") if p.is_file())
 print(symbols)
 print(dependencies)
