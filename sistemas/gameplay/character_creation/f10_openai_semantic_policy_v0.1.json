@@ -9,8 +9,8 @@
   "precedence": {
     "historical_contracts_preserved": true,
     "supersedes": [
-      "f10_biography_evidence_semantic_boundary/0.1.0:semantic_review deployment, provider and transport restrictions",
-      "f10_biography_validation_interface/0.1.0:unselected semantic provider"
+      "f10_h06_p06a3_evidence_semantic_boundary/0.1.0:semantic_review deployment, provider and transport restrictions",
+      "f10_h06_p06a_biography_validation/0.1.0:unselected semantic provider"
     ],
     "age_policy": "f10_species_playable_maturity_policy/0.1.2",
     "no_individual_maturity_proof": true
