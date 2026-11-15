@@ -28,6 +28,21 @@ La revisión semántica solo evalúa datos realmente aportados. Aportar más nar
 
 **Estado:** ciudadanía y criterio de obligatoriedad del formulario **DECIDIDOS / DOCUMENTADOS**, aún sin implementación de IA-03A/IA-03C. Las siguientes cuestiones del autor se resolverán por separado.
 
+## Decisión autoral — antecedentes y certificaciones ficticias con efectos reales
+
+**Aprobada en la conversación de IA-03A (15/11/2026):** si el jugador declara, por ejemplo, que posee **4.º dan de karate** y su biografía supera la revisión de coherencia de IA y las comprobaciones F10 aplicables, ese antecedente **forma parte real de su PERSON en CoreRPG** tras el alta autorizada. No es un mero comentario decorativo ni debe quedar pendiente indefinidamente por ausencia de un diploma/documento externo de una persona real.
+
+**Comportamiento de producto previsto:**
+
+- El grado/historial aceptado queda registrado como **hecho biográfico ficticio inicial**, con su procedencia y la versión/huella de validación F10.
+- Debe poder reflejarse en la **competencia inicial correspondiente** cuando exista la regla de progresión/capacidad del dominio; no crear un sistema paralelo de puntuaciones, ni convertir arbitrariamente un 4.º dan en «maestría absoluta». Se distingue la habilitación o certificación ficticia del valor cuantitativo de una habilidad. No suponer que esa traducción está implementada hoy.
+- Los NPC solo pueden conocer o utilizar el antecedente si su ámbito de conocimiento/permisos lo permite; no conceder omnisciencia.
+- Persistir y recuperar con la misma identidad e historia. No otorgar rango F11, plaza de Academia, autorizaciones Starfleet ni acceso a sistemas institucionales por un título civil/marcial.
+- Las certificaciones se comprueban **por plausibilidad interna de edad, años de práctica, trayectoria y entorno de la ficción**. No se exigirá al jugador presentar un certificado real ni un expediente de una entidad preexistente ficticia que todavía no tenga PERSON. Si una afirmación es cronológicamente imposible, F10 la rechaza o solicita corrección.
+- **Frontera de autoridad:** la IA revisa, **F10 decide**, y solo el flujo autorizado de creación en CoreRPG fija el antecedente; una cadena enviada por el cliente o una respuesta no verificada de IA no adquiere autoridad por sí sola.
+
+Esta decisión **precisa y corrige** las frases anteriores que podrían interpretarse como «un título ficticio nunca se incorpora a la PERSON» o «toda certificación requiere un certificado histórico preexistente». La protección válida es **no conceder capacidades incongruentes sin validación**, no prohibir los antecedentes narrativos certificados. **Estado: AUTORALMENTE DECIDIDO / DOCUMENTADO, todavía NO IMPLEMENTADO ni PROBADO en IA-03A/IA-03B.**
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
@@ -127,7 +142,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 ## 7. Riesgos adicionales detectados en la auditoría
 
-**R-01 — Sobreaprobación de fuentes (ALTO):** `RegisteredBiographyAuthority` ya comprueba un registro, pero las fixtures generan todos los `SUPPORTED` directamente. Si Codex copia ese patrón al producto, se aprueba cualquier texto. Exigir oráculos de decisión por campo y casos negativos; nada de «autocompletar los cinco registros».
+**R-00 — Certificaciones coherentes con efecto en PERSON (MEDIO):** registrar una titulación ficticia validada (por ejemplo 4.º dan) como antecedente real de la PERSON; su traducción a destreza inicial debe usar las reglas de habilidades existentes o quedar explícitamente pendiente si aún no hay integración. Prohibido convertirla en dato meramente decorativo o exigir diplomas reales al jugador. La IA sugiere; F10 valida; CoreRPG registra.\n\n**R-01 — Sobreaprobación de fuentes (ALTO):** `RegisteredBiographyAuthority` ya comprueba un registro, pero las fixtures generan todos los `SUPPORTED` directamente. Si Codex copia ese patrón al producto, se aprueba cualquier texto. Exigir oráculos de decisión por campo y casos negativos; nada de «autocompletar los cinco registros».
 
 **R-02 — Circularidad IA/objetivo (ALTO):** la puerta objetiva rechaza consulta IA cuando quedan evidencias pendientes. No usar la respuesta OpenAI como fuente que se autofirma para despejar esa puerta. Un relato muy elaborado tampoco confiere títulos.
 
