@@ -160,6 +160,16 @@
       "placeholder": "Ej.: estudié astronomía tres años con tutores civiles"
     },
     {
+      "id": "skills_narrative",
+      "type": "textarea",
+      "label": "Habilidades aprendidas y cómo las adquiriste (opcional)",
+      "help": "Describe de dónde vienen tus conocimientos y su nivel real: interés, práctica, estudios, trabajo supervisado... No asigna puntos ni títulos.",
+      "required": false,
+      "rows": 3,
+      "maxlength": 2200,
+      "placeholder": "Ej.: sé hacer pequeñas reparaciones porque ayudaba a mi familia; medito desde los 12 años"
+    },
+    {
       "id": "civil_experience",
       "type": "textarea",
       "label": "Experiencia civil anterior",
@@ -636,6 +646,7 @@
     "biography": "f10_draft.prior_experience (textual note, no new disallowed field)",
     "objective": "f10_draft.initial_long_term_objective",
     "physical_appearance": "f10_draft.appearance_profile",
-    "visual_model": "presentation.model_3d_ref (NULL; not transmitted to F10)"
+    "visual_model": "presentation.model_3d_ref (NULL; not transmitted to F10)",
+    "skills_narrative": "f10_draft.prior_experience (declaración textual, sin otorgar habilidad automática)"
   }
 }
