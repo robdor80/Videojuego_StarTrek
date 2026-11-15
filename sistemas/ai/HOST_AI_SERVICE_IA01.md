@@ -50,7 +50,7 @@ malformado e incompletitud. Razonamiento del proveedor no se publica como texto.
 
 Plazo desde `submit`, incluyendo espera en cola. Cancelación antes de red evita el intento;
 con red iniciada aborta IO pero no promete cancelar una facturación ya aceptada por OpenAI.
-El simulador debe respetar plazo y cancelación. WinHTTP vigila el plazo cada 10 ms; curl
+El simulador debe respetar plazo y cancelación. El contexto y buffer WinHTTP viven hasta el callback final de cierre, según [Microsoft](https://learn.microsoft.com/en-us/windows/win32/api/winhttp/nf-winhttp-winhttpclosehandle). WinHTTP asíncrono espera completitudes con comprobación de plazo/cancelación cada 10 ms; curl
 usa timeout total y callback de progreso (cancelación durante IO puede tardar alrededor de
 un segundo según fase/resolución DNS del sistema). Nunca esperar un futuro en Game Thread.
 `shutdown` solo solicita cancelación; el destructor hace join y debe ejecutarse en el
