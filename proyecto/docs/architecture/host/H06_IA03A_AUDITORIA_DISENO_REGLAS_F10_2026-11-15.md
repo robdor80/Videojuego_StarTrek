@@ -100,6 +100,20 @@ Esta decisión **precisa y corrige** las frases anteriores que podrían interpre
 
 **Estado:** DECIDIDO / DOCUMENTADO; todavía no IMPLEMENTADO ni PROBADO como flujo productivo de IA-03A/IA-03B. No modificar contratos bloqueados ni añadir sistemas de certificación documental.
 
+## Decisión autoral aprobada — aficiones simultáneas y tiempo biográfico
+
+**APROBADA por el autor (15/11/2026), cuestión 6 de 6.** El personaje podrá tener **tantas aficiones y actividades simultáneas como resulte coherente con su edad, historia y dedicación**. No hay número máximo artificial de actividades, puntos de creación, presupuesto rígido de horas ni prohibición por solapamiento cronológico.
+
+**Ejemplo permitido:** 25 años; karate desde los 8, piano desde los 10, natación desde los 12 y astronomía desde los 15. Las cuatro actividades pueden coexistir sin exigir demostraciones documentales. F10 y la IA valorarán la plausibilidad del **conjunto** cuando existan logros, niveles, obligaciones o dedicaciones incompatibles. Que dos intervalos se crucen **no es por sí mismo una contradicción**.
+
+**Ejemplo problemático:** 20 años, tres doctorados, cuatro títulos de campeón galáctico y varias trayectorias profesionales largas sin una explicación temporal plausible. F10 debe solicitar corrección o revisión por la contradicción concreta, **no** denegar simplemente por el número de aficiones.
+
+Las experiencias y logros iniciales que superen la doble validación se incorporarán a PERSON en CoreRPG y surtirán consecuencias en capacidades y diálogos según las reglas del juego. No se exige un certificado real para un título ficticio. Un solapamiento razonable no debe dejar automáticamente `ACTIVITY_BUDGET_REVIEW` pendiente de forma indefinida.
+
+**Límite técnico:** el algoritmo nativo actual `has_checkable_activity_budget` es conservador con los periodos solapados y aún **no implementa** esta decisión para todas las combinaciones. En IA-03A se deberá incorporar una evaluación de plausibilidad para coexistencias razonables, sin liberar indiscriminadamente contradicciones demostrables ni atribuir autoridad a la IA. No alterar contratos LOCKED ni inventar una escala de puntos.
+
+**Estado:** APROBADO / DOCUMENTADO, **NO IMPLEMENTADO** ni PROBADO aún.
+
 ## 1. Decisión arquitectónica
 
 Una biografía de inicio es una **propuesta de hechos ficticios personales**, no una solicitud documental de identidad real. El jugador puede inventar un pasado verosímil. F10 comprueba esa propuesta y genera **atestaciones internas, acotadas y vinculadas al borrador**, exclusivamente cuando pueda justificar lo que está respaldando.
@@ -207,7 +221,9 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 
 **R-04 — Campos libres confundidos (MEDIO):** el `draft_mapping` de `f10_formulario_inicial_v0.3.json` proyecta `biography` y `skills_narrative` en `prior_experience`. Esto puede reinterpretar aspiraciones como experiencia laboral o convertir texto libre en capacidades. En IA-03C, diseñar una proyección explícita entre campos/relato auxiliar, sin añadir claves prohibidas al borrador canónico ni dar autoridad al wrapper.
 
-**R-04B — Mapeos ausentes en formulario v0.3 (MEDIO):** el formulario exige `citizenship` y recoge `upbringing_place`, pero `draft_mapping` no define un enlace explícito de esos campos a `citizenship_context` y `culture_context`. Tampoco `upbringing_type` del mapping figura en `common_fields` con ese nombre. IA-03C debe definir una conversión revisada y completa, con casos de pérdida de datos, antes de usar el formulario como entrada al F10 nativo. No inventar valores por defecto ni suprimir el campo requerido del contrato bloqueado.\n\n**R-05 — Actividades simultáneas (MEDIO):** `has_checkable_activity_budget` no avala automáticamente periodos solapados, incluso si dos aficiones son compatibles. No imponer una falsa prohibición de dos actividades; usar una evaluación F10 de tiempo suficiente o conservar `REVIEW_REQUIRED`. En el caso mínimo bastará una afición estructurada verificable.
+**R-04B — Mapeos ausentes en formulario v0.3 (MEDIO):** el formulario exige `citizenship` y recoge `upbringing_place`, pero `draft_mapping` no define un enlace explícito de esos campos a `citizenship_context` y `culture_context`. Tampoco `upbringing_type` del mapping figura en `common_fields` con ese nombre. IA-03C debe definir una conversión revisada y completa, con casos de pérdida de datos, antes de usar el formulario como entrada al F10 nativo. No inventar valores por defecto ni suprimir el campo requerido del contrato bloqueado.
+
+**R-05 — Actividades simultáneas (MEDIO):** decisión autoral aprobada: el solapamiento entre aficiones no es motivo automático de rechazo ni de `REVIEW_REQUIRED` permanente. `has_checkable_activity_budget` es actualmente conservador y debe adaptarse con oráculos positivos de coexistencia razonable (karate, piano, natación, astronomía) y negativos de logros globalmente inverosímiles. Sin límite numérico artificial ni presupuesto de puntos.
 
 **R-06 — Alcance de especies (MEDIO):** solo humano, vulcano e híbrido humano-vulcano son seleccionables inicialmente, según decisión expresa del autor. El catálogo nativo de 26 perfiles no amplía la selección. Evitar verificaciones de ciudadanía sobre especies fuera del lanzamiento inicial.
 
@@ -237,7 +253,7 @@ Si cambia cualquier elemento relevante del borrador, estado legal, fuente, perfi
 | A12 | Revocación, contradicción entre fuentes o versión antigua | `REVIEW_REQUIRED`, aunque exista otro apoyo |
 | A13 | Changelings, jem'hadar o vorta sin mínimo definido | `REVIEW_REQUIRED`, sin desbloqueo por fuentes genéricas |
 | A14 | Ocampa en campaña principal | `CHANGES_REQUIRED`/DLC, cero HTTP |
-| A15 | Biografía con dos aficiones simultáneas no incompatibles a priori | No «prohibir» por solapamiento; evaluar tiempo si hay política, o `REVIEW_REQUIRED` |
+| A15 | Karate desde los 8, piano desde los 10, natación desde los 12 y astronomía desde los 15, con edad 25 | F10 permite la coexistencia razonable de las cuatro actividades tras validación; sin prohibición, límite artificial ni revisión permanente por el mero solapamiento |
 | A16 | Misma propuesta, texto «quiero ser capitán» vs «ya soy capitán» | Aspiración no otorga rango; pasado institucional requiere regla/fuente |
 | A17 | A01 con revisión simulada `COHERENT` sin registro de procedencia | `REVIEW_UNAVAILABLE` o no elegible; ninguna PERSON |
 | A18 | Caso positivo seguido de `eligible` con borrador/contexto cambiados | No reutilizar recibo, nueva revisión obligatoria |
@@ -261,9 +277,9 @@ Alcance:
 ## 10. Estado y decisiones pendientes
 
 - **AUDITADO:** repositorio actual, reglas, interfaces, diferencias histórico/producto y puntos de bloqueo; sin ejecución nueva de tests en este documento.
-- **DECISIÓN DE PRODUCTO APROBADA:** D-02 ciudadanía federada automática por especie perteneciente a la Federación (cualquier lugar natal). **DISEÑO PROPUESTO:** D-01 y D-03 a D-07, incluida ciudadanía de especies no federadas y antecedentes personales narrativos.
+- **DECISIONES DE PRODUCTO APROBADAS (6/6):** ciudadanía federada automática para las tres especies iniciales; formulario detallado con datos personales complementarios opcionales; origen conocido o inventado; estudios y títulos académicos ficticios coherentes; experiencia personal y profesional coherente; aficiones simultáneas sin límites artificiales. También aprobada la interpretación asistida del personaje y las consecuencias de la formación validada sobre PERSON, capacidades e interacciones con NPC. D-07 y los detalles técnicos de procedencia son requisitos de arquitectura que se deben respetar al implementar.
 - **IMPLEMENTACIÓN IA-03A:** PENDIENTE.
 - **IA-03B (PERSON/H03/H04), IA-03C (Unreal), OpenAI LIVE:** PENDIENTES.
 - **H06/HU-08/M1:** NO CERTIFICADOS.
 
-**Siguiente decisión de gobierno:** ratificar el alcance mínimo de D-01 a D-07 antes de pedir a Codex que convierta estas propuestas en reglas ejecutables. Evitar solicitar decisiones sobre la fecha exacta 2383, tres especies especiales y otras extensiones no necesarias para probar el candidato humano ordinario.
+**Siguiente paso:** IA-03A puede prepararse para Codex con las seis decisiones autorales resueltas. Traducirlas a validaciones y pruebas productivas, sin inventar controles burocráticos ni alterar contratos bloqueados. Mantener fuera de este corte la fecha exacta de 2383, las tres especies especiales y otras extensiones ajenas al caso inicial.
