@@ -34,25 +34,52 @@ bool valid_config(const Config& c) {
 // Every object follows the Structured Outputs strict required/no-extra-fields rule.
 bool strict_schema(const Json& node, unsigned depth = 0) {
     if (depth > 32) return false;
-    if (node.is_array()) {
-        for (const auto& child : node.array_range()) if (!strict_schema(child, depth + 1)) return false;
-    } else if (node.is_object()) {
-        if (node.contains("$ref") && (!node.at("$ref").is_string() ||
-            !node.at("$ref").as<std::string>().starts_with("#/"))) return false;
-        if (node.contains("$id") || node.contains("$schema")) return false;
-        if (node.contains("properties") || (node.contains("type") && node.at("type") == Json("object"))) {
-            if (!node.contains("properties") || !node.at("properties").is_object() ||
-                !node.contains("additionalProperties") || node.at("additionalProperties") != Json(false) ||
-                !node.contains("required") || !node.at("required").is_array()) return false;
-            std::set<std::string> required;
-            for (const auto& v : node.at("required").array_range()) {
-                if (!v.is_string() || !required.insert(v.as<std::string>()).second) return false;
-            }
-            if (required.size() != node.at("properties").size()) return false;
-            for (const auto& p : node.at("properties").object_range())
-                if (!required.contains(std::string(p.key()))) return false;
+    if (node.is_bool()) return true;
+    if (!node.is_object()) return false;
+    for (const auto* ref : {"$ref", "$dynamicRef", "$recursiveRef"})
+        if (node.contains(ref) && (!node.at(ref).is_string() ||
+            (node.at(ref).as<std::string>() != "#" && !node.at(ref).as<std::string>().starts_with("#/")))) return false;
+    if (node.contains("$id") || node.contains("$schema")) return false;
+    bool object = node.contains("properties");
+    if (node.contains("type")) {
+        const auto& type = node.at("type");
+        if (type == Json("object")) object = true;
+        if (type.is_array())
+            for (const auto& member : type.array_range()) if (member == Json("object")) object = true;
+    }
+    if (object) {
+        if (!node.contains("properties") || !node.at("properties").is_object() ||
+            !node.contains("additionalProperties") || node.at("additionalProperties") != Json(false) ||
+            !node.contains("required") || !node.at("required").is_array()) return false;
+        std::set<std::string> required;
+        for (const auto& v : node.at("required").array_range()) {
+            if (!v.is_string() || !required.insert(v.as<std::string>()).second) return false;
         }
-        for (const auto& p : node.object_range()) if (!strict_schema(p.value(), depth + 1)) return false;
+        if (required.size() != node.at("properties").size()) return false;
+        for (const auto& p : node.at("properties").object_range())
+            if (!required.contains(std::string(p.key()))) return false;
+    }
+    // Traverse only schema positions. Property names and enum/const values are data,
+    // even when named "properties", "required" or "$ref" themselves.
+    for (const auto* key : {"properties", "$defs", "definitions", "patternProperties", "dependentSchemas"}) {
+        if (!node.contains(key)) continue;
+        if (!node.at(key).is_object()) return false;
+        for (const auto& p : node.at(key).object_range())
+            if (!strict_schema(p.value(), depth + 1)) return false;
+    }
+    for (const auto* key : {"anyOf", "oneOf", "allOf", "prefixItems"}) {
+        if (!node.contains(key)) continue;
+        if (!node.at(key).is_array()) return false;
+        for (const auto& child : node.at(key).array_range())
+            if (!strict_schema(child, depth + 1)) return false;
+    }
+    for (const auto* key : {"items", "additionalProperties", "additionalItems", "not", "if", "then", "else",
+                            "contains", "propertyNames", "unevaluatedItems", "unevaluatedProperties"}) {
+        if (!node.contains(key)) continue;
+        const auto& child = node.at(key);
+        if (child.is_array() && std::string_view(key) == "items") {
+            for (const auto& item : child.array_range()) if (!strict_schema(item, depth + 1)) return false;
+        } else if (!strict_schema(child, depth + 1)) return false;
     }
     return true;
 }

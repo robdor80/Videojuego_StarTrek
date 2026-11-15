@@ -95,6 +95,13 @@ void responses() {
     for (auto bad : {R"({"type":"object"})", R"({"type":"object","properties":{},"required":[],"additionalProperties":false,"$ref":"https://example.invalid/schema"})"}) {
         r.json_schema = bad; auto count = t->calls.load(); CHECK(run(t, r).error == Error::CONFIGURATION); CHECK(t->calls == count);
     }
+    r.json_schema = R"({"type":"object","properties":{"properties":{"type":"string"},"type":{"type":"string"}},"required":["properties","type"],"additionalProperties":false})";
+    response_text(*t, R"({"properties":"literal data","type":"plain"})");
+    CHECK(run(t, r).error == Error::OK);
+    r.json_schema = R"({"type":"object","properties":{"child":{"type":["object","null"],"properties":{"ok":{"type":"boolean"}},"required":["ok"],"additionalProperties":false}},"required":["child"],"additionalProperties":false})";
+    response_text(*t, R"({"child":null})"); CHECK(run(t, r).error == Error::OK);
+    response_text(*t, R"({"child":{"ok":true}})"); CHECK(run(t, r).error == Error::OK);
+    response_text(*t, R"({"child":{"ok":"yes"}})"); CHECK(run(t, r).error == Error::MALFORMED);
     r = request();
     for (auto bad : {"not json", "[]", R"({"status":"completed","output":[]})", R"({"status":"completed","output":[{"type":"function_call"}]})", R"({"status":"completed","output":[{"type":"message","content":[{"type":"output_text","text":"one"},{"type":"output_text","text":"two"}]}]})"}) {
         t->answer.body = bad; auto result = run(t); CHECK(result.error == Error::MALFORMED && result.text.empty());
@@ -182,6 +189,7 @@ void credentials(const char* executable) {
         cleanup.owned = !deleted;
         CHECK(code == 0 && deleted);
         CHECK(credential_status(*store).storage_error == Error::MISSING_KEY);
+        std::cout << "PASS: Windows shared credential write/replace/read from second process\n";
     } else { CHECK(prior.shared); std::cout << "Existing credential preserved; write test skipped\n"; }
 #else
     (void)executable;
