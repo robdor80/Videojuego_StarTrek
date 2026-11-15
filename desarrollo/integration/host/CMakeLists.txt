@@ -73,6 +73,7 @@ add_custom_command(OUTPUT "${f10_rules_header}"
     "${f10_authoring}/character_creation/character_creation_contract_v1_0.json"
     "${f10_authoring}/character_creation/f10_biography_validation_interface_v0.1.json"
     "${f10_authoring}/character_creation/f10_biography_evidence_semantic_boundary_v0.1.json"
+    "${f10_authoring}/character_creation/f10_initial_player_rules_v0.1.json"
     "${f10_authoring}/character_creation/f10_initial_background_policy_v0.1.json"
     "${f10_authoring}/character_creation/f10_species_maturity_policy_v0.1.json"
     "${f10_authoring}/character_creation/f10_openai_semantic_policy_v0.1.json"
@@ -263,4 +264,21 @@ if(MSVC)
     target_compile_options(host_biography_tests PRIVATE /utf-8)
     target_compile_options(host_biography_ai_tests PRIVATE /utf-8)
   endif()
+endif()
+
+if(TREK_HOST_TESTS)
+  # Production constructors and genuine HOST profile; only HTTPS is simulated.
+  add_executable(host_initial_biography_tests tests/initial_biography_tests.cpp
+    ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp ${f10_sources} ${host_ai_sources})
+  add_dependencies(host_initial_biography_tests host_f10_rules)
+  target_compile_features(host_initial_biography_tests PRIVATE cxx_std_20)
+  target_compile_definitions(host_initial_biography_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_include_directories(host_initial_biography_tests PRIVATE src include "${f10_rules_dir}")
+  target_link_libraries(host_initial_biography_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG jsoncons Threads::Threads ${host_ai_platform_libraries})
+  set_target_properties(host_initial_biography_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  if(MSVC)
+    target_compile_options(host_initial_biography_tests PRIVATE /utf-8)
+  endif()
+  add_test(NAME host.biography.initial_player COMMAND host_initial_biography_tests)
+  set_tests_properties(host.biography.initial_player PROPERTIES TIMEOUT 45 LABELS "f10;ia03a;h03;native")
 endif()

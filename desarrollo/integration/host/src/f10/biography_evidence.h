@@ -2,6 +2,8 @@
 
 #include "biography_validation.h"
 
+namespace trek::host::detail { class BiographyProfileSource; }
+
 namespace trek::f10 {
 class OpenAiBiographyEvaluator;
 
@@ -48,6 +50,14 @@ public:
     // Register alongside other trusted sources to enable this per-evaluation
     // attestation and let the same registry apply contradictions or revocations.
     [[nodiscard]] static RegisteredBiographySource initial_background_source();
+    // Production initial-player composition. Profile is issued by SessionOwner,
+    // never decoded from the draft. Optional snapshots may deny/revoke claims.
+    [[nodiscard]] static std::shared_ptr<const RegisteredBiographyAuthority> for_initial_player(
+        std::shared_ptr<const host::detail::BiographyProfileSource>,
+        std::shared_ptr<OpenAiBiographyEvaluator> = {},
+        std::vector<BiographyClaimEvidence> = {});
+    [[nodiscard]] static RegisteredBiographySource initial_player_source();
+    [[nodiscard]] static RegisteredBiographySource profile_source();
     [[nodiscard]] bool resolves(BiographyIssue, const ReviewRequest&, const BiographyContext&) const override;
     [[nodiscard]] DomainDecision verify(const ReviewRequest&, const ReviewEvidence&) const override;
 
@@ -55,6 +65,8 @@ private:
     friend class BiographyValidator;
     [[nodiscard]] bool resolves(BiographyIssue, const ReviewRequest&, const BiographyContext&,
                                 const BiographyClaimEvidence* evaluated) const;
+    bool initial_player_{};
+    std::shared_ptr<const host::detail::BiographyProfileSource> profile_;
     const std::vector<RegisteredBiographySource> sources_;
     const std::vector<BiographyClaimEvidence> evidence_;
     const std::shared_ptr<OpenAiBiographyEvaluator> semantic_;

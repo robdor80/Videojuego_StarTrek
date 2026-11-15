@@ -43,6 +43,13 @@ def main(source):
             return json.loads(header.read_text(encoding="ascii").split('R"f10_rules(', 1)[1].split(')f10_rules"', 1)[0])
 
         original = generate()
+        initial_path = root / gameplay / "character_creation/f10_initial_player_rules_v0.1.json"
+        initial = json.loads(initial_path.read_text(encoding="utf-8"))
+        initial["semantic_instructions_es"] += " Revised."
+        initial_path.write_text(json.dumps(initial), encoding="utf-8")
+        assert generate()["sources_sha256"] != original["sources_sha256"]
+        initial["semantic_instructions_es"] = initial["semantic_instructions_es"].removesuffix(" Revised.")
+        initial_path.write_text(json.dumps(initial), encoding="utf-8")
         human = next(row for row in policy["species"] if row["species_id"] == "human")
         human["minimum_playable_age_earth_years"] += 1
         updated = generate()

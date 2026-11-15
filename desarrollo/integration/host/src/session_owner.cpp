@@ -1,6 +1,7 @@
 #include "trek/host/session_owner.h"
 
 #include "abi_admission.h"
+#include "biography_profile_source.h"
 #include "native_session.h"
 #include "player_bootstrap.h"
 #ifdef TREK_HOST_GATEWAY_TESTING
@@ -97,6 +98,8 @@ struct SessionOwner::Impl {
     State state = State::CLOSED;
     Generation generation;
     std::shared_ptr<const detail::ActiveCampaign> campaign;
+    std::shared_ptr<const int> biography_activation;
+    std::string local_profile;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
     bool stopping = false;
@@ -132,6 +135,7 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        biography_activation.reset();
         generation = {};
         campaign.reset();
         binding = Binding::UNBOUND;
@@ -484,6 +488,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
     if (config.class_id.empty() || config.class_id.find('\0') != std::string::npos) {
         return ready(Error::INVALID_ARGUMENT);
     }
+    impl_->biography_activation.reset();
     Impl::Open request{std::move(config), std::make_shared<const detail::ActiveCampaign>(), {}};
     auto reply = request.reply.get_future();
     impl_->opening.emplace(std::move(request));
@@ -495,6 +500,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
 std::shared_future<Result> SessionOwner::close()
 {
     std::lock_guard lock(impl_->mutex);
+    impl_->biography_activation.reset();
     if (impl_->closing) {
         return impl_->close_result;
     }
@@ -573,6 +579,7 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     } else if(generation!=Generation{})return ready(Error::GENERATION_EXPIRED);
     if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
     Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
+    impl_->biography_activation.reset();
     impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
     impl_->work.notify_one();return result;
 }
@@ -617,3 +624,18 @@ std::future<BindPlayerResult> PlayerBootstrap::bind(
 }
 
 } // namespace trek::host
+
+std::shared_ptr<const trek::host::detail::BiographyProfileSource>
+trek::host::detail::BiographyProfileSource::begin(SessionOwner& owner) {
+    std::lock_guard lock(owner.impl_->mutex);
+    if (owner.impl_->state != State::CLOSED || owner.impl_->stopping) return {};
+    if (owner.impl_->local_profile.empty()) owner.impl_->local_profile = detail::new_campaign_id();
+    const auto generation = next_generation();
+    if (!generation) return {};
+    auto activation = std::make_shared<const int>(0);
+    auto source = std::shared_ptr<const BiographyProfileSource>(new BiographyProfileSource(
+        {"starfleet_academy", "tng_ds9_voyager", 2383, "", detail::new_campaign_id(),
+         generation, owner.impl_->local_profile}, activation));
+    owner.impl_->biography_activation = std::move(activation);
+    return source;
+}
