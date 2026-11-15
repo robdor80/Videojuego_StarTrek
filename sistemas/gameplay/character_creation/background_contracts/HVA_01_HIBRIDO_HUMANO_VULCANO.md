@@ -2,8 +2,8 @@
 
 **Versión:** 0.1.0 · **Fecha:** 2026-11-15 · **Estado:** DISEÑO DOCUMENTAL, NO IMPLEMENTADO NI CERTIFICADO.
 **Responsable de reglas:** F10. **HOST H06:** orquestación. **CoreRPG:** hechos autoritativos. **Era:** Academia en 2383.
-**Opción jugable aprobada:** híbrido humano-vulcano desde la primera versión. **Identificador propuesto para incorporar al catálogo F10:** human_vulcan_hybrid; hoy no consta en la política numérica de madurez de F10 como especie seleccionable. NO reutilizar engañosamente species_id: vulcan ni human.
-**Edad mínima:** **PROPUESTA DE DISEÑO: 22 años terrestres**, exclusivamente como umbral cómodo entre las otras opciones; **NO APROBADA/NO AUTORIZADA EN EL CONTRATO F10 VIGENTE**. No implementarla hasta incorporación explícita de la regla. Tampoco imponer máximo ni solicitar acreditación individual de madurez: al aprobarse un número, la edad declarada basta para la comprobación de edad.
+**Opción jugable aprobada:** híbrido humano-vulcano desde la primera versión. **Identificador propio:** `human_vulcan_hybrid`, incorporado a la política numérica y a un perfil biológico de referencia F10 en esta PR. No reutiliza `vulcan` ni `human`. Su adopción por el producto dependerá de integrar y verificar el código.
+**Edad mínima aprobada por el autor (15-11-2026): 22 años terrestres.** Sin edad máxima automática ni acreditación individual adicional de madurez: la edad declarada que cumple los 22 años supera la comprobación de edad. No presupone acceso a la Academia ni autoriza por sí sola la creación de PERSON.
 **Definición:** ascendencia biológica humana y vulcana respaldada por la continuidad (Spock es precedente). No equivale a un “humano con educación vulcana”: el ejemplo de Michael Burnham muestra precisamente que la cultura se aprende independientemente de la biología.
 
 ## A. Regla fundamental: tres dimensiones separadas
@@ -150,7 +150,7 @@ La IA devuelve observaciones explícitas; no reescribe silenciosamente la histor
 
 ## J. Integración y dependencias pendientes
 
-La interfaz de jugador mostrará las tres especies desde la primera versión objetivo, pero todavía faltan **dos decisiones técnicas de F10**: alta formal del identificador del híbrido en el catálogo jugable y aprobación de un mínimo de edad numérico (22 es aquí una propuesta, NO una norma activa). Hasta que F10 lo autorice, no se generará una PERSON con identidad biológica falsa sustituyéndola por vulcan o human.
+La interfaz de jugador mostrará las tres especies desde la primera versión objetivo. **La edad de 22 años terrestres ha sido aprobada por el autor y se incorpora como mínimo numérico en F10, con `human_vulcan_hybrid` como identidad biológica independiente.** El catálogo de referencia y las pruebas del validador se actualizan en esta misma PR. Esta actualización no equivale a certificar la pantalla UE5, el funcionamiento nativo en producción, la conexión IA ni la creación de PERSON. Nunca se sustituirá al híbrido por `vulcan` o `human` para sortear una comprobación.
 
 El HOST enviará a OpenAI únicamente los datos de la ficha, el contrato elegido y el contexto de cultura declarado, bajo el proveedor común ya decidido. Primero valida F10 lo objetivo; después la IA propone revisión semántica; después F10 verifica la evidencia antes de que CoreRPG cree la persona. Ningún texto libre crea rango, poderes o ciudadanía. Si falla la IA, se conserva el borrador pendiente.
 
@@ -175,4 +175,4 @@ El HOST enviará a OpenAI únicamente los datos de la ficha, el contrato elegido
 - https://www.startrek.com/news/5-ways-star-trek-the-animated-series-totally-predicted-modern-star-trek (infancia y acoso de Spock como ejemplo particular, no universales)
 - TOS “Journey to Babel”, TAS “Yesteryear”, DIS “Lethe”, SNW “Charades”.
 
-**Cierre documental:** no se ha integrado el ID híbrido en F10, ni probado API, ni realizado pruebas UE5. Este documento es una especificación narrativa preparatoria, no un contrato ejecutable.
+**Cierre documental:** el ID híbrido y su mínimo aprobado (22) quedan incorporados al catálogo de referencia de F10 en esta PR. No se ha probado API OpenAI ni UE5 ni creación real de PERSON. Las pruebas de generación/validación requieren evidencias de ejecución antes de declarar integración certificada.
