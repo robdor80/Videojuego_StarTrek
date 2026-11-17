@@ -40,14 +40,13 @@ class ValhallaContractsTest(unittest.TestCase):
         self.assertIn("weapons_type_location_and_operational_state", profile["immediate_reports"]["package_contents"])
         self.assertIn("shields", profile["immediate_reports"]["package_contents"])
         self.assertIn("trajectory_course_velocity_position", profile["immediate_reports"]["package_contents"])
-        self.assertTrue(profile["extraordinary_exception"]["exception_cannot_be_random"] if "exception_cannot_be_random" in profile["extraordinary_exception"] else profile["visibility_and_safety"]["exception_cannot_be_random"])
+        self.assertTrue(profile["visibility_and_safety"]["exception_cannot_be_random"])
 
     def test_generic_resolver_remains_available(self) -> None:
         generic = read_json(SENSOR + "sensor_detection_rules.json")
         self.assertEqual(generic["model_id"], "deterministic_normalized_gameplay_v1")
         self.assertFalse(generic["runtime_override_implemented"])
         self.assertIn(SENSOR + "enterprise_d_valhalla_sensor_superiority_v0.1.json", generic["special_platform_profile_refs"])
-        self.assertIn("partial", str(generic.get("hidden_property_rules", [])).lower()) if False else None
 
     def test_watch_and_interface_are_wired_by_contract(self) -> None:
         watch = read_json("sistemas/gameplay/duty_system/sensor_watchstanding_state_v0.1.json")
