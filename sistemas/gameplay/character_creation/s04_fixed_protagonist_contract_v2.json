@@ -1,0 +1,174 @@
+{
+  "schema_version": "2.0.0",
+  "contract_id": "s04_fixed_player_protagonist",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "owner": "F10",
+  "continuity": "GAME_ADDITION",
+  "decision_ref": "proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md",
+  "design_ref": "sistemas/gameplay/character_creation/S04_PROTAGONISTA_IDENTIDAD_CARRERA_v2.md",
+  "campaign": {
+    "start_year": 2383,
+    "start_month_day": "AUTHOR_UNDECIDED",
+    "setting": "starfleet_academy",
+    "fixed_protagonist_across_new_games": true,
+    "academy_duration_years": 4,
+    "expected_graduation_year": 2387
+  },
+  "selection": {
+    "mode": "SINGLE_FIXED_CANONICAL_PROTAGONIST",
+    "allow_species_selection": false,
+    "allow_sex_selection": false,
+    "allow_free_biography_input": false,
+    "allow_age_selection": false,
+    "allowed_species_ids": [
+      "human_vulcan_hybrid"
+    ],
+    "sex": "male",
+    "age_at_academy_entry_years": 45,
+    "approximate_birth_year": 2338,
+    "apparent_human_age_approx": 30,
+    "character_id_policy": "new_authoritative_identity_per_campaign_same_biographical_archetype",
+    "no_new_character_from_appearance_changes": true
+  },
+  "parentage": {
+    "mother_species": "vulcan",
+    "father_species": "human",
+    "father_direct_descendant_of": "khan_noonien_singh",
+    "genealogical_chain": "UNDECIDED",
+    "parents_names": "UNDECIDED",
+    "birth_place": "UNDECIDED",
+    "culture": "mixed_with_strong_vulcan_maternal_teaching"
+  },
+  "biology": {
+    "exceptional_inherited_augment_expression": true,
+    "expression_model": "rare_polygenic_atavistic_reexpression_as_fiction",
+    "spock_like_hybrid_longevity": true,
+    "slow_aging": true,
+    "working_lifespan_range_years": [
+      150,
+      200
+    ],
+    "lifespan_not_hardcoded": true,
+    "unusually_high_strength": true,
+    "unusually_high_reflexes": true,
+    "unusually_high_resilience": true,
+    "invincible": false,
+    "automatic_telepathy": false,
+    "unlimited_powers": false
+  },
+  "training": {
+    "martial_mastery": [
+      "kung_fu",
+      "karate",
+      "aikido",
+      "suus_mahna"
+    ],
+    "mastery_is_existing_preacademy_fact": true,
+    "skill_values_from_core_validated_evidence_not_manual_points": true,
+    "formal_certificates": "UNDECIDED",
+    "vulcan_mental_discipline": true,
+    "emotion_suppression": false,
+    "emotion_control_earned": true,
+    "anger_is_not_genetic_moral_determinism": true,
+    "emotion_decisions_have_consequences": true
+  },
+  "education": {
+    "primary_vocation": "science",
+    "strong_interest": [
+      "astronomy",
+      "astrophysics",
+      "natural_science"
+    ],
+    "artistic_interests": [
+      "music"
+    ],
+    "music_role": "self_regulation_and_personal_expression",
+    "academic_degrees": "UNDECIDED",
+    "previous_starfleet_service": false,
+    "security_department_auto_assignment": false,
+    "prior_commission": false
+  },
+  "admission": {
+    "declares_khan_lineage": true,
+    "declares_exceptional_traits": true,
+    "requests_merit_based_assessment": true,
+    "normal_eligibility_still_required": true,
+    "opposed_by_fictional_admirals": true,
+    "supported_by": [
+      "jean_luc_picard",
+      "kathryn_janeway"
+    ],
+    "picard_locutus_ethical_argument": true,
+    "institutional_decision_only_by_authorized_F10": true,
+    "academic_admission_event_id": "DYNAMIC_AT_RUNTIME",
+    "not_rank_or_clearance": true
+  },
+  "customization": {
+    "editable_fields": [
+      "display_name",
+      "optional_appellation",
+      "hair_style",
+      "facial_hair",
+      "minor_facial_proportions",
+      "cosmetic_vulcan_features",
+      "uniform_cosmetic_compatible_with_rank"
+    ],
+    "immutable_fields": [
+      "sex",
+      "species_id",
+      "age_at_academy_entry_years",
+      "birth_year_anchor",
+      "parentage",
+      "khan_lineage",
+      "augment_expression",
+      "biography_core",
+      "martial_mastery",
+      "science_vocation",
+      "initial_academy_path"
+    ],
+    "visual_profile_persistent": true,
+    "cosmetics_do_not_mutate_core_capabilities": true
+  },
+  "intro": {
+    "plan_ref": "sistemas/gameplay/character_creation/S04_INTRO_CINEMATICA_PLAN_v1.md",
+    "art_style": "premium_2D_color_pencil_or_painterly_concept_art",
+    "video_ai_alternative_only_if_quality_better": true,
+    "life_stage_count": 5,
+    "janeway_first_defense": true,
+    "picard_final_speech": true,
+    "sisko_2383_participant": false,
+    "skip_and_rewatch_without_replaying_admission": true,
+    "voice_and_music_production_not_started": true
+  },
+  "relationships": {
+    "picard_initial_state": "KNOWS_DOSSIER_AND_SUPPORTS_FAIR_HEARING_NO_PERSONAL_FAVOR",
+    "janeway_initial_state": "KNOWS_DOSSIER_AND_ADVOCATES_WITHOUT_PERSONAL_MEETING",
+    "seven_initial_state": "NO_FORCED_AFFINITY_OR_EARLY_ENCOUNTER",
+    "sisko_initial_state": "NOT_PRESENT_UNTIL_APPROVED_RETURN_EVENT",
+    "future_relationships_event_driven": true
+  },
+  "narrative_progression": {
+    "fixed_backstory": true,
+    "player_ethics_and_career_mutable": true,
+    "career_rank_is_earned_via_F11": true,
+    "enterprise_d_command_not_guaranteed": true,
+    "scientific_preference_not_security_lock": true
+  },
+  "legacy": {
+    "previous_open_species_selection": "SUPERSEDED_FOR_NEW_PLAYER_GAME",
+    "old_f10_rules_ref": "sistemas/gameplay/character_creation/f10_initial_player_rules_v0.1.json",
+    "old_form_ref": "sistemas/gameplay/character_creation/f10_formulario_inicial_v0.3.json",
+    "locked_contracts_retained": true,
+    "code_migration_required": true,
+    "never_auto_convert_legacy_saves": true
+  },
+  "authority": {
+    "character_biography": "F10_author_approved_fixture",
+    "world_state": "CoreRPG",
+    "session": "HOST",
+    "cinematic_render": "UE5",
+    "ranks": "F11",
+    "ai": "narration_only_no_authority"
+  },
+  "runtime_implemented": false
+}
