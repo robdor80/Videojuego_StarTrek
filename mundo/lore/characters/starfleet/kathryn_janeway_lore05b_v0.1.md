@@ -14,7 +14,7 @@
 1. **Rango:** **almirante (★★★★)** en la continuidad del videojuego, en servicio activo. La fecha de consolidación administrativa del rango queda abierta; rango y función no son sinónimos.
 2. **Cargo:** **directora del Mando de Exploración y Operaciones del Cuadrante Delta**, con responsabilidad estratégica sobre expediciones de largo alcance, amenazas y cooperación con civilizaciones del Cuadrante Delta. La jurisdicción concreta no supone dominio absoluto de toda la Federación.
 3. **Relación con Siete de Nueve:** mantiene un **vínculo profundo de confianza y protección** con Annika Hansen, antigua compañera de la Voyager. La **primera misión conjunta entre Siete y la nave en que sirva el jugador** puede ser asignada por Janeway, según la ficha de Siete.
-4. **Primer encuentro con el jugador:** Janeway puede llegar a conocer personalmente al protagonista **a través de Siete de Nueve**, después de que esta haya trabajado con él y exista confianza justificada. No se fuerza el encuentro durante la Academia ni se presupone que Janeway conoce detalles privados ajenos a su conocimiento.
+4. **Conocimiento del jugador y primer encuentro personal:** por la decisión autoral posterior DEC-0022, **Janeway conoce el expediente y apoya una evaluación justa en el consejo de 2383**, sin necesidad de conocer todavía en persona al candidato. Su **primer encuentro personal** puede acontecer **más tarde a través de Siete de Nueve** y circunstancias justificadas. La aprobación institucional no implica confianza íntima, favoritismo o acceso a información confidencial ajena a la audiencia.
 5. **Relación con el jugador:** **segunda mentora**, especializada en exploración, decisiones de mando ante territorios desconocidos y grandes operaciones estratégicas. Su respeto nace de resultados y comportamiento, no de favoritismos.
 6. **Presencia narrativa:** figura **recurrente pero selectiva** en grandes operaciones de exploración y misiones relacionadas con el Cuadrante Delta, mediante reuniones, órdenes, comunicaciones o presencia justificada. No reemplaza al jugador en sus misiones ni necesariamente embarca en la Enterprise-D.
 
@@ -26,7 +26,7 @@
 
 ## Cronología y autoridad
 - **2383:** la Academia inicia la campaña; Janeway ya es almirante y ejerce su cargo en esta continuidad.
-- **2383–2387:** no se presume que conozca al jugador personalmente durante la Academia.
+- **2383–2387:** **conoce el expediente desde 2383 y defiende su candidatura** en el debate de alto mando. No se presume **encuentro presencial ni amistad personal** durante la Academia.
 - **Etapa posterior:** una misión conjunta ordenada a Siete puede abrir la puerta a su presentación; fecha real y resultado dependen de rango, destino y WorldState.
 - El cargo y ámbito exactos forman parte de GAME_ADDITION, no de un puesto canónico confirmado para 2383.
 
@@ -44,3 +44,9 @@ Organigrama del Mando del Cuadrante Delta, competencias operativas y relaciones 
 - `mundo/lore/characters/starfleet/seven_of_nine_lore05b_v0.1.md`.
 - `mundo/lore/characters/starfleet/tuvok_lore05b_v0.1.md`.
 - `mundo/lore/characters/README.md`.
+
+## Addendum DEC-0022 (17-11-2026) — defensa del ingreso
+
+La almirante Janeway **interviene entre los primeros pesos pesados favorables a examinar con justicia la candidatura** del protagonista híbrido humano-vulcano de 45 años, descendiente de Khan por vía paterna, tras décadas de preparación y total transparencia. Argumenta desde criterios profesionales y prudencia, no niega los riesgos ni salta las pruebas F10. Picard remata la audiencia con su testimonio de Locutus; los oponentes institucionales son almirantes originales ficticios. Janeway guarda este recuerdo/documentación en 2383 y podrá años después hablar del candidato a **Siete de Nueve**, cuando haya contexto y permiso para compartir hechos; no transmite automáticamente información reservada ni hace que Siete sienta atracción. Se mantiene la primera misión conjunta asignada por Janeway cuando el jugador alcance la etapa apropiada y la primera presentación personal en fecha coherente.
+
+Fuente de precedencia: `proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md`.

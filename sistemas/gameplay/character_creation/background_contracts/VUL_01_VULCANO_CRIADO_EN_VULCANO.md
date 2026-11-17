@@ -1,5 +1,7 @@
 # H06/F10 — Contrato VUL-01: infancia y vida preacadémica de un vulcano criado en Vulcano
 
+> **AVISO DE PRECEDENCIA · 17-11-2026, DEC-0022:** este contrato conserva el estudio genérico e histórico de especies/crianzas F10. En **la nueva partida del videojuego**, las tres opciones iniciales fueron sustituidas por **un único protagonista fijo**, híbrido humano-vulcano, varón, descendiente de Khan y de 45 años. Este documento **NO habilita un selector de especie ni de historia**. Véase `sistemas/gameplay/character_creation/S04_PROTAGONISTA_IDENTIDAD_CARRERA_v2.md`.
+
 **Versión:** 0.1.0 · **Fecha:** 2026-11-15 · **Estado:** DISEÑO DOCUMENTAL, NO IMPLEMENTADO NI CERTIFICADO.
 **Responsable de reglas:** F10. **Orquestación:** HOST H06. **Autoridad de hechos:** CoreRPG. **Ámbito:** personaje jugable inicial, campaña Academia en 2383.
 **Especie seleccionable:** vulcano puro (species_id: vulcan). **Crianza de referencia:** planeta Vulcano; otras crianzas deben aportar contexto, no se rechazan por especie.

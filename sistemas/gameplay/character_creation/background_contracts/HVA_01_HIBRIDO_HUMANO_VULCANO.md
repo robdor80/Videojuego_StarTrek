@@ -1,5 +1,7 @@
 # H06/F10 — Contrato HVA-01: infancia y vida preacadémica de un híbrido humano-vulcano
 
+> **AVISO DE PRECEDENCIA · 17-11-2026, DEC-0022:** este contrato conserva el estudio genérico e histórico de especies/crianzas F10. En **la nueva partida del videojuego**, las tres opciones iniciales fueron sustituidas por **un único protagonista fijo**, híbrido humano-vulcano, varón, descendiente de Khan y de 45 años. Este documento **NO habilita un selector de especie ni de historia**. Véase `sistemas/gameplay/character_creation/S04_PROTAGONISTA_IDENTIDAD_CARRERA_v2.md`.
+
 **Versión:** 0.1.0 · **Fecha:** 2026-11-15 · **Estado:** DISEÑO DOCUMENTAL, NO IMPLEMENTADO NI CERTIFICADO.
 **Responsable de reglas:** F10. **HOST H06:** orquestación. **CoreRPG:** hechos autoritativos. **Era:** Academia en 2383.
 **Opción jugable aprobada:** híbrido humano-vulcano desde la primera versión. **Identificador propio:** `human_vulcan_hybrid`, incorporado a la política numérica y a un perfil biológico de referencia F10 en esta PR. No reutiliza `vulcan` ni `human`. Su adopción por el producto dependerá de integrar y verificar el código.

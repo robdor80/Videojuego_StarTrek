@@ -42,3 +42,11 @@ Organigrama y competencias precisas del Consejo Estratégico; fecha de nombramie
 - `proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md`.
 - `mundo/lore/characters/README.md`.
 - Verificación externa sobre Patrick Stewart: https://www.rtve.es/noticias/20261029/muere-patrick-stewart-star-trek-xmen/17289271.shtml
+
+## Addendum DEC-0022 (17-11-2026) — patrocinio ético de la candidatura en 2383
+
+**Decisión posterior expresa:** antes de conocer personalmente al protagonista, Picard, como almirante de flota y presidente del Consejo Estratégico en esta continuidad, ha examinado **su expediente** y participa en un debate de alto mando sobre su ingreso en la Academia. Defiende una **evaluación individual y justa** del candidato híbrido humano-vulcano descendiente de Khan, de 45 años y ciencia como vocación, sin otorgarle plaza, rango o trato de favor. **En su discurso final alude a que él mismo fue Locutus de Borg**, conoce el peso del estigma y rechaza juzgar a una persona solo por su pasado/herencia; esta empatía no equipara las situaciones literalmente.
+
+Este conocimiento **documental previo no es un encuentro personal**: el primer encuentro presencial con el jugador sigue situado **durante la Academia**, conforme a la regla 5 de esta ficha. La mentoría y amistad dependen de méritos posteriores. Se conserva la entrega personal de galones al ascender legalmente a capitán. Guion audiovisual definitivo pendiente de coautoría; CoreRPG controla su conocimiento y disponibilidad.
+
+Fuente de precedencia: `proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md`.

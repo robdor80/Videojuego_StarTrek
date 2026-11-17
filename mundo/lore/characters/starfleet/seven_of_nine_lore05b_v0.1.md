@@ -44,3 +44,7 @@
 - Seis elecciones aprobadas explícitamente en LORE-05B el 13-11-2026.
 - `mundo/lore/characters/README.md`: persistencia y frontera entre IA y CoreRPG.
 - `proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md`: identidad de la USS Enterprise NCC-1701-D.
+
+## Addendum DEC-0022 (17-11-2026) — puente narrativo Janeway → jugador
+
+Janeway, desde **2383**, ha tenido acceso institucional al **expediente de admisión** del jugador y defendió su derecho a una evaluación justa ante las reservas de otros almirantes. Por tanto, en una etapa posterior de la campaña puede mencionarlo a Siete de Nueve si la conversación/misión lo justifica y la información es compartible. Siete y el protagonista comparten una posible experiencia subjetiva de ser juzgados por un legado extraordinario (ex-Borg frente a descendiente de Khan), pero **no son equivalentes, no se conocen automáticamente ni hay afecto o romance predeterminado**. Se conservan el primer encuentro operativo, agenda, permisos, consentimiento, carrera del jugador y autonomía de Siete. Fuente: `proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md`.
