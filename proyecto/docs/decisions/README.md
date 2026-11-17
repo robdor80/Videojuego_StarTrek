@@ -1,5 +1,7 @@
 # Decisiones de autor — índice de referencia
 
+**DEC-0022 · 17-11-2026:** [Sistema 04 — Protagonista único, legado Khan e intro Academia](s04_protagonista_unico_khan_intro_academia_2026-11-17.md). Sustituye la **creación libre del personaje jugable** por un varón híbrido humano-vulcano descendiente de Khan, con 45 años al entrar en la Academia, legado y capacidades fijados, nombre/cosmética ajustables e introducción 2D de alto mando encabezada por Janeway y rematada por Picard. **Diseño aprobado; F10/HOST/UE5 aún requieren migración.**
+
 **DEC-0021 · 17-11-2026:** [Superioridad sensorial y reputación galáctica de la Enterprise-D del Proyecto Valhalla](enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md). Fija lecturas ordinarias completas e instantáneas en automático y manual, prestigio de conocimiento público y disuasión NPC; **documental, sin runtime certificado**.
 
 Las decisiones aprobadas prevalecen sobre propuestas anteriores sólo en los aspectos que modifican expresamente. Conservar siempre el historial anterior y separar `GAME_ADDITION` de `SCREEN_CANON` y de implementación CoreRPG/Unreal.

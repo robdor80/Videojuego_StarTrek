@@ -16,3 +16,6 @@ Directory reserved by the Star Trek universe architecture. Content will be added
 - `sistemas/gameplay/character_creation/FORMULARIO_INICIAL_H06_F10_V0_3.md`: límites de autoridad, expediente de personalidad y futura evaluación institucional F10.
 - Puede importar borradores v0.1 y v0.2 para completar los campos nuevos. Genera un borrador local, **no una aprobación**, ni una PERSON ni un informe psicológico de la Academia.
 
+## Cambio autoral de nueva partida — DEC-0022 (17-11-2026)
+
+Los formularios `formulario_cadete_v0.1.html` y `formulario_cadete_v0.3.html` son prototipos históricos del **antiguo creador abierto**. **No deben mostrarse como flujo definitivo de nueva partida**. La pantalla futura permitirá solo nombre, peinado, barba y ajustes cosméticos acotados del protagonista fijo híbrido humano-vulcano varón, descendiente de Khan, que entra a los 45 años en 2383. Luego la **intro ilustrada 2D** mostrará debate Picard/Janeway, cinco etapas vitales y admisión autorizada. El trabajo de UI/UE5 todavía no está implementado. Diseño: `sistemas/gameplay/character_creation/S04_INTRO_CINEMATICA_PLAN_v1.md`; migración: `sistemas/gameplay/character_creation/S04_MIGRACION_F10_HOST_v2.md`.
