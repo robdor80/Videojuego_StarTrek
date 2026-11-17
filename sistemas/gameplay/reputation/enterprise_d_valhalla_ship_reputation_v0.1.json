@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "enterprise_d_valhalla_ship_reputation",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "classification": "GAME_ADDITION",
+  "decision_ref": "proyecto/docs/decisions/enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md",
+  "subject": {
+    "ship_id": "uss_enterprise_ncc_1701_d",
+    "registry": "NCC-1701-D",
+    "class_id": "galaxy",
+    "project_id": "project_valhalla",
+    "individual_ship_not_generic_class": true
+  },
+  "knowledge_policy": {
+    "prelaunch_project": "widely_known_and_discussed_from_credible_public_and_intelligence_channels",
+    "post_commissioning": "flagship_superiority_and_identity_broadly_recognized",
+    "covered_groups": [
+      "federation_member_worlds_and_starfleet",
+      "nonmember_powers_with_contact_and_information_networks",
+      "romulan_star_empire",
+      "klingon_empire",
+      "cardassian_union",
+      "ferengi_alliance",
+      "other_major_polities"
+    ],
+    "scope_rule": "all established reachable major factions know project; no arbitrary obliviousness when the Enterprise-D is positively identified",
+    "publication_event_required": true,
+    "no_future_readiness_leak": true,
+    "news_uses_known_timestamp_and_source": true
+  },
+  "public_fields": [
+    "ship_historical_identity",
+    "registry",
+    "project_name",
+    "reconstruction_under_geordi_la_forge",
+    "starfleet_flagship_status_when_effective",
+    "publicly_known_superiority",
+    "observed_strength_and_reputation"
+  ],
+  "protected_fields": [
+    "classified_blueprints",
+    "deflector_shield_codes_and_frequencies",
+    "exact_advanced_weapons_inventory_when_classified",
+    "secret_tactical_patterns",
+    "defiant_covert_mission_details",
+    "undisclosed_security_configuration"
+  ],
+  "core_events": [
+    "public_project_announcement",
+    "commissioning_or_return_to_service",
+    "reputation_publication",
+    "confirmed_demonstrated_capability",
+    "faction_receipt_or_intelligence_update"
+  ],
+  "observer_reactions": [
+    "deterrence",
+    "withdrawal",
+    "caution",
+    "respect",
+    "negotiation",
+    "strategic_interest",
+    "justified_hostility"
+  ],
+  "decision_inputs": [
+    "live_ship_capabilities",
+    "last_known_capabilities",
+    "observer_intelligence",
+    "opponent_force_balance",
+    "orders_and_rules_of_engagement",
+    "personality_and_mission",
+    "political_and_diplomatic_context"
+  ],
+  "rules": [
+    "Ship notoriety is distinct from character reputation and from diplomatic relationship score.",
+    "No new technology is auto-installed by reputation.",
+    "Public knowledge is broad, classified internals do not become public.",
+    "Threat evaluation must not balance buff ordinary opponents.",
+    "Outcomes depend on causal NPC decisions and WorldState; no forced surrender or victory.",
+    "An uncommissioned future service date is never presented as already complete."
+  ],
+  "runtime_implemented": false
+}
