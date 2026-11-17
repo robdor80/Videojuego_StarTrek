@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "enterprise_d_valhalla_acceptance_cases",
+  "status": "DESIGN_TEST_SPEC_NOT_EXECUTED",
+  "ship_id": "uss_enterprise_ncc_1701_d",
+  "configuration_id": "galaxy_refit_a2",
+  "cases": [
+    {
+      "id": "S01",
+      "setup": "ordinary obsolete freighter visible",
+      "action": "manual tactical analysis",
+      "expected": "complete correct weapons/shields/engines/trajectory in <=1s, no insufficient data"
+    },
+    {
+      "id": "S02",
+      "setup": "ordinary hostile warship visible",
+      "action": "manual tactical analysis",
+      "expected": "all actionable enemy armament positions, defensive systems and targetable subsystems immediately"
+    },
+    {
+      "id": "S03",
+      "setup": "ordinary contact acquired passively",
+      "action": "captain NPC requests report",
+      "expected": "full prepared intelligence available, no dependence on player or AI HTTP"
+    },
+    {
+      "id": "S04",
+      "setup": "ordinary tactical contact in red alert",
+      "action": "player junior tactical officer selects weapon subsystem and phasers",
+      "expected": "simple selection, valid prepared firing solution, no nested menus"
+    },
+    {
+      "id": "S05",
+      "setup": "ordinary contact at approach",
+      "action": "manual trajectory",
+      "expected": "course speed relative movement and trajectory immediately"
+    },
+    {
+      "id": "S06",
+      "setup": "ordinary planetary survey",
+      "action": "manual or automatic survey",
+      "expected": "immediate standard information without forced progressive configuration"
+    },
+    {
+      "id": "S07",
+      "setup": "sensor subsystem deliberately damaged",
+      "action": "sensor read",
+      "expected": "explicit actual damage consequence, not fabricated generic uncertainty; no claim of perfect hardware when physically offline"
+    },
+    {
+      "id": "S08",
+      "setup": "rare explicitly authored extraordinary phenomenon",
+      "action": "sensor read",
+      "expected": "exception provenance and meaningful specialized gameplay; never a random scan failure"
+    },
+    {
+      "id": "R01",
+      "setup": "project announced before commissioning",
+      "action": "major-faction intelligence retrieval",
+      "expected": "project widely known; actual readiness not falsely reported"
+    },
+    {
+      "id": "R02",
+      "setup": "flagship in service, ordinary pirate contact",
+      "action": "NPC threat appraisal",
+      "expected": "Valhalla advantage considered; no artificial enemy scaling or compulsory fight"
+    },
+    {
+      "id": "R03",
+      "setup": "romulan intelligence identifies NCC-1701-D",
+      "action": "NPC reaction",
+      "expected": "public superiority recognized while classified technical details remain secret"
+    },
+    {
+      "id": "R04",
+      "setup": "flagship and Defiant deployed separately",
+      "action": "reputation and threats",
+      "expected": "no hidden Defiant capability revelation, correct individual ship identities and authority"
+    },
+    {
+      "id": "R05",
+      "setup": "new extraordinary technology publicly demonstrated",
+      "action": "faction knowledge update",
+      "expected": "only confirmed public information propagates, with event timestamp and provenance"
+    },
+    {
+      "id": "S09",
+      "setup": "player away from bridge",
+      "action": "ship contact acquisition and report",
+      "expected": "watch and NPC decision execution continue normally"
+    }
+  ],
+  "acceptance_gates": [
+    "static_contract_consistency",
+    "CoreRPG_sensor_profile_runtime",
+    "HOST_autonomous_NPC_orders",
+    "UE5_LCARS_interaction",
+    "target_hardware_response_under_one_second",
+    "persistence_and_regression"
+  ],
+  "runtime_tests_passed": false
+}

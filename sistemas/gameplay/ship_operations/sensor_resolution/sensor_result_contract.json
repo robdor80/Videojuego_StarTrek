@@ -32,5 +32,26 @@
     "ground_truth",
     "unrevealed_hidden_properties"
   ],
-  "rule": "AI/UI may verbalize this structured result but may not add discoveries not present in it."
+  "rule": "AI/UI may verbalize this structured result but may not add discoveries not present in it.",
+  "platform_result_contracts": [
+    {
+      "ship_id": "uss_enterprise_ncc_1701_d",
+      "configuration_id": "galaxy_refit_a2",
+      "profile_ref": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+      "expected_ordinary_readout": "complete_correct_immediate",
+      "emergency_and_manual_equivalence": true,
+      "extended_profile_fields": [
+        "weapons_type_location_state",
+        "shields",
+        "propulsion",
+        "trajectory",
+        "targetable_subsystems",
+        "tactical_assessment"
+      ],
+      "source": "derived_from_authoritative_world_truth",
+      "target_latency_ms": 1000,
+      "rule": "No empty tactical report or insufficient armament data for ordinary contact when target profile is active."
+    }
+  ],
+  "runtime_extension_implemented": false
 }

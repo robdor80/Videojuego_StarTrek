@@ -11,7 +11,8 @@
     "relationship_history",
     "current_domestic_context",
     "military_logistics_context",
-    "crisis_specific_context"
+    "crisis_specific_context",
+    "recognized_individual_ship_reputation_and_actual_force_balance"
   ],
   "tuning_dimensions": [
     "force_acceptance",
@@ -30,7 +31,11 @@
     "Government and leader policy may temporarily override broad cultural expectations.",
     "Force balance, logistics, exhaustion and objectives can reverse a normal doctrinal preference.",
     "Individual captains/commanders still require personality, orders and authority state.",
-    "Unknown context produces uncertainty rather than a default Human/Federation doctrine."
+    "Unknown context produces uncertainty rather than a default Human/Federation doctrine.",
+    "Publicly recognized ship-specific superiority, such as the modernized Enterprise-D Valhalla, must influence tactical/diplomatic decisions of informed commanders without automatic mind control or arbitrary buffs to inferior ships."
   ],
-  "cultural_contract_ref": "mundo/lore/cultures/cultural_profile_contract_v0.1.json"
+  "cultural_contract_ref": "mundo/lore/cultures/cultural_profile_contract_v0.1.json",
+  "individual_ship_recognition_contract_refs": [
+    "sistemas/gameplay/conflict/enterprise_d_valhalla_threat_recognition_v0.1.json"
+  ]
 }

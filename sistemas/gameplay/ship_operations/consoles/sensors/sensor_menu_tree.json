@@ -31,7 +31,10 @@
     "context_prefill_allowed": true,
     "context_prefill_never_executes_automatically": true,
     "recommended_max_depth": 3,
-    "deeper_navigation_requires_explicit_design_review": true
+    "deeper_navigation_requires_explicit_design_review": true,
+    "platform_operational_shortcuts_ref": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+    "urgent_task_must_not_require_hierarchical_drilldown": true,
+    "advanced_menu_remains_available_but_not_mandatory_for_ordinary_reports": true
   },
   "root": [
     {

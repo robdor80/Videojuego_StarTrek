@@ -124,5 +124,23 @@
     "requirement": "When the player is not at the Sensor console, ship surveillance still belongs to the ship runtime.",
     "catch_up": "On resume, Core resolves elapsed World State and reconstructs sensor-observable changes before presenting alerts.",
     "prototype_note": "The current web Holodeck approximates this with a periodic local cycle while open."
-  }
+  },
+  "ship_specific_watch_profiles": [
+    {
+      "ship_id": "uss_enterprise_ncc_1701_d",
+      "configuration_id": "galaxy_refit_a2",
+      "profile_ref": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+      "ordinary_detection": "always_complete_immediate_operational_readout",
+      "precompute": [
+        "target_weapon_locations",
+        "shields",
+        "propulsion",
+        "trajectory",
+        "tactical_package"
+      ],
+      "manual_requests": "reuse_existing_information_with_immediate_fresh_resolution",
+      "autonomy": "officer_and_captain_NPC_access_same_profiles"
+    }
+  ],
+  "runtime_profile_wiring_pending": true
 }

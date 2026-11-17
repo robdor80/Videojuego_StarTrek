@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "enterprise_d_valhalla_sensor_superiority",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "classification": "GAME_ADDITION",
+  "decision_ref": "proyecto/docs/decisions/enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md",
+  "target": {
+    "ship_id": "uss_enterprise_ncc_1701_d",
+    "class_id": "galaxy",
+    "configuration_id": "galaxy_refit_a2",
+    "activation": "only_if_authoritative_refit_installed_and_operational",
+    "no_global_override": true
+  },
+  "principles": [
+    "automatic_and_manual_sensor_operations",
+    "ordinary_targets_always_reliably_detected_and_fully_resolved",
+    "immediate_correct_complete_readouts",
+    "no_repeated_scan_grind",
+    "no_fabricated_world_truth",
+    "sensor_data_and_firing_solutions_prepared_for_NPC_and_player",
+    "no_openai_dependency"
+  ],
+  "ordinary_scope": {
+    "includes": [
+      "uncloaked_ordinary_starships",
+      "ordinary_freighters_even_obsolete",
+      "ordinary_armed_vessels",
+      "known_shield_and_propulsion_systems",
+      "ordinary_celestial_bodies_and_hazards",
+      "ordinary_signatures_and_contacts"
+    ],
+    "baseline": "within the encounter/operationally relevant observation context",
+    "expected_outcome": "resolved_correct_actionable",
+    "ordinary_masking_policy": "routine masking or generic cloak is not an automatic reason to defeat the flagship; extraordinary masking requires authored provenance"
+  },
+  "immediate_reports": {
+    "operator_triggers": [
+      "IDENTIFICAR",
+      "ANALISIS_TACTICO",
+      "ARMAMENTO",
+      "ESCUDOS",
+      "PROPULSION",
+      "TRAYECTORIA",
+      "VIDA",
+      "BARRIDO"
+    ],
+    "package_contents": [
+      "identity_and_class",
+      "weapons_type_location_and_operational_state",
+      "defense_shields_and_observable_configuration",
+      "propulsion_and_engines",
+      "trajectory_course_velocity_position",
+      "targetable_subsystems",
+      "tactical_assessment",
+      "other_relevant_observable_properties"
+    ],
+    "one_request_one_complete_report": true,
+    "offline_precomputation": true,
+    "prewarm_on_contact_acquisition": true,
+    "refresh_on_state_change": true,
+    "manual_scan_supported": true,
+    "feedback_goal_ms_max": 1000,
+    "feedback_goal_kind": "runtime_acceptance_target_not_implemented",
+    "no_artificial_progress_or_retry": true,
+    "do_not_block_on_ai": true
+  },
+  "visibility_and_safety": {
+    "source": "existing_authoritative_world_state_and_valid_sensor_inference",
+    "default_confidence": "operationally_conclusive_for_ordinary_target",
+    "exception_cannot_be_random": true,
+    "allow_core_truth_leak": false,
+    "keep_sensor_observation_provenance": true,
+    "no_narrative_secret_invention": true,
+    "classified_access_still_enforced": true
+  },
+  "extraordinary_exception": {
+    "gate": "explicit_author_approved_story_or_rare_unique_technology",
+    "approximate_content_rarity_hint": "0.1_percent_is_narrative_guidance_not_failure_rng",
+    "must_record": [
+      "event_or_technology_ref",
+      "physical_cause",
+      "affected_properties",
+      "start_and_end",
+      "authority_approval"
+    ],
+    "default_forbidden": [
+      "generic_old_ship_undetectable",
+      "routine_scan_returns_unknown_weapons",
+      "repeated_scan_required_for_basic_capabilities",
+      "ordinary_tactical_scan_waits_90_seconds",
+      "random_unknown_contact_for_tension"
+    ]
+  },
+  "responsibility": {
+    "core": "resolves_known_observations_against_world_truth_and_ship_profile",
+    "host": "routes_orders_and_presents_authorized_state",
+    "ue5": "renders_LCARS_and_visuals",
+    "ai": "optional_verbalization_only",
+    "captain_npc": "uses_same_prepared_results_as_player"
+  },
+  "supersedes_within_target": [
+    "generic_partial_detection_of_ordinary_ship_weapon_systems",
+    "repeated_scan_required_for_ordinary_contact_readouts",
+    "long_duration_as_default_for_basic_tactical_analysis"
+  ],
+  "runtime_implemented": false
+}
