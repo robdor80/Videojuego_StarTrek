@@ -1,5 +1,7 @@
 # Consola de Sensores v0.3 · UX de puente
 
+> **Requisito de diseño 17-11-2026 — USS Enterprise-D modernizada (DEC-0021):** vigilancia pasiva, identificación y perfiles tácticos se precalculan continuamente; el modo manual también debe dar un informe ordinario **completo, correcto y prácticamente instantáneo**, sin «analizando...» prolongado. Máximo 1–2 acciones normales para órdenes frecuentes; los hasta 8 botones contextuales de v0.3 siguen como distribución máxima. No afirmar que el prototipo web ya cumple el perfil Valhalla ni retrasar respuesta por API. Contrato: `sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json`.
+
 Estado: **PROTOTIPO OPERATIVO**
 
 Ruta web de referencia: `academiaflota/holodeck/sensors-v03/`

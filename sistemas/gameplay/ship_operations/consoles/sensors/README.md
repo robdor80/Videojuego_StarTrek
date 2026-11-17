@@ -1,5 +1,7 @@
 # Consola funcional — Sensores
 
+> **ACTUALIZACIÓN DE AUTOR 17-11-2026 (DEC-0021, prevalece para USS Enterprise-D Proyecto Valhalla):** la rutina operativa de Sensores es **automática Y manual**. Un barrido o análisis táctico ordinario sobre nave detectable entrega en **una sola petición, inmediatamente**, todos los datos correctos necesarios (armas y posiciones, defensas, motores, trayectoria, etc.). No imponer pasos del árbol técnico ni esperas ficticias de 90 s. Los 10 menús de esta especificación histórica permanecen como **modo avanzado**, nunca como requisito para operar. Véase `sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json`. Esta doctrina requiere integración real y pruebas; otras naves no heredan automáticamente la superioridad.
+
 Estado: **APPROVED v0.1 / FUNCTIONAL SPEC COMPLETE**
 
 La consola de Sensores permite **detectar, buscar, localizar, medir, seguir y volver a observar** elementos del universo materializado.

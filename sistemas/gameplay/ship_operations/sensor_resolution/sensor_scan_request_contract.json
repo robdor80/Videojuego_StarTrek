@@ -53,5 +53,19 @@
     "warp",
     "artificial_transponder"
   ],
-  "rule": "The console builds this request. The detection engine resolves it against already-materialized world state."
+  "rule": "The console builds this request. The detection engine resolves it against already-materialized world state.",
+  "ship_specific_execution_policies": [
+    {
+      "profile_ref": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+      "ship_id": "uss_enterprise_ncc_1701_d",
+      "configuration_id": "galaxy_refit_a2",
+      "manual_and_automatic": true,
+      "ordinary_report_path": "instant_precomputed_or_deterministic_single_request",
+      "scanned_object_not_recreated": true,
+      "advanced_scan_duration_is_not_basic_tactical_report_delay": true,
+      "background_precomputation": "expected_once_active_contacts_are_acquired",
+      "operator_feedback_goal_ms": 1000,
+      "backend_implementation_pending": true
+    }
+  ]
 }

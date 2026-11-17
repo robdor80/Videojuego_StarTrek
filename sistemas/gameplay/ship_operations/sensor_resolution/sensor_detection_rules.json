@@ -69,5 +69,10 @@
     "Player observation does not expose authoritative entity_id.",
     "Unobserved entities are omitted from player detections.",
     "Unrevealed hidden ground-truth values are never copied into result payloads."
-  ]
+  ],
+  "special_platform_profile_refs": [
+    "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json"
+  ],
+  "profile_precedence_rule": "After ship/configuration eligibility is confirmed by authoritative ship state, a higher-priority authored profile may supersede generic normalized detection thresholds for ordinary subjects; other ships still use generic rules.",
+  "runtime_override_implemented": false
 }

@@ -1,5 +1,7 @@
 # Decisiones de autor — índice de referencia
 
+**DEC-0021 · 17-11-2026:** [Superioridad sensorial y reputación galáctica de la Enterprise-D del Proyecto Valhalla](enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md). Fija lecturas ordinarias completas e instantáneas en automático y manual, prestigio de conocimiento público y disuasión NPC; **documental, sin runtime certificado**.
+
 Las decisiones aprobadas prevalecen sobre propuestas anteriores sólo en los aspectos que modifican expresamente. Conservar siempre el historial anterior y separar `GAME_ADDITION` de `SCREEN_CANON` y de implementación CoreRPG/Unreal.
 
 ## Decisión principal vigente — 2026-11-13 (LORE-05A)

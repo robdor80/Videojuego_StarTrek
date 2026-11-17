@@ -42,3 +42,7 @@ La plantilla F04 «1.800 Flota + 400 civiles» continúa registrada como **heren
 - **HOST/UE5/IA:** presentar solo datos autorizados, no declarar lanzamientos ni restauraciones por lenguaje generado.
 
 **Estado administrativo de LORE-05A:** candidata documental hasta CI y fusión verificada. Ni esta acta ni su PR hacen `CONTENT_STATUS.md` COMPLETE antes del cierre.
+
+## Complemento posterior — 17-11-2026, DEC-0021
+
+La identidad y cronología de DEC-0020 siguen vigentes. La decisión [DEC-0021](enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md) aprueba el objetivo de supremacía sensorial y notoriedad pública de la Enterprise-D modernizada. El conocimiento del proyecto durante las obras no constituye comisión efectiva; el perfil sensorial reforzado solo se activa cuando la configuración de la nave existe y está operativa en WorldState. Torpedos transfásicos, blindaje ablativo y Defiant siguen sujetos a integración y prueba. Ninguna tecnología se instala solo por escribir este complemento.
