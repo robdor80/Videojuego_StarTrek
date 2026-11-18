@@ -1,9 +1,9 @@
 {
   "schema_version": "0.1.0",
   "system_id": "S12_INTERIORS_MOVEMENT",
-  "status": "PROPOSAL_REVIEW_REQUIRED",
+  "status": "CONCEPT_APPROVED_IMPLEMENTATION_PENDING",
   "date": "2026-11-18",
-  "author_design_approved": false,
+  "author_design_approved": true,
   "proposal_written": true,
   "contracts_created": true,
   "all_legacy_graph_contracts_preserved": true,
@@ -16,7 +16,7 @@
   "acceptance_runtime_passed": false,
   "measured_fps": null,
   "measured_vram_mb": null,
-  "merge_requires_author_decision": true,
+  "merge_requires_author_decision": false,
   "distinct_from_roadmap_F12": true,
   "dependencies": [
     "S18_identity_auth_access_DEC-0024"
@@ -30,5 +30,9 @@
     "ship_geolocation_and_LCARS_floorplans"
   ],
   "decoration_and_textures_out_of_scope": true,
-  "author_final_s12_design_approved": false
+  "author_final_s12_design_approved": true,
+  "catalog_phase_only": true,
+  "implementation_will_be_one_system_at_a_time": true,
+  "technical_contracts_are_nonbinding_until_implementation": true,
+  "approval_date": "2026-11-18"
 }
