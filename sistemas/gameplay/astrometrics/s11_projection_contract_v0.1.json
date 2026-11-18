@@ -1,0 +1,134 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s11_astrometrics_projection",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "decision_ref": "proyecto/docs/decisions/s11_astrometria_360_2026-11-18.md",
+  "target": {
+    "ship_id": "uss_enterprise_ncc_1701_d",
+    "configuration_id": "galaxy_refit_a2",
+    "only_if_operational": true
+  },
+  "source_contracts": [
+    "sistemas/gameplay/navigation/astrography_location_model.json",
+    "sistemas/gameplay/exploration/astrographic_knowledge_state.json",
+    "sistemas/gameplay/exploration/astrographic_discovery_event.json",
+    "sistemas/gameplay/navigation/political_space_overlay_model.json",
+    "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json"
+  ],
+  "owners": {
+    "truth": "CoreRPG",
+    "observation": "Sensors",
+    "interpretation": "Science",
+    "route_and_movement": "Navigation",
+    "authorized_view": "HOST",
+    "display": "UE5"
+  },
+  "scales": [
+    {
+      "id": "GALAXY_QUADRANT",
+      "level": 1,
+      "method": "volumetric_aggregate",
+      "features": [
+        "quadrants",
+        "regions",
+        "known_politics",
+        "ship_position"
+      ]
+    },
+    {
+      "id": "REGION_SECTOR",
+      "level": 2,
+      "method": "star_instances_and_routes",
+      "features": [
+        "systems",
+        "stars",
+        "routes",
+        "boundaries",
+        "hazards"
+      ]
+    },
+    {
+      "id": "STAR_SYSTEM",
+      "level": 3,
+      "method": "orbits_and_celestial_bodies",
+      "features": [
+        "stars",
+        "planets",
+        "moons",
+        "stations",
+        "known_contacts"
+      ]
+    },
+    {
+      "id": "CELESTIAL_OBJECT",
+      "level": 4,
+      "method": "interactive_globe",
+      "features": [
+        "atmosphere",
+        "gravity",
+        "temperature",
+        "topography_if_known",
+        "settlements_if_known"
+      ]
+    }
+  ],
+  "view_input": [
+    "ship_id",
+    "viewer_principal_id",
+    "campaign_time",
+    "focus_location_id",
+    "level",
+    "layers",
+    "known_revision",
+    "access_context"
+  ],
+  "view_output": [
+    "view_id",
+    "focus_location_id",
+    "level",
+    "visible_entities",
+    "display_positions_with_accuracy",
+    "facts_with_value_unit_source_asof",
+    "view_labels",
+    "effective_access",
+    "staleness",
+    "render_scale_disclaimer",
+    "revision"
+  ],
+  "rules": {
+    "hide_hidden_world_truth": true,
+    "visible_fact_has_provenance": true,
+    "classification_enforced": true,
+    "remote_record_never_claimed_as_live_sensor": true,
+    "unknown_z_never_default_zero": true,
+    "unknown_positions_schematic_and_labeled": true,
+    "exaggerated_scale_labeled": true,
+    "political_overlays_temporal": true,
+    "historical_not_future_truth": true,
+    "non_authoritative_hypothesis_labeled": true,
+    "events_update_when_known": true
+  },
+  "render": {
+    "volumetric": true,
+    "not_flat_map": true,
+    "agglomerate_galaxy": true,
+    "instancing": true,
+    "lod": true,
+    "streaming": true,
+    "relative_origin": true,
+    "padd_lightweight": true,
+    "not_all_stars_instanced": true,
+    "frame_target_fps": 60,
+    "ordinary_query_target_ms_max": 1000,
+    "targets_not_verified": true
+  },
+  "sensor": {
+    "automatic_and_manual": true,
+    "ordinary_report_immediate_and_complete_if_in_operational_scope": true,
+    "no_repeated_scan_grind": true,
+    "no_fake_90s_wait": true,
+    "rare_exception_requires_world_reason": true,
+    "no_external_ai_dependency": true
+  },
+  "runtime_implemented": false
+}

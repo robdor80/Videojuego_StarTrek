@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "system_id": "S11_ASTROMETRIA_360",
+  "status": "DESIGN_APPROVED_NOT_RUNTIME",
+  "approved_on": "2026-11-18",
+  "author_approved": true,
+  "contracts_written": true,
+  "cinematic_art_not_required_for_design": true,
+  "ue5_room_created": false,
+  "ue5_hologram_runtime": false,
+  "host_adapter_runtime": false,
+  "core_rpg_integration_runtime": false,
+  "padd_runtime": false,
+  "sensor_integration_runtime": false,
+  "route_handoff_runtime": false,
+  "voice_runtime": false,
+  "real_ue5_acceptance_passed": false,
+  "measured_fps": null,
+  "measured_latency_ms": null,
+  "design_ref": "sistemas/gameplay/astrometrics/S11_ASTROMETRIA_360_DISENO_v1.md",
+  "decision_ref": "proyecto/docs/decisions/s11_astrometria_360_2026-11-18.md",
+  "implementation_ref": "proyecto/docs/roadmap/S11_ASTROMETRIA_360_PLAN_2026-11-18.md"
+}
