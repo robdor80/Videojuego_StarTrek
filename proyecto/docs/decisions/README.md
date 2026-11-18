@@ -1,5 +1,7 @@
 # Decisiones de autor — índice de referencia
 
+**DEC-0024 · 18-11-2026:** [Sistema 18 — Identidad, autenticación y control de accesos](s18_identidad_autenticacion_control_accesos_2026-11-18.md). Nuevo sistema transversal solicitado por el autor: identifica jugador/NPC, autoriza entradas privadas/restringidas, gestiona visitas, revocación y excepciones. **Número y ámbito aprobados; políticas de detalle propuestas, runtime pendiente.** Separa decisiones de S18 de sensores/animación/recorridos del Sistema 12.
+
 **DEC-0023 · 18-11-2026:** [Sistema 11 — Astrometría 360°](s11_astrometria_360_2026-11-18.md). Sala volumétrica e interactiva de cuatro escalas en la Enterprise-D Valhalla, ciencia y comparación, órdenes de voz/manuales, rutas propuestas sin movimiento automático, Universo Vivo con procedencia. **Diseño aprobado; UE5/HOST/Core pendientes.**
 
 **DEC-0022 · 17-11-2026:** [Sistema 04 — Protagonista único, legado Khan e intro Academia](s04_protagonista_unico_khan_intro_academia_2026-11-17.md). Sustituye la **creación libre del personaje jugable** por un varón híbrido humano-vulcano descendiente de Khan, con 45 años al entrar en la Academia, legado y capacidades fijados, nombre/cosmética ajustables e introducción 2D de alto mando encabezada por Janeway y rematada por Picard. **Diseño aprobado; F10/HOST/UE5 aún requieren migración.**

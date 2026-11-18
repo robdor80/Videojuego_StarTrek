@@ -1,0 +1,36 @@
+name: S18 — Identidad y control de accesos (contratos)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sistemas/gameplay/access_control/**'
+      - 'proyecto/docs/decisions/s18_*'
+      - 'desarrollo/tools/validation/test_s18_access_control_contracts.py'
+      - '.github/workflows/s18-control-accesos-contratos.yml'
+  pull_request:
+    paths:
+      - 'sistemas/gameplay/access_control/**'
+      - 'proyecto/docs/decisions/s18_*'
+      - 'desarrollo/tools/validation/test_s18_access_control_contracts.py'
+      - '.github/workflows/s18-control-accesos-contratos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  s18-documentary-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compilación sintáctica
+        run: python -m py_compile desarrollo/tools/validation/test_s18_access_control_contracts.py
+      - name: Validar separación y contratos S18
+        run: python desarrollo/tools/validation/test_s18_access_control_contracts.py -v
