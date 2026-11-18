@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s12_valhalla_deck_basis",
+  "status": "PROPOSAL_REVIEW_REQUIRED",
+  "ship_id": "uss_enterprise_ncc_1701_d",
+  "class_id": "galaxy",
+  "refit_id": "galaxy_refit_a2",
+  "deck_aliases": [
+    {
+      "alias": "4-A",
+      "deck": "A",
+      "level": "+4",
+      "ring_module_deg": null,
+      "kind": "MAIN_BRIDGE",
+      "design_usage": "Puente principal; sala de observación",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "3-B",
+      "deck": "B",
+      "level": "+3",
+      "ring_module_deg": 4,
+      "kind": "UPPER_RING",
+      "design_usage": "Camarotes de oficiales, propuesta pendiente cartografía final",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "2-C",
+      "deck": "C",
+      "level": "+2",
+      "ring_module_deg": 2.5,
+      "kind": "LARGE_RING",
+      "design_usage": "Hangar principal y enfermería, asignación provisional",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "1-D",
+      "deck": "D",
+      "level": "+1",
+      "ring_module_deg": 2,
+      "kind": "LIVING_RING",
+      "design_usage": "Camarotes con puertas directas al corredor anular; 4 m de altura libre",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "-1-E",
+      "deck": "E",
+      "level": "-1",
+      "ring_module_deg": 2,
+      "kind": "COMMON_RING",
+      "design_usage": "Ten Forward, esparcimiento, bares y ventanales Galaxy; 4 m de altura libre",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "-2-F",
+      "deck": "F",
+      "level": "-2",
+      "ring_module_deg": 2.5,
+      "kind": "LARGE_LOWER_RING",
+      "design_usage": "Volúmenes inferiores, salas definitivas por asignar",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "-3-G",
+      "deck": "G",
+      "level": "-3",
+      "ring_module_deg": 4,
+      "kind": "LOWER_RING",
+      "design_usage": "Camarotes de alféreces, asignación provisional",
+      "geometry_verified_in_unreal": false
+    },
+    {
+      "alias": "-4-H",
+      "deck": "H",
+      "level": "-4",
+      "ring_module_deg": null,
+      "kind": "BATTLE_BRIDGE_EXTERNAL_SCENE",
+      "design_usage": "Puente de batalla Valkyrie Bridge 3, escenario independiente, conexión virtual condicionada",
+      "geometry_verified_in_unreal": false
+    }
+  ],
+  "design_constraints": {
+    "independent_interiors_no_hull_fit_required": true,
+    "cross_deck_virtual_turbolift": true,
+    "real_walkable_corridor_within_verified_scene": true,
+    "D_E_nominal_clear_height_m": 4,
+    "D_E_nominal_module_deg": 2,
+    "D_E_modules_per_ring_design": 180,
+    "D_quarters_direct_to_main_corridor": true,
+    "E_public_spaces_and_Galaxy_windows": true,
+    "battle_bridge_external_scene": true,
+    "stairs_only_if_physically_verified": true,
+    "existing_doors_not_moved_by_decoration": true
+  },
+  "verified_connection_ids": [],
+  "do_not_assume_all_3d_geometry_is_available": true,
+  "source_note": "Síntesis de decisiones anteriores de Valhalla; el inventario GitHub no certifica el contenido del .blend ni UE5",
+  "runtime_implemented": false
+}
