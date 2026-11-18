@@ -89,3 +89,9 @@ Un piloto no puede evitar un peligro que:
 - queda fuera de sus sensores/conocimiento.
 
 El sistema nunca entrega automáticamente la verdad oculta del World State.
+
+## Astrometría 360° — Sistema 11 aprobado (18-11-2026)
+
+La sala de Astrometría de Enterprise-D **visualiza** estrellas, cartas y rutas, y puede **proponer** un trayecto, pero **no ejecuta maniobras** ni reemplaza las reglas de Navegación. La ruta la valida y calcula Navegación según posición, propulsión, frontera, riesgos y autoridad. Se mantiene íntegro el flujo de este README.
+
+Referencias: sistemas/gameplay/astrometrics/S11_ASTROMETRIA_360_DISENO_v1.md y DEC-0023. El adaptador de handoff de Astrometría está aún pendiente de implementar.

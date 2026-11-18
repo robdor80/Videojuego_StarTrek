@@ -1,0 +1,38 @@
+name: S11 — Astrometria 360 grados (contratos documentales)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sistemas/gameplay/astrometrics/**'
+      - 'sistemas/gameplay/ship_operations/interconsole/s11_*'
+      - 'proyecto/docs/decisions/s11_*'
+      - 'desarrollo/tools/validation/test_s11_astrometrics_contracts.py'
+      - '.github/workflows/s11-astrometria-contratos.yml'
+  pull_request:
+    paths:
+      - 'sistemas/gameplay/astrometrics/**'
+      - 'sistemas/gameplay/ship_operations/interconsole/s11_*'
+      - 'proyecto/docs/decisions/s11_*'
+      - 'desarrollo/tools/validation/test_s11_astrometrics_contracts.py'
+      - '.github/workflows/s11-astrometria-contratos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  documentary-verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compilar test Python
+        run: python -m py_compile desarrollo/tools/validation/test_s11_astrometrics_contracts.py
+      - name: Validar contratos y escenarios S11
+        run: python desarrollo/tools/validation/test_s11_astrometrics_contracts.py -v

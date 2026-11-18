@@ -1,0 +1,161 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s11_astrometrics_interaction",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "locale": "es-ES",
+  "modes": [
+    "ROOM_HOLOGRAM_360",
+    "LCARS_FULLSCREEN",
+    "PADD_COMPACT",
+    "AUTHORIZED_REMOTE_STATION"
+  ],
+  "inputs": [
+    "mouse_keyboard",
+    "gamepad",
+    "room_interaction",
+    "lcars",
+    "spanish_voice",
+    "accessibility_list"
+  ],
+  "commands": [
+    {
+      "id": "SHOW",
+      "es": "Mostrar",
+      "args": [
+        "destination"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "FOCUS",
+      "es": "Centrar",
+      "args": [
+        "entity_id"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "ZOOM_IN",
+      "es": "Ampliar",
+      "args": [
+        "step"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "ZOOM_OUT",
+      "es": "Reducir",
+      "args": [
+        "step"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "ROTATE_360",
+      "es": "Girar",
+      "args": [
+        "axis",
+        "degrees"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "OBJECT_INFO",
+      "es": "Información",
+      "args": [
+        "entity_id"
+      ],
+      "effect": "AUTHORISED_READ"
+    },
+    {
+      "id": "COMPARE",
+      "es": "Comparar",
+      "args": [
+        "entity_a",
+        "entity_b",
+        "fields"
+      ],
+      "effect": "AUTHORISED_SCIENCE_READ"
+    },
+    {
+      "id": "LAYERS",
+      "es": "Capas",
+      "args": [
+        "layer_id",
+        "enabled"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "ROUTE_OPTIONS",
+      "es": "Rutas",
+      "args": [
+        "destination_id",
+        "preference"
+      ],
+      "effect": "NAVIGATION_READ"
+    },
+    {
+      "id": "SEND_ROUTE_PROPOSAL",
+      "es": "Enviar propuesta",
+      "args": [
+        "candidate_id"
+      ],
+      "effect": "NAVIGATION_REQUEST_ONLY"
+    },
+    {
+      "id": "HISTORY",
+      "es": "Historial",
+      "args": [
+        "timestamp_or_event"
+      ],
+      "effect": "KNOWN_HISTORY_READ"
+    },
+    {
+      "id": "FORECAST",
+      "es": "Proyección",
+      "args": [
+        "scenario",
+        "horizon"
+      ],
+      "effect": "LABELED_NONAUTHORITATIVE_PREDICTION"
+    },
+    {
+      "id": "SCENIC",
+      "es": "Modo contemplativo",
+      "args": [
+        "enabled"
+      ],
+      "effect": "VIEW_ONLY"
+    },
+    {
+      "id": "RESET_VIEW",
+      "es": "Restablecer",
+      "args": [],
+      "effect": "VIEW_ONLY"
+    }
+  ],
+  "voice_examples": [
+    "Ordenador, muestra el sistema de Vulcano",
+    "Amplía Vulcano",
+    "Compara su atmósfera con la terrestre",
+    "Muestra la ruta a Bajor",
+    "Activa la capa de fronteras"
+  ],
+  "rules": {
+    "deterministic_common_commands_without_ai": true,
+    "central_ai_optional_for_complex_language": true,
+    "manual_controls_always_available": true,
+    "one_selection_one_complete_information_sheet": true,
+    "cancelable_animation": true,
+    "do_not_grant_new_command_permissions": true,
+    "request_does_not_move_ship": true,
+    "no_client_world_mutation": true,
+    "never_reveal_classified": true,
+    "save_and_restore_view_without_creating_facts": true,
+    "npc_independent_use": true,
+    "voice_offline_fallback": true,
+    "reduced_motion_and_2d_accessibility": true
+  },
+  "runtime_implemented": false
+}

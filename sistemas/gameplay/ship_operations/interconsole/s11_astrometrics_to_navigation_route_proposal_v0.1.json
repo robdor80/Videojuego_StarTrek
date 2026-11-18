@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s11_astrometrics_to_navigation_route_proposal",
+  "status": "DESIGN_ONLY_NOT_EXECUTABLE",
+  "source_system": "astrometrics",
+  "target_system": "navigation",
+  "source_console_family": "navigation",
+  "required_fields": [
+    "proposal_id",
+    "requested_by_character_id",
+    "ship_id",
+    "created_at",
+    "destination_location_id",
+    "known_route_candidate_ref",
+    "knowledge_revision",
+    "authorization_context",
+    "source_view_id"
+  ],
+  "optional_fields": [
+    "preferred_route_profile",
+    "mission_ref",
+    "operator_notes",
+    "known_hazard_refs",
+    "known_border_refs",
+    "presentation_ref"
+  ],
+  "profiles": [
+    "fastest",
+    "safest",
+    "avoid_hostile_space",
+    "prefer_starbase_support",
+    "silent_or_low_contact"
+  ],
+  "handoff_phases": [
+    "proposed",
+    "acknowledged",
+    "reviewed",
+    "accepted_by_navigation",
+    "rejected",
+    "cancelled",
+    "executed_only_by_navigation"
+  ],
+  "invariants": {
+    "astrometrics_may_propose_not_execute": true,
+    "must_use_existing_navigation_order_contract": true,
+    "request_idempotent": true,
+    "do_not_grant_captain_rank_or_command": true,
+    "require_authorized_navigator_and_valid_f11_command": true,
+    "route_includes_known_risks_not_hidden_world_truth": true,
+    "route_result_ETA_computed_by_navigation": true,
+    "propose_does_not_modify_ship_position": true,
+    "no_mutation_by_AI": true
+  },
+  "source_refs": [
+    "sistemas/gameplay/navigation/navigation_order_contract.json",
+    "sistemas/gameplay/navigation/route_cost_model.json",
+    "sistemas/gameplay/navigation/route_context_model.json",
+    "sistemas/gameplay/astrometrics/s11_projection_contract_v0.1.json"
+  ],
+  "runtime_implemented": false
+}
