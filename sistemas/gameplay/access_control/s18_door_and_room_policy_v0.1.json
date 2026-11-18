@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s18_door_room_policy",
+  "status": "NUMBER_SCOPE_APPROVED_TECHNICAL_PROPOSAL_NOT_RUNTIME",
+  "policy_categories": [
+    {
+      "key": "PUBLIC_AUTO",
+      "trigger": "PROXIMITY",
+      "default_access": "ALLOW_IF_PUBLIC_AND_PHYSICALLY_SAFE",
+      "identity_requirement": "NONE_WHEN_POLICY_PUBLIC",
+      "s12_responsible_for_actuation": true
+    },
+    {
+      "key": "PRIVATE_BUTTON",
+      "trigger": "PANEL_PRESS",
+      "default_access": "CHECK_RESIDENT_OR_GUEST_OR_VALID_TASK",
+      "unknown_behavior": "RING_OR_REJECT_NO_REVEAL",
+      "s12_responsible_for_actuation": true
+    },
+    {
+      "key": "RESTRICTED",
+      "trigger": "PANEL_OR_INTERACTION",
+      "default_access": "CHECK_CLEARANCE_ROLE_TASK_AND_STEP_UP",
+      "unknown_behavior": "DENY_OR_REQUIRE_MORE_AUTH",
+      "s12_responsible_for_actuation": true
+    }
+  ],
+  "resources": [
+    "room_location_id",
+    "door_portal_id",
+    "facility_zone_id"
+  ],
+  "operations": [
+    "ENTER",
+    "EXIT",
+    "REQUEST_VISIT",
+    "GRANT_VISIT",
+    "REVOKE_VISIT",
+    "EMERGENCY_ENTRY",
+    "OPERATE_SECURE_FACILITY"
+  ],
+  "authorization_sources": [
+    "authoritative_residency_assignment",
+    "authorized_co_resident",
+    "explicit_guest_grant",
+    "validated_current_task_or_escort",
+    "duty_and_clearance_state",
+    "legitimate_institutional_role",
+    "incident_specific_emergency_override"
+  ],
+  "grant_fields": [
+    "grant_id",
+    "grantee_principal_id",
+    "grantor_principal_id",
+    "resource_scope",
+    "allowed_operations",
+    "valid_from",
+    "expires_at",
+    "revoked_at",
+    "grant_event_ref",
+    "issuer_authorization_ref",
+    "policy_revision"
+  ],
+  "time_basis": "authoritative_campaign_time_from_CoreRPG",
+  "rules": {
+    "rank_alone_never_universal_key": true,
+    "nonresident_knock_is_not_entry": true,
+    "invitation_requires_legitimate_grantor": true,
+    "visitors_not_authorized_by_proximity_to_resident": true,
+    "revocation_immediate_next_check": true,
+    "expired_grant_invalid": true,
+    "new_residency_replaces_old_derived_rights": true,
+    "strict_private_metadata_disclosure": true,
+    "egress_safety_separate_from_entry": true,
+    "quarantine_and_decompression_have_explicit_emergency_owner": true,
+    "secure_access_fails_closed": true,
+    "emergency_override_incident_evidence_required": true,
+    "physical_openability_checked_separately_by_S12": true,
+    "do_not_recreate_room_assignment_database": true
+  },
+  "integrates_with": [
+    "sistemas/gameplay/ship_operations/interior_location_model.json",
+    "sistemas/gameplay/ship_operations/ship_computer/access_control_rules.json",
+    "sistemas/gameplay/ship_operations/ship_computer/computer_request_contract.json"
+  ],
+  "runtime_implemented": false
+}

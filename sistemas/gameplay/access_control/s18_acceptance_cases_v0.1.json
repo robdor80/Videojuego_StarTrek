@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.1.0",
+  "suite_id": "s18_access_control_acceptance",
+  "status": "TEST_SCENARIOS_DESIGN_ONLY",
+  "author_number_approved": true,
+  "runtime_pass_count": 0,
+  "cases": [
+    {
+      "id": "S18-01",
+      "scenario": "Propietario pulsa pulsador de su camarote",
+      "expected": "ALLOW",
+      "rule": "No necesita un Blueprint exclusivo de jugador",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-02",
+      "scenario": "NPC desconocido pulsa el mismo panel privado",
+      "expected": "REQUEST_VISIT",
+      "rule": "No abre; timbre sin revelar ocupación",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-03",
+      "scenario": "NPC corresidente verificado",
+      "expected": "ALLOW",
+      "rule": "Residencia confirmada en Core",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-04",
+      "scenario": "Visita de NPC con permiso temporal vigente",
+      "expected": "ALLOW",
+      "rule": "Ámbito y caducidad verificados",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-05",
+      "scenario": "El mismo visitante tras revocación",
+      "expected": "DENY",
+      "rule": "Reevaluación sin cache obsoleta",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-06",
+      "scenario": "Caducidad por reloj de campaña",
+      "expected": "DENY",
+      "rule": "Hora autenticada Core",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-07",
+      "scenario": "Cambio de camarote por traslado",
+      "expected": "DENY_OLD_ALLOW_NEW",
+      "rule": "Asignaciones sincronizadas",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-08",
+      "scenario": "NPC suplanta character_id de jugador",
+      "expected": "DENY",
+      "rule": "ID client-side no sirve como evidencia",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-09",
+      "scenario": "Uniforme o insignia de oficial falso",
+      "expected": "DENY",
+      "rule": "No autentica al actor",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-10",
+      "scenario": "Comunicador prestado ante puerta sensible",
+      "expected": "STEP_UP_AUTH",
+      "rule": "Refuerzo conforme a riesgo",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-11",
+      "scenario": "Puerta ordinaria de pasillo y avatar Quinn",
+      "expected": "ALLOW_PUBLIC",
+      "rule": "Trigger Sutherland al S12; no llamada AI",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-12",
+      "scenario": "Entrada a armería sin habilitación",
+      "expected": "DENY",
+      "rule": "Rango por sí solo no basta",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-13",
+      "scenario": "Capitán ante camarote privado ajeno sin causa",
+      "expected": "REQUEST_VISIT",
+      "rule": "Privacidad vigente",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-14",
+      "scenario": "Médico con caso de emergencia real y autorización",
+      "expected": "ALLOW",
+      "rule": "Evento/incidente autorizado y auditable",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-15",
+      "scenario": "Texto 'EMERGENCIA' sin incidente verificado",
+      "expected": "DENY",
+      "rule": "No elevar permisos por frase IA",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-16",
+      "scenario": "Salida de camarote en estado normal sin comunicador",
+      "expected": "EXIT_SAFE",
+      "rule": "No encerrar por credencial",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-17",
+      "scenario": "Intento salida a pasillo despresurizado",
+      "expected": "SAFETY_INTERLOCK",
+      "rule": "Normas de Seguridad/Ingeniería, no cerradura cotidiana",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-18",
+      "scenario": "Permiso correcto y puerta sin energía",
+      "expected": "PHYSICALLY_BLOCKED",
+      "rule": "No confundir derecho con apertura física",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-19",
+      "scenario": "Dos pulsaciones de botón en mismo instante",
+      "expected": "ONE_REQUEST",
+      "rule": "Idempotencia y no duplicación de eventos",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-20",
+      "scenario": "Guardado y carga con permisos temporales",
+      "expected": "SAME_VALIDITY",
+      "rule": "No extender caducidad con load",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-21",
+      "scenario": "NPC fuera de escena pide entrada autorizada",
+      "expected": "AUTHENTIC_NPC_EVENT",
+      "rule": "Vinculación real de PERSON, no clon de jugador",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-22",
+      "scenario": "Sin servicio OpenAI/IA central",
+      "expected": "DETERMINISTIC",
+      "rule": "La cerradura continúa funcionando",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-23",
+      "scenario": "Visitante no autorizado pide ocupante",
+      "expected": "REDACTED",
+      "rule": "No divulgar ubicación, presencia o nombre privado",
+      "runtime_state": "NOT_RUN"
+    },
+    {
+      "id": "S18-24",
+      "scenario": "Puerta blindada bloqueada por daños",
+      "expected": "BLOCKED_BY_DOMAIN",
+      "rule": "S12/Ingeniería impiden apertura, sin permiso nuevo",
+      "runtime_state": "NOT_RUN"
+    }
+  ],
+  "no_claim_of_UE5_integration": true
+}

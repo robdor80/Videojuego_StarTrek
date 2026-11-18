@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s18_identity_assertion",
+  "status": "NUMBER_SCOPE_APPROVED_TECHNICAL_PROPOSAL_NOT_RUNTIME",
+  "truth_owner": "CoreRPG",
+  "transport_owner": "HOST",
+  "source_identity_ref": "sistemas/gameplay/characters/character_runtime_model.json",
+  "subjects": [
+    "PLAYER_PERSON",
+    "NPC_PERSON",
+    "AUTHORIZED_NONPERSON_SYSTEM_ACTOR"
+  ],
+  "evidence_sources": [
+    "authoritative_actor_character_binding",
+    "validated_player_session",
+    "core_signed_NPC_action",
+    "known_terminal_session",
+    "authenticated_combadge",
+    "optional_diegetic_biometric_challenge",
+    "authorized_secondary_challenge"
+  ],
+  "request_fields": [
+    "interaction_id",
+    "bound_actor_ref",
+    "interaction_source",
+    "location_ref",
+    "resource_ref",
+    "operation",
+    "campaign_time_ref",
+    "authentication_context"
+  ],
+  "binding_rules": {
+    "untrusted_client_actor_id_is_never_proof": true,
+    "untrusted_natural_language_identity_claim_never_proof": true,
+    "proximity_is_not_proof": true,
+    "uniform_or_rank_appearance_is_not_proof": true,
+    "identity_must_resolve_via_authoritative_actor_binding": true,
+    "player_and_NPC_use_same_principal_verification": true,
+    "nonperson_system_actor_requires_explicit_service_credential": true,
+    "biometrics_are_fictional_game_state_only_no_real_user_data": true,
+    "combadge_or_terminal_may_require_step_up": true,
+    "missing_or_conflicting_identity_fails_closed": true
+  },
+  "response_fields": [
+    "principal_id_verified",
+    "principal_type",
+    "source_refs",
+    "assertion_strength",
+    "validated_at",
+    "expires_at",
+    "context_scope",
+    "verification_event_ref"
+  ],
+  "not_authorization": true,
+  "runtime_implemented": false
+}
