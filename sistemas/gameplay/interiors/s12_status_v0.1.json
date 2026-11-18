@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "system_id": "S12_INTERIORS_MOVEMENT",
+  "status": "PROPOSAL_REVIEW_REQUIRED",
+  "date": "2026-11-18",
+  "author_design_approved": false,
+  "proposal_written": true,
+  "contracts_created": true,
+  "all_legacy_graph_contracts_preserved": true,
+  "real_geometry_blender_verified": false,
+  "ue5_maps_integrated": false,
+  "host_transit_implemented": false,
+  "core_rpg_travel_implemented": false,
+  "F12_social_runtime_integration": false,
+  "battle_bridge_scene_implemented": false,
+  "acceptance_runtime_passed": false,
+  "measured_fps": null,
+  "measured_vram_mb": null,
+  "merge_requires_author_decision": true,
+  "distinct_from_roadmap_F12": true
+}

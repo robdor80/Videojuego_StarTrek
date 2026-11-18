@@ -1,0 +1,141 @@
+{
+  "schema_version": "0.1.0",
+  "suite_id": "s12_interiors_acceptance",
+  "status": "SCENARIOS_PROPOSED_NOT_EXECUTED",
+  "cases": [
+    {
+      "id": "WALK-01",
+      "scenario": "Camarote D a corredor principal",
+      "expected": "Puerta existente auditada; caminar sin salto ni pasillo extra",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-02",
+      "scenario": "Corredor principal hasta ascensor",
+      "expected": "Caminar por malla, colisiones y NavMesh correctas",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-03",
+      "scenario": "Turbolift D a E",
+      "expected": "Escenas independientes enlazadas con tránsito que consume tiempo",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-04",
+      "scenario": "Ascensor fuera de servicio",
+      "expected": "Bloqueo y alternativa, sin llegada inventada",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-05",
+      "scenario": "Acceso no autorizado",
+      "expected": "Denegación sin cambio de localización",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-06",
+      "scenario": "H puente de batalla externo",
+      "expected": "Escenario separado, enlace virtual condicionado",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-07",
+      "scenario": "Escaleras no verificadas",
+      "expected": "No aparecer como enlace caminable",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-08",
+      "scenario": "Jefferies sin módulo",
+      "expected": "No crear acceso físico imposible",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-09",
+      "scenario": "Puerta privada",
+      "expected": "Timbre/permiso; sin acceso sólo por cercanía",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-10",
+      "scenario": "Guardar en ascensor",
+      "expected": "Restauración sin duplicar avatar ni perder tiempo",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-11",
+      "scenario": "NPC de camarote a guardia",
+      "expected": "Agenda y movimiento compatibles",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-12",
+      "scenario": "Alerta roja con pasillo bloqueado",
+      "expected": "Ruta se actualiza con estado de daños",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-13",
+      "scenario": "Oficial no está en su puesto",
+      "expected": "No aparece duplicado al cargar escena",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-14",
+      "scenario": "Viaje bajo emergencia",
+      "expected": "Se respeta el tiempo y el estado de compartimentación",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-15",
+      "scenario": "Reapertura de puerta reparada",
+      "expected": "Overlay de acceso actualizado, base preservada",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-16",
+      "scenario": "Ordenador, cómo llego a Astrometría",
+      "expected": "Guía real en vez de teletransporte",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-17",
+      "scenario": "Sala funcional sin modelo UE5",
+      "expected": "Fallback identificado; no falso 3D terminado",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-18",
+      "scenario": "Identidad de tripulantes",
+      "expected": "Mismo NPC entre carga/descarga de sectores",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-19",
+      "scenario": "Materiales y ventanas Galaxy",
+      "expected": "Preservar geometría original y estilo A2",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-20",
+      "scenario": "Ocho cubiertas con streaming",
+      "expected": "No cargar toda la nave simultáneamente; medir FPS/VRAM",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-21",
+      "scenario": "Encuentro con Siete de Nueve",
+      "expected": "Agenda, lugar y privacidad; no romance automático",
+      "runtime_status": "NOT_TESTED"
+    },
+    {
+      "id": "WALK-22",
+      "scenario": "Convivencia F12 y S12",
+      "expected": "F12 agenda; S12 espacio y circulación, sin doble autoridad",
+      "runtime_status": "NOT_TESTED"
+    }
+  ],
+  "all_runtime_tests_pending": true,
+  "ue5_simulation_not_run": true
+}
