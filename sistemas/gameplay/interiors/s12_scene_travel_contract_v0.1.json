@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s12_interior_scene_travel",
+  "status": "PROPOSAL_REVIEW_REQUIRED",
+  "ship": "uss_enterprise_ncc_1701_d",
+  "legacy_refs": [
+    "sistemas/gameplay/ship_operations/interior_location_model.json",
+    "sistemas/gameplay/ship_operations/interior_navigation_graph_v0.1.schema.json",
+    "sistemas/gameplay/ship_operations/interior_functional_profiles_v0.1.json",
+    "desarrollo/tools/validation/interior_navigation.py",
+    "sistemas/gameplay/characters/activity_schedule_model.json",
+    "sistemas/gameplay/ship_operations/shipboard_life_state_contract.json"
+  ],
+  "authority": {
+    "world_and_location": "CoreRPG",
+    "crew_schedule_and_social": "CoreRPG/F12",
+    "access_and_transition_orchestration": "HOST",
+    "physical_collision_navigation_and_render": "UE5",
+    "AI": "explanations_only_no_state"
+  },
+  "scene_fields": [
+    "scene_id",
+    "ship_id",
+    "ship_section_id",
+    "deck_alias",
+    "location_ids",
+    "source_asset_manifest_refs",
+    "scene_revision",
+    "walkable_regions",
+    "collision_evidence_ref",
+    "navmesh_evidence_ref",
+    "portal_refs",
+    "entry_spawn_anchors"
+  ],
+  "portal_fields": [
+    "portal_id",
+    "baseline_link_id",
+    "from_location_id",
+    "to_location_id",
+    "mode",
+    "geometry_evidence_ref",
+    "access_policy_ref",
+    "power_state_ref",
+    "damage_state_ref",
+    "verified",
+    "estimated_duration_ref",
+    "safe_arrival_anchor"
+  ],
+  "modes": [
+    "walk",
+    "door",
+    "stairs",
+    "turbolift",
+    "virtual_transition"
+  ],
+  "rules": {
+    "scene_physical_continuity_only_when_verified": true,
+    "interiors_may_not_fit_outer_hull": true,
+    "cross_deck_connection_can_be_virtual": true,
+    "unverified_link_not_routable": true,
+    "no_invented_portals": true,
+    "permission_check_before_travel": true,
+    "damage_and_alert_may_block_link": true,
+    "blocked_link_remains_in_persistent_baseline": true,
+    "travel_consumes_core_time": true,
+    "player_no_teleport_by_voice": true,
+    "no_client_side_authoritative_location_mutation": true,
+    "npc_real_schedule_and_presence": true,
+    "visual_NPC_LOD_independent_of_core_identity": true,
+    "no_duplicate_NPC_on_scene_load": true,
+    "no_extra_relationship_by_proximity": true,
+    "do_not_modify_original_blender_masters": true
+  },
+  "transition_states": [
+    "requested",
+    "verified_and_authorized",
+    "transit_started",
+    "scene_preload",
+    "arrival_authority_commit",
+    "safe_spawn",
+    "completed",
+    "cancelled_or_recovered"
+  ],
+  "request_fields": [
+    "request_id",
+    "character_id",
+    "ship_id",
+    "source_location_id",
+    "destination_location_id",
+    "portal_id",
+    "observed_revision",
+    "requested_at",
+    "permissions_context"
+  ],
+  "result_fields": [
+    "request_id",
+    "status",
+    "effective_elapsed_time",
+    "authoritative_location_ref",
+    "destination_scene_ref",
+    "safe_spawn_ref",
+    "failure_or_recovery_reason"
+  ],
+  "persistence": {
+    "request_idempotent": true,
+    "origin_destination_progress_persisted": true,
+    "save_load_cannot_duplicate_actor": true,
+    "scene_load_failure_not_arrival": true,
+    "no_invalid_spawn": true
+  },
+  "special": {
+    "battle_bridge_separate_virtual_scene": true,
+    "battle_bridge_conditioned_on_ship_section_and_access": true,
+    "jefferies_only_where_physically_modeled": true,
+    "stairs_only_between_physically_connected_verified_sections": true,
+    "D_cabins_open_to_existing_ring_not_new_parallel_corridor": true
+  },
+  "runtime_implemented": false
+}
