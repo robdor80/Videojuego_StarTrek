@@ -1,5 +1,7 @@
 # Decisiones de autor — índice de referencia
 
+**DEC-0023 · 18-11-2026:** [Sistema 11 — Astrometría 360°](s11_astrometria_360_2026-11-18.md). Sala volumétrica e interactiva de cuatro escalas en la Enterprise-D Valhalla, ciencia y comparación, órdenes de voz/manuales, rutas propuestas sin movimiento automático, Universo Vivo con procedencia. **Diseño aprobado; UE5/HOST/Core pendientes.**
+
 **DEC-0022 · 17-11-2026:** [Sistema 04 — Protagonista único, legado Khan e intro Academia](s04_protagonista_unico_khan_intro_academia_2026-11-17.md). Sustituye la **creación libre del personaje jugable** por un varón híbrido humano-vulcano descendiente de Khan, con 45 años al entrar en la Academia, legado y capacidades fijados, nombre/cosmética ajustables e introducción 2D de alto mando encabezada por Janeway y rematada por Picard. **Diseño aprobado; F10/HOST/UE5 aún requieren migración.**
 
 **DEC-0021 · 17-11-2026:** [Superioridad sensorial y reputación galáctica de la Enterprise-D del Proyecto Valhalla](enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md). Fija lecturas ordinarias completas e instantáneas en automático y manual, prestigio de conocimiento público y disuasión NPC; **documental, sin runtime certificado**.
