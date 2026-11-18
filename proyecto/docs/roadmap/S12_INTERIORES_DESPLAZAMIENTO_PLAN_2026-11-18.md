@@ -1,5 +1,7 @@
 # S12 — Plan propuesto de construcción de interiores y desplazamientos
 
+> **ACTUALIZACIÓN AUTORAL 18-11-2026 — PROTOTIPO S12 NO APROBADO:** la identidad/autenticación/permisos de puertas privadas **pertenecen ahora al Sistema 18 (DEC-0024, fusionada en main)**, no a S12. S12 se concentra en puertas mecánicas/automáticas, pulsadores, turboascensores que llegan a la **parada real más próxima**, navegación de NPC y geolocalización/mapas LCARS. **No es un sistema de decoración, texturas ni construcción de recorridos Blender.** Véase S12_FUNCIONAL_PRIORIDADES_ADENDA_2026-11-18.md.
+
 **18-11-2026 — propuesta para revisión, NO implementación.** S12 = Sistema 12 del catálogo de 17, no fase de proyecto F12 (Vida a bordo).
 
 ## Meta

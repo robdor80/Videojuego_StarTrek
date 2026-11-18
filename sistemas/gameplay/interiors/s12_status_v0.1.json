@@ -17,5 +17,18 @@
   "measured_fps": null,
   "measured_vram_mb": null,
   "merge_requires_author_decision": true,
-  "distinct_from_roadmap_F12": true
+  "distinct_from_roadmap_F12": true,
+  "dependencies": [
+    "S18_identity_auth_access_DEC-0024"
+  ],
+  "S12_owns_identity_or_authorization": false,
+  "priority_functional_corrective_scope": [
+    "automatic_doors_from_Sutherland",
+    "private_button_calls_S18",
+    "turbolifts_to_closest_real_stop",
+    "NPC_routefinding_between_locations",
+    "ship_geolocation_and_LCARS_floorplans"
+  ],
+  "decoration_and_textures_out_of_scope": true,
+  "author_final_s12_design_approved": false
 }

@@ -1,5 +1,7 @@
 # Sistema 12 — Interiores, tránsito y presencia a bordo
 
+> **ACTUALIZACIÓN AUTORAL 18-11-2026 — PROTOTIPO S12 NO APROBADO:** la identidad/autenticación/permisos de puertas privadas **pertenecen ahora al Sistema 18 (DEC-0024, fusionada en main)**, no a S12. S12 se concentra en puertas mecánicas/automáticas, pulsadores, turboascensores que llegan a la **parada real más próxima**, navegación de NPC y geolocalización/mapas LCARS. **No es un sistema de decoración, texturas ni construcción de recorridos Blender.** Véase S12_FUNCIONAL_PRIORIDADES_ADENDA_2026-11-18.md.
+
 **Versión de trabajo:** 1.0 · **18 de noviembre de 2026**  
 **Estado:** PROPUESTA PARA REVISIÓN AUTORAL — **NO APROBADO / NO IMPLEMENTADO**.  
 **Nave central:** USS Enterprise NCC-1701-D, clase Galaxy modernizada por Geordi La Forge, **Proyecto Valhalla**. El buque no se denomina clase Valhalla.

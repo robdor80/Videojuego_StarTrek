@@ -1,5 +1,7 @@
 # Sistema 12 — Interiores y desplazamiento
 
+> **ACTUALIZACIÓN AUTORAL 18-11-2026 — PROTOTIPO S12 NO APROBADO:** la identidad/autenticación/permisos de puertas privadas **pertenecen ahora al Sistema 18 (DEC-0024, fusionada en main)**, no a S12. S12 se concentra en puertas mecánicas/automáticas, pulsadores, turboascensores que llegan a la **parada real más próxima**, navegación de NPC y geolocalización/mapas LCARS. **No es un sistema de decoración, texturas ni construcción de recorridos Blender.** Véase S12_FUNCIONAL_PRIORIDADES_ADENDA_2026-11-18.md.
+
 **Fecha:** 18-11-2026 · **Estado:** PROPUESTA DE DISEÑO PARA REVISIÓN DEL AUTOR. **No aprobado, implementado ni fusionado.**
 
 **Distinción importante:** Sistema 12 del catálogo de diecisiete sistemas **NO es la fase técnica F12** del plan F00–F15. La fase F12 ya existente en `proyecto/docs/roadmap/master/fases/F12` corresponde a **vida a bordo, NPC y relaciones**; ambos deben integrarse sin duplicación.
