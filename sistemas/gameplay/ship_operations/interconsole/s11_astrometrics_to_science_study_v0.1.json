@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s11_astrometrics_to_science_study",
+  "status": "DESIGN_ONLY_NOT_EXECUTABLE",
+  "source_system": "astrometrics",
+  "target_system": "science",
+  "required_fields": [
+    "study_request_id",
+    "requested_by_character_id",
+    "ship_id",
+    "created_at",
+    "known_subject_location_id",
+    "authorized_observation_refs",
+    "requested_question",
+    "knowledge_revision",
+    "authorization_context"
+  ],
+  "optional_fields": [
+    "comparison_subject_ids",
+    "preferred_field_keys",
+    "priority",
+    "visualization_context_ref",
+    "presentation_ref"
+  ],
+  "phases": [
+    "submitted",
+    "accepted",
+    "in_progress",
+    "completed",
+    "requires_legitimate_more_data",
+    "cancelled"
+  ],
+  "invariants": {
+    "ship_existing_observations_only": true,
+    "science_owns_conclusion": true,
+    "scientific_result_has_provenance": true,
+    "no_unrevealed_core_truth": true,
+    "no_creation_of_unobserved_entities": true,
+    "no_auto_scanning_wait_for_ordinary_data": true,
+    "not_replace_sensor_scans": true,
+    "request_idempotent": true,
+    "source_operator_clearance_required": true,
+    "ai_narration_non_authoritative": true
+  },
+  "source_refs": [
+    "sistemas/gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json",
+    "sistemas/gameplay/science/sensor_analysis_model.json",
+    "sistemas/gameplay/astrometrics/s11_projection_contract_v0.1.json"
+  ],
+  "runtime_implemented": false
+}
