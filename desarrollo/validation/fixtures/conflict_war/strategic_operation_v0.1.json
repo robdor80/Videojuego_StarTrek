@@ -22,7 +22,8 @@
           "integrity": 100,
           "status": "operational"
         }
-      ]
+      ],
+      "owner_ref": "polity:klingon"
     },
     "defender": {
       "force_id": "fleet:f1",
@@ -43,10 +44,44 @@
           "integrity": 100,
           "status": "operational"
         }
-      ]
+      ],
+      "owner_ref": "polity:federation"
     },
     "objective_ref": "objective:control_outpost",
-    "location_ref": "system:delta"
+    "location_ref": "system:delta",
+    "campaign_id": "campaign:conflict_fixture",
+    "inventory_snapshot": {
+      "status": "accepted",
+      "source_domain": "CoreRPG",
+      "campaign_id": "campaign:conflict_fixture",
+      "world_revision": 1,
+      "roster": {
+        "ship:k1": {
+          "force_id": "fleet:k1",
+          "owner_ref": "polity:klingon",
+          "campaign_id": "campaign:conflict_fixture",
+          "status": "active"
+        },
+        "ship:k2": {
+          "force_id": "fleet:k1",
+          "owner_ref": "polity:klingon",
+          "campaign_id": "campaign:conflict_fixture",
+          "status": "active"
+        },
+        "ship:f1": {
+          "force_id": "fleet:f1",
+          "owner_ref": "polity:federation",
+          "campaign_id": "campaign:conflict_fixture",
+          "status": "active"
+        },
+        "ship:f2": {
+          "force_id": "fleet:f1",
+          "owner_ref": "polity:federation",
+          "campaign_id": "campaign:conflict_fixture",
+          "status": "active"
+        }
+      }
+    }
   },
   "expected": {
     "outcome": "attacker_advantage",
