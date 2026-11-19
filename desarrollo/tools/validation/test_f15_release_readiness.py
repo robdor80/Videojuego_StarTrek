@@ -132,6 +132,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
             "channel": "private_local",
             "artifact_sha256": "bad",
             "build_executed": True,
+            "local_install_tested": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
@@ -162,6 +163,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
             "channel": "private_candidate",
             "artifact_sha256": "1" * 64,
             "build_executed": True,
+            "local_install_tested": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
@@ -173,11 +175,28 @@ class F15ReleaseReadinessTests(unittest.TestCase):
         self.assertFalse(result["release_certified"])
 
 
+    def test_private_install_must_be_executed(self):
+        record = {
+            "version": "1.0.0",
+            "channel": "private_local",
+            "artifact_sha256": "1" * 64,
+            "build_executed": True,
+            "local_install_tested": False,
+            "e2e_passed": True,
+            "migration_tested": True,
+            "rollback_tested": True,
+            "backup_restore_tested": True,
+            "blocker_count": 0,
+            "evidence_refs": ["msi-build", "local-install", "restore"],
+        }
+        self.assertIn("private_install_not_tested", release_gate(record)["reasons"])
+
     def test_public_release_channels_are_forbidden(self):
         base = {
             "version": "1.0.0",
             "artifact_sha256": "1" * 64,
             "build_executed": True,
+            "local_install_tested": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
@@ -198,6 +217,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
             "channel": "private_local",
             "artifact_sha256": "1" * 64,
             "build_executed": True,
+            "local_install_tested": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
@@ -249,7 +269,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
         report = execute_fixture(
             here / "desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json"
         )
-        self.assertEqual(report["cases_total"], 38)
+        self.assertEqual(report["cases_total"], 39)
         self.assertEqual(report["cases_failed"], 0)
 
     def test_repository_audit_blocks_missing_root(self):
