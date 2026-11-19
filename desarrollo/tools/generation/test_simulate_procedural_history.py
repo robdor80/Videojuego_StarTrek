@@ -152,11 +152,11 @@ class ProceduralHistoryReferenceTests(unittest.TestCase):
 
     def test_23_knowledge_requires_observed_id(self):
         s = h.replay(state(), case()["events"])
-        self.assertEqual([], h.visible_history(s, [], 110, "classified"))
-        self.assertEqual(1, len(h.visible_history(s, ["hist:recovery_001"], 110, "public")))
-        self.assertEqual([], h.visible_history(s, ["hist:record_update_002"], 110, "public"))
-        self.assertEqual([], h.visible_history(s, ["hist:record_update_002"], 104, "classified"))
-        self.assertEqual(1, len(h.visible_history(s, ["hist:record_update_002"], 105, "restricted")))
+        self.assertEqual([], h.visible_history(s, [], 110, "classified", actor_ref="audience:cadet"))
+        self.assertEqual(1, len(h.visible_history(s, ["hist:recovery_001"], 110, "public", actor_ref="audience:cadet")))
+        self.assertEqual([], h.visible_history(s, ["hist:record_update_002"], 110, "public", actor_ref="audience:cadet"))
+        self.assertEqual([], h.visible_history(s, ["hist:record_update_002"], 104, "classified", actor_ref="audience:cadet"))
+        self.assertEqual(1, len(h.visible_history(s, ["hist:record_update_002"], 105, "restricted", actor_ref="audience:cadet")))
 
     def test_24_corrective_record_does_not_rewrite_past(self):
         s = h.replay(state(), case()["events"])
