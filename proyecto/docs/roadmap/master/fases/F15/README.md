@@ -1,7 +1,7 @@
 # F15 — QA integral, rendimiento e instalación privada
 
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** `ACEPTACION_SUPERADA`. El marcador histórico `BUILD_DISTRIBUIBLE` designará una **build instalable localmente**, no distribución pública; el validador/fixtures heredados requerirán migración R7 sin perder su gate fail-closed.
+**Nivel objetivo:** `ACEPTACION_SUPERADA`. El marcador histórico `BUILD_DISTRIBUIBLE` se interpreta exclusivamente como **build privada instalable localmente**. El corte R7 migra el validador y los fixtures vigentes sin perder el gate fail-closed.
 
 ## Objetivo
 
@@ -36,16 +36,16 @@ Aceptación E2E, CI y build PRIVADA realmente compilada, instalada, actualizada 
 
 ## Avance autónomo de referencia — 15-10-2026 (semántica histórica de beta)
 
-Preparación **P01–P05** con un gate final fail-closed para QA transversal, recorrido E2E, rendimiento MSI, UX/castellano y candidato beta/distribuible. Véase [acta de preparación F15](ACTA_P01_P05_REFERENCIA_2026-10-15.md).
+Preparación **P01–P05**, histórica a 15-10, con un gate fail-closed. Los nombres antiguos `release_*`, `f15_beta_*` y `BUILD_DISTRIBUIBLE` siguen existiendo por compatibilidad de rutas, pero **no autorizan publicación**. Véase [acta de preparación F15](ACTA_P01_P05_REFERENCIA_2026-10-15.md).
 
 - Validador: `desarrollo/tools/validation/f15_release_readiness.py`.
-- **37 escenarios**: `desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json`.
+- **38 escenarios**: `desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json`.
 - Plantilla deliberadamente bloqueada: `desarrollo/validation/fixtures/f15/f15_beta_capture_template_v0.1.json`.
 - Pruebas: `desarrollo/tools/validation/test_f15_release_readiness.py`.
 - CI: `.github/workflows/f15-release-readiness-reference.yml`.
 
-El gate nunca emite `ACEPTACION_SUPERADA` ni `BUILD_DISTRIBUIBLE`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
+El gate vigente exige los canales `private_local` / `private_candidate`, copia **y restauración** probada, migración y rollback, y rechaza canales públicos (`beta`, `release_candidate`, `steam`). Nunca emite `ACEPTACION_SUPERADA`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
 
 ## Criterio vigente R0/R7 — 19-11-2026
 
-**Uso exclusivamente privado.** No exigir publicación, servidores de terceros, marketing, tienda, licencias comerciales ni circulación de instaladores. Mantener QA, seguridad de guardados, pérdida de red/IA, rendimiento, actualización/rollback y recuperación local. La plantilla NO_EJECUTADO y el gate actual deben seguir fallando hasta que se ejecute una partida real. Codex migrará el vocabulario y los escenarios beta/BUILD_DISTRIBUIBLE en R7 con pruebas positivas/negativas; no se rebajará la puerta por cambiar su nombre.
+**Uso exclusivamente privado.** No exigir publicación, servidores de terceros, marketing, tienda, licencias comerciales ni circulación de instaladores. Mantener QA, seguridad de guardados, pérdida de red/IA, rendimiento, actualización/rollback y recuperación local. La plantilla `NO_EJECUTADO` sigue bloqueada hasta ejecutar una partida real. R7 corrige el código y amplía las regresiones de los canales privados. **No se han ejecutado** ni empaquetado ni recuperación real del MSI. La antigua acta del 15-10 permanece intacta como prueba histórica, no política vigente.
