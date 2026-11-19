@@ -10,7 +10,9 @@
 | [#96](https://github.com/robdor80/Videojuego_StarTrek/pull/96) | `feat/f06-guardia-operativa-sensores-20261110@df7dcb8850932191c9453a92dbad806ef14e7bbc` | #91 | 2/2 PASS | Draft; 10 ficheros; **depende de #91** |
 | [#97](https://github.com/robdor80/Videojuego_StarTrek/pull/97) | `fix/f06-aster-guardia-ux-ciencia-20261110@bbf7f5d5d89cc84b4544a6049a1924ebf9632fde` | #96 | 6/6 PASS | Draft; 16 ficheros; **depende de #96** |
 
-Los resultados son válidos **para sus respectivos HEAD y bases**, no equivalen a una cadena montada en `main`, ni a una operación jugable en UE5. Las cuentas de pruebas deben recotejarse al retomar las PR: no son promesas de CI futura.
+Los resultados son válidos **para sus respectivos HEAD y bases**, no equivalen a una cadena montada en `main`, ni a una operación jugable en UE5.
+
+**Divergencia concreta de dependencias:** en la consulta actual, la base de #96 es `049a4b2951ee71929fa845cd20fe999a9a559e4b`, mientras el HEAD actual de #91 es `0f67affecbb56c7d70d129b057fa7c50497a3ebd`. Por tanto **#96 no se puede dar por probado sobre el HEAD actual de #91**, aunque su CI individual esté en verde. La base de #97 sí coincide con el HEAD de #96 (`df7dcb8850932191c9453a92dbad806ef14e7bbc`) en esta lectura. La propia #91 parte de un `main` antiguo; verificar/rebasear y volver a probar la cadena cuando se reabra F06. **No se realiza rebase ahora.** Las cuentas de pruebas deben recotejarse al retomar las PR: no son promesas de CI futura.
 
 En `main` existen las referencias #7 y #92–#94, pero no el código nativo pendiente de las tres Draft. **No hay que repetir** el motor base, ni reemplazar sus oráculos/fixtures. La PR #95 es LCARS HTML/JS separado, sin conexión automática a F06 o Unreal.
 
