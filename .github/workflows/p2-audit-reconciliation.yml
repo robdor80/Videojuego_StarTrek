@@ -1,0 +1,46 @@
+name: P2 Auditoria Reconciliacion R1-R5
+
+on:
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/**"
+      - "desarrollo/validation/fixtures/**"
+      - "proyecto/docs/roadmap/**"
+      - ".github/workflows/p2-audit-reconciliation.yml"
+  push:
+    paths:
+      - "desarrollo/tools/generation/**"
+      - "desarrollo/validation/fixtures/**"
+      - "proyecto/docs/roadmap/**"
+      - ".github/workflows/p2-audit-reconciliation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  p2-reference-reconciliation:
+    name: B01-B10 regression + cross-block + F13/Academia
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax and synthetic ledger fixture
+        run: |
+          python -m compileall -q desarrollo/tools/generation
+          python -m json.tool desarrollo/validation/fixtures/p2_reconciliation/causal_bridge_v1.json > /dev/null
+          python -m json.tool proyecto/docs/roadmap/P2_B01_B10_MADUREZ_NORMALIZADA_20261119.json > /dev/null
+      - name: B01-B10 adversarial reference and transversal tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: F13 / Academy integration-boundary regression (offline)
+        run: |
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_academy_dynamic_frontier_bridge.py' -v
+      - name: CLI B10 proposal-only smoke
+        run: |
+          python desarrollo/tools/generation/simulate_background_galactic_evolution.py --fixture desarrollo/validation/fixtures/background_galactic_evolution/verified_npc_offscreen_catchup_v0.1.json
