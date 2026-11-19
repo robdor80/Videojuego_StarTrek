@@ -90,6 +90,26 @@ class F15ReleaseReadinessTests(unittest.TestCase):
         self.assertEqual(result["status"], REVIEW)
         self.assertFalse(result["thresholds_applied"])
 
+    def test_performance_rejects_non_finite_metrics(self):
+        required = {
+            "fps_avg": 60,
+            "fps_1pct_low": 45,
+            "vram_mb_peak": 7200,
+            "ram_mb_peak": 18000,
+            "cpu_ms_avg": 8.5,
+            "session_minutes": 120,
+        }
+        for bad in (float("inf"), float("nan")):
+            with self.subTest(metric=repr(bad)):
+                metrics = {**required, "fps_avg": bad}
+                result = performance_gate({
+                    "executed_on_msi": True,
+                    "provider_failure_recovered": True,
+                    "metrics": metrics,
+                    "evidence_ref": "perf.json",
+                })
+                self.assertIn("performance_metrics_incomplete", result["reasons"])
+
     def test_ux_requires_all_seven_areas(self):
         result = ux_gate({
             "locale": "es-ES",
