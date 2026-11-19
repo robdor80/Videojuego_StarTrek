@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "view_id": "P2_B01_B10_REFERENCE_MATURITY_NORMALIZED_20261119",
+  "generated_from": "source manifests (not replacement)",
+  "source_of_truth": "each source_manifest (historic)",
+  "audit_ref": "proyecto/docs/auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md",
+  "sequential_gate": "P2_B01_TO_B10_REFERENCE_CLOSED_RUNTIME_PENDING",
+  "audit_reconciliation_status": "OPEN_UNTIL_R5_CI_PASS",
+  "total_blocks": 10,
+  "total_packages": 177,
+  "total_reference_packages": 177,
+  "f13_runtime_implemented": false,
+  "blocks": {
+    "B01": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_civilization_evolution_galactic_interaction_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 15,
+      "historical_packages_complete": 15,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B02": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_colonization_expansion_borders_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B03": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_conflict_war_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B04": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_living_economy_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B05": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_history_major_events_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B06": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B07": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B08": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_systemic_crises_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B09": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_emergent_missions_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B10": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_background_galactic_evolution_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    }
+  }
+}
