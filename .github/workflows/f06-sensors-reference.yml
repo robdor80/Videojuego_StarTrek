@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feat/f06-sensors-functional-reference
+      - main
     paths:
       - "desarrollo/tools/simulation/f06_reference.py"
       - "desarrollo/tools/simulation/test_f06_reference.py"

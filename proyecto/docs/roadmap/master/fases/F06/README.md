@@ -27,7 +27,7 @@ La implementación devuelve snapshots, candidaturas de dossier y **event_candida
 
 ## Dependencias y límite de la autonomía
 
-**PR #2–#6 ya fusionadas**, con la decisión Galaxy/Enterprise-D → **nueva Clase Valhalla** aprobada (fecha de servicio todavía sin fijar). Esto no implica disponibilidad de esa clase en el fixture de Sensores de 2372, ni que el primer puente de pruebas tenga que ser Galaxy. La interfaz real de Core RPG (versiones y APIs a verificar), tick/persistencia, órdenes entregadas, permisos reales, transferencia auténtica a Ciencia, consola UE5 y aceptación de una guardia en el MSI **no se han ejecutado ni validado en esta PR**. No modificar `ESTADO_GLOBAL.json` ni declarar F06 CERRADA sin cumplir los criterios del plan maestro.
+**PR #2–#6 ya fusionadas**, con la referencia histórica de **nueva clase Valhalla**, sustituida por DEC-0020: el objetivo vigente es **USS Enterprise NCC-1701-D, clase Galaxy, modernizada por el Proyecto Valhalla**. El nombre de programa no es una clase. El censo histórico de 2.200 no es dotación ratificada para esa nave. Esto no implica disponibilidad de esa clase en el fixture de Sensores de 2372, ni que el primer puente de pruebas tenga que ser Galaxy. La interfaz real de Core RPG (versiones y APIs a verificar), tick/persistencia, órdenes entregadas, permisos reales, transferencia auténtica a Ciencia, consola UE5 y aceptación de una guardia en el MSI **no se han ejecutado ni validado en esta PR**. No modificar `ESTADO_GLOBAL.json` ni declarar F06 CERRADA sin cumplir los criterios del plan maestro.
 
 ## Fuente original conservada
 
@@ -50,5 +50,7 @@ La implementación devuelve snapshots, candidaturas de dossier y **event_candida
 - **A-06:** el resultado del barrido no genera ningún evento autoritativo y no inventa `REPORT_MADE` ni `ACTION_COMPLETED`. Core debe confirmar por separado inicio, resultado, informe y terminación.
 - **A-10:** sigue pendiente la lectura visual del PDF del manual; no declarar F06-P01 cerrada.
 - **A-07/A-08:** Core real, save/load, UE5 y E2E siguen pendientes; no inferir `CORE_INTEGRADO` del CI Python.
+
+**Nota R2 (19-11-2026):** #91, #96 y #97 siguen encadenadas en Draft (bases main → #91 → #96); no están en `main` ni prueban sensores de producción. Ver [reconciliación R2](R2_ESTADO_PR_F06_Y_GATE_PENDIENTE_2026-11-19.md).
 
 **CI histórica de referencia (12-10-2026):** [run 38228217392](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392) SUCCESS en `a6ef6895208a448c235c60ffced522560ce86a8a`: **31 casos de sensores** y tres interphase OMITIDOS entonces. **Comprobación posterior, 13-10-2026:** [Actions 38321712021](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021) SUCCESS para la PR integrada: 8+23 Sensores, 3 pruebas cruzadas **ejecutadas**, 26 F03, 17 F04 y 19 F05: **96 tests superados**. Core RPG, guardado real, manual PDF y UE5 siguen pendientes.

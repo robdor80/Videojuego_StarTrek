@@ -1,5 +1,12 @@
 name: F11 A02-01 native promotions
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - '.github/workflows/f11-native-promotions.yml'
   pull_request:
     paths:
       - 'desarrollo/integration/f11/**'

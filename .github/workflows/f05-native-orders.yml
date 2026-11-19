@@ -1,5 +1,11 @@
 name: F05 P05A integration audit
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'desarrollo/integration/f05/**'
+      - 'desarrollo/integration/f04/**'
+      - '.github/workflows/f05-native-orders.yml'
   pull_request:
     paths:
       - 'desarrollo/integration/f05/**'

@@ -42,7 +42,7 @@ El exit code 0 del validador significa *preparado para revisión manual*, **no g
 ## Dependencias que no se deben ocultar
 - **F07**: Sutherland aún sin importar/recorrer/colisionar/medir en el MSI, y derechos/hash del derivado pendientes. F07 scripts PBR sí están integrados como referencia.
 - **CoreRPG**: revisar API/ABI en SHA de `main` al integrar (World State, tiempo, reglas, Knowledge, Actions, persistencia y orden contextual). La 4.7 es base del guardado; 4.9–4.10 son dependencias funcionales y la 4.14 contempla integración UE5. No asumir que culminar una fase garantiza el adaptador completo de Star Trek.
-- **UE5/Host**: no se dispone del proyecto .uproject en este repositorio ni de ejecución Windows; no presentar prueba Python como render/transitabilidad/build.
+- **UE5/Host (corrección de actualidad 19-11)**: ya existe `juego/UE5/StarTrekRPG/StarTrekRPG.uproject`, proyecto principal **de diagnóstico HOST**, no una guardia F08 jugable. No hay en este expediente evidencia MSI de puente Sutherland F08 con Core/HOST/Sensores conectado; no presentar prueba Python ni mapa de diagnóstico como render, transitabilidad, interacción o build del videojuego.
 - **IA**: opcional, sin autoridad; caída de Gemini no puede detener operación determinista ni afirmar ejecución de órdenes.
 
 **Política:** hasta que lleguen datos reales, guardar solamente contratos, tests y evidencias de referencia. No afirmar `CORE_INTEGRADO`, `UE5_JUGABLE` ni `ACEPTACION_SUPERADA`.

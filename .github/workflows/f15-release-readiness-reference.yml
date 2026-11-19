@@ -1,4 +1,4 @@
-name: F15 — Release readiness reference (NO beta/runtime certification)
+name: F15 — Private install readiness reference (NO runtime certification)
 
 on:
   push:
@@ -38,7 +38,7 @@ permissions:
 
 jobs:
   offline-release-readiness:
-    name: 37 scenarios + 16 tests; reject NO_EJECUTADO template
+    name: 39 scenarios + 21 tests; reject NO_EJECUTADO template
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
