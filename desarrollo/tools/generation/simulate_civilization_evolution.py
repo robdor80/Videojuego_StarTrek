@@ -158,9 +158,23 @@ def simulate(*, campaign_seed: str, civilization_id: str, years: int,
                     "cause_refs": event.get("cause_refs", []),
                 })
             if "population_loss_basis_points" in effects:
-                loss = max(0, min(10000, int(effects["population_loss_basis_points"])))
+                loss = int(effects["population_loss_basis_points"])
+                ref = effects.get("accepted_population_loss_fact_ref")
+                fact = initial.get("accepted_population_facts", {}).get(ref)
+                if (type(effects["population_loss_basis_points"]) is not int
+                        or not 0 <= loss <= 10000
+                        or not isinstance(fact, dict)
+                        or fact.get("status") != "accepted"
+                        or fact.get("campaign_seed") != campaign_seed
+                        or fact.get("kind") != "catastrophic_loss"
+                        or fact.get("civilization_id") != civilization_id
+                        or fact.get("year") != year
+                        or fact.get("basis_points") != loss
+                        or ref in used_population_facts):
+                    raise ValueError("unverified catastrophic population loss")
+                used_population_facts.add(ref)
                 pop = int(state["population"])
-                state["population"] = max(0, pop - (pop * loss) // 10000)
+                state["population"] = pop - (pop * loss) // 10000
             if "population_capacity_delta" in effects:
                 state["population_capacity"] = max(
                     1, int(state["population_capacity"])
