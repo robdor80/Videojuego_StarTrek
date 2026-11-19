@@ -6,12 +6,14 @@ on:
       - "desarrollo/tools/generation/**"
       - "desarrollo/validation/fixtures/**"
       - "proyecto/docs/roadmap/**"
+      - "proyecto/docs/auditorias/**"
       - ".github/workflows/p2-audit-reconciliation.yml"
   push:
     paths:
       - "desarrollo/tools/generation/**"
       - "desarrollo/validation/fixtures/**"
       - "proyecto/docs/roadmap/**"
+      - "proyecto/docs/auditorias/**"
       - ".github/workflows/p2-audit-reconciliation.yml"
   workflow_dispatch:
 
