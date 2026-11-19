@@ -107,6 +107,7 @@ class P2CrossBlockReferenceGates(unittest.TestCase):
     def test_h15_b02_foundation_conserves_two_real_simulated_accounts(self):
         i = json.loads((FIX / "colonization_expansion/viable_colony_25y_v0.1.json").read_text())["input"]
         i["years"] = 0
+        i["scheduled_events"] = []  # year-2 fixture event is outside the zero-year window
         original = i["initial"]["origin_population"]
         out = colony.simulate_project(**i)
         self.assertEqual(out["snapshots"][0]["origin_population"] +
