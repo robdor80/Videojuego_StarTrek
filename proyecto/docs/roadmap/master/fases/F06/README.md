@@ -1,5 +1,8 @@
 # F06 — Consola de Sensores
 
+> **R0 · 19-11-2026:** fase EN_REVISION. En main hay referencias #7/#92/#93/#94, pero #91→#96→#97 son **Draft encadenadas** y están fuera de main. #91 propone puerto espacial sin productor de mundo runtime; Aster sirve a QA y no es consola final. Pendientes visual manual, fuente autoritativa, Ciencia, permisos, guardado, HOST y UE5. Las referencias temporales de 13-10 inferiores son históricas.
+
+
 **Estado de fase global reconciliado:** **EN_REVISION**, PR #7 ya **fusionada en `main`**. **Madurez demostrada:** `REFERENCIA_PROBADA` en barridos y cadena F04→F05→F06. P01 continúa EN_REVISION por PDF; P02–P04 siguen BLOQUEADAS para operativa autoritativa; P05 cerrada a nivel de pruebas de referencia. Meta de fase: Core/UE5 real (**PENDIENTE**). [Acta](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Entregables de los cinco puntos
