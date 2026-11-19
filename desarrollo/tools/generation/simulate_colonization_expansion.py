@@ -82,11 +82,52 @@ def stage_for(state: dict[str, Any]) -> str:
         return "established_colony"
     return "dependent_colony"
 
+def require_settlement_decision(state: dict[str, Any], *, campaign_seed: str,
+                                civilization_id: str, project_id: str) -> None:
+    """Check a synthetic accepted decision and *re-evaluate* its target constraints.
+
+    This is NOT an authorization service; F13 must supply the CoreRPG-sourced
+    decision in a trusted read-only snapshot, never from a client/IA request.
+    """
+    decision = state.get("settlement_decision")
+    if not isinstance(decision, dict):
+        raise ValueError("settlement requires accepted eligibility decision")
+    candidate = decision.get("candidate")
+    policy = decision.get("policy")
+    if not isinstance(candidate, dict) or not isinstance(policy, dict):
+        raise ValueError("settlement requires candidate and environmental policy")
+    if (decision.get("status") != "accepted"
+            or decision.get("source_domain") != "CoreRPG"
+            or not isinstance(decision.get("decision_ref"), str)
+            or not decision["decision_ref"].strip()
+            or not isinstance(decision.get("authority_ref"), str)
+            or not decision["authority_ref"].strip()
+            or type(decision.get("world_revision")) is not int
+            or decision["world_revision"] < 0
+            or decision.get("campaign_seed") != campaign_seed
+            or decision.get("civilization_id") != civilization_id
+            or decision.get("project_id") != project_id
+            or decision.get("target_location_id") != state.get("target_location_id")
+            or candidate.get("location_id") != state.get("target_location_id")):
+        raise ValueError("settlement decision has untrusted scope")
+    evaluation = evaluate_candidate(candidate, policy)
+    if not evaluation["eligible"]:
+        raise ValueError("settlement target ineligible: " + evaluation["reason"])
+    if (candidate.get("existing_claimant_refs")
+            and candidate.get("settlement_rights") not in {"treaty_grant", "joint_colony"}):
+        raise ValueError("settlement needs verified rights over existing claim")
+    if (candidate.get("settlement_rights") in {"treaty_grant", "invited_settlement", "joint_colony"}
+            and not isinstance(decision.get("rights_fact_ref"), str)):
+        raise ValueError("settlement rights need accepted treaty or invitation")
+
+
 def simulate_project(*, campaign_seed: str, civilization_id: str, project_id: str, years: int,
                      initial: dict[str, Any], scheduled_events: list[dict[str, Any]] | None = None) -> dict[str, Any]:
     if years < 0 or years > 250:
         raise ValueError("years must be between 0 and 250")
     state = copy.deepcopy(initial)
+    require_settlement_decision(state, campaign_seed=campaign_seed,
+                                civilization_id=civilization_id, project_id=project_id)
     founding = int(state["founding_population"])
     if founding <= 0 or founding > int(state["origin_population"]):
         raise ValueError("invalid founding population")
@@ -158,10 +199,30 @@ def simulate_project(*, campaign_seed: str, civilization_id: str, project_id: st
                                 "cause_refs": event.get("cause_refs", []), "evacuated_population": evacuated})
                 recorded = True
             if effects.get("independence_recognized"):
+                fact_ref = effects.get("accepted_resolution_ref")
+                resolution = initial.get("accepted_independence_resolutions", {}).get(fact_ref)
+                new_polity = effects.get("new_polity_ref")
+                if (not isinstance(fact_ref, str) or not isinstance(resolution, dict)
+                        or resolution.get("status") != "accepted"
+                        or resolution.get("source_domain") != "CoreRPG/B01"
+                        or resolution.get("campaign_seed") != campaign_seed
+                        or resolution.get("civilization_id") != civilization_id
+                        or resolution.get("project_id") != project_id
+                        or resolution.get("year") != year
+                        or resolution.get("jurisdiction_ref") != initial.get("effective_controller_ref")
+                        or not isinstance(resolution.get("authority_ref"), str)
+                        or not resolution["authority_ref"].strip()
+                        or not isinstance(new_polity, str) or not new_polity.strip()
+                        or resolution.get("new_polity_ref") != new_polity
+                        or resolution.get("creation_status") not in {"preexisting", "creation_approved"}):
+                    raise ValueError("independence requires accepted jurisdictional resolution")
+                if state["governance_status"] == "independent_polity":
+                    raise ValueError("independence already recognized")
                 state["governance_status"] = "independent_polity"
-                state["effective_controller_ref"] = effects.get("new_polity_ref", f"gen:polity:{stable_token(project_id, year)}")
+                state["effective_controller_ref"] = new_polity
                 history.append({"event_id": event["event_id"], "year": year, "type": "independence_recognized",
-                                "cause_refs": event.get("cause_refs", []), "civilization_id_preserved": True})
+                                "cause_refs": event.get("cause_refs", []), "resolution_ref": fact_ref,
+                                "civilization_id_preserved": True})
                 recorded = True
             if not recorded:
                 history.append({"event_id": event["event_id"], "year": year, "type": event.get("event_type", "state_change"),
