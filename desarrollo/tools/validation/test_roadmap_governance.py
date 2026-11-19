@@ -33,7 +33,7 @@ class RoadmapGovernanceTests(unittest.TestCase):
         phase = next(p for p in s["phases"] if p["id"] == "F11")
         phase["status"] = "EN_CURSO"
         # El foco F05 sigue teniendo prioridad. Dos frentes no falsean el gobierno.
-        updated = self.plan.replace("| **EN_REVISION** | UE5_JUGABLE |", "| **EN_CURSO** | UE5_JUGABLE |", 1)
+        updated = "\n".join(line.replace("**EN_REVISION**", "**EN_CURSO**") if line.startswith("| [F11](") else line for line in self.plan.split("\n"))
         self.assertEqual(self.run_checks(s, updated), [])
 
     def test_phase_closed_without_acta_is_rejected(self):
