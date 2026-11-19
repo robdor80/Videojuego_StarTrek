@@ -502,14 +502,15 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": false,
         "e2e_passed": false,
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "build_not_executed"
@@ -519,14 +520,15 @@
       "operation": "release",
       "input": {
         "version": "beta-one",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": false,
         "e2e_passed": false,
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_release_version"
@@ -543,7 +545,8 @@
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_release_channel"
@@ -553,14 +556,15 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "bad",
         "build_executed": false,
         "e2e_passed": false,
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_build_hash"
@@ -570,14 +574,15 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": false,
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_e2e_not_passed"
@@ -587,14 +592,15 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": true,
         "migration_tested": false,
         "rollback_tested": false,
         "blocker_count": 3,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "update_recovery_not_tested"
@@ -604,7 +610,7 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": true,
@@ -613,7 +619,8 @@
         "blocker_count": 1,
         "evidence_refs": [
           "build"
-        ]
+        ],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_blockers_present"
@@ -623,14 +630,15 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": true,
         "migration_tested": true,
         "rollback_tested": true,
         "blocker_count": 0,
-        "evidence_refs": []
+        "evidence_refs": [],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_claim_without_evidence"
@@ -640,7 +648,7 @@
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": true,
@@ -652,17 +660,18 @@
           "e2e",
           "migration",
           "rollback"
-        ]
+        ],
+        "backup_restore_tested": true
       },
       "expected_status": "REVIEW_REQUIRED",
-      "expected_reason": "release_candidate_requires_manual_beta_acceptance"
+      "expected_reason": "private_build_requires_manual_acceptance"
     },
     {
       "id": "R10",
       "operation": "release",
       "input": {
         "version": "0.9.0-beta.1",
-        "channel": "internal_beta",
+        "channel": "private_local",
         "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
         "build_executed": true,
         "e2e_passed": true,
@@ -671,10 +680,34 @@
         "blocker_count": true,
         "evidence_refs": [
           "build"
-        ]
+        ],
+        "backup_restore_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_blocker_count"
+    },
+    {
+      "id": "R11",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "private_local",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": 0,
+        "evidence_refs": [
+          "build",
+          "e2e",
+          "migration",
+          "rollback"
+        ],
+        "backup_restore_tested": false
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "backup_restore_not_tested"
     }
   ]
 }
