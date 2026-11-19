@@ -510,7 +510,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "build_not_executed"
@@ -528,7 +529,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_release_version"
@@ -546,7 +548,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_release_channel"
@@ -564,7 +567,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_build_hash"
@@ -582,7 +586,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_e2e_not_passed"
@@ -600,7 +605,8 @@
         "rollback_tested": false,
         "blocker_count": 3,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "update_recovery_not_tested"
@@ -620,7 +626,8 @@
         "evidence_refs": [
           "build"
         ],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_blockers_present"
@@ -638,7 +645,8 @@
         "rollback_tested": true,
         "blocker_count": 0,
         "evidence_refs": [],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "release_claim_without_evidence"
@@ -661,7 +669,8 @@
           "migration",
           "rollback"
         ],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "REVIEW_REQUIRED",
       "expected_reason": "private_build_requires_manual_acceptance"
@@ -681,7 +690,8 @@
         "evidence_refs": [
           "build"
         ],
-        "backup_restore_tested": true
+        "backup_restore_tested": true,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "invalid_blocker_count"
@@ -704,10 +714,35 @@
           "migration",
           "rollback"
         ],
-        "backup_restore_tested": false
+        "backup_restore_tested": false,
+        "local_install_tested": true
       },
       "expected_status": "BLOCKED",
       "expected_reason": "backup_restore_not_tested"
+    },
+    {
+      "id": "R12",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "private_local",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": 0,
+        "evidence_refs": [
+          "build",
+          "e2e",
+          "migration",
+          "rollback"
+        ],
+        "backup_restore_tested": true,
+        "local_install_tested": false
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "private_install_not_tested"
     }
   ]
 }
