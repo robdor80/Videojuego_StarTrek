@@ -12,7 +12,7 @@
 | R2 | [PR #179](https://github.com/robdor80/Videojuego_StarTrek/pull/179) | [Matriz real de Draft #91→#96→#97](fases/F06/R2_ESTADO_PR_F06_Y_GATE_PENDIENTE_2026-11-19.md), sin cambiar esas PR ni atribuir F06 a main | **NO** |
 | R3/R4/R6 | PR #179 | [Puertas transversales y distribución de autoridad](R3_R4_R6_R7_FRONTERAS_Y_GATES_2026-11-19.md); corrección de README F07/F08 y objetivo F13/P2 | **NO** |
 | R5 | PR #179 | [Matriz de identidad y migraciones](R5_IDENTIDAD_AUTORIDAD_Y_MIGRACIONES_2026-11-19.md); Enterprise-D Galaxy, protagonista fijo, emisor F11 como servicio | **NO** |
-| R7 | PR #179 | Validador F15 para uso privado, canales locales, copia/restauración exigida, 38 escenarios y 20 tests previstos; desbloqueo de estado administrativo congelado | **NO** |
+| R7 | PR #179 | Validador F15 para uso privado, canales locales, copia/restauración exigida, 39 escenarios y 21 tests previstos; desbloqueo de estado administrativo congelado | **NO** |
 
 **Integración:** #176 y #177 son PR Draft sobre `main`; #179 es Draft apilada sobre la rama de #176. Hasta una fusión controlada, estos cambios no constituyen la fotografía de `main`. R1 no acepta por sí misma excepciones de motor ni firma F05. No fusionar PR de desarrollo (#91/#95/#96/#97/#110) por esta auditoría.
 
