@@ -50,13 +50,14 @@
   },
   "release": {
     "version": "0.0.0-pre",
-    "channel": "internal_beta",
+    "channel": "private_local",
     "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "build_executed": false,
     "e2e_passed": false,
     "migration_tested": false,
     "rollback_tested": false,
     "blocker_count": 1,
-    "evidence_refs": []
+    "evidence_refs": [],
+    "backup_restore_tested": false
   }
 }
