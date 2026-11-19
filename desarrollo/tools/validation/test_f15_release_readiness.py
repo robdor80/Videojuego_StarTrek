@@ -124,7 +124,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
     def test_release_bool_is_strict(self):
         result = release_gate({
             "version": "0.9.0-beta.1",
-            "channel": "beta",
+            "channel": "private_local",
             "artifact_sha256": "1" * 64,
             "build_executed": 1,
             "e2e_passed": True,
