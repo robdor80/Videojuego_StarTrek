@@ -3,7 +3,7 @@
 > **R0 · 19-11-2026:** PLANIFICADA, primera puerta E2E prioritaria. Una orden válida de capitán NPC, contacto F06 observado sin omnisciencia, respuesta e informe, consecuencia Core, SAVE/LOAD entre procesos y aceptación jugable MSI en UE5 son condiciones inseparables. El fixture técnico Sutherland/2372 no se convierte en la campaña 2383–2387. No ejecutada aún; el estado que sigue de 13-10 es histórico.
 
 
-**Estado de la fase global:** **PLANIFICADA / PAUSADA**, pendiente de reactivación formal. F01 está cerrada a nivel de diseño, F02 es la fase principal, F03–F06 tienen entregables de referencia fusionados pero no integración Core/Host. No convertir la prueba interna `v0.0.1` en un lanzamiento por cambios del plan. [Acta de reconciliación](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
+**Estado de la fase global (fotografía histórica 13-10):** **PLANIFICADA / PAUSADA**, sin autorización para iniciar desarrollo en esta auditoría. La frase antigua «F02 es la fase principal» y la descripción de F03–F06 reflejan octubre y se sustituyen por el estado del R0 de 19-11. No convertir la prueba interna `v0.0.1` en un lanzamiento por cambios del plan. [Acta de reconciliación](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 **Nivel objetivo:** UE5_JUGABLE / ACEPTACION_SUPERADA.
 
 ## Objetivo
