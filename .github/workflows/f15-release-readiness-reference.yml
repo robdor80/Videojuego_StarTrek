@@ -38,7 +38,7 @@ permissions:
 
 jobs:
   offline-release-readiness:
-    name: 38 scenarios + 19 tests; reject NO_EJECUTADO template
+    name: 38 scenarios + 20 tests; reject NO_EJECUTADO template
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
