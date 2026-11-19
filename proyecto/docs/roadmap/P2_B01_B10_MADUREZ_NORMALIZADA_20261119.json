@@ -112,6 +112,16 @@
       "academy_boundary": 9
     },
     "date": "2026-11-19",
-    "runtime_implemented": false
+    "runtime_implemented": false,
+    "postmerge": {
+      "merge_sha": "8a9996fba66c496aa4a8d615caf95ed7b633cc6c",
+      "pull_request": 181,
+      "workflows_success": 10,
+      "workflows_failed": 0,
+      "audit_ci_run_id": 44567650496,
+      "audit_ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44567650496",
+      "date": "2026-11-19",
+      "classification": "OFFLINE_REFERENCE_ONLY"
+    }
   }
 }

@@ -4,7 +4,7 @@
 **Repositorio:** `robdor80/Videojuego_StarTrek`.  
 **Auditoría fuente:** [AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md](../auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md), PR #180 fusionada.  
 **Correcciones:** [PR #181](https://github.com/robdor80/Videojuego_StarTrek/pull/181), rama `fix/p2-reconciliacion-r1-r6-20261119`.  
-**Dictamen técnico del código sobre SHA `b108a8a9ffc9a13d932f9e0569118c2af9e02a78`:** `REFERENCIA_RECONCILIADA_OFFLINE`, condicionada a que el último HEAD documental conserve CI verde y la PR se fusione satisfactoriamente. **No se ha implementado ni certificado un universo jugable.**
+**Dictamen definitivo de Planificación 2:** `REFERENCIA_RECONCILIADA_OFFLINE`, con CI premerge y posmerge satisfactoria y PR #181 **fusionada**. El commit de código verificado fue `b108a8a9ffc9a13d932f9e0569118c2af9e02a78` y la fusión final es `8a9996fba66c496aa4a8d615caf95ed7b633cc6c`. **No se ha implementado ni certificado un universo jugable.**
 
 ## 1. Matriz completa H01–H20
 
@@ -80,4 +80,25 @@ python desarrollo/tools/generation/simulate_background_galactic_evolution.py --f
 
 **Pendiente para desarrollo futuro, fuera de esta intervención:** H10, H11 (materialización), H12, H13, H16 y validación multirrevisión real de H14; ejecución F13/CoreRPG/HOST/F11/UE5, persistencia y replay nativos, sensores, NPC sin jugador, estrés CPU/RAM, UI/PADD con conocimiento y permisos. Véase el [traspaso R6](../roadmap/P2_RECONCILIACION_CONTRATOS_Y_TRASPASO_R6_20261119.md). **R7 no ejecutado.**
 
-**Condición de fusión de PR #181:** último HEAD verificado en CI verde, revisión de archivos de alcance y ausencia de conflictos; la evidencia final de merge y su SHA se consulta en el registro permanente de la PR. **No reabrir ahora los diez bloques ni arrancar F13.**
+**Condición de fusión de PR #181: CUMPLIDA.** Último HEAD de la PR `d949d7ae56da81c6210ed30fa699ee024934b6ce`, **11/11 workflows de ese HEAD SUCCESS**. PR #181 fusionada mediante squash en `main`, commit `8a9996fba66c496aa4a8d615caf95ed7b633cc6c`. **No reabrir ahora los diez bloques ni arrancar F13.**
+
+## 5. Sello de certificación posfusión (verificado en main)
+
+**Commit de integración:** [`8a9996fba66c496aa4a8d615caf95ed7b633cc6c`](https://github.com/robdor80/Videojuego_StarTrek/commit/8a9996fba66c496aa4a8d615caf95ed7b633cc6c). **PR:** [#181 MERGED](https://github.com/robdor80/Videojuego_StarTrek/pull/181). Las siguientes **10 ejecuciones sobre exactamente ese SHA** han concluido `success`, sin fallos ni workflows pendientes en la enumeración de esa revisión:
+
+| Workflow | GitHub Actions run | Resultado |
+|---|---:|---|
+| P2 Auditoría Reconciliación R1–R5 | [44567650496](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44567650496) | SUCCESS |
+| P2-B04 Living Economy | 44567650617 | SUCCESS |
+| P2-B05 Procedural History | 44567650591 | SUCCESS |
+| P2-B06 Science Discovery | 44567650397 | SUCCESS |
+| P2-B07 Phenomena & Archaeology | 44567650547 | SUCCESS |
+| P2-B08 Systemic Crises | 44567650769 | SUCCESS |
+| P2-B09 Emergent Missions | 44567650416 | SUCCESS |
+| P2-B10 Galactic Evolution | 44567650576 | SUCCESS |
+| F13 frontera offline | 44567650752 | SUCCESS |
+| Academy Life Closure | 44567650354 | SUCCESS |
+
+La CI transversal sobre `main` mantiene **411/411 pruebas P2, 30/30 F13 offline y 9/9 Academia** (450/450), más validación sintáctica, JSON y CLI B10, en la run posfusión 44567650496. No confundir la CI con pruebas de rendimiento o integración jugable.
+
+**Cierre de la auditoría H01–H20 dentro de P2:** definitivamente saneada **en alcance de referencia offline**, sin defectos conocidos pendientes dentro de R1–R5, con R6 documental entregado y R7 expresamente excluido. Las dependencias para F13 están enumeradas, no ocultas. Este sello es una actualización documental del cierre, no un nuevo bloque de P2 ni otra implementación.
