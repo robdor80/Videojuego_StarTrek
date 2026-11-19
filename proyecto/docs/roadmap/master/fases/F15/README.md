@@ -39,12 +39,12 @@ Aceptación E2E, CI y build PRIVADA realmente compilada, instalada, actualizada 
 Preparación **P01–P05**, histórica a 15-10, con un gate fail-closed. Los nombres antiguos `release_*`, `f15_beta_*` y `BUILD_DISTRIBUIBLE` siguen existiendo por compatibilidad de rutas, pero **no autorizan publicación**. Véase [acta de preparación F15](ACTA_P01_P05_REFERENCIA_2026-10-15.md).
 
 - Validador: `desarrollo/tools/validation/f15_release_readiness.py`.
-- **38 escenarios**: `desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json`.
+- **39 escenarios**: `desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json`.
 - Plantilla deliberadamente bloqueada: `desarrollo/validation/fixtures/f15/f15_beta_capture_template_v0.1.json`.
 - Pruebas: `desarrollo/tools/validation/test_f15_release_readiness.py`.
 - CI: `.github/workflows/f15-release-readiness-reference.yml`.
 
-El gate vigente exige los canales `private_local` / `private_candidate`, copia **y restauración** probada, migración y rollback, y rechaza canales públicos (`beta`, `release_candidate`, `steam`). Nunca emite `ACEPTACION_SUPERADA`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
+El gate vigente exige los canales `private_local` / `private_candidate`, **instalación local ejecutada**, copia **y restauración** probada, migración y rollback, y rechaza canales públicos (`beta`, `release_candidate`, `steam`). Nunca emite `ACEPTACION_SUPERADA`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
 
 ## Criterio vigente R0/R7 — 19-11-2026
 
