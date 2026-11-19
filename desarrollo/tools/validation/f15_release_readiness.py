@@ -161,7 +161,7 @@ def release_gate(item: Any) -> dict[str, Any]:
         return outcome(BLOCKED, "invalid_release_channel")
     if not sha256(item.get("artifact_sha256")):
         return outcome(BLOCKED, "invalid_build_hash")
-    bools = ("build_executed", "e2e_passed", "migration_tested", "rollback_tested", "backup_restore_tested")
+    bools = ("build_executed", "local_install_tested", "e2e_passed", "migration_tested", "rollback_tested", "backup_restore_tested")
     if not all(bool_exact(item.get(k)) for k in bools):
         return outcome(BLOCKED, "invalid_release_record")
     blockers = item.get("blocker_count")
@@ -172,6 +172,8 @@ def release_gate(item: Any) -> dict[str, Any]:
         return outcome(BLOCKED, "invalid_release_record")
     if not item["build_executed"]:
         return outcome(BLOCKED, "build_not_executed")
+    if not item["local_install_tested"]:
+        return outcome(BLOCKED, "private_install_not_tested")
     if not item["e2e_passed"]:
         return outcome(BLOCKED, "release_e2e_not_passed")
     if not item["migration_tested"] or not item["rollback_tested"]:
