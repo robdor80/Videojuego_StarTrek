@@ -7,7 +7,60 @@
     "effective_control_ref": "polity:defender",
     "grievance_refs": [
       "claim:delta"
-    ]
+    ],
+    "accepted_conflict_decisions": {
+      "decision:evt:war": {
+        "status": "accepted",
+        "source_domain": "CoreRPG/B03",
+        "event_id": "evt:war",
+        "transition": "declare_war",
+        "from_state": "diplomatic_crisis",
+        "to_state": "war",
+        "authority_ref": "authority:high_council",
+        "cause_refs": [
+          "incident:armed_attack"
+        ],
+        "effective_tick": 1,
+        "war_objective_refs": [
+          "objective:secure_delta"
+        ]
+      },
+      "decision:evt:ceasefire": {
+        "status": "accepted",
+        "source_domain": "CoreRPG/B03",
+        "event_id": "evt:ceasefire",
+        "transition": "ceasefire",
+        "from_state": "war",
+        "to_state": "ceasefire",
+        "authority_ref": "authority:joint_signatories",
+        "cause_refs": [
+          "agreement:ceasefire"
+        ],
+        "effective_tick": 3,
+        "signer_refs": [
+          "polity:attacker",
+          "polity:defender"
+        ]
+      },
+      "decision:evt:peace": {
+        "status": "accepted",
+        "source_domain": "CoreRPG/B03",
+        "event_id": "evt:peace",
+        "transition": "peace_settlement",
+        "from_state": "ceasefire",
+        "to_state": "peace",
+        "authority_ref": "authority:joint_signatories",
+        "cause_refs": [
+          "treaty:peace"
+        ],
+        "effective_tick": 4,
+        "signer_refs": [
+          "polity:attacker",
+          "polity:defender"
+        ],
+        "treaty_ref": "treaty:peace"
+      }
+    }
   },
   "events": [
     {
@@ -21,7 +74,9 @@
           "objective:secure_delta"
         ],
         "authority_ref": "authority:high_council"
-      }
+      },
+      "tick": 1,
+      "accepted_decision_ref": "decision:evt:war"
     },
     {
       "event_id": "evt:occupation",
@@ -30,7 +85,8 @@
       ],
       "effects": {
         "occupation_control_ref": "polity:attacker"
-      }
+      },
+      "tick": 2
     },
     {
       "event_id": "evt:ceasefire",
@@ -40,7 +96,9 @@
       "effects": {
         "ceasefire": true,
         "war_exhaustion_delta": 25
-      }
+      },
+      "tick": 3,
+      "accepted_decision_ref": "decision:evt:ceasefire"
     },
     {
       "event_id": "evt:peace",
@@ -49,7 +107,9 @@
       ],
       "effects": {
         "peace_settlement": true
-      }
+      },
+      "tick": 4,
+      "accepted_decision_ref": "decision:evt:peace"
     }
   ],
   "expected": {
