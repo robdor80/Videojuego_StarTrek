@@ -20,15 +20,16 @@ Se parte de material que el autor **ya tiene preparado** (las imágenes, la mús
 
 Proyecto Unreal existente: `juego/UE5/StarTrekRPG/StarTrekRPG.uproject`.
 
-Ubicación de diseño para los activos Unreal de producción, dentro de **ese mismo proyecto**:
+Ubicación definitiva de los activos Unreal de producción, dentro de **ese mismo proyecto y del árbol `Content/StarTrek` existente**:
 
 ```text
-juego/UE5/StarTrekRPG/Content/Intro/
-  Images/
+juego/UE5/StarTrekRPG/Content/StarTrek/Intro/
+  Imagenes/
   Audio/
-  Sequences/
-  Materials/
-  UI/
+  Materiales/
+  Secuencias/
+  Mapas/
+  Widgets/
 ```
 
 La introducción se materializará como activos Unreal persistentes (por ejemplo, **Level Sequence** con pistas de imagen/animación/audio y elementos de UI/escena apropiados); la elección concreta entre actores, widgets o medios se tomará al verificar los recursos reales dentro del editor. **No debe desarrollarse como demo en otro .uproject ni en laboratorios temporales**. Guardar las modificaciones y comprobar que se recuperan al cerrar y reabrir el proyecto.
