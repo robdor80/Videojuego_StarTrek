@@ -1,5 +1,7 @@
 # Procedural Dynamic Universe — 10-block plan v0.1
 
+> **ESTADO VIGENTE — 19/11/2026 (reconciliación de auditoría):** B01–B10 están cerrados históricamente como **referencia offline**, 10/10 bloques y 177/177 paquetes, no como universo jugable. **No hay ningún «bloque siguiente» de P2 ni se inicia F13 ahora.** Consultar [vista normalizada de madurez](P2_B01_B10_MADUREZ_NORMALIZADA_20261119.json), [reparación R1–R5 y traspaso R6](P2_RECONCILIACION_CONTRATOS_Y_TRASPASO_R6_20261119.md) y [auditoría independiente](../auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md). Las referencias posteriores a «siguiente elegible» son fotografías **históricas fechadas**, no instrucciones actuales. CoreRPG mantiene la única autoridad de WorldState/tiempo/persistencia.
+
 **Status:** ACTIVE  
 **Execution rule:** blocks are implemented strictly in order. A later block may be documented as a dependency, but implementation does not start until the current block is COMPLETE, validated, cross-referenced and recorded in `CONTENT_STATUS.md`.
 
