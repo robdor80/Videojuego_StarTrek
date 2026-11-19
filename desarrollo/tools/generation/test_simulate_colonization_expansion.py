@@ -61,7 +61,13 @@ class ColonizationExpansionTests(unittest.TestCase):
 
     def test_independence_preserves_civilization_id(self):
         f=load("viable_colony_25y_v0.1.json"); inp=copy.deepcopy(f["input"]); inp["years"]=1; inp["initial"]["governance_maturity"]=80; inp["initial"]["autonomy_pressure"]=90
-        inp["scheduled_events"]=[{"year":1,"event_id":"evt:independence","cause_refs":["agreement:recognized"],"effects":{"independence_recognized":True,"new_polity_ref":"polity:haven"}}]
+        inp["initial"]["accepted_independence_resolutions"] = {
+            "resolution:haven": {"status":"accepted", "source_domain":"CoreRPG/B01",
+                "campaign_seed":inp["campaign_seed"],"civilization_id":inp["civilization_id"],
+                "project_id":inp["project_id"],"year":1,"authority_ref":"council:vote",
+                "jurisdiction_ref":inp["initial"]["effective_controller_ref"],
+                "new_polity_ref":"polity:haven","creation_status":"creation_approved"}}
+        inp["scheduled_events"]=[{"year":1,"event_id":"evt:independence","cause_refs":["agreement:recognized"],"effects":{"independence_recognized":True,"new_polity_ref":"polity:haven", "accepted_resolution_ref":"resolution:haven"}}]
         r=colx.simulate_project(**inp); self.assertEqual(r["civilization_id"],inp["civilization_id"]); self.assertEqual(r["final_state"]["governance_status"],"independent_polity"); self.assertEqual(r["final_state"]["effective_controller_ref"],"polity:haven")
 
 if __name__ == "__main__":
