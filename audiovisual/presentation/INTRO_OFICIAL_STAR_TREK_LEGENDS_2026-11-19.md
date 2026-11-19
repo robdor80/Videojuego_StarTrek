@@ -14,7 +14,23 @@ Se parte de material que el autor **ya tiene preparado** (las imágenes, la mús
 - Imágenes panorámicas horizontales de cada nave/estación completa y retratos de los capitanes preparados para fondo **negro puro**, con transiciones suaves integradas en negro.
 - Sincronización con la selección musical realizada por el autor (tema principal de *Star Trek* de 2009), respetando el diseño de 53 s ya acordado. Los puntos exactos de entrada y corte se fijarán al colocar la pista real.
 - Aparición final del título **STAR TREK LEGENDS**, como parte de la presentación oficial.
-- Esta presentación de **cinco leyendas** es **distinta** de la cinemática narrativa S04 sobre el protagonista, el consejo de Janeway/Picard y el acceso a la Academia: no mezclarlas ni considerarlas sustitutas.
+- La presentación de **cinco leyendas** y la cinemática narrativa **S04** son **capítulos creativos distintos de una misma introducción completa** del videojuego. Se producen y guardan separadamente, pero el jugador los verá unidos sin interrupciones de menú.
+
+## Unidad de la introducción completa y producción por etapas (ampliación autoral 19-11-2026)
+
+**Decisión aprobada:** la presentación musical de las cinco leyendas **NO** es la totalidad de la introducción de la campaña; es **su primer capítulo**. La apertura oficial del videojuego comprenderá varias secuencias producidas en distintos momentos pero **enlazadas, consecutivas y presentadas como un único prólogo**.
+
+1. **Capítulo 1: homenaje a las cinco leyendas.** Material de 10 imágenes (cinco capitanes, cinco naves/estación) y pista de Michael Giacchino disponibles en local según inventario aportado por el autor. Producción **inmediata** directamente en UE5. Duración de referencia **53 segundos**; el autor ha considerado un posible ajuste a 54 s al recortar la música. La duración exacta se decidirá y registrará al sincronizar el montaje musical.
+2. **Capítulo 2: Consejo de la Flota Estelar / expediente del protagonista.** Cinemática narrativa 2D de la admisión del personaje híbrido y descendiente de Khan, con debate del alto mando, recuerdos de la vida previa y posiciones institucionales, conforme a **S04 / DEC-0022**. **Producción posterior**: requiere definir ilustraciones, montaje y voces. Las grabaciones o referencias de voz de **Picard, Janeway y Riker** están pendientes de recopilar o preparar según indique el autor. La intervención concreta de Riker, lugar en la escena y texto **no quedan fijados por esta nota**; respetar la composición/competencias institucionales ya aprobadas.
+3. **Capítulo 3: resolución y comienzo de campaña.** Continuación audiovisual hacia la notificación/admisión legítima y entrada en la Academia en 2383; detalles y duración pendientes de guion. No confundir representación narrativa con la creación de plazas, identidades o rango por la cinemática.
+
+**Transición obligatoria:** cuando termine el capítulo musical, **fundido a negro** y comienzo del capítulo 2 **sin volver al menú ni exigir una segunda acción**. De igual modo, encadenar la resolución y entrada a la Academia. La música del capítulo 1 no debe arrastrarse por error al diálogo del Consejo; las mezclas, silencios y transiciones se ajustarán en edición.
+
+**Integración UE5:** mantener cada bloque como activo/secuencia independiente bajo `Content/StarTrek/Intro/` y preparar el encadenamiento posterior mediante un controlador/secuencia maestra de introducción o mecanismo equivalente compatible con Sequencer/UE5. **No obligar a recrear el capítulo 1** cuando lleguen ilustraciones y voces de capítulos posteriores. La selección definitiva del método de reproducción y transición se hará al probarlo en el proyecto. La intro completa se presenta al inicio de una **nueva partida**; omitirla o revisitarla no debe duplicar admisiones, guardar consecuencias ficticias ni recrear personajes (CoreRPG/F10 son autoridad).
+
+**Condición de entrega por fases:** el **capítulo 1 sí puede darse por terminado y persistente** una vez montado y validado en el proyecto real, aunque los demás bloques no estén listos. No afirmar que la **introducción completa** está terminada hasta enlazar todos los capítulos con los recursos finales y probar el paso a la partida.
+
+**Fuentes locales informadas por el autor, no versionadas en Git:** `Content/StarTrek/Intro/Imagenes_Originales/Capitanes/` (5 PNG), `Imagenes_Originales/Naves/` (5 JPEG) y `Musica original/` (MP3). Son fuentes originales que podrán mantenerse separadas de los activos importados Unreal en sus propias carpetas; confirmar la importación real antes de declararla realizada. Las copias periódicas del proyecto completo a SSD externo constituyen el respaldo habitual informado por el autor; comprobar que incluyen estos originales y los `.uasset`/`.umap` de `Content`.
 
 ## Ruta definitiva y persistencia del proyecto
 
