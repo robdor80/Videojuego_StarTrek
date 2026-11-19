@@ -109,12 +109,13 @@ class F15ReleaseReadinessTests(unittest.TestCase):
     def test_release_rejects_bad_hash(self):
         result = release_gate({
             "version": "0.9.0-beta.1",
-            "channel": "beta",
+            "channel": "private_local",
             "artifact_sha256": "bad",
             "build_executed": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
+            "backup_restore_tested": True,
             "blocker_count": 0,
             "evidence_refs": ["build"],
         })
@@ -129,6 +130,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
+            "backup_restore_tested": True,
             "blocker_count": 0,
             "evidence_refs": ["build"],
         })
@@ -137,17 +139,81 @@ class F15ReleaseReadinessTests(unittest.TestCase):
     def test_release_ready_metadata_is_not_release_certification(self):
         result = release_gate({
             "version": "0.9.0-beta.1",
-            "channel": "release_candidate",
+            "channel": "private_candidate",
             "artifact_sha256": "1" * 64,
             "build_executed": True,
             "e2e_passed": True,
             "migration_tested": True,
             "rollback_tested": True,
+            "backup_restore_tested": True,
             "blocker_count": 0,
             "evidence_refs": ["build", "e2e", "migration", "rollback"],
         })
         self.assertEqual(result["status"], REVIEW)
         self.assertFalse(result["release_certified"])
+
+
+    def test_public_release_channels_are_forbidden(self):
+        base = {
+            "version": "1.0.0",
+            "artifact_sha256": "1" * 64,
+            "build_executed": True,
+            "e2e_passed": True,
+            "migration_tested": True,
+            "rollback_tested": True,
+            "backup_restore_tested": True,
+            "blocker_count": 0,
+            "evidence_refs": ["msi-build", "recovery"],
+        }
+        for channel in ("beta", "release_candidate", "internal_beta", "steam"):
+            with self.subTest(channel=channel):
+                self.assertIn(
+                    "invalid_release_channel",
+                    release_gate({**base, "channel": channel})["reasons"],
+                )
+
+    def test_private_build_requires_backup_restore(self):
+        result = release_gate({
+            "version": "1.0.0",
+            "channel": "private_local",
+            "artifact_sha256": "1" * 64,
+            "build_executed": True,
+            "e2e_passed": True,
+            "migration_tested": True,
+            "rollback_tested": True,
+            "backup_restore_tested": False,
+            "blocker_count": 0,
+            "evidence_refs": ["msi-build"],
+        })
+        self.assertIn("backup_restore_not_tested", result["reasons"])
+
+    def test_repository_state_may_advance_without_freezing_f15(self):
+        here = Path(__file__).resolve().parents[3]
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            required = (
+                "proyecto/docs/roadmap/master/PLAN_MAESTRO.md",
+                "proyecto/docs/roadmap/master/ESTADO_GLOBAL.json",
+                "proyecto/docs/roadmap/master/CRITERIOS_DE_CIERRE.md",
+                "proyecto/docs/roadmap/master/fases/F15/README.md",
+                "desarrollo/tools/validation/f08_acceptance_gate.py",
+                "desarrollo/tools/validation/f14_audiovisual_reference.py",
+                "proyecto/docs/decisions/prototype_validation_and_release_policy.md",
+                "audiovisual/localization/README.md",
+                "audiovisual/ui/README.md",
+            )
+            for relative in required:
+                target = root / relative
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes((here / relative).read_bytes())
+            state_file = root / required[1]
+            state = json.loads(state_file.read_text(encoding="utf-8"))
+            f15 = next(x for x in state["phases"] if x["id"] == "F15")
+            f15["status"] = "EN_REVISION"
+            state_file.write_text(json.dumps(state), encoding="utf-8")
+            result = audit_repository(root)
+            self.assertEqual(result["status"], REVIEW)
+            self.assertEqual(result["f15_status"], "EN_REVISION")
 
     def test_no_ejecutado_capture_template_is_blocked(self):
         here = Path(__file__).resolve().parents[3]
@@ -163,7 +229,7 @@ class F15ReleaseReadinessTests(unittest.TestCase):
         report = execute_fixture(
             here / "desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json"
         )
-        self.assertEqual(report["cases_total"], 37)
+        self.assertEqual(report["cases_total"], 38)
         self.assertEqual(report["cases_failed"], 0)
 
     def test_repository_audit_blocks_missing_root(self):
