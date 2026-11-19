@@ -95,18 +95,66 @@ def assess_response(profile: dict[str, Any], situation: dict[str, Any]) -> dict[
         "war_objective_refs": copy.deepcopy(situation.get("war_objective_refs", [])),
     }
 
+def _unit_ids(force: dict[str, Any]) -> list[str]:
+    units = force.get("units")
+    if not isinstance(units, list):
+        raise ValueError("force units must be a list")
+    ids = [u.get("unit_id") for u in units]
+    if any(not isinstance(uid, str) or not uid.strip() for uid in ids):
+        raise ValueError("invalid military unit identity")
+    if len(ids) != len(set(ids)):
+        raise ValueError("duplicate military unit identity")
+    return ids
+
+
+def _validate_inventory(attacker: dict[str, Any], defender: dict[str, Any],
+                        inventory_snapshot: dict[str, Any], campaign_id: str) -> None:
+    a_ids, d_ids = _unit_ids(attacker), _unit_ids(defender)
+    if set(a_ids) & set(d_ids):
+        raise ValueError("unit identity appears on both sides")
+    if not isinstance(inventory_snapshot, dict) or not campaign_id:
+        raise ValueError("accepted force inventory snapshot required")
+    if (inventory_snapshot.get("status") != "accepted"
+            or inventory_snapshot.get("source_domain") != "CoreRPG"
+            or inventory_snapshot.get("campaign_id") != campaign_id
+            or type(inventory_snapshot.get("world_revision")) is not int):
+        raise ValueError("force inventory snapshot not accepted")
+    roster = inventory_snapshot.get("roster")
+    if not isinstance(roster, dict):
+        raise ValueError("force inventory roster missing")
+    for side in (attacker, defender):
+        force_id = side.get("force_id")
+        if not isinstance(force_id, str) or not force_id:
+            raise ValueError("force identity missing")
+        for unit in side["units"]:
+            rec = roster.get(unit["unit_id"])
+            if (not isinstance(rec, dict)
+                    or rec.get("force_id") != force_id
+                    or rec.get("owner_ref") != side.get("owner_ref")
+                    or rec.get("campaign_id") != campaign_id
+                    or rec.get("status") == "unavailable"):
+                raise ValueError("force unit absent from accepted owner inventory")
+
+
 def effective_force(force: dict[str, Any]) -> int:
+    _unit_ids(force)
     total = 0
     for unit in force.get("units", []):
         if unit.get("status") == "destroyed":
             continue
-        total += max(0, int(unit["combat_power"])) * clamp(unit.get("readiness", 100)) * clamp(unit.get("logistics", 100)) // 10000
+        integrity = clamp(unit.get("integrity", 100))
+        total += (max(0, int(unit["combat_power"]))
+                  * clamp(unit.get("readiness", 100))
+                  * clamp(unit.get("logistics", 100))
+                  * integrity // 1000000)
     return total
 
 def resolve_operation(*, campaign_seed: str, operation_id: str, attacker: dict[str, Any],
-                      defender: dict[str, Any], objective_ref: str, location_ref: str) -> dict[str, Any]:
+                      defender: dict[str, Any], objective_ref: str, location_ref: str,
+                      campaign_id: str, inventory_snapshot: dict[str, Any]) -> dict[str, Any]:
     if not objective_ref or not location_ref:
         raise ValueError("operation requires objective and location")
+    _validate_inventory(attacker, defender, inventory_snapshot, campaign_id)
     atk, dfn = copy.deepcopy(attacker), copy.deepcopy(defender)
     atk_power, def_power = effective_force(atk), effective_force(dfn)
     if atk_power <= 0 or def_power <= 0:
@@ -172,11 +220,18 @@ def apply_conflict_event(state: dict[str, Any], event: dict[str, Any]) -> dict[s
 
 def validate_operation(result: dict[str, Any]) -> list[str]:
     errors = []
-    before_a = set(result["attacker_before_unit_ids"])
-    after_a = {u["unit_id"] for u in result["attacker_after"]["units"]}
-    before_d = set(result["defender_before_unit_ids"])
-    after_d = {u["unit_id"] for u in result["defender_after"]["units"]}
-    if before_a != after_a or before_d != after_d or result.get("spawned_unit_ids"):
+    before_a = result["attacker_before_unit_ids"]
+    before_d = result["defender_before_unit_ids"]
+    after_a = [u["unit_id"] for u in result["attacker_after"]["units"]]
+    after_d = [u["unit_id"] for u in result["defender_after"]["units"]]
+    if (len(set(before_a)) != len(before_a)
+            or len(set(before_d)) != len(before_d)
+            or len(set(after_a)) != len(after_a)
+            or len(set(after_d)) != len(after_d)
+            or set(after_a) & set(after_d)):
+        errors.append("duplicate or cross-side force identity")
+    if (sorted(before_a) != sorted(after_a) or sorted(before_d) != sorted(after_d)
+            or result.get("spawned_unit_ids")):
         errors.append("strategic operation spawned or deleted force identities")
     if result.get("sovereignty_changed"):
         errors.append("operation cannot change sovereignty directly")
