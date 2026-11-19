@@ -198,25 +198,75 @@ def resolve_operation(*, campaign_seed: str, operation_id: str, attacker: dict[s
     }
 
 def apply_conflict_event(state: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
+    """Reference projection of accepted legal decisions, never issuance of one."""
     next_state = copy.deepcopy(state)
+    event_id = event.get("event_id")
+    if not isinstance(event_id, str) or not event_id.strip():
+        raise ValueError("conflict event identity required")
+    receipts = next_state.setdefault("conflict_event_receipts", {})
+    payload_hash = hashlib.sha256(json.dumps(event, sort_keys=True).encode("utf-8")).hexdigest()
+    if event_id in receipts:
+        if receipts[event_id] != payload_hash:
+            raise ValueError("divergent conflict event replay")
+        return next_state
     effects = event.get("effects", {})
-    if effects.get("declare_war"):
-        if not event.get("cause_refs") or not effects.get("war_objective_refs") or not effects.get("authority_ref"):
-            raise ValueError("war declaration requires cause, objective and authority")
-        next_state["conflict_state"] = "war"
-        next_state["war_objective_refs"] = list(effects["war_objective_refs"])
-    if effects.get("ceasefire"):
-        next_state["conflict_state"] = "ceasefire"
-    if effects.get("armistice"):
-        next_state["conflict_state"] = "armistice"
-    if effects.get("peace_settlement"):
-        next_state["conflict_state"] = "peace"
+    transition_flags = [name for name in ("declare_war", "ceasefire", "armistice", "peace_settlement")
+                        if effects.get(name)]
+    if len(transition_flags) > 1:
+        raise ValueError("multiple conflict transitions in one event")
+    if transition_flags:
+        transition = transition_flags[0]
+        previous = next_state.get("conflict_state")
+        allowed = {
+            "declare_war": ({"diplomatic_crisis", "peace"}, "war"),
+            "ceasefire": ({"war"}, "ceasefire"),
+            "armistice": ({"war", "ceasefire"}, "armistice"),
+            "peace_settlement": ({"ceasefire", "armistice"}, "peace"),
+        }
+        origin_states, target = allowed[transition]
+        if previous not in origin_states:
+            raise ValueError("illegal conflict transition")
+        decision_ref = event.get("accepted_decision_ref")
+        decision = state.get("accepted_conflict_decisions", {}).get(decision_ref)
+        if (not isinstance(decision_ref, str) or not isinstance(decision, dict)
+                or decision.get("status") != "accepted"
+                or decision.get("source_domain") != "CoreRPG/B03"
+                or decision.get("event_id") != event_id
+                or decision.get("transition") != transition
+                or decision.get("from_state") != previous
+                or decision.get("to_state") != target
+                or not isinstance(decision.get("authority_ref"), str)
+                or not decision["authority_ref"].strip()
+                or not event.get("cause_refs")
+                or not set(event["cause_refs"]).issubset(set(decision.get("cause_refs", [])))
+                or type(decision.get("effective_tick")) is not int
+                or type(event.get("tick")) is not int
+                or event["tick"] < decision["effective_tick"]):
+            raise ValueError("conflict transition lacks accepted legal decision")
+        if transition == "declare_war":
+            if (not effects.get("war_objective_refs")
+                    or effects.get("authority_ref") != decision["authority_ref"]
+                    or sorted(effects["war_objective_refs"]) != sorted(decision.get("war_objective_refs", []))):
+                raise ValueError("war declaration requires accepted objective and authority")
+            next_state["war_objective_refs"] = list(effects["war_objective_refs"])
+        else:
+            signers = decision.get("signer_refs")
+            if not isinstance(signers, list) or len(set(signers)) < 2:
+                raise ValueError("conflict cessation needs both signers")
+            if transition == "peace_settlement" and not decision.get("treaty_ref"):
+                raise ValueError("peace treaty required")
+        next_state["conflict_state"] = target
+        next_state["last_conflict_tick"] = event["tick"]
     if "war_exhaustion_delta" in effects:
         next_state["war_exhaustion"] = clamp(int(next_state.get("war_exhaustion", 0)) + int(effects["war_exhaustion_delta"]))
     if effects.get("occupation_control_ref"):
+        if next_state.get("conflict_state") != "war":
+            raise ValueError("occupation requires active war")
         next_state["effective_control_ref"] = effects["occupation_control_ref"]
         next_state["occupation_state"] = "military_occupation"
+    receipts[event_id] = payload_hash
     return next_state
+
 
 def validate_operation(result: dict[str, Any]) -> list[str]:
     errors = []
