@@ -1,0 +1,109 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DESIGN_CATALOG_NOT_RUNTIME",
+  "note": "Numeric IDs are Star Trek host-data vocabulary, not CoreRPG structural definitions. Unverified taxonomy cannot trigger confirmed render by itself.",
+  "classes": [
+    {
+      "id": 1,
+      "code": "galaxy",
+      "name": "Galaxy",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 2,
+      "code": "sovereign",
+      "name": "Sovereign",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 3,
+      "code": "odyssey",
+      "name": "Odyssey",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 4,
+      "code": "defiant",
+      "name": "Defiant",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 5,
+      "code": "miranda",
+      "name": "Miranda",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 6,
+      "code": "intrepid",
+      "name": "Intrepid",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 7,
+      "code": "akira",
+      "name": "Akira",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 8,
+      "code": "dderidex",
+      "name": "D'deridex",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 9,
+      "code": "bird_of_prey",
+      "name": "Bird-of-Prey",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 10,
+      "code": "borg_cube",
+      "name": "Cubo Borg",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 11,
+      "code": "danube",
+      "name": "Danube",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 12,
+      "code": "olympic",
+      "name": "Olympic",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 13,
+      "code": "type_6_shuttle",
+      "name": "Lanzadera tipo 6",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 14,
+      "code": "dkyr",
+      "name": "D'Kyr",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 15,
+      "code": "d5",
+      "name": "D5",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 16,
+      "code": "vorcha",
+      "name": "Vor'cha",
+      "visual_confirmation_required": true
+    },
+    {
+      "id": 17,
+      "code": "ktinga",
+      "name": "K't'inga",
+      "visual_confirmation_required": true
+    }
+  ]
+}

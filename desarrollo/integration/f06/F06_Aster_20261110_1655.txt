@@ -1,0 +1,73 @@
+F06 — SISTEMA ASTER · INFORME DE PRUEBA
+Fecha: 2026-11-10 16:55
+Escenario: 3. Interferencias
+Último tiempo simulado: 08:00:00
+
+EVENTOS PRESENTADOS AL OFICIAL:
+00:00:00 · Comienza la guardia. La computadora controla los sensores.
+00:00:00 · Detectados 18 contactos; clasificación automática iniciada.
+00:00:00 · Identificación completada; seguimiento automático.
+00:00:00 · Análisis automático iniciado: nave.
+00:00:00 · Análisis automático iniciado: nave.
+00:02:00 · Análisis de nave terminado. Continúo la vigilancia.
+00:02:00 · Análisis de nave terminado. Continúo la vigilancia.
+00:02:00 · Análisis automático iniciado: sonda.
+00:02:00 · Análisis automático iniciado: lanzadera.
+00:04:00 · Análisis de lanzadera terminado. Continúo la vigilancia.
+00:04:00 · Análisis automático iniciado: planeta.
+00:04:30 · Análisis de sonda terminado. Continúo la vigilancia.
+00:04:30 · Análisis automático iniciado: estación.
+00:06:30 · Análisis de planeta terminado. Continúo la vigilancia.
+00:06:30 · Análisis de estación terminado. Continúo la vigilancia.
+00:06:30 · Análisis automático iniciado: planeta.
+00:06:30 · Análisis automático iniciado: planeta.
+00:08:00 · Análisis de planeta terminado. Continúo la vigilancia.
+00:08:00 · Análisis automático iniciado: planeta.
+00:08:30 · Análisis de planeta terminado. Continúo la vigilancia.
+00:08:30 · Análisis automático iniciado: planeta.
+00:09:30 · Análisis de planeta terminado. Continúo la vigilancia.
+00:09:30 · Análisis automático iniciado: planeta.
+00:10:30 · Análisis de planeta terminado. Continúo la vigilancia.
+00:10:30 · Análisis automático iniciado: nebulosa.
+00:11:30 · Análisis de planeta terminado. Continúo la vigilancia.
+00:11:30 · Análisis automático iniciado: luna.
+00:13:30 · Análisis de nebulosa terminado. Continúo la vigilancia.
+00:13:30 · Análisis de luna terminado. Continúo la vigilancia.
+00:13:30 · Análisis automático iniciado: luna.
+00:13:30 · Análisis automático iniciado: luna.
+00:15:00 · Análisis de luna terminado. Continúo la vigilancia.
+00:15:00 · Análisis automático iniciado: luna.
+00:16:00 · Análisis de luna terminado. Continúo la vigilancia.
+00:16:00 · Análisis automático iniciado: asteroide.
+00:17:00 · Análisis de luna terminado. Continúo la vigilancia.
+00:17:00 · Análisis automático iniciado: estrella.
+00:18:00 · Análisis de asteroide terminado. Continúo la vigilancia.
+00:18:30 · Análisis de estrella terminado. Continúo la vigilancia.
+01:00:00 · Se pierde el contacto con nebulosa; mantengo vigilancia.
+01:00:00 · Se pierde el contacto con sonda; mantengo vigilancia.
+01:00:00 · Nuevo contacto: señal desconocida. La computadora lo evalúa.
+01:00:00 · Análisis automático iniciado: señal desconocida.
+01:03:00 · Análisis de nave terminado. Continúo la vigilancia.
+02:00:00 · Contacto recuperado (nebulosa). Vuelvo a analizarlo.
+02:00:00 · Identificación completada; seguimiento automático.
+02:00:00 · Contacto recuperado (sonda). Vuelvo a analizarlo.
+02:00:00 · Análisis automático iniciado: sonda.
+02:00:00 · Análisis automático iniciado: nebulosa.
+02:00:00 · Nuevo contacto: nave. La computadora lo evalúa.
+02:00:00 · Identificación completada; seguimiento automático.
+02:02:30 · Análisis de sonda terminado. Continúo la vigilancia.
+02:02:30 · Análisis automático iniciado: nave.
+02:03:00 · Análisis de nebulosa terminado. Continúo la vigilancia.
+02:04:30 · Análisis de nave terminado. Continúo la vigilancia.
+04:00:00 · Se pierde el contacto con nave; mantengo vigilancia.
+08:00:00 · Contacto recuperado (nave). Vuelvo a analizarlo.
+08:00:00 · Análisis automático iniciado: nave.
+08:00:00 · Guardia finalizada. Puedes repetir o exportar el informe.
+
+IMPRESIONES DEL JUGADOR:
+Demasiados datos infomando sobre analisis automatico iniciado.
+La nave identificada NO ofrece el nombre o caracter´siticas de  la nave, si ya la ha identificado.
+desde 01:01:48 no ofrece más datos.
+Raro que esta nave tarde 15 minutos en analizar el sistema solar.
+
+NOTA: prueba de CoreRPG con fixture QA Aster, no universo F13 ni UI LCARS final.
