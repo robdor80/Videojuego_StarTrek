@@ -96,19 +96,93 @@
     "wallets": {
       "customer_wallet": {
         "unit": "latinum_strip",
-        "balance": 20
+        "balance": 20,
+        "owner_ref": "customer"
       },
       "merchant_wallet": {
         "unit": "latinum_strip",
-        "balance": 2
+        "balance": 2,
+        "owner_ref": "merchant"
       },
       "other_currency_wallet": {
         "unit": "local_credits",
-        "balance": 20
+        "balance": 20,
+        "owner_ref": "customer"
       }
     },
     "last_tick": 0,
-    "event_log": []
+    "event_log": [],
+    "world_revision": 1,
+    "trusted_trade_delegations": {
+      "authorized_actor": [
+        "merchant",
+        "customer"
+      ]
+    },
+    "trusted_trade_consents": {
+      "sale_offer": [
+        {
+          "role": "seller",
+          "store_id": "colony_merchant",
+          "owner_ref": "merchant",
+          "status": "accepted"
+        }
+      ],
+      "sale_accepted": [
+        {
+          "role": "buyer",
+          "store_id": "colony_customer",
+          "owner_ref": "customer",
+          "status": "accepted"
+        }
+      ],
+      "signed": [
+        {
+          "role": "seller",
+          "store_id": "colony_merchant",
+          "owner_ref": "merchant",
+          "status": "accepted"
+        },
+        {
+          "role": "buyer",
+          "store_id": "colony_customer",
+          "owner_ref": "customer",
+          "status": "accepted"
+        }
+      ],
+      "offer": [
+        {
+          "role": "seller",
+          "store_id": "colony_merchant",
+          "owner_ref": "merchant",
+          "status": "accepted"
+        }
+      ],
+      "acceptance": [
+        {
+          "role": "buyer",
+          "store_id": "colony_customer",
+          "owner_ref": "customer",
+          "status": "accepted"
+        }
+      ],
+      "offered": [
+        {
+          "role": "seller",
+          "store_id": "colony_merchant",
+          "owner_ref": "merchant",
+          "status": "accepted"
+        }
+      ],
+      "accepted": [
+        {
+          "role": "buyer",
+          "store_id": "colony_customer",
+          "owner_ref": "customer",
+          "status": "accepted"
+        }
+      ]
+    }
   },
   "happy_path_events": [
     {
