@@ -19,7 +19,7 @@ Se conserva la regla existente: **CoreRPG** es autoridad del mundo y persistenci
 
 **Decisiones que no se reabren:** videojuego estrictamente personal; Enterprise NCC-1701-D reconstruida por La Forge mediante Proyecto Valhalla, **no** nave ni clase denominada Valhalla; Academia desde 2383, graduación aproximada 2387; protagonista único híbrido humano-vulcano descendiente de Khan; aventura principalmente tranquila con emergencias poco frecuentes; no Q/Continuo Q; IA OpenAI única a través del HOST sin API propia por subsistema; sensores extraordinariamente competentes de la Enterprise-D cuando el refit está activo; estilo interior Galaxy Refit A2; interfaz en castellano.
 
-**Limitación de trazabilidad del número 19:** el acuerdo conversacional incorpora la música como sistema 19, pero en main no se localiza aún un DEC o ficha S19 que fije **nombre oficial y límites exactos**. En este informe se denomina **S19 — Música / experiencia musical (etiqueta provisional)**; se auditan las necesidades musicales documentadas, sin presumir que el autor haya aprobado convertir toda la ingeniería de sonido o TTS en S19. La idea documentada IDEA-0002 es solo una parte de su posible alcance. El número no se reasigna.
+**Trazabilidad de S19:** el catálogo conversacional aprobó el **Sistema 19 — Audio, música y ambientación dinámica**. Es un coordinador común de música, ambientes, efectos, voces, mezcla, espacialización, reproducción y detención; los demás sistemas notifican acontecimientos y S19 decide la respuesta sonora conforme a su contexto. El autor priorizó **efectos sonoros** y pospuso la **música ambiental** hasta contar con materiales e implementación de calidad; si no queda bien, no se incluye. En main todavía falta una ficha propia S19 que formalice el acuerdo íntegro. IDEA-0002 describe la biblioteca personal, que es solo un consumidor/caso de uso parcial. La definición conversacional es válida a nivel de **ideas y necesidades**, no constituye una integración implementada.
 
 ## 2. Catálogo auditado y evaluación sintética
 
@@ -43,7 +43,7 @@ Se conserva la regla existente: **CoreRPG** es autoridad del mundo y persistenci
 | S16 — Vida a bordo | Rutinas, actividades, servicios y descanso | **Mantener** | Dependencias de S05/S06/S12, evitar subsistemas cosméticos vacíos |
 | S17 — Minijuegos | Ajedrez y ocio interactivo | **Mantener con alcance pequeño** | Reglas, NPC y esfuerzo frente al bucle principal |
 | S18 — Identidad, autenticación y control de accesos | Autenticación y autorización de accesos | **Mantener; bien delimitado** | Es diseño, no cerraduras UE5; frontera S12/Core/HOST |
-| S19 — Música / experiencia musical | Música contextual y biblioteca musical personal | **Mantener; formalizar** | Sin decisión/contrato S19 en main; reproducción local, mezcla y permisos |
+| S19 — Audio, música y ambientación dinámica | Coordinación de SFX, ambientes, voces, mezcla y música contextual; biblioteca personal | **Mantener; formalizar** | Falta ficha S19 en main; priorizar SFX y posponer música si no alcanza calidad |
 
 **Interpretación de la tabla:** no se atribuye a cada sistema un estado runtime completo. Existen distintos niveles de evidencia: diseño, contratos, simuladores de referencia, código nativo parcial, pruebas aisladas y escenas UE5 reportadas. El estado de una fase Fxx o Hxx no certifica automáticamente toda su familia Sxx.
 
@@ -156,11 +156,11 @@ Se conserva la regla existente: **CoreRPG** es autoridad del mundo y persistenci
 - **Acción:** reutilizar IDs Core/F11/propiedad de camarotes; decisión determinista de S18 y ejecución física de S12/ingeniería; privacidad proporcional; salida segura y excepciones trazadas. No crear cuentas del jugador ni otro gestor de PERSON.
 - **Prueba:** puerta pública automática y privada pulsada, jugador residente, invitado caducado, NPC no autorizado, revocación, emergencia, avería física y guardado; finalmente UE5/Host/Core certificados. **Estado actual: documentación y contratos, no runtime.**
 
-### S19 — Música / experiencia musical (alcance formal pendiente)
-- **Fortaleza:** IDEA-0002 ya aprueba biblioteca **MP3/FLAC local en el MSI**, vínculo de carpetas por defecto sin duplicar, selección/cola y reproducción diegética desde el camarote. Música es importante además para la identidad del protagonista y la ambientación.
-- **Riesgos:** no existe ficha oficial S19 con límite claro entre **biblioteca personal**, **música ambiental/cinemática**, **efectos** y **voces/TTS**. No suponer reproducción runtime MP3/FLAC por el mero hecho de importar recursos al editor; tampoco mezclar contenido musical privado con GitHub/API. El usuario no quiere servicios de pago adicionales ni impacto apreciable de voz sobre VRAM/FPS.
-- **Acción:** registrar DEC y contratos S19 solo tras fijar nombre/alcance con el autor; reutilizar Starship Computer para órdenes y UE5 para buses/atenuación/oclusión; indexar música sin subir ficheros; volumen y mezcla con prioridad de voz/alertas; política de continuidad al salir del camarote. Mantener TTS como integración de voz independiente bajo IA/audio, preferentemente local CPU/RAM y voz estable por NPC, sin convertir la clonación de famosos en requisito.
-- **Prueba:** localizar MP3/FLAC local en build empaquetada, oírla únicamente en zona correcta con puerta abierta/cerrada, pausar/continuar tras LOAD, respetar alertas, no cargar música en servidores y no degradar juego.
+### S19 — Audio, música y ambientación dinámica (alcance aprobado; falta ficha en main)
+- **Fortaleza:** en la conversación canónica se aprobó un **coordinador sonoro común**: otros sistemas notifican acontecimientos, y S19 resuelve prioridades, efectos, ambientes, voces, reproducción/detención, música contextual, mezcla y espacialización. IDEA-0002 añade un caso particular: biblioteca **MP3/FLAC local en el MSI**, carpetas vinculadas sin duplicación y reproducción diegética desde el camarote.
+- **Riesgos:** falta transcribir el acuerdo S19 al repo. Los efectos, ambientes, locuciones y música pueden competir en volumen o prioridades; no convertir cada sistema en un reproductor independiente. Tampoco presumir compatibilidad MP3/FLAC en builds empaquetadas o subir audio privado a GitHub/API. El TTS debe evitar pagos externos y carga significativa de VRAM/FPS; la clonación de voces conocidas no es requisito.
+- **Acción:** formalizar el **alcance ya aprobado** en una ficha S19, sin reabrir el concepto ni expandirlo arbitrariamente. Priorizar **SFX funcionales** (consola, puertas, alertas, ambiente de nave) y voz/mezcla cuando sean viables. La **música ambiental** queda pospuesta: calidad antes que cantidad; si no se logra bien, se omite. UE5 gestiona reproducción/buses/atenuación/oclusión, S19 coordina prioridades; servicio IA central solo interpreta textos cuando sea imprescindible. Reutilizar Starship Computer para órdenes, respetar bibliotecas locales y evitar procesamiento de voz costoso; para NPC evaluar TTS gratuito estable y local CPU/RAM, sin perjudicar RTX.
+- **Prueba:** un evento de alerta cambia prioridad de voces/SFX/ambientes sin solapes; dos emisores separados se atenúan correctamente; un comando de reproducción local funciona en build y al volver a un camarote; cero audio privado subido; FPS/VRAM medidos. **No exigir música cinematográfica como puerta de cierre** mientras siga pospuesta.
 
 ---
 
@@ -183,7 +183,7 @@ Se conserva la regla existente: **CoreRPG** es autoridad del mundo y persistenci
 | A06 | P2 Universo Vivo: diez bloques aprobados documentalmente, runtime galáctico no certificado | Presupuesto LOD/offscreen y reconciliación temporal/guardado |
 | A07 | DEC-0021 sensores refit vs patrones lentos heredados | Separar perfil clásico y refit; pruebas de informes instantáneos |
 | A08 | Escenarios UE5 Sutherland/Valhalla con evidencias locales no cotejadas en repositorio | Manifestar mapa/build/hash/log/FPS y ensayos negativos, sin mover originales |
-| A09 | S19 carece de contrato y nombre final de sistema | Decisión y hoja S19; no extenderlo silenciosamente a TTS |
+| A09 | S19 tiene **nombre y función aprobados en conversación**, pero no están formalizados íntegramente en main | Ficha/hoja S19 respetando decisión de calidad: SFX primero; música pospuesta si no es satisfactoria |
 | A10 | Voz/TTS: diálogo natural puede bloquearse por dependencia remota o consumir VRAM | Entrada manual siempre; TTS local CPU/RAM, voces estables, caché y medición |
 | A11 | Política de datos compartidos e identidad: conocimiento NPC, PADD y acceso a habitaciones | Proyecciones por observador y permiso; nunca contexto global a LLM |
 | A12 | Campaña muy larga vs Academia/ascensos/vida cotidiana y aceleración temporal | Una política coherente de calendario, saltos, catch-up, deadlines y escenas interrumpidas |
@@ -215,7 +215,7 @@ Se conserva la regla existente: **CoreRPG** es autoridad del mundo y persistenci
 | H. Pipeline de recursos/escenas | NAP/Blender + UE5 | Identidad de asset, fuente, importación, colisiones, LOD, presupuestos de escena | 11, 12, 13, 14, 17 |
 | I. Orquestación de incidencias operativas | Core + reglas Trek/F05 | Alertas, daños, prioridad de servicios, evacuaciones, escalado institucional | 05, 07, 09, 10, 12, 16, 18 |
 
-**Único posible hueco de catálogo que merece decisión posterior:** si el autor considera **sonido/voz** una experiencia sistémica autónoma —y no un servicio transversal y/o parte de S19—, habrá que discutirlo con él. No se asigna el número 20 unilateralmente. Igualmente, Ordenador de la Nave debe ser servicio común de S02/S01 y operaciones, no un segundo gestor de IA; F11 no se reconstruye en HOST; Director Narrativo pertenece a S07 y no a otro universo.
+**No hay hueco sonoro que justifique un S20:** audio, efectos, música, voces, mezcla y ambientación ya pertenecen a **S19**, mientras que la generación lingüística de IA permanece en S01/HOST y la representación/reproducción en UE5. El Ordenador de la Nave debe ser servicio común de S02/S01 y operaciones, no un segundo gestor de IA; F11 no se reconstruye en HOST; el Director Narrativo pertenece a S07 y no a otro universo.
 
 ## 6. Matriz de integración: una sola fuente de verdad
 
@@ -238,7 +238,7 @@ Esta priorización es **propuesta de auditoría**, no sustitución automática d
 **Puerta G0 — Reconciliación documental (ChatGPT + revisión autoral).**
 1. Mantener índice de decisiones vigentes DEC-0020–0024 y señalización de páginas maestras con referencias históricas obsoletas.
 2. Publicar registro S01–S19 con responsables, referencias y dependencias sin marcarlo «implementado».
-3. Formalizar límites S19 cuando el autor quiera discutir música/sonido; no bloquear el núcleo del juego.
+3. Registrar en main la definición **ya aprobada** de S19, con efectos sonoros prioritarios y música ambiental condicional a calidad; no bloquear el núcleo del juego.
 
 **Puerta G1 — Fuente autoritativa y HOST (Codex + auditoría ChatGPT).**
 1. Completar/migrar S04 F10/H06 a protagonista fijo v2.
@@ -277,7 +277,7 @@ Todos los escenarios están **propuestos**, no ejecutados ni certificados por es
 
 ## 9. Registro de decisiones pendientes, sin inventar aprobación
 
-- **DECISION_AUTOR_S19:** ratificar nombre y alcance exacto del 19 (biblioteca musical, banda sonora contextual, mezcla u otros). Hasta entonces solo IDEA-0002 y el acuerdo de música son vinculantes en sus términos conocidos.
+- **DOCUMENTACION_S19:** transcribir al repositorio el alcance **ya aprobado** «Audio, música y ambientación dinámica», distinguiendo SFX, ambientes, voces, mezcla, música pospuesta y biblioteca personal IDEA-0002. No solicitar nueva aprobación del nombre; solo consultar al autor si aparece una auténtica decisión de diseño no resuelta.
 - **DECISION_AUTOR_RITMO:** concretar en una prueba jugable cuánto se comprimen los cuatro cursos de Academia, sin alterar la cronología aprobada ni convertirlos en otras campañas obligatorias.
 - **DECISION_AUTOR_ACEPTACION:** aceptar qué tramo UE5 representa la experiencia mínima suficiente de la Enterprise-D antes de ampliar interiores.
 - **DECISION_TECNICA_IA:** determinar prioridades de cola, límites monetarios, degradación y gestión de voz/TTS **sin** añadir proveedores de pago, VRAM significativa ni clonación obligatoria.
@@ -315,6 +315,18 @@ Este informe **no autoriza** implementar por Codex un nuevo sistema, cambiar can
 
 **No hay un defecto de concepto que obligue a desechar ninguno de los 19 sistemas.** La planificación corre mayor riesgo por **sobreextensión, documentación desfasada, falta de pruebas integradas y duplicación entre Core/Fxx/HOST/UE5** que por ausencia de nuevas familias funcionales.
 
-**Orden recomendado:** reconciliar documentación; completar S04 y la acción/autoridad común; certificar un circuito jugable de Enterprise-D con NPC, puertas, sensores y SAVE/LOAD; medir presupuesto de simulación/audio/IA; crecer por utilidad jugable. S11 y S18 disponen ya de diseños concretos y deben integrarse sin saltarse las pruebas. S19 necesita su ficha oficial antes de declararlo cerrado en diseño.
+**Orden recomendado:** reconciliar documentación; completar S04 y la acción/autoridad común; certificar un circuito jugable de Enterprise-D con NPC, puertas, sensores y SAVE/LOAD; medir presupuesto de simulación/audio/IA; crecer por utilidad jugable. S11 y S18 disponen ya de diseños concretos y deben integrarse sin saltarse las pruebas. S19 requiere pasar al repositorio su **diseño conceptual aprobado**, pero no obligar a producir música que no alcance el nivel deseado.
 
 **Cierre de esta auditoría:** DOCUMENTACIÓN AUDITADA. **No** certifica 19 sistemas implementados, no fusiona planes por sí misma, no altera Lore/CoreRPG y no declara nuevas decisiones aprobadas.
+
+## 12. Handoff de auditoría a los cinco ámbitos (sin ejecución cruzada)
+
+Esta auditoría se entrega al **ámbito SISTEMAS** para que, en su conversación original, se revisen y formalicen **únicamente las fichas S01–S19**. No desencadena modificaciones automáticas en los otros pilares del proyecto.
+
+- **SISTEMAS (ahora):** ajustar catálogo, responsabilidades, límites, dependencias y criterios de aceptación; distinguir idea aprobada de diseño detallado, contrato, implementación y certificación. Mantener números y decisiones creativas aprobadas.
+- **PLANIFICACIÓN 1 (auditoría propia posterior):** revisar la migración S04/F10, rutas F04–F15 y puertas de UE5/CI con información cruzada; no reprogramar por este informe.
+- **PLANIFICACIÓN 2 (auditoría propia posterior):** revisar cobertura real y presupuesto de Universo Vivo/offscreen S03; no cambiar diez bloques ni sus actas ahora.
+- **LORE (auditoría propia posterior):** comprobar precedencia temporal Enterprise-D, Khan, Picard y NPC legendarios, sin modificar canon por la auditoría de sistemas.
+- **HOST (auditoría propia posterior):** verificar centralización S01, F11, contratos y autoridad del servicio compartido, sin duplicar componentes ni modificar código desde SISTEMAS.
+
+Los hallazgos transversales son **avisos para las futuras auditorías**, no tareas ya autorizadas en cada ámbito. Un documento detectado como obsoleto conserva su valor histórico hasta que su propietario lo reconcilie.
