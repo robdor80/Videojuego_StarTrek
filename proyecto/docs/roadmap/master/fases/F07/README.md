@@ -3,7 +3,7 @@
 > **R0 · 19-11-2026:** fase EN_REVISION, Sutherland sigue como piloto técnico. #95 LCARS HTML/JS es **Draft**, NO consola Unreal. F07-SEAT-01 NO APROBADA, pendiente evidencia primaria de GLB, materiales, colisiones, interacción y rendimiento MSI. La mención antigua de F02 como fase principal es histórica.
 
 
-**23-10-2026 · EN_REVISION / reconciliación de pruebas locales comunicadas.** F02 continúa como fase principal de gobierno, F08 sigue pausada respecto a ejecución E2E y **F07 NO está certificada como UE5_JUGABLE**.
+**23-10-2026 · REGISTRO HISTÓRICO / reconciliación de pruebas locales comunicadas.** La afirmación de que F02 continúa como fase principal corresponde exclusivamente a ese registro histórico y **no describe el estado vigente del 19-11**; F08 sigue pausada respecto a ejecución E2E y **F07 NO está certificada como UE5_JUGABLE**.
 
 La documentación preparatoria del **13-10-2026** fue correcta en su fecha, pero quedó desactualizada tras los ensayos de Sutherland en el MSI. Véase el [acta de reconciliación 23-10-2026](RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md). Los informes, logs, vídeos, escenas y hashes locales siguen pendientes de incorporación: **avance reportado no equivale a prueba oficial aprobada**.
 
@@ -11,7 +11,7 @@ La documentación preparatoria del **13-10-2026** fue correcta en su fecha, pero
 
 Para el prototipo interno **v0.0.1 de Sensores** está elegida la **USS Sutherland**, `star_trek_sutherland_bridge.glb`. Se conserva el nombre correcto Sutherland y el hash original de la auditoría F02.
 
-El **Enterprise A New Bridge (Kelvin)** continúa **excluido del piloto Sutherland**. Su estudio posterior como candidato arquitectónico para la **Clase Valhalla** es un trabajo separado; no se intercambian escenas ni se sustituyen activos sin decisión expresa.
+El **Enterprise A New Bridge (Kelvin)** continúa **excluido del piloto Sutherland**. Su estudio histórico posterior como candidato para la antigua **«Clase Valhalla»** fue anterior a DEC-0020. El destino vigente es Enterprise-D **clase Galaxy refit**, Proyecto Valhalla; se trata de un trabajo separado; no se intercambian escenas ni se sustituyen activos sin decisión expresa.
 
 ## Pasos F07 y estado comprobable
 
@@ -34,6 +34,13 @@ El **Enterprise A New Bridge (Kelvin)** continúa **excluido del piloto Sutherla
 - **F07-CHAIR-SELECT:** encargo para examinar cuatro GLB alternativos; no hay una silla ganadora certificada en este expediente.
 
 Todos los datos anteriores proceden de seguimiento de las pruebas locales. Su constatación primaria, rutas definitivas y versiones se integrarán en `Documents\StarTrek3D` y se referenciarán aquí **cuando se recuperen realmente**, sin inventar vínculos.
+
+## R3 — Correcciones de dirección y comprobaciones pendientes (19-11-2026)
+
+- #95 es una **consola HTML/JS en Draft**, no un adaptador conectado a UE5; no incorporar su vista como prueba de consola jugable.
+- La prueba F07-SEAT-01 sigue **NO APROBADA**; el ensayo de mecanismos de silla no acredita sentado sin intersecciones.
+- USS Sutherland 2372 queda reservada como **piloto técnico**, separada de la futura Galaxy refit de campaña; ninguna migración automática de materiales, plazas o geometrías.
+- Para aceptar una integración futura serán necesarios glTF/GLB y derivados con hash, colisión, escala, mapa y actor UE5, recorrido, interacción, build, perfil de VRAM/FPS y evidencias primarias MSI; no se realizan esas implementaciones por esta auditoría.
 
 ## Reutilización y puerta de cierre
 
