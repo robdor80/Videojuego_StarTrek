@@ -26,7 +26,17 @@
           "relation_state": "normal_relations",
           "planetary_binding": true
         }
-      ]
+      ],
+      "accepted_population_facts": {
+        "fact:terminal_loss": {
+          "status": "accepted",
+          "campaign_seed": "civ_evo_fixture_extinct",
+          "kind": "catastrophic_loss",
+          "civilization_id": "gen:civilization:extinct",
+          "year": 2,
+          "basis_points": 10000
+        }
+      }
     },
     "scheduled_events": [
       {
@@ -38,7 +48,8 @@
         ],
         "effects": {
           "population_loss_basis_points": 10000,
-          "extinction_confirmed": true
+          "extinction_confirmed": true,
+          "accepted_population_loss_fact_ref": "fact:terminal_loss"
         }
       }
     ]
