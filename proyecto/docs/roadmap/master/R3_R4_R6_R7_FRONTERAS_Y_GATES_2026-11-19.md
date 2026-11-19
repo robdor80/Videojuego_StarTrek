@@ -21,7 +21,7 @@ Este documento **no abre** F07/F08/F09/F12/F13/F14/F15 ni acredita un test de ju
 ## B. F07/F08 — separar laboratorio, escena y campaña
 
 - **F07:** piloto técnico vigente **USS Sutherland** con fixture de 2372; conservarlo para diagnóstico y regresiones. #95 es UI LCARS HTML/JS Draft, no interfaz de Unreal certificada. El asiento F07-SEAT-01 sigue no aprobado. Exigir glTF/GLB fuente y derivado con procedencia/hashes, materiales PBR, escala, colisión, puntos de interacción, mapa UE5, build MSI, prueba visual y perfilado.
-- **F08:** escenario de **guardia v0.0.1** por ejecutar, no una fase completada por tener plantilla ni arnés. El [proyecto Unreal principal](../../../juego/UE5/StarTrekRPG/README.md) ya existe como **diagnóstico HOST**, no como puente completo; nunca afirmar que falta todo `.uproject` ni que el diagnóstico es juego integrado.
+- **F08:** escenario de **guardia v0.0.1** por ejecutar, no una fase completada por tener plantilla ni arnés. El [proyecto Unreal principal](../../../../juego/UE5/StarTrekRPG/README.md) ya existe como **diagnóstico HOST**, no como puente completo; nunca afirmar que falta todo `.uproject` ni que el diagnóstico es juego integrado.
 - **Campaña futura:** 2383–2387 protagonista fijo y Enterprise-D en reconstrucción con sucesos emergentes; no copiar el fixture 2372 ni declarar 2387 como hecho garantizado del WorldState.
 
 **Operación mínima E2E para una futura aceptación F08**: orden verdadera de capitán NPC → recibo, actor y puesto válidos → barrido sobre verdad espacial → contacto según conocimiento observable → transferencia científica confirmada → respuesta/decisión persistida en Core → consola UE5 refleja ese hecho → SAVE → cerrar proceso → LOAD → mismo resultado sin repetición. Fallback IA/TTS sin bloqueo.
