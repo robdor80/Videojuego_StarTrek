@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 from typing import Any
@@ -48,7 +49,7 @@ def number(value: Any) -> bool:
     return type(value) in (int, float) and not isinstance(value, bool)
 
 def positive(value: Any) -> bool:
-    return number(value) and value > 0
+    return number(value) and value > 0 and (not isinstance(value, float) or math.isfinite(value))
 
 def sha256(value: Any) -> bool:
     return isinstance(value, str) and bool(_SHA256.fullmatch(value))
