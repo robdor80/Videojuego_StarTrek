@@ -6,7 +6,7 @@ Este directorio es la **entrada de referencia** para los 19 sistemas funcionales
 
 ## Documentos
 
-1. [Fichas S01–S19](FICHAS_S01_S19_FORMALIZADAS_2026-11-19.md): propósito, funciones, exclusiones, propietarios, consumidores y dependencias, criterio conceptual de aceptación y madurez.
+1. [Fichas S01–S10](FICHAS_S01_S10_FORMALIZADAS_2026-11-19.md) y [fichas S11–S19](FICHAS_S11_S19_FORMALIZADAS_2026-11-19.md): propósito, funciones, exclusiones, propietarios, consumidores, dependencias, criterio conceptual de aceptación y madurez.
 2. [Gobierno transversal, matriz de autoridad y pendientes](MATRIZ_TRANSVERSAL_Y_PENDIENTES_S01_S19_2026-11-19.md): rutas de acciones, servicios compartidos, conflictos/duplicidades resueltos documentalmente y avisos a otras auditorías.
 3. [S19 — Audio, música y ambientación dinámica](S19_AUDIO_MUSICA_AMBIENTACION_DINAMICA_2026-11-19.md): alcance ya aprobado por el autor, efectos prioritarios y música condicionada a calidad.
 4. [Acta de formalización](ACTA_REVISION_S01_S19_2026-11-19.md): trazabilidad A01–A16, conservación de decisiones, estados reales y decisiones que siguen abiertas.
