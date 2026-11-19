@@ -5,7 +5,7 @@
   "source_of_truth": "each source_manifest (historic)",
   "audit_ref": "proyecto/docs/auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md",
   "sequential_gate": "P2_B01_TO_B10_REFERENCE_CLOSED_RUNTIME_PENDING",
-  "audit_reconciliation_status": "OPEN_UNTIL_R5_CI_PASS",
+  "audit_reconciliation_status": "REFERENCE_RECONCILED_OFFLINE_R5_CI_PASS",
   "total_blocks": 10,
   "total_packages": 177,
   "total_reference_packages": 177,
@@ -101,5 +101,17 @@
       "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
       "runtime_implemented": false
     }
+  },
+  "reference_certification": {
+    "code_head_sha": "b108a8a9ffc9a13d932f9e0569118c2af9e02a78",
+    "workflow_run_id": 44566769866,
+    "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44566769866",
+    "counts": {
+      "p2_b01_b10_and_new_adversarial": 411,
+      "f13_offline": 30,
+      "academy_boundary": 9
+    },
+    "date": "2026-11-19",
+    "runtime_implemented": false
   }
 }
