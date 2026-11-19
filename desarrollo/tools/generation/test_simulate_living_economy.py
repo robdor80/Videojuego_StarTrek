@@ -30,7 +30,7 @@ def initial():
 
 def event(kind, **kwargs):
     return {"event_id": "test-" + kind, "kind": kind, "tick": 1,
-            "authority_ref": "authorized_actor", **kwargs}
+            "authority_ref": "authorized_actor", "expected_world_revision": 1, **kwargs}
 
 
 def produced():
