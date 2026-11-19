@@ -185,15 +185,45 @@ def replay(state, events):
     return current
 
 
-def visible_history(state, known_ids, at_tick, clearance):
-    """Knowledge is an explicit observed-ID grant. Clearance alone reveals nothing."""
+def visible_history(state, known_ids, at_tick, clearance, *, actor_ref):
+    """Read-only historical projection using actor-specific accepted grants.
+
+    known_ids is just a requested subset, never evidence of knowledge.
+    The trusted knowledge_grants catalog is synthetic in these offline fixtures;
+    in runtime only CoreRPG's knowledge/permission projection can supply it.
+    """
     validate_state(state)
     tick(at_tick, "observation tick")
+    ident(actor_ref, "audience actor")
     need(clearance in VISIBILITY, "invalid clearance")
-    need(isinstance(known_ids, list), "invalid knowledge grants")
+    need(isinstance(known_ids, list), "invalid knowledge request")
+    grants = state.get("knowledge_grants", {})
+    need(isinstance(grants, dict), "invalid knowledge grant catalog")
+    actor_grants = grants.get(actor_ref, [])
+    need(isinstance(actor_grants, list), "invalid actor grant collection")
+    allowed = set()
+    for grant in actor_grants:
+        if not isinstance(grant, dict):
+            continue
+        if (grant.get("status") != "accepted"
+                or grant.get("source_domain") != "CoreRPG/B05"
+                or grant.get("actor_ref") != actor_ref
+                or grant.get("campaign_id") != state["campaign_id"]
+                or not isinstance(grant.get("event_id"), str)
+                or type(grant.get("issued_tick")) is not int
+                or grant["issued_tick"] > at_tick):
+            continue
+        source = state["facts"].get(grant.get("source_fact_ref"))
+        if (not isinstance(source, dict)
+                or source.get("status") != "accepted"
+                or source.get("tick", at_tick + 1) > grant["issued_tick"]
+                or grant.get("issuer_ref") not in state["authorities"]):
+            continue
+        allowed.add(grant["event_id"])
     level = {"public": 0, "restricted": 1, "classified": 2}
+    requested = set(known_ids) & allowed
     return [copy.deepcopy(e) for e in state["history"] if
-            e["event_id"] in known_ids and e["tick"] <= at_tick and
+            e["event_id"] in requested and e["tick"] <= at_tick and
             level[e["visibility"]] <= level[clearance]]
 
 

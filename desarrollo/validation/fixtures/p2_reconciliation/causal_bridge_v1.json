@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "SYNTHETIC_OFFLINE_CONTRACT_NOT_CORE_FACTS",
+  "campaign_id": "campaign:p2-bridge-fixture",
+  "seed_refs": [
+    "seed:preexisting"
+  ],
+  "records": [
+    {
+      "record_id": "ref:b01",
+      "domain": "B01",
+      "tick": 100,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "seed:preexisting"
+      ],
+      "ledger": [
+        {
+          "kind": "population_transfer",
+          "transfer_id": "move:001",
+          "account_ref": "civ:origin",
+          "delta": -1000
+        },
+        {
+          "kind": "population_transfer",
+          "transfer_id": "move:001",
+          "account_ref": "colony:haven",
+          "delta": 1000
+        }
+      ]
+    },
+    {
+      "record_id": "ref:b02",
+      "domain": "B02",
+      "tick": 101,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b01"
+      ],
+      "ledger": [
+        {
+          "kind": "inventory_transfer",
+          "transfer_id": "cargo:001",
+          "account_ref": "depot:home",
+          "item_ref": "rations",
+          "delta": -50
+        },
+        {
+          "kind": "inventory_transfer",
+          "transfer_id": "cargo:001",
+          "account_ref": "depot:haven",
+          "item_ref": "rations",
+          "delta": 50
+        }
+      ]
+    },
+    {
+      "record_id": "ref:b03",
+      "domain": "B03",
+      "tick": 102,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b02"
+      ],
+      "ledger": [
+        {
+          "kind": "unit_ownership",
+          "unit_id": "vessel:unique-001",
+          "owner_ref": "fleet:one"
+        }
+      ]
+    },
+    {
+      "record_id": "ref:b04",
+      "domain": "B04",
+      "tick": 103,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b03"
+      ],
+      "ledger": []
+    },
+    {
+      "record_id": "ref:b05",
+      "domain": "B05",
+      "tick": 104,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b04"
+      ],
+      "ledger": [
+        {
+          "kind": "knowledge_grant",
+          "actor_ref": "padd:officer",
+          "issuer_domain": "CoreRPG/B05",
+          "source_ref": "ref:b04"
+        }
+      ]
+    },
+    {
+      "record_id": "ref:b06",
+      "domain": "B06",
+      "tick": 105,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b05"
+      ],
+      "ledger": []
+    },
+    {
+      "record_id": "ref:b07",
+      "domain": "B07",
+      "tick": 106,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b06"
+      ],
+      "ledger": []
+    },
+    {
+      "record_id": "ref:b08",
+      "domain": "B08",
+      "tick": 107,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b07"
+      ],
+      "ledger": []
+    },
+    {
+      "record_id": "ref:b09",
+      "domain": "B09",
+      "tick": 108,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "accepted_synthetic",
+      "source_refs": [
+        "ref:b08"
+      ],
+      "ledger": []
+    },
+    {
+      "record_id": "ref:b10",
+      "domain": "B10",
+      "tick": 109,
+      "campaign_id": "campaign:p2-bridge-fixture",
+      "status": "proposal_only",
+      "source_refs": [
+        "ref:b09"
+      ],
+      "ledger": []
+    }
+  ]
+}

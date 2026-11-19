@@ -72,7 +72,31 @@
     "reserved_ids": [
       "canon:romulus_2387"
     ],
-    "history": []
+    "history": [],
+    "knowledge_grants": {
+      "audience:cadet": [
+        {
+          "status": "accepted",
+          "source_domain": "CoreRPG/B05",
+          "actor_ref": "audience:cadet",
+          "campaign_id": "campaign_alpha",
+          "event_id": "hist:recovery_001",
+          "issued_tick": 104,
+          "source_fact_ref": "fact_factory_restored",
+          "issuer_ref": "regional_archive"
+        },
+        {
+          "status": "accepted",
+          "source_domain": "CoreRPG/B05",
+          "actor_ref": "audience:cadet",
+          "campaign_id": "campaign_alpha",
+          "event_id": "hist:record_update_002",
+          "issued_tick": 105,
+          "source_fact_ref": "fact_debrief_correction",
+          "issuer_ref": "regional_archive"
+        }
+      ]
+    }
   },
   "events": [
     {
