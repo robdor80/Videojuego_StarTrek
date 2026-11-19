@@ -128,6 +128,10 @@ def simulate_project(*, campaign_seed: str, civilization_id: str, project_id: st
     state = copy.deepcopy(initial)
     require_settlement_decision(state, campaign_seed=campaign_seed,
                                 civilization_id=civilization_id, project_id=project_id)
+    if (int(state["annual_migrants"]) < 0
+            or int(state["natural_growth_basis_points"]) < 0
+            or int(state["annual_support_capacity"]) < 0):
+        raise ValueError("negative migration, growth or support is invalid")
     founding = int(state["founding_population"])
     if founding <= 0 or founding > int(state["origin_population"]):
         raise ValueError("invalid founding population")
@@ -180,6 +184,8 @@ def simulate_project(*, campaign_seed: str, civilization_id: str, project_id: st
             if "annual_support_capacity_set" in effects:
                 state["annual_support_capacity"] = int(effects["annual_support_capacity_set"])
             if "annual_migrants_set" in effects:
+                if int(effects["annual_migrants_set"]) < 0:
+                    raise ValueError("negative migration is invalid")
                 state["annual_migrants"] = int(effects["annual_migrants_set"])
             if "autonomy_pressure_delta" in effects:
                 state["autonomy_pressure"] = clamp(int(state["autonomy_pressure"]) + int(effects["autonomy_pressure_delta"]))
