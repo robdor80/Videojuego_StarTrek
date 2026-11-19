@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """F15 release-readiness reference gate.
 
-This tool validates self-reported QA/release metadata and repository state.
-It never certifies Core integration, UE5 execution, MSI performance, beta
-acceptance, or a distributable build by itself.
+This tool validates self-reported QA/private-installation metadata and repository state.
+It never certifies Core integration, UE5 execution, MSI performance, private
+acceptance, or an executable build by itself. Historical release_* names are kept
+for backwards compatibility, never to authorize public distribution.
 """
 from __future__ import annotations
 
@@ -155,11 +156,11 @@ def release_gate(item: Any) -> dict[str, Any]:
     version = item.get("version")
     if not isinstance(version, str) or not _SEMVER.fullmatch(version):
         return outcome(BLOCKED, "invalid_release_version")
-    if item.get("channel") not in {"internal_beta", "beta", "release_candidate"}:
+    if item.get("channel") not in {"private_local", "private_candidate"}:
         return outcome(BLOCKED, "invalid_release_channel")
     if not sha256(item.get("artifact_sha256")):
         return outcome(BLOCKED, "invalid_build_hash")
-    bools = ("build_executed", "e2e_passed", "migration_tested", "rollback_tested")
+    bools = ("build_executed", "e2e_passed", "migration_tested", "rollback_tested", "backup_restore_tested")
     if not all(bool_exact(item.get(k)) for k in bools):
         return outcome(BLOCKED, "invalid_release_record")
     blockers = item.get("blocker_count")
@@ -174,11 +175,13 @@ def release_gate(item: Any) -> dict[str, Any]:
         return outcome(BLOCKED, "release_e2e_not_passed")
     if not item["migration_tested"] or not item["rollback_tested"]:
         return outcome(BLOCKED, "update_recovery_not_tested")
+    if not item["backup_restore_tested"]:
+        return outcome(BLOCKED, "backup_restore_not_tested")
     if blockers:
         return outcome(BLOCKED, "release_blockers_present", blocker_count=blockers)
     if not refs:
         return outcome(BLOCKED, "release_claim_without_evidence")
-    return outcome(REVIEW, "release_candidate_requires_manual_beta_acceptance")
+    return outcome(REVIEW, "private_build_requires_manual_acceptance")
 
 def validate_capture(payload: Any) -> dict[str, Any]:
     """Validate the five F15 capture sections without ever certifying release."""
@@ -244,8 +247,10 @@ def audit_repository(repo_root: str | Path) -> dict[str, Any]:
     f15 = next((p for p in phases if isinstance(p, dict) and p.get("id") == "F15"), None)
     if not f15 or f15.get("target_maturity") != "ACEPTACION_SUPERADA":
         return outcome(BLOCKED, "f15_target_maturity_mismatch")
-    if f15.get("status") != "PLANIFICADA":
-        return outcome(BLOCKED, "f15_state_changed_requires_governance_review")
+    if f15.get("status") not in {"PLANIFICADA", "EN_CURSO", "EN_REVISION", "BLOQUEADA", "CERRADA"}:
+        return outcome(BLOCKED, "f15_state_invalid")
+    # Lifecycle evidence and actual closure are checked by roadmap governance;
+    # this offline tool must not freeze the phase at PLANIFICADA.
 
     loc = (root / "audiovisual/localization/README.md").read_text(encoding="utf-8").strip()
     ui = (root / "audiovisual/ui/README.md").read_text(encoding="utf-8").strip()
