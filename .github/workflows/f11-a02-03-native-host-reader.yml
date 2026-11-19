@@ -1,5 +1,10 @@
 name: F11 A02-03 - native product Host reader (no issuer)
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'desarrollo/integration/f11_host/**'
+      - '.github/workflows/f11-a02-03-native-host-reader.yml'
   pull_request:
     paths:
       - 'desarrollo/integration/f11_host/**'
