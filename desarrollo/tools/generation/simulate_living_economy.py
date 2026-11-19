@@ -192,13 +192,39 @@ def _deliver(s: dict[str, Any], e: dict[str, Any]) -> dict[str, Any]:
             "item": sh["item"], "destination": sh["to_store"]}
 
 
+def _trusted_trade_gate(s: dict[str, Any], e: dict[str, Any],
+                        src: dict[str, Any], dst: dict[str, Any]) -> None:
+    """Reference-side authorization gate; trusted catalog is synthetic in fixtures.
+
+    F13 must source grants, owner registry and revision from CoreRPG, never client
+    payload. The simulator only checks the *shape and consistency* of that proof.
+    """
+    require(type(s.get("world_revision")) is int, "missing world revision")
+    require(type(e.get("expected_world_revision")) is int and
+            e["expected_world_revision"] == s["world_revision"], "stale world revision")
+    actor = label(e.get("authority_ref"), "transaction actor")
+    delegations = s.get("trusted_trade_delegations", {})
+    authorized_owners = delegations.get(actor, [])
+    for owner in (src["owner_ref"], dst["owner_ref"]):
+        require(owner in authorized_owners, "transaction actor lacks owner delegation")
+    consents = s.get("trusted_trade_consents", {})
+    for role, store_id, owner in (
+            ("seller", e["seller_store"], src["owner_ref"]),
+            ("buyer", e["buyer_store"], dst["owner_ref"])):
+        ref = label(e.get(role + "_acceptance_ref"), role + " acceptance")
+        grants = consents.get(ref, [])
+        require(any(isinstance(g, dict) and g.get("status") == "accepted"
+                    and g.get("store_id") == store_id and g.get("owner_ref") == owner
+                    and g.get("role") == role for g in grants),
+                role + " consent not verified")
+
+
 def _trade(s: dict[str, Any], e: dict[str, Any]) -> dict[str, Any]:
     src = entry(s["stores"], e["seller_store"], "seller store")
     dst = entry(s["stores"], e["buyer_store"], "buyer store")
     require(e["seller_store"] != e["buyer_store"], "buyer and seller stores must differ")
     require(src["location_ref"] == dst["location_ref"], "remote trade requires shipping")
-    label(e["seller_acceptance_ref"], "seller acceptance")
-    label(e["buyer_acceptance_ref"], "buyer acceptance")
+    _trusted_trade_gate(s, e, src, dst)
     consideration = e["consideration"]
     mode = label(consideration["mode"], "consideration mode")
     require(mode in CONSIDERATION, "unknown or unsupported consideration model")
@@ -210,6 +236,9 @@ def _trade(s: dict[str, Any], e: dict[str, Any]) -> dict[str, Any]:
         seller = entry(s["wallets"], consideration["seller_wallet"], "seller wallet")
         unit = label(consideration["unit"], "unit")
         require(buyer["unit"] == seller["unit"] == unit, "missing explicit common accounting unit")
+        require(buyer.get("owner_ref") == dst["owner_ref"] and
+                seller.get("owner_ref") == src["owner_ref"],
+                "wallet ownership mismatch")
         amount = integer(consideration["amount"], "price amount", positive=True)
         require(buyer["balance"] >= amount, "insufficient funds")
         buyer["balance"] -= amount
@@ -270,6 +299,8 @@ def apply_event(state: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
     s["event_log"].append({"event_id": event_id, "kind": kind, "tick": tick,
                            "digest": fingerprint, "effect": effect})
     s["last_tick"] = tick
+    if type(s.get("world_revision")) is int:
+        s["world_revision"] += 1
     validate_state(s)
     return s
 
