@@ -40,7 +40,12 @@
         "P03": "DOCUMENTACION_AUDITADA",
         "P04": "DOCUMENTACION_AUDITADA",
         "P05": "DOCUMENTACION_AUDITADA"
-      }
+      },
+      "evidence_refs": [
+        "PR #1 (gobierno documental original)",
+        "proyecto/docs/roadmap/master/INVENTARIO_BASELINE_2026-10-11.json",
+        "proyecto/docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
+      ]
     },
     {
       "id": "F01",
