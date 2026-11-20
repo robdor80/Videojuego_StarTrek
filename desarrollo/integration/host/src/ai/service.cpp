@@ -28,7 +28,8 @@ bool valid_config(const Config& c) {
         c.max_response_bytes >= 256 && c.max_response_bytes <= 2097152 &&
         c.max_output_bytes > 0 && c.max_output_bytes <= c.max_response_bytes &&
         c.max_output_tokens >= 16 && c.max_output_tokens <= 16384 &&
-        c.max_pending >= 1 && c.max_pending <= 64 && c.max_calls >= 1 && c.max_calls <= 100000;
+        c.max_pending >= 1 && c.max_pending <= 64 && c.max_calls <= 100000 &&
+        c.call_window.count() >= 100 && c.call_window.count() <= 86400000;
 }
 // OpenAI Structured Outputs subset (base models), not general JSON Schema.
 // https://developers.openai.com/api/docs/guides/structured-outputs#supported-schemas
@@ -203,7 +204,8 @@ Error parse_config(std::string_view data, Config& out) noexcept {
         if (!j.is_object()) return Error::CONFIGURATION;
         Config c;
         const std::set<std::string> allowed{"fast_model", "reasoning_model", "reasoning_effort", "routes", "timeout_ms",
-            "max_request_bytes", "max_response_bytes", "max_output_bytes", "max_output_tokens", "max_pending", "max_calls"};
+            "max_request_bytes", "max_response_bytes", "max_output_bytes", "max_output_tokens", "max_pending",
+            "max_calls", "call_window_ms"};
         for (const auto& p : j.object_range()) if (!allowed.contains(std::string(p.key()))) return Error::CONFIGURATION;
         for (auto [name, target] : {std::pair{"fast_model", &c.fast_model}, {"reasoning_model", &c.reasoning_model}, {"reasoning_effort", &c.reasoning_effort}})
             if (j.contains(name)) { if (!j.at(name).is_string()) return Error::CONFIGURATION; *target = j.at(name).as<std::string>(); }
@@ -213,6 +215,7 @@ Error parse_config(std::string_view data, Config& out) noexcept {
             target = static_cast<std::remove_reference_t<decltype(target)>>(j.at(name).as<uint64_t>());
         };
         long long timeout = c.timeout.count(); number("timeout_ms", timeout); c.timeout = std::chrono::milliseconds(timeout);
+        long long window = c.call_window.count(); number("call_window_ms", window); c.call_window = std::chrono::milliseconds(window);
         number("max_request_bytes", c.max_request_bytes); number("max_response_bytes", c.max_response_bytes);
         number("max_output_bytes", c.max_output_bytes); number("max_output_tokens", c.max_output_tokens);
         number("max_pending", c.max_pending); number("max_calls", c.max_calls);
@@ -264,7 +267,8 @@ struct Service::Impl {
     std::deque<Work> queue;
     std::stop_source active;
     bool closed{};
-    unsigned calls{};
+    std::deque<std::chrono::steady_clock::time_point> recent_calls;
+    unsigned dialogue_burst{};
     std::thread worker;
     Impl(Config c, std::shared_ptr<Transport> t, std::shared_ptr<CredentialStore> s)
         : config(std::move(c)), transport(std::move(t)), credentials(std::move(s)) {
@@ -288,8 +292,18 @@ struct Service::Impl {
         if (key.empty() || key.size() > 2048 || !std::all_of(key.begin(), key.end(), [](unsigned char x){return x > 32 && x < 127;})) return {Error::INVALID_CREDENTIAL};
         if (w.cancel.stop_requested()) return {Error::CANCELLED};
         if (std::chrono::steady_clock::now() >= w.deadline) return {Error::TIMEOUT};
-        if (calls >= config.max_calls) return {Error::CAPACITY};
-        ++calls;
+        // A rolling limiter may temporarily refuse new HTTP attempts, but never
+        // exhausts a lifetime quota. It is disabled by default (max_calls == 0).
+        if (config.max_calls != 0) {
+            const auto now = std::chrono::steady_clock::now();
+            while (!recent_calls.empty() && now - recent_calls.front() >= config.call_window)
+                recent_calls.pop_front();
+            if (recent_calls.size() >= config.max_calls) {
+                std::fill(key.begin(), key.end(), '\0');
+                return {Error::CAPACITY};
+            }
+            recent_calls.push_back(now);
+        }
         auto response = transport->post(body, key, w.deadline, w.cancel.get_token(), config.max_response_bytes);
         std::fill(key.begin(), key.end(), '\0');
         if (w.cancel.stop_requested()) return {Error::CANCELLED};
@@ -301,7 +315,17 @@ struct Service::Impl {
             std::unique_lock lock(mutex);
             wake.wait(lock, [this] { return closed || !queue.empty(); });
             if (queue.empty() && closed) return;
-            Work w = std::move(queue.front()); queue.pop_front(); active = w.cancel;
+            // Favor interactive dialogue without starving analysis and summary work.
+            // Up to three dialogue jobs may overtake queued non-dialogue jobs.
+            const auto is_dialogue = [](const Work& w) { return w.request.route == "DIALOGUE"; };
+            auto dialogue = std::find_if(queue.begin(), queue.end(), is_dialogue);
+            auto background = std::find_if(queue.begin(), queue.end(), [&](const Work& w) { return !is_dialogue(w); });
+            auto selected = dialogue != queue.end() && (dialogue_burst < 3 || background == queue.end())
+                ? dialogue : background;
+            if (selected == queue.end()) selected = queue.begin();
+            if (is_dialogue(*selected)) ++dialogue_burst;
+            else dialogue_burst = 0;
+            Work w = std::move(*selected); queue.erase(selected); active = w.cancel;
             lock.unlock();
             try { w.promise.set_value(execute(w)); } catch (...) { w.promise.set_value({Error::INTERNAL}); }
         }
