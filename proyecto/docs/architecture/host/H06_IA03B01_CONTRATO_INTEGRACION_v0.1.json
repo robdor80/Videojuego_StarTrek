@@ -124,7 +124,7 @@
     "legacy_free_biography_gate": "PRESERVED_UNCHANGED_IA03A",
     "fixed_profile_gate": "F10_V2_VERSIONED_DOMAIN_POLICY_REQUIRED",
     "semantic_ai_for_fixed_noneditable_story": "NOT_REQUIRING_NEW_USER_LLM_VALIDATION_IS_DESIGN_PROPOSAL_SUBJECT_TO_F10_V2_COMPATIBILITY",
-    "cannot_bypass_locked_v1": "true",
+    "cannot_bypass_locked_v1": true,
     "cannot_fabricate_semantic_coherent_result": true,
     "free_text_when_introduced": "IA02_STILL_REQUIRED_PER_OWNER_POLICY",
     "on_unresolved_contract_incompatibility": "STOP_CANDIDATE_PUBLICATION_AND_REPORT"
