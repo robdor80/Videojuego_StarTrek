@@ -283,6 +283,11 @@ struct Service::Impl {
         try { e = build(config, w.request, body, model); } catch (...) { return {Error::CONFIGURATION}; }
         if (e != Error::OK) return {e};
         std::string key;
+        // Wipe credential bytes even when validation, cancellation or transport throws.
+        struct WipeCredential {
+            std::string& value;
+            ~WipeCredential() { std::fill(value.begin(), value.end(), '\0'); }
+        } wipe{key};
         e = credentials->read(key);
         if (e == Error::MISSING_KEY || e == Error::UNSUPPORTED_PLATFORM) {
             const char* env = std::getenv("OPENAI_API_KEY");
