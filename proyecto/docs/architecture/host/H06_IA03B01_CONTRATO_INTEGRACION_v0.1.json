@@ -1,0 +1,301 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "host_h06_ia03b01_s04_fixed_candidate_integration",
+  "status": "PROPOSED_DESIGN_NOT_RUNTIME_AUTHORITY",
+  "phase": "H06_IA03B01",
+  "date": "2026-11-20",
+  "decision_ref": "proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md",
+  "canonical_sources": [
+    "sistemas/gameplay/character_creation/s04_fixed_protagonist_contract_v2.json",
+    "sistemas/gameplay/character_creation/s04_protagonist_biography_v1.json"
+  ],
+  "historical_sources_preserved": [
+    "sistemas/gameplay/character_creation/character_creation_contract_v1_0.json",
+    "sistemas/gameplay/character_creation/f10_initial_player_rules_v0.1.json",
+    "sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json"
+  ],
+  "owners": {
+    "canonical_profile": "S04_AUTHOR",
+    "eligibility_and_candidate": "F10",
+    "world_state_and_person": "CoreRPG",
+    "session_and_owner": "HOST_H02_H03",
+    "durability_and_restore": "HOST_H04",
+    "unreal_adapter": "HOST_H06_IA03C",
+    "naval_orders": "F05",
+    "commission_and_rank": "F11",
+    "language_review": "IA01_IA02_WHEN_APPLICABLE"
+  },
+  "campaign": {
+    "scenario_id": "starfleet_academy",
+    "era_id": "tng_ds9_voyager",
+    "year": 2383,
+    "exact_start_month_day": "UNDECIDED_BY_AUTHOR",
+    "runtime_core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d",
+    "not_ship_fixture": true,
+    "single_authoritative_worldstate": true,
+    "single_session_owner_thread": true
+  },
+  "hero": {
+    "selection": "SINGLE_FIXED_CANONICAL_ARCHETYPE",
+    "biological_species_id": "human_vulcan_hybrid",
+    "sex": "male",
+    "entry_age_earth_years": 45,
+    "apparent_age_approx": 30,
+    "birth_year_approx": 2338,
+    "one_person_per_campaign": true,
+    "fresh_person_for_each_new_campaign": true,
+    "immutable_from_client": [
+      "species_id",
+      "sex",
+      "age_at_entry",
+      "birth_date",
+      "parentage",
+      "khan_lineage",
+      "augment_expression",
+      "biography_core",
+      "martial_mastery",
+      "scientific_vocation",
+      "academy_path",
+      "status",
+      "rank",
+      "clearance"
+    ],
+    "canonical_martial_training": [
+      "kung_fu",
+      "karate",
+      "aikido",
+      "suus_mahna"
+    ],
+    "career_previous_starfleet_service": false,
+    "starter_f11_rank": null,
+    "academy_admission_by_creation": false,
+    "player_editable_request": [
+      "display_name",
+      "optional_appellation"
+    ],
+    "cosmetic_editable_deferred_to_IA03C": [
+      "hair_style",
+      "facial_hair",
+      "minor_facial_proportions",
+      "cosmetic_vulcan_features",
+      "uniform_cosmetic_compatible_with_rank"
+    ],
+    "unknown_fields_preserved_as_unknown": [
+      "birth_place",
+      "birth_exact_date",
+      "parents_names",
+      "genealogy_steps",
+      "martial_teachers",
+      "formal_degrees",
+      "music_instruments",
+      "numeric_skill_values",
+      "council_members_and_final_script"
+    ],
+    "unknown_is_not_factual_location_or_credential": true,
+    "no_automatic_numeric_skill_points": true
+  },
+  "trust": {
+    "canonical_source_selection": "INTERNAL_F10_REGISTERED_AUTHOR_SOURCE",
+    "source_verification": [
+      "identity",
+      "version",
+      "content_digest",
+      "approved_profile_invariants"
+    ],
+    "client_may_select_source": false,
+    "client_may_send_person_id": false,
+    "client_may_send_campaign_id": false,
+    "client_may_send_verified_evidence": false,
+    "client_may_send_admission_flag": false,
+    "client_may_send_rank": false,
+    "profile_owner": "HOST_H03_LOCAL",
+    "binding": [
+      "profile",
+      "campaign",
+      "generation",
+      "canonical_profile_version",
+      "canonical_profile_digest",
+      "editable_request_digest",
+      "domain_policy_version"
+    ],
+    "source_rejection": "NO_PERSON_NO_CAMPAIGN_PUBLICATION"
+  },
+  "validation": {
+    "legacy_free_biography_gate": "PRESERVED_UNCHANGED_IA03A",
+    "fixed_profile_gate": "F10_V2_VERSIONED_DOMAIN_POLICY_REQUIRED",
+    "semantic_ai_for_fixed_noneditable_story": "NOT_REQUIRING_NEW_USER_LLM_VALIDATION_IS_DESIGN_PROPOSAL_SUBJECT_TO_F10_V2_COMPATIBILITY",
+    "cannot_bypass_locked_v1": "true",
+    "cannot_fabricate_semantic_coherent_result": true,
+    "free_text_when_introduced": "IA02_STILL_REQUIRED_PER_OWNER_POLICY",
+    "on_unresolved_contract_incompatibility": "STOP_CANDIDATE_PUBLICATION_AND_REPORT"
+  },
+  "conceptual_operations": [
+    {
+      "name": "create_initial_context",
+      "owner": "HOST_H03",
+      "input": "local_session_principal",
+      "effect": "TRUSTED_CONTEXT_NO_PERSON"
+    },
+    {
+      "name": "validate_fixed_profile_v2",
+      "owner": "F10",
+      "input": "registered_s04_source_plus_allowed_editable_data",
+      "effect": "BOUND_ELIGIBILITY_NO_PERSON"
+    },
+    {
+      "name": "stage_academy_candidate",
+      "owner": "F10_Core",
+      "input": "valid_eligibility_plus_catalog",
+      "effect": "PRIVATE_STAGE_NO_VISIBLE_PERSON"
+    },
+    {
+      "name": "commit_academy_candidate",
+      "owner": "F10_Core",
+      "input": "private_stage_plus_host_intent",
+      "effect": "EXACTLY_ONE_PERSON_AND_CANDIDATE_FACT"
+    },
+    {
+      "name": "bind_academy_player",
+      "owner": "HOST_H03",
+      "input": "private_candidate_receipt_plus_live_core_person",
+      "effect": "ONE_ACADEMY_PLAYER_BINDING_NO_F05"
+    },
+    {
+      "name": "save_academy",
+      "owner": "HOST_H04",
+      "input": "type_checked_live_academy_campaign",
+      "effect": "COMMITTED_ACADEMY_SLOT"
+    },
+    {
+      "name": "restore_academy",
+      "owner": "HOST_H04",
+      "input": "validated_academy_slot_and_compatible_catalog",
+      "effect": "STAGED_RESTORE_NEW_GENERATION"
+    },
+    {
+      "name": "admit_candidate",
+      "owner": "F10",
+      "input": "separate_approved_admission_evidence_and_real_slot",
+      "effect": "SAME_PERSON_ONE_ADMISSION_AND_SLOT"
+    }
+  ],
+  "states": [
+    {
+      "name": "NO_CAMPAIGN",
+      "person": false
+    },
+    {
+      "name": "STAGED",
+      "person": false
+    },
+    {
+      "name": "CANDIDATE",
+      "person": true,
+      "cadet_slot": false,
+      "rank": false
+    },
+    {
+      "name": "BOUND",
+      "person": true,
+      "player_binding": true,
+      "cadet_slot": false
+    },
+    {
+      "name": "SAVED",
+      "person": true,
+      "academy_slot_committed": true
+    },
+    {
+      "name": "ADMITTED",
+      "person": true,
+      "f10_authorized_admission_required": true,
+      "cadet_slot": true
+    },
+    {
+      "name": "CADET_YEAR_1",
+      "person": true,
+      "f10_enrolment_required": true,
+      "cadet_slot": true
+    }
+  ],
+  "idempotency": {
+    "key_source": "HOST_INTERNAL",
+    "key_scope": "SAME_CAMPAIGN_AND_CREATION_INTENT",
+    "must_bind": [
+      "canonical_profile_digest",
+      "editable_request_digest",
+      "campaign_identity",
+      "local_principal"
+    ],
+    "same_key_same_content": "REPLAY_RETURNS_SAME_PERSON",
+    "same_key_changed_content": "CONFLICT_NO_EFFECT",
+    "same_campaign_new_request": "NO_SECOND_PLAYABLE_PERSON",
+    "new_campaign": "NEW_CORE_PERSON_SAME_ARCHETYPE",
+    "cinematic_replay": "NO_NEW_PERSON_NO_NEW_ADMISSION",
+    "after_crash_before_committed_save": "DURABILITY_NOT_CLAIMED"
+  },
+  "persisted_candidate_fields": [
+    "academy_campaign_identity",
+    "scenario_and_catalog_identity_version_digest",
+    "author_source_identity_version_digest",
+    "stable_core_person_identity",
+    "candidate_creation_fact_ref",
+    "validated_creation_ref",
+    "initial_known_biographical_facts_once",
+    "explicit_unknowns",
+    "host_local_profile_binding",
+    "host_intent_idempotency_record",
+    "academy_status",
+    "history_and_time",
+    "optional_approved_name"
+  ],
+  "academy_admission": {
+    "candidate_spends_cadet_slot": false,
+    "admission_requires_f10_event": true,
+    "admission_consumes_slot_once": true,
+    "first_year_requires_enrolment": true,
+    "intro_council_is_not_admission_issuer": true,
+    "no_prior_f05_authority": true,
+    "no_f11_commission_or_rank": true
+  },
+  "persistence": {
+    "existing_naval_format": "TREKHOST4 1",
+    "new_academy_type": "ACADEMY_VERSIONED_ENVELOPE_TO_DEFINE_IN_B03",
+    "do_not_reinterpret_naval_slot": true,
+    "no_silent_legacy_migration": true,
+    "restore_stage_then_verify_then_swap": true,
+    "restore_recheck": [
+      "campaign_type",
+      "catalog_version",
+      "core_person",
+      "creation_fact",
+      "local_profile_binding",
+      "academic_state",
+      "content_integrity",
+      "slot_provenance"
+    ],
+    "restore_invalidates_old_scope_generation": true,
+    "deny_cross_type_restore": true,
+    "content_assets_not_in_history": true
+  },
+  "rollout": {
+    "IA03B01": "DESIGN_ONLY",
+    "IA03B02": "CODEX_PRODUCT_F10_FACTORY_PENDING",
+    "IA03B03": "CODEX_ACADEMY_H03_H04_PENDING",
+    "IA03B04": "CHATGPT_AUDIT_PENDING",
+    "IA03C": "UNREAL_PENDING"
+  },
+  "forbidden_shortcuts": [
+    "FAKE_SEMANTIC_ACCEPTED",
+    "ARBITRARY_PERSON_ID_FROM_CLIENT",
+    "F05_MIRANDA_AS_ACADEMY",
+    "F11_COMMISSION_FOR_CANDIDATE",
+    "AUTO_ADMISSION_FROM_INTRO",
+    "FAKE_BIRTHPLACE_OR_CERTIFICATE",
+    "DUPLICATE_CORE_WORLDSTATE",
+    "UNVERSIONED_CHANGE_TO_LOCKED_F10_V1",
+    "CORE_PIN_CHANGE",
+    "REGISTER_F05_PLAYER_AS_ACADEMY_PLAYER"
+  ],
+  "acceptance_matrix_ref": "proyecto/docs/architecture/host/H06_IA03B01_MATRIZ_ACEPTACION_2026-11-20.md"
+}
