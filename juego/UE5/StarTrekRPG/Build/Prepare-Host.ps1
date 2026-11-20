@@ -28,6 +28,14 @@ try {
     & cmake --build $BuildRoot --config Release --parallel 3 --target TrekHost
     if ($LASTEXITCODE) { throw 'HOST Release build failed.' }
 
+    # Validate the complete output before changing the project's staged dependency.
+    foreach ($Dll in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
+        $NativeDll = Join-Path $BuildRoot "f05/f04/Release/$Dll"
+        if (!(Test-Path -LiteralPath $NativeDll -PathType Leaf)) {
+            throw "Missing Release output: $NativeDll"
+        }
+    }
+
     $Stage = Join-Path $ProjectDir 'Binaries/Host'
     $HeaderDir = Join-Path $Stage 'include/trek/host'
     New-Item -ItemType Directory -Path $HeaderDir -Force | Out-Null
@@ -35,6 +43,9 @@ try {
     foreach ($Dll in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
         Copy-Item -LiteralPath (Join-Path $BuildRoot "f05/f04/Release/$Dll") -Destination $Stage
     }
+    Write-Host "HOST Release prepared for: $ProjectDir"
+    Write-Host "Header and DLLs staged in: $Stage"
+    Write-Host 'Next: build StarTrekRPGEditor and open UnrealEditor.exe without -game.'
 } finally {
     $env:TEMP = $OldTemp
     $env:TMP = $OldTmp

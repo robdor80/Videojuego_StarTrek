@@ -8,6 +8,11 @@
     "TargetPlatforms": [ "Windows" ],
     "DisableEnginePluginsByDefault": true,
     "Plugins": [
-        { "Name": "WindowsDeviceProfileSelector", "Enabled": true }
+        { "Name": "WindowsDeviceProfileSelector", "Enabled": true },
+        { "Name": "ContentBrowserAssetDataSource", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "ContentBrowserClassDataSource", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "EngineAssetDefinitions", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "PropertyAccessEditor", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "PluginBrowser", "Enabled": true, "TargetAllowList": [ "Editor" ] }
     ]
 }
