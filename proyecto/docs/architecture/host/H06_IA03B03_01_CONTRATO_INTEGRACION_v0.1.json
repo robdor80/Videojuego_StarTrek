@@ -1,0 +1,209 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "host_ia03b03_academy_binding_persistence",
+  "status": "DESIGN_PROPOSAL_NOT_RUNTIME",
+  "date": "2026-11-20",
+  "phase": "H06_IA03B03-01",
+  "base_prs_merged": [
+    188,
+    189
+  ],
+  "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "design_ref": "proyecto/docs/architecture/host/H06_IA03B03_01_ARQUITECTURA_VINCULO_PERSISTENCIA_2026-11-20.md",
+  "authority": {
+    "person_and_world_state": "CoreRPG",
+    "candidate_and_biography": "F10_S04_v2",
+    "session_and_player_binding": "HOST_H02_H03",
+    "slot_and_restore": "HOST_H04",
+    "naval_orders": "F05",
+    "commission_rank": "F11",
+    "unreal": "IA-03C"
+  },
+  "existing_implementation": {
+    "academia_core_object": "AcademyCampaign",
+    "candidate_factory": "AcademyCandidateFactory",
+    "status": "CANDIDATE_UNBOUND_IN_MEMORY",
+    "session_owner": "SessionOwner",
+    "naval_bridge": "F04_F05",
+    "h04_naval_envelope": "TREKHOST4 1",
+    "save_academy": "SAVE_INCOMPATIBLE_CURRENTLY",
+    "restore_academy": "NOT_IMPLEMENTED",
+    "academy_product_catalog": "startrek.academy:starfleet_academy/v2"
+  },
+  "campaign": {
+    "kind": "ACADEMY",
+    "single_world_state": true,
+    "one_playable_person_per_campaign": true,
+    "local_user_profile_separate_from_diegic_name": true,
+    "candidate_has_naval_permissions": false,
+    "candidate_has_admission": false,
+    "candidate_has_f11_rank": false
+  },
+  "identity_binding": {
+    "entry": "HOST_PRIVATE_VERIFIED_B02_RECEIPT",
+    "subject_selection_from_ui": false,
+    "binding_owner": "H03",
+    "required_checks": [
+      "same_owner_and_local_profile",
+      "current_generation",
+      "real_core_person_definition",
+      "person_linked_to_academy_campus",
+      "candidate_created_fact_targets_exact_person",
+      "approved_s04_source_digest",
+      "unique_playable_person",
+      "not_already_bound_to_another_person"
+    ],
+    "on_success": "BOUND_SAME_CORE_PERSON_NO_F05",
+    "same_receipt_replay": "IDEMPOTENT",
+    "foreign_or_stale_receipt": "SCOPE_INVALID",
+    "cannot_bind_from_numerical_person_id": true,
+    "immutable_anchor": [
+      "campaign_id",
+      "core_person_id",
+      "candidate_creation_fact_id",
+      "s04_profile_id_and_version",
+      "s04_source_digest",
+      "local_profile_binding_identity"
+    ],
+    "mutable_per_snapshot": [
+      "core_revision",
+      "timeline_tick",
+      "current_academy_state"
+    ],
+    "receipt_pointer_survives_restart": false,
+    "restore_binding": "RECONSTRUCT_FROM_VALIDATED_CORE_AND_TRUSTED_H04_LOCAL_ANCHOR",
+    "no_duplicate_authoritative_worldstate": true
+  },
+  "naval_guard": {
+    "essential_before_academy_bound": true,
+    "gate": "SESSION_CAMPAIGN_KIND_BEFORE_F05_DISPATCH",
+    "must_deny_operations": [
+      "query_view",
+      "submit_order",
+      "query_order",
+      "cancel_order",
+      "institutional_command"
+    ],
+    "no_null_f04_dispatch": true,
+    "no_f05_bind_player": true,
+    "no_f11_mutation": true
+  },
+  "storage": {
+    "naval_v1": "TREKHOST4 1_UNCHANGED",
+    "academy_envelope_version": "VERSIONED_ACADEMY_ENVELOPE_TO_DEFINE_BY_CODEX",
+    "suggested_magic": "TREKHOST4 2",
+    "required_manifest_fields": [
+      "format_version",
+      "campaign_kind",
+      "core_pin",
+      "academy_catalog_identity_and_digest",
+      "source_profile_id_version_digest",
+      "campaign_id",
+      "slot_name",
+      "slot_version",
+      "person_id",
+      "candidate_creation_fact_id",
+      "local_profile_binding_identity",
+      "snapshot_core_revision",
+      "snapshot_timeline_tick"
+    ],
+    "registry_anchor_fields": [
+      "campaign_id",
+      "person_id",
+      "candidate_creation_fact_id",
+      "source_profile_id_version_digest",
+      "local_profile_binding_identity"
+    ],
+    "registry_must_not_fix_revision_or_tick": true,
+    "publication": "H04_STAGE_VALIDATE_FLUSH_PREPARED_COMMITTED",
+    "no_overwrite_existing_version": true,
+    "latest_committed_only": true,
+    "latest_committed_corrupt_behavior": "REJECT_UNLESS_EXPLICIT_PREVIOUS_VERSION_REQUEST",
+    "uncertain_publication": "PUBLICATION_UNCERTAIN_AND_REINSPECT",
+    "core_content": [
+      "WorldState",
+      "HistoryArchive",
+      "RandomStreams",
+      "Timeline"
+    ],
+    "no_unnecessary_duplication_of_logical_biography": true,
+    "physical_snapshot_deduplication_not_promised": true,
+    "slot_import_without_local_registry": "IMPORTED_UNVERIFIED_NO_ACTIVATION",
+    "cross_type_restore": "REJECT",
+    "legacy_saves_remain_valid": true,
+    "silent_upgrade_of_v1_characters": false
+  },
+  "restore": {
+    "from_closed_required": true,
+    "from_active_policy": "EXPLICIT_SAFE_STAGE_SWAP_OR_DENIAL_NOT_PARTIAL_SWAP",
+    "staging_must_validate": [
+      "manifest_and_commit",
+      "registry_provenance",
+      "campaign_uuid",
+      "core_sha",
+      "catalog_allowed_version",
+      "source_digest",
+      "exact_person_and_creation_fact",
+      "name_and_known_background",
+      "biographical_unknowns_not_invented",
+      "academic_state_consistent_with_f10",
+      "original_binding_anchor",
+      "core_history_integrity",
+      "RNG_and_Timeline"
+    ],
+    "recreate_candidate_not_allowed": true,
+    "rebuild_academy_campaign_from_recovered_graph": true,
+    "no_assumption_of_fixture_entity_ids": true,
+    "on_success": "SAME_PERSON_NEW_GENERATION_NEW_SCOPE_BOUND",
+    "invalidate_old_receipts_and_unreal_views": true,
+    "on_failure": "UNCHANGED_ACTIVE_OR_CLOSED",
+    "close_wins_race": true
+  },
+  "future_domain_admission": {
+    "status_B03": "NOT_IMPLEMENTED",
+    "candidate_population_slot_count": 0,
+    "admitted_requires_separate_f10_fact": true,
+    "admission_is_not_cinematic": true,
+    "restoring_admitted_must_not_repeat_admission": true
+  },
+  "operations_proposed": [
+    {
+      "name": "bind_academy_player",
+      "owner": "HOST_H03",
+      "input": "private_b02_receipt_and_live_core",
+      "postcondition": "BOUND_TO_CANONICAL_PERSON_NO_F05"
+    },
+    {
+      "name": "save_academy",
+      "owner": "HOST_H04",
+      "input": "active_bound_academy_and_valid_slot",
+      "postcondition": "COMMITTED_RECOVERABLE_ACADEMY_VERSION"
+    },
+    {
+      "name": "inspect_academy_slot",
+      "owner": "HOST_H04",
+      "input": "allowed_local_storage_root_and_slot",
+      "postcondition": "VISIBLE_KIND_VERSION_RECOVERABILITY_ONLY"
+    },
+    {
+      "name": "restore_academy",
+      "owner": "HOST_H04",
+      "input": "trusted_committed_academy_slot",
+      "postcondition": "STAGED_CORE_RESTORE_SAME_PERSON_NEW_GENERATION"
+    }
+  ],
+  "acceptance_matrix_ref": "proyecto/docs/architecture/host/H06_IA03B03_01_MATRIZ_ACEPTACION_2026-11-20.md",
+  "handoff_ref": "proyecto/docs/architecture/host/H06_IA03B03_02_03_ENCARGO_CODEX_2026-11-20.md",
+  "restrictions": [
+    "NO_CORE_PIN_CHANGE",
+    "NO_F11_EDITS",
+    "NO_F05_COMPETENCE_FOR_CANDIDATE",
+    "NO_LEGACY_H04_WIRE_REINTERPRETATION",
+    "NO_FAKE_ACADEMY_FROM_MIRANDA",
+    "NO_REAL_PERSON_SELECTED_BY_BLUEPRINT",
+    "NO_CLOUD_SERVER_OR_DRM",
+    "NO_TEMP_ARTIFACTS_OUTSIDE_LABORATORIOS",
+    "NO_MERGE_WITHOUT_USER_PERMISSION",
+    "NO_CERTIFICATION_WITHOUT_EVIDENCE"
+  ]
+}
