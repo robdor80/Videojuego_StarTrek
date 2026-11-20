@@ -44,7 +44,10 @@ struct Config {
         {"DIALOGUE", "fast"}, {"COMPUTER_ANALYSIS", "fast"}, {"NARRATIVE_SUMMARY", "fast"}};
     std::chrono::milliseconds timeout{20000};
     std::size_t max_request_bytes{65536}, max_response_bytes{131072}, max_output_bytes{32768};
-    unsigned max_output_tokens{1024}, max_pending{8}, max_calls{200};
+    // max_calls=0 disables the optional rate cap. Nonzero values are attempts per rolling call_window.
+    // This is not a monetary budget and never caps the lifetime of a game session.
+    unsigned max_output_tokens{1024}, max_pending{8}, max_calls{0};
+    std::chrono::milliseconds call_window{3600000};
 };
 // Bounded JSON document; invalid configuration never falls back silently.
 TREK_AI_API Error parse_config(std::string_view json, Config& out) noexcept;
