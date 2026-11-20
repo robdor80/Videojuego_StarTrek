@@ -50,6 +50,31 @@ En el navegador seleccionar **Contenido / Content** (`/Game`), limpiar búsqueda
 
 Las carpetas físicas vacías pueden quedar ocultas; PNG/JPEG/MP3 copiados con Windows son fuentes y necesitan importarse para convertirse en recursos `.uasset`. Su presencia física no demuestra que el navegador tenga recursos registrados. Si incluso `/Game` y Editar > Complementos faltan, comprobar los plugins del descriptor y la ruta realmente abierta antes de reinstalar el motor o borrar cachés.
 
+## Proteger el contenido de Unreal (fuera de Git)
+
+**Importante:** `.gitignore` excluye deliberadamente los `.uasset`, `.umap` y otros binarios. Un commit o una PR no salva esos recursos. El proyecto definitivo se debe respaldar en **otra unidad física**, mediante snapshots de todo su directorio `Content`; no utilizar `laboratorios/` ni la misma unidad como única copia de seguridad.
+
+Antes de empezar o terminar una sesión de importación/edición relevante, **guardar todo y cerrar Unreal Editor** para evitar archivos que cambien durante la copia. Elegir una carpeta en el HDD/SSD de respaldo existente, con espacio suficiente. El ejemplo siguiente emplea `X:` solo como marcador: reemplazarlo por la letra REAL de la unidad de respaldo.
+
+Desde PowerShell en la raíz del repositorio:
+
+```powershell
+$projectDir = (Resolve-Path 'juego/UE5/StarTrekRPG').Path
+& 'juego/UE5/StarTrekRPG/Build/Backup-Content.ps1' -ProjectDir $projectDir -DestinationRoot 'X:\Copias_StarTrekLegends\Unreal'
+```
+
+Cada ejecución crea un **snapshot nuevo** de todo `Content` (incluye mapas, widgets, Blueprints, materiales y recursos importados): `StarTrekRPG-Content-AAAAMMDD-HHMMSS-identificador/Content`, `manifest.json` con tamaño y SHA-256 por archivo y `COMPLETE.json` que certifica el manifiesto. Comprueba el origen antes/después de copiar y el destino. No sobrescribe ni borra snapshots previos. Si hay un fallo, conserva el directorio `.incomplete` y no lo considera respaldo válido. El script rechaza destinos en la misma unidad que el proyecto (separación por unidad; no certifica por sí sola que sean discos físicos distintos) y enlaces simbólicos dentro de `Content`.
+
+Verificación periódica de una copia concreta, sin modificar nada:
+
+```powershell
+& 'juego/UE5/StarTrekRPG/Build/Verify-ContentBackup.ps1' -SnapshotDir 'X:\Copias_StarTrekLegends\Unreal\StarTrekRPG-Content-AAAAMMDD-HHMMSS-identificador'
+```
+
+**Restauración segura:** verificar primero el snapshot y copiar su `Content` **a una copia aislada del proyecto** para ensayar la apertura en UE; no sobreescribir el `Content` principal sin una revisión explícita de rutas y versiones. Si se recupera en otro equipo, el código y configuración proceden de Git, y las dependencias HOST se preparan de nuevo según este README. Las imágenes/audio originales que todavía estén **fuera** de `Content` requieren respaldo aparte.
+
+**Límites:** las herramientas están versionadas, pero no generan copias hasta que alguien las ejecuta con una unidad de destino válida. No hay tarea programada ni copia automática instalada en el MSI. Antes de empezar la intro definitiva, ejecutar una primera copia después de importar sus recursos; repetirla al finalizar cada sesión importante. Conservar más de un snapshot y comprobar de vez en cuando una recuperación real en una copia aislada.
+
 ## Ejecutar el juego de diagnóstico
 
 ```powershell
