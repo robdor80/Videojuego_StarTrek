@@ -8,7 +8,8 @@ NPC, computadora, PERSON, menús Unreal ni cambios en Nimroel.
 `desarrollo/integration/host/include/trek/host/ai/service.h` proporciona la API C++20
 interna de `TrekHost`. Una instancia compartida de `Service`, propiedad de la composición
 HOST, atiende todos los consumidores futuros. No crear una instancia por NPC ni por petición.
-Un único trabajador procesa una cola acotada sin bloquear al remitente. No hay proceso
+Un único trabajador procesa una cola acotada con prioridad justa para diálogos,
+sin bloquear al remitente. No hay proceso
 auxiliar, servidor, base de datos, cuenta de jugador, suscripción ni segundo Core.
 
 `Transport` permite sustituir HTTPS por un simulador. El transporte real usa WinHTTP
@@ -32,8 +33,12 @@ Luna es habitual. Solo `REASONING_LANGUAGE` selecciona Sol por defecto; el consu
 seleccionará esa ruta si existe necesidad justificada. Cualquier ruta puede configurarse
 explícitamente como `reasoning`. `COMPUTER_ANALYSIS` usa Luna inicialmente. No hay escalada,
 reintento ni fallback automático, ni otros proveedores. Cada envío aceptado consume como
-máximo un intento de transporte. `max_calls` cuenta intentos por instancia y ejecución,
-no dinero; no garantiza un presupuesto monetario. La cola llena rechaza sin consumir API.
+máximo un intento de transporte. `max_calls=0` **desactiva el antiguo límite acumulativo**;
+si es mayor que cero, solo restringe intentos en una **ventana temporal deslizante**
+(`call_window_ms`, 100 ms–24 h, valor base 1 h), que se libera automáticamente.
+No es un presupuesto monetario ni calcula el gasto real. La cola llena rechaza sin consumir API.
+Las solicitudes `DIALOGUE` adelantan a las de fondo, pero tras tres diálogos se atiende
+una tarea pendiente no interactiva para evitar inanición. No hay reintentos automáticos.
 
 HTTPS tiene endpoint fijo `https://api.openai.com/v1/responses`, verificación de certificado
 y hostname, sin redirecciones. Solicitudes con `store:false`, instrucciones internas separadas
