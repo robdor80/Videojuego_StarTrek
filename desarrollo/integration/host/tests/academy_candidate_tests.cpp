@@ -123,10 +123,12 @@ void conflict()
     Candidate fixture;
     const auto first = fixture.submit();
     const auto before = fixture.inspect(first);
-    const auto result = fixture.submit(another_name);
-    require(result.error == Error::IDEMPOTENCY_CONFLICT && !result.receipt && result.generation == Generation{},
-            "Changed name reused the committed attempt");
-    same_world(before, fixture.inspect(first));
+    for (auto payload : {another_name, R"({"display_name":"Sarek Ríos","person_id":999})"sv}) {
+        const auto result = fixture.submit(payload);
+        require(result.error == Error::IDEMPOTENCY_CONFLICT && !result.receipt && result.generation == Generation{},
+                "Changed payload reused the committed attempt");
+        same_world(before, fixture.inspect(first));
+    }
 }
 
 void immutable_fields()

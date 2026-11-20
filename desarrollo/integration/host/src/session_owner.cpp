@@ -286,10 +286,9 @@ struct SessionOwner::Impl {
         if (const auto error = academy_admission(request.intent); error != Error::OK) { fail(error); return; }
         if (state == State::ACTIVE) {
             try {
-                const auto name = detail::academy_display_name(request.payload);
-                if (!name) { fail(Error::INVALID_ARGUMENT); return; }
                 if (!academy_receipt || !session.academy()) { fail(Error::INTERNAL_ERROR); return; }
-                if (detail::academy_digest(*name) != academy_receipt->editable_digest) {
+                const auto name = detail::academy_display_name(request.payload);
+                if (!name || detail::academy_digest(*name) != academy_receipt->editable_digest) {
                     fail(Error::IDEMPOTENCY_CONFLICT);
                     return;
                 }
