@@ -1,0 +1,15 @@
+fase,variante,duracion_sesion,frame_pista_principal_ms,frame_count,SceneRender_ms,SceneRender_count,RenderDeferredLighting_ms,LumenScreenProbeGather_ms,ShadowDepths_ms,VirtualShadowMapProjectionMaskBits_ms,DLSS_ms,DLSS_count,PostProcessing_ms
+v08_benchmark_supercomputadora_voyager,diag_native_sw,1m 30.9s,10.827,10158,11.023,14150,6.082,3.964,1.108,3.117,34.063,2,0.648
+v08_benchmark_supercomputadora_voyager,diag_native_sw_p4096,1m 32s,11.184,9826,11.431,13590,6.154,3.816,1.262,3.197,36.81,2,0.642
+v08_benchmark_supercomputadora_voyager,diag_quality_sw,1m 31.1s,8.464,12974,8.539,18146,2.976,1.932,0.958,1.374,1.863,9073,2.289
+v08_benchmark_supercomputadora_voyager,diag_quality_sw_p4096,1m 31s,9.098,12086,8.995,16980,2.896,1.838,1.632,1.31,1.854,8490,2.28
+v09_p01_iluminacion_sombras,diag_base_sw_p4096,1m 29.7s,8.698,12636,8.758,16310,2.912,1.852,1.326,1.323,1.86,8155,2.275
+v09_p01_iluminacion_sombras,diag_exp1_sw_p4096,1m 24.9s,9.038,12148,9.058,15658,2.91,1.87,1.681,1.322,1.847,7829,2.262
+v09_p01_iluminacion_sombras,diag_exp2_sw_p4096,1m 24.8s,8.402,13080,8.44,17006,2.936,1.9,0.954,1.338,1.888,8503,2.301
+v09_p01b_reorganizacion_iluminacion,diag_base_sw_p4096,2m 45.2s,9.228,23808,9.106,31484,2.978,2.113,1.241,1.298,1.859,15742,2.21
+v09_p01b_reorganizacion_iluminacion,diag_clean_sw_p4096,2m 37.9s,8.728,25138,8.75,32790,2.933,2.072,0.996,1.29,1.833,16395,2.181
+v09_p01b_reorganizacion_iluminacion,diag_exp1_sw_p4096,2m 40.2s,8.832,24890,8.639,33032,2.603,2.053,1.189,1.315,1.866,16516,2.248
+v09_p01b_reorganizacion_iluminacion,diag_exp2_sw_p4096,2m 39.8s,9.879,22190,9.61,29024,2.408,1.842,2.365,1.184,1.91,14512,2.272
+v09_p01b_reorganizacion_iluminacion,diag_locked_base_sw_p4096,1m 45.9s,8.816,15826,8.848,20818,2.925,1.999,0.987,1.259,1.844,10409,2.201
+v09_p01b_reorganizacion_iluminacion,diag_locked_clean_sw_p4096,1m 48.4s,8.851,15770,8.9,20726,2.976,2.109,0.992,1.32,1.845,10363,2.198
+v09_p01b_reorganizacion_iluminacion,diag_locked_final_sw_p4096,1m 48.5s,8.43,16550,8.437,21818,2.62,2.073,0.92,1.354,1.895,10909,2.254
