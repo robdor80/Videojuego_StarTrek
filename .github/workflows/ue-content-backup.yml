@@ -1,0 +1,71 @@
+name: UE Content Backup Safety
+
+on:
+  pull_request:
+    paths:
+      - 'juego/UE5/StarTrekRPG/Build/Backup-Content.ps1'
+      - 'juego/UE5/StarTrekRPG/Build/Verify-ContentBackup.ps1'
+      - '.github/workflows/ue-content-backup.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'juego/UE5/StarTrekRPG/Build/Backup-Content.ps1'
+      - 'juego/UE5/StarTrekRPG/Build/Verify-ContentBackup.ps1'
+      - '.github/workflows/ue-content-backup.yml'
+
+jobs:
+  backup-verify-guard:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Snapshot, verify, detect corruption, refuse same-unit destination
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $build = Join-Path $env:GITHUB_WORKSPACE 'juego\UE5\StarTrekRPG\Build'
+          $project = Join-Path $env:RUNNER_TEMP 'StarTrekRPG_BackupFixture'
+          $assetDir = Join-Path $project 'Content\Cinematics\IntroLegends\Widgets'
+          New-Item -ItemType Directory -Force -Path $assetDir | Out-Null
+          Set-Content -LiteralPath (Join-Path $project 'StarTrekRPG.uproject') -Value '{}'
+          $originalFile = Join-Path $assetDir 'WBP_Test.uasset'
+          [IO.File]::WriteAllBytes($originalFile, [byte[]](1..128))
+          $originalHash = (Get-FileHash -LiteralPath $originalFile -Algorithm SHA256).Hash
+
+          # Virtual volume only for CI; real backups must use a distinct physical drive.
+          $volume = Join-Path $env:RUNNER_TEMP 'SnapshotVirtualVolume'
+          New-Item -ItemType Directory -Path $volume -Force | Out-Null
+          & subst.exe R: $volume
+          if ($LASTEXITCODE -ne 0) { throw 'subst R: failed.' }
+          try {
+            & (Join-Path $build 'Backup-Content.ps1') -ProjectDir $project -DestinationRoot 'R:\Snapshots'
+            if (!$?) { throw 'Backup failed.' }
+            $snapshots = @(Get-ChildItem -LiteralPath 'R:\Snapshots' -Directory)
+            if ($snapshots.Count -ne 1) { throw 'Expected exactly one snapshot.' }
+            $snapshot = $snapshots[0].FullName
+            & (Join-Path $build 'Verify-ContentBackup.ps1') -SnapshotDir $snapshot
+            if (!$?) { throw 'Verification failed.' }
+
+            $copiedFile = Join-Path $snapshot 'Content\Cinematics\IntroLegends\Widgets\WBP_Test.uasset'
+            [IO.File]::WriteAllBytes($copiedFile, [byte[]](9, 9, 9))
+            $corruptionDetected = $false
+            try {
+              & (Join-Path $build 'Verify-ContentBackup.ps1') -SnapshotDir $snapshot
+            } catch {
+              $corruptionDetected = $true
+            }
+            if (!$corruptionDetected) { throw 'Corrupted backup was accepted.' }
+
+            $sameVolumeRejected = $false
+            try {
+              & (Join-Path $build 'Backup-Content.ps1') -ProjectDir $project -DestinationRoot (Join-Path $env:RUNNER_TEMP 'SameVolumeNotAllowed')
+            } catch {
+              $sameVolumeRejected = $true
+            }
+            if (!$sameVolumeRejected) { throw 'Same-volume destination was accepted.' }
+            if ((Get-FileHash -LiteralPath $originalFile -Algorithm SHA256).Hash -ne $originalHash) {
+              throw 'The original asset was modified.'
+            }
+            Write-Output 'PASS: snapshot, integrity, corruption, same-volume protection, source integrity.'
+          } finally {
+            & subst.exe R: /D
+          }
