@@ -1,4 +1,4 @@
-# Sistemas S01–S19 — catálogo conceptual formalizado
+# Sistemas S01–S19 — catálogo conceptual formalizado; S20 incorporado después
 
 **Fecha:** 19-11-2026 · **Ámbito:** exclusivamente SISTEMAS · **Estado:** revisión documental posterior a auditoría, sin implementación nueva.
 
@@ -9,11 +9,12 @@ Este directorio es la **entrada de referencia** para los 19 sistemas funcionales
 1. [Fichas S01–S10](FICHAS_S01_S10_FORMALIZADAS_2026-11-19.md) y [fichas S11–S19](FICHAS_S11_S19_FORMALIZADAS_2026-11-19.md): propósito, funciones, exclusiones, propietarios, consumidores, dependencias, criterio conceptual de aceptación y madurez.
 2. [Gobierno transversal, matriz de autoridad y pendientes](MATRIZ_TRANSVERSAL_Y_PENDIENTES_S01_S19_2026-11-19.md): rutas de acciones, servicios compartidos, conflictos/duplicidades resueltos documentalmente y avisos a otras auditorías.
 3. [S19 — Audio, música y ambientación dinámica](S19_AUDIO_MUSICA_AMBIENTACION_DINAMICA_2026-11-19.md): alcance ya aprobado por el autor, efectos prioritarios y música condicionada a calidad.
-4. [Acta de formalización](ACTA_REVISION_S01_S19_2026-11-19.md): trazabilidad A01–A16, conservación de decisiones, estados reales y decisiones que siguen abiertas.
+4. [S20 — Sistema de Voz de NPC y gestión dinámica de recursos](S20_SISTEMA_VOZ_NPC_Y_GESTION_DINAMICA_RECURSOS_2026-11-20.md): **nueva aprobación conceptual del 20-11-2026**, posterior a la revisión original. TTS CPU/GPU, presupuesto VRAM, streaming seguro y pruebas futuras; no implementación.
+5. [Acta de formalización](ACTA_REVISION_S01_S19_2026-11-19.md): trazabilidad A01–A16, conservación de decisiones, estados reales y decisiones que siguen abiertas.
 
 ## Precedencia y alcance de la aprobación
 
-- **Los 19 números S01–S19 permanecen invariantes**; no se aprueba S20.
+- **Los 19 números S01–S19 permanecen invariantes**. En la formalización **del 19-11-2026** no se aprobaba S20. La **aprobación autoral posterior del 20-11-2026** incorpora ahora **S20 — Sistema de Voz de NPC y gestión dinámica de recursos** sin modificar los diecinueve anteriores. Véase la ficha independiente S20.
 - **Autoría creativa:** las aprobaciones conversacionales prevalecen dentro de su ámbito, y las decisiones explícitas posteriores DEC-0020–0024 prevalecen solo en lo que modifican. Este documento formaliza límites y referencias; no revoca decisiones creativas ni convierte recomendaciones técnicas de la auditoría en aprobaciones autorales.
 - **Campaña vigente:** proyecto personal de un jugador, continuidad propia, protagonista único híbrido humano-vulcano descendiente de Khan (DEC-0022), Academia desde 2383, USS Enterprise NCC-1701-D Galaxy reconstruida mediante Proyecto Valhalla (DEC-0020; **Valhalla es el programa, no la clase/nave**). La Enterprise-D no se adquiere ni se manda automáticamente; depende de vacante, mérito y autoridad.
 - **Sensores del refit:** supremacía sensorial con lecturas ordinarias completas/prácticamente inmediatas cuando el equipamiento está instalado, operativo y el fenómeno es observable (DEC-0021). Ni fallo aleatorio de escaneo ni capacidades automáticas por escribir un documento.
@@ -77,3 +78,10 @@ La fuente que prevalece para cada avance técnico futuro es una evidencia identi
 - [Criterios de cierre de proyecto](../roadmap/master/CRITERIOS_DE_CIERRE.md).
 
 **No ejecutado por esta formalización:** código, CI, compilación, juego UE5, mediciones en MSI, cambio de contratos, migración de guardados o integración de IA.
+
+
+## Ampliación posterior — S20 (20-11-2026)
+
+Por instrucción expresa posterior del autor se incorpora [**S20 — Sistema de Voz de NPC y gestión dinámica de recursos**](S20_SISTEMA_VOZ_NPC_Y_GESTION_DINAMICA_RECURSOS_2026-11-20.md) como sistema **conceptualmente aprobado**, sin implementación ni proveedor TTS elegido. Su cometido específico es investigar y finalmente coordinar el presupuesto de GPU/VRAM/CPU para síntesis dinámica de voces NPC en UE5.8.2 (RTX 4070 8 GB), incluyendo evaluación de Piper, Kokoro, modelos alternativos y descargado/precarga *seguros* de recursos gráficos no visibles, **siempre tras perfilar el juego y sin prometer liberar memoria fija**.
+
+La revisión S01–S19, su matriz, fichas y acta **permanecen como fotografía válida de 19-11-2026**. La ampliación no cambia sus estados históricos ni atribuye rendimiento/certificación a S20. **S01/HOST** continúan gobernando el acceso a IA y el texto; **S19/UE5** gobiernan la mezcla y reproducción; **S20** gobierna la **política específica de coste/síntesis de voz** y solicita medidas de gestión gráfica que **solo UE5 puede ejecutar**. La reconciliación de contratos se reserva a la implementación futura.
