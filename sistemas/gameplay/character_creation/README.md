@@ -4,6 +4,8 @@
 
 **La nueva partida del videojuego Star Trek RPG ya no usa un creador de personaje libre.** Tiene un solo protagonista canónico, siempre el mismo **varón híbrido humano-vulcano**, hijo de **madre vulcana** y **padre humano descendiente de Khan Noonien Singh**, que ingresa con **45 años (aparenta ~30)** en la Academia de **2383**. Posee longevidad híbrida, expresión excepcional de características del linaje Khan, formación profunda en cuatro artes marciales (kung-fu, kárate, aikido y Suus Mahna), autocontrol emocional aprendido, vocación científica y música. Su pasado es fijo; sus decisiones durante el juego no.
 
+**Ampliación autoral de 19-11-2026:** su sangre tiene **potencial biomédico excepcional** heredado del linaje Khan. Enfermería podrá pedirle muestras para investigar y desarrollar tratamientos, vacunas o terapias para casos concretos, también como actividad cotidiana cuando esté sano. La donación es voluntaria, no hay cura universal ni resurrección automática y las mecánicas médicas específicas quedan pendientes. Referencia de diseño: [S04 v2, §04.3.1](S04_PROTAGONISTA_IDENTIDAD_CARRERA_v2.md). **Documentado; no implementado.**
+
 ## Documentación ACTUAL (siempre comenzar aquí)
 
 1. [DEC-0022 — decisión de autor y precedencia](../../../proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md).
