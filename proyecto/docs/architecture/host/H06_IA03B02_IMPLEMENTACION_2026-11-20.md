@@ -5,6 +5,7 @@ Fecha 2026-11-20. Entrega para auditoría independiente. La rama B02 parte de
 B01, abierta en Draft al iniciar el trabajo. La PR B02 apunta a esa rama.
 El Core de todas las composiciones se fija en
 `76a7b7b485616d8c4994f384a90f123bf333591d`.
+[PR #189](https://github.com/robdor80/Videojuego_StarTrek/pull/189)
 
 ## Arquitectura
 
@@ -71,7 +72,7 @@ capacidades de juego requiere reglas de dominio posteriores.
 El HOST conserva un solo intento por campaña y el recibo privado queda ligado
 al intento, perfil local, generación, campaña, fuente, huella del nombre,
 PERSON, hecho, tick y revisión de Core. La misma solicitud devuelve el mismo
-recibo. Un nombre distinto con el mismo intento devuelve
+recibo. Un nombre distinto o campos adicionales en el mismo intento devuelven
 `IDEMPOTENCY_CONFLICT`. La lectura verifica el recibo vigente y confronta sus
 datos con el WorldState y el catálogo en el hilo propietario. La API de lectura
 tiene como entrada el recibo emitido por el HOST y devuelve una proyección.
@@ -107,20 +108,48 @@ La mayoría de los casos ejecutan el C++ privado de la misma biblioteca
 compilación separada de las mismas fuentes con inyección de fallos. La
 composición de fallos comprueba también serialización y recarga en memoria del
 WorldState real con el catálogo de producto. B02-14 usa las suites históricas.
+[Matriz B01](H06_IA03B01_MATRIZ_ACEPTACION_2026-11-20.md)
 
-| Casos de la matriz | Evidencia | Estado |
+| Casos de la matriz | Evidencia | Linux Codex Cloud |
 | --- | --- | --- |
-| B02-01 a B02-10 | `host.academy.b02_01` a `host.academy.b02_10` | Pendiente |
-| B02-11 | `host.academy.b02_11` y `host.academy.b02_11_legacy` | Pendiente |
-| B02-12 y B02-13 | `host.academy.b02_12`, `host.academy.b02_13`, regresión F11 | Pendiente |
-| B02-14 | `host.biography.*` y rechazos de B02-05 | Pendiente |
-| B02-15 | `host.academy.b02_15` | Pendiente |
+| B02-01 a B02-10 | `host.academy.b02_01` a `host.academy.b02_10` | PASS |
+| B02-11 | `host.academy.b02_11` y `host.academy.b02_11_legacy` | PASS |
+| B02-12 y B02-13 | `host.academy.b02_12`, `host.academy.b02_13`, regresión F11 | PASS |
+| B02-14 | `host.biography.*` y rechazos de B02-05 | PASS |
+| B02-15 | `host.academy.b02_15` | PASS |
+
+### Codex Cloud
+
+Código probado en `9cca98d6cee54e65fa3213a384fd4805f5c3a0f1`, Linux x86-64
+con GCC 14.2.0, CMake 3.31.10 y Ninja. La compilación Release con
+`TREK_HOST_TESTS=ON` ejecutó la selección nativa del workflow mediante CTest.
+
+| Comprobación | Resultado |
+| --- | --- |
+| CTest nativo | PASS 281/281, con 126 HOST, 21 F04 y 134 F05. Incluye los 15 casos B02 nuevos y 25 de biografía e IA histórica |
+| F11 aislado con `desarrollo/integration/f11_host/run_native.py` | PASS 17/17 |
+| Contratos H01, factory F10 histórico y S04 canónico | PASS 11/11, 9/9 y 12/12, respectivamente |
+| Empotrado de fuente | PASS con finales CRLF normalizados. Una copia alterada de la biografía se rechazó durante la generación |
+| Linux Release con `TREK_HOST_TESTS=OFF` | PASS de compilación, inspección de dependencias y exportaciones, carga de ABI C 1 y 12/12 casos B02 enlazados a las bibliotecas Release de producción |
+
+En una repetición sobre el mismo directorio de compilación, el fixture
+histórico `f05.p05a_I_process_save` pidió una salida de historial nueva.
+Se apartó la salida de la ejecución anterior y se repitió la selección
+completa. La ejecución final tuvo cero fallos y cero omisiones.
 
 ### GitHub Actions
 
-El workflow `HOST native H02-H06` cubre Linux y Windows nativos, Linux
-ASan/UBSan y compilaciones Linux/Windows Release con tests deshabilitados.
-El informe se actualizará con las ejecuciones del código de entrega.
+El workflow `HOST native H02-H06` finalizó con **PASS 5/5** para la revisión
+de código `9cca98d6cee54e65fa3213a384fd4805f5c3a0f1`.
+[Ejecución 44722293675](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44722293675)
+
+| Trabajo | Estado |
+| --- | --- |
+| Linux nativo HOST/F04/F05, H01 y F11 aislado | PASS |
+| Windows nativo HOST/F04/F05, H01 y F11 aislado | PASS |
+| Linux ASan/UBSan, suite HOST | PASS |
+| Linux Release con tests deshabilitados | PASS |
+| Windows x64 Release con tests deshabilitados | PASS |
 
 ## Dependencias para B03
 
