@@ -16,6 +16,7 @@
 #include <limits>
 #include <mutex>
 #include <optional>
+#include <stdexcept>
 #include <thread>
 #include <type_traits>
 #include <string_view>
@@ -23,6 +24,22 @@
 #include <variant>
 
 namespace trek::host {
+namespace detail {
+struct AcademyCreationIntent {
+    Generation generation;
+    std::string campaign, profile;
+    // The private object itself is the only key for the one creation intent
+    // of this campaign. The campaign ID also identifies it for future storage.
+};
+
+struct AcademyCreationReceipt {
+    AcademyIntent intent;
+    corerpg::HistoryHash editable_digest;
+    std::string source_digest;
+    std::uint64_t person, creation_fact, revision, tick;
+};
+} // namespace detail
+
 namespace {
 
 constinit std::atomic<std::uint64_t> last_generation{0};
@@ -82,14 +99,26 @@ struct SessionOwner::Impl {
         std::promise<BindPlayerResult> reply;
     };
 
+    struct CreateAcademy {
+        detail::AcademyIntent intent;
+        std::string payload;
+        std::promise<detail::AcademyCreationResult> reply;
+    };
+
+    struct InspectAcademy {
+        Generation generation;
+        detail::AcademyReceipt receipt;
+        std::promise<detail::AcademyCandidateResult> reply;
+    };
+
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
     struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, TestVisit>;
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, CreateAcademy, InspectAcademy, TestVisit>;
 #else
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch>;
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, CreateAcademy, InspectAcademy>;
 #endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
@@ -100,6 +129,8 @@ struct SessionOwner::Impl {
     std::shared_ptr<const detail::ActiveCampaign> campaign;
     std::shared_ptr<const int> biography_activation;
     std::string local_profile;
+    detail::AcademyIntent academy_intent;
+    detail::AcademyReceipt academy_receipt;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
     bool stopping = false;
@@ -135,6 +166,8 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        academy_receipt.reset();
+        academy_intent.reset();
         biography_activation.reset();
         generation = {};
         campaign.reset();
@@ -240,6 +273,109 @@ struct SessionOwner::Impl {
         request.reply.set_value({error, {}});
     }
 
+    Error academy_admission(const detail::AcademyIntent& intent) const noexcept
+    {
+        if (!intent || intent != academy_intent || intent->profile != local_profile) return Error::SCOPE_INVALID;
+        if (state == State::CLOSED || state == State::OPENING) return Error::OK;
+        return admission(intent->generation);
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, CreateAcademy& request)
+    {
+        auto fail = [&](Error error) { request.reply.set_value({error, {}, {}}); };
+        if (const auto error = academy_admission(request.intent); error != Error::OK) { fail(error); return; }
+        if (state == State::ACTIVE) {
+            try {
+                if (!academy_receipt || !session.academy()) { fail(Error::INTERNAL_ERROR); return; }
+                const auto name = detail::academy_display_name(request.payload);
+                if (!name || detail::academy_digest(*name) != academy_receipt->editable_digest) {
+                    fail(Error::IDEMPOTENCY_CONFLICT);
+                    return;
+                }
+                request.reply.set_value({Error::OK, generation, academy_receipt});
+            } catch (...) { fail(Error::INTERNAL_ERROR); }
+            return;
+        }
+
+        state = State::OPENING;
+        lock.unlock();
+        Error error = Error::OK;
+        std::unique_ptr<detail::AcademyCampaign> staged;
+        detail::AcademyReceipt receipt;
+        std::string id;
+        try {
+            const auto name = detail::academy_display_name(request.payload);
+            if (!name) {
+                error = Error::INVALID_ARGUMENT;
+            } else {
+                staged = detail::AcademyCampaign::stage(request.intent->campaign, *name);
+                auto view = staged->inspect();
+                if (view.campaign_id != request.intent->campaign || view.display_name != *name)
+                    throw std::logic_error("F10 staged identity mismatch");
+                id = std::move(view.campaign_id);
+                receipt = std::make_shared<const detail::AcademyCreationReceipt>(detail::AcademyCreationReceipt{
+                    request.intent, detail::academy_digest(*name), std::move(view.source_digest),
+                    view.person, view.creation_fact, view.revision, view.tick});
+#ifdef TREK_HOST_ACADEMY_TESTING
+                detail::academy_fail_at(detail::AcademyFault::BEFORE_PUBLICATION);
+#endif
+            }
+        } catch (const detail::UnapprovedAcademySource&) {
+            error = Error::DOMAIN_REJECTED;
+        } catch (...) {
+            error = Error::INTERNAL_ERROR;
+        }
+        lock.lock();
+        if (state != State::OPENING || request.intent != academy_intent) {
+            fail(Error::GENERATION_EXPIRED);
+            return;
+        }
+        if (error == Error::OK) error = session.commit_academy(std::move(staged)).error;
+        if (error != Error::OK) {
+            state = State::CLOSED;
+            fail(error);
+            return;
+        }
+
+        // The Core world and all receipt data were prepared on this thread.
+        // The remaining moves publish one complete activation under the mutex.
+        biography_activation.reset();
+        generation = request.intent->generation;
+        persistent_id = std::move(id);
+        provenance = Provenance::CREATED_LOCALLY;
+        academy_receipt = std::move(receipt);
+        state = State::ACTIVE;
+        request.reply.set_value({Error::OK, generation, academy_receipt});
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>&, detail::NativeSession& session, InspectAcademy& request)
+    {
+        if (const auto error = admission(request.generation); error != Error::OK) {
+            request.reply.set_value({error, {}});
+            return;
+        }
+        if (request.receipt != academy_receipt || !session.academy() ||
+            academy_admission(request.receipt->intent) != Error::OK) {
+            request.reply.set_value({Error::SCOPE_INVALID, {}});
+            return;
+        }
+        const auto& receipt = *request.receipt;
+        try {
+            auto view = session.academy()->inspect();
+            if (view.campaign_id != persistent_id || view.campaign_id != receipt.intent->campaign ||
+                view.source_digest != receipt.source_digest ||
+                detail::academy_digest(view.display_name) != receipt.editable_digest ||
+                view.person != receipt.person || view.creation_fact != receipt.creation_fact ||
+                view.revision != receipt.revision || view.tick != receipt.tick) {
+                request.reply.set_value({Error::IDENTITY_MISMATCH, {}});
+                return;
+            }
+            request.reply.set_value({Error::OK, std::move(view)});
+        } catch (...) {
+            request.reply.set_value({Error::INTERNAL_ERROR, {}});
+        }
+    }
+
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
     {
         lock.unlock();
@@ -260,7 +396,7 @@ struct SessionOwner::Impl {
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
                  PreparePlayer& request)
     {
-        if (binding == Binding::INVALID) {
+        if (academy_receipt || binding == Binding::INVALID) {
             request.reply.set_value({Error::ACCESS_DENIED, {}});
             return;
         }
@@ -280,7 +416,7 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, BindPlayer& request)
     {
-        if (request.selection.campaign_.lock() != campaign) {
+        if (academy_receipt || request.selection.campaign_.lock() != campaign) {
             request.reply.set_value({Error::SCOPE_INVALID, {}});
             return;
         }
@@ -314,6 +450,7 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Save& request)
     {
+        if (academy_receipt) { request.reply.set_value({Error::SAVE_INCOMPATIBLE, {}}); return; }
         if(binding!=Binding::BOUND){request.reply.set_value({Error::PRINCIPAL_UNBOUND,{}});return;}
         state=State::SAVING;
         const auto id=persistent_id;const auto expected_player=player;
@@ -489,6 +626,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
         return ready(Error::INVALID_ARGUMENT);
     }
     impl_->biography_activation.reset();
+    impl_->academy_intent.reset();
     Impl::Open request{std::move(config), std::make_shared<const detail::ActiveCampaign>(), {}};
     auto reply = request.reply.get_future();
     impl_->opening.emplace(std::move(request));
@@ -505,6 +643,7 @@ std::shared_future<Result> SessionOwner::close()
         return impl_->close_result;
     }
     if (impl_->state == State::CLOSED) {
+        impl_->academy_intent.reset();
         return ready(Error::OK).share();
     }
     std::promise<Result> reply;
@@ -576,8 +715,10 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     const bool active=impl_->state==State::ACTIVE;
     if(impl_->state!=State::CLOSED) {
         if(auto error=impl_->admission(generation);error!=Error::OK)return ready(error);
+        if (impl_->academy_receipt) return ready(Error::SAVE_INCOMPATIBLE);
     } else if(generation!=Generation{})return ready(Error::GENERATION_EXPIRED);
     if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
+    impl_->academy_intent.reset();
     Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
     impl_->biography_activation.reset();
     impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
@@ -623,6 +764,54 @@ std::future<BindPlayerResult> PlayerBootstrap::bind(
         SessionOwner::Impl::BindPlayer{generation, selection, expected_revision, {}});
 }
 
+detail::AcademyIntent detail::AcademyCandidateFactory::begin(SessionOwner& owner)
+{
+    std::lock_guard lock(owner.impl_->mutex);
+    auto& impl = *owner.impl_;
+    if (impl.stopping) return {};
+    if (impl.academy_intent && impl.academy_admission(impl.academy_intent) == Error::OK) return impl.academy_intent;
+    if (impl.state != State::CLOSED) return {};
+
+    auto campaign = detail::new_campaign_id();
+    (void)detail::decode_campaign(campaign);
+    if (impl.local_profile.empty()) impl.local_profile = detail::new_campaign_id();
+    const auto next = next_generation();
+    if (!next) return {};
+    auto intent = std::make_shared<const AcademyCreationIntent>(
+        AcademyCreationIntent{Generation(next), std::move(campaign), impl.local_profile});
+    impl.biography_activation.reset();
+    impl.academy_intent = std::move(intent);
+    return impl.academy_intent;
+}
+
+std::future<detail::AcademyCreationResult> detail::AcademyCandidateFactory::create(
+    SessionOwner& owner, const AcademyIntent& intent, std::string_view payload)
+{
+    auto& impl = *owner.impl_;
+    std::lock_guard lock(impl.mutex);
+    if (const auto error = impl.academy_admission(intent); error != Error::OK)
+        return ready<AcademyCreationResult>(error);
+    if (payload.empty() || payload.size() > academy_payload_limit)
+        return ready<AcademyCreationResult>(Error::INVALID_ARGUMENT);
+    if (impl.requests.size() == SessionOwner::Impl::max_requests)
+        return ready<AcademyCreationResult>(Error::CAPACITY_LIMIT);
+    SessionOwner::Impl::CreateAcademy request{intent, std::string(payload), {}};
+    auto future = request.reply.get_future();
+    impl.requests.emplace_back(std::move(request));
+    impl.work.notify_one();
+    return future;
+}
+
+std::future<detail::AcademyCandidateResult> detail::AcademyCandidateFactory::inspect(
+    SessionOwner& owner, const AcademyReceipt& receipt)
+{
+    auto& impl = *owner.impl_;
+    std::lock_guard lock(impl.mutex);
+    if (!receipt || receipt != impl.academy_receipt) return ready<AcademyCandidateResult>(Error::SCOPE_INVALID);
+    return impl.enqueue<AcademyCandidateResult>(
+        SessionOwner::Impl::InspectAcademy{receipt->intent->generation, receipt, {}});
+}
+
 } // namespace trek::host
 
 std::shared_ptr<const trek::host::detail::BiographyProfileSource>
@@ -636,6 +825,7 @@ trek::host::detail::BiographyProfileSource::begin(SessionOwner& owner) {
     auto source = std::shared_ptr<const BiographyProfileSource>(new BiographyProfileSource(
         {"starfleet_academy", "tng_ds9_voyager", 2383, "", detail::new_campaign_id(),
          generation, owner.impl_->local_profile}, activation));
+    owner.impl_->academy_intent.reset();
     owner.impl_->biography_activation = std::move(activation);
     return source;
 }

@@ -88,13 +88,36 @@ add_custom_command(OUTPUT "${f10_rules_header}"
 add_custom_target(host_f10_rules DEPENDS "${f10_rules_header}")
 set(f10_sources src/f10/biography_validation.cpp src/f10/openai_biography.cpp)
 
+# F10 v2 has its own reviewed authoring inputs and runtime validation policy.
+set(f10_fixed_header "${f10_rules_dir}/fixed_candidate_data.h")
+add_custom_command(OUTPUT "${f10_fixed_header}"
+  COMMAND "${CMAKE_COMMAND}" -E make_directory "${f10_rules_dir}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/src/f10/embed_fixed_candidate.py"
+    "${star_trek_root}" "${f10_fixed_header}"
+  DEPENDS src/f10/embed_fixed_candidate.py
+    "${f10_authoring}/careers/academy_path/f10_fixed_candidate_factory_contract_v2.json"
+    "${f10_authoring}/character_creation/s04_fixed_protagonist_contract_v2.json"
+    "${f10_authoring}/character_creation/s04_protagonist_biography_v1.json"
+  VERBATIM)
+add_custom_target(host_f10_fixed_data DEPENDS "${f10_fixed_header}")
+
+add_library(host_academy_core STATIC src/f10/academy_campaign.cpp)
+add_dependencies(host_academy_core host_f10_fixed_data)
+target_include_directories(host_academy_core PRIVATE include "${f10_rules_dir}")
+target_link_libraries(host_academy_core PUBLIC CoreRPG::CoreRPG PRIVATE jsoncons)
+set_target_properties(host_academy_core PROPERTIES
+  POSITION_INDEPENDENT_CODE ON CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN YES)
+if(MSVC)
+  target_compile_options(host_academy_core PRIVATE /utf-8)
+endif()
+
 add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp
   ${f10_sources})
 add_dependencies(TrekHost host_f10_rules)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
 target_compile_definitions(TrekHost PRIVATE TREK_HOST_BUILD TREK_HOST_CORE_SHA="${host_core_sha}")
 target_include_directories(TrekHost PUBLIC include PRIVATE "${f10_rules_dir}")
-target_link_libraries(TrekHost PRIVATE TrekF04Bridge Threads::Threads CoreRPG::CoreRPG jsoncons)
+target_link_libraries(TrekHost PRIVATE TrekF04Bridge Threads::Threads host_academy_core jsoncons)
 # The validator reuses Core's pure SHA-256 implementation. Keep archive
 # symbols from the static Core library outside the shared HOST interface.
 target_link_options(TrekHost PRIVATE "$<$<PLATFORM_ID:Linux>:LINKER:--exclude-libs,libCoreRPG.a>")
@@ -128,7 +151,7 @@ if(TREK_HOST_TESTS)
   target_compile_features(host_fault_tests PRIVATE cxx_std_20)
   target_include_directories(host_fault_tests PRIVATE src include ../f04/include ../f05/include)
   target_compile_definitions(host_fault_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
-  target_link_libraries(host_fault_tests PRIVATE Threads::Threads)
+  target_link_libraries(host_fault_tests PRIVATE Threads::Threads host_academy_core)
   foreach(case IN ITEMS initialization hc06_incompatible_states pending failed_destroy failed_active_probe shutdown_retry)
     add_test(NAME host.fault.${case} COMMAND host_fault_tests ${case})
     set_tests_properties(host.fault.${case} PROPERTIES TIMEOUT 30 LABELS "h02;fault-injection")
@@ -145,7 +168,7 @@ if(TREK_HOST_TESTS)
   target_compile_features(host_persistence_tests PRIVATE cxx_std_20)
   target_include_directories(host_persistence_tests PRIVATE src include)
   target_compile_definitions(host_persistence_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
-  target_link_libraries(host_persistence_tests PRIVATE TrekF04Bridge Threads::Threads)
+  target_link_libraries(host_persistence_tests PRIVATE TrekF04Bridge Threads::Threads host_academy_core)
   set_target_properties(host_persistence_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   foreach(case IN ITEMS roundtrip reader history_rng paths failures io queue double late renewal_failure busy save_close load_close manifest incompatible
       identity import truncated altered incomplete absent_binding wrong_binding foreign_core)
@@ -182,7 +205,7 @@ if(TREK_HOST_TESTS)
   target_compile_features(host_m0_tests PRIVATE cxx_std_20)
   target_include_directories(host_m0_tests PRIVATE src tests include)
   target_compile_definitions(host_m0_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
-  target_link_libraries(host_m0_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG Threads::Threads)
+  target_link_libraries(host_m0_tests PRIVATE TrekF04Bridge host_academy_core Threads::Threads)
   set_target_properties(host_m0_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   foreach(case IN ITEMS bound readonly submit execute replay conflict stale unbound resolving scope authority recipient unsupported
       expired saving loading save_order close_order unknown observer institutional recover pending cancel concurrent)
@@ -274,11 +297,43 @@ if(TREK_HOST_TESTS)
   target_compile_features(host_initial_biography_tests PRIVATE cxx_std_20)
   target_compile_definitions(host_initial_biography_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
   target_include_directories(host_initial_biography_tests PRIVATE src include "${f10_rules_dir}")
-  target_link_libraries(host_initial_biography_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG jsoncons Threads::Threads ${host_ai_platform_libraries})
+  target_link_libraries(host_initial_biography_tests PRIVATE TrekF04Bridge host_academy_core jsoncons Threads::Threads ${host_ai_platform_libraries})
   set_target_properties(host_initial_biography_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   if(MSVC)
     target_compile_options(host_initial_biography_tests PRIVATE /utf-8)
   endif()
   add_test(NAME host.biography.initial_player COMMAND host_initial_biography_tests)
   set_tests_properties(host.biography.initial_player PROPERTIES TIMEOUT 45 LABELS "f10;ia03a;h03;native")
+endif()
+
+if(TREK_HOST_TESTS)
+  # Acceptance runs through the product DLL. A separate composition of the same
+  # native sources injects source and staging failures without product hooks.
+  add_executable(host_academy_candidate_tests tests/academy_candidate_tests.cpp)
+  target_include_directories(host_academy_candidate_tests PRIVATE src)
+  target_link_libraries(host_academy_candidate_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
+
+  add_executable(host_academy_candidate_faults tests/academy_candidate_tests.cpp
+    ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  add_dependencies(host_academy_candidate_faults host_f10_fixed_data)
+  target_compile_features(host_academy_candidate_faults PRIVATE cxx_std_20)
+  target_compile_definitions(host_academy_candidate_faults PRIVATE TREK_HOST_STATIC_TEST
+    TREK_HOST_ACADEMY_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_include_directories(host_academy_candidate_faults PRIVATE src include "${f10_rules_dir}")
+  target_link_libraries(host_academy_candidate_faults PRIVATE TrekF04Bridge CoreRPG::CoreRPG jsoncons Threads::Threads)
+
+  set_target_properties(host_academy_candidate_tests host_academy_candidate_faults PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  if(MSVC)
+    target_compile_options(host_academy_candidate_tests PRIVATE /utf-8)
+    target_compile_options(host_academy_candidate_faults PRIVATE /utf-8)
+  endif()
+  foreach(case IN ITEMS b02_01 b02_02 b02_03 b02_04 b02_05 b02_06 b02_08 b02_09 b02_10 b02_11 b02_13 b02_15)
+    add_test(NAME host.academy.${case} COMMAND host_academy_candidate_tests ${case})
+    set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "f10;ia03b02;native")
+  endforeach()
+  foreach(case IN ITEMS b02_07 b02_11_legacy b02_12)
+    add_test(NAME host.academy.${case} COMMAND host_academy_candidate_faults ${case})
+    set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "f10;ia03b02;fault-injection")
+  endforeach()
 endif()
