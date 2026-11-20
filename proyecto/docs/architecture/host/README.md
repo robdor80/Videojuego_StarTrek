@@ -4,7 +4,7 @@ Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-20**, sobre `main` SH
 
 HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **No existe todavía un HOST de producto certificado.** H00–H05 están fusionadas con sus alcances; H06 ya integró y verificó el diagnóstico Unreal 5.8.2, pero **M1 sigue parcial**: falta la creación y vinculación productiva del personaje/Academia y las órdenes de jugador. IA-01, IA-02 e IA-03A están integradas; no equivalen a una integración total con el juego.
 
-> **Nota de vigencia:** el [Plan Maestro v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) y muchas actas describen el estado histórico **en su fecha**. No deben utilizarse como estado actual de ramas, PR o módulos. Consultar también la [auditoría H00–H13 del 20/11](../../auditorias/AUDITORIA_HOST_H00_H13_2026-11-20.md) en su rama/PR Draft #183 mientras no se fusione.
+> **Nota de vigencia:** el [Plan Maestro v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) y muchas actas describen el estado histórico **en su fecha**. No deben utilizarse como estado actual de ramas, PR o módulos. Consultar también la [auditoría H00–H13 del 20/11, PR Draft #183](https://github.com/robdor80/Videojuego_StarTrek/pull/183) en su rama/PR Draft #183 mientras no se fusione.
 
 ## Documentos de gobierno
 
