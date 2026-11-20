@@ -1,6 +1,7 @@
 #pragma once
 
 #include "f04_bridge.h"
+#include "f10/academy_campaign.h"
 #include "trek/host/session_owner.h"
 
 #include <optional>
@@ -25,6 +26,8 @@ public:
 
     Outcome open(const PopulationConfig& config) noexcept;
     Outcome close() noexcept;
+    Outcome commit_academy(std::unique_ptr<AcademyCampaign>) noexcept;
+    const AcademyCampaign* academy() const noexcept { return academy_.get(); }
     Outcome persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept;
     Outcome snapshot(const std::filesystem::path&,const CampaignId&) noexcept;
     Outcome stage(const PreparedSlot&,F04Ref& player) noexcept;
@@ -39,6 +42,7 @@ public:
 #endif
 
 private:
+    std::unique_ptr<AcademyCampaign> academy_;
     F04Session* session_ = nullptr;
     bool reserved_ = false;
     F04Session* staged_ = nullptr;

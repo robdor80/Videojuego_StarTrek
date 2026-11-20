@@ -30,17 +30,17 @@ else:
     symbols = subprocess.check_output(["nm", "-D", "-C", "--defined-only", str(host)], text=True)
     dependencies = subprocess.check_output(["ldd", str(host)], text=True)
     assert "not found" not in dependencies
-for name in ("query_view", "submit_order", "query_order", "cancel_order", "restore"):
+for name in ("query_view", "submit_order", "query_order", "cancel_order", "restore", "AcademyCandidateFactory"):
     assert name in symbols, name
 for name in ("GatewayTestAccess", "gateway_test", "storage_test_hook", "f11_commit_promotion", "test_visit",
              "BiographyValidator", "BiographyReceipt", "SemanticEvaluator", "BiographyAuthority",
              "RegisteredBiographyAuthority", "BiographyClaimEvidence",
-             "HistoryPersistence", "WorldState"):
+             "HistoryPersistence", "WorldState", "AcademyCampaign", "academy_fail_at", "set_academy_fault"):
     assert name not in symbols, name
 assert "TrekF04Bridge" in dependencies
 assert not any("TrialHost" in p.name or p.name.startswith((
     "host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests",
-    "host_academy_feasibility_tests", "host_biography_tests", "host_ai_tests", "host_ai_smoke",
+    "host_academy_feasibility_tests", "host_academy_candidate_", "host_biography_tests", "host_ai_tests", "host_ai_smoke",
 )) for p in build.rglob("*") if p.is_file())
 print(symbols)
 print(dependencies)

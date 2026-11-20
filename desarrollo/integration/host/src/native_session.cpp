@@ -44,7 +44,7 @@ Outcome normalize_identity(std::uint32_t code) noexcept
 
 NativeSession::~NativeSession() noexcept
 {
-    if (session_ || reserved_ || staged_) {
+    if (session_ || reserved_ || staged_ || academy_) {
         std::terminate();
     }
 }
@@ -71,8 +71,19 @@ Outcome NativeSession::open(const PopulationConfig& config) noexcept
     return probe();
 }
 
+Outcome NativeSession::commit_academy(std::unique_ptr<AcademyCampaign> staged) noexcept
+{
+    if (!staged || reserved_ || session_ || staged_ || academy_) return {Error::INTERNAL_ERROR};
+    bool available = false;
+    if (!campaign_reserved.compare_exchange_strong(available, true)) return {Error::BUSY_STATE};
+    reserved_ = true;
+    academy_ = std::move(staged);
+    return {};
+}
+
 Outcome NativeSession::probe() const noexcept
 {
+    if (academy_) return {};
     return normalize(bridge::probe(session_));
 }
 
@@ -111,6 +122,7 @@ Outcome NativeSession::snapshot(const std::filesystem::path& path,const Campaign
 }
 Outcome NativeSession::stage(const PreparedSlot& slot,F04Ref& player) noexcept
 {
+    if (academy_) return {Error::SAVE_INCOMPATIBLE};
     if(staged_)return {Error::BUSY_STATE};
     const auto* sha=bridge::core_sha();if(!sha || std::string_view(sha)!=TREK_HOST_CORE_SHA)return {Error::INTERNAL_ERROR};
     const auto result=normalize(bridge::restore(slot,&staged_,player));
@@ -144,6 +156,7 @@ Outcome NativeSession::close() noexcept
         session_ = nullptr;
     }
     history_pin_.reset();
+    academy_.reset();
     if (reserved_) {
         reserved_ = false;
         campaign_reserved.store(false);
