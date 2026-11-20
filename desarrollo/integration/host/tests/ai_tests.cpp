@@ -27,13 +27,16 @@ struct Keys final : CredentialStore {
 struct Fake final : Transport {
     std::atomic<unsigned> calls{};
     std::atomic<bool> started{};
-    bool wait{};
+    std::atomic<bool> wait{};
     std::string last_body;
+    std::vector<std::string> observed_inputs;
     HttpResponse answer{Error::OK, 200, R"({"status":"completed","output":[{"type":"message","role":"assistant","status":"completed","content":[{"type":"output_text","text":"hello"}]}]})", "application/json"};
     HttpResponse post(std::string_view body, std::string_view key, std::chrono::steady_clock::time_point deadline,
                       std::stop_token stop, std::size_t limit) override {
         CHECK(key == secret); CHECK(limit > 0);
-        last_body = body; ++calls; started = true;
+        last_body = body;
+        observed_inputs.push_back(Json::parse(body).at("input")[0].at("content").as<std::string>());
+        ++calls; started = true;
         while (wait && !stop.stop_requested() && std::chrono::steady_clock::now() < deadline) std::this_thread::sleep_for(1ms);
         if (stop.stop_requested()) return {Error::CANCELLED};
         if (std::chrono::steady_clock::now() >= deadline) return {Error::TIMEOUT};
@@ -58,7 +61,10 @@ void configuration() {
     Config c;
     CHECK(parse_config(R"({"routes":{"DIALOGUE":"reasoning"},"timeout_ms":1000,"max_calls":2,"fast_model":"gpt-6-luna","reasoning_effort":"medium"})", c) == Error::OK);
     CHECK(c.routes.at("DIALOGUE") == "reasoning" && c.timeout == 1000ms && c.max_calls == 2);
-    for (auto bad : {"not json", "[]", R"({"timeout_ms":-1})", R"({"timeout_ms":0})", R"({"max_calls":1.5})", R"({"max_calls":0})", R"({"max_pending":65})", R"({"provider":"gemini"})", R"({"routes":{"UNKNOWN":"fast"}})", R"({"routes":{"DIALOGUE":"mistral"}})", R"({"reasoning_effort":"unknown"})", R"({"fast_model":"bad\nmodel"})"}) {
+    Config uncapped;
+    CHECK(parse_config(R"({"max_calls":0,"call_window_ms":100})", uncapped) == Error::OK);
+    CHECK(uncapped.max_calls == 0 && uncapped.call_window == 100ms);
+    for (auto bad : {"not json", "[]", R"({"timeout_ms":-1})", R"({"timeout_ms":0})", R"({"max_calls":1.5})", R"({"call_window_ms":0})", R"({"call_window_ms":86400001})", R"({"max_pending":65})", R"({"provider":"gemini"})", R"({"routes":{"UNKNOWN":"fast"}})", R"({"routes":{"DIALOGUE":"mistral"}})", R"({"reasoning_effort":"unknown"})", R"({"fast_model":"bad\nmodel"})"}) {
         auto before = c.max_calls; CHECK(parse_config(bad, c) == Error::CONFIGURATION); CHECK(c.max_calls == before);
     }
     auto t = std::make_shared<Fake>();
@@ -275,6 +281,45 @@ void concurrent_requests_test() {
     for (auto& sender : senders) sender.join();
     CHECK(success == 4 && capacity == 8 && t->calls == 4);
 }
+void rolling_capacity_and_priority() {
+    auto t = std::make_shared<Fake>();
+    Config rate; rate.max_calls = 1; rate.call_window = 120ms;
+    Service limited(rate, t, std::make_shared<Keys>());
+    CHECK(limited.submit(request()).result.get().error == Error::OK);
+    CHECK(limited.submit(request()).result.get().error == Error::CAPACITY);
+    std::this_thread::sleep_for(170ms);
+    CHECK(limited.submit(request()).result.get().error == Error::OK);
+    CHECK(t->calls == 2);
+
+    // More than 200 requests can complete in the same service lifetime by default.
+    auto no_limit = std::make_shared<Fake>();
+    Service unlimited({}, no_limit, std::make_shared<Keys>());
+    for (unsigned i = 0; i < 205; ++i)
+        CHECK(unlimited.submit(request()).result.get().error == Error::OK);
+    CHECK(no_limit->calls == 205);
+
+    auto ordered = std::make_shared<Fake>();
+    ordered->wait = true;
+    Config priority; priority.max_pending = 16; priority.timeout = 3000ms;
+    Service service(priority, ordered, std::make_shared<Keys>());
+    auto make = [](std::string route, std::string name) {
+        auto r = request(); r.route = std::move(route); r.input = std::move(name); return r;
+    };
+    auto first = service.submit(make("FAST_LANGUAGE", "first"));
+    wait_started(*ordered);
+    std::vector<Operation> queued;
+    queued.push_back(service.submit(make("NARRATIVE_SUMMARY", "low1")));
+    queued.push_back(service.submit(make("DIALOGUE", "d1")));
+    queued.push_back(service.submit(make("DIALOGUE", "d2")));
+    queued.push_back(service.submit(make("DIALOGUE", "d3")));
+    queued.push_back(service.submit(make("DIALOGUE", "d4")));
+    queued.push_back(service.submit(make("COMPUTER_ANALYSIS", "low2")));
+    ordered->wait = false;
+    CHECK(first.result.get().error == Error::OK);
+    for (auto& job : queued) CHECK(job.result.get().error == Error::OK);
+    CHECK(ordered->observed_inputs == (std::vector<std::string>{
+        "first", "d1", "d2", "d3", "low1", "d4", "low2"}));
+}
 void credentials(const char* executable) {
     Keys keys;
     CHECK(credential_status(keys).shared);
@@ -324,7 +369,7 @@ int main(int argc, char** argv) {
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION && loaded.max_calls == 7);
         std::filesystem::remove(scratch);
         CHECK(load_config(scratch, loaded) == Error::CONFIGURATION);
-        configuration(); responses(); structured_schemas(); errors_and_limits(); cancellation(); concurrent_requests_test(); credentials(argv[0]);
+        configuration(); responses(); structured_schemas(); errors_and_limits(); cancellation(); concurrent_requests_test(); rolling_capacity_and_priority(); credentials(argv[0]);
         auto keys = std::make_shared<Keys>();
         CHECK(import_environment_key(*keys) == Error::MISSING_KEY);
 #ifdef _WIN32
