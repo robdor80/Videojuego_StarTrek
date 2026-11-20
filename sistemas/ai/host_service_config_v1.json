@@ -15,5 +15,6 @@
   "max_output_bytes": 32768,
   "max_output_tokens": 1024,
   "max_pending": 8,
-  "max_calls": 200
+  "max_calls": 0,
+  "call_window_ms": 3600000
 }
