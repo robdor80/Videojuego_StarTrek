@@ -27,6 +27,8 @@ std::uint32_t snapshot(F04Session* session,const std::filesystem::path& path,con
 std::uint32_t restore(const PreparedSlot& slot,F04Session** out,F04Ref& player) noexcept
 {
     *out=nullptr;player={};F04Session* candidate=nullptr;
+    const auto* expected = std::get_if<PersistentIdentity>(&slot.identity);
+    if (!expected) return F04_SAVE;
     try {
         auto code=f04_create(1,"miranda",&candidate);
         if(code!=F04_OK)return code;
@@ -35,7 +37,7 @@ std::uint32_t restore(const PreparedSlot& slot,F04Session** out,F04Ref& player) 
         if(code==F04_OK)code=f04_history_identity(candidate,id.data(),id.size());
         if(code==F04_OK && id!=decode_campaign(slot.campaign))code=F04_DENIED;
         if(code==F04_OK)code=persistent_identity(candidate,actual,resolved);
-        if(code==F04_OK && actual!=slot.identity)code=F04_DENIED;
+        if(code==F04_OK && actual!=*expected)code=F04_DENIED;
         if(code==F04_OK){
 #ifdef TREK_HOST_PERSISTENCE_TESTING
             persistence_test_observe(candidate,false);

@@ -82,10 +82,12 @@ struct PlayerResult {
 };
 
 enum class Provenance { CREATED_LOCALLY, KNOWN_LOCAL, IMPORTED_UNVERIFIED, REJECTED };
+enum class CampaignKind { AUTO, NAVAL, ACADEMY };
 struct SlotAddress {
     std::string campaign; // 32 lowercase hex digits, obtained from campaign_id().
     std::string slot;     // 1..32 lowercase ASCII letters/digits/underscore.
     std::uint64_t version = 0; // 0 selects newest confirmed; explicit previous version allowed.
+    CampaignKind kind = CampaignKind::AUTO; // Native callers may require a particular reader.
 };
 struct SlotInspection {
     SlotAddress address;

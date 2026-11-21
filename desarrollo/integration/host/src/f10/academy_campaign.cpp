@@ -1,5 +1,6 @@
 #include "academy_campaign.h"
 #include "fixed_candidate_data.h"
+#include "../slot_store.h"
 
 #include <jsoncons/json.hpp>
 #include <jsoncons/json_cursor.hpp>
@@ -205,6 +206,37 @@ ContentCatalog make_catalog(const CanonicalProfile& profile)
     return *result.catalog();
 }
 
+std::string catalog_digest(const ContentCatalog& catalog)
+{
+    auto inventory = std::string(academy_catalog_version) + "\nCore schema 0.1.0\n";
+    for (const auto& definition : catalog.definitions()) {
+        inventory.append(definition.id().value()).append(" ").append(definition.kind().value()).append("\n");
+    }
+    return academy_digest_hex(inventory);
+}
+
+bool canonical_background(std::vector<std::string> actual, const CanonicalProfile& profile)
+{
+    auto expected = profile.facts;
+    expected.emplace_back("species/" + profile.species);
+    expected.emplace_back("mother/species/" + profile.mother_species);
+    expected.emplace_back("father/species/" + profile.father_species);
+    expected.emplace_back("paternal/ancestry/" + profile.ancestor);
+    std::ranges::sort(actual);
+    std::ranges::sort(expected);
+    return actual == expected;
+}
+
+Error history_error(HistoryStatus result, Error otherwise)
+{
+    switch (result) {
+    case HistoryStatus::success: return Error::OK;
+    case HistoryStatus::unsupported_version: return Error::SAVE_INCOMPATIBLE;
+    case HistoryStatus::limit_exceeded: return Error::CAPACITY_LIMIT;
+    default: return otherwise;
+    }
+}
+
 void link(WorldState& world, EntityId from, RelationKind kind, EntityId to)
 {
     require(world.add_relation({from, kind, to}) == RelationChange::applied);
@@ -296,8 +328,19 @@ HistoryHash academy_digest(std::string_view bytes)
     return HistoryPersistence::hash({reinterpret_cast<const std::uint8_t*>(bytes.data()), bytes.size()});
 }
 
+std::string academy_digest_hex(std::string_view bytes)
+{
+    return hex(academy_digest(bytes));
+}
+
+AcademySnapshotIdentity academy_identity(const AcademyCandidateView& view, std::string profile)
+{
+    return {{view.person, view.creation_fact, std::move(profile), view.source_digest, view.catalog_digest,
+             academy_digest_hex(view.display_name)}, view.revision, view.clock};
+}
+
 AcademyCampaign::AcademyCampaign(ContentCatalog catalog, std::uint64_t seed)
-    : catalog_(std::move(catalog)), random_(seed) {}
+    : catalog_(std::move(catalog)), catalog_digest_(catalog_digest(catalog_)), random_(seed) {}
 
 EntityId AcademyCampaign::create_entity(std::string_view definition)
 {
@@ -352,6 +395,83 @@ std::unique_ptr<AcademyCampaign> AcademyCampaign::stage(std::string_view campaig
     return staged;
 }
 
+Error AcademyCampaign::snapshot(const std::filesystem::path& destination, const HistoryCampaignId& campaign) const
+{
+    HistoryArchive archive;
+    if (!history_pin_) {
+        return history_error(HistoryPersistence::migrate(destination, campaign, world_, random_, timeline_, archive),
+                             Error::PERSISTENCE_FAILED);
+    }
+
+    // Core has no archive export operation. Branch the immutable recovered tree
+    // and extend it using the pinned API, preserving its segments and frontier.
+    copy_history(history_pin_->path(), destination);
+    WorldState checkpoint;
+    RandomStreams rng{0};
+    Timeline clock;
+    const auto recovered = HistoryPersistence::recover(destination, archive, checkpoint, rng, clock, &catalog_);
+    if (recovered != HistoryStatus::success) return history_error(recovered, Error::SAVE_CORRUPT);
+    if (archive.campaign_id() != campaign) return Error::IDENTITY_MISMATCH;
+    return history_error(HistoryPersistence::publish(archive, world_, random_, timeline_), Error::PERSISTENCE_FAILED);
+}
+
+std::unique_ptr<AcademyCampaign> AcademyCampaign::restore(const PreparedSlot& slot)
+{
+    const auto* expected = std::get_if<AcademySnapshotIdentity>(&slot.identity);
+    if (!expected) throw StorageFailure{Error::SAVE_INCOMPATIBLE};
+    const auto canonical = approved_profile();
+    auto restored = std::unique_ptr<AcademyCampaign>(new AcademyCampaign(make_catalog(canonical), 0));
+    if (expected->anchor.catalog_digest != restored->catalog_digest_ || expected->anchor.source_digest != canonical.digest)
+        throw StorageFailure{Error::SAVE_INCOMPATIBLE};
+
+    auto& archive = restored->history_;
+    const auto status = HistoryPersistence::recover(slot.history->path(), archive, restored->world_,
+                                                    restored->random_, restored->timeline_, &restored->catalog_);
+    if (status != HistoryStatus::success) throw StorageFailure{history_error(status, Error::SAVE_CORRUPT)};
+    if (archive.campaign_id() != decode_campaign(slot.campaign)) throw StorageFailure{Error::IDENTITY_MISMATCH};
+
+    // Archived role entities would hide a second candidate or change the meaning
+    // of the live anchors. Generic Core facts may remain in older segments.
+    for (HistoryPage page; archive.archived_count() != 0;) {
+        page = HistoryPersistence::query(archive, page.next, HistoryLimits{}.max_page);
+        if (page.status != HistoryStatus::success) throw StorageFailure{history_error(page.status, Error::SAVE_CORRUPT)};
+        for (const auto& fact : page.facts) {
+            if (fact.definition.empty()) continue;
+            const auto* definition = restored->catalog_.find_by_value(fact.definition);
+            if (!definition || definition->kind().value() == "person" || definition->kind().value() == "campus" ||
+                definition->kind().value() == "event") throw StorageFailure{Error::IDENTITY_MISMATCH};
+        }
+        if (!page.more) break;
+    }
+
+    try {
+        for (auto entity : HistoryPersistence::bound_entities(restored->world_)) {
+            const auto* definition = restored->world_.definition_of(entity);
+            require(definition != nullptr);
+            const auto name = definition->value();
+            if (name == id("campus")) {
+                require(!restored->campus_.is_valid());
+                restored->campus_ = entity;
+            } else if (name == id("person")) {
+                require(!restored->person_.is_valid());
+                restored->person_ = entity;
+            } else if (name == id("candidate_created")) {
+                require(!restored->creation_fact_.is_valid());
+                restored->creation_fact_ = entity;
+            }
+        }
+        const auto view = restored->inspect();
+        if (view.campaign_id != slot.campaign || view.source_digest != canonical.digest ||
+            !canonical_background(view.background, canonical) ||
+            academy_identity(view, expected->anchor.profile) != *expected)
+            throw StorageFailure{Error::IDENTITY_MISMATCH};
+    } catch (const std::logic_error&) {
+        throw StorageFailure{Error::IDENTITY_MISMATCH};
+    }
+    restored->history_pin_ = slot.history;
+    return restored;
+}
+
 AcademyCandidateView AcademyCampaign::inspect() const
 {
     AcademyCandidateView result;
@@ -371,12 +491,15 @@ AcademyCandidateView AcademyCampaign::inspect() const
     result.person = person_.value();
     result.creation_fact = creation_fact_.value();
     result.revision = world_.revision();
+    result.clock = timeline_.now();
+    result.catalog_digest = catalog_digest_;
     result.population_count = world_.populations().size();
-    for (auto entity = world_.next_entity_id({}); entity; entity = world_.next_entity_id(*entity)) {
-        const auto definition = path(*entity);
+    for (auto entity : HistoryPersistence::bound_entities(world_)) {
+        const auto definition = path(entity);
         result.person_count += definition == "person";
         result.creation_fact_count += definition == "candidate_created";
     }
+    bool has_tick = false;
     for (const auto& edge : world_.relations_from(creation_fact_)) {
         if (edge.kind == source) {
             const auto ref = path(edge.target);
@@ -385,7 +508,8 @@ AcademyCandidateView AcademyCampaign::inspect() const
         } else if (edge.kind == background) {
             result.background.emplace_back(path(edge.target));
         } else if ((edge.kind.value() & ~field_mask) == tick_field) {
-            require(edge.target == creation_fact_);
+            require(edge.target == creation_fact_ && !has_tick);
+            has_tick = true;
             result.tick = edge.kind.value() & field_mask;
         }
     }
@@ -397,9 +521,19 @@ AcademyCandidateView AcademyCampaign::inspect() const
     }
     require(result.campaign_id.size() == 32 && valid_name(result.display_name) && result.source_digest.size() == 64 &&
             result.person_count == 1 && result.creation_fact_count == 1 && result.population_count == 0 &&
-            world_.has_relation({creation_fact_, RelationKind{tick_field | result.tick}, creation_fact_}) &&
-            result.tick <= timeline_.now());
+            has_tick && result.tick <= result.clock);
     return result;
+}
+
+AcademyCandidateView AcademyCampaign::inspect_checkpoint() const
+{
+    auto view = inspect();
+    const auto serialized = CampaignPersistence::serialize(CampaignPersistence::capture(world_, random_, timeline_));
+    require(serialized.status == CampaignArchiveStatus::success);
+    view.checkpoint_digest = hex(HistoryPersistence::hash(serialized.bytes));
+    view.history_generation = history_.generation();
+    view.history_segments = history_.segments().size();
+    return view;
 }
 
 } // namespace trek::host::detail

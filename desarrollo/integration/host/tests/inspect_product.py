@@ -44,6 +44,7 @@ assert not any("TrialHost" in p.name or p.name.startswith((
     "host_native_tests", "host_fault_tests", "host_m0_tests", "host_persistence_tests",
     "host_academy_feasibility_tests", "host_academy_candidate_", "host_academy_player_", "host_biography_tests",
     "host_ai_tests", "host_ai_smoke", "host_academy_fault_runtime", "libhost_academy_fault_runtime",
+    "host_academy_persistence_",
 )) for p in build.rglob("*") if p.is_file())
 print(symbols)
 print(dependencies)

@@ -34,6 +34,9 @@ struct AcademyCandidateView {
     std::uint64_t person = 0, creation_fact = 0, revision = 0, tick = 0;
     std::size_t person_count = 0, creation_fact_count = 0, population_count = 0;
     std::vector<std::string> background;
+    std::string catalog_digest, checkpoint_digest;
+    std::uint64_t clock = 0, history_generation = 0;
+    std::size_t history_segments = 0;
 };
 
 struct AcademyCandidateResult {

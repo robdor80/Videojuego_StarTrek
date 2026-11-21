@@ -317,6 +317,10 @@ if(TREK_HOST_TESTS)
   target_include_directories(host_academy_player_tests PRIVATE src)
   target_link_libraries(host_academy_player_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
 
+  add_executable(host_academy_persistence_tests tests/academy_persistence_tests.cpp)
+  target_include_directories(host_academy_persistence_tests PRIVATE src)
+  target_link_libraries(host_academy_persistence_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
+
   add_library(host_academy_fault_runtime STATIC
     ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
   add_dependencies(host_academy_fault_runtime host_f10_fixed_data)
@@ -330,14 +334,19 @@ if(TREK_HOST_TESTS)
   target_link_libraries(host_academy_candidate_faults PRIVATE host_academy_fault_runtime)
   add_executable(host_academy_player_faults tests/academy_player_tests.cpp)
   target_link_libraries(host_academy_player_faults PRIVATE host_academy_fault_runtime)
+  add_executable(host_academy_persistence_faults tests/academy_persistence_tests.cpp)
+  target_link_libraries(host_academy_persistence_faults PRIVATE host_academy_fault_runtime)
 
   set_target_properties(host_academy_candidate_tests host_academy_candidate_faults
-    host_academy_player_tests host_academy_player_faults PROPERTIES
+    host_academy_player_tests host_academy_player_faults
+    host_academy_persistence_tests host_academy_persistence_faults PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   if(MSVC)
     target_compile_options(host_academy_candidate_tests PRIVATE /utf-8)
     target_compile_options(host_academy_candidate_faults PRIVATE /utf-8)
     target_compile_options(host_academy_fault_runtime PRIVATE /utf-8)
+    target_compile_options(host_academy_persistence_tests PRIVATE /utf-8)
+    target_compile_options(host_academy_persistence_faults PRIVATE /utf-8)
   endif()
   foreach(case IN ITEMS b02_01 b02_02 b02_03 b02_04 b02_05 b02_06 b02_08 b02_09 b02_10 b02_11 b02_13 b02_15)
     add_test(NAME host.academy.${case} COMMAND host_academy_candidate_tests ${case})
@@ -354,5 +363,12 @@ if(TREK_HOST_TESTS)
   foreach(case IN ITEMS b03t_03c b03t_bind_retry)
     add_test(NAME host.academy.${case} COMMAND host_academy_player_faults ${case})
     set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "h03;ia03b03-02;fault-injection")
+  endforeach()
+  foreach(case IN ITEMS process negative advanced interruptions)
+    add_test(NAME host.academy.persistence_${case}
+      COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/academy_persistence_process.py"
+        ${case} "${CMAKE_CURRENT_BINARY_DIR}/a04" "$<TARGET_FILE:host_academy_persistence_tests>"
+        "$<TARGET_FILE:host_academy_persistence_faults>")
+    set_tests_properties(host.academy.persistence_${case} PROPERTIES TIMEOUT 150 LABELS "h04;ia03b03-03;process")
   endforeach()
 endif()
