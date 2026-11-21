@@ -13,10 +13,14 @@ public class StarTrekRPG : ModuleRules
 
         string ThirdParty = Path.Combine(ProjectDirectory(), "Binaries", "Host");
         string Include = Path.Combine(ThirdParty, "include");
-        if (!File.Exists(Path.Combine(Include, "trek", "host", "host_abi.h")))
-            throw new BuildException("Missing HOST header: " + Path.Combine(Include, "trek", "host", "host_abi.h") +
-                ". Run Build/Prepare-Host.ps1 from the repository project with -CoreSource <clean pinned CoreRPG> " +
-                "-BuildRoot <native build output> -ProjectDir \"" + ProjectDirectory() + "\" before UBT. See README.md.");
+        foreach (string Header in new[] { "host_abi.h", "academy_abi.h" })
+        {
+            string Source = Path.Combine(Include, "trek", "host", Header);
+            if (!File.Exists(Source))
+                throw new BuildException("Missing HOST header: " + Source +
+                    ". Run Build/Prepare-Host.ps1 from the repository project with -CoreSource <clean pinned CoreRPG> " +
+                    "-BuildRoot <native build output> -ProjectDir \"" + ProjectDirectory() + "\" before UBT. See README.md.");
+        }
 
         PrivateIncludePaths.Add(Include);
         foreach (string Dll in new[] { "TrekF04Bridge.dll", "TrekHost.dll" })

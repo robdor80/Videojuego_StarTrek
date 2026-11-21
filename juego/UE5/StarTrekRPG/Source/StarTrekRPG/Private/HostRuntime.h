@@ -3,10 +3,15 @@
 #include "CoreMinimal.h"
 #include "Async/Future.h"
 #include "Modules/ModuleManager.h"
-#include "trek/host/host_abi.h"
+#include "HostAcademyExports.h"
 
 struct FHostApi
 {
+    ~FHostApi();
+
+    void* Bridge = nullptr;
+    void* Host = nullptr;
+    FHostAcademyApi Academy;
     decltype(&trek_host_create) Create = nullptr;
     decltype(&trek_host_destroy) Destroy = nullptr;
     decltype(&trek_host_status) Status = nullptr;
@@ -19,18 +24,16 @@ class FStarTrekRPGModule final : public FDefaultGameModuleImpl
 {
 public:
     static FStarTrekRPGModule& Get();
-    const FHostApi* GetHostApi() const { return Host ? &Api : nullptr; }
-    void RetireClient(TrekHostClient* Client);
+    TSharedPtr<const FHostApi, ESPMode::ThreadSafe> GetHostApi() const { return Api; }
+    static void RetireClient(TSharedPtr<const FHostApi, ESPMode::ThreadSafe> Api,
+                             TrekHostClient* Client, TFuture<TrekHostClient*> Creating);
 
     virtual bool SupportsDynamicReloading() override { return false; }
     virtual void StartupModule() override;
     virtual void ShutdownModule() override;
 
 private:
-    FHostApi Api;
-    void* Bridge = nullptr;
-    void* Host = nullptr;
-    TArray<TFuture<void>> Retiring;
+    TSharedPtr<const FHostApi, ESPMode::ThreadSafe> Api;
 };
 
 const TCHAR* HostCodeName(TrekHostCode Code);
