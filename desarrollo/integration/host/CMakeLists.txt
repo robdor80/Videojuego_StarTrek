@@ -331,6 +331,11 @@ if(TREK_HOST_TESTS)
       "$<TARGET_FILE:host_academy_abi_tests>" "$<TARGET_FILE:host_academy_persistence_tests>"
       "${CMAKE_CURRENT_BINARY_DIR}/academy-abi")
   set_tests_properties(host.academy.abi_process PROPERTIES TIMEOUT 180 LABELS "h06;ia03c02;process;c-abi")
+  add_test(NAME host.academy.abi_pagination
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/academy_abi_process.py" pagination
+      "$<TARGET_FILE:host_academy_abi_tests>" "$<TARGET_FILE:host_academy_persistence_tests>"
+      "${CMAKE_CURRENT_BINARY_DIR}/academy-abi")
+  set_tests_properties(host.academy.abi_pagination PROPERTIES TIMEOUT 300 LABELS "h06;ia03c02;process;c-abi")
 
   add_library(host_academy_fault_runtime STATIC
     ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)

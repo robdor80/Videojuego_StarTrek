@@ -35,6 +35,17 @@ struct PreparedSlot {
     SlotIdentity identity;
     std::string campaign;
 };
+// Private keyset position. Empty slot marks a completed campaign; version 0
+// marks a completed slot. An entirely empty position starts a fresh walk.
+struct SlotPosition {
+    std::string campaign, slot;
+    std::uint64_t version = 0;
+    bool operator==(const SlotPosition&) const = default;
+};
+struct SlotPage {
+    InspectionResult inspection;
+    std::optional<SlotPosition> next;
+};
 // Branch an existing archive into a new, private snapshot destination.
 void copy_history(const std::filesystem::path& source, const std::filesystem::path& destination);
 class SlotStore final {
@@ -47,6 +58,8 @@ public:
     PreparedSlot prepare(SlotAddress address) const;
     InspectionResult inspect(const std::function<Error(const PreparedSlot&)>& verify = {},
                              std::size_t limit = 10000) const;
+    SlotPage inspect_page(const SlotPosition& after,
+                         const std::function<Error(const PreparedSlot&)>& verify) const;
 private:
     StorageConfig config_;
 };

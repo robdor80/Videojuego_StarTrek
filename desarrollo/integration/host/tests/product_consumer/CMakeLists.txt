@@ -29,6 +29,12 @@ add_test(NAME product.academy.c_process
   COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/../academy_abi_process.py"
     "$<TARGET_FILE:academy_c_product_client>" "$<TARGET_FILE:academy_product_client>"
     "${CMAKE_CURRENT_BINARY_DIR}/c-proof")
+add_test(NAME product.academy.c_pagination
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/../academy_abi_process.py" pagination
+    "$<TARGET_FILE:academy_c_product_client>" "$<TARGET_FILE:academy_product_client>"
+    "${CMAKE_CURRENT_BINARY_DIR}/c-proof")
+set_tests_properties(product.academy.c_pagination PROPERTIES TIMEOUT 300
+  ENVIRONMENT_MODIFICATION "PATH=path_list_prepend:$<TARGET_FILE_DIR:TrekHost>")
 set_tests_properties(product.abi.v1 product.academy.c_lifecycle product.academy.c_process PROPERTIES TIMEOUT 180
   ENVIRONMENT_MODIFICATION "PATH=path_list_prepend:$<TARGET_FILE_DIR:TrekHost>")
 if(MSVC)

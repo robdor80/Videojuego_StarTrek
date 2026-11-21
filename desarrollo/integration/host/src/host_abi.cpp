@@ -355,7 +355,9 @@ try {
         input["display_name"] = copy(request->display_name);
         payload = input.to_string();
         if (!detail::academy_display_name(payload)) return TREK_HOST_INVALID_ARGUMENT;
-    } else if (request->creation_key || request->display_name.data || request->display_name.size ||
+    } else if ((request->operation == TREK_HOST_ACADEMY_QUERY && request->creation_key) ||
+               (request->operation == TREK_HOST_ACADEMY_SLOTS && request->slot_cursor > UINT32_MAX) ||
+               request->display_name.data || request->display_name.size ||
                request->display_name.reserved) return TREK_HOST_INVALID_ARGUMENT;
 
     auto* slot = client->find(0);
@@ -375,7 +377,7 @@ try {
         reply = detail::AcademyInterface::query(client->owner, current);
         break;
     case TREK_HOST_ACADEMY_SLOTS:
-        reply = detail::AcademyInterface::slots(client->owner, current);
+        reply = detail::AcademyInterface::slots(client->owner, current, static_cast<uint32_t>(request->slot_cursor));
         break;
     }
     *slot = {std::move(reply), next, 0, request->operation, create ? Generation{} : current, true};
@@ -409,6 +411,8 @@ try {
         const auto snapshot = client->owner.snapshot();
         completion.code = encode(result.error);
         if ((result.error == Error::OK && result.generation != snapshot.generation) ||
+            (result.error == Error::OK && slot->operation == TREK_HOST_ACADEMY_SLOTS &&
+             result.catalog_epoch != guard.catalog_epoch()) ||
             (result.error != Error::OK && slot->generation != Generation{} && slot->generation != snapshot.generation))
             completion.code = TREK_HOST_GENERATION_EXPIRED;
         if (completion.code == TREK_HOST_OK) {
@@ -416,6 +420,7 @@ try {
             if (slot->operation == TREK_HOST_ACADEMY_SLOTS) {
                 if (result.slots.size() > TREK_HOST_ACADEMY_MAX_SLOTS) throw std::logic_error("Slot limit");
                 completion.output.slots.count = static_cast<uint32_t>(result.slots.size());
+                completion.output.slots.next_cursor = result.next_cursor;
                 for (std::size_t i = 0; i < result.slots.size(); ++i) {
                     const auto& source = result.slots[i];
                     auto& row = completion.output.slots.entries[i];

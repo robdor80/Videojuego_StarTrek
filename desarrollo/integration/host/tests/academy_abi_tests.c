@@ -35,7 +35,7 @@ static TrekHostClient* client(const char* root)
 }
 static TrekHostAcademyRequest req(uint32_t op, uint64_t generation)
 {
-    return (TrekHostAcademyRequest){.size=sizeof(TrekHostAcademyRequest), .version=1,
+    return (TrekHostAcademyRequest){.size=sizeof(TrekHostAcademyRequest), .version=TREK_HOST_ACADEMY_VERSION,
                                   .operation=op, .generation=generation};
 }
 static TrekHostAcademyRequest creation(uint64_t key, const char* name)
@@ -123,9 +123,9 @@ static void deny_naval(TrekHostClient* c,uint64_t gen)
 }
 static void lifecycle(void)
 {
-    expect(trek_host_abi_version(),1);expect(trek_host_academy_version(),1);
+    expect(trek_host_abi_version(),1);expect(trek_host_academy_version(),TREK_HOST_ACADEMY_VERSION);
     TrekHostClient* c=client(""); uint64_t ticket=0;
-    TrekHostAcademyRequest bad=creation(1,"Aren");bad.version=2;
+    TrekHostAcademyRequest bad=creation(1,"Aren");bad.version=1;
     expect(submit(c,bad,&ticket),TREK_HOST_ABI_MISMATCH);check(!ticket,"bad version ticket");
     bad=creation(1,"Aren");bad.size--;
     expect(submit(c,bad,&ticket),TREK_HOST_ABI_MISMATCH);
@@ -202,13 +202,68 @@ static void print_candidate(const TrekHostAcademyCompletion* out)
     printf("%s\n%" PRIu64 "\n%" PRIu64 "\n%" PRIu64 "\n%s\n%s\n",v->campaign,out->generation,
            v->person,v->creation_fact,v->display_name,v->source_digest);
 }
+static TrekHostAcademyRequest page_req(uint64_t generation,uint32_t cursor)
+{
+    TrekHostAcademyRequest r=req(TREK_HOST_ACADEMY_SLOTS,generation);r.slot_cursor=cursor;return r;
+}
+static void catalog(TrekHostClient* c)
+{
+    uint32_t cursor=0;
+    unsigned pages=0;
+    do {
+        TrekHostAcademyCompletion out=run(c,page_req(0,cursor),TREK_HOST_OK);
+        check(out.output.slots.count<=64 && ++pages<1000,"page bound/progress");
+        for(unsigned i=0;i<out.output.slots.count;++i) {
+            const TrekHostSlotMetadata* row=&out.output.slots.entries[i];
+            printf("%s %u %u %u %u %u %u %" PRIu64 " %s\n",row->campaign,row->kind,row->format,
+                   row->reason,row->compatible,row->recoverable,row->provenance,row->version,row->slot);
+        }
+        check(!out.output.slots.next_cursor || out.output.slots.next_cursor!=cursor,"cursor did not advance");
+        cursor=out.output.slots.next_cursor;
+    }while(cursor);
+}
+static void cursor_lifecycle(TrekHostClient* c,const char* campaign)
+{
+    TrekHostAcademyCompletion first=run(c,page_req(0,0),TREK_HOST_OK);
+    check(first.output.slots.count==64 && first.output.slots.next_cursor,"missing continuation");
+    const uint32_t cursor=first.output.slots.next_cursor;
+    TrekHostAcademyCompletion replay=run(c,page_req(0,0),TREK_HOST_OK);
+    check(!memcmp(&first.output,&replay.output,sizeof(first.output)),"first page replay changed");
+    TrekHostAcademyCompletion second=run(c,page_req(0,cursor),TREK_HOST_OK);
+    uint64_t discarded=enqueue(c,page_req(0,cursor));
+    expect(trek_host_discard(c,discarded),TREK_HOST_OK);
+    replay=run(c,page_req(0,cursor),TREK_HOST_OK);
+    check(!memcmp(&second.output,&replay.output,sizeof(second.output)),"discard changed page position");
+    TrekHostClient* foreign=client("");
+    run(foreign,page_req(0,cursor),TREK_HOST_GENERATION_EXPIRED);
+    trek_host_destroy(foreign);
+    run(c,page_req(0,UINT32_MAX),TREK_HOST_GENERATION_EXPIRED);
+    TrekHostAcademyRequest invalid=page_req(0,0);invalid.slot_cursor=UINT64_C(0x100000000);
+    uint64_t ticket=0;expect(submit(c,invalid,&ticket),TREK_HOST_INVALID_ARGUMENT);
+    ticket=enqueue(c,page_req(0,cursor));close_session(c);
+    finish(c,ticket,TREK_HOST_GENERATION_EXPIRED);
+    run(c,page_req(0,cursor),TREK_HOST_GENERATION_EXPIRED);
+    first=run(c,page_req(0,0),TREK_HOST_OK);
+    TrekHostRequest restore=old_req(TREK_HOST_RESTORE,0);
+    restore.input.restore=(TrekHostSlot){text(campaign),text("alpha"),0};
+    TrekHostCompletion restored=old_finish(c,old_enqueue(c,restore),TREK_HOST_OK);
+    run(c,page_req(restored.generation,first.output.slots.next_cursor),TREK_HOST_GENERATION_EXPIRED);
+    first=run(c,page_req(restored.generation,0),TREK_HOST_OK);
+    ticket=enqueue(c,page_req(restored.generation,first.output.slots.next_cursor));
+    save(c,restored.generation);
+    finish(c,ticket,TREK_HOST_GENERATION_EXPIRED);
+    run(c,page_req(restored.generation,first.output.slots.next_cursor),TREK_HOST_GENERATION_EXPIRED);
+    deny_naval(c,restored.generation);
+}
 int main(int argc,char** argv)
 {
     if(argc==1){lifecycle();puts("Academy C extension lifecycle PASS");return 0;}
     check(argc>=3,"mode/root");TrekHostClient* c=client(argv[2]);
-    if(!strcmp(argv[1],"write")) {
+    if(!strcmp(argv[1],"write") || !strcmp(argv[1],"write_many")) {
         TrekHostAcademyCompletion out=run(c,creation(1,"Aren"),TREK_HOST_OK);
-        save(c,out.generation);print_candidate(&out);
+        unsigned count=argc>3?(unsigned)strtoul(argv[3],NULL,10):1;
+        for(unsigned i=0;i<count;++i)save(c,out.generation);
+        print_candidate(&out);
     } else if(!strcmp(argv[1],"read")) {
         check(argc==4,"campaign");
         TrekHostAcademyCompletion catalog=run(c,req(TREK_HOST_ACADEMY_SLOTS,0),TREK_HOST_OK);
@@ -233,12 +288,28 @@ int main(int argc,char** argv)
         TrekHostAcademyCompletion out=run(c,req(TREK_HOST_ACADEMY_QUERY,restored.generation),TREK_HOST_OK);
         deny_naval(c,out.generation);save(c,out.generation);print_candidate(&out);
     } else if(!strcmp(argv[1],"catalog")) {
-        TrekHostAcademyCompletion out=run(c,req(TREK_HOST_ACADEMY_SLOTS,0),TREK_HOST_OK);
-        for(unsigned i=0;i<out.output.slots.count;++i) {
-            const TrekHostSlotMetadata* row=&out.output.slots.entries[i];
-            printf("%s %u %u %u %u %u %u\n",row->campaign,row->kind,row->format,row->reason,
-                   row->compatible,row->recoverable,row->provenance);
-        }
+        catalog(c);
+    } else if(!strcmp(argv[1],"history")) {
+        check(argc==5,"campaign/version");
+        TrekHostRequest r=old_req(TREK_HOST_RESTORE,0);
+        r.input.restore=(TrekHostSlot){text(argv[3]),text("alpha"),strtoull(argv[4],NULL,10)};
+        TrekHostCompletion restored=old_finish(c,old_enqueue(c,r),TREK_HOST_OK);
+        TrekHostAcademyCompletion out=run(c,req(TREK_HOST_ACADEMY_QUERY,restored.generation),TREK_HOST_OK);
+        deny_naval(c,out.generation);print_candidate(&out);
+    } else if(!strcmp(argv[1],"cursor_lifecycle")) {
+        check(argc==4,"campaign");cursor_lifecycle(c,argv[3]);
+    } else if(!strcmp(argv[1],"empty_walk")) {
+        uint32_t cursor=0,first_cursor=0;unsigned pages=0;
+        do {
+            TrekHostAcademyCompletion out=run(c,page_req(0,cursor),TREK_HOST_OK);
+            check(!out.output.slots.count && ++pages<1000,"empty traversal bound");
+            check(!out.output.slots.next_cursor || out.output.slots.next_cursor!=cursor,"empty cursor stuck");
+            cursor=out.output.slots.next_cursor;
+            if(!first_cursor)first_cursor=cursor;
+        }while(cursor);
+        check(pages>32,"eviction fixture too short");
+        run(c,page_req(0,first_cursor),TREK_HOST_GENERATION_EXPIRED);
+        printf("Empty traversal and cursor eviction PASS: %u pages\n",pages);
     } else if(!strcmp(argv[1],"reject")) {
         check(argc==5,"campaign/error");
         TrekHostRequest r=old_req(TREK_HOST_RESTORE,0);
@@ -248,7 +319,10 @@ int main(int argc,char** argv)
     } else if(!strcmp(argv[1],"overflow")) {
         TrekHostAcademyCompletion out=run(c,creation(1,"Aren"),TREK_HOST_OK);
         for(unsigned i=0;i<65;++i)save(c,out.generation);
-        run(c,req(TREK_HOST_ACADEMY_SLOTS,out.generation),TREK_HOST_CAPACITY_LIMIT);
+        TrekHostAcademyCompletion first=run(c,page_req(out.generation,0),TREK_HOST_OK);
+        check(first.output.slots.count==64 && first.output.slots.next_cursor,"version 65 lost catalog");
+        TrekHostAcademyCompletion last=run(c,page_req(out.generation,first.output.slots.next_cursor),TREK_HOST_OK);
+        check(last.output.slots.count==1 && !last.output.slots.next_cursor,"version 65 inaccessible");
     } else check(0,"unknown mode");
     close_session(c);trek_host_destroy(c);return 0;
 }

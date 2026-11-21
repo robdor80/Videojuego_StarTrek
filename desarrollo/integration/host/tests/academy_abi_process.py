@@ -1,4 +1,4 @@
-"""Real C consumer: process restart, mixed H04 catalog and bounded overflow."""
+"""Real C consumer: process restart, mixed H04 catalog and bounded paging."""
 from pathlib import Path
 import shutil
 import subprocess
@@ -15,9 +15,13 @@ def run(executable, *args):
 
 
 def main():
-    consumer, naval_fixture, output = map(Path, sys.argv[1:])
+    pagination = sys.argv[1] == "pagination"
+    consumer, naval_fixture, output = map(Path, sys.argv[2:] if pagination else sys.argv[1:])
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(dir=output, prefix="c02-") as directory:
+        if pagination:
+            check_pagination(consumer, naval_fixture, Path(directory))
+            return
         root = Path(directory) / "slots"
         root.mkdir(mode=0o700)
         before = run(consumer, "write", root)
@@ -55,7 +59,48 @@ def main():
         overflow.mkdir(mode=0o700)
         run(consumer, "overflow", overflow)
         print(f"C02 public ABI restart PASS: campaign {before[0]}, PERSON {before[2]}, "
-              f"generations {before[1]} -> {after[1]}; mixed catalog and overflow PASS")
+              f"generations {before[1]} -> {after[1]}; mixed catalog and 65-version paging PASS")
+
+
+def check_pagination(consumer, naval_fixture, base):
+    root = base / "many"
+    root.mkdir(mode=0o700)
+    campaigns = [run(consumer, "write_many", root, count) for count in (65, 70, 9)]
+    naval = run(naval_fixture, "naval", root)[0]
+    expected = {(c[0], "alpha", v) for c, count in zip(campaigns, (65, 70, 9))
+                for v in range(1, count + 1)} | {(naval, "alpha", 1)}
+    rows = [row.split() for row in run(consumer, "catalog", root)]
+    keys = [(row[0], row[8], int(row[7])) for row in rows]
+    assert len(keys) == len(set(keys)) == 145 and set(keys) == expected
+    assert keys == sorted(keys, key=lambda k: (k[0], k[1], -k[2]))
+    assert all(row[3:7] == ["0", "1", "1", "1"] for row in rows)
+    assert rows == [row.split() for row in run(consumer, "catalog", root)]
+    # Resume an early, a boundary and a late historical version in new processes.
+    for campaign, version in ((campaigns[0], 1), (campaigns[0], 64), (campaigns[0], 65),
+                              (campaigns[1], 2), (campaigns[1], 70)):
+        restored = run(consumer, "history", root, campaign[0], version)
+        assert restored[0] == campaign[0] and restored[2:] == campaign[2:]
+        assert restored[1] != campaign[1]
+    # Corruption on a later page is returned as a row; other campaigns stay usable.
+    damaged_key = keys[100]
+    slot = root / "campaigns" / damaged_key[0] / "slots" / damaged_key[1] / f"v{damaged_key[2]}"
+    (slot / "COMMITTED").write_bytes(b"corrupt")
+    damaged = [row.split() for row in run(consumer, "catalog", root)]
+    assert [(r[0], r[8], int(r[7])) for r in damaged] == keys
+    row = damaged[100]
+    assert row[3] == "18" and row[5] == "0" and row[6] == "3", row
+    assert sum(r[5] == "1" for r in damaged) == 144
+    # Restore an intact campaign, invalidate cursors with SAVE in the same generation.
+    intact = next(c[0] for c in campaigns if c[0] != damaged_key[0])
+    run(consumer, "cursor_lifecycle", root, intact)
+    empty = base / "empty"
+    slots = empty / "campaigns" / ("a" * 32) / "slots"
+    slots.mkdir(parents=True, mode=0o700)
+    for i in range(4200):
+        (slots / f"empty_{i:04d}").mkdir()
+    run(consumer, "empty_walk", empty)
+    print("C02 paging PASS: 145 H04 versions in four campaigns, deterministic complete order, "
+          "historical restores, later-page corruption, cursor replay/discard/expiry and empty traversal")
 
 
 if __name__ == "__main__":

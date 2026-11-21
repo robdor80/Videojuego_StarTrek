@@ -11,6 +11,7 @@
 #endif
 
 #include <atomic>
+#include <algorithm>
 #include <condition_variable>
 #include <cstdio>
 #include <deque>
@@ -80,6 +81,17 @@ std::uint64_t next_generation() noexcept
         if (last_generation.compare_exchange_weak(previous, previous + 1)) {
             return previous + 1;
         }
+    }
+    return 0;
+}
+
+std::uint32_t next_catalog_cursor() noexcept
+{
+    // Unique across owners in this process; never recycle an evicted token.
+    static std::atomic<std::uint32_t> last{0};
+    auto previous=last.load();
+    while(previous!=std::numeric_limits<std::uint32_t>::max()) {
+        if(last.compare_exchange_weak(previous,previous+1))return previous+1;
     }
     return 0;
 }
@@ -187,6 +199,8 @@ struct SessionOwner::Impl {
     };
     struct InspectSlots {
         Generation generation;
+        std::uint64_t epoch;
+        detail::SlotPosition after;
         std::promise<detail::AcademyInterfaceResult> reply;
     };
 
@@ -229,6 +243,9 @@ struct SessionOwner::Impl {
     std::deque<Request> requests;
     static constexpr std::size_t max_requests = 32;
     detail::SlotStore store;
+    struct CatalogCursor { std::uint32_t token; detail::SlotPosition after; };
+    std::deque<CatalogCursor> catalog_cursors;
+    std::uint64_t catalog_epoch=0;
     std::string persistent_id;
     Provenance provenance=Provenance::REJECTED;
     std::thread owner;
@@ -255,6 +272,7 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        reset_catalog();
         academy_player.reset();
         academy_receipt.reset();
         academy_intent.reset();
@@ -273,6 +291,12 @@ struct SessionOwner::Impl {
             }, request);
         }
         requests.clear();
+    }
+
+    void reset_catalog()
+    {
+        catalog_cursors.clear();
+        ++catalog_epoch;
     }
 
     Error admission(Generation requested) const noexcept
@@ -311,6 +335,7 @@ struct SessionOwner::Impl {
         if (requests.size() == max_requests) {
             return reject(Error::CAPACITY_LIMIT);
         }
+        if constexpr (std::is_same_v<Item, Save>) reset_catalog();
         auto reply = request.reply.get_future();
         requests.emplace_back(std::move(request));
         work.notify_one();
@@ -581,14 +606,34 @@ struct SessionOwner::Impl {
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession&, InspectSlots& request)
     {
         const auto expected = request.generation;
+        if(request.epoch!=catalog_epoch) {
+            request.reply.set_value({Error::GENERATION_EXPIRED,{}});
+            return;
+        }
         lock.unlock();
-        auto inspected = store.inspect(verify_slot, 64);
+        auto page=store.inspect_page(request.after,verify_slot);
         lock.lock();
-        if (generation != expected || (state != State::ACTIVE && state != State::CLOSED))
-            inspected = {Error::GENERATION_EXPIRED, {}};
-        if (inspected.error != Error::OK) inspected.slots.clear();
-        request.reply.set_value({inspected.error, inspected.error == Error::OK ? expected : Generation{},
-                                 {}, std::move(inspected.slots)});
+        auto error=page.inspection.error;
+        if (generation != expected || request.epoch!=catalog_epoch ||
+            (state != State::ACTIVE && state != State::CLOSED)) error=Error::GENERATION_EXPIRED;
+        std::uint32_t next=0;
+        try {
+            if(error==Error::OK && page.next) {
+                for(const auto& cursor:catalog_cursors)
+                    if(cursor.after==*page.next){next=cursor.token;break;}
+                if(!next) {
+                    next=next_catalog_cursor();
+                    if(!next)error=Error::CAPACITY_LIMIT;
+                    else {
+                        catalog_cursors.push_back({next,std::move(*page.next)});
+                        if(catalog_cursors.size()>32)catalog_cursors.pop_front();
+                    }
+                }
+            }
+        } catch(...) {error=Error::INTERNAL_ERROR;}
+        if(error!=Error::OK){page.inspection.slots.clear();next=0;}
+        request.reply.set_value({error,error==Error::OK?expected:Generation{},
+                                {},std::move(page.inspection.slots),next,request.epoch});
     }
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
@@ -862,6 +907,11 @@ std::string_view detail::AbiAdmission::campaign() const noexcept
     return owner_.impl_->persistent_id;
 }
 
+std::uint64_t detail::AbiAdmission::catalog_epoch() const noexcept
+{
+    return owner_.impl_->catalog_epoch;
+}
+
 SessionOwner::SessionOwner() : SessionOwner(StorageConfig{}) {}
 SessionOwner::SessionOwner(StorageConfig storage) : impl_(std::make_unique<Impl>(std::move(storage))) {}
 SessionOwner::~SessionOwner() = default;
@@ -877,6 +927,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
     }
     impl_->biography_activation.reset();
     impl_->academy_intent.reset();
+    impl_->reset_catalog();
     Impl::Open request{std::move(config), std::make_shared<const detail::ActiveCampaign>(), {}};
     auto reply = request.reply.get_future();
     impl_->opening.emplace(std::move(request));
@@ -888,6 +939,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
 std::shared_future<Result> SessionOwner::close()
 {
     std::lock_guard lock(impl_->mutex);
+    impl_->reset_catalog();
     impl_->biography_activation.reset();
     if (impl_->closing) {
         return impl_->close_result;
@@ -973,6 +1025,7 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
     impl_->academy_intent.reset();
     Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
+    impl_->reset_catalog();
     impl_->biography_activation.reset();
     impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
     impl_->work.notify_one();return result;
@@ -1039,7 +1092,7 @@ std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::create_bou
     impl.academy_product_key = key;
     impl.academy_product_payload = std::move(payload);
     impl.academy_product_intent = intent;
-    if (impl.state == State::CLOSED) impl.state = State::OPENING;
+    if (impl.state == State::CLOSED) {impl.reset_catalog();impl.state = State::OPENING;}
     impl.work.notify_one();
     return future;
 }
@@ -1049,7 +1102,8 @@ std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::query(Sess
     return owner.impl_->enqueue<AcademyInterfaceResult>(SessionOwner::Impl::QueryAcademy{generation, {}});
 }
 
-std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::slots(SessionOwner& owner, Generation generation)
+std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::slots(
+    SessionOwner& owner, Generation generation, std::uint32_t cursor)
 {
     auto& impl = *owner.impl_;
     std::lock_guard lock(impl.mutex);
@@ -1058,7 +1112,14 @@ std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::slots(Sess
         return ready<AcademyInterfaceResult>(Error::BUSY_STATE);
     if (impl.requests.size() == SessionOwner::Impl::max_requests)
         return ready<AcademyInterfaceResult>(Error::CAPACITY_LIMIT);
-    SessionOwner::Impl::InspectSlots request{generation, {}};
+    SlotPosition after;
+    if(cursor) {
+        const auto found=std::find_if(impl.catalog_cursors.begin(),impl.catalog_cursors.end(),
+            [&](const auto& item){return item.token==cursor;});
+        if(found==impl.catalog_cursors.end())return ready<AcademyInterfaceResult>(Error::GENERATION_EXPIRED);
+        after=found->after;
+    }
+    SessionOwner::Impl::InspectSlots request{generation,impl.catalog_epoch,std::move(after),{}};
     auto future = request.reply.get_future();
     impl.requests.emplace_back(std::move(request));
     impl.work.notify_one();
@@ -1081,6 +1142,7 @@ detail::AcademyIntent detail::AcademyCandidateFactory::begin(SessionOwner& owner
     auto intent = std::make_shared<const AcademyCreationIntent>(
         AcademyCreationIntent{Generation(next), std::move(campaign), impl.local_profile});
     impl.biography_activation.reset();
+    impl.reset_catalog();
     impl.academy_intent = std::move(intent);
     return impl.academy_intent;
 }

@@ -328,6 +328,52 @@ Envelope validate(const fs::path& local,const fs::path& generation,const SlotAdd
     }
     return e;
 }
+
+SlotInspection inspect_version(const fs::path& registry, const fs::path& path, SlotAddress address,
+                               const std::function<Error(const PreparedSlot&)>& verify)
+{
+    SlotInspection info;
+    info.address=std::move(address);
+    try {
+        PinnedDirectory generation(path);
+        auto manifest=read(generation.path()/"manifest");
+        if (manifest.starts_with(academy_prefix)) {
+            info.format=2;info.address.kind=CampaignKind::ACADEMY;
+        } else if (manifest.starts_with("TREKHOST4 1\n")) {
+            info.format=1;info.address.kind=CampaignKind::NAVAL;
+        }
+        auto e=decode(manifest);
+        info.format=e.kind()==CampaignKind::ACADEMY?2:1;
+        info.address.kind=e.kind();info.compatible=true;
+        auto admitted=validate(registry,generation.path(),info.address);
+        if(verify) {
+            auto history=std::make_shared<PinnedDirectory>(generation.path()/"history");
+            auto error=verify({history,admitted.identity,info.address.campaign});
+            if (info.format==2 && error==Error::SAVE_INCOMPATIBLE) info.compatible=false;
+            need(error==Error::OK,error);
+        }
+        info.provenance=Provenance::KNOWN_LOCAL;info.reason=Error::OK;info.recoverable=true;
+    } catch(const StorageFailure& e) {
+        info.reason=e.error;if(e.error==Error::SAVE_UNTRUSTED)info.provenance=Provenance::IMPORTED_UNVERIFIED;
+    } catch(...) { info.reason=Error::PERSISTENCE_FAILED; }
+    return info;
+}
+
+std::vector<std::string> catalog_names(const fs::path& directory, bool campaigns)
+{
+    // Per-directory traversal guard, matching H04's existing version-directory
+    // guard. There is deliberately no aggregate version or row limit here.
+    std::vector<std::string> names;
+    for (const auto& entry : fs::directory_iterator(directory)) {
+        need(names.size()<10000,Error::CAPACITY_LIMIT);
+        auto name=entry.path().filename().string();
+        if (campaigns) (void)decode_campaign(name);
+        else need(valid_slot(name),Error::PATH_REJECTED);
+        names.push_back(std::move(name));
+    }
+    std::sort(names.begin(),names.end());
+    return names;
+}
 }
 Error SlotStore::save(const std::string& campaign_id,const std::string& slot,SlotIdentity identity,
                      const std::function<Error(const fs::path&)>& snapshot,
@@ -424,36 +470,51 @@ InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot
                 need(++count<=10000,Error::CAPACITY_LIMIT);auto name=s.path().filename().string();need(valid_slot(name),Error::PATH_REJECTED);PinnedDirectory slot(s.path());
                 for(auto version:versions(slot.path())) {
                     need(result.slots.size()<limit,Error::CAPACITY_LIMIT);
-                    need(++count<=10000,Error::CAPACITY_LIMIT);SlotInspection info;info.address={campaign_id,name,version};
-                    try {
-                        PinnedDirectory generation(slot.path()/("v"+std::to_string(version)));
-                        auto manifest=read(generation.path()/"manifest");
-                        if (manifest.starts_with(academy_prefix)) {
-                            info.format=2;info.address.kind=CampaignKind::ACADEMY;
-                        }
-                        else if (manifest.starts_with("TREKHOST4 1\n")) {
-                            info.format=1;info.address.kind=CampaignKind::NAVAL;
-                        }
-                        auto e=decode(manifest);
-                        info.format=e.kind()==CampaignKind::ACADEMY?2:1;
-                        info.address.kind=e.kind();info.compatible=true;
-                        auto admitted=validate(r->path()/"registry"/campaign_id,generation.path(),info.address);
-                        if(verify) {
-                            auto history=std::make_shared<PinnedDirectory>(generation.path()/"history");
-                            auto error=verify({history,admitted.identity,campaign_id});
-                            if (info.format==2 && error==Error::SAVE_INCOMPATIBLE) info.compatible=false;
-                            need(error==Error::OK,error);
-                        }
-                        info.provenance=Provenance::KNOWN_LOCAL;info.reason=Error::OK;info.recoverable=true;
-                    } catch(const StorageFailure& e) {
-                        info.reason=e.error;if(e.error==Error::SAVE_UNTRUSTED)info.provenance=Provenance::IMPORTED_UNVERIFIED;
-                    } catch(...) { info.reason=Error::PERSISTENCE_FAILED; }
-                    result.slots.push_back(std::move(info));
+                    need(++count<=10000,Error::CAPACITY_LIMIT);
+                    result.slots.push_back(inspect_version(r->path()/"registry"/campaign_id,
+                        slot.path()/("v"+std::to_string(version)),{campaign_id,name,version},verify));
                 }
             }
         }
     } catch(const StorageFailure& e) { result.error=e.error; } catch(...) { result.error=Error::PERSISTENCE_FAILED; }
     return result;
+}
+
+SlotPage SlotStore::inspect_page(const SlotPosition& after,
+                               const std::function<Error(const PreparedSlot&)>& verify) const
+{
+    SlotPage page;
+    try {
+        auto r=root(config_);
+        if(!fs::exists(fs::symlink_status(r->path()/"campaigns")))return page;
+        PinnedDirectory campaigns(r->path()/"campaigns");
+        auto position=after;
+        std::size_t moves=0;
+        for(const auto& campaign_id:catalog_names(campaigns.path(),true)) {
+            if(campaign_id<after.campaign || (campaign_id==after.campaign && after.slot.empty()))continue;
+            if(moves++==128){page.next=std::move(position);return page;}
+            PinnedDirectory campaign(campaigns.path()/campaign_id);
+            PinnedDirectory slots(campaign.path()/"slots");
+            for(const auto& name:catalog_names(slots.path(),false)) {
+                const bool same_campaign=campaign_id==after.campaign;
+                if(same_campaign && (name<after.slot || (name==after.slot && !after.version)))continue;
+                if(moves++==128){page.next=std::move(position);return page;}
+                PinnedDirectory slot(slots.path()/name);
+                const auto all=versions(slot.path());
+                for(auto it=all.rbegin();it!=all.rend();++it) {
+                    if(same_campaign && name==after.slot && *it>=after.version)continue;
+                    page.inspection.slots.push_back(inspect_version(r->path()/"registry"/campaign_id,
+                        slot.path()/("v"+std::to_string(*it)),{campaign_id,name,*it},verify));
+                    position={campaign_id,name,*it};
+                    if(page.inspection.slots.size()==64){page.next=std::move(position);return page;}
+                }
+                position={campaign_id,name,0};
+            }
+            position={campaign_id,{},0};
+        }
+    } catch(const StorageFailure& e) {page={{e.error,{}},{}};}
+      catch(...) {page={{Error::PERSISTENCE_FAILED,{}},{}};}
+    return page;
 }
 #if defined(TREK_HOST_PERSISTENCE_TESTING) || defined(TREK_HOST_ACADEMY_TESTING)
 void storage_test_event(const char* name) {point(name);}

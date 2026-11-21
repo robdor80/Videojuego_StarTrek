@@ -7,11 +7,13 @@
 extern "C" {
 #endif
 
-/* Additive extension 1. Resolve version/submit/poll together; version 0 means
+/* Additive Academy extension 2 (independent of the frozen naval C ABI 1).
+ * Draft Academy extension 1 is rejected with ABI_MISMATCH; no layout grows.
+ * Resolve version/submit/poll together; version 0 means
  * unavailable. Uses the v1 client, status, discard, SAVE, RESTORE and CLOSE.
  * Never pass extension tickets to v1 poll (or conversely). Wrong poll leaves
  * the ticket intact. All calls share v1's serialization/lifetime rules. */
-#define TREK_HOST_ACADEMY_VERSION 1u
+#define TREK_HOST_ACADEMY_VERSION 2u
 #define TREK_HOST_ACADEMY_NAME_BYTES 96u
 #define TREK_HOST_ACADEMY_MAX_SLOTS 64u
 
@@ -35,7 +37,10 @@ typedef struct {
      * generation must be 0. CLOSE/RESTORE/OPEN retire this intent: its old key
      * expires forever in this client. A higher key starts only from CLOSED.
      * No durable creation before SAVE: process death loses unsaved campaigns. */
-    uint64_t creation_key;
+    union {
+        uint64_t creation_key;
+        uint64_t slot_cursor; /* SLOTS only: 0 starts; otherwise next_cursor. */
+    };
     TrekHostText display_name; /* CREATE only, validated UTF-8/S04, 1..96 bytes. */
 } TrekHostAcademyRequest;
 
@@ -65,7 +70,7 @@ typedef struct {
     union {
         TrekHostAcademyView candidate;
         struct {
-            uint32_t count, reserved;
+            uint32_t count, next_cursor; /* 0 ends the walk; otherwise continue. */
             TrekHostSlotMetadata entries[TREK_HOST_ACADEMY_MAX_SLOTS];
         } slots;
     } output;
@@ -73,8 +78,16 @@ typedef struct {
 
 /* QUERY requires the exact live generation and a confirmed H03 binding.
  * SLOTS requires the current generation (0 in CLOSED); runs H04 inspection
- * on the owner thread. At most 64 versions: overflow fails CAPACITY_LIMIT,
- * with no partial catalog. Each row is descriptive; RESTORE revalidates H04.
+ * on the owner thread. Up to 64 rows per page, ordered by campaign ASCII,
+ * slot ASCII, then version descending. Follow next_cursor until 0, including
+ * empty pages (bounded traversal of empty directories). Each row includes
+ * H04 integrity errors; metadata never authorizes RESTORE.
+ * Cursors are opaque observations, scoped to this client/current generation.
+ * SAVE, OPEN, CREATE, RESTORE and CLOSE retire them. The last 32 positions are
+ * retained; an evicted/foreign/retired cursor returns GENERATION_EXPIRED.
+ * Retry/discard may reread a retained position. External filesystem changes
+ * are revalidated per page; restart at 0 to include new rows before a cursor.
+ * This is a live keyset walk, not a disk snapshot or a retained storage lock.
  * Both submit/poll are nonblocking; RETRY admits/consumes nothing. The eight
  * observation slots are shared with v1 and CLOSE retains its reserved slot. */
 TREK_HOST_ABI_API uint32_t TREK_HOST_ABI_CALL trek_host_academy_version(void);
