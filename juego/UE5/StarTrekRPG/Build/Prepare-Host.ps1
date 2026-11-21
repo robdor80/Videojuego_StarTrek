@@ -28,6 +28,13 @@ try {
     & cmake --build $BuildRoot --config Release --parallel 3 --target TrekHost
     if ($LASTEXITCODE) { throw 'HOST Release build failed.' }
 
+    $Headers = @('host_abi.h', 'academy_abi.h')
+    foreach ($Header in $Headers) {
+        if (!(Test-Path -LiteralPath (Join-Path $HostSource "include/trek/host/$Header") -PathType Leaf)) {
+            throw "Missing HOST SDK header: $Header"
+        }
+    }
+
     # Validate the complete output before changing the project's staged dependency.
     foreach ($Dll in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
         $NativeDll = Join-Path $BuildRoot "f05/f04/Release/$Dll"
@@ -39,12 +46,14 @@ try {
     $Stage = Join-Path $ProjectDir 'Binaries/Host'
     $HeaderDir = Join-Path $Stage 'include/trek/host'
     New-Item -ItemType Directory -Path $HeaderDir -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $HostSource 'include/trek/host/host_abi.h') -Destination $HeaderDir
+    foreach ($Header in $Headers) {
+        Copy-Item -LiteralPath (Join-Path $HostSource "include/trek/host/$Header") -Destination $HeaderDir
+    }
     foreach ($Dll in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
         Copy-Item -LiteralPath (Join-Path $BuildRoot "f05/f04/Release/$Dll") -Destination $Stage
     }
     Write-Host "HOST Release prepared for: $ProjectDir"
-    Write-Host "Header and DLLs staged in: $Stage"
+    Write-Host "Headers and DLLs staged in: $Stage"
     Write-Host 'Next: build StarTrekRPGEditor and open UnrealEditor.exe without -game.'
 } finally {
     $env:TEMP = $OldTemp

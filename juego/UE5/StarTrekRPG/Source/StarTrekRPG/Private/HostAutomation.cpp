@@ -142,6 +142,7 @@ struct FDiagnosticRun
             }
             if (!Game.IsValid()) return false;
             Host = Game->GetSubsystem<UHostSessionSubsystem>();
+            if (Host.IsValid() && Host->IsInitializing()) return false;
             if (!Host.IsValid() || !Host->IsAvailable() || !OriginalProjection.IsValid())
             {
                 Fail(TEXT("HOST or world subsystem unavailable"));
