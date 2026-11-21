@@ -174,7 +174,11 @@ def negative(product, faults, base):
         altered = clone(mode)
         target = slot(altered, campaign, 1, "changed")
         target.mkdir(parents=True)
-        [progress] = run(faults, mode, root, campaign, "alpha", 1, target / "history")
+        # Core's standalone fixture writer uses ordinary Win32 paths. Build
+        # the archive at a short path so its transient object names also fit.
+        fixture = base / f"fixture-{mode}"
+        [progress] = run(faults, mode, root, campaign, "alpha", 1, fixture)
+        shutil.move(fixture, target / "history")
         envelope = lines.copy()
         envelope[4] = "changed"
         retarget(target, envelope, progress)
@@ -200,7 +204,9 @@ def advanced(product, faults, base):
     campaign = before[0]
     target = slot(root, campaign, 1, "advanced")
     target.mkdir(parents=True)
-    progress, core_digest = run(faults, "advanced", root, campaign, "alpha", 1, target / "history")
+    fixture = base / "fixture-progress"
+    progress, core_digest = run(faults, "advanced", root, campaign, "alpha", 1, fixture)
+    shutil.move(fixture, target / "history")
     lines = committed(slot(root, campaign))
     registry_before = (root / "registry" / campaign).read_bytes()
     original_anchor = lines[6:9]
