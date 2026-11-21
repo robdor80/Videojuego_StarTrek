@@ -20,7 +20,12 @@
 #endif
 
 namespace trek::host {
-namespace detail { class AbiAdmission; class BiographyProfileSource; class AcademyCandidateFactory; }
+namespace detail {
+class AbiAdmission;
+class BiographyProfileSource;
+class AcademyCandidateFactory;
+class AcademyPlayerBinding;
+}
 
 // Internal C++ interface for HOST modules.
 enum class State { CLOSED, OPENING, ACTIVE, SAVING, LOADING, FAILED, FAILED_RECOVERABLE, CLOSING };
@@ -172,6 +177,7 @@ private:
     friend class PlayerBootstrap;
     friend class detail::BiographyProfileSource;
     friend class detail::AcademyCandidateFactory;
+    friend class detail::AcademyPlayerBinding;
     friend class detail::AbiAdmission;
 #ifdef TREK_HOST_GATEWAY_TESTING
     friend class GatewayTestAccess;

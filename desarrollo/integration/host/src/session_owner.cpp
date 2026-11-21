@@ -2,6 +2,7 @@
 
 #include "abi_admission.h"
 #include "biography_profile_source.h"
+#include "f10/academy_player_binding.h"
 #include "native_session.h"
 #include "player_bootstrap.h"
 #ifdef TREK_HOST_GATEWAY_TESTING
@@ -43,6 +44,22 @@ struct AcademyCreationReceipt {
 namespace {
 
 constinit std::atomic<std::uint64_t> last_generation{0};
+#ifdef TREK_HOST_ACADEMY_TESTING
+constinit std::atomic<void (*)()> academy_bind_test_hook{nullptr};
+#endif
+
+detail::AcademyCandidateResult inspect_academy_receipt(const detail::AcademyCampaign& academy,
+                                                       const detail::AcademyCreationReceipt& receipt)
+{
+    auto view = academy.inspect();
+    if (view.campaign_id != receipt.intent->campaign || view.source_digest != receipt.source_digest ||
+        detail::academy_digest(view.display_name) != receipt.editable_digest ||
+        view.person != receipt.person || view.creation_fact != receipt.creation_fact ||
+        view.revision != receipt.revision || view.tick != receipt.tick) {
+        return {Error::IDENTITY_MISMATCH, {}};
+    }
+    return {Error::OK, std::move(view)};
+}
 
 std::uint64_t next_generation() noexcept
 {
@@ -111,14 +128,22 @@ struct SessionOwner::Impl {
         std::promise<detail::AcademyCandidateResult> reply;
     };
 
+    struct BindAcademy {
+        Generation generation;
+        detail::AcademyReceipt receipt;
+        std::promise<Result> reply;
+    };
+
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
     struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, CreateAcademy, InspectAcademy, TestVisit>;
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+                                 CreateAcademy, InspectAcademy, BindAcademy, TestVisit>;
 #else
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, CreateAcademy, InspectAcademy>;
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+                                 CreateAcademy, InspectAcademy, BindAcademy>;
 #endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
@@ -133,6 +158,7 @@ struct SessionOwner::Impl {
     detail::AcademyReceipt academy_receipt;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
+    detail::AcademyReceipt academy_player;
     bool stopping = false;
     std::optional<Open> opening;
     std::optional<std::promise<Result>> closing;
@@ -166,6 +192,7 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        academy_player.reset();
         academy_receipt.reset();
         academy_intent.reset();
         biography_activation.reset();
@@ -280,6 +307,16 @@ struct SessionOwner::Impl {
         return admission(intent->generation);
     }
 
+    Error academy_receipt_admission(Generation requested, const detail::AcademyReceipt& receipt) const noexcept
+    {
+        if (const auto error = admission(requested); error != Error::OK) return error;
+        if (!receipt || receipt != academy_receipt || receipt->intent->generation != requested ||
+            academy_admission(receipt->intent) != Error::OK || receipt->intent->campaign != persistent_id) {
+            return Error::SCOPE_INVALID;
+        }
+        return Error::OK;
+    }
+
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, CreateAcademy& request)
     {
         auto fail = [&](Error error) { request.reply.set_value({error, {}, {}}); };
@@ -350,30 +387,61 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>&, detail::NativeSession& session, InspectAcademy& request)
     {
-        if (const auto error = admission(request.generation); error != Error::OK) {
+        if (const auto error = academy_receipt_admission(request.generation, request.receipt); error != Error::OK) {
             request.reply.set_value({error, {}});
             return;
         }
-        if (request.receipt != academy_receipt || !session.academy() ||
-            academy_admission(request.receipt->intent) != Error::OK) {
+        if (!session.academy()) {
             request.reply.set_value({Error::SCOPE_INVALID, {}});
             return;
         }
-        const auto& receipt = *request.receipt;
         try {
-            auto view = session.academy()->inspect();
-            if (view.campaign_id != persistent_id || view.campaign_id != receipt.intent->campaign ||
-                view.source_digest != receipt.source_digest ||
-                detail::academy_digest(view.display_name) != receipt.editable_digest ||
-                view.person != receipt.person || view.creation_fact != receipt.creation_fact ||
-                view.revision != receipt.revision || view.tick != receipt.tick) {
-                request.reply.set_value({Error::IDENTITY_MISMATCH, {}});
-                return;
-            }
-            request.reply.set_value({Error::OK, std::move(view)});
+            request.reply.set_value(inspect_academy_receipt(*session.academy(), *request.receipt));
         } catch (...) {
             request.reply.set_value({Error::INTERNAL_ERROR, {}});
         }
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, BindAcademy& request)
+    {
+        auto fail = [&](Error error) { request.reply.set_value({error, {}}); };
+        if (const auto error = academy_receipt_admission(request.generation, request.receipt); error != Error::OK) {
+            fail(error);
+            return;
+        }
+        const auto* academy = session.academy();
+        if (!academy || (binding != Binding::UNBOUND && academy_player != request.receipt)) {
+            fail(Error::IDENTITY_MISMATCH);
+            return;
+        }
+
+        // Core reads stay on this thread. Close can revoke the scope during validation.
+        lock.unlock();
+        Error validation;
+        try {
+            validation = inspect_academy_receipt(*academy, *request.receipt).error;
+#ifdef TREK_HOST_ACADEMY_TESTING
+            if (auto hook = academy_bind_test_hook.load()) hook();
+#endif
+        } catch (const std::logic_error&) {
+            validation = Error::IDENTITY_MISMATCH;
+        } catch (...) {
+            validation = Error::INTERNAL_ERROR;
+        }
+        lock.lock();
+        if (const auto error = academy_receipt_admission(request.generation, request.receipt); error != Error::OK) {
+            fail(error);
+            return;
+        }
+        if (validation != Error::OK) {
+            fail(validation);
+            return;
+        }
+        if (binding == Binding::UNBOUND) {
+            academy_player = request.receipt;
+            binding = Binding::BOUND;
+        }
+        request.reply.set_value({Error::OK, request.generation});
     }
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
@@ -482,6 +550,10 @@ struct SessionOwner::Impl {
         if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
         if (binding != Binding::BOUND) {
             fail(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND); return;
+        }
+        if (session.academy()) {
+            fail(Error::ACCESS_DENIED);
+            return;
         }
         const auto principal = player;
         OperationResult reply;
@@ -743,7 +815,10 @@ PlayerResult SessionOwner::current_player(Generation generation) const
         return {error, std::nullopt};
     }
     switch (impl_->binding) {
-    case Impl::Binding::BOUND: return {Error::OK, PlayerIdentity{generation, impl_->player.id}};
+    case Impl::Binding::BOUND: {
+        const auto person = impl_->academy_player ? impl_->academy_player->person : impl_->player.id;
+        return {Error::OK, PlayerIdentity{generation, person}};
+    }
     case Impl::Binding::INVALID: return {Error::ACCESS_DENIED, std::nullopt};
     default: return {Error::PRINCIPAL_UNBOUND, std::nullopt};
     }
@@ -811,6 +886,19 @@ std::future<detail::AcademyCandidateResult> detail::AcademyCandidateFactory::ins
     return impl.enqueue<AcademyCandidateResult>(
         SessionOwner::Impl::InspectAcademy{receipt->intent->generation, receipt, {}});
 }
+
+std::future<Result> detail::AcademyPlayerBinding::bind(
+    SessionOwner& owner, Generation generation, const AcademyReceipt& receipt)
+{
+    return owner.impl_->enqueue<Result>(SessionOwner::Impl::BindAcademy{generation, receipt, {}});
+}
+
+#ifdef TREK_HOST_ACADEMY_TESTING
+void detail::set_academy_bind_test_hook(void (*hook)()) noexcept
+{
+    academy_bind_test_hook.store(hook);
+}
+#endif
 
 } // namespace trek::host
 

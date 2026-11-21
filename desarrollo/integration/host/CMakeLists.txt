@@ -313,20 +313,31 @@ if(TREK_HOST_TESTS)
   target_include_directories(host_academy_candidate_tests PRIVATE src)
   target_link_libraries(host_academy_candidate_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
 
-  add_executable(host_academy_candidate_faults tests/academy_candidate_tests.cpp
-    ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
-  add_dependencies(host_academy_candidate_faults host_f10_fixed_data)
-  target_compile_features(host_academy_candidate_faults PRIVATE cxx_std_20)
-  target_compile_definitions(host_academy_candidate_faults PRIVATE TREK_HOST_STATIC_TEST
-    TREK_HOST_ACADEMY_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
-  target_include_directories(host_academy_candidate_faults PRIVATE src include "${f10_rules_dir}")
-  target_link_libraries(host_academy_candidate_faults PRIVATE TrekF04Bridge CoreRPG::CoreRPG jsoncons Threads::Threads)
+  add_executable(host_academy_player_tests tests/academy_player_tests.cpp)
+  target_include_directories(host_academy_player_tests PRIVATE src)
+  target_link_libraries(host_academy_player_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
 
-  set_target_properties(host_academy_candidate_tests host_academy_candidate_faults PROPERTIES
+  add_library(host_academy_fault_runtime STATIC
+    ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  add_dependencies(host_academy_fault_runtime host_f10_fixed_data)
+  target_compile_features(host_academy_fault_runtime PUBLIC cxx_std_20)
+  target_compile_definitions(host_academy_fault_runtime PUBLIC TREK_HOST_STATIC_TEST TREK_HOST_ACADEMY_TESTING
+    PRIVATE TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_include_directories(host_academy_fault_runtime PUBLIC src include PRIVATE "${f10_rules_dir}")
+  target_link_libraries(host_academy_fault_runtime PUBLIC TrekF04Bridge CoreRPG::CoreRPG PRIVATE jsoncons Threads::Threads)
+
+  add_executable(host_academy_candidate_faults tests/academy_candidate_tests.cpp)
+  target_link_libraries(host_academy_candidate_faults PRIVATE host_academy_fault_runtime)
+  add_executable(host_academy_player_faults tests/academy_player_tests.cpp)
+  target_link_libraries(host_academy_player_faults PRIVATE host_academy_fault_runtime)
+
+  set_target_properties(host_academy_candidate_tests host_academy_candidate_faults
+    host_academy_player_tests host_academy_player_faults PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   if(MSVC)
     target_compile_options(host_academy_candidate_tests PRIVATE /utf-8)
     target_compile_options(host_academy_candidate_faults PRIVATE /utf-8)
+    target_compile_options(host_academy_fault_runtime PRIVATE /utf-8)
   endif()
   foreach(case IN ITEMS b02_01 b02_02 b02_03 b02_04 b02_05 b02_06 b02_08 b02_09 b02_10 b02_11 b02_13 b02_15)
     add_test(NAME host.academy.${case} COMMAND host_academy_candidate_tests ${case})
@@ -335,5 +346,13 @@ if(TREK_HOST_TESTS)
   foreach(case IN ITEMS b02_07 b02_11_legacy b02_12)
     add_test(NAME host.academy.${case} COMMAND host_academy_candidate_faults ${case})
     set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "f10;ia03b02;fault-injection")
+  endforeach()
+  foreach(case IN ITEMS b03t_01 b03t_02 b03t_03a b03t_03b b03t_03d b03t_03e)
+    add_test(NAME host.academy.${case} COMMAND host_academy_player_tests ${case})
+    set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "h03;ia03b03-02;native")
+  endforeach()
+  foreach(case IN ITEMS b03t_03c b03t_bind_retry)
+    add_test(NAME host.academy.${case} COMMAND host_academy_player_faults ${case})
+    set_tests_properties(host.academy.${case} PROPERTIES TIMEOUT 30 LABELS "h03;ia03b03-02;fault-injection")
   endforeach()
 endif()
