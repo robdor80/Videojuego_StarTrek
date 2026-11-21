@@ -242,6 +242,20 @@ jobs:
           cmake --build "$consumer" --config Release 2>&1 | tee -a "$lab/product-linux-consumer.log"
           ctest --test-dir "$consumer" -C Release --no-tests=error --output-on-failure -V \
             2>&1 | tee -a "$lab/product-linux-consumer.log"
+      - name: Check Unreal's Academy negotiation on Linux
+        shell: bash
+        run: |
+          set -euo pipefail
+          lab="$PWD/laboratorios/host/ia03b02"
+          build="$lab/product-linux"
+          sdk="$lab/unreal-sdk-linux"
+          host_so=$(find "$build" -type f -name 'libTrekHost.so' -print -quit)
+          cmake -S juego/UE5/StarTrekRPG/Build/Tests -B "$sdk" -DCMAKE_BUILD_TYPE=Release \
+            -DHOST_SDK_INCLUDE="$PWD/desarrollo/integration/host/include" -DHOST_LIBRARY="$host_so" \
+            2>&1 | tee "$lab/product-linux-unreal-sdk.log"
+          cmake --build "$sdk" --config Release 2>&1 | tee -a "$lab/product-linux-unreal-sdk.log"
+          ctest --test-dir "$sdk" -C Release --no-tests=error -V \
+            2>&1 | tee -a "$lab/product-linux-unreal-sdk.log"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -300,6 +314,43 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           ctest --test-dir $consumer -C Release --no-tests=error --output-on-failure -V 2>&1 |
             Tee-Object -Append -FilePath "$lab/product-windows-consumer.log"
+          exit $LASTEXITCODE
+      - name: Stage product with Prepare-Host and check Unreal's Academy negotiation
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $build = Join-Path $lab 'product-windows'
+          $project = Join-Path $lab 'sdk-stage'
+          $sourceProject = Join-Path $PWD 'juego/UE5/StarTrekRPG'
+          $log = Join-Path $lab 'product-windows-unreal-sdk.log'
+          New-Item -ItemType Directory -Path $project -Force | Out-Null
+          Copy-Item -LiteralPath (Join-Path $sourceProject 'StarTrekRPG.uproject') -Destination $project
+          $generator = (Select-String -Path "$build/CMakeCache.txt" -Pattern '^CMAKE_GENERATOR:INTERNAL=(.+)$').Matches[0].Groups[1].Value
+          & "$sourceProject/Build/Prepare-Host.ps1" -CoreSource "$lab/core" -BuildRoot $build -ProjectDir $project -Generator $generator 2>&1 |
+            Tee-Object -FilePath $log
+          $stage = Join-Path $project 'Binaries/Host'
+          $headers = Join-Path $PWD 'desarrollo/integration/host/include/trek/host'
+          foreach ($name in @('host_abi.h', 'academy_abi.h')) {
+            if ((Get-FileHash "$headers/$name").Hash -ne (Get-FileHash "$stage/include/trek/host/$name").Hash) {
+              throw "Staged header differs from product source: $name"
+            }
+            Get-FileHash "$stage/include/trek/host/$name" | Tee-Object -Append -FilePath $log
+          }
+          foreach ($name in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
+            if ((Get-FileHash "$build/f05/f04/Release/$name").Hash -ne (Get-FileHash "$stage/$name").Hash) {
+              throw "Staged DLL differs from Release product: $name"
+            }
+            Get-FileHash "$stage/$name" | Tee-Object -Append -FilePath $log
+          }
+          $sdk = Join-Path $lab 'unreal-sdk-windows'
+          cmake -S "$sourceProject/Build/Tests" -B $sdk -G $generator -A x64 `
+            "-DHOST_SDK_INCLUDE=$stage/include" "-DHOST_LIBRARY=$stage/TrekHost.dll" 2>&1 |
+            Tee-Object -Append -FilePath $log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $sdk --config Release 2>&1 | Tee-Object -Append -FilePath $log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $sdk -C Release --no-tests=error -V 2>&1 | Tee-Object -Append -FilePath $log
           exit $LASTEXITCODE
       - uses: actions/upload-artifact@v4
         if: always()

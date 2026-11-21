@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.25)
+project(StarTrekHostSdk LANGUAGES CXX)
+
+enable_testing()
+add_executable(host_academy_exports HostAcademyExportsTest.cpp)
+target_compile_features(host_academy_exports PRIVATE cxx_std_17)
+target_include_directories(host_academy_exports PRIVATE "${HOST_SDK_INCLUDE}" ../../Source/StarTrekRPG/Private)
+if(CMAKE_DL_LIBS)
+    target_link_libraries(host_academy_exports PRIVATE ${CMAKE_DL_LIBS})
+endif()
+add_test(NAME unreal_sdk.academy_exports COMMAND host_academy_exports "${HOST_LIBRARY}")

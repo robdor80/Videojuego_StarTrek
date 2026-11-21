@@ -21,13 +21,26 @@
 
 | ID | Objetivo comprobable | Responsable | Estado actual |
 | --- | --- | --- | --- |
-| **C-01** | Inspección y arquitectura de la frontera ABI/UE, matriz de aceptación | **ChatGPT** | **DOCUMENTADO, PR Draft #193 sin fusionar** |
-| **C-02** | Nueva fachada C productiva CREATE+BIND+QUERY Academy y catálogo mínimo de ranuras; preservar ABI v1 | **Codex — GPT-6 Alto** | **CORRECCIÓN DE AUDITORÍA IMPLEMENTADA Y PROBADA: paginación determinista; REAUDITORÍA PENDIENTE**. Misma [PR Draft #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), dependiente de #193, sin fusionar; [informe C-02](H06_IA03C02_INTERFAZ_NATIVA_ACADEMIA_2026-11-21.md). [CI de la corrección 44882238947](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947): Linux 297/297, Windows 297/297, ASan/UBSan 142/142, Release tests-OFF 5/5 por SO. Local 115/115; 145 versiones/cuatro campañas/varias ranuras, cursores caducados y 4.200 ranuras vacías |
-| **C-03** | Adaptar `HostRuntime` y `HostSessionSubsystem` a la nueva fachada sin bloquear Game Thread | **Codex — GPT-6 Alto** | **PENDIENTE**; validación UE local MSI |
+| **C-01** | Inspección y arquitectura de la frontera ABI/UE, matriz de aceptación | **ChatGPT** | **DOCUMENTADO Y FUSIONADO** en [PR #193](https://github.com/robdor80/Videojuego_StarTrek/pull/193), merge `d87c7b2cc1e6775fbcff0573ddc909b0d0a6bec7` |
+| **C-02** | Fachada C productiva CREATE/BIND/QUERY y catálogo paginado de H04, con ABI v1 compatible | **Codex — GPT-6 Alto** | **IMPLEMENTADO, PROBADO Y FUSIONADO** en [PR #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), merge `098246e1bda8c40377f0e344949610c1f7cb948d`. [Informe y evidencia nativa C-02](H06_IA03C02_INTERFAZ_NATIVA_ACADEMIA_2026-11-21.md). |
+| **C-03** | Adaptar `HostRuntime` y `HostSessionSubsystem` a la fachada Academy sin bloquear Game Thread | **Codex — GPT-6 Alto** | **IMPLEMENTADO**. **PRUEBAS NATIVAS CLOUD PASS** (297/297). **CI NATIVA PASS** y **SDK RELEASE PASS** en Linux y Windows, con ASan/UBSan PASS en Linux. **AUDITORÍA CHATGPT PENDIENTE**. [PR Draft #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195), sin fusionar. **UE 5.8.4 EN MSI NOT_RUN**. **CERTIFICACIÓN INTEGRAL UNREAL/M1 PENDIENTE**. [Informe C-03](H06_IA03C03_INTEGRACION_UNREAL_2026-11-21.md). |
 | **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy (nombre editable, sin biografía libre) | **ChatGPT UX + Codex implementación** | **PENDIENTE** |
 | **C-05** | Pruebas UE 5.8.4 NullRHI/D3D12/varios mundos, auditoría y aceptación M1 | **Codex + ChatGPT + usuario** | **PENDIENTE** |
 
-**Puerta inmediata:** auditoría independiente de **C-02 en la PR Draft #194**, dependiente de la documental **#193**, que continúa abierta. No fusionar sin autorización. **No encargar a Codex repetir C-01** ni crear nuevas subfases: el trabajo posterior de integración UE pertenece a **C-03**, ya definido. C-02 queda entregada en alcance nativo; no certifica M1.
+**Puerta inmediata.** Auditoría independiente de C-03 en la PR Draft #195. Su validación real en UE 5.8.4 se conserva dentro de C-03 y de la matriz existente de C-05. [CI de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/195/checks).
+
+### Verificaciones C-03 reservadas para MSI
+
+| Verificación UE 5.8.4 | Estado |
+| --- | --- |
+| Compilación UBT de `StarTrekRPGEditor` | **NOT_RUN** |
+| Compilación UBT de `StarTrekRPG` Win64 | **NOT_RUN** |
+| Ejecución real con Unreal NullRHI | **NOT_RUN** |
+| Ejecución real con Unreal D3D12 | **NOT_RUN** |
+| Cambio real de `UWorld` en Unreal | **NOT_RUN** |
+| Carga real en Unreal de las DLL preparadas en MSI | **NOT_RUN** |
+| Creación, guardado, cierre de proceso y recuperación desde Unreal | **NOT_RUN** |
+| Prueba interactiva del jugador en MSI | **NOT_RUN** |
 
 ## 3. Ruta mínima que constituye éxito de H06/M1
 
