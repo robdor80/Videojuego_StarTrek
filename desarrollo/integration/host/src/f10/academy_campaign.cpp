@@ -362,7 +362,9 @@ AcademyCandidateView AcademyCampaign::inspect() const
     };
     require(path(campus_) == "campus" && path(person_) == "person" && path(creation_fact_) == "candidate_created" &&
             world_.has_relation({person_, candidate_for, campus_}) &&
-            world_.has_relation({creation_fact_, subject, person_}) && !world_.population_origin(person_));
+            world_.has_relation({creation_fact_, subject, person_}) && !world_.population_origin(person_) &&
+            std::ranges::count(world_.relations_from(person_), candidate_for, &EntityRelation::kind) == 1 &&
+            std::ranges::count(world_.relations_from(creation_fact_), subject, &EntityRelation::kind) == 1);
 
     result.campaign_id = read_text(world_, campus_, campaign_field, 32);
     result.display_name = read_text(world_, person_, name_field, name_limit);

@@ -101,7 +101,8 @@ jobs:
           if ($IsWindows) { $flags += @('-A', 'x64') }
           $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
                        'host_abi_tests', 'host_academy_feasibility_tests', 'host_academy_candidate_tests',
-                       'host_academy_candidate_faults', 'host_biography_tests', 'host_ai_tests', 'host_biography_ai_tests', 'host_initial_biography_tests')
+                       'host_academy_candidate_faults', 'host_academy_player_tests', 'host_academy_player_faults',
+                       'host_biography_tests', 'host_ai_tests', 'host_biography_ai_tests', 'host_initial_biography_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
             $env:CC = 'clang'
