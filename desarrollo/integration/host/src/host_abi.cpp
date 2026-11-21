@@ -1,6 +1,9 @@
 #include "trek/host/host_abi.h"
+#include "trek/host/academy_abi.h"
 
 #include "abi_admission.h"
+#include "academy_interface.h"
+#include "f10/academy_campaign.h"
 #include "trek/host/session_owner.h"
 #include "f05_orders.h"
 
@@ -14,6 +17,7 @@
 #include <type_traits>
 #include <utility>
 #include <variant>
+#include <jsoncons/json.hpp>
 
 using namespace trek::host;
 using detail::AbiAdmission;
@@ -24,6 +28,8 @@ static_assert(sizeof(TrekHostStatus) == 24 && sizeof(TrekHostCompletion) == 120)
 static_assert(offsetof(TrekHostRequest, input) == 16 && offsetof(TrekHostCompletion, output) == 72);
 static_assert(std::is_trivial_v<TrekHostRequest> && std::is_standard_layout_v<TrekHostRequest>);
 static_assert(std::is_trivial_v<TrekHostCompletion> && std::is_standard_layout_v<TrekHostCompletion>);
+static_assert(sizeof(TrekHostAcademyRequest) == 48 && sizeof(TrekHostAcademyView) == 240);
+static_assert(sizeof(TrekHostSlotMetadata) == 104 && sizeof(TrekHostAcademyCompletion) == 6696);
 
 namespace {
 
@@ -87,7 +93,8 @@ std::string copy(TrekHostText text)
     return text.size ? std::string(text.data, text.size) : std::string{};
 }
 
-using Reply = std::variant<std::future<Result>, std::shared_future<Result>, std::future<OperationResult>>;
+using Reply = std::variant<std::future<Result>, std::shared_future<Result>, std::future<OperationResult>,
+                           std::future<detail::AcademyInterfaceResult>>;
 
 struct Pending {
     Reply reply;
@@ -95,6 +102,7 @@ struct Pending {
     uint64_t key = 0;
     uint32_t operation = 0;
     Generation generation;
+    bool academy = false;
 };
 
 void project(TrekHostCompletion& out, const OperationResult& result, const Pending& pending)
@@ -263,6 +271,7 @@ try {
     if (out->size != sizeof(*out)) return TREK_HOST_ABI_MISMATCH;
     auto* slot = client->find(ticket);
     if (!slot) return TREK_HOST_UNKNOWN_TICKET;
+    if (slot->academy) return TREK_HOST_ABI_MISMATCH;
 
     const AbiAdmission guard(client->owner);
     if (!guard) return TREK_HOST_RETRY;
@@ -320,6 +329,138 @@ TrekHostCode TREK_HOST_ABI_CALL trek_host_discard(TrekHostClient* client, uint64
     if (!slot) return TREK_HOST_UNKNOWN_TICKET;
     *slot = {};
     return TREK_HOST_OK;
+}
+
+uint32_t TREK_HOST_ABI_CALL trek_host_academy_version(void)
+{
+    return TREK_HOST_ACADEMY_VERSION;
+}
+
+TrekHostCode TREK_HOST_ABI_CALL trek_host_academy_submit(
+    TrekHostClient* client, const TrekHostAcademyRequest* request, uint64_t* ticket)
+try {
+    if (!ticket) return TREK_HOST_INVALID_ARGUMENT;
+    *ticket = 0;
+    if (!client || !request) return TREK_HOST_INVALID_ARGUMENT;
+    if (request->size != sizeof(*request) || request->version != TREK_HOST_ACADEMY_VERSION)
+        return TREK_HOST_ABI_MISMATCH;
+    if (request->reserved || request->operation < TREK_HOST_ACADEMY_CREATE ||
+        request->operation > TREK_HOST_ACADEMY_SLOTS) return TREK_HOST_INVALID_ARGUMENT;
+    const bool create = request->operation == TREK_HOST_ACADEMY_CREATE;
+    std::string payload;
+    if (create) {
+        if (request->generation || !request->creation_key || !request->display_name.size ||
+            !valid_text(request->display_name, TREK_HOST_ACADEMY_NAME_BYTES)) return TREK_HOST_INVALID_ARGUMENT;
+        jsoncons::json input;
+        input["display_name"] = copy(request->display_name);
+        payload = input.to_string();
+        if (!detail::academy_display_name(payload)) return TREK_HOST_INVALID_ARGUMENT;
+    } else if (request->creation_key || request->display_name.data || request->display_name.size ||
+               request->display_name.reserved) return TREK_HOST_INVALID_ARGUMENT;
+
+    auto* slot = client->find(0);
+    if (!slot || slot == &client->pending.back() ||
+        client->last_ticket == std::numeric_limits<uint64_t>::max()) return TREK_HOST_CAPACITY_LIMIT;
+    const AbiAdmission guard(client->owner);
+    if (!guard) return TREK_HOST_RETRY;
+    const auto current = client->owner.snapshot().generation;
+    if (!create && request->generation != AbiAdmission::token(current)) return TREK_HOST_GENERATION_EXPIRED;
+    const auto next = client->last_ticket + 1;
+    std::future<detail::AcademyInterfaceResult> reply;
+    switch (request->operation) {
+    case TREK_HOST_ACADEMY_CREATE:
+        reply = detail::AcademyInterface::create_bound(client->owner, request->creation_key, std::move(payload));
+        break;
+    case TREK_HOST_ACADEMY_QUERY:
+        reply = detail::AcademyInterface::query(client->owner, current);
+        break;
+    case TREK_HOST_ACADEMY_SLOTS:
+        reply = detail::AcademyInterface::slots(client->owner, current);
+        break;
+    }
+    *slot = {std::move(reply), next, 0, request->operation, create ? Generation{} : current, true};
+    *ticket = client->last_ticket = next;
+    return TREK_HOST_OK;
+} catch (const jsoncons::ser_error&) {
+    return TREK_HOST_INVALID_ARGUMENT;
+} catch (...) {
+    return TREK_HOST_INTERNAL_ERROR;
+}
+
+TrekHostCode TREK_HOST_ABI_CALL trek_host_academy_poll(
+    TrekHostClient* client, uint64_t ticket, TrekHostAcademyCompletion* out)
+try {
+    if (!client || !out || !ticket) return TREK_HOST_INVALID_ARGUMENT;
+    if (out->size != sizeof(*out)) return TREK_HOST_ABI_MISMATCH;
+    auto* slot = client->find(ticket);
+    if (!slot) return TREK_HOST_UNKNOWN_TICKET;
+    if (!slot->academy) return TREK_HOST_ABI_MISMATCH;
+    const AbiAdmission guard(client->owner);
+    if (!guard) return TREK_HOST_RETRY;
+    auto& future = std::get<std::future<detail::AcademyInterfaceResult>>(slot->reply);
+    if (future.wait_for(std::chrono::seconds(0)) != std::future_status::ready) return TREK_HOST_PENDING;
+    TrekHostAcademyCompletion completion{};
+    completion.size = sizeof(completion);
+    completion.ticket = ticket;
+    completion.operation = slot->operation;
+    completion.code = TREK_HOST_INTERNAL_ERROR;
+    try {
+        auto result = future.get();
+        const auto snapshot = client->owner.snapshot();
+        completion.code = encode(result.error);
+        if ((result.error == Error::OK && result.generation != snapshot.generation) ||
+            (result.error != Error::OK && slot->generation != Generation{} && slot->generation != snapshot.generation))
+            completion.code = TREK_HOST_GENERATION_EXPIRED;
+        if (completion.code == TREK_HOST_OK) {
+            completion.generation = AbiAdmission::token(result.generation);
+            if (slot->operation == TREK_HOST_ACADEMY_SLOTS) {
+                if (result.slots.size() > TREK_HOST_ACADEMY_MAX_SLOTS) throw std::logic_error("Slot limit");
+                completion.output.slots.count = static_cast<uint32_t>(result.slots.size());
+                for (std::size_t i = 0; i < result.slots.size(); ++i) {
+                    const auto& source = result.slots[i];
+                    auto& row = completion.output.slots.entries[i];
+                    if (source.address.campaign.size() != 32 || source.address.slot.size() > 32)
+                        throw std::logic_error("Slot metadata bounds");
+                    row.version = source.address.version;
+                    row.kind = source.address.kind == CampaignKind::ACADEMY ? TREK_HOST_KIND_ACADEMY :
+                               source.address.kind == CampaignKind::NAVAL ? TREK_HOST_KIND_NAVAL : TREK_HOST_KIND_UNKNOWN;
+                    row.format = source.format;
+                    row.provenance = static_cast<uint32_t>(source.provenance);
+                    row.reason = encode(source.reason);
+                    row.compatible = source.compatible;
+                    row.recoverable = source.recoverable;
+                    std::memcpy(row.campaign, source.address.campaign.data(), source.address.campaign.size());
+                    std::memcpy(row.slot, source.address.slot.data(), source.address.slot.size());
+                }
+            } else {
+                if (!result.candidate) throw std::logic_error("Missing bound candidate");
+                const auto& source = *result.candidate;
+                if (source.campaign_id.size() != 32 || source.display_name.size() > TREK_HOST_ACADEMY_NAME_BYTES ||
+                    source.source_digest.size() != 64) throw std::logic_error("Candidate bounds");
+                auto& view = completion.output.candidate;
+                view.person = source.person;
+                view.creation_fact = source.creation_fact;
+                view.revision = source.revision;
+                view.tick = source.tick;
+                view.kind = TREK_HOST_KIND_ACADEMY;
+                view.candidate_state = TREK_HOST_CANDIDATE;
+                std::memcpy(view.campaign, source.campaign_id.data(), source.campaign_id.size());
+                std::memcpy(view.display_name, source.display_name.data(), source.display_name.size());
+                std::memcpy(view.source_digest, source.source_digest.data(), source.source_digest.size());
+            }
+        }
+    } catch (...) {
+        completion.code = TREK_HOST_INTERNAL_ERROR;
+    }
+    if (completion.code != TREK_HOST_OK) {
+        completion.generation = 0;
+        completion.output = {};
+    }
+    *slot = {};
+    *out = completion;
+    return TREK_HOST_OK;
+} catch (...) {
+    return TREK_HOST_INTERNAL_ERROR;
 }
 
 } // extern "C"

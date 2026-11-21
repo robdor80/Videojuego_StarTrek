@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(TrekHostProductConsumer LANGUAGES CXX)
+project(TrekHostProductConsumer LANGUAGES C CXX)
 
 find_package(Threads REQUIRED)
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
@@ -15,6 +15,17 @@ add_executable(academy_product_client ../academy_persistence_tests.cpp)
 target_compile_features(academy_product_client PRIVATE cxx_std_20)
 target_include_directories(academy_product_client PRIVATE ../../include ../../src ../../../f04/include)
 target_link_libraries(academy_product_client PRIVATE TrekHost Threads::Threads)
+add_executable(academy_c_product_client ../academy_abi_tests.c)
+set_target_properties(academy_c_product_client PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES)
+target_include_directories(academy_c_product_client PRIVATE ../../include)
+target_link_libraries(academy_c_product_client PRIVATE TrekHost)
+add_test(NAME product.academy.c_lifecycle COMMAND academy_c_product_client)
+add_test(NAME product.academy.c_process
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/../academy_abi_process.py"
+    "$<TARGET_FILE:academy_c_product_client>" "$<TARGET_FILE:academy_product_client>"
+    "${CMAKE_CURRENT_BINARY_DIR}/c-proof")
+set_tests_properties(product.academy.c_lifecycle product.academy.c_process PROPERTIES TIMEOUT 180
+  ENVIRONMENT_MODIFICATION "PATH=path_list_prepend:$<TARGET_FILE_DIR:TrekHost>")
 if(MSVC)
   target_compile_options(academy_product_client PRIVATE /utf-8)
 endif()

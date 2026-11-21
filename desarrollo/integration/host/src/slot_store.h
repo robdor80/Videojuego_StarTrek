@@ -45,7 +45,8 @@ public:
                const std::function<Error(const std::filesystem::path&)>& snapshot,
                const std::function<Error(const PreparedSlot&)>& verify) const;
     PreparedSlot prepare(SlotAddress address) const;
-    InspectionResult inspect(const std::function<Error(const PreparedSlot&)>& verify = {}) const;
+    InspectionResult inspect(const std::function<Error(const PreparedSlot&)>& verify = {},
+                             std::size_t limit = 10000) const;
 private:
     StorageConfig config_;
 };

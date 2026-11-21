@@ -25,6 +25,7 @@ class AbiAdmission;
 class BiographyProfileSource;
 class AcademyCandidateFactory;
 class AcademyPlayerBinding;
+class AcademyInterface;
 }
 
 // Internal C++ interface for HOST modules.
@@ -180,6 +181,7 @@ private:
     friend class detail::BiographyProfileSource;
     friend class detail::AcademyCandidateFactory;
     friend class detail::AcademyPlayerBinding;
+    friend class detail::AcademyInterface;
     friend class detail::AbiAdmission;
 #ifdef TREK_HOST_GATEWAY_TESTING
     friend class GatewayTestAccess;

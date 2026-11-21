@@ -411,7 +411,7 @@ PreparedSlot SlotStore::prepare(SlotAddress address) const {
     point("after_copy");
     return {std::move(history),std::move(e.identity),std::move(e.campaign)};
 }
-InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot&)>& verify) const {
+InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot&)>& verify, std::size_t limit) const {
     InspectionResult result;
     try {
         auto r=root(config_);
@@ -423,12 +423,16 @@ InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot
             for(const auto& s:fs::directory_iterator(slots.path())) {
                 need(++count<=10000,Error::CAPACITY_LIMIT);auto name=s.path().filename().string();need(valid_slot(name),Error::PATH_REJECTED);PinnedDirectory slot(s.path());
                 for(auto version:versions(slot.path())) {
+                    need(result.slots.size()<limit,Error::CAPACITY_LIMIT);
                     need(++count<=10000,Error::CAPACITY_LIMIT);SlotInspection info;info.address={campaign_id,name,version};
                     try {
                         PinnedDirectory generation(slot.path()/("v"+std::to_string(version)));
                         auto manifest=read(generation.path()/"manifest");
                         if (manifest.starts_with(academy_prefix)) {
                             info.format=2;info.address.kind=CampaignKind::ACADEMY;
+                        }
+                        else if (manifest.starts_with("TREKHOST4 1\n")) {
+                            info.format=1;info.address.kind=CampaignKind::NAVAL;
                         }
                         auto e=decode(manifest);
                         info.format=e.kind()==CampaignKind::ACADEMY?2:1;
