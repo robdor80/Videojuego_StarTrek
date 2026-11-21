@@ -65,10 +65,12 @@ def main():
 def check_pagination(consumer, naval_fixture, base):
     root = base / "many"
     root.mkdir(mode=0o700)
-    campaigns = [run(consumer, "write_many", root, count) for count in (65, 70, 9)]
+    campaigns = [run(consumer, "write_many", root, count) for count in (65, 70, 6)]
+    run(consumer, "add_slot", root, campaigns[2][0], "beta", 3)
     naval = run(naval_fixture, "naval", root)[0]
-    expected = {(c[0], "alpha", v) for c, count in zip(campaigns, (65, 70, 9))
-                for v in range(1, count + 1)} | {(naval, "alpha", 1)}
+    expected = {(c[0], "alpha", v) for c, count in zip(campaigns, (65, 70, 6))
+                for v in range(1, count + 1)} | {(naval, "alpha", 1)} | {
+                    (campaigns[2][0], "beta", v) for v in range(1, 4)}
     rows = [row.split() for row in run(consumer, "catalog", root)]
     keys = [(row[0], row[8], int(row[7])) for row in rows]
     assert len(keys) == len(set(keys)) == 145 and set(keys) == expected
@@ -81,6 +83,8 @@ def check_pagination(consumer, naval_fixture, base):
         restored = run(consumer, "history", root, campaign[0], version)
         assert restored[0] == campaign[0] and restored[2:] == campaign[2:]
         assert restored[1] != campaign[1]
+    restored = run(consumer, "history", root, campaigns[2][0], 3, "beta")
+    assert restored[0] == campaigns[2][0] and restored[2:] == campaigns[2][2:]
     # Corruption on a later page is returned as a row; other campaigns stay usable.
     damaged_key = keys[100]
     slot = root / "campaigns" / damaged_key[0] / "slots" / damaged_key[1] / f"v{damaged_key[2]}"

@@ -289,11 +289,20 @@ int main(int argc,char** argv)
         deny_naval(c,out.generation);save(c,out.generation);print_candidate(&out);
     } else if(!strcmp(argv[1],"catalog")) {
         catalog(c);
-    } else if(!strcmp(argv[1],"history")) {
-        check(argc==5,"campaign/version");
+    } else if(!strcmp(argv[1],"history") || !strcmp(argv[1],"add_slot")) {
+        const int adding=!strcmp(argv[1],"add_slot");
+        check(argc==5 || argc==6,"campaign/version/slot");
         TrekHostRequest r=old_req(TREK_HOST_RESTORE,0);
-        r.input.restore=(TrekHostSlot){text(argv[3]),text("alpha"),strtoull(argv[4],NULL,10)};
+        r.input.restore=(TrekHostSlot){text(argv[3]),text(!adding && argc==6?argv[5]:"alpha"),
+                                     adding?0:strtoull(argv[4],NULL,10)};
         TrekHostCompletion restored=old_finish(c,old_enqueue(c,r),TREK_HOST_OK);
+        if(adding) {
+            check(argc==6,"add_slot campaign/slot/count");
+            for(unsigned i=0;i<(unsigned)strtoul(argv[5],NULL,10);++i) {
+                TrekHostRequest s=old_req(TREK_HOST_SAVE,restored.generation);s.input.slot=text(argv[4]);
+                old_finish(c,old_enqueue(c,s),TREK_HOST_OK);
+            }
+        }
         TrekHostAcademyCompletion out=run(c,req(TREK_HOST_ACADEMY_QUERY,restored.generation),TREK_HOST_OK);
         deny_naval(c,out.generation);print_candidate(&out);
     } else if(!strcmp(argv[1],"cursor_lifecycle")) {

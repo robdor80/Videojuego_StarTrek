@@ -69,7 +69,8 @@ La auditoría posterior detectó el fallo funcional del catálogo pese a esta CI
 ## Validación de la corrección de paginación
 
 - Consumidor C11 contra DLL real: **5/5 pruebas locales PASS**, incluida ABI naval v1. Nuevo caso `host.academy.abi_pagination`, también `product.academy.c_pagination` contra Release tests-OFF.
-- Fixture con **145 versiones H04 reales de cuatro campañas** (tres Academy con 65, 70 y 9 versiones, más una naval): cobertura exacta, sin duplicados, orden determinista y repetible entre procesos, recuperación de versiones 1/2/64/65/70 con la misma PERSON y bloqueo F05 intacto.
+- Regresión local ampliada de la corrección: **115/115 PASS**, incluidos H03/H04, B02/B03, F05 y roundtrip naval C v1.
+- Fixture con **145 versiones H04 reales de cuatro campañas y varias ranuras** (tres Academy con 65, 70 y 9 versiones, la tercera repartida entre alpha/beta, más una naval): cobertura exacta, sin duplicados, orden determinista y repetible entre procesos, recuperación de versiones 1/2/64/65/70 y del histórico beta con la misma PERSON y bloqueo F05 intacto.
 - COMMITTED manipulado en una fila posterior a la primera página: la fila conserva su error y quedan consultables las otras 144 versiones. Reintentos/descarte de páginas, cursor extranjero/inexistente/fuera de rango, caducidad por CLOSE desde CLOSED, RESTORE y SAVE en la misma generación.
 - 4.200 ranuras vacías: progreso por páginas vacías y expulsión segura de cursores tras más de 32 posiciones, sin bucles ni crecimiento del registro de cursores.
 - La nueva matriz CI Linux/Windows, ASan/UBSan y producto Release tests-OFF queda pendiente de registrar para esta corrección. Los resultados anteriores son evidencia histórica, no se atribuyen al nuevo HEAD.
