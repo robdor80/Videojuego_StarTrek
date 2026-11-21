@@ -2,6 +2,8 @@
 
 **Corte 21-11-2026.** Integración implementada en `codex/h06-ia03c03-academy-unreal` desde `main` en `098246e1bda8c40377f0e344949610c1f7cb948d`. C-01 y C-02 constan fusionadas en [#193](https://github.com/robdor80/Videojuego_StarTrek/pull/193) y [#194](https://github.com/robdor80/Videojuego_StarTrek/pull/194). Auditoría independiente de ChatGPT y certificación integral Unreal/M1 pendientes. La [PR #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195) permanece Draft y sin fusionar.
 
+**HEAD de implementación** `7a6c9663e6c4442ab4698176329a4cf1566a7a09`. El commit posterior registra la evidencia y el estado de C-03. La revisión exacta de entrega queda en el historial y en la descripción de la [PR Draft #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195/commits).
+
 ## Arquitectura y contratos
 
 `FStarTrekRPGModule` carga las mismas DLL Win64 de producto. `FHostApi` valida primero la ABI 1 y negocia después los tres símbolos de Academy. La negociación acepta v2. Un export ausente o una versión cero indican `SERVICE_UNAVAILABLE`. Otra versión indica `ABI_MISMATCH`. Ambos casos mantienen operativo el cliente v1. Las comprobaciones de tamaño cubren request/completion/status v1 (80/120/24 bytes), request/ficha/fila/completion Academy (48/240/104/6696) y los offsets de salida 72 y 32. [ABI v1](../../../../desarrollo/integration/host/include/trek/host/host_abi.h) · [Academy ABI v2](../../../../desarrollo/integration/host/include/trek/host/academy_abi.h).
@@ -20,7 +22,7 @@ Para reintentar CREATE, se conserva la clave y el nombre exacto por cliente. CLO
 
 ## Concurrencia, mundos y catálogo
 
-- GameInstance conserva el único cliente y el ticker existente. La preparación del directorio de guardados y la creación del cliente se ejecutan en segundo plano. El ticker toma la inicialización cuando está lista y serializa status, submit, poll y discard. No se espera una operación Core o H04 en el Game Thread.
+- GameInstance conserva el único cliente y el ticker existente. La preparación del directorio de guardados y la creación del cliente se ejecutan en segundo plano. El ticker toma la inicialización cuando está lista y serializa status, submit, poll y discard. El trabajador nativo resuelve las peticiones Core y H04 fuera del Game Thread.
 - Ocho observaciones compartidas, con reserva de CLOSE. Cada observación marca su familia de poll. Se comprueba la generación con status después del poll antes de aplicar payload. Si hay contención, el ticker conserva la respuesta consumida hasta obtener el status. CLOSE revoca observaciones previas y RESTORE publica la generación nueva.
 - Cada mundo mantiene una proyección con enlace débil. EndPlay descarta sus observaciones y vistas. Una transición admitida queda en GameInstance hasta completarse, aunque su observador ya se haya destruido. El mundo siguiente consulta la generación vigente. Descartar un ticket de SAVE deja continuar el trabajo H04.
 - La inicialización y la retirada capturan la API por referencia compartida y usan hilos que pueden finalizar tras el cierre del Task Graph. La retirada puede esperar una inicialización pendiente fuera del Game Thread. El módulo Unreal Win64 permanece residente durante el proceso para que el callable siga disponible durante `ShutdownModule`. Las DLL nativas mantienen sus referencias hasta terminar `Destroy`. El cierre completo del proceso conserva las versiones ya confirmadas por H04.
@@ -38,7 +40,7 @@ Para reintentar CREATE, se conserva la clave y el nombre exacto por cliente. CLO
 | `juego/UE5/StarTrekRPG/README.md` | Inventario de cabeceras y DLL requeridas para preparar el proyecto |
 | Este informe y `H06_CONTROL_UNICO_ESTADO_2026-11-21.md` | Estado de C-01 a C-03 y verificaciones pendientes |
 
-Las rutas de fuentes y scripts Unreal de la tabla se resuelven desde `juego/UE5/StarTrekRPG`. CoreRPG conserva el pin `76a7b7b485616d8c4994f384a90f123bf333591d`. Esta entrega no añade assets ni modifica el producto nativo, F11 o contratos LOCKED.
+Las rutas de fuentes y scripts Unreal de la tabla se resuelven desde `juego/UE5/StarTrekRPG`. CoreRPG conserva el pin `76a7b7b485616d8c4994f384a90f123bf333591d`. La entrega se limita a fuentes y procedimientos de Unreal, comprobaciones de SDK y documentación de H06.
 
 ## Pruebas ejecutadas
 
@@ -49,9 +51,15 @@ Las rutas de fuentes y scripts Unreal de la tabla se resuelven desde `juego/UE5/
 | Cloud Linux, negociador del SDK contra biblioteca Release | **1/1 PASS**, con los exports reales, omisión individual de cada símbolo, versión cero, versión Draft incompatible y uso posterior de ABI v1. |
 | Cloud H01 y regresión aislada F11 | **11/11 PASS** en contratos y **17/17 PASS** en la regresión. |
 | Cloud Linux, ensayo nativo de los datos de Seed/Resume | **PASS** contra producto tests OFF en dos procesos. Misma PERSON, hecho y checkpoint tras recuperar la versión 1. Validó el nombre, 66 versiones, la página vacía, el rechazo de la versión dañada, CLOSE con una consulta pendiente y el cursor retirado. |
-| Actions Linux/Windows, ASan/UBSan y SDK Release | En curso. [Primera matriz IA-03C-03](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761). [Ejecuciones de la rama](https://github.com/robdor80/Videojuego_StarTrek/actions?query=branch%3Acodex%2Fh06-ia03c03-academy-unreal) |
+| Actions Linux nativo Release | **297/297 PASS**, H01 y F11 PASS. [Job Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455554). |
+| Actions Windows nativo Release | **297/297 PASS**, H01 y F11 PASS. [Job Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455645). |
+| Actions Linux Clang ASan/UBSan | **142/142 PASS**. [Job ASan/UBSan](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455539). |
+| Actions Linux Release con tests OFF | **5/5 PASS** y **1/1 PASS** del negociador con producto real. [Job producto Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913811410/job/136875011283). |
+| Actions Windows x64 Release con tests OFF | **5/5 PASS** y **1/1 PASS** del negociador con las DLL del SDK preparado por `Prepare-Host.ps1`. Los hashes de ambas cabeceras y DLL coincidieron con la fuente y el build Release. [Job producto Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913811410/job/136875011357). |
 
-Cloud no dispone de Unreal Engine 5.8.4 ni UBT. La prueba del negociador solo compila C++ contra las cabeceras C y carga el producto nativo. Seed y Resume ejercitan el subsistema Unreal y quedan preparados para ejecutarse en MSI.
+La primera ejecución compiló y preparó el SDK Windows, y el consumidor nuevo falló al cargar la DLL. La comprobación pasó tras normalizar la ruta Win64 y cargar primero `TrekF04Bridge.dll`, como hace `HostRuntime`. La matriz completa del HEAD de implementación y el check H01 tienen sus propias ejecuciones. El HEAD documental activa los mismos checks. [Carga inicial de prueba](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455636) · [Matriz del HEAD de implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154850) · [H01 del HEAD de implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154848) · [Checks de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/195/checks).
+
+Unreal Engine 5.8.4 y UBT están ausentes en Cloud. La prueba del negociador solo compila C++ contra las cabeceras C y carga el producto nativo. Seed y Resume ejercitan el subsistema Unreal y quedan preparados para ejecutarse en MSI.
 
 ## Pruebas MSI pendientes
 
