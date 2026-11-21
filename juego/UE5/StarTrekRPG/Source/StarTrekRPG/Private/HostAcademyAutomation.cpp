@@ -16,7 +16,7 @@ namespace
 {
 constexpr auto Flags = EAutomationTestFlags::ClientContext | EAutomationTestFlags::ProductFilter;
 const TCHAR* DiagnosticMap = TEXT("/Game/Diagnostics/HostDiagnostic");
-const TCHAR* SlotName = TEXT("academy-c03");
+const TCHAR* SlotName = TEXT("academy_c03");
 const TCHAR* CandidateName = TEXT("María Vega");
 constexpr uint64 Versions = TREK_HOST_ACADEMY_MAX_SLOTS + 2;
 
@@ -35,19 +35,22 @@ struct FAcademyRun
     FString Fixture;
     FString ExpectedCandidate;
     FHostAcademySlot FirstVersion;
+    FHostAcademySlot RejectedVersion;
     uint64 Generation = 0;
     uint64 Saved = 0;
     uint64 Found = 0;
     uint32 Cursor = 0;
-    int32 Pages = 0;
+    uint32 FirstCursor = 0;
+    uint64 Pages = 0;
+    bool bSawEmptyPage = false;
     double Deadline = FPlatformTime::Seconds() + 120.0;
     bool bResume;
     bool bDone = false;
 
     enum class EStep
     {
-        Start, Create, AfterTravel, Query, Candidate, Save, Saved, List, Page,
-        Restore, Restored, BeforeClose, Close, Closed
+        Start, Create, AfterTravel, Query, Candidate, Replay, Replayed, Save,
+        Saved, List, Page, Restore, Restored, BeforeClose, Close, Closed
     };
     EStep Step = EStep::Start;
 
@@ -178,7 +181,7 @@ struct FAcademyRun
             if (Completed(Projection->GetAcademyResult(TREK_HOST_ACADEMY_QUERY)))
             {
                 const auto& Candidate = Projection->GetAcademyCandidate();
-                if (!Candidate.IsSet() || Candidate->DisplayName != CandidateName ||
+                if (!Candidate.IsSet() || !Candidate->DisplayName.Equals(CandidateName, ESearchCase::CaseSensitive) ||
                     Candidate->Kind != TREK_HOST_KIND_ACADEMY || Candidate->CandidateState != TREK_HOST_CANDIDATE ||
                     Candidate->Generation != Generation || !Candidate->Person || !Candidate->CreationFact ||
                     Host->GetStatus().principal != TREK_HOST_OK ||
@@ -199,8 +202,24 @@ struct FAcademyRun
                 else
                 {
                     ExpectedCandidate = CandidateRecord(*Candidate);
-                    Step = EStep::Save;
+                    Step = EStep::Replay;
                 }
+            }
+            break;
+        case EStep::Replay:
+            Admit(Host->CreateAcademy(*Projection, CandidateName), EStep::Replayed);
+            break;
+        case EStep::Replayed:
+            if (Completed(Projection->GetAcademyResult(TREK_HOST_ACADEMY_CREATE)))
+            {
+                const auto& Candidate = Projection->GetAcademyCandidate();
+                if (!Candidate.IsSet() || Candidate->Generation != Generation ||
+                    CandidateRecord(*Candidate) != ExpectedCandidate)
+                {
+                    Fail(TEXT("replayed CREATE changed the candidate or active generation"));
+                    break;
+                }
+                Step = EStep::Save;
             }
             break;
         case EStep::Save:
@@ -219,32 +238,48 @@ struct FAcademyRun
             if (Completed(Projection->GetAcademyResult(TREK_HOST_ACADEMY_SLOTS)))
             {
                 const auto& Catalog = Projection->GetAcademyPage();
-                if (!Catalog.IsSet() || Catalog->Generation != 0 || Catalog->Rows.Num() > TREK_HOST_ACADEMY_MAX_SLOTS ||
-                    ++Pages > Versions)
+                if (!Catalog.IsSet() || Catalog->Generation != 0 ||
+                    Catalog->Rows.Num() > static_cast<int32>(TREK_HOST_ACADEMY_MAX_SLOTS) || ++Pages > Versions)
                 {
                     Fail(TEXT("invalid catalog page or nonterminating cursor"));
                     break;
                 }
                 for (const auto& Row : Catalog->Rows)
                 {
-                    if (Row.Slot != SlotName || Row.Kind != TREK_HOST_KIND_ACADEMY ||
-                        !Row.bCompatible || !Row.bRecoverable || Row.Reason != TREK_HOST_OK ||
-                        Found >= Versions || Row.Version != Versions - Found++)
+                    if (Row.Slot != SlotName || !ExpectedCandidate.StartsWith(Row.Campaign + TEXT("|")) ||
+                        Row.Kind != TREK_HOST_KIND_ACADEMY || Found >= Versions || Row.Version != Versions - Found)
                     {
                         Fail(TEXT("invalid catalog row or version order"));
+                        break;
+                    }
+                    ++Found;
+                    if (Row.Version == 2)
+                    {
+                        if (Row.bRecoverable || Row.Reason != TREK_HOST_SAVE_CORRUPT)
+                        {
+                            Fail(TEXT("the damaged version must retain its H04 rejection"));
+                            break;
+                        }
+                        RejectedVersion = Row;
+                    }
+                    else if (!Row.bCompatible || !Row.bRecoverable || Row.Reason != TREK_HOST_OK)
+                    {
+                        Fail(TEXT("a valid version must be recoverable"));
                         break;
                     }
                     if (Row.Version == 1) FirstVersion = Row;
                 }
                 if (bDone) break;
                 Cursor = Catalog->NextCursor;
+                if (Pages == 1) FirstCursor = Cursor;
+                bSawEmptyPage |= Catalog->Rows.IsEmpty() && Catalog->HasMore();
                 if (Catalog->HasMore())
                 {
                     Step = EStep::List;
                 }
-                else if (Pages < 2 || Found != Versions || FirstVersion.Version != 1)
+                else if (!bSawEmptyPage || Found != Versions || FirstVersion.Version != 1 || RejectedVersion.Version != 2)
                 {
-                    Fail(TEXT("catalog did not include every historical version"));
+                    Fail(TEXT("catalog needs an empty continuation and all valid and damaged historical versions"));
                 }
                 else
                 {
@@ -253,6 +288,11 @@ struct FAcademyRun
             }
             break;
         case EStep::Restore:
+            if (Host->RestoreAcademy(*Projection, RejectedVersion) != TREK_HOST_SAVE_CORRUPT)
+            {
+                Fail(TEXT("a damaged version was accepted for RESTORE"));
+                break;
+            }
             Admit(Host->RestoreAcademy(*Projection, FirstVersion), EStep::Restored);
             break;
         case EStep::Restored:
@@ -260,7 +300,7 @@ struct FAcademyRun
             {
                 Generation = Host->GetStatus().generation;
                 if (!Generation || Projection->GetAcademyPage().IsSet() ||
-                    Host->ListAcademySlots(*Projection, 1) != TREK_HOST_GENERATION_EXPIRED)
+                    Host->ListAcademySlots(*Projection, FirstCursor) != TREK_HOST_GENERATION_EXPIRED)
                 {
                     Fail(TEXT("RESTORE did not establish a new generation or revoke old cursors"));
                     break;

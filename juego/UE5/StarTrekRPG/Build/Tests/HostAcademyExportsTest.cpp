@@ -6,6 +6,7 @@
 #include <initializer_list>
 
 #ifdef _WIN32
+#include <filesystem>
 #include <Windows.h>
 #else
 #include <dlfcn.h>
@@ -44,7 +45,22 @@ int main(int Argc, char** Argv)
         return 1;
     }
 #ifdef _WIN32
-    const auto Library = LoadLibraryExA(Argv[1], nullptr, LOAD_WITH_ALTERED_SEARCH_PATH);
+    const auto HostPath = std::filesystem::absolute(Argv[1]).make_preferred();
+    const auto BridgePath = HostPath.parent_path() / L"TrekF04Bridge.dll";
+    constexpr auto SearchFlags = LOAD_LIBRARY_SEARCH_DLL_LOAD_DIR | LOAD_LIBRARY_SEARCH_DEFAULT_DIRS;
+    const auto Bridge = LoadLibraryExW(BridgePath.c_str(), nullptr, SearchFlags);
+    if (!Bridge)
+    {
+        std::fprintf(stderr, "LoadLibraryExW(TrekF04Bridge.dll) failed: %lu\n", GetLastError());
+        return 1;
+    }
+    const auto Library = LoadLibraryExW(HostPath.c_str(), nullptr, SearchFlags);
+    if (!Library)
+    {
+        std::fprintf(stderr, "LoadLibraryExW(TrekHost.dll) failed: %lu\n", GetLastError());
+        FreeLibrary(Bridge);
+        return 1;
+    }
     const auto Resolve = [Library](const char* Name) { return GetProcAddress(Library, Name); };
 #else
     const auto Library = dlopen(Argv[1], RTLD_NOW | RTLD_LOCAL);
@@ -94,6 +110,7 @@ int main(int Argc, char** Argv)
     }
 #ifdef _WIN32
     FreeLibrary(Library);
+    FreeLibrary(Bridge);
 #else
     dlclose(Library);
 #endif
