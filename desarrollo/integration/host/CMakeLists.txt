@@ -219,6 +219,12 @@ endif()
 
 if(TREK_HOST_TESTS)
   add_executable(host_abi_tests tests/host_abi_tests.c)
+  add_executable(host_academy_abi_tests tests/academy_abi_tests.c)
+  set_target_properties(host_academy_abi_tests PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  target_link_libraries(host_academy_abi_tests PRIVATE TrekHost)
+  add_test(NAME host.academy.abi_lifecycle COMMAND host_academy_abi_tests)
+  set_tests_properties(host.academy.abi_lifecycle PROPERTIES TIMEOUT 90 LABELS "h06;ia03c02;c-abi")
   set_target_properties(host_abi_tests PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
   target_link_libraries(host_abi_tests PRIVATE TrekHost)
@@ -320,6 +326,16 @@ if(TREK_HOST_TESTS)
   add_executable(host_academy_persistence_tests tests/academy_persistence_tests.cpp)
   target_include_directories(host_academy_persistence_tests PRIVATE src)
   target_link_libraries(host_academy_persistence_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads)
+  add_test(NAME host.academy.abi_process
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/academy_abi_process.py"
+      "$<TARGET_FILE:host_academy_abi_tests>" "$<TARGET_FILE:host_academy_persistence_tests>"
+      "${CMAKE_CURRENT_BINARY_DIR}/academy-abi")
+  set_tests_properties(host.academy.abi_process PROPERTIES TIMEOUT 180 LABELS "h06;ia03c02;process;c-abi")
+  add_test(NAME host.academy.abi_pagination
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/academy_abi_process.py" pagination
+      "$<TARGET_FILE:host_academy_abi_tests>" "$<TARGET_FILE:host_academy_persistence_tests>"
+      "${CMAKE_CURRENT_BINARY_DIR}/academy-abi")
+  set_tests_properties(host.academy.abi_pagination PROPERTIES TIMEOUT 300 LABELS "h06;ia03c02;process;c-abi")
 
   add_library(host_academy_fault_runtime STATIC
     ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
@@ -336,6 +352,12 @@ if(TREK_HOST_TESTS)
   target_link_libraries(host_academy_player_faults PRIVATE host_academy_fault_runtime)
   add_executable(host_academy_persistence_faults tests/academy_persistence_tests.cpp)
   target_link_libraries(host_academy_persistence_faults PRIVATE host_academy_fault_runtime)
+  add_executable(host_academy_abi_faults tests/academy_abi_faults.cpp)
+  target_link_libraries(host_academy_abi_faults PRIVATE host_academy_fault_runtime)
+  set_target_properties(host_academy_abi_faults PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  add_test(NAME host.academy.abi_faults COMMAND host_academy_abi_faults)
+  set_tests_properties(host.academy.abi_faults PROPERTIES TIMEOUT 45 LABELS "h06;ia03c02;fault-injection")
 
   set_target_properties(host_academy_candidate_tests host_academy_candidate_faults
     host_academy_player_tests host_academy_player_faults

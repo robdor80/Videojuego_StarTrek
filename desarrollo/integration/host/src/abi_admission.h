@@ -17,6 +17,7 @@ public:
     explicit AbiAdmission(SessionOwner&);
     static std::uint64_t token(Generation) noexcept;
     std::string_view campaign() const noexcept;
+    std::uint64_t catalog_epoch() const noexcept;
     explicit operator bool() const noexcept { return lock_.owns_lock(); }
 
 private:

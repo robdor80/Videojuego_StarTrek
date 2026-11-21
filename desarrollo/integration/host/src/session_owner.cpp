@@ -1,6 +1,7 @@
 #include "trek/host/session_owner.h"
 
 #include "abi_admission.h"
+#include "academy_interface.h"
 #include "biography_profile_source.h"
 #include "f10/academy_player_binding.h"
 #include "native_session.h"
@@ -10,6 +11,7 @@
 #endif
 
 #include <atomic>
+#include <algorithm>
 #include <condition_variable>
 #include <cstdio>
 #include <deque>
@@ -83,6 +85,17 @@ std::uint64_t next_generation() noexcept
     return 0;
 }
 
+std::uint32_t next_catalog_cursor() noexcept
+{
+    // Unique across owners in this process; never recycle an evicted token.
+    static std::atomic<std::uint32_t> last{0};
+    auto previous=last.load();
+    while(previous!=std::numeric_limits<std::uint32_t>::max()) {
+        if(last.compare_exchange_weak(previous,previous+1))return previous+1;
+    }
+    return 0;
+}
+
 template<class Reply = Result>
 std::future<Reply> ready(Error error)
 {
@@ -112,6 +125,19 @@ Error verify_academy_slot(const detail::PreparedSlot& slot)
     } catch (...) {
         return Error::PERSISTENCE_FAILED;
     }
+}
+
+Error verify_slot(const detail::PreparedSlot& prepared)
+{
+    if (std::holds_alternative<detail::AcademySnapshotIdentity>(prepared.identity))
+        return verify_academy_slot(prepared);
+    const auto* sha = detail::bridge::core_sha();
+    if (!sha || std::string_view(sha) != TREK_HOST_CORE_SHA) return Error::SAVE_INCOMPATIBLE;
+    F04Session* candidate = nullptr;
+    F04Ref player{};
+    const auto code = detail::bridge::restore(prepared, &candidate, player);
+    if (candidate) detail::bridge::destroy(candidate);
+    return code == F04_OK ? Error::OK : code == F04_DENIED ? Error::IDENTITY_MISMATCH : Error::SAVE_CORRUPT;
 }
 
 } // namespace
@@ -162,6 +188,21 @@ struct SessionOwner::Impl {
         Generation generation;
         std::promise<detail::AcademyCandidateResult> reply;
     };
+    struct CreateBoundAcademy {
+        detail::AcademyIntent intent;
+        std::string payload;
+        std::promise<detail::AcademyInterfaceResult> reply;
+    };
+    struct QueryAcademy {
+        Generation generation;
+        std::promise<detail::AcademyInterfaceResult> reply;
+    };
+    struct InspectSlots {
+        Generation generation;
+        std::uint64_t epoch;
+        detail::SlotPosition after;
+        std::promise<detail::AcademyInterfaceResult> reply;
+    };
 
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
@@ -169,10 +210,12 @@ struct SessionOwner::Impl {
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy, TestVisit>;
+                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
+                                 CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy>;
+                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
+                                 CreateBoundAcademy, QueryAcademy, InspectSlots>;
 #endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
@@ -185,6 +228,11 @@ struct SessionOwner::Impl {
     std::string local_profile;
     detail::AcademyIntent academy_intent;
     detail::AcademyReceipt academy_receipt;
+    // One bounded product retry record. The high-water key survives invalidation;
+    // the weak intent cannot keep a retired activation authorized.
+    std::uint64_t academy_product_key = 0;
+    std::string academy_product_payload;
+    std::weak_ptr<const detail::AcademyCreationIntent> academy_product_intent;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
     std::shared_ptr<const detail::AcademyAnchor> academy_player;
@@ -195,6 +243,9 @@ struct SessionOwner::Impl {
     std::deque<Request> requests;
     static constexpr std::size_t max_requests = 32;
     detail::SlotStore store;
+    struct CatalogCursor { std::uint32_t token; detail::SlotPosition after; };
+    std::deque<CatalogCursor> catalog_cursors;
+    std::uint64_t catalog_epoch=0;
     std::string persistent_id;
     Provenance provenance=Provenance::REJECTED;
     std::thread owner;
@@ -221,6 +272,7 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        reset_catalog();
         academy_player.reset();
         academy_receipt.reset();
         academy_intent.reset();
@@ -239,6 +291,12 @@ struct SessionOwner::Impl {
             }, request);
         }
         requests.clear();
+    }
+
+    void reset_catalog()
+    {
+        catalog_cursors.clear();
+        ++catalog_epoch;
     }
 
     Error admission(Generation requested) const noexcept
@@ -277,6 +335,7 @@ struct SessionOwner::Impl {
         if (requests.size() == max_requests) {
             return reject(Error::CAPACITY_LIMIT);
         }
+        if constexpr (std::is_same_v<Item, Save>) reset_catalog();
         auto reply = request.reply.get_future();
         requests.emplace_back(std::move(request));
         work.notify_one();
@@ -503,6 +562,78 @@ struct SessionOwner::Impl {
         if (result.candidate && result.candidate->campaign_id != persistent_id)
             result = {Error::IDENTITY_MISMATCH, {}};
         request.reply.set_value(std::move(result));
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 CreateBoundAcademy& request)
+    {
+        // Compose the existing B02/B03 handlers on this same worker. Their local
+        // promises are completed synchronously by execute; get never waits for
+        // queued work. No observation or polling is needed to advance the bind.
+        CreateAcademy create{request.intent, std::move(request.payload), {}};
+        auto created_reply = create.reply.get_future();
+        execute(lock, session, create);
+        auto created = created_reply.get();
+        if (created.error != Error::OK) {
+            request.reply.set_value({created.error, {}});
+            return;
+        }
+        BindAcademy bind{created.generation, std::move(created.receipt), {}};
+        auto bound_reply = bind.reply.get_future();
+        execute(lock, session, bind);
+        const auto bound = bound_reply.get();
+        if (bound.error != Error::OK) {
+            // Keep B02's private receipt for an idempotent retry. Only a
+            // confirmed binding may be queried or persisted. CLOSE revokes it.
+            request.reply.set_value({bound.error, {}});
+            return;
+        }
+        QueryAcademy query{bound.generation, std::move(request.reply)};
+        execute(lock, session, query);
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 QueryAcademy& request)
+    {
+        InspectBoundAcademy inspect{request.generation, {}};
+        auto reply = inspect.reply.get_future();
+        execute(lock, session, inspect);
+        auto result = reply.get();
+        request.reply.set_value({result.error, result.error == Error::OK ? request.generation : Generation{},
+                                 std::move(result.candidate)});
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession&, InspectSlots& request)
+    {
+        const auto expected = request.generation;
+        if(request.epoch!=catalog_epoch) {
+            request.reply.set_value({Error::GENERATION_EXPIRED,{}});
+            return;
+        }
+        lock.unlock();
+        auto page=store.inspect_page(request.after,verify_slot);
+        lock.lock();
+        auto error=page.inspection.error;
+        if (generation != expected || request.epoch!=catalog_epoch ||
+            (state != State::ACTIVE && state != State::CLOSED)) error=Error::GENERATION_EXPIRED;
+        std::uint32_t next=0;
+        try {
+            if(error==Error::OK && page.next) {
+                for(const auto& cursor:catalog_cursors)
+                    if(cursor.after==*page.next){next=cursor.token;break;}
+                if(!next) {
+                    next=next_catalog_cursor();
+                    if(!next)error=Error::CAPACITY_LIMIT;
+                    else {
+                        catalog_cursors.push_back({next,std::move(*page.next)});
+                        if(catalog_cursors.size()>32)catalog_cursors.pop_front();
+                    }
+                }
+            }
+        } catch(...) {error=Error::INTERNAL_ERROR;}
+        if(error!=Error::OK){page.inspection.slots.clear();next=0;}
+        request.reply.set_value({error,error==Error::OK?expected:Generation{},
+                                {},std::move(page.inspection.slots),next,request.epoch});
     }
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
@@ -776,6 +907,11 @@ std::string_view detail::AbiAdmission::campaign() const noexcept
     return owner_.impl_->persistent_id;
 }
 
+std::uint64_t detail::AbiAdmission::catalog_epoch() const noexcept
+{
+    return owner_.impl_->catalog_epoch;
+}
+
 SessionOwner::SessionOwner() : SessionOwner(StorageConfig{}) {}
 SessionOwner::SessionOwner(StorageConfig storage) : impl_(std::make_unique<Impl>(std::move(storage))) {}
 SessionOwner::~SessionOwner() = default;
@@ -791,6 +927,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
     }
     impl_->biography_activation.reset();
     impl_->academy_intent.reset();
+    impl_->reset_catalog();
     Impl::Open request{std::move(config), std::make_shared<const detail::ActiveCampaign>(), {}};
     auto reply = request.reply.get_future();
     impl_->opening.emplace(std::move(request));
@@ -802,6 +939,7 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
 std::shared_future<Result> SessionOwner::close()
 {
     std::lock_guard lock(impl_->mutex);
+    impl_->reset_catalog();
     impl_->biography_activation.reset();
     if (impl_->closing) {
         return impl_->close_result;
@@ -887,22 +1025,14 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
     impl_->academy_intent.reset();
     Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
+    impl_->reset_catalog();
     impl_->biography_activation.reset();
     impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
     impl_->work.notify_one();return result;
 }
 InspectionResult SessionOwner::inspect(const StorageConfig& config)
 {
-    return detail::SlotStore(config).inspect([](const detail::PreparedSlot& prepared){
-        if (std::holds_alternative<detail::AcademySnapshotIdentity>(prepared.identity))
-            return verify_academy_slot(prepared);
-        const auto* sha=detail::bridge::core_sha();
-        if(!sha || std::string_view(sha)!=TREK_HOST_CORE_SHA)return Error::SAVE_INCOMPATIBLE;
-        F04Session* candidate=nullptr;F04Ref player{};
-        auto code=detail::bridge::restore(prepared,&candidate,player);
-        if(candidate)detail::bridge::destroy(candidate);
-        return code==F04_OK?Error::OK:code==F04_DENIED?Error::IDENTITY_MISMATCH:Error::SAVE_CORRUPT;
-    });
+    return detail::SlotStore(config).inspect(verify_slot);
 }
 
 PlayerResult SessionOwner::current_player(Generation generation) const
@@ -936,6 +1066,66 @@ std::future<BindPlayerResult> PlayerBootstrap::bind(
         SessionOwner::Impl::BindPlayer{generation, selection, expected_revision, {}});
 }
 
+std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::create_bound(
+    SessionOwner& owner, std::uint64_t key, std::string payload)
+{
+    auto& impl = *owner.impl_;
+    std::lock_guard lock(impl.mutex);
+    const auto reject = [](Error error) { return ready<AcademyInterfaceResult>(error); };
+    if (!key || !academy_display_name(payload)) return reject(Error::INVALID_ARGUMENT);
+    if (impl.requests.size() == SessionOwner::Impl::max_requests) return reject(Error::CAPACITY_LIMIT);
+    AcademyIntent intent;
+    if (key < impl.academy_product_key) return reject(Error::GENERATION_EXPIRED);
+    if (key == impl.academy_product_key) {
+        intent = impl.academy_product_intent.lock();
+        if (!intent || intent != impl.academy_intent) return reject(Error::GENERATION_EXPIRED);
+        if (payload != impl.academy_product_payload) return reject(Error::IDEMPOTENCY_CONFLICT);
+        if (const auto error = impl.academy_admission(intent); error != Error::OK) return reject(error);
+    } else {
+        if (impl.state != State::CLOSED) return reject(Error::BUSY_STATE);
+        intent = AcademyCandidateFactory::begin(owner);
+        if (!intent) return reject(Error::INTERNAL_ERROR);
+    }
+    SessionOwner::Impl::CreateBoundAcademy request{intent, payload, {}};
+    auto future = request.reply.get_future();
+    impl.requests.emplace_back(std::move(request));
+    impl.academy_product_key = key;
+    impl.academy_product_payload = std::move(payload);
+    impl.academy_product_intent = intent;
+    if (impl.state == State::CLOSED) {impl.reset_catalog();impl.state = State::OPENING;}
+    impl.work.notify_one();
+    return future;
+}
+
+std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::query(SessionOwner& owner, Generation generation)
+{
+    return owner.impl_->enqueue<AcademyInterfaceResult>(SessionOwner::Impl::QueryAcademy{generation, {}});
+}
+
+std::future<detail::AcademyInterfaceResult> detail::AcademyInterface::slots(
+    SessionOwner& owner, Generation generation, std::uint32_t cursor)
+{
+    auto& impl = *owner.impl_;
+    std::lock_guard lock(impl.mutex);
+    if (generation != impl.generation) return ready<AcademyInterfaceResult>(Error::GENERATION_EXPIRED);
+    if (impl.state != State::CLOSED && impl.state != State::ACTIVE)
+        return ready<AcademyInterfaceResult>(Error::BUSY_STATE);
+    if (impl.requests.size() == SessionOwner::Impl::max_requests)
+        return ready<AcademyInterfaceResult>(Error::CAPACITY_LIMIT);
+    SlotPosition after;
+    if(cursor) {
+        const auto found=std::find_if(impl.catalog_cursors.begin(),impl.catalog_cursors.end(),
+            [&](const auto& item){return item.token==cursor;});
+        if(found==impl.catalog_cursors.end())return ready<AcademyInterfaceResult>(Error::GENERATION_EXPIRED);
+        after=found->after;
+    }
+    SessionOwner::Impl::InspectSlots request{generation,impl.catalog_epoch,std::move(after),{}};
+    auto future = request.reply.get_future();
+    impl.requests.emplace_back(std::move(request));
+    impl.work.notify_one();
+    return future;
+}
+
 detail::AcademyIntent detail::AcademyCandidateFactory::begin(SessionOwner& owner)
 {
     std::lock_guard lock(owner.impl_->mutex);
@@ -952,6 +1142,7 @@ detail::AcademyIntent detail::AcademyCandidateFactory::begin(SessionOwner& owner
     auto intent = std::make_shared<const AcademyCreationIntent>(
         AcademyCreationIntent{Generation(next), std::move(campaign), impl.local_profile});
     impl.biography_activation.reset();
+    impl.reset_catalog();
     impl.academy_intent = std::move(intent);
     return impl.academy_intent;
 }
