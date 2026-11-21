@@ -207,7 +207,14 @@ struct FAcademyRun
             }
             break;
         case EStep::Replay:
-            Admit(Host->CreateAcademy(*Projection, CandidateName), EStep::Replayed);
+            if (const auto& Candidate = Projection->GetAcademyCandidate(); Candidate.IsSet())
+            {
+                Admit(Host->CreateAcademy(*Projection, Candidate->DisplayName), EStep::Replayed);
+            }
+            else
+            {
+                Fail(TEXT("missing candidate for CREATE replay"));
+            }
             break;
         case EStep::Replayed:
             if (Completed(Projection->GetAcademyResult(TREK_HOST_ACADEMY_CREATE)))

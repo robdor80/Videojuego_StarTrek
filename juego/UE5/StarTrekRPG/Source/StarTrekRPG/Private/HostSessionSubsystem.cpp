@@ -714,15 +714,17 @@ TrekHostCode UHostSessionSubsystem::CreateAcademy(UHostWorldProjection& World, c
         return World.RejectAcademy(TREK_HOST_ACADEMY_CREATE, TREK_HOST_CAPACITY_LIMIT);
     }
 
-    const FTCHARToUTF8 NameBytes(*Name, Name.Len());
+    // A caller may pass a name from a projection that admission invalidates.
+    FString SubmittedName = Name;
+    const FTCHARToUTF8 NameBytes(*SubmittedName, SubmittedName.Len());
     TrekHostAcademyRequest Command = AcademyRequest(TREK_HOST_ACADEMY_CREATE);
     Command.creation_key = bReplay ? LastCreationKey : LastCreationKey + 1;
     Command.display_name = Bytes(NameBytes);
     const TrekHostCode Code = Submit(World, Command);
-    if (Code == TREK_HOST_OK)
+    if (Code == TREK_HOST_OK && !bReplay)
     {
         LastCreationKey = Command.creation_key;
-        RetryCreationName = Name;
+        RetryCreationName = MoveTemp(SubmittedName);
     }
     return Code;
 }
