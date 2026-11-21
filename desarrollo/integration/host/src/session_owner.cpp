@@ -17,6 +17,7 @@
 #include <limits>
 #include <mutex>
 #include <optional>
+#include <random>
 #include <stdexcept>
 #include <thread>
 #include <type_traits>
@@ -43,7 +44,6 @@ struct AcademyCreationReceipt {
 
 namespace {
 
-constinit std::atomic<std::uint64_t> last_generation{0};
 #ifdef TREK_HOST_ACADEMY_TESTING
 constinit std::atomic<void (*)()> academy_bind_test_hook{nullptr};
 #endif
@@ -55,7 +55,7 @@ detail::AcademyCandidateResult inspect_academy_receipt(const detail::AcademyCamp
     if (view.campaign_id != receipt.intent->campaign || view.source_digest != receipt.source_digest ||
         detail::academy_digest(view.display_name) != receipt.editable_digest ||
         view.person != receipt.person || view.creation_fact != receipt.creation_fact ||
-        view.revision != receipt.revision || view.tick != receipt.tick) {
+        view.revision < receipt.revision || view.tick != receipt.tick) {
         return {Error::IDENTITY_MISMATCH, {}};
     }
     return {Error::OK, std::move(view)};
@@ -63,6 +63,17 @@ detail::AcademyCandidateResult inspect_academy_receipt(const detail::AcademyCamp
 
 std::uint64_t next_generation() noexcept
 {
+    // Tokens include a process-specific starting point. The durable binding
+    // reconstructs ownership without accepting generations from the slot.
+    static std::atomic<std::uint64_t> last_generation{[]() noexcept {
+        try {
+            std::random_device random;
+            return std::uniform_int_distribution<std::uint64_t>{
+                1, std::numeric_limits<std::uint64_t>::max() / 2}(random);
+        } catch (...) {
+            return std::numeric_limits<std::uint64_t>::max();
+        }
+    }()};
     auto previous = last_generation.load();
     while (previous != std::numeric_limits<std::uint64_t>::max()) {
         if (last_generation.compare_exchange_weak(previous, previous + 1)) {
@@ -86,6 +97,20 @@ void report_failure(const char* operation, detail::Outcome outcome) noexcept
     if (outcome.domain_code) {
         std::fprintf(stderr, "TrekHost: %s failed (F04/F05 code %u)\n",
                      operation, static_cast<unsigned>(*outcome.domain_code));
+    }
+}
+
+Error verify_academy_slot(const detail::PreparedSlot& slot)
+{
+    try {
+        auto candidate = detail::AcademyCampaign::restore(slot);
+        return Error::OK;
+    } catch (const detail::StorageFailure& failure) {
+        return failure.error;
+    } catch (const detail::UnapprovedAcademySource&) {
+        return Error::SAVE_INCOMPATIBLE;
+    } catch (...) {
+        return Error::PERSISTENCE_FAILED;
     }
 }
 
@@ -133,6 +158,10 @@ struct SessionOwner::Impl {
         detail::AcademyReceipt receipt;
         std::promise<Result> reply;
     };
+    struct InspectBoundAcademy {
+        Generation generation;
+        std::promise<detail::AcademyCandidateResult> reply;
+    };
 
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
@@ -140,10 +169,10 @@ struct SessionOwner::Impl {
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 CreateAcademy, InspectAcademy, BindAcademy, TestVisit>;
+                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy, TestVisit>;
 #else
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 CreateAcademy, InspectAcademy, BindAcademy>;
+                                 CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy>;
 #endif
     enum class Binding { UNBOUND, RESOLVING, BOUND, INVALID };
 
@@ -158,7 +187,7 @@ struct SessionOwner::Impl {
     detail::AcademyReceipt academy_receipt;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
-    detail::AcademyReceipt academy_player;
+    std::shared_ptr<const detail::AcademyAnchor> academy_player;
     bool stopping = false;
     std::optional<Open> opening;
     std::optional<std::promise<Result>> closing;
@@ -410,16 +439,24 @@ struct SessionOwner::Impl {
             return;
         }
         const auto* academy = session.academy();
-        if (!academy || (binding != Binding::UNBOUND && academy_player != request.receipt)) {
+        if (!academy || (binding != Binding::UNBOUND && !academy_player)) {
             fail(Error::IDENTITY_MISMATCH);
             return;
         }
 
         // Core reads stay on this thread. Close can revoke the scope during validation.
+        const auto prior = academy_player;
         lock.unlock();
         Error validation;
+        std::shared_ptr<const detail::AcademyAnchor> resolved;
         try {
-            validation = inspect_academy_receipt(*academy, *request.receipt).error;
+            auto inspected = inspect_academy_receipt(*academy, *request.receipt);
+            validation = inspected.error;
+            if (inspected.candidate) {
+                auto anchor = detail::academy_identity(*inspected.candidate, request.receipt->intent->profile).anchor;
+                if (prior && *prior != anchor) validation = Error::IDENTITY_MISMATCH;
+                else if (!prior) resolved = std::make_shared<const detail::AcademyAnchor>(std::move(anchor));
+            }
 #ifdef TREK_HOST_ACADEMY_TESTING
             if (auto hook = academy_bind_test_hook.load()) hook();
 #endif
@@ -438,10 +475,34 @@ struct SessionOwner::Impl {
             return;
         }
         if (binding == Binding::UNBOUND) {
-            academy_player = request.receipt;
+            academy_player = std::move(resolved);
             binding = Binding::BOUND;
         }
         request.reply.set_value({Error::OK, request.generation});
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 InspectBoundAcademy& request)
+    {
+        const auto* academy = session.academy();
+        const auto anchor = academy_player;
+        if (!academy || !anchor || binding != Binding::BOUND) {
+            request.reply.set_value({Error::PRINCIPAL_UNBOUND, {}});
+            return;
+        }
+        lock.unlock();
+        detail::AcademyCandidateResult result{Error::INTERNAL_ERROR, {}};
+        try {
+            auto view = academy->inspect_checkpoint();
+            if (detail::academy_identity(view, anchor->profile).anchor == *anchor)
+                result = {Error::OK, std::move(view)};
+            else result.error = Error::IDENTITY_MISMATCH;
+        } catch (...) {}
+        lock.lock();
+        if (const auto error = admission(request.generation); error != Error::OK) result = {error, {}};
+        if (result.candidate && result.candidate->campaign_id != persistent_id)
+            result = {Error::IDENTITY_MISMATCH, {}};
+        request.reply.set_value(std::move(result));
     }
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Check& check)
@@ -464,7 +525,7 @@ struct SessionOwner::Impl {
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
                  PreparePlayer& request)
     {
-        if (academy_receipt || binding == Binding::INVALID) {
+        if (session.academy() || binding == Binding::INVALID) {
             request.reply.set_value({Error::ACCESS_DENIED, {}});
             return;
         }
@@ -484,7 +545,7 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, BindPlayer& request)
     {
-        if (academy_receipt || request.selection.campaign_.lock() != campaign) {
+        if (session.academy() || request.selection.campaign_.lock() != campaign) {
             request.reply.set_value({Error::SCOPE_INVALID, {}});
             return;
         }
@@ -518,23 +579,37 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Save& request)
     {
-        if (academy_receipt) { request.reply.set_value({Error::SAVE_INCOMPATIBLE, {}}); return; }
+        const auto* academy = session.academy();
+        if (academy && !store.configured()) { request.reply.set_value({Error::SAVE_INCOMPATIBLE, {}}); return; }
         if(binding!=Binding::BOUND){request.reply.set_value({Error::PRINCIPAL_UNBOUND,{}});return;}
-        state=State::SAVING;
         const auto id=persistent_id;const auto expected_player=player;
+        const auto anchor=academy_player;
+        state=State::SAVING;
         lock.unlock();
         Error error=Error::PERSISTENCE_FAILED;
         try {
-            detail::PersistentIdentity identity{};F04Ref resolved{};
-            auto outcome=session.persistent_identity(identity,resolved);
-            if(outcome.error!=Error::OK || resolved.scope!=expected_player.scope || resolved.id!=expected_player.id)error=Error::IDENTITY_MISMATCH;
-            else error=store.save(id,request.slot,identity,
-                [&](const auto& path){return session.snapshot(path,detail::decode_campaign(id)).error;},
-                [&](const detail::PreparedSlot& prepared){
-                    F04Ref verified{};auto result=session.stage(prepared,verified);
-                    auto cleanup=session.discard_stage();
-                    return cleanup.error==Error::OK?result.error:cleanup.error;
-                });
+            if (academy) {
+                const auto view=academy->inspect();
+                if (!anchor || view.campaign_id!=id) error=Error::IDENTITY_MISMATCH;
+                else {
+                    auto identity=detail::academy_identity(view,anchor->profile);
+                    if (identity.anchor!=*anchor) error=Error::IDENTITY_MISMATCH;
+                    else error=store.save(id,request.slot,std::move(identity),
+                        [&](const auto& path) { return academy->snapshot(path,detail::decode_campaign(id)); },
+                        verify_academy_slot);
+                }
+            } else {
+                detail::PersistentIdentity identity{};F04Ref resolved{};
+                auto outcome=session.persistent_identity(identity,resolved);
+                if(outcome.error!=Error::OK || resolved.scope!=expected_player.scope || resolved.id!=expected_player.id)error=Error::IDENTITY_MISMATCH;
+                else error=store.save(id,request.slot,identity,
+                    [&](const auto& path){return session.snapshot(path,detail::decode_campaign(id)).error;},
+                    [&](const detail::PreparedSlot& prepared){
+                        F04Ref verified{};auto result=session.stage(prepared,verified);
+                        auto cleanup=session.discard_stage();
+                        return cleanup.error==Error::OK?result.error:cleanup.error;
+                    });
+            }
         }catch(const detail::StorageFailure& e){error=e.error;}catch(...){error=Error::PERSISTENCE_FAILED;}
         lock.lock();
         if(state==State::SAVING)state=State::ACTIVE;
@@ -589,27 +664,44 @@ struct SessionOwner::Impl {
         lock.unlock();
         Error error=Error::PERSISTENCE_FAILED;F04Ref restored{};
         std::shared_ptr<const detail::ActiveCampaign> marker;
+        std::unique_ptr<detail::AcademyCampaign> staged_academy;
+        std::shared_ptr<const detail::AcademyAnchor> restored_anchor;
+        std::string restored_profile;
         std::string id;std::uint64_t next=0;
         try {
             auto prepared=store.prepare(request.address);
-            marker=std::make_shared<const detail::ActiveCampaign>();id=prepared.campaign;
+            id=prepared.campaign;
             next=next_generation();
             if(!next)error=Error::INTERNAL_ERROR;
+            else if (const auto* identity=std::get_if<detail::AcademySnapshotIdentity>(&prepared.identity)) {
+                staged_academy=detail::AcademyCampaign::restore(prepared);
+                restored_anchor=std::make_shared<const detail::AcademyAnchor>(identity->anchor);
+                restored_profile=identity->anchor.profile;
+                error=Error::OK;
+            }
             else {
+                marker=std::make_shared<const detail::ActiveCampaign>();
                 auto outcome=session.stage(prepared,restored);error=outcome.error;
                 if(outcome.domain_code==F04_DENIED)error=Error::IDENTITY_MISMATCH;
                 else if(outcome.domain_code==F04_SAVE)error=Error::SAVE_CORRUPT;
             }
-        }catch(const detail::StorageFailure& e){error=e.error;}catch(...){error=Error::PERSISTENCE_FAILED;}
+        }catch(const detail::StorageFailure& e){error=e.error;}
+         catch(const detail::UnapprovedAcademySource&){error=Error::SAVE_INCOMPATIBLE;}
+         catch(...){error=Error::PERSISTENCE_FAILED;}
         lock.lock();
         if(state==State::CLOSING)error=Error::GENERATION_EXPIRED;
         if(error==Error::OK) {
             // All allocation, Core validation and scope renewal finished before
             // this mutex-protected publication. No old request survives the swap.
-            auto outcome=session.commit_stage();error=outcome.error;
+            auto outcome=staged_academy ? session.commit_academy(std::move(staged_academy)) : session.commit_stage();
+            error=outcome.error;
             if(error==Error::OK) {
                 invalidate();campaign=std::move(marker);persistent_id=std::move(id);
-                provenance=Provenance::KNOWN_LOCAL;generation=Generation(next);player=restored;binding=Binding::BOUND;state=State::ACTIVE;
+                if (restored_anchor) {
+                    academy_player=std::move(restored_anchor);
+                    local_profile=std::move(restored_profile);
+                } else player=restored;
+                provenance=Provenance::KNOWN_LOCAL;generation=Generation(next);binding=Binding::BOUND;state=State::ACTIVE;
             }
         }
         if(error!=Error::OK) {
@@ -787,7 +879,10 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     const bool active=impl_->state==State::ACTIVE;
     if(impl_->state!=State::CLOSED) {
         if(auto error=impl_->admission(generation);error!=Error::OK)return ready(error);
-        if (impl_->academy_receipt) return ready(Error::SAVE_INCOMPATIBLE);
+        if (impl_->academy_receipt || impl_->academy_player)
+            return ready(impl_->store.configured()?Error::BUSY_STATE:Error::SAVE_INCOMPATIBLE);
+        if (address.kind==CampaignKind::ACADEMY) return ready(Error::BUSY_STATE);
+        address.kind=CampaignKind::NAVAL;
     } else if(generation!=Generation{})return ready(Error::GENERATION_EXPIRED);
     if(impl_->requests.size()==Impl::max_requests)return ready(Error::CAPACITY_LIMIT);
     impl_->academy_intent.reset();
@@ -799,6 +894,8 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
 InspectionResult SessionOwner::inspect(const StorageConfig& config)
 {
     return detail::SlotStore(config).inspect([](const detail::PreparedSlot& prepared){
+        if (std::holds_alternative<detail::AcademySnapshotIdentity>(prepared.identity))
+            return verify_academy_slot(prepared);
         const auto* sha=detail::bridge::core_sha();
         if(!sha || std::string_view(sha)!=TREK_HOST_CORE_SHA)return Error::SAVE_INCOMPATIBLE;
         F04Session* candidate=nullptr;F04Ref player{};
@@ -891,6 +988,12 @@ std::future<Result> detail::AcademyPlayerBinding::bind(
     SessionOwner& owner, Generation generation, const AcademyReceipt& receipt)
 {
     return owner.impl_->enqueue<Result>(SessionOwner::Impl::BindAcademy{generation, receipt, {}});
+}
+
+std::future<detail::AcademyCandidateResult> detail::AcademyPlayerBinding::inspect(SessionOwner& owner, Generation generation)
+{
+    return owner.impl_->enqueue<detail::AcademyCandidateResult>(
+        SessionOwner::Impl::InspectBoundAcademy{generation, {}});
 }
 
 #ifdef TREK_HOST_ACADEMY_TESTING

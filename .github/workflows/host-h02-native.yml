@@ -102,6 +102,7 @@ jobs:
           $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
                        'host_abi_tests', 'host_academy_feasibility_tests', 'host_academy_candidate_tests',
                        'host_academy_candidate_faults', 'host_academy_player_tests', 'host_academy_player_faults',
+                       'host_academy_persistence_tests', 'host_academy_persistence_faults',
                        'host_biography_tests', 'host_ai_tests', 'host_biography_ai_tests', 'host_initial_biography_tests')
           $selection = '^host\.'
           if ($env:HOST_SUITE -eq 'asan-ubsan') {
@@ -234,6 +235,12 @@ jobs:
           PY
           python3 desarrollo/integration/host/tests/inspect_product.py "$build" 2>&1 | tee "$lab/product-linux-inspection.log"
           python3 desarrollo/integration/host/tests/inspect_abi.py "$build" 2>&1 | tee "$lab/product-linux-abi.log"
+          consumer="$lab/product-client-linux"
+          cmake -S desarrollo/integration/host/tests/product_consumer -B "$consumer" \
+            -DTREK_HOST_RUNTIME="$host_so" -DCMAKE_BUILD_TYPE=Release 2>&1 | tee "$lab/product-linux-consumer.log"
+          cmake --build "$consumer" --config Release 2>&1 | tee -a "$lab/product-linux-consumer.log"
+          ctest --test-dir "$consumer" -C Release --no-tests=error --output-on-failure -V \
+            2>&1 | tee -a "$lab/product-linux-consumer.log"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -279,6 +286,19 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
           python desarrollo/integration/host/tests/inspect_abi.py $build 2>&1 |
             Tee-Object -FilePath "$lab/product-windows-abi.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          $import = Get-ChildItem $build -Recurse -Filter TrekHost.lib | Select-Object -First 1
+          if (!$import) { throw 'Missing TrekHost import library' }
+          $consumer = Join-Path $lab 'product-client-windows'
+          cmake -S desarrollo/integration/host/tests/product_consumer -B $consumer -A x64 `
+            "-DTREK_HOST_RUNTIME=$($dll.FullName)" "-DTREK_HOST_LIBRARY=$($import.FullName)" 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-consumer.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $consumer --config Release 2>&1 |
+            Tee-Object -Append -FilePath "$lab/product-windows-consumer.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $consumer -C Release --no-tests=error --output-on-failure -V 2>&1 |
+            Tee-Object -Append -FilePath "$lab/product-windows-consumer.log"
           exit $LASTEXITCODE
       - uses: actions/upload-artifact@v4
         if: always()

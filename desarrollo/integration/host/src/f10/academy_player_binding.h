@@ -21,6 +21,8 @@ class AcademyPlayerBinding final {
 public:
     TREK_HOST_ACADEMY_BINDING_API static std::future<Result> bind(
         SessionOwner&, Generation, const AcademyReceipt&);
+    TREK_HOST_ACADEMY_BINDING_API static std::future<AcademyCandidateResult> inspect(
+        SessionOwner&, Generation);
 };
 
 #ifdef TREK_HOST_ACADEMY_TESTING

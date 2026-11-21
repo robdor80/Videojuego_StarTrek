@@ -24,7 +24,7 @@ namespace fs=std::filesystem;
 namespace {
 constexpr std::uint64_t max_file=64ULL*1024*1024, max_tree=512ULL*1024*1024;
 void need(bool ok,Error error=Error::PERSISTENCE_FAILED) { if(!ok)throw StorageFailure{error}; }
-#ifdef TREK_HOST_PERSISTENCE_TESTING
+#if defined(TREK_HOST_PERSISTENCE_TESTING) || defined(TREK_HOST_ACADEMY_TESTING)
 std::function<void(const char*)> test_hook;
 void point(const char* name) { if(test_hook)test_hook(name); }
 #else
@@ -80,7 +80,7 @@ public:
     void sync(){need(::fsync(fd)==0);}
     void close_checked(){auto held=fd;fd=-1;need(::close(held)==0);}
 #endif
-    void finish(){sync();close_checked();}
+    void finish(){point("file_sync");sync();close_checked();}
     File(const File&)=delete;
 };
 void sync_dir(const fs::path& p) {
@@ -110,18 +110,81 @@ PersistentIdentity parse_identity(const std::string& s) {
     std::istringstream in(s);std::string a,b,c,d,extra;need(bool(in>>a>>b>>c>>d) && !(in>>extra),Error::SAVE_CORRUPT);
     PersistentIdentity i{number(a),number(b),number(c),number(d)};need(i.person && i.record,Error::IDENTITY_MISMATCH);return i;
 }
-struct Envelope { std::string campaign,slot;std::uint64_t version;PersistentIdentity identity; };
+constexpr std::string_view academy_magic = "TREKHOST4 2";
+constexpr std::string_view academy_prefix = "TREKHOST4 2\nACADEMY\n";
+
+bool digest(const std::string& value) {
+    return value.size()==64 && value.find_first_not_of("0123456789abcdef")==std::string::npos;
+}
+void validate_anchor(const AcademyAnchor& a) {
+    (void)decode_campaign(a.profile);
+    need(a.person && a.creation_fact && a.person!=a.creation_fact &&
+         digest(a.source_digest) && digest(a.catalog_digest) && digest(a.name_digest),Error::IDENTITY_MISMATCH);
+}
+std::string anchor_text(const AcademyAnchor& a) {
+    return std::string(academy_catalog_version)+" "+a.catalog_digest+"\n"+
+           std::string(academy_source_version)+" "+a.source_digest+"\n"+
+           std::to_string(a.person)+" "+std::to_string(a.creation_fact)+" "+a.profile+" "+a.name_digest+"\n";
+}
+struct Envelope {
+    std::string campaign,slot;
+    std::uint64_t version;
+    SlotIdentity identity;
+    std::string history_digest;
+    CampaignKind kind() const {
+        return std::holds_alternative<AcademySnapshotIdentity>(identity) ? CampaignKind::ACADEMY : CampaignKind::NAVAL;
+    }
+};
+std::string registry_text(const Envelope& e) {
+    if (const auto* academy=std::get_if<AcademySnapshotIdentity>(&e.identity))
+        return "TREKHOST4 ACADEMY REGISTRY 1\n"+e.campaign+"\n"+anchor_text(academy->anchor);
+    return identity_text(std::get<PersistentIdentity>(e.identity));
+}
+bool registry_matches(const Envelope& e,const std::string& text) {
+    if (const auto* naval=std::get_if<PersistentIdentity>(&e.identity))
+        return !text.starts_with("TREKHOST4 ACADEMY ") && parse_identity(text)==*naval;
+    return text==registry_text(e);
+}
 std::string encode(const Envelope& e) {
-    return "TREKHOST4 1\n"+std::string(TREK_HOST_CORE_SHA)+"\n"+e.campaign+"\n"+e.slot+"\n"+std::to_string(e.version)+"\n"+identity_text(e.identity)+"\n";
+    const auto address=std::string(TREK_HOST_CORE_SHA)+"\n"+e.campaign+"\n"+e.slot+"\n"+std::to_string(e.version)+"\n";
+    if (const auto* academy=std::get_if<AcademySnapshotIdentity>(&e.identity))
+        return std::string(academy_prefix)+address+anchor_text(academy->anchor)+
+               std::to_string(academy->revision)+" "+std::to_string(academy->clock)+"\n"+e.history_digest+"\n";
+    return "TREKHOST4 1\n"+address+identity_text(std::get<PersistentIdentity>(e.identity))+"\n";
 }
 Envelope decode(const std::string& s) {
     std::istringstream in(s);std::string magic,sha,campaign,slot,ver,id,extra;
     need(bool(std::getline(in,magic)),Error::SAVE_CORRUPT);
-    need(magic=="TREKHOST4 1",Error::SAVE_INCOMPATIBLE);
+    const bool academy=magic==academy_magic;
+    need(academy || magic=="TREKHOST4 1",Error::SAVE_INCOMPATIBLE);
+    if (academy) need(bool(std::getline(in,id)) && id=="ACADEMY",Error::SAVE_INCOMPATIBLE);
     need(bool(std::getline(in,sha)) && sha==TREK_HOST_CORE_SHA,Error::SAVE_INCOMPATIBLE);
-    need(bool(std::getline(in,campaign)) && bool(std::getline(in,slot)) && bool(std::getline(in,ver)) && bool(std::getline(in,id)) && !std::getline(in,extra),Error::SAVE_CORRUPT);
+    need(bool(std::getline(in,campaign)) && bool(std::getline(in,slot)) && bool(std::getline(in,ver)),Error::SAVE_CORRUPT);
     (void)decode_campaign(campaign);need(valid_slot(slot),Error::PATH_REJECTED);auto version=number(ver);need(version>0,Error::SAVE_CORRUPT);
-    return {campaign,slot,version,parse_identity(id)};
+    if (!academy) {
+        need(bool(std::getline(in,id)) && !std::getline(in,extra),Error::SAVE_CORRUPT);
+        return {campaign,slot,version,parse_identity(id),{}};
+    }
+
+    std::string catalog,source,anchor,progress,history;
+    need(bool(std::getline(in,catalog) && std::getline(in,source) && std::getline(in,anchor) &&
+              std::getline(in,progress) && std::getline(in,history)) && !std::getline(in,extra),Error::SAVE_CORRUPT);
+    need(catalog.starts_with(std::string(academy_catalog_version)+" ") &&
+         source.starts_with(std::string(academy_source_version)+" "),Error::SAVE_INCOMPATIBLE);
+    AcademySnapshotIdentity snapshot;
+    auto& a=snapshot.anchor;
+    a.catalog_digest=catalog.substr(academy_catalog_version.size()+1);
+    a.source_digest=source.substr(academy_source_version.size()+1);
+    std::istringstream anchor_fields(anchor),progress_fields(progress);
+    std::string person,fact,revision,clock;
+    need(bool(anchor_fields>>person>>fact>>a.profile>>a.name_digest) && !(anchor_fields>>extra) &&
+         bool(progress_fields>>revision>>clock) && !(progress_fields>>extra) && digest(history),Error::SAVE_CORRUPT);
+    a.person=number(person);a.creation_fact=number(fact);
+    snapshot.revision=number(revision);snapshot.clock=number(clock);
+    validate_anchor(a);
+    Envelope result{campaign,slot,version,std::move(snapshot),std::move(history)};
+    need(encode(result)==s,Error::SAVE_CORRUPT);
+    return result;
 }
 bool object_name(const std::string& n) {
     return n=="CURRENT" || (n.size()==68 && n.substr(64)==".obj" && n.substr(0,64).find_first_not_of("0123456789abcdef")==std::string::npos);
@@ -137,11 +200,15 @@ void tree(const fs::path& source,const fs::path& destination={},bool durable=fal
         current=current || name=="CURRENT";
         if(!destination.empty()) {
             File out(destination/name,true);std::array<char,65536> buffer{};auto left=n;
+            point("copy_file");
             while(left){auto take=static_cast<std::size_t>(std::min<std::uint64_t>(left,buffer.size()));f.read(buffer.data(),take);out.write(buffer.data(),take);left-=take;}
             need(f.size()==n,Error::SAVE_CORRUPT);out.finish();
         } else if(durable) f.finish();
     }
     need(current,Error::SAVE_CORRUPT);if(!destination.empty())sync_dir(destination);
+}
+std::string history_digest(const fs::path& history) {
+    return academy_digest_hex(read(history/"CURRENT",128));
 }
 std::uint64_t version_number(const std::string& n) {
     if(n.size()<2 || n[0]!='v')return 0;
@@ -156,6 +223,7 @@ std::vector<std::uint64_t> versions(const fs::path& slot) {
     need(out.size()<=10000,Error::CAPACITY_LIMIT);std::sort(out.begin(),out.end());return out;
 }
 void publish(const fs::path& from,const fs::path& to) {
+    point("publish_rename");
 #ifdef _WIN32
     need(MoveFileExW(from.c_str(),to.c_str(),MOVEFILE_WRITE_THROUGH)!=0);
 #else
@@ -220,6 +288,11 @@ CampaignId decode_campaign(const std::string& s) {
 bool valid_slot(const std::string& s) {
     return !s.empty() && s.size()<=32 && s.find_first_not_of("abcdefghijklmnopqrstuvwxyz0123456789_")==std::string::npos && s!="con" && s!="prn" && s!="aux" && s!="nul" && !(s.size()==4 && (s.starts_with("com") || s.starts_with("lpt")) && s[3]>='0' && s[3]<='9');
 }
+void copy_history(const fs::path& source,const fs::path& destination) {
+    mkdir(destination);
+    PinnedDirectory pinned(destination);
+    tree(source,pinned.path());
+}
 namespace {
 std::shared_ptr<PinnedDirectory> root(const StorageConfig& config) {
     need(!config.root.empty() && config.root.find('\0')==std::string::npos && !config.root.starts_with("/proc/"),Error::PATH_REJECTED);
@@ -239,27 +312,40 @@ std::shared_ptr<PinnedDirectory> root(const StorageConfig& config) {
 Envelope validate(const fs::path& local,const fs::path& generation,const SlotAddress& address) {
     auto e=decode(read(generation/"manifest"));
     need(e.campaign==address.campaign && e.slot==address.slot && e.version==address.version,Error::SAVE_CORRUPT);
+    need(address.kind==CampaignKind::AUTO || address.kind==e.kind(),Error::SAVE_INCOMPATIBLE);
     need(read(generation/"COMMITTED")==encode(e),Error::SAVE_CORRUPT);
     need(fs::exists(fs::symlink_status(local)),Error::SAVE_UNTRUSTED);
     PinnedDirectory registry(local.parent_path());
-    need(parse_identity(read(registry.path()/local.filename()))==e.identity,Error::IDENTITY_MISMATCH);
-    tree(generation/"history");return e;
+    need(registry_matches(e,read(registry.path()/local.filename())),Error::IDENTITY_MISMATCH);
+    tree(generation/"history");
+    if (e.kind()==CampaignKind::ACADEMY) {
+        for (const auto& entry : fs::directory_iterator(generation)) {
+            const auto name=entry.path().filename();
+            need(name=="manifest" || name=="COMMITTED" || name=="history",Error::SAVE_CORRUPT);
+        }
+        PinnedDirectory history(generation/"history");
+        need(history_digest(history.path())==e.history_digest,Error::SAVE_CORRUPT);
+    }
+    return e;
 }
 }
-Error SlotStore::save(const std::string& campaign_id,const std::string& slot,PersistentIdentity identity,
+Error SlotStore::save(const std::string& campaign_id,const std::string& slot,SlotIdentity identity,
                      const std::function<Error(const fs::path&)>& snapshot,
                      const std::function<Error(const PreparedSlot&)>& verify) const {
     bool publication_started=false;
     try {
         (void)decode_campaign(campaign_id);need(valid_slot(slot),Error::PATH_REJECTED);
-        need(identity.person && identity.record,Error::PRINCIPAL_UNBOUND);
+        Envelope e{campaign_id,slot,0,std::move(identity),{}};
+        if (const auto* naval=std::get_if<PersistentIdentity>(&e.identity))
+            need(naval->person && naval->record,Error::PRINCIPAL_UNBOUND);
+        else validate_anchor(std::get<AcademySnapshotIdentity>(e.identity).anchor);
         auto r=root(config_);File lock(r->path()/"host.lock",true,true);
         ensure_dir(r->path()/"campaigns");PinnedDirectory campaigns(r->path()/"campaigns");
         ensure_dir(campaigns.path()/campaign_id);PinnedDirectory campaign(campaigns.path()/campaign_id);
         ensure_dir(r->path()/"registry");PinnedDirectory registry(r->path()/"registry");
         if(!fs::exists(fs::symlink_status(registry.path()/campaign_id))) {
             const auto temporary=registry.path()/("pending-"+new_campaign_id());
-            write(temporary,identity_text(identity)); // checked flush + close; partial files are never registry entries
+            write(temporary,registry_text(e)); // checked flush + close; partial files are never registry entries
             point("registry_before_publish");publication_started=true;
 #ifdef _WIN32
             const auto moved=MoveFileExW(temporary.c_str(),(registry.path()/campaign_id).c_str(),MOVEFILE_WRITE_THROUGH);
@@ -273,20 +359,25 @@ Error SlotStore::save(const std::string& campaign_id,const std::string& slot,Per
             need(moved==0);
 #endif
             point("registry_after_publish");sync_dir(registry.path());
-            need(read(registry.path()/campaign_id)==identity_text(identity));
+            need(read(registry.path()/campaign_id)==registry_text(e));
             publication_started=false;
         }
-        need(parse_identity(read(registry.path()/campaign_id))==identity,Error::IDENTITY_MISMATCH);
+        need(registry_matches(e,read(registry.path()/campaign_id)),Error::IDENTITY_MISMATCH);
         sync_dir(registry.path());
         ensure_dir(campaign.path()/"slots");PinnedDirectory slots(campaign.path()/"slots");
         ensure_dir(slots.path()/slot);PinnedDirectory selected(slots.path()/slot);
         auto prior=versions(selected.path());auto version=prior.empty()?1:prior.back()+1;need(version && version<=10000,Error::CAPACITY_LIMIT);
         const auto name="v"+std::to_string(version);mkdir(selected.path()/name);PinnedDirectory staging(selected.path()/name);
-        point("before_snapshot");need(snapshot(staging.path()/"history")==Error::OK);
+        point("before_snapshot");
+        const auto status=snapshot(staging.path()/"history");
+        need(status==Error::OK,e.kind()==CampaignKind::ACADEMY?status:Error::PERSISTENCE_FAILED);
         point("after_snapshot");tree(staging.path()/"history",{},true);sync_dir(staging.path()/"history");
         auto history=std::make_shared<PinnedDirectory>(staging.path()/"history");
-        need(verify({history,identity,campaign_id})==Error::OK,Error::IDENTITY_MISMATCH);
-        Envelope e{campaign_id,slot,version,identity};write(staging.path()/"manifest",encode(e));
+        if (e.kind()==CampaignKind::ACADEMY) e.history_digest=history_digest(history->path());
+        const auto verified=verify({history,e.identity,campaign_id});
+        need(verified==Error::OK,e.kind()==CampaignKind::ACADEMY?verified:Error::IDENTITY_MISMATCH);
+        e.version=version;
+        write(staging.path()/"manifest",encode(e));
         point("after_manifest");write(staging.path()/"prepared",encode(e));
         sync_dir(staging.path());sync_dir(selected.path());sync_dir(slots.path());sync_dir(campaign.path());sync_dir(campaigns.path());sync_dir(r->path());
         point("before_publish");publication_started=true;
@@ -315,8 +406,10 @@ PreparedSlot SlotStore::prepare(SlotAddress address) const {
     ensure_dir(r->path()/"work");PinnedDirectory work(r->path()/"work");
     const auto id=new_campaign_id();mkdir(work.path()/id);PinnedDirectory copy(work.path()/id);
     mkdir(copy.path()/"history");auto history=std::make_shared<PinnedDirectory>(copy.path()/"history");
-    tree(generation.path()/"history",history->path());point("after_copy");
-    return {history,e.identity,e.campaign};
+    tree(generation.path()/"history",history->path());
+    if (e.kind()==CampaignKind::ACADEMY) need(history_digest(history->path())==e.history_digest,Error::SAVE_CORRUPT);
+    point("after_copy");
+    return {std::move(history),std::move(e.identity),std::move(e.campaign)};
 }
 InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot&)>& verify) const {
     InspectionResult result;
@@ -333,11 +426,19 @@ InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot
                     need(++count<=10000,Error::CAPACITY_LIMIT);SlotInspection info;info.address={campaign_id,name,version};
                     try {
                         PinnedDirectory generation(slot.path()/("v"+std::to_string(version)));
-                        auto e=decode(read(generation.path()/"manifest"));(void)e;info.format=1;info.compatible=true;
+                        auto manifest=read(generation.path()/"manifest");
+                        if (manifest.starts_with(academy_prefix)) {
+                            info.format=2;info.address.kind=CampaignKind::ACADEMY;
+                        }
+                        auto e=decode(manifest);
+                        info.format=e.kind()==CampaignKind::ACADEMY?2:1;
+                        info.address.kind=e.kind();info.compatible=true;
                         auto admitted=validate(r->path()/"registry"/campaign_id,generation.path(),info.address);
                         if(verify) {
                             auto history=std::make_shared<PinnedDirectory>(generation.path()/"history");
-                            auto error=verify({history,admitted.identity,campaign_id});need(error==Error::OK,error);
+                            auto error=verify({history,admitted.identity,campaign_id});
+                            if (info.format==2 && error==Error::SAVE_INCOMPATIBLE) info.compatible=false;
+                            need(error==Error::OK,error);
                         }
                         info.provenance=Provenance::KNOWN_LOCAL;info.reason=Error::OK;info.recoverable=true;
                     } catch(const StorageFailure& e) {
@@ -350,7 +451,7 @@ InspectionResult SlotStore::inspect(const std::function<Error(const PreparedSlot
     } catch(const StorageFailure& e) { result.error=e.error; } catch(...) { result.error=Error::PERSISTENCE_FAILED; }
     return result;
 }
-#ifdef TREK_HOST_PERSISTENCE_TESTING
+#if defined(TREK_HOST_PERSISTENCE_TESTING) || defined(TREK_HOST_ACADEMY_TESTING)
 void storage_test_event(const char* name) {point(name);}
 void storage_test_hook(std::function<void(const char*)> hook) { test_hook=std::move(hook); }
 #endif
