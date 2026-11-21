@@ -1,5 +1,8 @@
 # F13 — Universo dinámico, exploración y misiones
 
+> **R0 · 19-11-2026:** F13 sigue PLANIFICADA para runtime; **P2 B01–B10 REFERENCE_COMPLETE** y PR #122 fusionada. No hay universo galáctico nativo persistente Core/HOST/Unreal. Reusar los contratos de Planificación 2 sin desarrollar un segundo simulador. Las afirmaciones de octubre sobre «bloque 4 pendiente» son históricas; la certificación B10 al final del documento es la vigente.
+
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 
@@ -10,7 +13,7 @@ Ampliar un universo persistente que genera situaciones causales y respeta canon/
 ## Pasos y entregables
 
 - [ ] **F13-P01** — Consolidar estado de capas 001–120 y planes procedurales sin confundir contrato con runtime.
-- [ ] **F13-P02** — Retomar, siguiendo el orden interno, bloques dinámicos 4–10 (1–3 cerrados a nivel de referencia).
+- [ ] **F13-P02** — Convertir gradualmente contratos B01–B10 ya cerrados en referencia en servicios del universo runtime, sin duplicar Planificación 2.
 - [ ] **F13-P03** — Integrar navegación, sistemas, planetas, civilizaciones, estaciones, tráfico, recursos, política y economía.
 - [ ] **F13-P04** — Cerrar experiencia de primer contacto, Primera Directriz, diplomacia, exploración y misiones emergentes.
 - [ ] **F13-P05** — Ejecutar pruebas de simulación fuera de escena, coherencia galáctica, conflicto y consumo de recursos.

@@ -1,5 +1,8 @@
 # F07 — Pipeline 3D, Rob3D y puente piloto
 
+> **R0 · 19-11-2026:** fase EN_REVISION, Sutherland sigue como piloto técnico. #95 LCARS HTML/JS es **Draft**, NO consola Unreal. F07-SEAT-01 NO APROBADA, pendiente evidencia primaria de GLB, materiales, colisiones, interacción y rendimiento MSI. La mención antigua de F02 como fase principal es histórica.
+
+
 **23-10-2026 · EN_REVISION / reconciliación de pruebas locales comunicadas.** F02 continúa como fase principal de gobierno, F08 sigue pausada respecto a ejecución E2E y **F07 NO está certificada como UE5_JUGABLE**.
 
 La documentación preparatoria del **13-10-2026** fue correcta en su fecha, pero quedó desactualizada tras los ensayos de Sutherland en el MSI. Véase el [acta de reconciliación 23-10-2026](RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md). Los informes, logs, vídeos, escenas y hashes locales siguen pendientes de incorporación: **avance reportado no equivale a prueba oficial aprobada**.

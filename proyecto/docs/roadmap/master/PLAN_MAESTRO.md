@@ -1,88 +1,81 @@
-# PLAN MAESTRO — Videojuego Star Trek RPG 3D
+# PLAN MAESTRO — Star Trek Legends · Planificación 1 (F00–F15)
 
-**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01–P04 integradas y auditadas favorablemente en alcance nativo (PR #81, #82, #84 y #85), todas pendientes de pruebas UE5.8.2/MSI; P04 es una capa generativa opcional, sin cliente HTTP comercial ejecutado.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
+**Fotografía de gobierno R0: 19-11-2026.** Fuente estructurada: [ESTADO_GLOBAL.json](ESTADO_GLOBAL.json). Diagnóstico: [auditoría independiente F00–F15](../../auditorias/AUDITORIA_PLANIFICACION_1_F00_F15_2026-11-19.md), PR #174 fusionada. Esta versión sustituye las frases administrativas del 03-11, **no** sus actas, pruebas ni contratos históricos, que siguen accesibles en el historial Git.
 
-## Decisión autoral transversal 2026-10-30 — cronología y propulsión
+**Dictamen:** Planificación 1 **NO está terminada**. Conserva **16 fases y 80 pasos**. F00–F04 están cerradas solo en sus **alcances originales diferentes**; F05 tiene pruebas técnicas MSI pero falta acta; F06 y F07 necesitan integrar borradores y UE5; F11 tiene un primer ascenso real; F13/P2 está terminada solo como **referencia**. No existe una guardia F08 E2E aceptada en Unreal. PR fusionada ≠ fase cerrada; PR Draft ≠ main; simulador ≠ juego.
 
-**Vigencia actual:** año inicial Academia **2383**; **clase Odyssey ya en servicio y punta de lanza** al comenzar la campaña; **programa Valhalla iniciado tras Nemesis (2379), con siete años de construcción/desarrollo desde 2380 y primera unidad objetivo 2387**, que la releva como máximo exponente tecnológico. **Flujo cuántico experimental en unidades Odyssey de pruebas** y candidato a perfeccionamiento/implantación posterior en Valhalla; **no estándar ni necesariamente instalado al entrar Valhalla en servicio**. Fecha exacta de comisiones, destino del jugador y éxito de pruebas no garantizados. **DEC-0013–0016**, [acta de autoridad](../../decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md). Sustituye únicamente reservas históricas incompatibles; no cierra F04 ni implementa sistemas.
+## Decisiones vigentes (precedencia sobre documentos antiguos)
 
-## Principios de producto conservados
+- **DEC-0020:** nave de destino = **USS Enterprise NCC-1701-D**, **clase Galaxy**, modernizada. **Proyecto Valhalla** es el programa de reconstrucción, **no una nueva clase de nave**. La antigua «Clase Valhalla» es referencia histórica; no migrar identificadores/guardados ni atribuirle una dotación heredada de 1.800+400 sin autorización y pruebas.
+- Academia comienza en **2383**, cuatro años de formación y graduación objetivo hacia **2387**. El estado real de la Enterprise-D y la fecha de entrega requieren coherencia con Lore; no implican capitanía automática ni equipamiento no validado. **USS Sutherland** sigue siendo piloto técnico F07/F08, no se sustituye por la Enterprise-D sin decisión del autor.
+- **DEC-0021:** Sensores deben exponer observaciones y conocimientos autorizados, nunca omnisciencia. **DEC-0022:** protagonista único aprobado, varón híbrido humano-vulcano de 45 años al iniciar la Academia; nombre y pequeños aspectos editables. La migración del editor productivo F10/HOST sigue pendiente.
+- **Uso exclusivamente privado:** F15 no requiere lanzamiento público ni distribución. Exige build local en MSI, instalación, actualizaciones, copias, rollback y recuperación probados.
+- **Fuentes de verdad:** CoreRPG = WorldState/tiempo/persistencia; fases Star Trek = reglas de dominio; HOST = sesión/autenticidad/emisor de servicios/enrutamiento IA; Unreal = interacción, visualización, escenas y rendimiento. Ni IA, LCARS, HTML ni voz pueden aplicar mutaciones por sí solas.
 
-- RPG 3D para PC/MSI con universo persistente, NPC que actúan sin el jugador y Academia de cuatro años antes del servicio activo; la web academiaflota sigue siendo complemento educativo.
-- Carrera gradual y **opcional**; alférez nuevo ≠ capitán; quedarse en cualquier destino, cambiar de nave o aspirar al mando de una nave de **Clase Valhalla** debe tener consecuencias reales.
-- **DEC-0001 resuelta:** Galaxy/Enterprise-D como inspiración de la **nueva Clase Valhalla** (no un refit ni la Enterprise-D renombrada); exterior reconocible pero modernizado. Sovereign y Odyssey se conservan como otras Damas potencialmente NPC; no confundir nave final con **puente piloto** de la v0.0.1. **No hay año de servicio Valhalla fijado.**
-- Generar realidad antes de observarla. La IA remota propone y dialoga sin modificar World State por sí sola. La vida NPC persiste fuera de escena sin actores 3D cargados.
-- Una fuente por responsabilidad; no crear un Core RPG paralelo en Star Trek; no duplicar temarios de la web en código de juego.
-
-- **v0.0.x son prototipos internos de validación, no lanzamientos ni contenido necesariamente integrado en el juego 1.0**. v0.0.1 se limita a la guardia de Sensores; futuras pruebas parciales de Academia son posibles. La numeración de ensayos es independiente de las fases del plan; véase `proyecto/docs/decisions/prototype_validation_and_release_policy.md`.
-
-## Índice oficial de fases
+## Fases y metas — estado de gestión ≠ madurez demostrada
 
 | Fase | Tema | Estado global | Entrega objetivo |
 |---|---|---|---|
-| [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | CERRADA | DOCUMENTACION_AUDITADA |
-| [F01](fases/F01/README.md) | Visión y canon del producto | **CERRADA en diseño** (PR #2, acta F01) | DISENO_VALIDADO |
-| [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** (PR #60; laboratorio CoreRPG/UE5 validado) | CONTRATO_VALIDADO |
-| [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** (CoreRPG PR #12 + Trek PR #62; corte vertical integrado y auditado) | CORE_INTEGRADO |
-| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **CERRADA** (corte operativo auditado; deuda avanzada explícita en acta) | REFERENCIA_PROBADA |
-| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01–P04 integradas nativamente; 12 pruebas UE y MSI pendientes; P05 cierre real pendiente) | CORE_INTEGRADO |
-| [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
-| [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
-| [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | PLANIFICADA | ACEPTACION_SUPERADA |
-| [F09](fases/F09/README.md) | Resto de consolas | PLANIFICADA | UE5_JUGABLE |
-| [F10](fases/F10/README.md) | Academia jugable | PLANIFICADA | UE5_JUGABLE |
-| [F11](fases/F11/README.md) | Carrera y flota jugable | PLANIFICADA | UE5_JUGABLE |
-| [F12](fases/F12/README.md) | Vida a bordo y relaciones | PLANIFICADA | CORE_INTEGRADO |
-| [F13](fases/F13/README.md) | Universo dinámico | PLANIFICADA | CORE_INTEGRADO |
-| [F14](fases/F14/README.md) | Recursos audiovisuales y NAP | PLANIFICADA | UE5_JUGABLE |
-| [F15](fases/F15/README.md) | QA, beta y distribución | PLANIFICADA | ACEPTACION_SUPERADA |
+| [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | **CERRADA** | DOCUMENTACION_AUDITADA |
+| [F01](fases/F01/README.md) | Visión y canon del producto | **CERRADA** | DISENO_VALIDADO |
+| [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** | CONTRATO_VALIDADO |
+| [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** | CORE_INTEGRADO |
+| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **CERRADA** | REFERENCIA_PROBADA |
+| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** | CORE_INTEGRADO |
+| [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** | REFERENCIA_PROBADA |
+| [F07](fases/F07/README.md) | Pipeline 3D y puente piloto | **EN_REVISION** | UE5_JUGABLE |
+| [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | **PLANIFICADA** | ACEPTACION_SUPERADA |
+| [F09](fases/F09/README.md) | Resto de consolas | **PLANIFICADA** | UE5_JUGABLE |
+| [F10](fases/F10/README.md) | Academia jugable | **PLANIFICADA** | UE5_JUGABLE |
+| [F11](fases/F11/README.md) | Carrera y flota jugable | **EN_REVISION** | UE5_JUGABLE |
+| [F12](fases/F12/README.md) | Vida a bordo y relaciones | **PLANIFICADA** | CORE_INTEGRADO |
+| [F13](fases/F13/README.md) | Universo dinámico | **PLANIFICADA** | CORE_INTEGRADO |
+| [F14](fases/F14/README.md) | Recursos audiovisuales y NAP | **PLANIFICADA** | UE5_JUGABLE |
+| [F15](fases/F15/README.md) | QA, beta privada y mantenimiento local | **PLANIFICADA** | ACEPTACION_SUPERADA |
 
-Cada fase contiene cinco pasos `Fnn-P01`…`Fnn-P05`; **80 pasos** en total. Los de **F00 y F01 están cerrados únicamente a su madurez documental**. Los entregables documentales de F02–F06 están incorporados (PR #3–#7); la **F02** añade la integración real de laboratorio mediante **PR #60**, fusionada y auditada, con cierre limitado a `CONTRATO_VALIDADO`. Las puertas de **F04–F08**, incluida la guardia de Sensores completa, se mantienen independientes. Un paso cerrado a nivel referencia **no** equivale a su integración ejecutable.
+**Interpretación:** F00 (documentación), F01 (diseño), F02 (contrato de laboratorio), F03 (corte Core) y F04 (referencia operativa) no tienen idéntico significado de CERRADA. Los 29 pasos marcados CERRADA en la fotografía anterior no eran 29 experiencias jugables; los 51 restantes contienen trabajo real todavía no actualizado por aceptación. Los 80 pasos permanecen en el JSON y sus estados no se traducen a un porcentaje de finalización de juego. No se conoce un número de horas o semanas restante fiable.
 
-## Flujo principal y dependencias
+## Progreso y puertas no resueltas
 
-```text
-F00 (auditado/cerrado)
-  ↓
-F01 visión y decisiones de alcance
-  ↓
-F02 arquitectura y contratos
-  ↓
-F03 mundo, persistencia → F04 dotación/autoridad → F05 órdenes/NPC
-  ↓                                      ↓
-F06 Sensores funcionales ←───────────────┘
-  ↓
-F07 puente 3D y pipeline (preparación paralela permitida)
-  ↓
-F08 v0.0.1 JUGABLE  ← bloqueo explícito de Core si procede
-  ↓
-F09 consolas → F10 Academia jugable → F11 carrera/flota
-  ↓
-F12 vida a bordo / F13 universo dinámico / F14 producción audiovisual
-  ↓
-F15 beta/distribución (QA siempre transversal)
-```
+**F00–F04.** F02 #60 prueba Core↔UE solo de laboratorio; F03 #62/Core #12 certifica persistencia de un corte sintético; F04 #76/Core #13 conserva cinco perfiles/guardias/campañas de referencia. **No rehacer** esas bases. F04-INTEGRACION-04, independencia de secciones y plantilla autoral de Enterprise-D siguen fuera del corte cerrado.
 
-**Fotografía histórica del control 13-10-2026 (superada por PR #60):** las PR #2–#7 están fusionadas en `main`; sus pruebas y entregables de referencia son reales, pero **M1–M3 siguen sujetos a las evidencias definidas**, y no se certifica aún un corte Core↔UE5. Véase el [registro post-merge](ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
+**F05.** #81/#82/#84/#85 y **#89 están fusionadas**. La certificación #89 registra dos repeticiones oficiales en MSI, por repetición Core 482 PASS y 1 SKIP POSIX, symlink 3/3, F04/F05 395/395, UE5 12/12 NullRHI y 12/12 D3D12 sobre RTX 4070 Laptop. Se trata de **automatizaciones de laboratorio**, no de pantalla de juego. Se observaron **14 errores globales de arranque Unreal** reproducidos en controles sin módulos Star Trek, sin aserción concreta identificada. El archivo acceptance.json mantiene FINAL=PENDIENTE_ACTA y revisión RHI en espera. **R1 debe auditar logs y aprobar o rechazar la excepción explícitamente antes del cierre F05.**
 
-Este diagrama es el **camino crítico orientativo**, no una prohibición de diseñar/probar componentes independientes antes de otra fase. Dentro de F13 rige además el orden 1→10 del plan dinámico existente; bloques 1–3 constan cerrados **a nivel de referencia**, 4 siguiente pendiente.
+**F06.** #92/#93/#94 aportan ensayos en main. **#91 → #96 → #97** siguen **Draft**, encadenadas; pruebas Tk de Aster no son consola UE5 y el puerto espacial de #91 no dispone de generador runtime universal. Quedan manual visual P01, observación espacial autoritativa, permisos, transferencia a Ciencia, save/load y rendimiento.
 
-## Hitos de aceptación
+**F07.** Sutherland y pipeline GLB/PBR tienen ensayos reportados pero faltan evidencias primarias, prueba de sentado correcta (F07-SEAT-01 NO aprobada), materiales, colisiones y perfil MSI. **#95 sigue Draft**: LCARS HTML/JS aislado; no es interfaz UE5 conectada a Core.
 
-| Hito | Resultado | No se acepta como sustituto |
-|---|---|---|
-| M0 — F00 | Plan y línea base comprobados en GitHub | Una lista informal de ideas |
-| M1 — F01/F02 | Producto definido y contratos contrastados con Core | APIs imaginadas o elecciones tácitas de canon |
-| M2 — F03/F06 | Universo/Sensores reproducibles y reglas auditadas | Solo README o fixtures sin ejecutar |
-| M3 — F07/F08 | **Primer guardia de Sensores interactiva en UE5** | Capturas, PDFs o validación de JSON |
-| M4 — F09–F11 | Operaciones, Academia y carrera reales | Cursos web por sí solos |
-| M5 — F12–F15 | Universo persistente y beta comprobada | Cantidad de documentos sin jugabilidad |
+**F08.** **PRIMER GATE JUGABLE PRIORITARIO:** orden legítima de capitán NPC → contacto observado → barrido y análisis → parte científico → consecuencia Core confirmada → SAVE/LOAD en otro proceso → interacción y aceptación reales en UE5 MSI. Incluir rechazos, filtrado de conocimiento y fallback sin IA. Conservar el fixture técnico 2372/Sutherland separado de la historia de Academia 2383–2387. F08-P01…P05 aún no ejecutados E2E.
 
-## Gestión de cambios
+**F09.** Dieciséis familias de consolas y contratos offline, pero sin estaciones funcionales en juego. Priorizar solo las necesarias para la guardia antes de ampliar catálogo.
 
-- F00 manda el control global; cada fase mantiene sus enlaces a **ubicaciones existentes**. Prohibido trasladar cientos de rutas para adaptarse al plan.
-- Idea `IDEA-xxxx` → decisión `DEC-xxxx` cuando haga falta → fase/paso `Fnn-Pnn` → evidencia/prueba → cierre.
-- Todo `COMPLETE` previo se registra con **alcance declarado** (lore, contrato, simulador, CI o UE5), no como prueba de implementación general.
-- **Criterio vigente de gobierno (03-11-2026):** la única fase principal `EN_CURSO` es **F05**; F04 permanece `CERRADA` a su madurez demostrada. P01–P04 han pasado auditorías nativas, pero la meta `CORE_INTEGRADO` global no está certificada mientras falten pruebas UE/MSI y el cierre P05. **F06 bloqueada** por ese gate. F07 conserva preparación técnica independiente permitida, sin certificar todavía `UE5_JUGABLE`.
-- Para modificaciones que cambian la continuidad del juego, el alcance jugable o la arquitectura del Core, respetar las decisiones creativas expresamente aprobadas por el autor. **La cronología de pantalla puede alterarse para este juego personal**, con anotación GAME_ADDITION, sin habilitar por defecto tecnologías futuras en todas las eras.
-- **Acta vigente de la nueva Clase Valhalla:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Blindaje ablativo y torpedos transfásicos aprobados como diseño; Blender/UE5 y Core pendientes de implementar y validar.
+**F10–F11.** F10 contiene currículo de cuatro años y ensayos de referencia, admisión parcial y HOST diagnóstico; pendiente migración DEC-0022 y continuidad jugable. F11 tiene **primer ascenso Core 1101→1102** con expediente y persistencia (#106/#107) y lector HOST de solo lectura (#109), todo ello fusionado. **#110 es Draft de documentación con 33 casos NOT_RUN, no un emisor institucional funcional.** Faltan emisión productiva, rangos restantes, ofertas/plazas, sucesiones, ceremonias, rechazo, guardado y campaña UE5.
+
+**F12–F14.** F12 (vida social) sigue siendo referencia. **Planificación 2 B01–B10 está REFERENCE_COMPLETE**, pero **F13 no simula el universo galáctico** en Core/HOST/Unreal; reutilizar sus contratos sin duplicar P2. F14 dispone de recursos/biblias pero necesita manifest de assets realmente importables, colisiones, LOD, animación y huella de VRAM de la ruta F08.
+
+**F15.** Gate documental fail-closed con plantilla NO_EJECUTADO es correcto. La aceptación final exige pruebas E2E, negativas, persistencia, recuperación, rendimiento y **build privada instalable, actualizable y reparable**. No habilitar distribución a terceros.
+
+## Cortes R0–R7
+
+| Corte | Trabajo concreto | Responsable | Estado |
+|---|---|---|---|
+| R0 | Gobierno: JSON + plan + CI/validador + seguimiento veraz | ChatGPT, pruebas automatizadas | PR revisable |
+| R1 | Cierre F05: contraste #89, MSI, excepciones y acta | ChatGPT + aceptación del propietario; Codex si hay defectos | Pendiente de acta |
+| R2 | #91→#96→#97, universo espacial y conocimiento F06 | Codex C++/HOST; ChatGPT revisión | Pendiente |
+| R3 | #95 LCARS, puente Sutherland y UE5 MSI | ChatGPT contrato; Codex UE; propietario valida | Pendiente |
+| R4 | Guardia F08 E2E autorizada y repetible | Codex integración, ChatGPT QA, propietario | Pendiente: prioridad jugable |
+| R5 | Protagonista F10, Academia y carrera F11 sin atajos | ChatGPT diseño, Codex ejecución | Pendiente |
+| R6 | F09/F12/F13/F14, amplitud mínima después de F08 | Responsables de cada dominio | Pendiente |
+| R7 | QA, instalación y mantenimiento local privado F15 | ChatGPT QA, Codex build, propietario | Pendiente |
+
+No transferir tareas propias de HOST, Lore, Sistemas S01–S19 o Planificación 2 sin sus respectivas auditorías. Este programa registra dependencias y fronteras; no crea «Planificación 3» ni altera la estructura F00–F15.
+
+## Evidencias de aceptación y máquina objetivo
+
+Por operación registrar: actor y principal, permiso/revisión Core, hechos observables y ocultos, orden y rechazo, recibo de consecuencias, journal, persistencia, UI UE5, fallo de IA/TTS, versión y SHA de build y assets, comando/log/captura MSI, tiempos/VRAM/RAM/CPU/FPS y decisión del propietario. Ejecutar negativas por orden falsa, contacto no observado, revisión caducada, corrupción de guardado y caída de proveedor remoto. **NullRHI/Python no prueban jugabilidad D3D12**.
+
+MSI de referencia: i9-14900HX, RTX 4070 Laptop **8 GB VRAM**, **32 GB RAM**. Los presupuestos concretos (frametime, memoria, latencia, frecuencia de simulación y degradación) se fijarán con telemetría antes de certificar F07/F08; no se inventa un FPS medido. Evitar que IA o TTS comprometan el bucle del juego o la autoridad de Core.
+
+## Archivo histórico
+
+[Acta 13-10](ACTA_RECONCILIACION_F00_F06_2026-10-13.md), [cierre F04](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), [certificación técnica F05](fases/F05/F05-P05B_CERTIFICACION_INTEGRAL_MSI_20261105.md) y [criterios](CRITERIOS_DE_CIERRE.md) siguen siendo fuentes originales. Las antiguas referencias a «Clase Valhalla», #89 «Draft» o P2 bloque 4 pendiente se consultan como **historia de su fecha**, no como fotografía de hoy.

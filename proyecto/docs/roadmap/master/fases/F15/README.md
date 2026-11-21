@@ -1,11 +1,11 @@
-# F15 — QA integral, rendimiento, distribución y beta
+# F15 — QA integral, rendimiento e instalación privada
 
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo oficial:** `ACEPTACION_SUPERADA`. `BUILD_DISTRIBUIBLE` es una condición/artefacto de aceptación de P05, no un nivel de madurez adicional del roadmap.
+**Nivel objetivo:** `ACEPTACION_SUPERADA`. El marcador histórico `BUILD_DISTRIBUIBLE` designará una **build instalable localmente**, no distribución pública; el validador/fixtures heredados requerirán migración R7 sin perder su gate fail-closed.
 
 ## Objetivo
 
-Cerrar producto jugable con pruebas, recuperación de estado y publicación reproducible.
+Cerrar el videojuego privado con pruebas, recuperación de estado e instalación local reproducible en el MSI.
 
 ## Pasos y entregables
 
@@ -13,7 +13,7 @@ Cerrar producto jugable con pruebas, recuperación de estado y publicación repr
 - [ ] **F15-P02** — Ejecutar recorrido Academia→destino→misión→ascensos/decisiones→guardado/carga.
 - [ ] **F15-P03** — Perfilar VRAM/RAM/CPU/FPS, fallos de proveedor remoto y sesiones largas en MSI.
 - [ ] **F15-P04** — Validar castellano, controles, accesibilidad, UX, registros, migraciones y errores recuperables.
-- [ ] **F15-P05** — Definir versiones, distribución, actualizaciones, criterios beta y publicación verificable.
+- [ ] **F15-P05** — Verificar build privada, instalación local, actualizaciones reversibles, mantenimiento, copias, migraciones, rollback y recuperación.
 
 ## Material ya creado que no se mueve
 
@@ -32,9 +32,9 @@ Todas las fases; QA y optimización son también condiciones transversales desde
 
 ## Puerta de cierre
 
-Aceptación E2E, CI y build distribuible realmente ejecutados; no basta con validaciones documentales. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+Aceptación E2E, CI y build PRIVADA realmente compilada, instalada, actualizada y recuperada en MSI; no bastan validaciones documentales. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
 
-## Avance autónomo de referencia — 15-10-2026
+## Avance autónomo de referencia — 15-10-2026 (semántica histórica de beta)
 
 Preparación **P01–P05** con un gate final fail-closed para QA transversal, recorrido E2E, rendimiento MSI, UX/castellano y candidato beta/distribuible. Véase [acta de preparación F15](ACTA_P01_P05_REFERENCIA_2026-10-15.md).
 
@@ -45,3 +45,7 @@ Preparación **P01–P05** con un gate final fail-closed para QA transversal, re
 - CI: `.github/workflows/f15-release-readiness-reference.yml`.
 
 El gate nunca emite `ACEPTACION_SUPERADA` ni `BUILD_DISTRIBUIBLE`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
+
+## Criterio vigente R0/R7 — 19-11-2026
+
+**Uso exclusivamente privado.** No exigir publicación, servidores de terceros, marketing, tienda, licencias comerciales ni circulación de instaladores. Mantener QA, seguridad de guardados, pérdida de red/IA, rendimiento, actualización/rollback y recuperación local. La plantilla NO_EJECUTADO y el gate actual deben seguir fallando hasta que se ejecute una partida real. Codex migrará el vocabulario y los escenarios beta/BUILD_DISTRIBUIBLE en R7 con pruebas positivas/negativas; no se rebajará la puerta por cambiar su nombre.
