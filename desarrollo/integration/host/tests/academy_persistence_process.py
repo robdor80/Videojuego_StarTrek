@@ -104,6 +104,12 @@ def negative(product, faults, base):
     (slot(bad_commit, campaign) / "COMMITTED").write_bytes(b"wrong")
     rejects(bad_commit)
 
+    bad_pointer = clone("bad-pointer")
+    current = slot(bad_pointer, campaign) / "history" / "CURRENT"
+    pointer = current.read_bytes()
+    current.write_bytes(pointer[:-1] + bytes([pointer[-1] ^ 1]))
+    rejects(bad_pointer)
+
     bad_campaign = clone("bad-address")
     altered = lines.copy()
     altered[3] = "ef" * 16
@@ -216,6 +222,10 @@ def advanced(product, faults, base):
     assert len(segments) == 1
     assert (slot(root, campaign, 2) / "history" / segments[0].name).read_bytes() == segments[0].read_bytes()
     same_progress(before, restore(product, root, before, version=1))
+    damaged = shutil.copytree(root, base / "bad-segment")
+    (slot(damaged, campaign, 2) / "history" / segments[0].name).write_bytes(b"truncated segment")
+    run(product, "reject", damaged, campaign, "alpha", 0, "corrupt")
+    same_progress(before, restore(product, damaged, before, version=1))
     print(f"Preserved Core segment {segments[0].name}, advanced checkpoint {core_digest}, and unchanged H03 anchor.")
 
 
@@ -224,8 +234,8 @@ def interruptions(product, faults, base):
     before = run(product, "write", root)
     campaign = before[0]
     count = 1
-    for where in ("before_snapshot", "after_snapshot", "partial_write", "after_manifest",
-                  "before_publish", "crash", "after_publish", "before_ack"):
+    for where in ("before_snapshot", "copy_file", "file_sync", "after_snapshot", "partial_write",
+                  "after_manifest", "before_publish", "crash", "publish_rename", "after_publish", "before_ack"):
         run(faults, "fault", root, campaign, "alpha", 0, where, code=73 if where == "crash" else 0)
         count += int(where in {"after_publish", "before_ack"})
         assert len(list(slot(root, campaign).parent.glob("v*/COMMITTED"))) == count, where

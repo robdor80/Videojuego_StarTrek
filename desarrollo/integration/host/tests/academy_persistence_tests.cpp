@@ -304,7 +304,7 @@ void interrupted(const StorageConfig& config, const SlotAddress& address, std::s
     });
     const auto result = owner.save(loaded.generation, "alpha").get();
     storage_test_hook({});
-    const auto uncertain = point == "after_publish" || point == "before_ack";
+    const auto uncertain = point == "publish_rename" || point == "after_publish" || point == "before_ack";
     expect(result, uncertain ? Error::PUBLICATION_UNCERTAIN : Error::PERSISTENCE_FAILED);
     require(view_of(owner, loaded.generation).checkpoint_digest == before.checkpoint_digest,
             "Interrupted SAVE modified the live state");

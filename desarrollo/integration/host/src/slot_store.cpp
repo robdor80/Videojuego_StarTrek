@@ -80,7 +80,7 @@ public:
     void sync(){need(::fsync(fd)==0);}
     void close_checked(){auto held=fd;fd=-1;need(::close(held)==0);}
 #endif
-    void finish(){sync();close_checked();}
+    void finish(){point("file_sync");sync();close_checked();}
     File(const File&)=delete;
 };
 void sync_dir(const fs::path& p) {
@@ -200,6 +200,7 @@ void tree(const fs::path& source,const fs::path& destination={},bool durable=fal
         current=current || name=="CURRENT";
         if(!destination.empty()) {
             File out(destination/name,true);std::array<char,65536> buffer{};auto left=n;
+            point("copy_file");
             while(left){auto take=static_cast<std::size_t>(std::min<std::uint64_t>(left,buffer.size()));f.read(buffer.data(),take);out.write(buffer.data(),take);left-=take;}
             need(f.size()==n,Error::SAVE_CORRUPT);out.finish();
         } else if(durable) f.finish();
@@ -222,6 +223,7 @@ std::vector<std::uint64_t> versions(const fs::path& slot) {
     need(out.size()<=10000,Error::CAPACITY_LIMIT);std::sort(out.begin(),out.end());return out;
 }
 void publish(const fs::path& from,const fs::path& to) {
+    point("publish_rename");
 #ifdef _WIN32
     need(MoveFileExW(from.c_str(),to.c_str(),MOVEFILE_WRITE_THROUGH)!=0);
 #else
