@@ -2,7 +2,7 @@
 
 **Corte 21-11-2026.** Integración implementada en `codex/h06-ia03c03-academy-unreal` desde `main` en `098246e1bda8c40377f0e344949610c1f7cb948d`. C-01 y C-02 constan fusionadas en [#193](https://github.com/robdor80/Videojuego_StarTrek/pull/193) y [#194](https://github.com/robdor80/Videojuego_StarTrek/pull/194). Auditoría independiente de ChatGPT y certificación integral Unreal/M1 pendientes. La [PR #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195) permanece Draft y sin fusionar.
 
-**HEAD de implementación** `7a6c9663e6c4442ab4698176329a4cf1566a7a09`. El commit posterior registra la evidencia y el estado de C-03. La revisión exacta de entrega queda en el historial y en la descripción de la [PR Draft #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195/commits).
+**HEAD de implementación** `d36bfafc77dd56f62976c4631a202e0262735646`. El commit posterior registra la evidencia y el estado de C-03. La revisión exacta de entrega queda en el historial y en la descripción de la [PR Draft #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195/commits).
 
 ## Arquitectura y contratos
 
@@ -18,7 +18,7 @@
 
 El retorno de submit indica admisión del ticket. Los resultados de dominio se publican por operación en la proyección de mundo, con código, ticket y generación. `RETRY` permite reenviar al no haber admitido la petición. Las referencias retornadas apuntan a la última proyección del mundo y se invalidan al cambiarla. La ficha solo representa un candidato vinculado; admisión F10, rango, destino, F05 y F11 permanecen bajo sus contratos nativos.
 
-Para reintentar CREATE, se conserva la clave y el nombre exacto por cliente. CLOSE retira el intento. Un cambio de nombre durante el mismo intento devuelve `IDEMPOTENCY_CONFLICT`. Ninguna entrada de creación acepta un `person_id` o un recibo. El UUID en `GetCampaignAddress()` es la última dirección publicada para el diagnóstico y puede seguir visible tras CLOSE.
+Para reintentar CREATE, se conserva la clave y el nombre exacto por cliente. El nombre se copia antes de submit para admitir también un argumento tomado de la ficha de mundo que la transición invalida. CLOSE retira el intento. Un cambio de nombre durante el mismo intento devuelve `IDEMPOTENCY_CONFLICT`. Ninguna entrada de creación acepta un `person_id` o un recibo. El UUID en `GetCampaignAddress()` es la última dirección publicada para el diagnóstico y puede seguir visible tras CLOSE.
 
 ## Concurrencia, mundos y catálogo
 
@@ -57,7 +57,7 @@ Las rutas de fuentes y scripts Unreal de la tabla se resuelven desde `juego/UE5/
 | Actions Linux Release con tests OFF | **5/5 PASS** y **1/1 PASS** del negociador con producto real. [Job producto Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913811410/job/136875011283). |
 | Actions Windows x64 Release con tests OFF | **5/5 PASS** y **1/1 PASS** del negociador con las DLL del SDK preparado por `Prepare-Host.ps1`. Los hashes de ambas cabeceras y DLL coincidieron con la fuente y el build Release. [Job producto Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913811410/job/136875011357). |
 
-La primera ejecución compiló y preparó el SDK Windows, y el consumidor nuevo falló al cargar la DLL. La comprobación pasó tras normalizar la ruta Win64 y cargar primero `TrekF04Bridge.dll`, como hace `HostRuntime`. La matriz completa del HEAD de implementación y el check H01 tienen sus propias ejecuciones. El HEAD documental activa los mismos checks. [Carga inicial de prueba](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455636) · [Matriz del HEAD de implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154850) · [H01 del HEAD de implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154848) · [Checks de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/195/checks).
+La primera ejecución compiló y preparó el SDK Windows, y el consumidor nuevo falló al cargar la DLL. La comprobación pasó tras normalizar la ruta Win64 y cargar primero `TrekF04Bridge.dll`, como hace `HostRuntime`. La matriz anterior al ajuste de copia del nombre y el check H01 tienen sus propias ejecuciones. El HEAD de entrega activa los mismos checks. La comprobación del reintento desde una ficha de mundo forma parte de Seed, pendiente de UE en MSI. [Carga inicial de prueba](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44913289761/job/136873455636) · [Matriz anterior al ajuste de copia del nombre](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154850) · [H01 de esa revisión](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154848) · [Checks de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/195/checks).
 
 Unreal Engine 5.8.4 y UBT están ausentes en Cloud. La prueba del negociador solo compila C++ contra las cabeceras C y carga el producto nativo. Seed y Resume ejercitan el subsistema Unreal y quedan preparados para ejecutarse en MSI.
 

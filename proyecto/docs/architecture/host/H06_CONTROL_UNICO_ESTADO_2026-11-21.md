@@ -27,7 +27,7 @@
 | **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy (nombre editable, sin biografía libre) | **ChatGPT UX + Codex implementación** | **PENDIENTE** |
 | **C-05** | Pruebas UE 5.8.4 NullRHI/D3D12/varios mundos, auditoría y aceptación M1 | **Codex + ChatGPT + usuario** | **PENDIENTE** |
 
-**Puerta inmediata.** Auditoría independiente de C-03 en la PR Draft #195. Su validación real en UE 5.8.4 se conserva dentro de C-03 y de la matriz existente de C-05. [CI de la implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44914154850).
+**Puerta inmediata.** Auditoría independiente de C-03 en la PR Draft #195. Su validación real en UE 5.8.4 se conserva dentro de C-03 y de la matriz existente de C-05. [CI de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/195/checks).
 
 ### Verificaciones C-03 reservadas para MSI
 
