@@ -1,6 +1,6 @@
 # H06 — IA-03C-02 · Interfaz C nativa de Academia
 
-**Fecha:** 21-11-2026. **Estado:** corrección de paginación solicitada por auditoría IMPLEMENTADA, pruebas locales PASS; nueva matriz CI pendiente. Auditoría independiente pendiente de cierre. No fusionar.
+**Fecha:** 21-11-2026. **Estado:** corrección de paginación solicitada por auditoría IMPLEMENTADA Y PROBADA; CI Linux/Windows/ASan-UBSan y producto Release tests-OFF PASS. Auditoría independiente pendiente de cierre. No fusionar.
 
 **Base:** PR Draft #193, rama `chatgpt/host-h06-ia03c01-contratos-unreal-20261121`, SHA `cb633b4ba3097a872c6901fdd6191a5c0e245c0b`. Entrega: [PR Draft #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), rama `codex/host-h06-ia03c02-academy-native`. Auditoría del HEAD `29609e5125fbdcff2d8dd0281c2598eed46c756e`: [dictamen condicionado](https://github.com/robdor80/Videojuego_StarTrek/pull/194#pullrequestreview-6003856271). Esta corrección continúa C-02 en la misma PR; no crea otra subfase. El HEAD final queda identificado por el historial y la PR.
 
@@ -73,7 +73,19 @@ La auditoría posterior detectó el fallo funcional del catálogo pese a esta CI
 - Fixture con **145 versiones H04 reales de cuatro campañas y varias ranuras** (tres Academy con 65, 70 y 9 versiones, la tercera repartida entre alpha/beta, más una naval): cobertura exacta, sin duplicados, orden determinista y repetible entre procesos, recuperación de versiones 1/2/64/65/70 y del histórico beta con la misma PERSON y bloqueo F05 intacto.
 - COMMITTED manipulado en una fila posterior a la primera página: la fila conserva su error y quedan consultables las otras 144 versiones. Reintentos/descarte de páginas, cursor extranjero/inexistente/fuera de rango, caducidad por CLOSE desde CLOSED, RESTORE y SAVE en la misma generación.
 - 4.200 ranuras vacías: progreso por páginas vacías y expulsión segura de cursores tras más de 32 posiciones, sin bucles ni crecimiento del registro de cursores.
-- La nueva matriz CI Linux/Windows, ASan/UBSan y producto Release tests-OFF queda pendiente de registrar para esta corrección. Los resultados anteriores son evidencia histórica, no se atribuyen al nuevo HEAD.
+- Implementación de paginación: `4e85bb7ca0e080cef185667a6e1a861345936adb`. Fixture final de pruebas: `7e2208692df87484ee08bb966e96d5610bc1b7b5`. [CI de la corrección, run 44882238947](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947). La ejecución intermedia 44882003402 se canceló al ampliar el fixture de varias ranuras; fue sustituida por esta matriz sobre el commit actualizado, sin diagnosticar un fallo de código.
+
+| Comprobación de la corrección | Resultado | Evidencia |
+| --- | --- | --- |
+| Linux nativo Release | **297/297 PASS**, H01 y regresión aislada F11 PASS | [job 136779829935](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947/job/136779829935) |
+| Windows nativo Release | **297/297 PASS**, H01 y regresión aislada F11 PASS | [job 136779829797](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947/job/136779829797) |
+| Linux Clang ASan/UBSan | **142/142 PASS**, sin errores de sanitizadores, detección de fugas habilitada | [job 136779829719](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947/job/136779829719) |
+| Linux Release, tests OFF | **5/5 PASS**, carga y exports inspeccionados | [job 136779829671](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947/job/136779829671) |
+| Windows Release, tests OFF | **5/5 PASS**, carga y exports inspeccionados | [job 136779829796](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44882238947/job/136779829796) |
+
+Los cinco consumidores incluyen los cuatro anteriores y la paginación con varias campañas/ranuras. Los resultados anteriores a la corrección se conservan como evidencia histórica y no se atribuyen a este nuevo código.
+
+**Resultado de la corrección:** ninguna compilación ni prueba fallida en la matriz completa del SHA `7e2208692df87484ee08bb966e96d5610bc1b7b5`. El commit posterior de cierre modifica únicamente este informe y el tablero, con código y tests idénticos; el HEAD final y su CI asociada se verifican en la PR antes de la entrega. El dictamen de auditoría sigue pendiente de revisión independiente; no se declara fusionado ni certificado M1.
 
 La duración de disco/Core depende del sistema de archivos, con trabajo acotado y ejecutado fuera del hilo llamador. Una campaña sin SAVE confirmado no sobrevive al proceso, conforme a H04.
 
