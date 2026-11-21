@@ -1,10 +1,11 @@
 #include "HostRuntime.h"
 
-#include "Async/Async.h"
 #include "HAL/PlatformProcess.h"
 #include "Misc/Paths.h"
 #include "Modules/ModuleManager.h"
 #include "Windows/WindowsHWrapper.h"
+
+#include <thread>
 
 DEFINE_LOG_CATEGORY_STATIC(LogStarTrekHost, Log, All);
 
@@ -87,14 +88,15 @@ void FStarTrekRPGModule::RetireClient(TSharedPtr<const FHostApi, ESPMode::Thread
                                     TrekHostClient* Client, TFuture<TrekHostClient*> Creating)
 {
     check(IsInGameThread() && Api && (Client || Creating.IsValid()));
-    Async(EAsyncExecution::Thread, [Api = MoveTemp(Api), Client, Creating = MoveTemp(Creating)]() mutable
+    // Retirement can finish after the engine has shut down its task graph.
+    std::thread([Api = MoveTemp(Api), Client, Creating = MoveTemp(Creating)]() mutable
     {
         TrekHostClient* Retiring = Client ? Client : Creating.Get();
         if (Retiring)
         {
             Api->Destroy(Retiring);
         }
-    });
+    }).detach();
 }
 
 void FStarTrekRPGModule::ShutdownModule()

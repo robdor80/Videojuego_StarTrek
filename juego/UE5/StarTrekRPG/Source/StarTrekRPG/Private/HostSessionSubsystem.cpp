@@ -1,7 +1,6 @@
 #include "HostSessionSubsystem.h"
 
 #include "HostRuntime.h"
-#include "Async/Async.h"
 #include "Containers/StringConv.h"
 #include "Engine/GameInstance.h"
 #include "Engine/World.h"
@@ -10,6 +9,8 @@
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
 #include "Misc/Paths.h"
+
+#include <thread>
 
 namespace
 {
@@ -213,17 +214,21 @@ void UHostSessionSubsystem::Initialize(FSubsystemCollectionBase& Collection)
         : FPaths::ProjectSavedDir();
     FString Root = FPaths::ConvertRelativePathToFull(FPaths::Combine(UserDirectory, TEXT("HostSlots")));
     FPaths::MakePlatformFilename(Root);
-    Creating = Async(EAsyncExecution::Thread, [Native = Api, Root = MoveTemp(Root)]() -> TrekHostClient*
+    TPromise<TrekHostClient*> Initialized;
+    Creating = Initialized.GetFuture();
+    std::thread([Native = Api, Root = MoveTemp(Root), Initialized = MoveTemp(Initialized)]() mutable
     {
-        if (!IFileManager::Get().MakeDirectory(*Root, true) && !IFileManager::Get().DirectoryExists(*Root))
-        {
-            return nullptr;
-        }
-        const FTCHARToUTF8 RootUtf8(*Root);
         TrekHostClient* Result = nullptr;
-        return Native->Create(TREK_HOST_ABI_VERSION, RootUtf8.Get(), RootUtf8.Length(), &Result) == TREK_HOST_OK
-            ? Result : nullptr;
-    });
+        if (IFileManager::Get().MakeDirectory(*Root, true) || IFileManager::Get().DirectoryExists(*Root))
+        {
+            const FTCHARToUTF8 RootUtf8(*Root);
+            if (Native->Create(TREK_HOST_ABI_VERSION, RootUtf8.Get(), RootUtf8.Length(), &Result) != TREK_HOST_OK)
+            {
+                Result = nullptr;
+            }
+        }
+        Initialized.SetValue(Result);
+    }).detach();
     TickHandle = FTSTicker::GetCoreTicker().AddTicker(
         FTickerDelegate::CreateUObject(this, &UHostSessionSubsystem::Tick));
 }
