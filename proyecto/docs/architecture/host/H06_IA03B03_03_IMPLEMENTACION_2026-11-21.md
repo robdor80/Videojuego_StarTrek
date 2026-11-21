@@ -1,10 +1,11 @@
 # HOST H06 · IA-03B03-03 · Persistencia de Academia en H04
 
-Entrega para auditoría B03-04. La rama parte de `main` en
+Entrega para auditoría B03-04 en
+`codex/host-ia03b03-03-persistencia-academy`. La rama parte de `main` en
 `91d5759a9c7e242f8870a8ab1539ebe0835f37eb`, con las PR #188 a #191 fusionadas.
 CoreRPG se compila desde `76a7b7b485616d8c4994f384a90f123bf333591d`.
 La integración sigue el diseño y los oráculos de B03-01.
-[Arquitectura](H06_IA03B03_01_ARQUITECTURA_VINCULO_PERSISTENCIA_2026-11-20.md) · [Matriz](H06_IA03B03_01_MATRIZ_ACEPTACION_2026-11-20.md)
+[PR Draft #192](https://github.com/robdor80/Videojuego_StarTrek/pull/192) · [Arquitectura](H06_IA03B03_01_ARQUITECTURA_VINCULO_PERSISTENCIA_2026-11-20.md) · [Matriz](H06_IA03B03_01_MATRIZ_ACEPTACION_2026-11-20.md)
 
 ## Formato de ranura
 
@@ -46,8 +47,9 @@ el nombre y la fuente observados en el Core de la campaña activa. Con una
 raíz configurada, SAVE exige un vínculo `BOUND`. La decisión y escritura
 se realizan en el hilo propietario.
 
-La primera foto utiliza `HistoryPersistence::migrate` para crear el árbol
-`CRPGROOT` en una versión nueva. El checkpoint Core incluye el WorldState
+Una activación creada por B02 usa `HistoryPersistence::migrate` para crear
+una foto completa `CRPGROOT` en cada versión hasta que se restaure desde un
+archivo. El checkpoint Core incluye el WorldState
 real, sus referencias canónicas, RandomStreams y Timeline. B02 crea los hechos
 autoritativos de candidatura en ese WorldState. Al volver a guardar una
 campaña recuperada, H04 copia su historial validado a la versión nueva y
@@ -110,7 +112,7 @@ F04/F05.
 | B03T-04, 05, 06, 10, 16, 17 y 19; B03-03, 05, 06, 08, 10 y 12 históricos | `host.academy.persistence_process`. Procesos independientes escriben, reanudan, vuelven a guardar y leen una versión anterior. Compara los campos de identidad, la proyección biográfica y el SHA-256 del checkpoint Core completo. Verifica generaciones, recibos caducados, recuperación H03, lista mixta y bloqueo F05. |
 | B03T-07, 08, 11, 12, 13, 14, 15 y 22; B03-04, 07 y 11 históricos | `host.academy.persistence_negative`. Corrupción de marcadores y objetos, enlaces, registro ajeno, pin y fuentes incompatibles y archivos Core válidos cuyo grafo es incompatible. Incluye candidato v1 y una definición de admisión sin autorización de dominio. |
 | B03T-20 | `host.academy.persistence_advanced`. Una copia de ensayo avanza Timeline a 31, consume un flujo RNG y consolida un hecho Core neutral. El producto reanuda y guarda `alpha/v2`. Se comparan el checkpoint completo, los bytes del segmento y el registro intacto. |
-| B03T-09 y 18; B03-09 histórico | `host.academy.persistence_interruptions`. Fallos antes y después del marcador, salida abrupta del proceso, confirmación incierta, reintentos y cierre durante la preparación de LOAD. |
+| B03T-09 y 18; B03-09 histórico | `host.academy.persistence_interruptions`. Fallos de snapshot, copia, sincronización y manifiesto, incertidumbre durante publicación o confirmación de `COMMITTED`, salida abrupta, reintentos y cierre durante la preparación de LOAD. |
 | B03T-21 y parte de B03T-10/16 | Las reanudaciones nativas conservan la única PERSON y el único hecho. La interacción de introducción se registra como `NOT_RUN` por pertenecer a IA-03C. |
 
 La prueba fundamental arranca un ejecutable consumidor, crea y vincula en
@@ -119,14 +121,75 @@ de lanzar otro proceso desde cero. Los casos de alteración y avance usan un
 ejecutable separado para construir archivos de control con CoreRPG. El
 consumidor que los restaura enlaza la biblioteca de producto.
 
-### Ejecuciones
+### Codex Cloud
 
-La evidencia local y los resultados de CI se registran en la PR Draft. El
-workflow `HOST native H02-H06` ejecuta la selección nativa de HOST/F04/F05,
-F11 por separado, ASan/UBSan y el consumidor multiproceso en producto Release.
+Código probado en `3544d89eeb18701ae4716dbd6a44c2c7ba9b6f3f` con Linux
+x86-64, GCC 14.2.0, CMake 3.31.10 y Ninja.
+
+| Comprobación | Resultado |
+| --- | --- |
+| Selección nativa Release | PASS 293/293, con 138 HOST, 21 F04 y 134 F05. Incluye las cuatro pruebas multiproceso de esta fase y las regresiones históricas H02, H03, H04, H05 y Academia. |
+| F11 aislado | PASS 17/17 con `desarrollo/integration/f11_host/run_native.py`. |
+| GCC ASan/UBSan de Academia | PASS 27/27, con detección de fugas y los cuatro recorridos multiproceso. |
+| Contratos H01, factory F10 histórico y S04 | PASS 11/11, 9/9 y 12/12, respectivamente. |
+| Producto Linux Release con `TREK_HOST_TESTS=OFF` | PASS de carga ABI C 1, inspección de binarios y dependencias, y ciclo multiproceso del consumidor externo `product.academy.process`. |
+| Ausencia de llamadas F05 desde Academia | PASS. Una sonda interpuesta interceptó la entrada F05 en un control positivo. La creación, el vínculo, SAVE y la restauración independiente, incluidas las cinco negativas de operación naval, completaron el recorrido sin invocarla. |
+
+En una ejecución local, el nuevo caso de copia se encontró con el binario de
+inyección anterior a ese punto y falló. Se recompiló, se conservaron las salidas
+previas por separado y se repitió la suite completa. La ejecución final tuvo
+cero fallos y cero omisiones.
+Los 27 casos de Academia se repitieron con y sin sanitizadores sobre
+`31a63d64790e5bef7a238c7b5ef4ab167a925f58`, que acorta la ruta de escritura
+de los archivos de ensayo. Ambas selecciones pasaron.
+
+En Linux Release, la campaña `f41b5dc5e418a406219254290a2de009` recuperó la
+PERSON `2`, el hecho `3`, la revisión `176` y el mismo checkpoint
+`c6196068443dddd4fcd4712621d2da6542a2a3e4de8c5cc02e7423d550a472ec` en
+los tres procesos de lectura. Los cuatro procesos usaron generaciones
+distintas. En el caso de avance se conservó el segmento Core
+`6ebc6a7f6b524923e267d67f30dc69ed6356c8ce7e4b9e0b1bc834c57b95bb06.obj`
+y el checkpoint nuevo con tick 31. Las pruebas extraen los IDs del Core de
+cada campaña y comparan todos los campos en ejecución.
+
+Para reproducir la selección nativa, compilar los objetivos del workflow
+`HOST native H02-H06` con `TREK_HOST_TESTS=ON` y el checkout fijado.
+
+```sh
+ctest --test-dir "$build" -C Release --no-tests=error --output-on-failure \
+  -R '^(host\.|f05\.|f04\.(history_faults|thread|scope|identity|class|buffers|determinism|population_.*|process_save|process_load)$)'
+```
+
 Para reproducir el consumidor, compilar `TrekHost` con `TREK_HOST_TESTS=OFF`
 y configurar `desarrollo/integration/host/tests/product_consumer` con
-`TREK_HOST_RUNTIME` y, en Windows, `TREK_HOST_LIBRARY`.
+`TREK_HOST_RUNTIME` y, en Windows, `TREK_HOST_LIBRARY`. Ejecutar
+`product.academy.process` con CTest desde la compilación del consumidor.
+
+### GitHub Actions
+
+El workflow `HOST native H02-H06` ejecuta Linux y Windows nativos,
+F11 aislado, ASan/UBSan y el consumidor multiproceso sobre las bibliotecas
+Release de producto. La primera ejecución corresponde a
+`662e757a37c7c8b9fdaadc509e4126c053ad4ec0`.
+[Matriz de implementación](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44873688459)
+
+| Trabajo | Primera ejecución |
+| --- | --- |
+| Linux nativo HOST/F04/F05, H01 y F11 aislado | PASS |
+| Windows MSVC x64 nativo HOST/F04/F05 | FAIL inicial en el generador del archivo negativo `missing-person`, con 292/293 casos aprobados. |
+| H01 y F11 aislado dentro del trabajo Windows | PASS, incluidos 17/17 casos F11. |
+| Linux ASan/UBSan, suite HOST | PASS |
+| Linux Release tests-OFF, ABI y consumidor Academy multiproceso | PASS |
+| Windows x64 Release tests-OFF, ABI y consumidor Academy multiproceso | PASS |
+| Workflow H01 de contratos documentales | PASS |
+
+El generador de archivos negativos de la primera ejecución utilizaba una ruta
+Win32 ordinaria. El nombre temporal de un objeto Core podía superar 260
+caracteres. El ensayo ahora genera esos objetos en una ruta corta de la misma
+ejecución y mueve el archivo completo a la ranura antes de probar el lector.
+Las verificaciones del HEAD de la Draft incluyen esa corrección y los casos
+adicionales de copia, sincronización y corrupción de segmentos.
+[Controles de la Draft](https://github.com/robdor80/Videojuego_StarTrek/pull/192/checks) · [H01 inicial](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44873688446)
 
 ## Límites
 
