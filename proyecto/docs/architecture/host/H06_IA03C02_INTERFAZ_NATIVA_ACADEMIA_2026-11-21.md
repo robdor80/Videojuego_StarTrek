@@ -2,7 +2,7 @@
 
 **Fecha:** 21-11-2026. **Estado:** IMPLEMENTADA, pruebas locales PASS; CI pendiente de registrar. Auditoría independiente pendiente. No fusionar.
 
-**Base:** PR Draft #193, rama `chatgpt/host-h06-ia03c01-contratos-unreal-20261121`, SHA `cb633b4ba3097a872c6901fdd6191a5c0e245c0b`. Rama de implementación: `codex/host-h06-ia03c02-academy-native`. La PR y sus ejecuciones identificarán el HEAD comprobado; este informe se actualizará con los resultados finales.
+**Base:** PR Draft #193, rama `chatgpt/host-h06-ia03c01-contratos-unreal-20261121`, SHA `cb633b4ba3097a872c6901fdd6191a5c0e245c0b`. Entrega: [PR Draft #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), rama `codex/host-h06-ia03c02-academy-native`. Implementación inicial: `79bc00c5032e9ad690b32273d90c1481f3d7e198`. La PR y sus ejecuciones identificarán el HEAD comprobado; este informe se actualizará con los resultados finales.
 
 ## Interfaz entregada
 
@@ -37,8 +37,11 @@ Una creación sin SAVE no es durable. Un cierre de proceso antes de guardar pier
 ## Pruebas y evidencia
 
 - Local Windows, MSVC 19.51 / Visual Studio 18 2026, Release: consumidor C11 y pruebas de producto contra DLL real. Pasan ciclo ABI extendida, ABI v1 histórica, reinicio entre procesos, identidad intacta, catálogo mixto y overflow; tres tests C-02 más `host.abi.lifecycle`.
+- Regresión local ampliada: **114/114 PASS**, selección `^host\.(native|fault|persistence|m0|abi|academy\.(abi_|b0|persistence_))`, incluidos roundtrip naval C v1, casos H03, negativos y cierres H04/B03. El código de producto es el del SHA inicial; el consumidor C incluye además las comprobaciones de entradas reservadas, dos CREATE admitidos antes de observar, referencias de otro cliente y catálogo caducado después de RESTORE.
 - Negativos del consumidor C: UTF-8 sobrelargo/surrogates/fuera de Unicode, nombre largo, NUL, entradas reservadas/versiones; replay/conflicto; generación caducada; capacidad compartida y CLOSE reservado; descarte; cierres repetidos y destroy durante creación. H04: COMMITTED alterado, campaña no registrada, pin incorrecto y formato desconocido, con catálogo y RESTORE rechazados.
 - Composición aislada con fallos: staging interrumpido antes de publicar, fallo de bind y reintento sobre la misma PERSON, CLOSE durante bind con barrera determinista, una PERSON/un hecho/cero población, revisión e identidad sin mutación, cinco operaciones F05 rechazadas.
 - CI requerida: Linux, Windows, ASan/UBSan y Release tests-OFF Linux/Windows, con consumidor C compilado separadamente contra el producto. Resultados y SHA se registrarán al finalizar las ejecuciones.
+
+La ejecución de este chat es Windows local con CI remota, sin ejecutor Cloud conectado. Todos los builds y registros locales se aíslan en el laboratorio C-02 del repositorio conforme a AGENTS.md; no se publican en Git ni constituyen dependencias del producto.
 
 No se modifica CoreRPG ni el pin `76a7b7b485616d8c4994f384a90f123bf333591d`, F11, contratos históricos LOCKED o fuentes Unreal. No se ejecuta UBT, Unreal, NullRHI, D3D12 ni aceptación MSI. C-03, C-04 y C-05 siguen pendientes; M1 no está certificado.

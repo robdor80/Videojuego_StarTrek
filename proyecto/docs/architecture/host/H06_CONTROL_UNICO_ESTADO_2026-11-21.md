@@ -22,7 +22,7 @@
 | ID | Objetivo comprobable | Responsable | Estado actual |
 | --- | --- | --- | --- |
 | **C-01** | Inspección y arquitectura de la frontera ABI/UE, matriz de aceptación | **ChatGPT** | **DOCUMENTADO, PR Draft #193 sin fusionar** |
-| **C-02** | Nueva fachada C productiva CREATE+BIND+QUERY Academy y catálogo mínimo de ranuras; preservar ABI v1 | **Codex — GPT-6 Alto** | **IMPLEMENTADA, pruebas locales PASS; CI y auditoría pendientes**. [Informe C-02](H06_IA03C02_INTERFAZ_NATIVA_ACADEMIA_2026-11-21.md); PR Draft dependiente de #193 en preparación. Ejecución local Windows y CI, sin ejecutor Cloud conectado |
+| **C-02** | Nueva fachada C productiva CREATE+BIND+QUERY Academy y catálogo mínimo de ranuras; preservar ABI v1 | **Codex — GPT-6 Alto** | **IMPLEMENTADA, 114/114 pruebas locales PASS; CI y auditoría pendientes**. [PR Draft #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), dependiente de #193; [informe C-02](H06_IA03C02_INTERFAZ_NATIVA_ACADEMIA_2026-11-21.md). Ejecución local Windows y CI, sin ejecutor Cloud conectado |
 | **C-03** | Adaptar `HostRuntime` y `HostSessionSubsystem` a la nueva fachada sin bloquear Game Thread | **Codex — GPT-6 Alto** | **PENDIENTE**; validación UE local MSI |
 | **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy (nombre editable, sin biografía libre) | **ChatGPT UX + Codex implementación** | **PENDIENTE** |
 | **C-05** | Pruebas UE 5.8.4 NullRHI/D3D12/varios mundos, auditoría y aceptación M1 | **Codex + ChatGPT + usuario** | **PENDIENTE** |

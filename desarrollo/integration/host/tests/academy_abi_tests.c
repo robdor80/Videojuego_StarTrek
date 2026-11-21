@@ -127,6 +127,13 @@ static void lifecycle(void)
     TrekHostClient* c=client(""); uint64_t ticket=0;
     TrekHostAcademyRequest bad=creation(1,"Aren");bad.version=2;
     expect(submit(c,bad,&ticket),TREK_HOST_ABI_MISMATCH);check(!ticket,"bad version ticket");
+    bad=creation(1,"Aren");bad.size--;
+    expect(submit(c,bad,&ticket),TREK_HOST_ABI_MISMATCH);
+    bad=creation(1,"Aren");bad.reserved=1;
+    expect(submit(c,bad,&ticket),TREK_HOST_INVALID_ARGUMENT);
+    bad=creation(1,"Aren");bad.display_name.reserved=1;
+    expect(submit(c,bad,&ticket),TREK_HOST_INVALID_ARGUMENT);
+    bad=creation(0,"Aren");expect(submit(c,bad,&ticket),TREK_HOST_INVALID_ARGUMENT);
     const char* invalid[]={""," ","A\nB","\xc0\xaf","\xed\xa0\x80","\xf4\x90\x80\x80","\xe2\x80\xae"};
     for(unsigned i=0;i<sizeof(invalid)/sizeof(invalid[0]);++i)
         expect(submit(c,creation(1,invalid[i]),&ticket),TREK_HOST_INVALID_ARGUMENT);
@@ -137,9 +144,12 @@ static void lifecycle(void)
     check(status(c).state==TREK_HOST_CLOSED,"invalid created a campaign");
     char copied[]="T'Var \xc3\x81ren";
     ticket=enqueue(c,creation(1,copied));memset(copied,'x',strlen(copied));
+    const uint64_t duplicate=enqueue(c,creation(1,"T'Var \xc3\x81ren"));
     TrekHostCompletion wrong={.size=sizeof(wrong)};
     expect(trek_host_poll(c,ticket,&wrong),TREK_HOST_ABI_MISMATCH);
     TrekHostAcademyCompletion first=finish(c,ticket,TREK_HOST_OK);
+    TrekHostAcademyCompletion concurrent=finish(c,duplicate,TREK_HOST_OK);
+    same(&first.output.candidate,&concurrent.output.candidate);
     check(!strcmp(first.output.candidate.display_name,"T'Var \xc3\x81ren"),"input not copied");
     TrekHostStatus bound=status(c);expect(bound.principal,TREK_HOST_OK);
     check(bound.generation==first.generation,"H03 generation");
@@ -150,6 +160,9 @@ static void lifecycle(void)
     TrekHostAcademyCompletion view=run(c,req(TREK_HOST_ACADEMY_QUERY,first.generation),TREK_HOST_OK);
     same(&first.output.candidate,&view.output.candidate);
     deny_naval(c,first.generation);
+    TrekHostClient* foreign=client("");
+    expect(submit(foreign,req(TREK_HOST_ACADEMY_QUERY,first.generation),&ticket),TREK_HOST_GENERATION_EXPIRED);
+    trek_host_destroy(foreign);
     expect(submit(c,req(TREK_HOST_ACADEMY_QUERY,first.generation+1),&ticket),TREK_HOST_GENERATION_EXPIRED);
     uint64_t tickets[8];
     for(unsigned i=0;i<8;++i)tickets[i]=enqueue(c,req(TREK_HOST_ACADEMY_QUERY,first.generation));
@@ -210,10 +223,12 @@ int main(int argc,char** argv)
         check(naval==1 && academy==1,"mixed family catalog");
         TrekHostRequest r=old_req(TREK_HOST_RESTORE,0);
         r.input.restore=(TrekHostSlot){text(argv[3]),text("alpha"),0};
+        const uint64_t late_catalog=enqueue(c,req(TREK_HOST_ACADEMY_SLOTS,0));
         uint64_t restore_ticket=old_enqueue(c,r);
         TrekHostAcademyCompletion wrong={.size=sizeof(wrong)};
         expect(trek_host_academy_poll(c,restore_ticket,&wrong),TREK_HOST_ABI_MISMATCH);
         TrekHostCompletion restored=old_finish(c,restore_ticket,TREK_HOST_OK);
+        finish(c,late_catalog,TREK_HOST_GENERATION_EXPIRED);
         expect(status(c).principal,TREK_HOST_OK);
         TrekHostAcademyCompletion out=run(c,req(TREK_HOST_ACADEMY_QUERY,restored.generation),TREK_HOST_OK);
         deny_naval(c,out.generation);save(c,out.generation);print_candidate(&out);
