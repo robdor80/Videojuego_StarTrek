@@ -338,8 +338,9 @@ struct FAcademyMenuRun
             {
                 if (Scenario == EMenuScenario::SaveFailure)
                 {
-                    if (Flow.SaveState() != Save::Failed || Flow.HasConfirmedProgress())
-                        Fail(TEXT("A real H04 storage error was shown as a successful first save"));
+                    if (Flow.SaveState() != Save::Failed || Flow.HasConfirmedProgress() ||
+                        (Flow.Error() != TREK_HOST_PATH_REJECTED && Flow.Error() != TREK_HOST_PERSISTENCE_FAILED))
+                        Fail(TEXT("The first save did not report the obstructed H04 storage"));
                     else if (Click(Panel.ToSharedRef(), TEXT("AcademySaveClose"))) Step = EStep::SaveFailed;
                 }
                 else if (Flow.SaveState() != Save::Confirmed)

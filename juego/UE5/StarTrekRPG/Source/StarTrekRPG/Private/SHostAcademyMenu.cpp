@@ -91,6 +91,8 @@ FText FailureText(TrekHostCode Code, EAcademyOperation Operation)
         return LOCTEXT("Untrusted", "H04 no ha podido verificar la procedencia de esta versión.");
     case TREK_HOST_PUBLICATION_UNCERTAIN:
         return LOCTEXT("PublicationUncertain", "H04 no ha confirmado la publicación. Comprueba las versiones de la partida en Continuar antes de guardar de nuevo.");
+    case TREK_HOST_PATH_REJECTED:
+        return LOCTEXT("StoragePathRejected", "H04 ha rechazado la ruta de guardado o recuperación.");
     case TREK_HOST_PERSISTENCE_FAILED:
         return LOCTEXT("PersistenceFailed", "H04 no ha podido completar el guardado.");
     case TREK_HOST_PRINCIPAL_UNBOUND:
