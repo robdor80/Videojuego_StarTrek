@@ -17,6 +17,10 @@
 - [C15 — Guion de prólogo y storyboard de Academia](C15_PROLOGO_ACADEMIA.md).
 - [D10 — Auditoría y cierre transversal](D10_AUDITORIA_CIERRE.md).
 
+## Identificador GitHub de la entrega
+
+**PR de esta operación:** [#199 — Operación LORE integral](https://github.com/robdor80/Videojuego_StarTrek/pull/199), rama `lore/operacion-integral-20261122` hacia `main`. Su estado de merge y SHA definitivo **se consultan en GitHub**, no se inventan ni se consideran PASS por la existencia de este enlace. Commits de construcción: `69eae82d`, `a91e17ca`, `aa5a7d07`, `0e3b34c4`; consultar la lista de commits de la PR para nuevas correcciones y fusión.
+
 ## Registro de procesos (se actualiza con evidencia real)
 
 | P | Objetivo | Entregable principal | Estado de este paquete |

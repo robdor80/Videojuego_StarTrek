@@ -1,5 +1,7 @@
 # D10 — Auditoría transversal y cierre de Operación LORE
 
+**PR abierta para el cierre:** [#199](https://github.com/robdor80/Videojuego_StarTrek/pull/199), cuyo estado de revisión/merge deberá comprobarse en GitHub. **No deducir un SHA de fusión hasta obtener respuesta de la plataforma.**
+
 **Fecha:** 22-11-2026 · **Tipo:** evaluación documental de ampliaciones, no conformidad runtime. **Estado en este commit:** revisión estructural redactada; los resultados del workflow de esta PR **no se anticipan**, verificar después de su ejecución.
 
 ## 1. Cruces de coherencia identificados

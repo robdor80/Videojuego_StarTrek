@@ -1,5 +1,8 @@
 # Biblioteca LORE — Star Trek RPG
 
+> **Ampliación documental 22-11-2026:** [Operación LORE 01–15 y reconciliación S04/Enterprise-D](../../proyecto/docs/roadmap/operacion_lore_20261122/README.md) — [PR #199](https://github.com/robdor80/Videojuego_StarTrek/pull/199). Es un suplemento narrativo/editorial y un índice de conocimiento, no un cambio de contratos CoreRPG/HOST ni prueba de runtime. Estado final de la PR: comprobar GitHub.
+
+
 **Estado de los bloques documentales:** LORE-01 a LORE-04 cerrados en sus alcances (consulta [CONTENT_STATUS](../../CONTENT_STATUS.md)). No equivale a importación jugable ni a exhaustividad del universo.
 
 **Decisión vigente sobre nave aspiracional:** [DEC-0020 — Enterprise-D reconstruida mediante Proyecto Valhalla](../../proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md). No confundir con la clase Valhalla histórica; [registro de identidad](starships/individual_ships/project_valhalla_enterprise_d_v0.1.json).  
