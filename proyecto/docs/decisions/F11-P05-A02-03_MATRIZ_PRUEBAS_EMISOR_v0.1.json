@@ -1,0 +1,278 @@
+{
+  "phase": "F11-P05-A02-03",
+  "artifact": "ISSUER_ACCEPTANCE_PLAN_NOT_TEST_RESULT",
+  "version": "0.1.0",
+  "source_base_sha": "816e72b2b6e2057c47b84473e616a6feda096016",
+  "core_pin": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "fixture_trust_marker_only_not_credential": 110501,
+  "implemented": false,
+  "production_authority_emission_enabled": false,
+  "total_scenarios": 33,
+  "evidence_policy": "Each scenario must be linked to actual executable native tests and logs on real product binary; this matrix is not a passed test report.",
+  "cases": [
+    {
+      "id": "TRUST-01",
+      "gate": "HOST_01",
+      "scenario": "Archivo con formato Core válido pero origen no autenticado",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Carga/activación de autoridad con archivo externo coherente no permite emitir comisión ni concesión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRUST-02",
+      "gate": "HOST_01",
+      "scenario": "Marcador de ensayo 110501 y checksum correcto importados como credencial",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "El identificador de ensayo no suple autenticación del Host",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRUST-03",
+      "gate": "HOST_01",
+      "scenario": "F04Ref de otro scope, sujeto impostor y actor_id declarado por cliente",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Ninguno autentica al principal institucional",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRUST-04",
+      "gate": "HOST_01",
+      "scenario": "Campo verified o instrucción AI/Blueprint/consola que solicita ascenso",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Sin acceso al emisor ni al secreto de autoridad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRUST-05",
+      "gate": "HOST_01",
+      "scenario": "Host sin principal autenticado o sin procedencia confiable",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Emisor falla cerrado de forma predeterminada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRUST-06",
+      "gate": "HOST_01",
+      "scenario": "Juego local con ejecutable alterado",
+      "expected": "NO_CLAIM",
+      "evidence_required": "No declarar defensa antifalsificación fuerte sin raíz de confianza fuera del cliente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "COMMISSION-01",
+      "gate": "HOST_02",
+      "scenario": "Oficial nuevo con graduación y orden institucional verificables",
+      "expected": "ACCEPT_ATOMIC",
+      "evidence_required": "Identidad persistente 128b, comisión, rango 1101, referencias completas dentro de Core",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "COMMISSION-02",
+      "gate": "HOST_02",
+      "scenario": "Graduación ausente o procedente solo de NPC/LLM",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "No crear comisión por discurso/tiempo transcurrido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "COMMISSION-03",
+      "gate": "HOST_02",
+      "scenario": "Intento de comisión duplicada sobre mismo oficial",
+      "expected": "DENY_OR_IDEMPOTENT_NO_DUPLICATES",
+      "evidence_required": "No duplicar identidades, graduaciones o comisiones",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "COMMISSION-04",
+      "gate": "HOST_02",
+      "scenario": "Identidad 128b duplicada o inválida",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Se mantiene la unicidad y formato de identidad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-01",
+      "gate": "HOST_03",
+      "scenario": "Oficio sin competencia para la transición 1101 a 1102",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Rango del capitán no crea competencia de Personal",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-02",
+      "gate": "HOST_03",
+      "scenario": "Concesión institucional legítima, acotada y vigente",
+      "expected": "ACCEPT_ATOMIC",
+      "evidence_required": "Registrar dominio, ventana, autoridad y procedencia en Core",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-03",
+      "gate": "HOST_03",
+      "scenario": "Concesión caducada o todavía no vigente",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "No emitir nueva orden fuera de ventana",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-04",
+      "gate": "HOST_03",
+      "scenario": "Concesión revocada en el mismo tick antes del commit",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Revocación inmediata prevalece",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-05",
+      "gate": "HOST_03",
+      "scenario": "Evaluación referida a otra identidad o comisión",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "No cruzar expedientes de oficiales",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-06",
+      "gate": "HOST_03",
+      "scenario": "Orden referida a otra evaluación, causa o concesión",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Cadena completa y consistente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GRANT-07",
+      "gate": "HOST_03",
+      "scenario": "Orden revocada en el mismo tick antes del commit",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Orden sin efecto para nuevos ascensos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PROMOTION-01",
+      "gate": "HOST_04",
+      "scenario": "Primer ascenso 1101 a 1102 con todos los hechos válidos",
+      "expected": "ACCEPT_ATOMIC",
+      "evidence_required": "Un evento promotion, rango actualizado, revisión correcta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PROMOTION-02",
+      "gate": "HOST_04",
+      "scenario": "Intento de ascender 1102 a 1103 en este incremento",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Transición no aprobada aún",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PROMOTION-03",
+      "gate": "HOST_04",
+      "scenario": "Ascenso válido de rango sin cambio de destino, puesto ni mando",
+      "expected": "ACCEPT_ATOMIC",
+      "evidence_required": "WorldState difiere únicamente en los hechos y referencias permitidos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "PROMOTION-04",
+      "gate": "HOST_04",
+      "scenario": "Fallo inyectado durante creación parcial de hechos",
+      "expected": "ROLLBACK_BYTE_EXACT",
+      "evidence_required": "Sin hecho semipublicado, RNG/reloj/revisión idénticos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REPLAY-01",
+      "gate": "HOST_05",
+      "scenario": "Misma clave y payload tras guardar/cargar en otro proceso",
+      "expected": "RECEIPT_NO_MUTATION",
+      "evidence_required": "Recuperación del mismo recibo y evento, sin duplicados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REPLAY-02",
+      "gate": "HOST_05",
+      "scenario": "Misma clave con payload distinto",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "Conflicto de idempotencia sin cambios",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REPLAY-03",
+      "gate": "HOST_05",
+      "scenario": "Revisión de mundo caducada para emisión nueva",
+      "expected": "DENY_NO_MUTATION",
+      "evidence_required": "No escribir sobre estado concurrente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REPLAY-04",
+      "gate": "HOST_05",
+      "scenario": "Revocación posterior a ascenso ya legal en mismo tick",
+      "expected": "HISTORICAL_FACT_STABLE",
+      "evidence_required": "Evento ya válido persiste; concesión revocada no autoriza otro",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REPLAY-05",
+      "gate": "HOST_05",
+      "scenario": "Guardar y recuperar raíz de procedencia productiva",
+      "expected": "VERIFY_OR_DENY",
+      "evidence_required": "Procedencia se comprueba antes de nueva emisión; checksum no es prueba de autenticidad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REGRESSION-01",
+      "gate": "HOST_06",
+      "scenario": "17 casos existentes F11+Host Reader en GNU y MSVC",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "17/17 por plataforma, sin SKIP",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REGRESSION-02",
+      "gate": "HOST_06",
+      "scenario": "Regresiones F04 y F05 completas con Core pin exacto",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "Ninguna prueba histórica cambiada para aceptar nuevo comportamiento",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REGRESSION-03",
+      "gate": "HOST_06",
+      "scenario": "Seis campañas históricas Core y sus oráculos",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "Huella y semántica históricas preservadas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "REGRESSION-04",
+      "gate": "HOST_06",
+      "scenario": "Ausencia de símbolos de ensayo en DLL producto",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "No exportar f11_test_create/f11_test_revoke/f11_test_fault",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "UNREAL-01",
+      "gate": "HOST_07",
+      "scenario": "Proyecto Unreal real disponible y funcional",
+      "expected": "ENVIRONMENT_REQUIRED",
+      "evidence_required": "No declarar UE5_JUGABLE con StarTrekRPG.uproject ausente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "UNREAL-02",
+      "gate": "HOST_07",
+      "scenario": "Ejecutar NullRHI y D3D12 en MSI con Host real",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "Logs y versión del editor verificables; sin sustitución por CTest",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "UNREAL-03",
+      "gate": "HOST_07",
+      "scenario": "Guardar/recuperar el grado y ver expediente en juego",
+      "expected": "PASS_REQUIRED",
+      "evidence_required": "La visualización lee Core; no crea autoridad desde una escena",
+      "status": "NOT_RUN"
+    }
+  ]
+}
