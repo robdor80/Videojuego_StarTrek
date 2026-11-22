@@ -33,7 +33,7 @@ private:
     void BuildCandidate(SVerticalBox& Body);
     void BuildRecovery(SVerticalBox& Body);
     void BuildConfirmation(SVerticalBox& Body);
-    TSharedRef<SWidget> Button(EAction Action, FName Tag, const FText& Label);
+    TSharedRef<SWidget> Button(EAction Action, FName WidgetTag, const FText& Label);
     bool IsActionEnabled(EAction Action) const;
     FReply Act(EAction Action);
     FText HostText() const;
