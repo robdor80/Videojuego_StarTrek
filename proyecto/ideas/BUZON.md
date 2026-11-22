@@ -263,6 +263,18 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** «esta ... también ... implémentala».
 - **Ejecución:** autorizada; el registro por sí solo no significa cartografía UE5 terminada.
 
+### IDEA-0021 — Enciclopedia Starfleet LCARS y PADD de Star Trek Legends
+- **Fecha de aprobación expresa:** 2026-11-23.
+- **Estado:** APROBADA CONCEPTUALMENTE; 20 entradas editoriales ya preparadas por LORE B09, integración y auditoría de continuidad pendientes.
+- **Regla autoral fundamental:** **la enciclopedia describe NUESTRO videojuego**, no el canon televisivo de manera automática. Decisiones vigentes del autor + LORE propio para hechos estables, WorldState para sucesos reales de la partida, canon de pantalla solo si es compatible; divergencias aprobadas prevalecen siempre. No fijar fechas, edades ni biografías por ejemplos hipotéticos.
+- **Consulta:** enciclopedia en computadora, terminales LCARS y PADD Android (IDEA-0019), con índices, historia, especies, tecnología, personajes y expedientes autorizados. Información filtrada por fecha, conocimiento y permisos; sin revelación de secretos o futuros.
+- **Invariante:** leer una ficha **no crea misiones, desbloquea acontecimientos, modifica relaciones ni escribe en WorldState**.
+- **Base existente:** `mundo/lore/knowledge/lore_2383_enciclopedia_editorial_v1.json` y `proyecto/docs/roadmap/operacion_lore_20261122/B09_ENCICLOPEDIA_PADD.md`; sus 20 entradas son editoriales **no runtime**, sujetas a revisión contra decisiones vigentes.
+- **Ficha detallada:** [IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md](IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md).
+- **Etapas candidatas:** ENC-01–ENC-07. Integración con LORE, computadora de nave, F02–F05, F11–F12, F14–F15 e IDEA-0019.
+- **Decisión del autor:** aprobada expresamente y aclarada («datos de mi videojuego, no datos del canon»).
+- **Ejecución:** documentación editorial y política registradas; NO es una enciclopedia jugable implementada. No cambia F05 ni el Plan Maestro.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
