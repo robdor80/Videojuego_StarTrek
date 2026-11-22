@@ -1,8 +1,8 @@
 # Proyecto HOST — Índice técnico
 
-Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-22** tras pruebas MSI de H06 C-05. Referencia de código auditado: **PR #200, commit 148dc86a**; la PR continúa sin fusionar. Repositorio: robdor80/Videojuego_StarTrek.
+Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-23**. **M1 CERTIFICADO EN ALCANCE LIMITADO** para HOST Academy mínimo en Unreal 5.8.4 y presentación en pantalla completa; [acta de certificación](H06_IA03C05_ACTA_CERTIFICACION_M1_2026-11-23.md). PR #200 fusionada en `main` (`9ab15007ee3cdeb8bf1453069ec327b0012d0a22`).
 
-HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **No existe todavía un HOST de producto certificado.** H00–H05 están fusionadas con sus alcances. En H06, **la creación/vinculación de Academia y su menú están implementados**, y el usuario ha validado en MSI el flujo de crear, guardar y recuperar entre procesos sobre Unreal **5.8.4**. La [auditoría C-05](H06_IA03C05_AUDITORIA_CIERRE_2026-11-22.md) es favorable con reservas de evidencia y presentación; **M1 NO CERTIFICADO** mientras la PR #200 esté sin integrar y no se cierren las reservas documentadas. IA-01, IA-02 e IA-03A están integradas en sus respectivos alcances; no significan integración completa de toda la IA del videojuego.
+HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **El hito mínimo M1 está CERTIFICADO CON LIMITACIÓN**, no el HOST integral. H00–H05 están fusionadas en sus respectivos alcances; H06 C-01…C-05 se han cerrado para la integración mínima UE 5.8.4. La presentación Slate a **2560×1600 en modo ventana presenta un defecto de escalado/centrado y NO está certificada**; a esa resolución el menú y «Continuar» fueron aceptados tras Alt+Intro a pantalla completa. Se conserva el límite en el [acta M1](H06_IA03C05_ACTA_CERTIFICACION_M1_2026-11-23.md). Las capacidades institucionales F11 y las fases H07–H13 siguen fuera de este certificado.
 
 > **Nota de vigencia:** el [Plan Maestro v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) y muchas actas describen el estado histórico **en su fecha**. No deben utilizarse como estado actual de ramas, PR o módulos. Consultar también la [auditoría H00–H13 del 20/11, PR Draft #183](https://github.com/robdor80/Videojuego_StarTrek/pull/183) en su rama/PR Draft #183 mientras no se fusione.
 
@@ -29,9 +29,10 @@ Validador estático: desarrollo/tools/validation/test_host_h01_contracts.py y CI
 
 - [Tablero operacional H06](H06_CONTROL_UNICO_ESTADO_2026-11-21.md): fuente actual del estado de C-01…C-05 y M1.
 - [Protocolo C-05](H06_IA03C05_PROTOCOLO_CERTIFICACION_M1_2026-11-22.md): requisitos G0–G7.
+- [**Acta definitiva M1 con alcance limitado**](H06_IA03C05_ACTA_CERTIFICACION_M1_2026-11-23.md): decisión G0–G7, aceptación del usuario, limitación de presentación a 2560×1600 en ventana y siguiente fase H07.
 - [Resultados UE/MSI y aceptación](H06_IA03C05_RESULTADOS_M1_2026-11-22.md): rondas por commit, Automation y pruebas manuales.
-- [Auditoría independiente C-05](H06_IA03C05_AUDITORIA_CIERRE_2026-11-22.md): revisión técnica favorable con reservas; M1 no certificado.
-- [PR #200 — reparación UBT/Slate/Escape](https://github.com/robdor80/Videojuego_StarTrek/pull/200): abierta y sin fusionar al corte del documento.
+- [Auditoría independiente C-05](H06_IA03C05_AUDITORIA_CIERRE_2026-11-22.md): informe previo e histórico a la certificación.
+- [PR #200 — reparación UBT/Slate/Escape](https://github.com/robdor80/Videojuego_StarTrek/pull/200): FUSIONADA; el código probado es 148dc86a.
 
 La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no un campus 3D extenso. Los trabajos artísticos y narrativos posteriores no bloquean M1.
 
