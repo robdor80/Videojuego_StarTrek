@@ -419,9 +419,9 @@ void SHostAcademyMenu::BuildConfirmation(SVerticalBox& Body)
     ];
 }
 
-TSharedRef<SWidget> SHostAcademyMenu::Button(EAction Action, FName Tag, const FText& Label)
+TSharedRef<SWidget> SHostAcademyMenu::Button(EAction Action, FName WidgetTag, const FText& Label)
 {
-    return SNew(SButton).Tag(Tag).Text(Label).ContentPadding(FMargin(12, 8))
+    return SNew(SButton).Tag(WidgetTag).Text(Label).ContentPadding(FMargin(12, 8))
         .IsEnabled_Lambda([this, Action]() { return IsActionEnabled(Action); })
         .OnClicked(this, &SHostAcademyMenu::Act, Action);
 }
