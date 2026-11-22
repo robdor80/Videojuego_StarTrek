@@ -6,6 +6,9 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 
 ## Subplanes en uso o preservados
 
+- [Operación LORE 22-11-2026 — reconciliación, ampliación y guion](operacion_lore_20261122/README.md): registro y anexos documentales LORE-01–05, biografía S04, Valhalla y ordenador. **Trabajo en PR; no equivale a implementación ni certificación MSI**.
+
+
 - [Preparación del diseño — ocho pilares](game_design_readiness_v0_2.md): base de Academia, carrera, vida social, bienestar, lore, IA, universo y Ordenador.
 - [Vertical slice de Sensores](ship_console_vertical_slice_v0_0_1.md): árboles funcionales, resultado observable, historial y aceptación previstos; integración en UE5/Core pendiente.
 - [Plan procedural de 120 capas](procedural_layers_master_plan_v0.1.md): alcance **documental/contratos**, capa 119 parcial y 120 bloqueada por runtime.
