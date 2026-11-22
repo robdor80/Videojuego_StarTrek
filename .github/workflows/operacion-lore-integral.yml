@@ -1,0 +1,31 @@
+name: Operacion LORE 2026-11-22 — Integridad documental
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/operacion_lore_20261122/**"
+      - "proyecto/docs/roadmap/README.md"
+      - "mundo/lore/knowledge/**"
+      - "sistemas/gameplay/character_creation/s04_protagonist_narrative_annex_20261122.json"
+      - "desarrollo/tools/validation/*operacion_lore_20261122.py"
+      - ".github/workflows/operacion-lore-integral.yml"
+  push:
+    paths:
+      - "proyecto/docs/roadmap/operacion_lore_20261122/**"
+      - "proyecto/docs/roadmap/README.md"
+      - "mundo/lore/knowledge/**"
+      - "sistemas/gameplay/character_creation/s04_protagonist_narrative_annex_20261122.json"
+      - "desarrollo/tools/validation/*operacion_lore_20261122.py"
+      - ".github/workflows/operacion-lore-integral.yml"
+  workflow_dispatch:
+jobs:
+  integridad-lore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validar fronteras, fuentes y catálogos
+        run: python3 desarrollo/tools/validation/validate_operacion_lore_20261122.py
+      - name: Mutaciones adversariales de continuidad
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_operacion_lore_20261122.py' -v

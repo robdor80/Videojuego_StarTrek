@@ -13,7 +13,7 @@
 
 | ID | Fuente antigua / contradicción | Prevalece | Acción documental segura |
 |---|---|---|---|
-| LOR-01 | `CONTENT_STATUS.md`: `historical_events/` marcado TODO, mientras LORE-03A ya incluye 40 referencias previas + 26 fichas nuevas | LORE-03A y cierre de LORE-03 | Distinguir cobertura histórica inicial de expansión 2383–2387; proponer corrección del índice, sin borrar fuentes |
+| LOR-01 | `CONTENT_STATUS.md` marca TODO en `sistemas/universe/chronology/historical_events/`, mientras LORE-03A documenta `mundo/lore/historical_events/`: **rutas diferentes**, no contradicción demostrada | Conservar la separación datos de referencia / implementación | No actualizar la fila TODO sin auditar ese consumidor técnico; sí enlazar la ampliación documental B03 |
 | LOR-02 | Atlas `lore03_a_yearly_atlas_v0.2.md` todavía describe Valhalla como clase nueva | DEC-0020, 13-11 | Mantener atlas como evidencia temporal y agregar lector de precedencia; no migrar IDs |
 | LOR-03 | `valhalla_tech_decisions_v0.1.json` contiene `class_identity=NEW_VALHALLA_CLASS...` | DEC-0020, DEC-0021 | Mantener JSON legado; tratar 16 VAL-TEC como candidatos a refit individual en matriz A02 |
 | LOR-04 | S04 v2: cabecera «todavía no implementado» y campos `UNDECIDED` | PR #188–#198 y nueva autorización 22-11 | Anexos narrativos y nota de estado actual; **no tocar el JSON empotrado** |
@@ -25,6 +25,10 @@
 | LOR-10 | Catálogos LORE-02 mantienen `NEEDS_REVIEW` aunque sus fases se cerraron documentalmente | Estado de fichas y actas de auditoría son dimensiones distintas | No reemplazar estado individual por `COMPLETE` sin per-record evidence; anexo de explotación A04 |
 | LOR-11 | La restauración de Enterprise-D de 2401 y casco Syracuse podrían proyectarse al 2387 | Canon posterior y continuidad divergente | 2387 no usa ese casco por defecto y la misión no fuerza alta |
 | LOR-12 | «estar en el catálogo» se confunde en algunos consumos hipotéticos con «estar operativo» | CoreRPG y capas de conocimiento | Restringir consultas a existencia + fecha + equipamiento + permiso + observación + estado vivo |
+
+## Auditoría de precisión del 22-11-2026
+
+La primera hipótesis LOR-01 se descartó tras comparar las **rutas completas**: el TODO de `CONTENT_STATUS.md` se refiere a `sistemas/universe/chronology/historical_events/`, no al atlas de `mundo/lore/historical_events/`. No se alteró el estado técnico por un falso positivo. Esto constituye una **corrección real de la auditoría**, no una deuda nueva.
 
 ## Precedencia temporal
 
