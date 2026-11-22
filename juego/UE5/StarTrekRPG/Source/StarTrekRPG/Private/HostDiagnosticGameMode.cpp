@@ -7,6 +7,9 @@
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
 #include "Engine/World.h"
+#include "Framework/Application/IInputProcessor.h"
+#include "Framework/Application/SlateApplication.h"
+#include "Widgets/SViewport.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Misc/CommandLine.h"
 #include "Misc/Parse.h"
@@ -173,6 +176,28 @@ private:
 };
 }
 
+// A fallback for this menu's own viewport only, never a global Escape binding.
+class FAcademyViewportEscape final : public IInputProcessor
+{
+public:
+    FAcademyViewportEscape(TSharedPtr<SHostAcademyMenu> InMenu, TSharedPtr<SViewport> InViewport)
+        : Menu(InMenu), Viewport(InViewport) {}
+    virtual void Tick(const float, FSlateApplication&, TSharedRef<ICursor>) override {}
+    virtual bool HandleKeyDownEvent(FSlateApplication& Slate, const FKeyEvent& Event) override
+    {
+        const auto Widget = Menu.Pin();
+        const auto GameViewport = Viewport.Pin();
+        if (!Widget || !GameViewport || Event.GetKey() != EKeys::Escape ||
+            Event.IsAltDown() || Event.IsControlDown() || Event.IsCommandDown() ||
+            Slate.GetUserFocusedWidget(Event.GetUserIndex()) != GameViewport)
+            return false;
+        return Widget->HandleEscape().IsEventHandled();
+    }
+private:
+    TWeakPtr<SHostAcademyMenu> Menu;
+    TWeakPtr<SViewport> Viewport;
+};
+
 AHostDiagnosticGameMode::AHostDiagnosticGameMode()
 {
     PlayerControllerClass = AHostDiagnosticPlayerController::StaticClass();
@@ -206,6 +231,8 @@ void AHostDiagnosticPlayerController::BeginPlay()
         if (Projection) AcademyMenu->AttachView(*Projection);
         AcademyPanel = SNew(SHostAcademyMenu).Menu(AcademyMenu);
         Panel = AcademyPanel;
+        AcademyEscapeInput = MakeShared<FAcademyViewportEscape>(AcademyPanel, Viewport->GetGameViewportWidget());
+        FSlateApplication::Get().RegisterInputPreProcessor(AcademyEscapeInput);
         if (World->WorldType != EWorldType::PIE && !Viewport->OnWindowCloseRequested().IsBound())
         {
             Viewport->OnWindowCloseRequested().BindUObject(this, &AHostDiagnosticPlayerController::RequestAcademyWindowClose);
@@ -241,6 +268,9 @@ void AHostDiagnosticPlayerController::EndPlay(const EEndPlayReason::Type Reason)
             Viewport->RemoveViewportWidgetForPlayer(LocalPlayer, Panel.ToSharedRef());
         }
     }
+    if (AcademyEscapeInput && FSlateApplication::IsInitialized())
+        FSlateApplication::Get().UnregisterInputPreProcessor(AcademyEscapeInput);
+    AcademyEscapeInput.Reset();
     Panel.Reset();
     AcademyPanel.Reset();
     AcademyMenu.Reset();

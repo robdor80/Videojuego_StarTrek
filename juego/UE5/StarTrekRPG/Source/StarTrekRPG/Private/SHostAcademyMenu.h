@@ -19,6 +19,7 @@ public:
     void Refresh();
     virtual bool SupportsKeyboardFocus() const override { return true; }
     virtual FReply OnPreviewKeyDown(const FGeometry& Geometry, const FKeyEvent& Event) override;
+    FReply HandleEscape();
 
 private:
     enum class EAction
@@ -33,7 +34,7 @@ private:
     void BuildCandidate(SVerticalBox& Body);
     void BuildRecovery(SVerticalBox& Body);
     void BuildConfirmation(SVerticalBox& Body);
-    TSharedRef<SWidget> Button(EAction Action, FName Tag, const FText& Label);
+    TSharedRef<SWidget> Button(EAction Action, FName WidgetTag, const FText& Label);
     bool IsActionEnabled(EAction Action) const;
     FReply Act(EAction Action);
     FText HostText() const;

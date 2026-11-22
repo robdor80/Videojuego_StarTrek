@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Widgets/Children.h"
+#include "Layout/Children.h"
 #include "Widgets/SWidget.h"
 
 inline TSharedPtr<SWidget> FindHostWidget(const TSharedRef<SWidget>& Root, FName Tag)

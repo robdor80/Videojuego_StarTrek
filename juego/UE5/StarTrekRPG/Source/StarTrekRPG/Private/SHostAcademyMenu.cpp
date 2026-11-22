@@ -419,9 +419,9 @@ void SHostAcademyMenu::BuildConfirmation(SVerticalBox& Body)
     ];
 }
 
-TSharedRef<SWidget> SHostAcademyMenu::Button(EAction Action, FName Tag, const FText& Label)
+TSharedRef<SWidget> SHostAcademyMenu::Button(EAction Action, FName WidgetTag, const FText& Label)
 {
-    return SNew(SButton).Tag(Tag).Text(Label).ContentPadding(FMargin(12, 8))
+    return SNew(SButton).Tag(WidgetTag).Text(Label).ContentPadding(FMargin(12, 8))
         .IsEnabled_Lambda([this, Action]() { return IsActionEnabled(Action); })
         .OnClicked(this, &SHostAcademyMenu::Act, Action);
 }
@@ -477,9 +477,17 @@ FReply SHostAcademyMenu::OnPreviewKeyDown(const FGeometry&, const FKeyEvent& Eve
 {
     if (Event.GetKey() == EKeys::Escape)
     {
-        if (Menu->GetConfirmation() != EAcademyConfirmation::None) return Act(EAction::Cancel);
-        if (Screen == EAcademyScreen::Name || Screen == EAcademyScreen::Catalog) return Act(EAction::Back);
+        return HandleEscape();
     }
+    return FReply::Unhandled();
+}
+
+FReply SHostAcademyMenu::HandleEscape()
+{
+    if (Menu->GetConfirmation() != EAcademyConfirmation::None) return Act(EAction::Cancel);
+    const auto ActiveScreen = Menu->GetFlow().Screen();
+    if (ActiveScreen == EAcademyScreen::Name || ActiveScreen == EAcademyScreen::Catalog)
+        return Act(EAction::Back);
     return FReply::Unhandled();
 }
 

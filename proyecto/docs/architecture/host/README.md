@@ -1,8 +1,8 @@
 # Proyecto HOST — Índice técnico
 
-Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-20**, sobre `main` SHA `57fcc1c99f3075b026525ab1411421da925cb5e5`. Repositorio: robdor80/Videojuego_StarTrek.
+Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-22** tras pruebas MSI de H06 C-05. Referencia de código auditado: **PR #200, commit 148dc86a**; la PR continúa sin fusionar. Repositorio: robdor80/Videojuego_StarTrek.
 
-HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **No existe todavía un HOST de producto certificado.** H00–H05 están fusionadas con sus alcances; H06 ya integró y verificó el diagnóstico Unreal 5.8.2, pero **M1 sigue parcial**: falta la creación y vinculación productiva del personaje/Academia y las órdenes de jugador. IA-01, IA-02 e IA-03A están integradas; no equivalen a una integración total con el juego.
+HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **No existe todavía un HOST de producto certificado.** H00–H05 están fusionadas con sus alcances. En H06, **la creación/vinculación de Academia y su menú están implementados**, y el usuario ha validado en MSI el flujo de crear, guardar y recuperar entre procesos sobre Unreal **5.8.4**. La [auditoría C-05](H06_IA03C05_AUDITORIA_CIERRE_2026-11-22.md) es favorable con reservas de evidencia y presentación; **M1 NO CERTIFICADO** mientras la PR #200 esté sin integrar y no se cierren las reservas documentadas. IA-01, IA-02 e IA-03A están integradas en sus respectivos alcances; no significan integración completa de toda la IA del videojuego.
 
 > **Nota de vigencia:** el [Plan Maestro v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) y muchas actas describen el estado histórico **en su fecha**. No deben utilizarse como estado actual de ramas, PR o módulos. Consultar también la [auditoría H00–H13 del 20/11, PR Draft #183](https://github.com/robdor80/Videojuego_StarTrek/pull/183) en su rama/PR Draft #183 mientras no se fusione.
 
@@ -24,6 +24,16 @@ HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, q
 7. [Acta H01](H01_ACTA_2026-11-11.md): entregas, límites y transición a H02.
 
 Validador estático: desarrollo/tools/validation/test_host_h01_contracts.py y CI host-h01-contracts.yml. No constituye prueba del HOST de producto.
+
+## H06 — Academia integrada, pruebas MSI y puerta de certificación M1
+
+- [Tablero operacional H06](H06_CONTROL_UNICO_ESTADO_2026-11-21.md): fuente actual del estado de C-01…C-05 y M1.
+- [Protocolo C-05](H06_IA03C05_PROTOCOLO_CERTIFICACION_M1_2026-11-22.md): requisitos G0–G7.
+- [Resultados UE/MSI y aceptación](H06_IA03C05_RESULTADOS_M1_2026-11-22.md): rondas por commit, Automation y pruebas manuales.
+- [Auditoría independiente C-05](H06_IA03C05_AUDITORIA_CIERRE_2026-11-22.md): revisión técnica favorable con reservas; M1 no certificado.
+- [PR #200 — reparación UBT/Slate/Escape](https://github.com/robdor80/Videojuego_StarTrek/pull/200): abierta y sin fusionar al corte del documento.
+
+La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no un campus 3D extenso. Los trabajos artísticos y narrativos posteriores no bloquean M1.
 
 ## Fases y responsables
 

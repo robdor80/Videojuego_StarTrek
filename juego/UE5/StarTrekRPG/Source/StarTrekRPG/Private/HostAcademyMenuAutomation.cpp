@@ -6,6 +6,9 @@
 #include "DynamicRHI.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
+#include "Engine/GameViewportClient.h"
+#include "Framework/Application/SlateApplication.h"
+#include "Widgets/SViewport.h"
 #include "Engine/World.h"
 #include "Misc/AutomationTest.h"
 #include "Misc/CommandLine.h"
@@ -58,14 +61,16 @@ struct FAcademyMenuRun
     TSet<uint64> RejectedVersions;
     uint64 Saves = 0;
     uint32 ExpiredCursor = 0;
+    TSharedPtr<FHostAcademySlot> PendingRestoreVersion;
     bool bSawEmptyPage = false;
     int32 InvalidNamesTested = 0;
     bool bDone = false;
+    bool bCancelledRestoreWithEscape = false;
     enum class EStep
     {
         Start, Name, InvalidName, Create, Query, FirstSave, Candidate,
         SaveVersion, CloseAfterSave, Closed, SaveFailed, CancelClose, ConfirmClose,
-        Catalog, StaleCatalog, ConfirmRestore, Restored
+        Catalog, StaleCatalog, SelectRestorable, ConfirmRestore, Restored
     };
     EStep Step = EStep::Start;
 
@@ -87,7 +92,10 @@ struct FAcademyMenuRun
     bool Click(const TSharedRef<SWidget>& Panel, FName Tag, bool bDoubleClick = false)
     {
         const auto Button = Find<SButton>(Panel, Tag);
-        if (!Button || !Button->IsEnabled()) return Fail(*FString::Printf(TEXT("Missing or disabled: %s"), *Tag.ToString()));
+        if (!Button) return Fail(*FString::Printf(TEXT("Missing button: %s"), *Tag.ToString()));
+        // IsEnabled reads a cached Slate attribute; update it before inspecting the widget.
+        Panel->SlatePrepass(1.0f);
+        if (!Button->IsEnabled()) return Fail(*FString::Printf(TEXT("Disabled button after prepass: %s"), *Tag.ToString()));
         Button->SimulateClick();
         if (bDoubleClick) Button->SimulateClick();
         return true;
@@ -184,11 +192,33 @@ struct FAcademyMenuRun
             if (Row->Version == 2 || Row->Version == AcademyMenuVersions)
             {
                 List->SetSelection(Row);
+                // Selection is applied synchronously, but Slate's enabled attribute is cached.
+                Panel->SlatePrepass(1.0f);
                 const auto Button = Find<SButton>(Panel, TEXT("AcademyRestore"));
-                if (Row->Reason != TREK_HOST_SAVE_CORRUPT || Menu.GetSelected() != Row ||
-                    Menu.CanRestore() || !Button || Button->IsEnabled())
+                if (Row->Reason != TREK_HOST_SAVE_CORRUPT)
                 {
-                    Fail(TEXT("The damaged version must be visible and disabled for recovery"));
+                    Fail(*FString::Printf(TEXT("Damaged v%llu returned reason %u instead of SAVE_CORRUPT"),
+                        Row->Version, static_cast<uint32>(Row->Reason)));
+                    return;
+                }
+                if (Menu.GetSelected() != Row)
+                {
+                    Fail(*FString::Printf(TEXT("Damaged v%llu was not selected by Slate"), Row->Version));
+                    return;
+                }
+                if (Menu.CanRestore())
+                {
+                    Fail(*FString::Printf(TEXT("Damaged v%llu was incorrectly recoverable in the menu"), Row->Version));
+                    return;
+                }
+                if (!Button)
+                {
+                    Fail(TEXT("The AcademyRestore button is missing for a damaged version"));
+                    return;
+                }
+                if (Button->IsEnabled())
+                {
+                    Fail(*FString::Printf(TEXT("Damaged v%llu has an enabled Restore button after Slate prepass"), Row->Version));
                     return;
                 }
                 RejectedVersions.Add(Row->Version);
@@ -205,7 +235,9 @@ struct FAcademyMenuRun
             return;
         }
         List->SetSelection(First);
-        if (Click(Panel, TEXT("AcademyRestore"))) Step = EStep::ConfirmRestore;
+        PendingRestoreVersion = First;
+        // Let a subsequent automation tick observe the updated Slate attributes.
+        Step = EStep::SelectRestorable;
     }
 
     bool Tick()
@@ -253,15 +285,23 @@ struct FAcademyMenuRun
         case EStep::Start:
             if (Scenario == EMenuScenario::Unavailable)
             {
+                // A headless NullRHI run might not have painted the menu yet.
+                Panel->SlatePrepass(1.0f);
                 const auto New = Find<SButton>(Panel.ToSharedRef(), TEXT("AcademyNew"));
                 const auto Continue = Find<SButton>(Panel.ToSharedRef(), TEXT("AcademyBrowse"));
                 const auto Status = Find<STextBlock>(Panel.ToSharedRef(), TEXT("AcademyHost"));
-                if (!New || !Continue || !Status || New->IsEnabled() || Continue->IsEnabled() ||
-                    Host->GetAcademyAvailability() == TREK_HOST_OK || Host->GetStatus().state != TREK_HOST_CLOSED ||
-                    !Status->GetText().ToString().Contains(TEXT("Academia no disponible")))
-                {
-                    Fail(TEXT("Unavailable Academy must show an error and never open a naval session"));
-                }
+                if (!New || !Continue || !Status)
+                    Fail(TEXT("Unavailable Academy is missing a menu control or HOST status label"));
+                else if (Host->GetAcademyAvailability() == TREK_HOST_OK)
+                    Fail(TEXT("Academy reported available without TrekHost.dll"));
+                else if (Host->GetStatus().state != TREK_HOST_CLOSED)
+                    Fail(TEXT("Unavailable Academy opened a HOST session instead of remaining CLOSED"));
+                else if (New->IsEnabled())
+                    Fail(TEXT("New Game remained enabled without HOST after Slate prepass"));
+                else if (Continue->IsEnabled())
+                    Fail(TEXT("Continue remained enabled without HOST after Slate prepass"));
+                else if (!Status->GetText().ToString().Contains(TEXT("Academia no disponible")))
+                    Fail(TEXT("Unavailable Academy did not render its error message after Slate prepass"));
                 return true;
             }
             if (Host->GetAcademyAvailability() != TREK_HOST_OK ||
@@ -422,7 +462,41 @@ struct FAcademyMenuRun
                 else if (Click(Panel.ToSharedRef(), TEXT("AcademyReload"))) Step = EStep::Catalog;
             }
             break;
+        case EStep::SelectRestorable:
+        {
+            const auto Button = Find<SButton>(Panel.ToSharedRef(), TEXT("AcademyRestore"));
+            Panel->SlatePrepass(1.0f);
+            if (!PendingRestoreVersion || Menu->GetSelected() != PendingRestoreVersion ||
+                PendingRestoreVersion->Version != 1 || !Menu->CanRestore())
+                Fail(TEXT("Recoverable v1 is no longer selected or authorized by the catalog"));
+            else if (!Button)
+                Fail(TEXT("Restore button is missing after selecting recoverable v1"));
+            else if (!Button->IsEnabled())
+                Fail(TEXT("Restore button is disabled after a later Slate prepass for recoverable v1"));
+            else if (Click(Panel.ToSharedRef(), TEXT("AcademyRestore")))
+            {
+                PendingRestoreVersion.Reset();
+                Step = EStep::ConfirmRestore;
+            }
+            break;
+        }
         case EStep::ConfirmRestore:
+            if (!bCancelledRestoreWithEscape && FindHostWidget(Panel.ToSharedRef(), TEXT("AcademyConfirm")))
+            {
+                FSlateApplication::Get().SetKeyboardFocus(Game->GetGameViewportClient()->GetGameViewportWidget());
+                const FKeyEvent Key(EKeys::Escape, FModifierKeysState(), 0, false, 0, 0);
+                FSlateApplication::Get().ProcessKeyDownEvent(Key);
+                FSlateApplication::Get().ProcessKeyUpEvent(Key);
+                if (Menu->GetConfirmation() != EAcademyConfirmation::None ||
+                    Flow.Screen() != Screen::Catalog || Host->GetStatus().state != TREK_HOST_CLOSED)
+                    Fail(TEXT("Escape from viewport did not cancel RESTORE without opening a session"));
+                else
+                {
+                    bCancelledRestoreWithEscape = true;
+                    Menu->RequestRestore();
+                }
+                break;
+            }
             if (FindHostWidget(Panel.ToSharedRef(), TEXT("AcademyConfirm")) &&
                 Click(Panel.ToSharedRef(), TEXT("AcademyConfirm"))) Step = EStep::Restored;
             break;
