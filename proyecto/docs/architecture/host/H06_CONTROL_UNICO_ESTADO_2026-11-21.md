@@ -1,6 +1,6 @@
 # H06 — TABLERO ÚNICO DE CONTROL Y CIERRE
 
-**Corte:** 21-11-2026. **Responsable de seguimiento:** ChatGPT. **Fase única:** H06, integración HOST↔Unreal.  
+**Corte:** 22-11-2026. **Responsable de seguimiento:** ChatGPT. **Fase única:** H06, integración HOST↔Unreal.
 **Estado del documento:** registro de situación verificable; revisado contra fuentes y PR visibles en el repositorio. Se actualiza este archivo, **no se crean nuevas subfases de H06 por defecto**.  
 **Regla de gobierno:** los identificadores ya existentes se conservan; un fallo, una prueba o un ajuste no origina otra subfase salvo dependencia técnica nueva justificada y aprobada. Los commits, incidencias y pruebas viven en la PR correspondiente. Todas las fusiones importantes requieren autorización del usuario.
 
@@ -9,7 +9,7 @@
 | Bloque H06 | Situación | Evidencia / siguiente puerta |
 | --- | --- | --- |
 | **H06-P01…P05 — integración diagnóstica Unreal** | **IMPLEMENTADA, PROBADA en alcance histórico y FUSIONADA; M1 NO certificado** | Proyecto real `StarTrekRPG.uproject`, `HostSessionSubsystem`, diagnóstico y guardado naval; documentación H06 |
-| **H06-P06 — camino de nueva partida Academia** | **PARCIAL**; los caminos históricos de formulario/biografía no constituyen la nueva entrada UE con protagonista fijo | La realización final consume IA-03B e IA-03C; no duplicar un segundo camino de creación |
+| **H06-P06 — camino de nueva partida Academia** | **IMPLEMENTADO en fuentes C-04. Pruebas UE/MSI NOT_RUN** | La entrada `-AcademyMenu` consume IA-03B e IA-03C. La aceptación en UE 5.8.4 queda pendiente |
 | **IA-01 — pasarela central IA** | **FUSIONADA** en alcance nativo; LIVE no acreditado | Informe IA-01; conexión futura a consumidores del juego |
 | **IA-02 — evaluación biográfica semántica** | **FUSIONADA** en su alcance; no sustituye S04 v2 | Informe IA-02; no obligar a editar biografía fija |
 | **IA-03A — reglas de biografía F10** | **FUSIONADA**, pero su editor libre es **histórico y no aplicable** al protagonista fijo | Decisión S04 v2 prevalece; no borrar contratos históricos |
@@ -24,10 +24,10 @@
 | **C-01** | Inspección y arquitectura de la frontera ABI/UE, matriz de aceptación | **ChatGPT** | **DOCUMENTADO Y FUSIONADO** en [PR #193](https://github.com/robdor80/Videojuego_StarTrek/pull/193), merge `d87c7b2cc1e6775fbcff0573ddc909b0d0a6bec7` |
 | **C-02** | Fachada C productiva CREATE/BIND/QUERY y catálogo paginado de H04, con ABI v1 compatible | **Codex — GPT-6 Alto** | **IMPLEMENTADO, PROBADO Y FUSIONADO** en [PR #194](https://github.com/robdor80/Videojuego_StarTrek/pull/194), merge `098246e1bda8c40377f0e344949610c1f7cb948d`. [Informe y evidencia nativa C-02](H06_IA03C02_INTERFAZ_NATIVA_ACADEMIA_2026-11-21.md). |
 | **C-03** | Adaptar `HostRuntime` y `HostSessionSubsystem` a la fachada Academy sin bloquear Game Thread | **Codex — GPT-6 Alto** | **IMPLEMENTADO, PROBADO en CI nativa/SDK, AUDITADO favorablemente en alcance Cloud y FUSIONADO** en [PR #195](https://github.com/robdor80/Videojuego_StarTrek/pull/195), merge `ddd4ce57cbacfba6cc1f227a32456f7cd5c8ee26`. Linux/Windows 297/297, ASan/UBSan 142/142, producto 5/5 + SDK 1/1 por SO. **UE 5.8.4 EN MSI: 8 pruebas NOT_RUN (listadas abajo)**. **NO CERTIFICADO en Unreal ni M1**. [Informe C-03](H06_IA03C03_INTEGRACION_UNREAL_2026-11-21.md). |
-| **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy (nombre editable, sin biografía libre) | **ChatGPT UX + Codex implementación** | **DISEÑO FUNCIONAL DOCUMENTADO** por ChatGPT, [PR Draft #196](https://github.com/robdor80/Videojuego_StarTrek/pull/196), **SIN FUSIONAR**. [Especificación UX y matriz UX-01…UX-15](H06_IA03C04_DISENO_FUNCIONAL_MENU_ACADEMIA_2026-11-21.md). **Implementación Codex Cloud PENDIENTE; UBT/UE/MSI NOT_RUN**. Reutilizar C-03 y H04, no crear autoridades paralelas. |
+| **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy con nombre editable | **ChatGPT UX + Codex implementación** | Diseño **DOCUMENTADO Y FUSIONADO** en [#196](https://github.com/robdor80/Videojuego_StarTrek/pull/196). Menú **IMPLEMENTADO** en fuentes y **PROBADO** en alcance nativo, SDK y presentación C++ sin Unreal. Auditoría independiente, fusión de la implementación, UBT y ejecución MSI pendientes. [Informe C-04](H06_IA03C04_IMPLEMENTACION_MENU_ACADEMIA_2026-11-22.md). |
 | **C-05** | Pruebas UE 5.8.4 NullRHI/D3D12/varios mundos, auditoría y aceptación M1 | **Codex + ChatGPT + usuario** | **PENDIENTE** |
 
-**Puerta inmediata.** Revisar e integrar el diseño documental de C-04 en la [PR Draft #196](https://github.com/robdor80/Videojuego_StarTrek/pull/196) solo con autorización del usuario; después Codex Cloud implementará sobre el diseño (GPT-6 Alto), con PR y auditoría propias. Las ocho comprobaciones de C-03 en MSI permanecen NOT_RUN y se acumulan a las pruebas UE de C-04/C-05; no declarar certificación M1 por CI nativa.
+**Puerta inmediata.** Auditar la PR Draft de implementación C-04 y ejecutar las automatizaciones y la prueba interactiva de Academia en UE 5.8.4 en MSI. Las ocho comprobaciones C-03 permanecen **NOT_RUN** y se acumulan a las pruebas C-04 detalladas en el informe. M1 pendiente de certificación.
 
 ### Verificaciones C-03 reservadas para MSI
 
@@ -68,7 +68,7 @@ Quedan **fuera del bloqueo de M1** y se harán en sus fases propias: introducci�
 ## 5. Documentos y trazabilidad
 
 - [Diseño detallado C-01](H06_IA03C01_PLAN_INTEGRACION_ACADEMIA_UE584_2026-11-21.md), PR [#193](https://github.com/robdor80/Videojuego_StarTrek/pull/193).
-- [Diseño funcional y matriz de aceptación C-04](H06_IA03C04_DISENO_FUNCIONAL_MENU_ACADEMIA_2026-11-21.md), PR Draft [#196](https://github.com/robdor80/Videojuego_StarTrek/pull/196), DOCUMENTADO y no implementado.
+- [Diseño funcional y matriz de aceptación C-04](H06_IA03C04_DISENO_FUNCIONAL_MENU_ACADEMIA_2026-11-21.md), fusionado en [#196](https://github.com/robdor80/Videojuego_StarTrek/pull/196). [Informe de implementación y verificación MSI](H06_IA03C04_IMPLEMENTACION_MENU_ACADEMIA_2026-11-22.md).
 - [H06 índice/README](README.md) y [Plan Maestro H00–H13](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) **históricos**: sus descripciones iniciales no sustituyen este corte.
 - PR fusionadas de B03: [#190](https://github.com/robdor80/Videojuego_StarTrek/pull/190), [#191](https://github.com/robdor80/Videojuego_StarTrek/pull/191), [#192](https://github.com/robdor80/Videojuego_StarTrek/pull/192).
 - [Auditoría HOST anterior #183](https://github.com/robdor80/Videojuego_StarTrek/pull/183), Draft y previa al cierre de B03: contiene hallazgos ya parcialmente corregidos y **requiere reconciliación posterior**, no reapertura de B03 como bloque nuevo.
