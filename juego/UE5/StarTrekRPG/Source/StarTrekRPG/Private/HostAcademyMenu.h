@@ -11,6 +11,7 @@ class FHostAcademyMenu
 public:
     explicit FHostAcademyMenu(UHostSessionSubsystem* Host = nullptr) : Session(Host) {}
 
+    void AttachView(UHostWorldProjection& World);
     void Tick(UHostSessionSubsystem& Host, UHostWorldProjection& World);
 
     void OpenName();

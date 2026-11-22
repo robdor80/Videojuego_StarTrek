@@ -203,6 +203,7 @@ void AHostDiagnosticPlayerController::BeginPlay()
         AcademyHost = Host;
         AcademyProjection = Projection;
         AcademyMenu = Host ? TSharedPtr<FHostAcademyMenu>(Host->GetAcademyMenu()) : MakeShared<FHostAcademyMenu>();
+        if (Projection) AcademyMenu->AttachView(*Projection);
         AcademyPanel = SNew(SHostAcademyMenu).Menu(AcademyMenu);
         Panel = AcademyPanel;
         if (World->WorldType != EWorldType::PIE && !Viewport->OnWindowCloseRequested().IsBound())

@@ -311,9 +311,14 @@ void FHostAcademyMenu::Synchronize(UHostSessionSubsystem& Host, UHostWorldProjec
     }
 }
 
-void FHostAcademyMenu::Tick(UHostSessionSubsystem& Host, UHostWorldProjection& World)
+void FHostAcademyMenu::AttachView(UHostWorldProjection& World)
 {
     if (WorldProjection.Get() != &World) ChangeWorld(World);
+}
+
+void FHostAcademyMenu::Tick(UHostSessionSubsystem& Host, UHostWorldProjection& World)
+{
+    AttachView(World);
     if (ShouldExit()) return;
 
     if (Receipt)
@@ -363,11 +368,15 @@ TrekHostCode FHostAcademyMenu::Submit(UHostSessionSubsystem& Host, UHostWorldPro
         if (Status.state != TREK_HOST_CLOSED) return TREK_HOST_BUSY_STATE;
         return Host.ListAcademySlots(World, RequestedCursor, &Receipt);
     case EAcademyOperation::Restore:
-        return RestoreVersion.IsSet() ? Host.RestoreAcademy(World, *RestoreVersion, &Receipt) : TREK_HOST_GENERATION_EXPIRED;
+        if (!RestoreVersion.IsSet() || !HasCurrentPage()) return TREK_HOST_GENERATION_EXPIRED;
+        return Host.RestoreAcademy(World, *RestoreVersion, &Receipt);
     case EAcademyOperation::Close:
     case EAcademyOperation::ExitClose:
-    case EAcademyOperation::ResetCreate:
+        if (ExpectedGeneration && Status.generation != ExpectedGeneration && Status.state != TREK_HOST_CLOSED)
+            return TREK_HOST_GENERATION_EXPIRED;
         return Host.Close(World, &Receipt);
+    case EAcademyOperation::ResetCreate:
+        return Status.state == TREK_HOST_CLOSED ? Host.Close(World, &Receipt) : TREK_HOST_BUSY_STATE;
     default:
         return TREK_HOST_INVALID_ARGUMENT;
     }
