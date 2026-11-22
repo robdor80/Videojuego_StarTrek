@@ -1,6 +1,6 @@
 # StarTrekRPG
 
-Proyecto principal C++ Win64 para Unreal Engine **5.8.4** (asociación `5.8`). El mapa mínimo de H06 muestra el panel HOST. El panel usa una sesión por GameInstance y muestra exclusivamente la proyección autorizada del jugador. OPEN técnico queda `PRINCIPAL_UNBOUND`; la creación productiva de cadete sigue pendiente.
+Proyecto principal C++ Win64 para Unreal Engine **5.8.4** (asociación `5.8`). El mapa mínimo de H06 ofrece el diagnóstico HOST por defecto y el menú de candidatura de Academia con `-AcademyMenu`. Ambos usan una sesión por GameInstance. OPEN técnico queda `PRINCIPAL_UNBOUND`.
 
 ## Reconstruir desde Git
 
@@ -84,3 +84,15 @@ Verificación periódica de una copia concreta, sin modificar nada:
 Abrir sesión técnica, consultar y cerrar desde el panel. Para recuperar, introducir el ID técnico de una campaña conocida por H04 y la ranura local. La raíz predeterminada se toma del directorio de aplicaciones del usuario y se puede aislar durante ensayos con `-UserDir`. H04 valida la dirección, el registro local y el vínculo persistido. SAVE requiere ese vínculo. El panel muestra el resultado de H04 cuando termina la operación y mantiene F11 como `SERVICE_UNAVAILABLE`.
 
 La [matriz y los comandos de verificación H06](../../../proyecto/docs/architecture/host/H06_RESULTADOS_2026-11-13.md) documentan la automatización de interfaz, mundos, persistencia y RHI. Los proyectos de laboratorio y los recursos artísticos tienen sus propias rutas y su migración futura se controla por separado.
+
+
+## Ejecutar el menú de Academia
+
+```powershell
+$academyUser = Join-Path $work 'academy-manual'
+& "$engine/Engine/Binaries/Win64/UnrealEditor.exe" $project -game -AcademyMenu -d3d12 -windowed "-UserDir=$academyUser"
+```
+
+Nueva partida permite elegir el nombre del protagonista. El menú abre su ficha tras verificar la candidatura y recibir el resultado del primer guardado de H04 en `principal`. Continuar permite recorrer el catálogo de Academia y elegir una versión exacta. Usa el mismo `-UserDir` tras reiniciar el proceso para consultar esos guardados.
+
+La secuencia automatizada de dos procesos y las comprobaciones pendientes en MSI se detallan en el [informe de implementación C-04](../../../proyecto/docs/architecture/host/H06_IA03C04_IMPLEMENTACION_MENU_ACADEMIA_2026-11-22.md).

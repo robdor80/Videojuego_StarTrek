@@ -2,10 +2,14 @@
 
 #include "HostRuntime.h"
 #include "HostSessionSubsystem.h"
+#include "SHostAcademyMenu.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
 #include "Engine/World.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Misc/CommandLine.h"
+#include "Misc/Parse.h"
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Input/SEditableTextBox.h"
 #include "Widgets/Layout/SBorder.h"
@@ -194,12 +198,32 @@ void AHostDiagnosticPlayerController::BeginPlay()
     UGameInstance* Game = World->GetGameInstance();
     UHostSessionSubsystem* Host = Game ? Game->GetSubsystem<UHostSessionSubsystem>() : nullptr;
     UHostWorldProjection* Projection = World->GetSubsystem<UHostWorldProjection>();
-    Panel = SNew(SHostDiagnostic).Host(Host).Projection(Projection);
+    if (FParse::Param(FCommandLine::Get(), TEXT("AcademyMenu")))
+    {
+        AcademyHost = Host;
+        AcademyProjection = Projection;
+        AcademyMenu = Host ? TSharedPtr<FHostAcademyMenu>(Host->GetAcademyMenu()) : MakeShared<FHostAcademyMenu>();
+        AcademyPanel = SNew(SHostAcademyMenu).Menu(AcademyMenu);
+        Panel = AcademyPanel;
+        if (World->WorldType != EWorldType::PIE && !Viewport->OnWindowCloseRequested().IsBound())
+        {
+            Viewport->OnWindowCloseRequested().BindUObject(this, &AHostDiagnosticPlayerController::RequestAcademyWindowClose);
+        }
+    }
+    else
+    {
+        Panel = SNew(SHostDiagnostic).Host(Host).Projection(Projection);
+    }
     PanelViewport = Viewport;
     Viewport->AddViewportWidgetForPlayer(LocalPlayer, Panel.ToSharedRef(), 10);
     bShowMouseCursor = true;
     FInputModeGameAndUI Input;
     Input.SetHideCursorDuringCapture(false);
+    if (AcademyPanel)
+    {
+        Input.SetWidgetToFocus(AcademyPanel);
+        Input.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+    }
     SetInputMode(Input);
 }
 
@@ -207,13 +231,47 @@ void AHostDiagnosticPlayerController::EndPlay(const EEndPlayReason::Type Reason)
 {
     if (UGameViewportClient* Viewport = PanelViewport.Get(); Viewport && Panel)
     {
+        if (Viewport->OnWindowCloseRequested().IsBoundToObject(this))
+        {
+            Viewport->OnWindowCloseRequested().Unbind();
+        }
         if (ULocalPlayer* LocalPlayer = GetLocalPlayer())
         {
             Viewport->RemoveViewportWidgetForPlayer(LocalPlayer, Panel.ToSharedRef());
         }
     }
     Panel.Reset();
+    AcademyPanel.Reset();
+    AcademyMenu.Reset();
+    AcademyHost.Reset();
+    AcademyProjection.Reset();
     Super::EndPlay(Reason);
+}
+
+void AHostDiagnosticPlayerController::PlayerTick(float DeltaTime)
+{
+    Super::PlayerTick(DeltaTime);
+    if (!AcademyPanel) return;
+
+    auto* Host = AcademyHost.Get();
+    auto* Projection = AcademyProjection.Get();
+    if (Host && Projection)
+    {
+        AcademyMenu->Tick(*Host, *Projection);
+    }
+    AcademyPanel->Refresh();
+    if (AcademyMenu->ShouldExit())
+    {
+        UKismetSystemLibrary::QuitGame(this, this, EQuitPreference::Quit, false);
+    }
+}
+
+bool AHostDiagnosticPlayerController::RequestAcademyWindowClose()
+{
+    if (!AcademyMenu || AcademyMenu->ShouldExit()) return true;
+
+    AcademyMenu->RequestClose(true);
+    return AcademyMenu->ShouldExit();
 }
 
 #undef LOCTEXT_NAMESPACE
