@@ -2,6 +2,18 @@
 
 **Producto:** base consultable por índices/lecturas, **no** IA implementada ni servicio operativo. Catálogo editorial: `mundo/lore/knowledge/lore_2383_enciclopedia_editorial_v1.json`.
 
+## Precedencia aprobada — enciclopedia de Star Trek Legends, NO canon televisivo automático
+
+**Decisión del autor, 23-11-2026:** la biblioteca/enciclopedia ha de describir **la continuidad propia y aprobada de nuestro videojuego**. [IDEA-0021](../../../ideas/IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md) es la especificación funcional de esta extensión a B09.
+
+**Orden obligatorio:** (1) decisiones autorales vigentes + LORE ratificado del juego para datos estables; (2) CoreRPG/WorldState para acontecimientos realmente ocurridos en cada partida; (3) canon Star Trek **solo cuando no contradiga** lo anterior; (4) información no resuelta, nunca autocompletada con canon externo. La etiqueta de procedencia `SCREEN_CANON` **no otorga prioridad** sobre una divergencia `GAME_ADDITION` aprobada.
+
+**Ejemplo:** si la biografía autorizada de Siete de Nueve difiere de la televisión, prevalece la versión del videojuego. El año 2400 citado al explicar esta regla era **hipotético**, no una nueva fecha de nacimiento fijada. No fabricar datos no ratificados. La Enterprise-D de Proyecto Valhalla se describe según su reconstrucción propia y su WorldState, no por repetir sin filtro otras continuidades.
+
+**Control de publicación:** las 20 entradas iniciales son **semillas editoriales pendientes de auditoría de continuidad autoral**; no publicar respuestas ni habilitar importación runtime hasta verificar cada afirmación frente a las decisiones actuales. No alterar a ciegas entradas históricas ni inventar conciliaciones. Los conflictos quedan señalados para revisión.
+
+**Regla innegociable:** consultar artículos no crea misiones, desbloquea acontecimientos, aprende hechos automáticamente en WorldState ni modifica la partida. Solo lectura, incluida la app Android IDEA-0019.
+
 ## 1. Cinco planos de información que no deben mezclarse
 
 1. **Factual histórica**: afirmaciones, fechas, fuentes, confianza y vigencia.

@@ -8,6 +8,14 @@ Provenance is separate from confidence:
 - **authority** describes the type/strength of the source;
 - **confidence** describes how certain we are that the structured claim correctly represents the evidence.
 
+## Priority of game continuity (approved 23 November 2026)
+
+This registry records **where a claim comes from**, not which fictional continuity must prevail. For Star Trek Legends content (including the LCARS and PADD encyclopaedia), the **author-approved game continuity is authoritative**. Screen canon is a reference only when compatible with valid game decisions. A `SCREEN_CANON` tag never overrides a contradictory, approved `GAME_ADDITION`.
+
+If an author-approved date, biography, event or starship identity differs from television, display and index the **game version**. If a game fact is not fixed, mark it unresolved; do not silently import a screen-canon value to fill a gap. The game World State owns campaign outcomes, and role/knowledge permissions govern visibility.
+
+See `proyecto/ideas/IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md` and the LORE B09 editorial gate.
+
 ## Required provenance categories
 
 - `SCREEN_CANON`
@@ -88,7 +96,7 @@ Must record:
 Must record:
 - why the game needs the addition,
 - affected era(s),
-- constraints imposed by canon,
+- compatibility with the **game's approved continuity** and documented divergences from screen canon when relevant,
 - Roberto approval when the decision materially changes the setting or player experience.
 
 ## Source granularity
