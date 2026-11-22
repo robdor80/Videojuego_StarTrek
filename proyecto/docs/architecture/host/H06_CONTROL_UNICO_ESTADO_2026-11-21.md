@@ -27,7 +27,7 @@
 | **C-04** | Interfaz mínima Nueva partida / Continuar / ficha Academy con nombre editable | **ChatGPT UX + Codex implementación** | Diseño **DOCUMENTADO Y FUSIONADO** en [#196](https://github.com/robdor80/Videojuego_StarTrek/pull/196). Menú **IMPLEMENTADO** en fuentes y **PROBADO** en alcance nativo, SDK y presentación C++ sin Unreal. Auditoría independiente, fusión de la implementación, UBT y ejecución MSI pendientes. [Informe C-04](H06_IA03C04_IMPLEMENTACION_MENU_ACADEMIA_2026-11-22.md). |
 | **C-05** | Pruebas UE 5.8.4 NullRHI/D3D12/varios mundos, auditoría y aceptación M1 | **Codex + ChatGPT + usuario** | **PENDIENTE** |
 
-**Puerta inmediata.** Auditar la PR Draft de implementación C-04 y ejecutar las automatizaciones y la prueba interactiva de Academia en UE 5.8.4 en MSI. Las ocho comprobaciones C-03 permanecen **NOT_RUN** y se acumulan a las pruebas C-04 detalladas en el informe. M1 pendiente de certificación.
+**Puerta inmediata.** Auditar la [PR Draft #197 de implementación C-04](https://github.com/robdor80/Videojuego_StarTrek/pull/197) y ejecutar las automatizaciones y la prueba interactiva de Academia en UE 5.8.4 en MSI. Las ocho comprobaciones C-03 permanecen **NOT_RUN** y se acumulan a las pruebas C-04 detalladas en el informe. M1 pendiente de certificación.
 
 ### Verificaciones C-03 reservadas para MSI
 

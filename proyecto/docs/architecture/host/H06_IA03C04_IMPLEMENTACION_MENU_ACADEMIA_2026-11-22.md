@@ -1,6 +1,6 @@
 # H06 · IA-03C-04 · Implementación de Nueva partida, Continuar y ficha de Academia
 
-**Corte 22-11-2026.** Implementación de [la especificación UX aprobada](H06_IA03C04_DISENO_FUNCIONAL_MENU_ACADEMIA_2026-11-21.md) sobre `main` en `9f96c2aa998dea6a66def517948c3d3cfcb3f769` ([PR #196](https://github.com/robdor80/Videojuego_StarTrek/pull/196)). Rama `codex/h06-ia03c04-academy-menu`. Revisión de implementación `1f3179f7f36eb5a7a8135361143496b029fd26ec`. El historial de la PR registra el HEAD de entrega, que incorpora este informe.
+**Corte 22-11-2026.** Implementación de [la especificación UX aprobada](H06_IA03C04_DISENO_FUNCIONAL_MENU_ACADEMIA_2026-11-21.md) sobre `main` en `9f96c2aa998dea6a66def517948c3d3cfcb3f769` ([PR #196](https://github.com/robdor80/Videojuego_StarTrek/pull/196)). Rama `codex/h06-ia03c04-academy-menu`. Revisión de fuentes `121d642a6b9b70fb3af815b8139d63cb222677b8`. El historial registra el HEAD de entrega que incorpora este informe. [PR Draft #197](https://github.com/robdor80/Videojuego_StarTrek/pull/197/commits).
 
 | Estado | Alcance |
 | --- | --- |
@@ -29,6 +29,7 @@ El `UHostSessionSubsystem` de GameInstance conserva el cliente y el flujo de pre
 - El panel bloquea acciones incompatibles desde el clic. El controlador sigue un único ticket admitido. Para una respuesta de submit `RETRY` limita los reenvíos a cinco con 80 ms de espera entre intentos. Poll, creación de cliente, trabajo de CoreRPG y disco H04 conservan la ejecución del puente existente. El Game Thread consume las vistas y los resultados.
 - Las mutaciones siguen observándose en GameInstance al viajar. CREATE y RESTORE ya eran transiciones retenidas de C-03. C-04 amplía la observación opcional al resultado de SAVE para conservar la confirmación real durante el viaje. El puente identifica ticket, familia, operación y generación. QUERY y SLOTS siguen publicando sus DTO en su mundo. Tras descartar un mundo se toma la generación vigente, se vuelve a consultar la candidatura y se invalida el catálogo anterior. Un cursor expirado requiere un nuevo recorrido desde cero.
 - Los resultados finales `PUBLICATION_UNCERTAIN` y las observaciones ambiguas de un SAVE admitido dejan el guardado sin confirmar. La ficha bloquea otro SAVE durante esa sesión y permite cerrar con confirmación. Continuar ofrece la comprobación de las versiones que H04 puede leer y recuperar. El catálogo no prueba por sí solo qué versión produjo el intento incierto.
+- Las pruebas diagnósticas C-03 y navales usaban dos nombres internos iguales. Se distinguen en las fuentes para que puedan compilar en una misma unidad Unity. Se conserva la comprobación UBT Unity en el procedimiento MSI.
 - El cliente, el ABI naval v1, Academy v2, la reserva de CLOSE y el pin Core `76a7b7b485616d8c4994f384a90f123bf333591d` se conservan. H03, H04, F04/F05, F11 y S04 mantienen sus contratos. Los archivos de mapa y recursos se conservan.
 
 ### Fuentes y pruebas
@@ -41,7 +42,7 @@ Rutas relativas a `juego/UE5/StarTrekRPG/` salvo el tablero y este informe.
 | `Source/StarTrekRPG/Private/HostAcademyMenu{.h,.cpp,Flow.h}` | Secuenciación de presentación, catálogo por página y adaptación de acciones y resultados a la proyección vigente |
 | `Source/StarTrekRPG/Private/HostSessionSubsystem.{h,cpp}` | Recibo opcional por ticket, SAVE observado tras viaje, validación del resultado v1 y protección de conversión Unicode |
 | `Source/StarTrekRPG/Private/HostDiagnosticGameMode.{h,cpp}` | Entrada optativa al menú y coordinación del visor y cierre. Conserva la vía naval |
-| `Source/StarTrekRPG/Private/HostAcademyMenuAutomation.cpp`, `HostSlateAutomation.h`, `HostAutomation.cpp` | Automatizaciones Slate y búsqueda de controles compartida con el diagnóstico histórico |
+| `Source/StarTrekRPG/Private/HostAcademyMenuAutomation.cpp`, `HostSlateAutomation.h`, `HostAutomation.cpp`, `HostAcademyAutomation.cpp` | Automatizaciones Slate, búsqueda de controles compartida y constantes de C-03 diferenciadas para compilación Unity |
 | `Build/Tests/{CMakeLists.txt,HostAcademyMenuFlowTest.cpp}` | Cuatro casos CTest de la lógica de presentación, integrados en los jobs SDK existentes |
 | `README.md`, tablero e informe | Entrada reproducible, alcance probado y protocolo MSI |
 
@@ -50,11 +51,22 @@ Rutas relativas a `juego/UE5/StarTrekRPG/` salvo el tablero y este informe.
 | Verificación | Resultado |
 | --- | --- |
 | Linux GCC 14.2.0, compilación Release y CTest HOST/F04/F05 | **297/297 PASS**. Selección de la matriz de CI. Incluye ABI v1/v2, identidad, fallos de persistencia, cursores, doble CREATE nativo y continuidad entre procesos |
+| Ensayo Linux de catálogo mixto con producto Release | **PASS**. Los consumidores existentes recorrieron 66 versiones Academy junto a un guardado naval, detectaron v2 y v66 dañadas, rechazaron la selección implícita y recuperaron v1 con la misma campaña, PERSON y hecho. El almacén de prueba obstruido produjo `PATH_REJECTED` al guardar. |
 | Linux Release con pruebas internas desactivadas | **5/5 PASS** consumidores de producto, inspección de exports y ABI **PASS**. Pin Core y ausencia de ganchos de pruebas verificados |
-| Linux SDK y controlador de presentación | **5/5 PASS**. Un caso de negociación contra producto real y cuatro casos C++ sin Unreal |
+| Linux SDK y controlador de presentación | **5/5 PASS**. Un caso de negociación contra producto real y cuatro casos C++ sin Unreal. Los cuatro escenarios de presentación pasaron también con GCC ASan/UBSan |
 | Contratos HOST H01 y regresión F11 aislada | **11/11 PASS** y **17/17 PASS**, respectivamente |
-| Linux local ASan/UBSan y GitHub Actions Linux/Windows | Estado y enlaces en la revisión de evidencia de la PR |
 | Unreal Engine 5.8.4 y UBT | **NOT_RUN**, herramientas ausentes en Cloud |
+
+La primera matriz de Actions se ejecutó en `db896d25134599e1da119ab6ac4e282753b1c63f`. La revisión de fuentes posterior ajusta Slate y las automatizaciones de Unreal. La PR conserva los checks asociados al HEAD de entrega. [Ejecución H02–H06](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890) · [Checks del HEAD de la PR](https://github.com/robdor80/Videojuego_StarTrek/pull/197/checks).
+
+| Job | Resultado |
+| --- | --- |
+| HOST native Linux | **PASS**. CTest, H01 y regresión F11. [Job Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890/job/137045167860) |
+| HOST native Windows | **PASS**. CTest, H01 y regresión F11. [Job Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890/job/137045167752) |
+| HOST Linux con Clang ASan/UBSan | **PASS**. [Job ASan/UBSan](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890/job/137045167850) |
+| Producto Linux Release, ABI y SDK | **PASS**. Incluye presentación C++. [Job producto Linux](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890/job/137045168226) |
+| Producto Windows x64 Release, ABI y SDK | **PASS**. Incluye preparación oficial de DLL y presentación C++. [Job producto Windows](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245890/job/137045167563) |
+| H01 documental | **PASS**. [Workflow H01](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44969245941) |
 
 Los logs locales, XML de CTest, compilaciones y checkout exacto de Core se conservan en el laboratorio de esta ejecución según `AGENTS.md`. El proyecto y CI pueden recrear lo necesario a partir de las fuentes y del pin.
 
@@ -65,14 +77,14 @@ La columna Cloud identifica la evidencia de cada capa. La columna MSI reserva la
 | ID | Verificación y evidencia Cloud | Unreal/MSI |
 | --- | --- | --- |
 | UX-01 | **PASS SDK** para export ausente, versión cero, versión incompatible y ABI naval posterior. `AcademyMenu.Unavailable` comprueba el widget y la sesión cerrada sin DLL. | **NOT_RUN** |
-| UX-02 | **PASS ABI v2** para nombre inválido, exceso y Unicode en el contrato; **PASS** transición C++ de rechazo. `Seed` comprueba exceso multibyte y nombre válido desde el campo. | **NOT_RUN** |
+| UX-02 | **PASS ABI v2** para nombre inválido, exceso y Unicode en el contrato; **PASS** transición C++ de rechazo. `Seed` comprueba entrada vacía, exceso multibyte, rechazo de S04 y nombre válido desde el campo. El puente rechaza una unidad UTF-16 aislada. | **NOT_RUN** |
 | UX-03 | **PASS ABI v2** y **PASS presentación** para el flujo CREATE → QUERY. `Seed` pulsa dos veces y comprueba la identidad y una sola campaña tras paginar con `Resume`. | **NOT_RUN** |
 | UX-04 | **PASS H04** y **PASS presentación** para la secuencia de confirmación. `Seed` comprueba estado pendiente y marcador H04 de `principal/v1`. | **NOT_RUN** |
 | UX-05 | **PASS H04** en fallos de publicación y **PASS presentación** para fallo inicial e incertidumbre. `SaveFailure` cubre error de disco real, espera y cierre cancelable. Inyección de publicación incierta en Slate **NOT_RUN**. | **NOT_RUN** |
 | UX-06 | **PASS** consumidor Academy entre procesos. `Resume` abre Continuar sin UUID introducido por el jugador. | **NOT_RUN** |
 | UX-07 | **PASS ABI/SDK** para más de 64 versiones, continuación vacía y lógica de catálogo. `Resume` recorre 66 versiones de Academia con páginas vacías, y la preparación MSI añade almacenamiento Naval en el mismo catálogo. | **NOT_RUN** |
 | UX-08 | **PASS H04** y **PASS presentación** para filas dañadas o incompatibles. `Resume` selecciona una dañada y verifica que la recuperación está deshabilitada. | **NOT_RUN** |
-| UX-09 | **PASS** consumidor real entre procesos y secuenciación RESTORE → QUERY. `Resume` verifica v1 con la ficha completa del proceso Seed. | **NOT_RUN** |
+| UX-09 | **PASS** consumidor real entre procesos y secuenciación RESTORE → QUERY. `Resume` verifica v1 con la ficha completa del proceso Seed. La última versión tiene un marcador dañado para detectar una selección implícita de la versión más alta. | **NOT_RUN** |
 | UX-10 | **PASS ABI v2** para cursores caducados. `Resume` retira el catálogo por CLOSE, verifica descartes y pulsa Empezar listado. | **NOT_RUN** |
 | UX-11 | **PASS presentación** para reconsulta. `Seed` recarga el mapa con CREATE, QUERY y primer SAVE admitidos y verifica descarte de la proyección anterior y resultado final correcto. | **NOT_RUN** |
 | UX-12 | **PASS presentación** para SAVE → CLOSE, fallo e incertidumbre. `Seed` y `SaveFailure` verifican el cierre confirmado y la opción de cancelar el abandono. | **NOT_RUN** |
@@ -98,14 +110,14 @@ La columna Cloud identifica la evidencia de cada capa. La columna MSI reserva la
 
 ## Reproducción en MSI
 
-1. Obtener el HEAD de la PR y seguir la preparación aislada del [informe C-03](H06_IA03C03_INTEGRACION_UNREAL_2026-11-21.md#reproducción-en-msi). Usar un `$work` absoluto y nuevo bajo el directorio de resultados de la tarea. El procedimiento verifica `Build.version`, genera una copia desde Git, ejecuta `Prepare-Host.ps1`, compila los dos targets y genera el mapa con el commandlet. Conservar el mapa original fuera de la copia de prueba.
-2. Mantener los pares históricos `StarTrek.H06.Academy.Seed` / `Resume` y `StarTrek.H06.DiagnosticFlow` del procedimiento anterior. Ejecutar la matriz C-04 en procesos separados con el editor por línea de comandos. Cada RHI tiene almacenamientos propios. El diagnóstico entre Seed y Resume incorpora un guardado naval mediante el flujo histórico en el mismo catálogo.
+1. Obtener el HEAD de la PR y seguir la preparación aislada del [informe C-03](H06_IA03C03_INTEGRACION_UNREAL_2026-11-21.md#reproducción-en-msi). Usar un `$work` absoluto y nuevo bajo el directorio de resultados de la tarea. El procedimiento verifica `Build.version`, genera una copia desde Git, ejecuta `Prepare-Host.ps1`, compila los dos targets y genera el mapa con el commandlet. Conservar el mapa original fuera de la copia de prueba. Repetir el build Editor con `-ForceUnity` y otro log para comprobar la convivencia de las automatizaciones C-03 y C-04.
+2. Mantener los pares históricos `StarTrek.H06.Academy.Seed` / `Resume` y `StarTrek.H06.DiagnosticFlow` del procedimiento anterior. Ejecutar la matriz C-04 en procesos separados con el editor por línea de comandos. Cada RHI tiene almacenamientos propios. El escritor H04 histórico añade una campaña naval al mismo catálogo de prueba. El diagnóstico opera con esa campaña y genera un guardado naval adicional.
 
    ```powershell
-   function Invoke-HostUiTest($Project, $Test, $Mode, $UserDir, $Log, $Academy, $ExpectDll) {
+   function Invoke-HostUiTest($Project, $Test, $Mode, $UserDir, $Log, $Academy, $ExpectDll, $Extra = @()) {
        $menuArg = @()
        if ($Academy) { $menuArg += '-AcademyMenu' }
-       & $editor $Project -game "-$Mode" @menuArg -unattended -nop4 -nosound -nosplash -windowed -resx=960 -resy=650 `
+       & $editor $Project -game "-$Mode" @menuArg @Extra -unattended -nop4 -nosound -nosplash -windowed -resx=960 -resy=650 `
            -NoZenAutoLaunch -ddc=NoZenLocalFallback "-UserDir=$UserDir" "-AbsLog=$Log.log" `
            "-ExecCmds=Automation RunTests $Test" '-TestExit=Automation Test Queue Empty' "-ReportExportPath=$Log-report"
        if ($LASTEXITCODE) { throw "$Test falló con $Mode" }
@@ -119,15 +131,25 @@ La columna Cloud identifica la evidencia de cada capa. La columna MSI reserva la
        }
    }
 
+   $fixtureBuild = Join-Path $work 'fixture-native'
+   cmake -S desarrollo/integration/host -B $fixtureBuild -G 'Visual Studio 18 2026' -A x64 "-DCORERPG_SOURCE_DIR=$core" -DTREK_HOST_TESTS=ON
+   if ($LASTEXITCODE) { throw 'Falló la configuración del escritor naval' }
+   cmake --build $fixtureBuild --config Release --parallel 3 --target host_m0_tests
+   if ($LASTEXITCODE) { throw 'Falló la compilación del escritor naval' }
+   $writer = Join-Path $fixtureBuild 'f05/f04/Release/host_m0_tests.exe'
+
    foreach ($mode in @('nullrhi', 'd3d12')) {
        $user = Join-Path $work "c04-$mode"
        $failUser = Join-Path $work "c04-$mode-fallo"
        if ((Test-Path $user) -or (Test-Path $failUser)) { throw 'Usar almacenamientos nuevos' }
        New-Item -ItemType Directory $user, "$failUser/Saved/HostSlots" | Out-Null
        Invoke-HostUiTest $project 'StarTrek.H06.AcademyMenu.Seed' $mode $user "$work/c04-$mode-seed" $true $true
-       Invoke-HostUiTest $project 'StarTrek.H06.DiagnosticFlow' $mode $user "$work/c04-$mode-naval" $false $true
-
        $root = Join-Path $user 'Saved/HostSlots'
+       & $writer write $root
+       if ($LASTEXITCODE) { throw 'Falló el escritor del guardado naval' }
+       $navalCampaign = (Get-Content -LiteralPath "$root/campaign-id" -Raw).Trim()
+       Invoke-HostUiTest $project 'StarTrek.H06.DiagnosticFlow' $mode $user "$work/c04-$mode-naval" $false $true @("-H06FixtureCampaign=$navalCampaign")
+
        $campaign = (Get-Content -LiteralPath "$root/academy-c04-identity.txt" -Encoding utf8 -Raw).Split('|')[0]
        if ($campaign -cnotmatch '^[0-9a-f]{32}$') { throw 'UUID inválido en la ficha de prueba' }
        $slots = Join-Path $root "campaigns/$campaign/slots"
@@ -135,7 +157,9 @@ La columna Cloud identifica la evidencia de cada capa. La columna MSI reserva la
        foreach ($index in 0..139) {
            New-Item -ItemType Directory (Join-Path $slots ('0empty{0:D3}' -f $index)) | Out-Null
        }
-       Set-Content -LiteralPath "$slots/principal/v2/COMMITTED" -Encoding ascii -NoNewline -Value 'fixture-corrupto'
+       foreach ($version in @(2, 66)) {
+           Set-Content -LiteralPath "$slots/principal/v$version/COMMITTED" -Encoding ascii -NoNewline -Value 'fixture-corrupto'
+       }
        Invoke-HostUiTest $project 'StarTrek.H06.AcademyMenu.Resume' $mode $user "$work/c04-$mode-resume" $true $true
 
        Set-Content -LiteralPath "$failUser/Saved/HostSlots/campaigns" -Encoding ascii -NoNewline -Value 'impide-crear-directorio'
@@ -149,6 +173,6 @@ La columna Cloud identifica la evidencia de cada capa. La columna MSI reserva la
 ## Límites y riesgos
 
 - UHT, UBT, Slate y el cierre de ventana de UE 5.8.4 siguen pendientes de MSI. La secuenciación de presentación y el SDK compilan en Cloud con CMake. El comportamiento de foco y la actualización de vistas con NullRHI siguen pendientes.
-- El catálogo presenta una lectura viva. Una selección puede caducar o cambiar en disco antes de que H04 vuelva a validar la versión.
+- El catálogo presenta una lectura viva. Una selección puede caducar o cambiar en disco antes de que H04 vuelva a validar la versión. Se muestran las filas atribuidas a Academia por los metadatos H04, incluso cuando su integridad impide recuperar la versión.
 - H04 v1 devuelve un código final para SAVE y el catálogo omite fecha, hora y nombre. El menú comunica confirmación de `principal` y presenta la versión del catálogo mediante sus metadatos reales.
 - Los cierres normales del menú esperan los resultados. Una terminación forzada del proceso puede perder una candidatura sin guardado confirmado. La certificación de M1 requiere las comprobaciones reservadas y la auditoría independiente.
