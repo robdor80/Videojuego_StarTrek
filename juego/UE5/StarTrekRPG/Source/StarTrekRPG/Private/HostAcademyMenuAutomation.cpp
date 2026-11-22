@@ -25,6 +25,13 @@ const TCHAR* AcademyMenuMap = TEXT("/Game/Diagnostics/HostDiagnostic");
 const TCHAR* AcademyMenuName = TEXT("María Vega");
 constexpr uint64 AcademyMenuVersions = TREK_HOST_ACADEMY_MAX_SLOTS + 2;
 
+FString InvalidMenuName(int32 Index)
+{
+    if (Index == 0) return FString();
+    if (Index == 1) return FString::ChrN(49, TEXT('é'));
+    return TEXT(" María");
+}
+
 enum class EMenuScenario { Seed, Resume, SaveFailure, Unavailable };
 
 FString MenuCandidateRecord(const FHostAcademyCandidate& Value)
@@ -48,10 +55,11 @@ struct FAcademyMenuRun
     FString Fixture;
     FString Expected;
     TSet<uint64> VersionsSeen;
+    TSet<uint64> RejectedVersions;
     uint64 Saves = 0;
     uint32 ExpiredCursor = 0;
     bool bSawEmptyPage = false;
-    bool bSawCorruptVersion = false;
+    int32 InvalidNamesTested = 0;
     bool bDone = false;
     enum class EStep
     {
@@ -165,14 +173,15 @@ struct FAcademyMenuRun
         for (const auto& Row : Menu.GetRows())
         {
             if (Row->Kind != TREK_HOST_KIND_ACADEMY || Row->Slot != TEXT("principal") ||
-                !Expected.StartsWith(Row->Campaign + TEXT("|")) || VersionsSeen.Contains(Row->Version))
+                !Expected.StartsWith(Row->Campaign + TEXT("|")) || VersionsSeen.Contains(Row->Version) ||
+                Row->Version == 0 || Row->Version > AcademyMenuVersions)
             {
                 Fail(TEXT("Unexpected Academy row, duplicate version or unfiltered naval row"));
                 return;
             }
             VersionsSeen.Add(Row->Version);
             if (Row->Version == 1) First = Row;
-            if (Row->Version == 2)
+            if (Row->Version == 2 || Row->Version == AcademyMenuVersions)
             {
                 List->SetSelection(Row);
                 const auto Button = Find<SButton>(Panel, TEXT("AcademyRestore"));
@@ -182,7 +191,7 @@ struct FAcademyMenuRun
                     Fail(TEXT("The damaged version must be visible and disabled for recovery"));
                     return;
                 }
-                bSawCorruptVersion = true;
+                RejectedVersions.Add(Row->Version);
             }
         }
         if (Page->HasMore())
@@ -190,7 +199,7 @@ struct FAcademyMenuRun
             Click(Panel, TEXT("AcademyMore"));
             return;
         }
-        if (!bSawEmptyPage || !bSawCorruptVersion || VersionsSeen.Num() != static_cast<int32>(AcademyMenuVersions) || !First)
+        if (!bSawEmptyPage || RejectedVersions.Num() != 2 || VersionsSeen.Num() != static_cast<int32>(AcademyMenuVersions) || !First)
         {
             Fail(TEXT("Expected an empty continuation, all 66 versions and recoverable version 1"));
             return;
@@ -280,8 +289,14 @@ struct FAcademyMenuRun
         case EStep::Name:
             if (FindHostWidget(Panel.ToSharedRef(), TEXT("AcademyName")))
             {
-                if (Scenario == EMenuScenario::Seed && EnterName(Panel.ToSharedRef(), FString::ChrN(49, TEXT('é'))))
-                    Step = EStep::InvalidName;
+                if (Scenario == EMenuScenario::Seed)
+                {
+                    const TCHAR InvalidUnit = static_cast<TCHAR>(0xd800);
+                    if (Host->CreateAcademy(*Projection, FString(1, &InvalidUnit)) != TREK_HOST_INVALID_ARGUMENT)
+                        Fail(TEXT("A lone UTF-16 surrogate must not be replaced before submitting CREATE"));
+                    else if (EnterName(Panel.ToSharedRef(), InvalidMenuName(InvalidNamesTested)))
+                        Step = EStep::InvalidName;
+                }
                 else if (Scenario == EMenuScenario::SaveFailure && EnterName(Panel.ToSharedRef(), AcademyMenuName))
                     Step = EStep::Candidate;
             }
@@ -292,7 +307,11 @@ struct FAcademyMenuRun
                 if (Flow.Error() != TREK_HOST_INVALID_ARGUMENT || Host->GetStatus().generation ||
                     Projection->GetAcademyCandidate().IsSet() || Projection->GetCompletion().IsSet())
                 {
-                    Fail(TEXT("A 98-byte UTF-8 name passed validation or touched the session"));
+                    Fail(TEXT("An invalid name passed validation or touched the session"));
+                }
+                else if (++InvalidNamesTested < 3)
+                {
+                    EnterName(Panel.ToSharedRef(), InvalidMenuName(InvalidNamesTested));
                 }
                 else if (EnterName(Panel.ToSharedRef(), AcademyMenuName, true)) Step = EStep::Create;
             }

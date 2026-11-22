@@ -347,7 +347,9 @@ void SHostAcademyMenu::BuildCandidate(SVerticalBox& Body)
                 FText::AsNumber(Candidate->Revision), FText::AsNumber(Candidate->Tick), FText::FromString(Candidate->SourceDigest)))
         ]
     ];
-    const auto Save = Button(EAction::Save, TEXT("AcademySave"), LOCTEXT("Save", "Guardar"));
+    const FText SaveLabel = Menu->GetFlow().SaveState() == EAcademySave::Failed
+        ? LOCTEXT("RetrySave", "Reintentar guardar") : LOCTEXT("Save", "Guardar");
+    const auto Save = Button(EAction::Save, TEXT("AcademySave"), SaveLabel);
     const auto Close = Button(EAction::Close, TEXT("AcademyClose"), LOCTEXT("Close", "Cerrar partida"));
     FocusTarget = Menu->CanSave() ? Save : Close;
     Body.AddSlot().AutoHeight()
@@ -518,7 +520,12 @@ FText SHostAcademyMenu::CatalogText() const
     if (Menu->IsBusy()) return FText::GetEmpty();
     if (Menu->IsCatalogExpired()) return LOCTEXT("ReloadCatalog", "Actualiza el listado con «Empezar listado».");
     if (Menu->IsCatalogEmpty()) return LOCTEXT("EmptyCatalog", "No hay candidaturas guardadas.");
-    if (!Menu->GetRows().IsEmpty()) return LOCTEXT("SelectVersion", "Selecciona una versión. Las versiones dañadas o incompatibles aparecen con su estado.");
+    if (const auto& Row = Menu->GetSelected(); Row && Row->Reason != TREK_HOST_OK)
+    {
+        return FText::Format(LOCTEXT("SelectedSlotError", "{0} ({1})"),
+            FailureText(Row->Reason, EAcademyOperation::Restore), CodeText(Row->Reason));
+    }
+    if (!Menu->GetRows().IsEmpty()) return LOCTEXT("SelectVersion", "Selecciona una versión guardada.");
     if (Menu->CanLoadMore()) return LOCTEXT("EmptyPage", "Esta página no contiene versiones de Academia. Puedes cargar más.");
     if (Menu->GetFlow().Error() == TREK_HOST_OK) return LOCTEXT("EndOfCatalog", "No hay más versiones de Academia en el listado.");
     return FText::GetEmpty();
