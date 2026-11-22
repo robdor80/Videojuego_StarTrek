@@ -1,5 +1,6 @@
 #include "HostSessionSubsystem.h"
 
+#include "HostAcademyMenu.h"
 #include "HostRuntime.h"
 #include "Containers/StringConv.h"
 #include "Engine/GameInstance.h"
@@ -242,6 +243,7 @@ void UHostSessionSubsystem::Deinitialize()
         TickHandle.Reset();
     }
     DiscardObservations();
+    AcademyMenu.Reset();
     InvalidateProjections();
     for (const TWeakObjectPtr<UHostWorldProjection>& World : Worlds)
     {
@@ -275,9 +277,10 @@ void UHostSessionSubsystem::Detach(UHostWorldProjection& World)
         FObservation& Entry = Pending[Index];
         if (Entry.World.Get() == &World)
         {
-            if (Entry.Ticket == Transition)
+            if (Entry.Ticket == Transition ||
+                (!Entry.bAcademy && Entry.Operation == TREK_HOST_SAVE && Entry.Receipt.IsValid()))
             {
-                // The GameInstance retains the lifecycle operation across travel.
+                // Lifecycle operations and explicitly observed SAVE survive travel.
                 Entry.World.Reset();
             }
             else
@@ -332,6 +335,10 @@ void UHostSessionSubsystem::InvalidateCatalog()
 
 void UHostSessionSubsystem::Discard(const FObservation& Entry)
 {
+    if (const auto Receipt = Entry.Receipt.Pin())
+    {
+        Receipt->Code = TREK_HOST_GENERATION_EXPIRED;
+    }
     if (!Entry.IsReady())
     {
         Api->Discard(Client, Entry.Ticket);
@@ -395,6 +402,13 @@ bool UHostSessionSubsystem::Poll(FObservation& Entry)
         Code = Api->Poll(Client, Entry.Ticket, &Result);
         if (Code == TREK_HOST_OK)
         {
+            if (Result.size != sizeof(Result) || Result.operation != Entry.Operation || Result.ticket != Entry.Ticket)
+            {
+                Result = {};
+                Result.code = TREK_HOST_ABI_MISMATCH;
+                Result.operation = Entry.Operation;
+                Result.ticket = Entry.Ticket;
+            }
             Entry.NativeResult = Result;
             return true;
         }
@@ -407,7 +421,7 @@ bool UHostSessionSubsystem::Poll(FObservation& Entry)
 
     // Only transport OK consumes the observation. Release it on any terminal
     // transport failure and report the original ticket and operation.
-    Discard(Entry);
+    Api->Discard(Client, Entry.Ticket);
     if (Entry.bAcademy)
     {
         Entry.AcademyNativeResult = MakeUnique<TrekHostAcademyCompletion>();
@@ -439,6 +453,7 @@ void UHostSessionSubsystem::Publish(FObservation& Entry)
     {
         World = nullptr;
     }
+    const auto Receipt = Entry.Receipt.Pin();
     if (Entry.bAcademy)
     {
         auto& Result = *Entry.AcademyNativeResult;
@@ -464,6 +479,11 @@ void UHostSessionSubsystem::Publish(FObservation& Entry)
         {
             World->Accept(Result);
         }
+        if (Receipt)
+        {
+            Receipt->Generation = Result.generation;
+            Receipt->Code = Result.code;
+        }
         return;
     }
     auto& Result = Entry.NativeResult.GetValue();
@@ -483,6 +503,11 @@ void UHostSessionSubsystem::Publish(FObservation& Entry)
     if (World)
     {
         World->Accept(Result);
+    }
+    if (Receipt)
+    {
+        Receipt->Generation = Result.generation;
+        Receipt->Code = Result.code;
     }
 }
 
@@ -553,7 +578,8 @@ TrekHostCode UHostSessionSubsystem::CheckAdmission(const UHostWorldProjection& W
 }
 
 void UHostSessionSubsystem::Observe(UHostWorldProjection& World, uint64 Ticket, uint32 Operation,
-                                   uint64 Generation, bool bAcademy, bool bTransition)
+                                   uint64 Generation, bool bAcademy, bool bTransition,
+                                   TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     if (bTransition)
     {
@@ -561,7 +587,14 @@ void UHostSessionSubsystem::Observe(UHostWorldProjection& World, uint64 Ticket, 
         InvalidateProjections();
         Transition = Ticket;
     }
-    Pending.Add({Ticket, &World, Operation, Generation, bAcademy});
+    FObservation Entry{Ticket, &World, Operation, Generation, bAcademy};
+    if (Receipt)
+    {
+        *Receipt = MakeShared<FHostRequestReceipt>();
+        (*Receipt)->Ticket = Ticket;
+        Entry.Receipt = *Receipt;
+    }
+    Pending.Add(MoveTemp(Entry));
     if (bAcademy)
     {
         World.AcademyResults[Operation].Reset();
@@ -586,7 +619,8 @@ TrekHostCode UHostSessionSubsystem::Reject(UHostWorldProjection& World, uint32 O
     return Code;
 }
 
-TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const TrekHostRequest& Command)
+TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const TrekHostRequest& Command,
+                                           TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     const uint32 Operation = Command.operation;
     const TrekHostCode Admission = CheckAdmission(World, Operation == TREK_HOST_CLOSE);
@@ -609,11 +643,12 @@ TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const Tr
     {
         InvalidateCatalog();
     }
-    Observe(World, Ticket, Operation, Command.generation, false, IsTransition(Operation));
+    Observe(World, Ticket, Operation, Command.generation, false, IsTransition(Operation), Receipt);
     return Code;
 }
 
-TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const TrekHostAcademyRequest& Command)
+TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const TrekHostAcademyRequest& Command,
+                                           TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     const uint32 Operation = Command.operation;
     if (World.Session.Get() != this)
@@ -648,7 +683,7 @@ TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const Tr
     {
         World.AcademyPage.Reset();
     }
-    Observe(World, Ticket, Operation, Command.generation, true, Operation == TREK_HOST_ACADEMY_CREATE);
+    Observe(World, Ticket, Operation, Command.generation, true, Operation == TREK_HOST_ACADEMY_CREATE, Receipt);
     return Code;
 }
 
@@ -660,9 +695,9 @@ TrekHostCode UHostSessionSubsystem::Open(UHostWorldProjection& World)
     return Submit(World, Command);
 }
 
-TrekHostCode UHostSessionSubsystem::Close(UHostWorldProjection& World)
+TrekHostCode UHostSessionSubsystem::Close(UHostWorldProjection& World, TSharedPtr<FHostRequestReceipt>* Receipt)
 {
-    return Submit(World, Request(TREK_HOST_CLOSE));
+    return Submit(World, Request(TREK_HOST_CLOSE), Receipt);
 }
 
 TrekHostCode UHostSessionSubsystem::Query(UHostWorldProjection& World)
@@ -670,12 +705,13 @@ TrekHostCode UHostSessionSubsystem::Query(UHostWorldProjection& World)
     return Submit(World, Request(TREK_HOST_QUERY_VIEW, Status.generation));
 }
 
-TrekHostCode UHostSessionSubsystem::Save(UHostWorldProjection& World, const FString& Slot)
+TrekHostCode UHostSessionSubsystem::Save(UHostWorldProjection& World, const FString& Slot,
+                                TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     const FTCHARToUTF8 SlotBytes(*Slot);
     TrekHostRequest Command = Request(TREK_HOST_SAVE, Status.generation);
     Command.input.slot = Bytes(SlotBytes);
-    return Submit(World, Command);
+    return Submit(World, Command, Receipt);
 }
 
 TrekHostCode UHostSessionSubsystem::Restore(UHostWorldProjection& World, const FString& Campaign, const FString& Slot)
@@ -684,16 +720,17 @@ TrekHostCode UHostSessionSubsystem::Restore(UHostWorldProjection& World, const F
 }
 
 TrekHostCode UHostSessionSubsystem::Restore(UHostWorldProjection& World, const FString& Campaign,
-                                           const FString& Slot, uint64 Version)
+                                           const FString& Slot, uint64 Version, TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     const FTCHARToUTF8 CampaignBytes(*Campaign);
     const FTCHARToUTF8 SlotBytes(*Slot);
     TrekHostRequest Command = Request(TREK_HOST_RESTORE, Status.generation);
     Command.input.restore = {Bytes(CampaignBytes), Bytes(SlotBytes), Version};
-    return Submit(World, Command);
+    return Submit(World, Command, Receipt);
 }
 
-TrekHostCode UHostSessionSubsystem::CreateAcademy(UHostWorldProjection& World, const FString& Name)
+TrekHostCode UHostSessionSubsystem::CreateAcademy(UHostWorldProjection& World, const FString& Name,
+                                         TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     check(IsInGameThread());
     if (World.Session.Get() != this)
@@ -717,10 +754,17 @@ TrekHostCode UHostSessionSubsystem::CreateAcademy(UHostWorldProjection& World, c
     // A caller may pass a name from a projection that admission invalidates.
     FString SubmittedName = Name;
     const FTCHARToUTF8 NameBytes(*SubmittedName, SubmittedName.Len());
+    const FUTF8ToTCHAR RoundTrip(NameBytes.Get(), NameBytes.Length());
+    if (NameBytes.Length() > static_cast<int32>(TREK_HOST_ACADEMY_NAME_BYTES) ||
+        !SubmittedName.Equals(FString(RoundTrip.Length(), RoundTrip.Get()), ESearchCase::CaseSensitive))
+    {
+        // Reject a lossy conversion instead of submitting replacement characters.
+        return World.RejectAcademy(TREK_HOST_ACADEMY_CREATE, TREK_HOST_INVALID_ARGUMENT);
+    }
     TrekHostAcademyRequest Command = AcademyRequest(TREK_HOST_ACADEMY_CREATE);
     Command.creation_key = bReplay ? LastCreationKey : LastCreationKey + 1;
     Command.display_name = Bytes(NameBytes);
-    const TrekHostCode Code = Submit(World, Command);
+    const TrekHostCode Code = Submit(World, Command, Receipt);
     if (Code == TREK_HOST_OK && !bReplay)
     {
         LastCreationKey = Command.creation_key;
@@ -729,12 +773,13 @@ TrekHostCode UHostSessionSubsystem::CreateAcademy(UHostWorldProjection& World, c
     return Code;
 }
 
-TrekHostCode UHostSessionSubsystem::QueryAcademy(UHostWorldProjection& World)
+TrekHostCode UHostSessionSubsystem::QueryAcademy(UHostWorldProjection& World, TSharedPtr<FHostRequestReceipt>* Receipt)
 {
-    return Submit(World, AcademyRequest(TREK_HOST_ACADEMY_QUERY, Status.generation));
+    return Submit(World, AcademyRequest(TREK_HOST_ACADEMY_QUERY, Status.generation), Receipt);
 }
 
-TrekHostCode UHostSessionSubsystem::ListAcademySlots(UHostWorldProjection& World, uint32 Cursor)
+TrekHostCode UHostSessionSubsystem::ListAcademySlots(UHostWorldProjection& World, uint32 Cursor,
+                                            TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     check(IsInGameThread());
     if (World.Session.Get() != this)
@@ -748,10 +793,11 @@ TrekHostCode UHostSessionSubsystem::ListAcademySlots(UHostWorldProjection& World
     }
     TrekHostAcademyRequest Command = AcademyRequest(TREK_HOST_ACADEMY_SLOTS, Status.generation);
     Command.slot_cursor = Cursor;
-    return Submit(World, Command);
+    return Submit(World, Command, Receipt);
 }
 
-TrekHostCode UHostSessionSubsystem::RestoreAcademy(UHostWorldProjection& World, const FHostAcademySlot& Version)
+TrekHostCode UHostSessionSubsystem::RestoreAcademy(UHostWorldProjection& World, const FHostAcademySlot& Version,
+                                          TSharedPtr<FHostRequestReceipt>* Receipt)
 {
     check(IsInGameThread());
     const TrekHostCode Availability = GetAcademyAvailability();
@@ -772,5 +818,14 @@ TrekHostCode UHostSessionSubsystem::RestoreAcademy(UHostWorldProjection& World, 
         return Reject(World, TREK_HOST_RESTORE, TREK_HOST_BUSY_STATE);
     }
     // The row is a read projection. H04 validates this exact address afresh.
-    return Restore(World, Version.Campaign, Version.Slot, Version.Version);
+    return Restore(World, Version.Campaign, Version.Slot, Version.Version, Receipt);
+}
+
+TSharedRef<FHostAcademyMenu> UHostSessionSubsystem::GetAcademyMenu()
+{
+    if (!AcademyMenu)
+    {
+        AcademyMenu = MakeShared<FHostAcademyMenu>(this);
+    }
+    return AcademyMenu.ToSharedRef();
 }

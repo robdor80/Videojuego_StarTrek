@@ -52,6 +52,17 @@ struct FHostAcademyResult
     uint64 Generation = 0;
 };
 
+// Optional observation of one admitted ticket. Mutations may finish after
+// the submitting UWorld is gone. Read payloads remain in the world projection.
+struct FHostRequestReceipt
+{
+    uint64 Ticket = 0;
+    uint64 Generation = 0;
+    TOptional<TrekHostCode> Code;
+};
+
+class FHostAcademyMenu;
+
 UCLASS()
 class UHostWorldProjection final : public UWorldSubsystem
 {
@@ -108,18 +119,24 @@ public:
     // Last published address for the naval diagnostic, including after CLOSE.
     const FString& GetCampaignAddress() const { return CampaignAddress; }
 
+    TSharedRef<FHostAcademyMenu> GetAcademyMenu();
+
     TrekHostCode Open(UHostWorldProjection& World);
-    TrekHostCode Close(UHostWorldProjection& World);
+    TrekHostCode Close(UHostWorldProjection& World, TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
     TrekHostCode Query(UHostWorldProjection& World);
-    TrekHostCode Save(UHostWorldProjection& World, const FString& Slot);
+    TrekHostCode Save(UHostWorldProjection& World, const FString& Slot,
+                      TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
     TrekHostCode Restore(UHostWorldProjection& World, const FString& Campaign, const FString& Slot);
 
     // Submit returns admission status. Read the operation result from the
     // attached world on a later tick. RETRY did not admit a native ticket.
-    TrekHostCode CreateAcademy(UHostWorldProjection& World, const FString& Name);
-    TrekHostCode QueryAcademy(UHostWorldProjection& World);
-    TrekHostCode ListAcademySlots(UHostWorldProjection& World, uint32 Cursor = 0);
-    TrekHostCode RestoreAcademy(UHostWorldProjection& World, const FHostAcademySlot& Version);
+    TrekHostCode CreateAcademy(UHostWorldProjection& World, const FString& Name,
+                               TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
+    TrekHostCode QueryAcademy(UHostWorldProjection& World, TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
+    TrekHostCode ListAcademySlots(UHostWorldProjection& World, uint32 Cursor = 0,
+                                  TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
+    TrekHostCode RestoreAcademy(UHostWorldProjection& World, const FHostAcademySlot& Version,
+                                TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
 
 private:
     friend class UHostWorldProjection;
@@ -133,6 +150,7 @@ private:
         uint32 Operation;
         uint64 Generation;
         bool bAcademy;
+        TWeakPtr<FHostRequestReceipt> Receipt;
         TOptional<TrekHostCompletion> NativeResult;
         TUniquePtr<TrekHostAcademyCompletion> AcademyNativeResult;
 
@@ -150,11 +168,14 @@ private:
     void Publish(FObservation& Entry);
     TrekHostCode CheckAdmission(const UHostWorldProjection& World, bool bClosing) const;
     void Observe(UHostWorldProjection& World, uint64 Ticket, uint32 Operation,
-                 uint64 Generation, bool bAcademy, bool bTransition);
-    TrekHostCode Submit(UHostWorldProjection& World, const TrekHostRequest& Request);
-    TrekHostCode Submit(UHostWorldProjection& World, const TrekHostAcademyRequest& Request);
+                 uint64 Generation, bool bAcademy, bool bTransition, TSharedPtr<FHostRequestReceipt>* Receipt);
+    TrekHostCode Submit(UHostWorldProjection& World, const TrekHostRequest& Request,
+                        TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
+    TrekHostCode Submit(UHostWorldProjection& World, const TrekHostAcademyRequest& Request,
+                        TSharedPtr<FHostRequestReceipt>* Receipt);
     TrekHostCode Reject(UHostWorldProjection& World, uint32 Operation, TrekHostCode Code);
-    TrekHostCode Restore(UHostWorldProjection& World, const FString& Campaign, const FString& Slot, uint64 Version);
+    TrekHostCode Restore(UHostWorldProjection& World, const FString& Campaign, const FString& Slot, uint64 Version,
+                         TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
 
     TSharedPtr<const struct FHostApi, ESPMode::ThreadSafe> Api;
     TFuture<TrekHostClient*> Creating;
@@ -168,4 +189,5 @@ private:
     uint64 Transition = 0;
     uint64 LastCreationKey = 0;
     FString RetryCreationName;
+    TSharedPtr<FHostAcademyMenu> AcademyMenu;
 };

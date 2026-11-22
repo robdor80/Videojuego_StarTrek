@@ -1,6 +1,7 @@
 #if WITH_DEV_AUTOMATION_TESTS
 #include "HostDiagnosticGameMode.h"
 #include "HostRuntime.h"
+#include "HostSlateAutomation.h"
 #include "HostSessionSubsystem.h"
 #include "DynamicRHI.h"
 #include "Engine/Engine.h"
@@ -20,22 +21,6 @@ namespace
 {
 constexpr auto Flags = EAutomationTestFlags::ClientContext | EAutomationTestFlags::ProductFilter;
 const TCHAR* DiagnosticMap = TEXT("/Game/Diagnostics/HostDiagnostic");
-
-TSharedPtr<SWidget> FindWidget(const TSharedRef<SWidget>& Root, FName Tag)
-{
-    if (Root->GetTag() == Tag) return Root;
-    if (FChildren* Children = Root->GetChildren())
-    {
-        for (int32 Index = 0; Index < Children->Num(); ++Index)
-        {
-            if (TSharedPtr<SWidget> Found = FindWidget(Children->GetChildAt(Index), Tag))
-            {
-                return Found;
-            }
-        }
-    }
-    return nullptr;
-}
 
 struct FDiagnosticRun
 {
@@ -80,17 +65,17 @@ struct FDiagnosticRun
         if (!Panel) return Fail(TEXT("Missing actual viewport panel"));
         if (Slot)
         {
-            auto Field = StaticCastSharedPtr<SEditableTextBox>(FindWidget(Panel.ToSharedRef(), TEXT("H06_Slot")));
+            auto Field = StaticCastSharedPtr<SEditableTextBox>(FindHostWidget(Panel.ToSharedRef(), TEXT("H06_Slot")));
             if (!Field) return Fail(TEXT("Missing slot widget"));
             Field->SetText(FText::FromString(Slot));
         }
         if (Address)
         {
-            auto Field = StaticCastSharedPtr<SEditableTextBox>(FindWidget(Panel.ToSharedRef(), TEXT("H06_Campaign")));
+            auto Field = StaticCastSharedPtr<SEditableTextBox>(FindHostWidget(Panel.ToSharedRef(), TEXT("H06_Campaign")));
             if (!Field) return Fail(TEXT("Missing campaign widget"));
             Field->SetText(FText::FromString(*Address));
         }
-        auto Button = StaticCastSharedPtr<SButton>(FindWidget(Panel.ToSharedRef(), FName(*FString::Printf(TEXT("H06_%u"), Op))));
+        auto Button = StaticCastSharedPtr<SButton>(FindHostWidget(Panel.ToSharedRef(), FName(*FString::Printf(TEXT("H06_%u"), Op))));
         if (!Button || !Button->IsEnabled()) return Fail(TEXT("Missing or disabled diagnostic button"));
         Button->SimulateClick();
         return true;

@@ -14,8 +14,8 @@
 
 namespace
 {
-constexpr auto Flags = EAutomationTestFlags::ClientContext | EAutomationTestFlags::ProductFilter;
-const TCHAR* DiagnosticMap = TEXT("/Game/Diagnostics/HostDiagnostic");
+constexpr auto AcademySubsystemFlags = EAutomationTestFlags::ClientContext | EAutomationTestFlags::ProductFilter;
+const TCHAR* AcademySubsystemMap = TEXT("/Game/Diagnostics/HostDiagnostic");
 const TCHAR* SlotName = TEXT("academy_c03");
 const TCHAR* CandidateName = TEXT("María Vega");
 constexpr uint64 Versions = TREK_HOST_ACADEMY_MAX_SLOTS + 2;
@@ -109,7 +109,7 @@ struct FAcademyRun
             {
                 UWorld* World = Context.World();
                 if (World && World->IsGameWorld() && World->HasBegunPlay() &&
-                    World->GetPackage()->GetName() == DiagnosticMap)
+                    World->GetPackage()->GetName() == AcademySubsystemMap)
                 {
                     Game = World->GetGameInstance();
                     break;
@@ -153,7 +153,7 @@ struct FAcademyRun
             if (Admit(Host->CreateAcademy(*Projection, CandidateName), EStep::AfterTravel))
             {
                 Previous = Projection;
-                const FURL Url(nullptr, DiagnosticMap, TRAVEL_Absolute);
+                const FURL Url(nullptr, AcademySubsystemMap, TRAVEL_Absolute);
                 FWorldContext* Context = Game->GetWorldContext();
                 FString Error;
                 if (!Context || !GEngine->LoadMap(*Context, Url, nullptr, Error))
@@ -342,8 +342,8 @@ struct FAcademyRun
 };
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHostAcademySeed, "StarTrek.H06.Academy.Seed", Flags)
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHostAcademyResume, "StarTrek.H06.Academy.Resume", Flags)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHostAcademySeed, "StarTrek.H06.Academy.Seed", AcademySubsystemFlags)
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FHostAcademyResume, "StarTrek.H06.Academy.Resume", AcademySubsystemFlags)
 
 bool FHostAcademySeed::RunTest(const FString&)
 {

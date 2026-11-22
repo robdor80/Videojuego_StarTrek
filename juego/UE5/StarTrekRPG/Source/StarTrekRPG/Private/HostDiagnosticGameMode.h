@@ -5,6 +5,10 @@
 #include "HostDiagnosticGameMode.generated.h"
 
 class SWidget;
+class SHostAcademyMenu;
+class FHostAcademyMenu;
+class UHostSessionSubsystem;
+class UHostWorldProjection;
 class UGameViewportClient;
 
 UCLASS()
@@ -20,10 +24,17 @@ public:
 protected:
     virtual void BeginPlay() override;
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
+    virtual void PlayerTick(float DeltaTime) override;
 
 private:
+    bool RequestAcademyWindowClose();
+
     TWeakObjectPtr<UGameViewportClient> PanelViewport;
     TSharedPtr<SWidget> Panel;
+    TSharedPtr<SHostAcademyMenu> AcademyPanel;
+    TSharedPtr<FHostAcademyMenu> AcademyMenu;
+    TWeakObjectPtr<UHostSessionSubsystem> AcademyHost;
+    TWeakObjectPtr<UHostWorldProjection> AcademyProjection;
 };
 
 UCLASS()
