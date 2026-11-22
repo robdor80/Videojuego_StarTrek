@@ -6,6 +6,9 @@
 #include "DynamicRHI.h"
 #include "Engine/Engine.h"
 #include "Engine/GameInstance.h"
+#include "Engine/GameViewportClient.h"
+#include "Framework/Application/SlateApplication.h"
+#include "Widgets/SViewport.h"
 #include "Engine/World.h"
 #include "Misc/AutomationTest.h"
 #include "Misc/CommandLine.h"
@@ -62,6 +65,7 @@ struct FAcademyMenuRun
     bool bSawEmptyPage = false;
     int32 InvalidNamesTested = 0;
     bool bDone = false;
+    bool bCancelledRestoreWithEscape = false;
     enum class EStep
     {
         Start, Name, InvalidName, Create, Query, FirstSave, Candidate,
@@ -477,6 +481,22 @@ struct FAcademyMenuRun
             break;
         }
         case EStep::ConfirmRestore:
+            if (!bCancelledRestoreWithEscape && FindHostWidget(Panel.ToSharedRef(), TEXT("AcademyConfirm")))
+            {
+                FSlateApplication::Get().SetKeyboardFocus(Game->GetGameViewportClient()->GetGameViewportWidget());
+                const FKeyEvent Key(EKeys::Escape, FModifierKeysState(), 0, false, 0, 0);
+                FSlateApplication::Get().ProcessKeyDownEvent(Key);
+                FSlateApplication::Get().ProcessKeyUpEvent(Key);
+                if (Menu->GetConfirmation() != EAcademyConfirmation::None ||
+                    Flow.Screen() != Screen::Catalog || Host->GetStatus().state != TREK_HOST_CLOSED)
+                    Fail(TEXT("Escape from viewport did not cancel RESTORE without opening a session"));
+                else
+                {
+                    bCancelledRestoreWithEscape = true;
+                    Menu->RequestRestore();
+                }
+                break;
+            }
             if (FindHostWidget(Panel.ToSharedRef(), TEXT("AcademyConfirm")) &&
                 Click(Panel.ToSharedRef(), TEXT("AcademyConfirm"))) Step = EStep::Restored;
             break;

@@ -19,6 +19,7 @@ public:
     void Refresh();
     virtual bool SupportsKeyboardFocus() const override { return true; }
     virtual FReply OnPreviewKeyDown(const FGeometry& Geometry, const FKeyEvent& Event) override;
+    FReply HandleEscape();
 
 private:
     enum class EAction

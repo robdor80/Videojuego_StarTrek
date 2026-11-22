@@ -4,6 +4,7 @@
 #include "GameFramework/PlayerController.h"
 #include "HostDiagnosticGameMode.generated.h"
 
+class IInputProcessor;
 class SWidget;
 class SHostAcademyMenu;
 class FHostAcademyMenu;
@@ -26,10 +27,12 @@ protected:
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
     virtual void PlayerTick(float DeltaTime) override;
 
+
 private:
     bool RequestAcademyWindowClose();
 
     TWeakObjectPtr<UGameViewportClient> PanelViewport;
+    TSharedPtr<IInputProcessor> AcademyEscapeInput;
     TSharedPtr<SWidget> Panel;
     TSharedPtr<SHostAcademyMenu> AcademyPanel;
     TSharedPtr<FHostAcademyMenu> AcademyMenu;

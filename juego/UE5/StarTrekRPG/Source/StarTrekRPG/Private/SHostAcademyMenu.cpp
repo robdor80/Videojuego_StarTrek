@@ -477,9 +477,17 @@ FReply SHostAcademyMenu::OnPreviewKeyDown(const FGeometry&, const FKeyEvent& Eve
 {
     if (Event.GetKey() == EKeys::Escape)
     {
-        if (Menu->GetConfirmation() != EAcademyConfirmation::None) return Act(EAction::Cancel);
-        if (Screen == EAcademyScreen::Name || Screen == EAcademyScreen::Catalog) return Act(EAction::Back);
+        return HandleEscape();
     }
+    return FReply::Unhandled();
+}
+
+FReply SHostAcademyMenu::HandleEscape()
+{
+    if (Menu->GetConfirmation() != EAcademyConfirmation::None) return Act(EAction::Cancel);
+    const auto ActiveScreen = Menu->GetFlow().Screen();
+    if (ActiveScreen == EAcademyScreen::Name || ActiveScreen == EAcademyScreen::Catalog)
+        return Act(EAction::Back);
     return FReply::Unhandled();
 }
 
