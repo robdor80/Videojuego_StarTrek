@@ -1,0 +1,38 @@
+name: HOST H07 — frontera institucional y matriz estática
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/H07_*"
+      - "desarrollo/tools/validation/test_host_h07_boundary.py"
+      - "desarrollo/integration/host/**"
+      - "desarrollo/integration/f11_host/**"
+      - "desarrollo/integration/f11/**"
+      - ".github/workflows/host-h07-boundary.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "proyecto/docs/architecture/host/H07_*"
+      - "desarrollo/tools/validation/test_host_h07_boundary.py"
+      - "desarrollo/integration/host/**"
+      - "desarrollo/integration/f11_host/**"
+      - "desarrollo/integration/f11/**"
+      - ".github/workflows/host-h07-boundary.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  boundary-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar laboratorio aislado
+        run: mkdir -p laboratorios/host/h07/p01-ci
+      - name: Ejecutar comprobaciones estáticas H07 (no CTest ni Unreal)
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          TMPDIR: laboratorios/host/h07/p01-ci
+        run: python3 desarrollo/tools/validation/test_host_h07_boundary.py
