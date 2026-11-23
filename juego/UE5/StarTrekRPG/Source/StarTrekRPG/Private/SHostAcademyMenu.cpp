@@ -147,7 +147,7 @@ void SHostAcademyMenu::Construct(const FArguments& Args)
             [
                 SNew(SBox).WidthOverride(856)
                 [
-                    SNew(SBorder).Padding(24).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(Surface)
+                    SNew(SBorder).Tag(TEXT("AcademySurface")).Padding(24).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(Surface)
                     [
                         SNew(SVerticalBox)
                         + SVerticalBox::Slot().AutoHeight().Padding(0, 0, 0, 6)

@@ -4,6 +4,7 @@
 #include "HostSessionSubsystem.h"
 #include "SHostAcademyMenu.h"
 #include "SHostInstitutionalView.h"
+#include "HostWindowBounds.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
@@ -286,6 +287,7 @@ void AHostDiagnosticPlayerController::PlayerTick(float DeltaTime)
 {
     Super::PlayerTick(DeltaTime);
     if (!AcademyPanel) return;
+    if (auto* Viewport = PanelViewport.Get()) FitHostAcademyWindow(*Viewport);
 
     auto* Host = AcademyHost.Get();
     auto* Projection = AcademyProjection.Get();
