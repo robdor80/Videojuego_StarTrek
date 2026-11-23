@@ -5,6 +5,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <optional>
 #include <string_view>
 #include <utility>
 
@@ -61,6 +62,19 @@ class NotificationProjection final {
     }
 
 public:
+    // Pure per-item formatter for independent tests. This is NOT an
+    // authorization method; SessionOwner is the sole product poll entry.
+    static std::optional<NotificationNotice> format_event(const EventNotice& event)
+    {
+        if (event.source != EventSource::F05_ORDER || !event.id || !event.order)
+            return std::nullopt;
+        const auto* text = label(event.state);
+        if (!text) return std::nullopt;
+        return NotificationNotice{event.source, text->kind, text->level, event.id,
+                                  event.previous, event.order, event.tick,
+                                  text->title, text->body};
+    }
+
     static NotificationBatchResult from_authorized_f05(
         const EventBatchResult& source, std::string_view host_campaign)
     {
@@ -95,14 +109,13 @@ public:
                 result.error = Error::DOMAIN_REJECTED;
                 return result;
             }
-            const auto* text = label(event.state);
-            if (!text) {
-                result.error = Error::SERVICE_UNAVAILABLE; // Not a known F05 presentation.
+            const auto projected = format_event(event);
+            if (!projected) {
+                result.error = event.source == EventSource::F05_ORDER
+                    ? Error::SERVICE_UNAVAILABLE : Error::DOMAIN_REJECTED;
                 return result;
             }
-            staged.push_back({event.source, text->kind, text->level, event.id,
-                              event.previous, event.order, event.tick,
-                              text->title, text->body});
+            staged.push_back(*projected);
             last_id = event.id;
             last_tick = event.tick;
             last_order = event.order;
