@@ -17,7 +17,7 @@ Desde niño **siempre quiso ingresar en la Flota Estelar**. Rechazó la vía de 
 
 - **Ciencia:** formación civil avanzada, especialmente astronomía, astrofísica y método científico; no inventar doctorados, patentes ni carrera militar previa.
 - **Artes marciales:** maestro avanzado de **Suus Mahna, aikido, kung-fu y kárate**; también domina a nivel avanzado las **armas blancas tradicionales asociadas a esas disciplinas**, según técnica y contexto. No se necesitan personajes ni nombres de maestros.
-- **Música:** **maestro en piano**, su único instrumento establecido. Eliminar laúd vulcano y violonchelo de esta biografía.
+- **Música:** **maestro en piano**, su único instrumento establecido. No se reconoce maestría en ningún otro instrumento.
 - **Autodominio:** entrenamiento prolongado para dominar sus capacidades físicas y cognitivas, y manejar responsablemente el legado de Khan. No implica invulnerabilidad, obediencia a un destino ni rango de Flota.
 - Las muertes de ambos padres ocurren antes del ingreso en Academia, ya en su vida adulta. No fijar cronologías de duelo, diagnósticos cardíacos más específicos ni edad exacta sin autorización.
 
