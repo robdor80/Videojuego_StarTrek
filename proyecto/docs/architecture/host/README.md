@@ -44,6 +44,12 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 
 **Madurez H08-P01:** diseño versionado; no hay nuevas APIs nativas, suscripción runtime, nuevo reloj ni notificaciones UE. H08-P02, P03 y P04 mantienen sus pruebas de producto pendientes. La fuente autoritativa es CoreRPG y las emisiones institucionales pertenecen a F11.
 
+## H08-P02 — Distribuidor local de eventos nativos (F05)
+
+- [Informe de implementación y límites H08-P02](H08_P02_DISTRIBUIDOR_EVENTOS_INFORME_2026-11-23.md): suscripciones C++ de órdenes F05, FIFO, acuses de presentación, no duplicación y relectura tras carga.
+- 13 pruebas integradas con el Core real (`host.event.he01_delivery`…`he13_generation`) y 8 pruebas de cola aislada (`host.event.unit.*`) añadidas a la matriz de Actions nativa.
+- **Alcance:** F05 únicamente, sin cambios ABI C/Unreal; F04/F11 y formateadores de avisos quedan pendientes de sus fases/contratos. Consultar CI de su PR antes de afirmar probado o fusionado.
+
 ## Fases y responsables
 
 H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Codex (identidad). H04: Codex (persistencia). H05: Codex (Core/F04/F05). H06: Codex (UE real). H07: ChatGPT+Codex (lector y pasarela NO emisora de F11). H08-H11: coordinación y sistemas progresivos. H12-H13: estabilidad y certificación.

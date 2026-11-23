@@ -141,6 +141,28 @@ struct OperationResult {
     std::optional<OrderReceipt> receipt;
 };
 
+// H08-P02 native-only events. No C ABI or Unreal client is added here.
+// IDs/state are filtered projections of a real F05 event page, not authority.
+enum class EventSource : std::uint32_t { F05_ORDER = 1 };
+struct EventNotice {
+    EventSource source = EventSource::F05_ORDER;
+    std::uint64_t id = 0, previous = 0, order = 0, tick = 0;
+    std::uint32_t state = 0, code = 0;
+    bool operator==(const EventNotice&) const = default;
+};
+struct EventSubscriptionResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+};
+struct EventBatchResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+    std::vector<EventNotice> events;
+    bool more = false, resync_required = false;
+};
+
 class PlayerBootstrap;
 
 class SessionOwner final {
@@ -175,6 +197,15 @@ public:
     TREK_HOST_API std::future<OperationResult> cancel_order(Generation, std::uint64_t order,
                                                         std::uint64_t expected_revision, std::uint64_t correlation_id = 0);
     TREK_HOST_API std::future<OperationResult> institutional_command(Generation, std::uint64_t correlation_id = 0);
+
+    // F05-only initial H08-P02 subscription. HOST resolves the observer;
+    // clients supply no actor or scope. All Core reads run on the owner thread.
+    TREK_HOST_API std::future<EventSubscriptionResult> subscribe_order_events(
+        Generation, std::uint64_t order, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<EventBatchResult> poll_order_events(
+        Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<Result> ack_order_events(
+        Generation, std::uint64_t subscription, std::uint64_t presented_event_id);
 
 private:
     friend class PlayerBootstrap;
