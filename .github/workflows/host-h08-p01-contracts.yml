@@ -1,0 +1,45 @@
+name: HOST H08-P01 — contratos de eventos y servicios
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/H08_P01_*"
+      - "desarrollo/tools/validation/test_host_h08_p01_contract.py"
+      - ".github/workflows/host-h08-p01-contracts.yml"
+  push:
+    branches:
+      - "docs/host-h08-p01-event-contracts-20261123"
+    paths:
+      - "proyecto/docs/architecture/host/H08_P01_*"
+      - "desarrollo/tools/validation/test_host_h08_p01_contract.py"
+      - ".github/workflows/host-h08-p01-contracts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: Contrato H08-P01 / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 7
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Preparar único laboratorio descartable dentro del repositorio
+        shell: bash
+        run: mkdir -p laboratorios/host/h08/p01/ci
+      - name: Comprobar contratos H08-P01 contra H01 y cabeceras de producto
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          TMPDIR: laboratorios/host/h08/p01/ci
+          TEMP: laboratorios/host/h08/p01/ci
+          TMP: laboratorios/host/h08/p01/ci
+        run: python desarrollo/tools/validation/test_host_h08_p01_contract.py
