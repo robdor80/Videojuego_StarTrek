@@ -67,4 +67,37 @@ std::uint32_t dispatch(F04Session* session, F04Ref player, const GatewayRequest&
     default: return F04_INTERNAL;
     }
 }
+
+// H08-P02: one real F05 source, read by the owning thread only. Never accept
+// actor/scope from the consumer. F05 checks per-order observer access.
+std::uint32_t events(F04Session* session, F04Ref player, std::uint64_t order,
+                     std::uint64_t after, NativeEventPage& page) noexcept
+{
+    page = {};
+    if (!session || !order) return F04_ARGUMENT;
+    F05PlayerBinding binding{};
+    auto code = f05_player_binding(session, &binding);
+    if (code != F04_OK) return code;
+    if (!binding.record || binding.person.id != player.id ||
+        binding.person.scope != player.scope) return F04_DENIED;
+    F04Person person{};
+    code = f04_person(session, binding.person, binding.person.id, &person);
+    if (code != F04_OK) return code;
+    F05OrderView order_view{};
+    code = f05_order(session, binding.person, order, &order_view);
+    if (code != F04_OK) return code;
+    F05EventView source[16]{};
+    std::uint64_t written = 0;
+    std::uint32_t more = 0;
+    code = f05_events_page(session, binding.person, order, after, source, 16, &written, &more);
+    if (code != F04_OK) return code;
+    if (written > 16) return F04_INTERNAL;
+    for (std::uint64_t i = 0; i < written; ++i) {
+        page.events[i] = {EventSource::F05_ORDER, source[i].id, source[i].previous,
+                          source[i].order, source[i].tick, source[i].state, source[i].code};
+    }
+    page.written = written;
+    page.more = more != 0;
+    return F04_OK;
+}
 }
