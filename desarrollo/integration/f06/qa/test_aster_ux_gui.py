@@ -126,12 +126,19 @@ def run(runner,output,realtime=False):
         else:raise AssertionError('mismatched UI/Core pair accepted')
         assert panel.state is state_before, 'mismatched context must not mutate Core'
         sidecar.write_text(original,encoding='utf-8')
+        panel.open_report_dialog();root.update()
+        pending=next(w for w in root.winfo_children() if isinstance(w,tk.Toplevel))
+        pending_chooser=next(w for w in pending.winfo_children() if w.winfo_class()=='TCombobox')
+        pending_chooser.set('Ciencia')
         panel.apply(panel.command(f'STEP {240-panel.state["tick"]}'));root.update()
         unknown=next(str(c[0]) for c in panel.state['contacts'] if c[1]==1 and c[3]==0)
         assert panel.contacts_table.selection()==(unknown,)
+        next(w for w in pending.winfo_children() if w.winfo_class()=='TButton').invoke()
+        assert panel.state['deliveries'][-1][1]==int(rom), 'open report must keep its original subject'
         text=panel.detail_text.get('1.0','end');assert 'no observable' in text and 'sin referencia' in text and 'Blindaje: 1' not in text
         panel.apply(panel.command('STEP 60'));root.update()
         assert panel.contacts_table.selection()==(rom,) and 'Emisión ofensiva' in panel.alert_description.cget('text')
+        assert panel.interrupted['selected']==unknown and panel.interrupted_stack[-1]['selected']==rom
         panel.report_contact_to_officer()
         assert len([d for d in panel.state['deliveries'] if d[1]==int(rom) and d[4]==1])==2
         panel.open_report_dialog();root.update()
@@ -152,6 +159,9 @@ def run(runner,output,realtime=False):
                 capture.save(output/f'layout-{geometry}.png')
             except (ImportError,OSError):pass
         panel.apply(panel.command('STEP 120'));root.update();assert not panel.alert_bar.winfo_viewable(),'offensive alert must retire'
+        panel.resume_study();root.update();assert panel.contacts_table.selection()==(unknown,)
+        assert panel.resume_button.winfo_viewable()
+        panel.resume_study();root.update();assert panel.current_view=='results' and panel.contacts_table.selection()==(rom,)
         n=len(panel.state['deliveries']);panel.communicate_voice();root.update()
         voice=[w for w in root.winfo_children() if isinstance(w,tk.Toplevel)]
         assert voice and 'guion QA' in voice[-1].title() and len(panel.state['deliveries'])==n

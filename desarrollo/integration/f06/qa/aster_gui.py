@@ -147,6 +147,7 @@ class Panel:
         self.motion_samples: dict[str, tuple] = {}
         self.sensor_preset = tk.StringVar(value="Estándar")
         self.interrupted = None
+        self.interrupted_stack = []
         self.seen_incidents = set()
         self.incident_started = {}
         self.active_alert = None
@@ -316,11 +317,14 @@ class Panel:
         self.contacts_table = ttk.Treeview(
             list_area, show="tree", height=7, selectmode="browse")
         self.contacts_table.heading("#0", text="Sistema estelar observado")
-        self.contacts_table.column("#0", minwidth=100, width=210, stretch=True)
+        self.contacts_table.column("#0", minwidth=250, width=300, stretch=True)
         self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
         self.contacts_table.tag_configure("contact", font=("Segoe UI", 11))
         self.contacts_table.tag_configure("lost", foreground="#7d8289")
         self.contacts_table.tag_configure("alert", foreground="#9a3412")
+        tree_horizontal = ttk.Scrollbar(list_area, orient="horizontal", command=self.contacts_table.xview)
+        tree_horizontal.pack(side="bottom", fill="x")
+        self.contacts_table.configure(xscrollcommand=tree_horizontal.set)
         self.contacts_table.pack(side="left", fill="both", expand=True)
         tree_scroll = ttk.Scrollbar(list_area, orient="vertical",
                                      command=self.contacts_table.yview)
@@ -572,9 +576,12 @@ class Panel:
         self._draw_map()
 
     def resume_study(self):
-        context, self.interrupted = self.interrupted, None
+        context = self.interrupted
+        self.interrupted = self.interrupted_stack.pop() if self.interrupted_stack else None
         if context: self._restore_view(context)
-        self.resume_button.pack_forget()
+        if self.interrupted:
+            self.resume_button.configure(text=self._resume_label(self.interrupted))
+        else: self.resume_button.pack_forget()
 
     def communicate_voice(self):
         selected = self.contacts_table.selection()
@@ -591,21 +598,27 @@ class Panel:
         ttk.Label(window, text="F06: sin canal de voz ni conversación NPC integrados.", padding=10).pack(fill="x")
 
     def open_report_dialog(self):
+        selected = self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map: return
+        contact_id = selected[0]
         window = tk.Toplevel(self.root)
         window.title("Enviar informe · cola QA")
-        window.geometry("380x170")
+        window.geometry("440x210")
+        ttk.Label(window, text=self._operational_name(self.contact_map[contact_id]), padding=10,
+                  wraplength=400).pack(fill="x")
         ttk.Label(window, text="Destinatario", padding=10).pack(anchor="w")
         recipient = tk.StringVar(value="Capitán / superior")
         ttk.Combobox(window, textvariable=recipient, state="readonly",
                      values=("Capitán / superior", "Táctica", "Ciencia")).pack(fill="x", padx=10)
         def send():
             command = {"Capitán / superior":"REPORT", "Táctica":"TACTICAL_SEND", "Ciencia":"SCIENCE_SEND"}[recipient.get()]
-            self.transfer_contact(command)
+            self.transfer_contact(command, contact_id)
             window.destroy()
         ttk.Button(window, text="Enviar a la cola QA", command=send).pack(pady=12)
 
     def _ui_snapshot(self):
         return {"version": 1, "context": self._view_context(), "interrupted": self.interrupted,
+                "interrupted_stack": list(self.interrupted_stack),
                 "followed": sorted(self.followed_ids), "analyzed": sorted(self.analyzed_ids),
                 "seen_incidents": list(self.seen_incidents),
                 "incident_started": [[*k, v] for k, v in self.incident_started.items()],
@@ -619,6 +632,7 @@ class Panel:
         self.incident_started = {(cid, severity): when for cid, severity, when in ui.get("incident_started", [])}
         self.group_open = dict(ui.get("groups", {}))
         self.interrupted = ui.get("interrupted")
+        self.interrupted_stack = list(ui.get("interrupted_stack", []))[-16:]
         self.lines = list(ui.get("lines", []))
         self.notes.delete("1.0", "end")
         self.notes.insert("1.0", ui.get("notes", ""))
@@ -821,8 +835,9 @@ class Panel:
             self.seen_incidents.add(key)
             selection = self.contacts_table.selection()
             if severity >= 2 and (not selection or selection[0] != cid):
-                if self.interrupted is None:
-                    self.interrupted = self._view_context()
+                if self.interrupted is not None:
+                    self.interrupted_stack = (self.interrupted_stack + [self.interrupted])[-16:]
+                self.interrupted = self._view_context()
                 self.navigate("contacts")
                 self._choose_contact(cid)
                 self.resume_button.configure(text=self._resume_label(self.interrupted))
@@ -1033,13 +1048,6 @@ class Panel:
             if not rows:
                 continue
             extra = ""
-            if key == "planet":
-                classes = Counter(PLANET_CLASSES.get(reports[c[0]][1], "?")
-                                  for c in rows if c[0] in reports
-                                  and reports[c[0]][1] != 0)
-                if classes:
-                    extra = "   ·   " + ", ".join(
-                        f"{n} clase {cls}" for cls, n in sorted(classes.items()))
             groupid = "group:" + key
             retained_groups.add(groupid)
             heading = f"{names[key].upper()}  ·  {len(rows)}{extra}"
@@ -1190,10 +1198,11 @@ class Panel:
     def send_analysis_to_tactical(self) -> None:
         self.transfer_contact("TACTICAL_SEND")
 
-    def transfer_contact(self, command):
+    def transfer_contact(self, command, contact_id=None):
         selected = self.contacts_table.selection()
-        if not selected or selected[0] not in self.contact_map: return
-        c = self.contact_map[selected[0]]
+        cid = contact_id or (selected[0] if selected else None)
+        if cid not in self.contact_map: return
+        c = self.contact_map[cid]
         recipient = {"REPORT": 1, "TACTICAL_SEND": 2, "SCIENCE_SEND": 3}[command]
         try:
             response = self.command(f"{command} {c[0]}")
@@ -1503,6 +1512,7 @@ class Panel:
         self.saved_notes = ""
         self.state = {}
         self.interrupted = None
+        self.interrupted_stack.clear()
         self.seen_incidents.clear()
         self.incident_started.clear()
         self.active_alert = None
@@ -1578,6 +1588,10 @@ class Panel:
             f"Configuración: {self.state.get('config')}", "",
             "IMPRESIONES DEL JUGADOR:",
             self.notes.get("1.0", "end").strip(), "",
+            "AUDITORÍA TÉCNICA CORE (fuentes públicas y acuses QA):",
+            json.dumps({key: self.state.get(key, []) for key in
+                        ("deliveries", "equipment", "position_evidence", "deep_analysis", "tracking")},
+                       ensure_ascii=False, indent=2), "",
             "NOTA: prueba de CoreRPG con fixture QA Aster, no universo F13 ni UI LCARS final.",
         ])
         Path(path).write_text(contents, encoding="utf-8")
