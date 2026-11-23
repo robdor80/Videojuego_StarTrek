@@ -1,5 +1,8 @@
 # F01 — Visión del producto y canon
 
+> **R0 · 19-11-2026:** F01 conserva su cierre HISTÓRICO de diseño. **DEC-0020 vigente:** USS Enterprise NCC-1701-D clase Galaxy; Proyecto Valhalla es su programa de reconstrucción, no una nueva clase. **DEC-0022:** protagonista único. Los contratos antiguos de clase Valhalla se mantienen para migración/legado, no se interpretan como especificación actual de nave ni dotación.
+
+
 **Estado global:** **CERRADA a nivel de diseño**, revisión y [acta de cierre documental](ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md) de 2026-10-13. **Madurez real:** `DISENO_VALIDADO` para P01–P05; no supone integración Core/UE5, fecha de servicio Valhalla ni puente piloto elegido.
 
 ## Objetivo

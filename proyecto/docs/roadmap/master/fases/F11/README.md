@@ -1,5 +1,8 @@
 # F11 — Carrera profesional y flota jugable
 
+> **R0 · 19-11-2026:** EN_REVISION por incremento nativo, NO carrera jugable. PR #106/#107 primer ascenso autoritativo 1101→1102 con persistencia y #109 lector HOST solo lectura están fusionadas. PR #110 sigue **Draft documental** (33 casos NOT_RUN): no hay emisor institucional de producto. Rangos posteriores, vacantes/sucesiones, ceremonias, Academia e integración UE5 pendientes. HOST sirve la emisión, F11 conserva reglas.
+
+
 > **Actualización autoral 11-11-2026:** el objetivo narrativo aprobado es capitanear la **USS Enterprise NCC-1701-D modernizada**, con oportunidades de progresión garantizadas de forma creíble y sin vacantes arbitrarias. El alcance de P01–P05 se ha actualizado en [PLAN_F11_ACTUALIZADO_2026-11-11.md](PLAN_F11_ACTUALIZADO_2026-11-11.md). La P01 actual dispone de [reglamento y casos](F11-P01_JERARQUIA_CADENA_MANDO_V1.md), contrato y pruebas offline, **sin integración jugable**. Las afirmaciones sobre «nueva clase Valhalla» y los pasos de octubre que aparecen más abajo se conservan como **histórico**, no como la decisión creativa vigente. El Plan Maestro y el estado global aún requieren reconciliación específica y no se cambian para simular un cierre.
 
 > **F11-P02 — trabajo de referencia 11-11-2026:** [Diseño de destinos, 7 áreas de F04, perfiles de puesto y vacantes](F11-P02_DESTINOS_DEPARTAMENTOS_PUESTOS_V1.md). Incluye catálogo y evaluador Python independiente con pruebas automatizadas; **no hay plazas, destinos ni ofertas efectivas en CoreRPG/UE5**. No se da por integrada la progresión garantizada de P03/P04 ni se altera el estado global de F11.

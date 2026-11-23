@@ -1,5 +1,8 @@
 # F10 — Academia jugable e integración de academiaflota
 
+> **R0 · 19-11-2026:** PLANIFICADA como Academia UE5 aunque posee referencia y avances diagnósticos de admisión. DEC-0022 exige protagonista único; migración productiva F10/HOST no implementada. No duplicar validadores de identidad en HOST, no romper contratos históricos ni presuponer cuatro años jugables.
+
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 

@@ -1,5 +1,8 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
+> **R0 · 19-11-2026:** F04 cerrada exclusivamente como referencia probada. La plantilla heredada de «Clase Valhalla» y dotación de hasta 2.200 no define la USS Enterprise NCC-1701-D refit (DEC-0020). Identidad, capacidades, censo, secciones y guardados legacy requieren adaptación específica sin reabrir el cierre histórico F04-INTEGRACION-04.
+
+
 ## Estado actual: CERRADA (31-10-2026)
 
 Cierre administrativo **en el alcance efectivamente probado**: cinco perfiles organizativos, reglas de autoridad/guardia, historial CoreRPG y campañas verificadas de 365 días (cinco clases) y 730 días (Valhalla). GitHub Star Trek PR #76 y CoreRPG PR #13 fusionadas y CI verde. Objetivo de Plan Maestro: **REFERENCIA_PROBADA**; no se certifica `UE5_JUGABLE` ni mando autónomo de secciones separadas, operaciones completas de Defiant/Marines o combate. Consultar el [acta de cierre administrativo](ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md) para evidencia y deuda no certificada.

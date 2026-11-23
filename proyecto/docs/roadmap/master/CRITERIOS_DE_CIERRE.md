@@ -10,7 +10,7 @@ Ejemplo: un sistema puede tener un paso `CERRADA` en **contrato v0.1** y permane
 
 En `ESTADO_GLOBAL.json`, `status` indica **estado de planificación**, `target_maturity` la **puerta de fase**, `achieved_maturity` la **evidencia alcanzada en algún alcance comprobable** y `step_evidence_maturity` el **nivel exacto de cada entregable cerrado o documentado**. No atribuir a toda la fase la madurez parcial más elevada. Para cerrar una fase, además de alcanzar su objetivo documental o de runtime, deberán cumplirse **todas las puertas propias de su README**, incluidas negativas, dependencias y artefactos externos pertinentes. 
 
-**Caso 13-10-2026:** F01 `CERRADA` solamente en `DISENO_VALIDADO`; F04/F06 `EN_REVISION` aun con QA `REFERENCIA_PROBADA` porque falta validación operativa de su alcance, y F02 es la única fase principal `EN_CURSO`. Véase [acta de reconciliación](ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
+**Caso histórico de 13-10-2026 (superado):** F01 `CERRADA` solamente en `DISENO_VALIDADO`; F04/F06 `EN_REVISION` aun con QA `REFERENCIA_PROBADA` porque falta validación operativa de su alcance, y F02 es la única fase principal `EN_CURSO`. Véase [acta de reconciliación](ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Puerta obligatoria de cada paso
 
@@ -39,5 +39,11 @@ En `ESTADO_GLOBAL.json`, `status` indica **estado de planificación**, `target_m
 - Priorizar **camino crítico** F01→F08. Antes de ejecutar trabajo específico buscar evidencias ya disponibles en su roadmap fuente.
 - Dependencia externa pendiente: `BLOQUEADA` **solo la tarea dependiente**, no reetiquetar todo el proyecto; documentar versión/comportamiento esperado sin diseñar APIs definitivas sin contraparte.
 - Ideas nuevas siempre en `proyecto/ideas/BUZON.md`; estado `PLANIFICADA` solo después de ubicar y aceptar su fase/paso.
-- Escenarios donde se requiere autor: **nuevas** decisiones creativas sobre la **Clase Valhalla** (elección de inspiración Galaxy y nombre ya resueltos), alteraciones de canon/épocas no aprobadas, dimensiones sustantivas de nuevos MVP, reglas de consentimiento/privacidad o límites de la simulación.
+- Escenarios donde se requiere autor: nuevas decisiones sobre la **USS Enterprise NCC-1701-D** (clase Galaxy, Proyecto Valhalla como programa según DEC-0020), dotación/capacidades no verificadas, canon y épocas, MVP, privacidad o límites de la simulación.
 - La **F00 se cierra por evidencias documentales y de navegación**; no significa que F01–F15 estén cerradas ni que se haya desarrollado un ejecutable 3D.
+
+## Gobierno evolutivo — R0 (19-11-2026)
+
+El foco global es una prioridad de trabajo, no una restricción de una única fase EN_CURSO. Se permiten actividades paralelas sin alterar cierres históricos. Para CERRADA se exige acta de fecha, alcance, nivel y evidencias; no basta una PR. Los PR Draft no forman parte de main y ninguna aceptación UE5 se infiere de NullRHI, QA Tk o documentación. El validador comprueba invariantes, no estados congelados ni una lista de PR de octubre. Conservar certificaciones y actas de su fecha; las contradicciones posteriores se resuelven por nueva fotografía.
+
+F15 se orienta exclusivamente a instalación, actualización, mantenimiento, migración y recuperación **privadas** en MSI. Los fixtures antiguos de publicación/beta son registros históricos, no requisitos de distribuir el juego a terceros.

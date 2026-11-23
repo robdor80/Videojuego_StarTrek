@@ -6,12 +6,14 @@ on:
       - "proyecto/docs/roadmap/master/**"
       - "proyecto/docs/decisions/prototype_validation_and_release_policy.md"
       - "desarrollo/tools/validation/validate_roadmap_state.py"
+      - "desarrollo/tools/validation/test_roadmap_governance.py"
       - ".github/workflows/roadmap-governance.yml"
   push:
     branches: [main]
     paths:
       - "proyecto/docs/roadmap/master/**"
       - "desarrollo/tools/validation/validate_roadmap_state.py"
+      - "desarrollo/tools/validation/test_roadmap_governance.py"
       - ".github/workflows/roadmap-governance.yml"
   workflow_dispatch:
 
@@ -29,6 +31,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate syntax
-        run: python -m py_compile desarrollo/tools/validation/validate_roadmap_state.py
+        run: python -m py_compile desarrollo/tools/validation/validate_roadmap_state.py desarrollo/tools/validation/test_roadmap_governance.py
+      - name: Run positive/negative governance regression tests
+        run: python -m unittest discover -s desarrollo/tools/validation -p "test_roadmap_governance.py" -v
       - name: Verify 16 phases / 80 steps and state-plan reconciliation
         run: python desarrollo/tools/validation/validate_roadmap_state.py
