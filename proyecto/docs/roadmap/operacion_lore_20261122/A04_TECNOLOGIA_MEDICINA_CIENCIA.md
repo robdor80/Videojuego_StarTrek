@@ -1,5 +1,7 @@
 # A04 — Revisión editorial de tecnología, equipamiento, medicina y ciencia
 
+**RATIFICADO 23-11-2026:** biblioteca **general del universo**, no carga instalada en Enterprise-D ni otra nave. 45 sistemas, 73 equipos y sus inferencias anteriores se conservan, con estado individual **NEEDS_REVIEW** y sin aprobar por defecto nuevas tecnologías que no consten en decisiones del autor. Las tecnologías especiales de Valhalla se tratan en A02/C14.
+
 **Resultado:** compilada una matriz de uso seguro de los catálogos existentes. **No se altera `status=NEEDS_REVIEW` de ninguna ficha por decreto**, porque un estado de dataset no es prueba de revisión individual de su contenido, enlaces y fuentes.
 
 ## Inventario verificado en main
