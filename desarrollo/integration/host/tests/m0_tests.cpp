@@ -393,10 +393,197 @@ void clock_case(Fixture& f, const std::string& name)
     }
 }
 
+// H08-P04: real authenticated F05 events projected as presentation only.
+void notification_case(Fixture& f, const std::string& name)
+{
+    const auto check = [&](const NotificationBatchResult& b, U token,
+                           std::size_t count, U correlation=0) {
+        require(b.error==Error::OK && b.generation==f.generation &&
+                b.subscription==token && b.correlation_id==correlation &&
+                !b.resync_required && b.campaign_id==f.campaign,
+                "H08-P04: incorrect presentation envelope");
+        require(b.items.size()==count,"H08-P04: wrong notification count");
+        for(const auto& item:b.items)
+            require(item.source==EventSource::F05_ORDER && item.source_event_id &&
+                    item.order && !item.title.empty() && !item.body.empty(),
+                    "H08-P04: fabricated/incomplete source notification");
+    };
+    const auto denied = [&](const NotificationBatchResult& b, Error error, U corr=0) {
+        require(b.error==error && b.correlation_id==corr &&
+                b.generation==Generation{} && b.subscription==0 &&
+                b.items.empty() && b.campaign_id.empty() && !b.more &&
+                !b.resync_required,"H08-P04: error exposed a notification or token");
+    };
+
+    if(name=="hn07_unbound") {
+        const auto before=f.bytes();
+        denied(f.owner.poll_order_notifications(f.generation,1,77).get(),
+               Error::PRINCIPAL_UNBOUND,77);
+        require(f.bytes()==before,"Unbound poll changed Core");
+        return;
+    }
+    if(name=="hn11_generation") {
+        auto issued=f.submit(f.intent());
+        auto sub=f.owner.subscribe_order_events(f.generation,issued.order).get();
+        require(sub.error==Error::OK && sub.subscription,"Failed subscribe");
+        denied(f.owner.poll_order_notifications({},sub.subscription,72).get(),
+               Error::INVALID_ARGUMENT,72);
+        return;
+    }
+    if(name=="hn06_foreign") {
+        U order=0;
+        f.visit([&](F04Session* session) {
+            F04Handles h{};F04Stats st{};
+            check_code(f04_handles(session,&h),F04_OK,"H08-P04 foreign handles");
+            check_code(f04_stats(session,&st),F04_OK,"H08-P04 foreign stats");
+            F05OrderRequest q{h.captain,{h.ship.scope,f.recipient},h.ship,
+                {h.ship.scope,f.station},91602,st.revision,28900,50501,F04_SCAN,0};
+            F05Receipt receipt{};
+            check_code(f05_submit(session,&q,&receipt),F04_OK,
+                       "Create real foreign Core event");
+            order=receipt.order;
+        });
+        const auto before=f.bytes();
+        auto sub=f.owner.subscribe_order_events(f.generation,order).get();
+        require(sub.error!=Error::OK && !sub.subscription,"Foreign subscription permitted");
+        denied(f.owner.poll_order_notifications(f.generation,1,53).get(),
+               Error::SCOPE_INVALID,53);
+        require(f.bytes()==before,"Foreign projection mutated Core");
+        return;
+    }
+
+    auto order=f.submit(f.intent());
+    if(name!="hn02_incremental" && name!="hn10_clock" && name!="hn05_close")
+        f.complete(order.order);
+    auto sub=f.owner.subscribe_order_events(f.generation,order.order,41).get();
+    require(sub.error==Error::OK && sub.subscription,"H08-P04 subscription failed");
+    const auto token=sub.subscription;
+    if(name=="hn08_unknown_token") {
+        denied(f.owner.poll_order_notifications(f.generation,token+500,47).get(),
+               Error::SCOPE_INVALID,47);
+        return;
+    }
+    if(name=="hn05_close") {
+        check(f.owner.poll_order_notifications(f.generation,token).get(),token,1);
+        const auto old=f.generation;
+        expect(f.owner.close().get(),Error::OK);
+        denied(f.owner.poll_order_notifications(old,token,51).get(),
+               Error::GENERATION_EXPIRED,51);
+        return;
+    }
+    if(name=="hn02_incremental") {
+        auto issued=f.owner.poll_order_notifications(f.generation,token).get();
+        check(issued,token,1);
+        require(issued.items[0].kind==NotificationKind::ORDER_ISSUED,
+                "H08-P04 invents acceptance before Core");
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        issued.items[0].source_event_id).get(),Error::OK);
+        f.transition(order.order,false);
+        auto accepted=f.owner.poll_order_notifications(f.generation,token).get();
+        check(accepted,token,1);
+        require(accepted.items[0].kind==NotificationKind::ORDER_ACCEPTED &&
+                accepted.items[0].previous_event_id==issued.items[0].source_event_id,
+                "H08-P04 accepted without causal source");
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        accepted.items[0].source_event_id).get(),Error::OK);
+        f.transition(order.order,true);
+        auto final=f.owner.poll_order_notifications(f.generation,token).get();
+        check(final,token,2);
+        require(final.items[0].kind==NotificationKind::ORDER_EXECUTING &&
+                final.items[1].kind==NotificationKind::ORDER_COMPLETED &&
+                final.items[1].previous_event_id==final.items[0].source_event_id,
+                "H08-P04 invented/out-of-order terminal F05 notification");
+        return;
+    }
+    if(name=="hn10_clock") {
+        const auto first=f.owner.poll_order_notifications(f.generation,token).get();
+        check(first,token,1);
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items[0].source_event_id).get(),Error::OK);
+        const auto old=f.view();
+        auto result=f.owner.advance_clock(f.generation,
+            ClockIntent{1,old.revision,old.now,old.now+5,1}).get();
+        require(result.error==Error::OK,"H08-P04 clock advance failed");
+        check(f.owner.poll_order_notifications(f.generation,token).get(),token,0);
+        return;
+    }
+    auto before=f.bytes();
+    auto first=f.owner.poll_order_notifications(f.generation,token,42).get();
+    check(first,token,4,42);
+    const NotificationKind kinds[]={
+        NotificationKind::ORDER_ISSUED, NotificationKind::ORDER_ACCEPTED,
+        NotificationKind::ORDER_EXECUTING, NotificationKind::ORDER_COMPLETED};
+    for(std::size_t i=0;i<first.items.size();++i) {
+        const auto& item=first.items[i];
+        require(item.kind==kinds[i] && item.order==order.order,
+                "H08-P04 invalid Core F05 state mapping");
+        if(i)require(item.previous_event_id==first.items[i-1].source_event_id &&
+                     item.core_tick>=first.items[i-1].core_tick,
+                     "H08-P04 broke F05 source causality or tick");
+        require(item.body.find("50501")==std::string::npos,
+                "H08-P04 exposed private cause in text");
+    }
+    if(name=="hn01_statuses" || name=="hn03_repoll" || name=="hn12_same_stream") {
+        auto again=f.owner.poll_order_notifications(f.generation,token,43).get();
+        check(again,token,4,43);
+        require(first.items==again.items,"H08-P04 repeated poll changed notifications");
+        if(name=="hn12_same_stream") {
+            const auto raw=f.owner.poll_order_events(f.generation,token).get();
+            require(raw.error==Error::OK && raw.events.size()==first.items.size(),
+                    "H08-P04 created separate source cursor");
+            for(std::size_t i=0;i<raw.events.size();++i)
+                require(raw.events[i].id==first.items[i].source_event_id,
+                        "H08-P04 notification not derived from F05 raw fact");
+        }
+    } else if(name=="hn04_restore") {
+        expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+        auto old=f.generation;
+        auto restored=f.owner.restore(old,{f.campaign,"alpha"}).get();
+        expect(restored,Error::OK); f.generation=restored.generation;
+        denied(f.owner.poll_order_notifications(old,token,49).get(),
+               Error::GENERATION_EXPIRED,49);
+        denied(f.owner.poll_order_notifications(f.generation,token,50).get(),
+               Error::SCOPE_INVALID,50);
+        auto sub2=f.owner.subscribe_order_events(f.generation,order.order).get();
+        require(sub2.error==Error::OK && sub2.subscription!=token,
+                "H08-P04 reused RESTORE token");
+        auto current=f.owner.poll_order_notifications(f.generation,sub2.subscription).get();
+        check(current,sub2.subscription,4);
+        for(std::size_t i=0;i<current.items.size();++i)
+            require(first.items[i]==current.items[i],
+                    "H08-P04 invented changed notification after RESTORE");
+        return;
+    } else if(name=="hn09_partial_ack") {
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items[1].source_event_id).get(),Error::OK);
+        auto remaining=f.owner.poll_order_notifications(f.generation,token).get();
+        check(remaining,token,2);
+        require(remaining.items[0]==first.items[2] && remaining.items[1]==first.items[3],
+                "H08-P04 ACK altered identity or order");
+    } else if(name=="hn13_double_observer") {
+        auto sub2=f.owner.subscribe_order_events(f.generation,order.order).get();
+        require(sub2.error==Error::OK && sub2.subscription!=token,
+                "H08-P04 subscriber collision");
+        auto independent=f.owner.poll_order_notifications(f.generation,sub2.subscription).get();
+        check(independent,sub2.subscription,4);
+        require(independent.items==first.items,"H08-P04 observer-local stream differs");
+    } else if(name=="hn14_ack_no_core") {
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items.back().source_event_id).get(),Error::OK);
+        auto empty=f.owner.poll_order_notifications(f.generation,token).get();
+        check(empty,token,0);
+    } else if(name!="hn01_statuses" && name!="hn03_repoll" &&
+             name!="hn12_same_stream") {
+        throw std::runtime_error("Unknown H08-P04 native case");
+    }
+    require(f.bytes()==before,"H08-P04 notification projection/ack changed Core");
+}
+
 void run_case(const std::string& name,const fs::path& root) {
-    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound" && name!="hk06_unbound",
-              (name=="authority" || name=="observer" || name=="he05_foreign")?4:3);
+    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound" && name!="hk06_unbound" && name!="hn07_unbound",
+              (name=="authority" || name=="observer" || name=="he05_foreign" || name=="hn06_foreign")?4:3);
     if(name.rfind("hk",0)==0) {clock_case(f,name);return;}
+    if(name.rfind("hn",0)==0) {notification_case(f,name);return;}
     if(name=="bound") {
         auto v=f.view(); require(v.person==f.captain && v.ship==1,"Projection uses wrong person");
     } else if(name=="readonly") {

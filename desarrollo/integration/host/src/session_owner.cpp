@@ -6,6 +6,7 @@
 #include "f10/academy_player_binding.h"
 #include "native_session.h"
 #include "event_delivery.h"
+#include "notification_projection.h"
 #include "player_bootstrap.h"
 #ifdef TREK_HOST_GATEWAY_TESTING
 #include "gateway_test_access.h"
@@ -211,17 +212,18 @@ struct SessionOwner::Impl {
     struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
     struct SubscribeEvents { Generation generation; std::uint64_t order, correlation; std::promise<EventSubscriptionResult> reply; };
     struct PollEvents { Generation generation; std::uint64_t subscription, correlation; std::promise<EventBatchResult> reply; };
+    struct PollNotifications { Generation generation; std::uint64_t subscription, correlation; std::promise<NotificationBatchResult> reply; };
     struct AckEvents { Generation generation; std::uint64_t subscription, event_id; std::promise<Result> reply; };
     struct AdvanceClock { Generation generation; ClockIntent intent; std::uint64_t correlation; std::promise<ClockResult> reply; };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 SubscribeEvents, PollEvents, AckEvents, AdvanceClock,
+                                 SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 SubscribeEvents, PollEvents, AckEvents, AdvanceClock,
+                                 SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots>;
 #endif
@@ -311,7 +313,8 @@ struct SessionOwner::Impl {
                 else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.correlation});
                 else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, SubscribeEvents> ||
-                                   std::is_same_v<std::decay_t<decltype(item)>, PollEvents>)
+                                   std::is_same_v<std::decay_t<decltype(item)>, PollEvents> ||
+                                   std::is_same_v<std::decay_t<decltype(item)>, PollNotifications>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, 0, item.correlation});
                 else item.reply.set_value({Error::GENERATION_EXPIRED, {}});
             }, request);
@@ -346,6 +349,7 @@ struct SessionOwner::Impl {
         auto reject = [&](Error error) {
             if constexpr (std::is_same_v<Item, Dispatch> ||
                           std::is_same_v<Item, SubscribeEvents> || std::is_same_v<Item, PollEvents> ||
+                          std::is_same_v<Item, PollNotifications> ||
                           std::is_same_v<Item, AdvanceClock>) {
                 std::promise<Reply> promise;
                 auto future = promise.get_future();
@@ -363,6 +367,7 @@ struct SessionOwner::Impl {
         if constexpr (std::is_same_v<Item, Dispatch> ||
                       std::is_same_v<Item, SubscribeEvents> ||
                       std::is_same_v<Item, PollEvents> ||
+                      std::is_same_v<Item, PollNotifications> ||
                       std::is_same_v<Item, AckEvents> ||
                       std::is_same_v<Item, AdvanceClock>) {
             if (binding != Binding::BOUND)
@@ -880,6 +885,26 @@ struct SessionOwner::Impl {
         } catch (...) { fail(Error::INTERNAL_ERROR); }
     }
 
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 PollNotifications& request)
+    {
+        // Reuse exactly P02's authenticated page, cursor and queue. The nested
+        // request is executed synchronously on this same owner thread, not an
+        // async task or a second F05 subscriber. Never duplicate Core reads.
+        std::promise<EventBatchResult> source_reply;
+        auto ready_source = source_reply.get_future();
+        PollEvents source{request.generation, request.subscription,
+                          request.correlation, std::move(source_reply)};
+        execute(lock, session, source);
+        try {
+            const auto page = ready_source.get();
+            request.reply.set_value(
+                detail::NotificationProjection::from_authorized_f05(page, persistent_id));
+        } catch (...) {
+            request.reply.set_value({Error::INTERNAL_ERROR, {}, 0, request.correlation});
+        }
+    }
+
     void execute(std::unique_lock<std::recursive_mutex>&, detail::NativeSession& session,
                  AckEvents& request)
     {
@@ -1186,6 +1211,12 @@ std::future<EventBatchResult> SessionOwner::poll_order_events(
     Generation generation, std::uint64_t subscription, std::uint64_t correlation)
 {
     return impl_->enqueue<EventBatchResult>(Impl::PollEvents{generation, subscription, correlation, {}});
+}
+std::future<NotificationBatchResult> SessionOwner::poll_order_notifications(
+    Generation generation, std::uint64_t subscription, std::uint64_t correlation)
+{
+    return impl_->enqueue<NotificationBatchResult>(
+        Impl::PollNotifications{generation, subscription, correlation, {}});
 }
 std::future<Result> SessionOwner::ack_order_events(
     Generation generation, std::uint64_t subscription, std::uint64_t event_id)

@@ -163,6 +163,32 @@ struct EventBatchResult {
     bool more = false, resync_required = false;
 };
 
+// H08-P04: presentation-only projections. No Core authority, F11 issuer,
+// public C ABI or Unreal endpoint; acknowledgements reuse H08-P02.
+enum class NotificationLevel : std::uint32_t { INFO, SUCCESS, WARNING, ERROR };
+enum class NotificationKind : std::uint32_t {
+    ORDER_ISSUED = 1, ORDER_ACCEPTED, ORDER_EXECUTING, ORDER_COMPLETED,
+    ORDER_FAILED, ORDER_REFUSED, ORDER_CANCELLED
+};
+struct NotificationNotice {
+    EventSource source = EventSource::F05_ORDER;
+    NotificationKind kind = NotificationKind::ORDER_ISSUED;
+    NotificationLevel level = NotificationLevel::INFO;
+    std::uint64_t source_event_id = 0;
+    std::uint64_t previous_event_id = 0;
+    std::uint64_t order = 0, core_tick = 0;
+    std::string title, body; // Safe, localized presentation, no raw Core details.
+    bool operator==(const NotificationNotice&) const = default;
+};
+struct NotificationBatchResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+    std::string campaign_id; // Non-secret H04 identity for stable source deduplication.
+    std::vector<NotificationNotice> items;
+    bool more = false, resync_required = false;
+};
+
 // H08-P03: explicit, bounded campaign-clock intent on the trusted native
 // HOST interface. The timeline and scheduled work belong exclusively to Core.
 struct ClockLimits {
@@ -227,6 +253,10 @@ public:
     TREK_HOST_API std::future<EventSubscriptionResult> subscribe_order_events(
         Generation, std::uint64_t order, std::uint64_t correlation_id = 0);
     TREK_HOST_API std::future<EventBatchResult> poll_order_events(
+        Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
+    // One-to-one presentation of the SAME authorized F05 source stream.
+    // No new subscriptions, no new acknowledgement semantics, no F11 emission.
+    TREK_HOST_API std::future<NotificationBatchResult> poll_order_notifications(
         Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
     TREK_HOST_API std::future<Result> ack_order_events(
         Generation, std::uint64_t subscription, std::uint64_t presented_event_id);
