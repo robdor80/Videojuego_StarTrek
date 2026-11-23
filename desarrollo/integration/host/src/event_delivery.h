@@ -25,6 +25,7 @@ public:
         std::uint64_t cursor = 0; // Last source event admitted, NOT a page offset.
         std::uint64_t last_ack = 0;
         bool source_more = false;
+        bool resync_required = false;
         std::deque<EventNotice> pending;
     };
 
@@ -35,7 +36,7 @@ public:
     [[nodiscard]] std::uint64_t subscribe(std::uint64_t order) {
         if (!order || !has_capacity()) return 0;
         const auto token = ++last_token_;
-        subscriptions_.push_back({token, order, 0, 0, false, {}});
+        subscriptions_.push_back({token, order, 0, 0, false, false, {}});
         return token;
     }
     [[nodiscard]] Subscription* find(std::uint64_t token) noexcept {
@@ -58,7 +59,10 @@ public:
                 e.previous != previous || e.id == previous) return false;
             previous = e.id;
         }
-        for (std::size_t i = 0; i < count; ++i) entry.pending.push_back(items[i]);
+        // Stage first: allocation failures must not leave a partly published page.
+        std::deque<EventNotice> staged;
+        for (std::size_t i = 0; i < count; ++i) staged.push_back(items[i]);
+        entry.pending.swap(staged);
         entry.cursor = previous;
         entry.source_more = source_more;
         return true;
