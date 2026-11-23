@@ -2,7 +2,7 @@
 """H07: comprobaciones ESTÁTICAS de frontera y planificación.
 
 No llama a CoreRPG, no ejecuta Unreal, no emite hechos institucionales.
-Los casos del JSON son NOT_RUN y NO se cuentan como pruebas funcionales.
+Los resultados requieren evidencia trazada; esta suite estática NO los ejecuta.
 """
 from __future__ import annotations
 
@@ -25,18 +25,25 @@ def read(path: Path) -> str:
 
 
 class HostH07BoundaryStaticTests(unittest.TestCase):
-    def test_matrix_has_unique_not_run_cases(self) -> None:
+    def test_matrix_has_unique_traceable_cases(self) -> None:
         matrix = json.loads(read(MATRIX))
         host = matrix["host_cases"]
         external = matrix["external_f11_reference"]["cases"]
-        self.assertEqual(matrix["maturity"], "TEST_PLAN_ONLY")
-        self.assertEqual(matrix["overall_status"], "NOT_RUN")
+        self.assertEqual(matrix["maturity"], "TECHNICAL_EVIDENCE_NOT_CERTIFIED")
+        self.assertEqual(matrix["overall_status"], "PARTIAL_TECHNICAL_EVIDENCE")
         self.assertEqual(len(host), 27)
         self.assertEqual(len(external), 33)
         self.assertEqual(len({case["id"] for case in host}), 27)
         self.assertEqual(len({case["id"] for case in external}), 33)
-        self.assertTrue(all(case["status"] == "NOT_RUN" for case in host + external))
-        self.assertTrue(all(case["evidence"] is None for case in host))
+        self.assertTrue(all(case["status"] == "NOT_RUN" for case in external))
+        for case in host:
+            self.assertIn(case["status"], matrix["status_legend"])
+            if case["status"] == "PASS":
+                evidence = case["evidence"]
+                self.assertRegex(evidence["source_sha"], r"^[0-9a-f]{40}$")
+                self.assertRegex(evidence["sha256"], r"^[0-9a-f]{64}$")
+                self.assertTrue(evidence["artifact"])
+                self.assertTrue((DOCS / evidence["report"]).is_file())
         self.assertEqual(matrix["external_f11_reference"]["state"], "DRAFT_NOT_MERGED")
         self.assertTrue(matrix["external_f11_reference"]["not_host_tests"])
 
