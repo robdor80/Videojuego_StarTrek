@@ -237,7 +237,8 @@ void clock_case(Fixture& f, const std::string& name)
         return;
     }
     if(name=="hk07_limits") {
-        const auto base=f.view(),before=f.bytes();
+        const auto base=f.view();
+        const auto before=f.bytes();
         const ClockIntent bad[]={
             {0,base.revision,base.now,base.now+2,1},
             {1,base.revision,base.now,base.now+2,0},
