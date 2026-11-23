@@ -112,6 +112,13 @@ Outcome NativeSession::dispatch(F04Ref player, const GatewayRequest& request, Op
     return normalize_identity(code);
 }
 
+Outcome NativeSession::events(F04Ref player, std::uint64_t order, std::uint64_t after,
+                              NativeEventPage& page) noexcept
+{
+    if (academy_ || !session_) return {Error::ACCESS_DENIED};
+    return normalize_identity(bridge::events(session_, player, order, after, page));
+}
+
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
 {
     return normalize(bridge::persistent_identity(session_,identity,player));
