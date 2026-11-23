@@ -232,6 +232,15 @@ if(TREK_HOST_TESTS)
       COMMAND host_m0_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/h08/${case}")
     set_tests_properties(host.event.${case} PROPERTIES TIMEOUT 120 LABELS "h08-p02;native;f05")
   endforeach()
+  # H08-P03: the existing real Core/F05 M0 executable drives the only
+  # campaign timeline. No automatic scheduler or wall-clock acceleration.
+  foreach(case IN ITEMS hk01_basic hk02_partial hk03_stale hk04_replay hk05_conflict
+      hk06_unbound hk07_limits hk08_restore hk09_concurrent hk10_close
+      hk11_events hk12_partial_replay hk13_worker hk14_queued_close hk15_same_tick)
+    add_test(NAME host.clock.${case} COMMAND host_m0_tests ${case}
+      "${CMAKE_CURRENT_BINARY_DIR}/h08-clock/${case}")
+    set_tests_properties(host.clock.${case} PROPERTIES TIMEOUT 120 LABELS "h08-p03;native;core-clock")
+  endforeach()
   add_test(NAME host.m0.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m0_process.py"
     "$<TARGET_FILE:host_m0_tests>" "${CMAKE_CURRENT_BINARY_DIR}/m0/process")
   set_tests_properties(host.m0.process PROPERTIES TIMEOUT 240 LABELS "h05;process")
