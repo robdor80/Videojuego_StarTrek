@@ -12,6 +12,7 @@
 - HOST: SessionOwner (Generation opaca y current_player); SessionOwner::institutional_command(Generation, correlation) **devuelve SERVICE_UNAVAILABLE en NativeSession** si supera admisión y vinculación, sin llamar al puente. La Academy no pasa el control Dispatch naval.
 - C ABI HOST: operaciones OPEN, CLOSE, QUERY_VIEW, SUBMIT_SCAN, QUERY_ORDER, CANCEL_ORDER, SAVE y RESTORE; **no existe operación C ABI de emitir F11**.
 - F11 productiva actual solo confirma el ascenso 1101→1102 con antecedentes ya emitidos. TrekF11TrialHost y f11_bootstrap_authorized_trial son solo de ensayo.
+- La macro `F11_NATIVE_TEST_HOST` compila `f11_trial_host.inc` exclusivamente para el emisor de ensayo; NO puede habilitarse en una compilación de producto del HOST.
 - Lectura de hechos F11 exige un F04Session con esquema F11 activado. AcademyCampaign H06 no es, por ahora, ese F04Session de oficial comisionado.
 
 ## 2. Modelo lógico propuesto (NO una firma C ni un nuevo endpoint)
