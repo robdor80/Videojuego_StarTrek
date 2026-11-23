@@ -76,6 +76,15 @@ jobs:
           xvfb-run -a python desarrollo/integration/f06/qa/test_aster_x1_gui.py \
             --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner" \
             --output-dir "laboratorios/f06/ci/build/gui-realtime" --realtime
+      - name: Verify playable Tk console (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $runner = "laboratorios/f06/ci/build/f05/f04/Release/f06_aster_runner.exe"
+          python desarrollo/integration/f06/qa/test_aster_gui_layout.py --runner $runner
+          if ($LASTEXITCODE) { throw "Tk layout failed" }
+          python desarrollo/integration/f06/qa/test_aster_x1_gui.py --runner $runner --output-dir "laboratorios/f06/ci/build/gui-x1"
+          if ($LASTEXITCODE) { throw "Tk UX failed" }
       - name: Validate QA Python and Windows launch scripts
         shell: pwsh
         run: |
@@ -119,3 +128,5 @@ jobs:
             laboratorios/f06/ci/build/eight-hours/eight-hours.json
             laboratorios/f06/ci/build/gui-realtime/*.json*
             laboratorios/f06/ci/build/gui-x1/*.json*
+            laboratorios/f06/ci/build/gui-x1/*.png
+            laboratorios/f06/ci/build/ux/ux-contract.json

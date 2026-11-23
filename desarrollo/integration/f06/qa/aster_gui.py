@@ -11,6 +11,7 @@ import argparse
 from collections import Counter
 from datetime import datetime
 import json
+import hashlib
 from pathlib import Path
 import subprocess
 import sys
@@ -145,17 +146,21 @@ class Panel:
         self.technical_expanded = False
         self.motion_samples: dict[str, tuple] = {}
         self.sensor_preset = tk.StringVar(value="Estándar")
+        self.interrupted = None
+        self.seen_incidents = set()
+        self.incident_started = {}
+        self.active_alert = None
+        self.last_detail_key = None
+        self.saved_ui = None
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.apply(self._read(), reset=True)
         if x1:
             self.button_play.configure(text="Pausar")
             self.progress.configure(maximum=540)
-            if self.state.get("contacts"):
-                self._choose_contact(str(self.state["contacts"][0][0]))
         self.last_wall = time.monotonic()
         self.wall_origin = self.last_wall
-        self.root.after(500, self.tick)
+        self.tick_after = self.root.after(500, self.tick)
 
     def _render(self) -> None:
         """F06: quiet, task-first console with no decorative LCARS skin.
@@ -205,7 +210,7 @@ class Panel:
         alert_copy = tk.Frame(self.alert_bar, background="#ffe2a1")
         alert_copy.pack(side="left", fill="both", expand=True, padx=13, pady=8)
         self.alert_title = tk.Label(alert_copy, text="", anchor="w",
-                                    font=("Segoe UI", 16, "bold"),
+                                    font=("Segoe UI", 12, "bold"),
                                     background="#ffe2a1", foreground="#7c2d12")
         self.alert_title.pack(fill="x")
         self.alert_description = tk.Label(
@@ -223,12 +228,19 @@ class Panel:
         panes = ttk.Panedwindow(self.root, orient="horizontal")
         panes.grid(row=2, column=0, sticky="nsew", padx=12, pady=(3, 5))
         self.workspace_panes = panes
-        left = ttk.Frame(panes, width=350, padding=(0, 5))
-        center = ttk.Frame(panes, width=690, padding=(8, 3))
-        right = ttk.Frame(panes, width=365, padding=(8, 3))
-        panes.add(left, weight=2)
-        panes.add(center, weight=5)
-        panes.add(right, weight=3)
+        self.zone_frames = []
+        for width, color, weight in ((270, "#b94343", 20), (510, "#3b70bd", 38),
+                                     (570, "#32834d", 42)):
+            frame = tk.Frame(panes, width=width, highlightthickness=3,
+                             highlightbackground=color, highlightcolor=color, bd=0)
+            frame.pack_propagate(False)
+            panes.add(frame, weight=weight)
+            self.zone_frames.append(frame)
+        left, center, right = [ttk.Frame(frame, padding=8) for frame in self.zone_frames]
+        for frame in (left, center, right):
+            frame.pack(fill="both", expand=True)
+        self.workspace_panes.bind("<Configure>", self._fit_zones)
+
 
         # Four operator workflows; engineering adjustments are a separate utility.
         ttk.Label(left, text="OPERACIONES", font=("Segoe UI", 12, "bold")
@@ -255,7 +267,9 @@ class Panel:
         titlebar.pack(fill="x", pady=(2, 9))
         self.workspace_title = ttk.Label(titlebar, text="SISTEMA ASTER",
                                           font=("Segoe UI", 16, "bold"))
-        self.workspace_title.pack(side="left")
+        self.workspace_title.pack(fill="x")
+        titlebar = ttk.Frame(center)
+        titlebar.pack(fill="x", pady=(0, 5))
         self.map_button = ttk.Button(titlebar, text="Ver todos",
                                       command=self.toggle_map)
         self.map_button.pack(side="right", padx=(4, 0))
@@ -265,7 +279,7 @@ class Panel:
                    ).pack(side="right", padx=(4, 0))
         self.auto_brief = ttk.Label(center, text="", wraplength=350,
                                     font=("Segoe UI", 10), justify="left")
-        self.auto_brief.pack(fill="x", pady=(0, 5))
+        # Compatibility widget retained off screen; context follows selection.
         self.auto_brief.bind("<Configure>", lambda event:
                              self.auto_brief.configure(wraplength=max(180,event.width-8)))
         self.section_info = ttk.Label(center, text="", font=("Segoe UI", 10))
@@ -273,7 +287,7 @@ class Panel:
 
         self.map_box = ttk.Frame(center)
         self.map_box.pack(fill="both", expand=True, pady=(0, 7))
-        self.map_canvas = tk.Canvas(self.map_box, height=340, background="#f8fafc",
+        self.map_canvas = tk.Canvas(self.map_box, height=250, background="#f8fafc",
                                     highlightthickness=0)
         self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
@@ -284,7 +298,7 @@ class Panel:
         main_box = ttk.Frame(center)
         main_box.pack(fill="both", expand=True)
         self.main_text = tk.Text(
-            main_box, height=11, background="#ffffff", relief="flat",
+            main_box, width=1, height=7, background="#ffffff", relief="flat",
             font=("Segoe UI", 11), padx=15, pady=12, wrap="word",
             state="disabled", spacing2=3, spacing3=3)
         self.main_text.tag_configure("heading", font=("Segoe UI", 15, "bold"))
@@ -302,7 +316,7 @@ class Panel:
         self.contacts_table = ttk.Treeview(
             list_area, show="tree", height=7, selectmode="browse")
         self.contacts_table.heading("#0", text="Sistema estelar observado")
-        self.contacts_table.column("#0", minwidth=225, width=320, stretch=True)
+        self.contacts_table.column("#0", minwidth=100, width=210, stretch=True)
         self.contacts_table.tag_configure("group", font=("Segoe UI", 12, "bold"))
         self.contacts_table.tag_configure("contact", font=("Segoe UI", 11))
         self.contacts_table.tag_configure("lost", foreground="#7d8289")
@@ -317,7 +331,7 @@ class Panel:
         self.contacts_table.bind("<<TreeviewClose>>", self._remember_group)
 
         # RIGHT: nothing but the selected item, and its available actions.
-        ttk.Label(right, text="INFORMACIÓN DEL CONTACTO",
+        ttk.Label(right, text="LECTURAS DE SENSORES",
                   font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 10))
         self.equipment_brief = ttk.LabelFrame(right, text="FICHA OPERATIVA · CORE F06", padding=5)
         self.equipment_brief.pack(fill="x", pady=(0, 5))
@@ -333,7 +347,7 @@ class Panel:
         self.detail_box = detail_box
         detail_box.pack(fill="both", expand=True)
         self.detail_text = tk.Text(
-            detail_box, height=3, state="disabled", relief="flat",
+            detail_box, width=1, height=3, state="disabled", relief="flat",
             background="#ffffff", font=("Segoe UI", 12),
             wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
         self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
@@ -354,12 +368,19 @@ class Panel:
         ttk.Button(self.action_area, text="ANÁLISIS",
                    command=lambda: self.contact_action("SCAN")).grid(
                        row=0, column=1, sticky="ew", padx=2)
-        ttk.Button(self.action_area, text="SEGUIR",
-                   command=lambda: self.contact_action("PRIORITY")).grid(
-                       row=0, column=2, sticky="ew", padx=2)
+        self.follow_button = ttk.Button(self.action_area, text="SEGUIR",
+                   command=lambda: self.contact_action("PRIORITY"))
+        self.follow_button.grid(row=0, column=2, sticky="ew", padx=2)
         self.contact_report_button = ttk.Button(
-            right, text="COMUNICAR CONTACTO AL OFICIAL",
-            command=self.report_contact_to_officer)
+            right, text="Enviar informe…",
+            command=self.open_report_dialog)
+        self.voice_button = ttk.Button(right, text="Comunicar por voz · guion QA",
+                                       command=self.communicate_voice)
+        self.resume_button = ttk.Button(left, text="Retomar estudio", command=self.resume_study)
+        self.resume_button.pack(fill="x", before=self.secondary_frame, pady=4)
+        self.resume_button.pack_forget()
+        self.unfollow_button = ttk.Button(right, text="Dejar de seguir",
+                                          command=lambda: self.contact_action("UNFOLLOW"))
         # The progress indicator is based on actual Core start/end ticks.
         self.scan_progress = ttk.Frame(right)
         self.scan_progress_label = ttk.Label(self.scan_progress, text="")
@@ -368,13 +389,13 @@ class Panel:
             self.scan_progress, maximum=100, value=0)
         self.scan_progress_value.pack(fill="x")
         self.technical_button = ttk.Button(
-            right, text="Ver ficha técnica",
+            right, text="Lecturas complementarias",
             command=self.open_contact_details)
         self.tactical_report_button = ttk.Button(
-            right, text="TRANSFERIR A TÁCTICA (cola QA)",
+            right, text="Enviar a Táctica · QA",
             command=self.send_analysis_to_tactical)
         self.science_transfer_button = ttk.Button(
-            right, text="TRANSFERIR A CIENCIA (cola QA)",
+            right, text="Enviar a Ciencia · QA",
             command=lambda: self.transfer_contact("SCIENCE_SEND"))
 
         self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
@@ -396,6 +417,9 @@ class Panel:
         self.notice_label = ttk.Label(notice_bar, text="Vigilancia automática activada.",
                                       font=("Segoe UI", 11))
         self.notice_label.pack(side="left", fill="x", expand=True, padx=(9, 0))
+        self.notice_label.bind("<Configure>", lambda e: self.notice_label.configure(wraplength=max(80,e.width)))
+        self.alert_title.bind("<Configure>", lambda e: self.alert_title.configure(wraplength=max(100,e.width)))
+        self.alert_description.bind("<Configure>", lambda e: self.alert_description.configure(wraplength=max(100,e.width)))
         ttk.Button(notice_bar, text="Ver avisos anteriores",
                    command=self.open_history).pack(side="right")
 
@@ -447,6 +471,186 @@ class Panel:
 
         self.navigate("status")
 
+    def _fit_zones(self, event):
+        if getattr(self, "last_pane_width", None) == event.width:
+            return
+        self.last_pane_width = event.width
+        self.workspace_panes.sashpos(0, round(event.width * .20))
+        self.workspace_panes.sashpos(1, round(event.width * .58))
+
+    @staticmethod
+    def _write_text(widget, text, reset=False):
+        if widget.get("1.0", "end-1c") == text:
+            if reset: widget.yview_moveto(0)
+            return
+        pos = 0 if reset else widget.yview()[0]
+        widget.configure(state="normal")
+        widget.delete("1.0", "end")
+        widget.insert("1.0", text)
+        widget.tag_add("heading", "1.0", "1.end")
+        for label, color in (("VERDE", "#19652a"), ("ÁMBAR", "#945200"),
+                             ("ROJO", "#b42318"), ("GRIS", "#626262")):
+            widget.tag_configure(label, foreground=color)
+            start = "1.0"
+            while found := widget.search(label + " ·", start, "end"):
+                widget.tag_add(label, found, f"{found} lineend")
+                start = f"{found}+1c"
+        widget.configure(state="disabled")
+        widget.yview_moveto(pos)
+
+    def _deep_dossier(self, c):
+        v = next((v for v in self.state.get("deep_analysis", []) if v["contact"] == c[0]), {})
+        lines = ["HALLAZGOS ADICIONALES", ""]
+        mask = v.get("mask", 0)
+        if mask & 1:
+            lines += ["ATMÓSFERA · MODELO DE DALTON",
+                      f"Presión parcial de O₂: {v['oxygen_microbar']/1000:.3f} mbar",
+                      f"Presión parcial de CO₂: {v['co2_microbar']/1000:.3f} mbar",
+                      "Calculadas con presión y composición del informe científico observado.",
+                      "Estas medidas no certifican habitabilidad ni ausencia de tóxicos.", ""]
+        if mask & 2:
+            lines += ["GEOMETRÍA OBSERVABLE",
+                      f"Extensión angular estimada: {v['angular_nanoradian']} nrad",
+                      "Modelo geométrico: eslora medida y distancia actual; no resuelve la orientación.", ""]
+        if mask & 4:
+            lines += ["HISTORIA CINEMÁTICA",
+                      f"Desplazamiento neto: {v['displacement_micro_au']/1000000:.6f} UA en {v['interval_s']} s",
+                      "Comparación de posiciones archivadas; no determina intenciones.", ""]
+        if mask & 8:
+            lines += ["EVOLUCIÓN TÉCNICA", f"Cambios de sistemas medidos: {v['equipment_changes']}", ""]
+        if not mask: lines += ["No hay nuevas lecturas verificables.", ""]
+        lines += ["LÍMITES DE LA MEDICIÓN",
+                  "Sin medidas adicionales de tecnología interna, tripulación o vulnerabilidades."]
+        return "\n".join(lines)
+
+    def _tracking_dossier(self, c):
+        nav = self._navigation_data(c) if c[2] == 1 else None
+        lines = ["NAVEGACIÓN", f"Distancia: {c[5]/1000:.3f} UA"]
+        if nav:
+            lines += [f"Trayectoria estimada: {nav[2]:03d}°", f"Velocidad relativa: {nav[6]/1000000:.6f} UA/s",
+                      {0:"Movimiento radial sin determinar.",1:"Se aproxima.",2:"Se aleja."}.get(nav[3], "Sin determinar.")]
+            if nav[4]: lines.append("Posible convergencia hacia nuestra posición; intención no determinada.")
+        else: lines.append("Trayectoria aún no determinada con lecturas actuales.")
+        if any(e["contact"] == c[0] for e in self.state.get("equipment", [])):
+            lines += ["", self._equipment_dossier(c)]
+        events = [e for e in self.state.get("navigation_alerts", []) if e[1] == c[0] and self.state["tick"]-e[2] <= 30]
+        if events:
+            lines += ["", "CAMBIOS OBSERVADOS"]
+            for e in events[-3:]:
+                lines.append(f"{clock(e[2])} · " + {1:"cambio de rumbo medido",2:"convergencia de trayectoria",3:"aproximación",4:"alejamiento"}.get(e[0], "cambio de movimiento"))
+        receipts = [r for r in self.state.get("deliveries", []) if r[1] == c[0] and r[4] == 2 and r[5] == 1]
+        mode = next((r[1] for r in self.state.get("tracking", []) if r[0] == c[0]), 0)
+        lines += ["", "ESTADO DEL SEGUIMIENTO",
+                  "Transferencia continua a Táctica activa · cola QA." if mode else "Seguimiento suspendido; pulsa Seguir para retomarlo."]
+        if receipts: lines.append("Última entrega confirmada: " + clock(receipts[-1][3]) + ".")
+        lines.append("Potencia en vatios y preparación de curvatura: sin medidas suficientes.")
+        return "\n".join(lines)
+
+    def _view_context(self):
+        selection = self.contacts_table.selection()
+        return {"view": self.current_view, "selected": selection[0] if selection else None,
+                "section": self.section_id, "zoom": self.map_zoom, "overview": self.map_overview,
+                "detail_scroll": self.detail_text.yview()[0], "main_scroll": self.main_text.yview()[0],
+                "list_scroll": self.contacts_table.yview()[0]}
+
+    def _resume_label(self, context):
+        c = self.contact_map.get(context.get("selected"))
+        name = self.designations.get(c[0]) if c else None
+        return "Retomar " + name if name and len(name) <= 16 else "Retomar estudio anterior"
+
+    def _restore_view(self, context):
+        self.navigate(context.get("view", "status"))
+        self.select_section(context.get("section", "all"))
+        if context.get("selected") in self.contact_map:
+            self._choose_contact(context["selected"])
+        self.map_zoom = max(.35, min(50, context.get("zoom", 1)))
+        self.map_overview = context.get("overview", True)
+        self.root.update_idletasks()
+        self.detail_text.yview_moveto(context.get("detail_scroll", 0))
+        self.main_text.yview_moveto(context.get("main_scroll", 0))
+        self.contacts_table.yview_moveto(context.get("list_scroll", 0))
+        self._draw_map()
+
+    def resume_study(self):
+        context, self.interrupted = self.interrupted, None
+        if context: self._restore_view(context)
+        self.resume_button.pack_forget()
+
+    def communicate_voice(self):
+        selected = self.contacts_table.selection()
+        if not selected or selected[0] not in self.contact_map: return
+        c = self.contact_map[selected[0]]
+        window = tk.Toplevel(self.root)
+        window.title("Comunicar por voz · guion QA")
+        window.geometry("680x310")
+        ttk.Label(window, text="Guion de pruebas para que lo transmita el jugador.", padding=10).pack(fill="x")
+        box = tk.Text(window, wrap="word", height=8, padx=12, pady=10)
+        box.pack(fill="both", expand=True)
+        box.insert("1.0", self._report_script(c))
+        box.configure(state="disabled")
+        ttk.Label(window, text="F06: sin canal de voz ni conversación NPC integrados.", padding=10).pack(fill="x")
+
+    def open_report_dialog(self):
+        window = tk.Toplevel(self.root)
+        window.title("Enviar informe · cola QA")
+        window.geometry("380x170")
+        ttk.Label(window, text="Destinatario", padding=10).pack(anchor="w")
+        recipient = tk.StringVar(value="Capitán / superior")
+        ttk.Combobox(window, textvariable=recipient, state="readonly",
+                     values=("Capitán / superior", "Táctica", "Ciencia")).pack(fill="x", padx=10)
+        def send():
+            command = {"Capitán / superior":"REPORT", "Táctica":"TACTICAL_SEND", "Ciencia":"SCIENCE_SEND"}[recipient.get()]
+            self.transfer_contact(command)
+            window.destroy()
+        ttk.Button(window, text="Enviar a la cola QA", command=send).pack(pady=12)
+
+    def _ui_snapshot(self):
+        return {"version": 1, "context": self._view_context(), "interrupted": self.interrupted,
+                "followed": sorted(self.followed_ids), "analyzed": sorted(self.analyzed_ids),
+                "seen_incidents": list(self.seen_incidents),
+                "incident_started": [[*k, v] for k, v in self.incident_started.items()],
+                "groups": dict(self.group_open), "notes": self.notes.get("1.0", "end-1c"), "lines": list(self.lines)}
+
+    def _restore_ui(self, state, ui):
+        ids = {str(c[0]) for c in state["contacts"]}
+        self.followed_ids = set(ui.get("followed", [])) & ids
+        self.analyzed_ids = set(ui.get("analyzed", [])) & ids
+        self.seen_incidents = {tuple(k) for k in ui.get("seen_incidents", [])}
+        self.incident_started = {(cid, severity): when for cid, severity, when in ui.get("incident_started", [])}
+        self.group_open = dict(ui.get("groups", {}))
+        self.interrupted = ui.get("interrupted")
+        self.lines = list(ui.get("lines", []))
+        self.notes.delete("1.0", "end")
+        self.notes.insert("1.0", ui.get("notes", ""))
+        self.state = {}
+        self.apply(state)
+        self._restore_view(ui.get("context", {}))
+        if self.interrupted:
+            self.resume_button.configure(text=self._resume_label(self.interrupted))
+            self.resume_button.pack(fill="x", before=self.secondary_frame, pady=4)
+        else: self.resume_button.pack_forget()
+        self.last_wall = time.monotonic()
+        self.wall_origin = self.last_wall-state["tick"]
+        self.elapsed_fraction = 0
+
+    def checkpoint_file(self, path, restore):
+        sidecar = path.with_suffix(path.suffix + ".ui.json")
+        if restore:
+            ui = {}
+            if sidecar.is_file():
+                ui = json.loads(sidecar.read_text(encoding="utf-8"))
+                if ui.get("version") != 1 or ui.get("core_sha256") != hashlib.sha256(path.read_bytes()).hexdigest():
+                    raise ValueError("El contexto no corresponde a esta guardia Core.")
+            self._restore_ui(self.command(f"LOADFILE {path}"), ui)
+        else:
+            self.command(f"SAVEFILE {path}")
+            ui = self._ui_snapshot()
+            ui["core_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            temp = sidecar.with_suffix(sidecar.suffix + ".tmp")
+            temp.write_text(json.dumps(ui, ensure_ascii=False), encoding="utf-8")
+            temp.replace(sidecar)
+        self.append(self.state["tick"], "Guardia y contexto restaurados." if restore else "Guardia y contexto guardados.")
+
     def toggle_test_options(self) -> None:
         if self.test_area.winfo_manager():
             self.test_area.grid_remove()
@@ -492,6 +696,8 @@ class Panel:
         if view not in self.workspace_labels and view != "configuration":
             return
         self.current_view = view
+        if view in ("status", "configuration"):
+            self.contacts_table.selection_remove(*self.contacts_table.selection())
         self.section_id = "summary"
         self.contact_subset = "all"
         self.contact_filter.set("Todos")
@@ -501,7 +707,7 @@ class Panel:
             child.destroy()
         filters = {
             "status": [("Todo el sistema", "all")],
-            "contacts": [("Todos los nuevos", "all"), ("Naves", "ships"),
+            "contacts": [("Todos los contactos", "all"), ("Naves", "ships"),
                          ("Perdidos", "lost")],
             "tracking": [("En seguimiento", "all")],
             "results": [("Analizados", "all")],
@@ -513,7 +719,7 @@ class Panel:
                            fill="x", pady=2)
         self.workspace_title.configure(text={
             "status": "GENERAL · SISTEMA ASTER",
-            "contacts": "CONTACTOS NUEVOS",
+            "contacts": "CONTACTOS",
             "tracking": "SEGUIMIENTO PRIORITARIO",
             "results": "ANÁLISIS SOLICITADOS",
             "configuration": "EQUIPO DE SENSORES",
@@ -559,135 +765,70 @@ class Panel:
         if hasattr(self, "main_text"):
             self._update_main_content()
 
-    def _update_alert(self, state: dict) -> None:
-        """Large, persistent, direct-entry warning for observed sensor threats."""
-        core_ids = [str(x) for x in state.get("attention_contacts", [])]
-        if len(core_ids) != state.get("attention", 0):
-            raise RuntimeError("Incoherencia en los contactos señalados por CoreRPG.")
-        observed = {str(c[0]): c for c in state.get("contacts", [])}
-        latest_equipment = {str(e["contact"]): e for e in state.get("equipment", [])}
-        def equipment_severity(cid: str) -> int:
-            e = latest_equipment.get(cid)
-            return max((slot[3] for slot in e["slots"]), default=0) if e else 0
-        borg = [str(c[0]) for c in state.get("contacts", [])
-                if c[1] == 1 and c[2] == 1 and c[3] == 10]
-        arrival = self.arrival_id if self.arrival_id in observed and (
-            observed[self.arrival_id][2] == 1) else None
-        # New arrivals must be visible even if an earlier unknown ship is
-        # still awaiting operator attention. Never bury them under old alerts.
-        nav_target = (str(self.nav_priority[1]) if self.nav_priority
-                      and str(self.nav_priority[1]) in observed else None)
-        if borg:
-            ids = borg
-        else:
-            ids = list(dict.fromkeys(
-                ([nav_target] if nav_target else []) +
-                ([arrival] if arrival else []) + core_ids))
-        if self.x1:
-            ids.sort(key=equipment_severity, reverse=True)
-        if not ids:
+    def _update_alert(self, state):
+        latest = {str(e["contact"]): e for e in state.get("equipment", [])}
+        candidates = []
+        current_causes = set()
+        for cid, c in self.contact_map.items():
+            if c[2] != 1: continue
+            e = latest.get(cid)
+            offense = bool(e and any(e["mask"] & (1 << k) and e["slots"][k][0]
+                                     and e["slots"][k][1] == 3 for k in (0, 1)))
+            discrepancy = bool(e and any(s[3] == 2 for s in e["slots"]))
+            severity = 4 if c[1] == 1 and c[3] == 10 else 3 if offense else 2 if (
+                c[1] in (0, 11) or c[1] == 1 and (not c[3] or discrepancy and c[3] != 18)) else 1 if discrepancy else 0
+            if not severity: continue
+            # Cause identity deliberately excludes later generic position updates.
+            key = (cid, severity)
+            current_causes.add(key)
+            self.incident_started.setdefault(key, state["tick"])
+            age = state["tick"] - self.incident_started[key]
+            if severity <= 2 and age > 45: continue
+            reason = ("Contacto Borg identificado" if severity == 4 else
+                      "Emisión ofensiva activa medida" if offense else
+                      "Diferencias de equipamiento respecto al catálogo QA" if discrepancy else
+                      "Firma sin identificación suficiente")
+            candidates.append((severity, cid, key, reason))
+        # A resolved cause can generate a genuinely new episode later. Keeping
+        # its old acknowledgement would suppress the next offensive incident.
+        self.seen_incidents.intersection_update(current_causes)
+        self.incident_started = {k: v for k, v in self.incident_started.items() if k in current_causes}
+        if state.get("offline") or not candidates:
+            self.active_alert = None
             self.alert_ids = []
             self.alert_bar.grid_remove()
             return
-        if tuple(ids) != tuple(self.alert_ids):
-            self.alert_cursor = 0
-        self.alert_ids = ids
-        self.alert_cursor %= len(ids)
-        chosen = ids[self.alert_cursor]
-        severity = "critical" if chosen in borg or equipment_severity(chosen) == 3 else "warning"
-        if chosen in borg:
-            title = "ALERTA PRIORITARIA · CONTACTO BORG"
-            explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
-        elif equipment_severity(chosen) == 3:
-            title = "ALERTA · EMISIÓN OFENSIVA ACTIVA"
-            explanation = "Emisión ofensiva medida por Core F06. Datos observados disponibles; comunicar y transferir siguen siendo decisiones del oficial."
-        elif chosen == nav_target and self.nav_priority:
-            nav_kind, _, _, heading, trend, intercept = self.nav_priority
-            if intercept:
-                title = "ATENCIÓN · POSIBLE CURSO DE INTERCEPTACIÓN"
-                explanation = (
-                    f"Rumbo de desplazamiento {heading:03d}°. "
-                    "La trayectoria observada converge hacia nuestra posición. "
-                    "Aviso disponible para Táctica. Intención no determinada.")
-            else:
-                title = "ATENCIÓN · CAMBIO DE RUMBO"
-                explanation = (
-                    f"Nuevo rumbo estimado: {heading:03d}°. "
-                    + ("El contacto se aproxima. " if trend == 1
-                       else "El contacto se aleja. " if trend == 2 else "")
-                    + "Seguimiento compartido con Táctica.")
-        elif chosen == arrival:
-            arriving = observed.get(chosen)
-            class_name = STARSHIP_CLASSES.get(arriving[3]) if arriving else None
-            title = ("NAVE DETECTADA · " + class_name.upper()
-                     if class_name else "NUEVA NAVE DETECTADA")
-            design = STARSHIP_DESIGNS.get(arriving[3]) if arriving else None
-            explanation = (
-                "Identificación inmediata completada. "
-                + (f"Diseño: {design[1]}. " if design else "")
-                + "Afiliación actual sin verificar. Velocidad de guardia reducida a ×1."
-                if class_name else
-                "Detección naval bajo investigación. Velocidad ×1; revisar sensores.")
-        elif any(e["contact"] == int(chosen) and any(slot[3] >= 2 for slot in e["slots"])
-                 for e in state.get("equipment", [])[-len(observed)*2:]):
-            title = "ATENCIÓN · EQUIPAMIENTO OBSERVADO"
-            explanation = "Discrepancia con catálogo o emisión ofensiva real. Abre la ficha; comunicar es decisión del oficial."
-        else:
-            title = "ATENCIÓN · NAVE SIN IDENTIFICAR"
-            explanation = "Clase no determinada; los sistemas físicos observables están disponibles en la ficha."
-        contact = observed.get(chosen)
-        if contact:
-            label = self.designations.get(contact[0], "C-" + ids[self.alert_cursor][-6:])
-            identity = contact_identification(contact)
-            summary = (f"{label}  ·  {identity}  ·  "
-                       f"{contact[5] / 1000:.3f} UA")
-        else:
-            summary = "Señal observada: ficha no disponible temporalmente."
-        bg, ink, stroke = (
-            ("#fecaca", "#7f1d1d", "#b91c1c") if severity == "critical"
-            else ("#ffe2a1", "#78350f", "#b45309")
-        )
-        for widget in (self.alert_bar, self.alert_title, self.alert_description):
-            widget.configure(background=bg)
+        severity, cid, key, reason = max(candidates, key=lambda x: (x[0], self.incident_started[x[2]]))
+        self.active_alert = key
+        self.alert_ids = [c[1] for c in sorted(candidates, reverse=True)]
+        self.alert_cursor = self.alert_ids.index(cid)
+        c = self.contact_map[cid]
+        self.alert_title.configure(text=("ALERTA · " if severity >= 3 else "ATENCIÓN · ") + self._operational_name(c))
+        self.alert_description.configure(text=reason + ".")
+        bg, ink, stroke = (("#fecaca", "#7f1d1d", "#b91c1c") if severity >= 3
+                           else ("#ffe2a1", "#78350f", "#b45309"))
+        for widget in (self.alert_bar, self.alert_title, self.alert_description): widget.configure(background=bg)
         self.alert_bar.configure(highlightbackground=stroke)
-        self.alert_title.configure(text=title, foreground=ink)
-        self.alert_description.configure(text=summary + "\n" + explanation,
-                                          foreground=ink)
-        self.alert_button.configure(text=(
-            "ABRIR CONTACTO" if len(ids) == 1 else
-            f"ABRIR CONTACTO {self.alert_cursor + 1}/{len(ids)}"),
-            background=stroke, activebackground=ink)
-        if not self.alert_bar.winfo_manager():
-            self.alert_bar.grid(row=1, column=0, sticky="ew",
-                                padx=12, pady=(0, 6))
+        self.alert_title.configure(foreground=ink)
+        self.alert_description.configure(foreground=ink)
+        self.alert_button.configure(text="Ver contacto", background=stroke)
+        self.alert_bar.grid(row=1, column=0, sticky="ew", padx=12, pady=(0, 6))
+        if key not in self.seen_incidents:
+            self.seen_incidents.add(key)
+            selection = self.contacts_table.selection()
+            if severity >= 2 and (not selection or selection[0] != cid):
+                if self.interrupted is None:
+                    self.interrupted = self._view_context()
+                self.navigate("contacts")
+                self._choose_contact(cid)
+                self.resume_button.configure(text=self._resume_label(self.interrupted))
+                self.resume_button.pack(fill="x", before=self.secondary_frame, pady=4)
+            self.append(state["tick"], reason + ": " + self._operational_name(c) + ".")
 
-    def open_alert_contact(self) -> None:
-        if not self.alert_ids:
-            return
-        cid = self.alert_ids[self.alert_cursor]
-        if cid not in self.contact_map:
-            return
-        self.navigate("contacts")
-        self.select_section("all")
-        if self.contacts_table.exists(cid):
-            parent = self.contacts_table.parent(cid)
-            if parent:
-                self.contacts_table.item(parent, open=True)
-                self.group_open[parent] = True
-            self.contacts_table.selection_set(cid)
-            self.contacts_table.focus(cid)
-            self.contacts_table.see(cid)
-            self.show_selected()
-            self._draw_map()
-        if self.nav_priority and cid == str(self.nav_priority[1]):
-            self.nav_priority = None
-        if cid == self.arrival_id:
-            self.acknowledged_arrivals.add(cid)
-            self.arrival_id = None
-        if len(self.alert_ids) > 1:
-            self.alert_cursor = (self.alert_cursor + 1) % len(self.alert_ids)
-        self._update_alert(self.state)
-
+    def open_alert_contact(self):
+        if self.active_alert:
+            self.navigate("contacts")
+            self._choose_contact(self.active_alert[0])
 
     def _read(self) -> dict:
         assert self.process.stdout is not None
@@ -725,12 +866,12 @@ class Panel:
         name = self.designations.get(contact[0], "Contacto C-" + str(contact[0])[-6:])
         return f"{name} · {kind}: {known}. Distancia a la nave {distance}. Confianza {confidence}. Estado {status}."
 
-    def _on_contact_selected(self, event: tk.Event | None = None) -> None:
+    def _on_contact_selected(self, event=None):
         selected = self.contacts_table.selection()
         if selected and selected[0] in self.contact_map:
             self.map_overview = False
             self.map_zoom = 1.0
-            self.map_button.configure(text="Ver todos")
+            self.map_button.configure(text="Mapa general")
         self.show_selected()
         self._draw_map()
         self._update_main_content()
@@ -749,10 +890,6 @@ class Panel:
         cv.create_line(cx, 12, cx, h - 12, fill="#cbd5e1")
         cv.create_text(14, 13, text="Y+", anchor="w", fill="#64748b")
         cv.create_text(w-14, cy-12, text="X+", anchor="e", fill="#64748b")
-        cv.create_polygon(cx, cy-10, cx-7, cy+7, cx+7, cy+7,
-                          fill="#2563eb")
-        cv.create_text(cx + 9, cy + 12, text="ENTERPRISE-D",
-                       anchor="nw", fill="#1d4ed8")
         self.map_positions = []
         if not self.state:
             return
@@ -770,18 +907,28 @@ class Panel:
         radius = max(100, max(abs(c[8]) for c in rows),
                      max(abs(c[9]) for c in rows))
         scale = 0.42 * min(w,h) / radius * self.map_zoom
+        ox, oy = (rows[0][8], rows[0][9]) if focused else (0, 0)
+        ship_x, ship_y = cx-ox*scale, cy+oy*scale
+        if 12 < ship_x < w-12 and 12 < ship_y < h-12:
+            cv.create_polygon(ship_x, ship_y-10, ship_x-7, ship_y+7, ship_x+7, ship_y+7, fill="#2563eb")
+            cv.create_text(ship_x+9, ship_y+12, text="ENTERPRISE-D", anchor="nw", fill="#1d4ed8")
+        if focused and chosen_id in self.followed_ids:
+            points = [r for r in self.state.get("position_evidence", []) if str(r[1]) == chosen_id][-32:]
+            if len(points) >= 2:
+                trace = [coordinate for r in points for coordinate in (cx+(r[3]-ox)*scale, cy-(r[4]-oy)*scale)]
+                cv.create_line(*trace, fill="#7c3aed", width=2, tags="trajectory")
         cv.create_text(w-10, h-9,
                        text=f"Escala ±{radius / (1000*self.map_zoom):.2f} UA · XY",
                        anchor="se", fill="#475569")
         for c in rows:
             key = str(c[0])
-            px, py = cx + c[8]*scale, cy-c[9]*scale
+            px, py = cx + (c[8]-ox)*scale, cy-(c[9]-oy)*scale
             sz = 7 if c[1] in (1,2) else 5
             color = "#155e75" if c[2] == 1 else "#9ca3af"
             if c[1] in (12,13,14):
                 color = "#64748b"
             if key == chosen_id:
-                cv.create_line(cx,cy,px,py,fill="#0891b2",
+                cv.create_line(ship_x,ship_y,px,py,fill="#0891b2",
                                width=2,dash=(5,4))
                 cv.create_oval(px-10,py-10,px+10,py+10,
                               outline="#2563eb",width=2)
@@ -832,19 +979,7 @@ class Panel:
             if group.startswith("group:"):
                 self.group_open[group] = bool(tree.item(group, "open"))
         self.contact_map = {str(c[0]): c for c in state["contacts"]}
-        stars = [c for c in state["contacts"] if c[1] == 12]
-        planets = [c for c in state["contacts"] if c[1] == 13]
-        if stars:
-            star = stars[0]
-            planets.sort(key=lambda c: sum(
-                (c[8 + i] - star[8 + i]) ** 2 for i in range(3)))
-            roman = ("I", "II", "III", "IV", "V", "VI", "VII", "VIII",
-                     "IX", "X", "XI", "XII")
-            for idx, planet in enumerate(planets):
-                self.designations.setdefault(
-                    planet[0], "Aster " + (roman[idx] if idx < len(roman)
-                                                  else str(idx + 1)))
-            self.designations.setdefault(star[0], "Aster · estrella central")
+        self.designations.update({int(cid): name for cid, name in state.get("chart_labels", [])})
         reports = {r[0]: r for r in state.get("science", [])}
 
         names = {
@@ -866,8 +1001,6 @@ class Panel:
         needle = self.search_text.get().strip().casefold()
         for c in state["contacts"]:
             cid = str(c[0])
-            if self.current_view == "contacts" and cid not in self.new_contact_ids:
-                continue
             if self.current_view == "tracking" and cid not in self.followed_ids:
                 continue
             if self.current_view == "results" and cid not in self.analyzed_ids:
@@ -908,7 +1041,7 @@ class Panel:
             heading = f"{names[key].upper()}  ·  {len(rows)}{extra}"
             if not tree.exists(groupid):
                 tree.insert("", "end", iid=groupid, text=heading,
-                            open=self.group_open.get(groupid, False),
+                            open=self.group_open.get(groupid, True),
                             tags=("group",))
             elif tree.item(groupid, "text") != heading:
                 tree.item(groupid, text=heading)
@@ -953,19 +1086,19 @@ class Panel:
                     label += " (provisional)"
         elif kind in (1, 2):
             klass = STARSHIP_CLASSES.get(contact[3])
-            design = STARSHIP_DESIGNS.get(contact[3])
             label = (klass or ("Nave no identificada" if kind == 1
                                else "Lanzadera no identificada"))
-            if design:
-                label += " · " + design[1]
+            if contact[3] == 18:
+                label = "Transporte civil"
+            peers = [c for c in self.state.get("contacts", []) if c[1] == kind and c[3] == contact[3]]
+            if len(peers) > 1:
+                label += " · " + (str(contact[6]) if contact[6] else "C-" + str(contact[0])[-6:])
         elif kind == 12:
             label = name or "Estrella"
         else:
             label = name or TYPES.get(kind, "Objeto detectado").capitalize()
         if status != 1:
             label += " · SEÑAL PERDIDA"
-        if str(contact[0]) in self.shared_report_ids and self.current_view == "contacts":
-            label += " · COMUNICADO"
         return label
 
     @staticmethod
@@ -1014,477 +1147,159 @@ class Panel:
                              "No se han determinado intenciones hostiles.")
         else:
             lines.append("Vector de movimiento todavía no determinado.")
+        equipment = [e for e in self.state.get("equipment", []) if e["contact"] == contact[0]]
+        if equipment:
+            e = equipment[-1]
+            if any(e["mask"] & (1 << k) and e["slots"][k][0] and e["slots"][k][1] == 3 for k in (0, 1)):
+                lines.append("Emisión ofensiva activa medida en sus armas.")
+            elif any(slot[3] == 2 for slot in e["slots"]):
+                lines.append("Equipamiento observado diferente de la referencia de clase QA.")
+        science = next((r for r in self.state.get("science", []) if r[0] == contact[0]), None)
+        if science:
+            lines.append(f"Temperatura medida {science[4]} kelvin y presión {science[5]} milibares. Habitabilidad sin confirmar.")
         return " ".join(lines)
 
-    def _update_main_content(self) -> None:
-        """Main zone is a playable task display rather than a duplicated list."""
-        if not hasattr(self, "main_text") or not self.state:
+    def _update_main_content(self):
+        if not self.state or not hasattr(self, "main_text"):
             return
-        selection = self.contacts_table.selection()
-        c = self.contact_map.get(selection[0]) if selection else None
-        title = {"status": "PANORAMA DEL SISTEMA",
-                 "contacts": "CONTACTOS NUEVOS",
-                 "tracking": "SEGUIMIENTO DE CONTACTOS",
-                 "results": "ANÁLISIS CIENTÍFICO Y NAVAL",
-                 "configuration": "EQUIPO DE SENSORES"}.get(
-                     self.current_view, "SENSORES")
-        lines = [title, ""]
-        if self.current_view == "status":
-            counts = Counter(x[1] for x in self.state["contacts"] if x[2] == 1)
-            for kind, name in ((12,"Estrellas"),(13,"Planetas"),(14,"Lunas"),
-                               (17,"Asteroides"),(15,"Nebulosas"),
-                               (16,"Estaciones"),(1,"Naves"),(2,"Lanzaderas"),
-                               (3,"Sondas")):
-                if counts[kind]:
-                    lines.append(f"{name}: {counts[kind]}")
-            lines.extend(["", "Vigilancia automática activa.",
-                          "Selecciona un elemento para acercar el mapa a su posición."])
-        elif self.current_view == "contacts":
-            if not c:
-                lines.extend([f"Contactos nuevos durante la guardia: "
-                              f"{len(self.new_contact_ids)}",
-                              "Selecciona un contacto y prepara el parte al oficial."])
-            else:
-                lines.extend(["PARTE PREPARADO PARA EL OFICIAL", "",
-                              self._report_script(c), ""])
-                lines.append(
-                    "Comunicado en la prueba."
-                    if str(c[0]) in self.shared_report_ids else
-                    "Pulsa COMUNICAR CONTACTO AL OFICIAL para transmitirlo.")
-        elif self.current_view == "tracking":
-            if not c:
-                lines.extend(["Selecciona un contacto previamente marcado con SEGUIR.",
-                              f"En seguimiento: {len(self.followed_ids)}"])
-            else:
-                lines.append(self._operational_name(c))
-                lines.append(f"Distancia actual: {c[5] / 1000:.3f} UA")
-                nav = self._navigation_data(c)
-                if nav:
-                    lines.append(f"Trayectoria: {nav[2]:03d}° (marco de sensores)")
-                    lines.append({1:"Se aproxima",2:"Se aleja",
-                                  0:"Movimiento radial sin determinar"}.get(
-                                      nav[3],"Movimiento indeterminado"))
-                    if len(nav) > 6:
-                        lines.append(
-                            f"Desplazamiento relativo: {nav[6] / 1000000:.6f} UA/s")
-                    if nav[4]:
-                        lines.append("")
-                        lines.append("ATENCIÓN: posible interceptación de nuestra nave")
-                    else:
-                        lines.append("Sin trayectoria de interceptación confirmada.")
-                else:
-                    lines.append("Esperando segundo punto de trayectoria observado.")
-                lines.extend(["", "Táctica accede al mismo feed de sensores (QA)."])
-        elif self.current_view == "results":
-            if not c:
-                lines.extend([
-                    f"Objetos estudiados por el oficial: {len(self.analyzed_ids)}",
-                    "Selecciona un expediente para revisar la observación obtenida."])
-            else:
-                jobs = [j for j in self.state.get("scans", [])
-                        if j[1] == c[0] and j[0] in self.operator_scan_ids]
-                completed = [j for j in jobs if j[5] == 2]
-                active = [j for j in jobs if j[5] == 1]
-                lines.append(self._operational_name(c))
-                if active:
-                    lines.append("Análisis detallado en marcha.")
-                if completed:
-                    lines.append(
-                        f"Observación Core completada a las "
-                        f"{clock(max(j[3] for j in completed))}.")
-                if c[1] in (1,2):
-                    lines += [self._equipment_dossier(c)]
-                else:
-                    reports=[r for r in self.state.get("science", []) if r[0] == c[0]]
-                    if reports:
-                        p=reports[-1]
-                        lines += ["", f"Clase planetaria: "
-                                  f"{PLANET_CLASSES.get(p[1], 'sin determinar')}",
-                                  f"Temperatura: {p[4]} K",
-                                  f"Presión: {p[5]} mbar",
-                                  f"Oxígeno: {p[8]/10:.1f}%"]
-                    else:
-                        lines.append("Sin informe científico adicional.")
-                lines += ["", "Informe disponible en el archivo de CoreRPG."]
+        selected = self.contacts_table.selection()
+        c = self.contact_map.get(selected[0]) if selected else None
+        if c:
+            title = self._operational_name(c)
+            if c[1] == 13:
+                r = next((r for r in self.state.get("science", []) if r[0] == c[0]), None)
+                if r and r[1]:
+                    title += " · clase " + PLANET_CLASSES.get(r[1], "sin determinar")
+                    if r[3]: title += " (provisional)"
+            text = title + "\n\n" + ("Señal actual" if c[2] == 1 else "Última observación · señal perdida")
+            text += "\nSímbolo de posición medido. Imagen del objeto aún no validada."
         else:
-            lines.append("Revisa el estado de los equipos en el panel derecho.")
-        text="\n".join(lines)
-        if self.main_text.get("1.0", "end-1c") == text:
-            return
-        pos=self.main_text.yview()[0]
-        self.main_text.configure(state="normal")
-        self.main_text.delete("1.0", "end")
-        self.main_text.insert("1.0", text)
-        self.main_text.tag_add("heading", "1.0", "1.end")
-        for match in ("ATENCIÓN:", "PARTE PREPARADO PARA EL OFICIAL"):
-            found=self.main_text.search(match, "2.0", "end")
-            if found:
-                self.main_text.tag_add("priority", found,
-                                       f"{found}+{len(match)}c")
-        self.main_text.configure(state="disabled")
-        self.main_text.yview_moveto(pos)
+            counts = Counter(c[1] for c in self.state["contacts"] if c[2] == 1)
+            text = ("SISTEMA ASTER\n\nEntorno de pruebas observado desde la Enterprise-D. "
+                    f"{counts[12]} estrella · {counts[13]} planetas · {counts[14]} lunas.\n"
+                    "Selecciona un cuerpo en el mapa o en la lista para explorarlo.")
+        self._write_text(self.main_text, text)
 
-    def report_contact_to_officer(self) -> None:
-        selected=self.contacts_table.selection()
-        if not selected or selected[0] not in self.contact_map:
-            messagebox.showinfo("Sensores", "Selecciona un contacto.", parent=self.root)
-            return
-        cid=selected[0]
-        contact=self.contact_map[cid]
-        if cid in self.shared_report_ids:
-            return
-        try:
-            message=self._report_script(contact)
-            response=self.command(f"REPORT {contact[0]}")
-            self.apply(response)
-            if cid in self.shared_report_ids:
-                self.append(response["tick"],
-                            "Parte al oficial registrado en la simulación: " + message)
-                self._update_main_content()
-        except Exception as exc:
-            messagebox.showwarning(
-                "Sensores", f"No se pudo comunicar el contacto: {exc}",
-                parent=self.root)
+    def report_contact_to_officer(self):
+        self.transfer_contact("REPORT")
 
     def send_analysis_to_tactical(self) -> None:
         self.transfer_contact("TACTICAL_SEND")
 
-    def transfer_contact(self, command: str) -> None:
+    def transfer_contact(self, command):
         selected = self.contacts_table.selection()
-        if not selected or selected[0] not in self.contact_map:
-            return
-        contact = self.contact_map[selected[0]]
+        if not selected or selected[0] not in self.contact_map: return
+        c = self.contact_map[selected[0]]
+        recipient = {"REPORT": 1, "TACTICAL_SEND": 2, "SCIENCE_SEND": 3}[command]
         try:
-            response = self.command(f"{command} {contact[0]}")
+            response = self.command(f"{command} {c[0]}")
+            receipts = [d for d in response["deliveries"] if d[1] == c[0] and d[4] == recipient and d[5] == 1]
+            if not receipts: raise RuntimeError("La cola no ha confirmado la entrega.")
             self.apply(response)
-            recipient = 2 if command == "TACTICAL_SEND" else 3
-            receipt = next(d for d in response["deliveries"]
-                           if d[1] == contact[0] and d[4] == recipient)
-            if recipient == 2:
-                self.tactical_qa_ids.add(str(contact[0]))
-            self.append(response["tick"],
-                        f"Entrega a cola QA confirmada · recibo {receipt[0]} · "
-                        f"observación {receipt[2]}. Consumidor final pendiente.")
+            self.append(response["tick"], {1: "Informe enviado al capitán · cola QA.",
+                        2: "Datos transferidos a Táctica · cola QA.",
+                        3: "Datos transferidos a Ciencia · cola QA."}[recipient])
         except Exception as exc:
             messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
-    def _equipment_dossier(self, contact: list) -> str:
-        readings = [e for e in self.state.get("equipment", [])
-                    if e["contact"] == contact[0]]
-        if not readings:
-            return "\nARMAMENTO Y DEFENSAS\nSin medición física disponible.\n"
+    def _equipment_dossier(self, contact):
+        readings = [e for e in self.state.get("equipment", []) if e["contact"] == contact[0]]
+        if not readings: return "Sin medición de sistemas disponible."
         e = readings[-1]
-        text = ("\nARMAMENTO Y DEFENSAS\n"
-                f"Lectura Core F06 · {clock(e['tick'])} · "
-                f"confianza {e['confidence']/10:.1f}%\n")
-        text += (f"Estructura observada: {e['length_m']} m\n" if e['length_m']
-                 else "Dimensiones: sin medición suficiente.\n")
-        text += (f"Referencia: catálogo QA v{e['catalog']} · cifras ficticias/no canónicas\n"
-                 if e['catalog'] else "Referencia de clase: no disponible\n")
-        for k, (count, state, expected, comparison) in enumerate(e['slots']):
-            reference = str(expected) if e['catalog'] else "sin referencia"
-            if not e['mask'] & (1 << k):
-                text += f"GRIS · {EQUIPMENT_SLOTS[k]}: no observable; catálogo {reference}\n"
+        lines = ["SISTEMAS OBSERVADOS"]
+        if e["length_m"]: lines.append(f"Eslora medida: {e['length_m']} m")
+        for k, (count, condition, expected, comparison) in enumerate(e["slots"]):
+            if not e["mask"] & (1 << k):
+                lines.append(f"GRIS · {EQUIPMENT_SLOTS[k]}: no observable")
             else:
-                condition = ("no disponible", "en reposo", "energizado", "emisión ofensiva activa")[state]
-                text += (f"{COMPARISONS[comparison]} · {EQUIPMENT_SLOTS[k]}: "
-                         f"{count} detectados ({condition}); catálogo {reference}\n")
-        text += "Verde indica coincidencia, no ausencia de peligro.\n"
-        receipts = [d for d in self.state.get("deliveries", []) if d[1] == contact[0]]
-        for receipt in receipts:
-            target = {1: "Superior", 2: "Táctica QA", 3: "Ciencia QA"}[receipt[4]]
-            text += f"Entrega {target}: recibo {receipt[0]} · observación {receipt[2]}\n"
-        return text
+                status = ("ausente", "en reposo", "energizado", "emisión ofensiva activa")[condition]
+                ref = f"; catálogo {expected}" if e["catalog"] else "; sin referencia de clase"
+                lines.append(f"{COMPARISONS[comparison]} · {EQUIPMENT_SLOTS[k]}: {count} detectados ({status}){ref}")
+        if e["catalog"]: lines.append("Referencia QA ficticia/no canónica. Coincidencia no implica seguridad.")
+        return "\n".join(lines)
 
-    def _no_selection_dossier(self) -> str:
-        state = self.state
-        if not state:
-            return "INFORMACIÓN\n\nEsperando datos del sistema."
+    def _no_selection_dossier(self):
         if self.current_view == "configuration":
-            diagnostic = state.get("diagnostic", [0, 0, 0, 0])
-            status = {1: "Nominal", 2: "Degradado", 3: "Sin servicio",
-                      4: "Revisar configuración"}.get(diagnostic[0], "No disponible")
-            return (
-                "EQUIPO DE SENSORES\nPerfil individual Enterprise-D / Galaxy, Proyecto Valhalla.\nBanco QA F04: casco sintético Miranda.\n\n"
-                f"Estado: {status}\n"
-                f"Potencia: {diagnostic[2] / 10:.1f}%\n"
-                f"Integridad: {diagnostic[3] / 10:.1f}%\n"
-                f"Capacidad: {diagnostic[1] / 10:.1f}%\n"
-                f"Interferencia EM: {state.get('interference_em', 0)}/550\n\n"
-                "Elige un perfil o ejecuta un autodiagnóstico."
-            )
+            d = self.state.get("diagnostic", [0, 0, 0, 0])
+            return ("EQUIPO DE SENSORES\n\nPerfil Galaxy modernizada · Proyecto Valhalla.\n"
+                    f"Capacidad: {d[1]/10:.1f}% · potencia: {d[2]/10:.1f}% · integridad: {d[3]/10:.1f}%")
+        if self.current_view == "tracking":
+            return "SEGUIMIENTO\n\nMarca un objetivo con Seguir. La vigilancia pasiva del resto continúa."
         if self.current_view == "results":
-            jobs = state.get("scans", [])
-            return (
-                "ESTUDIOS\n\n"
-                f"En curso: {sum(j[5] == 1 for j in jobs)}\n"
-                f"Terminados: {sum(j[5] == 2 for j in jobs)}\n"
-                f"Informes planetarios: {len(state.get('science', []))}\n\n"
-                "Selecciona un objeto para consultar sus resultados."
-            )
-        return (
-            "SISTEMA ASTER\n\n"
-            "Selecciona un elemento de la lista para ver lo que "
-            "los sensores saben de él.\n\n"
-            "Despliega las categorías que quieras consultar. "
-            "La computadora continúa vigilando en automático."
-        )
+            return "ANÁLISIS\n\nElige Analizar sobre un contacto para consultar conocimiento adicional verificable."
+        environment = self.state.get("environment", [])
+        lines = ["ENTORNO OBSERVADO", "", "Sensores sin servicio." if self.state.get("offline") else "Vigilancia automática activa."]
+        if environment:
+            names = ("Electromagnetismo", "Banda térmica", "Gravimetría", "Subespacio", "Banda biológica")
+            detected = [f"{name}: perturbación medida ({value/10:.1f}%)." for name, value in zip(names, environment) if value]
+            lines += detected or ["Sin perturbaciones medidas en las bandas ambientales supervisadas."]
+        else: lines.append("Lecturas ambientales aún no disponibles.")
+        if any(c[1] == 17 and c[2] == 1 for c in self.state.get("contacts", [])):
+            lines.append("Cinturón de asteroides observado en el mapa.")
+        return "\n".join(lines)
 
-    def show_selected(self) -> None:
+    def show_selected(self):
         selection = self.contacts_table.selection()
         c = self.contact_map.get(selection[0]) if selection else None
-        details = self._no_selection_dossier()
+        self.equipment_brief.pack_forget()
         self.technical_details = ""
-        readings = [e for e in self.state.get("equipment", [])
-                    if c is not None and e["contact"] == c[0]]
-        if readings:
-            e = readings[-1]
-            self.equipment_brief.configure(text=(
-                f"LECTURA F06 · {clock(e['tick'])} · {e['confidence']/10:.1f}%"
-                if c[2] == 1 else f"HISTÓRICO · CONTACTO PERDIDO · {clock(e['tick'])}"))
-            def count(k: int) -> str:
-                if not e["mask"] & (1<<k):
-                    return "sin observar"
-                value, state, expected, comparison = e["slots"][k]
-                reference = str(expected) if e["catalog"] else "?"
-                return f"{value} (cat. {reference}) · {COMPARISONS[comparison]}"
-            self.equipment_brief_lines[0].configure(text=f"Emisores: {count(0)} · Lanzadores: {count(1)}")
-            self.equipment_brief_lines[1].configure(text=f"Escudos: {count(2)} · Blindaje: {count(3)}")
-            self.equipment_brief_lines[2].configure(text=f"Warp: {count(4)} · Impulso: {count(5)}")
-            self.equipment_brief_lines[3].configure(text=f"{e['length_m']} m · Catálogo QA ficticio/no canónico" if e['catalog']
-                                                   else f"{e['length_m']} m · Clase no determinada; sin referencia")
-            colors = ("#626262", "#19652a", "#945200", "#b42318")
-            for label, indices in zip(self.equipment_brief_lines, ((0,1),(2,3),(4,5),())):
-                severity = max((e['slots'][k][3] for k in indices),default=0)
-                label.configure(foreground=colors[severity])
-            if not self.equipment_brief.winfo_manager():
-                self.equipment_brief.pack(fill="x", pady=(0,5), before=self.detail_box)
-        else:
-            self.equipment_brief.pack_forget()
-        if c is not None:
-            name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
-            typ = TYPES.get(c[1], "Señal desconocida")
-            klass_name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1, 2) else None
-            heading = (
-                f"{'LANZADERA' if c[1] == 2 else 'NAVE'} · CLASE {klass_name.upper()}"
-                if klass_name else
-                "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
-            if c[1] in (1, 2):
-                klass = STARSHIP_CLASSES.get(c[3])
-                description = STARSHIP_DESIGNS.get(c[3], ("Clase de nave no catalogada",))[0]
-                heading = (
-                    f"{description.upper()} · {klass.upper()}"
-                    if klass else "NAVE · IDENTIFICACIÓN PENDIENTE"
-                )
-                nav = next(
-                    (row for row in self.state.get("navigation", [])
-                     if row[0] == c[0]), None)
-                details = f"{heading}\n\n"
-                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
-                if nav and c[2] == 1:
-                    _, measured_at, direction, tendency, intercept, closest = nav[:6]
-                    age = max(0, self.state["tick"] - measured_at)
-                    if age <= 300:
-                        tendency_es = {1: "Se acerca", 2: "Se aleja",
-                                       0: "Sin variación apreciable"}
-                        details += (
-                            f"Rumbo de desplazamiento: {direction:03d}° (estimado)\n"
-                            f"Movimiento: {tendency_es.get(tendency, 'Sin determinar')}\n"
-                        )
-                        if intercept:
-                            details += (
-                                "\n¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!\n"
-                                "La trayectoria observada apunta hacia nuestra posición.\n"
-                            )
-                    else:
-                        details += "Trayectoria: esperando actualización de sensores.\n"
-                else:
-                    details += "Rumbo y movimiento: calculando trayectoria…\n"
-                details += (f"Transpondedor declarado: {c[6]}\n" if c[6]
-                            else "Transpondedor: sin señal\n")
-                details += "Afiliación actual: sin acreditar\n"
-                details += self._equipment_dossier(c)
+        details = self._no_selection_dossier()
+        if c:
+            active = c[2] == 1
+            historical = "" if active else "ÚLTIMA LECTURA · SEÑAL PERDIDA\n" + LOSS_CAUSES.get(c[7], "Causa no determinada") + "\n\n"
+            if self.current_view == "results":
+                details = self._deep_dossier(c)
+            elif self.current_view == "tracking":
+                details = self._tracking_dossier(c)
             else:
-                details = f"{heading}\n\n"
-                details += f"Distancia: {c[5] / 1000:.3f} UA\n"
-            if c[2] == 2:
-                details += ("\nSEÑAL PERDIDA\n"
-                            + LOSS_CAUSES.get(c[7], "Causa desconocida") + "\n")
-            reports = [r for r in self.state.get("science", []) if r[0] == c[0]]
-            if reports:
-                r = reports[-1]
-                bio = {0: "Sin estudiar", 1: "No detectadas", 2: "Posibles",
-                       3: "Corroboradas"}.get(r[10], "No determinado")
-                details += (
-                    "\nDATOS PLANETARIOS\n"
-                    f"Clase: {PLANET_CLASSES.get(r[1], '?')}"
-                    f"{' · provisional' if r[3] else ''}\n"
-                    f"Temperatura: {r[4]} K\n"
-                    f"Presión: {r[5]} mbar\n"
-                    f"Agua superficial: {r[6] / 10:.0f}%\n"
-                    f"Oxígeno: {r[8] / 10:.1f}%\n"
-                    f"Biosignales: {bio}\n"
-                )
-                if r[8] < 100 or r[5] < 300:
-                    details += "\nAVISO: atmósfera no respirable sin asistencia.\n"
-                else:
-                    details += "\nRespirabilidad: no confirmada.\n"
-                self.technical_details += (
-                    "INFORME CIENTÍFICO CORE\n"
-                    f"Confianza informe: {r[2] / 10:.1f}%\n"
-                    f"Nitrógeno: {r[7] / 10:.1f}%\n"
-                    f"CO₂: {r[9] / 10:.1f}%\n"
-                    "Habitantes y civilización: sin determinar.\n\n"
-                )
-            elif c[1] == 13:
-                details += "\nDATOS PLANETARIOS\nTodavía sin informe científico.\n"
-            elif c[1] == 12:
-                details += "\nTipo espectral: no determinado.\n"
-            jobs = [j for j in self.state.get("scans", []) if j[1] == c[0]]
-            active = [j for j in jobs if j[5] == 1]
-            complete = [j for j in jobs if j[5] == 2]
-            # Routine job counts are backend metadata, never part of the
-            # operator's naval or astronomical decision panel.
-            if jobs and self.current_view == "results" and c[1] not in (1, 2):
-                details += "\nESTUDIOS\n"
-                if active:
-                    details += f"En curso: {len(active)}\n"
-                if complete:
-                    details += (f"Terminados: {len(complete)}\n"
-                                f"Último: {clock(complete[-1][3])}\n")
-            comparison = next(
-                (row for row in self.state.get("comparisons", [])
-                 if row[0] == c[0]), None)
-            if comparison and c[1] not in (1, 2):
-                _, count, old_tick, new_tick, dc, dd, changed = comparison
-                details += (
-                    "\nARCHIVO DE SENSORES · COMPARACIÓN\n"
-                    f"Comparadas: {clock(old_tick)} y {clock(new_tick)}\n"
-                    f"Variación de distancia: {dd / 1000:+.3f} UA\n"
-                    f"Clasificación: {'Ha cambiado' if changed else 'Sin cambios confirmados'}\n"
-                )
-            if str(c[0]) in self.alert_ids:
-                details += "\nREQUIERE ATENCIÓN DEL OFICIAL\n"
-            self.technical_details += self._contact_description(c) + "\n"
-            for j in jobs:
-                self.technical_details += (
-                    f"\nEstudio {j[0]}: inicio {clock(j[2])}; "
-                    f"fin previsto {clock(j[3])}; estado {j[5]}; "
-                    f"resultado Core {j[4]}."
-                )
-
-        if c is not None and self.technical_expanded:
-            az, elev = self._bearing(c)
-            details += (
-                "\nLECTURAS COMPLEMENTARIAS\n"
-                f"Azimut en marco de sensores: {az:03d}°\n"
-                f"Elevación en marco de sensores: {elev:+d}°\n"
-            )
-            motion = self._navigation_data(c)
-            if motion and len(motion) > 6:
-                details += (
-                    f"Desplazamiento relativo: {motion[6]/1000000:.6f} UA/s\n"
-                    f"Variación radial: {motion[7]/1000000:+.6f} UA/s\n"
-                )
-            else:
-                details += "Velocidad relativa: sin segunda observación válida.\n"
-        # Leave the dossier scroll where the officer placed it. Its text
-        # may change as Core publishes new readings, but the 500-ms refresh
-        # must not forcibly jump to the first line.
-        old_details = self.detail_text.get("1.0", "end-1c")
-        if old_details != details:
-            y_before = self.detail_text.yview()[0]
-            self.detail_text.configure(state="normal")
-            self.detail_text.delete("1.0", "end")
-            self.detail_text.insert("1.0", details)
-            self.detail_text.tag_add("heading", "1.0", "1.end")
-            for section in ("CAPACIDADES CONOCIDAS DE LA CLASE",
-                            "DATOS PLANETARIOS",
-                            "ARCHIVO DE SENSORES · COMPARACIÓN", "ESTUDIOS",
-                            "SEÑAL PERDIDA", "REQUIERE ATENCIÓN DEL OFICIAL",
-                            "¡POSIBLE TRAYECTORIA DE INTERCEPTACIÓN!"):
-                start = self.detail_text.search(section, "2.0", "end")
-                if start:
-                    self.detail_text.tag_add(
-                        "section", start, f"{start}+{len(section)}c")
-            for label, color in (("VERDE", "#19652a"), ("ÁMBAR", "#945200"),
-                                 ("ROJO", "#b42318"), ("GRIS", "#626262")):
-                self.detail_text.tag_configure(label, foreground=color)
-                start = "1.0"
-                while found := self.detail_text.search(label + " ·", start, "end"):
-                    self.detail_text.tag_add(label, found, f"{found} lineend")
-                    start = f"{found}+1c"
-            self.detail_text.configure(state="disabled")
-            self.detail_text.yview_moveto(y_before)
-        if c is not None:
+                lines = ["LECTURAS DEL OBJETO", "", f"Distancia: {c[5]/1000:.3f} UA",
+                         f"Confianza de observación: {c[4]/10:.1f}%"]
+                if c[1] in (1, 2):
+                    design = STARSHIP_DESIGNS.get(c[3])
+                    if design: lines.append("Diseño: " + design[1])
+                    lines += ["Afiliación actual: sin acreditar.",
+                              "Transpondedor declarado: " + (str(c[6]) if c[6] else "sin señal"),
+                              "Nombre, matrícula, misión y tripulación: sin datos autorizados.", "", self._equipment_dossier(c)]
+                elif c[1] == 13:
+                    r = next((r for r in self.state.get("science", []) if r[0] == c[0]), None)
+                    if r:
+                        lines += ["", "CIENCIA PLANETARIA", f"Temperatura: {r[4]} K", f"Presión: {r[5]} mbar",
+                                  f"Agua superficial: {r[6]/10:.1f}%", f"Nitrógeno: {r[7]/10:.1f}%",
+                                  f"Oxígeno: {r[8]/10:.1f}%", f"CO₂: {r[9]/10:.1f}%",
+                                  "Biosignales: " + {0:"sin determinar",1:"no detectadas",2:"posibles",3:"corroboradas"}.get(r[10], "sin determinar"),
+                                  "Respirabilidad y civilización: sin confirmar."]
+                    else: lines += ["", "Sin medición científica suficiente para clasificar el planeta."]
+                elif c[1] == 12: lines += ["", "Espectro y composición estelar: no medidos por este contrato."]
+                else: lines += ["", "Composición y estructura interna: sin lecturas verificables."]
+                if self.technical_expanded:
+                    az, el = self._bearing(c)
+                    lines += ["", f"Azimut observado: {az:03d}° · elevación: {el:+d}°"]
+                details = "\n".join(lines)
+            details = historical + details
+        key = (self.current_view, str(c[0]) if c else None)
+        self._write_text(self.detail_text, details, reset=key != self.last_detail_key)
+        self.last_detail_key = key
+        for widget in (self.action_area, self.contact_report_button, self.voice_button,
+                       self.tactical_report_button, self.science_transfer_button,
+                       self.unfollow_button, self.technical_button): widget.pack_forget()
+        if c:
+            self.technical_button.pack(fill="x", pady=2)
             if c[2] == 1:
-                self.identify_button.configure(
-                    text="LECTURA")
-                if not self.action_area.winfo_manager():
-                    self.action_area.pack(fill="x", pady=(7, 4))
-            else:
-                self.action_area.pack_forget()
-            if not self.technical_button.winfo_manager():
-                self.technical_button.pack(fill="x", pady=4)
-            if c[2] == 1:
-                self.contact_report_button.configure(
-                    text=("CONTACTO COMUNICADO" if str(c[0]) in self.shared_report_ids
-                          else "COMUNICAR CONTACTO AL OFICIAL"),
-                    state=("disabled" if str(c[0]) in self.shared_report_ids else "normal"))
-                if not self.contact_report_button.winfo_manager():
-                    self.contact_report_button.pack(fill="x", pady=(5, 2))
-            else:
-                self.contact_report_button.pack_forget()
-            completed = any(
-                j[1] == c[0] and j[0] in self.operator_scan_ids and j[5] == 2
-                for j in self.state.get("scans", []))
-            if c[2] == 1 and any(e["contact"] == c[0] for e in self.state.get("equipment", [])):
-                if not self.tactical_report_button.winfo_manager():
-                    self.tactical_report_button.pack(fill="x", pady=(4, 2))
-                self.science_transfer_button.pack(fill="x", pady=(2, 2))
-            else:
-                self.tactical_report_button.pack_forget()
-                self.science_transfer_button.pack_forget()
-        else:
-            self.action_area.pack_forget()
-            self.technical_button.pack_forget()
-            self.contact_report_button.pack_forget()
-            self.tactical_report_button.pack_forget()
-            self.science_transfer_button.pack_forget()
-        self._update_scan_progress(c)
+                self.action_area.pack(fill="x", pady=(4, 2))
+                self.voice_button.pack(fill="x", pady=2)
+                self.contact_report_button.pack(fill="x", pady=2)
+                tracking = next((r[1] for r in self.state.get("tracking", []) if r[0] == c[0]), 0)
+                if tracking:
+                    self.follow_button.state(["disabled"])
+                    self.unfollow_button.pack(fill="x", pady=2)
+                else:
+                    self.follow_button.state(["!disabled"])
+                    if c[1] in (1,2): self.tactical_report_button.pack(fill="x", pady=2)
+                if c[1] == 13 or self.current_view == "results": self.science_transfer_button.pack(fill="x", pady=2)
+        self.scan_progress.pack_forget()
 
-    def _update_scan_progress(self, contact: list | None) -> None:
-        """Only operator-requested long scans get a progress indicator."""
-        if contact is None:
-            self.scan_progress.pack_forget()
-            return
-        jobs = [j for j in self.state.get("scans", [])
-                if j[1] == contact[0] and j[0] in self.operator_scan_ids]
-        if not jobs:
-            self.scan_progress.pack_forget()
-            return
-        job = max(jobs, key=lambda row: (row[2], row[0]))
-        duration = max(1, job[3] - job[2])
-        percent = min(100, max(0, round(
-            100 * (self.state["tick"] - job[2]) / duration)))
-        if job[5] == 2:
-            # A finished scan must not occupy the main operator display
-            # indefinitely. Keep the result archived, but hide the progress
-            # shortly after completion.
-            if self.state["tick"] - job[3] >= 5:
-                self.scan_progress.pack_forget()
-                return
-            percent = 100
-            label = "Análisis detallado · 100 % · lectura conservada"
-        elif job[5] == 1:
-            label = f"Análisis detallado · {percent} % · en curso"
-        else:
-            label = "Análisis interrumpido · sin resultado confirmado"
-            percent = 0
-        self.scan_progress_label.configure(text=label)
-        self.scan_progress_value["value"] = percent
-        if not self.scan_progress.winfo_manager():
-            self.scan_progress.pack(fill="x", pady=(3, 6))
+    def _update_scan_progress(self, contact):
+        self.scan_progress.pack_forget()
 
     def open_contact_details(self) -> None:
         """Reveal meaningful readings in the RIGHT pane, not debug popups."""
@@ -1522,59 +1337,25 @@ class Panel:
         except Exception as exc:
             messagebox.showwarning("Sensores", f"Autodiagnóstico no disponible: {exc}", parent=self.root)
 
-    def contact_action(self, action: str) -> None:
+    def contact_action(self, action):
         selected = self.contacts_table.selection()
-        if not selected:
-            messagebox.showinfo("Sensores", "Selecciona primero un contacto.", parent=self.root)
-            return
-        contact = self.contact_map[selected[0]]
-        if contact[2] != 1:
-            messagebox.showwarning("Sensores", "Ese contacto está perdido y no puede analizarse todavía.", parent=self.root)
-            return
+        if not selected or selected[0] not in self.contact_map: return
+        cid = selected[0]
         try:
-            old_jobs = {j[0] for j in self.state.get("scans", [])}
-            state = self.command(f"{action} {contact[0]}")
-            if action == "SCAN":
-                created = [j for j in state["scans"]
-                           if j[0] not in old_jobs and j[1] == contact[0]]
-                for job in created:
-                    self.manual_jobs[job[0]] = contact[0]
-                    self.operator_scan_ids.add(job[0])
-                if created:
-                    self.analyzed_ids.add(selected[0])
-            elif action == "PRIORITY":
-                self.followed_ids.add(selected[0])
+            state = self.command(f"{action} {cid}")
+            if action == "SCAN": self.analyzed_ids.add(cid)
+            elif action == "PRIORITY": self.followed_ids.add(cid)
+            elif action == "UNFOLLOW": self.followed_ids.discard(cid)
             self.apply(state)
-            if action == "SCAN" and created:
-                self.navigate("results")
-                self._choose_contact(selected[0])
-            elif action == "PRIORITY":
-                self.navigate("tracking")
-                self._choose_contact(selected[0])
-            reference = "C-" + selected[0][-6:]
-            if action == "FOCUS":
-                updated = self.contact_map.get(str(contact[0]), contact)
-                if updated[1] in (1, 2):
-                    klass = STARSHIP_CLASSES.get(updated[3])
-                    message = (
-                        f"Identificación rápida de {reference}: clase {klass}."
-                        if klass else
-                        f"Lectura rápida de {reference} terminada: clase sin confirmar. "
-                        "No hay firma suficiente para identificarla.")
-                else:
-                    message = (
-                        f"Análisis rápido de {reference}: "
-                        f"{TYPES.get(updated[1], 'señal')} observado. "
-                        "El expediente contiene los datos disponibles.")
-            elif action == "SCAN":
-                message = (
-                    f"Análisis detallado de {reference} iniciado. "
-                    "Progreso y resultados en el expediente del contacto.")
-            else:
-                message = f"Seguimiento prioritario establecido sobre {reference}."
-            self.append(state["tick"], message)
+            if action in ("SCAN", "PRIORITY"):
+                self.navigate("results" if action == "SCAN" else "tracking")
+                self._choose_contact(cid)
+            self.append(state["tick"], {"SCAN":"Análisis disponible; consulta los hallazgos y sus límites.",
+                        "PRIORITY":"Seguimiento activo. Datos compartidos automáticamente con Táctica · QA.",
+                        "UNFOLLOW":"Seguimiento finalizado; vigilancia pasiva activa.",
+                        "FOCUS":"Lectura actualizada."}[action])
         except Exception as exc:
-            messagebox.showwarning("Sensores", f"No ha sido posible: {exc}", parent=self.root)
+            messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
     def _choose_contact(self, cid: str) -> None:
         tree=self.contacts_table
@@ -1590,212 +1371,36 @@ class Panel:
         self._update_main_content()
         self._draw_map()
 
-    def apply(self, state: dict, reset: bool = False) -> None:
+    def apply(self, state, reset=False):
         previous = self.state
         self.state = state
         self.x1 = state.get("mode") == 4
         self.speed_selector.configure(values=("×1",) if self.x1 else ("×1", "×15", "×30", "×60"))
-        if self.x1:
-            self.speed.set("×1")
+        if self.x1: self.speed.set("×1")
         self.record.append(state)
         t = state["tick"]
-        readings = state.get("equipment", [])
-        if readings:
-            e = max(readings, key=lambda row: (row["tick"], readings.index(row)))
-            contact = next(c for c in state["contacts"] if c[0] == e["contact"])
-            slots = []
-            for k in (0,1,2):
-                value = e["slots"][k]
-                slots.append(f"{EQUIPMENT_SLOTS[k]}: {value[0]}" if e["mask"] & (1<<k)
-                             else f"{EQUIPMENT_SLOTS[k]}: no observable")
-            self.auto_brief.configure(text=(
-                "FICHA AUTOMÁTICA · " + contact_identification(contact) + "\n" +
-                " · ".join(slots) + f" · {e['length_m']} m · {clock(e['tick'])}"))
-        else:
-            self.auto_brief.configure(text="Vigilancia automática; sin nuevas mediciones navales.")
-        latest_ids = {e["contact"]: e["id"] for e in readings}
-        self.shared_report_ids = {
-            str(item[0]) for item in state.get("contact_briefs", []) if item[0] not in latest_ids}
-        self.shared_report_ids.update(str(d[1]) for d in state.get("deliveries", [])
-                                      if d[4] == 1 and latest_ids.get(d[1]) == d[2])
-        new_arrivals=[]
-        if not reset:
-            for event in state.get("events", []):
-                kind, cid, when, category, klass=event
-                if kind==1 and category in (1,2):
-                    key=str(cid)
-                    observed=next((c for c in state["contacts"]
-                                   if c[0]==cid and c[2]==1),None)
-                    if observed and key not in self.new_contact_ids:
-                        self.new_contact_ids.add(key)
-                        new_arrivals.append(key)
-        if new_arrivals and not self.x1:
-            self.navigate("contacts")
-            self._choose_contact(new_arrivals[-1])
-        self.progress["value"] = t
-        self.timelabel.configure(text=f"{'ASTER_X1' if self.x1 else 'Guardia'}: {clock(t)} / {clock(state.get('duration', 28800))}")
-        self.progress.configure(maximum=state.get("duration", 28800))
-        if state["offline"]:
-            status = "Sensores fuera de servicio · vigilancia degradada"
-        else:
-            status = f"Vigilancia activa · {state['active']} contactos"
-        self.summary.configure(text=status)
-        # Dynamic course and interception warnings come from consecutive
-        # observed positions in the native Core sensor projection.
+        self.followed_ids.update(str(r[0]) for r in state.get("tracking", []) if r[1])
+        self.new_contact_ids.update(str(c[0]) for c in state["contacts"])
+        latest = {e["contact"]: e["id"] for e in state.get("equipment", [])}
+        self.shared_report_ids = {str(d[1]) for d in state.get("deliveries", [])
+                                  if d[4] == 1 and latest.get(d[1]) == d[2]}
+        self.tactical_qa_ids = {str(d[1]) for d in state.get("deliveries", []) if d[4] == 2 and d[5] == 1}
+        self.progress.configure(value=t, maximum=state.get("duration", 28800))
+        self.timelabel.configure(text=f"{clock(t)} / {clock(state.get('duration', 28800))}")
+        self.summary.configure(text="Sensores sin servicio" if state.get("offline") else "Vigilancia automática activa")
         self._refresh_contacts(state)
-        for evt in state.get("navigation_alerts", []):
-            kind, cid, when, heading, trend, intercept = evt
-            key = (kind, cid, when)
-            if key in self.nav_events_seen:
-                continue
-            self.nav_events_seen.add(key)
-            contact = self.contact_map.get(str(cid))
-            if not contact:
-                continue
-            klass = STARSHIP_CLASSES.get(contact[3], "nave")
-            if kind == 2:
-                msg = (f"ALERTA DE SENSORES: {klass}, posible rumbo de "
-                       f"interceptación ({heading:03d}°). Informar a Táctica.")
-                self.nav_priority = evt
-            elif kind == 1:
-                msg = (f"Maniobra detectada: {klass} cambia de rumbo a "
-                       f"{heading:03d}°. "
-                       + ("Se aproxima." if trend == 1 else
-                          "Se aleja." if trend == 2 else
-                          "Trayectoria lateral."))
-                self.nav_priority = evt
-            elif kind == 3:
-                msg = f"Seguimiento: {klass} se aproxima. Rumbo {heading:03d}°."
-            else:
-                msg = f"Seguimiento: {klass} se aleja. Rumbo {heading:03d}°."
-            self.append(when, msg)
-        self._update_alert(state)
         self._update_view_content()
         if reset:
-            visible = [c for c in state["contacts"] if c[2] == 1]
-            counts = Counter(c[1] for c in visible)
-            def amount(key: int, singular: str, plural: str) -> str:
-                n = counts.get(key, 0)
-                return f"{n} {singular if n == 1 else plural}"
-            summary = ", ".join([
-                amount(12, "estrella", "estrellas"),
-                amount(13, "planeta", "planetas"),
-                amount(14, "luna", "lunas"),
-                amount(15, "nebulosa", "nebulosas"),
-                amount(16, "estación", "estaciones"),
-                amount(1, "nave", "naves"),
-                amount(2, "lanzadera", "lanzaderas"),
-                amount(3, "sonda", "sondas"),
-            ])
-            self.append(t, "Barrido panorámico: " + summary + ".")
-            classes = Counter(
-                r[1] for r in state["science"] if r[1] and r[3]
-            )
-            if classes:
-                found = ", ".join(
-                    f"{n} clase {PLANET_CLASSES.get(cls, '?')} provisional"
-                    for cls, n in sorted(classes.items())
-                )
-                self.append(t, "Informe científico inicial autorizado: " + found + ".")
-            interesting = [r for r in state["science"] if r[10] >= 2 and r[2] >= 650]
-            for report in interesting:
-                designation = self.designations.get(report[0], "contacto " + str(report[0])[-6:])
-                self.append(t, f"Atención científica: indicios de biosignales en {designation}. "
-                            "Vida inteligente y civilización NO determinadas.")
-            for report in state["science"]:
-                if report[1] == 1 and report[8] < 100:
-                    designation = self.designations.get(report[0], "contacto " + str(report[0])[-6:])
-                    self.append(t, f"Precaución: {designation} presenta clasificación M provisional, "
-                                "pero el oxígeno medido no permite asumir una atmósfera respirable.")
-            unidentified = sum(1 for c in visible if c[1] == 1 and c[3] == 0)
-            if unidentified:
-                self.append(t, f"{unidentified} contacto(s) navales sin clase confirmada. "
-                            "El operador puede consultarlos o priorizarlos.")
-            self.append(t, "Vigilancia automática establecida. Los análisis rutinarios quedan en segundo plano.")
-        if previous and previous.get("interference_em", 0) != state.get("interference_em", 0):
-            level = state["interference_em"]
-            self.append(t, (
-                f"Interferencias electromagnéticas detectadas (índice {level}/550). "
-                "La detección puede estar degradada." if level else
-                "Interferencias electromagnéticas remitidas. Sensores recuperando contactos."
-            ))
-        if previous and previous.get("offline", 0) != state["offline"]:
-            self.append(t, "Avería: sensores sin servicio." if state["offline"] else
-                        "Sensores nuevamente operativos.")
-        background_losses: Counter = Counter()
-        background_reacquired: Counter = Counter()
-        for kind, contact_id, when, category, klass in state["events"]:
-            if not self.x1 and not reset and when > 0 and kind == 1 and category in (1, 2):
-                candidate = str(contact_id)
-                observed = self.contact_map.get(candidate)
-                if (observed and observed[2] == 1 and
-                        candidate not in self.acknowledged_arrivals):
-                    self.arrival_id = candidate
-                    if not self.slowed_for_alert:
-                        self.speed_before_alert = self.speed.get()
-                    self.slowed_for_alert = True
-                    self.speed.set("×1")
-                    self.sim_half_seconds = 0
-                    self.restore_speed_button.configure(
-                        text=f"Volver a {self.speed_before_alert}")
-                    if not self.restore_speed_button.winfo_manager():
-                        self.restore_speed_button.pack(
-                            side="left", padx=(12, 0))
-            contact = self.contact_map.get(str(contact_id))
-            ident = contact_identification(contact) if contact else TYPES.get(category, "señal")
-            short_ref = "C-" + str(contact_id)[-6:]
-            if reset and kind in (1, 4):
-                continue  # the initial panoramic briefing already covers these
-            if kind == 1 and category in (12, 13, 14, 15, 17):
-                continue  # normal astronomical detections are inventory, not alarms
-            if kind == 1:
-                label = TYPES.get(category, "señal de naturaleza desconocida")
-                msg = f"Nuevo contacto {short_ref}: {label}. Identificación bajo vigilancia."
-            elif kind == 2:
-                if category in (12, 13, 14, 15, 17) and state.get("interference_em", 0):
-                    background_losses[when] += 1
-                    continue
-                cause = LOSS_CAUSES.get(contact[7], "causa no determinada") if contact else "causa no determinada"
-                if cause == "causa no determinada" and state.get("interference_em", 0):
-                    cause = "interferencias presentes; relación causal no confirmada"
-                msg = f"Se pierde el contacto {short_ref} ({ident}). Causa: {cause}."
-            elif kind == 3:
-                if category in (12, 13, 14, 15, 17):
-                    background_reacquired[when] += 1
-                    continue
-                msg = f"Contacto recuperado {short_ref}: {ident}."
-            elif kind == 4:
-                if not klass:
-                    continue
-                msg = f"Identificación: contacto {short_ref}, {ident}."
-            elif kind in (5, 6):
-                continue  # automatic routine operations are recorded only in Core
-            elif kind == 7:
-                if category in (12, 13, 14, 15, 17):
-                    continue
-                msg = f"No ha sido posible completar el análisis de {short_ref}. Consultar expediente."
-            else:
-                continue
-            self.append(when, msg)
-        for when, count in sorted(background_losses.items()):
-            self.append(when, f"Vigilancia astronómica degradada: {count} señales temporalmente no detectables. "
-                        "Revisar condiciones de los sensores.")
-        for when, count in sorted(background_reacquired.items()):
-            self.append(when, f"Vigilancia astronómica restablecida: {count} señales recuperadas.")
-
-        for job in state.get("scans", []):
-            if job[0] not in self.manual_jobs or job[5] == 1:
-                continue
-            target = self.manual_jobs.pop(job[0])
-            result = {2: "completado y registrado", 3: "fallido",
-                      4: "cancelado"}.get(job[5], "estado desconocido")
-            self.append(t, f"Estudio solicitado de C-{str(target)[-6:]}: {result}.")
+            self.append(t, "Sistema Aster observado. Vigilancia automática activa.")
+        if previous and previous.get("offline") != state.get("offline"):
+            self.append(t, "Sensores sin servicio; lecturas conservadas como histórico." if state.get("offline")
+                        else "Sensores recuperados. Vigilancia automática restablecida.")
         self._update_alert(state)
         self._record_latency(state)
         if t >= state.get("duration", 28800):
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
-            self.append(t, "Guardia finalizada. Exporta el informe cuando quieras.")
+            if previous.get("tick", -1) < t: self.append(t, "Guardia finalizada. Informe disponible para exportar.")
 
     def restore_watch_speed(self) -> None:
         """A new ship slows the clock, but the operator chooses when to accelerate."""
@@ -1827,12 +1432,6 @@ class Panel:
                 self.telemetry.parent.mkdir(parents=True, exist_ok=True)
                 with self.telemetry.open("a", encoding="utf-8") as log:
                     log.write(json.dumps(record) + "\n")
-        for e in state.get("equipment", []):
-            if e["id"] in self.equipment_seen:
-                continue
-            self.equipment_seen.add(e["id"])
-            if any(slot[3] in (2,3) for slot in e["slots"]):
-                self.append(state["tick"], "Equipamiento anómalo o emisión ofensiva observada; consulta la ficha.")
 
     def tick(self) -> None:
         now = time.monotonic()
@@ -1852,7 +1451,7 @@ class Panel:
         elif self.x1:
             # Pausing shifts the real-time origin; it never fabricates an SLA.
             self.wall_origin += elapsed
-        self.root.after(500, self.tick)
+        self.tick_after = self.root.after(500, self.tick)
 
     def toggle(self) -> None:
         if self.state.get("tick", 0) >= self.state.get("duration", 28800):
@@ -1899,6 +1498,12 @@ class Panel:
         self.saved_lines = None
         self.saved_notes = ""
         self.state = {}
+        self.interrupted = None
+        self.seen_incidents.clear()
+        self.incident_started.clear()
+        self.active_alert = None
+        self.resume_button.pack_forget()
+        self.navigate("status")
         self.notice_label.configure(text="Vigilancia automática activada.")
         try:
             self.apply(self.command(f"RESTART {MODES.index(self.mode.get())}"), reset=True)
@@ -1907,78 +1512,29 @@ class Panel:
         except Exception as exc:
             messagebox.showerror("Prueba F06", str(exc), parent=self.root)
 
-    def disk_checkpoint(self, restore: bool) -> None:
-        if not self.x1:
-            messagebox.showinfo("Sensores", "Guardado en disco disponible en ASTER_X1.", parent=self.root)
-            return
+    def disk_checkpoint(self, restore):
+        if not self.x1: return
         self.playing = False
         self.button_play.configure(text="Reanudar")
         chooser = filedialog.askopenfilename if restore else filedialog.asksaveasfilename
-        path = chooser(parent=self.root, defaultextension=".aster",
-                       filetypes=[("Guardia ASTER_X1", "*.aster")])
-        if not path:
-            return
+        path = chooser(parent=self.root, defaultextension=".aster", filetypes=[("Guardia ASTER_X1", "*.aster")])
+        if not path: return
         try:
-            state = self.command(f"{'LOADFILE' if restore else 'SAVEFILE'} {path}")
-            if restore:
-                self.state = {}
-                self.equipment_seen = {e["id"] for e in state.get("equipment", [])}
-                self.new_contact_ids = {str(c[0]) for c in state["contacts"]}
-                self.followed_ids.clear()
-                self.analyzed_ids.clear()
-                self.manual_jobs.clear()
-                self.operator_scan_ids.clear()
-            self.apply(state)
-            self.last_wall = time.monotonic()
-            self.wall_origin = self.last_wall-state["tick"]
-            self.elapsed_fraction = 0.0
-            self.append(state["tick"], "Guardia restaurada desde Core." if restore else "Guardia Core guardada en disco.")
+            self.checkpoint_file(Path(path), restore)
         except Exception as exc:
             messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
-    def checkpoint(self, op: str) -> None:
+    def checkpoint(self, op):
         self.playing = False
         self.button_play.configure(state="normal", text="Reanudar")
         try:
             if op == "SAVE":
-                state = self.command(op)
-                self.saved_lines = list(self.lines)
-                self.saved_manual_jobs = dict(self.manual_jobs)
-                self.saved_operator_scan_ids = set(self.operator_scan_ids)
-                self.saved_operator_views = {
-                    "new": set(self.new_contact_ids),
-                    "followed": set(self.followed_ids),
-                    "analysed": set(self.analyzed_ids),
-                    "tactical": set(self.tactical_qa_ids),
-                }
-                self.saved_notes = self.notes.get("1.0", "end").strip()
-                self.apply(state)
-                self.append(state["tick"], "Bitácora y estado de guardia conservados.")
-            else:
-                if self.saved_lines is None:
-                    messagebox.showinfo("Sensores", "Todavía no hay ningún punto guardado.", parent=self.root)
-                    return
-                state = self.command(op)
-                self.lines = list(self.saved_lines)
-                self.manual_jobs = dict(self.saved_manual_jobs)
-                self.operator_scan_ids = set(self.saved_operator_scan_ids)
-                self.new_contact_ids = set(self.saved_operator_views.get("new", set()))
-                self.followed_ids = set(self.saved_operator_views.get("followed", set()))
-                self.analyzed_ids = set(self.saved_operator_views.get("analysed", set()))
-                self.tactical_qa_ids = set(self.saved_operator_views.get("tactical", set()))
-                self.record.clear()
-                self.equipment_seen = {e["id"] for e in state.get("equipment", [])}
-                self.last_wall = time.monotonic()
-                self.wall_origin = self.last_wall-state["tick"]
-                self.elapsed_fraction = 0.0
-                self.state = {}  # loading must not create a false state-transition alarm
-                self.arrival_id = None
-                self.alert_ids = []
-                self.notice_label.configure(text=self.lines[-1] if self.lines else "")
-                self.notes.delete("1.0", "end")
-                self.notes.insert("1.0", self.saved_notes)
-                self.apply(state)
-                self.append(state["tick"], "Guardia recuperada desde el estado persistido en CoreRPG.")
+                self.saved_ui = self._ui_snapshot()
+                self.apply(self.command("SAVE"))
+            elif self.saved_ui is not None:
+                self._restore_ui(self.command("LOAD"), self.saved_ui)
+            else: return
+            self.append(self.state["tick"], "Guardia y contexto conservados." if op == "SAVE" else "Guardia y estudio recuperados.")
         except Exception as exc:
             messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
@@ -2025,6 +1581,7 @@ class Panel:
 
     def close(self) -> None:
         self.playing = False
+        self.root.after_cancel(self.tick_after)
         try:
             self.process.terminate()
             self.process.wait(timeout=2)

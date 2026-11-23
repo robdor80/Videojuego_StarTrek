@@ -64,8 +64,10 @@ F06EquipmentView f06_equipment_view(const WorldState& w,U id) {
  return v;
 }
 F06DeliveryView f06_delivery_view(const WorldState& w,U id) {
+ const U target=ref(w,id,TARGET);
  return {val(w,id,F06_D_PUBLIC),val(w,ref(w,id,F06_CONTACT_REF),F06_PUBLIC_ID),
-  val(w,ref(w,id,TARGET),F06_E_PUBLIC),val(w,id,F06_D_TICK),
+  val(w,target,type(w,target,"f06_equipment")?F06_E_PUBLIC:
+   type(w,target,"f06_observation")?F06_O_PUBLIC:F06_SCI_PUBLIC),val(w,id,F06_D_TICK),
   static_cast<uint32_t>(val(w,id,F06_D_RECIPIENT)),1};
 }
 }
@@ -142,6 +144,88 @@ uint32_t f06_deliveries_page(F04Session* s,F04Ref who,U offset,F06DeliveryView* 
   need(observer(s,who),F04_DENIED);
   for(U id:all(s->c->world,"f06_delivery"))
    if((*total)++>=offset && *written<capacity)out[(*written)++]=f06_delivery_view(s->c->world,id);
+  return F04_OK;
+ });
+}
+
+uint32_t f06_deliver_evidence(F04Session* s,F04Ref who,const F06EvidenceDeliveryRequest* req,F06DeliveryView* out) {
+ if(!req || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);(void)scan_station(*s->c,who.id);
+  need(req->request_key && req->request_key<=FOREVER && req->source_id &&
+   req->recipient>=1 && req->recipient<=3 && req->kind>=1 && req->kind<=3,F04_ARGUMENT);
+  const auto& w=s->c->world;U source=0;
+  if(req->kind==1){for(U id:all(w,"f06_equipment"))if(val(w,id,F06_E_PUBLIC)==req->source_id)source=id;}
+  else if(req->kind==2)source=f06_result_by_public(w,req->source_id);
+  else source=f06_report_by_public(w,req->source_id);
+  need(source,F04_UNAVAILABLE);
+  const U contact=req->kind==3?ref(w,ref(w,source,F06_HANDOFF_REF),F06_CONTACT_REF):ref(w,source,F06_CONTACT_REF);
+  need(val(w,contact,F06_PUBLIC_ID)==req->contact_id,F04_SCOPE);
+  for(U id:all(w,"f06_delivery"))if(val(w,id,F06_D_KEY)==req->request_key){
+   const auto v=f06_delivery_view(w,id);
+   need(ref(w,id,PERSON)==who.id && ref(w,id,TARGET)==source && v.contact_id==req->contact_id &&
+     v.recipient==req->recipient,F04_OVERLAP);*out=v;return F04_OK;
+  }
+  need(req->expected_revision==w.revision(),F04_STALE);
+  need(val(w,contact,F06_STATUS)==F06_ACTIVE,F04_UNAVAILABLE);
+  need(all(w,"f06_delivery").size()<512,F04_CAPACITY);
+  auto next=std::make_unique<Campaign>(*s->c);
+  const U id=make(*next,*s->content.catalog(),"f06_delivery");
+  link(*next,id,SHIP,1);link(*next,id,PERSON,who.id);link(*next,id,F06_CONTACT_REF,contact);link(*next,id,TARGET,source);
+  f06_set(*next,id,F06_D_KEY,req->request_key);f06_set(*next,id,F06_D_PUBLIC,f06_public(id,val(next->world,1,SHIP_ID)));
+  f06_set(*next,id,F06_D_TICK,next->time.now());f06_set(*next,id,F06_D_RECIPIENT,req->recipient);
+  (void)event(*next,*s->content.catalog(),who.id,6060+req->recipient,F04_OK,0,contact);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_delivery_view(s->c->world,id);return F04_OK;
+ });
+}
+uint32_t f06_contact_tracking(F04Session* s,F04Ref who,U public_id,F06TrackView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);const auto& w=s->c->world;
+  const U contact=f06_contact_for_public(w,public_id);need(contact,F04_UNAVAILABLE);
+  const U cap=f06_tracking_capacity(w),used=f06_tracking_used(w);
+  *out={public_id,val(w,contact,F06_TRACK_UPDATED),static_cast<uint32_t>(val(w,contact,F06_TRACK_MODE)),
+   static_cast<uint32_t>(used),static_cast<uint32_t>(cap>used?cap-used:0),static_cast<uint32_t>(used>cap)};
+  return F04_OK;
+ });
+}
+uint32_t f06_deep_analysis(F04Session* s,F04Ref who,U public_id,F06DeepAnalysisView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t {
+  need(observer(s,who),F04_DENIED);const auto& w=s->c->world;
+  const U contact=f06_contact_for_public(w,public_id);need(contact,F04_UNAVAILABLE);
+  out->contact_id=public_id;
+  U first=0,last=0;
+  for(U id:all(w,"f06_observation"))if(ref(w,id,F06_CONTACT_REF)==contact){if(!first)first=id;last=id;}
+  if(last){out->position_source=val(w,last,F06_O_PUBLIC);
+   if(val(w,last,F06_O_TICK)>val(w,first,F06_O_TICK)){
+    const auto a=f06_result_view(w,first),b=f06_result_view(w,last);
+    const long double dx=b.observed_x_milli_au-a.observed_x_milli_au,
+     dy=b.observed_y_milli_au-a.observed_y_milli_au,dz=b.observed_z_milli_au-a.observed_z_milli_au;
+    out->interval_seconds=b.tick-a.tick;
+    out->displacement_micro_au=static_cast<U>(std::llround(std::sqrt(dx*dx+dy*dy+dz*dz)*1000));out->valid_mask|=4;
+   }
+  }
+  for(U id:all(w,"f06_science_report"))if(ref(w,ref(w,id,F06_HANDOFF_REF),F06_CONTACT_REF)==contact){
+   out->science_source=val(w,id,F06_SCI_PUBLIC);
+   // 1 mbar=1000 microbar; concentration is permille, so units cancel.
+   out->oxygen_microbar=val(w,id,F06_SCI_PRESS)*val(w,id,F06_SCI_O2);
+   out->co2_microbar=val(w,id,F06_SCI_PRESS)*val(w,id,F06_SCI_CO2);out->valid_mask|=1;
+  }
+  const U equipment=f06_latest_equipment(w,contact);
+  if(equipment){
+   out->equipment_source=val(w,equipment,F06_E_PUBLIC);U count=0;
+   for(U id:all(w,"f06_equipment"))if(ref(w,id,F06_CONTACT_REF)==contact)++count;
+   out->equipment_changes=count?count-1:0;if(count>1)out->valid_mask|=8;
+   const U length=val(w,equipment,F06_E_LENGTH),distance=val(w,contact,F06_DISTANCE);
+   if(length && distance && val(w,contact,F06_STATUS)==F06_ACTIVE){
+    // Small-angle physical extent; AU is exactly 149597870700 metres.
+    out->angular_nanoradian=static_cast<U>(std::llround(
+     2*std::atan(static_cast<long double>(length)/(2*distance*149597870.7L))*1000000000));
+    out->valid_mask|=2;
+   }
+  }
   return F04_OK;
  });
 }

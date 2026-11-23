@@ -117,11 +117,15 @@ bool f06_schema(const Campaign& c) {
  }
  for(U id:all(w,"f06_delivery")) {
   const U target=ref(w,id,TARGET);
-  if(!type(w,target,"f06_equipment") || ref(w,id,SHIP)!=1 || !type(w,ref(w,id,PERSON),"person") ||
-     ref(w,target,F06_CONTACT_REF)!=ref(w,id,F06_CONTACT_REF) ||
+  const bool equipment=type(w,target,"f06_equipment"),position=type(w,target,"f06_observation"),
+    science=type(w,target,"f06_science_report");
+  const U subject=science?ref(w,ref(w,target,F06_HANDOFF_REF),F06_CONTACT_REF):ref(w,target,F06_CONTACT_REF);
+  const U tick=val(w,target,equipment?F06_E_TICK:position?F06_O_TICK:F06_SCI_TICK);
+  if(!(equipment || position || science) || ref(w,id,SHIP)!=1 || !type(w,ref(w,id,PERSON),"person") ||
+     subject!=ref(w,id,F06_CONTACT_REF) ||
      !val(w,id,F06_D_KEY) || !delivery_keys.insert(val(w,id,F06_D_KEY)).second ||
      !val(w,id,F06_D_PUBLIC) || !delivery_ids.insert(val(w,id,F06_D_PUBLIC)).second ||
-     val(w,id,F06_D_TICK)>c.time.now() || val(w,id,F06_D_TICK)<val(w,target,F06_E_TICK) ||
+     val(w,id,F06_D_TICK)>c.time.now() || val(w,id,F06_D_TICK)<tick ||
      val(w,id,F06_D_RECIPIENT)<1 || val(w,id,F06_D_RECIPIENT)>3)return false;
  }
  std::set<U> signals,public_ids;

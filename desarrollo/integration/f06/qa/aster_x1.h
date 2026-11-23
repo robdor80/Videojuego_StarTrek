@@ -23,6 +23,13 @@ inline std::vector<AsterX1Unit> aster_x1_units(uint64_t seed,uint64_t tick) {
   u.world.transponder_id=i<2?71001+i:0;
   u.world.strength_permille=950;u.world.signature_category=F06_CATEGORY_STARSHIP;
   u.world.active=tick>=u.arrival;
+  // QA physical motion exists before sensing; no GUI trajectories. One
+  // milli-AU sample step each five seconds, with a measured turn at t=300.
+  if(i>0 && i<4 && tick>=u.arrival){
+   const auto dt=static_cast<int>((tick-u.arrival)/5);
+   u.world.absolute_x_milli_au-=dt;
+   if(i==2 && tick>=300)u.world.absolute_y_milli_au+=static_cast<int>((tick-300)/5);
+  }
   auto& p=u.physical;p.version=1;p.world_entity_key=u.world.world_entity_key;
   p.length_m=i==2?1040:i==3?400+draw()%200:220;
   p.source_revision=1;p.cloaked=i==4 && tick<390;
@@ -33,6 +40,7 @@ inline std::vector<AsterX1Unit> aster_x1_units(uint64_t seed,uint64_t tick) {
   // A real configuration change, independent of contact/public IDs.
   if(i==1 && tick>=210){p.count[0]=1;p.state[0]=2;p.source_revision=2;}
   if(i==2 && tick>=300){p.state[0]=3;p.source_revision=2;}
+  if(i==2 && tick>=420){p.state[0]=1;p.source_revision=3;}
   if(i==3){p.visibility_permille[3]=0;} // unobservable internal armour stays secret
   if(i==4 && tick>=390){p.source_revision=2;p.cloaked=0;}
   units.push_back(u);
