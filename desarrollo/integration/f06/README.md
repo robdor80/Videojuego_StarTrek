@@ -139,3 +139,11 @@ emisión → aceptación → ejecución F05 sobre una firma que los sensores pas
 no podían resolver. Comprueba que solo la ejecución autorizada produce un
 contacto observable, sin revelar clase/transpondedor ni duplicar el barrido
 en reintentos de una orden terminada.
+
+## ASTER_X1 (23-11-2026)
+
+La [guía del MSI](qa/GUIA_PRUEBA_ASTER.md) arranca una guardia de nueve minutos
+reales a ×1. El [informe técnico de entrega](../../../proyecto/docs/roadmap/master/fases/F06/ENTREGA_ASTER_X1_2026-11-23.md)
+explica las fuentes de equipamiento, contratos, reconciliación y matriz T01–T15.
+`f06_equipment.h` es una extensión opt-in; no cambia las estructuras C existentes.
+El fixture de ocho horas y su calendario se conservan por separado.

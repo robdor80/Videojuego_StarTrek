@@ -96,7 +96,9 @@ def run(runner: Path):
     ending=say(p,"STEP 28800")
     assert ending["tick"]==28800 and ending["active"]>=15,ending
     assert len(ending["attention_contacts"]) == ending["attention"], ending
-    assert all(any(c[0] == cid and c[2] == 1 and c[3] == 0
+    assert all(any(c[0] == cid and c[2] == 1 and (c[3] == 0 or
+                   any(e["contact"] == cid and any(s[3] >= 2 for s in e["slots"])
+                       for e in ending.get("equipment", [])))
                    for c in ending["contacts"])
                for cid in ending["attention_contacts"]), ending
     finish(p)

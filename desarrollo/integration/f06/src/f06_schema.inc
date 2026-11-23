@@ -2,6 +2,19 @@
 namespace {
 bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  std::set<U>& required,std::set<U>& ar,std::set<U>& rr) {
+ if(type(w,id,"f06_physical")) {
+  allowed={F06_P_REV,F06_P_LENGTH,F06_P_CLOAK,F06_P_0,F06_P_1,F06_P_2,F06_P_3,F06_P_4,F06_P_5};
+  required=allowed;ar={SHIP,F06_SIGNAL_REF};rr=ar;return true;
+ }
+ if(type(w,id,"f06_equipment")) {
+  allowed={F06_E_PUBLIC,F06_E_TICK,F06_E_CLASS,F06_E_LENGTH,F06_E_CONF,F06_E_MASK,F06_E_CATALOG,
+   F06_E_0,F06_E_1,F06_E_2,F06_E_3,F06_E_4,F06_E_5};
+  required=allowed;ar={SHIP,F06_CONTACT_REF};rr=ar;return true;
+ }
+ if(type(w,id,"f06_delivery")) {
+  allowed={F06_D_KEY,F06_D_PUBLIC,F06_D_TICK,F06_D_RECIPIENT};
+  required=allowed;ar={SHIP,PERSON,F06_CONTACT_REF,TARGET};rr=ar;return true;
+ }
  if(type(w,id,"f06_environment")) {
   allowed={F06_ENV_REV,F06_ENV_EM,F06_ENV_THERM,F06_ENV_GRAV,F06_ENV_SUB,F06_ENV_BIO};
   required=allowed;ar={SHIP};rr=ar;return true;
@@ -78,6 +91,39 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
 }
 bool f06_schema(const Campaign& c) {
  const auto& w=c.world;
+ std::set<U> physical_signals, equipment_ids, delivery_ids, delivery_keys;
+ if(all(w,"f06_physical").size()>2048 || all(w,"f06_equipment").size()>4096 ||
+    all(w,"f06_delivery").size()>512)return false;
+ for(U id:all(w,"f06_physical")) {
+  const U sig=ref(w,id,F06_SIGNAL_REF);
+  if(!type(w,sig,"f06_signal") || ref(w,id,SHIP)!=1 || !physical_signals.insert(sig).second ||
+     !val(w,id,F06_P_REV) || val(w,id,F06_P_REV)>FOREVER || val(w,id,F06_P_LENGTH)>10000 || val(w,id,F06_P_CLOAK)>1)return false;
+  for(U k=0;k<6;++k){
+   const U v=val(w,id,Field(F06_P_0+k));
+   if((v&255)>64 || ((v>>8)&3)>(k<2?3u:2u) || (v>>10)>1000 || (!(v&255) && ((v>>8)&3)))return false;
+  }
+ }
+ for(U id:all(w,"f06_equipment")) {
+  if(!type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") || ref(w,id,SHIP)!=1 ||
+     !val(w,id,F06_E_PUBLIC) || !equipment_ids.insert(val(w,id,F06_E_PUBLIC)).second ||
+     val(w,id,F06_E_TICK)>c.time.now() ||
+     val(w,id,F06_E_TICK)<val(w,ref(w,id,F06_CONTACT_REF),F06_FIRST) || val(w,id,F06_E_CLASS)>UINT32_MAX || val(w,id,F06_E_LENGTH)>10000 ||
+     val(w,id,F06_E_CATALOG)>1 || val(w,id,F06_E_CONF)>1000 || val(w,id,F06_E_MASK)>63)return false;
+  for(U k=0;k<6;++k){
+   const U v=val(w,id,Field(F06_E_0+k));
+   if((v&255)>64 || (v>>8)>(k<2?3u:2u) || (!(v&255) && (v>>8)) ||
+      (!(val(w,id,F06_E_MASK)&(1u<<k)) && v))return false;
+  }
+ }
+ for(U id:all(w,"f06_delivery")) {
+  const U target=ref(w,id,TARGET);
+  if(!type(w,target,"f06_equipment") || ref(w,id,SHIP)!=1 || !type(w,ref(w,id,PERSON),"person") ||
+     ref(w,target,F06_CONTACT_REF)!=ref(w,id,F06_CONTACT_REF) ||
+     !val(w,id,F06_D_KEY) || !delivery_keys.insert(val(w,id,F06_D_KEY)).second ||
+     !val(w,id,F06_D_PUBLIC) || !delivery_ids.insert(val(w,id,F06_D_PUBLIC)).second ||
+     val(w,id,F06_D_TICK)>c.time.now() || val(w,id,F06_D_TICK)<val(w,target,F06_E_TICK) ||
+     val(w,id,F06_D_RECIPIENT)<1 || val(w,id,F06_D_RECIPIENT)>3)return false;
+ }
  std::set<U> signals,public_ids;
  std::set<U> observation_ids;
  const auto observations=all(w,"f06_observation");

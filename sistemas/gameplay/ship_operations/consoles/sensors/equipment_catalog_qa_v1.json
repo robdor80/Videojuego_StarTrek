@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "status": "QA_FICTION_NON_CANON",
+  "slots": ["offensive_energy_emitters", "launchers", "shield_generators", "armour_layers", "warp_drives", "impulse_drives"],
+  "classes": [
+    {"class_id": 18, "count": [0, 0, 1, 1, 1, 2]},
+    {"class_id": 8, "count": [6, 2, 2, 1, 1, 2]},
+    {"class_id": 16, "count": [4, 2, 1, 1, 1, 2]}
+  ]
+}

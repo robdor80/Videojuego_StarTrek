@@ -3,6 +3,10 @@
 #include "f06_profiles_generated.h"
 namespace {
 void f06_bis_tick(Campaign&,const ContentCatalog&);
+U f06_physical_for(const WorldState&,U);
+U f06_latest_equipment(const WorldState&,U);
+F06EquipmentView f06_equipment_view(const WorldState&,U);
+void f06_measure_equipment(Campaign&,const ContentCatalog&,U,U,U);
 U f06_zigzag(int64_t x) {return x<0?U(-(x+1))*2+1:U(x)*2;}
 U f06_public(U source,U ship_identity) {
  U z=source+UINT64_C(0x9e3779b97f4a7c15)+(ship_identity<<1);
@@ -115,6 +119,8 @@ U f06_score_from_array(const WorldState& w,U s,U distance,bool active,bool focus
  const U limit=focused?50000:30000;
  if(distance>limit)return 0;
  const auto profile=f06_profile_numbers(w);
+ const U physical=f06_physical_for(w,s);
+ if(physical && val(w,physical,F06_P_CLOAK))return 0;
  const U strength=val(w,s,F06_STRENGTH);
  const auto config=f06_current_config(w);
  U mask=U(val(w,s,F06_INTERFERENCE))*
@@ -154,6 +160,14 @@ U f06_score_from_array(const WorldState& w,U s,U distance,bool active,bool focus
  score=score*array.power_permille/1000;
  score=score*array.integrity_permille/1000;
  score=score*config.sensitivity_permille/1000;
+ // Physical opt-in naval signatures have deterministic nominal acquisition.
+ // Zero emission, cloak, range, actual interference and hardware degradation
+ // remain physical limits. Legacy signal scoring stays byte-compatible.
+ if(physical && strength && !mask && array.capability_permille==1000 &&
+    array.power_permille==1000 && array.integrity_permille==1000 &&
+    config.sensitivity_permille==1000 &&
+    (val(w,s,F06_CATEGORY)==F06_CATEGORY_STARSHIP || val(w,s,F06_CATEGORY)==F06_CATEGORY_SHUTTLE) &&
+    (array.long_enabled || (array.short_enabled && distance<=2000)))score=std::max<U>(score,720);
  return std::min<U>(1000,score);
 }
 
@@ -286,6 +300,7 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
   const int64_t approx=rank<2?0:(p/ static_cast<int64_t>(step))*static_cast<int64_t>(step);
   f06_set(c,contact,field,f06_zigzag(approx));
  }
+ f06_measure_equipment(c,cat,contact,sig,score);
  if(fresh)f06_notice(c,cat,contact,F06_NEW_CONTACT);
  else if(reacquired) {
   f06_set(c,contact,F06_AUTO_GEN,val(c.world,contact,F06_AUTO_GEN)+1);
@@ -825,7 +840,7 @@ uint32_t f06_notices_page(F04Session* s,F04Ref who,U after,
   bool past=after==0;
   for(U id:all(w,"event")) {
    const U op=val(w,id,OP);
-   if(op<6001 || op>6005)continue;
+   if(op<6001 || op>6006)continue;
    const U token=f06_public(id,val(w,1,SHIP_ID));
    if(!past) {if(token==after)past=true;continue;}
    if(*written>=capacity){*more=1;break;}
@@ -971,3 +986,5 @@ uint32_t f06_scan_area(F04Session* s,F04Ref who,
 
 // Additive F06-BIS runtime within the exact same Core campaign.
 #include "f06_bis.inc"
+
+#include "f06_equipment.inc"

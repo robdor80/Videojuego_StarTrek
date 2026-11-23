@@ -102,8 +102,8 @@ def main() -> None:
         root.update()
         result=panel.main_text.get("1.0","end")
         assert "Análisis" in result or "ANÁLISIS" in result
-        assert "Disruptores y torpedos de fotones" in result, result
-        assert "no medidos" in result, "class catalogue must not fake measurements"
+        assert "Emisores ofensivos" in result and "Lectura Core F06" in result, result
+        assert "catálogo QA" in result, "QA figures must be explicitly noncanonical"
         assert not panel.scan_progress.winfo_manager(), (
             "completed analysis must not leave permanent progress bar")
         assert panel.tactical_report_button.winfo_manager()
@@ -128,7 +128,7 @@ def main() -> None:
         assert panel.current_view=="contacts"
         assert panel.contacts_table.selection()==(warbird,)
         dossier=panel.detail_text.get("1.0","end").lower()
-        assert "disruptores" in dossier and "camuflaje" in dossier,dossier
+        assert "ámbar" in dossier and "8 detectados" in dossier,dossier
         assert "rumbo de desplazamiento" in dossier,dossier
         assert "consultar catálogo" not in dossier,dossier
 

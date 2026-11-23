@@ -3,6 +3,13 @@
 // No 3D Unreal assets, LLM, fabricated sensor contacts or external world state.
 #include "f04_bridge.h"
 #include "f06_sensors.h"
+#include "f06_equipment.h"
+#include "aster_x1.h"
+#include <chrono>
+#include <charconv>
+#include <fstream>
+#include <filesystem>
+#include <sstream>
 #include "f06_bis.h"
 #include "f06_autonomy.h"
 #include "f06_demo_system_generated.h"
@@ -20,6 +27,12 @@
 #include <vector>
 
 using U=uint64_t;
+static U number(const std::string& arg){
+ U value=0;const auto parsed=std::from_chars(arg.data(),arg.data()+arg.size(),value);
+ if(arg.empty() || parsed.ec!=std::errc{} || parsed.ptr!=arg.data()+arg.size())
+  throw std::runtime_error("invalid unsigned argument");
+ return value;
+}
 static void check(uint32_t result,const char* op) {
  if(result!=F04_OK)throw std::runtime_error(std::string(op)+" returned "+std::to_string(result));
 }
@@ -43,6 +56,10 @@ struct Watch {
  // It is an actual runner action, not an inert GUI toast or an NPC dialogue.
  std::vector<std::array<U,3>> contact_briefs,saved_contact_briefs;
  F04Handles h{};
+ U seed=42,world_revision=0;
+ std::map<U,U> physical_revisions;
+ std::map<U,std::array<U,4>> latency;
+ static U monotonic(){return static_cast<U>(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now().time_since_epoch()).count());}
  U event_cursor=0;
  U checkpoint_event_cursor=0;
  size_t next_frame=0;
@@ -57,12 +74,30 @@ struct Watch {
   F04Request q{actor,stats().revision,code,0,target,aux,start,end,42};
   F04Result result{};check(f04_execute(s,&q,&result),"roster");
  }
+ void install_legacy_physical(const F06DemoFrame& frame){
+  for(U i=0;i<frame.count;++i){const auto& e=frame.entities[i];
+   if(e.signature_category!=F06_CATEGORY_STARSHIP && e.signature_category!=F06_CATEGORY_SHUTTLE)continue;
+   F06PhysicalInput p{};p.expected_revision=stats().revision;p.world_entity_key=e.world_entity_key;
+   p.version=1;p.source_revision=1;p.length_m=e.class_id==8?1040:220;
+   const std::array<unsigned,6> counts=e.class_id==18?std::array<unsigned,6>{0,0,1,1,1,2}:
+      e.class_id==8?std::array<unsigned,6>{8,3,2,1,1,2}:std::array<unsigned,6>{4,2,1,1,1,2};
+   for(U k=0;k<6;++k){p.count[k]=counts[k];p.state[k]=counts[k]?1:0;p.visibility_permille[k]=1000;}
+   check(f06_host_physical(s,&p),"legacy physical fixture");
+  }
+ }
  void publish(size_t i){
   const auto& frame=F06_DEMO_FRAMES[i];
   F06WorldSnapshot snapshot{stats().revision,frame.source_revision,
     frame.tick,F06_DEMO_OBSERVER_X,F06_DEMO_OBSERVER_Y,F06_DEMO_OBSERVER_Z,
     frame.count,frame.entities};
   F06WorldReceipt receipt{};
+  if(i==0){
+   std::vector<F06WorldEntity> inactive(frame.entities,frame.entities+frame.count);
+   for(auto& e:inactive)if(e.signature_category==F06_CATEGORY_STARSHIP || e.signature_category==F06_CATEGORY_SHUTTLE)e.active=0;
+   auto staging=snapshot;staging.source_revision=frame.source_revision-1;staging.entities=inactive.data();
+   check(f06_host_world_snapshot(s,&staging,&receipt),"legacy materialization");
+   install_legacy_physical(frame);snapshot.expected_revision=stats().revision;
+  }
   check(f06_host_world_snapshot(s,&snapshot,&receipt),"host world");
   update_navigation(frame.tick);
  }
@@ -125,8 +160,8 @@ struct Watch {
   }
  }
  void reset(int new_mode){
+  if(new_mode<0 || new_mode>4)throw std::runtime_error("invalid variant");
   if(s){check(f04_destroy(s),"destroy");s=nullptr;}
-  if(new_mode<0 || new_mode>3)throw std::runtime_error("invalid variant");
   mode=new_mode;event_cursor=0;checkpoint_event_cursor=0;next_frame=0;checkpoint.clear();science_issues.clear();
   tracks.clear();saved_tracks.clear();nav_events.clear();saved_nav_events.clear();
   contact_briefs.clear();saved_contact_briefs.clear();
@@ -140,8 +175,73 @@ struct Watch {
   F06ProfileInstall install{stats().revision,5,0};
   F06ProfileView profile{};
   check(f06_host_install_profile(s,&install,&profile),"modernized Enterprise-D equipment");
-  publish(next_frame++);
-  initial_scientific_survey();
+  physical_revisions.clear();latency.clear();world_revision=0;
+  if(mode==4){publish_x1(0,true);publish_x1(0);}else{
+   publish(next_frame++);
+   initial_scientific_survey();
+  }
+ }
+ void publish_x1(U tick,bool materialize=false){
+  auto units=aster_x1_units(seed,tick);
+  std::vector<F06WorldEntity> entities;
+  for(const auto& u:units){auto e=u.world;if(materialize)e.active=0;entities.push_back(e);}
+  const U source=monotonic();
+  // Install/update all physical configurations BEFORE making entities visible.
+  if(!materialize)for(auto& u:units){
+   if(physical_revisions[u.world.world_entity_key]==u.physical.source_revision)continue;
+   u.physical.expected_revision=stats().revision;
+   check(f06_host_physical(s,&u.physical),"physical source");
+   physical_revisions[u.world.world_entity_key]=u.physical.source_revision;
+  }
+  F06WorldSnapshot snapshot{stats().revision,++world_revision,tick,0,0,0,entities.size(),entities.data()};
+  F06WorldReceipt receipt{};
+  const U received=monotonic();
+  check(f06_host_world_snapshot(s,&snapshot,&receipt),"X1 world");
+  const U published=monotonic();
+  for(const auto& c:visible_contacts())if(c.status==F06_ACTIVE && c.first_seen==tick && !latency.contains(c.contact_id))
+   latency[c.contact_id]={tick,source,received,published};
+  update_navigation(tick);
+ }
+ void delivery(U contact,uint32_t recipient){
+  F06DeliveryRequest req{stats().revision,(contact%900000000000ULL)*4+recipient,contact,recipient,0};
+  F06DeliveryView receipt{};check(f06_deliver(s,h.ensign,&req,&receipt),"deliver QA queue");
+  if(recipient==1){
+   bool known=false;for(const auto& row:contact_briefs)if(row[0]==contact)known=true;
+   if(!known)contact_briefs.push_back({contact,receipt.tick,0});
+  }
+ }
+ void file_save(const std::string& path){
+  save();std::ofstream f(std::filesystem::u8path(path),std::ios::binary);if(!f)throw std::runtime_error("save open");
+  const U header[4]={0x41535445525831ULL,static_cast<U>(mode),seed,checkpoint.size()};
+  f.write(reinterpret_cast<const char*>(header),sizeof(header));
+  f.write(reinterpret_cast<const char*>(checkpoint.data()),static_cast<std::streamsize>(checkpoint.size()));
+  if(!f)throw std::runtime_error("save write");
+ }
+ void file_load(const std::string& path){
+  std::ifstream f(std::filesystem::u8path(path),std::ios::binary);U header[4]{};
+  f.read(reinterpret_cast<char*>(header),sizeof(header));
+  if(!f || header[0]!=0x41535445525831ULL || header[1]!=4 || !header[3] || header[3]>64000000)
+   throw std::runtime_error("invalid QA checkpoint");
+  std::vector<uint8_t> bytes(static_cast<size_t>(header[3]));
+  f.read(reinterpret_cast<char*>(bytes.data()),static_cast<std::streamsize>(bytes.size()));
+  if(!f || f.peek()!=std::char_traits<char>::eof())throw std::runtime_error("truncated/trailing QA checkpoint");
+  check(f04_load(s,bytes.data(),bytes.size()),"file load Core");
+  checkpoint=std::move(bytes);mode=4;seed=header[2];check(f04_handles(s,&h),"handles");
+  synchronize_x1();
+ }
+ void synchronize_x1(){
+  physical_revisions.clear();
+  for(const auto& u:aster_x1_units(seed,stats().now))physical_revisions[u.world.world_entity_key]=u.physical.source_revision;
+  // The producer's source revision is deterministic: initial inactive + tick 0
+  // plus one publication per elapsed second. No re-publication on restoration.
+  world_revision=stats().now+2;latency.clear();tracks.clear();nav_events.clear();contact_briefs.clear();
+  std::array<F06ComputerEvent,128> events{};U en=0;uint32_t more=0;
+  check(f06_computer_events_page(s,h.captain,0,events.data(),events.size(),&en,&more),"restored cursor");
+  if(more)throw std::runtime_error("QA restored event capacity");
+  event_cursor=en?events[en-1].event_token:0;
+  std::array<F06DeliveryView,512> rows{};U n=0,total=0;
+  check(f06_deliveries_page(s,h.captain,0,rows.data(),rows.size(),&n,&total),"restored deliveries");
+  for(U i=0;i<n;++i)if(rows[i].recipient==1)contact_briefs.push_back({rows[i].contact_id,rows[i].tick,0});
  }
  void scenario_event(U tick){
   if(mode==2 && (tick==3600 || tick==7200)){
@@ -157,7 +257,19 @@ struct Watch {
  }
  void advance(U amount) {
   if(amount>28800)throw std::runtime_error("requested step outside watch");
-  const U initial=stats().now,target=std::min<U>(28800,initial+amount);
+  const U initial=stats().now,target=std::min<U>(mode==4?540:28800,initial+amount);
+  if(mode==4){
+   while(stats().now<target){
+    const U tick=stats().now+1;U processed=0;
+    check(f04_advance(s,tick,4096,&processed),"advance X1 Core");
+    if(tick==450 || tick==465){
+     F06ArrayInput in{stats().revision,1000,tick==450?0u:1000u,1000,1,1,1,0};
+     F06ArrayView out{};check(f06_host_array_state(s,&in,&out),"X1 equipment outage");
+    }
+    publish_x1(tick);
+   }
+   return;
+  }
   while(stats().now<target){
    U bound=target;
    if(next_frame<std::size(F06_DEMO_FRAMES))
@@ -202,6 +314,7 @@ struct Watch {
   tracks=saved_tracks;
   nav_events=saved_nav_events;
   contact_briefs=saved_contact_briefs;
+  if(mode==4)synchronize_x1();
  }
  std::vector<F06ContactView> visible_contacts() {
   std::array<F06ContactView,64> rows{};
@@ -306,6 +419,7 @@ struct Watch {
     F06_TRACK_PRIORITY,&updated),"operator priority");
  }
  void report_contact(U contact){
+  for(const auto& c:visible_contacts())if(c.contact_id==contact && (c.observed_category==1 || c.observed_category==2)){delivery(contact,1);return;}
   const auto contacts=visible_contacts();
   const auto it=std::find_if(contacts.begin(),contacts.end(),
       [contact](const auto& row){return row.contact_id==contact;});
@@ -336,6 +450,7 @@ struct Watch {
   if(more)throw std::runtime_error("QA event batch limit");
   if(event_n)event_cursor=ev[event_n-1].event_token;
   std::cout<<"{\"ok\":true,\"tick\":"<<state.tick<<",\"mode\":"<<mode
+    <<",\"duration\":"<<(mode==4?540:28800)
     <<",\"active\":"<<state.active_contacts
     <<",\"running\":"<<state.analyses_running
     <<",\"completed\":"<<state.analyses_completed
@@ -450,6 +565,28 @@ struct Watch {
    const auto& brief=contact_briefs[i];
    std::cout<<'['<<brief[0]<<','<<brief[1]<<','<<brief[2]<<']';
   }
+  std::cout<<"],\"equipment\":[";
+  std::array<F06EquipmentView,512> equipment{};U en=0,et=0;
+  check(f06_equipment_page(s,h.captain,0,0,equipment.data(),equipment.size(),&en,&et),"public equipment");
+  if(et>equipment.size())throw std::runtime_error("QA equipment capacity");
+  for(U i=0;i<en;++i){
+   if(i)std::cout<<',';const auto& e=equipment[i];
+   std::cout<<"{\"id\":"<<e.observation_id<<",\"contact\":"<<e.contact_id<<",\"tick\":"<<e.tick
+    <<",\"class\":"<<e.class_id<<",\"catalog\":"<<e.catalog_version<<",\"length_m\":"<<e.length_m
+    <<",\"confidence\":"<<e.confidence_permille<<",\"mask\":"<<e.visible_mask<<",\"slots\":[";
+   for(U k=0;k<6;++k){if(k)std::cout<<',';
+    std::cout<<'['<<e.count[k]<<','<<e.state[k]<<','<<e.expected[k]<<','<<e.comparison[k]<<']';}
+   std::cout<<"]}";
+  }
+  std::cout<<"],\"deliveries\":[";
+  std::array<F06DeliveryView,512> deliveries{};U dn=0,dt=0;
+  check(f06_deliveries_page(s,h.captain,0,deliveries.data(),deliveries.size(),&dn,&dt),"public deliveries");
+  for(U i=0;i<dn;++i){if(i)std::cout<<',';const auto& d=deliveries[i];
+   std::cout<<'['<<d.receipt_id<<','<<d.contact_id<<','<<d.observation_id<<','<<d.tick<<','<<d.recipient<<','<<d.status<<']';}
+  std::cout<<"],\"latency\":[";
+  bool first_latency=true;
+  for(const auto& [contact,l]:latency){if(!first_latency)std::cout<<',';first_latency=false;
+   std::cout<<'['<<contact<<','<<l[0]<<','<<l[1]<<','<<l[2]<<','<<l[3]<<']';}
   std::cout<<"],\"contacts\":[";
   for(U i=0;i<written;++i){
    if(i)std::cout<<',';
@@ -463,25 +600,30 @@ struct Watch {
   std::cout<<"]}"<<std::endl;
  }
 };
-int main(){
+int main(int argc,char** argv){
  Watch watch;
  try{
-  watch.reset(0);watch.emit();
+  watch.reset(argc>1 && std::string(argv[1])=="--x1"?4:0);watch.emit();
   std::string cmd;
   while(std::getline(std::cin,cmd)){
    const auto n=cmd.find(' ');
    const std::string action=cmd.substr(0,n);
    try{
     const std::string arg=n==std::string::npos?"":cmd.substr(n+1);
-    if(action=="STEP")watch.advance(std::stoull(arg));
-    else if(action=="RESTART")watch.reset(std::stoi(arg));
+    if(action=="STEP")watch.advance(number(arg));
+    else if(action=="RESTART")watch.reset(number(arg)<=4?static_cast<int>(number(arg)):-1);
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
-    else if(action=="PRIORITY")watch.prioritize(std::stoull(arg));
-    else if(action=="REPORT")watch.report_contact(std::stoull(arg));
-    else if(action=="FOCUS")watch.focus(std::stoull(arg));
-    else if(action=="SCAN")watch.study(std::stoull(arg));
-    else if(action=="CONFIG")watch.configure(std::stoi(arg));
+    else if(action=="PRIORITY")watch.prioritize(number(arg));
+    else if(action=="SAVEFILE")watch.file_save(arg);
+    else if(action=="LOADFILE")watch.file_load(arg);
+    else if(action=="SEED"){watch.seed=number(arg);watch.reset(4);}
+    else if(action=="TACTICAL_SEND")watch.delivery(number(arg),2);
+    else if(action=="SCIENCE_SEND")watch.delivery(number(arg),3);
+    else if(action=="REPORT")watch.report_contact(number(arg));
+    else if(action=="FOCUS")watch.focus(number(arg));
+    else if(action=="SCAN")watch.study(number(arg));
+    else if(action=="CONFIG")watch.configure(number(arg)<=3?static_cast<int>(number(arg)):-1);
     else if(action=="DIAG")watch.diagnostics();
     else if(action=="STATUS" || action=="TACTICAL"){} // same read-only Core feed
     else throw std::runtime_error("unsupported command");

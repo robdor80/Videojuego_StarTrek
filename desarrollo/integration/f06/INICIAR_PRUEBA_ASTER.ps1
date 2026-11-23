@@ -2,7 +2,8 @@
 # Safe: never touches 3D assets or modifies an existing CoreRPG checkout.
 param(
  [string]$CoreSource = "",
- [string]$Generator = ""
+ [string]$Generator = "",
+ [ValidateSet("x1","eight-hours")][string]$Mode = "x1"
 )
 $ErrorActionPreference = "Stop"
 $Repo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot "../../.."))
@@ -69,6 +70,7 @@ if (-not (Test-Path -LiteralPath $Runner)) {
 if (-not (Test-Path -LiteralPath $Runner)) {
   throw "No se encuentra el ejecutable F06 despues de compilar"
 }
-Write-Host "Iniciando guardia de ocho horas (16 minutos reales a x30)..."
-& python (Join-Path $PSScriptRoot "qa/aster_gui.py") --runner $Runner
+Write-Host "Iniciando ASTER: $Mode. El modo x1 dura nueve minutos reales."
+$Telemetry = Join-Path $Lab ("latencia-" + (Get-Date -Format "yyyyMMdd-HHmmss") + ".jsonl")
+& python (Join-Path $PSScriptRoot "qa/aster_gui.py") --runner $Runner --mode $Mode --telemetry $Telemetry
 if ($LASTEXITCODE) { throw "La ventana de F06 termino con un error" }

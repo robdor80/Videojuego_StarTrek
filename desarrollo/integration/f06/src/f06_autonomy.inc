@@ -108,6 +108,7 @@ uint32_t f06_computer_kind(U op){
   case 6002:case 6003:return F06_COMPUTER_LOSS;
   case 6004:return F06_COMPUTER_REACQUIRED;
   case 6005:return F06_COMPUTER_IDENTIFIED;
+  case 6006:return F06_COMPUTER_EQUIPMENT_CHANGED;
   case 6090:return F06_COMPUTER_ANALYSIS_STARTED;
   case 6091:return F06_COMPUTER_ANALYSIS_DONE;
   case 6092:return F06_COMPUTER_ANALYSIS_UNAVAILABLE;
@@ -122,6 +123,12 @@ bool f06_computer_requires_attention(const WorldState& w,U c) {
     category!=F06_CATEGORY_STARSHIP &&
     category!=F06_CATEGORY_SUBSPACE &&
     category!=F06_CATEGORY_UNKNOWN)return false;
+ const U equipment=f06_latest_equipment(w,c);
+ if(equipment){
+  const auto reading=f06_equipment_view(w,equipment);
+  for(U k=0;k<6;++k)if(reading.comparison[k]>=2)return true;
+  if(!val(w,c,F06_SEEN_CLASS))return true;
+ }
  if(val(w,c,F06_SEEN_CLASS))return false;
  bool attempted=false,pending=false;
  for(U job:all(w,"f06_timed_scan"))if(val(w,job,F06_TIMED_AUTO) &&
@@ -187,7 +194,7 @@ uint32_t f06_computer_events_page(F04Session* s,F04Ref who,U after,
    if(*written>=capacity){*more=1;break;}
    const U target=ref(w,id,TARGET);
    U contact=0;
-   if(op>=6001 && op<=6005){
+   if(op>=6001 && op<=6006){
     if(!type(w,target,"f06_contact"))continue;
     contact=target;
    }else{

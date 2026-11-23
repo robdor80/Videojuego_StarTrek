@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import time
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
@@ -22,6 +23,7 @@ MODES = (
     "2. Repetición idéntica",
     "3. Interferencias",
     "4. Avería y recuperación",
+    "5. ASTER_X1 · 9 min reales",
 )
 TYPES = {
     0: "señal desconocida", 1: "nave", 2: "lanzadera",
@@ -65,28 +67,9 @@ STARSHIP_DESIGNS = {
     17: ("Crucero de batalla", "Imperio Klingon"),
     18: ("Transporte de mercancías", "Diseño civil del escenario Aster"),
 }
-# Tactical class data are *known catalog capabilities*, not live proof of
-# activated weapons. Keep the operator's panel focused on decisions.
-NAVAL_CAPABILITIES = {
-    # Database of known class specifications, directly visible from Sensors.
-    # Typical class capabilities are NOT observations of this specific vessel.
-    1: ("Crucero de exploración de la Flota Estelar",
-        "Baterías fáser y torpedos de fotones",
-        "Escudos deflectores"),
-    4: ("Escolta táctica de la Flota Estelar",
-        "Cañones fáser de pulsos y torpedos de fotones/cuánticos",
-        "Escudos deflectores y blindaje ablativo"),
-    6: ("Explorador de largo alcance de la Flota Estelar",
-        "Baterías fáser y torpedos de fotones",
-        "Escudos deflectores"),
-    8: ("Ave de guerra romulana",
-        "Baterías de disruptores y lanzadores de torpedos de fotones",
-        "Escudos deflectores y dispositivo de camuflaje"),
-    16: ("Crucero de batalla klingon",
-         "Disruptores y torpedos de fotones",
-         "Escudos deflectores; capacidad de camuflaje"),
-    18: ("Transporte civil", "Armamento no acreditado", "Defensas no acreditadas"),
-}
+EQUIPMENT_SLOTS = ("Emisores ofensivos", "Lanzadores", "Generadores de escudo",
+                   "Capas de blindaje", "Motores warp", "Motores de impulso")
+COMPARISONS = ("GRIS", "VERDE", "ÁMBAR", "ROJO")
 LOSS_CAUSES = {
     1: "salida a curvatura observada", 2: "ocultación observada",
     3: "fuera del alcance de los sensores", 4: "sensores sin servicio",
@@ -112,19 +95,27 @@ def clock(tick: int) -> str:
 
 
 class Panel:
-    def __init__(self, root: tk.Tk, runner: Path) -> None:
+    def __init__(self, root: tk.Tk, runner: Path, x1: bool = False, telemetry: Path | None = None) -> None:
+        self.x1 = x1
+        self.telemetry = telemetry
+        self.telemetry_seen: set[tuple] = set()
+        self.last_wall = time.monotonic()
+        self.wall_origin = self.last_wall
+        self.elapsed_fraction = 0.0
+        self.last_receipt = self.last_wall
+        self.equipment_seen: set[int] = set()
         self.root = root
         root.title("USS Enterprise-D · Sensores · Sistema Aster")
         root.geometry("1100x840")
         root.minsize(820, 650)
         self.process = subprocess.Popen(
-            [str(runner)], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+            [str(runner)] + (["--x1"] if x1 else []), stdin=subprocess.PIPE, stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL, encoding="utf-8", bufsize=1,
             creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
         )
-        self.speed = tk.StringVar(value="×30")
-        self.mode = tk.StringVar(value=MODES[0])
-        self.playing = False
+        self.speed = tk.StringVar(value="×1" if x1 else "×30")
+        self.mode = tk.StringVar(value=MODES[4 if x1 else 0])
+        self.playing = x1
         self.speed_before_alert = "×30"
         self.slowed_for_alert = False
         self.sim_half_seconds = 0
@@ -157,6 +148,13 @@ class Panel:
         self._render()
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self.apply(self._read(), reset=True)
+        if x1:
+            self.button_play.configure(text="Pausar")
+            self.progress.configure(maximum=540)
+            if self.state.get("contacts"):
+                self._choose_contact(str(self.state["contacts"][0][0]))
+        self.last_wall = time.monotonic()
+        self.wall_origin = self.last_wall
         self.root.after(500, self.tick)
 
     def _render(self) -> None:
@@ -265,6 +263,11 @@ class Panel:
                    ).pack(side="right", padx=(4, 0))
         ttk.Button(titlebar, text="Zoom +", command=lambda: self.zoom_map(1.33)
                    ).pack(side="right", padx=(4, 0))
+        self.auto_brief = ttk.Label(center, text="", wraplength=350,
+                                    font=("Segoe UI", 10), justify="left")
+        self.auto_brief.pack(fill="x", pady=(0, 5))
+        self.auto_brief.bind("<Configure>", lambda event:
+                             self.auto_brief.configure(wraplength=max(180,event.width-8)))
         self.section_info = ttk.Label(center, text="", font=("Segoe UI", 10))
         self.section_info.pack(fill="x", pady=(0, 9))
 
@@ -316,10 +319,21 @@ class Panel:
         # RIGHT: nothing but the selected item, and its available actions.
         ttk.Label(right, text="INFORMACIÓN DEL CONTACTO",
                   font=("Segoe UI", 12, "bold")).pack(anchor="w", pady=(2, 10))
+        self.equipment_brief = ttk.LabelFrame(right, text="FICHA OPERATIVA · CORE F06", padding=5)
+        self.equipment_brief.pack(fill="x", pady=(0, 5))
+        self.equipment_brief_lines = []
+        for _ in range(4):
+            label = ttk.Label(self.equipment_brief, text="", wraplength=330,
+                              font=("Segoe UI", 10))
+            label.pack(fill="x")
+            label.bind("<Configure>", lambda event:
+                       event.widget.configure(wraplength=max(150,event.width-5)))
+            self.equipment_brief_lines.append(label)
         detail_box = ttk.Frame(right)
+        self.detail_box = detail_box
         detail_box.pack(fill="both", expand=True)
         self.detail_text = tk.Text(
-            detail_box, height=7, state="disabled", relief="flat",
+            detail_box, height=3, state="disabled", relief="flat",
             background="#ffffff", font=("Segoe UI", 12),
             wrap="word", padx=14, pady=14, spacing2=3, spacing3=4)
         self.detail_text.tag_configure("heading", font=("Segoe UI", 16, "bold"))
@@ -331,17 +345,18 @@ class Panel:
         details_scroll.pack(side="right", fill="y")
         self.detail_text.configure(yscrollcommand=details_scroll.set)
 
-        self.action_area = ttk.LabelFrame(right, text="ÓRDENES", padding=8)
+        self.action_area = ttk.LabelFrame(right, text="LECTURAS OPCIONALES", padding=5)
+        self.action_area.columnconfigure((0, 1, 2), weight=1)
         self.identify_button = ttk.Button(
-            self.action_area, text="IDENTIFICAR",
+            self.action_area, text="LECTURA",
             command=lambda: self.contact_action("FOCUS"))
-        self.identify_button.pack(fill="x", pady=2)
-        ttk.Button(self.action_area, text="ANÁLISIS DETALLADO",
-                   command=lambda: self.contact_action("SCAN")).pack(
-                       fill="x", pady=2)
+        self.identify_button.grid(row=0, column=0, sticky="ew", padx=2)
+        ttk.Button(self.action_area, text="ANÁLISIS",
+                   command=lambda: self.contact_action("SCAN")).grid(
+                       row=0, column=1, sticky="ew", padx=2)
         ttk.Button(self.action_area, text="SEGUIR",
-                   command=lambda: self.contact_action("PRIORITY")).pack(
-                       fill="x", pady=2)
+                   command=lambda: self.contact_action("PRIORITY")).grid(
+                       row=0, column=2, sticky="ew", padx=2)
         self.contact_report_button = ttk.Button(
             right, text="COMUNICAR CONTACTO AL OFICIAL",
             command=self.report_contact_to_officer)
@@ -356,8 +371,11 @@ class Panel:
             right, text="Ver ficha técnica",
             command=self.open_contact_details)
         self.tactical_report_button = ttk.Button(
-            right, text="Preparar informe para Táctica (QA)",
+            right, text="TRANSFERIR A TÁCTICA (cola QA)",
             command=self.send_analysis_to_tactical)
+        self.science_transfer_button = ttk.Button(
+            right, text="TRANSFERIR A CIENCIA (cola QA)",
+            command=lambda: self.transfer_contact("SCIENCE_SEND"))
 
         self.engineering = ttk.LabelFrame(right, text="Ajustes de sensores", padding=9)
         ttk.Combobox(
@@ -401,13 +419,20 @@ class Panel:
         testrow = ttk.Frame(self.test_area)
         testrow.pack(fill="x")
         ttk.Label(testrow, text="Velocidad").pack(side="left")
-        ttk.Combobox(testrow, textvariable=self.speed, values=("×1", "×15", "×30", "×60"),
-                     state="readonly", width=5).pack(side="left", padx=(4, 15))
+        self.speed_selector = ttk.Combobox(testrow, textvariable=self.speed,
+                     values=("×1", "×15", "×30", "×60"), state="readonly", width=5)
+        self.speed_selector.pack(side="left", padx=(4, 15))
         ttk.Label(testrow, text="Incidencia").pack(side="left")
         scenario = ttk.Combobox(testrow, textvariable=self.mode, values=MODES,
                                 state="readonly", width=24)
         scenario.pack(side="left", padx=(5, 12))
         scenario.bind("<<ComboboxSelected>>", lambda _: self.restart())
+        diskrow = ttk.Frame(self.test_area)
+        diskrow.pack(fill="x", pady=(5, 0))
+        ttk.Button(diskrow, text="Guardar ASTER_X1 en disco",
+                   command=lambda: self.disk_checkpoint(False)).pack(side="left")
+        ttk.Button(diskrow, text="Abrir guardia ASTER_X1",
+                   command=lambda: self.disk_checkpoint(True)).pack(side="left", padx=6)
         ttk.Button(testrow, text="Reiniciar", command=self.restart).pack(side="left", padx=3)
         ttk.Button(testrow, text="Guardar", command=lambda: self.checkpoint("SAVE")
                    ).pack(side="left", padx=3)
@@ -594,10 +619,13 @@ class Panel:
                 + "Afiliación actual sin verificar. Velocidad de guardia reducida a ×1."
                 if class_name else
                 "Detección naval bajo investigación. Velocidad ×1; revisar sensores.")
+        elif any(e["contact"] == int(chosen) and any(slot[3] >= 2 for slot in e["slots"])
+                 for e in state.get("equipment", [])[-len(observed)*2:]):
+            title = "ATENCIÓN · EQUIPAMIENTO OBSERVADO"
+            explanation = "Discrepancia con catálogo o emisión ofensiva real. Abre la ficha; comunicar es decisión del oficial."
         else:
             title = "ATENCIÓN · NAVE SIN IDENTIFICAR"
-            explanation = ("La computadora intentó identificar este contacto "
-                           "y no ha conseguido confirmar su clase.")
+            explanation = "Clase no determinada; los sistemas físicos observables están disponibles en la ficha."
         contact = observed.get(chosen)
         if contact:
             label = self.designations.get(contact[0], "C-" + ids[self.alert_cursor][-6:])
@@ -655,6 +683,7 @@ class Panel:
     def _read(self) -> dict:
         assert self.process.stdout is not None
         line = self.process.stdout.readline()
+        self.last_receipt = time.monotonic()
         if not line:
             raise RuntimeError("El proceso nativo de CoreRPG ha terminado inesperadamente.")
         result = json.loads(line)
@@ -663,6 +692,8 @@ class Panel:
         return result
 
     def command(self, text: str) -> dict:
+        if "\n" in text or "\r" in text:
+            raise ValueError("Formato de orden no válido")
         if self.process.poll() is not None:
             raise RuntimeError("La simulación nativa ya no está activa.")
         assert self.process.stdin is not None
@@ -1053,14 +1084,7 @@ class Panel:
                         f"Observación Core completada a las "
                         f"{clock(max(j[3] for j in completed))}.")
                 if c[1] in (1,2):
-                    profile = NAVAL_CAPABILITIES.get(c[3])
-                    if profile:
-                        lines += ["", "CAPACIDADES CONOCIDAS DE LA CLASE",
-                                  f"Armamento habitual: {profile[1]}",
-                                  f"Defensas habituales: {profile[2]}"]
-                    lines += ["", "Estado actual de armas, escudos, propulsión y "
-                               "tripulación: no medidos por este banco F06.",
-                               "No confundir datos de catálogo con una lectura del buque."]
+                    lines += [self._equipment_dossier(c)]
                 else:
                     reports=[r for r in self.state.get("science", []) if r[0] == c[0]]
                     if reports:
@@ -1114,29 +1138,54 @@ class Panel:
                 parent=self.root)
 
     def send_analysis_to_tactical(self) -> None:
-        selected=self.contacts_table.selection()
+        self.transfer_contact("TACTICAL_SEND")
+
+    def transfer_contact(self, command: str) -> None:
+        selected = self.contacts_table.selection()
         if not selected or selected[0] not in self.contact_map:
             return
-        cid=selected[0]
-        contact=self.contact_map[cid]
-        has_report=any(
-            j[1]==contact[0] and j[5]==2 and j[0] in self.operator_scan_ids
-            for j in self.state.get("scans", []))
-        if not has_report:
-            messagebox.showinfo("Sensores", "No hay análisis terminado.",
-                                parent=self.root)
-            return
+        contact = self.contact_map[selected[0]]
         try:
-            tactical=self.command("TACTICAL")
-            if tactical["contacts"]!=self.state["contacts"]:
-                raise RuntimeError("El feed no coincide con el de Sensores.")
-            self.tactical_qa_ids.add(cid)
-            self.append(self.state["tick"],
-                        f"Expediente de {self._operational_name(contact)} "
-                        "preparado para consulta táctica en el banco QA. "
-                        "La consola táctica final está pendiente de integración.")
+            response = self.command(f"{command} {contact[0]}")
+            self.apply(response)
+            recipient = 2 if command == "TACTICAL_SEND" else 3
+            receipt = next(d for d in response["deliveries"]
+                           if d[1] == contact[0] and d[4] == recipient)
+            if recipient == 2:
+                self.tactical_qa_ids.add(str(contact[0]))
+            self.append(response["tick"],
+                        f"Entrega a cola QA confirmada · recibo {receipt[0]} · "
+                        f"observación {receipt[2]}. Consumidor final pendiente.")
         except Exception as exc:
             messagebox.showwarning("Sensores", str(exc), parent=self.root)
+
+    def _equipment_dossier(self, contact: list) -> str:
+        readings = [e for e in self.state.get("equipment", [])
+                    if e["contact"] == contact[0]]
+        if not readings:
+            return "\nARMAMENTO Y DEFENSAS\nSin medición física disponible.\n"
+        e = readings[-1]
+        text = ("\nARMAMENTO Y DEFENSAS\n"
+                f"Lectura Core F06 · {clock(e['tick'])} · "
+                f"confianza {e['confidence']/10:.1f}%\n")
+        text += (f"Estructura observada: {e['length_m']} m\n" if e['length_m']
+                 else "Dimensiones: sin medición suficiente.\n")
+        text += (f"Referencia: catálogo QA v{e['catalog']} · cifras ficticias/no canónicas\n"
+                 if e['catalog'] else "Referencia de clase: no disponible\n")
+        for k, (count, state, expected, comparison) in enumerate(e['slots']):
+            reference = str(expected) if e['catalog'] else "sin referencia"
+            if not e['mask'] & (1 << k):
+                text += f"GRIS · {EQUIPMENT_SLOTS[k]}: no observable; catálogo {reference}\n"
+            else:
+                condition = ("no disponible", "en reposo", "energizado", "emisión ofensiva activa")[state]
+                text += (f"{COMPARISONS[comparison]} · {EQUIPMENT_SLOTS[k]}: "
+                         f"{count} detectados ({condition}); catálogo {reference}\n")
+        text += "Verde indica coincidencia, no ausencia de peligro.\n"
+        receipts = [d for d in self.state.get("deliveries", []) if d[1] == contact[0]]
+        for receipt in receipts:
+            target = {1: "Superior", 2: "Táctica QA", 3: "Ciencia QA"}[receipt[4]]
+            text += f"Entrega {target}: recibo {receipt[0]} · observación {receipt[2]}\n"
+        return text
 
     def _no_selection_dossier(self) -> str:
         state = self.state
@@ -1147,7 +1196,7 @@ class Panel:
             status = {1: "Nominal", 2: "Degradado", 3: "Sin servicio",
                       4: "Revisar configuración"}.get(diagnostic[0], "No disponible")
             return (
-                "EQUIPO DE SENSORES\n\n"
+                "EQUIPO DE SENSORES\nPerfil individual Enterprise-D / Galaxy, Proyecto Valhalla.\nBanco QA F04: casco sintético Miranda.\n\n"
                 f"Estado: {status}\n"
                 f"Potencia: {diagnostic[2] / 10:.1f}%\n"
                 f"Integridad: {diagnostic[3] / 10:.1f}%\n"
@@ -1177,6 +1226,32 @@ class Panel:
         c = self.contact_map.get(selection[0]) if selection else None
         details = self._no_selection_dossier()
         self.technical_details = ""
+        readings = [e for e in self.state.get("equipment", [])
+                    if c is not None and e["contact"] == c[0]]
+        if readings:
+            e = readings[-1]
+            self.equipment_brief.configure(text=(
+                f"LECTURA F06 · {clock(e['tick'])} · {e['confidence']/10:.1f}%"
+                if c[2] == 1 else f"HISTÓRICO · CONTACTO PERDIDO · {clock(e['tick'])}"))
+            def count(k: int) -> str:
+                if not e["mask"] & (1<<k):
+                    return "sin observar"
+                value, state, expected, comparison = e["slots"][k]
+                reference = str(expected) if e["catalog"] else "?"
+                return f"{value} (cat. {reference}) · {COMPARISONS[comparison]}"
+            self.equipment_brief_lines[0].configure(text=f"Emisores: {count(0)} · Lanzadores: {count(1)}")
+            self.equipment_brief_lines[1].configure(text=f"Escudos: {count(2)} · Blindaje: {count(3)}")
+            self.equipment_brief_lines[2].configure(text=f"Warp: {count(4)} · Impulso: {count(5)}")
+            self.equipment_brief_lines[3].configure(text=f"{e['length_m']} m · Catálogo QA ficticio/no canónico" if e['catalog']
+                                                   else f"{e['length_m']} m · Clase no determinada; sin referencia")
+            colors = ("#626262", "#19652a", "#945200", "#b42318")
+            for label, indices in zip(self.equipment_brief_lines, ((0,1),(2,3),(4,5),())):
+                severity = max((e['slots'][k][3] for k in indices),default=0)
+                label.configure(foreground=colors[severity])
+            if not self.equipment_brief.winfo_manager():
+                self.equipment_brief.pack(fill="x", pady=(0,5), before=self.detail_box)
+        else:
+            self.equipment_brief.pack_forget()
         if c is not None:
             name = self.designations.get(c[0], "Contacto C-" + str(c[0])[-6:])
             typ = TYPES.get(c[1], "Señal desconocida")
@@ -1187,9 +1262,7 @@ class Panel:
                 "NAVE · IDENTIDAD PENDIENTE" if c[1] == 1 else name.upper())
             if c[1] in (1, 2):
                 klass = STARSHIP_CLASSES.get(c[3])
-                profile = NAVAL_CAPABILITIES.get(c[3])
-                description = profile[0] if profile else (
-                    STARSHIP_DESIGNS.get(c[3], ("Clase de nave no catalogada",))[0])
+                description = STARSHIP_DESIGNS.get(c[3], ("Clase de nave no catalogada",))[0]
                 heading = (
                     f"{description.upper()} · {klass.upper()}"
                     if klass else "NAVE · IDENTIFICACIÓN PENDIENTE"
@@ -1218,14 +1291,10 @@ class Panel:
                         details += "Trayectoria: esperando actualización de sensores.\n"
                 else:
                     details += "Rumbo y movimiento: calculando trayectoria…\n"
-                if profile:
-                    details += (
-                        "\nCAPACIDADES CONOCIDAS DE LA CLASE\n"
-                        f"Armamento habitual: {profile[1]}\n"
-                        f"Defensas habituales: {profile[2]}\n"
-                    )
-                # The sensor feed is already shared with Tactical; a
-                # permanent label saying so serves no operator purpose.
+                details += (f"Transpondedor declarado: {c[6]}\n" if c[6]
+                            else "Transpondedor: sin señal\n")
+                details += "Afiliación actual: sin acreditar\n"
+                details += self._equipment_dossier(c)
             else:
                 details = f"{heading}\n\n"
                 details += f"Distancia: {c[5] / 1000:.3f} UA\n"
@@ -1329,19 +1398,26 @@ class Panel:
                 if start:
                     self.detail_text.tag_add(
                         "section", start, f"{start}+{len(section)}c")
+            for label, color in (("VERDE", "#19652a"), ("ÁMBAR", "#945200"),
+                                 ("ROJO", "#b42318"), ("GRIS", "#626262")):
+                self.detail_text.tag_configure(label, foreground=color)
+                start = "1.0"
+                while found := self.detail_text.search(label + " ·", start, "end"):
+                    self.detail_text.tag_add(label, found, f"{found} lineend")
+                    start = f"{found}+1c"
             self.detail_text.configure(state="disabled")
             self.detail_text.yview_moveto(y_before)
         if c is not None:
             if c[2] == 1:
                 self.identify_button.configure(
-                    text="IDENTIFICAR" if c[1] in (1, 2) else "ANÁLISIS RÁPIDO")
+                    text="LECTURA")
                 if not self.action_area.winfo_manager():
                     self.action_area.pack(fill="x", pady=(7, 4))
             else:
                 self.action_area.pack_forget()
             if not self.technical_button.winfo_manager():
                 self.technical_button.pack(fill="x", pady=4)
-            if self.current_view == "contacts" and str(c[0]) in self.new_contact_ids:
+            if c[2] == 1:
                 self.contact_report_button.configure(
                     text=("CONTACTO COMUNICADO" if str(c[0]) in self.shared_report_ids
                           else "COMUNICAR CONTACTO AL OFICIAL"),
@@ -1353,16 +1429,19 @@ class Panel:
             completed = any(
                 j[1] == c[0] and j[0] in self.operator_scan_ids and j[5] == 2
                 for j in self.state.get("scans", []))
-            if self.current_view == "results" and completed:
+            if c[2] == 1 and any(e["contact"] == c[0] for e in self.state.get("equipment", [])):
                 if not self.tactical_report_button.winfo_manager():
                     self.tactical_report_button.pack(fill="x", pady=(4, 2))
+                self.science_transfer_button.pack(fill="x", pady=(2, 2))
             else:
                 self.tactical_report_button.pack_forget()
+                self.science_transfer_button.pack_forget()
         else:
             self.action_area.pack_forget()
             self.technical_button.pack_forget()
             self.contact_report_button.pack_forget()
             self.tactical_report_button.pack_forget()
+            self.science_transfer_button.pack_forget()
         self._update_scan_progress(c)
 
     def _update_scan_progress(self, contact: list | None) -> None:
@@ -1505,8 +1584,26 @@ class Panel:
     def apply(self, state: dict, reset: bool = False) -> None:
         previous = self.state
         self.state = state
+        self.x1 = state.get("mode") == 4
+        self.speed_selector.configure(values=("×1",) if self.x1 else ("×1", "×15", "×30", "×60"))
+        if self.x1:
+            self.speed.set("×1")
         self.record.append(state)
         t = state["tick"]
+        readings = state.get("equipment", [])
+        if readings:
+            e = max(readings, key=lambda row: (row["tick"], readings.index(row)))
+            contact = next(c for c in state["contacts"] if c[0] == e["contact"])
+            slots = []
+            for k in (0,1,2):
+                value = e["slots"][k]
+                slots.append(f"{EQUIPMENT_SLOTS[k]}: {value[0]}" if e["mask"] & (1<<k)
+                             else f"{EQUIPMENT_SLOTS[k]}: no observable")
+            self.auto_brief.configure(text=(
+                "FICHA AUTOMÁTICA · " + contact_identification(contact) + "\n" +
+                " · ".join(slots) + f" · {e['length_m']} m · {clock(e['tick'])}"))
+        else:
+            self.auto_brief.configure(text="Vigilancia automática; sin nuevas mediciones navales.")
         self.shared_report_ids={
             str(item[0]) for item in state.get("contact_briefs", [])}
         new_arrivals=[]
@@ -1520,11 +1617,12 @@ class Panel:
                     if observed and key not in self.new_contact_ids:
                         self.new_contact_ids.add(key)
                         new_arrivals.append(key)
-        if new_arrivals:
+        if new_arrivals and not self.x1:
             self.navigate("contacts")
             self._choose_contact(new_arrivals[-1])
         self.progress["value"] = t
-        self.timelabel.configure(text=f"Guardia: {clock(t)} / 08:00:00")
+        self.timelabel.configure(text=f"{'ASTER_X1' if self.x1 else 'Guardia'}: {clock(t)} / {clock(state.get('duration', 28800))}")
+        self.progress.configure(maximum=state.get("duration", 28800))
         if state["offline"]:
             status = "Sensores fuera de servicio · vigilancia degradada"
         else:
@@ -1615,7 +1713,7 @@ class Panel:
         background_losses: Counter = Counter()
         background_reacquired: Counter = Counter()
         for kind, contact_id, when, category, klass in state["events"]:
-            if not reset and when > 0 and kind == 1 and category in (1, 2):
+            if not self.x1 and not reset and when > 0 and kind == 1 and category in (1, 2):
                 candidate = str(contact_id)
                 observed = self.contact_map.get(candidate)
                 if (observed and observed[2] == 1 and
@@ -1681,7 +1779,8 @@ class Panel:
                       4: "cancelado"}.get(job[5], "estado desconocido")
             self.append(t, f"Estudio solicitado de C-{str(target)[-6:]}: {result}.")
         self._update_alert(state)
-        if t >= 28800:
+        self._record_latency(state)
+        if t >= state.get("duration", 28800):
             self.playing = False
             self.button_play.configure(text="Guardia finalizada", state="disabled")
             self.append(t, "Guardia finalizada. Exporta el informe cuando quieras.")
@@ -1695,31 +1794,70 @@ class Panel:
         self.append(self.state.get("tick", 0),
                     f"Guardia a velocidad {self.speed.get()} por decisión del oficial.")
 
+    def _record_latency(self, state: dict) -> None:
+        self.root.update_idletasks()
+        displayed = time.monotonic()
+        for row in state.get("latency", []):
+            cid, tick, source, received, published = row
+            key = (cid, source)
+            if key in self.telemetry_seen:
+                continue
+            self.telemetry_seen.add(key)
+            record = {"contact": cid, "tick": tick, "source_native_ns": source,
+                      "core_receive_native_ns": received, "f06_publish_native_ns": published,
+                      "gui_receive_monotonic_s": self.last_receipt,
+                      "gui_display_monotonic_s": displayed,
+                      "native_latency_s": (published-source)/1e9,
+                      "mode": "ASTER_X1" if self.x1 else "eight_hours",
+                      "realtime": self.playing and self.x1,
+                      "source_to_gui_s": max(0, displayed-(self.wall_origin+tick))}
+            if self.telemetry:
+                self.telemetry.parent.mkdir(parents=True, exist_ok=True)
+                with self.telemetry.open("a", encoding="utf-8") as log:
+                    log.write(json.dumps(record) + "\n")
+        for e in state.get("equipment", []):
+            if e["id"] in self.equipment_seen:
+                continue
+            self.equipment_seen.add(e["id"])
+            if any(slot[3] in (2,3) for slot in e["slots"]):
+                self.append(state["tick"], "Equipamiento anómalo o emisión ofensiva observada; consulta la ficha.")
+
     def tick(self) -> None:
-        if self.playing and self.state.get("tick", 0) < 28800:
+        now = time.monotonic()
+        elapsed, self.last_wall = now-self.last_wall, now
+        if self.playing and self.state.get("tick", 0) < self.state.get("duration", 28800):
             try:
-                # Advance one simulated second every two 500-ms ticks at ×1.
-                # Integer half-seconds also preserve exact ×15 cadence.
-                self.sim_half_seconds += int(self.speed.get()[1:])
-                sim_seconds, self.sim_half_seconds = divmod(
-                    self.sim_half_seconds, 2)
-                if sim_seconds:
-                    self.apply(self.command(f"STEP {sim_seconds}"))
+                speed = 1 if self.x1 else int(self.speed.get()[1:])
+                self.elapsed_fraction += elapsed*speed
+                seconds = int(self.elapsed_fraction)
+                self.elapsed_fraction -= seconds
+                if seconds:
+                    self.apply(self.command(f"STEP {seconds}"))
             except Exception as exc:
                 self.playing = False
                 self.button_play.configure(text="Reanudar")
                 messagebox.showerror("Prueba F06", str(exc), parent=self.root)
+        elif self.x1:
+            # Pausing shifts the real-time origin; it never fabricates an SLA.
+            self.wall_origin += elapsed
         self.root.after(500, self.tick)
 
     def toggle(self) -> None:
-        if self.state.get("tick", 0) >= 28800:
+        if self.state.get("tick", 0) >= self.state.get("duration", 28800):
             return
+        self.last_wall = time.monotonic()
+        self.wall_origin = self.last_wall-self.state.get("tick", 0)-self.elapsed_fraction
         self.playing = not self.playing
         self.button_play.configure(text="Pausar" if self.playing else "Reanudar")
 
     def restart(self) -> None:
         self.playing = False
-        self.speed.set("×30")
+        self.x1 = MODES.index(self.mode.get()) == 4
+        self.last_wall = self.wall_origin = time.monotonic()
+        self.elapsed_fraction = 0.0
+        self.telemetry_seen.clear()
+        self.equipment_seen.clear()
+        self.speed.set("×1" if self.x1 else "×30")
         self.speed_before_alert = "×30"
         self.slowed_for_alert = False
         self.sim_half_seconds = 0
@@ -1752,8 +1890,39 @@ class Panel:
         self.notice_label.configure(text="Vigilancia automática activada.")
         try:
             self.apply(self.command(f"RESTART {MODES.index(self.mode.get())}"), reset=True)
+            self.playing = self.x1
+            self.button_play.configure(text="Pausar" if self.x1 else "Iniciar")
         except Exception as exc:
             messagebox.showerror("Prueba F06", str(exc), parent=self.root)
+
+    def disk_checkpoint(self, restore: bool) -> None:
+        if not self.x1:
+            messagebox.showinfo("Sensores", "Guardado en disco disponible en ASTER_X1.", parent=self.root)
+            return
+        self.playing = False
+        self.button_play.configure(text="Reanudar")
+        chooser = filedialog.askopenfilename if restore else filedialog.asksaveasfilename
+        path = chooser(parent=self.root, defaultextension=".aster",
+                       filetypes=[("Guardia ASTER_X1", "*.aster")])
+        if not path:
+            return
+        try:
+            state = self.command(f"{'LOADFILE' if restore else 'SAVEFILE'} {path}")
+            if restore:
+                self.state = {}
+                self.equipment_seen = {e["id"] for e in state.get("equipment", [])}
+                self.new_contact_ids = {str(c[0]) for c in state["contacts"]}
+                self.followed_ids.clear()
+                self.analyzed_ids.clear()
+                self.manual_jobs.clear()
+                self.operator_scan_ids.clear()
+            self.apply(state)
+            self.last_wall = time.monotonic()
+            self.wall_origin = self.last_wall-state["tick"]
+            self.elapsed_fraction = 0.0
+            self.append(state["tick"], "Guardia restaurada desde Core." if restore else "Guardia Core guardada en disco.")
+        except Exception as exc:
+            messagebox.showwarning("Sensores", str(exc), parent=self.root)
 
     def checkpoint(self, op: str) -> None:
         self.playing = False
@@ -1786,6 +1955,10 @@ class Panel:
                 self.analyzed_ids = set(self.saved_operator_views.get("analysed", set()))
                 self.tactical_qa_ids = set(self.saved_operator_views.get("tactical", set()))
                 self.record.clear()
+                self.equipment_seen = {e["id"] for e in state.get("equipment", [])}
+                self.last_wall = time.monotonic()
+                self.wall_origin = self.last_wall-state["tick"]
+                self.elapsed_fraction = 0.0
                 self.state = {}  # loading must not create a false state-transition alarm
                 self.arrival_id = None
                 self.alert_ids = []
@@ -1851,12 +2024,14 @@ class Panel:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--runner", required=True, type=Path)
+    parser.add_argument("--mode", choices=("x1", "eight-hours"), default="x1")
+    parser.add_argument("--telemetry", type=Path)
     args = parser.parse_args()
     if not args.runner.is_file():
         raise SystemExit(f"No existe el ejecutable nativo: {args.runner}")
     root = tk.Tk()
     try:
-        Panel(root, args.runner)
+        Panel(root, args.runner, x1=args.mode == "x1", telemetry=args.telemetry)
     except Exception as exc:
         messagebox.showerror("Prueba F06", str(exc), parent=root)
         root.destroy()

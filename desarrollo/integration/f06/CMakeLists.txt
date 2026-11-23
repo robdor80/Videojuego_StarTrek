@@ -21,6 +21,11 @@ execute_process(
   --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_profiles_generated.h"
  COMMAND_ERROR_IS_FATAL ANY
 )
+execute_process(
+ COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_equipment_catalog.py"
+  --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_equipment_catalog_generated.h"
+ COMMAND_ERROR_IS_FATAL ANY
+)
 set(F06_QA_PHYSICAL "${CMAKE_CURRENT_BINARY_DIR}/generated/aster_f06_physical.json")
 execute_process(
  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/../../tools/generation/enrich_aster_f06_v1.py"
@@ -54,6 +59,9 @@ target_include_directories(f06_tests PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/genera
 add_executable(f06_aster_runner qa/aster_runner.cpp)
 target_link_libraries(f06_aster_runner PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
 target_compile_features(f06_aster_runner PRIVATE cxx_std_20)
+if(MSVC)
+ target_compile_options(f06_aster_runner PRIVATE /utf-8)
+endif()
 target_include_directories(f06_aster_runner PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/generated")
 set_target_properties(f06_aster_runner PROPERTIES
  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
@@ -66,3 +74,19 @@ set_target_properties(f06_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CUR
 foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking tracking_capacity_recovery area_scan notices_cursor power_queue f05_order world_feed profiles configuration config_live search diagnostics results_compare categories mini_system bis_science bis_science_corrob bis_timed bis_timed_interrupt bis_environment bis_power bis_sections bis_sections_modes computer_empty computer_focus computer_interference computer_failure)
  add_test(NAME f06.${scenario} COMMAND f06_tests ${scenario})
 endforeach()
+
+add_executable(f06_equipment_tests tests/f06_equipment_tests.cpp)
+target_link_libraries(f06_equipment_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
+target_compile_features(f06_equipment_tests PRIVATE cxx_std_20)
+set_target_properties(f06_equipment_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+add_test(NAME f06.equipment_contract COMMAND f06_equipment_tests)
+add_test(NAME f06.aster_x1_acceptance COMMAND "${Python3_EXECUTABLE}"
+ "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_aster_x1.py" --runner "$<TARGET_FILE:f06_aster_runner>"
+ --output-dir "${CMAKE_CURRENT_BINARY_DIR}/x1")
+
+add_test(NAME f06.aster_eight_hours_separate COMMAND "${Python3_EXECUTABLE}"
+ "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_aster_eight_hours.py" --runner "$<TARGET_FILE:f06_aster_runner>"
+ --output-dir "${CMAKE_CURRENT_BINARY_DIR}/eight-hours")
+add_test(NAME f06.equipment_catalog_integrity COMMAND "${Python3_EXECUTABLE}"
+ "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_equipment_catalog.py"
+ --output-dir "${CMAKE_CURRENT_BINARY_DIR}/catalog-negatives")
