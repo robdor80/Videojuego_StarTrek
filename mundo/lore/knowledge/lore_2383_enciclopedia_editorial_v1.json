@@ -1,11 +1,15 @@
 {
   "schema_version": "1.0.0",
   "catalogue_id": "lore_2383_enciclopedia_editorial",
-  "status": "EDITORIAL_REFERENCE_NOT_RUNTIME",
+  "status": "PARKED_IDEA_NOT_AUTHOR_APPROVED",
   "continuity": "star_trek_legends_authorial",
-  "reference_continuities": ["tng", "ds9", "voyager"],
+  "reference_continuities": [
+    "tng",
+    "ds9",
+    "voyager"
+  ],
   "continuity_priority": "AUTHOR_APPROVED_GAME_LORE_OVER_SCREEN_CANON",
-  "continuity_review_status": "PENDING_AUTHORIAL_GAME_CONTINUITY_AUDIT",
+  "continuity_review_status": "DEFERRED_TO_IDEA_CONVERSATION",
   "continuity_policy_ref": "proyecto/ideas/IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md",
   "language": "es-ES",
   "source_policy": "mundo/sources/provenance_policy.md",
@@ -333,5 +337,7 @@
       "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
       "auto_materialize": false
     }
-  ]
+  ],
+  "author_approval_state": "TWENTY_EDITORIAL_SEEDS_NOT_APPROVED",
+  "authorial_review_ref": "proyecto/docs/roadmap/operacion_lore_20261122/DECISIONES_RATIFICADAS_20261123.md"
 }
