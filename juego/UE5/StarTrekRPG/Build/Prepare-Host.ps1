@@ -28,7 +28,7 @@ try {
     & cmake --build $BuildRoot --config Release --parallel 3 --target TrekHost
     if ($LASTEXITCODE) { throw 'HOST Release build failed.' }
 
-    $Headers = @('host_abi.h', 'academy_abi.h')
+    $Headers = @('host_abi.h', 'academy_abi.h', 'institutional_abi.h')
     foreach ($Header in $Headers) {
         if (!(Test-Path -LiteralPath (Join-Path $HostSource "include/trek/host/$Header") -PathType Leaf)) {
             throw "Missing HOST SDK header: $Header"

@@ -301,6 +301,7 @@ std::shared_ptr<PinnedDirectory> root(const StorageConfig& config) {
     need(configured.is_absolute() && configured.root_name().native().size()==2 && configured.root_name().native()[1]==L':',Error::PATH_REJECTED);
     // Local volumes only. Extended paths keep the same bounded path policy and
     // avoid MAX_PATH failures for nested generations on supported Windows.
+    configured.make_preferred(); // Extended Win32 paths require backslash separators.
     configured=fs::path(std::wstring(L"\\\\?\\")+configured.native());
 #endif
     auto pin=std::make_shared<PinnedDirectory>(configured);

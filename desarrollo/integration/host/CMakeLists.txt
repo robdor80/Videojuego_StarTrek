@@ -263,6 +263,8 @@ endif()
 # The test executable links the read-only product bridge. Confirmed facts are
 # provided by f11.process_save from a separate build and process.
 if(TREK_HOST_TESTS)
+  set(TREK_HOST_H07_TEST_ROOT "${CMAKE_CURRENT_BINARY_DIR}/h07/p03" CACHE PATH
+    "Isolated H07 test storage; choose a short absolute path on Windows")
   add_executable(host_h07_query_tests tests/h07_p03_queries.cpp ${host_sources} ${host_adapter_sources})
   target_compile_features(host_h07_query_tests PRIVATE cxx_std_20)
   target_include_directories(host_h07_query_tests PRIVATE src tests include)
@@ -283,7 +285,7 @@ if(TREK_HOST_TESTS)
   endif()
   foreach(h07_case IN LISTS h07_query_cases)
     add_test(NAME host.h07.p03.${h07_case} COMMAND host_h07_query_tests
-      ${h07_case} "${CMAKE_CURRENT_BINARY_DIR}/h07/p03")
+      ${h07_case} "${TREK_HOST_H07_TEST_ROOT}")
     set_tests_properties(host.h07.p03.${h07_case} PROPERTIES TIMEOUT 120 LABELS "h07;p03;native")
   endforeach()
   if(TREK_HOST_F11_READS)
@@ -293,6 +295,16 @@ if(TREK_HOST_TESTS)
 endif()
 
 if(TREK_HOST_TESTS)
+  add_executable(host_institutional_abi_tests tests/institutional_abi_tests.c)
+  set_target_properties(host_institutional_abi_tests PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  target_link_libraries(host_institutional_abi_tests PRIVATE TrekHost)
+  if(TREK_HOST_F11_READS)
+    add_test(NAME host.h07.p05.abi COMMAND host_institutional_abi_tests "${TREK_HOST_H07_TEST_ROOT}")
+    set_tests_properties(host.h07.p03.restore host.h07.p03.import host.h07.p05.abi PROPERTIES RESOURCE_LOCK h07_saved_storage)
+    set_tests_properties(host.h07.p05.abi PROPERTIES FIXTURES_REQUIRED host_h07_saved_career TIMEOUT 120 LABELS "h07;p05;abi")
+  endif()
+
   add_executable(host_abi_tests tests/host_abi_tests.c)
   add_executable(host_academy_abi_tests tests/academy_abi_tests.c)
   set_target_properties(host_academy_abi_tests PROPERTIES C_STANDARD 11 C_STANDARD_REQUIRED YES

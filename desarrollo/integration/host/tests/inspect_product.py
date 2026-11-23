@@ -43,7 +43,8 @@ else:
     bridge_symbols = subprocess.check_output(["nm", "-a", "-C", "--defined-only", str(bridge)], text=True)
     bridge_dependencies = subprocess.check_output(["ldd", str(bridge)], text=True)
     assert "not found" not in dependencies + bridge_dependencies
-for name in ("trek_host_academy_version", "trek_host_academy_submit", "trek_host_academy_poll",
+for name in ("trek_host_institutional_version", "trek_host_institutional_submit", "trek_host_institutional_poll",
+             "trek_host_institutional_current", "trek_host_academy_version", "trek_host_academy_submit", "trek_host_academy_poll",
              "query_view", "submit_order", "query_order", "cancel_order", "restore", "AcademyCandidateFactory",
              "AcademyPlayerBinding"):
     assert name in symbols, name

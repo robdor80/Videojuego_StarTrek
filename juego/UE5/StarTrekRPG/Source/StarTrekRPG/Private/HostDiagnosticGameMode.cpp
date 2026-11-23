@@ -3,6 +3,7 @@
 #include "HostRuntime.h"
 #include "HostSessionSubsystem.h"
 #include "SHostAcademyMenu.h"
+#include "SHostInstitutionalView.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
@@ -92,6 +93,8 @@ public:
                         [
                             SNew(STextBlock).Text(this, &SHostDiagnostic::ResultText).AutoWrapText(true)
                         ]
+                        + SVerticalBox::Slot().AutoHeight()
+                        [ SNew(SHostInstitutionalView).Host(Args._Host).Projection(Args._Projection) ]
                     ]
                 ]
             ]

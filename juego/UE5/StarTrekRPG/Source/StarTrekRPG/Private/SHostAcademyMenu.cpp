@@ -1,4 +1,5 @@
 #include "SHostAcademyMenu.h"
+#include "SHostInstitutionalView.h"
 
 #include "Framework/Application/SlateApplication.h"
 #include "HostRuntime.h"
@@ -349,6 +350,8 @@ void SHostAcademyMenu::BuildCandidate(SVerticalBox& Body)
                 FText::AsNumber(Candidate->Revision), FText::AsNumber(Candidate->Tick), FText::FromString(Candidate->SourceDigest)))
         ]
     ];
+    Body.AddSlot().AutoHeight().Padding(0, 8)
+    [ SNew(SHostInstitutionalView).Host(Menu->GetSession()).Projection(Menu->GetProjection()) ];
     const FText SaveLabel = Menu->GetFlow().SaveState() == EAcademySave::Failed
         ? LOCTEXT("RetrySave", "Reintentar guardar") : LOCTEXT("Save", "Guardar");
     const auto Save = Button(EAction::Save, TEXT("AcademySave"), SaveLabel);

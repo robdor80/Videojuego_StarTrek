@@ -2,6 +2,8 @@
 #include "trek/host/academy_abi.h"
 
 #include "abi_admission.h"
+#include "institutional_queries.h"
+#include "trek/host/institutional_abi.h"
 #include "academy_interface.h"
 #include "f10/academy_campaign.h"
 #include "trek/host/session_owner.h"
@@ -94,7 +96,7 @@ std::string copy(TrekHostText text)
 }
 
 using Reply = std::variant<std::future<Result>, std::shared_future<Result>, std::future<OperationResult>,
-                           std::future<detail::AcademyInterfaceResult>>;
+                           std::future<detail::AcademyInterfaceResult>, std::future<detail::InstitutionalResult>>;
 
 struct Pending {
     Reply reply;
@@ -103,6 +105,8 @@ struct Pending {
     uint32_t operation = 0;
     Generation generation;
     bool academy = false;
+    bool institutional = false;
+    uint64_t correlation = 0;
 };
 
 void project(TrekHostCompletion& out, const OperationResult& result, const Pending& pending)
@@ -271,7 +275,7 @@ try {
     if (out->size != sizeof(*out)) return TREK_HOST_ABI_MISMATCH;
     auto* slot = client->find(ticket);
     if (!slot) return TREK_HOST_UNKNOWN_TICKET;
-    if (slot->academy) return TREK_HOST_ABI_MISMATCH;
+    if (slot->academy || slot->institutional) return TREK_HOST_ABI_MISMATCH;
 
     const AbiAdmission guard(client->owner);
     if (!guard) return TREK_HOST_RETRY;
@@ -330,6 +334,100 @@ TrekHostCode TREK_HOST_ABI_CALL trek_host_discard(TrekHostClient* client, uint64
     *slot = {};
     return TREK_HOST_OK;
 }
+
+uint32_t TREK_HOST_ABI_CALL trek_host_institutional_version(void)
+{
+    return TREK_HOST_INSTITUTIONAL_VERSION;
+}
+
+TrekHostCode TREK_HOST_ABI_CALL trek_host_institutional_current(
+    TrekHostClient* client, uint64_t generation, uint64_t epoch)
+try {
+    if (!client) return TREK_HOST_INVALID_ARGUMENT;
+    const AbiAdmission guard(client->owner);
+    if (!guard) return TREK_HOST_RETRY;
+    const auto current = client->owner.snapshot().generation;
+    if (!generation || generation != AbiAdmission::token(current)) return TREK_HOST_GENERATION_EXPIRED;
+    detail::InstitutionalResult result;
+    result.generation = current;
+    result.persistence_epoch = epoch;
+    result.view.emplace();
+    return detail::InstitutionalQueries::is_current(client->owner, result) ? TREK_HOST_OK : TREK_HOST_GENERATION_EXPIRED;
+} catch (...) { return TREK_HOST_INTERNAL_ERROR; }
+
+TrekHostCode TREK_HOST_ABI_CALL trek_host_institutional_submit(
+    TrekHostClient* client, const TrekHostInstitutionalRequest* request, uint64_t* ticket)
+try {
+    if (!ticket) return TREK_HOST_INVALID_ARGUMENT;
+    *ticket = 0;
+    if (!client || !request) return TREK_HOST_INVALID_ARGUMENT;
+    if (request->size != sizeof(*request) || request->version != TREK_HOST_INSTITUTIONAL_VERSION)
+        return TREK_HOST_ABI_MISMATCH;
+    if (request->reserved || (request->operation != TREK_HOST_CAREER && request->operation != TREK_HOST_PROMOTION) ||
+        (request->operation == TREK_HOST_CAREER && request->event_id) ||
+        (request->operation == TREK_HOST_PROMOTION && !request->event_id)) return TREK_HOST_INVALID_ARGUMENT;
+    auto* slot = client->find(0);
+    if (!slot || slot == &client->pending.back() || client->last_ticket == UINT64_MAX) return TREK_HOST_CAPACITY_LIMIT;
+    const AbiAdmission guard(client->owner);
+    if (!guard) return TREK_HOST_RETRY;
+    const auto current = client->owner.snapshot().generation;
+    if (request->generation != AbiAdmission::token(current)) return TREK_HOST_GENERATION_EXPIRED;
+    const auto next = client->last_ticket + 1;
+    auto reply = request->operation == TREK_HOST_CAREER
+        ? detail::InstitutionalQueries::career(client->owner, current, request->correlation)
+        : detail::InstitutionalQueries::promotion(client->owner, current, request->event_id, request->correlation);
+    *slot = {std::move(reply), next, 0, request->operation, current, false, true, request->correlation};
+    *ticket = client->last_ticket = next;
+    return TREK_HOST_OK;
+} catch (...) { return TREK_HOST_INTERNAL_ERROR; }
+
+TrekHostCode TREK_HOST_ABI_CALL trek_host_institutional_poll(
+    TrekHostClient* client, uint64_t ticket, TrekHostInstitutionalCompletion* out)
+try {
+    if (!client || !out || !ticket) return TREK_HOST_INVALID_ARGUMENT;
+    if (out->size != sizeof(*out)) return TREK_HOST_ABI_MISMATCH;
+    auto* slot = client->find(ticket);
+    if (!slot) return TREK_HOST_UNKNOWN_TICKET;
+    if (!slot->institutional) return TREK_HOST_ABI_MISMATCH;
+    const AbiAdmission guard(client->owner);
+    if (!guard) return TREK_HOST_RETRY;
+    auto& future = std::get<std::future<detail::InstitutionalResult>>(slot->reply);
+    if (future.wait_for(std::chrono::seconds(0)) != std::future_status::ready) return TREK_HOST_PENDING;
+    TrekHostInstitutionalCompletion completion{};
+    completion.size = sizeof(completion);
+    completion.ticket = ticket;
+    completion.operation = slot->operation;
+    completion.correlation = slot->correlation;
+    completion.code = TREK_HOST_INTERNAL_ERROR;
+    try {
+        const auto result = future.get();
+        completion.code = encode(result.error);
+        if (result.error == Error::OK && !detail::InstitutionalQueries::is_current(client->owner, result))
+            completion.code = TREK_HOST_GENERATION_EXPIRED;
+        if (completion.code == TREK_HOST_OK) {
+            completion.generation = AbiAdmission::token(result.generation);
+            completion.epoch = result.persistence_epoch;
+            completion.world_revision = result.view->world_revision;
+            std::visit([&](const auto& facts) {
+                using T = std::decay_t<decltype(facts)>;
+                if constexpr (std::is_same_v<T, detail::CareerViewV1>) {
+                    completion.event_id = facts.rank_event_id;
+                    completion.rank = facts.rank;
+                    completion.service_status = facts.service_status;
+                } else {
+                    completion.event_id = facts.event_id;
+                    completion.effective_tick = facts.effective_tick;
+                    completion.original_revision = facts.original_revision;
+                    completion.from_rank = facts.from_rank;
+                    completion.to_rank = facts.to_rank;
+                }
+            }, result.view->facts);
+        }
+    } catch (...) { completion.code = TREK_HOST_INTERNAL_ERROR; }
+    *slot = {};
+    *out = completion;
+    return TREK_HOST_OK;
+} catch (...) { return TREK_HOST_INTERNAL_ERROR; }
 
 uint32_t TREK_HOST_ABI_CALL trek_host_academy_version(void)
 {
@@ -396,7 +494,7 @@ try {
     if (out->size != sizeof(*out)) return TREK_HOST_ABI_MISMATCH;
     auto* slot = client->find(ticket);
     if (!slot) return TREK_HOST_UNKNOWN_TICKET;
-    if (!slot->academy) return TREK_HOST_ABI_MISMATCH;
+    if (!slot->academy || slot->institutional) return TREK_HOST_ABI_MISMATCH;
     const AbiAdmission guard(client->owner);
     if (!guard) return TREK_HOST_RETRY;
     auto& future = std::get<std::future<detail::AcademyInterfaceResult>>(slot->reply);

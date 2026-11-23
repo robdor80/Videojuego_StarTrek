@@ -6,6 +6,7 @@
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "Subsystems/WorldSubsystem.h"
 #include "trek/host/academy_abi.h"
+#include "trek/host/institutional_abi.h"
 #include "HostSessionSubsystem.generated.h"
 
 struct FHostAcademyCandidate
@@ -74,6 +75,8 @@ public:
     const TOptional<FHostAcademyCandidate>& GetAcademyCandidate() const { return AcademyCandidate; }
     const TOptional<FHostAcademyPage>& GetAcademyPage() const { return AcademyPage; }
     const TOptional<FHostAcademyResult>& GetAcademyResult(uint32 Operation) const;
+    // Returns a fresh validated copy; stale payloads never escape the projection.
+    TOptional<TrekHostInstitutionalCompletion> GetInstitutional(uint32 Operation) const;
     FString GetMessage() const { return Message; }
 
     virtual void OnWorldBeginPlay(UWorld& World) override;
@@ -99,6 +102,7 @@ private:
     TOptional<FHostAcademyCandidate> AcademyCandidate;
     TOptional<FHostAcademyPage> AcademyPage;
     TOptional<FHostAcademyResult> AcademyResults[TREK_HOST_ACADEMY_SLOTS + 1];
+    TOptional<TrekHostInstitutionalCompletion> Institutional[2];
     FString Message;
 };
 
@@ -121,6 +125,8 @@ public:
 
     TSharedRef<FHostAcademyMenu> GetAcademyMenu();
 
+    TrekHostCode QueryInstitutional(UHostWorldProjection& World, uint32 Operation, uint64 Event = 0);
+    bool IsInstitutionalCurrent(const TrekHostInstitutionalCompletion& Result) const;
     TrekHostCode Open(UHostWorldProjection& World);
     TrekHostCode Close(UHostWorldProjection& World, TSharedPtr<FHostRequestReceipt>* Receipt = nullptr);
     TrekHostCode Query(UHostWorldProjection& World);
@@ -158,6 +164,16 @@ private:
         bool IsCatalog() const { return bAcademy && Operation == TREK_HOST_ACADEMY_SLOTS; }
     };
 
+    struct FInstitutionalObservation
+    {
+        uint64 Ticket, Correlation;
+        uint32 Operation;
+        TWeakObjectPtr<UHostWorldProjection> World;
+    };
+    void InvalidateInstitutional();
+    void PollInstitutional();
+    TArray<FInstitutionalObservation> InstitutionalPending;
+    uint64 InstitutionalCorrelation = 0;
     bool Tick(float DeltaTime);
     bool RefreshStatus();
     void InvalidateProjections();
