@@ -30,13 +30,14 @@ def run(runner, output):
         return [e for e in state['equipment'] if e['contact']==cid][-1]
     p, initial = start()
     assert initial['automatic'] == 1 and initial['tick'] == 0 and initial['duration'] == 540
-    assert initial['active'] == 1
-    first = initial['contacts'][0]
+    bodies=sum(c[1] not in (1,2) for c in initial['contacts'])
+    assert bodies==15 and initial['active']==bodies+1
+    first = next(c for c in initial['contacts'] if c[1]==1)
     assert first[3]==18 and first[6] and latest(initial, first[0])['mask']==63
     assert all(s[3]==1 for s in latest(initial, first[0])['slots'])
-    before = say(p, 'STEP 59'); assert before['active']==1
-    cargo = say(p, 'STEP 1'); assert cargo['active']==2
-    added = next(c for c in cargo['contacts'] if c[0]!=first[0])
+    before = say(p, 'STEP 59'); assert before['active']==bodies+1
+    cargo = say(p, 'STEP 1'); assert cargo['active']==bodies+2
+    added = next(c for c in cargo['contacts'] if c[1]==1 and c[0]!=first[0])
     assert added[3]==18 and added[6] and latest(cargo, added[0])['tick']==60
     rom = say(p,'STEP 90'); warbird = next(c for c in rom['contacts'] if c[3]==8)
     e = latest(rom, warbird[0]); assert warbird[6]==0 and e['tick']==150
@@ -45,7 +46,7 @@ def run(runner, output):
     assert e['tick']==210 and e['slots'][0][0]==1 and e['slots'][0][3]==2
     count = len(changed['equipment'])
     assert len(say(p,'STATUS')['equipment']) == count
-    unknown = say(p,'STEP 30'); un = next(c for c in unknown['contacts'] if c[3]==0)
+    unknown = say(p,'STEP 30'); un = next(c for c in unknown['contacts'] if c[1]==1 and c[3]==0)
     e = latest(unknown, un[0]); assert un[6]==0 and e['class']==0 and e['catalog']==0
     assert e['slots'][0][0]>=6 and e['slots'][1][0]==2 and e['slots'][2][0]==2
     assert not e['mask']&8 and e['slots'][3][:2]==[0,0]
@@ -75,15 +76,15 @@ def run(runner, output):
     say(p,'RESTART 9',False)
     after = say(p,'STATUS'); assert before['equipment']==after['equipment'] and before['contacts']==after['contacts']
     active = say(p,'STEP 60'); assert latest(active,warbird[0])['slots'][0][3]==3
-    hidden = say(p,'STEP 60'); assert hidden['tick']==360 and hidden['active']==4
+    hidden = say(p,'STEP 60'); assert hidden['tick']==360 and hidden['active']==bodies+4
     assert len(hidden['latency'])==0, 'restored latency must not invent new arrivals'
-    assert len(hidden['contacts'])==4 and all(c[3]!=18 or c[6] for c in hidden['contacts'])
-    revealed = say(p,'STEP 30'); assert revealed['active']==5
+    assert len(hidden['contacts'])==bodies+4 and all(c[3]!=18 or c[6] for c in hidden['contacts'])
+    revealed = say(p,'STEP 30'); assert revealed['active']==bodies+5
     decloaked = next(c for c in revealed['contacts'] if c[3]==18 and c[6]==0)
     assert latest(revealed,decloaked[0])['tick']==390
     assert all(0 <= l[2] <= l[3] <= l[4] for l in revealed['latency'])
     offline = say(p,'STEP 60'); assert offline['offline']==1 and offline['active']==0
-    online = say(p,'STEP 15'); assert online['offline']==0 and online['active']==5
+    online = say(p,'STEP 15'); assert online['offline']==0 and online['active']==bodies+5
     ending = say(p,'STEP 75'); assert ending['tick']==540
     assert all(e['contact'] in {c[0] for c in ending['contacts']} for e in ending['equipment'])
     assert all(c[0] not in range(910001,910007) for c in ending['contacts'])

@@ -122,51 +122,23 @@ def run(runner: Path):
     assert final["contacts"]==ending["contacts"]
     finish(p)
 
-    # Regression from the live human guard: requesting a detailed scan
-    # while automatic Aster work is active must NOT require pausing time.
+    # Officer analysis is immediate on the same Core clock, even while the
+    # autonomous computer has background work. No timed placeholder is added.
     p,running=start(runner)
     running=say(p,"STEP 15")
-    auto_running=[j for j in running["scans"] if j[5]==1]
-    assert auto_running, "fixture must exercise a busy computer"
-    manual_contact=running["science"][0][0]
-    active_ids={j[0] for j in running["scans"]}
-    admitted=say(p,f"SCAN {manual_contact}")
-    manual=[j for j in admitted["scans"]
-            if j[0] not in active_ids and j[1]==manual_contact]
-    assert len(manual)==1 and manual[0][5]==1,admitted
-    assert manual[0][3]-manual[0][2] == 20, (
-        "detailed sensor analysis must finish within 20 Core seconds")
-    assert admitted["tick"]==running["tick"],(
-        "an officer's order must not pause or advance the guard")
-    finish(p)
-
-    # An actual officer study must reserve a native Core timed job,
-    # progress on the shared clock, and yield an observed result.
-    p,study_initial=start(runner)
-    planet_id=study_initial["science"][0][0]
-    for _ in range(42):
-        say(p,"STEP 30")
-    before=say(p,"STATUS")
-    known={j[0] for j in before["scans"]}
-    scheduled=say(p,f"SCAN {planet_id}")
-    manual=[j for j in scheduled["scans"] if j[0] not in known and j[1]==planet_id]
-    assert len(manual)==1 and manual[0][5]==1,scheduled
-    for _ in range(8):
-        after=say(p,"STEP 30")
-        current=next(j for j in after["scans"] if j[0]==manual[0][0])
-        if current[5]!=1:
-            break
-    assert current[5]==2 and current[4]!=0,after
-    # Recent comparisons are produced from Core's archived observations,
-    # not differences invented in the Python window.
-    row=next((r for r in after["comparisons"] if r[0]==planet_id),None)
-    assert row is not None and row[1]>=2,row
-    assert row[2]<=row[3],row
-    saved_observations=say(p,"SAVE")["comparisons"]
+    assert any(j[5]==1 for j in running["scans"])
+    planet=running["science"][0][0]
+    known={j[0] for j in running["scans"]}
+    result=say(p,f"SCAN {planet}")
+    assert result["tick"]==running["tick"]
+    assert {j[0] for j in result["scans"]}==known
+    deep=next(v for v in result["deep_analysis"] if v["contact"]==planet)
+    assert deep["science_source"] and deep["position_source"] and deep["mask"]&1
+    assert any(r[0]==planet and r[1]>=2 for r in result["comparisons"])
+    saved=say(p,"SAVE")
     say(p,"STEP 30")
-    loaded_observations=say(p,"LOAD")["comparisons"]
-    assert loaded_observations==saved_observations,(
-        loaded_observations,saved_observations)
+    loaded=say(p,"LOAD")
+    assert loaded["deep_analysis"]==saved["deep_analysis"]
     finish(p)
 
     # A Klingon cruiser arrives exactly at hour 1. Its classification must

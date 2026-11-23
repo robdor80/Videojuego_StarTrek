@@ -87,6 +87,9 @@ add_test(NAME f06.aster_x1_acceptance COMMAND "${Python3_EXECUTABLE}"
 add_test(NAME f06.aster_eight_hours_separate COMMAND "${Python3_EXECUTABLE}"
  "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_aster_eight_hours.py" --runner "$<TARGET_FILE:f06_aster_runner>"
  --output-dir "${CMAKE_CURRENT_BINARY_DIR}/eight-hours")
+add_test(NAME f06.aster_ux_contract COMMAND "${Python3_EXECUTABLE}"
+ "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_aster_ux.py" --runner "$<TARGET_FILE:f06_aster_runner>"
+ --output-dir "${CMAKE_CURRENT_BINARY_DIR}/ux")
 add_test(NAME f06.equipment_catalog_integrity COMMAND "${Python3_EXECUTABLE}"
  "${CMAKE_CURRENT_SOURCE_DIR}/qa/test_equipment_catalog.py"
  --output-dir "${CMAKE_CURRENT_BINARY_DIR}/catalog-negatives")

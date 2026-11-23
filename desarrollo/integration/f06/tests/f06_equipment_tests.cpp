@@ -62,6 +62,31 @@ int main(){try{
  Fixture other;require(f04_load(other.s,bytes.data(),bytes.size())==F04_OK,"other session restore");f04_handles(other.s,&other.h);
  require(other.equipment().size()==2 && other.equipment().back().observation_id==rows.back().observation_id,"persistent equipment identity");
  F06DeliveryView recovered{};require(f06_deliveries_page(other.s,other.h.captain,0,&recovered,1,&n,&total)==F04_OK && total==1 && recovered.receipt_id==delivered.receipt_id,"durable queue");
+ // v2 sends immutable position/Science evidence, with the same authority and
+ // retry guarantees as equipment. Deep analysis sees PUBLIC evidence only.
+ F06DeepAnalysisView deep{};
+ require(f06_deep_analysis(f.s,forged,first.contact_id,&deep)==F04_DENIED && !deep.valid_mask,"analysis forged actor");
+ require(f06_deep_analysis(f.s,f.h.captain,999,&deep)==F04_UNAVAILABLE,"analysis invented contact");
+ require(f06_deep_analysis(f.s,f.h.captain,first.contact_id,&deep)==F04_OK &&
+   (deep.valid_mask&2) && deep.angular_nanoradian==7 && deep.equipment_changes==1,"geometry from measured 1000m at 1AU and real history");
+ F06ContactView focused{};require(f06_focus(f.s,f.h.ensign,f.revision(),first.contact_id,&focused)==F04_OK,"position evidence");
+ F06ResultView position{};require(f06_results_page(f.s,f.h.captain,first.contact_id,0,&position,1,&n,&total)==F04_OK && n,"focused position");
+ F06EvidenceDeliveryRequest evidence{f.revision(),72,first.contact_id,position.result_id,2,2};
+ bytes=f.save();require(f06_deliver_evidence(f.s,f.h.captain,&evidence,&receipt)!=F04_OK && bytes==f.save(),"v2 requires sensors authority");
+ evidence.expected_revision=0;require(f06_deliver_evidence(f.s,f.h.ensign,&evidence,&receipt)==F04_STALE && bytes==f.save(),"v2 stale atomicity");
+ evidence.expected_revision=f.revision();evidence.contact_id=999;
+ require(f06_deliver_evidence(f.s,f.h.ensign,&evidence,&receipt)==F04_SCOPE && bytes==f.save(),"v2 source subject binding");
+ evidence.contact_id=first.contact_id;
+ require(f06_deliver_evidence(f.s,f.h.ensign,&evidence,&receipt)==F04_OK && receipt.observation_id==position.result_id,"v2 committed actual position");
+ const auto positional_receipt=receipt;bytes=f.save();
+ require(f06_deliver_evidence(f.s,f.h.ensign,&evidence,&receipt)==F04_OK && bytes==f.save() && receipt.receipt_id==positional_receipt.receipt_id,"v2 retry without mutation");
+ evidence.source_id=999;
+ require(f06_deliver_evidence(f.s,f.h.ensign,&evidence,&receipt)==F04_UNAVAILABLE && bytes==f.save(),"v2 fabricated evidence rejected");
+ require(f04_load(other.s,bytes.data(),bytes.size())==F04_OK,"v2 parser accepts valid linked evidence");
+ f04_handles(other.s,&other.h);
+ std::array<F06DeliveryView,4> restored_delivery{};
+ require(f06_deliveries_page(other.s,other.h.captain,0,restored_delivery.data(),4,&n,&total)==F04_OK && total==2 &&
+   restored_delivery[1].observation_id==position.result_id,"v2 persistent receipt target");
  // Unknown class has physical measurement, never a borrowed identity.
  Fixture unknown;unknown.world(false,0);auto u=unknown.physical();u.cloaked=1;require(f06_host_physical(unknown.s,&u)==F04_OK,"cloak source");unknown.world(true,0);
  require(unknown.equipment().empty(),"cloaked inventory invisible");
@@ -69,6 +94,10 @@ int main(){try{
  u.expected_revision=unknown.revision();u.source_revision=2;u.cloaked=0;
  require(f06_host_physical(unknown.s,&u)==F04_OK,"decloak");auto measured=unknown.equipment();
  require(measured.size()==1 && measured[0].class_id==0 && measured[0].catalog_version==0 && measured[0].count[0]==8 && measured[0].comparison[0]==0,"unknown physical armament without identity");
+ auto secret=u;secret.expected_revision=unknown.revision();secret.source_revision=3;secret.visibility_permille[3]=0;
+ require(f06_host_physical(unknown.s,&secret)==F04_OK,"hidden structure");
+ require(f06_deep_analysis(unknown.s,unknown.h.captain,measured[0].contact_id,&deep)==F04_OK &&
+   !deep.science_source && !deep.oxygen_microbar,"deep analysis cannot invent atmosphere for unknown ship");
  // Explicit zero power blocks acquisition; restoration resumes autonomously.
  Fixture damaged;damaged.world(false);auto pd=damaged.physical();require(f06_host_physical(damaged.s,&pd)==F04_OK,"damage physical");
  F06ArrayInput a{damaged.revision(),1000,0,1000,1,1,1,0};F06ArrayView av{};require(f06_host_array_state(damaged.s,&a,&av)==F04_OK,"offline");damaged.world();require(damaged.equipment().empty(),"offline cannot measure");

@@ -38,6 +38,27 @@ F04_API uint32_t f06_equipment_page(F04Session*,F04Ref,uint64_t contact_id,
 F04_API uint32_t f06_deliver(F04Session*,F04Ref,const F06DeliveryRequest*,F06DeliveryView*);
 F04_API uint32_t f06_deliveries_page(F04Session*,F04Ref,uint64_t offset,
  F06DeliveryView*,uint64_t capacity,uint64_t* written,uint64_t* total);
+/* Additive v2 queue: immutable public evidence only. kind: 1 equipment,
+ * 2 focused position observation, 3 completed Science report. Retries bind
+ * actor, contact, recipient AND source. No Host identifiers are accepted. */
+typedef struct {
+ uint64_t expected_revision,request_key,contact_id,source_id;
+ uint32_t recipient,kind;
+} F06EvidenceDeliveryRequest;
+F04_API uint32_t f06_deliver_evidence(F04Session*,F04Ref,
+ const F06EvidenceDeliveryRequest*,F06DeliveryView*);
+F04_API uint32_t f06_contact_tracking(F04Session*,F04Ref,uint64_t,F06TrackView*);
+/* Derived science, never a new assertion of hidden physical truth. Valid bits:
+ * 1 Dalton partial pressures (microbar); 2 angular extent (nanoradian);
+ * 4 displacement between archived observations; 8 equipment history.
+ * No crew, mission, spectral composition or intention can be inferred here. */
+typedef struct {
+ uint64_t contact_id,position_source,science_source,equipment_source;
+ uint64_t oxygen_microbar,co2_microbar,angular_nanoradian;
+ uint64_t interval_seconds,displacement_micro_au,equipment_changes;
+ uint32_t valid_mask,reserved;
+} F06DeepAnalysisView;
+F04_API uint32_t f06_deep_analysis(F04Session*,F04Ref,uint64_t,F06DeepAnalysisView*);
 #ifdef __cplusplus
 }
 #endif

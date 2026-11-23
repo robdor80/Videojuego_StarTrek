@@ -175,8 +175,12 @@ struct Watch {
   F06ProfileInstall install{stats().revision,5,0};
   F06ProfileView profile{};
   check(f06_host_install_profile(s,&install,&profile),"modernized Enterprise-D equipment");
+  // Explicit trusted QA instrument frame: this controlled scenario starts
+  // clear in all five environmental bands. Zero is measured, not a GUI default.
+  F06EnvironmentInput ambient{stats().revision,1,0,0,0,0,0,0};F06EnvironmentView ambient_view{};
+  check(f06_host_environment(s,&ambient,&ambient_view),"initial environmental instrument frame");
   physical_revisions.clear();latency.clear();world_revision=0;
-  if(mode==4){publish_x1(0,true);publish_x1(0);}else{
+  if(mode==4){publish_x1(0,true);publish_x1(0);initial_scientific_survey();}else{
    publish(next_frame++);
    initial_scientific_survey();
   }
@@ -184,6 +188,11 @@ struct Watch {
  void publish_x1(U tick,bool materialize=false){
   auto units=aster_x1_units(seed,tick);
   std::vector<F06WorldEntity> entities;
+  for(auto e:F06_DEMO_ENTITIES_0){
+   if(e.signature_category==F06_CATEGORY_STARSHIP || e.signature_category==F06_CATEGORY_SHUTTLE)continue;
+   e.absolute_x_milli_au-=F06_DEMO_OBSERVER_X;e.absolute_y_milli_au-=F06_DEMO_OBSERVER_Y;
+   e.absolute_z_milli_au-=F06_DEMO_OBSERVER_Z;if(materialize)e.active=0;entities.push_back(e);
+  }
   for(const auto& u:units){auto e=u.world;if(materialize)e.active=0;entities.push_back(e);}
   const U source=monotonic();
   // Install/update all physical configurations BEFORE making entities visible.
@@ -201,11 +210,60 @@ struct Watch {
   for(const auto& c:visible_contacts())if(c.status==F06_ACTIVE && c.first_seen==tick && !latency.contains(c.contact_id))
    latency[c.contact_id]={tick,source,received,published};
   update_navigation(tick);
+  share_tracking();
+ }
+ void deliver_source(U contact,U source,uint32_t kind,uint32_t recipient){
+  // Stable request key is derived from the immutable PUBLIC observation.
+  F06EvidenceDeliveryRequest req{stats().revision,(source%900000000000ULL)*16+kind*4+recipient,
+    contact,source,recipient,kind};
+  F06DeliveryView receipt{};check(f06_deliver_evidence(s,h.ensign,&req,&receipt),"evidence QA queue");
+  if(recipient==1 && std::none_of(contact_briefs.begin(),contact_briefs.end(),
+      [contact](const auto& row){return row[0]==contact;}))contact_briefs.push_back({contact,receipt.tick,0});
+ }
+ void share_tracking(){
+  // Explicit Core tracking survives process restoration. No Tk dependency.
+  // Position evidence every five seconds, equipment changes immediately.
+  if(stats().now>=28800)return; // the eight-hour operator duty has ended
+  for(const auto& c:visible_contacts()){
+   F06TrackView track{};check(f06_contact_tracking(s,h.captain,c.contact_id,&track),"tracking projection");
+   if(!track.mode || c.status!=F06_ACTIVE)continue;
+   U n=0,total=0;F06EquipmentView e{};
+   check(f06_equipment_page(s,h.captain,c.contact_id,0,nullptr,0,&n,&total),"tracking equipment count");
+   if(total){check(f06_equipment_page(s,h.captain,c.contact_id,total-1,&e,1,&n,&total),"tracking equipment");delivery(c.contact_id,2);}
+   std::array<F06ResultView,1> prior{};U results=0;
+   check(f06_results_page(s,h.captain,c.contact_id,0,nullptr,0,&n,&results),"tracking position count");
+   if(results)check(f06_results_page(s,h.captain,c.contact_id,results-1,prior.data(),1,&n,&results),"tracking previous");
+   if(results)deliver_source(c.contact_id,prior[0].result_id,2,2);
+   const bool moved=!results || prior[0].observed_x_milli_au!=c.observed_x_milli_au ||
+      prior[0].observed_y_milli_au!=c.observed_y_milli_au || prior[0].observed_z_milli_au!=c.observed_z_milli_au;
+   if(moved && (!results || stats().now>=prior[0].tick+5)){
+    focus(c.contact_id);
+    check(f06_results_page(s,h.captain,c.contact_id,results,prior.data(),1,&n,&results),"tracking new position");
+    if(n)deliver_source(c.contact_id,prior[0].result_id,2,2);
+   }
+  }
  }
  void delivery(U contact,uint32_t recipient){
   U n=0,total=0;
   check(f06_equipment_page(s,h.captain,contact,0,nullptr,0,&n,&total),"equipment count for delivery");
-  if(!total)throw std::runtime_error("no observed equipment for delivery");
+  if(!total){
+   std::array<F06ScienceReportView,32> reports{};U rn=0,rt=0;
+   check(f06_science_reports_page(s,h.captain,0,reports.data(),reports.size(),&rn,&rt),"science evidence");
+   for(U i=rn;i>0;--i)if(reports[i-1].contact_id==contact){deliver_source(contact,reports[i-1].report_id,3,recipient);return;}
+   F06ResultView result{};U count=0;
+   check(f06_results_page(s,h.captain,contact,0,nullptr,0,&n,&count),"position evidence count");
+   if(count)check(f06_results_page(s,h.captain,contact,count-1,&result,1,&n,&count),"previous position evidence");
+   const auto contacts=visible_contacts();
+   const auto current=std::find_if(contacts.begin(),contacts.end(),[contact](const auto& c){return c.contact_id==contact;});
+   if(current==contacts.end() || current->status!=F06_ACTIVE)throw std::runtime_error("contact not currently observable");
+   if(!count || result.observed_x_milli_au!=current->observed_x_milli_au ||
+      result.observed_y_milli_au!=current->observed_y_milli_au || result.observed_z_milli_au!=current->observed_z_milli_au ||
+      result.class_id!=current->class_id || result.confidence_permille!=current->confidence_permille){
+    focus(contact);
+    check(f06_results_page(s,h.captain,contact,count,&result,1,&n,&count),"new position evidence");
+   }
+   deliver_source(contact,result.result_id,2,recipient);return;
+  }
   F06EquipmentView observation{};
   check(f06_equipment_page(s,h.captain,contact,total-1,&observation,1,&n,&total),"latest equipment for delivery");
   F06DeliveryRequest req{stats().revision,(observation.observation_id%900000000000ULL)*4+recipient,contact,recipient,0};
@@ -246,11 +304,12 @@ struct Watch {
   event_cursor=en?events[en-1].event_token:0;
   std::array<F06DeliveryView,512> rows{};U n=0,total=0;
   check(f06_deliveries_page(s,h.captain,0,rows.data(),rows.size(),&n,&total),"restored deliveries");
-  for(U i=0;i<n;++i)if(rows[i].recipient==1)contact_briefs.push_back({rows[i].contact_id,rows[i].tick,0});
+  for(U i=0;i<n;++i)if(rows[i].recipient==1 && std::none_of(contact_briefs.begin(),contact_briefs.end(),
+      [&](const auto& row){return row[0]==rows[i].contact_id;}))contact_briefs.push_back({rows[i].contact_id,rows[i].tick,0});
  }
  void scenario_event(U tick){
   if(mode==2 && (tick==3600 || tick==7200)){
-   F06EnvironmentInput in{stats().revision,tick==3600?1u:2u,
+   F06EnvironmentInput in{stats().revision,tick==3600?2u:3u,
       static_cast<uint32_t>(tick==3600?550:0),0,0,0,0,0};
    F06EnvironmentView v{};check(f06_host_environment(s,&in,&v),"interference");
   }
@@ -294,6 +353,7 @@ struct Watch {
    if(next_frame<std::size(F06_DEMO_FRAMES) &&
       F06_DEMO_FRAMES[next_frame].tick==bound)
      publish(next_frame++);
+   share_tracking();
   }
  }
  void save(){
@@ -383,19 +443,9 @@ struct Watch {
   }
  }
  void study(U contact) {
-  // This is a real CoreRPG timed operation, not a simulated UI progress bar.
-  // The next saved revision defines a stable unique request in this QA session.
-  F06TimedScanRequest request{stats().revision,600000+stats().revision,contact,20,0};
-  F06TimedScanView started{};
-  const auto code=f06_begin_timed_scan(s,h.ensign,&request,&started);
-  if(code==F04_CAPACITY)
-   throw std::runtime_error("Los sensores ya están ocupados con análisis del oficial. "
-     "No hace falta pausar la guardia; solicita otro cuando termine alguno.");
-  if(code==F04_UNAVAILABLE)
-   throw std::runtime_error("No hay señal o capacidad de sensores suficiente para este análisis.");
-  if(code==F04_DENIED)
-   throw std::runtime_error("La orden no está autorizada para este puesto de guardia.");
-  check(code,"focused scientific scan");
+  // Immediate authenticated instrument observation, no artificial clock work.
+  // Derived physics is computed by f06_deep_analysis from public Core evidence.
+  focus(contact);
  }
  void configure(int preset){
   F06ConfigRequest request{stats().revision,1000,1000,0,0,60,0};
@@ -422,17 +472,29 @@ struct Watch {
   F06TrackView updated{};
   check(f06_set_tracking(s,h.ensign,stats().revision,contact,
     F06_TRACK_PRIORITY,&updated),"operator priority");
+  share_tracking();
  }
  void report_contact(U contact){
-  for(const auto& c:visible_contacts())if(c.contact_id==contact && (c.observed_category==1 || c.observed_category==2)){delivery(contact,1);return;}
-  const auto contacts=visible_contacts();
-  const auto it=std::find_if(contacts.begin(),contacts.end(),
-      [contact](const auto& row){return row.contact_id==contact;});
-  if(it==contacts.end() || it->status!=F06_ACTIVE)
-    throw std::runtime_error("contact not currently observable");
-  for(const auto& report:contact_briefs)
-    if(report[0]==contact)return; // One delivered report per contact per watch.
-  contact_briefs.push_back({contact,stats().now,it->class_id});
+  // A new measured maneuver is a new reportable situation even when no
+  // equipment changed. Identical reports still reuse immutable receipts.
+  std::array<F06DeliveryView,512> receipts{};U n=0,total=0,last_tick=0;
+  check(f06_deliveries_page(s,h.captain,0,receipts.data(),receipts.size(),&n,&total),"report history");
+  bool prior=false;
+  for(U i=0;i<n;++i)if(receipts[i].contact_id==contact && receipts[i].recipient==1){prior=true;last_tick=receipts[i].tick;}
+  bool changed_course=false;
+  for(const auto& event:nav_events)if(static_cast<U>(event[1])==contact && static_cast<U>(event[2])>last_tick)changed_course=true;
+  if(prior && changed_course){
+   F06EquipmentView e{};U en=0,et=0;
+   check(f06_equipment_page(s,h.captain,contact,0,nullptr,0,&en,&et),"report systems count");
+   if(et)check(f06_equipment_page(s,h.captain,contact,et-1,&e,1,&en,&et),"report systems");
+   if(!et || e.tick<=last_tick){
+    focus(contact);F06ResultView position{};U pn=0,pt=0;
+    check(f06_results_page(s,h.captain,contact,0,nullptr,0,&pn,&pt),"report position count");
+    check(f06_results_page(s,h.captain,contact,pt-1,&position,1,&pn,&pt),"report position");
+    deliver_source(contact,position.result_id,2,1);return;
+   }
+  }
+  delivery(contact,1);
  }
  void emit(){
   F06ComputerStatus state{};
@@ -463,6 +525,9 @@ struct Watch {
     <<",\"offline\":"<<state.equipment_offline
     <<",\"automatic\":"<<state.autonomous
     <<",\"interference_em\":"<<environment.em_permille
+    <<",\"environment_source\":"<<environment.source_revision
+    <<",\"environment\":["<<environment.em_permille<<','<<environment.thermal_permille<<','
+      <<environment.gravimetric_permille<<','<<environment.subspace_permille<<','<<environment.biological_permille<<']'
     <<",\"config\":["<<config.sensitivity_permille<<','<<config.resolution_permille
       <<','<<config.compensation_permille<<','<<config.preset_id<<','
       <<config.preferred_update_seconds<<']'
@@ -602,6 +667,38 @@ struct Watch {
      <<','<<c.observed_x_milli_au<<','<<c.observed_y_milli_au
      <<','<<c.observed_z_milli_au<<','<<c.last_seen<<']';
   }
+  std::cout<<"],\"chart_labels\":[";
+  bool first_label=true;
+  for(U i=0;i<written;++i){const auto& c=contacts[i];if(c.status!=F06_ACTIVE || c.observed_category==1 || c.observed_category==2)continue;
+   for(const auto& e:F06_DEMO_ENTITIES_0){
+    if(c.observed_category!=e.signature_category ||
+      std::llabs(c.observed_x_milli_au-(e.absolute_x_milli_au-F06_DEMO_OBSERVER_X))>10 ||
+      std::llabs(c.observed_y_milli_au-(e.absolute_y_milli_au-F06_DEMO_OBSERVER_Y))>10)continue;
+    for(const auto& label:F06_CHART_LABELS)if(label.key==e.world_entity_key){
+     if(!first_label)std::cout<<',';first_label=false;
+     std::cout<<'['<<c.contact_id<<",\""<<label.name<<"\"]";
+    }
+   }
+  }
+  std::cout<<"],\"tracking\":[";
+  for(U i=0;i<written;++i){if(i)std::cout<<',';F06TrackView track{};
+   check(f06_contact_tracking(s,h.captain,contacts[i].contact_id,&track),"public tracking");
+   std::cout<<'['<<track.contact_id<<','<<track.mode<<','<<track.updated_at<<']';}
+  std::cout<<"],\"deep_analysis\":[";
+  for(U i=0;i<written;++i){if(i)std::cout<<',';F06DeepAnalysisView v{};
+   check(f06_deep_analysis(s,h.captain,contacts[i].contact_id,&v),"public derived analysis");
+   std::cout<<"{\"contact\":"<<v.contact_id<<",\"mask\":"<<v.valid_mask
+    <<",\"position_source\":"<<v.position_source<<",\"science_source\":"<<v.science_source
+    <<",\"equipment_source\":"<<v.equipment_source<<",\"oxygen_microbar\":"<<v.oxygen_microbar
+    <<",\"co2_microbar\":"<<v.co2_microbar<<",\"angular_nanoradian\":"<<v.angular_nanoradian
+    <<",\"interval_s\":"<<v.interval_seconds<<",\"displacement_micro_au\":"<<v.displacement_micro_au
+    <<",\"equipment_changes\":"<<v.equipment_changes<<'}';}
+  std::cout<<"],\"position_evidence\":[";
+  std::array<F06ResultView,1024> evidence{};U pn=0,pt=0;
+  check(f06_results_page(s,h.captain,0,0,evidence.data(),evidence.size(),&pn,&pt),"public position archive");
+  for(U i=0;i<pn;++i){if(i)std::cout<<',';const auto& p=evidence[i];
+   std::cout<<'['<<p.result_id<<','<<p.contact_id<<','<<p.tick<<','<<p.observed_x_milli_au
+    <<','<<p.observed_y_milli_au<<','<<p.observed_z_milli_au<<']';}
   std::cout<<"]}"<<std::endl;
  }
 };
@@ -620,6 +717,9 @@ int main(int argc,char** argv){
     else if(action=="SAVE")watch.save();
     else if(action=="LOAD")watch.load();
     else if(action=="PRIORITY")watch.prioritize(number(arg));
+    else if(action=="UNFOLLOW"){
+     F06TrackView v{};check(f06_set_tracking(watch.s,watch.h.ensign,watch.stats().revision,
+       number(arg),F06_TRACK_PASSIVE,&v),"release tracking");}
     else if(action=="SAVEFILE")watch.file_save(arg);
     else if(action=="LOADFILE")watch.file_load(arg);
     else if(action=="SEED"){watch.seed=number(arg);watch.reset(4);}
