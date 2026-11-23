@@ -5,4 +5,10 @@ std::uint32_t dispatch(F04Session*, F04Ref, const GatewayRequest&, OperationResu
 {
     return F04_INTERNAL;
 }
+Outcome institutional_read(F04Session*, F04Ref, const InstitutionalRequest&,
+                           std::optional<InstitutionalViewV1>& view) noexcept
+{
+    view.reset();
+    return {Error::SERVICE_UNAVAILABLE};
+}
 }

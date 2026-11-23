@@ -13,6 +13,7 @@ F11PromotionReceipt f11_receipt(const Campaign& c,U e) {
   val(w,e,F11_COMMIT_REVISION),w.revision(),val(w,e,TICK),
   uint32_t(val(w,e,F11_FROM)),uint32_t(val(w,e,F11_TO)),F04_OK,0};
 }
+#ifndef F11_HOST_READ_ONLY
 bool f11_same(const WorldState& w,U e,const F11PromotionRequest& q) {
  return f11_equal(f11_identity(w,e),q.character) && ref(w,e,PERSON)==q.subject.id &&
   ref(w,e,F11_GRANT_REF)==q.grant && ref(w,e,F11_ORDER_REF)==q.order &&
@@ -49,7 +50,9 @@ void f11_boundary(U stage) {if(f11_fault==stage){f11_fault=0;throw std::runtime_
 #else
 void f11_boundary(U) {}
 #endif
+#endif
 }
+#ifndef F11_HOST_READ_ONLY
 uint32_t f11_commit_promotion(F04Session* s,const F11PromotionRequest* q,F11PromotionReceipt* out) {
  if(!q || !out)return F04_ARGUMENT;*out={};
  const auto code=call(s,[&]()->uint32_t {
@@ -90,6 +93,7 @@ uint32_t f11_commit_promotion(F04Session* s,const F11PromotionRequest* q,F11Prom
  if(code!=F04_OK){*out={};out->status=code;}
  return code;
 }
+#endif
 uint32_t f11_personnel(F04Session* s,F04Ref subject,F11PersonnelView* out) {
  if(!out)return F04_ARGUMENT;*out={};return call(s,[&]()->uint32_t {
   f11_subject(s,subject);const auto& w=s->c->world;const U p=subject.id;

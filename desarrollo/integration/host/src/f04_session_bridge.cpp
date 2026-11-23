@@ -2,6 +2,9 @@
 
 #include "f05_player_binding.h"
 #include "f04_host_persistence.h"
+#ifdef F11_HOST_READ_ONLY
+#include "f11_host_reader.h"
+#endif
 
 #ifdef TREK_HOST_PERSISTENCE_TESTING
 namespace trek::host::detail { void persistence_test_observe(F04Session*,bool); }
@@ -102,5 +105,61 @@ std::uint32_t bind_player(F04Session* session, F04Ref person, std::uint64_t revi
 {
     return f05_bind_player(session, person, revision);
 }
+
+#ifdef F11_HOST_READ_ONLY
+namespace {
+Outcome read_error(std::uint32_t code) noexcept
+{
+    switch (code) {
+    case F04_SCOPE: return {Error::SCOPE_INVALID, code};
+    case F04_THREAD: return {Error::WRONG_THREAD, code};
+    case F11_UNCOMMISSIONED: return {Error::DOMAIN_REJECTED, code};
+    case F04_DENIED:
+    case F04_ARGUMENT: // An unknown event and another person's event disclose the same result.
+    case F11_IDENTITY: return {Error::ACCESS_DENIED, code};
+    default: return {Error::INTERNAL_ERROR, code};
+    }
+}
+} // namespace
+
+Outcome institutional_read(F04Session* session, F04Ref player, const InstitutionalRequest& request,
+                           std::optional<InstitutionalViewV1>& view) noexcept
+{
+    view.reset();
+    F05PlayerBinding binding{};
+    const auto binding_code = f05_player_binding(session, &binding);
+    if (binding_code != F04_OK) return read_error(binding_code);
+    if (!binding.record || binding.person.id != player.id) return {Error::ACCESS_DENIED};
+    if (binding.person.scope != player.scope) return {Error::SCOPE_INVALID};
+
+    if (request.kind == InstitutionalKind::CAREER) {
+        f11_host::Career career{};
+        const auto code = f11_host::career(session, binding.person, &career);
+        if (code != F04_OK) return read_error(code);
+        view = InstitutionalViewV1{career.world_revision,
+            CareerViewV1{career.rank_event, career.rank, career.service_status}};
+        return {};
+    }
+
+    if (!request.event_id) return {Error::INVALID_ARGUMENT};
+    f11_host::Promotion promotion{};
+    const auto code = f11_host::promotion(session, binding.person, request.event_id, &promotion);
+    if (code != F04_OK) return read_error(code);
+    // The reader carries the original commit revision. Read the current Core
+    // revision on the same owner turn, without touching time or history.
+    F04Stats stats{};
+    if (const auto status = f04_stats(session, &stats); status != F04_OK) return read_error(status);
+    view = InstitutionalViewV1{stats.revision, PromotionViewV1{promotion.promotion_event,
+        promotion.effective_tick, promotion.original_revision, promotion.from_rank, promotion.to_rank}};
+    return {};
+}
+#else
+Outcome institutional_read(F04Session*, F04Ref, const InstitutionalRequest&,
+                           std::optional<InstitutionalViewV1>& view) noexcept
+{
+    view.reset();
+    return {Error::SERVICE_UNAVAILABLE};
+}
+#endif
 
 } // namespace trek::host::detail::bridge

@@ -2,9 +2,10 @@ cmake_minimum_required(VERSION 3.25)
 project(TrekHost LANGUAGES C CXX)
 
 option(TREK_HOST_TESTS "Build native HOST tests" OFF)
+option(TREK_HOST_F11_READS "Compose the private read-only F11 queries in HOST" ON)
 
-# H02 adopts the F05 build and its candidate Core. F11 test and product
-# targets are outside this build graph.
+# Start from the certified F05 composition. Only the HOST-owned bridge
+# translation unit may opt into the F11 read vocabulary below.
 set(host_core_sha "76a7b7b485616d8c4994f384a90f123bf333591d")
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/../f05/core-revision.txt" f05_core_sha)
 string(STRIP "${f05_core_sha}" f05_core_sha)
@@ -12,7 +13,8 @@ if(NOT f05_core_sha STREQUAL host_core_sha)
   message(FATAL_ERROR "H02 requires its reviewed F05 Core revision: ${host_core_sha}")
 endif()
 
-if(F11_ENABLE_PROMOTIONS OR TARGET TrekF11TrialHost OR TARGET TrekF04Bridge)
+if(F11_ENABLE_PROMOTIONS OR TARGET TrekF11TrialHost OR TARGET TrekF04Bridge
+   OR F11_NATIVE_TEST_HOST OR F11_HOST_READ_ONLY)
   message(FATAL_ERROR "H02 requires a standalone F05 composition without F11 targets or a preexisting bridge")
 endif()
 if(NOT CORERPG_SOURCE_DIR OR NOT IS_DIRECTORY "${CORERPG_SOURCE_DIR}")
@@ -39,7 +41,7 @@ endif()
 
 get_target_property(bridge_definitions TrekF04Bridge COMPILE_DEFINITIONS)
 if(NOT F05_ENABLE_ORDERS OR NOT F04_ENABLE_HISTORY OR TARGET TrekF11TrialHost
-   OR bridge_definitions MATCHES "(F11_ENABLE_PROMOTIONS|F11_NATIVE_TEST_HOST)")
+   OR bridge_definitions MATCHES "(F11_ENABLE_PROMOTIONS|F11_NATIVE_TEST_HOST|F11_HOST_READ_ONLY)")
   message(FATAL_ERROR "Unexpected H02 bridge flags or F11 trial target")
 endif()
 if(NOT TREK_HOST_TESTS)
@@ -59,6 +61,24 @@ set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/
 
 
 set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
+set(host_adapter_sources src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+if(TREK_HOST_F11_READS)
+  set(f11_api "${CMAKE_CURRENT_SOURCE_DIR}/../f11/include")
+  set(f11_reader "${CMAKE_CURRENT_SOURCE_DIR}/../f11_host")
+  target_compile_definitions(TrekF04Bridge PRIVATE F11_HOST_READ_ONLY=1)
+  target_include_directories(TrekF04Bridge PRIVATE "${f11_api}" "${CMAKE_CURRENT_SOURCE_DIR}/../f11/src")
+  # Reuse only the reader translation unit. The standalone F11 CMake project
+  # separately builds a trial issuer and is never entered by this graph.
+  list(APPEND host_adapter_sources "${f11_reader}/src/f11_host_reader.cpp")
+  set_property(SOURCE src/f04_session_bridge.cpp "${f11_reader}/src/f11_host_reader.cpp"
+    APPEND PROPERTY INCLUDE_DIRECTORIES "${f11_api};${f11_reader}/include")
+  set_property(SOURCE src/f04_session_bridge.cpp "${f11_reader}/src/f11_host_reader.cpp"
+    APPEND PROPERTY COMPILE_DEFINITIONS F11_HOST_READ_ONLY=1)
+endif()
+file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/host-bridge-definitions-$<CONFIG>.txt"
+  CONTENT "$<JOIN:$<TARGET_PROPERTY:TrekF04Bridge,COMPILE_DEFINITIONS>,
+>
+")
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 get_filename_component(star_trek_root "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
 set(f10_authoring "${star_trek_root}/sistemas/gameplay")
@@ -111,7 +131,7 @@ if(MSVC)
   target_compile_options(host_academy_core PRIVATE /utf-8)
 endif()
 
-add_library(TrekHost SHARED ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp src/host_abi.cpp
+add_library(TrekHost SHARED ${host_sources} ${host_adapter_sources} src/host_abi.cpp
   ${f10_sources})
 add_dependencies(TrekHost host_f10_rules)
 target_compile_features(TrekHost PUBLIC cxx_std_20)
@@ -164,7 +184,7 @@ endif()
 
 if(TREK_HOST_TESTS)
   # Real bridge and product sources; failpoints exist only in this separate test executable.
-  add_executable(host_persistence_tests tests/persistence_tests.cpp ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  add_executable(host_persistence_tests tests/persistence_tests.cpp ${host_sources} ${host_adapter_sources})
   target_compile_features(host_persistence_tests PRIVATE cxx_std_20)
   target_include_directories(host_persistence_tests PRIVATE src include)
   target_compile_definitions(host_persistence_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -201,7 +221,7 @@ endif()
 
 if(TREK_HOST_TESTS)
   # Same product sources/real bridge; privileged fixture access is compiled only here.
-  add_executable(host_m0_tests tests/m0_tests.cpp ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  add_executable(host_m0_tests tests/m0_tests.cpp ${host_sources} ${host_adapter_sources})
   target_compile_features(host_m0_tests PRIVATE cxx_std_20)
   target_include_directories(host_m0_tests PRIVATE src tests include)
   target_compile_definitions(host_m0_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_PERSISTENCE_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -221,7 +241,7 @@ endif()
 # their historical oracles untouched; the production HOST has no F11 issuer.
 if(TREK_HOST_TESTS)
   add_executable(host_h07_admission_tests tests/h07_p02_admission_tests.cpp
-    ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+    ${host_sources} ${host_adapter_sources})
   target_compile_features(host_h07_admission_tests PRIVATE cxx_std_20)
   target_include_directories(host_h07_admission_tests PRIVATE src tests include)
   target_compile_definitions(host_h07_admission_tests PRIVATE
@@ -238,6 +258,38 @@ if(TREK_HOST_TESTS)
     set_tests_properties(host.h07.p02.${h07_case} PROPERTIES
       TIMEOUT 120 LABELS "h07;p02;native;fail-closed")
   endforeach()
+endif()
+
+# The test executable links the read-only product bridge. Confirmed facts are
+# provided by f11.process_save from a separate build and process.
+if(TREK_HOST_TESTS)
+  add_executable(host_h07_query_tests tests/h07_p03_queries.cpp ${host_sources} ${host_adapter_sources})
+  target_compile_features(host_h07_query_tests PRIVATE cxx_std_20)
+  target_include_directories(host_h07_query_tests PRIVATE src tests include)
+  target_compile_definitions(host_h07_query_tests PRIVATE
+    TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_PERSISTENCE_TESTING
+    TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_link_libraries(host_h07_query_tests PRIVATE TrekF04Bridge host_academy_core Threads::Threads)
+  set_target_properties(host_h07_query_tests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  if(MSVC)
+    target_compile_options(host_h07_query_tests PRIVATE /utf-8)
+  endif()
+  set(h07_query_cases capability academy)
+  if(TREK_HOST_F11_READS)
+    target_include_directories(host_h07_query_tests PRIVATE "${f11_api}")
+    target_compile_definitions(host_h07_query_tests PRIVATE F11_HOST_READ_ONLY=1)
+    list(APPEND h07_query_cases career promotion uncommissioned foreign scope closed repeated save restore import)
+  endif()
+  foreach(h07_case IN LISTS h07_query_cases)
+    add_test(NAME host.h07.p03.${h07_case} COMMAND host_h07_query_tests
+      ${h07_case} "${CMAKE_CURRENT_BINARY_DIR}/h07/p03")
+    set_tests_properties(host.h07.p03.${h07_case} PROPERTIES TIMEOUT 120 LABELS "h07;p03;native")
+  endforeach()
+  if(TREK_HOST_F11_READS)
+    set_tests_properties(host.h07.p03.save PROPERTIES FIXTURES_SETUP host_h07_saved_career)
+    set_tests_properties(host.h07.p03.restore host.h07.p03.import PROPERTIES FIXTURES_REQUIRED host_h07_saved_career)
+  endif()
 endif()
 
 if(TREK_HOST_TESTS)
@@ -321,7 +373,7 @@ endif()
 if(TREK_HOST_TESTS)
   # Production constructors and genuine HOST profile; only HTTPS is simulated.
   add_executable(host_initial_biography_tests tests/initial_biography_tests.cpp
-    ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp ${f10_sources} ${host_ai_sources})
+    ${host_sources} ${host_adapter_sources} ${f10_sources} ${host_ai_sources})
   add_dependencies(host_initial_biography_tests host_f10_rules)
   target_compile_features(host_initial_biography_tests PRIVATE cxx_std_20)
   target_compile_definitions(host_initial_biography_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -361,7 +413,7 @@ if(TREK_HOST_TESTS)
   set_tests_properties(host.academy.abi_pagination PROPERTIES TIMEOUT 300 LABELS "h06;ia03c02;process;c-abi")
 
   add_library(host_academy_fault_runtime STATIC
-    ${host_sources} src/f10/academy_campaign.cpp src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+    ${host_sources} src/f10/academy_campaign.cpp ${host_adapter_sources})
   add_dependencies(host_academy_fault_runtime host_f10_fixed_data)
   target_compile_features(host_academy_fault_runtime PUBLIC cxx_std_20)
   target_compile_definitions(host_academy_fault_runtime PUBLIC TREK_HOST_STATIC_TEST TREK_HOST_ACADEMY_TESTING
