@@ -351,9 +351,9 @@ void run_case(const std::string& name,const fs::path& root) {
         } else if(name=="he13_generation") {
             auto issued=f.submit(f.intent());
             require(f.owner.subscribe_order_events({},issued.order,12).get().error==
-                    Error::GENERATION_EXPIRED,"Invalid generation subscribed");
+                    Error::INVALID_ARGUMENT,"Empty generation subscribed");
             require(f.owner.poll_order_events({},12,13).get().error==
-                    Error::GENERATION_EXPIRED,"Invalid generation polled");
+                    Error::INVALID_ARGUMENT,"Empty generation polled");
         } else {
             auto q=f.intent(); auto issued=f.submit(q);
             if(name!="he02_incremental" && name!="he07_close" && name!="he08_capacity")
