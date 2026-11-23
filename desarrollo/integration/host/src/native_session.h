@@ -21,6 +21,13 @@ struct NativeEventPage {
     bool more = false;
 };
 
+struct NativeClockReport {
+    std::uint64_t before_tick = 0, after_tick = 0;
+    std::uint64_t before_revision = 0, after_revision = 0;
+    std::uint64_t processed = 0;
+    bool more_due = false;
+};
+
 // Called exclusively by the owner thread, including destruction.
 class NativeSession final {
 public:
@@ -46,6 +53,7 @@ public:
     // Revalidates the F05-bound local principal on each authorized source read.
     Outcome events(F04Ref player, std::uint64_t order, std::uint64_t after,
                    NativeEventPage& page) noexcept;
+    Outcome advance(F04Ref player, const ClockIntent& intent, NativeClockReport& report) noexcept;
 #ifdef TREK_HOST_GATEWAY_TESTING
     void test_visit(const std::function<void(F04Session*)>& visit) { visit(session_); }
 #endif
@@ -62,6 +70,7 @@ namespace bridge {
 std::uint32_t dispatch(F04Session*, F04Ref, const GatewayRequest&, OperationResult&) noexcept;
 std::uint32_t events(F04Session*, F04Ref, std::uint64_t order,
                      std::uint64_t after, NativeEventPage& page) noexcept;
+std::uint32_t advance(F04Session*, F04Ref, const ClockIntent&, NativeClockReport&) noexcept;
 const char* core_sha() noexcept;
 std::uint32_t persistent_identity(F04Session*,PersistentIdentity&,F04Ref&) noexcept;
 std::uint32_t snapshot(F04Session*,const std::filesystem::path&,const CampaignId&) noexcept;
