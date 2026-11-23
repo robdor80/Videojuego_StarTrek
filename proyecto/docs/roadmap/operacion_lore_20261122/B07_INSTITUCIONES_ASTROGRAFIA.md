@@ -1,5 +1,7 @@
 # B07 — Federación, potencias, jurisdicciones y cartografía temporal
 
+**RATIFICADO 23-11-2026:** recopilación y reglas de coherencia aprobadas, sin creación de nuevas potencias, rutas, coordenadas o jurisdicciones; prioridad absoluta a la continuidad propia de Star Trek Legends sobre datos televisivos incompatibles.
+
 **Alcance:** procesos 07 y 08. Reutiliza LORE-01 B/C/D, LORE-04D y LORE-05C/D; no abre una segunda geografía ni un motor político.
 
 ## 1. Mapa de instituciones de 2383
