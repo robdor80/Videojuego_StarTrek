@@ -308,9 +308,10 @@ struct SessionOwner::Impl {
             std::visit([](auto& item) {
                 if constexpr (std::is_same_v<std::decay_t<decltype(item)>, Dispatch>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.request.correlation});
+                else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
+                    item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.correlation});
                 else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, SubscribeEvents> ||
-                                   std::is_same_v<std::decay_t<decltype(item)>, PollEvents> ||
-                                   std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
+                                   std::is_same_v<std::decay_t<decltype(item)>, PollEvents>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, 0, item.correlation});
                 else item.reply.set_value({Error::GENERATION_EXPIRED, {}});
             }, request);
@@ -350,6 +351,8 @@ struct SessionOwner::Impl {
                 auto future = promise.get_future();
                 if constexpr (std::is_same_v<Item, Dispatch>)
                     promise.set_value({error, {}, request.request.correlation});
+                else if constexpr (std::is_same_v<Item, AdvanceClock>)
+                    promise.set_value({error, {}, request.correlation});
                 else promise.set_value({error, {}, 0, request.correlation});
                 return future;
             } else return ready<Reply>(error);
