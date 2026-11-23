@@ -212,6 +212,15 @@ if(TREK_HOST_TESTS)
     add_test(NAME host.m0.${case} COMMAND host_m0_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/m0/${case}")
     set_tests_properties(host.m0.${case} PROPERTIES TIMEOUT 120 LABELS "h05;native")
   endforeach()
+  # H08-P02 reads genuine F05 events through the existing M0 product composition.
+  # These are additional cases; existing M0/historical test names are untouched.
+  foreach(case IN ITEMS he01_delivery he02_incremental he03_dedup he04_unbound
+      he05_foreign he06_restore he07_close he08_capacity he09_errors
+      he10_readonly he11_causality he12_parallel he13_generation)
+    add_test(NAME host.event.${case}
+      COMMAND host_m0_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/h08/${case}")
+    set_tests_properties(host.event.${case} PROPERTIES TIMEOUT 120 LABELS "h08-p02;native;f05")
+  endforeach()
   add_test(NAME host.m0.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m0_process.py"
     "$<TARGET_FILE:host_m0_tests>" "${CMAKE_CURRENT_BINARY_DIR}/m0/process")
   set_tests_properties(host.m0.process PROPERTIES TIMEOUT 240 LABELS "h05;process")
