@@ -56,6 +56,12 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 - 15 casos `host.clock.*` con el F04/Core real, además de regresiones H02–H06 y producto Linux/Windows. Una ejecución parcial de Core es un recibo con `more_due=true`, **no un error que dispare reintentos**.
 - Estado de este enlace: implementación en PR; la evidencia de CI y el estado de la fusión determinan si queda probado. Sin API C/Unreal nueva ni reloj paralelo.
 
+## H08-P04 — Proyecciones de notificación no mutadoras
+
+- [Contrato, catálogo de mensajes y matriz H08-P04](H08_P04_NOTIFICACIONES_V1_2026-11-23.md): proyección de transiciones F05 en textos seguros en castellano, usando la misma suscripción, hechos y acuses de H08-P02.
+- API **C++ interna** `SessionOwner::poll_order_notifications`; sin nueva ABI C/Unreal, sin emisor F11, sin duplicar reloj ni historial.
+- 14 pruebas con la fuente real F05/Core (`host.notification.hn*`) y 10 puras (`host.notification.unit.*`); la CI de la PR determina su estado de probado. El cierre de P04 no certifica automáticamente Unreal ni H08 integral.
+
 ## Fases y responsables
 
 H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Codex (identidad). H04: Codex (persistencia). H05: Codex (Core/F04/F05). H06: Codex (UE real). H07: ChatGPT+Codex (lector y pasarela NO emisora de F11). H08-H11: coordinación y sistemas progresivos. H12-H13: estabilidad y certificación.
