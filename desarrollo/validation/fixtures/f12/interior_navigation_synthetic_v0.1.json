@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1.0",
+  "ship_id": "TEST-SYNTHETIC-NOT-ENTERPRISE-D",
+  "map_revision": "test-001",
+  "source": "Synthetic MAP-01 test only; NOT a ship floor plan",
+  "locations": [
+    {
+      "location_id": "deck_d_corridor",
+      "display_es": "Pasillo de pruebas",
+      "deck_or_section": "D",
+      "location_type": "corridor"
+    },
+    {
+      "location_id": "deck_d_lift",
+      "display_es": "Turboascensor de pruebas D",
+      "deck_or_section": "D",
+      "location_type": "turbolift"
+    },
+    {
+      "location_id": "deck_e_lift",
+      "display_es": "Turboascensor de pruebas E",
+      "deck_or_section": "E",
+      "location_type": "turbolift"
+    },
+    {
+      "location_id": "deck_e_engineering",
+      "display_es": "Ingeniería de pruebas",
+      "deck_or_section": "E",
+      "location_type": "main_engineering"
+    },
+    {
+      "location_id": "deck_e_restricted",
+      "display_es": "Zona restringida de pruebas",
+      "deck_or_section": "E",
+      "location_type": "security_armory"
+    }
+  ],
+  "links": [
+    {
+      "link_id": "d_corridor_lift",
+      "from": "deck_d_corridor",
+      "to": "deck_d_lift",
+      "mode": "door",
+      "verified": true,
+      "bidirectional": true,
+      "cost": 1
+    },
+    {
+      "link_id": "d_to_e",
+      "from": "deck_d_lift",
+      "to": "deck_e_lift",
+      "mode": "turbolift",
+      "verified": true,
+      "bidirectional": true,
+      "cost": 3
+    },
+    {
+      "link_id": "e_lift_engineering",
+      "from": "deck_e_lift",
+      "to": "deck_e_engineering",
+      "mode": "walk",
+      "verified": true,
+      "bidirectional": true,
+      "cost": 2
+    },
+    {
+      "link_id": "e_lift_restricted",
+      "from": "deck_e_lift",
+      "to": "deck_e_restricted",
+      "mode": "door",
+      "verified": true,
+      "bidirectional": true,
+      "cost": 1
+    }
+  ]
+}

@@ -190,3 +190,11 @@ Starfleet ships share a common philosophy but a Galaxy-class computer need not h
 Generic query/action validation and authoritative state remain CoreRPG concerns where reusable.
 
 Star Trek defines the ship-computer personality, Starfleet access semantics, LCARS-facing behavior and universe-specific query/action vocabulary.
+
+## Sistema 18 — Identidad, autenticación y control de accesos (DEC-0024)
+
+El servicio de la computadora no decide por sí mismo que una persona tenga acceso a una habitación por haber hablado con ella. Las peticiones de abrir puertas, invitar personal o consultar zonas privadas se traducen en **intenciones** y pasan por **S18** y las fuentes autoritativas de CoreRPG. El ordenador no fabrica `character_id`, residentes, rangos, códigos ni permisos; un resultado de IA es una propuesta, no credencial.
+
+**Puertas públicas automáticas:** Sistema 12 ejecuta la detección y apertura donde no haya barreras de seguridad. **Camarotes y zonas restringidas:** S18 responde `ALLOW` / `DENY` / `REQUEST_VISIT` / `STEP_UP_AUTH`; el consumidor físico decide si la puerta puede moverse según energía/daños.
+
+[Arquitectura del Sistema 18](../../access_control/S18_IDENTIDAD_CONTROL_ACCESOS_DISENO_v1.md). Estado: diseño, no runtime.

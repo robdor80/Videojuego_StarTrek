@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "name": "entrada",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "yaw": 0,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    },
+    {
+      "name": "circulo_01",
+      "start": [
+        2268,
+        -1431,
+        37
+      ],
+      "yaw": 0,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    },
+    {
+      "name": "circulo_02",
+      "start": [
+        2268,
+        1926,
+        37
+      ],
+      "yaw": 0,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    },
+    {
+      "name": "pasillo_exterior",
+      "start": [
+        4700,
+        248,
+        37
+      ],
+      "yaw": 0,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    },
+    {
+      "name": "escalera_sur",
+      "start": [
+        3204,
+        -190,
+        125
+      ],
+      "yaw": -90,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    },
+    {
+      "name": "escalera_inferior",
+      "start": [
+        3353,
+        835,
+        -128
+      ],
+      "yaw": 180,
+      "points": [],
+      "hold": true,
+      "warmup_s": 6,
+      "seconds": 8,
+      "perf": true
+    }
+  ]
+}

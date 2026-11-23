@@ -1,0 +1,41 @@
+name: S04 - Protagonista fijo y continuidad (contratos)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sistemas/gameplay/character_creation/**'
+      - 'mundo/lore/characters/starfleet/**'
+      - 'proyecto/docs/decisions/s04_*'
+      - 'proyecto/docs/architecture/host/H06_S04_*'
+      - 'desarrollo/tools/validation/test_s04_canonical_protagonist.py'
+      - '.github/workflows/s04-protagonista-contratos.yml'
+  pull_request:
+    paths:
+      - 'sistemas/gameplay/character_creation/**'
+      - 'mundo/lore/characters/starfleet/**'
+      - 'proyecto/docs/decisions/s04_*'
+      - 'proyecto/docs/architecture/host/H06_S04_*'
+      - 'desarrollo/tools/validation/test_s04_canonical_protagonist.py'
+      - '.github/workflows/s04-protagonista-contratos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  s04-documentary-regression:
+    name: S04 - identidad, guion y cronologia (NO runtime)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Comprobar sintaxis de test
+        run: python -m py_compile desarrollo/tools/validation/test_s04_canonical_protagonist.py
+      - name: Ejecutar comprobaciones estructurales autorales
+        run: python -m unittest desarrollo/tools/validation/test_s04_canonical_protagonist.py -v

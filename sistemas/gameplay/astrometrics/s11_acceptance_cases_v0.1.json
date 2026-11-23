@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1.0",
+  "suite_id": "s11_astrometrics_acceptance",
+  "status": "CASES_DEFINED_NOT_EXECUTED",
+  "cases": [
+    {
+      "id": "AST-01",
+      "scenario": "galaxy hologram 360",
+      "expected": "real volume, smooth orbit camera, no flat map",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-02",
+      "scenario": "galaxy to sector to solar system to planet",
+      "expected": "four scales preserve focus and entity ID",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-03",
+      "scenario": "ordinary Vulcan science dossier",
+      "expected": "complete correct provenance-bearing report; near immediate",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-04",
+      "scenario": "ordinary freighter manual scan",
+      "expected": "single full sensor result without fabricated 90-second delay",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-05",
+      "scenario": "unknown remote Delta region",
+      "expected": "no omniscience; source and age shown",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-06",
+      "scenario": "coordinate Z missing",
+      "expected": "schematic explicitly marked, no invented Z=0",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-07",
+      "scenario": "border updates after known conflict",
+      "expected": "latest authorized political overlay only",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-08",
+      "scenario": "cadet lacks classified clearance",
+      "expected": "hide secret chart fields",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-09",
+      "scenario": "Earth vs Vulcan comparison",
+      "expected": "correct measured fields and units, no invented values",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-10",
+      "scenario": "science officer route proposal",
+      "expected": "no movement until Navigation and command validate",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-11",
+      "scenario": "future simulation",
+      "expected": "labeled hypothesis, not WorldState future",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-12",
+      "scenario": "save/load view",
+      "expected": "same focus, same data identity, no duplicate discoveries",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-13",
+      "scenario": "voice unavailable",
+      "expected": "manual camera, search, comparisons, layers still work",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-14",
+      "scenario": "PADD view",
+      "expected": "same permissions and data with lightweight renderer",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-15",
+      "scenario": "NPC uses room while player absent",
+      "expected": "agenda, access and task validate",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-16",
+      "scenario": "100 repeated zoom and orbit operations",
+      "expected": "no unbounded allocation or visible freeze",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-17",
+      "scenario": "MSI RTX4070 acceptance",
+      "expected": "real measured FPS and query latency",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-18",
+      "scenario": "cosmetic hologram transition",
+      "expected": "cancelable and not blocking data",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-19",
+      "scenario": "unknown anomaly exception",
+      "expected": "only exceptional authored provenance, not random scan failure",
+      "runtime_status": "PENDING"
+    },
+    {
+      "id": "AST-20",
+      "scenario": "other starfleet vessel",
+      "expected": "no Valhalla sensor superpower assigned generically",
+      "runtime_status": "PENDING"
+    }
+  ],
+  "runtime_results_count": 0,
+  "real_ue5_tests_passed": false
+}

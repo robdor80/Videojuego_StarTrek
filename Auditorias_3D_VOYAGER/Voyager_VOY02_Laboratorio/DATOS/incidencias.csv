@@ -1,0 +1,16 @@
+﻿id,problema,estado,respuesta,evidencia
+I01,Base OBJ omitida en escenas,RESUELTA,Solo mallas de laboratorio; respaldo y contraste 645 componentes,correccion_base_obj.json
+I02,Encuadre ortográfico recortado,RESUELTA,Proyección y aspecto; plantas verticales; QA,capturas_qa.json
+I03,Vecinos visibles en B,RESUELTA,Ocultación temporal y restauración,capturas_manifest.json
+I04,Acceso desde centro/navegación,NO_DEMOSTRADO,Rejilla refinada negativa; estudiar niveles y arquitectura,acceso_central_revision.json
+I05,Escalones y soporte fragmentado,ADAPTACION_PENDIENTE,Secciones reales; no solver de subida,ergonomia_detallada.json
+I06,Cruces de puertas laterales,ADAPTACION_PENDIENTE,Offsets pequeños ensayados sin solución completa,carreras_investigacion.json
+I07,Bolsillo posterior,NO_DEMOSTRADO,Contactos de borde y contención no certificada,carreras_investigacion.json
+I08,Agrupación de navegación con consola,RESUELTA_SEMANTICA,8 piezas propuestas; mecánica sin validar,puestos_revision.json
+I09,Cojines de mando omitidos,RESUELTA_SEMANTICA,11 piezas por grupo; medida sobre cojín,presentacion_revision.json
+I10,Postura sentada y apoyo de pies,ADAPTACION_PENDIENTE,Proxies hipotéticos; navegación cruza Object_129,puestos_revision.json
+I11,AD_PUENTE cruza hojas abiertas,RESUELTA_POSE_ESTATICA,R1 retranqueo 140mm; junta final y carrera pendientes,encuentros_adaptadores.json
+I12,Accesibilidad continua,NO_DEMOSTRADO,Giros locales no resuelven ruta ni cambios de nivel,accesibilidad_camarote.json
+I13,Texturas y PBR,PREPARACION_PENDIENTE,Escenarios 2K/4K calculados; sin reducción de imágenes,materiales_rendimiento_revision.json
+I14,Rendimiento y sistemas UE,NO_EJECUTADO,Fase futura explícita; sin FPS prometidos,../06_MATERIALES_RENDIMIENTO.md
+I15,Familias MAX no equivalentes,LIMITACION_CONSERVADA,No mezclar muebles por escala global,correspondencias_max_obj.json

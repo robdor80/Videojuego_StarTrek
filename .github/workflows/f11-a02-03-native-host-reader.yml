@@ -1,0 +1,47 @@
+name: F11 A02-03 - native product Host reader (no issuer)
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f11_host/**'
+      - '.github/workflows/f11-a02-03-native-host-reader.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  product-host-reader:
+    name: 17 native product/Host reader cases (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/f11/p05-a02-03/ci/CoreRPG
+      - name: Build real product bridge; validate 13 existing and 4 Host reader native cases
+        run: python desarrollo/integration/f11_host/run_native.py --core-source laboratorios/f11/p05-a02-03/ci/CoreRPG --output laboratorios/f11/p05-a02-03/ci/host-reader --parallel 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f11-a02-03-host-reader-${{ matrix.os }}
+          path: |
+            laboratorios/f11/p05-a02-03/ci/host-reader/run.json
+            laboratorios/f11/p05-a02-03/ci/host-reader/tests.xml
+            laboratorios/f11/p05-a02-03/ci/host-reader/*.log
+            laboratorios/f11/p05-a02-03/ci/host-reader/build/Testing/Temporary/LastTest.log
+            laboratorios/f11/p05-a02-03/ci/host-reader/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/f11/p05-a02-03/ci/host-reader/build/f11/process-before.f04
+            laboratorios/f11/p05-a02-03/ci/host-reader/build/f11/process-after.f04
+            laboratorios/f11/p05-a02-03/ci/host-reader/build/f11/process.txt

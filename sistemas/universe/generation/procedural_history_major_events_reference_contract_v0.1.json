@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_history_major_events_reference",
+  "status": "REFERENCE_ADAPTER_NOT_CORERPG_RUNTIME",
+  "owner": "Star Trek domain history; persistence and authoritative causality belong to CoreRPG",
+  "inputs": [
+    "campaign_id",
+    "sealed_history_prefix",
+    "accepted_source_facts",
+    "existing_impacted_entities",
+    "authorization_context",
+    "cutoff_tick"
+  ],
+  "event_fields": [
+    "event_id",
+    "tick",
+    "kind",
+    "source_refs",
+    "impact_refs",
+    "actor_ref",
+    "major",
+    "visibility",
+    "provenance",
+    "trigger",
+    "corrects_ref_optional"
+  ],
+  "event_kinds": [
+    "civilizational_transition",
+    "colonial_milestone",
+    "economic_milestone",
+    "conflict_aftermath",
+    "diplomatic_milestone",
+    "infrastructure_recovery",
+    "historical_record_update"
+  ],
+  "invariants": [
+    "CANON_AND_PREFIX_PROTECTED",
+    "NO_RETROACTIVE_EVENT_CREATION",
+    "NO_PLAYER_SPAWN",
+    "CAUSES_RESOLVE_TO_ACCEPTED_FACTS",
+    "NO_WAR_SCIENCE_CRISIS_MISSIONS_OWNERSHIP",
+    "EXISTING_IMPACTED_ENTITIES_ONLY",
+    "AUTHORITY_VERIFIED_BY_EXPLICIT_MAP",
+    "MAJOR_SCALE_REQUIRES_EVIDENCE",
+    "DETERMINISTIC_REPLAY_AND_IDEMPOTENCE",
+    "CAMPAIGN_ISOLATION",
+    "APPEND_ONLY_CORRECTIONS",
+    "KNOWLEDGE_IS_NOT_WORLD_TRUTH",
+    "NO_WORLD_STATE_MUTATION",
+    "UNKNOWN_NEVER_BECOMES_FACT"
+  ],
+  "historical_seed_policy": "Pre-campaign history from canon and curated facts must be sealed by authoritative bootstrap. This reference never backfills past events after campaign cutoff.",
+  "future_event_policy": "No TV future is predetermined; any post-cutoff outcome needs live accepted causes.",
+  "reference_simulation": "Explicit history-recognition events only. No world scheduler, war/conflict engine, research, anomaly, systemic-crisis, mission generator or writeback to CoreRPG.",
+  "no_runtime_claim": true
+}

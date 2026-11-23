@@ -1,0 +1,93 @@
+[
+  {
+    "id": "B01_Oeste_C02",
+    "center_xy": [
+      1225,
+      1926.1851
+    ],
+    "width_cm": 200,
+    "height_cm": 300,
+    "bottom_cm": 37,
+    "yaw_deg": 180,
+    "thickness_cm": 12,
+    "reason": "Salida radial sin continuacion construida; caida reproducida con Quinn"
+  },
+  {
+    "id": "B02_Curva_Norte",
+    "center_xy": [
+      3502.093375495612,
+      2295.285275589417
+    ],
+    "width_cm": 200,
+    "height_cm": 260,
+    "bottom_cm": 37,
+    "yaw_deg": 121.65897812935246,
+    "thickness_cm": 12,
+    "reason": "Extremo real del pasillo curvo sin suelo de continuacion; caida reproducida"
+  },
+  {
+    "id": "B04_Curva_Sur",
+    "center_xy": [
+      3499.053835145269,
+      -1798.6885147759258
+    ],
+    "width_cm": 200,
+    "height_cm": 260,
+    "bottom_cm": 37,
+    "yaw_deg": -121.65898138602469,
+    "thickness_cm": 12,
+    "reason": "Extremo real del pasillo curvo sin suelo de continuacion; caida reproducida"
+  },
+  {
+    "id": "B03_Pasillo_Este",
+    "center_xy": [
+      5560,
+      247.36
+    ],
+    "width_cm": 300,
+    "height_cm": 260,
+    "bottom_cm": 37,
+    "yaw_deg": 0,
+    "thickness_cm": 12,
+    "reason": "Fin real del corredor recto; caida reproducida al cruzar el borde"
+  },
+  {
+    "id": "B05_Superior_Sur",
+    "center_xy": [
+      3353.18,
+      -66.43587
+    ],
+    "width_cm": 130,
+    "height_cm": 162.635,
+    "bottom_cm": 379.635,
+    "yaw_deg": -90,
+    "thickness_cm": 12,
+    "reason": "Desembarco superior sin cubierta de destino; altura libre del bastidor 162.635 cm"
+  },
+  {
+    "id": "B06_Superior_Norte",
+    "center_xy": [
+      3353.18,
+      561.15857
+    ],
+    "width_cm": 130,
+    "height_cm": 162.635,
+    "bottom_cm": 379.635,
+    "yaw_deg": -90,
+    "thickness_cm": 12,
+    "reason": "Desembarco superior sin cubierta de destino; altura libre del bastidor 162.635 cm"
+  },
+  {
+    "id": "B07_Inferior_Norte",
+    "center_xy": [
+      3203.8,
+      561.15857
+    ],
+    "width_cm": 130,
+    "height_cm": 226.815,
+    "bottom_cm": -305.635,
+    "yaw_deg": -90,
+    "thickness_cm": 12,
+    "reason": "Salida inferior sin suelo construido fuera del bastidor"
+  }
+]

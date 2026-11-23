@@ -1,0 +1,47 @@
+[
+  {
+    "H": 1.6,
+    "D": 0.4,
+    "drop": 0.2153641328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 0,
+    "failures": [],
+    "complete_sampled_body_clear": true,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  },
+  {
+    "H": 1.75,
+    "D": 0.4,
+    "drop": 0.1783141328742544,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 0,
+    "failures": [],
+    "complete_sampled_body_clear": true,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  },
+  {
+    "H": 1.9,
+    "D": 0.4,
+    "drop": 0.14126413287425443,
+    "backshift": 0.18,
+    "samples": 301,
+    "failed_samples": 0,
+    "failures": [],
+    "complete_sampled_body_clear": true,
+    "interpolation_continuously_certified": false,
+    "rechecked_step_frames": 60,
+    "adaptation": "A2: explicit foot lift over proposed guide; retains A1 failures",
+    "rechecked_control_frames": 61,
+    "hand_contact": "Analytic capsule tip offset 2mm from each original Plane94/95 plane"
+  }
+]

@@ -1,3 +1,5 @@
+> **ACTUALIZACIÓN DE PRECEDENCIA — 22-11-2026 (GAME_ADDITION).** Este atlas es evidencia documental de LORE-03A, no una decisión reciente sobre la identidad naval. Toda frase inferior que denomine a Valhalla «clase», «buque nuevo» o le atribuya comisión garantizada en 2387 está **superada por DEC-0020 (13-11-2026)**: el buque objetivo es la **USS Enterprise NCC-1701-D**, clase **Galaxy**, que se reconstruye y moderniza bajo el **Proyecto Valhalla**. Comienzo de obras 2380; en obras en 2383; 2387 solo objetivo condicional. La anterior clase/VAL-TEC permanece como identificador legado sin migración destructiva. [Anexo actualizado](../../../proyecto/docs/roadmap/operacion_lore_20261122/A02_ENTERPRISE_D_VALHALLA.md).
+
 # LORE-03 A — Atlas cronológico editorial, v0.2
 
 **Ámbito jugable:** 2364–2383 como referencia histórica; **2383 año de ingreso aprobado** del cadete (día/mes pendiente). Los hitos de desarrollo de clase posteriores a 2383 son planes GAME_ADDITION, no sucesos de pantalla ni guiones forzados. **Estado:** preparado para revisión documental, nunca runtime. Se preservan Pike/Kirk como pasado histórico.

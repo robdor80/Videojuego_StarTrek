@@ -1,0 +1,106 @@
+[
+  {
+    "image": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\CAPTURAS\\obj_texturizado_interior.png",
+    "camera": [
+      0,
+      -1,
+      1.65
+    ],
+    "target": [
+      0,
+      5,
+      1.5
+    ],
+    "materials": "original GLB shaders unchanged",
+    "lighting": "temporary neutral world .5 + 3 area lights 500 W; Standard; Cycles CPU 64 samples, no denoise",
+    "cut": false,
+    "lighting_details": {
+      "world_strength": 0.5,
+      "area_lights": 3,
+      "area_energy_each_w": 500,
+      "interior_point_w": 0,
+      "interior_point_position": null
+    }
+  },
+  {
+    "image": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\CAPTURAS\\obj_texturizado_interior_luz_diagnostico.png",
+    "camera": [
+      0,
+      -1,
+      1.65
+    ],
+    "target": [
+      0,
+      5,
+      1.5
+    ],
+    "materials": "original GLB shaders unchanged",
+    "lighting": "temporary neutral world .5 + 3 area lights 500 W; Standard; Cycles CPU 64 samples, no denoise",
+    "cut": false,
+    "lighting_details": {
+      "world_strength": 0.5,
+      "area_lights": 3,
+      "area_energy_each_w": 500,
+      "interior_point_w": 180,
+      "interior_point_position": [
+        0,
+        0,
+        2.4
+      ]
+    }
+  },
+  {
+    "image": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\CAPTURAS\\obj_texturizado_corte_perspectiva.png",
+    "camera": [
+      10,
+      -12,
+      13
+    ],
+    "target": [
+      0,
+      0,
+      1
+    ],
+    "materials": "original GLB shaders unchanged",
+    "lighting": "temporary neutral world .5 + 3 area lights 500 W; Standard; Cycles CPU 64 samples, no denoise",
+    "cut": true,
+    "lighting_details": {
+      "world_strength": 0.5,
+      "area_lights": 3,
+      "area_energy_each_w": 500,
+      "interior_point_w": 180,
+      "interior_point_position": [
+        0,
+        0,
+        2.4
+      ]
+    }
+  },
+  {
+    "image": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_Puente_2026-10-21\\CAPTURAS\\obj_texturizado_corte_planta.png",
+    "camera": [
+      0,
+      0,
+      25
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ],
+    "materials": "original GLB shaders unchanged",
+    "lighting": "temporary neutral world .5 + 3 area lights 500 W; Standard; Cycles CPU 64 samples, no denoise",
+    "cut": true,
+    "lighting_details": {
+      "world_strength": 0.5,
+      "area_lights": 3,
+      "area_energy_each_w": 500,
+      "interior_point_w": 180,
+      "interior_point_position": [
+        0,
+        0,
+        2.4
+      ]
+    }
+  }
+]

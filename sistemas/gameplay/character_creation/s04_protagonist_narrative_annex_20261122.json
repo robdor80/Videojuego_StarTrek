@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0.0",
+  "annex_id": "s04_fixed_protagonist_narrative_annex_20261122",
+  "status": "APPROVED_GAME_ADDITION_DOCUMENTARY_NOT_HOST_PAYLOAD",
+  "provenance": "GAME_ADDITION",
+  "authorial_delegation_date": "2026-11-22",
+  "supersedes_unresolved_fields_only_in_documentation": true,
+  "must_not_override_embedded_contract_v2": true,
+  "source_contract": "sistemas/gameplay/character_creation/s04_fixed_protagonist_contract_v2.json",
+  "source_biography": "sistemas/gameplay/character_creation/s04_protagonist_biography_v1.json",
+  "decision": "proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md",
+  "narrative_document": "proyecto/docs/roadmap/operacion_lore_20261122/C11_BIOGRAFIA_PROTAGONISTA.md",
+  "identity": {
+    "sex": "male",
+    "species_id": "human_vulcan_hybrid",
+    "birth_year_approx": 2338,
+    "age_at_academy_entry": 45,
+    "academy_year": 2383,
+    "exact_birth_date": null,
+    "public_name": "CUSTOMIZABLE_BY_PLAYER",
+    "birthplace": {
+      "world": "vulcan",
+      "area_es": "proximidades de Shi'Kahr",
+      "coordinates": null,
+      "world_instance_created": false
+    },
+    "parentage": {
+      "mother": {
+        "name": "T'Ralis",
+        "species": "vulcan",
+        "profession_es": "profesora civil de lógica aplicada"
+      },
+      "father": {
+        "name": "Naveen Vale",
+        "species": "human",
+        "profession_es": "historiador científico y archivista civil",
+        "ancestor": "khan_noonien_singh"
+      }
+    }
+  },
+  "lineage": [
+    {
+      "generation": 0,
+      "name": "Khan Noonien Singh",
+      "birth_year_approx": null,
+      "relation_to_previous": "canonical_ancestor"
+    },
+    {
+      "generation": 1,
+      "name": "Nadiya Singh",
+      "birth_year_approx": 1995,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 2,
+      "name": "Arun Singh",
+      "birth_year_approx": 2023,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 3,
+      "name": "Leena Singh",
+      "birth_year_approx": 2051,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 4,
+      "name": "Rafi Sen",
+      "birth_year_approx": 2079,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 5,
+      "name": "Samira Sen",
+      "birth_year_approx": 2107,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 6,
+      "name": "Dev Sen",
+      "birth_year_approx": 2135,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 7,
+      "name": "Isha Sen",
+      "birth_year_approx": 2163,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 8,
+      "name": "Navin Sen",
+      "birth_year_approx": 2191,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 9,
+      "name": "Maya Sen",
+      "birth_year_approx": 2219,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 10,
+      "name": "Aren Sen",
+      "birth_year_approx": 2247,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 11,
+      "name": "Lina Vale",
+      "birth_year_approx": 2275,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    },
+    {
+      "generation": 12,
+      "name": "Naveen Vale",
+      "birth_year_approx": 2303,
+      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
+    }
+  ],
+  "teachers": [
+    {
+      "name": "Sorvek",
+      "field": "suus_mahna",
+      "role": "original_civil_instructor"
+    },
+    {
+      "name": "Mara Calder",
+      "field": "aikido",
+      "role": "original_civil_instructor"
+    },
+    {
+      "name": "Imran Chen",
+      "field": "kung_fu",
+      "role": "original_civil_instructor"
+    },
+    {
+      "name": "Akira Sato",
+      "field": "karate",
+      "role": "original_civil_instructor"
+    }
+  ],
+  "skills": {
+    "martial": [
+      "kung_fu",
+      "karate",
+      "aikido",
+      "suus_mahna"
+    ],
+    "primary_civil_scientific_focus": [
+      "astronomy",
+      "astrophysics"
+    ],
+    "music": [
+      "vulcan_lute",
+      "cello"
+    ],
+    "formal_starfleet_prior_service": false,
+    "automatic_officer_rank": false
+  },
+  "science_fiction_genetic_basis": "fictional_exceptional_polygenic_reexpression_no_numeric_mechanics",
+  "privacy": "RESTRICTED_BIOGRAPHICAL_AND_MEDICAL_INFORMATION",
+  "future_relations": "EVENT_DRIVEN_NO_AUTOMATIC_ROMANCE_OR_COMMAND",
+  "runtime_import_allowed": false,
+  "compatibility": {
+    "current_host_consumes_embedded_v2": true,
+    "new_runtime_contract_required_for_parents_and_teacher_fields": true,
+    "migration_policy": "EXPLICIT_VERSIONED_WITH_HASH_AND_SAVE_COMPATIBILITY",
+    "world_state_materialized": false
+  }
+}

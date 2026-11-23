@@ -1,0 +1,2643 @@
+[
+  {
+    "name": "Mesh1",
+    "parent": "Group1",
+    "vertices": 1060,
+    "triangles": 962,
+    "bounds_min": [
+      78.68106079101562,
+      11.833969116210938,
+      -0.01954861916601658
+    ],
+    "bounds_max": [
+      84.42166137695312,
+      19.912445068359375,
+      4.001526832580566
+    ],
+    "materials": {
+      "Color_H04": 962
+    },
+    "origin": [
+      81.55685424804688,
+      16.0082950592041,
+      2.5554959774017334
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh10",
+    "parent": "Group9",
+    "vertices": 1446,
+    "triangles": 984,
+    "bounds_min": [
+      -37.27681350708008,
+      -15.741116523742676,
+      0.23797862231731415
+    ],
+    "bounds_max": [
+      -18.983625411987305,
+      -4.625453472137451,
+      3.0010857582092285
+    ],
+    "materials": {
+      "FrontColor": 984
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh100",
+    "parent": "Group_19_1",
+    "vertices": 120,
+    "triangles": 80,
+    "bounds_min": [
+      -42.01905822753906,
+      2.9392237663269043,
+      1.110167145729065
+    ],
+    "bounds_max": [
+      -40.79594421386719,
+      4.669797420501709,
+      2.3312270641326904
+    ],
+    "materials": {
+      "FrontColor": 80
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh101",
+    "parent": "Group_35_1",
+    "vertices": 125,
+    "triangles": 77,
+    "bounds_min": [
+      -44.802001953125,
+      0.9478071331977844,
+      0.23798134922981262
+    ],
+    "bounds_max": [
+      -43.919586181640625,
+      3.1653711795806885,
+      2.129246950149536
+    ],
+    "materials": {
+      "FrontColor": 77
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh102",
+    "parent": "Group_33_1",
+    "vertices": 125,
+    "triangles": 77,
+    "bounds_min": [
+      -44.802001953125,
+      -3.1791791915893555,
+      0.23798100650310516
+    ],
+    "bounds_max": [
+      -43.919586181640625,
+      -0.961615264415741,
+      2.129246234893799
+    ],
+    "materials": {
+      "FrontColor": 77
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh103",
+    "parent": "Group_44_1",
+    "vertices": 2624,
+    "triangles": 1950,
+    "bounds_min": [
+      -51.06459426879883,
+      -9.127599716186523,
+      0.2379796952009201
+    ],
+    "bounds_max": [
+      -33.047340393066406,
+      9.113791465759277,
+      4.017688751220703
+    ],
+    "materials": {
+      "FrontColor": 1950
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh104",
+    "parent": "Group_43_1",
+    "vertices": 900,
+    "triangles": 764,
+    "bounds_min": [
+      -49.91796112060547,
+      -6.9746317863464355,
+      3.628422498703003
+    ],
+    "bounds_max": [
+      -35.98250961303711,
+      6.9608235359191895,
+      4.607744216918945
+    ],
+    "materials": {
+      "FrontColor": 764
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh105",
+    "parent": "Group_52_1",
+    "vertices": 3,
+    "triangles": 1,
+    "bounds_min": [
+      -4.0600786209106445,
+      1.7387468814849854,
+      0.23798146843910217
+    ],
+    "bounds_max": [
+      -4.058772563934326,
+      1.7406163215637207,
+      0.23798146843910217
+    ],
+    "materials": {
+      "FrontColor": 1
+    },
+    "origin": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh11",
+    "parent": "Group10",
+    "vertices": 571,
+    "triangles": 470,
+    "bounds_min": [
+      -47.49966049194336,
+      8.722475051879883,
+      0.2379826009273529
+    ],
+    "bounds_max": [
+      -37.41593933105469,
+      17.55414581298828,
+      3.331601619720459
+    ],
+    "materials": {
+      "FrontColor": 470
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh12",
+    "parent": "Hallway_Strait_Small1",
+    "vertices": 900,
+    "triangles": 676,
+    "bounds_min": [
+      13.838969230651855,
+      4.20742130279541,
+      -0.019549597054719925
+    ],
+    "bounds_max": [
+      17.531837463378906,
+      5.523896217346191,
+      3.093982458114624
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 156,
+      "Airway___Upper_Struts": 166,
+      "Ground_Skirting___Lighting": 180,
+      "FrontColor": 174
+    },
+    "origin": [
+      15.681283950805664,
+      4.867260456085205,
+      1.4361212253570557
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh13",
+    "parent": "Hallway_Strait_large1",
+    "vertices": 1320,
+    "triangles": 1004,
+    "bounds_min": [
+      22.718225479125977,
+      4.207420825958252,
+      -0.01954960636794567
+    ],
+    "bounds_max": [
+      26.41109275817871,
+      8.596542358398438,
+      3.0939829349517822
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 376,
+      "Ground_Skirting___Lighting": 244,
+      "Upper_Border___Lower_Recess": 60,
+      "FrontColor": 324
+    },
+    "origin": [
+      24.57241439819336,
+      6.391693592071533,
+      1.5472218990325928
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh14",
+    "parent": "Hallway_Medium_Door_Double1",
+    "vertices": 628,
+    "triangles": 516,
+    "bounds_min": [
+      27.23100471496582,
+      4.228841781616211,
+      -0.019549665972590446
+    ],
+    "bounds_max": [
+      30.777568817138672,
+      6.423402786254883,
+      3.093982458114624
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 184,
+      "Ground_Skirting___Lighting": 112,
+      "FrontColor": 186,
+      "Upper_Border___Lower_Recess": 34
+    },
+    "origin": [
+      28.980688095092773,
+      5.310741424560547,
+      1.9769198894500732
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh15",
+    "parent": "J_Tube_Long1",
+    "vertices": 128,
+    "triangles": 88,
+    "bounds_min": [
+      50.79664611816406,
+      11.796293258666992,
+      0.4022943675518036
+    ],
+    "bounds_max": [
+      51.97171401977539,
+      13.625092506408691,
+      1.3166946172714233
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 18,
+      "Ground_Skirting___Lighting": 10,
+      "FrontColor": 48,
+      "Upper_Border___Lower_Recess": 12
+    },
+    "origin": [
+      51.38417434692383,
+      12.73922348022461,
+      0.9452615976333618
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh16",
+    "parent": "G_4_Way_Up_Dn_Lt_Rt_Junction___With_Hallway_access1",
+    "vertices": 3333,
+    "triangles": 2602,
+    "bounds_min": [
+      50.00004959106445,
+      19.1506290435791,
+      -0.07034716755151749
+    ],
+    "bounds_max": [
+      53.164146423339844,
+      21.72062873840332,
+      3.0386271476745605
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 1028,
+      "Airway___Upper_Struts": 488,
+      "Light_Detailing": 132,
+      "FrontColor": 444,
+      "Ground_Skirting___Lighting": 510
+    },
+    "origin": [
+      51.57054901123047,
+      20.782865524291992,
+      1.2294881343841553
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh17",
+    "parent": "Turbolift1",
+    "vertices": 3115,
+    "triangles": 3307,
+    "bounds_min": [
+      69.55625915527344,
+      13.612089157104492,
+      -0.019548136740922928
+    ],
+    "bounds_max": [
+      72.59886169433594,
+      17.145570755004883,
+      3.080268144607544
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 822,
+      "Ground_Skirting___Lighting": 711,
+      "Airway___Upper_Struts": 1121,
+      "FrontColor": 333,
+      "Light_Detailing": 69,
+      "_cTerminal": 251
+    },
+    "origin": [
+      71.08411407470703,
+      15.559863090515137,
+      1.3977285623550415
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh18",
+    "parent": "Hallway_Medium_Single1",
+    "vertices": 940,
+    "triangles": 684,
+    "bounds_min": [
+      18.278596878051758,
+      4.103281021118164,
+      -0.019549667835235596
+    ],
+    "bounds_max": [
+      21.971464157104492,
+      6.297842025756836,
+      3.093982458114624
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 184,
+      "Ground_Skirting___Lighting": 180,
+      "Upper_Border___Lower_Recess": 146,
+      "FrontColor": 174
+    },
+    "origin": [
+      20.151710510253906,
+      5.195737361907959,
+      1.3992581367492676
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh19",
+    "parent": "J_Tube_Access_hatch1",
+    "vertices": 327,
+    "triangles": 249,
+    "bounds_min": [
+      50.7966423034668,
+      13.853691101074219,
+      0.40229466557502747
+    ],
+    "bounds_max": [
+      51.971710205078125,
+      14.073149681091309,
+      1.316694736480713
+    ],
+    "materials": {
+      "Ground_Skirting___Lighting": 96,
+      "Airway___Upper_Struts": 27,
+      "FrontColor": 50,
+      "Upper_Border___Lower_Recess": 76
+    },
+    "origin": [
+      51.39595413208008,
+      13.987719535827637,
+      0.8613021373748779
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh2",
+    "parent": "Group2",
+    "vertices": 1621,
+    "triangles": 1077,
+    "bounds_min": [
+      0.018748044967651367,
+      2.2898874282836914,
+      -0.019550155848264694
+    ],
+    "bounds_max": [
+      5.57414436340332,
+      7.821229934692383,
+      3.093982696533203
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 329,
+      "Upper_Border___Lower_Recess": 198,
+      "Ground_Skirting___Lighting": 250,
+      "FrontColor": 300
+    },
+    "origin": [
+      3.1130943298339844,
+      5.041991710662842,
+      1.5800700187683105
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh20",
+    "parent": "J_tube_90__Turn1",
+    "vertices": 182,
+    "triangles": 130,
+    "bounds_min": [
+      52.30118942260742,
+      8.509584426879883,
+      0.4022938311100006
+    ],
+    "bounds_max": [
+      53.51951599121094,
+      9.727910041809082,
+      1.3166940212249756
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 27,
+      "FrontColor": 70,
+      "Upper_Border___Lower_Recess": 18,
+      "Ground_Skirting___Lighting": 15
+    },
+    "origin": [
+      52.85886001586914,
+      9.17025375366211,
+      0.9354888200759888
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh21",
+    "parent": "J_tube_4__Degree_Slant_Long1",
+    "vertices": 124,
+    "triangles": 82,
+    "bounds_min": [
+      49.693565368652344,
+      3.6522703170776367,
+      0.4022931158542633
+    ],
+    "bounds_max": [
+      51.58590316772461,
+      5.62255859375,
+      1.3166934251785278
+    ],
+    "materials": {
+      "FrontColor": 42,
+      "Airway___Upper_Struts": 18,
+      "Ground_Skirting___Lighting": 8,
+      "Upper_Border___Lower_Recess": 14
+    },
+    "origin": [
+      50.59441375732422,
+      4.726611137390137,
+      0.930473804473877
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh24",
+    "parent": "Hallway_4__Degree_Circlar_Medium1",
+    "vertices": 802,
+    "triangles": 586,
+    "bounds_min": [
+      62.94524002075195,
+      8.590986251831055,
+      -0.019548920914530754
+    ],
+    "bounds_max": [
+      66.59454345703125,
+      12.2572660446167,
+      3.0939834117889404
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 52,
+      "FrontColor": 217,
+      "Ground_Skirting___Lighting": 94,
+      "Airway___Upper_Struts": 223
+    },
+    "origin": [
+      64.77852630615234,
+      10.40103530883789,
+      1.5467514991760254
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh25",
+    "parent": "Hallway_Medium_Door_Single1",
+    "vertices": 792,
+    "triangles": 616,
+    "bounds_min": [
+      27.157854080200195,
+      7.947402477264404,
+      -0.019549068063497543
+    ],
+    "bounds_max": [
+      30.777568817138672,
+      10.141963005065918,
+      3.0939831733703613
+    ],
+    "materials": {
+      "Ground_Skirting___Lighting": 150,
+      "Airway___Upper_Struts": 185,
+      "Upper_Border___Lower_Recess": 95,
+      "FrontColor": 186
+    },
+    "origin": [
+      28.77410125732422,
+      9.021684646606445,
+      1.6664187908172607
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh26",
+    "parent": "Hallway_Small_DoorSingle1",
+    "vertices": 760,
+    "triangles": 609,
+    "bounds_min": [
+      27.089271545410156,
+      11.665961265563965,
+      -0.019548404961824417
+    ],
+    "bounds_max": [
+      30.777568817138672,
+      12.982694625854492,
+      3.0939836502075195
+    ],
+    "materials": {
+      "Ground_Skirting___Lighting": 146,
+      "Airway___Upper_Struts": 182,
+      "Upper_Border___Lower_Recess": 95,
+      "FrontColor": 186
+    },
+    "origin": [
+      28.690736770629883,
+      12.324042320251465,
+      1.6952323913574219
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh27",
+    "parent": "Recessed_Large_Cargo_Type_Door1",
+    "vertices": 426,
+    "triangles": 318,
+    "bounds_min": [
+      45.488258361816406,
+      12.824198722839355,
+      -0.019548192620277405
+    ],
+    "bounds_max": [
+      47.1535530090332,
+      16.0050048828125,
+      3.057408094406128
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 203,
+      "FrontColor": 12,
+      "Upper_Border___Lower_Recess": 78,
+      "Ground_Skirting___Lighting": 25
+    },
+    "origin": [
+      46.88380813598633,
+      14.378192901611328,
+      1.612465262413025
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh28",
+    "parent": "Hallway_Residential_Quarters_Asymetrical1",
+    "vertices": 620,
+    "triangles": 510,
+    "bounds_min": [
+      32.15226745605469,
+      4.0976948738098145,
+      -0.019549774006009102
+    ],
+    "bounds_max": [
+      37.661163330078125,
+      6.292255878448486,
+      3.093982219696045
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 154,
+      "Ground_Skirting___Lighting": 136,
+      "Upper_Border___Lower_Recess": 41,
+      "FrontColor": 179
+    },
+    "origin": [
+      34.87162399291992,
+      5.113280773162842,
+      2.094708204269409
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh29",
+    "parent": "Hallway_J_tube_Access_Singlec1",
+    "vertices": 672,
+    "triangles": 518,
+    "bounds_min": [
+      49.260581970214844,
+      35.50794982910156,
+      -0.019544538110494614
+    ],
+    "bounds_max": [
+      52.88029861450195,
+      37.702510833740234,
+      3.0939877033233643
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 90,
+      "Ground_Skirting___Lighting": 116,
+      "FrontColor": 159,
+      "Airway___Upper_Struts": 153
+    },
+    "origin": [
+      51.57681655883789,
+      36.57725524902344,
+      1.6840771436691284
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh3",
+    "parent": "Group3",
+    "vertices": 418,
+    "triangles": 342,
+    "bounds_min": [
+      -11.102787971496582,
+      8.971908569335938,
+      -0.01954691670835018
+    ],
+    "bounds_max": [
+      4.15245246887207,
+      16.896709442138672,
+      5.705928325653076
+    ],
+    "materials": {
+      "Color_H04": 342
+    },
+    "origin": [
+      0.29103392362594604,
+      12.9345064163208,
+      2.458477020263672
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh35",
+    "parent": "Group_31_6",
+    "vertices": 2096,
+    "triangles": 1760,
+    "bounds_min": [
+      45.48825454711914,
+      8.119399070739746,
+      -0.01954897865653038
+    ],
+    "bounds_max": [
+      47.08041763305664,
+      11.300200462341309,
+      3.0574073791503906
+    ],
+    "materials": {
+      "FrontColor": 82,
+      "Ground_Skirting___Lighting": 794,
+      "Light_Detailing": 94,
+      "Airway___Upper_Struts": 337,
+      "Upper_Border___Lower_Recess": 453
+    },
+    "origin": [
+      46.778831481933594,
+      10.105629920959473,
+      1.5869752168655396
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh37",
+    "parent": "Corridor___Turbolift_access___Large1",
+    "vertices": 547,
+    "triangles": 447,
+    "bounds_min": [
+      69.61909484863281,
+      4.430302143096924,
+      -0.019549626857042313
+    ],
+    "bounds_max": [
+      73.01935577392578,
+      7.575575828552246,
+      3.093982696533203
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 235,
+      "Upper_Border___Lower_Recess": 63,
+      "FrontColor": 61,
+      "Light_Detailing": 32,
+      "Ground_Skirting___Lighting": 48,
+      "_cTerminal": 8
+    },
+    "origin": [
+      71.29515075683594,
+      6.005966663360596,
+      1.3957115411758423
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh38",
+    "parent": "Hallway_4_Way_Junction1",
+    "vertices": 880,
+    "triangles": 764,
+    "bounds_min": [
+      38.943267822265625,
+      4.0976948738098145,
+      -0.019549665972590446
+    ],
+    "bounds_max": [
+      42.58405685424805,
+      7.738481044769287,
+      3.093982696533203
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 272,
+      "FrontColor": 420,
+      "Ground_Skirting___Lighting": 40,
+      "Upper_Border___Lower_Recess": 32
+    },
+    "origin": [
+      40.75516891479492,
+      5.914447784423828,
+      2.167703151702881
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh39",
+    "parent": "J_tube_4__Degree_Slant_Short1",
+    "vertices": 112,
+    "triangles": 76,
+    "bounds_min": [
+      50.780033111572266,
+      7.212798118591309,
+      0.4022935926914215
+    ],
+    "bounds_max": [
+      51.971710205078125,
+      7.634042739868164,
+      1.316693663597107
+    ],
+    "materials": {
+      "FrontColor": 40,
+      "Airway___Upper_Struts": 14,
+      "Ground_Skirting___Lighting": 8,
+      "Upper_Border___Lower_Recess": 14
+    },
+    "origin": [
+      51.40392303466797,
+      7.494365215301514,
+      0.9513878226280212
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh4",
+    "parent": "Group4",
+    "vertices": 102,
+    "triangles": 64,
+    "bounds_min": [
+      -19.03207015991211,
+      -3.294044256210327,
+      1.110166072845459
+    ],
+    "bounds_max": [
+      -10.403861999511719,
+      3.382424831390381,
+      3.87327241897583
+    ],
+    "materials": {
+      "FrontColor": 64
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh40",
+    "parent": "Hallway_T_Junction1",
+    "vertices": 978,
+    "triangles": 812,
+    "bounds_min": [
+      38.917232513427734,
+      9.262480735778809,
+      -0.01954871229827404
+    ],
+    "bounds_max": [
+      42.58405685424805,
+      12.903266906738281,
+      3.0939836502075195
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 349,
+      "FrontColor": 307,
+      "Upper_Border___Lower_Recess": 46,
+      "Ground_Skirting___Lighting": 110
+    },
+    "origin": [
+      40.31867599487305,
+      11.076528549194336,
+      1.995478630065918
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh41",
+    "parent": "Hallway_90__Degree_Turn1",
+    "vertices": 1278,
+    "triangles": 1001,
+    "bounds_min": [
+      38.917232513427734,
+      19.592056274414062,
+      -0.019547078758478165
+    ],
+    "bounds_max": [
+      42.58405685424805,
+      23.258882522583008,
+      3.0939853191375732
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 296,
+      "Upper_Border___Lower_Recess": 160,
+      "Ground_Skirting___Lighting": 166,
+      "FrontColor": 379
+    },
+    "origin": [
+      40.55455017089844,
+      21.622802734375,
+      1.7055362462997437
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh42",
+    "parent": "Corridor___Turbolift_access___Small1",
+    "vertices": 661,
+    "triangles": 515,
+    "bounds_min": [
+      69.6590576171875,
+      9.227470397949219,
+      -0.019548766314983368
+    ],
+    "bounds_max": [
+      72.14623260498047,
+      12.3727445602417,
+      3.0939834117889404
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 256,
+      "Upper_Border___Lower_Recess": 80,
+      "FrontColor": 61,
+      "Light_Detailing": 32,
+      "Ground_Skirting___Lighting": 82,
+      "_cTerminal": 4
+    },
+    "origin": [
+      70.88735961914062,
+      10.647099494934082,
+      1.3306915760040283
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh45",
+    "parent": "Hallway_4__Degree_Circlar_Large1",
+    "vertices": 802,
+    "triangles": 586,
+    "bounds_min": [
+      62.06741714477539,
+      4.163207530975342,
+      -0.01954963617026806
+    ],
+    "bounds_max": [
+      67.47237396240234,
+      7.829482078552246,
+      3.093982696533203
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 187,
+      "Upper_Border___Lower_Recess": 92,
+      "Ground_Skirting___Lighting": 90,
+      "FrontColor": 217
+    },
+    "origin": [
+      64.76970672607422,
+      5.973295211791992,
+      1.5467498302459717
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh5",
+    "parent": "Group5",
+    "vertices": 78,
+    "triangles": 48,
+    "bounds_min": [
+      -25.4287052154541,
+      -6.382606506347656,
+      0.5504980087280273
+    ],
+    "bounds_max": [
+      -20.99090576171875,
+      -1.2341747283935547,
+      3.8732717037200928
+    ],
+    "materials": {
+      "FrontColor": 48
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh50",
+    "parent": "Recessed_Control_Area___Medium1",
+    "vertices": 1800,
+    "triangles": 1462,
+    "bounds_min": [
+      45.48825454711914,
+      4.32768440246582,
+      -0.019549638032913208
+    ],
+    "bounds_max": [
+      47.080421447753906,
+      6.595395088195801,
+      3.0574066638946533
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 374,
+      "Light_Detailing": 108,
+      "Ground_Skirting___Lighting": 582,
+      "Upper_Border___Lower_Recess": 340,
+      "FrontColor": 58
+    },
+    "origin": [
+      46.62910842895508,
+      5.973055839538574,
+      1.7685859203338623
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh51",
+    "parent": "Recessed_Large___Double_Exits1",
+    "vertices": 1384,
+    "triangles": 976,
+    "bounds_min": [
+      45.5627555847168,
+      22.306957244873047,
+      -0.019546659663319588
+    ],
+    "bounds_max": [
+      47.062110900878906,
+      25.63406753540039,
+      3.0574097633361816
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 336,
+      "Ground_Skirting___Lighting": 150,
+      "Upper_Border___Lower_Recess": 304,
+      "Light_Detailing": 126,
+      "FrontColor": 60
+    },
+    "origin": [
+      46.831932067871094,
+      23.96786117553711,
+      1.6082110404968262
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh52",
+    "parent": "Hallway_Primary_Secondary_Location___island___EG__Holodeck_1",
+    "vertices": 3497,
+    "triangles": 2701,
+    "bounds_min": [
+      75.11284637451172,
+      4.703686237335205,
+      -0.01954958587884903
+    ],
+    "bounds_max": [
+      87.97721099853516,
+      10.232246398925781,
+      3.0939831733703613
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 240,
+      "Ground_Skirting___Lighting": 811,
+      "FrontColor": 483,
+      "_cTerminal": 79,
+      "Airway___Upper_Struts": 1064,
+      "Light_Detailing": 24
+    },
+    "origin": [
+      81.4788818359375,
+      7.497748851776123,
+      1.4528887271881104
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh53",
+    "parent": "Recessed_Large_Cargo_Type_Door_Edge1",
+    "vertices": 293,
+    "triangles": 227,
+    "bounds_min": [
+      52.868167877197266,
+      47.06288146972656,
+      -0.019550330936908722
+    ],
+    "bounds_max": [
+      55.82951354980469,
+      47.13603591918945,
+      3.057405710220337
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 147,
+      "Upper_Border___Lower_Recess": 65,
+      "Ground_Skirting___Lighting": 13,
+      "FrontColor": 2
+    },
+    "origin": [
+      54.41208267211914,
+      47.10805892944336,
+      1.5212914943695068
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh54",
+    "parent": "Hallway_Small_Door_Double1",
+    "vertices": 585,
+    "triangles": 473,
+    "bounds_min": [
+      27.23100471496582,
+      14.506698608398438,
+      -0.019548045471310616
+    ],
+    "bounds_max": [
+      30.777568817138672,
+      15.823431968688965,
+      3.0939841270446777
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 142,
+      "FrontColor": 190,
+      "Ground_Skirting___Lighting": 112,
+      "Upper_Border___Lower_Recess": 29
+    },
+    "origin": [
+      28.99022674560547,
+      15.162914276123047,
+      2.094442367553711
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh55",
+    "parent": "Recessed_large_Door_Edge1",
+    "vertices": 129,
+    "triangles": 93,
+    "bounds_min": [
+      44.8785514831543,
+      1.5868891477584839,
+      -0.019550083205103874
+    ],
+    "bounds_max": [
+      47.83989715576172,
+      1.6600390672683716,
+      3.0585641860961914
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 20,
+      "Upper_Border___Lower_Recess": 14,
+      "Ground_Skirting___Lighting": 37,
+      "FrontColor": 22
+    },
+    "origin": [
+      46.35921859741211,
+      1.6486667394638062,
+      1.474029302597046
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh56",
+    "parent": "J_tube_T___Section_Turn1",
+    "vertices": 194,
+    "triangles": 136,
+    "bounds_min": [
+      50.79664611816406,
+      8.463554382324219,
+      0.4022938311100006
+    ],
+    "bounds_max": [
+      52.017723083496094,
+      9.730644226074219,
+      1.3166940212249756
+    ],
+    "materials": {
+      "FrontColor": 74,
+      "Upper_Border___Lower_Recess": 18,
+      "Ground_Skirting___Lighting": 16,
+      "Airway___Upper_Struts": 28
+    },
+    "origin": [
+      51.59967803955078,
+      9.084062576293945,
+      0.9471282362937927
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh57",
+    "parent": "Hallway_Residential_Quarters_Symetrical1",
+    "vertices": 620,
+    "triangles": 506,
+    "bounds_min": [
+      32.15226745605469,
+      7.816254615783691,
+      -0.019549068063497543
+    ],
+    "bounds_max": [
+      37.66116714477539,
+      10.010815620422363,
+      3.0939831733703613
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 41,
+      "Airway___Upper_Struts": 151,
+      "Ground_Skirting___Lighting": 136,
+      "FrontColor": 178
+    },
+    "origin": [
+      34.95195388793945,
+      8.89327621459961,
+      2.085883140563965
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh58",
+    "parent": "J_Tube_Short1",
+    "vertices": 128,
+    "triangles": 88,
+    "bounds_min": [
+      50.7966423034668,
+      9.908954620361328,
+      0.4022940695285797
+    ],
+    "bounds_max": [
+      51.971710205078125,
+      10.366151809692383,
+      1.3166942596435547
+    ],
+    "materials": {
+      "Ground_Skirting___Lighting": 10,
+      "Upper_Border___Lower_Recess": 12,
+      "FrontColor": 48,
+      "Airway___Upper_Struts": 18
+    },
+    "origin": [
+      51.38420104980469,
+      10.1447114944458,
+      0.9452610611915588
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh59",
+    "parent": "T___Section_Hallway___1x2_1",
+    "vertices": 600,
+    "triangles": 460,
+    "bounds_min": [
+      18.27859878540039,
+      7.0115814208984375,
+      -0.019549189135432243
+    ],
+    "bounds_max": [
+      21.715435028076172,
+      9.20614242553711,
+      3.0939831733703613
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 134,
+      "Upper_Border___Lower_Recess": 80,
+      "Ground_Skirting___Lighting": 98,
+      "FrontColor": 148
+    },
+    "origin": [
+      19.35506820678711,
+      8.10122013092041,
+      1.7235316038131714
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh6",
+    "parent": "Group6",
+    "vertices": 78,
+    "triangles": 48,
+    "bounds_min": [
+      -30.14633560180664,
+      -6.382606506347656,
+      0.5504980087280273
+    ],
+    "bounds_max": [
+      -25.708539962768555,
+      -1.2341747283935547,
+      3.8732717037200928
+    ],
+    "materials": {
+      "FrontColor": 48
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh62",
+    "parent": "Hallway_4__Degree_Circlar_Small1",
+    "vertices": 788,
+    "triangles": 576,
+    "bounds_min": [
+      64.10873413085938,
+      12.555932998657227,
+      -0.0195482075214386
+    ],
+    "bounds_max": [
+      66.00239562988281,
+      16.222211837768555,
+      3.0939841270446777
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 227,
+      "Upper_Border___Lower_Recess": 44,
+      "FrontColor": 211,
+      "Ground_Skirting___Lighting": 94
+    },
+    "origin": [
+      65.0560073852539,
+      14.381669998168945,
+      1.5378645658493042
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh63",
+    "parent": "J_Tube_Medium1",
+    "vertices": 128,
+    "triangles": 88,
+    "bounds_min": [
+      50.79664611816406,
+      10.648719787597656,
+      0.4022941291332245
+    ],
+    "bounds_max": [
+      51.97171401977539,
+      11.563119888305664,
+      1.3166943788528442
+    ],
+    "materials": {
+      "FrontColor": 48,
+      "Airway___Upper_Struts": 18,
+      "Ground_Skirting___Lighting": 10,
+      "Upper_Border___Lower_Recess": 12
+    },
+    "origin": [
+      51.38417053222656,
+      11.120219230651855,
+      0.9452612400054932
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh64",
+    "parent": "Recessed_Large___Double_JT_Exit1",
+    "vertices": 2041,
+    "triangles": 1409,
+    "bounds_min": [
+      45.488258361816406,
+      36.05560302734375,
+      -0.019544392824172974
+    ],
+    "bounds_max": [
+      47.06211471557617,
+      39.675323486328125,
+      3.0574119091033936
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 367,
+      "Upper_Border___Lower_Recess": 493,
+      "Light_Detailing": 126,
+      "Ground_Skirting___Lighting": 274,
+      "FrontColor": 149
+    },
+    "origin": [
+      46.63347625732422,
+      37.92573165893555,
+      1.224238634109497
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh65",
+    "parent": "Vertical_Maintenance_TSEC_1_1",
+    "vertices": 2240,
+    "triangles": 1834,
+    "bounds_min": [
+      50.3112678527832,
+      25.907377243041992,
+      1.204763520945562e-05
+    ],
+    "bounds_max": [
+      52.82204055786133,
+      28.46185874938965,
+      3.1229422092437744
+    ],
+    "materials": {
+      "FrontColor": 360,
+      "Ground_Skirting___Lighting": 132,
+      "Upper_Border___Lower_Recess": 850,
+      "Airway___Upper_Struts": 404,
+      "Light_Detailing": 88
+    },
+    "origin": [
+      51.50572204589844,
+      27.623538970947266,
+      1.4004405736923218
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh66",
+    "parent": "J_tube_4__Degree_Slant_Medium1",
+    "vertices": 124,
+    "triangles": 82,
+    "bounds_min": [
+      50.569549560546875,
+      5.7215576171875,
+      0.4022933542728424
+    ],
+    "bounds_max": [
+      51.91364288330078,
+      6.821601390838623,
+      1.3166935443878174
+    ],
+    "materials": {
+      "FrontColor": 42,
+      "Airway___Upper_Struts": 18,
+      "Ground_Skirting___Lighting": 8,
+      "Upper_Border___Lower_Recess": 14
+    },
+    "origin": [
+      51.20104217529297,
+      6.356894493103027,
+      0.9302964210510254
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh67",
+    "parent": "G_2_Way_Up_Dn_Junction1",
+    "vertices": 2755,
+    "triangles": 2202,
+    "bounds_min": [
+      50.44175720214844,
+      15.3660306930542,
+      -0.07034765183925629
+    ],
+    "bounds_max": [
+      53.03994369506836,
+      17.936031341552734,
+      3.0386264324188232
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 886,
+      "Airway___Upper_Struts": 440,
+      "Light_Detailing": 128,
+      "FrontColor": 444,
+      "Ground_Skirting___Lighting": 304
+    },
+    "origin": [
+      51.738948822021484,
+      17.063135147094727,
+      1.3339381217956543
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh68",
+    "parent": "Recessed_Large___No_Exits___Top_Details1",
+    "vertices": 1168,
+    "triangles": 824,
+    "bounds_min": [
+      45.48825454711914,
+      45.684669494628906,
+      -0.019542831927537918
+    ],
+    "bounds_max": [
+      47.06211471557617,
+      48.865478515625,
+      3.0574135780334473
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 351,
+      "Upper_Border___Lower_Recess": 281,
+      "Light_Detailing": 150,
+      "Ground_Skirting___Lighting": 40,
+      "_cTerminal": 2
+    },
+    "origin": [
+      46.914432525634766,
+      47.26063537597656,
+      1.7309759855270386
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh69",
+    "parent": "Recessed_Large___Single_JT_Exit1",
+    "vertices": 1594,
+    "triangles": 1104,
+    "bounds_min": [
+      45.48825454711914,
+      31.570262908935547,
+      -0.019545188173651695
+    ],
+    "bounds_max": [
+      47.062110900878906,
+      34.970516204833984,
+      3.0574114322662354
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 324,
+      "Upper_Border___Lower_Recess": 392,
+      "Light_Detailing": 126,
+      "Ground_Skirting___Lighting": 170,
+      "FrontColor": 92
+    },
+    "origin": [
+      46.73281478881836,
+      33.70811462402344,
+      1.3257522583007812
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh7",
+    "parent": "Group7",
+    "vertices": 1480,
+    "triangles": 1024,
+    "bounds_min": [
+      -37.604637145996094,
+      -6.677880764007568,
+      1.1101655960083008
+    ],
+    "bounds_max": [
+      -19.03207015991211,
+      1.3225560188293457,
+      3.873272180557251
+    ],
+    "materials": {
+      "FrontColor": 1024
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh70",
+    "parent": "Recessed_Large___Single_Exit1",
+    "vertices": 1258,
+    "triangles": 888,
+    "bounds_min": [
+      45.5627555847168,
+      17.529003143310547,
+      -0.019547509029507637
+    ],
+    "bounds_max": [
+      47.062110900878906,
+      20.782958984375,
+      3.0574088096618652
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 330,
+      "Ground_Skirting___Lighting": 108,
+      "Upper_Border___Lower_Recess": 286,
+      "Light_Detailing": 126,
+      "FrontColor": 38
+    },
+    "origin": [
+      46.88590621948242,
+      19.281713485717773,
+      1.6386436223983765
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh71",
+    "parent": "Maintenance_Straight_Large",
+    "vertices": 1230,
+    "triangles": 914,
+    "bounds_min": [
+      61.86725997924805,
+      31.44536590576172,
+      3.2791666984558105
+    ],
+    "bounds_max": [
+      64.20641326904297,
+      37.385860443115234,
+      5.655129909515381
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 256,
+      "Upper_Border___Lower_Recess": 333,
+      "Light_Detailing": 80,
+      "Ground_Skirting___Lighting": 239,
+      "Color_E01": 2,
+      "_cTerminal": 4
+    },
+    "origin": [
+      63.0021858215332,
+      34.42686080932617,
+      4.477355003356934
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh72",
+    "parent": "Group_11_1",
+    "vertices": 145,
+    "triangles": 81,
+    "bounds_min": [
+      60.09388732910156,
+      35.144317626953125,
+      3.2791669368743896
+    ],
+    "bounds_max": [
+      60.706092834472656,
+      37.28810501098633,
+      5.604329586029053
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 47,
+      "Airway___Upper_Struts": 24,
+      "Light_Detailing": 4,
+      "Ground_Skirting___Lighting": 6
+    },
+    "origin": [
+      60.53934097290039,
+      36.23040008544922,
+      4.205529689788818
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh73",
+    "parent": "Vertical_Maintenance_TSEC_3_1",
+    "vertices": 1918,
+    "triangles": 1550,
+    "bounds_min": [
+      85.02416229248047,
+      32.8890380859375,
+      -0.26008284091949463
+    ],
+    "bounds_max": [
+      87.43333435058594,
+      35.15882873535156,
+      3.0386292934417725
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 351,
+      "Upper_Border___Lower_Recess": 639,
+      "Color_E01": 360,
+      "Ground_Skirting___Lighting": 128,
+      "Light_Detailing": 72
+    },
+    "origin": [
+      86.33079528808594,
+      34.409542083740234,
+      1.2921887636184692
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh74",
+    "parent": "maintenance_straight",
+    "vertices": 1122,
+    "triangles": 834,
+    "bounds_min": [
+      76.14688873291016,
+      33.98895263671875,
+      3.279167413711548
+    ],
+    "bounds_max": [
+      78.58528900146484,
+      36.3281135559082,
+      5.655129909515381
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 325,
+      "Airway___Upper_Struts": 196,
+      "Light_Detailing": 68,
+      "_cTerminal": 4,
+      "Ground_Skirting___Lighting": 239,
+      "Color_E01": 2
+    },
+    "origin": [
+      77.37626647949219,
+      35.12028121948242,
+      4.388865947723389
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh75",
+    "parent": "Maintenance_90Degree",
+    "vertices": 2556,
+    "triangles": 2174,
+    "bounds_min": [
+      49.61104202270508,
+      30.839555740356445,
+      1.2638593943847809e-05
+    ],
+    "bounds_max": [
+      52.63279724121094,
+      33.86130905151367,
+      2.4775753021240234
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 735,
+      "Light_Detailing": 204,
+      "Upper_Border___Lower_Recess": 1172,
+      "_cTerminal": 4,
+      "Ground_Skirting___Lighting": 24,
+      "FrontColor": 35
+    },
+    "origin": [
+      51.18280029296875,
+      32.288169860839844,
+      1.0466976165771484
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh76",
+    "parent": "Vertical_Maintenance_Double1",
+    "vertices": 2382,
+    "triangles": 1952,
+    "bounds_min": [
+      50.099525451660156,
+      22.682884216308594,
+      -0.2600846290588379
+    ],
+    "bounds_max": [
+      52.71189880371094,
+      25.135766983032227,
+      2.5997157096862793
+    ],
+    "materials": {
+      "FrontColor": 384,
+      "Airway___Upper_Struts": 458,
+      "Upper_Border___Lower_Recess": 886,
+      "Ground_Skirting___Lighting": 136,
+      "Light_Detailing": 88
+    },
+    "origin": [
+      51.40549087524414,
+      24.305438995361328,
+      1.1616485118865967
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh77",
+    "parent": "Maintenance_90Degree1",
+    "vertices": 2556,
+    "triangles": 2174,
+    "bounds_min": [
+      80.1828842163086,
+      33.20732116699219,
+      3.2791671752929688
+    ],
+    "bounds_max": [
+      83.20464324951172,
+      36.229068756103516,
+      5.756729602813721
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 735,
+      "Light_Detailing": 204,
+      "Upper_Border___Lower_Recess": 1172,
+      "_cTerminal": 4,
+      "Ground_Skirting___Lighting": 24,
+      "Color_E01": 35
+    },
+    "origin": [
+      81.75640106201172,
+      34.77911376953125,
+      4.32584285736084
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh78",
+    "parent": "Vertical_Maintenance_Double2",
+    "vertices": 2382,
+    "triangles": 1952,
+    "bounds_min": [
+      66.03707122802734,
+      33.10517883300781,
+      3.0386292934417725
+    ],
+    "bounds_max": [
+      68.64944458007812,
+      35.55805587768555,
+      5.8984293937683105
+    ],
+    "materials": {
+      "Color_E01": 384,
+      "Airway___Upper_Struts": 458,
+      "Upper_Border___Lower_Recess": 886,
+      "Ground_Skirting___Lighting": 136,
+      "Light_Detailing": 88
+    },
+    "origin": [
+      67.34342193603516,
+      34.72719192504883,
+      4.4603590965271
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh79",
+    "parent": "Vertical_Maintenance_TSEC_2_1",
+    "vertices": 1962,
+    "triangles": 1590,
+    "bounds_min": [
+      53.3769645690918,
+      25.526626586914062,
+      3.0203397274017334
+    ],
+    "bounds_max": [
+      55.786136627197266,
+      27.59088897705078,
+      6.161557674407959
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 353,
+      "Upper_Border___Lower_Recess": 604,
+      "FrontColor": 424,
+      "Ground_Skirting___Lighting": 137,
+      "Light_Detailing": 72
+    },
+    "origin": [
+      54.66874313354492,
+      26.878862380981445,
+      4.382743835449219
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh8",
+    "parent": "Group8",
+    "vertices": 109,
+    "triangles": 87,
+    "bounds_min": [
+      -45.218509674072266,
+      -15.296741485595703,
+      0.23797884583473206
+    ],
+    "bounds_max": [
+      -40.45228576660156,
+      -12.672788619995117,
+      1.0075221061706543
+    ],
+    "materials": {
+      "FrontColor": 87
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh80",
+    "parent": "Hallway_Primary_Secondary_Location___open___EG__Holodeck_1",
+    "vertices": 4007,
+    "triangles": 2945,
+    "bounds_min": [
+      88.98175048828125,
+      1.0368605852127075,
+      -0.019550126045942307
+    ],
+    "bounds_max": [
+      102.1879653930664,
+      10.232246398925781,
+      3.0939831733703613
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 278,
+      "Ground_Skirting___Lighting": 853,
+      "FrontColor": 612,
+      "_cTerminal": 179,
+      "Airway___Upper_Struts": 999,
+      "Light_Detailing": 24
+    },
+    "origin": [
+      95.50245666503906,
+      5.855429649353027,
+      1.2945928573608398
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh81",
+    "parent": "Room___Head___Single_Restroom1",
+    "vertices": 102,
+    "triangles": 64,
+    "bounds_min": [
+      4.548122406005859,
+      9.092602729797363,
+      -0.019546983763575554
+    ],
+    "bounds_max": [
+      9.507421493530273,
+      14.33926773071289,
+      2.7968058586120605
+    ],
+    "materials": {
+      "Color_H04": 64
+    },
+    "origin": [
+      7.184934139251709,
+      11.274052619934082,
+      1.3572337627410889
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh82",
+    "parent": "Vertical_Maintenance_TSEC_2_2",
+    "vertices": 1962,
+    "triangles": 1590,
+    "bounds_min": [
+      85.024169921875,
+      33.09457015991211,
+      3.020341157913208
+    ],
+    "bounds_max": [
+      87.43334197998047,
+      35.15882873535156,
+      6.161559104919434
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 353,
+      "Upper_Border___Lower_Recess": 604,
+      "Color_E01": 424,
+      "Ground_Skirting___Lighting": 137,
+      "Light_Detailing": 72
+    },
+    "origin": [
+      86.31511688232422,
+      34.447147369384766,
+      4.382745265960693
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh83",
+    "parent": "Vertical_Maintenance_TSEC_3_2",
+    "vertices": 1918,
+    "triangles": 1550,
+    "bounds_min": [
+      53.37696838378906,
+      25.32109260559082,
+      -0.26008403301239014
+    ],
+    "bounds_max": [
+      55.786136627197266,
+      27.59088706970215,
+      3.038628101348877
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 351,
+      "Upper_Border___Lower_Recess": 639,
+      "FrontColor": 360,
+      "Ground_Skirting___Lighting": 128,
+      "Light_Detailing": 72
+    },
+    "origin": [
+      54.684120178222656,
+      26.84147834777832,
+      1.2921875715255737
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh84",
+    "parent": "Maintenance_T_Section",
+    "vertices": 2506,
+    "triangles": 2178,
+    "bounds_min": [
+      71.08802032470703,
+      33.42902755737305,
+      3.2791671752929688
+    ],
+    "bounds_max": [
+      74.1129379272461,
+      36.349178314208984,
+      5.705929756164551
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 585,
+      "Upper_Border___Lower_Recess": 1335,
+      "Light_Detailing": 214,
+      "Ground_Skirting___Lighting": 12,
+      "Color_E01": 32
+    },
+    "origin": [
+      72.60232543945312,
+      34.96997833251953,
+      4.324985980987549
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh9",
+    "parent": "ConferenceRoom",
+    "vertices": 520,
+    "triangles": 380,
+    "bounds_min": [
+      -47.498207092285156,
+      -19.144365310668945,
+      0.23797807097434998
+    ],
+    "bounds_max": [
+      -33.799861907958984,
+      -8.736282348632812,
+      3.331597089767456
+    ],
+    "materials": {
+      "FrontColor": 380
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh91",
+    "parent": "Recessed_Large___Double_JT_Exit___Controls1",
+    "vertices": 2527,
+    "triangles": 1985,
+    "bounds_min": [
+      45.488258361816406,
+      40.760406494140625,
+      -0.019543679431080818
+    ],
+    "bounds_max": [
+      47.0621337890625,
+      44.380123138427734,
+      3.057412624359131
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 427,
+      "Upper_Border___Lower_Recess": 449,
+      "Light_Detailing": 54,
+      "Ground_Skirting___Lighting": 834,
+      "FrontColor": 221
+    },
+    "origin": [
+      46.65625,
+      42.63355255126953,
+      1.375911831855774
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh92",
+    "parent": "Hallway_T_Junction_Doorway1",
+    "vertices": 737,
+    "triangles": 635,
+    "bounds_min": [
+      38.944984436035156,
+      14.427265167236328,
+      -0.019547997042536736
+    ],
+    "bounds_max": [
+      42.58405685424805,
+      18.068056106567383,
+      3.093984365463257
+    ],
+    "materials": {
+      "Ground_Skirting___Lighting": 76,
+      "Upper_Border___Lower_Recess": 36,
+      "Airway___Upper_Struts": 241,
+      "FrontColor": 282
+    },
+    "origin": [
+      40.61525344848633,
+      16.24407196044922,
+      2.43286395072937
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh93",
+    "parent": "Recessed_Large_Turbolift_Door_Edge1",
+    "vertices": 119,
+    "triangles": 93,
+    "bounds_min": [
+      52.87854766845703,
+      45.932586669921875,
+      -0.01839197613298893
+    ],
+    "bounds_max": [
+      55.83989715576172,
+      46.005741119384766,
+      3.0585639476776123
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 10,
+      "Airway___Upper_Struts": 8,
+      "Ground_Skirting___Lighting": 49,
+      "FrontColor": 26
+    },
+    "origin": [
+      54.35923767089844,
+      45.99155807495117,
+      1.2731822729110718
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh94",
+    "parent": "Corridor___JT_Access___Large1",
+    "vertices": 547,
+    "triangles": 447,
+    "bounds_min": [
+      68.66021728515625,
+      18.661611557006836,
+      -0.12800541520118713
+    ],
+    "bounds_max": [
+      71.80549621582031,
+      22.061870574951172,
+      2.9855270385742188
+    ],
+    "materials": {
+      "_cTerminal": 4,
+      "Airway___Upper_Struts": 235,
+      "FrontColor": 61,
+      "Ground_Skirting___Lighting": 48,
+      "Upper_Border___Lower_Recess": 63,
+      "Light_Detailing": 32,
+      "Color_E01": 4
+    },
+    "origin": [
+      70.23573303222656,
+      20.38568878173828,
+      1.2872568368911743
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh95",
+    "parent": "Recessed_Large___No_Exits1",
+    "vertices": 1062,
+    "triangles": 734,
+    "bounds_min": [
+      45.48825454711914,
+      26.86545753479004,
+      -0.01954593136906624
+    ],
+    "bounds_max": [
+      47.062110900878906,
+      30.0462589263916,
+      3.057410478591919
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 261,
+      "Upper_Border___Lower_Recess": 281,
+      "Light_Detailing": 126,
+      "Ground_Skirting___Lighting": 66
+    },
+    "origin": [
+      46.96839141845703,
+      28.44002342224121,
+      1.5615348815917969
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh96",
+    "parent": "maintenance_straight1",
+    "vertices": 1122,
+    "triangles": 834,
+    "bounds_min": [
+      57.458885192871094,
+      30.937110900878906,
+      -0.01954539865255356
+    ],
+    "bounds_max": [
+      59.79804611206055,
+      33.375511169433594,
+      2.356417179107666
+    ],
+    "materials": {
+      "Upper_Border___Lower_Recess": 325,
+      "Airway___Upper_Struts": 196,
+      "Light_Detailing": 68,
+      "_cTerminal": 4,
+      "Ground_Skirting___Lighting": 239,
+      "FrontColor": 2
+    },
+    "origin": [
+      58.666316986083984,
+      32.16628646850586,
+      1.090146541595459
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh97",
+    "parent": "Maintenance_T_Section1",
+    "vertices": 2506,
+    "triangles": 2178,
+    "bounds_min": [
+      53.56393051147461,
+      30.839553833007812,
+      1.2716776836896315e-05
+    ],
+    "bounds_max": [
+      56.58884811401367,
+      33.75970458984375,
+      2.4267754554748535
+    ],
+    "materials": {
+      "Airway___Upper_Struts": 585,
+      "Upper_Border___Lower_Recess": 1335,
+      "Light_Detailing": 214,
+      "Ground_Skirting___Lighting": 12,
+      "FrontColor": 32
+    },
+    "origin": [
+      55.074153900146484,
+      32.21884536743164,
+      1.0458413362503052
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh98",
+    "parent": "Group_42_1",
+    "vertices": 274,
+    "triangles": 184,
+    "bounds_min": [
+      -40.18143081665039,
+      -3.207429885864258,
+      1.1101661920547485
+    ],
+    "bounds_max": [
+      -39.22698974609375,
+      3.1936213970184326,
+      2.340407133102417
+    ],
+    "materials": {
+      "FrontColor": 184
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "name": "Mesh99",
+    "parent": "Group_34_1",
+    "vertices": 120,
+    "triangles": 80,
+    "bounds_min": [
+      -42.01905822753906,
+      -4.683605670928955,
+      1.1101659536361694
+    ],
+    "bounds_max": [
+      -40.79594421386719,
+      -2.9530322551727295,
+      2.331225872039795
+    ],
+    "materials": {
+      "FrontColor": 80
+    },
+    "origin": [
+      -43.0,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  }
+]

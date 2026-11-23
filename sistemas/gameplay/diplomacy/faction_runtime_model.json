@@ -69,6 +69,14 @@
       "sanctions",
       "currency_or_exchange_context",
       "local_law"
+    ],
+    "individual_ship_reputation": [
+      "ship_id",
+      "recognized_public_project",
+      "last_known_capability_profile",
+      "intelligence_source_and_timestamp",
+      "classified_information_gates",
+      "commander_threat_appraisal"
     ]
   },
   "ai_authority": {
@@ -78,5 +86,9 @@
     "may_assume_species_implies_faction": false,
     "may_assume_uniform_implies_unlimited_authority": false
   },
-  "conflict_system_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json"
+  "conflict_system_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "individual_ship_reputation_contract_refs": [
+    "sistemas/gameplay/reputation/enterprise_d_valhalla_ship_reputation_v0.1.json"
+  ],
+  "ship_superiority_interaction_rule": "Factions recognize publicly known Valhalla Project reputation without assuming access to classified capabilities or predetermining diplomacy outcomes."
 }

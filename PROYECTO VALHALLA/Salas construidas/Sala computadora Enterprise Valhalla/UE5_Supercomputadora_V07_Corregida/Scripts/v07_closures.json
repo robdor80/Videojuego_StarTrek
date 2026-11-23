@@ -1,0 +1,22 @@
+[
+  {
+    "id": "B08_Bajo_Escalera_Sur",
+    "center_xy": [3353.18, -60],
+    "bottom_cm": 37,
+    "height_cm": 250,
+    "width_cm": 130,
+    "thickness_cm": 12,
+    "yaw_deg": -90,
+    "reason": "Hueco bajo el tramo superior: caida reproducida con Quinn desde el suelo principal. No es la entrada valida de la escalera, situada en X=3204."
+  },
+  {
+    "id": "B09_Bajo_Escalera_Norte",
+    "center_xy": [3353.18, 561.15857],
+    "bottom_cm": -305.635,
+    "height_cm": 226.815,
+    "width_cm": 130,
+    "thickness_cm": 12,
+    "yaw_deg": -90,
+    "reason": "Boca inferior bajo la rampa de bajada, sin cubierta de continuacion. Cierre preventivo; no confundir con la entrada transitable de la rampa en Z=37."
+  }
+]

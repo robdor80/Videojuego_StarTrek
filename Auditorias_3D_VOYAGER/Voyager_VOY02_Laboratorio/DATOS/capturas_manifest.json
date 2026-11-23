@@ -1,0 +1,888 @@
+[
+  {
+    "file": "A01_puente_completo.png",
+    "scene": "A_ESCALA_HUMANA_110",
+    "title": "Puente completo; escala experimental 1.10",
+    "note": "",
+    "camera": [
+      18.150745391845703,
+      -18.202417373657227,
+      16.289257049560547
+    ],
+    "target": [
+      0.08445268124341965,
+      -0.1361258625984192,
+      1.8362247943878174
+    ],
+    "ortho_scale": 21.422454833984375,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.0535714365541935,
+      "xmax": 0.9464285373687744,
+      "ymin": 0.08850528299808502,
+      "ymax": 0.9114951491355896
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 648
+  },
+  {
+    "file": "A02_puente_humanos.png",
+    "scene": "A_ESCALA_HUMANA_110",
+    "title": "Referencias 1.60 / 1.75 / 1.90 m; arquitectura a 1.10",
+    "note": "Corte horizontal Z=3.00 m solo para captura; no se guarda sobre el laboratorio.",
+    "camera": [
+      18.166385650634766,
+      -18.218059539794922,
+      16.01073455810547
+    ],
+    "target": [
+      -0.1398892104625702,
+      0.08821526169776917,
+      1.3657150268554688
+    ],
+    "ortho_scale": 21.422452926635742,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357152968645096,
+      "xmax": 0.9464287161827087,
+      "ymin": 0.10598497837781906,
+      "ymax": 0.8940146565437317
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 606
+  },
+  {
+    "file": "A03_planta_acotada.png",
+    "scene": "A_ESCALA_HUMANA_110",
+    "title": "Planta de puente: envolvente 14.465 x 14.312 m",
+    "note": "Corte Z=3.00 m; envolvente exterior, no anchura útil de pasos.",
+    "camera": [
+      -4.76837158203125e-07,
+      0.33553194999694824,
+      31.244178771972656
+    ],
+    "target": [
+      -4.76837158203125e-07,
+      0.33553194999694824,
+      1.5
+    ],
+    "ortho_scale": 22.583911895751953,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.17976000905036926,
+      "xmax": 0.8202399611473083,
+      "ymin": 0.0535714216530323,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 606
+  },
+  {
+    "file": "A04_seccion_alturas.png",
+    "scene": "A_ESCALA_HUMANA_110",
+    "title": "Alturas de personas y niveles del puente",
+    "note": "Sección adicional Y=0; referencias humanas completas conservadas.",
+    "camera": [
+      0.0069653987884521484,
+      -25.21597671508789,
+      2.0859503746032715
+    ],
+    "target": [
+      0.0069653987884521484,
+      1.128836989402771,
+      1.5590541362762451
+    ],
+    "ortho_scale": 15.913522720336914,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357138812541962,
+      "xmax": 0.946428656578064,
+      "ymin": 0.3552723824977875,
+      "ymax": 0.6447269916534424
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 340
+  },
+  {
+    "file": "A05_escalas_comparadas.png",
+    "scene": "A_COMPARACION_ESCALAS",
+    "title": "Mismo acceso y referencia de 1.90 m: escalas 1.00 / 1.10 / 1.15 / 1.508",
+    "note": "Fragmentos de acceso reales; no demuestra ergonomía del puente completo.",
+    "camera": [
+      5.602474212646484,
+      -22.185102462768555,
+      5.305188179016113
+    ],
+    "target": [
+      5.602474212646484,
+      -0.36663949489593506,
+      2.032418966293335
+    ],
+    "ortho_scale": 15.679899215698242,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357147753238678,
+      "xmax": 0.9464285969734192,
+      "ymin": 0.2904415726661682,
+      "ymax": 0.7095590233802795
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 96
+  },
+  {
+    "file": "B00_catalogo_ensayos.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "Siete ensamblajes reales, alineados por anclas de extremos",
+    "note": "",
+    "camera": [
+      10.136762619018555,
+      18.54863929748535,
+      74.97327423095703
+    ],
+    "target": [
+      10.136762619018555,
+      18.54863929748535,
+      1.556766152381897
+    ],
+    "ortho_scale": 68.68704986572266,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.31231966614723206,
+      "xmax": 0.6876803636550903,
+      "ymin": 0.053571417927742004,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 60
+  },
+  {
+    "file": "B01_CORTO_LARGO_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B01_CORTO_LARGO: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      1.7881393432617188e-07,
+      2.194561243057251,
+      11.912551879882812
+    ],
+    "target": [
+      1.7881393432617188e-07,
+      2.194561243057251,
+      1.1500005722045898
+    ],
+    "ortho_scale": 9.446484565734863,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.30453741550445557,
+      "xmax": 0.6954625844955444,
+      "ymin": 0.05357140675187111,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "B01_CORTO_LARGO_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B01_CORTO_LARGO: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      6.623891830444336,
+      -4.429330825805664,
+      6.449113845825195
+    ],
+    "target": [
+      9.58072376988639e-08,
+      2.194561243057251,
+      1.150000810623169
+    ],
+    "ortho_scale": 8.731940269470215,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.11945939064025879,
+      "xmax": 0.8805409669876099,
+      "ymin": 0.05357133597135544,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "B02_DOS_RECTOS_CURVA_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B02_DOS_RECTOS_CURVA: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      20.090770721435547,
+      1.8399240970611572,
+      16.51361083984375
+    ],
+    "target": [
+      20.090770721435547,
+      1.8399240970611572,
+      1.1500004529953003
+    ],
+    "ortho_scale": 13.359407424926758,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.2801397740840912,
+      "xmax": 0.7198600769042969,
+      "ymin": 0.05357141047716141,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B02_DOS_RECTOS_CURVA_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B02_DOS_RECTOS_CURVA: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      29.415782928466797,
+      -7.485088348388672,
+      9.041109085083008
+    ],
+    "target": [
+      19.960134506225586,
+      1.970560073852539,
+      1.4765914678573608
+    ],
+    "ortho_scale": 11.042585372924805,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.0535714253783226,
+      "xmax": 0.946428656578064,
+      "ymin": 0.09251765161752701,
+      "ymax": 0.9074822664260864
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B03_RECTA_T_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B03_RECTA_T: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      1.0907702445983887,
+      13.833415985107422,
+      14.066954612731934
+    ],
+    "target": [
+      1.0907702445983887,
+      13.833415985107422,
+      1.1500004529953003
+    ],
+    "ortho_scale": 9.704421997070312,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.19733355939388275,
+      "xmax": 0.802666425704956,
+      "ymin": 0.0535714328289032,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B03_RECTA_T_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B03_RECTA_T: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      8.91154670715332,
+      6.01263952255249,
+      7.832514762878418
+    ],
+    "target": [
+      0.9617118835449219,
+      13.96247386932373,
+      1.4726464748382568
+    ],
+    "ortho_scale": 9.29427719116211,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.053571730852127075,
+      "xmax": 0.946428656578064,
+      "ymin": 0.0769893154501915,
+      "ymax": 0.9230101704597473
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B04_CUATRO_VIAS_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B04_CUATRO_VIAS: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      20.084259033203125,
+      13.833415031433105,
+      14.053640365600586
+    ],
+    "target": [
+      20.084259033203125,
+      13.833415031433105,
+      1.1500003337860107
+    ],
+    "ortho_scale": 9.704418182373047,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.19800429046154022,
+      "xmax": 0.8019959330558777,
+      "ymin": 0.053571414202451706,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B04_CUATRO_VIAS_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B04_CUATRO_VIAS: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      27.89763069152832,
+      6.020043849945068,
+      7.823985576629639
+    ],
+    "target": [
+      19.955989837646484,
+      13.961684226989746,
+      1.470672845840454
+    ],
+    "ortho_scale": 9.283961296081543,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.053571417927742004,
+      "xmax": 0.946428656578064,
+      "ymin": 0.07724113017320633,
+      "ymax": 0.9227584600448608
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B05_MODULO_PUERTAS_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B05_MODULO_PUERTAS: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      2.980232238769531e-07,
+      25.097280502319336,
+      10.419909477233887
+    ],
+    "target": [
+      2.980232238769531e-07,
+      25.097280502319336,
+      1.1500002145767212
+    ],
+    "ortho_scale": 7.266859531402588,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.2459104359149933,
+      "xmax": 0.7540895342826843,
+      "ymin": 0.053571440279483795,
+      "ymax": 0.9464285373687744
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "B05_MODULO_PUERTAS_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B05_MODULO_PUERTAS: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      5.691379547119141,
+      19.36932373046875,
+      5.703104496002197
+    ],
+    "target": [
+      -0.013854671269655228,
+      25.07455825805664,
+      1.1389172077178955
+    ],
+    "ortho_scale": 7.930925369262695,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.142973855137825,
+      "xmax": 0.8570266962051392,
+      "ymin": 0.0535711906850338,
+      "ymax": 0.9464282989501953
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "B06_TURBOLIFT_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B06_TURBOLIFT: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      19.0,
+      27.339378356933594,
+      15.9736909866333
+    ],
+    "target": [
+      19.0,
+      27.339378356933594,
+      1.1500004529953003
+    ],
+    "ortho_scale": 14.691130638122559,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.37431642413139343,
+      "xmax": 0.6256834268569946,
+      "ymin": 0.05357152596116066,
+      "ymax": 0.946428656578064
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B06_TURBOLIFT_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B06_TURBOLIFT: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      28.061771392822266,
+      18.115039825439453,
+      8.399419784545898
+    ],
+    "target": [
+      18.93842124938965,
+      27.23838996887207,
+      1.1007392406463623
+    ],
+    "ortho_scale": 10.370474815368652,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.08267467468976974,
+      "xmax": 0.9173261523246765,
+      "ymin": 0.053571101278066635,
+      "ymax": 0.9464283585548401
+    },
+    "temporarily_hidden_neighbors": 64,
+    "visible_meshes": 9
+  },
+  {
+    "file": "B07_RESIDENCIAL_planta.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B07_RESIDENCIAL: unión geométrica y referencia humana",
+    "note": "Corte Z=2.30 m. Color por módulo; no se reparan molduras en esta prueba.",
+    "camera": [
+      2.86102294921875e-06,
+      37.09728240966797,
+      12.264419555664062
+    ],
+    "target": [
+      2.86102294921875e-06,
+      37.09728240966797,
+      1.1500002145767212
+    ],
+    "ortho_scale": 7.2668657302856445,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.12095771729946136,
+      "xmax": 0.8790422677993774,
+      "ymin": 0.053571052849292755,
+      "ymax": 0.9464281797409058
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "B07_RESIDENCIAL_perspectiva.png",
+    "scene": "B_PASILLOS_UNIONES",
+    "title": "B07_RESIDENCIAL: perfiles existentes y continuidad de suelo",
+    "note": "Corte Z=2.30 m. Medidas y discrepancias registradas en ensamblajes_pruebas.json.",
+    "camera": [
+      7.012425422668457,
+      30.53886604309082,
+      6.759939193725586
+    ],
+    "target": [
+      0.17197413742542267,
+      37.37931442260742,
+      1.2875781059265137
+    ],
+    "ortho_scale": 8.496495246887207,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.12591083347797394,
+      "xmax": 0.8740895986557007,
+      "ymin": 0.05357135832309723,
+      "ymax": 0.9464284777641296
+    },
+    "temporarily_hidden_neighbors": 65,
+    "visible_meshes": 8
+  },
+  {
+    "file": "D01_interior_camarote.png",
+    "scene": "D_CAMAROTE_ENSAYO",
+    "title": "Habitación existente con cama, escritorio y armario de referencia",
+    "note": "Envolvente completa; volúmenes verdes nuevos, sin diseño artístico final.",
+    "camera": [
+      -2.5,
+      -2.799999952316284,
+      1.649999976158142
+    ],
+    "target": [
+      0.4000000059604645,
+      1.5,
+      0.8999999761581421
+    ],
+    "ortho_scale": null,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": null,
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 18
+  },
+  {
+    "file": "D03_camarote_perspectiva.png",
+    "scene": "D_CAMAROTE_ENSAYO",
+    "title": "Volumen caminable, entrada y mobiliario de prueba",
+    "note": "Corte Z=2.30 m. Los objetos no son muebles definitivos.",
+    "camera": [
+      12.472016334533691,
+      -13.523396492004395,
+      13.622017860412598
+    ],
+    "target": [
+      0.23863336443901062,
+      -1.2900134325027466,
+      1.388634204864502
+    ],
+    "ortho_scale": 14.875208854675293,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.08626069873571396,
+      "xmax": 0.9137392640113831,
+      "ymin": 0.05357157811522484,
+      "ymax": 0.946428656578064
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 18
+  },
+  {
+    "file": "E01_puertas_cerradas.png",
+    "scene": "E_PUERTAS_CARRERA_PRUEBA",
+    "title": "Tres puertas: 1 / ensayo geométrico",
+    "note": "Las poses intermedias tienen nuevos contactos detectados; apertura final no certifica bolsillos ni mecanismo.",
+    "camera": [
+      16.198989868164062,
+      -11.62808609008789,
+      8.922346115112305
+    ],
+    "target": [
+      5.007401943206787,
+      -0.43649911880493164,
+      1.647813320159912
+    ],
+    "ortho_scale": 10.282621383666992,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.07642029225826263,
+      "xmax": 0.9235800504684448,
+      "ymin": 0.05357116088271141,
+      "ymax": 0.946428120136261
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 62
+  },
+  {
+    "file": "E02_puertas_intermedias.png",
+    "scene": "E_PUERTAS_CARRERA_PRUEBA",
+    "title": "Tres puertas: 25 / ensayo geométrico",
+    "note": "Las poses intermedias tienen nuevos contactos detectados; apertura final no certifica bolsillos ni mecanismo.",
+    "camera": [
+      16.16364288330078,
+      -11.59273910522461,
+      8.899370193481445
+    ],
+    "target": [
+      5.000907897949219,
+      -0.43000495433807373,
+      1.643592357635498
+    ],
+    "ortho_scale": 10.282621383666992,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.07641991972923279,
+      "xmax": 0.9235798716545105,
+      "ymin": 0.0535711944103241,
+      "ymax": 0.9464281797409058
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 62
+  },
+  {
+    "file": "E03_puertas_abiertas.png",
+    "scene": "E_PUERTAS_CARRERA_PRUEBA",
+    "title": "Tres puertas: 49 / ensayo geométrico",
+    "note": "Las poses intermedias tienen nuevos contactos detectados; apertura final no certifica bolsillos ni mecanismo.",
+    "camera": [
+      16.34662437438965,
+      -11.69052505493164,
+      8.988748550415039
+    ],
+    "target": [
+      5.021040439605713,
+      -0.36494147777557373,
+      1.6271188259124756
+    ],
+    "ortho_scale": 10.288250923156738,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.07079658657312393,
+      "xmax": 0.9292038679122925,
+      "ymin": 0.05357130616903305,
+      "ymax": 0.9464282393455505
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 62
+  },
+  {
+    "file": "D02_planta_camarote.png",
+    "scene": "D_CAMAROTE_ENSAYO",
+    "title": "Maqueta de camarote y conexión al pasillo",
+    "note": "Envolvente Group4 / Mesh4, corte Z=2.30 m; mobiliario verde solo para comprobar espacio.",
+    "camera": [
+      1.1920928955078125e-07,
+      -1.7972803115844727,
+      22.3088436126709
+    ],
+    "target": [
+      1.1920928955078125e-07,
+      -1.7972803115844727,
+      1.1200006008148193
+    ],
+    "ortho_scale": 11.122720718383789,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.1998724490404129,
+      "xmax": 0.8001275658607483,
+      "ymin": 0.05357144773006439,
+      "ymax": 0.9464285373687744
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 18
+  },
+  {
+    "file": "G04_cruce_y_turbolift.png",
+    "scene": "G_INTERIORES_CONECTADOS",
+    "title": "Cruce y transición a cabina de turbolift",
+    "note": "Ramal aislado, corte Z=2.30 m. Solo cabina y acceso estáticos; no implementa ascensor.",
+    "camera": [
+      14.55559253692627,
+      -2.5312423706054688,
+      11.890761375427246
+    ],
+    "target": [
+      3.854681968688965,
+      8.169668197631836,
+      1.1898508071899414
+    ],
+    "ortho_scale": 13.18797779083252,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.10024791210889816,
+      "xmax": 0.899752140045166,
+      "ymin": 0.05357149615883827,
+      "ymax": 0.9464287161827087
+    },
+    "temporarily_hidden_neighbors": 683,
+    "visible_meshes": 5
+  },
+  {
+    "file": "C01_puente_pasillo.png",
+    "scene": "C_UNION_PUENTE_PASILLO",
+    "title": "Puente → adaptador experimental → pasillo → cruce",
+    "note": "Corte Z=2.30 m; puertas en pose abierta estática, sin mecanismo certificado.",
+    "camera": [
+      21.634071350097656,
+      -26.662490844726562,
+      23.211132049560547
+    ],
+    "target": [
+      -1.6925625801086426,
+      -3.33585786819458,
+      -0.11550134420394897
+    ],
+    "ortho_scale": 26.734529495239258,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357136204838753,
+      "xmax": 0.9464284777641296,
+      "ymin": 0.08634596318006516,
+      "ymax": 0.9136543869972229
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 603
+  },
+  {
+    "file": "C02_detalle_adaptador.png",
+    "scene": "C_UNION_PUENTE_PASILLO",
+    "title": "Acceso posterior: adaptador naranja construido solo para laboratorio",
+    "note": "Contexto posterior aislado solo para captura. Paredes/techo del adaptador retranqueados 0.14m; carrera de puertas sin certificar.",
+    "camera": [
+      11.058095932006836,
+      -9.82655143737793,
+      11.44677448272705
+    ],
+    "target": [
+      0.7513214349746704,
+      0.48022282123565674,
+      1.140000581741333
+    ],
+    "ortho_scale": 13.824746131896973,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.1724482774734497,
+      "xmax": 0.8275520205497742,
+      "ymin": 0.053571585565805435,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 620,
+    "visible_meshes": 21
+  },
+  {
+    "file": "G01_conjunto_completo.png",
+    "scene": "G_INTERIORES_CONECTADOS",
+    "title": "Conjunto experimental completo, sin cortes",
+    "note": "",
+    "camera": [
+      33.95985412597656,
+      -31.81796646118164,
+      35.768463134765625
+    ],
+    "target": [
+      -0.7146623134613037,
+      2.8565471172332764,
+      1.0939503908157349
+    ],
+    "ortho_scale": 38.091712951660156,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357125401496887,
+      "xmax": 0.9464284181594849,
+      "ymin": 0.08874042332172394,
+      "ymax": 0.9112602472305298
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 681
+  },
+  {
+    "file": "G02_conjunto_planta.png",
+    "scene": "G_INTERIORES_CONECTADOS",
+    "title": "Puente + pasillos + turbolift + camarote",
+    "note": "Corte Z=2.30 m; rojo/naranja: adaptadores de prueba. No valida el tránsito de todo el puente.",
+    "camera": [
+      0.5326385498046875,
+      4.338320732116699,
+      60.65996551513672
+    ],
+    "target": [
+      0.5326385498046875,
+      4.338320732116699,
+      0.7582381367683411
+    ],
+    "ortho_scale": 26.956899642944336,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.1581019014120102,
+      "xmax": 0.8418980836868286,
+      "ymin": 0.05357141047716141,
+      "ymax": 0.9464285969734192
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 644
+  },
+  {
+    "file": "G03_conjunto_perspectiva.png",
+    "scene": "G_INTERIORES_CONECTADOS",
+    "title": "Conexiones de laboratorio verificadas en recorridos seleccionados",
+    "note": "Corte Z=2.30 m. Se conservan los problemas del modelo y se documentan las zonas no demostradas.",
+    "camera": [
+      33.756736755371094,
+      -31.614852905273438,
+      35.33380126953125
+    ],
+    "target": [
+      -0.8275408744812012,
+      2.96942400932312,
+      0.7495207786560059
+    ],
+    "ortho_scale": 38.09171676635742,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.05357144773006439,
+      "xmax": 0.9464285373687744,
+      "ymin": 0.09607730060815811,
+      "ymax": 0.9039228558540344
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 644
+  },
+  {
+    "file": "E04_sillas_grupos.png",
+    "scene": "E_SILLAS_GRUPOS",
+    "title": "Cinco agrupaciones revisadas: 8 / 31 / 31 / 11 / 11 piezas",
+    "note": "Grupos semánticos corregidos; los giros históricos corresponden a agrupaciones anteriores. Articulación y sentado sin validar.",
+    "camera": [
+      11.063722610473633,
+      -8.42055892944336,
+      8.131665229797363
+    ],
+    "target": [
+      2.4050545692443848,
+      0.23810887336730957,
+      0.33886444568634033
+    ],
+    "ortho_scale": 8.847888946533203,
+    "engine": "Workbench / material diffuse",
+    "source_scene_preserved_full": true,
+    "projected_mesh_bounds": {
+      "xmin": 0.127216175198555,
+      "xmax": 0.8727840781211853,
+      "ymin": 0.05357097461819649,
+      "ymax": 0.946428120136261
+    },
+    "temporarily_hidden_neighbors": 0,
+    "visible_meshes": 92
+  }
+]

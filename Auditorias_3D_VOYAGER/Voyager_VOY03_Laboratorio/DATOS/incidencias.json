@@ -1,0 +1,51 @@
+[
+  {
+    "id": "I01",
+    "cause": "VOY02 fixed foot capsule hits stair risers before graph transitions",
+    "resolution": "Terrain lower hemisphere envelope, real tread support, continuous sweep and bearing checks",
+    "status": "resolved_algorithm",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I02",
+    "cause": "Material-only floor selection misses real support and includes console Mesh_1787",
+    "resolution": "Explicit mesh role inventory, Mesh_2121-2124 /1968/1848 and nosings; consoles retained as obstacles",
+    "status": "resolved_semantics",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I03",
+    "cause": "Diagonal free nodes cross Mesh_2096",
+    "resolution": "Reject entire edge, replan; keep rejected coordinates",
+    "status": "resolved_route",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I04",
+    "cause": "Absolute triangle edge tolerance creates false Mesh_1944 collision",
+    "resolution": "Area-relative barycentric tolerance and scale controls",
+    "status": "resolved_algorithm",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I05",
+    "cause": "float BVH misses AD_PUENTE/PASILLO_PRINCIPAL shared edge",
+    "resolution": "Double precision intersection on SAME real triangles; measured gap0",
+    "status": "resolved_algorithm",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I06",
+    "cause": "Corner path has lateral riser contact, insufficient vertical support between free poses",
+    "resolution": "Reject support up<0.50 and replan; convex real triangle bearing certificate for whole intervals",
+    "status": "resolved_route",
+    "geometry_changes": 0
+  },
+  {
+    "id": "I07",
+    "cause": "Initial captures clipped/occluded; first paths had unvalidated corner",
+    "resolution": "Retain in REVISION_A1_NO_VALIDADA; new camera bounds and final routes",
+    "status": "corrected_evidence",
+    "geometry_changes": 0
+  }
+]

@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.25)
+project(StarTrekHostSdk LANGUAGES CXX)
+
+enable_testing()
+add_executable(host_academy_exports HostAcademyExportsTest.cpp)
+target_compile_features(host_academy_exports PRIVATE cxx_std_17)
+target_include_directories(host_academy_exports PRIVATE "${HOST_SDK_INCLUDE}" ../../Source/StarTrekRPG/Private)
+if(CMAKE_DL_LIBS)
+    target_link_libraries(host_academy_exports PRIVATE ${CMAKE_DL_LIBS})
+endif()
+add_test(NAME unreal_sdk.academy_exports COMMAND host_academy_exports "${HOST_LIBRARY}")
+
+add_executable(host_academy_menu_flow HostAcademyMenuFlowTest.cpp)
+target_compile_features(host_academy_menu_flow PRIVATE cxx_std_17)
+target_include_directories(host_academy_menu_flow PRIVATE "${HOST_SDK_INCLUDE}" ../../Source/StarTrekRPG/Private)
+foreach(scenario IN ITEMS new failure restore catalog)
+    add_test(NAME academy_menu.${scenario} COMMAND host_academy_menu_flow "${scenario}")
+endforeach()

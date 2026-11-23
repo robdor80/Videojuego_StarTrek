@@ -1,5 +1,23 @@
 # F11 — Carrera profesional y flota jugable
 
+> **Actualización autoral 11-11-2026:** el objetivo narrativo aprobado es capitanear la **USS Enterprise NCC-1701-D modernizada**, con oportunidades de progresión garantizadas de forma creíble y sin vacantes arbitrarias. El alcance de P01–P05 se ha actualizado en [PLAN_F11_ACTUALIZADO_2026-11-11.md](PLAN_F11_ACTUALIZADO_2026-11-11.md). La P01 actual dispone de [reglamento y casos](F11-P01_JERARQUIA_CADENA_MANDO_V1.md), contrato y pruebas offline, **sin integración jugable**. Las afirmaciones sobre «nueva clase Valhalla» y los pasos de octubre que aparecen más abajo se conservan como **histórico**, no como la decisión creativa vigente. El Plan Maestro y el estado global aún requieren reconciliación específica y no se cambian para simular un cierre.
+
+> **F11-P02 — trabajo de referencia 11-11-2026:** [Diseño de destinos, 7 áreas de F04, perfiles de puesto y vacantes](F11-P02_DESTINOS_DEPARTAMENTOS_PUESTOS_V1.md). Incluye catálogo y evaluador Python independiente con pruebas automatizadas; **no hay plazas, destinos ni ofertas efectivas en CoreRPG/UE5**. No se da por integrada la progresión garantizada de P03/P04 ni se altera el estado global de F11.
+
+> **F11-P03 — preparación de progresión (11-11-2026):** [Reglamento de evaluaciones, ascensos y oportunidades garantizadas](F11-P03_EVALUACIONES_ASCENSOS_Y_OPORTUNIDADES_V1.md). Contrato de meses ficticios **solo ilustrativos**, planificador offline no mutador, control de evaluaciones, sanciones, formación, preferencias, planes idempotentes y escalado cuando vence el horizonte. **No se han implementado todavía ascensos reales, vacantes de NPC ni integración en CoreRPG/UE5; la carrera garantizada integral depende de P04/P05.**
+
+> **F11-P04 — sucesiones causales de NPC (11-11-2026):** [Modelo de carreras de NPC, jefaturas, primer oficial y capitanía de la Enterprise-D](F11-P04_TRAYECTORIAS_NPC_Y_SUCESIONES_CAUSALES_V1.md). Incluye contrato y director Python **offline** de opciones creíbles, motivación del NPC, aceptación/rechazo, órdenes, salida y comprobación efectiva de vacante; no borra NPC ni asciende automáticamente al jugador. **NO integra CoreRPG/UE5: la garantía jugable y la persistencia son P05.**
+
+> **F11-P05-A01 — auditoría del código (11-11-2026):** [Inventario de capacidades reales F04/F05/CoreRPG, riesgos de integración y primer corte A02](F11-P05-A01_AUDITORIA_INTEGRACION_CORE_2026-11-11.md). A01 identifica como bloqueos el ascenso autoritativo, la autorización de Personal de Flota, la identidad inter-naves y la diferencia entre guardia descubierta y plaza libre. **Solo auditoría estática; no se ha implementado ni ejecutado aún P05.**
+
+> **F11-P05-A02-00 — contrato profesional (11-11-2026):** [Identidad de carrera, rangos 1101–1106 y autoridad de Personal de Flota](F11-P05-A02-00_CONTRATO_IDENTIDAD_RANGOS_AUTORIDAD_2026-11-11.md). Base contractual conservada como histórico de diseño.
+
+> **F11-P05-A02-01 — primer ascenso nativo (11-11-2026):** [PR #106 fusionada](https://github.com/robdor80/Videojuego_StarTrek/pull/106). Ascenso autoritativo **1101→1102**, expediente Core, persistencia e idempotencia; [reauditoría histórica](../../../../../../desarrollo/integration/f11/REAUDIT.md) y CI Linux/MSVC satisfactorias. **No** implica emisor institucional de producto, UE5 jugable ni la carrera completa.
+
+> **F11-P05-A02-02 — certificación de persistencia y compatibilidad (11-11-2026):** [Informe de alcance, matriz G1–G10 y nueva CI independiente](F11-P05-A02-02_CERTIFICACION_PERSISTENCIA_COMPATIBILIDAD_2026-11-11.md). Verifica integridad del árbol ya auditado y vuelve a ejecutar las regresiones sobre Linux/MSVC. **No cerrar A02-02 hasta que la PR de certificación y todos sus checks concluyan satisfactoriamente.**
+
+> **Decisión narrativa aprobada de ascensos diegéticos (11-11-2026):** [Acta permanente de comunicaciones, encuentros con superiores, ceremonias y presentación profesional diferida](../../../../decisions/f11_p05_ascensos_diegeticos_presentacion_narrativa_2026-11-11.md). [Issue abierta #104](https://github.com/robdor80/Videojuego_StarTrek/issues/104): A02-01 aporta evento Core estable, P05-C garantiza cola/acuse persistente y P05-D implementa experiencia jugable. **No se ha implementado todavía la interfaz ni las ceremonias**. No cerrar F11 sin P05-D/E verificadas.
+
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
 **Nivel objetivo:** CONTRATO_VALIDADO, REFERENCIA_PROBADA o UE5_JUGABLE según cada paso.
 

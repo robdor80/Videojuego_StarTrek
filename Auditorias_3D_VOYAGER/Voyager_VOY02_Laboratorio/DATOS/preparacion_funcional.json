@@ -1,0 +1,1510 @@
+{
+  "doors": [
+    {
+      "id": "D_IZQ",
+      "closed_capsule_blocked_control": true,
+      "poses": [
+        {
+          "fraction": 0,
+          "bvh_pairs": 177,
+          "triangle_intersections_or_contacts": 177,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.25,
+          "bvh_pairs": 183,
+          "triangle_intersections_or_contacts": 183,
+          "new_pairs_vs_closed": 105,
+          "objects_new_contacts": [
+            "Mesh_1837",
+            "Mesh_1855",
+            "Object_81"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.5,
+          "bvh_pairs": 187,
+          "triangle_intersections_or_contacts": 187,
+          "new_pairs_vs_closed": 125,
+          "objects_new_contacts": [
+            "Mesh_1837",
+            "Mesh_1855",
+            "Object_81"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.75,
+          "bvh_pairs": 171,
+          "triangle_intersections_or_contacts": 171,
+          "new_pairs_vs_closed": 146,
+          "objects_new_contacts": [
+            "Mesh_1837",
+            "Mesh_1855",
+            "Object_81"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 1,
+          "bvh_pairs": 0,
+          "triangle_intersections_or_contacts": 0,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        }
+      ],
+      "pocket_verified": false,
+      "grade": "C"
+    },
+    {
+      "id": "D_DER",
+      "closed_capsule_blocked_control": true,
+      "poses": [
+        {
+          "fraction": 0,
+          "bvh_pairs": 400,
+          "triangle_intersections_or_contacts": 400,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.25,
+          "bvh_pairs": 344,
+          "triangle_intersections_or_contacts": 344,
+          "new_pairs_vs_closed": 165,
+          "objects_new_contacts": [
+            "Mesh_1858",
+            "Object_82"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.5,
+          "bvh_pairs": 345,
+          "triangle_intersections_or_contacts": 345,
+          "new_pairs_vs_closed": 196,
+          "objects_new_contacts": [
+            "Mesh_1858",
+            "Object_82"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.75,
+          "bvh_pairs": 329,
+          "triangle_intersections_or_contacts": 329,
+          "new_pairs_vs_closed": 270,
+          "objects_new_contacts": [
+            "Mesh_1858",
+            "Object_82"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 1,
+          "bvh_pairs": 0,
+          "triangle_intersections_or_contacts": 0,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        }
+      ],
+      "pocket_verified": false,
+      "grade": "C"
+    },
+    {
+      "id": "D_POST",
+      "closed_capsule_blocked_control": true,
+      "poses": [
+        {
+          "fraction": 0,
+          "bvh_pairs": 126,
+          "triangle_intersections_or_contacts": 126,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.25,
+          "bvh_pairs": 119,
+          "triangle_intersections_or_contacts": 119,
+          "new_pairs_vs_closed": 98,
+          "objects_new_contacts": [
+            "Mesh_1832",
+            "Mesh_1833"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.5,
+          "bvh_pairs": 117,
+          "triangle_intersections_or_contacts": 117,
+          "new_pairs_vs_closed": 98,
+          "objects_new_contacts": [
+            "Mesh_1832",
+            "Mesh_1833",
+            "hallwayfloor_1"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 0.75,
+          "bvh_pairs": 107,
+          "triangle_intersections_or_contacts": 107,
+          "new_pairs_vs_closed": 100,
+          "objects_new_contacts": [
+            "Mesh_1832",
+            "Mesh_1833",
+            "hallwayfloor_1"
+          ],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        },
+        {
+          "fraction": 1,
+          "bvh_pairs": 0,
+          "triangle_intersections_or_contacts": 0,
+          "new_pairs_vs_closed": 0,
+          "objects_new_contacts": [],
+          "method": "BVH broadphase + 17-axis triangle SAT, 1um separation tolerance; contacts included, no swept continuous solver"
+        }
+      ],
+      "pocket_verified": false,
+      "grade": "C"
+    }
+  ],
+  "chairs": [
+    {
+      "id": "NAVEGACION",
+      "parts": [
+        "ChamferBox_22",
+        "Layer__3",
+        "MSB_30191",
+        "MSB_30192",
+        "MSB_30193",
+        "MSB_30194",
+        "Object_126",
+        "Object_127",
+        "Object_129",
+        "Object_75",
+        "Object_76",
+        "Object_77"
+      ],
+      "part_count": 12,
+      "pivot_candidate": [
+        -0.03151202201843262,
+        -3.2832720279693604,
+        0.5940582000347732
+      ],
+      "fixed_base_candidates": [
+        "Object_75"
+      ],
+      "poses": [
+        {
+          "mode": "ORIGEN",
+          "new_contact_pairs": 0,
+          "objects_new_contacts": [],
+          "contacts_total": 1210
+        },
+        {
+          "mode": "GIRO_10_GRADOS",
+          "new_contact_pairs": 1172,
+          "objects_new_contacts": [
+            "Mesh_1728",
+            "Mesh_1787",
+            "Mesh_1788",
+            "Mesh_1789",
+            "Mesh_1856",
+            "Mesh_1867",
+            "Mesh_1907",
+            "Mesh_1908",
+            "Mesh_1909",
+            "Mesh_1911",
+            "Mesh_1968",
+            "Mesh_1974",
+            "Mesh_2090",
+            "Mesh_2129",
+            "Mesh_2130",
+            "Mesh_2131",
+            "Object_125",
+            "Object_128",
+            "Plane_139",
+            "Plane_95"
+          ],
+          "contacts_total": 1183
+        },
+        {
+          "mode": "DESPLAZAMIENTO_10CM",
+          "new_contact_pairs": 696,
+          "objects_new_contacts": [
+            "Mesh_1787",
+            "Mesh_1788",
+            "Mesh_1789",
+            "Mesh_1856",
+            "Mesh_1867",
+            "Mesh_1904",
+            "Mesh_1907",
+            "Mesh_1908",
+            "Mesh_1910",
+            "Mesh_1968",
+            "Mesh_1974",
+            "Mesh_2090",
+            "Mesh_2131",
+            "Plane_96"
+          ],
+          "contacts_total": 746
+        }
+      ],
+      "grade": "C",
+      "note": "Rigid assembly trials only; base/seat articulation, occupied pose and continuous sweep not certified."
+    },
+    {
+      "id": "LATERAL_DER",
+      "parts": [
+        "ChamferBox_37",
+        "Layer__4",
+        "MSB0030110_MSB_30119",
+        "MSB0030110_MSB_30120",
+        "MSB0030110_MSB_30121",
+        "MSB0030110_MSB_30122",
+        "MSB0030116_MSB_30178",
+        "MSB0030116_MSB_30179",
+        "MSB0030116_MSB_30180",
+        "MSB0030116_MSB_30181",
+        "MSB0030117_MSB_30138",
+        "MSB0030117_MSB_30139",
+        "MSB0030117_MSB_30140",
+        "MSB0030117_MSB_30141",
+        "MSB0030119_MSB_30131",
+        "MSB0030119_MSB_30132",
+        "MSB0030119_MSB_30133",
+        "MSB0030119_MSB_30134",
+        "MSB_30195",
+        "MSB_30196",
+        "MSB_30197",
+        "MSB_30198",
+        "MSB_30199",
+        "MSB_30200",
+        "MSB_30201",
+        "MSB_30202",
+        "MSB_30203",
+        "MSB_30204",
+        "MSB_30205",
+        "Object_120",
+        "Object_121"
+      ],
+      "part_count": 31,
+      "pivot_candidate": [
+        4.588890075683594,
+        -3.0180734395980835,
+        0.8732402175664902
+      ],
+      "fixed_base_candidates": [
+        "MSB0030110_MSB_30119",
+        "MSB0030110_MSB_30120",
+        "MSB0030110_MSB_30121",
+        "MSB0030110_MSB_30122",
+        "MSB0030116_MSB_30178",
+        "MSB0030116_MSB_30179",
+        "MSB0030116_MSB_30180",
+        "MSB0030116_MSB_30181",
+        "MSB0030117_MSB_30138",
+        "MSB0030117_MSB_30139",
+        "MSB0030117_MSB_30140",
+        "MSB0030117_MSB_30141",
+        "MSB0030119_MSB_30131",
+        "MSB0030119_MSB_30132",
+        "MSB0030119_MSB_30133",
+        "MSB0030119_MSB_30134",
+        "MSB_30196",
+        "MSB_30201",
+        "MSB_30202",
+        "MSB_30203",
+        "MSB_30204",
+        "MSB_30205"
+      ],
+      "poses": [
+        {
+          "mode": "ORIGEN",
+          "new_contact_pairs": 0,
+          "objects_new_contacts": [],
+          "contacts_total": 78
+        },
+        {
+          "mode": "GIRO_10_GRADOS",
+          "new_contact_pairs": 30,
+          "objects_new_contacts": [
+            "floorfront_1"
+          ],
+          "contacts_total": 56
+        },
+        {
+          "mode": "DESPLAZAMIENTO_10CM",
+          "new_contact_pairs": 12,
+          "objects_new_contacts": [
+            "floorfront_1"
+          ],
+          "contacts_total": 66
+        }
+      ],
+      "grade": "C",
+      "note": "Rigid assembly trials only; base/seat articulation, occupied pose and continuous sweep not certified."
+    },
+    {
+      "id": "LATERAL_IZQ",
+      "parts": [
+        "ChamferBox_38",
+        "Layer__5",
+        "MSB0030110_MSB_30123",
+        "MSB0030110_MSB_30124",
+        "MSB0030110_MSB_30125",
+        "MSB0030110_MSB_30126",
+        "MSB0030116_MSB_30182",
+        "MSB0030116_MSB_30183",
+        "MSB0030116_MSB_30184",
+        "MSB0030116_MSB_30185",
+        "MSB0030117_MSB_30142",
+        "MSB0030117_MSB_30143",
+        "MSB0030117_MSB_30144",
+        "MSB0030117_MSB_30145",
+        "MSB0030119_MSB_30135",
+        "MSB0030119_MSB_30136",
+        "MSB0030119_MSB_30137",
+        "MSB0030119_MSB_30138",
+        "MSB_30206",
+        "MSB_30207",
+        "MSB_30208",
+        "MSB_30209",
+        "MSB_30210",
+        "MSB_30211",
+        "MSB_30212",
+        "MSB_30213",
+        "MSB_30214",
+        "MSB_30215",
+        "MSB_30216",
+        "Object_122",
+        "Object_123"
+      ],
+      "part_count": 31,
+      "pivot_candidate": [
+        -4.221960425376892,
+        -2.840357542037964,
+        0.8734857141971588
+      ],
+      "fixed_base_candidates": [
+        "MSB0030110_MSB_30123",
+        "MSB0030110_MSB_30124",
+        "MSB0030110_MSB_30125",
+        "MSB0030110_MSB_30126",
+        "MSB0030116_MSB_30182",
+        "MSB0030116_MSB_30183",
+        "MSB0030116_MSB_30184",
+        "MSB0030116_MSB_30185",
+        "MSB0030117_MSB_30142",
+        "MSB0030117_MSB_30143",
+        "MSB0030117_MSB_30144",
+        "MSB0030117_MSB_30145",
+        "MSB0030119_MSB_30135",
+        "MSB0030119_MSB_30136",
+        "MSB0030119_MSB_30137",
+        "MSB0030119_MSB_30138",
+        "MSB_30207",
+        "MSB_30212",
+        "MSB_30213",
+        "MSB_30214",
+        "MSB_30215",
+        "MSB_30216"
+      ],
+      "poses": [
+        {
+          "mode": "ORIGEN",
+          "new_contact_pairs": 0,
+          "objects_new_contacts": [],
+          "contacts_total": 60
+        },
+        {
+          "mode": "GIRO_10_GRADOS",
+          "new_contact_pairs": 50,
+          "objects_new_contacts": [
+            "floorfront_1"
+          ],
+          "contacts_total": 70
+        },
+        {
+          "mode": "DESPLAZAMIENTO_10CM",
+          "new_contact_pairs": 9,
+          "objects_new_contacts": [
+            "floorfront_1"
+          ],
+          "contacts_total": 54
+        }
+      ],
+      "grade": "C",
+      "note": "Rigid assembly trials only; base/seat articulation, occupied pose and continuous sweep not certified."
+    },
+    {
+      "id": "MANDO_IZQ",
+      "parts": [
+        "Box_6",
+        "Box_7",
+        "Armrest_5",
+        "Armrest_6"
+      ],
+      "part_count": 4,
+      "pivot_candidate": [
+        -0.6155774891376495,
+        0.8703955709934235,
+        1.1958804428577423
+      ],
+      "fixed_base_candidates": [],
+      "poses": [
+        {
+          "mode": "ORIGEN",
+          "new_contact_pairs": 0,
+          "objects_new_contacts": [],
+          "contacts_total": 2719
+        },
+        {
+          "mode": "GIRO_10_GRADOS",
+          "new_contact_pairs": 2701,
+          "objects_new_contacts": [
+            "ChamferBox_23",
+            "ChamferBox_24",
+            "ChamferBox_25",
+            "ChamferBox_26",
+            "ChamferBox_27",
+            "ChamferBox_28",
+            "ChamferBox_29",
+            "Mesh_2093"
+          ],
+          "contacts_total": 2872
+        },
+        {
+          "mode": "DESPLAZAMIENTO_10CM",
+          "new_contact_pairs": 2193,
+          "objects_new_contacts": [
+            "ChamferBox_23",
+            "ChamferBox_24",
+            "ChamferBox_25",
+            "ChamferBox_26",
+            "ChamferBox_27",
+            "ChamferBox_28",
+            "ChamferBox_29",
+            "Mesh_2093"
+          ],
+          "contacts_total": 2193
+        }
+      ],
+      "grade": "C",
+      "note": "Rigid assembly trials only; base/seat articulation, occupied pose and continuous sweep not certified."
+    },
+    {
+      "id": "MANDO_DER",
+      "parts": [
+        "Box_8",
+        "Box_9",
+        "Armrest_7",
+        "Armrest_8"
+      ],
+      "part_count": 4,
+      "pivot_candidate": [
+        0.6252455115318298,
+        0.8703955709934235,
+        1.1958804428577423
+      ],
+      "fixed_base_candidates": [],
+      "poses": [
+        {
+          "mode": "ORIGEN",
+          "new_contact_pairs": 0,
+          "objects_new_contacts": [],
+          "contacts_total": 2723
+        },
+        {
+          "mode": "GIRO_10_GRADOS",
+          "new_contact_pairs": 2917,
+          "objects_new_contacts": [
+            "ChamferBox_30",
+            "ChamferBox_31",
+            "ChamferBox_32",
+            "ChamferBox_33",
+            "ChamferBox_34",
+            "ChamferBox_35",
+            "ChamferBox_36",
+            "Mesh_2093"
+          ],
+          "contacts_total": 3088
+        },
+        {
+          "mode": "DESPLAZAMIENTO_10CM",
+          "new_contact_pairs": 2199,
+          "objects_new_contacts": [
+            "ChamferBox_30",
+            "ChamferBox_31",
+            "ChamferBox_32",
+            "ChamferBox_33",
+            "ChamferBox_34",
+            "ChamferBox_35",
+            "ChamferBox_36",
+            "Mesh_2093"
+          ],
+          "contacts_total": 2199
+        }
+      ],
+      "grade": "C",
+      "note": "Rigid assembly trials only; base/seat articulation, occupied pose and continuous sweep not certified."
+    }
+  ],
+  "screens": [
+    {
+      "object": "Mesh_1746",
+      "materials": [
+        "Mainscreen"
+      ],
+      "triangles": 236,
+      "planarity_max_error_m": 0.09845409062376351,
+      "already_independent_object": true,
+      "grade": "B",
+      "normal_candidate": [
+        0.000664059139689402,
+        -0.9999284045178178,
+        -0.011947588204756332
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2125",
+      "materials": [
+        "scrn4_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 9.862022545825688e-09,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        5.098217748042579e-06,
+        0.425568415631084,
+        -0.9049262531230139
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2126",
+      "materials": [
+        "scrn6_9"
+      ],
+      "triangles": 48,
+      "planarity_max_error_m": 0.0,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2127",
+      "materials": [
+        "scrn7_4"
+      ],
+      "triangles": 268,
+      "planarity_max_error_m": 6.845988590343867e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        5.543464085420301e-08,
+        -3.80824917082076e-07,
+        -0.999999999999926
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2128",
+      "materials": [
+        "scrn7_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 7.435539800190738e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3031313144187275,
+        0.34371116212363134,
+        0.8888048397991526
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2133",
+      "materials": [
+        "scrn1_1"
+      ],
+      "triangles": 3,
+      "planarity_max_error_m": 2.0520022669980043e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.30313719287147395,
+        0.34372033358919585,
+        0.8887992881271536
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2134",
+      "materials": [
+        "scrn1_4"
+      ],
+      "triangles": 76,
+      "planarity_max_error_m": 6.515895438915439e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        4.917016702356849e-08,
+        3.737146605575061e-07,
+        0.9999999999999291
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2135",
+      "materials": [
+        "scrn2_5"
+      ],
+      "triangles": 46,
+      "planarity_max_error_m": 0.0,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2136",
+      "materials": [
+        "scrn2_1"
+      ],
+      "triangles": 48,
+      "planarity_max_error_m": 0.0,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Mesh_2137",
+      "materials": [
+        "scrn9"
+      ],
+      "triangles": 50,
+      "planarity_max_error_m": 3.4466072302841155e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -1.4807113974604553e-11,
+        0.916048229829479,
+        0.40106812466995934
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Object_86",
+      "materials": [
+        "scrn4_2"
+      ],
+      "triangles": 26,
+      "planarity_max_error_m": 3.973165379131394e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.04241784243301805,
+        0.42344151714903056,
+        -0.9049298360634679
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Object_87",
+      "materials": [
+        "scrn4_2"
+      ],
+      "triangles": 26,
+      "planarity_max_error_m": 2.957519133976738e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.04245253053269903,
+        0.4233672234086807,
+        -0.9049629698471617
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_100",
+      "materials": [
+        "scrn3_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.126705943378037e-17,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3801120944476699,
+        0.9249404281652986,
+        -2.9422536455825377e-17
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_101",
+      "materials": [
+        "scrn5_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.0990583387870779e-16,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.2809032700037367,
+        0.9597360850260906,
+        -8.135920864967006e-17
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_102",
+      "materials": [
+        "scrn3_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 8.774661586336993e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.17904065820594373,
+        0.9838416756278027,
+        2.657049232662745e-06
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_103",
+      "materials": [
+        "scrn3_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.508387375757149e-05,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.16161348278576484,
+        0.39313386885419294,
+        -0.9051667489151318
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_104",
+      "materials": [
+        "scrn3_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 2.416084958212217e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.07618298635557882,
+        -0.4183532127115625,
+        0.9050838314785321
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_105",
+      "materials": [
+        "scrn3_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.021969531199266e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.07613624420590977,
+        0.41833031668505855,
+        -0.905098347396788
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_106",
+      "materials": [
+        "scrn3_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.978736285425224e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.16165338920772535,
+        -0.39332235673849,
+        0.9050777344777273
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_107",
+      "materials": [
+        "scrn3_4"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.3785889089774663e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.1197221992009831,
+        -0.40902512282978437,
+        0.9046353098970655
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_108",
+      "materials": [
+        "scrn3_4"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.8973539286807357e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.1196324404623999,
+        0.4088454613317248,
+        -0.9047283945679274
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_109",
+      "materials": [
+        "scrn6_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.94351992266749e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.7581010946930826,
+        0.6521370486524649,
+        -5.222719377810389e-08
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_110",
+      "materials": [
+        "scrn1_5"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 4.85722573273506e-17,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.9068556345369686,
+        0.37394972080668026,
+        -0.1943565394247338
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_113",
+      "materials": [
+        "scrn2_8"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 4.133117059911477e-17,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.7580901185221394,
+        0.65214980809557,
+        3.6482278592428167e-16
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_114",
+      "materials": [
+        "scrn6_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.97338362117234e-17,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.7581000526295519,
+        -0.6521382600362217,
+        4.864217676794134e-16
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_115",
+      "materials": [
+        "scrn1_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.554643434033113e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.3738692962198606,
+        0.9066785864492851,
+        -0.1953348156842299
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_116",
+      "materials": [
+        "scrn1_6"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 4.600479435595828e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.46793541397304417,
+        -0.1929578134148981,
+        -0.8624405664114003
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_117",
+      "materials": [
+        "scrn7_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.554651688402523e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3738625791193181,
+        0.9066813562166951,
+        -0.19533481569680783
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_118",
+      "materials": [
+        "scrn7_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.3930481145008056e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.1929278224981795,
+        -0.46796329242758916,
+        -0.8624321493581055
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_119",
+      "materials": [
+        "scrn7_5"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.6215967149138533e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.9068593169429228,
+        0.3739446403266513,
+        -0.19434913234894308
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_120",
+      "materials": [
+        "scrn8"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 6.938893903907228e-18,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.0,
+        0.22737326079623707,
+        0.9738076813595621
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_121",
+      "materials": [
+        "scrn7_6"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.489262708269216e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.4604723404925565,
+        -0.18988030472075307,
+        -0.8671278415092327
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_122",
+      "materials": [
+        "scrn7_7"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 2.8855311687281393e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3334984740531354,
+        -0.13752404128367568,
+        -0.9326660205417778
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_123",
+      "materials": [
+        "scrn6_7"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 6.221709356324379e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.33326646747977223,
+        -0.28849839041075565,
+        -0.8976091244990534
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_124",
+      "materials": [
+        "scrn6_8"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.3317491362602185e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.3335585400021932,
+        -0.2885135218641279,
+        -0.8974957649444163
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_125",
+      "materials": [
+        "scrn6_6"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 0.0007883861610983173,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.3303068968738945,
+        -0.2858258897850911,
+        -0.8995559541274236
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_126",
+      "materials": [
+        "scrn6_4"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.323640132141259e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.3058135047928862,
+        0.5973566968630278,
+        0.7413791722183624
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_127",
+      "materials": [
+        "scrn6_5"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 0.0,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_128",
+      "materials": [
+        "scrn2_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.7515103119952746e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3335577220628603,
+        -0.2885120410372731,
+        -0.8974965449675797
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_129",
+      "materials": [
+        "scrn2_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.8809652130877836e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.33326598463359436,
+        0.2884989802939545,
+        0.8976091141780755
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_130",
+      "materials": [
+        "scrn2_4"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.0066659670945888e-05,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.3332636340740666,
+        0.2883753719639554,
+        0.8976497062041502
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_131",
+      "materials": [
+        "scrn2_6"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 8.363596070148915e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.30581351736209067,
+        0.5973603920981602,
+        0.7413761896304456
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_134",
+      "materials": [
+        "scrn1_7"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.642716869314057e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3334990193169685,
+        0.1375205583315634,
+        0.932666339132487
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_135",
+      "materials": [
+        "scrn1_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 2.3130793692927032e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.19292792645113455,
+        -0.46796287694833805,
+        -0.862432351546195
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_136",
+      "materials": [
+        "scrn6_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.3506645218117637e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.23946666110043097,
+        0.20599718070592019,
+        -0.9487997047652491
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_137",
+      "materials": [
+        "scrn6_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 4.0840925304846953e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.23945807789249415,
+        0.205989986055554,
+        -0.9488034330549532
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_138",
+      "materials": [
+        "scrn10_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 0.00016980538282629354,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.19491583819577118,
+        0.3568627017550863,
+        0.913595549527525
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_139",
+      "materials": [
+        "scrn10_2"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 5.660749960098577e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.11873778293561205,
+        0.3759885876366529,
+        0.9189852669496565
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_140",
+      "materials": [
+        "scrn10_6"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 0.00021742986532595487,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.19186063531896802,
+        -0.35525875379451133,
+        -0.9148665008991056
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_92",
+      "materials": [
+        "scrn4_1"
+      ],
+      "triangles": 6,
+      "planarity_max_error_m": 0.03347469455646028,
+      "already_independent_object": true,
+      "grade": "B",
+      "normal_candidate": [
+        -0.0002473100103340304,
+        -0.9999999694188422,
+        -2.714649228966609e-07
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_93",
+      "materials": [
+        "scrn2_7"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.9435362371297165e-08,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.7580963865016741,
+        0.6521425218256373,
+        -5.2227632039022356e-08
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_94",
+      "materials": [
+        "scrn10_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.3836026911268062e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        -0.044492882679384456,
+        0.4179325888574852,
+        0.9073878633537915
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_95",
+      "materials": [
+        "scrn10_4"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.4905560489844594e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.04443970971176431,
+        0.4179341983935534,
+        0.9073897277431965
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_96",
+      "materials": [
+        "scrn10_5"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.2050889877660703e-05,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3006697514787547,
+        0.9489286895050466,
+        0.09556172235753524
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_97",
+      "materials": [
+        "scrn3_3"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 1.6541646452948005e-16,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.2808355362094229,
+        -0.9597559073024586,
+        -8.135807044914718e-17
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_98",
+      "materials": [
+        "scrn3_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 3.044361815456394e-17,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.3802308133656422,
+        -0.9248916307153517,
+        -2.9402207665091273e-17
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "Plane_99",
+      "materials": [
+        "scrn3_1"
+      ],
+      "triangles": 2,
+      "planarity_max_error_m": 8.282474845956288e-07,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.17915259254990398,
+        -0.9838212991068845,
+        2.5080112270731147e-06
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "scn12a_1",
+      "materials": [
+        "scrn12red"
+      ],
+      "triangles": 50,
+      "planarity_max_error_m": 2.961436579314298e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.9240570714656094,
+        0.3822545338833804,
+        -3.4413531280578994e-08
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    },
+    {
+      "object": "scn12b_1",
+      "materials": [
+        "scrn12red"
+      ],
+      "triangles": 50,
+      "planarity_max_error_m": 4.63061942976742e-06,
+      "already_independent_object": true,
+      "grade": "A",
+      "normal_candidate": [
+        0.9238982776520606,
+        -0.3826381744566988,
+        3.4447058859131704e-08
+      ],
+      "future": "Preserve UV0; independent output surface may host interaction, no UI implemented."
+    }
+  ],
+  "motion_tests_are_discrete": true,
+  "no_blueprints_no_NPC": true
+}

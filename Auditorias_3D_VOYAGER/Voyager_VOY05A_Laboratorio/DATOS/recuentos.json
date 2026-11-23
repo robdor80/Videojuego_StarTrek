@@ -1,0 +1,37 @@
+{
+  "total_records": 187,
+  "kinds": {
+    "hueco_o_boca": 115,
+    "abertura_estructural_funcion_no_confirmada": 2,
+    "conducto_bajo_o_escotilla": 27,
+    "boca_vertical": 18,
+    "registro_techo_con_tapa": 1,
+    "puerta_cerrada": 23,
+    "acceso_turbolift_sin_hojas": 1
+  },
+  "grades": {
+    "B": 130,
+    "E": 3,
+    "C": 51,
+    "D": 3
+  },
+  "architectural_families": {
+    "AR_BOCA_MODULAR": 69,
+    "AR_HUECO_HABITACION": 18,
+    "AR_CONDUCTO_BAJO": 27,
+    "AR_TURBOLIFT": 4,
+    "AR_MANTENIMIENTO": 26,
+    "AR_EJE_VERTICAL": 18,
+    "AR_REGISTRO_TECHO": 1,
+    "AR_PUERTA_BIPARTIDA": 18,
+    "AR_CIERRE_ASIMETRICO": 2,
+    "AR_PUENTE_DETALLADO": 4
+  },
+  "dimensional_groups": 27,
+  "closed_doors": 23,
+  "complete_independent_doors": 0,
+  "bridge_leaf_groups_independent": 3,
+  "closed_doors_C": 20,
+  "closed_doors_D": 3,
+  "bridge_records": 4
+}

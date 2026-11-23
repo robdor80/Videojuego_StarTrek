@@ -1,0 +1,1347 @@
+Listado de rutas de carpetas
+El número de serie del volumen es 2E1D-4590
+C:.
+|   asset_manifest.json
+|   README.md
+|   
++---estaciones
+|   |   README.md
+|   |   
+|   \---descargadas
+|       +---bajoran_system
+|       |   +---deep_space_12_ds9_star_trek_zeo_001
+|       |   |       deep-space-12-ds9-star-trek-zeo.zip
+|       |   |       deep_space_12_-_ds9_-_star_trek_zeo.glb
+|       |   |       metadata.json
+|       |   |       README.md
+|       |   |       
+|       |   \---deep_space_12_ds9_star_trek_zeo_002
+|       |           deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb
+|       |           metadata.json
+|       |           README.md
+|       |           
+|       \---starfleet
+|           \---earth_spacedock
+|                   Deep Space Nine High Poly.zip
+|                   metadata.json
+|                   README.md
+|                   star-trek-earth-spacedock (1).zip
+|                   star_trek_earth_spacedock.glb
+|                   
++---facilities
+|   \---reference
+|           README.md
+|           
++---interiores
+|   +---aseo
+|   |       aseo.blend
+|   |       quarto.skp
+|   |       
+|   +---bares
+|   |   +---nine-forward
+|   |   |       nine-forward.blend
+|   |   |       
+|   |   \---ten_forward_tng
+|   |       |   Enterprise+D+Ten+Forward+(WIP).skp
+|   |       |   two_forward_tng.glb
+|   |       |   
+|   |       \---two-forward-tng
+|   |           |   two-forward.blend
+|   |           |   
+|   |           +---source
+|   |           |   |   Two+Forward.zip
+|   |           |   |   
+|   |           |   \---Two+Forward
+|   |           |       |   model.dae
+|   |           |       |   
+|   |           |       \---model
+|   |           |               LCARS_Replicador.jpg
+|   |           |               material_1.jpg
+|   |           |               material_16.jpg
+|   |           |               material_19.jpg
+|   |           |               material_22.jpg
+|   |           |               material_44.jpg
+|   |           |               material_44_1.jpg
+|   |           |               Wood_Cherry_Original.jpg
+|   |           |               
+|   |           \---textures
+|   |                   LCARS_Replicador.jpeg
+|   |                   material_1.jpeg
+|   |                   material_16.jpeg
+|   |                   material_19.jpeg
+|   |                   material_22.jpeg
+|   |                   material_44.jpeg
+|   |                   material_44_1.jpeg
+|   |                   Wood_Cherry_Original.jpeg
+|   |                   
+|   +---camarotes
+|   |       Picard camarote.dae
+|   |       
+|   +---Centro Tactico de Control
+|   |       Centro Tactico de Control.blend
+|   |       
+|   +---CONN OP
+|   |       CONN OP.blend
+|   |       
+|   +---consola
+|   |       consola.blend
+|   |       
+|   +---consola cientifica
+|   |       consola cientifica.blend
+|   |       
+|   +---enfermeria D
+|   |       enfermeria D.blend
+|   |       
+|   +---habitacion random
+|   |       habitacion random.2.blend
+|   |       habitacion random.blend
+|   |       
+|   +---holodeck
+|   |       Holodeck Galaxy.blend
+|   |       Voyager Holodeck.zip
+|   |       
+|   +---laboratorio y transportacion
+|   |       nx_class_starship_corridor.glb
+|   |       sala de transporte.blend
+|   |       
+|   +---mesa ingenieria
+|   |       mesa ingenieria.blend
+|   |       
+|   +---reactor warp
+|   |       Ingenieria_Valhalla_Montaje_01.blend
+|   |       Ingenieria_Valhalla_Montaje_02.blend
+|   |       Ingenieria_Valhalla_Montaje_03.blend
+|   |       Ingenieria_Valhalla_Montaje_03.blend1
+|   |       Ingenieria_Valhalla_Montaje_04.blend
+|   |       motor_warp.blend
+|   |       
+|   +---runabout
+|   |   \---cabina_de_runabout_danube_rio_grande
+|   |           metadata.json
+|   |           README.md
+|   |           star-trek-ds9-danube-runabout-rio-grande-cockpit.zip
+|   |           star_trek_ds9_danube_runabout_rio_grande_cockpit.glb
+|   |           star_trek_ds9_danube_runabout_rio_grande_cockpit.zip
+|   |           
+|   +---sala de cartografia
+|   |       sala de cartografia.blend
+|   |       
+|   +---sala del nucleo D
+|   |       NUCLEO+Deck+Ten.skp
+|   |       Reactor WARP D.blend
+|   |       Sala nucleo Enterprise D.blend
+|   |       
+|   +---sala ingenieria Galaxy D
+|   |       sala ingenieria galaxy d.blend
+|   |       
+|   +---sala observacion
+|   |       Observation+Room.skp
+|   |       sala observacion.blend
+|   |       
+|   +---sala reactor warp
+|   |       sala reactor warp 2.blend
+|   |       sala reactor warp.blend
+|   |       
+|   +---shipboard
+|   |   \---ten_forward_tng
+|   |           metadata.json
+|   |           README.md
+|   |           
+|   +---silla capitan
+|   |       silla capitan.blend
+|   |       
+|   \---ventanas
+|           ventanas 2 cubiertas.blend
+|           
++---manifests
+|       README.md
+|       
++---materiales_PBR
++---metadata
+|       README.md
+|       
++---mobiliario
++---naves
+|   |   README.md
+|   |   
+|   +---Andorian
+|   |   \---crucero_andoriano
+|   |       \---andorian_cruiser
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_andorian_cruiser_e03144851b704fa7ba2dd9eb3d431599.glb
+|   |               
+|   +---Arkonian
+|   |   \---nave_militar_arkoniana
+|   |       \---arkonian_military_vessel
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb
+|   |               
+|   +---Bajorian
+|   |   \---carguero_bajorano
+|   |       \---bajoran_freighter
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb
+|   |               
+|   +---Borg
+|   |   \---cubo_borg
+|   |       \---borg_cube
+|   |               borg_cube_ec8e1dca683b4ba0ba589907666faed6.glb
+|   |               metadata.json
+|   |               README.md
+|   |               
+|   +---Klingon
+|   |   \---mixed
+|   |       +---bird_of_prey_enterprise
+|   |       |       metadata.json
+|   |       |       README.md
+|   |       |       star_trek_-_bird_of_prey_enterprise_615bb97eafd24be180d91aff724508ac.glb
+|   |       |       
+|   |       +---b_1_blas_rika_bird_of_prey
+|   |       |       b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb
+|   |       |       metadata.json
+|   |       |       README.md
+|   |       |       
+|   |       +---klingon_d5_class
+|   |       |       metadata.json
+|   |       |       README.md
+|   |       |       star_trek_-_klingon_d5_class_88cc858cf5a24ed1955d4018af84b3a9.glb
+|   |       |       
+|   |       \---klingon_freighter
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb
+|   |               
+|   +---Romulan
+|   |   \---ave_de_guerra_dderidex
+|   |       \---dderidex_class_warbird
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb
+|   |               
+|   +---Species 8472
+|   +---species_8472
+|   |   \---bionave_especie_8472
+|   |       \---species_8472_bioship
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb
+|   |               
+|   +---starfleet
+|   |   +---akira
+|   |   |   \---akira_class
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb
+|   |   |           
+|   |   +---calss sovereign
+|   |   +---class akira
+|   |   +---class constitution
+|   |   +---class danube
+|   |   +---class defiant
+|   |   +---class galaxy
+|   |   |   \---Blueprints
+|   |   |           star-trek-the-next-generation-enterprise-sheet-1.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-10.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-11.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-12.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-13.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-2.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-3.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-4.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-5.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-6.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-7.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-8.jpg
+|   |   |           star-trek-the-next-generation-enterprise-sheet-9.jpg
+|   |   |           
+|   |   +---class miranda
+|   |   +---class odissey
+|   |   +---class olympic
+|   |   +---class sovereign
+|   |   |   \---class sovereign with hangar
+|   |   +---classs intrepid
+|   |   +---constitution
+|   |   |   \---dsc_enterprise
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb
+|   |   |           
+|   |   +---constitution_class
+|   |   |   \---reference_blueprints
+|   |   |       \---ncc_1700_franz_joseph
+|   |   |           |   2025-Franz-Joseph-Remastered-Calendar.pdf
+|   |   |           |   blueprint_index.json
+|   |   |           |   NCC-1700-USS-Constitution-Remastered2.pdf
+|   |   |           |   README.md
+|   |   |           |   
+|   |   |           \---sheets
+|   |   |                   01.jpg
+|   |   |                   02.jpg
+|   |   |                   03.jpg
+|   |   |                   04.jpg
+|   |   |                   05.jpg
+|   |   |                   06.jpg
+|   |   |                   07.jpg
+|   |   |                   08.jpg
+|   |   |                   09.jpg
+|   |   |                   10.jpg
+|   |   |                   11.jpg
+|   |   |                   12.jpg
+|   |   |                   13.jpg
+|   |   |                   14.jpg
+|   |   |                   
+|   |   +---danube
+|   |   |   \---danube_class
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb
+|   |   |           
+|   |   +---defiant
+|   |   |   +---defiant_001
+|   |   |   |       defiant_42239f2b45f24650b1900bd98c71f93c.glb
+|   |   |   |       metadata.json
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   \---defiant_002
+|   |   |           defiant_1d21c0c29f25458a9044344645f36a2c.glb
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           
+|   |   +---galaxy
+|   |   |   +---galaxy_class
+|   |   |   |       metadata.json
+|   |   |   |       README.md
+|   |   |   |       star_trek_-_galaxy_class_2b45cb2241694848b1250df739ede732.glb
+|   |   |   |       
+|   |   |   \---tng_galaxy_class_model
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb
+|   |   |           
+|   |   +---galaxy_class
+|   |   |   \---enterprise_d
+|   |   |       +---bridge
+|   |   |       \---reference_blueprints
+|   |   |           \---sheets
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-1.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-10.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-11.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-12.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-13.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-2.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-3.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-4.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-5.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-6.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-7.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-8.jpg
+|   |   |                   star-trek-the-next-generation-enterprise-sheet-9.jpg
+|   |   |                   
+|   |   +---Gran Dama NCC1701-D
+|   |   |       star-trek-online-uss-enterprise-d.zip
+|   |   |       star_trek_online__uss_enterprise_d.glb
+|   |   |       
+|   |   +---miranda
+|   |   |   \---miranda_class_1
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star-trek-miranda-class (1).zip
+|   |   |           star_trek_-_miranda_class (1).glb
+|   |   |           
+|   |   +---miranda_class
+|   |   |   \---reference_blueprints
+|   |   |       \---ncc_1864_reliant
+|   |   |           |   blueprint_index.json
+|   |   |           |   README.md
+|   |   |           |   
+|   |   |           \---sheets
+|   |   |                   01.jpg
+|   |   |                   02.jpg
+|   |   |                   03.jpg
+|   |   |                   04.jpg
+|   |   |                   05.jpg
+|   |   |                   06.jpg
+|   |   |                   07.jpg
+|   |   |                   08.jpg
+|   |   |                   09.jpg
+|   |   |                   10.jpg
+|   |   |                   11.jpg
+|   |   |                   12.jpg
+|   |   |                   13.jpg
+|   |   |                   14.jpg
+|   |   |                   15.jpg
+|   |   |                   16.jpg
+|   |   |                   17.jpg
+|   |   |                   18.jpg
+|   |   |                   
+|   |   +---odyssey
+|   |   |   \---online_odessey_class_enterprise_f
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star-trek-online-odessey-class-enterprise-f.zip
+|   |   |           star_trek_online__odessey_class__enterprise_f.glb
+|   |   |           
+|   |   +---olympic
+|   |   |   \---olympic_class
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_-_olympic_class_ac868ef2149640d3946c004a9ff0b829.glb
+|   |   |           
+|   |   +---shuttle
+|   |   |   \---type_6_shuttle
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star_trek_-_type_6_shuttle_e986bb89f0004d2eadcd19e383d5c5a6.glb
+|   |   |           
+|   |   +---sovereign
+|   |   |   +---sovereign_class
+|   |   |   |       metadata.json
+|   |   |   |       README.md
+|   |   |   |       star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb
+|   |   |   |       
+|   |   |   +---sovereign_version_con_fuente_fbx
+|   |   |   |   |   metadata.json
+|   |   |   |   |   README.md
+|   |   |   |   |   star-trek-sovereign-class.zip
+|   |   |   |   |   star_trek_-_sovereign_class (1).glb
+|   |   |   |   |   
+|   |   |   |   \---star-trek-sovereign-class
+|   |   |   |       +---source
+|   |   |   |       |       Sovereign Class.fbx
+|   |   |   |       |       
+|   |   |   |       \---textures
+|   |   |   |               Sovereign_Class_decals.png
+|   |   |   |               Sovereign_Class_diffuse_1.png
+|   |   |   |               Sovereign_Class_diffuse_2.png
+|   |   |   |               Sovereign_Class_diffuse_3.png
+|   |   |   |               Sovereign_Class_lum_1.png
+|   |   |   |               Sovereign_Class_lum_2.png
+|   |   |   |               Sovereign_Class_lum_3.png
+|   |   |   |               Sovereign_Class_spec_1.png
+|   |   |   |               Sovereign_Class_spec_2.png
+|   |   |   |               
+|   |   |   \---sovereign_version_con_hangar
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star-trek-sovereign-class-with-shuttlebay.zip
+|   |   |           star_trek_sovereign_class_with_shuttlebay.glb
+|   |   |           star_trek_sovereign_class_with_shuttlebay.zip
+|   |   |           
+|   |   \---uss_theurgy
+|   |       +---imagenes_puente
+|   |       |       .gitkeep
+|   |       |       45 grados.png
+|   |       |       Anexo 2.png
+|   |       |       Anexo.png
+|   |       |       Back view.png
+|   |       |       Consola CONN y vuelo.png
+|   |       |       Consola lateral 2.png
+|   |       |       Consola lateral.png
+|   |       |       frontal.png
+|   |       |       Silla capitan.png
+|   |       |       zenital.png
+|   |       |       
+|   |       \---planos
+|   |               .gitkeep
+|   |               
+|   +---vulcan
+|   |   \---dkyr_vulcana
+|   |       \---dkyr_class
+|   |               metadata.json
+|   |               README.md
+|   |               star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb
+|   |               
+|   \---Vulcano
++---objetos
+|   +---descargados
+|   |   +---dishes
+|   |   +---drinks
+|   |   |   +---cocktails
+|   |   |   |   \---cocktail_martini
+|   |   |   |           cocktail-martini.zip
+|   |   |   |           cocktail_martini.glb
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---coffee
+|   |   |   |   +---coffee_cup_with_plate
+|   |   |   |   |       coffee-cup-with-plate.zip
+|   |   |   |   |       coffee_cup_with_plate.glb
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---cup_of_coffee
+|   |   |   |           cup-of-coffee.zip
+|   |   |   |           cup_of_coffee.glb
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---coktails
+|   |   |   +---tea
+|   |   |   +---various glasses
+|   |   |   +---various_glasses
+|   |   |   |   \---glass_set
+|   |   |   |           glass-set.zip
+|   |   |   |           glass_set.glb
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---water
+|   |   |   |   \---water_cup
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           water_cup.glb
+|   |   |   |           
+|   |   |   +---whiskey
+|   |   |   |   \---whiskey_glass
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           whiskey-glass.zip
+|   |   |   |           whiskey_glass.glb
+|   |   |   |           
+|   |   |   \---wine
+|   |   |       \---red_wine_glass
+|   |   |               metadata.json
+|   |   |               README.md
+|   |   |               red-wine-glass.zip
+|   |   |               red_wine_glass.glb
+|   |   |               
+|   |   +---food
+|   |   |   +---carne
+|   |   |   |   +---florence_steak_fiorentina_bistecca
+|   |   |   |   |       florence-steak-fiorentina-bistecca.zip
+|   |   |   |   |       florence_steak_-_fiorentina_bistecca.glb
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   +---steak_and_rice_scaniverse
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       steak-and-rice-scaniverse.zip
+|   |   |   |   |       steak_and_rice_scaniverse.glb
+|   |   |   |   |       
+|   |   |   |   +---steak_potatoes_scaniverse
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       steak-potatoes-scaniverse.zip
+|   |   |   |   |       steak__potatoes_scaniverse.glb
+|   |   |   |   |       
+|   |   |   |   \---steak_tartare_from_bistrot_rougemont
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           steak-tartare-from-bistrot-rougemont.zip
+|   |   |   |           steak_tartare_from_bistrot_rougemont.glb
+|   |   |   |           
+|   |   |   +---cheese
+|   |   |   |   \---another_cheese_board
+|   |   |   |           another-cheese-board.zip
+|   |   |   |           another_cheese_board.glb
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---china
+|   |   |   |   +---dumplings
+|   |   |   |   |       dumplings.glb
+|   |   |   |   |       dumplings.zip
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---vegan_hainanese_chicken_rice_scaniverse
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           vegan-hainanese-chicken-rice-scaniverse.zip
+|   |   |   |           vegan_hainanese_chicken_rice_scaniverse.glb
+|   |   |   |           
+|   |   |   +---fast food
+|   |   |   +---fast_food
+|   |   |   |   +---fast_food_set
+|   |   |   |   |       fast-food-set.zip
+|   |   |   |   |       fast_food_set.glb
+|   |   |   |   |       metadata.json
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---food
+|   |   |   |           food.glb
+|   |   |   |           food.zip
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---icecream
+|   |   |   |   \---stylized_ice_cream_dessert_game_ready_asset
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           stylized-ice-cream-dessert-game-ready-asset.zip
+|   |   |   |           stylized_ice_cream_dessert_-_game_ready_asset.glb
+|   |   |   |           
+|   |   |   +---paella
+|   |   |   |   \---day_317_paella
+|   |   |   |           day-317-paella.zip
+|   |   |   |           day_317_paella.glb
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---pasta
+|   |   |   |   +---pasta_bowl_polycam
+|   |   |   |   |       metadata.json
+|   |   |   |   |       pasta-bowl-polycam.zip
+|   |   |   |   |       pasta_bowl_-_polycam.glb
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---pasta_with_meatballs_and_sausage
+|   |   |   |           metadata.json
+|   |   |   |           pasta-with-meatballs-and-sausage.zip
+|   |   |   |           pasta_with_meatballs_and_sausage.glb
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---pizza
+|   |   |   |   +---pizza
+|   |   |   |   |       metadata.json
+|   |   |   |   |       pizza.glb
+|   |   |   |   |       pizza.zip
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   +---pizza_1
+|   |   |   |   |       metadata.json
+|   |   |   |   |       pizza (1).glb
+|   |   |   |   |       pizza (1).zip
+|   |   |   |   |       README.md
+|   |   |   |   |       
+|   |   |   |   \---pizza_bigboss_pancho
+|   |   |   |           metadata.json
+|   |   |   |           pizza-bigboss-pancho.zip
+|   |   |   |           pizza_bigboss_pancho.glb
+|   |   |   |           README.md
+|   |   |   |           
+|   |   |   +---ramen
+|   |   |   |   \---spicy_ramen_noodle
+|   |   |   |           metadata.json
+|   |   |   |           README.md
+|   |   |   |           spicy-ramen-noodle.zip
+|   |   |   |           spicy_ramen_noodle.glb
+|   |   |   |           
+|   |   |   \---sushi
+|   |   |       +---stylized_sushi
+|   |   |       |       metadata.json
+|   |   |       |       README.md
+|   |   |       |       stylized-sushi.zip
+|   |   |       |       stylized_sushi.glb
+|   |   |       |       
+|   |   |       +---sushi
+|   |   |       |       metadata.json
+|   |   |       |       README.md
+|   |   |       |       sushi.glb
+|   |   |       |       sushi.zip
+|   |   |       |       
+|   |   |       +---sushihibiya
+|   |   |       |       metadata.json
+|   |   |       |       README.md
+|   |   |       |       sushihibiya.glb
+|   |   |       |       sushihibiya.zip
+|   |   |       |       
+|   |   |       +---sushi_boat_nigiri
+|   |   |       |       metadata.json
+|   |   |       |       README.md
+|   |   |       |       sushi-boat-nigiri.zip
+|   |   |       |       sushi_boat_nigiri.glb
+|   |   |       |       
+|   |   |       +---sushi_boat_nigiri_1
+|   |   |       |       metadata.json
+|   |   |       |       README.md
+|   |   |       |       sushi_boat_nigiri (1).glb
+|   |   |       |       
+|   |   |       \---sushi_real_3dmodel
+|   |   |               metadata.json
+|   |   |               README.md
+|   |   |               sushi-real-3dmodel.glb
+|   |   |               sushi-real-3dmodel.zip
+|   |   |               
+|   |   +---repetidor subespacio 47
+|   |   |       repetidor subespacio 47.blend
+|   |   |       
+|   |   +---replicator
+|   |   |   \---henry_star_trek_tng_replicator
+|   |   |           henry_star_trek_tng_replicator.glb
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           
+|   |   \---torpedos
+|   |           torpedos.blend
+|   |           
+|   +---equipamiento
+|   |       README.md
+|   |       
+|   \---utileria
+|           README.md
+|           
++---otros
+|   +---cartografia
+|   |   \---reference
+|   |       \---star_charts_geoffrey_mandel
+|   |               README.md
+|   |               reference_index.json
+|   |               Star_Trek_Star_Charts_Geoffrey_Mandel.pdf
+|   |               
+|   +---escenas
+|   |   |   README.md
+|   |   |   
+|   |   +---academy
+|   |   |       README.md
+|   |   |       
+|   |   +---bridges
+|   |   |       f07_registry.json
+|   |   |       README.md
+|   |   |       
+|   |   +---engineering
+|   |   |       README.md
+|   |   |       
+|   |   +---exterior_space
+|   |   |       README.md
+|   |   |       
+|   |   +---interiors
+|   |   |       README.md
+|   |   |       
+|   |   +---laboratories
+|   |   |       README.md
+|   |   |       
+|   |   +---planets
+|   |   |       README.md
+|   |   |       
+|   |   +---sickbay
+|   |   |       README.md
+|   |   |       
+|   |   \---stations
+|   |           README.md
+|   |           
+|   +---iconos
+|   |       README.md
+|   |       
+|   +---prompts
+|   |       README.md
+|   |       
+|   +---ui
+|   |       README.md
+|   |       
+|   \---vfx
+|           README.md
+|           
++---pasillos
+|   |   corredor D.bis.blend
+|   |   corredor D.blend
+|   |   nx_class_starship_corridor.glb
+|   |   
+|   +---general
+|   |   +---pasillo_enterprise
+|   |   |       enterprise-corridor.zip
+|   |   |       enterprise_corridor.glb
+|   |   |       metadata.json
+|   |   |       README.md
+|   |   |       
+|   |   \---pasillo_modular_star_trek
+|   |           metadata.json
+|   |           modular-star-trek-corridor.zip
+|   |           README.md
+|   |           
+|   +---hangar
+|   |   \---hangar_star_trek
+|   |           metadata.json
+|   |           README.md
+|   |           star_trek_hangar.glb
+|   |           
+|   +---Low Poly Corridor - [Star Trek]
+|   +---low_poly
+|   |   \---pasillo_low_poly_star_trek
+|   |           low-poly-corridor-star-trek.zip
+|   |           low_poly_corridor_-_star_trek.glb
+|   |           low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb
+|   |           metadata.json
+|   |           README.md
+|   |           
+|   +---NX Class
+|   +---nx_class
+|   |   \---pasillo_clase_nx
+|   |       |   metadata.json
+|   |       |   nx-class-starship-corridor.zip
+|   |       |   nx_class_starship_corridor.glb
+|   |       |   README.md
+|   |       |   
+|   |       \---nx-class-starship-corridor
+|   |           +---source
+|   |           |   |   corridor+nx+2.zip
+|   |           |   |   
+|   |           |   \---corridor+nx+2
+|   |           |       |   model.dae
+|   |           |       |   
+|   |           |       \---model
+|   |           |               Blinds_Wood_White.jpg
+|   |           |               material_3.png
+|   |           |               material_34.jpg
+|   |           |               material_57.png
+|   |           |               Metal_Aluminum_Anodized.jpg
+|   |           |               texture.png
+|   |           |               texture_0.png
+|   |           |               texture_1.png
+|   |           |               texture_2.png
+|   |           |               
+|   |           \---textures
+|   |                   Blinds_Wood_White.jpeg
+|   |                   material_3.inline_conv_generated.png
+|   |                   material_3.png
+|   |                   material_34.jpeg
+|   |                   material_57.inline_conv_generated.png
+|   |                   material_57.png
+|   |                   Metal_Aluminum_Anodized.jpeg
+|   |                   texture.png
+|   |                   texture_0.png
+|   |                   texture_1.png
+|   |                   texture_2.png
+|   |                   
+|   \---Star Trek Voyager Collection
+|       \---voyager
+|           \---coleccion_de_pasillos_voyager
+|               |   metadata.json
+|               |   README.md
+|               |   star-trek-voyager-collection.zip
+|               |   star_trek_voyager_collection.glb
+|               |   
+|               \---star-trek-voyager-collection
+|                   \---source
+|                           StarTrekVoyagerCollection.blend
+|                           
++---personajes
+|   |   README.md
+|   |   short_pointy-ear_toy.glb
+|   |   
+|   +---descargados
+|   |   +---7 de 9
+|   |   +---Data
+|   |   |   \---data
+|   |   |           ava-data-mashup.zip
+|   |   |           ava__data_mashup.glb
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           
+|   |   +---Geordi La Forge Visor
+|   |   +---geordi_visor
+|   |   |   \---geordi_la_forge_visor
+|   |   |           geordi-la-forge-visor.zip
+|   |   |           geordi_la_forge_visor.glb
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           
+|   |   +---mccoy
+|   |   |   \---leonard_mccoy_bones
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star-trek-bones.zip
+|   |   |           
+|   |   +---picard
+|   |   |   \---jean_luc_picard
+|   |   |           metadata.json
+|   |   |           patrick-stewart-star-trek.zip
+|   |   |           patrick_stewart_star_trek.glb
+|   |   |           README.md
+|   |   |           
+|   |   +---Piccard
+|   |   +---Saru
+|   |   |   \---saru
+|   |   |           commander-saru.zip
+|   |   |           commander_saru.glb
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           
+|   |   +---scotty
+|   |   |   \---montgomery_scott_scotty
+|   |   |           metadata.json
+|   |   |           README.md
+|   |   |           star-trek-scotty.zip
+|   |   |           
+|   |   +---seven_of_nine
+|   |   |   \---siete_de_nueve
+|   |   |       |   metadata.json
+|   |   |       |   README.md
+|   |   |       |   seven-of-nine.zip
+|   |   |       |   seven_of_nine.glb
+|   |   |       |   seven_of_nine.zip
+|   |   |       |   
+|   |   |       +---seven-of-nine
+|   |   |       |   +---source
+|   |   |       |   |       7of9_sketchfab.fbx
+|   |   |       |   |       
+|   |   |       |   \---textures
+|   |   |       |           7of9Body_albedo.jpeg
+|   |   |       |           7of9Body_AO.jpeg
+|   |   |       |           7of9Body_metallic.jpeg
+|   |   |       |           7of9Body_normal.png
+|   |   |       |           7of9Body_roughness.jpeg
+|   |   |       |           7of9Eyelashes_normal.png
+|   |   |       |           7of9Eyelashes_opacity.jpeg
+|   |   |       |           7of9Hair_albedo.jpeg
+|   |   |       |           7of9Hair_AO.jpeg
+|   |   |       |           7of9Hair_normal.png
+|   |   |       |           7of9Hair_opacity.jpeg
+|   |   |       |           7of9Hair_roughness.jpeg
+|   |   |       |           7of9Head_albedo.jpeg
+|   |   |       |           7of9Head_AO.jpeg
+|   |   |       |           7of9Head_normal.png
+|   |   |       |           7of9Head_roughness.jpeg
+|   |   |       |           eye_albedo.jpeg
+|   |   |       |           Mough_albedo.jpeg
+|   |   |       |           
+|   |   |       \---seven_of_nine
+|   |   |           |   license.txt
+|   |   |           |   scene.bin
+|   |   |           |   scene.gltf
+|   |   |           |   
+|   |   |           \---textures
+|   |   |                   7of9Body_baseColor.jpeg
+|   |   |                   7of9Body_metallicRoughness.png
+|   |   |                   7of9Body_normal.png
+|   |   |                   7of9Eyelashes_baseColor.png
+|   |   |                   7of9Eyelashes_normal.png
+|   |   |                   7of9Hair_baseColor.png
+|   |   |                   7of9Hair_metallicRoughness.png
+|   |   |                   7of9Hair_normal.png
+|   |   |                   7of9Head_baseColor.jpeg
+|   |   |                   7of9Head_metallicRoughness.png
+|   |   |                   7of9Head_normal.png
+|   |   |                   material_baseColor.jpeg
+|   |   |                   Mough_baseColor.jpeg
+|   |   |                   
+|   |   +---Star trek BONES
+|   |   +---Star Trek SCOTTY
+|   |   \---Worf
+|   |       \---worf
+|   |               metadata.json
+|   |               README.md
+|   |               star-trek-first-contact-worf.zip
+|   |               star_trek_first_contact__worf.glb
+|   |               star_trek_first_contact__worf.zip
+|   |               
+|   +---retratos
+|   |       README.md
+|   |       
+|   \---uniformes
+|           README.md
+|           
++---planetas
+|   |   README.md
+|   |   
+|   +---alien_space_nebula_1_skybox
+|   |       alien_space_nebula_1_skybox_b365bdbc52b74d19920f7ffbc78e8b10.glb
+|   |       metadata.json
+|   |       README.md
+|   |       
+|   +---asteroides
+|   |   +---asteroid
+|   |   |       asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb
+|   |   |       metadata.json
+|   |   |       README.md
+|   |   |       
+|   |   \---asteroid_low_poly
+|   |           asteroid_low_poly_ef955548bb5f4bc6a71c8970b1de2c7b.glb
+|   |           metadata.json
+|   |           README.md
+|   |           
+|   +---estrellas
+|   |   \---prominencia_solar
+|   |       |   metadata.json
+|   |       |   README.md
+|   |       |   solar_prominence.glb
+|   |       |   
+|   |       \---solar-prominence
+|   |           +---source
+|   |           |       0000000.blend
+|   |           |       
+|   |           \---textures
+|   |                   500_(4).jpeg
+|   |                   500_(7).jpeg
+|   |                   86133191-abstract-halftone-random-white-do.jpeg
+|   |                   
+|   +---green_planet
+|   |       green-planet.zip
+|   |       green_planet.glb
+|   |       metadata.json
+|   |       README.md
+|   |       
+|   +---jupiter_free_downloadable_model
+|   |       jupiter-free-downloadable-model.zip
+|   |       metadata.json
+|   |       README.md
+|   |       
+|   +---photorealistic_moon
+|   |       metadata.json
+|   |       photorealistic-moon.zip
+|   |       README.md
+|   |       
+|   +---planet_earth
+|   |       metadata.json
+|   |       planet-earth.zip
+|   |       planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb
+|   |       README.md
+|   |       
+|   +---planet_earth_2
+|   |       metadata.json
+|   |       planet_earth (2).glb
+|   |       README.md
+|   |       
+|   +---planet_venus
+|   |       metadata.json
+|   |       planet-venus.zip
+|   |       planet_venus.glb
+|   |       README.md
+|   |       
+|   +---saturn_planet
+|   |       metadata.json
+|   |       README.md
+|   |       saturn-planet.zip
+|   |       
+|   \---various_planets
+|           metadata.json
+|           README.md
+|           various-planets.zip
+|           
++---puentes
+|   \---starfleet
+|       +---enterprise_e
+|       |   \---puente_uss_enterprise_e
+|       |           metadata.json
+|       |           README.md
+|       |           
+|       +---galaxy
+|       |   \---puente_enterprise_d_galaxy
+|       |           metadata.json
+|       |           README.md
+|       |           
+|       +---ross
+|       |   \---puente_uss_ross_galaxy
+|       |           metadata.json
+|       |           README.md
+|       |           
+|       +---uss_ascendant
+|       |   \---puente_uss_ascendant
+|       |       |   metadata.json
+|       |       |   README.md
+|       |       |   
+|       |       +---blender
+|       |       |   +---backups
+|       |       |   |       .gitkeep
+|       |       |   |       
+|       |       |   +---componentes
+|       |       |   |       .gitkeep
+|       |       |   |       
+|       |       |   \---principal
+|       |       |           .gitkeep
+|       |       |           
+|       |       \---docs
+|       |           |   .gitkeep
+|       |           |   
+|       |           +---auditorias
+|       |           |   |   AUDITORIA_ASCENDANT_LOCAL.md
+|       |           |   |   AUDITORIA_GEOMETRICA_ENTERPRISE.md
+|       |           |   |   COMPARATIVA_ENTERPRISE_ASCENDANT.md
+|       |           |   |   ESCALA_Y_TRANSITABILIDAD_ENTERPRISE.md
+|       |           |   |   ESTADO_IMPORTACION_BLENDER.md
+|       |           |   |   IDENTIFICACIONES_ENTERPRISE.json
+|       |           |   |   INVENTARIO_LOCAL_DATOS.json
+|       |           |   |   INVENTARIO_LOCAL_INICIAL.md
+|       |           |   |   MAPA_OBJETOS_ENTERPRISE.csv
+|       |           |   |   MISION_04_ENTERPRISE_E.md
+|       |           |   |   PLAN_FASE_4_INTERVENCION_POSTERIOR.md
+|       |           |   |   PREPARACION_MISSION_OPS.md
+|       |           |   |   VERIFICACION_FINAL_FASE3.json
+|       |           |   |   
+|       |           |   +---ascendant_bpy_v1
+|       |           |   |       CONCILIACION_Y_MODULOS.json
+|       |           |   |       CONTRASTE_FORMATOS_ASCENDANT.json
+|       |           |   |       DAE_BLENDER.json
+|       |           |   |       GLB_BLENDER.json
+|       |           |   |       TRANSITABILIDAD_ASCENDANT.json
+|       |           |   |       VERIFICACION_FINAL.json
+|       |           |   |       
+|       |           |   +---ascendant_fuentes_v1
+|       |           |   |       ARCHIVOS_ASCENDANT.csv
+|       |           |   |       FUENTES_ASCENDANT.json
+|       |           |   |       
+|       |           |   +---comparativa_v1
+|       |           |   |       CONTROL_INICIAL.json
+|       |           |   |       PROCEDENCIA_PUBLICA.json
+|       |           |   |       
+|       |           |   +---comparativa_v2
+|       |           |   |       ASCENDANT_DIFERENCIAS.csv
+|       |           |   |       ASCENDANT_ENSAYO.json
+|       |           |   |       CORRESPONDENCIAS_FOCALES.json
+|       |           |   |       CORRESPONDENCIA_GEOMETRICA.json
+|       |           |   |       ENTERPRISE_DIFERENCIAS.csv
+|       |           |   |       ENTERPRISE_ENSAYO.json
+|       |           |   |       MATERIALES_PREVIOS.json
+|       |           |   |       MODULOS_COMPARADOS.csv
+|       |           |   |       RESUMEN_COMPARATIVO.json
+|       |           |   |       VERIFICACION_FINAL.json
+|       |           |   |       
+|       |           |   +---enterprise_bpy_v1
+|       |           |   |       MAPA_OBJETOS_ENTERPRISE.csv
+|       |           |   |       
+|       |           |   +---enterprise_bpy_v2
+|       |           |   |       CONTRASTE_DAE_BLENDER.json
+|       |           |   |       MAPA_OBJETOS_ENTERPRISE.csv
+|       |           |   |       VERIFICACION_FINAL.json
+|       |           |   |       
+|       |           |   +---fase3_bpy_v1
+|       |           |   |       CANDIDATOS_POSTERIOR.json
+|       |           |   |       MEDICIONES_FASE3.json
+|       |           |   |       MUESTRAS_PLANTA.csv
+|       |           |   |       
+|       |           |   \---fase3_rutas_v4
+|       |           |           CANDIDATOS_POSTERIOR.json
+|       |           |           ERGONOMIA_PUESTOS.json
+|       |           |           MEDICIONES_FASE3.json
+|       |           |           MUESTRAS_PLANTA.csv
+|       |           |           ZONAS_TRANSITABILIDAD.csv
+|       |           |           
+|       |           +---materiales
+|       |           |       BIBLIOTECA_PBR_ROBDEV.md
+|       |           |       
+|       |           +---puente-kelvin
+|       |           |       PLAN.md
+|       |           |       
+|       |           \---uss-theurgy
+|       |                   DISENO_MAESTRO.md
+|       |                   UE5_ESCENARIO_JUGABLE.md
+|       |                   
+|       \---vengeance
+|           \---puente_uss_vengeance
+|                   metadata.json
+|                   README.md
+|                   
++---ships
+|   \---starfleet
+|       +---barquillas
+|       |       barquillas.blend
+|       |       
+|       +---bridges
+|       |   |   USS Valkyrie bridge.blend
+|       |   |   USS Valkyrie bridge.blend1
+|       |   |   
+|       |   +---enterprise_e
+|       |   |   \---puente_uss_enterprise_e
+|       |   |           uss-enterprise-e-bridge.zip
+|       |   |           uss_enterprise_-_e_bridge.glb
+|       |   |           
+|       |   +---galaxy
+|       |   |   \---puente_enterprise_d_galaxy
+|       |   |           henry_enterprise_d.glb
+|       |   |           
+|       |   +---ross
+|       |   |   \---puente_uss_ross_galaxy
+|       |   |       |   uss-ross-galaxy-class-starship-bridge-command.zip
+|       |   |       |   uss_ross_galaxy_class_starship_bridge_command.glb
+|       |   |       |   
+|       |   |       \---uss-ross-galaxy-class-starship-bridge-command
+|       |   |           +---source
+|       |   |           |   |   Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy.zip
+|       |   |           |   |   
+|       |   |           |   \---Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy
+|       |   |           |       |   model.dae
+|       |   |           |       |   
+|       |   |           |       \---model
+|       |   |           |               material_29.jpeg
+|       |   |           |               material_2_10.jpg
+|       |   |           |               material_30.jpeg
+|       |   |           |               material_51.jpg
+|       |   |           |               Metal_Rough.jpg
+|       |   |           |               Metal_Seamed.jpg
+|       |   |           |               Naamloos_1.jpg
+|       |   |           |               Naamloos_2.jpg
+|       |   |           |               texture.png
+|       |   |           |               texture_0.png
+|       |   |           |               texture_1.png
+|       |   |           |               texture_2.png
+|       |   |           |               texture_3.png
+|       |   |           |               texture_4.png
+|       |   |           |               texture_5.png
+|       |   |           |               texture_6.png
+|       |   |           |               texture_7.png
+|       |   |           |               texture_8.png
+|       |   |           |               __Metal_Aluminum_Anodized_2.jpg
+|       |   |           |               
+|       |   |           \---textures
+|       |   |                   material_29.jpeg
+|       |   |                   material_2_10.jpeg
+|       |   |                   material_30.jpeg
+|       |   |                   material_51.jpeg
+|       |   |                   Metal_Rough.jpeg
+|       |   |                   Metal_Seamed.jpeg
+|       |   |                   Naamloos_1.jpeg
+|       |   |                   Naamloos_2.jpeg
+|       |   |                   texture.png
+|       |   |                   texture_0.png
+|       |   |                   texture_1.png
+|       |   |                   texture_2.png
+|       |   |                   texture_3.png
+|       |   |                   texture_4.png
+|       |   |                   texture_5.png
+|       |   |                   texture_6.png
+|       |   |                   texture_7.png
+|       |   |                   texture_8.png
+|       |   |                   __Metal_Aluminum_Anodized_2.jpeg
+|       |   |                   
+|       |   +---USS Ascendant bridge
+|       |   +---USS Enterprise E
+|       |   +---USS Galaxy (Valhalla)
+|       |   |       Galaxy Bridge - release.blend
+|       |   |       
+|       |   +---USS Galaxy class
+|       |   +---USS Ross Galaxy Class Starship Bridge command
+|       |   +---USS Suntherland
+|       |   |       Sutherland_Chair01_Movable_v01.glb
+|       |   |       Sutherland_Chair01_RailBase_v01.glb
+|       |   |       Sutherland_Consolas_Modificacion_v01.blend
+|       |   |       Sutherland_Consolas_Modificacion_v01.blend1
+|       |   |       Sutherland_PBR_Lab_v01.blend
+|       |   |       Sutherland_PBR_Lab_v01.blend1
+|       |   |       Sutherland_Plataforma_Corredera_v01.blend
+|       |   |       Sutherland_Plataforma_Corredera_v01.blend1
+|       |   |       Sutherland_test_sillas_consolas_v01.blend
+|       |   |       
+|       |   +---USS Sutherland
+|       |   |       star_trek_sutherland_bridge.glb
+|       |   |       
+|       |   +---USS Vengance bridge
+|       |   +---uss_ascendant
+|       |   |   \---puente_uss_ascendant
+|       |   |       |   uss_ascendant_bridge.glb
+|       |   |       |   
+|       |   |       +---blender
+|       |   |       |   +---analisis
+|       |   |       |   |   \---ascendant_v1
+|       |   |       |   |           ascendant_dae_analisis.blend
+|       |   |       |   |           ascendant_glb_analisis.blend
+|       |   |       |   |           
+|       |   |       |   \---principal
+|       |   |       |           enterprise_importacion_inicial.blend
+|       |   |       |           theurgy_trabajo_v0_1.blend
+|       |   |       |           theurgy_trabajo_v0_1.blend1
+|       |   |       |           
+|       |   |       \---uss-ascendant-bridge
+|       |   |           +---source
+|       |   |           |   |   USS+ASCENDANT+BRIDGE+FINAL.zip
+|       |   |           |   |   
+|       |   |           |   \---USS+ASCENDANT+BRIDGE+FINAL
+|       |   |           |       |   model.dae
+|       |   |           |       |   
+|       |   |           |       \---model
+|       |   |           |               Blinds_Roman_Hobbled_Blue.jpg
+|       |   |           |               GRATE_GLOW.jpg
+|       |   |           |               HONEYCOMB_GLOW_2.jpg
+|       |   |           |               Honeycomb_Grate.jpg
+|       |   |           |               iso_web_yellow2.jpg
+|       |   |           |               NewTrekLCARS.jpg
+|       |   |           |               VIEWSCREEN_GLOW.jpg
+|       |   |           |               _0e3a929217289.560caa6605fe9.jpg
+|       |   |           |               _58cd499217289.560ca8b44d983.jpg
+|       |   |           |               
+|       |   |           \---textures
+|       |   |                   Blinds_Roman_Hobbled_Blue.jpeg
+|       |   |                   GRATE_GLOW.jpeg
+|       |   |                   HONEYCOMB_GLOW_2.jpeg
+|       |   |                   Honeycomb_Grate.jpeg
+|       |   |                   iso_web_yellow2.jpeg
+|       |   |                   NewTrekLCARS.jpeg
+|       |   |                   VIEWSCREEN_GLOW.jpeg
+|       |   |                   _0e3a929217289.560caa6605fe9.jpeg
+|       |   |                   _58cd499217289.560ca8b44d983.jpeg
+|       |   |                   
+|       |   \---vengeance
+|       |       \---puente_uss_vengeance
+|       |           |   uss-vengance-bridge.zip
+|       |           |   uss_vengance_bridge.glb
+|       |           |   
+|       |           \---uss-vengance-bridge
+|       |               +---source
+|       |               |   |   USS+Vengance+bridge_dae.zip
+|       |               |   |   
+|       |               |   \---USS+Vengance+bridge_dae
+|       |               |       |   model.dae
+|       |               |       |   
+|       |               |       \---model
+|       |               |               Black_Dots_4.png
+|       |               |               HullPlates2.jpg
+|       |               |               iso_web_yellow2.jpg
+|       |               |               Lcars2.jpg
+|       |               |               material_4.jpg
+|       |               |               material_8.bmp
+|       |               |               Metal_Corrogated_Shiny.jpg
+|       |               |               NewTrekLCARS.jpg
+|       |               |               Tile_Hexagon_White.jpg
+|       |               |               
+|       |               \---textures
+|       |                       Black_Dots_4.png
+|       |                       HullPlates2.jpeg
+|       |                       iso_web_yellow2.jpeg
+|       |                       Lcars2.jpeg
+|       |                       material_4.jpeg
+|       |                       material_8.png
+|       |                       Metal_Corrogated_Shiny.jpeg
+|       |                       NewTrekLCARS.jpeg
+|       |                       Tile_Hexagon_White.jpeg
+|       |                       
+|       +---cubiertas
+|       |       Enterprise A HULL.blend
+|       |       NCC1701a - A. HUL.blend
+|       |       NCC1701a - A.blend
+|       |       NCC1701a - B.blend
+|       |       NCC1701a - C.blend
+|       |       NCC1701a - D.blend
+|       |       NCC1701a - E.blend
+|       |       NCC1701a - F.blend
+|       |       NCC1701a - G.blend
+|       |       NCC1701a - H.blend
+|       |       NCC1701a - I.blend
+|       |       NCC1701a - J.blend
+|       |       NCC1701A_Decks_B_to_G_Stacked_Base.blend
+|       |       Shuttlebay_A.blend
+|       |       
+|       \---shuttlebay
+|               Centro Control Hangar Princiapl Galaxy D.blend
+|               shuttlebay secundario.blend
+|               shuttlebay.blend
+|               Shuttlebay.skp
+|               
++---stars
+|   \---sistema_solar_animado
+|       |   metadata.json
+|       |   README.md
+|       |   solar_system_animation.glb
+|       |   
+|       \---solar-system-animation
+|           +---source
+|           |       Solar System.blend
+|           |       
+|           \---textures
+|                   2k_earth_daymap.jpg
+|                   2k_jupiter.jpg
+|                   2k_mars.jpg
+|                   2k_mercury.jpg
+|                   2k_moon.jpg
+|                   2k_neptune.jpg
+|                   2k_saturn.jpg
+|                   2k_saturn_ring_alpha.png
+|                   2k_sun.jpg
+|                   2k_uranus.jpg
+|                   2k_venus_surface.jpg
+|                   
++---uniformes
+|       Star Trek TNG Uniform S3.blend
+|       
+\---vehiculos
+    \---rover
+        \---argo_ii_type_rover_star_trek_zeo
+                argo-ii-type-rover-star-trek-zeo.zip
+                argo_ii_type_rover_star_trek_zeo.glb
+                argo_ii_type_rover_star_trek_zeo.zip
+                metadata.json
+                README.md
+                

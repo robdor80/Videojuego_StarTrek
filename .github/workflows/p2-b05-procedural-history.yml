@@ -1,0 +1,40 @@
+name: P2-B05 Procedural History Reference
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_procedural_history.py"
+      - "desarrollo/tools/generation/test_simulate_procedural_history.py"
+      - "desarrollo/validation/fixtures/procedural_history/**"
+      - "sistemas/universe/generation/procedural_history_major_events_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md"
+      - ".github/workflows/p2-b05-procedural-history.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_procedural_history.py"
+      - "desarrollo/tools/generation/test_simulate_procedural_history.py"
+      - "desarrollo/validation/fixtures/procedural_history/**"
+      - "sistemas/universe/generation/procedural_history_major_events_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md"
+      - ".github/workflows/p2-b05-procedural-history.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  procedural-history-reference:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Historia procedural de referencia
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_procedural_history.py' -v
+      - name: Regresión universo dinámico B1–B4
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: Regresión F13 y coherencia secuencial
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_dynamic_universe_reference.py' -v
+      - name: Contrato, fixture y ejecución determinista
+        run: |
+          python -m json.tool sistemas/universe/generation/procedural_history_major_events_reference_contract_v0.1.json >/dev/null
+          python -m json.tool desarrollo/validation/fixtures/procedural_history/procedural_history_reconstruction_v0.1.json >/dev/null
+          python desarrollo/tools/generation/simulate_procedural_history.py --fixture desarrollo/validation/fixtures/procedural_history/procedural_history_reconstruction_v0.1.json

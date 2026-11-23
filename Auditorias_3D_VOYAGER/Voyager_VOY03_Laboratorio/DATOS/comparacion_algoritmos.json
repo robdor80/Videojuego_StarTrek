@@ -1,0 +1,281 @@
+{
+  "results": [
+    {
+      "id": "CENTRO_A_PASARELA",
+      "samples": 812,
+      "fixed_foot_blocked_samples": 177,
+      "first_blocked_samples": [
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322
+      ],
+      "obstacles": [
+        [
+          "Object_119",
+          122
+        ],
+        [
+          "Mesh_1856",
+          116
+        ],
+        [
+          "Mesh_1755",
+          115
+        ],
+        [
+          "Mesh_1859",
+          115
+        ],
+        [
+          "Mesh_1810",
+          67
+        ],
+        [
+          "Mesh_1857",
+          67
+        ],
+        [
+          "Mesh_1807",
+          47
+        ],
+        [
+          "Mesh_1860",
+          47
+        ],
+        [
+          "Mesh_1808",
+          38
+        ],
+        [
+          "Mesh_1862",
+          38
+        ],
+        [
+          "Mesh_1797",
+          1
+        ]
+      ],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    },
+    {
+      "id": "CENTRO_A_NAVEGACION",
+      "samples": 607,
+      "fixed_foot_blocked_samples": 102,
+      "first_blocked_samples": [
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "obstacles": [
+        [
+          "Mesh_1856",
+          98
+        ],
+        [
+          "Mesh_1811",
+          37
+        ],
+        [
+          "Mesh_1857",
+          37
+        ],
+        [
+          "Mesh_1848",
+          28
+        ],
+        [
+          "Mesh_1968",
+          28
+        ],
+        [
+          "Mesh_2123",
+          28
+        ],
+        [
+          "Mesh_1802",
+          24
+        ]
+      ],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    },
+    {
+      "id": "NAVEGACION_A_PASARELA",
+      "samples": 1416,
+      "fixed_foot_blocked_samples": 312,
+      "first_blocked_samples": [
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "obstacles": [
+        [
+          "Mesh_1856",
+          245
+        ],
+        [
+          "Mesh_1857",
+          137
+        ],
+        [
+          "Object_119",
+          122
+        ],
+        [
+          "Mesh_1755",
+          115
+        ],
+        [
+          "Mesh_1859",
+          115
+        ],
+        [
+          "Mesh_1810",
+          100
+        ],
+        [
+          "Mesh_1807",
+          47
+        ],
+        [
+          "Mesh_1860",
+          47
+        ],
+        [
+          "Mesh_1808",
+          38
+        ],
+        [
+          "Mesh_1862",
+          38
+        ],
+        [
+          "Mesh_1811",
+          37
+        ],
+        [
+          "Mesh_2123",
+          28
+        ],
+        [
+          "Mesh_1848",
+          28
+        ],
+        [
+          "Mesh_1968",
+          28
+        ],
+        [
+          "Mesh_1802",
+          24
+        ]
+      ],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    },
+    {
+      "id": "CENTRO_A_MANDO_IZQ",
+      "samples": 173,
+      "fixed_foot_blocked_samples": 0,
+      "first_blocked_samples": [],
+      "obstacles": [],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    },
+    {
+      "id": "CENTRO_A_MANDO_DER",
+      "samples": 173,
+      "fixed_foot_blocked_samples": 0,
+      "first_blocked_samples": [],
+      "obstacles": [],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    },
+    {
+      "id": "PASARELA_A_POSTERIOR",
+      "samples": 533,
+      "fixed_foot_blocked_samples": 0,
+      "first_blocked_samples": [],
+      "obstacles": [],
+      "meaning": "Negative control: no stair solver, same mesh, same 10mm samples; not a new routing failure."
+    }
+  ],
+  "notes": "VOY02 coarse graph was not a physical step-up solver. This control isolates that restriction at 10mm. Material selection, diagonal edge and float robustness errors are separately documented."
+}

@@ -1,0 +1,4810 @@
+{
+  "method": "Prior BVH + 17-axis SAT; 21 static fractions; transverse test requires vertices on both sides of both planes beyond 10um. Depth is a plane crossing witness, not a solid penetration depth. Offset variants use 5 fractions only.",
+  "doors": [
+    {
+      "id": "D_IZQ",
+      "scale": 1.1,
+      "stroke_m": 0.4604835652298358,
+      "poses": [
+        {
+          "fraction": 0.0,
+          "all_pairs": 177,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 0.05,
+          "all_pairs": 183,
+          "new_pairs": 86,
+          "coplanar": 0,
+          "transverse": 9,
+          "other_touch_or_edge": 77,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 46,
+              "transverse": 5,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0014727591802335697,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.413026084310549e-09,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 34,
+              "transverse": 4,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0058421634567050774,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.1,
+          "all_pairs": 178,
+          "new_pairs": 95,
+          "coplanar": 0,
+          "transverse": 10,
+          "other_touch_or_edge": 85,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 50,
+              "transverse": 9,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009583220722598838,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.9614459664787376e-09,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 38,
+              "transverse": 1,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 5.143418477869741e-05,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.15000000000000002,
+          "all_pairs": 180,
+          "new_pairs": 100,
+          "coplanar": 0,
+          "transverse": 17,
+          "other_touch_or_edge": 83,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 51,
+              "transverse": 11,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009576918379563858,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 5.6500910905510855e-09,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 42,
+              "transverse": 6,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0058357846052482345,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.2,
+          "all_pairs": 184,
+          "new_pairs": 105,
+          "coplanar": 0,
+          "transverse": 21,
+          "other_touch_or_edge": 84,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 51,
+              "transverse": 13,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.00957061603652978,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 7.17923956251717e-09,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 47,
+              "transverse": 8,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.005832595179519371,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.25,
+          "all_pairs": 183,
+          "new_pairs": 105,
+          "coplanar": 0,
+          "transverse": 24,
+          "other_touch_or_edge": 81,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 50,
+              "transverse": 13,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009564313693495686,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 7.606705612983315e-09,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 49,
+              "transverse": 11,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.005829405753790507,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.30000000000000004,
+          "all_pairs": 191,
+          "new_pairs": 113,
+          "coplanar": 0,
+          "transverse": 27,
+          "other_touch_or_edge": 86,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 54,
+              "transverse": 14,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009558011350461576,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.0237536506449348e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 52,
+              "transverse": 13,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.005826216328061658,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.35000000000000003,
+          "all_pairs": 187,
+          "new_pairs": 109,
+          "coplanar": 0,
+          "transverse": 28,
+          "other_touch_or_edge": 81,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 54,
+              "transverse": 13,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009551709007427482,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.1766684978415438e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 48,
+              "transverse": 15,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.005823026902332795,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.4,
+          "all_pairs": 185,
+          "new_pairs": 107,
+          "coplanar": 0,
+          "transverse": 30,
+          "other_touch_or_edge": 77,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 50,
+              "transverse": 10,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009545406664392533,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.329583345038157e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 50,
+              "transverse": 20,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0058198374766047925,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.45,
+          "all_pairs": 186,
+          "new_pairs": 112,
+          "coplanar": 0,
+          "transverse": 34,
+          "other_touch_or_edge": 78,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 55,
+              "transverse": 13,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009539104321149424,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.4824981922347659e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 50,
+              "transverse": 21,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.005816648050875929,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "all_pairs": 187,
+          "new_pairs": 125,
+          "coplanar": 0,
+          "transverse": 48,
+          "other_touch_or_edge": 77,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 62,
+              "transverse": 19,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009532801978324346,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.6354130394313743e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 56,
+              "transverse": 29,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.009120672206778752,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.55,
+          "all_pairs": 195,
+          "new_pairs": 147,
+          "coplanar": 0,
+          "transverse": 67,
+          "other_touch_or_edge": 80,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 71,
+              "transverse": 23,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.020153523567003118,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.7883278866279833e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 69,
+              "transverse": 44,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.028004198329158424,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.6000000000000001,
+          "all_pairs": 207,
+          "new_pairs": 173,
+          "coplanar": 0,
+          "transverse": 92,
+          "other_touch_or_edge": 81,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 83,
+              "transverse": 34,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.02024475217904149,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.941242733824592e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 83,
+              "transverse": 58,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03958004628660036,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.65,
+          "all_pairs": 212,
+          "new_pairs": 186,
+          "coplanar": 0,
+          "transverse": 106,
+          "other_touch_or_edge": 80,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 86,
+              "transverse": 38,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.020335980791079893,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.0941575810212005e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 93,
+              "transverse": 68,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0396531077759309,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.7000000000000001,
+          "all_pairs": 186,
+          "new_pairs": 160,
+          "coplanar": 0,
+          "transverse": 84,
+          "other_touch_or_edge": 76,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 56,
+              "transverse": 14,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.01063539441345373,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.2470724282178142e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 97,
+              "transverse": 70,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.023384328233221747,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.75,
+          "all_pairs": 171,
+          "new_pairs": 146,
+          "coplanar": 0,
+          "transverse": 79,
+          "other_touch_or_edge": 67,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 44,
+              "transverse": 9,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0013462523826318845,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.3999872754144223e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 95,
+              "transverse": 70,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.00036015026841438365,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8,
+          "all_pairs": 78,
+          "new_pairs": 64,
+          "coplanar": 0,
+          "transverse": 15,
+          "other_touch_or_edge": 49,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 39,
+              "transverse": 8,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.001073873797787035,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.5529021226110317e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 18,
+              "transverse": 7,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0003961597631899251,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8500000000000001,
+          "all_pairs": 73,
+          "new_pairs": 60,
+          "coplanar": 0,
+          "transverse": 10,
+          "other_touch_or_edge": 50,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 32,
+              "transverse": 5,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0024462428891225125,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.7058169698076404e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            },
+            {
+              "object": "Object_81",
+              "pairs": 21,
+              "transverse": 5,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0003904658720371554,
+              "moving_z_range_above_sill_m": [
+                -1.0972504205231104e-08,
+                1.9533964570782738
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9,
+          "all_pairs": 44,
+          "new_pairs": 32,
+          "coplanar": 0,
+          "transverse": 5,
+          "other_touch_or_edge": 27,
+          "by_object": [
+            {
+              "object": "Mesh_1837",
+              "pairs": 25,
+              "transverse": 5,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0008519207989786421,
+              "moving_z_range_above_sill_m": [
+                -3.9657239503387845e-08,
+                1.9533964570782738
+              ]
+            },
+            {
+              "object": "Mesh_1855",
+              "pairs": 7,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.858731817004249e-08,
+              "moving_z_range_above_sill_m": [
+                -1.3021413869385158e-08,
+                0.22744149083119197
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9500000000000001,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 1.0,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "NORMAL_OUT_10MM",
+          "offset_m": [
+            -0.008787416796781865,
+            0.004772976643525079,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 215,
+              "new_pairs": 93,
+              "coplanar": 1,
+              "transverse": 81,
+              "other_touch_or_edge": 11,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 90,
+                  "transverse": 81,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.000638584481389039,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 3,
+                  "transverse": 0,
+                  "coplanar": 1,
+                  "max_two_sided_plane_crossing_depth_m": 1.8679805904964801e-10,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 189,
+              "new_pairs": 126,
+              "coplanar": 0,
+              "transverse": 107,
+              "other_touch_or_edge": 19,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 112,
+                  "transverse": 107,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.011481481415459483,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 9.878982445161062e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 189,
+              "new_pairs": 139,
+              "coplanar": 0,
+              "transverse": 120,
+              "other_touch_or_edge": 19,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 125,
+                  "transverse": 120,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.01295599907930419,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.7524724804991547e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 176,
+              "new_pairs": 166,
+              "coplanar": 0,
+              "transverse": 152,
+              "other_touch_or_edge": 14,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 152,
+                  "transverse": 152,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.010658881480013288,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.517046716482203e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_OUT_30MM",
+          "offset_m": [
+            -0.026362250390345596,
+            0.014318929930575236,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 16,
+              "new_pairs": 11,
+              "coplanar": 2,
+              "transverse": 2,
+              "other_touch_or_edge": 7,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 8,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00026291608810424805,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 3,
+                  "transverse": 0,
+                  "coplanar": 2,
+                  "max_two_sided_plane_crossing_depth_m": 7.715354160603857e-10,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 17,
+              "new_pairs": 15,
+              "coplanar": 0,
+              "transverse": 2,
+              "other_touch_or_edge": 13,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 7,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00026291608810424805,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 8.127287213954804e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 16,
+              "new_pairs": 14,
+              "coplanar": 0,
+              "transverse": 2,
+              "other_touch_or_edge": 12,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 6,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00026291608810424805,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.5897991029507175e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 15,
+              "new_pairs": 12,
+              "coplanar": 0,
+              "transverse": 4,
+              "other_touch_or_edge": 8,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 4,
+                  "transverse": 4,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0013430050969336703,
+                  "moving_z_range_above_sill_m": [
+                    1.7776967819951133,
+                    1.9533964570782738
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.3826847011091195e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_10MM",
+          "offset_m": [
+            0.008787416796781865,
+            -0.004772976643525079,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 230,
+              "new_pairs": 186,
+              "coplanar": 5,
+              "transverse": 162,
+              "other_touch_or_edge": 19,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 20,
+                  "transverse": 0,
+                  "coplanar": 5,
+                  "max_two_sided_plane_crossing_depth_m": 1.4556411843211312e-08,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 166,
+                  "transverse": 162,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0006225587856156186,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 182,
+              "new_pairs": 168,
+              "coplanar": 0,
+              "transverse": 159,
+              "other_touch_or_edge": 9,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 7.97025448516633e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.0972504205231104e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 162,
+                  "transverse": 159,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.06005639814758166,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 184,
+              "new_pairs": 170,
+              "coplanar": 0,
+              "transverse": 161,
+              "other_touch_or_edge": 9,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.5712353896007292e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.0972504205231104e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 164,
+                  "transverse": 161,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.047645314797772474,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 175,
+              "new_pairs": 166,
+              "coplanar": 0,
+              "transverse": 158,
+              "other_touch_or_edge": 8,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.3174303087998346e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.0972504205231104e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 160,
+                  "transverse": 158,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.010267888460327593,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_30MM",
+          "offset_m": [
+            0.026362250390345596,
+            -0.014318929930575236,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 170,
+              "new_pairs": 163,
+              "coplanar": 2,
+              "transverse": 123,
+              "other_touch_or_edge": 38,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 37,
+                  "transverse": 0,
+                  "coplanar": 2,
+                  "max_two_sided_plane_crossing_depth_m": 1.4556738550546215e-08,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    0.31577701831084054
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 126,
+                  "transverse": 123,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006612190319075293,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 334,
+              "new_pairs": 330,
+              "coplanar": 0,
+              "transverse": 287,
+              "other_touch_or_edge": 43,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.0343979169662375e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 316,
+                  "transverse": 287,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.02214474742566837,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 317,
+              "new_pairs": 307,
+              "coplanar": 0,
+              "transverse": 269,
+              "other_touch_or_edge": 38,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.8360641631077066e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.0972504205231104e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 299,
+                  "transverse": 269,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.040280926997520276,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 313,
+              "new_pairs": 303,
+              "coplanar": 0,
+              "transverse": 267,
+              "other_touch_or_edge": 36,
+              "by_object": [
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.6377304092491762e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.0972504205231104e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 295,
+                  "transverse": 267,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.026086478587941206,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 192,
+              "new_pairs": 192,
+              "coplanar": 0,
+              "transverse": 160,
+              "other_touch_or_edge": 32,
+              "by_object": [
+                {
+                  "object": "Doorpanel_8",
+                  "pairs": 2,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006608031193843801,
+                  "moving_z_range_above_sill_m": [
+                    0.17543018126707835,
+                    1.7776967819951133
+                  ]
+                },
+                {
+                  "object": "Mesh_1855",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 3.262775982224285e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3021413869385158e-08,
+                    0.22744149083119197
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 182,
+                  "transverse": 158,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.008760693222014518,
+                  "moving_z_range_above_sill_m": [
+                    -3.9657239503387845e-08,
+                    1.9533964570782738
+                  ]
+                }
+              ]
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_2MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.002
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 149,
+              "new_pairs": 23,
+              "coplanar": 0,
+              "transverse": 2,
+              "other_touch_or_edge": 21,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 10,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 8.944353349123191e-06,
+                  "moving_z_range_above_sill_m": [
+                    0.001999960342760498,
+                    1.9547838166974145
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 13,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0002372625213259122,
+                  "moving_z_range_above_sill_m": [
+                    1.4758823589108545,
+                    1.9553964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 164,
+              "new_pairs": 99,
+              "coplanar": 0,
+              "transverse": 24,
+              "other_touch_or_edge": 75,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 50,
+                  "transverse": 13,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009578322972852443,
+                  "moving_z_range_above_sill_m": [
+                    0.001999960342760498,
+                    1.9553964570782738
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 49,
+                  "transverse": 11,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.005837948189518286,
+                  "moving_z_range_above_sill_m": [
+                    0.001999989027495796,
+                    1.9553964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 170,
+              "new_pairs": 119,
+              "coplanar": 0,
+              "transverse": 49,
+              "other_touch_or_edge": 70,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 63,
+                  "transverse": 20,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009546811257681111,
+                  "moving_z_range_above_sill_m": [
+                    0.001999960342760498,
+                    1.9553964570782738
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 56,
+                  "transverse": 29,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009134008897629619,
+                  "moving_z_range_above_sill_m": [
+                    0.001999989027495796,
+                    1.9553964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 154,
+              "new_pairs": 140,
+              "coplanar": 0,
+              "transverse": 80,
+              "other_touch_or_edge": 60,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 45,
+                  "transverse": 10,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.001999978222261164,
+                  "moving_z_range_above_sill_m": [
+                    0.001999960342760498,
+                    1.9553964570782738
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 95,
+                  "transverse": 70,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00036015012897926786,
+                  "moving_z_range_above_sill_m": [
+                    0.001999989027495796,
+                    1.9553964570782738
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_10MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.01
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 146,
+              "new_pairs": 28,
+              "coplanar": 0,
+              "transverse": 2,
+              "other_touch_or_edge": 26,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 13,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 6.503632443104202e-06,
+                  "moving_z_range_above_sill_m": [
+                    0.009999960342760498,
+                    1.9364596875928004
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 15,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00023567904564152922,
+                  "moving_z_range_above_sill_m": [
+                    1.4838823589108545,
+                    1.963396457078274
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 165,
+              "new_pairs": 100,
+              "coplanar": 0,
+              "transverse": 23,
+              "other_touch_or_edge": 77,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 50,
+                  "transverse": 12,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009634360090279515,
+                  "moving_z_range_above_sill_m": [
+                    0.009999960342760498,
+                    1.963396457078274
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 50,
+                  "transverse": 11,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.005872117932429464,
+                  "moving_z_range_above_sill_m": [
+                    0.009999989027495795,
+                    1.963396457078274
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 170,
+              "new_pairs": 119,
+              "coplanar": 0,
+              "transverse": 49,
+              "other_touch_or_edge": 70,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 63,
+                  "transverse": 20,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999986151105067,
+                  "moving_z_range_above_sill_m": [
+                    0.009999960342760498,
+                    1.963396457078274
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 56,
+                  "transverse": 29,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009187355661033098,
+                  "moving_z_range_above_sill_m": [
+                    0.009999989027495795,
+                    1.963396457078274
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 154,
+              "new_pairs": 140,
+              "coplanar": 0,
+              "transverse": 80,
+              "other_touch_or_edge": 60,
+              "by_object": [
+                {
+                  "object": "Mesh_1837",
+                  "pairs": 45,
+                  "transverse": 10,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999978222261143,
+                  "moving_z_range_above_sill_m": [
+                    0.009999960342760498,
+                    1.963396457078274
+                  ]
+                },
+                {
+                  "object": "Object_81",
+                  "pairs": 95,
+                  "transverse": 70,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00036014957123880445,
+                  "moving_z_range_above_sill_m": [
+                    0.009999989027495795,
+                    1.963396457078274
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        }
+      ],
+      "obstacle_topology": [
+        {
+          "object": "Mesh_1837",
+          "boundary_edges": 56,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        },
+        {
+          "object": "Mesh_1855",
+          "boundary_edges": 41,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        },
+        {
+          "object": "Object_81",
+          "boundary_edges": 172,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        }
+      ],
+      "pocket_certified": false,
+      "grade": "C",
+      "conclusion": "Investigated. Preserve floor contacts and transverse intersections separately; rebuild local guides/pockets in a later functional prototype. No tested offset is applied to the saved scene."
+    },
+    {
+      "id": "D_DER",
+      "scale": 1.1,
+      "stroke_m": 0.46048378552130176,
+      "poses": [
+        {
+          "fraction": 0.0,
+          "all_pairs": 400,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 0.05,
+          "all_pairs": 370,
+          "new_pairs": 155,
+          "coplanar": 0,
+          "transverse": 155,
+          "other_touch_or_edge": 0,
+          "by_object": [
+            {
+              "object": "Object_82",
+              "pairs": 155,
+              "transverse": 155,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.023512258060343325,
+              "moving_z_range_above_sill_m": [
+                1.3566629579172764,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.1,
+          "all_pairs": 362,
+          "new_pairs": 166,
+          "coplanar": 0,
+          "transverse": 166,
+          "other_touch_or_edge": 0,
+          "by_object": [
+            {
+              "object": "Object_82",
+              "pairs": 166,
+              "transverse": 166,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.028426486928993813,
+              "moving_z_range_above_sill_m": [
+                1.3566629579172764,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.15000000000000002,
+          "all_pairs": 348,
+          "new_pairs": 167,
+          "coplanar": 0,
+          "transverse": 161,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 4.600797120765657e-09,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 161,
+              "transverse": 161,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03834358792469817,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.2,
+          "all_pairs": 344,
+          "new_pairs": 165,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 6.13325727246243e-09,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 159,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03833427251002194,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.25,
+          "all_pairs": 344,
+          "new_pairs": 165,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 7.665717424159213e-09,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 159,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03832495709534658,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.30000000000000004,
+          "all_pairs": 344,
+          "new_pairs": 165,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 9.198177575855992e-09,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 159,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03831564168067035,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.35000000000000003,
+          "all_pairs": 343,
+          "new_pairs": 172,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.0730637727552768e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 166,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03830632626599498,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.4,
+          "all_pairs": 343,
+          "new_pairs": 172,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.2263097879249541e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 166,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03829701085132201,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.45,
+          "all_pairs": 341,
+          "new_pairs": 172,
+          "coplanar": 0,
+          "transverse": 159,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.3795441945561501e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 166,
+              "transverse": 159,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.038287695436643364,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "all_pairs": 345,
+          "new_pairs": 196,
+          "coplanar": 0,
+          "transverse": 183,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.532425536023314e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 190,
+              "transverse": 183,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.038278380021963876,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.55,
+          "all_pairs": 337,
+          "new_pairs": 220,
+          "coplanar": 0,
+          "transverse": 207,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.685306877490479e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 214,
+              "transverse": 207,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.03826906460729507,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.6000000000000001,
+          "all_pairs": 341,
+          "new_pairs": 248,
+          "coplanar": 0,
+          "transverse": 235,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.8381882189576427e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 242,
+              "transverse": 235,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.05514334620804388,
+              "moving_z_range_above_sill_m": [
+                0.31577701772314654,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.65,
+          "all_pairs": 343,
+          "new_pairs": 271,
+          "coplanar": 0,
+          "transverse": 258,
+          "other_touch_or_edge": 13,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 1.991069560424807e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 265,
+              "transverse": 258,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.04640909514011474,
+              "moving_z_range_above_sill_m": [
+                0.3157769849405919,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.7000000000000001,
+          "all_pairs": 342,
+          "new_pairs": 272,
+          "coplanar": 0,
+          "transverse": 258,
+          "other_touch_or_edge": 14,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.143950901891971e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 266,
+              "transverse": 258,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.02400646093445355,
+              "moving_z_range_above_sill_m": [
+                0.3157769849405919,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.75,
+          "all_pairs": 329,
+          "new_pairs": 270,
+          "coplanar": 0,
+          "transverse": 264,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.296832243359135e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 264,
+              "transverse": 264,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.023684159124195102,
+              "moving_z_range_above_sill_m": [
+                0.3157769849405919,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8,
+          "all_pairs": 140,
+          "new_pairs": 122,
+          "coplanar": 0,
+          "transverse": 116,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.449713584826299e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 116,
+              "transverse": 116,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.023686599486588224,
+              "moving_z_range_above_sill_m": [
+                -1.3609107896161989e-08,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8500000000000001,
+          "all_pairs": 120,
+          "new_pairs": 104,
+          "coplanar": 0,
+          "transverse": 98,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.602594926293464e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 98,
+              "transverse": 98,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.023706879731400808,
+              "moving_z_range_above_sill_m": [
+                -1.3609107896161989e-08,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9,
+          "all_pairs": 70,
+          "new_pairs": 56,
+          "coplanar": 0,
+          "transverse": 50,
+          "other_touch_or_edge": 6,
+          "by_object": [
+            {
+              "object": "Mesh_1858",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 2.7554762677606272e-08,
+              "moving_z_range_above_sill_m": [
+                -1.1560198232007935e-08,
+                0.22744149024349794
+              ]
+            },
+            {
+              "object": "Object_82",
+              "pairs": 50,
+              "transverse": 50,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.018007848608381966,
+              "moving_z_range_above_sill_m": [
+                -1.3609107896161989e-08,
+                1.9531335404024754
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9500000000000001,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 1.0,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "NORMAL_OUT_10MM",
+          "offset_m": [
+            0.008787392583595241,
+            0.004773021221592815,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 384,
+              "new_pairs": 37,
+              "coplanar": 1,
+              "transverse": 36,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 1,
+                  "max_two_sided_plane_crossing_depth_m": 4.008675799331743e-10,
+                  "moving_z_range_above_sill_m": [
+                    -1.3609107896161989e-08,
+                    1.5075627401994752e-08
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 36,
+                  "transverse": 36,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0006040911232194717,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.883938091050211
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 344,
+              "new_pairs": 198,
+              "coplanar": 0,
+              "transverse": 187,
+              "other_touch_or_edge": 11,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 7.2427510151122795e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 192,
+                  "transverse": 187,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.06265283716804512,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 345,
+              "new_pairs": 219,
+              "coplanar": 0,
+              "transverse": 206,
+              "other_touch_or_edge": 13,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.4887266566783243e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 213,
+                  "transverse": 206,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.04792862815227122,
+                  "moving_z_range_above_sill_m": [
+                    0.24560358280998812,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 329,
+              "new_pairs": 274,
+              "coplanar": 0,
+              "transverse": 268,
+              "other_touch_or_edge": 6,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.253133364014145e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 268,
+                  "transverse": 268,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03367289929185258,
+                  "moving_z_range_above_sill_m": [
+                    0.24560358280998812,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_OUT_30MM",
+          "offset_m": [
+            0.02636217775078572,
+            0.014319063664778446,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 191,
+              "new_pairs": 41,
+              "coplanar": 0,
+              "transverse": 31,
+              "other_touch_or_edge": 10,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 41,
+                  "transverse": 31,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0005949588349769289,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 174,
+              "new_pairs": 119,
+              "coplanar": 0,
+              "transverse": 105,
+              "other_touch_or_edge": 14,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 6.3692219065252335e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 113,
+                  "transverse": 105,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.08261783130315618,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 176,
+              "new_pairs": 125,
+              "coplanar": 0,
+              "transverse": 111,
+              "other_touch_or_edge": 14,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.4013288979883441e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 119,
+                  "transverse": 111,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.05699092842433855,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 169,
+              "new_pairs": 141,
+              "coplanar": 0,
+              "transverse": 134,
+              "other_touch_or_edge": 7,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.165735605324165e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 135,
+                  "transverse": 134,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.04090336146295652,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_10MM",
+          "offset_m": [
+            -0.008787392583595241,
+            -0.004773021221592815,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 410,
+              "new_pairs": 59,
+              "coplanar": 2,
+              "transverse": 49,
+              "other_touch_or_edge": 8,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 10,
+                  "transverse": 0,
+                  "coplanar": 2,
+                  "max_two_sided_plane_crossing_depth_m": 4.1969700453558767e-10,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    0.17782158608299836
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 49,
+                  "transverse": 49,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0005898090493426827,
+                  "moving_z_range_above_sill_m": [
+                    1.5075627401994752e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 343,
+              "new_pairs": 195,
+              "coplanar": 0,
+              "transverse": 187,
+              "other_touch_or_edge": 8,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 8.08868383320615e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 189,
+                  "transverse": 187,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03448989533143635,
+                  "moving_z_range_above_sill_m": [
+                    1.5075627401994752e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 347,
+              "new_pairs": 220,
+              "coplanar": 0,
+              "transverse": 207,
+              "other_touch_or_edge": 13,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.575098459169004e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 214,
+                  "transverse": 207,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03449901694212684,
+                  "moving_z_range_above_sill_m": [
+                    1.5075627401994752e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 329,
+              "new_pairs": 277,
+              "coplanar": 0,
+              "transverse": 271,
+              "other_touch_or_edge": 6,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 6,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.3405311227041252e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 271,
+                  "transverse": 271,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0336841588994049,
+                  "moving_z_range_above_sill_m": [
+                    1.5075627401994752e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_30MM",
+          "offset_m": [
+            -0.02636217775078572,
+            -0.014319063664778446,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 360,
+              "new_pairs": 172,
+              "coplanar": 0,
+              "transverse": 131,
+              "other_touch_or_edge": 41,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 28,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.3879521805289014e-09,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    0.31577701772314654
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 144,
+                  "transverse": 131,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006347991062130992,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 484,
+              "new_pairs": 384,
+              "coplanar": 0,
+              "transverse": 367,
+              "other_touch_or_edge": 17,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 9.92921964253607e-09,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 383,
+                  "transverse": 367,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.045809187223400744,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 484,
+              "new_pairs": 395,
+              "coplanar": 0,
+              "transverse": 378,
+              "other_touch_or_edge": 17,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 1.749071186667314e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Mesh_1874",
+                  "pairs": 9,
+                  "transverse": 9,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006696840044353812,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.31577701772314654
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 385,
+                  "transverse": 369,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.045855764296778984,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 471,
+              "new_pairs": 438,
+              "coplanar": 0,
+              "transverse": 421,
+              "other_touch_or_edge": 17,
+              "by_object": [
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 7,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 2.5052204090810207e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Mesh_1874",
+                  "pairs": 9,
+                  "transverse": 9,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006688923017206514,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.31577701772314654
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 422,
+                  "transverse": 412,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.04041596045539211,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 199,
+              "new_pairs": 199,
+              "coplanar": 0,
+              "transverse": 180,
+              "other_touch_or_edge": 19,
+              "by_object": [
+                {
+                  "object": "Doorpanel_7",
+                  "pairs": 2,
+                  "transverse": 2,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.006329881120310014,
+                  "moving_z_range_above_sill_m": [
+                    0.17543018067938432,
+                    1.7776967814074194
+                  ]
+                },
+                {
+                  "object": "Mesh_1858",
+                  "pairs": 8,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 3.261369631494728e-08,
+                  "moving_z_range_above_sill_m": [
+                    -1.3609107896161989e-08,
+                    0.22744149024349794
+                  ]
+                },
+                {
+                  "object": "Mesh_1874",
+                  "pairs": 9,
+                  "transverse": 9,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.00668100599005837,
+                  "moving_z_range_above_sill_m": [
+                    -1.1560198232007935e-08,
+                    0.31577701772314654
+                  ]
+                },
+                {
+                  "object": "Object_82",
+                  "pairs": 180,
+                  "transverse": 169,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.01785807001972651,
+                  "moving_z_range_above_sill_m": [
+                    -4.0244933530164674e-08,
+                    1.9531335404024754
+                  ]
+                }
+              ]
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_2MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.002
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 385,
+              "new_pairs": 51,
+              "coplanar": 0,
+              "transverse": 51,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 51,
+                  "transverse": 51,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.002633027132922742,
+                  "moving_z_range_above_sill_m": [
+                    0.0019999863908921056,
+                    1.9551335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 335,
+              "new_pairs": 165,
+              "coplanar": 0,
+              "transverse": 165,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 165,
+                  "transverse": 165,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03834681055632838,
+                  "moving_z_range_above_sill_m": [
+                    0.0019999863908921056,
+                    1.9551335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 335,
+              "new_pairs": 193,
+              "coplanar": 0,
+              "transverse": 193,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 193,
+                  "transverse": 193,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.038300233482945666,
+                  "moving_z_range_above_sill_m": [
+                    0.0019999863908921056,
+                    1.9551335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 317,
+              "new_pairs": 265,
+              "coplanar": 0,
+              "transverse": 265,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 265,
+                  "transverse": 265,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.023683791842874988,
+                  "moving_z_range_above_sill_m": [
+                    0.0019999863908921056,
+                    1.9551335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_10MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.01
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 383,
+              "new_pairs": 63,
+              "coplanar": 0,
+              "transverse": 63,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 63,
+                  "transverse": 63,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.010274300100272036,
+                  "moving_z_range_above_sill_m": [
+                    0.009999986390892104,
+                    1.9631335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 335,
+              "new_pairs": 165,
+              "coplanar": 0,
+              "transverse": 165,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 165,
+                  "transverse": 165,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03843422440025558,
+                  "moving_z_range_above_sill_m": [
+                    0.009999986390892104,
+                    1.9631335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 335,
+              "new_pairs": 193,
+              "coplanar": 0,
+              "transverse": 193,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 193,
+                  "transverse": 193,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.03838764732687286,
+                  "moving_z_range_above_sill_m": [
+                    0.009999986390892104,
+                    1.9631335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 317,
+              "new_pairs": 265,
+              "coplanar": 0,
+              "transverse": 265,
+              "other_touch_or_edge": 0,
+              "by_object": [
+                {
+                  "object": "Object_82",
+                  "pairs": 265,
+                  "transverse": 265,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.023682322717594517,
+                  "moving_z_range_above_sill_m": [
+                    0.009999986390892104,
+                    1.9631335404024757
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        }
+      ],
+      "obstacle_topology": [
+        {
+          "object": "Mesh_1858",
+          "boundary_edges": 36,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        },
+        {
+          "object": "Object_82",
+          "boundary_edges": 358,
+          "nonmanifold_edges": 1,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        }
+      ],
+      "pocket_certified": false,
+      "grade": "C",
+      "conclusion": "Investigated. Preserve floor contacts and transverse intersections separately; rebuild local guides/pockets in a later functional prototype. No tested offset is applied to the saved scene."
+    },
+    {
+      "id": "D_POST",
+      "scale": 1.1,
+      "stroke_m": 0.4604808511734009,
+      "poses": [
+        {
+          "fraction": 0.0,
+          "all_pairs": 126,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 0.05,
+          "all_pairs": 144,
+          "new_pairs": 118,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 118,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 52,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 66,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.1,
+          "all_pairs": 141,
+          "new_pairs": 120,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 120,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 55,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 65,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.15000000000000002,
+          "all_pairs": 132,
+          "new_pairs": 111,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 111,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 61,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.2,
+          "all_pairs": 129,
+          "new_pairs": 108,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 108,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 49,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 59,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.25,
+          "all_pairs": 119,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 51,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.30000000000000004,
+          "all_pairs": 118,
+          "new_pairs": 97,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 97,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.35000000000000003,
+          "all_pairs": 118,
+          "new_pairs": 97,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 97,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.4,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.473619339329384,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.45,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.5,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.55,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.6000000000000001,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.65,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.7000000000000001,
+          "all_pairs": 117,
+          "new_pairs": 98,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 98,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 47,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.75,
+          "all_pairs": 107,
+          "new_pairs": 100,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 100,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 49,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 50,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8,
+          "all_pairs": 91,
+          "new_pairs": 84,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 84,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 41,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 42,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.8500000000000001,
+          "all_pairs": 54,
+          "new_pairs": 47,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 47,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 22,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 24,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7256920074049453,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9,
+          "all_pairs": 22,
+          "new_pairs": 15,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 15,
+          "by_object": [
+            {
+              "object": "Mesh_1832",
+              "pairs": 6,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": 0.0,
+              "moving_z_range_above_sill_m": [
+                1.7753119443479997,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "Mesh_1833",
+              "pairs": 8,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                1.7753119443479997,
+                1.9531347487989883
+              ]
+            },
+            {
+              "object": "hallwayfloor_1",
+              "pairs": 1,
+              "transverse": 0,
+              "coplanar": 0,
+              "max_two_sided_plane_crossing_depth_m": -0.0,
+              "moving_z_range_above_sill_m": [
+                -2.636275493461682e-08,
+                0.17782264695801533
+              ]
+            }
+          ]
+        },
+        {
+          "fraction": 0.9500000000000001,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        },
+        {
+          "fraction": 1.0,
+          "all_pairs": 0,
+          "new_pairs": 0,
+          "coplanar": 0,
+          "transverse": 0,
+          "other_touch_or_edge": 0,
+          "by_object": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "NORMAL_OUT_10MM",
+          "offset_m": [
+            -0.0,
+            0.01,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 183,
+              "new_pairs": 126,
+              "coplanar": 0,
+              "transverse": 26,
+              "other_touch_or_edge": 100,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 126,
+                  "transverse": 26,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0006648184578988441,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 176,
+              "new_pairs": 161,
+              "coplanar": 0,
+              "transverse": 155,
+              "other_touch_or_edge": 6,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 161,
+                  "transverse": 155,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 175,
+              "new_pairs": 162,
+              "coplanar": 0,
+              "transverse": 155,
+              "other_touch_or_edge": 7,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 161,
+                  "transverse": 155,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.17782264695801533
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 172,
+              "new_pairs": 165,
+              "coplanar": 0,
+              "transverse": 159,
+              "other_touch_or_edge": 6,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 164,
+                  "transverse": 159,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.17782264695801533
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_OUT_30MM",
+          "offset_m": [
+            -0.0,
+            0.029999999999999995,
+            -0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 183,
+              "new_pairs": 126,
+              "coplanar": 0,
+              "transverse": 26,
+              "other_touch_or_edge": 100,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 126,
+                  "transverse": 26,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0006648184578988441,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 177,
+              "new_pairs": 162,
+              "coplanar": 0,
+              "transverse": 155,
+              "other_touch_or_edge": 7,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 162,
+                  "transverse": 155,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 178,
+              "new_pairs": 168,
+              "coplanar": 0,
+              "transverse": 155,
+              "other_touch_or_edge": 13,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 168,
+                  "transverse": 155,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 172,
+              "new_pairs": 165,
+              "coplanar": 0,
+              "transverse": 159,
+              "other_touch_or_edge": 6,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 164,
+                  "transverse": 159,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 1,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.17782264695801533
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_10MM",
+          "offset_m": [
+            0.0,
+            -0.01,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 199,
+              "new_pairs": 135,
+              "coplanar": 0,
+              "transverse": 20,
+              "other_touch_or_edge": 115,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 120,
+                  "transverse": 20,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.000664818457898844,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.3157769476000289
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 193,
+              "new_pairs": 178,
+              "coplanar": 0,
+              "transverse": 154,
+              "other_touch_or_edge": 24,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 164,
+                  "transverse": 154,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 192,
+              "new_pairs": 179,
+              "coplanar": 0,
+              "transverse": 154,
+              "other_touch_or_edge": 25,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 164,
+                  "transverse": 154,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 184,
+              "new_pairs": 178,
+              "coplanar": 0,
+              "transverse": 159,
+              "other_touch_or_edge": 19,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 163,
+                  "transverse": 159,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.009999999999999698,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "NORMAL_IN_30MM",
+          "offset_m": [
+            0.0,
+            -0.029999999999999995,
+            0.0
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 199,
+              "new_pairs": 139,
+              "coplanar": 0,
+              "transverse": 24,
+              "other_touch_or_edge": 115,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 124,
+                  "transverse": 24,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.000664818457898844,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.3157769476000289
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 193,
+              "new_pairs": 180,
+              "coplanar": 0,
+              "transverse": 154,
+              "other_touch_or_edge": 26,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 165,
+                  "transverse": 154,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 192,
+              "new_pairs": 181,
+              "coplanar": 0,
+              "transverse": 154,
+              "other_touch_or_edge": 27,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 166,
+                  "transverse": 154,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 15,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 183,
+              "new_pairs": 177,
+              "coplanar": 0,
+              "transverse": 159,
+              "other_touch_or_edge": 18,
+              "by_object": [
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 163,
+                  "transverse": 159,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.030000000000000072,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    1.9531347487989883
+                  ]
+                },
+                {
+                  "object": "hallwayfloor_1",
+                  "pairs": 14,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    -2.636275493461682e-08,
+                    0.22744258390106956
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_2MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.002
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 152,
+              "new_pairs": 68,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 68,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 34,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.475619339329384,
+                    1.9551347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 34,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.475619339329384,
+                    1.9551347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 116,
+              "new_pairs": 104,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 104,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.475619339329384,
+                    1.9551347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 54,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.475619339329384,
+                    1.9551347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 114,
+              "new_pairs": 102,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 102,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7276920074049456,
+                    1.9551347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 52,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7276920074049456,
+                    1.9551347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 99,
+              "new_pairs": 99,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 99,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 49,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7276920074049456,
+                    1.9551347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7276920074049456,
+                    1.9551347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        },
+        {
+          "id": "LIFT_10MM",
+          "offset_m": [
+            0.0,
+            0.0,
+            0.01
+          ],
+          "poses": [
+            {
+              "fraction": 0.0,
+              "all_pairs": 152,
+              "new_pairs": 68,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 68,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 34,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.483619339329384,
+                    1.9631347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 34,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.483619339329384,
+                    1.9631347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.25,
+              "all_pairs": 118,
+              "new_pairs": 106,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 106,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.483619339329384,
+                    1.9631347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 56,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.483619339329384,
+                    1.9631347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.5,
+              "all_pairs": 114,
+              "new_pairs": 102,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 102,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7356920074049456,
+                    1.9631347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 52,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7356920074049456,
+                    1.9631347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 0.75,
+              "all_pairs": 99,
+              "new_pairs": 99,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 99,
+              "by_object": [
+                {
+                  "object": "Mesh_1832",
+                  "pairs": 49,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": 0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7356920074049456,
+                    1.9631347487989885
+                  ]
+                },
+                {
+                  "object": "Mesh_1833",
+                  "pairs": 50,
+                  "transverse": 0,
+                  "coplanar": 0,
+                  "max_two_sided_plane_crossing_depth_m": -0.0,
+                  "moving_z_range_above_sill_m": [
+                    1.7356920074049456,
+                    1.9631347487989885
+                  ]
+                }
+              ]
+            },
+            {
+              "fraction": 1.0,
+              "all_pairs": 0,
+              "new_pairs": 0,
+              "coplanar": 0,
+              "transverse": 0,
+              "other_touch_or_edge": 0,
+              "by_object": []
+            }
+          ],
+          "all_sampled_surface_contacts_clear": false
+        }
+      ],
+      "obstacle_topology": [
+        {
+          "object": "Mesh_1832",
+          "boundary_edges": 56,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        },
+        {
+          "object": "Mesh_1833",
+          "boundary_edges": 62,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        },
+        {
+          "object": "hallwayfloor_1",
+          "boundary_edges": 363,
+          "nonmanifold_edges": 0,
+          "closed_two_manifold_candidate": false,
+          "note": "Triangle-edge weld at 10um; closed topology alone does not prove an empty pocket."
+        }
+      ],
+      "pocket_certified": false,
+      "grade": "C",
+      "conclusion": "Investigated. Preserve floor contacts and transverse intersections separately; rebuild local guides/pockets in a later functional prototype. No tested offset is applied to the saved scene."
+    }
+  ],
+  "no_original_or_scene_geometry_modified": true
+}

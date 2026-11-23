@@ -1,0 +1,456 @@
+{
+  "time": "2026-10-21T12:44:27.925992+02:00",
+  "laboratory": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio",
+  "inventory_excludes": "TRASPASO (documentos nuevos de conservación)",
+  "files": 207,
+  "bytes": 203611846,
+  "originals_all_hashes_match": true,
+  "format_checks": [
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\A01_puente_completo.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\A02_puente_humanos.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\A03_planta_acotada.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\A04_seccion_alturas.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\A05_escalas_comparadas.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B00_catalogo_ensayos.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B01_CORTO_LARGO_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B01_CORTO_LARGO_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B02_DOS_RECTOS_CURVA_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B02_DOS_RECTOS_CURVA_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B03_RECTA_T_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B03_RECTA_T_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B04_CUATRO_VIAS_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B04_CUATRO_VIAS_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B05_MODULO_PUERTAS_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B05_MODULO_PUERTAS_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B06_TURBOLIFT_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B06_TURBOLIFT_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B07_RESIDENCIAL_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\B07_RESIDENCIAL_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\C01_puente_pasillo.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\C02_detalle_adaptador.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\D01_interior_camarote.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\D02_planta_camarote.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\D03_camarote_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\E01_puertas_cerradas.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\E02_puertas_intermedias.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\E03_puertas_abiertas.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\E04_sillas_grupos.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\G01_conjunto_completo.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\G02_conjunto_planta.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\G03_conjunto_perspectiva.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\CAPTURAS\\G04_cruce_y_turbolift.png",
+      "check": "file readability only; not validation of numerical conclusions",
+      "resolution": [
+        1700,
+        1150
+      ],
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\candidatos_accesos_y_muebles.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\capturas_manifest.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\comparacion_escala_max_obj.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\correspondencias_max_obj.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\ensamblajes_pruebas.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\entradas_antes.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\ergonomia_inicial.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\escenas_manifest.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\habitaciones_sondeo.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\interfaces_modulos.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\max_geometria.npz",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\max_objetos.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\modulos_geometria.npz",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\modulos_objetos.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\modulos_sondeo.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\obj_geometria.npz",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\obj_objetos.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\planos_horizontales_obj.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\preparacion_funcional.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\prototipo_conjunto.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\prototipo_geometria.npz",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\puertas_medidas.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\transitos_puente.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\transitos_puente_1p0.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\transitos_puente_1p15.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    },
+    {
+      "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\DATOS\\transitos_puente_1p2.json",
+      "check": "file readability only; not validation of numerical conclusions",
+      "readable": true
+    }
+  ],
+  "remaining_relevant_processes": [],
+  "process_check_exit": 0,
+  "git_read_only": {
+    "workspace": {
+      "path": "C:\\Users\\andro\\Documents\\ChatGPT\\UE5 y Blender",
+      "status_exit": 0,
+      "status": "## No commits yet on master",
+      "head": null
+    },
+    "Videojuego_StarTrek": {
+      "path": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek",
+      "status_exit": 0,
+      "status": "## main...origin/main",
+      "head": "3479faefb9aa56980265c5b03aeab3ba3ddd083f"
+    }
+  },
+  "last_completed_operation": "12_capturas.py: 33 capturas; Blender quit. Encuadres pendientes de corrección.",
+  "stop_point": "Antes de cambiar cámaras/maniquíes o repetir renders. Sin nuevas mediciones ni implementación desde la orden de parada.",
+  "blend_reopen_validation": "Pendiente; no se abre Blender durante el traspaso."
+}

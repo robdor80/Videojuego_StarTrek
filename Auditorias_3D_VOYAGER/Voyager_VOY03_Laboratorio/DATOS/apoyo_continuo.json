@@ -1,0 +1,126 @@
+{
+  "method": "Continuous bearing certificate: distance to a convex triangle is convex.\nIf both ends of an interval lie <= radius+8mm from one real triangle,\nthe entire interval does too. Require that triangle below both sphere centres.\nSubdivide the actual linear trajectory if the supporting triangle changes.\nThis is a capsule terrain envelope, not a human foot or gait simulation.\n",
+  "radius_m": 0.35,
+  "padding_bound_m": 0.008,
+  "upward_contact_component_bound": 0.5,
+  "vertical_separation_bound_m": 0.179,
+  "results": [
+    {
+      "id": "CENTRO_A_PASARELA",
+      "certified": true,
+      "intervals": 831,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.007763261822318734,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "CENTRO_A_NAVEGACION",
+      "certified": true,
+      "intervals": 606,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.006262841818321763,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "NAVEGACION_A_PASARELA",
+      "certified": true,
+      "intervals": 1450,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.007846085681003423,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "CENTRO_A_MANDO_IZQ",
+      "certified": true,
+      "intervals": 172,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.004033801698982875,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "CENTRO_A_MANDO_DER",
+      "certified": true,
+      "intervals": 172,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.004032436799766281,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "PASARELA_A_POSTERIOR",
+      "certified": true,
+      "intervals": 532,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.004019824090389423,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "ESCALERA_DERECHA",
+      "certified": true,
+      "intervals": 155,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.006075188066146875,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "ESCALERA_IZQUIERDA",
+      "certified": true,
+      "intervals": 155,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.0069766102089713344,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "ESCALERA_NAV_CENTRAL",
+      "certified": true,
+      "intervals": 100,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.007783150779063164,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "CENTRO_PUENTE_AL_TURBOLIFT",
+      "certified": true,
+      "intervals": 3176,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.007763261822318568,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "REGRESION_PUENTE_AL_TURBOLIFT",
+      "certified": true,
+      "intervals": 2344,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.004030923956968024,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "CENTRO_PUENTE_AL_CAMAROTE",
+      "certified": true,
+      "intervals": 3578,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.007763261822318568,
+      "same_trajectory_all_heights": true
+    },
+    {
+      "id": "REGRESION_PUENTE_AL_CAMAROTE",
+      "certified": true,
+      "intervals": 2746,
+      "failed_intervals": [],
+      "max_subdivision_depth": 0,
+      "maximum_bearing_distance_above_radius_m": 0.004024866198797883,
+      "same_trajectory_all_heights": true
+    }
+  ]
+}

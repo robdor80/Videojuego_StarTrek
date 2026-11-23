@@ -42,7 +42,7 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 
 | Era | Status | Anchor |
 |---|---|---|
-| TNG + DS9 + Voyager y su continuación histórica | ✅ ÚNICA ÉPOCA JUGABLE | Ventana documental 2364–2383; Academia propuesta para 2383, día/mes pendientes |
+| TNG + DS9 + Voyager y su continuación histórica | ✅ ÚNICA ÉPOCA JUGABLE | Ventana documental 2364–2383; inicio de Academia aprobado en 2383, día/mes pendientes |
 | Pike / Strange New Worlds | 📚 SOLO REFERENCIA HISTÓRICA | Christopher Pike / NCC-1701; perfil conservado y `playable: false` |
 | Kirk / TOS + films | 📚 SOLO REFERENCIA HISTÓRICA | James T. Kirk / NCC-1701/A; perfil conservado y `playable: false` |
 
@@ -580,7 +580,7 @@ Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runt
 
 ## LORE-03 — Historia, conflictos y continuidad galáctica (inicio 2026-10-23)
 
-**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `proyecto/docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
+**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 aprobado como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `proyecto/docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
 
 | Apartado | Estado | Alcance actual |
 |---|---|---|
@@ -609,6 +609,24 @@ Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. Registro de cierre A�
 Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md`. Los documentos con etiquetas `CANDIDATE_PENDING_MERGE` son **fotografías de sus PR anteriores**; este índice y el acta posfusión registran el estado administrativo vigente. Las ramas históricas no se eliminan automáticamente.
 
 
+## LORE-05 — Profundización documental (inicio 2026-11-13)
+
+**LORE-05A — Reconciliación y consolidación: ✅ COMPLETE_DOCUMENTARY.** [PR #124](https://github.com/robdor80/Videojuego_StarTrek/pull/124) fusionada mediante squash `05ff35625a5358944dad0bd7dc4a9a091af28387`; [CI LORE-05A postfusión #43332503938](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43332503938) **SUCCESS** junto con 9/9 workflows del commit de fusión. Acta: [cierre documental LORE-05A](proyecto/docs/roadmap/lore_05_a/ACTA_CIERRE_DOCUMENTAL_LORE05A_20261113.md).
+
+**DEC-0020 — Identidad vigente:** la nave aspiracional es la **USS Enterprise NCC-1701-D**, `class_id=galaxy`. **Proyecto Valhalla** es el programa de recuperación, reconstrucción y modernización del buque individual, dirigido por Geordi La Forge en la continuidad del videojuego. Se mantiene 2379 origen, 2380 inicio de trabajos, Academia/Odyssey 2383 y alistamiento **objetivo condicional 2387**. El relato audiovisual de *Picard* en 2401 es referencia canónica futura, **no** desenlace obligatorio de campaña. Ver [DEC-0020](proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md).
+
+**Frontera de cierre:** la antigua `class_id=valhalla`, las 16 elecciones técnicas VAL-TEC y las dotaciones F04 se conservan por compatibilidad histórica, **no** se trasladan automáticamente a Enterprise-D ni implican instalación, plaza o capitanía. Ningún runtime CoreRPG/HOST/UE5, malla, guardado o simulación se certifica por esta fusión.
+
+**LORE-05B — Personajes legendarios, biografías y relaciones: ✅ COMPLETE_DOCUMENTARY (alcance 12/12).** [PR #126](https://github.com/robdor80/Videojuego_StarTrek/pull/126): 12 fichas autorales aprobadas y validadas, con 84/84 verificaciones documentales y 29 referencias internas examinadas; [elenco cerrado](mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md) y [acta de auditoría](mundo/lore/characters/LORE05B_AUDITORIA_PRECIERRE_2026-11-13.md). El cierre registra únicamente **diseño/lore**; NPC activos, eventos, cronología personal exacta, 3D, IA, HOST, CoreRPG y UE5 siguen pendientes de fases de integración. PR #126 **fusionada** (squash `4df4d23f2e050bba830f6696a27bb6d4c004fd2f`); **20/20 workflows de pull request del HEAD final `67b1eaa6...` SUCCESS**. El acta enlazada refleja el precierre histórico anterior a la fusión, no el estado actual. No consta workflow exclusivo de 05B: sus 84 comprobaciones son documentales.
+
+**LORE-05C — Mundos, colonias y localizaciones: ✅ COMPLETE_DOCUMENTARY (alcance 16/16).** [Guía narrativa](mundo/lore/astrography/worlds/lore05c_guia_localizaciones_2026-11-13.md), [catálogo de referencia](mundo/lore/astrography/worlds/lore05c_priority_locations_v0.1.json) y [acta de cierre](proyecto/docs/roadmap/lore_05_c/ACTA_CIERRE_DOCUMENTAL_LORE05C_20261113.md), [PR #127](https://github.com/robdor80/Videojuego_StarTrek/pull/127). 13 anclajes ya existentes, Marte en contexto Sol y dos colonias históricas sin nueva navegación; 12 escenarios documentales y 14/14 pruebas adversariales sobre HEAD inicial 6a20c243, [CI LORE-05C #43353077576](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353077576) SUCCESS. **Verificación posterior LORE-05F:** HEAD final `4ea1c087...`, **20/20 workflows de PR SUCCESS**, incluido [LORE-05C #43353283486](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43353283486); PR #127 fusionada (`5cecf75fa647e60c050b40c7c6d2ce87ec6e2e95`). No hay ejecución en CoreRPG/HOST/UE5 ni rutas, colonias o NPC nuevos instalados.
+
+**LORE-05D — Naves, instalaciones y organizaciones: ✅ COMPLETE_DOCUMENTARY (alcance cerrado).** [PR #128](https://github.com/robdor80/Videojuego_StarTrek/pull/128), [guía narrativa](mundo/lore/operations/LORE05D_NAVES_INSTALACIONES_ORGANIZACIONES_20261113.md), [catálogo 8/12/8+2](mundo/lore/operations/lore05d_entities_v0.1.json), [acta](proyecto/docs/roadmap/lore_05_d/ACTA_CIERRE_DOCUMENTAL_LORE05D_20261113.md) y 18 casos de seguridad documental. Validador PASS, **25/25 pruebas adversariales PASS** y [CI LORE-05D #43354375724](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354375724) SUCCESS en HEAD previo al acta `de4f7d1`; 7/7 workflows de ese HEAD verdes. **Verificación posterior LORE-05F:** HEAD final `6b265245...`, **20/20 workflows de PR SUCCESS**, incluido [LORE-05D #43354607817](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43354607817); PR #128 fusionada (`54de78c2240e7876d4ef3d2b1c96bbe1f55e8f29`). No se crea nueva nave individual, estación, permiso, guerra o misión y no hay ejecución CoreRPG/HOST/UE5. Defiant original destruida en 2375 ≠ São Paulo rebautizada; Enterprise-D permanece Galaxy bajo Proyecto Valhalla.
+
+**LORE-05E — Idiomas, comunicación y exploración: ✅ COMPLETE_DOCUMENTARY (8 lenguas existentes, 18 reglas, 24 escenarios).** [PR #129](https://github.com/robdor80/Videojuego_StarTrek/pull/129) fusionada mediante squash `2d477179342a9f26edb46b95dc494dba8088bee5`; [CI HEAD final #43355862872](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43355862872) SUCCESS con validador y **24/24 pruebas**, y **7/7** workflows aplicables del HEAD definitivo en verde. [Acta de cierre](proyecto/docs/roadmap/lore_05_e/ACTA_CIERRE_DOCUMENTAL_LORE05E_20261113.md). Sin implementación CoreRPG/HOST/UE5/PADD, sin nuevo idioma jugable, contacto automático ni Delta activo.
+
+**LORE-05F — Auditoría transversal: ✅ COMPLETE_DOCUMENTARY.** [PR #131](https://github.com/robdor80/Videojuego_StarTrek/pull/131) aprobada para fusión por el autor y entregada con [acta transversal](proyecto/docs/roadmap/lore_05_f/ACTA_AUDITORIA_TRANSVERSAL_20261113.md), [matriz de 16 deudas](proyecto/docs/roadmap/lore_05_f/MATRIZ_DE_HANDOFF_Y_DEUDAS.md) y validador independiente. **LORE-05 GLOBAL: ✅ COMPLETE_DOCUMENTARY** una vez fusionada la PR #131 en `main`; ver comprobación real de CI y merge en GitHub. Este cierre valida exclusivamente el universo documental, **nunca el funcionamiento en CoreRPG/HOST/UE5**.
+
 ## Procedural living-universe master plan
 
 Control documents:
@@ -623,3 +641,70 @@ Current layer status:
 - **120 BLOCKED_RUNTIME** — waits on CoreRPG Generic World State and later runtime capabilities.
 
 This status does **not** mean all species, planets, ships, organizations or assets are exhaustively populated. It means their governing procedural contracts and cross-domain rules now have a coherent baseline.
+
+## P2 — Universo dinámico: Bloque 4 (2026-11-12)
+
+**Bloque 4 — Economía viva interplanetaria e interestelar: COMPLETE_REFERENCE** en contratos, simulador determinista y pruebas Star Trek. Su referencia es `proyecto/docs/roadmap/procedural_living_economy_plan_v0.1.md`, con acta `proyecto/docs/roadmap/P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md` y estado `proyecto/docs/roadmap/procedural_living_economy_status_v0.1.json`.
+
+**Validación:** workflow [P2-B04 #43192447974](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43192447974) SUCCESS: 30 pruebas de economía, 62 pruebas de bloques dinámicos 1–4 (incluyendo esas 30), regresión LORE-04B y JSON. LORE-04B sigue cerrado **solo documentalmente**; sus referencias de octubre al Bloque 4 pendiente reflejan el estado anterior, no la fotografía actual.
+
+**Limitación:** no hay integración CoreRPG/UE5/HOST, ni un mercado económico ejecutándose autónomamente en la campaña. WorldState, tiempo, acciones, transacciones y guardado genéricos siguen siendo propiedad de CoreRPG. **Siguiente bloque secuencial: Bloque 5 — Historia procedural y acontecimientos importantes.**
+
+
+
+## P2 — Universo dinámico: Bloque 5 (2026-11-12)
+
+**Bloque 5 — Historia procedural y grandes acontecimientos: COMPLETE_REFERENCE** tras contrato, generador offline de referencia, historia append-only, conocimiento filtrado, fixture y pruebas deterministas. Plan: `proyecto/docs/roadmap/procedural_history_major_events_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_history_major_events_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md`. PR #114.
+
+**Validación final de referencia:** [run #43195780820](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43195780820), SUCCESS: 36/36 pruebas nuevas B05, 98/98 regresiones B1–B5, 28/28 pruebas F13, y JSON/CLI. El bloque 5 no ejecuta cambios de soberanía, guerras, producción, misiones, descubrimientos ni crisis: consume hechos aceptados. No hay CoreRPG/UE5/HOST ni save/load real integrados por este bloque. **Siguiente bloque elegible: Bloque 6 — Ciencia, tecnología y descubrimientos.**
+
+## P2 — Universo dinámico: Bloque 6 (2026-11-12)
+
+**Bloque 6 — Ciencia, tecnología y descubrimientos: COMPLETE_REFERENCE** en los paquetes **ST001–ST018 (18/18)**, reutilizando las decisiones de LORE-02 D. Plan: `proyecto/docs/roadmap/procedural_science_technology_discovery_plan_v0.1.md`; estado `proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json`; acta `proyecto/docs/roadmap/P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md`. Rama de cierre / PR #115.
+
+**Pruebas:** [Actions #43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066) SUCCESS tras sincronizar F13/B07 y los documentos: **54/54** B06, **152/152** regresiones dinámicas B1–B6 (54 incluidas), **29/29** F13 tras actualización de frontera, JSON y CLI deterministas. Auditoría transversal 16/16 workflows SUCCESS en commit f81de6332ef71588e27fd20848f8b7ee12dcdfed; verificar cualquier revisión documental posterior antes de fusionar.
+
+**Frontera:** sólo hechos sintéticos offline. Ningún avance científico real, autoinstalación de mejoras, viaje temporal, misión Omega ejecutable, scheduler offscreen, guardado real, interfaz de CoreRPG/HOST o sala UE5 se declara implementado. Queda permitido el reconocimiento histórico documentado de NPC, sin atribución ni nombre automático. **Siguiente elegible tras fusión: Bloque 7 — Fenómenos, anomalías y arqueología procedural**. Bloques 8–10 sin comenzar.
+
+
+## P2 — Universo dinámico: Bloque 7 (2026-11-12)
+
+**Bloque 7 — Fenómenos, anomalías y arqueología procedural: REFERENCE_COMPLETE (PR #116 fusionada; CI B07/F13 posfusión verde)** en **PA001–PA018 (18/18)**. Plan `proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md`, estado `proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json`, acta `proyecto/docs/roadmap/P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md`.
+
+**Evidencia certificada:** [Actions #43207092271](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43207092271), SUCCESS en `ba881f723f1a2bc8180402081a42889d8388a639`: **56/56** B07, **208/208** regresiones B1–B7, **30/30** F13, JSON y CLI; auditoría 19/19 workflows SUCCESS sobre ese mismo HEAD. La sincronización documental del acta/manifiesto es posterior: exigir CI de su último commit antes de fusionar PR #116.
+
+Se define generación determinista previa a la observación, hechos causales aceptados (incluidos nuevos fenómenos durante la campaña), slots que no se rerollean, registros de sensores con autor/instrumento, evolución física, ruinas con custodia/permiso, hallazgos de estrato sin apropiación, hipótesis parciales y conocimiento filtrado. El fixture y sus `accepted` **no son WorldState real**: sin runtime CoreRPG/F06/HOST/UE5, sin contenidos 3D ni NPC autónomos demostrados. Anomalías extraordinarias/Omega requieren autoría específica; no hay viaje temporal jugable, misiones o crisis automáticas. **Tras fusión: B08 — Crisis sistémicas.**
+
+**Seguimiento de CI transversal posfusión:** la comprobación heredada de cierre de Academia aún exigía el estado inicial `READY_TO_RESUME` del Bloque 4, incompatible con el progreso real hasta B07. Una corrección acotada preserva aquel dato histórico y valida la frontera presente B08 mediante prueba independiente, sin alterar la simulación de anomalías ni marcar Academia runtime completa.
+
+
+## P2 — Universo dinámico: Bloque 8 (2026-11-12)
+
+**Bloque 8 — Crisis sistémicas y consecuencias a escala galáctica: REFERENCE_COMPLETE (PR #118 FUSIONADA, CI posfusión 19/19 verde)** en **CR001–CR020 (20/20)**. Plan: `proyecto/docs/roadmap/procedural_systemic_crises_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_systemic_crises_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md`. Primera evidencia [Actions #43259713758](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758): **56/56** pruebas adversariales B08, **264/264** regresiones B01–B08, **30/30** F13, sintaxis/JSON/CLI. Exigir de nuevo CI del HEAD definitivo antes de fusionar.
+
+El expediente procede de **hechos de choque existentes y ya aceptados en un fixture**, proyecta causalmente riesgo entre redes, superpone choques documentados, exige autorizaciones para intervenir (excepción explícita en mundo prewarp), registra contención/recuperación y entrega noticias con clasificación/retardo. Ninguna escasez, víctima, población, inventario, nave, frontera, tecnología o misión se crea ni cambia. Los datos con `accepted` son **ficticios, no CoreRPG real**. B09 será el siguiente bloque elegible **después de fusión y validación final**; B10 pendiente. F13 PLANIFICADA, sin ejecución HOST/UE5, guardado ni scheduler Core.
+
+
+**Cierre administrativo P2-B08:** PR #118 fusionada en main (commit `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`). [B08 posfusión #43260787149](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149) y [F13 posfusión #43260787238](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238): SUCCESS, junto con **19/19 workflows** del HEAD de fusión. **B09 ya habilitado** para su trabajo de referencia; B10 TODO, F13 global PLANIFICADA y ninguna ejecución CoreRPG/HOST/UE5 nueva. Las puertas «pendientes» mencionadas antes conservan su valor de seguimiento previo.
+
+## P2 — Universo dinámico: Bloque 9 (2026-11-12)
+
+**Bloque 9 — Misiones emergentes derivadas del estado del universo: REFERENCE_COMPLETE en contrato y evaluador offline, 20/20 paquetes EM001–EM020.** Plan: `proyecto/docs/roadmap/procedural_emergent_missions_plan_v0.1.md`; estado: `proyecto/docs/roadmap/procedural_emergent_missions_status_v0.1.json`; acta: `proyecto/docs/roadmap/P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md`. Necesidades sintéticas expresamente aceptadas y derivadas de consecuencias independientes, sin crear misiones desde una proyección B08 ni por distancia del jugador. La agencia NPC puede resolver la necesidad antes de que llegue la noticia a la Enterprise-D; se exigen órdenes y reservas externas, verificación de Primera Directriz y resultado aceptado para cerrar.
+
+**No es una implementación de misiones jugables**: los datos `accepted` del fixture no están firmados por CoreRPG; no hay recursos consumidos, asignaciones ejecutadas, órdenes HOST/F11 reales, UE5, PADD ni scheduler B10. La puerta B10 se habilita sólo tras CI definitivo y fusión B09; F13 general PLANIFICADA y capas 119/120 intactas.
+
+**Cierre administrativo P2-B09:** [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fusionada en main (`4c8733da7cef6acf2b0a0c4259734a615ffed2d0`), último HEAD premerge con **20/20 workflows verdes**, incluidos 65/65 B09, 329/329 regresiones dinámicas, 30/30 F13 y 9/9 Academia. **B10 habilitado** sólo para trabajo de referencia. No se afirma prueba CI posfusión con las herramientas disponibles; el juego integrado permanece pendiente.
+
+## P2 — Universo dinámico: Bloque 10, cierre de referencia (2026-11-12)
+
+**B10 REFERENCE_COMPLETE sólo en contrato y referencia offline, GS001–GS020 (20/20)**. Se añade simulador de arbitraje entre intenciones ya aceptadas por B01–B09, reloj virtual autorizado por lotes, presupuestos, cuotas, prioridad con envejecimiento, outbox de propuestas con ID estable, recibos externos, hash de journal y acceso por entregas clasificadas. Plan: proyecto/docs/roadmap/procedural_background_galactic_evolution_plan_v0.1.md; manifiesto: procedural_background_galactic_evolution_status_v0.1.json; acta: P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md.
+
+**Evidencia inicial [Actions #43277716336](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43277716336)**: 50/50 casos B10, 379/379 regresiones B01–B10, 30/30 F13 y 9/9 Academia PASS; workflow SUCCESS. La fusión exige certificar todavía el último HEAD. **Todos los 10 bloques quedan definidos/probados como referencia, NO se ejecuta un universo persistente en segundo plano en CoreRPG/HOST/UE5.** No se introduce segundo escritor WorldState, ni reloj de pared, ni recursos reales, ni nuevos hechos, ni misiones jugables; los accepted del fixture son falsos hechos simulados. F13 global sigue PLANIFICADA, capa 119 PARTIAL, 120 BLOCKED_RUNTIME.
+
+**Endurecimiento y segunda auditoría:** tras proteger deduplicación del intent externo, impedir noticias anteriores a su hecho emisor, limitar configuración y comprobar prioridad envejecida, el commit `7cbc4631b4cea44e7657c9115716872ad29a55a0` superó **54/54 B10, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia** en [Actions #43278574994](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43278574994); los **22/22 workflows** asociados quedaron SUCCESS. Esta certificación es anterior al commit documental que la registra; ese commit deberá pasar sus propios checks antes de la fusión.
+
+## Certificación administrativa definitiva — 12/11/2026
+
+La [PR #122](https://github.com/robdor80/Videojuego_StarTrek/pull/122) quedó **fusionada** en main con squash `e3ae738d9ae14f949982b49ef3b2786dfcdf18db`. El último HEAD premerge `8b1683542fdb8025f46d7322256ff99b53fefa0f` pasó **26/26 workflows SUCCESS**. Sobre el commit real de fusión, la CI volvió a terminar con **21/21 SUCCESS**, incluido [P2-B10 posfusión #43279008660](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43279008660), así como F13 y Academia. La suite B10 ampliada cuenta 54/54 casos, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia (medido sobre el HEAD endurecido anterior a la última revisión documental).
+
+**Decisión:** B10 = REFERENCE_COMPLETE, GS001–GS020 (20/20). **Planificación 2 cierra los diez bloques exclusivamente en madurez de referencia**, no como motor galáctico nativo. F13 global continúa PLANIFICADA, capas 119 PARTIAL/120 BLOCKED_RUNTIME, CoreRPG/HOST/UE5 y NPC offscreen jugables sin acreditar. Las referencias previas a CI/merge pendientes eran controles históricos y quedan reemplazadas por esta certificación.

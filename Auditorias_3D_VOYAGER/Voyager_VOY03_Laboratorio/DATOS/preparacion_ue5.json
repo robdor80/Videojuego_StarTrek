@@ -1,0 +1,452 @@
+{
+  "executed_in_ue": false,
+  "geometry_blender_passed": true,
+  "ue_viability": "estimated favorable, pending real tests",
+  "radius_cm": 35,
+  "total_heights_cm": [
+    160,
+    175,
+    190
+  ],
+  "half_heights_cm": [
+    80,
+    87.5,
+    95
+  ],
+  "step_limit_cm_lab_hypothesis": 18,
+  "slope_degrees_future_hypothesis": 40,
+  "objects": [
+    {
+      "object": "Mesh_1856",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -4.584632921218873,
+          -4.7342462062835695,
+          0.02332566659897566
+        ],
+        [
+          4.593026828765869,
+          0.5702598810195924,
+          0.736743724346161
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1859",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -6.442341613769532,
+          -0.36002444028854375,
+          0.7835250854492188
+        ],
+        [
+          6.4273230075836185,
+          7.045969676971436,
+          0.7835256099700928
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1860",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          3.4106335163116457,
+          -0.29119966328144076,
+          0.47944158315658575
+        ],
+        [
+          4.593026828765869,
+          0.3823578178882599,
+          0.479441648721695
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1861",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -4.584632921218873,
+          -0.2898950815200806,
+          0.47944158315658575
+        ],
+        [
+          -3.4016036272048953,
+          0.3839187264442444,
+          0.479441648721695
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1862",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          3.2525998353958134,
+          -0.10582874938845635,
+          0.63148792386055
+        ],
+        [
+          4.433469676971436,
+          0.565424257516861,
+          0.6314879894256592
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1863",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -4.424811410903931,
+          -0.10526774972677232,
+          0.63148792386055
+        ],
+        [
+          -3.2411852121353153,
+          0.5702598810195924,
+          0.6314879894256592
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_2121",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -0.47112671434879305,
+          -2.229111433029175,
+          0.16951454132795335
+        ],
+        [
+          0.48331471085548405,
+          -2.0514504432678224,
+          0.16951455771923066
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_2122",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -0.47111901044845583,
+          -2.0088981628417972,
+          0.3215532273054123
+        ],
+        [
+          0.48331471085548405,
+          -1.8312359929084778,
+          0.3215532600879669
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_2123",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -1.9879101157188417,
+          -2.8219278097152714,
+          0.1812141761183739
+        ],
+        [
+          -1.638975751399994,
+          -2.289467525482178,
+          0.18121420890092851
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_2124",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          1.6506170988082887,
+          -2.8221323728561405,
+          0.1812141761183739
+        ],
+        [
+          1.9995514631271365,
+          -2.289672088623047,
+          0.18121420890092851
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1968",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -3.363486433029175,
+          -4.699140548706055,
+          0.3274029463529587
+        ],
+        [
+          3.3757185220718386,
+          -0.5651469826698303,
+          0.32740327417850495
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1848",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -3.363486433029175,
+          -4.699140548706055,
+          0.32155312895774846
+        ],
+        [
+          3.3757185220718386,
+          -0.5651469826698303,
+          0.3215534567832947
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1739",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -4.584632921218873,
+          -0.2898950815200806,
+          0.4326596975326538
+        ],
+        [
+          -3.602452635765076,
+          0.1619035303592682,
+          0.479441648721695
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1740",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -4.424811410903931,
+          -0.10526775792241097,
+          0.58470498919487
+        ],
+        [
+          -3.4413699150085453,
+          0.3460787415504456,
+          0.6314879894256592
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1755",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          2.075480055809021,
+          -0.3597615242004395,
+          0.7367436587810517
+        ],
+        [
+          6.43465371131897,
+          0.8153453409671784,
+          0.7835256099700928
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1807",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          3.6109865903854375,
+          -0.29119966328144076,
+          0.4326596975326538
+        ],
+        [
+          4.593026828765869,
+          0.16018974035978317,
+          0.479441648721695
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1808",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          3.4502028465271,
+          -0.105828757584095,
+          0.58470498919487
+        ],
+        [
+          4.433469676971436,
+          0.3444815427064896,
+          0.6314879894256592
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1809",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -6.448329544067383,
+          -0.3557135343551636,
+          0.7367436587810517
+        ],
+        [
+          -2.062846446037293,
+          0.8367887377738953,
+          0.7835256099700928
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1810",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          0.76268829703331,
+          -2.243728256225586,
+          0.4326597303152085
+        ],
+        [
+          3.472835397720337,
+          -0.3161014556884766,
+          0.4794417798519135
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1811",
+      "role": "floor or stair, preserve entire geometry",
+      "bounds": [
+        [
+          -3.4613182306289674,
+          -2.243728256225586,
+          0.4326597303152085
+        ],
+        [
+          0.7533305823802948,
+          -0.3116442739963532,
+          0.4794417798519135
+        ]
+      ],
+      "future_collision": "measured support / solid local stair collision; preserve openings",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_1787",
+      "role": "console, obstacle, not floor",
+      "bounds": [
+        [
+          -1.5728217363357546,
+          -4.314152717590332,
+          0.3274031758308411
+        ],
+        [
+          1.5850097656250002,
+          -3.642732429504395,
+          0.5145319312810899
+        ]
+      ],
+      "future_collision": "obstacle",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1788",
+      "role": "console, obstacle, not floor",
+      "bounds": [
+        [
+          -1.5728217363357546,
+          -4.314146161079407,
+          0.8029133439064027
+        ],
+        [
+          1.5850097656250002,
+          -3.528242373466492,
+          0.8496952950954438
+        ]
+      ],
+      "future_collision": "obstacle",
+      "normal_review": false
+    },
+    {
+      "object": "Mesh_2096",
+      "role": "obstacle",
+      "bounds": [
+        [
+          -2.4147640228271485,
+          -1.818435323238373,
+          0.3274030447006226
+        ],
+        [
+          -2.3081651210784915,
+          -1.7574237108230593,
+          1.3332067012786866
+        ]
+      ],
+      "future_collision": "obstacle",
+      "normal_review": true
+    },
+    {
+      "object": "Mesh_1944",
+      "role": "obstacle",
+      "bounds": [
+        [
+          3.9708976030349734,
+          0.9157225728034973,
+          0.7835266590118409
+        ],
+        [
+          4.089246821403504,
+          1.0213874995708467,
+          1.9062856197357179
+        ]
+      ],
+      "future_collision": "obstacle",
+      "normal_review": true
+    }
+  ]
+}

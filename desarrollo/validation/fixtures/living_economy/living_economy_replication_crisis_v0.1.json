@@ -1,0 +1,22 @@
+{
+  "fixture_id": "living_economy_replication_crisis_v0.1",
+  "classification": "GAME_ADDITION_TEST_ONLY",
+  "description": "Isolated clinic request cannot instantiate a specialized medical pattern when local energy is zero. Failure is atomic; a rumor is not a fact.",
+  "case": "LORE-04B02 B02-01 and B05 ECO-06/ECO-08",
+  "initial_state_ref": "living_economy_frontier_supply_v0.1.json",
+  "modification": {
+    "facility_id": "frontier_workshop",
+    "power_units": 0
+  },
+  "attempt": {
+    "event_id": "fabricate-when-powerless",
+    "kind": "replicate",
+    "tick": 1,
+    "authority_ref": "clinic_order",
+    "facility_id": "frontier_workshop",
+    "item": "medkit",
+    "quantity": 1
+  },
+  "expected_failure": "insufficient power",
+  "expected_medkit_delta": 0
+}

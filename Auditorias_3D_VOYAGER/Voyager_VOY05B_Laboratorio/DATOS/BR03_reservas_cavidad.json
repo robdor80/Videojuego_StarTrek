@@ -1,0 +1,70 @@
+[
+  {
+    "side": -1,
+    "margin": 0,
+    "local_min": [
+      -0.021255,
+      -0.79777,
+      0.0
+    ],
+    "local_max": [
+      0.021255,
+      -0.37915,
+      1.775577
+    ],
+    "intersecting_triangles": {},
+    "total": 0,
+    "method": "triangle/AABB SAT of static proposed reservation; boundary contact included; box is conservative envelope, not a displaced leaf"
+  },
+  {
+    "side": -1,
+    "margin": 0.01,
+    "local_min": [
+      -0.031255,
+      -0.79777,
+      0.01
+    ],
+    "local_max": [
+      0.031255,
+      -0.37915,
+      1.785577
+    ],
+    "intersecting_triangles": {},
+    "total": 0,
+    "method": "triangle/AABB SAT of static proposed reservation; boundary contact included; box is conservative envelope, not a displaced leaf"
+  },
+  {
+    "side": 1,
+    "margin": 0,
+    "local_min": [
+      -0.021255,
+      0.37915,
+      0.0
+    ],
+    "local_max": [
+      0.021255,
+      0.79777,
+      1.775577
+    ],
+    "intersecting_triangles": {},
+    "total": 0,
+    "method": "triangle/AABB SAT of static proposed reservation; boundary contact included; box is conservative envelope, not a displaced leaf"
+  },
+  {
+    "side": 1,
+    "margin": 0.01,
+    "local_min": [
+      -0.031255,
+      0.37915,
+      0.01
+    ],
+    "local_max": [
+      0.031255,
+      0.79777,
+      1.785577
+    ],
+    "intersecting_triangles": {},
+    "total": 0,
+    "method": "triangle/AABB SAT of static proposed reservation; boundary contact included; box is conservative envelope, not a displaced leaf"
+  }
+]

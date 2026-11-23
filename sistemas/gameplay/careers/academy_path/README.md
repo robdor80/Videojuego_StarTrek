@@ -86,3 +86,7 @@ See:
 The living-Academy layer is tracked in `life/` and `proyecto/docs/roadmap/academy_life_social_simulation_plan_v0.1.md`.
 
 Current status: **Step 1/20 — Academy population COMPLETE.** The Academy population now has explicit cohort/group accounting, Tier A/B/C conservation, player-slot accounting and membership/presence separation. Procedural individual cadet generation is deliberately reserved for Step 2.
+
+## Protagonista único — DEC-0022 del 17-11-2026
+
+La vía de **nueva partida** ya no ofrece el editor abierto de tres especies, sino un **híbrido humano-vulcano varón de 45 años, descendiente de Khan**, cuyo historial se presenta en una introducción ilustrada. El jugador puede adaptar su nombre/aspecto menor; no cambiar raza/sexo/edad/biografía. Janeway y Picard respaldan su derecho a una evaluación justa en 2383; la Academia mantiene la **autoridad de admisión** y la formación de cuatro años; no se regala plaza ni rango. La presentación de entrada a Academia es idempotente; evitar obligar a repetir evaluaciones ya resueltas en el prólogo. El código F10/HOST y los antiguos formularios todavía necesitan migración. Ver `proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md` y `sistemas/gameplay/character_creation/S04_PROTAGONISTA_IDENTIDAD_CARRERA_v2.md`.

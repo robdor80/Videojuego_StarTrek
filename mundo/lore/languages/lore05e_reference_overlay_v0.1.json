@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05E",
+  "campaign_baseline_year": 2383,
+  "world_state_authority": "CoreRPG_ONLY",
+  "kind": "DOCUMENTARY_REFERENCE",
+  "runtime_implemented": false,
+  "world_state_mutations": false,
+  "automatic_discoveries": false,
+  "automatic_contact": false,
+  "automatic_diplomacy": false,
+  "automatic_dlc_unlock": false,
+  "canonical_faction_or_civilization_additions": 0,
+  "new_playable_language_definitions": 0,
+  "source_contracts": {
+    "language_catalogue": "sistemas/gameplay/languages/initial_language_catalogue.json",
+    "language_runtime": "sistemas/gameplay/languages/language_runtime_model.json",
+    "language_generator": "sistemas/universe/generation/procedural_civilization_language_naming_generation_v0.1.json",
+    "translator_bootstrap": "sistemas/gameplay/first_contact/universal_translator_bootstrap_v0.1.json",
+    "subspace": "sistemas/gameplay/communications/subspace_communication_contract.json",
+    "communications": "sistemas/gameplay/communications/communications_model.json",
+    "prime_directive": "sistemas/gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+    "first_contact": "sistemas/gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+    "first_contact_states": "sistemas/gameplay/first_contact/civilization_contact_status_model_v0.1.json",
+    "exploration": "sistemas/gameplay/exploration/exploration_progress_model.json",
+    "astroknowledge": "sistemas/gameplay/exploration/astrographic_knowledge_state.json",
+    "character_knowledge": "sistemas/gameplay/knowledge/character_knowledge_state.json",
+    "provenance": "mundo/sources/provenance_policy.md",
+    "decision_language": "proyecto/docs/decisions/player_facing_language.md",
+    "decision_enterprise": "proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md",
+    "lore05c": "proyecto/docs/roadmap/lore_05_c/README.md",
+    "lore05d": "proyecto/docs/roadmap/lore_05_d/README.md"
+  },
+  "translator_states": [
+    "direct_shared_language",
+    "universal_translator_confident",
+    "universal_translator_partial",
+    "universal_translator_literal_only",
+    "analysis_required",
+    "untranslated"
+  ],
+  "channel_states": [
+    "not_attempted",
+    "acquiring",
+    "connected",
+    "degraded",
+    "delayed",
+    "store_and_forward",
+    "blocked",
+    "jammed",
+    "lost",
+    "recipient_refused"
+  ],
+  "existing_languages": [
+    {
+      "language_id": "klingonese",
+      "display_name_es": "Klingon",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": null,
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "romulan",
+      "display_name_es": "Romulano",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": null,
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "bajoran",
+      "display_name_es": "Bajorano",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": null,
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "ferengi",
+      "display_name_es": "Ferengi",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": null,
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "trill",
+      "display_name_es": "Trill",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": null,
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "breen",
+      "display_name_es": "Breen",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": "MAIN_GAME",
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "kazon",
+      "display_name_es": "Kazon",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": "DLC_DELTA_FUTURE",
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    },
+    {
+      "language_id": "talaxian",
+      "display_name_es": "Talaxiano",
+      "source_catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+      "availability_scope": "DLC_DELTA_FUTURE",
+      "auto_assume_fluency": false,
+      "auto_assume_monolingual_species": false,
+      "auto_unlock_dlc": false
+    }
+  ],
+  "narrative_rules": [
+    {
+      "id": "E-R01",
+      "area": "language",
+      "rule_es": "Lengua, especie, ciudadanía, identidad cultural y competencia individual no son equivalentes."
+    },
+    {
+      "id": "E-R02",
+      "area": "language",
+      "rule_es": "El catálogo existente de ocho lenguas es una muestra, no un censo completo; los registros Delta no desbloquean el DLC."
+    },
+    {
+      "id": "E-R03",
+      "area": "language",
+      "rule_es": "Nombres propios, exónimos, endónimos y transliteraciones exigen evidencia; la IA no revela autodenominaciones antes de conocerlas."
+    },
+    {
+      "id": "E-R04",
+      "area": "translation",
+      "rule_es": "Una traducción literal correcta puede expresar una intención cultural incorrecta; usar incertidumbre explícita."
+    },
+    {
+      "id": "E-R05",
+      "area": "translation",
+      "rule_es": "La mejora de una matriz requiere observaciones/intercambios causales aceptados y persiste; no se recalcula por escena."
+    },
+    {
+      "id": "E-R06",
+      "area": "communication",
+      "rule_es": "La calidad del enlace, el cifrado, la autenticación, la demora y la traducción son capas independientes."
+    },
+    {
+      "id": "E-R07",
+      "area": "communication",
+      "rule_es": "Una señal emitida no concede recepción ni conocimiento; transmisor y destinatario conservan vistas diferentes."
+    },
+    {
+      "id": "E-R08",
+      "area": "communication",
+      "rule_es": "Mensajes y órdenes requieren emisor/autoridad comprobables; F11 decide validez, HOST no reimplementa F11."
+    },
+    {
+      "id": "E-R09",
+      "area": "exploration",
+      "rule_es": "Objeto real, detección, identificación, cartografía, visita y publicación son eventos/estados distintos."
+    },
+    {
+      "id": "E-R10",
+      "area": "exploration",
+      "rule_es": "No revelar ruinas, formas de vida, recursos, rutas ni propiedades por un escaneo genérico si sensores y CoreRPG no lo exponen."
+    },
+    {
+      "id": "E-R11",
+      "area": "exploration",
+      "rule_es": "La ficha de carta puede caducar; una base de datos no conoce el mundo automáticamente."
+    },
+    {
+      "id": "E-R12",
+      "area": "first_contact",
+      "rule_es": "Descubrir vida inteligente no equivale a permiso de contacto, tratado, membresía ni soberanía."
+    },
+    {
+      "id": "E-R13",
+      "area": "first_contact",
+      "rule_es": "Primera Directriz obliga a revisar desarrollo, contaminación, consentimiento, jurisdicción y cadena de mando; no hay excepción automática."
+    },
+    {
+      "id": "E-R14",
+      "area": "first_contact",
+      "rule_es": "Una facción, capitán local o científico no representa necesariamente a toda su civilización."
+    },
+    {
+      "id": "E-R15",
+      "area": "knowledge",
+      "rule_es": "El PADD exterior combina conocimiento adquirido y permisos; secretos no se exportan por precaución."
+    },
+    {
+      "id": "E-R16",
+      "area": "presentation",
+      "rule_es": "El idioma del jugador es español de España; el doblaje/voz no garantiza idioma diegético conocido."
+    },
+    {
+      "id": "E-R17",
+      "area": "world",
+      "rule_es": "El universo causal persiste sin presencia del jugador, no se generan civilizaciones o eventos para satisfacerle."
+    },
+    {
+      "id": "E-R18",
+      "area": "world",
+      "rule_es": "Enterprise-D (NCC-1701-D) clase Galaxy sigue en reconstrucción 2383; no suponer disponible en 2387."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "s18_access_decision",
+  "status": "NUMBER_SCOPE_APPROVED_TECHNICAL_PROPOSAL_NOT_RUNTIME",
+  "source": "S12_UE5_or_validated_system_intent",
+  "identity_verification": "s18_identity_assertion",
+  "policy": "s18_door_room_policy",
+  "request_required_fields": [
+    "request_id",
+    "trusted_principal_assertion_ref",
+    "resource_id",
+    "portal_id",
+    "requested_operation",
+    "authoritative_time_ref",
+    "door_policy_revision",
+    "access_context_ref"
+  ],
+  "result_required_fields": [
+    "request_id",
+    "effective_decision",
+    "resource_id",
+    "policy_revision",
+    "evaluated_at",
+    "reason_code_redacted",
+    "authorization_evidence_refs",
+    "audit_event_ref",
+    "idempotency_ref"
+  ],
+  "decisions": [
+    "ALLOW",
+    "DENY",
+    "REQUEST_VISIT",
+    "STEP_UP_AUTH",
+    "NOT_AVAILABLE"
+  ],
+  "physical_after_auth_results": [
+    "OPENED",
+    "PHYSICALLY_BLOCKED",
+    "POWER_UNAVAILABLE",
+    "SEALED_FOR_SAFETY",
+    "FAILED_MECHANICAL",
+    "CANCELLED"
+  ],
+  "separation": {
+    "ALLOW_does_not_open_door": true,
+    "animation_and_collision_owned_by_S12": true,
+    "CoreRPG_owns_state_and_permissions": true,
+    "HOST_transports_validated_request": true,
+    "voice_only_proposes_intention": true,
+    "AI_never_authorizes": true
+  },
+  "security": {
+    "default_deny_if_essential_data_missing": true,
+    "never_accept_raw_claimed_principal_id": true,
+    "never_leak_resident_presence_on_denial": true,
+    "revalidate_issued_grant_against_authoritative_clock_and_revision": true,
+    "do_not_ever_cache_stale_privileges": true,
+    "explicit_emergency_incident_and_authority": true,
+    "private_audit_access_controlled": true,
+    "support_egress_without_trapping_player": true,
+    "request_idempotent": true
+  },
+  "runtime_implemented": false
+}

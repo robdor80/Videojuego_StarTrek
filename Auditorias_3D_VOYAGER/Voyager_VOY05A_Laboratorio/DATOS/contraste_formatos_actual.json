@@ -1,0 +1,51 @@
+{
+  "coleccion_glb": {
+    "a_to_b_max": 0.7498058211155416,
+    "b_to_a_max": 1.66611841731421e-05,
+    "a_to_b_median": 4.76837158203125e-06,
+    "b_to_a_median": 4.633476477996048e-06,
+    "a_points": 90853,
+    "b_points": 99615,
+    "method": "bidirectional nearest vertices; not surface Hausdorff or UV equality"
+  },
+  "puente_blend": {
+    "a_to_b_max": 0.0,
+    "b_to_a_max": 0.0,
+    "a_to_b_median": 0.0,
+    "b_to_a_median": 0.0,
+    "a_points": 254270,
+    "b_points": 254270,
+    "method": "bidirectional nearest vertices; not surface Hausdorff or UV equality"
+  },
+  "puente_glb": {
+    "a_to_b_max": 2.132480599880018e-06,
+    "b_to_a_max": 2.132480599880018e-06,
+    "a_to_b_median": 7.177349673981843e-07,
+    "b_to_a_median": 7.177349673981843e-07,
+    "a_points": 254270,
+    "b_points": 255754,
+    "method": "bidirectional nearest vertices; not surface Hausdorff or UV equality"
+  },
+  "puente_max": {
+    "transform": "MAX = OBJ * 1.50813535 + (-0.11236,1.875563,-0.466607), hypothesis from VOY02, rechecked now",
+    "a_to_b_max": 0.6880287614153227,
+    "b_to_a_max": 18.153386287869353,
+    "a_to_b_median": 6.047098395793891e-06,
+    "b_to_a_median": 0.2658859653227013,
+    "a_points": 254270,
+    "b_points": 437444,
+    "method": "bidirectional nearest vertices; not surface Hausdorff or UV equality"
+  },
+  "puente_max_desktop": {
+    "transform": "MAX = OBJ * 1.50813535 + (-0.11236,1.875563,-0.466607), hypothesis from VOY02, rechecked now",
+    "a_to_b_max": 0.6880287614153227,
+    "b_to_a_max": 18.153386287869353,
+    "a_to_b_median": 6.047098395793891e-06,
+    "b_to_a_median": 0.2658859653227013,
+    "a_points": 254270,
+    "b_points": 437444,
+    "method": "bidirectional nearest vertices; not surface Hausdorff or UV equality"
+  },
+  "native_exact_translation_duplicates": [],
+  "identity_limit": "Rotation/reflection, UV and material identity are not implied by a point cloud or dimensional match."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "initiative_id": "valhalla_sensor_reputation_20261117",
+  "design_approved": true,
+  "contract_only": true,
+  "main_runtime_implemented": false,
+  "ue5_certified": false,
+  "core_sensor_resolver_wired": false,
+  "host_npc_reputation_wired": false,
+  "acceptance_tests_executed": false,
+  "authoritative_decision": "proyecto/docs/decisions/enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md",
+  "blocked_by": [
+    "StarTrek-specific capability profile in live CoreRPG/ship instantiation",
+    "sensor resolution fast path and precomputation",
+    "NPC force evaluation and faction awareness runtime",
+    "UE5 functional tactical/sensor console",
+    "scenario and performance tests"
+  ],
+  "notes": [
+    "No claim of actual perfect sensors until these gates pass.",
+    "Existing generic sensors for other classes remain unchanged.",
+    "2387 date is a target not an imposed completed WorldState."
+  ]
+}

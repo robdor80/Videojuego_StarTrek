@@ -1,0 +1,16 @@
+{
+  "setback_m": 0.14,
+  "changed_objects": [
+    {
+      "scene": "C_UNION_PUENTE_PASILLO",
+      "object": "AD_PUENTE.001"
+    },
+    {
+      "scene": "G_INTERIORES_CONECTADOS",
+      "object": "AD_PUENTE"
+    }
+  ],
+  "geometry_new_only": true,
+  "door_mechanism_certified": false,
+  "blend_sha256": "d5ba0d89902de39aacd4e7f74417d6007fa04958d97d667ab59bad7097665eae"
+}

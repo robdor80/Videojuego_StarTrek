@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETADA",
+  "scope": "VOY03 geometric circulation only",
+  "time_utc": "2026-10-21T16:22:20.864431+00:00",
+  "geometry_modified": false,
+  "originals_unchanged": true,
+  "protected_hash_entries": 2762,
+  "all_routes_passed": true,
+  "heights_m": [
+    1.6,
+    1.75,
+    1.9
+  ],
+  "radius_m": 0.35,
+  "pose_samples": 48090,
+  "swept_intervals": 48051,
+  "blend_file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\ESCENAS\\VOY03_Circulacion.blend",
+  "blend_sha256": "b90dc854dfb3ce62ece4cfb60b25a510787592f5abb68236e799647e074287ea",
+  "ue_executed": false,
+  "voy04_started": false,
+  "git_operations": false,
+  "remaining": "Real CharacterMovement, collisions, dynamics, gait, doors and NavMesh require a future authorized phase."
+}

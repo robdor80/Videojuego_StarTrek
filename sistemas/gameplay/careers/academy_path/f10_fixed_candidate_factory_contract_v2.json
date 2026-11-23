@@ -1,0 +1,50 @@
+{
+  "contract_id": "f10_fixed_candidate_factory",
+  "schema_version": "2.0.0",
+  "owner": "F10",
+  "scope": "IA-03B02",
+  "scenario": "starfleet_academy",
+  "start_year": 2383,
+  "catalog": "startrek.academy:starfleet_academy/v2",
+  "source": {
+    "selection": "INTERNAL_ONLY",
+    "verification": "SHA256_UTF8_LF_AND_CANONICAL_INVARIANTS",
+    "s04_contract": {
+      "path": "sistemas/gameplay/character_creation/s04_fixed_protagonist_contract_v2.json",
+      "id": "s04_fixed_player_protagonist",
+      "version": "2.0.0",
+      "sha256": "e2a61bc3984df99123edd9072eae3b6755e24267dd0fa5c2bd727f45b84d90ba"
+    },
+    "s04_biography": {
+      "path": "sistemas/gameplay/character_creation/s04_protagonist_biography_v1.json",
+      "id": "s04_player_khan_vulcan_male",
+      "version": "1.0.0",
+      "sha256": "abb04e51348a906433028b5585e1a0cc9c5386725f2e5557dc8d8857a3fc47d9"
+    }
+  },
+  "validation": {
+    "mode": "DETERMINISTIC_AUTHOR_APPROVED_SOURCE",
+    "legacy_free_biography_semantic_review_required": true,
+    "unknown_fields": "NO_WORLD_ASSERTION",
+    "request": {
+      "required": ["display_name"],
+      "additional_fields": false,
+      "maximum_name_utf8_bytes": 96,
+      "name_identity": "EXACT_DECODED_UTF8",
+      "maximum_payload_bytes": 1024
+    }
+  },
+  "identity": "CAMPAIGN_ID_AND_CORE_ENTITY_ID",
+  "creation": {
+    "thread": "SESSION_OWNER",
+    "publication": "STAGED_CORE_WORLD_THEN_IN_MEMORY_COMMIT",
+    "result": "PRIVATE_GENERATION_PROFILE_ATTEMPT_SOURCE_CORE_RECEIPT",
+    "initial_status": "candidate",
+    "same_intent_same_name": "REPLAY",
+    "same_intent_different_name": "CONFLICT",
+    "cadet_slot": false,
+    "admission": false,
+    "naval_authority": false,
+    "rank": false
+  }
+}

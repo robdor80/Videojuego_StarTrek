@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "evidence_commit": "19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "compatible_core_revisions": [
+    "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98"
+  ],
+  "origin": "Audited complete-original-world oracle, original per-block canonical CRPGTIME hashes and final 7-day future; MSI acceptance at 19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "contract_files": {
+    "desarrollo/integration/f04/core-history-revision.txt": "1e9fef879e886087b2977543d308075afd06aa355ee4649cbf1e6a980da046d6",
+    "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+    "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
+    "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "00fd3c825fb69c9d5e52e3932484c51b68c2a28724b126bae7adffaa1e0e1fb1",
+    "desarrollo/integration/f04/src/f04_history.inc": "8d5a929d8ceb19ae9672b998fb4e6d0beb11af2b76dd8e92b6f845352a4c2a7b",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
+    "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
+    "desarrollo/integration/f04/src/f04_roster.inc": "5c2ca6a1eb3af6cc7a47cf3d004ba301ab09ac8ac4897a9415eb73e48eead118",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "faa1b67265b1f7aa36157a160c86239a9e84898e147f5c902046c12aa454e36a",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "42b2498992a72f092f9e60193ca5f750c8f4b6dda457efcd2fd27f4e8426353e",
+    "desarrollo/integration/f04/src/f04_templates.h": "7ea94aba17aee2c5b55ccc2b147dc1d776d4b89e668d182db925aba05bd30393",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "4cc6d52cd5b6f9da830f2955e26c4f177d56f09a97cd7a5ca0fc71d8128ab821",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "50e218a4b42e058dde7235e86d40833535fbcae5ea69745ae0babedb55cdfc19",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "0a80ddd12f0595156cf243e08470622995cff002e0c163c584f761bafc0ff898",
+    "desarrollo/integration/f04/tests/history_audit.cpp": "9775b533e36fa243f9b81fb08359d0792b7db794d91895539488654e79610fc2",
+    "desarrollo/integration/f04/tests/history_campaign.cpp": "7fadda51a12a182f89c07c39b027afb68b049a6c928236e1b0350cef56c2fc18",
+    "desarrollo/integration/f04/tests/organization_lab.h": "e5a0c3acbf847d2ccdcf9f078d0e7c16d26e72c68c9dcbc795c138601d9f9c85",
+    "mundo/lore/starships/classes/core_starship_classes.json": "9aae07144d8707d1a87e839fd9507e4f8c29bce3905f33b713b0ea716fe7f9aa",
+    "sistemas/gameplay/ship_operations/class_definition_contract.json": "ffd2be980fd600f5381b7ddf7358bb48da754484e8970dd633e5c22fd614a07a",
+    "desarrollo/integration/f04/CMakeLists.txt": "87528e8c29c90f05894938cfd557da8a4ed0e8d4843accb99266a2c4a61a5c62"
+  },
+  "provenance_files": {
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json": "a984beff263a81551bddb3c0f483932416648e6918fa8ec8ae82a5d526be07fe",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/reference-fixtures/SHA256.json": "c7b5952a12b7c43a35c3031aec824fb6070c7f98612c243f04d6388ca8f36553",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/evidence-sha256.json": "f67d018d452fe162c8bebbad8b8559be641823e8e70e324be550387f9791c9d6",
+    "desarrollo/integration/f04/tests/fixtures/history_reference_v1.json": "3a065ade86c2d2b6a97e9ec50eaa39387aaf6060b5126ee5f65768a87e022f85",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/1-365/audit.log": "1068b745117a7677633573e176ab7cadd9e514a8e376e13e567b4cfe6d3703d8",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/1-365/campaign-1-365.resume": "fc68d33f18e2775a7c8347c96dff58ec46f6554599c95d00a68a817ee7afc509",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/1-365/campaign.log": "2bd88ff170dde9e783aa0e3ef45f49240bcf846a4b2d4af139812190b83894cc",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/1-365/result.json": "c77e9b3383027ee9f4d0241f17d17d3bbee2040b6b8c25d47a420b573b004fa0",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/1-365/resume.log": "47dd5bc1032f755a406177c0b50222cb2bbdfb0095767b8a1654cbf5f7937d29",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/2-365/audit.log": "cb793ed341fc1d5e478aad80cbb212319a73c858c5479de9bdb73f7171de1d4c",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/2-365/campaign-2-365.resume": "f5f1c7c8bb35c1094fb131e6f990bf9a0e70a6e8b0e9920170682ed8c666ad76",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/2-365/campaign.log": "bec4bd974968f87278316ff90171166c1729fbf78d5a6e4fa758f44ec32fc492",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/2-365/result.json": "c64d51a4680532b91291ea36d54ffb53614aa77dc86286a4589b472463a976e8",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/2-365/resume.log": "8d0c7262e6cb27e591e551cb47bd2d86a269c60bd22f91a7cc59895360871103",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/3-365/audit.log": "205a657581978dee633832ae3dfccbc912530c2cc8337f4a81fe5a385655bde7",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/3-365/campaign-3-365.resume": "2c48b855ff8935f388f4d1a774eeac951a6b792af8db090058312bdfc1565c7c",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/3-365/campaign.log": "c8552648d7b16387b3cf565be43921f87da28190ceb459e6d0d84ff72a6de84f",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/3-365/result.json": "88c5244b1bc5d8aa38871a29183096347f8931a0ce0b5aaa70d889256cacc826",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/3-365/resume.log": "62372f24f31af218a6479368421935c708799621247e393101fbd8ec4d5638d8",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/4-365/audit.log": "517e1be1814af3cad2568487fd0869bc370ac9dc33e393ab5b9d92a76f9be9eb",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/4-365/campaign-4-365.resume": "f03a3b13d87779627b97e15e0112d9174dba6cde0ffb3433c1a18dd07f6948e8",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/4-365/campaign.log": "226942bfcd3e23a191a39e7432e8645f8bff5cc8b94b85350debf71ec777c970",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/4-365/result.json": "71420c14822aeecd2962a3a92385fc857b9ffe5041fa0386dd2afb4864fef479",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/4-365/resume.log": "43016be342756b2d291dcbf75350ddb1b76d87800c92d4dcea7d27122ee186c4",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-365/audit.log": "7104a9dea97b697384d9bff5848fefd17be4d3459897e42a9199af30da4d094e",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-365/campaign-5-365.resume": "032156e53a8fbc60ccbf96846a88d19d62cb9f7760bb07424701b6c86c7f267d",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-365/campaign.log": "b4fd11cbbced7d2686f373e293d13acfa3e9396c8498af1bdfdcb14a98de0f07",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-365/result.json": "b577427682085647ef16c8839561fd0f48caab49acc200f6febf1196bf2089cf",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-365/resume.log": "0006287b94e5e6c359d09e3b47aa238840042e48c2f13ce4304c025fcc0e33cc",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-730/audit.log": "214e6e64193e14ae16a8267d05a28874d62a78216d9344aa5c590608e248ed35",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-730/campaign-5-730.resume": "688979f7030a6564077751c76fbf286d931c185a9b90382c40a1bf1a8f5e2b73",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-730/campaign.log": "be94920bf02450dacf92814ea7ec86db5a5ff8b54be4207cb1286bc3cd34e1e1",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-730/result.json": "47e28277d83015d0c8ac052ec277905c31bfdc401c776bda98396c31db9f2ae7",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/5-730/resume.log": "627ffdbb74cea1fb104634d90b32f9c9042c7f804e49106347b07e327b1f92e9",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/environment.json": "c51bee65a2b6ce69219d943cb179a54f2a4f3085cbf8cf6a2689e43a4e52745d",
+    "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/transition.json": "76aa460931fe96e207998948cd14a519df53373514ef1e0cffd877c8b80b8052"
+  },
+  "campaigns": {
+    "1-365": {
+      "profile": 1,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/campaign-1-365.oracle",
+      "sha256": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/acceptance.json",
+      "acceptance_sha256": "7a8422f5a6dd5335944a634828b25f250bdd343e9c977d69bfb42770c7f506e3"
+    },
+    "2-365": {
+      "profile": 2,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/campaign-2-365.oracle",
+      "sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/acceptance.json",
+      "acceptance_sha256": "a968aab184dfa3f1170c54ef8d3cce71ea8390b4f7af292d75279cdba0244d62"
+    },
+    "3-365": {
+      "profile": 3,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/campaign-3-365.oracle",
+      "sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/acceptance.json",
+      "acceptance_sha256": "63f1c54678884fb1265123e98b2cf018d1c03a5163de699cc2d5956f3be04b9e"
+    },
+    "4-365": {
+      "profile": 4,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/campaign-4-365.oracle",
+      "sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/acceptance.json",
+      "acceptance_sha256": "dbe15b905253ce05492def18cb066a377ce78ebdfae190b1e13e624b97750e11"
+    },
+    "5-365": {
+      "profile": 5,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/campaign-5-365.oracle",
+      "sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/acceptance.json",
+      "acceptance_sha256": "d06616a2c55125a9b8ee6bf0efb63aff47ce12a8867bb2ed7b71c8d036c89ee5"
+    },
+    "5-730": {
+      "profile": 5,
+      "days": 730,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/campaign-5-730.oracle",
+      "sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/acceptance.json",
+      "acceptance_sha256": "2075fb7cfd262eda89106a66df14c4f2e55867b171af9e34407d61894cbeb8c6"
+    }
+  },
+  "source_contract_update_f05_p01": {
+    "date": "2026-11-02",
+    "implementation_commit": "370adf7938446f4c9e47ed1615413306b4eb82af",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "9b7e44e6582a889501916b2bbcb8baae8cf153f8a23108969cfd1ee1337f0cd8",
+      "desarrollo/integration/f04/CMakeLists.txt": "340bf2d3c01b63b8a793b98fb031bc943da05bb51d8374b8f675bf3521bd2a37"
+    },
+    "scope": "Additive F05 compile option and shared F04_SCAN ActionResult capture. No oracle, acceptance or provenance bytes changed. All six actual F04 campaigns must again match the frozen complete-history oracle before acceptance of this source update. Core F04 pins unchanged."
+  },
+  "source_contract_update_f05_p02": {
+    "date": "2026-11-02",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "b478b6ce64b897b161651809a1946e8c02216aaa4b9aba6da7b88a37aff68b59"
+    },
+    "scope": "P02 extends the existing delegation vocabulary only under F05_ENABLE_ORDERS; legacy labels and F04 policy behavior preserved. Six original historical campaigns must match the same frozen oracles. No oracle, acceptance or provenance bytes changed."
+  },
+  "source_contract_update_f05_p03": {
+    "date": "2026-11-02",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "ae3b995f27d3525b19512377cb11f19d4d246c37ab6e8978a600841ac4176269",
+      "desarrollo/integration/f04/src/f04_history.inc": "ba4d502b8c8363d227e1d2f493ac31be15de1508720b351670ab7c9c8b136055"
+    },
+    "scope": "Additive P03 vocabulary under F05_ENABLE_ORDERS and retention of obligation tombstones. F04 historical builds keep F05 disabled. Frozen oracle, acceptance, pins and provenance bytes unchanged; all six original campaigns must match before acceptance."
+  },
+  "p04_compatibility": {
+    "base_star_trek": "f1ab2f33cccdd861077e59069addb8a12ff573d7",
+    "reason": "P04 optional language boundary. F04 reference target excludes F05; existing Core scan/roster/history semantics and all six frozen oracles preserved.",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "ff77e4749a29d9c5fa2f9e8823b186ee1879d6227333014e6f6b9c3b9ed69903",
+      "desarrollo/integration/f04/src/f04_history.inc": "5d3ce1d25ffcc7e6665ba2fc2d0a754371ea1f7a9e78d6e557bb14f768e39502"
+    }
+  },
+  "manifest_version": 2,
+  "source_contract_update_f11_a02_01": {
+    "date": "2026-11-11",
+    "previous_manifest": "desarrollo/integration/f04/tests/fixtures/history_reference_v1.json",
+    "evidence": "proyecto/docs/roadmap/master/fases/F11/evidence/F11-P05-A02-01-REAUDIT/transition.json",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "ab30ecd6fcba4642574523d62cb74762704e759d18121ba22f8111bdaa135a63",
+      "desarrollo/integration/f04/src/f04_history.inc": "0d87e388c7c834f93b2603aa22a801ac7d85822cb7f71bf1ac368cb9f57114ee",
+      "desarrollo/integration/f04/CMakeLists.txt": "8215e9bdb7e5ade15ed95eb6c0c3c6bac2e3bb3430d8b5c186fa0d03969b1a79"
+    },
+    "baseline_revision": "5c6133b402631459a4e345cb35cf45a8812a5ce5",
+    "scope": "Versioned only after all six historical campaigns matched the original complete-history oracles, persisted past audit and fresh-process future. Original v1 manifest, six oracles, acceptance, provenance and Core pins unchanged."
+  }
+}

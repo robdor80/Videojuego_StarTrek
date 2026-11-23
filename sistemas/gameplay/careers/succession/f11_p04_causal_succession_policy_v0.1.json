@@ -1,0 +1,207 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f11_p04_causal_npc_careers_and_succession",
+  "maturity": "OFFLINE_REFERENCE_ONLY_NO_WORLD_STATE_MUTATION",
+  "design_goal": "Asegurar oportunidades profesionales creíbles hasta la capitanía USS Enterprise NCC-1701-D, con NPC autónomos, sin impedir el progreso del jugador ni eliminar controles de autoridad.",
+  "project_ship_key": "enterprise_d_ncc_1701_d_refit",
+  "clock_unit": "fictional_service_months",
+  "scheduling_parameters_illustrative_not_final": {
+    "minimum_departure_notice_months": 2,
+    "alternate_career_review_months": 3,
+    "advance_preparation_window_months": 6,
+    "npc_decision_window_months": 4,
+    "deadline_source": "f11_p03_persistent_ready_since_and_deadline"
+  },
+  "target_stages": {
+    "department_head": {
+      "accepted_ranks": [
+        "lieutenant_commander",
+        "commander"
+      ],
+      "position_ids": [
+        "chief_engineering_officer",
+        "chief_science_officer",
+        "chief_security_officer",
+        "chief_tactical_officer",
+        "chief_medical_officer"
+      ],
+      "unit_scope": "qualified_any_unit",
+      "requires_command_qualification": false,
+      "requires_department_qualification": true
+    },
+    "enterprise_d_first_officer": {
+      "accepted_ranks": [
+        "commander"
+      ],
+      "position_ids": [
+        "first_officer"
+      ],
+      "unit_scope": "enterprise_d_only",
+      "requires_command_qualification": true,
+      "requires_department_qualification": false
+    },
+    "captain_other_ship": {
+      "accepted_ranks": [
+        "captain"
+      ],
+      "position_ids": [
+        "commanding_officer"
+      ],
+      "unit_scope": "other_ship_only",
+      "requires_command_qualification": true,
+      "requires_department_qualification": false
+    },
+    "enterprise_d_captain": {
+      "accepted_ranks": [
+        "captain"
+      ],
+      "position_ids": [
+        "commanding_officer"
+      ],
+      "unit_scope": "enterprise_d_only",
+      "requires_command_qualification": true,
+      "requires_department_qualification": false
+    }
+  },
+  "player_freedom": {
+    "may_stay_as_department_head_at_commander": true,
+    "may_remain_first_officer_instead_of_leaving": true,
+    "captaining_other_ship_is_optional_not_mandatory": true,
+    "may_decline_or_pause_and_reopen_opportunities": true,
+    "never_auto_accepts_offers": true
+  },
+  "npc_career_templates": [
+    {
+      "id": "xo_promoted_to_other_ship_captain",
+      "incumbent_from": "first_officer",
+      "transition": "promotion_to_other_ship_command",
+      "requires": [
+        "own_npc_career_motivation",
+        "valid_npc_qualification",
+        "fleet_need",
+        "other_ship_authorized_vacant_co_billet",
+        "npc_acceptance",
+        "fleet_orders",
+        "release_effective"
+      ],
+      "no_premature_vacancy": true
+    },
+    {
+      "id": "captain_promoted_to_fleet_leadership",
+      "incumbent_from": "commanding_officer",
+      "transition": "promotion_to_flag_or_fleet_post",
+      "requires": [
+        "own_npc_career_motivation",
+        "verified_flag_or_staff_opportunity",
+        "competence_and_service_record",
+        "npc_acceptance",
+        "fleet_orders",
+        "release_effective"
+      ],
+      "no_premature_vacancy": true
+    },
+    {
+      "id": "experienced_head_reassigned",
+      "incumbent_from": "department_head",
+      "transition": "professional_transfer_or_promotion",
+      "requires": [
+        "genuine_service_need",
+        "compatible_vacant_billet",
+        "npc_acceptance_or_valid_independent_order",
+        "fleet_orders",
+        "release_effective"
+      ],
+      "no_premature_vacancy": true
+    },
+    {
+      "id": "existing_retirement_plan",
+      "incumbent_from": "any",
+      "transition": "independent_recorded_retirement",
+      "requires": [
+        "preexisting_service_record_retirement_event",
+        "eligibility_and_notice",
+        "authorized_effective_date"
+      ],
+      "prohibit": "fabricated_retirement_for_player"
+    }
+  ],
+  "selection_rules": [
+    "real_professional_evidence",
+    "npc_preference_or_legitimate_service_order",
+    "target_vacancy_is_verified",
+    "target_unit_is_operational",
+    "independent_destination_plausible",
+    "advance_notice",
+    "timing_and_ordering",
+    "repeatable_alternative_on_refusal"
+  ],
+  "plan_statuses": [
+    "INVALID_CONTEXT",
+    "PLAYER_PAUSED",
+    "ALREADY_IN_TARGET_POST",
+    "DIRECT_SELECTION_POSSIBLE",
+    "CAUSAL_OPPORTUNITY_PREPARED",
+    "AWAITING_NPC_DECISION",
+    "AWAITING_VALID_ORDERS",
+    "AWAITING_EFFECTIVE_DEPARTURE",
+    "FLEET_ALTERNATIVE_REQUIRED",
+    "URGENT_FLEET_ESCALATION",
+    "FUTURE_CANDIDACY_READY",
+    "AWAITING_VACANCY_CONFIRMATION"
+  ],
+  "event_chain": [
+    "npc_career_motivation_verified",
+    "other_fleet_opportunity_verified",
+    "npc_offer_issued",
+    "npc_acceptance_or_valid_order",
+    "npc_authorized_orders_issued",
+    "npc_departure_effective",
+    "target_billet_vacancy_confirmed",
+    "player_selection_review",
+    "player_authorized_appointment",
+    "player_assignment_effective"
+  ],
+  "promotion_rule": "An NPC progression plan is NOT a promotion: only verified Core personnel events change rank.",
+  "safety_invariants": [
+    "occupied_or_planned_billet_not_vacant",
+    "npc_identity_and_history_survive_transfer",
+    "no_arbitrary_death_injury_demotions_or_dismissals",
+    "no_invented_ship_or_billet",
+    "no_forced_npc_consent_as_story_shortcut",
+    "no_offers_based_only_on_player_need",
+    "no_rank_change_from_plan",
+    "no_mutation_by_python_or_ai",
+    "one_effective_occupant_per_billet",
+    "two_people_never_share_a_unique_command_billet",
+    "player_decision_remains_voluntary",
+    "do_not_reset_p03_ready_anchor_on_refusal_or_replan",
+    "no_false_success_if_all_plans_fail",
+    "separate_player_rank_from_first_officer_and_ship_command_positions",
+    "no_fleet_staff_appointments_without_catalogued_authority",
+    "no_forced_departure_from_enterprise_d_to_be_captain",
+    "fleet_selection_after_vacancy_requires_authority_and_player_eligibility",
+    "timeline_events_cannot_be_postdated_or_backdated_to_create_fake_history",
+    "npc_acceptance_and_promotion_board_must_be_authoritatively_supported"
+  ],
+  "core_integration_requirements": [
+    "Core WorldState owns current occupants and all unit/position IDs",
+    "Read and record official source events and exact world revision",
+    "Proposed events are intents; authorized atomic Core transactions perform real changes",
+    "On each progression event revalidate P01 authority and P02 billet availability",
+    "Persist plan episode IDs, NPC responses, rejected alternatives, source events and deadline",
+    "NPC decisions are recorded before orders, and orders before effective departure",
+    "F11-P05 saves/loads active plans and verifies same future and no duplicate assignments",
+    "UE5 only renders verified outcomes; AI only phrases narrative",
+    "P04 requires a verified P03 plan and its persistently recorded ready-anchor; never construct them from AI narratives",
+    "P04 proposals distinguish NPC intent, signed offer, acceptance, board decision, issued personnel order and actual release"
+  ],
+  "links": [
+    "proyecto/docs/roadmap/master/fases/F11/PLAN_F11_ACTUALIZADO_2026-11-11.md",
+    "proyecto/docs/roadmap/master/fases/F11/F11-P01_JERARQUIA_CADENA_MANDO_V1.md",
+    "proyecto/docs/roadmap/master/fases/F11/F11-P02_DESTINOS_DEPARTAMENTOS_PUESTOS_V1.md",
+    "proyecto/docs/roadmap/master/fases/F11/F11-P03_EVALUACIONES_ASCENSOS_Y_OPORTUNIDADES_V1.md",
+    "sistemas/gameplay/careers/promotions/f11_p03_progression_policy_v0.1.json",
+    "sistemas/gameplay/careers/assignments/f11_p02_billet_profiles_v0.1.json",
+    "sistemas/gameplay/careers/service_record/service_record_model.json"
+  ]
+}

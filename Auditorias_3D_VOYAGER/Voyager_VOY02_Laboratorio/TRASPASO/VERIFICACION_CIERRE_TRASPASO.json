@@ -1,0 +1,10 @@
+{
+  "time": "2026-10-21T12:54:26.533414+02:00",
+  "preexisting_files_rehashed": 207,
+  "changed_or_missing": [],
+  "all_four_requested_documents_exist": true,
+  "remaining_relevant_processes": [],
+  "process_check_exit": 0,
+  "safe_preserved_state": true,
+  "note": "Comprobaciones de conservación; no nuevas pruebas Voyager. Primer intento de rehash usó hashlib.file_digest, no disponible en Python 3.10; se corrigió con lectura por bloques, sin modificar archivos del laboratorio."
+}

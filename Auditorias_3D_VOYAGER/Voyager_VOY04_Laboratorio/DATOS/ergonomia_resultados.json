@@ -1,0 +1,146 @@
+[
+  {
+    "H": 1.6,
+    "original_seat_height_m": 0.6298896762556753,
+    "adapted_seat_height_over_local_foot_floor_m": 0.3912,
+    "seat_drop_m": 0.2153641328742544,
+    "back_shift_m": 0.18,
+    "travel_m": 0.4,
+    "eyes_local": [
+      0.0,
+      0.04800000000000001,
+      0.5326358671257456
+    ],
+    "look_down_to_center_deg": 30.606715017098576,
+    "visibility": [
+      {
+        "screen": "Plane_94",
+        "first_hit": "Plane_94",
+        "visible": true
+      },
+      {
+        "screen": "Plane_95",
+        "first_hit": "Plane_95",
+        "visible": true
+      }
+    ],
+    "hands": [
+      {
+        "side": -1,
+        "screen": "Plane_95",
+        "shoulder_to_hand_m": 0.4361915974367925,
+        "capsule_tip_gap_to_plane_m": 0.0020000000000000226,
+        "minimum_to_screen_m": 0.00199935790575689,
+        "elbow_inner_angle_deg": 90.76789653002393
+      },
+      {
+        "side": 1,
+        "screen": "Plane_94",
+        "shoulder_to_hand_m": 0.43643847571076827,
+        "capsule_tip_gap_to_plane_m": 0.0020000000000000226,
+        "minimum_to_screen_m": 0.0019996355834218,
+        "elbow_inner_angle_deg": 90.85875395704208
+      }
+    ],
+    "backrest_min_capsule_gap_m": 0.07593467036850966,
+    "work_pose_geom": true,
+    "back_support_certified": false,
+    "biomechanics_certified": false
+  },
+  {
+    "H": 1.75,
+    "original_seat_height_m": 0.6298896762556753,
+    "adapted_seat_height_over_local_foot_floor_m": 0.42824999999999996,
+    "seat_drop_m": 0.1783141328742544,
+    "back_shift_m": 0.18,
+    "travel_m": 0.4,
+    "eyes_local": [
+      0.0,
+      0.05625,
+      0.6394358671257455
+    ],
+    "look_down_to_center_deg": 40.37843739228325,
+    "visibility": [
+      {
+        "screen": "Plane_94",
+        "first_hit": "Plane_94",
+        "visible": true
+      },
+      {
+        "screen": "Plane_95",
+        "first_hit": "Plane_95",
+        "visible": true
+      }
+    ],
+    "hands": [
+      {
+        "side": -1,
+        "screen": "Plane_95",
+        "shoulder_to_hand_m": 0.4541489420937692,
+        "capsule_tip_gap_to_plane_m": 0.001999999999999974,
+        "minimum_to_screen_m": 0.0019993579055507735,
+        "elbow_inner_angle_deg": 85.16193100918606
+      },
+      {
+        "side": 1,
+        "screen": "Plane_94",
+        "shoulder_to_hand_m": 0.4547525644328697,
+        "capsule_tip_gap_to_plane_m": 0.001999999999999974,
+        "minimum_to_screen_m": 0.001999635583249032,
+        "elbow_inner_angle_deg": 85.35363460243289
+      }
+    ],
+    "backrest_min_capsule_gap_m": 0.0671704937019432,
+    "work_pose_geom": true,
+    "back_support_certified": false,
+    "biomechanics_certified": false
+  },
+  {
+    "H": 1.9,
+    "original_seat_height_m": 0.6298896762556753,
+    "adapted_seat_height_over_local_foot_floor_m": 0.46529999999999994,
+    "seat_drop_m": 0.14126413287425443,
+    "back_shift_m": 0.18,
+    "travel_m": 0.4,
+    "eyes_local": [
+      0.0,
+      0.0645,
+      0.7462358671257454
+    ],
+    "look_down_to_center_deg": 48.22367621871746,
+    "visibility": [
+      {
+        "screen": "Plane_94",
+        "first_hit": "Plane_94",
+        "visible": true
+      },
+      {
+        "screen": "Plane_95",
+        "first_hit": "Plane_95",
+        "visible": true
+      }
+    ],
+    "hands": [
+      {
+        "side": -1,
+        "screen": "Plane_95",
+        "shoulder_to_hand_m": 0.4866657579164396,
+        "capsule_tip_gap_to_plane_m": 0.001999999999999988,
+        "minimum_to_screen_m": 0.0019993579053446675,
+        "elbow_inner_angle_deg": 84.80495631608704
+      },
+      {
+        "side": 1,
+        "screen": "Plane_94",
+        "shoulder_to_hand_m": 0.4875687802536505,
+        "capsule_tip_gap_to_plane_m": 0.00199999999999996,
+        "minimum_to_screen_m": 0.0019996355830762744,
+        "elbow_inner_angle_deg": 85.06511042501819
+      }
+    ],
+    "backrest_min_capsule_gap_m": 0.0584063170353767,
+    "work_pose_geom": true,
+    "back_support_certified": false,
+    "biomechanics_certified": false
+  }
+]

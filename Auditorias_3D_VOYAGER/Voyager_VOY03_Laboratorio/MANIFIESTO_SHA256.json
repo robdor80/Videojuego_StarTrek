@@ -1,0 +1,927 @@
+{
+  "entries": [
+    {
+      "path": "00_RESUMEN_EJECUTIVO.md",
+      "bytes": 4844,
+      "sha256": "341084b9e0119e6f0dfd3e06b8baa63c9384883fb8597ad1a532301cb0749583"
+    },
+    {
+      "path": "01_DIAGNOSTICO_CIRCULACION.md",
+      "bytes": 4576,
+      "sha256": "091d5c3d39159e63af5102e979f914d6df9499e67c3c6576396d19e851e5e165"
+    },
+    {
+      "path": "02_ESCALONES_Y_DESNIVELES.md",
+      "bytes": 5236,
+      "sha256": "3ac7190fbf672e73f572a527683860c2de6000287de3ee74e4dcad72adda1a90"
+    },
+    {
+      "path": "03_PRUEBAS_CAPSULAS.md",
+      "bytes": 4802,
+      "sha256": "6f23eca8e17139d4fe48546de0670f1266a5b9b6566ccf536f23ec14a0780513"
+    },
+    {
+      "path": "04_SOLUCIONES_EXPERIMENTALES.md",
+      "bytes": 4025,
+      "sha256": "56b838f3ad5b1f5ac57049ec6fecac674a8bd9c999db485c03288b049e574190"
+    },
+    {
+      "path": "05_RECORRIDOS_COMPLETOS.md",
+      "bytes": 3552,
+      "sha256": "6c9937026853da8bb593f93ac4e9afe51b65973d436923f3b024e20660173895"
+    },
+    {
+      "path": "06_PREPARACION_UE5.md",
+      "bytes": 5063,
+      "sha256": "be1ce525dd4dfcd9afae2ff309ccf7a42db5165dd4718584bee0daf53f69b668"
+    },
+    {
+      "path": "07_RECOMENDACIONES_FUTURAS.md",
+      "bytes": 3224,
+      "sha256": "fc0a9b82db6ee11e419d47e0787214c27d8604427d531d194e63d36b10e0c18b"
+    },
+    {
+      "path": "08_METODOLOGIA_Y_LIMITACIONES.md",
+      "bytes": 6794,
+      "sha256": "9be31fcb6595fcc5a8a56ccbc1b7bcf3e151534c58cecb50ad13421fc8570d16"
+    },
+    {
+      "path": "CAPTURAS/A01_planta_original.png",
+      "bytes": 2227673,
+      "sha256": "068d37d9f2fa03b072a19c990d978be665c53876878d822abef183be5bfb063b"
+    },
+    {
+      "path": "CAPTURAS/A02_escalera_derecha_contexto.png",
+      "bytes": 2637616,
+      "sha256": "9ce537b1fb244562d990fa7fd623a2d64cf21dc1e650cc356fdb004e264f6cf6"
+    },
+    {
+      "path": "CAPTURAS/A03_escalera_izquierda_contexto.png",
+      "bytes": 2621470,
+      "sha256": "eae13401c0b60ad431aa3a217a90c07f639dccc230fb317941ec91e64db95c24"
+    },
+    {
+      "path": "CAPTURAS/A04_escalones_aislados.png",
+      "bytes": 1219183,
+      "sha256": "7b5a8a697026afb7eb5608710bcf2aeade7e7f5d28b5df52845a731c8b608648"
+    },
+    {
+      "path": "CAPTURAS/A05_navegacion_escalones.png",
+      "bytes": 2728010,
+      "sha256": "cd59e1cd6a826e77b873cb59e592910e9232b5f29653f457bd18e008214ccc36"
+    },
+    {
+      "path": "CAPTURAS/B01_planta_rutas_original.png",
+      "bytes": 2089168,
+      "sha256": "4beecd2e077f5a343fe7217493aa74fa51209d1221536f4ceaa22c4a12500cb2"
+    },
+    {
+      "path": "CAPTURAS/B02_niveles_lateral.png",
+      "bytes": 1526487,
+      "sha256": "4a1b1ca389673a912946587f1204fbbd89891ca56a49dc7d750695e1da4f3f34"
+    },
+    {
+      "path": "CAPTURAS/B03_escalera_derecha_apoyo.png",
+      "bytes": 2890471,
+      "sha256": "2a614285828c987d2c5e5ea63899b61ba3a20051431523103b3d9c220fdcb039"
+    },
+    {
+      "path": "CAPTURAS/B04_escalera_izquierda_apoyo.png",
+      "bytes": 2753220,
+      "sha256": "cdc30b27a4d46183c0803a12a9cc41b70fc4879a538a77084098265c4f487c38"
+    },
+    {
+      "path": "CAPTURAS/B05_navegacion_ruta.png",
+      "bytes": 3058828,
+      "sha256": "a8edc957ed03dcdc4c3e52cef9c1585eefc2aacf79b332f531f168937c4c0116"
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.60.png",
+      "bytes": 3054215,
+      "sha256": "1654c2de230424701cd8ba675628fcd7ac76b5ce4bc8da373327b64b04ec6a46"
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.75.png",
+      "bytes": 3051751,
+      "sha256": "aed735b2ab119fe336c3e919d3eec8df81694c8acae1812db6e91f32ea7c6f6e"
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.90.png",
+      "bytes": 3050540,
+      "sha256": "1ad1c2008d0c6f34ce47f050b49f1c8c24979cd35faf7914768bba2f3af9e7ac"
+    },
+    {
+      "path": "CAPTURAS/B07_red_completa_planta.png",
+      "bytes": 1606519,
+      "sha256": "8e0bb46b54dec0656b996307ad3ed7e433c148e365f6c00b5103821bc7390126"
+    },
+    {
+      "path": "CAPTURAS/B08_red_completa_axonometrica.png",
+      "bytes": 1806313,
+      "sha256": "9e5671399f7e4412240f396488893887050e898a28c813e44e9b2494b16cfb51"
+    },
+    {
+      "path": "CAPTURAS/B09_union_posterior.png",
+      "bytes": 2711977,
+      "sha256": "9ab8ce83c1681fef502f83ad4a51aedbe278848a464580eae144487f5bc015d3"
+    },
+    {
+      "path": "CAPTURAS/B10_puestos_mando.png",
+      "bytes": 2901903,
+      "sha256": "bf73aa6d53293f16a4df2646ff93b480edf93f8cfdc0006e6a0323901914c36e"
+    },
+    {
+      "path": "CAPTURAS/B11_planta_original_completa.png",
+      "bytes": 2048723,
+      "sha256": "db09b8650d6e725edbb5791d1065335fa2270592324e0ef7601f4c3444a57dd4"
+    },
+    {
+      "path": "CAPTURAS/B12_niveles_suelos_aislados.png",
+      "bytes": 988261,
+      "sha256": "59de1e6c9426e6c0f4b54d56bd981451e2adfba884ed702f5f5e34b407ce0789"
+    },
+    {
+      "path": "CAPTURAS/B13_escalones_apoyos_aislados.png",
+      "bytes": 2264392,
+      "sha256": "12b23bf4b7e761833c3e3d477477b20b9a623d26e73c89697c36d399b8134ce1"
+    },
+    {
+      "path": "CAPTURAS/B14_bloqueo_diagonal_Mesh2096.png",
+      "bytes": 3102832,
+      "sha256": "8af11275667d691ea10168622341f5cee4cc7becce319c14428546ba62988158"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B01_planta_rutas_original.png",
+      "bytes": 2489327,
+      "sha256": "4635e8b03bb694dfd9962b92625d27ced6fd7bfe8c16eb2586d72d01648b0c17"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B02_niveles_lateral.png",
+      "bytes": 1526487,
+      "sha256": "6ef62fb09eae8a69856cccaed12a9d45bf15db31449338e3d1eccd9f6866d96f"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B03_escalera_derecha_apoyo.png",
+      "bytes": 2890471,
+      "sha256": "8811ebbc9d99445e94b4dfc8955545d97d6bbf9b24c7085de48ace3302125491"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B04_escalera_izquierda_apoyo.png",
+      "bytes": 2753220,
+      "sha256": "e082ef9193dba7d20c598badff78be64e67e88d9e0ae5e48d0670d214473a9bb"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B05_navegacion_ruta.png",
+      "bytes": 3062675,
+      "sha256": "f4ca26be03f9126d0e594c23ef27fe280933891d763a1d5e7c7992247056448c"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.60.png",
+      "bytes": 2762668,
+      "sha256": "a54f0853623b89edd1ff6394cd8d47a28acc6dd82988a3931f9caaa5059a8b5a"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.75.png",
+      "bytes": 2771666,
+      "sha256": "f8331f10c63bd8a10dfa709533c39fb1eefe657689ce4b248193d7ab4555d01a"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.90.png",
+      "bytes": 2769367,
+      "sha256": "ccac7cc1954aac5ad82e360e4bd2aeeffbc17519af3551b0a5296b1c38a9b428"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B07_red_completa_planta.png",
+      "bytes": 1777612,
+      "sha256": "9281e3c046e009759a9918cd3b57274c5fda91486ec6744cf58ed1b3701c80e7"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B08_red_completa_axonometrica.png",
+      "bytes": 1812175,
+      "sha256": "dfc4e106112ec37895eac65ab7b789a7b2ea23cc6de5343aa772d2ce5d313508"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B09_union_posterior.png",
+      "bytes": 2724462,
+      "sha256": "70b8ff0d2cd9cad141b3c64cb9fa15503ee5f3841f90ddad1a8994d95ed08b73"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B10_puestos_mando.png",
+      "bytes": 2895419,
+      "sha256": "60c5fb6fb362f0989d679e428c9550e6932f618f83b77f484fae4444b9594af1"
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B11_planta_original_completa.png",
+      "bytes": 2048723,
+      "sha256": "aeedf65940820583056ba6cd8200ba0e945bc43dd40c8f7a0a748f3d2d93750f"
+    },
+    {
+      "path": "DATOS/acceso_central_revision.json",
+      "bytes": 6063885,
+      "sha256": "3187e9d7673b6452bd1deb6a0bf6ea595962acca2132efd19affac7a53041a2f"
+    },
+    {
+      "path": "DATOS/apoyo_A0_esquina_negativa.json",
+      "bytes": 4271,
+      "sha256": "527060455c4fa94710416d04d6e5252597e623c32b2f66b1e1b11eaa1bd8cd08"
+    },
+    {
+      "path": "DATOS/apoyo_continuo.json",
+      "bytes": 4262,
+      "sha256": "1ca02a093faa5af8e69aaaf6d0877c60a7106a2b1a5aa1563c41fd947227b95e"
+    },
+    {
+      "path": "DATOS/barridos_A0_errores_numericos.json",
+      "bytes": 7540802,
+      "sha256": "b7ce2870bd1f37904eefe8ec9f09904e91862c83f0c9b2fe8fc0235904b3beff"
+    },
+    {
+      "path": "DATOS/barridos_A1_sin_apoyo_continuo.json",
+      "bytes": 7506808,
+      "sha256": "29fe627b85dc91cc730f469a395a3bbbfd61c39f658fcab66867ad0a7ae246a7"
+    },
+    {
+      "path": "DATOS/barridos_resultados.json",
+      "bytes": 7547749,
+      "sha256": "1ced6c75c2a4587c2403540afaeab6c8183b2a05f89f3990c443911a30099122"
+    },
+    {
+      "path": "DATOS/barridos_resultados_parcial.json",
+      "bytes": 7547294,
+      "sha256": "1e3771ef12d07753f3e1cebbe3a993ec207e83ef201142d931d0626d8cb91b0d"
+    },
+    {
+      "path": "DATOS/baseline_protegido.json",
+      "bytes": 886086,
+      "sha256": "3c4714f87b7d38d0646413982ada136d1f262aaf2520cd1aaef3f505f9e3a0e9"
+    },
+    {
+      "path": "DATOS/busqueda_original.json",
+      "bytes": 1055302,
+      "sha256": "a3473a466fe205051320d6220d8a51d79ccf3f6a08f6a337202719a1f11483f3"
+    },
+    {
+      "path": "DATOS/busqueda_original_A0_sin_narices.json",
+      "bytes": 665292,
+      "sha256": "c7bb66b02e1dfe4a2fc9b15d8f3d56d8801b781d8e072b9192ecb657d560509a"
+    },
+    {
+      "path": "DATOS/busqueda_original_A1_sin_1810_1811.json",
+      "bytes": 678820,
+      "sha256": "98e0e7547a3e05e6b0038e124c83b1cbe45e3061f4c780cbc25c4197f590bcf2"
+    },
+    {
+      "path": "DATOS/cambios_experimentales.json",
+      "bytes": 326,
+      "sha256": "91c6a9f3de4733bfbf1b90511351b31d0e945676f5f5596bfdc81055f65df86a"
+    },
+    {
+      "path": "DATOS/capturas_qa.json",
+      "bytes": 22414,
+      "sha256": "0f5d59d9405d4ba0c776ea9e2329572d9c0a8f246d786ee14912b2ae0ff84a76"
+    },
+    {
+      "path": "DATOS/comparacion_algoritmos.json",
+      "bytes": 5250,
+      "sha256": "a9893dac13e940aa5799ed02324234f62e676820525f7019bc3207ec3a72912e"
+    },
+    {
+      "path": "DATOS/contraste_blend.json",
+      "bytes": 485769,
+      "sha256": "bc1862cf1c6f5d9f6e723486d407ed062a75c2fbb4eb90745d326978312b8018"
+    },
+    {
+      "path": "DATOS/contraste_VOY03.json",
+      "bytes": 156097,
+      "sha256": "299426b130b4522bca8a9b4458259ba54891be65b49ecb63aee673075a085caf"
+    },
+    {
+      "path": "DATOS/copias_visuales_referencia.json",
+      "bytes": 3830,
+      "sha256": "04eeb05f6e9116c0f9cebd4c10060656be83749d5c87fb3895a3b3f5ca5a9acf"
+    },
+    {
+      "path": "DATOS/depuracion_catalogo.json",
+      "bytes": 1556,
+      "sha256": "0e32ddc00bed8093c0b9ff326130021de46a0bcfd9c99f8843d7ae1c12de73e8"
+    },
+    {
+      "path": "DATOS/ergonomia_detallada.json",
+      "bytes": 468373,
+      "sha256": "c644f186e23095475c004a972809bc0165d3e25d05e084acddc15677c122eb4b"
+    },
+    {
+      "path": "DATOS/escalones_medidos.csv",
+      "bytes": 626,
+      "sha256": "25baf23d061071441d6bae9f867b9f7b8cd056261b09ffe75d08327e8491e3bd"
+    },
+    {
+      "path": "DATOS/escenas_manifest.json",
+      "bytes": 1708,
+      "sha256": "67014bbfc8a5138b1b3f90318a2ff2285531b6f4216a7c3c74134a2139b94cd0"
+    },
+    {
+      "path": "DATOS/estado_final_VOY03.json",
+      "bytes": 802,
+      "sha256": "a2eeb4b79ae27a58376884e9e7234b6d26314824ab345d0c71698aca3dd335a2"
+    },
+    {
+      "path": "DATOS/incidencias.json",
+      "bytes": 1920,
+      "sha256": "adb9623f217a30ff5d3fca893a953319520fb4fb4a5e8e963b878b9c913b9c6b"
+    },
+    {
+      "path": "DATOS/integridad_final.json",
+      "bytes": 1170747,
+      "sha256": "16e7479a100b568418c487026e52a4ffcde4e43299c9bb688ccb278f49bede62"
+    },
+    {
+      "path": "DATOS/manifest_blender.json",
+      "bytes": 515390,
+      "sha256": "72f30fd09f41c488b674e297036e5e49bf16e9f2f427d239ad9845bf668129eb"
+    },
+    {
+      "path": "DATOS/mediciones_finales.json",
+      "bytes": 209364,
+      "sha256": "f69e166a638263d77a016876db4d499362d319e19ee1e3835d351858f47cba56"
+    },
+    {
+      "path": "DATOS/niveles_medidos.csv",
+      "bytes": 189,
+      "sha256": "8943be07d8c74eafa9d38bf6a1def7c8691f3a3663b37d015169b481150cdd19"
+    },
+    {
+      "path": "DATOS/obj_geometria.npz",
+      "bytes": 5964020,
+      "sha256": "c1240a8e89993bc371660547a8df7a96c5a659324e11ae24bb3ad989626ccc38"
+    },
+    {
+      "path": "DATOS/obj_objetos.json",
+      "bytes": 308702,
+      "sha256": "21de9d0f034a4b46059e4b523051d7d2a35deae6ee52f6f43f251e4bb75b4d6d"
+    },
+    {
+      "path": "DATOS/obstaculos_y_superficies.csv",
+      "bytes": 4168,
+      "sha256": "4388ac3228066629a35c9143e89d64607abbfb307affd2413891e742220ea985"
+    },
+    {
+      "path": "DATOS/perfiles_escaleras.json",
+      "bytes": 944051,
+      "sha256": "a7672a570f7abdf51426a853ed3228dbbf05b86be21273d4ef04f7431a2b9c89"
+    },
+    {
+      "path": "DATOS/planos_soporte_plot.json",
+      "bytes": 2693641,
+      "sha256": "4ea602b1dfa867ea009330c629a06da463907ee868fb84e49d3b79da0a9330e4"
+    },
+    {
+      "path": "DATOS/preparacion_ue5.json",
+      "bytes": 11771,
+      "sha256": "7a09212529354af425edf646f2b28aed4d2f21b211890c2cfd02e3d6756e44d0"
+    },
+    {
+      "path": "DATOS/prototipo_conjunto.json",
+      "bytes": 245480,
+      "sha256": "d72685e3e2d4479df96d88f9ae8e68bb703d81110d9f3f5d657bac95a0af2387"
+    },
+    {
+      "path": "DATOS/prototipo_geometria.npz",
+      "bytes": 3331699,
+      "sha256": "0b6c6bea93a34aa985c55afbbd0440de2b33f342774745038938dee462fc140c"
+    },
+    {
+      "path": "DATOS/pruebas_rutas.csv",
+      "bytes": 8886,
+      "sha256": "7845a544a4ea67c7c51b2abed6baafa20f38dd524afd8661fff43a55bdd6d476"
+    },
+    {
+      "path": "DATOS/puente_abierto.npz",
+      "bytes": 9457608,
+      "sha256": "28f550f4dba0f1caf37a1f0a2c15ba05e565ebcc75f11592da1457d65f2c0ad8"
+    },
+    {
+      "path": "DATOS/puertas_medidas.json",
+      "bytes": 82816,
+      "sha256": "5fa86d093c8aa6d02315d20b31c2a2301d0fb4fe3d0d07d61461162307b865e3"
+    },
+    {
+      "path": "DATOS/puestos_revision.json",
+      "bytes": 105014,
+      "sha256": "04467372a9fbcf1d9a457b05b3cef5b1571ba4c611adcec6e4a8351bf8c6d542"
+    },
+    {
+      "path": "DATOS/resultados_rutas.csv",
+      "bytes": 12565,
+      "sha256": "28acf13aa78a00f3d4c9c54a8a1b61a5baab5ce949ab5614105f2169ed77b7be"
+    },
+    {
+      "path": "DATOS/resumen_metricas.json",
+      "bytes": 31735,
+      "sha256": "09538a0436d213b6d0124a9fbbf58230133b53093da68342036192eeb22e6b71"
+    },
+    {
+      "path": "DATOS/rutas_A2_atajo_esquina.json",
+      "bytes": 2436463,
+      "sha256": "ef40db4dae3d8444836f54740e27d4742409dc0b147fdd1e78752c9ec978895e"
+    },
+    {
+      "path": "DATOS/rutas_originales_candidatas.json",
+      "bytes": 2578480,
+      "sha256": "dddbe1016de0a9aa39e9dd8acd43995785c877f7481d21365f97aaef65699fb6"
+    },
+    {
+      "path": "DATOS/rutas_puntos.csv",
+      "bytes": 1710023,
+      "sha256": "452dfe0836aa48819f7ce2e9ba0e19b9dbc9ee3e26801b79c3aab336322724c8"
+    },
+    {
+      "path": "DATOS/secciones_niveles.csv",
+      "bytes": 3916,
+      "sha256": "9d3ee9ebec6628971a527ee31182e69fa0a4208dc139be1c5f69056a4d717449"
+    },
+    {
+      "path": "DATOS/soluciones.json",
+      "bytes": 1229,
+      "sha256": "36fe6ff03011b3fbd543265bcc537077be3838f9617872744b3df57ab9f9b67f"
+    },
+    {
+      "path": "DATOS/soportes_finales_plot.json",
+      "bytes": 4158816,
+      "sha256": "c97f9d235b286f5ed1126abd035d046b6ba1417880dbbfa992f3d6e98b9180a5"
+    },
+    {
+      "path": "DATOS/topografia_objetos.json",
+      "bytes": 572811,
+      "sha256": "a0a0a4232bfd4013f522cd804172eb082910cb7ac42e7e59b1f17861a5934c4d"
+    },
+    {
+      "path": "DATOS/transitos_puente.json",
+      "bytes": 248438,
+      "sha256": "e688c39760bb9dea449c07d6cc8dd8d5d235bacdae0f2c535aff8eb5e160ee0d"
+    },
+    {
+      "path": "DATOS/validacion_entrega.json",
+      "bytes": 307,
+      "sha256": "d65b9ea4f9b5cc9580d9a3742009a2b580de968a46c481ee271e119040e58c43"
+    },
+    {
+      "path": "ESCENAS/VOY03_Circulacion.blend",
+      "bytes": 22845851,
+      "sha256": "b90dc854dfb3ce62ece4cfb60b25a510787592f5abb68236e799647e074287ea"
+    },
+    {
+      "path": "GALERIA.html",
+      "bytes": 23066,
+      "sha256": "89932ff25c3035e8a9ff915e3d863addcb9687553aa140c69085d68d74735d9c"
+    },
+    {
+      "path": "LAMINAS/01_superficies_originales.png",
+      "bytes": 74841,
+      "sha256": "0798de6effdaf394feab817548ba16b629b17262c70740bcf8dd720becfd7c89"
+    },
+    {
+      "path": "LAMINAS/02_planta_soportes_y_rutas.png",
+      "bytes": 94122,
+      "sha256": "d2b8a52eac3ed09b17535165dc1bfbe14205c0ddea3646eedd3ba2ec70cf7852"
+    },
+    {
+      "path": "LAMINAS/03_seccion_derecha.png",
+      "bytes": 57468,
+      "sha256": "9a6cd091488193da5098160335d01866fe997b81f23d9ea2f8fb5604d1d6bc11"
+    },
+    {
+      "path": "LAMINAS/03_seccion_izquierda.png",
+      "bytes": 58121,
+      "sha256": "c9e576b7d3ebdd547011a01c41f432147d36944624986bee1ae6827969118161"
+    },
+    {
+      "path": "LAMINAS/04_seccion_navegacion.png",
+      "bytes": 65232,
+      "sha256": "ea0ea3e195285fd78b1352eaba85a34291ca4b5aae30a001bc0b3fd43865cc8b"
+    },
+    {
+      "path": "LAMINAS/05_atajo_descartado_y_ruta_final.png",
+      "bytes": 44609,
+      "sha256": "e1afef8ba8a0efeebf806020727622821b6ea07666333e768bb627109ddc69db"
+    },
+    {
+      "path": "LAMINAS/06_tres_alturas.png",
+      "bytes": 313088,
+      "sha256": "bf271c626f1ec41172a9c9b670ef64348ea52aad07a0565f2d83b1d2b4aa9802"
+    },
+    {
+      "path": "LAMINAS/07_comparativa_sin_reparacion.png",
+      "bytes": 900958,
+      "sha256": "3f7ae59a34747b5ff08b78167b26bfa8bd4588c248f884de5ed423a94a76c8c7"
+    },
+    {
+      "path": "LAMINAS/QA_contacto_final.png",
+      "bytes": 813431,
+      "sha256": "9ebc84c18ddb351ab0282fc74e64f2a1124b371b9633b1082ee827f338f64510"
+    },
+    {
+      "path": "LAMINAS/QA_contacto_inicial.png",
+      "bytes": 666552,
+      "sha256": "c1d7c2422399a386fe2ed906f745ded94927179e1aaff71a60cb92b5f1361443"
+    },
+    {
+      "path": "LOGS/01_topografia.log",
+      "bytes": 1942,
+      "sha256": "13783801ed643a27cfe908a1cda2e5ecd4168c6cc878e462eee519a0234dff56"
+    },
+    {
+      "path": "LOGS/03_inspeccion_blender.log",
+      "bytes": 1113,
+      "sha256": "2478b295488074acc6739a10a4fb359a27b56291f9cd13b968433e4986e93065"
+    },
+    {
+      "path": "LOGS/04_busqueda_original.log",
+      "bytes": 3072,
+      "sha256": "625807f8c0e34a0f0a8aba4549318b4e36c963042330094d712f4027e5e2a6e9"
+    },
+    {
+      "path": "LOGS/04A_busqueda_con_narices.log",
+      "bytes": 3017,
+      "sha256": "d70ebabf20e852ce096add645463206a06defac27be4e6477c03633957cbd9be"
+    },
+    {
+      "path": "LOGS/04B_busqueda_soportes_completos.log",
+      "bytes": 3920,
+      "sha256": "dc8c1a5e48dd6d1aac9d1a266b0b2451110b28e7f7cd3bd0c9a4a30c6060bca2"
+    },
+    {
+      "path": "LOGS/05_perfiles_corregido.log",
+      "bytes": 2752,
+      "sha256": "4b4bf7529ac7067983cd755ff9c1c244916f13ef0379ef758b563cb353e3a2cb"
+    },
+    {
+      "path": "LOGS/05_perfiles_y_bloqueos.log",
+      "bytes": 394,
+      "sha256": "2a2ac284168a7d7f534c7d2e8a3235ec895dc7c7596aa12f9f2f76d7a52e8aad"
+    },
+    {
+      "path": "LOGS/05B_perfiles_narices.log",
+      "bytes": 1858,
+      "sha256": "1764934b2a8add2245bcbcb3c16ee6554ffd2846c01d54b4d102fe254fb5f561"
+    },
+    {
+      "path": "LOGS/06_replanificar_aristas.log",
+      "bytes": 678,
+      "sha256": "c7ab8882d456dea8d7b410cd4d1e01090fb11a585c6655bb66721d560898f830"
+    },
+    {
+      "path": "LOGS/06B_apoyo_vertical.log",
+      "bytes": 678,
+      "sha256": "8d5dec91d621f82a4075e453fc724b992501eae473f1b65d0baea272a9917cf0"
+    },
+    {
+      "path": "LOGS/07_barridos_y_recorridos.log",
+      "bytes": 11873,
+      "sha256": "994cad5f05c73c769d0c3df64e8ba0c796862fc209740014dd09599338f2d383"
+    },
+    {
+      "path": "LOGS/07B_barridos_corregidos.log",
+      "bytes": 9577,
+      "sha256": "0d10df7f775884d4fd14b7455efe4453bb2dbbb53c133579ff108e482f6736da"
+    },
+    {
+      "path": "LOGS/07C_sin_atajo_esquina.log",
+      "bytes": 9573,
+      "sha256": "fccf40bdfe054dc3d2456065ba5158a695541fa4a8b0dabe3b5ef38956b3f230"
+    },
+    {
+      "path": "LOGS/08_debug_corregido.log",
+      "bytes": 1747,
+      "sha256": "d0ed09644c5a17ef467b19041daf9d7927bbaf7ef8ed215d171db1e9b7427392"
+    },
+    {
+      "path": "LOGS/09_apoyo_intervalos.log",
+      "bytes": 3021,
+      "sha256": "0761d5d16b75b3a010817979b1d09e9422cee1df5da7b146c19d8f834ab3e432"
+    },
+    {
+      "path": "LOGS/09B_apoyo_final.log",
+      "bytes": 3001,
+      "sha256": "33855b1618d452f52402b743402fa0236b276cd1b67f65af51926f8aa379927e"
+    },
+    {
+      "path": "LOGS/10_mediciones.log",
+      "bytes": 2331,
+      "sha256": "78240e0900f0059aae33c06f97e32532319ef6db08a36f6380111a9bf278f19c"
+    },
+    {
+      "path": "LOGS/11_comparacion_algoritmos.log",
+      "bytes": 2529,
+      "sha256": "0254036870639c00b26242b093baf9b3b1ef712fe0fd580ed3d933f0c2e2e3ef"
+    },
+    {
+      "path": "LOGS/12_laboratorio_blender.log",
+      "bytes": 2406,
+      "sha256": "39a1d4077abcae16dabb0c626f7832c3bd9e82ba3bd8b21199399d3284497b60"
+    },
+    {
+      "path": "LOGS/12B_laboratorio_final.log",
+      "bytes": 2588,
+      "sha256": "4f494746f3f8cfba132faa312d4690352027ecc4540c2bb57746673e212ab3ca"
+    },
+    {
+      "path": "LOGS/12C_laboratorio_sin_helpers_heredados.log",
+      "bytes": 2588,
+      "sha256": "a0bfdb4711c64d9cfcec56ab28f995c67e0fd4559c6216f33877d20c57c1ca6d"
+    },
+    {
+      "path": "LOGS/12D_presentacion_final.log",
+      "bytes": 2588,
+      "sha256": "b70a28ea91801204b5860f2ec14412c9f163b665a75cad35392ad14a9f0baef4"
+    },
+    {
+      "path": "LOGS/14_datos_finales.log",
+      "bytes": 108,
+      "sha256": "59490122521952cec4b6bee698dfc1f2a4d020ea568ddc3d63c85adc152fa9c8"
+    },
+    {
+      "path": "LOGS/16_contraste_guardado.log",
+      "bytes": 657,
+      "sha256": "5eff7b57b8a0f37eb34924d797556175856a1a6668434d4699cccca4e174934d"
+    },
+    {
+      "path": "LOGS/16B_contraste_final.log",
+      "bytes": 657,
+      "sha256": "468f2e62b8151a6f14e43a6a93edff7b74896d24be657ed94a9b73d5c34f2fed"
+    },
+    {
+      "path": "LOGS/18_evidencias_adicionales.log",
+      "bytes": 771,
+      "sha256": "ee37c6340732c79f93ae67201376b808ad780e0350563c5ead6f34590f1dbf9f"
+    },
+    {
+      "path": "LOGS/18B_capsula_alambrica_corregida.log",
+      "bytes": 771,
+      "sha256": "ea70c412bca7b5d12fe320345d3388063f71d75fef321bfaf47848e63682f67e"
+    },
+    {
+      "path": "LOGS/20_integridad_final.log",
+      "bytes": 236,
+      "sha256": "3a362bd5fa251222afd52fa27ee580497052bb3ca1ba8096277550040fa312da"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3474,
+      "sha256": "d66c33a746e9981c1d2533996e9d48ad3c146602b92dc2aa70c5a5294447e32c"
+    },
+    {
+      "path": "REFERENCIAS/sweepgeom_A0.py",
+      "bytes": 2117,
+      "sha256": "cd3954890b96eb7bacd14e9b8d6fa619158a6920f2c8df85e7301855ee649592"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/00_RESUMEN_EJECUTIVO.md",
+      "bytes": 5926,
+      "sha256": "13399c85b5e7c2744e06ff8ff5753decc24a517687340fa64e92e7a19fdccbbb"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/01_ESCALAS_ERGONOMIA.md",
+      "bytes": 7679,
+      "sha256": "74d60a6a721e61bb5a4f98c9fc27aec766fb3cbdfee7fdb94d8f3a8298bc8317"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/02_MODULARIDAD_PASILLOS.md",
+      "bytes": 5035,
+      "sha256": "7704b886ac0c075b357b11422bab239f6cc51a6f2629c8eae1b2c5bc1b1d169d"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/03_CONEXION_PUENTE_PASILLOS.md",
+      "bytes": 6031,
+      "sha256": "803916e3b22a6e38ef21773a551fa4285d920f90b8ce692b8e6fe38fc3b3d0e1"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/04_CAMAROTE_JUGADOR.md",
+      "bytes": 4716,
+      "sha256": "ce18e78c8c32916b7fa60f1c2041278612da0c50a5784675021ef1a2d9f206fb"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/05_PUERTAS_SILLAS_CONSOLAS.md",
+      "bytes": 5873,
+      "sha256": "62c12655ae7396757b1e84e8bdaddcfc7e529245c2a7e3f02fd2dc1c99e86585"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/06_MATERIALES_RENDIMIENTO.md",
+      "bytes": 5656,
+      "sha256": "26abd6710185235a64ec8fe6d853349e52fe93f1b57b9967630d991a6589893d"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/07_HOJA_DE_RUTA_RECOMENDADA.md",
+      "bytes": 5495,
+      "sha256": "1b5ecee9d892b389a901b77ea7f2bc74937672ddbc9d9cf7b5878271ef9f300a"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/08_PRUEBAS_Y_LIMITACIONES.md",
+      "bytes": 8610,
+      "sha256": "1d29739f88a3cf48ff3f4f7199aefa921c75a1e6b49c19adda35833ee605b024"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/17_acceso_central.py",
+      "bytes": 4925,
+      "sha256": "4847b25a4f5781316903bd01d608b506c68197c13c6497476629df526375c358"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A01_puente_completo.png",
+      "bytes": 1525122,
+      "sha256": "96d02df84eca86324773487d34e893573a9ee1819371f2dbb1cd70d3d690de98"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A02_puente_humanos.png",
+      "bytes": 1617982,
+      "sha256": "a4d6062fcd5f830993b3d10cb02059dfe0bc5e15166b2f38be22cc8dcc1563a5"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A03_planta_acotada.png",
+      "bytes": 1577889,
+      "sha256": "012feccf0069503389798a6a41cadadf69987a19b8a2de9a0d8dea96629d5f20"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A04_seccion_alturas.png",
+      "bytes": 1173482,
+      "sha256": "58e32a786cce9327eb67c616eba3bef93c34d1ad832a8df40ceee5a1b29adaec"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/C01_puente_pasillo.png",
+      "bytes": 1625707,
+      "sha256": "535c7fc0f5d4dd607ccf2866a1ae774b4a9a32bb94145da556048e6516bfc748"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/C02_detalle_adaptador.png",
+      "bytes": 1314632,
+      "sha256": "1f3d095b152693b995bc9cc9529daee6b2aa1c26bc63f6b3b89335ff2ea63c45"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G01_conjunto_completo.png",
+      "bytes": 1542224,
+      "sha256": "c92a516167f5cce2944b826eca921d9570ec9bd3c09cec2fb2273d40d539754d"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G02_conjunto_planta.png",
+      "bytes": 1812657,
+      "sha256": "8f79b600fab1e2a934a8a92d6bcb9420b85a334954f80195c4b4762b0cdce99e"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G03_conjunto_perspectiva.png",
+      "bytes": 1554980,
+      "sha256": "f2dad4315a4578b10abc0f3d9fdf22a75cc5d898badf8075f1fb81afc9adda65"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G04_cruce_y_turbolift.png",
+      "bytes": 1447992,
+      "sha256": "310175fc192d453060505cf9c642b35689a13daa6e018628d17ca9a9aeb1d22b"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/geom.py",
+      "bytes": 7718,
+      "sha256": "30a7288a183db81268466f186e9fa4f7943ea48e4e361dfb86f15b0d12c30042"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/README.md",
+      "bytes": 3302,
+      "sha256": "c7ebfabd0abfafc9c1f74ed77c6ae4171a22f32fff9596ea712acb1f5a5ae9d7"
+    },
+    {
+      "path": "REFERENCIAS/VOY02/VERIFICACION_ENTREGA.md",
+      "bytes": 1142,
+      "sha256": "99de346106088c9276e5367c194cba81790198316b32bd736133f6cc6821aab1"
+    },
+    {
+      "path": "REFERENCIAS/walkgeom_A0.py",
+      "bytes": 4783,
+      "sha256": "3035d65f36a37b294a3e5f441ed9cff4e403a30d836ecfcf7fc601f6fc3cf21e"
+    },
+    {
+      "path": "SCRIPTS/00_copias_y_baseline.py",
+      "bytes": 2329,
+      "sha256": "dd027ca577b0c41bf1011d679a554282694086be1eb1be1c3dcb3f5af78877fd"
+    },
+    {
+      "path": "SCRIPTS/01_topografia.py",
+      "bytes": 3141,
+      "sha256": "4c3dca0bc44822338c1d4eedda92a91a0d46ecdb62b861332b6c83c57a6014f3"
+    },
+    {
+      "path": "SCRIPTS/02_planta_soportes.py",
+      "bytes": 1285,
+      "sha256": "1bfd02d4ec6fddbc6cb4b541c18e22a407526c502c333bb3664c2af718c51202"
+    },
+    {
+      "path": "SCRIPTS/03_inspeccion_blender.py",
+      "bytes": 2233,
+      "sha256": "ded4b3de22ec1063839e23b67838d4934cbc3584d8de28c3d2b87efea5f4a185"
+    },
+    {
+      "path": "SCRIPTS/04_busqueda_original.py",
+      "bytes": 3472,
+      "sha256": "0ffdfd93dfc4edbf5d4b110367bf9b555ea2c219cdfc7497581c4d211260a01f"
+    },
+    {
+      "path": "SCRIPTS/05_perfiles_y_bloqueos.py",
+      "bytes": 1704,
+      "sha256": "1ba831ba4c6c0625beba94519c7710d3e1c51856bff44f67470ed8824b7ca70b"
+    },
+    {
+      "path": "SCRIPTS/06_replanificar_aristas.py",
+      "bytes": 3341,
+      "sha256": "00bb97f646a9dc80720a8ed2b609041cca7f78230bd805ff6d13d4b3538326af"
+    },
+    {
+      "path": "SCRIPTS/07_barridos_y_recorridos.py",
+      "bytes": 5978,
+      "sha256": "79d2cfda5cd57bc62ce3802ba2c16a60edbc10a19089a10596a0580ad0084b89"
+    },
+    {
+      "path": "SCRIPTS/08_debug_barrido.py",
+      "bytes": 1726,
+      "sha256": "301eba2588034fdf2bb9ef180d58de0ee306cf6492e244a09954eb34a99fa9ef"
+    },
+    {
+      "path": "SCRIPTS/09_apoyo_intervalos.py",
+      "bytes": 2515,
+      "sha256": "286b508fd65d0ee9fc020035bbcbf3e1f2f3b5f00a3149d50fd1c712f9a92f78"
+    },
+    {
+      "path": "SCRIPTS/10_mediciones.py",
+      "bytes": 5360,
+      "sha256": "7ef3c13542ed6de21bea2680ecc15fc0241d83da9f55bed6574af4c14cab3dd2"
+    },
+    {
+      "path": "SCRIPTS/11_comparacion_algoritmos.py",
+      "bytes": 1250,
+      "sha256": "dd3059f7a4db9a9bbc642ec1fbc6dd6cc38009f8d23c3b038d1bc861c5b7b8fa"
+    },
+    {
+      "path": "SCRIPTS/12_laboratorio_blender.py",
+      "bytes": 9232,
+      "sha256": "485e09470d98d498e3345579e538a0e522985f8e86af5d8ecfbda79701aab55a"
+    },
+    {
+      "path": "SCRIPTS/13_debug_apoyo.py",
+      "bytes": 1120,
+      "sha256": "ebb6f400d305add45d7a2939fbddb24196529ea03e7d7a00e5a265e6e3acdf93"
+    },
+    {
+      "path": "SCRIPTS/14_datos_y_exportacion.py",
+      "bytes": 5508,
+      "sha256": "e35cd3fc2c59c10a2e4628c7866904f342195862dffcdf1d5decac65e0c485e8"
+    },
+    {
+      "path": "SCRIPTS/15_laminas.py",
+      "bytes": 6294,
+      "sha256": "6145e7b277c0bbd78a395eb32906e69485e6fc65c8b5587125f546804cce6328"
+    },
+    {
+      "path": "SCRIPTS/16_contraste_guardado.py",
+      "bytes": 3994,
+      "sha256": "3523d2f0ac15496d4991b1ff39b4b4c230ee57884678836ac65221769c1a46ea"
+    },
+    {
+      "path": "SCRIPTS/17_informes.py",
+      "bytes": 44725,
+      "sha256": "3aea064116d0fb61cddcf13d4a712d5a80f02cb462f81c186b31bb920c2898d0"
+    },
+    {
+      "path": "SCRIPTS/18_evidencias_adicionales.py",
+      "bytes": 3772,
+      "sha256": "14b5268154983f9b83fa2788bd24d7ee9fa4c3328ea993043dc135db1e88bc4c"
+    },
+    {
+      "path": "SCRIPTS/19_galeria_y_copias_visuales.py",
+      "bytes": 8601,
+      "sha256": "ce46f417eedf7600ad8752c95c942c747edf9d1c1d95accbb8981129ab1038b9"
+    },
+    {
+      "path": "SCRIPTS/20_integridad_final.py",
+      "bytes": 1742,
+      "sha256": "5f011adf11743c632f40efc75545f22fd335738afc52f7d492d7bd826870a210"
+    },
+    {
+      "path": "SCRIPTS/21_paquete_verificado.py",
+      "bytes": 5570,
+      "sha256": "703d6735f80e08645b8f161ef94a2a130ae6e6fa803097f7af6c7d55c33675bd"
+    },
+    {
+      "path": "SCRIPTS/geom.py",
+      "bytes": 7718,
+      "sha256": "30a7288a183db81268466f186e9fa4f7943ea48e4e361dfb86f15b0d12c30042"
+    },
+    {
+      "path": "SCRIPTS/sweepgeom.py",
+      "bytes": 2899,
+      "sha256": "16013e08eb78c205476f74bd3d7dc9d8fb475889ff0112029409be8cd8b3b39b"
+    },
+    {
+      "path": "SCRIPTS/walkgeom.py",
+      "bytes": 6000,
+      "sha256": "bff2551fbef0e374635442520180159e9dfa016759fadb14b1ac714ff3211ab0"
+    }
+  ],
+  "excluded_reference_blend": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\REFERENCIAS\\VOY02\\VOY02_Laboratorio.blend",
+  "excluded_reference_blend_sha256": "15a1f59850ccca78dc371bae6035bd785e7a36bf852b48943ab4f6a897d10eba",
+  "note": "Manifest excludes its own hash. ZIP CRC and every manifest entry SHA256 were checked after creation."
+}

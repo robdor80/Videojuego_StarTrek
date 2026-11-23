@@ -11,7 +11,11 @@
     "stable_grouping_not_best_action_ranking": true,
     "never_auto_execute": true,
     "preserve_context_on_route": true,
-    "blocked_actions_require_reason": true
+    "blocked_actions_require_reason": true,
+    "ship_specific_fast_path_ref": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+    "operational_target_clicks_goal": "1_or_2_for_frequent_orders",
+    "urgent_profile_preselected": "prefill_authorized_contact_and_scan_profile",
+    "automatic_watch_distinct_from_manual_execution": "background preparation continues; user-triggered privileged actions still require applicable authorization"
   },
   "actions": {
     "focused_scan": {

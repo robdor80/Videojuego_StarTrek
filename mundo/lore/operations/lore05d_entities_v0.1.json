@@ -1,0 +1,639 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05D",
+  "status": "DOCUMENTARY_ONLY",
+  "campaign_baseline_year": 2383,
+  "source_catalogues": {
+    "ships": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+    "classes": "mundo/lore/starships/classes/core_starship_classes.json",
+    "project": "mundo/lore/starships/individual_ships/project_valhalla_enterprise_d_v0.1.json",
+    "facilities": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+    "designs": "mundo/lore/stations_and_facilities/canonical_station_design_catalogue_v0.1.json",
+    "factions": "sistemas/gameplay/diplomacy/major_faction_catalogue.json"
+  },
+  "world_state_authority": "CoreRPG_ONLY",
+  "ship_count": 8,
+  "facility_count": 12,
+  "faction_count": 8,
+  "institution_profiles": [
+    {
+      "institution_id": "federation_civil_government",
+      "profile_ref": "sistemas/gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+      "governance_note": "Gobierno civil y Consejo con autoridad institucional distinta del mando de operaciones."
+    },
+    {
+      "institution_id": "starfleet",
+      "profile_ref": "sistemas/gameplay/organizations/profiles/STARFLEET_ORGANIZATION_PROFILE_v0.1.json",
+      "governance_note": "Servicio uniformado, cadena de mando y órdenes gobernadas por F11, sin duplicar sus reglas."
+    }
+  ],
+  "ships": [
+    {
+      "ship_id": "uss_enterprise_ncc_1701",
+      "registry": "NCC-1701",
+      "registry_history": null,
+      "class_id": "constitution",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "pike",
+        "kirk"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "SNW_STRANGE_NEW_WORLDS_EP",
+        "MA_ENTERPRISE_1701",
+        "TOS_WHERE_NO_MAN_HAS_GONE_BEFORE",
+        "MA_CONSTITUTION_CLASS",
+        "STIII_SEARCH_FOR_SPOCK"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use": "Historiografía de la Flota y legado institucional.",
+      "prohibited_inference": "No es nave jugable de 2383; destrucción de 2285 registrada, no reactivarla.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_enterprise_ncc_1701_a",
+      "registry": "NCC-1701-A",
+      "registry_history": null,
+      "class_id": "constitution",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "STIV_VOYAGE_HOME",
+        "MA_ENTERPRISE_1701_A",
+        "STVI_UNDISCOVERED_COUNTRY"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use": "Memoria histórica del mando de Kirk y de la época anterior.",
+      "prohibited_inference": "Una maqueta histórica o recurso 3D no significa unidad activa, tripulación actual o destino.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_reliant_ncc_1864",
+      "registry": "NCC-1864",
+      "registry_history": null,
+      "class_id": "miranda",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "STII_WRATH_OF_KHAN",
+        "MA_RELIANT_1864"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use": "Investigación académica de incidentes del siglo XXIII.",
+      "prohibited_inference": "Fue destruida en 2285; no duplicar la matrícula en generación.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_excelsior_ncc_2000",
+      "registry": null,
+      "registry_history": [
+        "NX-2000",
+        "NCC-2000"
+      ],
+      "class_id": "excelsior",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "MA_EXCELSIOR_2000",
+        "STVI_UNDISCOVERED_COUNTRY"
+      ],
+      "documentary_state_2383": "LEGADO_CON_ESTADO_ACTUAL_NO_VERIFICADO",
+      "narrative_use": "Precedentes de logística, innovación y exploración de la Flota.",
+      "prohibited_inference": "No deducir que esta nave individual esté operativa en 2383 por supervivencia de su clase.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_grissom_ncc_638",
+      "registry": "NCC-638",
+      "registry_history": null,
+      "class_id": "oberth",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "STIII_SEARCH_FOR_SPOCK",
+        "MA_GRISSOM_638"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use": "Lecciones institucionales y científicas del incidente Génesis.",
+      "prohibited_inference": "Destruida en 2285; no aparece como buque de prácticas activo.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_enterprise_ncc_1701_d",
+      "registry": "NCC-1701-D",
+      "registry_history": null,
+      "class_id": "galaxy",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "TNG_ENCOUNTER_AT_FARPOINT",
+        "MA_ENTERPRISE_1701_D"
+      ],
+      "documentary_state_2383": "PROYECTO_RECONSTRUCCION",
+      "narrative_use": "La Enterprise-D original se recupera/reconstruye como Proyecto Valhalla desde 2380 en esta continuidad; la carrera del jugador puede aproximarse a ella después de graduarse.",
+      "prohibited_inference": "No cambiar registro ni clase; no sustituir por una nave llamada Valhalla; no garantizar alta, localización, destino o capitanía en 2387.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_defiant_nx_74205",
+      "registry": "NX-74205",
+      "registry_history": null,
+      "class_id": "defiant",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "DS9_SEARCH_PART_I",
+        "MA_DEFIANT_74205",
+        "DS9_CHANGING_FACE_OF_EVIL"
+      ],
+      "documentary_state_2383": "DESTRUIDA_ANTES_2383",
+      "narrative_use": "Defiant histórica: legado táctico, desarrollo experimental y relación con DS9.",
+      "prohibited_inference": "El casco NX-74205 fue destruido en 2375; la Sao Paulo rebautizada Defiant NO comparte este ship_id ni es la misma unidad física.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    },
+    {
+      "ship_id": "uss_voyager_ncc_74656",
+      "registry": "NCC-74656",
+      "registry_history": null,
+      "class_id": "intrepid",
+      "operator_reference": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "source_ship_catalogue": "mundo/lore/starships/individual_ships/core_canonical_ships.json",
+      "provenance_refs": [
+        "VOY_CARETAKER",
+        "MA_VOYAGER_74656"
+      ],
+      "documentary_state_2383": "HISTORIA_RECONOCIDA_ESTADO_ACTUAL_NO_VERIFICADO",
+      "narrative_use": "Exploración lejana, aprendizaje científico y transmisión institucional de experiencia.",
+      "prohibited_inference": "Regreso de Voyager en 2378, pero no imponer su ubicación, dotación, disponibilidad ni misiones de 2383 sin hechos de la partida.",
+      "world_state_known": false,
+      "auto_spawn": false,
+      "auto_assign_to_player": false,
+      "automatic_command_authority": false
+    }
+  ],
+  "facilities": [
+    {
+      "facility_id": "canon:facility:starbase_1",
+      "display_name": "Starbase One",
+      "design_ref": "starfleet_starbase_1_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "pike"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_STARBASE_1_TYPE",
+        "ST_OFFICIAL_SNW_BROKEN_CIRCLE"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use_and_limits": "Estudio de infraestructura histórica; su diseño no se invoca en 2383 sin justificación.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:deep_space_station_k7",
+      "display_name": "Deep Space Station K-7",
+      "design_ref": null,
+      "identity_policy": "reserved_unique_design",
+      "retained_playable_profiles": [
+        "kirk"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use_and_limits": "Historia de frontera klingon; existencia/operación exacta en 2383 no corroborada aquí.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:regula_i",
+      "display_name": "Regula I",
+      "design_ref": "federation_regula_i_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "kirk"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_REGULA_I_TYPE",
+        "ST2_WRATH_OF_KHAN"
+      ],
+      "documentary_state_2383": "SOLO_REFERENCIA_HISTORICA",
+      "narrative_use_and_limits": "Memoria de investigación del siglo XXIII; no asumir estación activa en 2383.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:spacedock_one",
+      "display_name": "Spacedock One / Earth Spacedock",
+      "design_ref": "starfleet_spacedock_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_SPACEDOCK_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ],
+      "documentary_state_2383": "UBICACION_CONOCIDA_ESTADO_OPERATIVO_DINAMICO",
+      "narrative_use_and_limits": "Dársenas, tráfico, servicios y seguridad federativa con aforos y permisos, nunca servicios infinitos.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:jupiter_station",
+      "display_name": "Jupiter Station",
+      "design_ref": null,
+      "identity_policy": "reserved_unique_design",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_JUPITER_STATION"
+      ],
+      "documentary_state_2383": "UBICACION_CONOCIDA_ESTADO_OPERATIVO_DINAMICO",
+      "narrative_use_and_limits": "Investigación e infraestructura de Sol, con accesos por misión y puestos reales.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:utopia_planitia_fleet_yards",
+      "display_name": "Utopia Planitia Fleet Yards",
+      "design_ref": null,
+      "identity_policy": "reserved_major_complex",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_UTOPIA_PLANITIA_FLEET_YARDS"
+      ],
+      "documentary_state_2383": "UBICACION_CONOCIDA_ESTADO_OPERATIVO_DINAMICO",
+      "narrative_use_and_limits": "Astilleros y construcción naval, pero Proyecto Valhalla no se sitúa automáticamente aquí.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:starbase_375",
+      "display_name": "Starbase 375",
+      "design_ref": "federation_starbase_375_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_STARBASE_375_TYPE",
+        "DS9_A_TIME_TO_STAND"
+      ],
+      "documentary_state_2383": "INSTALACION_HISTORICA_TNG_ESTADO_ACTUAL_VARIABLE",
+      "narrative_use_and_limits": "Veteranía de logística de la guerra; servicios de 2383 dependen de la situación del complejo.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:relay_station_47",
+      "display_name": "Relay Station 47",
+      "design_ref": "starfleet_relay_station_47_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_RELAY_STATION_47",
+        "TNG_AQUIEL"
+      ],
+      "documentary_state_2383": "INSTALACION_HISTORICA_TNG_ESTADO_ACTUAL_VARIABLE",
+      "narrative_use_and_limits": "Red de comunicaciones/soporte; su infraestructura 2383 debe consultarse, no darse por intacta.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:deep_space_9",
+      "display_name": "Deep Space 9 / Terok Nor",
+      "design_ref": "cardassian_terok_nor_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ],
+      "documentary_state_2383": "INSTALACION_CON_JURISDICCION_MIXTA_ESTADO_DINAMICO",
+      "narrative_use_and_limits": "Puerto político y comercial de Bajor; sede de operaciones según la cadena de mando y acuerdos vigentes.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:empok_nor",
+      "display_name": "Empok Nor",
+      "design_ref": "cardassian_terok_nor_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ],
+      "documentary_state_2383": "ESTACION_HISTORICA_ESTADO_ACTUAL_VARIABLE",
+      "narrative_use_and_limits": "Un diseño físico similar a Terok Nor NO implica mismos propietarios, habitantes o servicios.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:tygokor_complex",
+      "display_name": "Ty'Gokor orbital complex",
+      "design_ref": "klingon_tygokor_orbital_facility",
+      "identity_policy": "reserved_complex",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_TYGOKOR_ORBITAL_FACILITY",
+        "DS9_APOCALYPSE_RISING"
+      ],
+      "documentary_state_2383": "INSTALACION_ESTRATEGICA_ESTADO_ACTUAL_VARIABLE",
+      "narrative_use_and_limits": "Instalación imperial restringida; visitas y datos de inteligencia requieren autoridad y documentación.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    },
+    {
+      "facility_id": "canon:facility:monac_shipyards",
+      "display_name": "Monac shipyards",
+      "design_ref": "dominion_monac_type",
+      "identity_policy": "reserved",
+      "retained_playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "source_facility_catalogue": "mundo/lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+      "source_refs": [
+        "MA_MONAC_SHIPYARD"
+      ],
+      "documentary_state_2383": "INSTALACION_HISTORICA_ESTADO_ACTUAL_VARIABLE",
+      "narrative_use_and_limits": "Astilleros del Dominio documentados; no suponer instalaciones recuperadas, intactas o accesibles en 2383.",
+      "unique_identity_respected": true,
+      "operator_current": null,
+      "owner_current": null,
+      "inventory_current": null,
+      "staff_current": null,
+      "dock_capacity_current": null,
+      "auto_generate_duplicate": false,
+      "automatically_service_player": false
+    }
+  ],
+  "factions": [
+    {
+      "faction_id": "united_federation_of_planets",
+      "display_name_es": "Federación Unida de Planetas",
+      "type": "federal_interstellar_polity",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+        "sistemas/gameplay/organizations/profiles/STARFLEET_ORGANIZATION_PROFILE_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Gobierno civil y Flota tienen potestades distintas; un rango militar no convierte al jugador en legislador o delegado diplomático.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "klingon_empire",
+      "display_name_es": "Imperio Klingon",
+      "type": "interstellar_empire",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/KLINGON_EMPIRE_ORGANIZATIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "El Alto Consejo, las Casas y el ejército imperial no comparten una sola voluntad ni forman una organización idéntica.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "romulan_star_empire",
+      "display_name_es": "Imperio Estelar Romulano",
+      "type": "interstellar_empire",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/ROMULAN_EMPIRE_ORGANIZATIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Senado, mando militar y Tal Shiar son instituciones diferenciadas; no conceder secretos por especie.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "cardassian_union",
+      "display_name_es": "Unión Cardassiana",
+      "type": "centralized_interstellar_state",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/CARDASSIAN_UNION_ORGANIZATIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Gobierno, ejército, inteligencia y resistencia son identidades separadas; soberanía y régimen pueden cambiar en WorldState.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "bajoran_provisional_government",
+      "display_name_es": "Gobierno Provisional Bajorano",
+      "type": "planetary_sovereign_government",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/BAJORAN_INSTITUTIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Bajor es soberano y las instituciones religiosas, civiles y militares no son equivalentes; DS9 tampoco altera ese hecho.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "ferengi_alliance",
+      "display_name_es": "Alianza Ferengi",
+      "type": "commercial_interstellar_polity",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/FERENGI_ALLIANCE_ORGANIZATIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "La autoridad comercial no vincula universalmente a todos los ferengis; contratos requieren jurisdicción y partes reales.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "borg_collective",
+      "display_name_es": "Colectivo Borg",
+      "type": "collective_assimilation_power",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/BORG_COLLECTIVE_OPERATIONAL_PROFILE_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Red de asimilación no equivale a especie, ciudadanía ni organización diplomática ordinaria; individuos liberados no son drones por origen.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    },
+    {
+      "faction_id": "dominion",
+      "display_name_es": "Dominio",
+      "type": "gamma_quadrant_hegemonic_power",
+      "source_faction_catalogue": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+      "organization_profile_refs": [
+        "sistemas/gameplay/organizations/profiles/DOMINION_ORGANIZATIONS_v0.1.json"
+      ],
+      "documentary_interpretation_2383": "Fundadores, administración vorta y tropas jem'hadar constituyen funciones distintas; la posguerra depende de hechos registrados.",
+      "jurisdiction_current": null,
+      "diplomatic_status_current": null,
+      "active_leadership_current": null,
+      "automatic_treaty_or_war": false,
+      "automatic_membership": false
+    }
+  ],
+  "red_flags": [
+    "Defiant NX-74205 no es la Sao Paulo renombrada; esta ultima no está sembrada por este catálogo.",
+    "USS Enterprise-D Galaxy NCC-1701-D no es clase Valhalla ni buque nuevo.",
+    "Odyssey es clase incorporada a diseño 2383, no nave individual generada automáticamente.",
+    "Registros históricos pueden existir sin objeto físico activo en 2383.",
+    "Facility design != individual facility != operator != owner != people.",
+    "Governance != actor affiliation != permissions != knowledge.",
+    "Ni un oficial de alto rango inventa órdenes, viajes, propiedad o sucesión de cargo."
+  ],
+  "runtime_implemented": false,
+  "live_state_mutations": false,
+  "automatic_world_spawns": false,
+  "automatic_missions": false
+}

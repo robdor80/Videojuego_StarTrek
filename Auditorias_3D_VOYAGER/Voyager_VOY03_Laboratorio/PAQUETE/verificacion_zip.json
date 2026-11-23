@@ -1,0 +1,25 @@
+{
+  "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\PAQUETE\\VOY03_Entrega.zip",
+  "bytes": 145696040,
+  "sha256": "504f85db2c992cdebd6cf2d3890b065c5368ca370de164fe1f7d7bc1af094368",
+  "crc_all_passed": true,
+  "all_manifest_hashes_match": true,
+  "entries": 185,
+  "contains_nine_reports": true,
+  "contains_final_blend": true,
+  "contains_scripts_data_images_logs": true,
+  "external_reference_blend": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\REFERENCIAS\\VOY02\\VOY02_Laboratorio.blend",
+  "delivery_checks": {
+    "reports": 9,
+    "scripts_parsed": 25,
+    "broken_report_links": [],
+    "images_verified": 54,
+    "cases_passed": 39,
+    "continuous_support_routes": 13,
+    "geometry_components_matched": 645,
+    "scenes": 4,
+    "protected_unchanged": 2762,
+    "reference_copies_unchanged": 37,
+    "all_passed": true
+  }
+}

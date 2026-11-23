@@ -1,5 +1,7 @@
 # Procedural Dynamic Universe — 10-block plan v0.1
 
+> **ESTADO VIGENTE — 19/11/2026 (reconciliación de auditoría):** B01–B10 están cerrados históricamente como **referencia offline**, 10/10 bloques y 177/177 paquetes, no como universo jugable. **No hay ningún «bloque siguiente» de P2 ni se inicia F13 ahora.** Consultar [vista normalizada de madurez](P2_B01_B10_MADUREZ_NORMALIZADA_20261119.json), [reparación R1–R5 y traspaso R6](P2_RECONCILIACION_CONTRATOS_Y_TRASPASO_R6_20261119.md) y [auditoría independiente](../auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md). Las referencias posteriores a «siguiente elegible» son fotografías **históricas fechadas**, no instrucciones actuales. CoreRPG mantiene la única autoridad de WorldState/tiempo/persistencia.
+
 **Status:** ACTIVE  
 **Execution rule:** blocks are implemented strictly in order. A later block may be documented as a dependency, but implementation does not start until the current block is COMPLETE, validated, cross-referenced and recorded in `CONTENT_STATUS.md`.
 
@@ -8,13 +10,13 @@
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
 | 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | COMPLETE |
-| 4 | Living Interplanetary / Interstellar Economy | READY_TO_RESUME |
-| 5 | Procedural History & Major Events | TODO |
-| 6 | Science, Technology & Discovery | TODO |
-| 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
-| 8 | Systemic Crises | TODO |
-| 9 | Emergent Missions from World State | TODO |
-| 10 | Background Galactic Evolution | TODO |
+| 4 | Living Interplanetary / Interstellar Economy | REFERENCE_COMPLETE |
+| 5 | Procedural History & Major Events | REFERENCE_COMPLETE |
+| 6 | Science, Technology & Discovery | REFERENCE_COMPLETE |
+| 7 | Phenomena, Anomalies & Procedural Archaeology | REFERENCE_COMPLETE |
+| 8 | Systemic Crises | REFERENCE_COMPLETE |
+| 9 | Emergent Missions from World State | REFERENCE_COMPLETE |
+| 10 | Background Galactic Evolution | REFERENCE_COMPLETE |
 
 ## Block separation
 
@@ -43,4 +45,54 @@ Block 3 closes crisis/escalation, culture/faction/government conflict behaviour,
 
 ## Temporary priority gate — Academy Life
 
-Dynamic Universe **Block 4 — Living Interplanetary / Interstellar Economy is READY_TO_RESUME and remains unstarted**. The temporary Academy gate is now closed because `Academy Life & Social Simulation` is 20/20 COMPLETE. Block 4 is the next Dynamic Universe implementation target before any Block 5 work.
+Academy Life 20/20 had removed the earlier gate. **Update 2026-11-12:** Block 4 is now COMPLETE on the Star Trek reference-contract/test side, with [plan](procedural_living_economy_plan_v0.1.md), [status](procedural_living_economy_status_v0.1.json) and [acceptance evidence](P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md). It does not certify CoreRPG/UE5/HOST runtime. **Block 5 — Procedural History & Major Events is the next eligible block.**
+
+## Actualización secuencial — 12/11/2026, P2-B05
+
+Bloque 5 **REFERENCE_COMPLETE** sólo a nivel de contrato, simulador histórico offline, 36 pruebas y regresiones. Ver [plan B05](procedural_history_major_events_plan_v0.1.md), [estado B05](procedural_history_major_events_status_v0.1.json) y [acta B05](P2_B05_ACTA_CIERRE_REFERENCIA_20261112.md). **Siguiente elegible: Bloque 6 — Science, Technology & Discovery.** La fase F13 global, el runtime CoreRPG, HOST y UE5 no cambian de madurez.
+
+## Actualización secuencial — 12/11/2026, P2-B06
+
+**Bloque 6 — Ciencia, tecnología y descubrimientos: REFERENCE_COMPLETE** en los 18 paquetes ST001–ST018. Contrato, simulador de referencia y fixture científico→ingeniería→astillero→ensayo individual, con 54 pruebas nuevas, 152 regresiones dinámicas incluyendo B06 y 29 de F13 superadas en [Actions #43199308066](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43199308066). Ver [plan B06](procedural_science_technology_discovery_plan_v0.1.md), [estado B06](procedural_science_technology_discovery_status_v0.1.json) y [acta](P2_B06_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible: Bloque 7 — Fenómenos, anomalías y arqueología procedural**, tras fusión y CI final de B06. Bloques 7–10 no iniciados. F13 global, CoreRPG, HOST, UE5, investigación offscreen y guardado autoritativo no cambian de estado. Las referencias anteriores que fijaban B4/B5/B6 como siguiente son fotografías históricas conservadas por trazabilidad.
+
+## Actualización secuencial — 12/11/2026, P2-B07
+
+Bloque 7 **REFERENCE_COMPLETE** para fenómenos, anomalías y arqueología en los 18 paquetes PA001–PA018, con PR #116 **fusionada** en `main` (squash `73eb7e59e1032ac5975c9e459f27d2c1f5609522`) y CI B07/F13 de referencia exitoso. La generación/simulación Python, un caso de perturbación subespacial y ruinas protegidas, el control de canon/semillas/LOD y 56 pruebas adversariales no suponen un runtime galáctico. Ver [plan B07](procedural_phenomena_archaeology_plan_v0.1.md), [estado B07](procedural_phenomena_archaeology_status_v0.1.json) y [acta B07](P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible: Bloque 8 — Crisis sistémicas.** Bloques 9–10 TODO; F13, CoreRPG, HOST, UE5, escáneres reales, editor procedural y guardado autoritativo NO cambian de madurez. Los párrafos anteriores que señalan B4/B5/B6/B7 como «siguiente» conservan su fecha histórica y no se han eliminado.
+
+
+## Actualización secuencial — 12/11/2026, P2-B08
+
+Bloque 8 **REFERENCE_COMPLETE en contrato y simulación de referencia**: 20 paquetes CR001–CR020, crisis causales desde hechos externos aceptados, propagación controlada por redes existentes, combinación de choques, contención/recuperación verificadas y conocimiento distribuido con permisos y retraso. La PR [#118](https://github.com/robdor80/Videojuego_StarTrek/pull/118) incorpora contrato, fixture, tests y CI, con primera validación [Actions #43259713758](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43259713758): **56/56 B08, 264/264 B01–B08 y 30/30 F13**. Ver [plan B08](procedural_systemic_crises_plan_v0.1.md), [estado](procedural_systemic_crises_status_v0.1.json) y [acta](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+**Siguiente elegible tras CI final y fusión: Bloque 9 — Misiones emergentes derivadas del estado del universo.** B10 TODO. F13 global sigue PLANIFICADA, CoreRPG mantiene única autoridad, no se ejecutan economía, población, pérdidas, decisiones de guerra, misiones o scheduler, y no hay UE5/HOST jugable. Los textos anteriores que mencionan B4–B8 como «siguiente» se conservan como instantáneas históricas.
+
+
+## Confirmación administrativa — 12/11/2026, B08
+
+La PR #118 se fusionó en main, squash `bffa7be364cd7e06a1b6c50b823dcb89d7e95cc9`; la CI previa fue 19/19 SUCCESS y la posfusión volvió a certificar 19/19 SUCCESS ([B08](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787149), [F13](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43260787238)). La **puerta B09 está abierta** para referencia; no modifica el carácter no autoritativo de B08 ni cierra B10 o F13 global.
+
+## Actualización secuencial — 12/11/2026, P2-B09
+
+**Bloque 9 — Misiones emergentes derivadas del estado del universo: REFERENCE_COMPLETE sólo en contratos y referencia offline**, 20 paquetes EM001–EM020. Requiere hechos de necesidad y consecuencia ya aceptados; proyectar un riesgo B08 no genera misión; autoridad, recursos y rutas externos, intervención prewarp con excepción independiente, NPC sin jugador, noticias retrasadas, resultado y resolución verificados. Ver [plan B09](procedural_emergent_missions_plan_v0.1.md), [estado](procedural_emergent_missions_status_v0.1.json) y [acta](P2_B09_ACTA_CIERRE_REFERENCIA_20261112.md). **La puerta del Bloque 10 — Evolución galáctica en segundo plano se abre tras CI definitivo y fusión de B09.** F13 global PLANIFICADA, CoreRPG/HOST/UE5 sin runtime, capas 119/120 sin cambio. Declaraciones antiguas sobre bloque siguiente son fotografías históricas.
+
+## Confirmación administrativa — 12/11/2026, B09
+
+La [PR #120](https://github.com/robdor80/Videojuego_StarTrek/pull/120) fue **fusionada** en main (squash `4c8733da7cef6acf2b0a0c4259734a615ffed2d0`) después de CI **20/20 SUCCESS** del último HEAD premerge (`94f71f812400e5dbbd9fd3c143a53ad01a235a68`), incluyendo el workflow [B09 #43266888009](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43266888009). Las ejecuciones posteriores a la fusión no han podido comprobarse con la herramienta actual y no se dan por certificadas. **B10 es el siguiente bloque secuencial de referencia**, no un scheduler ya implementado; F13 PLANIFICADA y capas 119/120 sin cambios.
+
+## Cierre secuencial — 12/11/2026, P2-B10 (referencia)
+
+**Bloque 10 — Evolución galáctica offscreen: REFERENCE_COMPLETE en alcance documental y simulación Python**, con 20 paquetes GS001–GS020. El scheduler de prueba acepta únicamente intenciones externas ya acreditadas, exige ventanas de reloj virtual autorizadas, arbitra presupuestos y prioridades con aging, aplica backpressure sin borrar cola, emite propuestas no autoritativas y conserva hash encadenado, acuses externos y entregas filtradas. Véanse [plan B10](procedural_background_galactic_evolution_plan_v0.1.md), [estado](procedural_background_galactic_evolution_status_v0.1.json) y [acta](P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md).
+
+Pruebas iniciales [Actions #43277716336](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43277716336): 50/50 B10, 379/379 B01–B10, 30/30 F13, 9/9 Academia, job SUCCESS. La certificación de HEAD final y fusión se registra separadamente. **La secuencia de los 10 bloques queda agotada sólo en madurez de referencia.** F13 global permanece PLANIFICADA; las capas 119/120 y CoreRPG/HOST/UE5 runtime siguen pendientes. Los antiguos textos «siguiente bloque» son fotos históricas.
+
+**Endurecimiento y segunda auditoría:** tras proteger deduplicación del intent externo, impedir noticias anteriores a su hecho emisor, limitar configuración y comprobar prioridad envejecida, el commit `7cbc4631b4cea44e7657c9115716872ad29a55a0` superó **54/54 B10, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia** en [Actions #43278574994](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43278574994); los **22/22 workflows** asociados quedaron SUCCESS. Esta certificación es anterior al commit documental que la registra; ese commit deberá pasar sus propios checks antes de la fusión.
+
+## Certificación administrativa definitiva — 12/11/2026
+
+La [PR #122](https://github.com/robdor80/Videojuego_StarTrek/pull/122) quedó **fusionada** en main con squash `e3ae738d9ae14f949982b49ef3b2786dfcdf18db`. El último HEAD premerge `8b1683542fdb8025f46d7322256ff99b53fefa0f` pasó **26/26 workflows SUCCESS**. Sobre el commit real de fusión, la CI volvió a terminar con **21/21 SUCCESS**, incluido [P2-B10 posfusión #43279008660](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43279008660), así como F13 y Academia. La suite B10 ampliada cuenta 54/54 casos, 383/383 regresiones B01–B10, 30/30 F13 y 9/9 Academia (medido sobre el HEAD endurecido anterior a la última revisión documental).
+
+**Decisión:** B10 = REFERENCE_COMPLETE, GS001–GS020 (20/20). **Planificación 2 cierra los diez bloques exclusivamente en madurez de referencia**, no como motor galáctico nativo. F13 global continúa PLANIFICADA, capas 119 PARTIAL/120 BLOCKED_RUNTIME, CoreRPG/HOST/UE5 y NPC offscreen jugables sin acreditar. Las referencias previas a CI/merge pendientes eran controles históricos y quedan reemplazadas por esta certificación.

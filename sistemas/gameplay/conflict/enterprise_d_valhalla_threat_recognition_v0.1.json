@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "enterprise_d_valhalla_threat_recognition",
+  "status": "AUTHOR_APPROVED_DESIGN_NOT_RUNTIME",
+  "decision_ref": "proyecto/docs/decisions/enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md",
+  "triggers": [
+    "contact_recognized_as_enterprise_d_valhalla",
+    "known_public_return_to_service",
+    "new_capability_intelligence_received"
+  ],
+  "inputs": [
+    "observer_entity_id",
+    "observer_faction_id",
+    "public_ship_reputation_ref",
+    "observer_knowledge",
+    "actual_or_estimated_force_ratio",
+    "ship_and_enemy_live_damage",
+    "current_orders",
+    "mission_objective",
+    "commander_personality",
+    "rules_of_engagement",
+    "civilian_or_diplomatic_risk"
+  ],
+  "allowed_outputs": [
+    "avoid_engagement",
+    "withdraw",
+    "keep_distance",
+    "attempt_diplomacy",
+    "continue_mission_cautiously",
+    "seek_reinforcements",
+    "engage_if_motivated_and_authorized"
+  ],
+  "rules": [
+    "Notoriety of Valhalla is a mandatory strategic input, not a direct 'fear' mind-control flag.",
+    "Inferior routine vessels never get arbitrary buffs to equal the flagship.",
+    "Do not force enemies to attack simply to keep gameplay exciting.",
+    "A justified attack is allowed with its actual risk and consequences.",
+    "NPC ship commander acts by its own legitimate authority, including offscreen.",
+    "No species-based fixed reaction.",
+    "Does not reveal classified armament or override sensors.",
+    "Do not spawn encounters just to showcase flagship."
+  ],
+  "runtime_implemented": false
+}

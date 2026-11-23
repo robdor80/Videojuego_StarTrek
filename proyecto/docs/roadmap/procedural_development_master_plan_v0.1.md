@@ -314,3 +314,28 @@ This separation prevents the earlier 001–118 design-readiness closure from bei
 - Blocks 1–2 remain COMPLETE.
 - **Block 3 — Procedural Conflict & War: COMPLETE.**
 - Blocks 4–10 remain unimplemented; Block 4 is next in strict sequence.
+
+### Dynamic-universe sequence update — Block 4 (2026-11-12)
+
+Blocks 1–3 remain COMPLETE on the Star Trek reference side. **Block 4 — Living Interplanetary / Interstellar Economy is COMPLETE_REFERENCE**, backed by deterministic simulator, 30 dedicated tests, 62 regression tests across blocks 1–4 and LORE-04B regression. See `procedural_living_economy_plan_v0.1.md` and `P2_B04_ACTA_CIERRE_REFERENCIA_20261112.md`. Blocks 5–10 remain unimplemented; Block 5 is now next. Generic runtime, event scheduling, mutation and persistence continue to belong to CoreRPG; no UE5/Host integration is claimed.
+
+### Dynamic-universe sequence update — Block 6 (2026-11-12)
+
+Blocks 1–3 preserve their COMPLETE reference-level foundations; B04, B05 and **B06 are REFERENCE_COMPLETE** after PR #113/#114 and the B06 reference package, respectively. Science, technology and discoveries are covered by contract plus a deterministic, adversarial offline simulator. **B07 — Phenomena, Anomalies & Procedural Archaeology is next, only after B06 merge and CI verification.** B08–B10 remain TODO. Reference evidence does not establish autonomous NPC runtime, CoreRPG-authoritative state, HOST session commands or UE5 gameplay.
+
+### Dynamic-universe sequence update — Block 7 (2026-11-12)
+
+Blocks 1–3 remain COMPLETE at reference foundation level; B04–B07 are **REFERENCE_COMPLETE** on the Star Trek contract/offline-evidence side only (PR #116 merged after final CI success). B07 formalizes anomaly/site world-generation candidates, causal life cycles, protected archaeology and observer-specific knowledge without authorizing a second WorldState writer. See `proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md`, status and closure act. **B08 — Systemic Crises** is the next sequential reference block after merge; B09–B10 are TODO. F13 overall and CoreRPG/HOST/UE5 gameplay remain pending.
+
+
+### Dynamic-universe sequence update — Block 8 (2026-11-12)
+
+**P2-B08 Systemic Crises: REFERENCE_COMPLETE (offline only)**, 20 CR packages, versioned crisis/network cascade contract, synthetic accepted shock facts, deterministic risk projections, verified and authorized mitigation, prewarp non-interference review, containment/recovery and delayed classified reports. [Plan](procedural_systemic_crises_plan_v0.1.md), [status](procedural_systemic_crises_status_v0.1.json), [act](P2_B08_ACTA_CIERRE_REFERENCIA_20261112.md), PR #118. First CI green: 56 dedicated, 264 B01–B08 and 30 F13 tests. **Next reference block is B09 after final CI and merge; B10 remains TODO.** CoreRPG/HOST/UE5/B10 runtime and F13 full closure remain unavailable. All earlier dated priority statements are historical, not live gates.
+
+### Dynamic-universe sequence update — Block 9 (2026-11-12)
+
+**B09 REFERENCE_COMPLETE (non-runtime)**: 20 EM packages covering mission candidates only from independently accepted real needs, external command orders and resource reservations, NPC capacity, Prime Directive constraints, delayed knowledge and outcome-backed closure, with deterministic offline validation and [plan](procedural_emergent_missions_plan_v0.1.md). **B10 — Background Galactic Evolution becomes the next reference frontier after CI and PR merge**. All prior priority statements are historical; F13 and CoreRPG/HOST/UE5 are not closed or reimplemented.
+
+### Dynamic-universe sequence update — Block 10 (2026-11-12)
+
+**B10 REFERENCE_COMPLETE (offline reference only)**: GS001–GS020, authorized virtual-time windows, bounded galactic catch-up, priority aging, quotas, stable dispatch proposals, backpressure, read-only evidence/receipts and filtered delayed deliveries. [Plan B10](procedural_background_galactic_evolution_plan_v0.1.md), [status](procedural_background_galactic_evolution_status_v0.1.json), [act](P2_B10_ACTA_CIERRE_REFERENCIA_20261112.md). CI initial 50 B10, 379 dynamic B01–B10, 30 F13, 9 Academy tests PASS. **Los diez bloques terminan sólo en madurez de referencia**; el siguiente gran trabajo pertenece al runtime F13/CoreRPG/HOST/UE5. Las capas 119/120 conservan su estado y los planes históricos de fases no se reescriben.

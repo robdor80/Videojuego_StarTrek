@@ -1,5 +1,7 @@
 # Research Queue
 
+> **Actualización de lectura 2026-11-13:** la secuencia «Academia EN CURSO / tecnología QUEUED» de este archivo es un plan histórico de arranque, no la fotografía actual. LORE-01 a LORE-04 están **cerradas documentalmente**; Academia 20/20 y Planificación 2 B01–B10 constan **cerradas como referencia**, no runtime. La nueva [LORE-05A](../../../proyecto/docs/roadmap/lore_05_a/README.md) consolida DEC-0020 sobre la Enterprise-D. Consultar [estado maestro](../../../CONTENT_STATUS.md) antes de declarar pasos pendientes. Las entradas siguientes se preservan como historia de investigación.
+
 Living queue controlled by the project research workflow.
 
 ## Active sequence

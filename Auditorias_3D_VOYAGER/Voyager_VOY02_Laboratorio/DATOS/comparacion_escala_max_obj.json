@@ -1,0 +1,172 @@
+[
+  {
+    "max": "Mainroof",
+    "obj": "Mainroof_1",
+    "max_over_obj_xyz": [
+      1.5081353492717293,
+      1.5081352846103389,
+      1.5081364520277893
+    ],
+    "median_scale": 1.5081353492717293,
+    "translation_max_minus_scaled_obj": [
+      -0.11236047834057114,
+      1.8755625590802463,
+      -0.4666070147086341
+    ],
+    "triangles_max": 14447,
+    "triangles_obj": 14452
+  },
+  {
+    "max": "hallwayfloor",
+    "obj": "hallwayfloor_1",
+    "max_over_obj_xyz": [
+      1.5081354534663651,
+      1.5081379314579808,
+      NaN
+    ],
+    "median_scale": 1.5081366924621729,
+    "translation_max_minus_scaled_obj": [
+      -0.11236306634638771,
+      1.8755627058267343,
+      -0.46661174173315545
+    ],
+    "triangles_max": 361,
+    "triangles_obj": 361
+  },
+  {
+    "max": "centerlight",
+    "obj": "centerlight_1",
+    "max_over_obj_xyz": [
+      1.5081270981129102,
+      1.508140473840839,
+      1.5081126628612247
+    ],
+    "median_scale": 1.5081270981129102,
+    "translation_max_minus_scaled_obj": [
+      -0.11236160168811984,
+      1.8755520843987634,
+      -0.46658394521432545
+    ],
+    "triangles_max": 2688,
+    "triangles_obj": 2688
+  },
+  {
+    "max": "centerlights01",
+    "obj": "centerlights_2",
+    "max_over_obj_xyz": [
+      1.5081383738212533,
+      1.5081334707935896,
+      1.5081162882608017
+    ],
+    "median_scale": 1.5081334707935896,
+    "translation_max_minus_scaled_obj": [
+      -0.11236395923866205,
+      1.8755618648876182,
+      -0.4666048489967958
+    ],
+    "triangles_max": 196,
+    "triangles_obj": 196
+  },
+  {
+    "max": "blackinset",
+    "obj": "blackinset_1",
+    "max_over_obj_xyz": [
+      1.5081380928666528,
+      1.5081370423528988,
+      1.5081460818115222
+    ],
+    "median_scale": 1.5081380928666528,
+    "translation_max_minus_scaled_obj": [
+      -0.11236464100218892,
+      1.8755632808343783,
+      -0.46661822371230244
+    ],
+    "triangles_max": 796,
+    "triangles_obj": 796
+  },
+  {
+    "max": "centerinset",
+    "obj": "centerinset_1",
+    "max_over_obj_xyz": [
+      1.5081304424268573,
+      1.5081342115084215,
+      1.5080189826112798
+    ],
+    "median_scale": 1.5081304424268573,
+    "translation_max_minus_scaled_obj": [
+      -0.11235940260512842,
+      1.8755630806515426,
+      -0.46659222982392823
+    ],
+    "triangles_max": 289,
+    "triangles_obj": 289
+  },
+  {
+    "max": "lightssupport",
+    "obj": "lightssupport_1",
+    "max_over_obj_xyz": [
+      1.5081365888165659,
+      1.5081348724809136,
+      NaN
+    ],
+    "median_scale": 1.5081357306487397,
+    "translation_max_minus_scaled_obj": [
+      -0.11235920400774918,
+      1.8755609130062534,
+      -0.4666139828520244
+    ],
+    "triangles_max": 48,
+    "triangles_obj": 48
+  },
+  {
+    "max": "hallwaypanels",
+    "obj": "hallwaypanels_1",
+    "max_over_obj_xyz": [
+      1.508135165464812,
+      1.5081367593462842,
+      1.5081324286040882
+    ],
+    "median_scale": 1.508135165464812,
+    "translation_max_minus_scaled_obj": [
+      -0.11235901458209918,
+      1.8755665622293192,
+      -0.4666034408566482
+    ],
+    "triangles_max": 1824,
+    "triangles_obj": 1824
+  },
+  {
+    "max": "hallwaysubframe",
+    "obj": "hallwaysubframe_1",
+    "max_over_obj_xyz": [
+      1.5081351078645016,
+      1.5081354381013394,
+      1.5081315169862093
+    ],
+    "median_scale": 1.5081351078645016,
+    "translation_max_minus_scaled_obj": [
+      -0.1123592238689195,
+      1.8755643987532453,
+      -0.4666034532900838
+    ],
+    "triangles_max": 1611,
+    "triangles_obj": 1611
+  },
+  {
+    "max": "strudextends",
+    "obj": "strudextends_1",
+    "max_over_obj_xyz": [
+      1.2138941981522988,
+      1.242531430998048,
+      3.3335707584365055
+    ],
+    "median_scale": 1.242531430998048,
+    "translation_max_minus_scaled_obj": [
+      0.40312631415276373,
+      2.4971967651717053,
+      -0.08961803674010937
+    ],
+    "triangles_max": 592,
+    "triangles_obj": 592
+  }
+]

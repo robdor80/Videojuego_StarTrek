@@ -1,0 +1,642 @@
+{
+  "images": [
+    {
+      "path": "CAPTURAS/A01_planta_original.png",
+      "dimensions": [
+        1800,
+        1300
+      ],
+      "sha256": "068d37d9f2fa03b072a19c990d978be665c53876878d822abef183be5bfb063b",
+      "group": "Capturas originales de diagnóstico",
+      "selected_final": false,
+      "caption": "A01 planta original",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/A02_escalera_derecha_contexto.png",
+      "dimensions": [
+        1800,
+        1300
+      ],
+      "sha256": "9ce537b1fb244562d990fa7fd623a2d64cf21dc1e650cc356fdb004e264f6cf6",
+      "group": "Capturas originales de diagnóstico",
+      "selected_final": false,
+      "caption": "A02 escalera derecha contexto",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/A03_escalera_izquierda_contexto.png",
+      "dimensions": [
+        1800,
+        1300
+      ],
+      "sha256": "eae13401c0b60ad431aa3a217a90c07f639dccc230fb317941ec91e64db95c24",
+      "group": "Capturas originales de diagnóstico",
+      "selected_final": false,
+      "caption": "A03 escalera izquierda contexto",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/A04_escalones_aislados.png",
+      "dimensions": [
+        1800,
+        1300
+      ],
+      "sha256": "7b5a8a697026afb7eb5608710bcf2aeade7e7f5d28b5df52845a731c8b608648",
+      "group": "Capturas originales de diagnóstico",
+      "selected_final": false,
+      "caption": "Diagnóstico inicial: Mesh_1856 aislada. Muestra marcos/narices, NO la escalera entera.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/A05_navegacion_escalones.png",
+      "dimensions": [
+        1800,
+        1300
+      ],
+      "sha256": "cd59e1cd6a826e77b873cb59e592910e9232b5f29653f457bd18e008214ccc36",
+      "group": "Capturas originales de diagnóstico",
+      "selected_final": false,
+      "caption": "A05 navegacion escalones",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B01_planta_rutas_original.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "4beecd2e077f5a343fe7217493aa74fa51209d1221536f4ceaa22c4a12500cb2",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Rutas finales sobre el puente completo; recorte de techo solo para visualización.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B02_niveles_lateral.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "4a1b1ca389673a912946587f1204fbbd89891ca56a49dc7d750695e1da4f3f34",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "Vista lateral exterior ocluida: no usar para interpretar niveles; sustituida por B12 y secciones.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B03_escalera_derecha_apoyo.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "2a614285828c987d2c5e5ea63899b61ba3a20051431523103b3d9c220fdcb039",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Escalera derecha y trayectoria de diagnóstico; todos los objetos se conservan en las pruebas.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B04_escalera_izquierda_apoyo.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "cdc30b27a4d46183c0803a12a9cc41b70fc4879a538a77084098265c4f487c38",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Escalera izquierda y trayectoria de diagnóstico.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B05_navegacion_ruta.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "a8edc957ed03dcdc4c3e52cef9c1585eefc2aacf79b332f531f168937c4c0116",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Área de navegación y rutas finales; aproximación al puesto, no postura sentada.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.60.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "1654c2de230424701cd8ba675628fcd7ac76b5ce4bc8da373327b64b04ec6a46",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Cápsula de referencia 1.60 m, radio0,35m; mismo punto crítico.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.75.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "aed735b2ab119fe336c3e919d3eec8df81694c8acae1812db6e91f32ea7c6f6e",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Cápsula de referencia 1.75 m, radio0,35m; mismo punto crítico.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B06_capsula_1.90.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "1ad1c2008d0c6f34ce47f050b49f1c8c24979cd35faf7914768bba2f3af9e7ac",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Cápsula de referencia 1.90 m, radio0,35m; mismo punto crítico.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B07_red_completa_planta.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "8e0bb46b54dec0656b996307ad3ed7e433c148e365f6c00b5103821bc7390126",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Recorridos finales centro–turbolift y centro–camarote; ensamblaje heredado.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B08_red_completa_axonometrica.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "9e5671399f7e4412240f396488893887050e898a28c813e44e9b2494b16cfb51",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Vista general del recorrido sobre la red existente, puertas abiertas.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B09_union_posterior.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "9ab8ce83c1681fef502f83ad4a51aedbe278848a464580eae144487f5bc015d3",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Conexión posterior y adaptador R1, sin nueva modificación.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B10_puestos_mando.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "bf73aa6d53293f16a4df2646ff93b480edf93f8cfdc0006e6a0323901914c36e",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Aproximaciones finales a sillones izquierdo y derecho, sin uso de asiento.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B11_planta_original_completa.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "db09b8650d6e725edbb5791d1065335fa2270592324e0ef7601f4c3444a57dd4",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Planta de referencia sin rutas añadidas; encuadre completo corregido.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B12_niveles_suelos_aislados.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "59de1e6c9426e6c0f4b54d56bd981451e2adfba884ed702f5f5e34b407ce0789",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Suelos reales aislados para ver niveles; color diagnóstico. Arquitectura restante omitida solo en esta captura, presente en todos los ensayos.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B13_escalones_apoyos_aislados.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "12b23bf4b7e761833c3e3d477477b20b9a623d26e73c89697c36d399b8134ce1",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Detalle de apoyos reales de la escalera, aislados y coloreados solo para lectura.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/B14_bloqueo_diagonal_Mesh2096.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "8af11275667d691ea10168622341f5cee4cc7becce319c14428546ba62988158",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Resultado negativo: cápsula de radio35cm en la diagonal descartada; obstáculo Mesh_2096 no eliminado.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B01_planta_rutas_original.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "4635e8b03bb694dfd9962b92625d27ced6fd7bfe8c16eb2586d72d01648b0c17",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B02_niveles_lateral.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "6ef62fb09eae8a69856cccaed12a9d45bf15db31449338e3d1eccd9f6866d96f",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B03_escalera_derecha_apoyo.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "8811ebbc9d99445e94b4dfc8955545d97d6bbf9b24c7085de48ace3302125491",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B04_escalera_izquierda_apoyo.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "e082ef9193dba7d20c598badff78be64e67e88d9e0ae5e48d0670d214473a9bb",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B05_navegacion_ruta.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "f4ca26be03f9126d0e594c23ef27fe280933891d763a1d5e7c7992247056448c",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.60.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "a54f0853623b89edd1ff6394cd8d47a28acc6dd82988a3931f9caaa5059a8b5a",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.75.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "f8331f10c63bd8a10dfa709533c39fb1eefe657689ce4b248193d7ab4555d01a",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B06_capsula_1.90.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "ccac7cc1954aac5ad82e360e4bd2aeeffbc17519af3551b0a5296b1c38a9b428",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B07_red_completa_planta.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "9281e3c046e009759a9918cd3b57274c5fda91486ec6744cf58ed1b3701c80e7",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B08_red_completa_axonometrica.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "dfc4e106112ec37895eac65ab7b789a7b2ea23cc6de5343aa772d2ce5d313508",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B09_union_posterior.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "70b8ff0d2cd9cad141b3c64cb9fa15503ee5f3841f90ddad1a8994d95ed08b73",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B10_puestos_mando.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "60c5fb6fb362f0989d679e428c9550e6932f618f83b77f484fae4444b9594af1",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "CAPTURAS/REVISION_A1_NO_VALIDADA/B11_planta_original_completa.png",
+      "dimensions": [
+        2000,
+        1450
+      ],
+      "sha256": "aeedf65940820583056ba6cd8200ba0e945bc43dd40c8f7a0a748f3d2d93750f",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "RECHAZADA como evidencia final: encuadre inicial / candidato sin certificado continuo. Conservada por trazabilidad.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/01_superficies_originales.png",
+      "dimensions": [
+        1600,
+        1600
+      ],
+      "sha256": "0798de6effdaf394feab817548ba16b629b17262c70740bcf8dd720becfd7c89",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "Selección inicial por material: inventario incompleto, no representa huecos físicos acreditados.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/02_planta_soportes_y_rutas.png",
+      "dimensions": [
+        2000,
+        2100
+      ],
+      "sha256": "d2b8a52eac3ed09b17535165dc1bfbe14205c0ddea3646eedd3ba2ec70cf7852",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Inventario corregido de apoyos reales y seis rutas validadas. No certifica toda la planta.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/03_seccion_derecha.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "9a6cd091488193da5098160335d01866fe997b81f23d9ea2f8fb5604d1d6bc11",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Perfil medido de la escalera derecha a 2mm, contrahuellas y huella.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/03_seccion_izquierda.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "c9e576b7d3ebdd547011a01c41f432147d36944624986bee1ae6827969118161",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Perfil medido de la escalera izquierda a 2mm.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/04_seccion_navegacion.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "ea0ea3e195285fd78b1352eaba85a34291ca4b5aae30a001bc0b3fd43865cc8b",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Sección real de rejillas/marcos y apoyos de navegación.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/05_atajo_descartado_y_ruta_final.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "e1afef8ba8a0efeebf806020727622821b6ea07666333e768bb627109ddc69db",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Comparación de trayectoria; misma arquitectura. El rojo queda rechazado por falta de apoyo vertical.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/06_tres_alturas.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "bf271c626f1ec41172a9c9b670ef64348ea52aad07a0565f2d83b1d2b4aa9802",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Mismo punto, radio35cm constante, alturas160/175/190cm.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/07_comparativa_sin_reparacion.png",
+      "dimensions": [
+        2000,
+        1300
+      ],
+      "sha256": "3f7ae59a34747b5ff08b78167b26bfa8bd4588c248f884de5ed423a94a76c8c7",
+      "group": "Evidencia final",
+      "selected_final": true,
+      "caption": "Antes/después del método; la arquitectura no se ha reparado.",
+      "nonempty": true
+    },
+    {
+      "path": "LAMINAS/QA_contacto_inicial.png",
+      "dimensions": [
+        1200,
+        1350
+      ],
+      "sha256": "c1d7c2422399a386fe2ed906f745ded94927179e1aaff71a60cb92b5f1361443",
+      "group": "Descartados / diagnósticos iniciales",
+      "selected_final": false,
+      "caption": "Contacto de QA inicial; incluye encuadres rechazados y ruta sin certificado continuo.",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A01_puente_completo.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "96d02df84eca86324773487d34e893573a9ee1819371f2dbb1cd70d3d690de98",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "A01 puente completo",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A02_puente_humanos.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "a4d6062fcd5f830993b3d10cb02059dfe0bc5e15166b2f38be22cc8dcc1563a5",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "A02 puente humanos",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A03_planta_acotada.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "012feccf0069503389798a6a41cadadf69987a19b8a2de9a0d8dea96629d5f20",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "A03 planta acotada",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/A04_seccion_alturas.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "58e32a786cce9327eb67c616eba3bef93c34d1ad832a8df40ceee5a1b29adaec",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "A04 seccion alturas",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/C01_puente_pasillo.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "535c7fc0f5d4dd607ccf2866a1ae774b4a9a32bb94145da556048e6516bfc748",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "C01 puente pasillo",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/C02_detalle_adaptador.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "1f3d095b152693b995bc9cc9529daee6b2aa1c26bc63f6b3b89335ff2ea63c45",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "C02 detalle adaptador",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G01_conjunto_completo.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "c92a516167f5cce2944b826eca921d9570ec9bd3c09cec2fb2273d40d539754d",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "G01 conjunto completo",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G02_conjunto_planta.png",
+      "dimensions": [
+        1300,
+        2000
+      ],
+      "sha256": "8f79b600fab1e2a934a8a92d6bcb9420b85a334954f80195c4b4762b0cdce99e",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "G02 conjunto planta",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G03_conjunto_perspectiva.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "f2dad4315a4578b10abc0f3d9fdf22a75cc5d898badf8075f1fb81afc9adda65",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "G03 conjunto perspectiva",
+      "nonempty": true
+    },
+    {
+      "path": "REFERENCIAS/VOY02/CAPTURAS/G04_cruce_y_turbolift.png",
+      "dimensions": [
+        1700,
+        1150
+      ],
+      "sha256": "310175fc192d453060505cf9c642b35689a13daa6e018628d17ca9a9aeb1d22b",
+      "group": "Referencia VOY02",
+      "selected_final": false,
+      "caption": "G04 cruce y turbolift",
+      "nonempty": true
+    }
+  ],
+  "visual_review": "Contact sheets plus individual plans, sections, capsule views, full assembly and negative obstacle reviewed. B02 is explicitly not used for level evidence.",
+  "all_readable": true
+}

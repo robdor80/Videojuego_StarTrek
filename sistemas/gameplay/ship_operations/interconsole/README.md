@@ -24,3 +24,9 @@ SENSORS
 - Inter-console transfer never exposes unrevealed authoritative world truth.
 
 This pattern is intended to generalize later to Tactical, Operations, CONN/Navigation, Engineering, Communications and Computer/Database.
+
+## Sistema 11 — Astrometría 360° (DEC-0023)
+
+Astrometría puede solicitar resultados a Sensores y Ciencia y enviar una **propuesta de ruta** a Navigation, sin cambiar el movimiento/autoridad de navegación. La vista autorizada se compone con procedencia, fecha y permisos; se evita un segundo WorldState. Contrato de transferencia de ruta: sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_navigation_route_proposal_v0.1.json. Consulta de estudio: sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_science_study_v0.1.json.
+
+**Solo contratos documentales**: las transferencias reales requieren HOST/Codex y pruebas. Ver DEC-0023.

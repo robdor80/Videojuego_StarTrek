@@ -1,0 +1,525 @@
+[
+  {
+    "file": "A01_puente_completo.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.0535714365541935,
+      "xmax": 0.9464285373687744,
+      "ymin": 0.08850528299808502,
+      "ymax": 0.9114951491355896
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "A02_puente_humanos.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357152968645096,
+      "xmax": 0.9464287161827087,
+      "ymin": 0.10598497837781906,
+      "ymax": 0.8940146565437317
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "A03_planta_acotada.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.17976000905036926,
+      "xmax": 0.8202399611473083,
+      "ymin": 0.0535714216530323,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "A04_seccion_alturas.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357138812541962,
+      "xmax": 0.946428656578064,
+      "ymin": 0.3552723824977875,
+      "ymax": 0.6447269916534424
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "A05_escalas_comparadas.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357147753238678,
+      "xmax": 0.9464285969734192,
+      "ymin": 0.2904415726661682,
+      "ymax": 0.7095590233802795
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B00_catalogo_ensayos.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.31231966614723206,
+      "xmax": 0.6876803636550903,
+      "ymin": 0.053571417927742004,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B01_CORTO_LARGO_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.11945939064025879,
+      "xmax": 0.8805409669876099,
+      "ymin": 0.05357133597135544,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B01_CORTO_LARGO_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.30453741550445557,
+      "xmax": 0.6954625844955444,
+      "ymin": 0.05357140675187111,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B02_DOS_RECTOS_CURVA_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.0535714253783226,
+      "xmax": 0.946428656578064,
+      "ymin": 0.09251765161752701,
+      "ymax": 0.9074822664260864
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B02_DOS_RECTOS_CURVA_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.2801397740840912,
+      "xmax": 0.7198600769042969,
+      "ymin": 0.05357141047716141,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B03_RECTA_T_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.053571730852127075,
+      "xmax": 0.946428656578064,
+      "ymin": 0.0769893154501915,
+      "ymax": 0.9230101704597473
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B03_RECTA_T_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.19733355939388275,
+      "xmax": 0.802666425704956,
+      "ymin": 0.0535714328289032,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B04_CUATRO_VIAS_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.053571417927742004,
+      "xmax": 0.946428656578064,
+      "ymin": 0.07724113017320633,
+      "ymax": 0.9227584600448608
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B04_CUATRO_VIAS_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.19800429046154022,
+      "xmax": 0.8019959330558777,
+      "ymin": 0.053571414202451706,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B05_MODULO_PUERTAS_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.142973855137825,
+      "xmax": 0.8570266962051392,
+      "ymin": 0.0535711906850338,
+      "ymax": 0.9464282989501953
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B05_MODULO_PUERTAS_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.2459104359149933,
+      "xmax": 0.7540895342826843,
+      "ymin": 0.053571440279483795,
+      "ymax": 0.9464285373687744
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B06_TURBOLIFT_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.08267467468976974,
+      "xmax": 0.9173261523246765,
+      "ymin": 0.053571101278066635,
+      "ymax": 0.9464283585548401
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B06_TURBOLIFT_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.37431642413139343,
+      "xmax": 0.6256834268569946,
+      "ymin": 0.05357152596116066,
+      "ymax": 0.946428656578064
+    },
+    "bounds_pass": true,
+    "isolated_objects": 64,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B07_RESIDENCIAL_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.12591083347797394,
+      "xmax": 0.8740895986557007,
+      "ymin": 0.05357135832309723,
+      "ymax": 0.9464284777641296
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "B07_RESIDENCIAL_planta.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.12095771729946136,
+      "xmax": 0.8790422677993774,
+      "ymin": 0.053571052849292755,
+      "ymax": 0.9464281797409058
+    },
+    "bounds_pass": true,
+    "isolated_objects": 65,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "C01_puente_pasillo.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357136204838753,
+      "xmax": 0.9464284777641296,
+      "ymin": 0.08634596318006516,
+      "ymax": 0.9136543869972229
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "C02_detalle_adaptador.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.1724482774734497,
+      "xmax": 0.8275520205497742,
+      "ymin": 0.053571585565805435,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 620,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "D01_interior_camarote.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": null,
+    "bounds_pass": null,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "D02_planta_camarote.png",
+    "resolution": [
+      1300,
+      1600
+    ],
+    "projected_bounds": {
+      "xmin": 0.1998724490404129,
+      "xmax": 0.8001275658607483,
+      "ymin": 0.05357144773006439,
+      "ymax": 0.9464285373687744
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "D03_camarote_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.08626069873571396,
+      "xmax": 0.9137392640113831,
+      "ymin": 0.05357157811522484,
+      "ymax": 0.946428656578064
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "E01_puertas_cerradas.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.07642029225826263,
+      "xmax": 0.9235800504684448,
+      "ymin": 0.05357116088271141,
+      "ymax": 0.946428120136261
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "E02_puertas_intermedias.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.07641991972923279,
+      "xmax": 0.9235798716545105,
+      "ymin": 0.0535711944103241,
+      "ymax": 0.9464281797409058
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "E03_puertas_abiertas.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.07079658657312393,
+      "xmax": 0.9292038679122925,
+      "ymin": 0.05357130616903305,
+      "ymax": 0.9464282393455505
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "E04_sillas_grupos.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.127216175198555,
+      "xmax": 0.8727840781211853,
+      "ymin": 0.05357097461819649,
+      "ymax": 0.946428120136261
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "G01_conjunto_completo.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357125401496887,
+      "xmax": 0.9464284181594849,
+      "ymin": 0.08874042332172394,
+      "ymax": 0.9112602472305298
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "G02_conjunto_planta.png",
+    "resolution": [
+      1300,
+      2000
+    ],
+    "projected_bounds": {
+      "xmin": 0.1581019014120102,
+      "xmax": 0.8418980836868286,
+      "ymin": 0.05357141047716141,
+      "ymax": 0.9464285969734192
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "G03_conjunto_perspectiva.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.05357144773006439,
+      "xmax": 0.9464285373687744,
+      "ymin": 0.09607730060815811,
+      "ymax": 0.9039228558540344
+    },
+    "bounds_pass": true,
+    "isolated_objects": 0,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  },
+  {
+    "file": "G04_cruce_y_turbolift.png",
+    "resolution": [
+      1700,
+      1150
+    ],
+    "projected_bounds": {
+      "xmin": 0.10024791210889816,
+      "xmax": 0.899752140045166,
+      "ymin": 0.05357149615883827,
+      "ymax": 0.9464287161827087
+    },
+    "bounds_pass": true,
+    "isolated_objects": 683,
+    "review": "Visual review via contact sheets and selected full-resolution views. Perspective details intentionally show local context; orthographic views include all selected mesh bounds."
+  }
+]

@@ -1,0 +1,5195 @@
+{
+  "file": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\ESCENAS\\VOY03_Circulacion.blend",
+  "sha256": "b90dc854dfb3ce62ece4cfb60b25a510787592f5abb68236e799647e074287ea",
+  "file_unchanged": true,
+  "tolerance_m": 2e-05,
+  "reason": "20um accounts for float world transforms of native library coordinates; actual maximum reported per object.",
+  "objects": [
+    {
+      "object": "G_INTERIORES_CONECTADOS__Top_ring_1",
+      "label": "PUENTE:Top_ring_1",
+      "triangles": 3044,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_112",
+      "label": "PUENTE:Plane_112",
+      "triangles": 28,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_111",
+      "label": "PUENTE:Plane_111",
+      "triangles": 2,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_88",
+      "label": "PUENTE:Object_88",
+      "triangles": 153,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_85",
+      "label": "PUENTE:Object_85",
+      "triangles": 295,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_84",
+      "label": "PUENTE:Object_84",
+      "triangles": 332,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_83",
+      "label": "PUENTE:Object_83",
+      "triangles": 1373,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_82",
+      "label": "PUENTE:Object_82",
+      "triangles": 1022,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_81",
+      "label": "PUENTE:Object_81",
+      "triangles": 956,
+      "error_m": 8.463859551000041e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_80",
+      "label": "PUENTE:Object_80",
+      "triangles": 367,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_79",
+      "label": "PUENTE:Object_79",
+      "triangles": 374,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_78",
+      "label": "PUENTE:Object_78",
+      "triangles": 369,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_130",
+      "label": "PUENTE:Object_130",
+      "triangles": 847,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_119",
+      "label": "PUENTE:Object_119",
+      "triangles": 430,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_117",
+      "label": "PUENTE:Object_117",
+      "triangles": 2,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_116",
+      "label": "PUENTE:Object_116",
+      "triangles": 2,
+      "error_m": 1.6689300608163649e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_115",
+      "label": "PUENTE:Object_115",
+      "triangles": 2,
+      "error_m": 9.536743172944284e-08,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_114",
+      "label": "PUENTE:Object_114",
+      "triangles": 6,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_113",
+      "label": "PUENTE:Object_113",
+      "triangles": 2,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_112",
+      "label": "PUENTE:Object_112",
+      "triangles": 3,
+      "error_m": 3.0994415300966693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_111",
+      "label": "PUENTE:Object_111",
+      "triangles": 2,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2132",
+      "label": "PUENTE:Mesh_2132",
+      "triangles": 2,
+      "error_m": 5.006790146921958e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2131",
+      "label": "PUENTE:Mesh_2131",
+      "triangles": 6,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2130",
+      "label": "PUENTE:Mesh_2130",
+      "triangles": 3,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2129",
+      "label": "PUENTE:Mesh_2129",
+      "triangles": 3,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2124",
+      "label": "PUENTE:Mesh_2124",
+      "triangles": 680,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2123",
+      "label": "PUENTE:Mesh_2123",
+      "triangles": 680,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2122",
+      "label": "PUENTE:Mesh_2122",
+      "triangles": 680,
+      "error_m": 5.125999464894448e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2121",
+      "label": "PUENTE:Mesh_2121",
+      "triangles": 680,
+      "error_m": 5.841255195093709e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2120",
+      "label": "PUENTE:Mesh_2120",
+      "triangles": 176,
+      "error_m": 3.0398368888739924e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2119",
+      "label": "PUENTE:Mesh_2119",
+      "triangles": 544,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2118",
+      "label": "PUENTE:Mesh_2118",
+      "triangles": 544,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2117",
+      "label": "PUENTE:Mesh_2117",
+      "triangles": 544,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2116",
+      "label": "PUENTE:Mesh_2116",
+      "triangles": 544,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2115",
+      "label": "PUENTE:Mesh_2115",
+      "triangles": 544,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2114",
+      "label": "PUENTE:Mesh_2114",
+      "triangles": 544,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2113",
+      "label": "PUENTE:Mesh_2113",
+      "triangles": 574,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2112",
+      "label": "PUENTE:Mesh_2112",
+      "triangles": 51,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2111",
+      "label": "PUENTE:Mesh_2111",
+      "triangles": 51,
+      "error_m": 3.5166740453007606e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2110",
+      "label": "PUENTE:Mesh_2110",
+      "triangles": 51,
+      "error_m": 3.6358833366278986e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2109",
+      "label": "PUENTE:Mesh_2109",
+      "triangles": 51,
+      "error_m": 3.2782554715282686e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2108",
+      "label": "PUENTE:Mesh_2108",
+      "triangles": 51,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2107",
+      "label": "PUENTE:Mesh_2107",
+      "triangles": 51,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2106",
+      "label": "PUENTE:Mesh_2106",
+      "triangles": 51,
+      "error_m": 3.0994415389784535e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2105",
+      "label": "PUENTE:Mesh_2105",
+      "triangles": 51,
+      "error_m": 2.9802322476513154e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2104",
+      "label": "PUENTE:Mesh_2104",
+      "triangles": 53,
+      "error_m": 2.7418136649970393e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2103",
+      "label": "PUENTE:Mesh_2103",
+      "triangles": 53,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2102",
+      "label": "PUENTE:Mesh_2102",
+      "triangles": 51,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2101",
+      "label": "PUENTE:Mesh_2101",
+      "triangles": 51,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2100",
+      "label": "PUENTE:Mesh_2100",
+      "triangles": 53,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2099",
+      "label": "PUENTE:Mesh_2099",
+      "triangles": 53,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2098",
+      "label": "PUENTE:Mesh_2098",
+      "triangles": 51,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2097",
+      "label": "PUENTE:Mesh_2097",
+      "triangles": 51,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2096",
+      "label": "PUENTE:Mesh_2096",
+      "triangles": 51,
+      "error_m": 4.887580882240172e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2095",
+      "label": "PUENTE:Mesh_2095",
+      "triangles": 51,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2093",
+      "label": "PUENTE:Mesh_2093",
+      "triangles": 1736,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2092",
+      "label": "PUENTE:Mesh_2092",
+      "triangles": 118,
+      "error_m": 3.2782554715282686e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2091",
+      "label": "PUENTE:Mesh_2091",
+      "triangles": 259,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2090",
+      "label": "PUENTE:Mesh_2090",
+      "triangles": 219,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2089",
+      "label": "PUENTE:Mesh_2089",
+      "triangles": 52,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2088",
+      "label": "PUENTE:Mesh_2088",
+      "triangles": 52,
+      "error_m": 3.5762786954052217e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2087",
+      "label": "PUENTE:Mesh_2087",
+      "triangles": 51,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2086",
+      "label": "PUENTE:Mesh_2086",
+      "triangles": 51,
+      "error_m": 3.3974647628554067e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2085",
+      "label": "PUENTE:Mesh_2085",
+      "triangles": 51,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2084",
+      "label": "PUENTE:Mesh_2084",
+      "triangles": 51,
+      "error_m": 3.5762786954052217e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2083",
+      "label": "PUENTE:Mesh_2083",
+      "triangles": 51,
+      "error_m": 3.0994415389784535e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2082",
+      "label": "PUENTE:Mesh_2082",
+      "triangles": 51,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2081",
+      "label": "PUENTE:Mesh_2081",
+      "triangles": 51,
+      "error_m": 2.8014183151015004e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2080",
+      "label": "PUENTE:Mesh_2080",
+      "triangles": 51,
+      "error_m": 2.890825276935516e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2079",
+      "label": "PUENTE:Mesh_2079",
+      "triangles": 53,
+      "error_m": 2.667307859027801e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2078",
+      "label": "PUENTE:Mesh_2078",
+      "triangles": 53,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2077",
+      "label": "PUENTE:Mesh_2077",
+      "triangles": 51,
+      "error_m": 2.726912509132262e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2076",
+      "label": "PUENTE:Mesh_2076",
+      "triangles": 51,
+      "error_m": 2.890825276935516e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2075",
+      "label": "PUENTE:Mesh_2075",
+      "triangles": 53,
+      "error_m": 4.887580882240172e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2074",
+      "label": "PUENTE:Mesh_2074",
+      "triangles": 53,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2073",
+      "label": "PUENTE:Mesh_2073",
+      "triangles": 51,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2072",
+      "label": "PUENTE:Mesh_2072",
+      "triangles": 51,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2071",
+      "label": "PUENTE:Mesh_2071",
+      "triangles": 53,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2070",
+      "label": "PUENTE:Mesh_2070",
+      "triangles": 53,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2069",
+      "label": "PUENTE:Mesh_2069",
+      "triangles": 53,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2068",
+      "label": "PUENTE:Mesh_2068",
+      "triangles": 53,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2067",
+      "label": "PUENTE:Mesh_2067",
+      "triangles": 36,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2066",
+      "label": "PUENTE:Mesh_2066",
+      "triangles": 38,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2065",
+      "label": "PUENTE:Mesh_2065",
+      "triangles": 24,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2064",
+      "label": "PUENTE:Mesh_2064",
+      "triangles": 24,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2063",
+      "label": "PUENTE:Mesh_2063",
+      "triangles": 24,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2062",
+      "label": "PUENTE:Mesh_2062",
+      "triangles": 24,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2061",
+      "label": "PUENTE:Mesh_2061",
+      "triangles": 24,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2060",
+      "label": "PUENTE:Mesh_2060",
+      "triangles": 24,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2059",
+      "label": "PUENTE:Mesh_2059",
+      "triangles": 24,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2058",
+      "label": "PUENTE:Mesh_2058",
+      "triangles": 24,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2056",
+      "label": "PUENTE:Mesh_2056",
+      "triangles": 24,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2055",
+      "label": "PUENTE:Mesh_2055",
+      "triangles": 24,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2054",
+      "label": "PUENTE:Mesh_2054",
+      "triangles": 24,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2053",
+      "label": "PUENTE:Mesh_2053",
+      "triangles": 24,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2052",
+      "label": "PUENTE:Mesh_2052",
+      "triangles": 24,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2051",
+      "label": "PUENTE:Mesh_2051",
+      "triangles": 24,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2050",
+      "label": "PUENTE:Mesh_2050",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2049",
+      "label": "PUENTE:Mesh_2049",
+      "triangles": 24,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2048",
+      "label": "PUENTE:Mesh_2048",
+      "triangles": 24,
+      "error_m": 2.7418136649970393e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2047",
+      "label": "PUENTE:Mesh_2047",
+      "triangles": 24,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2046",
+      "label": "PUENTE:Mesh_2046",
+      "triangles": 24,
+      "error_m": 3.0994415300966693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2045",
+      "label": "PUENTE:Mesh_2045",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2044",
+      "label": "PUENTE:Mesh_2044",
+      "triangles": 24,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2043",
+      "label": "PUENTE:Mesh_2043",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2042",
+      "label": "PUENTE:Mesh_2042",
+      "triangles": 24,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2041",
+      "label": "PUENTE:Mesh_2041",
+      "triangles": 24,
+      "error_m": 1.9073486345888568e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2040",
+      "label": "PUENTE:Mesh_2040",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2039",
+      "label": "PUENTE:Mesh_2039",
+      "triangles": 250,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2038",
+      "label": "PUENTE:Mesh_2038",
+      "triangles": 2,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2037",
+      "label": "PUENTE:Mesh_2037",
+      "triangles": 86,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2036",
+      "label": "PUENTE:Mesh_2036",
+      "triangles": 2,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2035",
+      "label": "PUENTE:Mesh_2035",
+      "triangles": 2,
+      "error_m": 2.741813656115255e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2034",
+      "label": "PUENTE:Mesh_2034",
+      "triangles": 2,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2033",
+      "label": "PUENTE:Mesh_2033",
+      "triangles": 2,
+      "error_m": 2.741813656115255e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2032",
+      "label": "PUENTE:Mesh_2032",
+      "triangles": 2,
+      "error_m": 1.907348639029749e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2031",
+      "label": "PUENTE:Mesh_2031",
+      "triangles": 2,
+      "error_m": 1.7881393343799346e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2030",
+      "label": "PUENTE:Mesh_2030",
+      "triangles": 2,
+      "error_m": 1.907348639029749e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2029",
+      "label": "PUENTE:Mesh_2029",
+      "triangles": 2,
+      "error_m": 1.3113021779531664e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2028",
+      "label": "PUENTE:Mesh_2028",
+      "triangles": 2,
+      "error_m": 2.741813656115255e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2027",
+      "label": "PUENTE:Mesh_2027",
+      "triangles": 2,
+      "error_m": 1.7881393343799346e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2026",
+      "label": "PUENTE:Mesh_2026",
+      "triangles": 2,
+      "error_m": 1.907348639029749e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2025",
+      "label": "PUENTE:Mesh_2025",
+      "triangles": 2,
+      "error_m": 2.741813656115255e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2024",
+      "label": "PUENTE:Mesh_2024",
+      "triangles": 2,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2023",
+      "label": "PUENTE:Mesh_2023",
+      "triangles": 86,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2022",
+      "label": "PUENTE:Mesh_2022",
+      "triangles": 17,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2021",
+      "label": "PUENTE:Mesh_2021",
+      "triangles": 17,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2020",
+      "label": "PUENTE:Mesh_2020",
+      "triangles": 24,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2019",
+      "label": "PUENTE:Mesh_2019",
+      "triangles": 108,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2018",
+      "label": "PUENTE:Mesh_2018",
+      "triangles": 199,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2017",
+      "label": "PUENTE:Mesh_2017",
+      "triangles": 28,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2016",
+      "label": "PUENTE:Mesh_2016",
+      "triangles": 20,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2015",
+      "label": "PUENTE:Mesh_2015",
+      "triangles": 86,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2014",
+      "label": "PUENTE:Mesh_2014",
+      "triangles": 17,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2013",
+      "label": "PUENTE:Mesh_2013",
+      "triangles": 17,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2012",
+      "label": "PUENTE:Mesh_2012",
+      "triangles": 24,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2011",
+      "label": "PUENTE:Mesh_2011",
+      "triangles": 86,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1978",
+      "label": "PUENTE:Mesh_1978",
+      "triangles": 10,
+      "error_m": 1.6689300563754728e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1977",
+      "label": "PUENTE:Mesh_1977",
+      "triangles": 10,
+      "error_m": 1.5497207606074426e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1976",
+      "label": "PUENTE:Mesh_1976",
+      "triangles": 165,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1975",
+      "label": "PUENTE:Mesh_1975",
+      "triangles": 162,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1974",
+      "label": "PUENTE:Mesh_1974",
+      "triangles": 505,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1973",
+      "label": "PUENTE:Mesh_1973",
+      "triangles": 8,
+      "error_m": 5.722045877121218e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1972",
+      "label": "PUENTE:Mesh_1972",
+      "triangles": 8,
+      "error_m": 6.198883077956907e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1971",
+      "label": "PUENTE:Mesh_1971",
+      "triangles": 8,
+      "error_m": 6.198883077956907e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1970",
+      "label": "PUENTE:Mesh_1970",
+      "triangles": 8,
+      "error_m": 5.722045877121218e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1968",
+      "label": "PUENTE:Mesh_1968",
+      "triangles": 2207,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1967",
+      "label": "PUENTE:Mesh_1967",
+      "triangles": 12,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1966",
+      "label": "PUENTE:Mesh_1966",
+      "triangles": 12,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1965",
+      "label": "PUENTE:Mesh_1965",
+      "triangles": 12,
+      "error_m": 9.536743172944284e-08,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1964",
+      "label": "PUENTE:Mesh_1964",
+      "triangles": 12,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1963",
+      "label": "PUENTE:Mesh_1963",
+      "triangles": 12,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1962",
+      "label": "PUENTE:Mesh_1962",
+      "triangles": 14,
+      "error_m": 3.0994415300966693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1961",
+      "label": "PUENTE:Mesh_1961",
+      "triangles": 28,
+      "error_m": 3.0994415300966693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1960",
+      "label": "PUENTE:Mesh_1960",
+      "triangles": 4967,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1959",
+      "label": "PUENTE:Mesh_1959",
+      "triangles": 136,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1958",
+      "label": "PUENTE:Mesh_1958",
+      "triangles": 218,
+      "error_m": 3.5166740453007606e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1957",
+      "label": "PUENTE:Mesh_1957",
+      "triangles": 218,
+      "error_m": 3.5762786954052217e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1956",
+      "label": "PUENTE:Mesh_1956",
+      "triangles": 218,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1955",
+      "label": "PUENTE:Mesh_1955",
+      "triangles": 230,
+      "error_m": 3.2782554715282686e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1954",
+      "label": "PUENTE:Mesh_1954",
+      "triangles": 234,
+      "error_m": 3.24845315091693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1953",
+      "label": "PUENTE:Mesh_1953",
+      "triangles": 230,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1952",
+      "label": "PUENTE:Mesh_1952",
+      "triangles": 234,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1951",
+      "label": "PUENTE:Mesh_1951",
+      "triangles": 230,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1950",
+      "label": "PUENTE:Mesh_1950",
+      "triangles": 230,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1949",
+      "label": "PUENTE:Mesh_1949",
+      "triangles": 1092,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1948",
+      "label": "PUENTE:Mesh_1948",
+      "triangles": 93,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1947",
+      "label": "PUENTE:Mesh_1947",
+      "triangles": 62,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1945",
+      "label": "PUENTE:Mesh_1945",
+      "triangles": 95,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1944",
+      "label": "PUENTE:Mesh_1944",
+      "triangles": 68,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1943",
+      "label": "PUENTE:Mesh_1943",
+      "triangles": 62,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1942",
+      "label": "PUENTE:Mesh_1942",
+      "triangles": 6,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1941",
+      "label": "PUENTE:Mesh_1941",
+      "triangles": 6,
+      "error_m": 5.006790164685526e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1940",
+      "label": "PUENTE:Mesh_1940",
+      "triangles": 6,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1939",
+      "label": "PUENTE:Mesh_1939",
+      "triangles": 6,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1938",
+      "label": "PUENTE:Mesh_1938",
+      "triangles": 6,
+      "error_m": 5.006790164685526e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1937",
+      "label": "PUENTE:Mesh_1937",
+      "triangles": 6,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1936",
+      "label": "PUENTE:Mesh_1936",
+      "triangles": 6,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1935",
+      "label": "PUENTE:Mesh_1935",
+      "triangles": 6,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1934",
+      "label": "PUENTE:Mesh_1934",
+      "triangles": 8,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1933",
+      "label": "PUENTE:Mesh_1933",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1932",
+      "label": "PUENTE:Mesh_1932",
+      "triangles": 8,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1931",
+      "label": "PUENTE:Mesh_1931",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1930",
+      "label": "PUENTE:Mesh_1930",
+      "triangles": 24,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1929",
+      "label": "PUENTE:Mesh_1929",
+      "triangles": 8,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1928",
+      "label": "PUENTE:Mesh_1928",
+      "triangles": 8,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1927",
+      "label": "PUENTE:Mesh_1927",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1926",
+      "label": "PUENTE:Mesh_1926",
+      "triangles": 8,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1925",
+      "label": "PUENTE:Mesh_1925",
+      "triangles": 24,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1924",
+      "label": "PUENTE:Mesh_1924",
+      "triangles": 8,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1923",
+      "label": "PUENTE:Mesh_1923",
+      "triangles": 24,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1922",
+      "label": "PUENTE:Mesh_1922",
+      "triangles": 18,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1921",
+      "label": "PUENTE:Mesh_1921",
+      "triangles": 8,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1920",
+      "label": "PUENTE:Mesh_1920",
+      "triangles": 8,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1919",
+      "label": "PUENTE:Mesh_1919",
+      "triangles": 18,
+      "error_m": 2.980232238769531e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1918",
+      "label": "PUENTE:Mesh_1918",
+      "triangles": 324,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1917",
+      "label": "PUENTE:Mesh_1917",
+      "triangles": 324,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1916",
+      "label": "PUENTE:Mesh_1916",
+      "triangles": 204,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1915",
+      "label": "PUENTE:Mesh_1915",
+      "triangles": 204,
+      "error_m": 3.0398368888739924e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1914",
+      "label": "PUENTE:Mesh_1914",
+      "triangles": 1130,
+      "error_m": 3.6358833366278986e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1913",
+      "label": "PUENTE:Mesh_1913",
+      "triangles": 114,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1912",
+      "label": "PUENTE:Mesh_1912",
+      "triangles": 114,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1911",
+      "label": "PUENTE:Mesh_1911",
+      "triangles": 146,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1910",
+      "label": "PUENTE:Mesh_1910",
+      "triangles": 144,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1909",
+      "label": "PUENTE:Mesh_1909",
+      "triangles": 116,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1908",
+      "label": "PUENTE:Mesh_1908",
+      "triangles": 112,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1907",
+      "label": "PUENTE:Mesh_1907",
+      "triangles": 110,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1906",
+      "label": "PUENTE:Mesh_1906",
+      "triangles": 8,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1905",
+      "label": "PUENTE:Mesh_1905",
+      "triangles": 8,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1904",
+      "label": "PUENTE:Mesh_1904",
+      "triangles": 110,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1903",
+      "label": "PUENTE:Mesh_1903",
+      "triangles": 84,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1902",
+      "label": "PUENTE:Mesh_1902",
+      "triangles": 114,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1901",
+      "label": "PUENTE:Mesh_1901",
+      "triangles": 114,
+      "error_m": 3.3974647628554067e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1900",
+      "label": "PUENTE:Mesh_1900",
+      "triangles": 84,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1899",
+      "label": "PUENTE:Mesh_1899",
+      "triangles": 114,
+      "error_m": 3.6358833366278986e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1898",
+      "label": "PUENTE:Mesh_1898",
+      "triangles": 84,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1897",
+      "label": "PUENTE:Mesh_1897",
+      "triangles": 96,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1896",
+      "label": "PUENTE:Mesh_1896",
+      "triangles": 118,
+      "error_m": 3.0994415389784535e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1895",
+      "label": "PUENTE:Mesh_1895",
+      "triangles": 118,
+      "error_m": 3.069639209485331e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1894",
+      "label": "PUENTE:Mesh_1894",
+      "triangles": 96,
+      "error_m": 2.7418136649970393e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1893",
+      "label": "PUENTE:Mesh_1893",
+      "triangles": 100,
+      "error_m": 2.771615985608378e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1892",
+      "label": "PUENTE:Mesh_1892",
+      "triangles": 120,
+      "error_m": 2.8014183151015004e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1891",
+      "label": "PUENTE:Mesh_1891",
+      "triangles": 118,
+      "error_m": 2.5928020530585627e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1890",
+      "label": "PUENTE:Mesh_1890",
+      "triangles": 98,
+      "error_m": 2.831220635712839e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1889",
+      "label": "PUENTE:Mesh_1889",
+      "triangles": 98,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1888",
+      "label": "PUENTE:Mesh_1888",
+      "triangles": 122,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1887",
+      "label": "PUENTE:Mesh_1887",
+      "triangles": 226,
+      "error_m": 5.364418029785156e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1886",
+      "label": "PUENTE:Mesh_1886",
+      "triangles": 100,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1885",
+      "label": "PUENTE:Mesh_1885",
+      "triangles": 120,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1884",
+      "label": "PUENTE:Mesh_1884",
+      "triangles": 98,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1883",
+      "label": "PUENTE:Mesh_1883",
+      "triangles": 120,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1874",
+      "label": "PUENTE:Mesh_1874",
+      "triangles": 116,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1873",
+      "label": "PUENTE:Mesh_1873",
+      "triangles": 115,
+      "error_m": 7.510185238146505e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1872",
+      "label": "PUENTE:Mesh_1872",
+      "triangles": 535,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1871",
+      "label": "PUENTE:Mesh_1871",
+      "triangles": 110,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1870",
+      "label": "PUENTE:Mesh_1870",
+      "triangles": 2,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1869",
+      "label": "PUENTE:Mesh_1869",
+      "triangles": 110,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1868",
+      "label": "PUENTE:Mesh_1868",
+      "triangles": 2,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1867",
+      "label": "PUENTE:Mesh_1867",
+      "triangles": 408,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1866",
+      "label": "PUENTE:Mesh_1866",
+      "triangles": 262,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1854",
+      "label": "PUENTE:Mesh_1854",
+      "triangles": 318,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1853",
+      "label": "PUENTE:Mesh_1853",
+      "triangles": 2,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1852",
+      "label": "PUENTE:Mesh_1852",
+      "triangles": 28,
+      "error_m": 6.675720207738323e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1851",
+      "label": "PUENTE:Mesh_1851",
+      "triangles": 2,
+      "error_m": 2.1457672261249172e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1850",
+      "label": "PUENTE:Mesh_1850",
+      "triangles": 28,
+      "error_m": 6.675720207738323e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1849",
+      "label": "PUENTE:Mesh_1849",
+      "triangles": 132,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1848",
+      "label": "PUENTE:Mesh_1848",
+      "triangles": 2172,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1847",
+      "label": "PUENTE:Mesh_1847",
+      "triangles": 2,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1846",
+      "label": "PUENTE:Mesh_1846",
+      "triangles": 24,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1845",
+      "label": "PUENTE:Mesh_1845",
+      "triangles": 22,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1844",
+      "label": "PUENTE:Mesh_1844",
+      "triangles": 2,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1843",
+      "label": "PUENTE:Mesh_1843",
+      "triangles": 22,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1842",
+      "label": "PUENTE:Mesh_1842",
+      "triangles": 22,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1841",
+      "label": "PUENTE:Mesh_1841",
+      "triangles": 22,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1840",
+      "label": "PUENTE:Mesh_1840",
+      "triangles": 22,
+      "error_m": 7.987022385691489e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1838",
+      "label": "PUENTE:Mesh_1838",
+      "triangles": 336,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1837",
+      "label": "PUENTE:Mesh_1837",
+      "triangles": 54,
+      "error_m": 7.987022385691489e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1836",
+      "label": "PUENTE:Mesh_1836",
+      "triangles": 100,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1835",
+      "label": "PUENTE:Mesh_1835",
+      "triangles": 2,
+      "error_m": 4.2915344167226976e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1834",
+      "label": "PUENTE:Mesh_1834",
+      "triangles": 2,
+      "error_m": 4.2915344167226976e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1833",
+      "label": "PUENTE:Mesh_1833",
+      "triangles": 114,
+      "error_m": 4.291534425604482e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1832",
+      "label": "PUENTE:Mesh_1832",
+      "triangles": 54,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1831",
+      "label": "PUENTE:Mesh_1831",
+      "triangles": 179,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1830",
+      "label": "PUENTE:Mesh_1830",
+      "triangles": 2,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1829",
+      "label": "PUENTE:Mesh_1829",
+      "triangles": 2,
+      "error_m": 4.0531158340684215e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1816",
+      "label": "PUENTE:Mesh_1816",
+      "triangles": 8,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1815",
+      "label": "PUENTE:Mesh_1815",
+      "triangles": 42,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1814",
+      "label": "PUENTE:Mesh_1814",
+      "triangles": 42,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1813",
+      "label": "PUENTE:Mesh_1813",
+      "triangles": 8,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1811",
+      "label": "PUENTE:Mesh_1811",
+      "triangles": 244,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1810",
+      "label": "PUENTE:Mesh_1810",
+      "triangles": 140,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1809",
+      "label": "PUENTE:Mesh_1809",
+      "triangles": 162,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1808",
+      "label": "PUENTE:Mesh_1808",
+      "triangles": 47,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1807",
+      "label": "PUENTE:Mesh_1807",
+      "triangles": 46,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1806",
+      "label": "PUENTE:Mesh_1806",
+      "triangles": 2,
+      "error_m": 1.0728835952988902e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1805",
+      "label": "PUENTE:Mesh_1805",
+      "triangles": 2,
+      "error_m": 2.980232238769531e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1804",
+      "label": "PUENTE:Mesh_1804",
+      "triangles": 54,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1803",
+      "label": "PUENTE:Mesh_1803",
+      "triangles": 54,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1802",
+      "label": "PUENTE:Mesh_1802",
+      "triangles": 2,
+      "error_m": 3.3378601038691613e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1801",
+      "label": "PUENTE:Mesh_1801",
+      "triangles": 2,
+      "error_m": 3.3378601038691613e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1800",
+      "label": "PUENTE:Mesh_1800",
+      "triangles": 80,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1799",
+      "label": "PUENTE:Mesh_1799",
+      "triangles": 26,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1798",
+      "label": "PUENTE:Mesh_1798",
+      "triangles": 603,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1797",
+      "label": "PUENTE:Mesh_1797",
+      "triangles": 26,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1796",
+      "label": "PUENTE:Mesh_1796",
+      "triangles": 80,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1795",
+      "label": "PUENTE:Mesh_1795",
+      "triangles": 544,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1794",
+      "label": "PUENTE:Mesh_1794",
+      "triangles": 29,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1793",
+      "label": "PUENTE:Mesh_1793",
+      "triangles": 29,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1792",
+      "label": "PUENTE:Mesh_1792",
+      "triangles": 24,
+      "error_m": 6.198883077956907e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1791",
+      "label": "PUENTE:Mesh_1791",
+      "triangles": 18,
+      "error_m": 2.9802322476513154e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1790",
+      "label": "PUENTE:Mesh_1790",
+      "triangles": 18,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1789",
+      "label": "PUENTE:Mesh_1789",
+      "triangles": 43,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1788",
+      "label": "PUENTE:Mesh_1788",
+      "triangles": 356,
+      "error_m": 6.675720207738323e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1786",
+      "label": "PUENTE:Mesh_1786",
+      "triangles": 50,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1785",
+      "label": "PUENTE:Mesh_1785",
+      "triangles": 50,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1784",
+      "label": "PUENTE:Mesh_1784",
+      "triangles": 50,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1783",
+      "label": "PUENTE:Mesh_1783",
+      "triangles": 50,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1782",
+      "label": "PUENTE:Mesh_1782",
+      "triangles": 88,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1781",
+      "label": "PUENTE:Mesh_1781",
+      "triangles": 42,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1780",
+      "label": "PUENTE:Mesh_1780",
+      "triangles": 13,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1779",
+      "label": "PUENTE:Mesh_1779",
+      "triangles": 42,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1778",
+      "label": "PUENTE:Mesh_1778",
+      "triangles": 13,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1777",
+      "label": "PUENTE:Mesh_1777",
+      "triangles": 42,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1776",
+      "label": "PUENTE:Mesh_1776",
+      "triangles": 13,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1775",
+      "label": "PUENTE:Mesh_1775",
+      "triangles": 42,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1774",
+      "label": "PUENTE:Mesh_1774",
+      "triangles": 13,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1773",
+      "label": "PUENTE:Mesh_1773",
+      "triangles": 42,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1772",
+      "label": "PUENTE:Mesh_1772",
+      "triangles": 13,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1771",
+      "label": "PUENTE:Mesh_1771",
+      "triangles": 42,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1770",
+      "label": "PUENTE:Mesh_1770",
+      "triangles": 13,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1769",
+      "label": "PUENTE:Mesh_1769",
+      "triangles": 8,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1768",
+      "label": "PUENTE:Mesh_1768",
+      "triangles": 24,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1767",
+      "label": "PUENTE:Mesh_1767",
+      "triangles": 8,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1766",
+      "label": "PUENTE:Mesh_1766",
+      "triangles": 24,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1765",
+      "label": "PUENTE:Mesh_1765",
+      "triangles": 42,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1764",
+      "label": "PUENTE:Mesh_1764",
+      "triangles": 13,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1755",
+      "label": "PUENTE:Mesh_1755",
+      "triangles": 172,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1753",
+      "label": "PUENTE:Mesh_1753",
+      "triangles": 50,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1752",
+      "label": "PUENTE:Mesh_1752",
+      "triangles": 10,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1751",
+      "label": "PUENTE:Mesh_1751",
+      "triangles": 50,
+      "error_m": 4.529952999376974e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1750",
+      "label": "PUENTE:Mesh_1750",
+      "triangles": 28,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1749",
+      "label": "PUENTE:Mesh_1749",
+      "triangles": 738,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1748",
+      "label": "PUENTE:Mesh_1748",
+      "triangles": 50,
+      "error_m": 6.437301625084046e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1747",
+      "label": "PUENTE:Mesh_1747",
+      "triangles": 50,
+      "error_m": 6.437301625084046e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1745",
+      "label": "PUENTE:Mesh_1745",
+      "triangles": 50,
+      "error_m": 6.675720207738323e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1743",
+      "label": "PUENTE:Mesh_1743",
+      "triangles": 108,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1742",
+      "label": "PUENTE:Mesh_1742",
+      "triangles": 1388,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1741",
+      "label": "PUENTE:Mesh_1741",
+      "triangles": 886,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1740",
+      "label": "PUENTE:Mesh_1740",
+      "triangles": 50,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1739",
+      "label": "PUENTE:Mesh_1739",
+      "triangles": 50,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1737",
+      "label": "PUENTE:Mesh_1737",
+      "triangles": 62,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1734",
+      "label": "PUENTE:Mesh_1734",
+      "triangles": 4667,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1732",
+      "label": "PUENTE:Mesh_1732",
+      "triangles": 68,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1731",
+      "label": "PUENTE:Mesh_1731",
+      "triangles": 68,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1730",
+      "label": "PUENTE:Mesh_1730",
+      "triangles": 718,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__hallwaysupports_4",
+      "label": "PUENTE:hallwaysupports_4",
+      "triangles": 110,
+      "error_m": 4.291534425604482e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__hallwaysupports_3",
+      "label": "PUENTE:hallwaysupports_3",
+      "triangles": 110,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__hallwaypanels_1",
+      "label": "PUENTE:hallwaypanels_1",
+      "triangles": 1824,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Doorpanel_8",
+      "label": "PUENTE:Doorpanel_8",
+      "triangles": 26,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Doorpanel_7",
+      "label": "PUENTE:Doorpanel_7",
+      "triangles": 26,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Doorpanel_6",
+      "label": "PUENTE:Doorpanel_6",
+      "triangles": 26,
+      "error_m": 4.291534425604482e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Doorpanel_5",
+      "label": "PUENTE:Doorpanel_5",
+      "triangles": 26,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_36",
+      "label": "PUENTE:ChamferBox_36",
+      "triangles": 300,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_35",
+      "label": "PUENTE:ChamferBox_35",
+      "triangles": 300,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_34",
+      "label": "PUENTE:ChamferBox_34",
+      "triangles": 300,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_33",
+      "label": "PUENTE:ChamferBox_33",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_32",
+      "label": "PUENTE:ChamferBox_32",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_31",
+      "label": "PUENTE:ChamferBox_31",
+      "triangles": 300,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_30",
+      "label": "PUENTE:ChamferBox_30",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_29",
+      "label": "PUENTE:ChamferBox_29",
+      "triangles": 300,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_28",
+      "label": "PUENTE:ChamferBox_28",
+      "triangles": 300,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_27",
+      "label": "PUENTE:ChamferBox_27",
+      "triangles": 300,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_26",
+      "label": "PUENTE:ChamferBox_26",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_25",
+      "label": "PUENTE:ChamferBox_25",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_24",
+      "label": "PUENTE:ChamferBox_24",
+      "triangles": 300,
+      "error_m": 3.4570694040780836e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_23",
+      "label": "PUENTE:ChamferBox_23",
+      "triangles": 300,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__BNC_2",
+      "label": "PUENTE:BNC_2",
+      "triangles": 48,
+      "error_m": 3.3974647628554067e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__BCN_3",
+      "label": "PUENTE:BCN_3",
+      "triangles": 48,
+      "error_m": 3.2186508214238074e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1865",
+      "label": "PUENTE:Mesh_1865",
+      "triangles": 50,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1864",
+      "label": "PUENTE:Mesh_1864",
+      "triangles": 50,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1863",
+      "label": "PUENTE:Mesh_1863",
+      "triangles": 26,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1862",
+      "label": "PUENTE:Mesh_1862",
+      "triangles": 26,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1861",
+      "label": "PUENTE:Mesh_1861",
+      "triangles": 27,
+      "error_m": 3.6954879689687914e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1860",
+      "label": "PUENTE:Mesh_1860",
+      "triangles": 25,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1859",
+      "label": "PUENTE:Mesh_1859",
+      "triangles": 637,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1858",
+      "label": "PUENTE:Mesh_1858",
+      "triangles": 34,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1857",
+      "label": "PUENTE:Mesh_1857",
+      "triangles": 373,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1856",
+      "label": "PUENTE:Mesh_1856",
+      "triangles": 18635,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1855",
+      "label": "PUENTE:Mesh_1855",
+      "triangles": 39,
+      "error_m": 7.510185238146505e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1787",
+      "label": "PUENTE:Mesh_1787",
+      "triangles": 1951,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1728",
+      "label": "PUENTE:Mesh_1728",
+      "triangles": 240,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__hallwayfloor_1",
+      "label": "PUENTE:hallwayfloor_1",
+      "triangles": 361,
+      "error_m": 4.291534425604482e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__floorfront_1",
+      "label": "PUENTE:floorfront_1",
+      "triangles": 613,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_133",
+      "label": "PUENTE:Plane_133",
+      "triangles": 2262,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_132",
+      "label": "PUENTE:Plane_132",
+      "triangles": 2269,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_128",
+      "label": "PUENTE:Object_128",
+      "triangles": 687,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_125",
+      "label": "PUENTE:Object_125",
+      "triangles": 2203,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_124",
+      "label": "PUENTE:Object_124",
+      "triangles": 2240,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1946",
+      "label": "PUENTE:Mesh_1946",
+      "triangles": 3195,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1828",
+      "label": "PUENTE:Mesh_1828",
+      "triangles": 156,
+      "error_m": 6.437301642847615e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1827",
+      "label": "PUENTE:Mesh_1827",
+      "triangles": 24,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1826",
+      "label": "PUENTE:Mesh_1826",
+      "triangles": 24,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1825",
+      "label": "PUENTE:Mesh_1825",
+      "triangles": 160,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1824",
+      "label": "PUENTE:Mesh_1824",
+      "triangles": 132,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1823",
+      "label": "PUENTE:Mesh_1823",
+      "triangles": 2,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1822",
+      "label": "PUENTE:Mesh_1822",
+      "triangles": 2,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1821",
+      "label": "PUENTE:Mesh_1821",
+      "triangles": 2,
+      "error_m": 5.006790146921958e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1820",
+      "label": "PUENTE:Mesh_1820",
+      "triangles": 2,
+      "error_m": 5.006790146921958e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1819",
+      "label": "PUENTE:Mesh_1819",
+      "triangles": 2,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1818",
+      "label": "PUENTE:Mesh_1818",
+      "triangles": 2,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1817",
+      "label": "PUENTE:Mesh_1817",
+      "triangles": 2134,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1738",
+      "label": "PUENTE:Mesh_1738",
+      "triangles": 3144,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1736",
+      "label": "PUENTE:Mesh_1736",
+      "triangles": 3282,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1735",
+      "label": "PUENTE:Mesh_1735",
+      "triangles": 5586,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1733",
+      "label": "PUENTE:Mesh_1733",
+      "triangles": 5226,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1729",
+      "label": "PUENTE:Mesh_1729",
+      "triangles": 5226,
+      "error_m": 3.9339065516230676e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__scn12b_1",
+      "label": "PUENTE:scn12b_1",
+      "triangles": 50,
+      "error_m": 5.125999464894448e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__scn12a_1",
+      "label": "PUENTE:scn12a_1",
+      "triangles": 50,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_99",
+      "label": "PUENTE:Plane_99",
+      "triangles": 2,
+      "error_m": 1.694139022401231e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_98",
+      "label": "PUENTE:Plane_98",
+      "triangles": 2,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_97",
+      "label": "PUENTE:Plane_97",
+      "triangles": 2,
+      "error_m": 1.5497207606074426e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_96",
+      "label": "PUENTE:Plane_96",
+      "triangles": 2,
+      "error_m": 5.006790146921958e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_95",
+      "label": "PUENTE:Plane_95",
+      "triangles": 2,
+      "error_m": 5.722045877121218e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_94",
+      "label": "PUENTE:Plane_94",
+      "triangles": 2,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_93",
+      "label": "PUENTE:Plane_93",
+      "triangles": 2,
+      "error_m": 2.8862319201294895e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_92",
+      "label": "PUENTE:Plane_92",
+      "triangles": 6,
+      "error_m": 2.8610229563241774e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_140",
+      "label": "PUENTE:Plane_140",
+      "triangles": 2,
+      "error_m": 1.9073486257070726e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_139",
+      "label": "PUENTE:Plane_139",
+      "triangles": 2,
+      "error_m": 5.006790164685526e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_138",
+      "label": "PUENTE:Plane_138",
+      "triangles": 2,
+      "error_m": 3.3378601216327297e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_137",
+      "label": "PUENTE:Plane_137",
+      "triangles": 2,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_136",
+      "label": "PUENTE:Plane_136",
+      "triangles": 2,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_135",
+      "label": "PUENTE:Plane_135",
+      "triangles": 2,
+      "error_m": 5.722045877121218e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_134",
+      "label": "PUENTE:Plane_134",
+      "triangles": 2,
+      "error_m": 3.3378601216327297e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_131",
+      "label": "PUENTE:Plane_131",
+      "triangles": 2,
+      "error_m": 2.264976499688487e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_130",
+      "label": "PUENTE:Plane_130",
+      "triangles": 2,
+      "error_m": 3.2782554715282686e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_129",
+      "label": "PUENTE:Plane_129",
+      "triangles": 2,
+      "error_m": 3.0398368888739924e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_128",
+      "label": "PUENTE:Plane_128",
+      "triangles": 2,
+      "error_m": 2.264976508570271e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_127",
+      "label": "PUENTE:Plane_127",
+      "triangles": 2,
+      "error_m": 2.980232238769531e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_126",
+      "label": "PUENTE:Plane_126",
+      "triangles": 2,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_125",
+      "label": "PUENTE:Plane_125",
+      "triangles": 2,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_124",
+      "label": "PUENTE:Plane_124",
+      "triangles": 2,
+      "error_m": 2.264976499688487e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_123",
+      "label": "PUENTE:Plane_123",
+      "triangles": 2,
+      "error_m": 2.5033950912245473e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_122",
+      "label": "PUENTE:Plane_122",
+      "triangles": 2,
+      "error_m": 3.3378601038691613e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_121",
+      "label": "PUENTE:Plane_121",
+      "triangles": 2,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_120",
+      "label": "PUENTE:Plane_120",
+      "triangles": 2,
+      "error_m": 2.264976508570271e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_119",
+      "label": "PUENTE:Plane_119",
+      "triangles": 2,
+      "error_m": 4.529953017140542e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_118",
+      "label": "PUENTE:Plane_118",
+      "triangles": 2,
+      "error_m": 5.722045877121218e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_117",
+      "label": "PUENTE:Plane_117",
+      "triangles": 2,
+      "error_m": 3.8146972514141453e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_116",
+      "label": "PUENTE:Plane_116",
+      "triangles": 2,
+      "error_m": 6.198883077956907e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_115",
+      "label": "PUENTE:Plane_115",
+      "triangles": 2,
+      "error_m": 3.8146972514141453e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_114",
+      "label": "PUENTE:Plane_114",
+      "triangles": 2,
+      "error_m": 1.5497207606074426e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_113",
+      "label": "PUENTE:Plane_113",
+      "triangles": 2,
+      "error_m": 1.9073486257070726e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_110",
+      "label": "PUENTE:Plane_110",
+      "triangles": 2,
+      "error_m": 4.529953017140542e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_109",
+      "label": "PUENTE:Plane_109",
+      "triangles": 2,
+      "error_m": 2.8862319201294895e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_108",
+      "label": "PUENTE:Plane_108",
+      "triangles": 2,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_107",
+      "label": "PUENTE:Plane_107",
+      "triangles": 2,
+      "error_m": 1.5497207650483347e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_106",
+      "label": "PUENTE:Plane_106",
+      "triangles": 2,
+      "error_m": 1.907348639029749e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_105",
+      "label": "PUENTE:Plane_105",
+      "triangles": 2,
+      "error_m": 1.9073486345888568e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_104",
+      "label": "PUENTE:Plane_104",
+      "triangles": 2,
+      "error_m": 3.0994415300966693e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_103",
+      "label": "PUENTE:Plane_103",
+      "triangles": 2,
+      "error_m": 2.384185795456517e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_102",
+      "label": "PUENTE:Plane_102",
+      "triangles": 2,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_101",
+      "label": "PUENTE:Plane_101",
+      "triangles": 2,
+      "error_m": 2.145767217243133e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Plane_100",
+      "label": "PUENTE:Plane_100",
+      "triangles": 2,
+      "error_m": 1.1920928955078125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_87",
+      "label": "PUENTE:Object_87",
+      "triangles": 26,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_86",
+      "label": "PUENTE:Object_86",
+      "triangles": 26,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2137",
+      "label": "PUENTE:Mesh_2137",
+      "triangles": 50,
+      "error_m": 2.9206275975468543e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2136",
+      "label": "PUENTE:Mesh_2136",
+      "triangles": 48,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2135",
+      "label": "PUENTE:Mesh_2135",
+      "triangles": 46,
+      "error_m": 3.218650812542023e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2134",
+      "label": "PUENTE:Mesh_2134",
+      "triangles": 76,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2133",
+      "label": "PUENTE:Mesh_2133",
+      "triangles": 3,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2128",
+      "label": "PUENTE:Mesh_2128",
+      "triangles": 2,
+      "error_m": 3.5762786865234375e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2127",
+      "label": "PUENTE:Mesh_2127",
+      "triangles": 268,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2126",
+      "label": "PUENTE:Mesh_2126",
+      "triangles": 48,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2125",
+      "label": "PUENTE:Mesh_2125",
+      "triangles": 2,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1746",
+      "label": "PUENTE:Mesh_1746",
+      "triangles": 236,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_77",
+      "label": "PUENTE:Object_77",
+      "triangles": 478,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_76",
+      "label": "PUENTE:Object_76",
+      "triangles": 8080,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_75",
+      "label": "PUENTE:Object_75",
+      "triangles": 279,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_129",
+      "label": "PUENTE:Object_129",
+      "triangles": 3875,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_127",
+      "label": "PUENTE:Object_127",
+      "triangles": 660,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_126",
+      "label": "PUENTE:Object_126",
+      "triangles": 554,
+      "error_m": 7.390975937937583e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_123",
+      "label": "PUENTE:Object_123",
+      "triangles": 612,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_122",
+      "label": "PUENTE:Object_122",
+      "triangles": 478,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_121",
+      "label": "PUENTE:Object_121",
+      "triangles": 612,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_120",
+      "label": "PUENTE:Object_120",
+      "triangles": 478,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30216",
+      "label": "PUENTE:MSB_30216",
+      "triangles": 2396,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30215",
+      "label": "PUENTE:MSB_30215",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30214",
+      "label": "PUENTE:MSB_30214",
+      "triangles": 108,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30213",
+      "label": "PUENTE:MSB_30213",
+      "triangles": 72,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30212",
+      "label": "PUENTE:MSB_30212",
+      "triangles": 108,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30211",
+      "label": "PUENTE:MSB_30211",
+      "triangles": 72,
+      "error_m": 4.2915344167226976e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30210",
+      "label": "PUENTE:MSB_30210",
+      "triangles": 72,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30209",
+      "label": "PUENTE:MSB_30209",
+      "triangles": 12,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30208",
+      "label": "PUENTE:MSB_30208",
+      "triangles": 172,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30207",
+      "label": "PUENTE:MSB_30207",
+      "triangles": 12,
+      "error_m": 4.529952999376974e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30206",
+      "label": "PUENTE:MSB_30206",
+      "triangles": 72,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30205",
+      "label": "PUENTE:MSB_30205",
+      "triangles": 2396,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30204",
+      "label": "PUENTE:MSB_30204",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30203",
+      "label": "PUENTE:MSB_30203",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30202",
+      "label": "PUENTE:MSB_30202",
+      "triangles": 72,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30201",
+      "label": "PUENTE:MSB_30201",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30200",
+      "label": "PUENTE:MSB_30200",
+      "triangles": 72,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30199",
+      "label": "PUENTE:MSB_30199",
+      "triangles": 72,
+      "error_m": 4.529952999376974e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30198",
+      "label": "PUENTE:MSB_30198",
+      "triangles": 12,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30197",
+      "label": "PUENTE:MSB_30197",
+      "triangles": 172,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30196",
+      "label": "PUENTE:MSB_30196",
+      "triangles": 12,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30195",
+      "label": "PUENTE:MSB_30195",
+      "triangles": 72,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30194",
+      "label": "PUENTE:MSB_30194",
+      "triangles": 72,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30193",
+      "label": "PUENTE:MSB_30193",
+      "triangles": 172,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30192",
+      "label": "PUENTE:MSB_30192",
+      "triangles": 12,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB_30191",
+      "label": "PUENTE:MSB_30191",
+      "triangles": 72,
+      "error_m": 2.622604355906333e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30138",
+      "label": "PUENTE:MSB0030119_MSB_30138",
+      "triangles": 108,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30137",
+      "label": "PUENTE:MSB0030119_MSB_30137",
+      "triangles": 108,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30136",
+      "label": "PUENTE:MSB0030119_MSB_30136",
+      "triangles": 108,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30135",
+      "label": "PUENTE:MSB0030119_MSB_30135",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30134",
+      "label": "PUENTE:MSB0030119_MSB_30134",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30133",
+      "label": "PUENTE:MSB0030119_MSB_30133",
+      "triangles": 108,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30132",
+      "label": "PUENTE:MSB0030119_MSB_30132",
+      "triangles": 108,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030119_MSB_30131",
+      "label": "PUENTE:MSB0030119_MSB_30131",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30145",
+      "label": "PUENTE:MSB0030117_MSB_30145",
+      "triangles": 108,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30144",
+      "label": "PUENTE:MSB0030117_MSB_30144",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30143",
+      "label": "PUENTE:MSB0030117_MSB_30143",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30142",
+      "label": "PUENTE:MSB0030117_MSB_30142",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30141",
+      "label": "PUENTE:MSB0030117_MSB_30141",
+      "triangles": 108,
+      "error_m": 5.48362731223051e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30140",
+      "label": "PUENTE:MSB0030117_MSB_30140",
+      "triangles": 108,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30139",
+      "label": "PUENTE:MSB0030117_MSB_30139",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030117_MSB_30138",
+      "label": "PUENTE:MSB0030117_MSB_30138",
+      "triangles": 108,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30185",
+      "label": "PUENTE:MSB0030116_MSB_30185",
+      "triangles": 116,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30184",
+      "label": "PUENTE:MSB0030116_MSB_30184",
+      "triangles": 116,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30183",
+      "label": "PUENTE:MSB0030116_MSB_30183",
+      "triangles": 116,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30182",
+      "label": "PUENTE:MSB0030116_MSB_30182",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30181",
+      "label": "PUENTE:MSB0030116_MSB_30181",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30180",
+      "label": "PUENTE:MSB0030116_MSB_30180",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30179",
+      "label": "PUENTE:MSB0030116_MSB_30179",
+      "triangles": 116,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030116_MSB_30178",
+      "label": "PUENTE:MSB0030116_MSB_30178",
+      "triangles": 116,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30126",
+      "label": "PUENTE:MSB0030110_MSB_30126",
+      "triangles": 12,
+      "error_m": 5.245208747339802e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30125",
+      "label": "PUENTE:MSB0030110_MSB_30125",
+      "triangles": 12,
+      "error_m": 5.48362731223051e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30124",
+      "label": "PUENTE:MSB0030110_MSB_30124",
+      "triangles": 12,
+      "error_m": 3.3378601038691613e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30123",
+      "label": "PUENTE:MSB0030110_MSB_30123",
+      "triangles": 12,
+      "error_m": 3.8146972514141453e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30122",
+      "label": "PUENTE:MSB0030110_MSB_30122",
+      "triangles": 12,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30121",
+      "label": "PUENTE:MSB0030110_MSB_30121",
+      "triangles": 12,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30120",
+      "label": "PUENTE:MSB0030110_MSB_30120",
+      "triangles": 12,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__MSB0030110_MSB_30119",
+      "label": "PUENTE:MSB0030110_MSB_30119",
+      "triangles": 12,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Layer__5",
+      "label": "PUENTE:Layer__5",
+      "triangles": 388,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Layer__4",
+      "label": "PUENTE:Layer__4",
+      "triangles": 388,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Layer__3",
+      "label": "PUENTE:Layer__3",
+      "triangles": 948,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_38",
+      "label": "PUENTE:ChamferBox_38",
+      "triangles": 1008,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_37",
+      "label": "PUENTE:ChamferBox_37",
+      "triangles": 1008,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__ChamferBox_22",
+      "label": "PUENTE:ChamferBox_22",
+      "triangles": 1000,
+      "error_m": 6.19888304242977e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Box_9",
+      "label": "PUENTE:Box_9",
+      "triangles": 9024,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Box_8",
+      "label": "PUENTE:Box_8",
+      "triangles": 22171,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Box_7",
+      "label": "PUENTE:Box_7",
+      "triangles": 9024,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Box_6",
+      "label": "PUENTE:Box_6",
+      "triangles": 22173,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Armrest_8",
+      "label": "PUENTE:Armrest_8",
+      "triangles": 1500,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Armrest_7",
+      "label": "PUENTE:Armrest_7",
+      "triangles": 1500,
+      "error_m": 3.6358833366278986e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Armrest_6",
+      "label": "PUENTE:Armrest_6",
+      "triangles": 1500,
+      "error_m": 3.3378601127509455e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Armrest_5",
+      "label": "PUENTE:Armrest_5",
+      "triangles": 1500,
+      "error_m": 3.6358833366278986e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2010",
+      "label": "PUENTE:Mesh_2010",
+      "triangles": 17,
+      "error_m": 3.3623960771222983e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2009",
+      "label": "PUENTE:Mesh_2009",
+      "triangles": 86,
+      "error_m": 4.0776518162033426e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2008",
+      "label": "PUENTE:Mesh_2008",
+      "triangles": 28,
+      "error_m": 4.0776518162033426e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2007",
+      "label": "PUENTE:Mesh_2007",
+      "triangles": 24,
+      "error_m": 3.928640204264866e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2006",
+      "label": "PUENTE:Mesh_2006",
+      "triangles": 17,
+      "error_m": 3.526308853807336e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2005",
+      "label": "PUENTE:Mesh_2005",
+      "triangles": 86,
+      "error_m": 4.107454136814681e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2004",
+      "label": "PUENTE:Mesh_2004",
+      "triangles": 28,
+      "error_m": 3.988244845487543e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2003",
+      "label": "PUENTE:Mesh_2003",
+      "triangles": 86,
+      "error_m": 4.167058786919142e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2002",
+      "label": "PUENTE:Mesh_2002",
+      "triangles": 17,
+      "error_m": 4.882314534881971e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2001",
+      "label": "PUENTE:Mesh_2001",
+      "triangles": 86,
+      "error_m": 4.78545698179289e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2000",
+      "label": "PUENTE:Mesh_2000",
+      "triangles": 28,
+      "error_m": 4.78545698179289e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1999",
+      "label": "PUENTE:Mesh_1999",
+      "triangles": 17,
+      "error_m": 4.956820340851209e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1998",
+      "label": "PUENTE:Mesh_1998",
+      "triangles": 86,
+      "error_m": 4.893490404001e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1997",
+      "label": "PUENTE:Mesh_1997",
+      "triangles": 28,
+      "error_m": 4.893490404001e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1996",
+      "label": "PUENTE:Mesh_1996",
+      "triangles": 24,
+      "error_m": 4.882314534881971e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1995",
+      "label": "PUENTE:Mesh_1995",
+      "triangles": 86,
+      "error_m": 4.956820340851209e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1994",
+      "label": "PUENTE:Mesh_1994",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1993",
+      "label": "PUENTE:Mesh_1993",
+      "triangles": 28,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1992",
+      "label": "PUENTE:Mesh_1992",
+      "triangles": 17,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1991",
+      "label": "PUENTE:Mesh_1991",
+      "triangles": 24,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1990",
+      "label": "PUENTE:Mesh_1990",
+      "triangles": 28,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1989",
+      "label": "PUENTE:Mesh_1989",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1988",
+      "label": "PUENTE:Mesh_1988",
+      "triangles": 17,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1987",
+      "label": "PUENTE:Mesh_1987",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1986",
+      "label": "PUENTE:Mesh_1986",
+      "triangles": 17,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1985",
+      "label": "PUENTE:Mesh_1985",
+      "triangles": 28,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1984",
+      "label": "PUENTE:Mesh_1984",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1983",
+      "label": "PUENTE:Mesh_1983",
+      "triangles": 24,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1982",
+      "label": "PUENTE:Mesh_1982",
+      "triangles": 17,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1981",
+      "label": "PUENTE:Mesh_1981",
+      "triangles": 28,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1980",
+      "label": "PUENTE:Mesh_1980",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1979",
+      "label": "PUENTE:Mesh_1979",
+      "triangles": 86,
+      "error_m": 2.384185791015625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1882",
+      "label": "PUENTE:Mesh_1882",
+      "triangles": 28,
+      "error_m": 6.185178573758776e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1881",
+      "label": "PUENTE:Mesh_1881",
+      "triangles": 17,
+      "error_m": 6.66201572130376e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1880",
+      "label": "PUENTE:Mesh_1880",
+      "triangles": 86,
+      "error_m": 6.185178573758776e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1879",
+      "label": "PUENTE:Mesh_1879",
+      "triangles": 24,
+      "error_m": 7.138852886612312e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1878",
+      "label": "PUENTE:Mesh_1878",
+      "triangles": 26,
+      "error_m": 7.138852886612312e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1877",
+      "label": "PUENTE:Mesh_1877",
+      "triangles": 86,
+      "error_m": 7.138852886612312e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1876",
+      "label": "PUENTE:Mesh_1876",
+      "triangles": 2,
+      "error_m": 3.337663061486751e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1875",
+      "label": "PUENTE:Mesh_1875",
+      "triangles": 17,
+      "error_m": 7.138852886612312e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1763",
+      "label": "PUENTE:Mesh_1763",
+      "triangles": 17,
+      "error_m": 3.5625742178524433e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1762",
+      "label": "PUENTE:Mesh_1762",
+      "triangles": 28,
+      "error_m": 5.02049463335652e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1761",
+      "label": "PUENTE:Mesh_1761",
+      "triangles": 86,
+      "error_m": 5.02049463335652e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1760",
+      "label": "PUENTE:Mesh_1760",
+      "triangles": 28,
+      "error_m": 5.02049463335652e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1759",
+      "label": "PUENTE:Mesh_1759",
+      "triangles": 86,
+      "error_m": 5.02049463335652e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1758",
+      "label": "PUENTE:Mesh_1758",
+      "triangles": 17,
+      "error_m": 4.0668203116212e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1757",
+      "label": "PUENTE:Mesh_1757",
+      "triangles": 86,
+      "error_m": 5.02049463335652e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1756",
+      "label": "PUENTE:Mesh_1756",
+      "triangles": 24,
+      "error_m": 4.0668203116212e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__door_2",
+      "label": "PUENTE:door_2",
+      "triangles": 86,
+      "error_m": 7.138852886612312e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Torus_2",
+      "label": "PUENTE:Torus_2",
+      "triangles": 3072,
+      "error_m": 5.722045912648355e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__strudextends_1",
+      "label": "PUENTE:strudextends_1",
+      "triangles": 592,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_99",
+      "label": "PUENTE:Object_99",
+      "triangles": 58,
+      "error_m": 4.172325134277344e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_98",
+      "label": "PUENTE:Object_98",
+      "triangles": 58,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_97",
+      "label": "PUENTE:Object_97",
+      "triangles": 86,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_96",
+      "label": "PUENTE:Object_96",
+      "triangles": 84,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_95",
+      "label": "PUENTE:Object_95",
+      "triangles": 86,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_94",
+      "label": "PUENTE:Object_94",
+      "triangles": 84,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_93",
+      "label": "PUENTE:Object_93",
+      "triangles": 84,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_92",
+      "label": "PUENTE:Object_92",
+      "triangles": 84,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_91",
+      "label": "PUENTE:Object_91",
+      "triangles": 84,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_90",
+      "label": "PUENTE:Object_90",
+      "triangles": 82,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_89",
+      "label": "PUENTE:Object_89",
+      "triangles": 84,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_118",
+      "label": "PUENTE:Object_118",
+      "triangles": 299,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_110",
+      "label": "PUENTE:Object_110",
+      "triangles": 86,
+      "error_m": 7.152557373046875e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_109",
+      "label": "PUENTE:Object_109",
+      "triangles": 88,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_108",
+      "label": "PUENTE:Object_108",
+      "triangles": 86,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_107",
+      "label": "PUENTE:Object_107",
+      "triangles": 58,
+      "error_m": 3.4570693951962994e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_106",
+      "label": "PUENTE:Object_106",
+      "triangles": 58,
+      "error_m": 3.69548798673236e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_105",
+      "label": "PUENTE:Object_105",
+      "triangles": 58,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_104",
+      "label": "PUENTE:Object_104",
+      "triangles": 60,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_103",
+      "label": "PUENTE:Object_103",
+      "triangles": 60,
+      "error_m": 4.05311585183199e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_102",
+      "label": "PUENTE:Object_102",
+      "triangles": 60,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_101",
+      "label": "PUENTE:Object_101",
+      "triangles": 60,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Object_100",
+      "label": "PUENTE:Object_100",
+      "triangles": 58,
+      "error_m": 4.41074371693162e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2094",
+      "label": "PUENTE:Mesh_2094",
+      "triangles": 5844,
+      "error_m": 8.106231668136843e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_2057",
+      "label": "PUENTE:Mesh_2057",
+      "triangles": 96,
+      "error_m": 4.05311585183199e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1969",
+      "label": "PUENTE:Mesh_1969",
+      "triangles": 168,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1839",
+      "label": "PUENTE:Mesh_1839",
+      "triangles": 132,
+      "error_m": 3.8146972691777137e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1812",
+      "label": "PUENTE:Mesh_1812",
+      "triangles": 316,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1754",
+      "label": "PUENTE:Mesh_1754",
+      "triangles": 1000,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mesh_1744",
+      "label": "PUENTE:Mesh_1744",
+      "triangles": 245,
+      "error_m": 5.722045894884786e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Mainroof_1",
+      "label": "PUENTE:Mainroof_1",
+      "triangles": 14452,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__lightssupport_1",
+      "label": "PUENTE:lightssupport_1",
+      "triangles": 48,
+      "error_m": 6.675720207738323e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__lightsring_3",
+      "label": "PUENTE:lightsring_3",
+      "triangles": 718,
+      "error_m": 6.91413877262903e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__lightringback_1",
+      "label": "PUENTE:lightringback_1",
+      "triangles": 449,
+      "error_m": 4.529953008258758e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__lightring_4",
+      "label": "PUENTE:lightring_4",
+      "triangles": 336,
+      "error_m": 7.629394520591859e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__hallwaysubframe_1",
+      "label": "PUENTE:hallwaysubframe_1",
+      "triangles": 1611,
+      "error_m": 4.291534434486266e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__centerRA_1",
+      "label": "PUENTE:centerRA_1",
+      "triangles": 630,
+      "error_m": 5.602836612439432e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__Centerpiece_1",
+      "label": "PUENTE:Centerpiece_1",
+      "triangles": 8438,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__centerlights_2",
+      "label": "PUENTE:centerlights_2",
+      "triangles": 196,
+      "error_m": 5.245208729576234e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__centerlight_1",
+      "label": "PUENTE:centerlight_1",
+      "triangles": 2688,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__centerinset_1",
+      "label": "PUENTE:centerinset_1",
+      "triangles": 289,
+      "error_m": 5.483627329994079e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "G_INTERIORES_CONECTADOS__blackinset_1",
+      "label": "PUENTE:blackinset_1",
+      "triangles": 796,
+      "error_m": 5.960464477539062e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "PASILLO_PRINCIPAL",
+      "label": "PASILLO_PRINCIPAL",
+      "triangles": 1004,
+      "error_m": 9.5367431640625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "CRUCE_CUATRO",
+      "label": "CRUCE_CUATRO",
+      "triangles": 764,
+      "error_m": 3.6954879760742188e-06,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "ACCESO_TURBO",
+      "label": "ACCESO_TURBO",
+      "triangles": 447,
+      "error_m": 1.1444091796875e-05,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "CABINA_TURBO",
+      "label": "CABINA_TURBO",
+      "triangles": 3307,
+      "error_m": 6.67572021484375e-06,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "PASILLO_CAMAROTE",
+      "label": "PASILLO_CAMAROTE",
+      "triangles": 684,
+      "error_m": 9.5367431640625e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "CAMAROTE_EXISTENTE",
+      "label": "CAMAROTE_EXISTENTE",
+      "triangles": 64,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_PUENTE",
+      "label": "AD_PUENTE",
+      "triangles": 48,
+      "error_m": 7.400512691546624e-08,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_CRUCE",
+      "label": "AD_CRUCE",
+      "triangles": 48,
+      "error_m": 9.536743128535363e-08,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_RAMAL_TURBO",
+      "label": "AD_RAMAL_TURBO",
+      "triangles": 48,
+      "error_m": 3.341674812418205e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_GARGANTA_TURBO",
+      "label": "AD_GARGANTA_TURBO",
+      "triangles": 48,
+      "error_m": 3.8909912092321974e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_RAMAL_CAMAROTE",
+      "label": "AD_RAMAL_CAMAROTE",
+      "triangles": 48,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "AD_CAMAROTE",
+      "label": "AD_CAMAROTE",
+      "triangles": 48,
+      "error_m": 4.76837158203125e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "REF_CAMA",
+      "label": "REF_CAMA",
+      "triangles": 12,
+      "error_m": 1.2397766120386677e-06,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "REF_ESCRITORIO",
+      "label": "REF_ESCRITORIO",
+      "triangles": 12,
+      "error_m": 1.430511474609375e-06,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    },
+    {
+      "object": "REF_ARMARIO",
+      "label": "REF_ARMARIO",
+      "triangles": 12,
+      "error_m": 1.7684648279114867e-07,
+      "pass_test": true,
+      "fingerprint_matches_source": true
+    }
+  ],
+  "missing_labels": [],
+  "scenes": [
+    {
+      "name": "01_REFERENCIA_ORIGINAL",
+      "geometry_objects": 645,
+      "all_fingerprints_match": true
+    },
+    {
+      "name": "02_DIAGNOSTICO",
+      "geometry_objects": 645,
+      "all_fingerprints_match": true
+    },
+    {
+      "name": "03_EXPERIMENTO_A_SIN_CAMBIOS",
+      "geometry_objects": 645,
+      "all_fingerprints_match": true
+    },
+    {
+      "name": "04_RECORRIDOS_COMPLETOS",
+      "geometry_objects": 645,
+      "all_fingerprints_match": true
+    }
+  ],
+  "scene_names_match": true,
+  "packed_images": 49,
+  "all_geometry_matches": true
+}

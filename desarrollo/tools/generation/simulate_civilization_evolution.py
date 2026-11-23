@@ -73,6 +73,7 @@ def simulate(*, campaign_seed: str, civilization_id: str, years: int,
             raise ValueError(f"event year outside simulation window: {year}")
         events_by_year.setdefault(year, []).append(event)
 
+    used_population_facts: set[str] = set()
     history: list[dict[str, Any]] = []
     snapshots: list[dict[str, Any]] = [{"year": 0, **copy.deepcopy(state)}]
 
@@ -107,14 +108,73 @@ def simulate(*, campaign_seed: str, civilization_id: str, years: int,
                 if key in effects:
                     state[field] = clamp(int(state[field]) + int(effects[key]))
 
+            # A raw delta cannot create or remove people. Every external movement
+            # is tied to an accepted, double-entry fact in the reference snapshot.
             if "population_delta" in effects:
-                state["population"] = max(
-                    0, int(state["population"]) + int(effects["population_delta"])
-                )
+                change = effects.get("population_change")
+                if not isinstance(change, dict):
+                    raise ValueError("population_delta requires typed population_change")
+                kind = change.get("kind")
+                if kind not in {"migration", "births", "deaths", "casualties"}:
+                    raise ValueError("unsupported population change kind")
+                fact_ref = change.get("accepted_fact_ref")
+                facts = initial.get("accepted_population_facts", {})
+                fact = facts.get(fact_ref) if isinstance(facts, dict) else None
+                if not isinstance(fact_ref, str) or not isinstance(fact, dict):
+                    raise ValueError("unverified population fact")
+                if fact_ref in used_population_facts:
+                    raise ValueError("population fact already consumed")
+                if (fact.get("status") != "accepted"
+                        or fact.get("campaign_seed") != campaign_seed
+                        or fact.get("year") != year
+                        or fact.get("kind") != kind):
+                    raise ValueError("population fact outside trusted scope")
+                delta = int(effects["population_delta"])
+                if type(effects["population_delta"]) is not int or delta != fact.get("delta"):
+                    raise ValueError("population delta differs from accepted fact")
+                if kind == "migration":
+                    source, destination = fact.get("source_ref"), fact.get("destination_ref")
+                    amount = fact.get("amount")
+                    if (not isinstance(source, str) or not source or
+                            not isinstance(destination, str) or not destination or
+                            source == destination or type(amount) is not int or amount <= 0 or
+                            fact.get("source_debit") != -amount or
+                            fact.get("destination_credit") != amount or
+                            delta != (amount if destination == civilization_id else -amount) or
+                            civilization_id not in {source, destination}):
+                        raise ValueError("unbalanced migration evidence")
+                elif kind == "births" and delta < 0:
+                    raise ValueError("birth count cannot be negative")
+                elif kind in {"deaths", "casualties"} and delta > 0:
+                    raise ValueError("loss cannot increase population")
+                if int(state["population"]) + delta < 0:
+                    raise ValueError("population cannot be overdrawn")
+                state["population"] += delta
+                used_population_facts.add(fact_ref)
+                history.append({
+                    "event_id": event_id, "year": year,
+                    "type": "population_change", "kind": kind,
+                    "accepted_fact_ref": fact_ref, "delta": delta,
+                    "cause_refs": event.get("cause_refs", []),
+                })
             if "population_loss_basis_points" in effects:
-                loss = max(0, min(10000, int(effects["population_loss_basis_points"])))
+                loss = int(effects["population_loss_basis_points"])
+                ref = effects.get("accepted_population_loss_fact_ref")
+                fact = initial.get("accepted_population_facts", {}).get(ref)
+                if (type(effects["population_loss_basis_points"]) is not int
+                        or not 0 <= loss <= 10000
+                        or not isinstance(fact, dict)
+                        or fact.get("status") != "accepted"
+                        or fact.get("campaign_seed") != campaign_seed
+                        or fact.get("kind") != "catastrophic_loss"
+                        or fact.get("civilization_id") != civilization_id
+                        or fact.get("year") != year
+                        or fact.get("basis_points") != loss
+                        or ref in used_population_facts):
+                    raise ValueError("unverified catastrophic population loss")
+                used_population_facts.add(ref)
                 pop = int(state["population"])
-                state["population"] = max(0, pop - (pop * loss) // 10000)
+                state["population"] = pop - (pop * loss) // 10000
             if "population_capacity_delta" in effects:
                 state["population_capacity"] = max(
                     1, int(state["population_capacity"])
@@ -177,6 +237,16 @@ def simulate(*, campaign_seed: str, civilization_id: str, years: int,
                     int(relation["tension"]) + int(effects.get("tension_delta", 0))
                 )
                 if effects.get("war_declared") is True:
+                    fact_ref = effects.get("accepted_war_fact_ref")
+                    fact = initial.get("accepted_conflict_facts", {}).get(fact_ref)
+                    if (not isinstance(fact_ref, str) or not isinstance(fact, dict)
+                            or fact.get("status") != "accepted"
+                            or fact.get("source_domain") != "B03/CoreRPG"
+                            or fact.get("campaign_seed") != campaign_seed
+                            or fact.get("civilization_id") != civilization_id
+                            or fact.get("party_ref") != target
+                            or fact.get("year") != year):
+                        raise ValueError("B01 cannot autonomously declare war")
                     relation["war_declared"] = True
                 relation["relation_state"] = relation_state(relation)
                 history.append({

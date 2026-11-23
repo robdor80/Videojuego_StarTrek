@@ -39,3 +39,9 @@ Prueba académica reproducible y transición real al servicio; 20/20 life design
 Se ha añadido [el acta técnica de F10](ACTA_P01_P05_REFERENCIA_2026-10-14.md), la auditoría de currículo y web, un filtro de evidencia sin autoridad automática y un ensayo offline de los cuatro años hasta Alférez y primer destino. El replay reutiliza los pasos 18 y 19 de Academy Life; la suite comprueba además horarios/instructores y publica un snapshot de prueba.
 
 **Madurez demostrable:** `REFERENCIA_PROBADA` para pruebas Python y paridad estática, sujeta a CI verde. **Fase global todavía NO cerrada**: los P01–P05 solo se marcarán completados al nivel de su puerta cuando haya CoreRPG autoritativo, UE5 jugable, persistencia real y aceptación en MSI. No confundir el fixture de host con autenticación ni el snapshot offline con una partida real.
+
+## DEC-0022 · Sistema 04 (17-11-2026): impacto en F10
+
+El comienzo de campaña deja de usar la creación libre humano/vulcano/híbrido. La ruta productiva será **un protagonista fijo** (45 años, varón híbrido humano-vulcano, ascendencia paterna de Khan y vocación científica), personalizable solo en nombre y pequeños rasgos estéticos; su dossier se somete a un proceso legítimo de admisión y se presenta mediante intro 2D institucional con Janeway y Picard.
+
+**No reemplazar silenciosamente** IA-03A, el contrato F10 bloqueado, los bancos ACC-01–05 ni la etapa de Academia. F10 mantiene competencia exclusiva sobre datos iniciales/decisión académica; HOST solo coordina. Es necesario un adaptador con migración del validador productivo, intro idempotente y pruebas (ver `sistemas/gameplay/character_creation/S04_MIGRACION_F10_HOST_v2.md`). Los 4 años de currículo permanecen. **Esta nota no indica implementación en Core/HOST/UE5**.

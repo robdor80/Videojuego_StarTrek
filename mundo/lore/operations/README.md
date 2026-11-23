@@ -1,5 +1,7 @@
 # LORE-01 E — Información operativa transversal
 
+**Complemento posterior:** [LORE-05D — Naves, instalaciones y organizaciones](LORE05D_NAVES_INSTALACIONES_ORGANIZACIONES_20261113.md) y [catálogo de entidades enlazadas](lore05d_entities_v0.1.json). Sin mutaciones del estado vivo ni reemplazo de este contrato operacional.
+
 **Ámbito:** TNG, DS9 y Voyager, con antecedentes TOS/películas cuando son necesarios. **Fecha:** 2026-10-19.
 **Estado:** investigación/documentación para revisión, NO runtime, NO importación. CoreRPG conserva toda autoridad sobre el estado de cada campaña.
 

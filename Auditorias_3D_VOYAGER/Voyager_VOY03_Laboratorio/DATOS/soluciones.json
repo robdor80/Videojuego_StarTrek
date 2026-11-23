@@ -1,0 +1,43 @@
+[
+  {
+    "option": "A",
+    "name": "Original geometry + corrected physical interpretation and verified route",
+    "tested": true,
+    "works": true,
+    "objects_modified": [],
+    "visual_consequence": "none; diagnostic helpers only",
+    "recommendation": true
+  },
+  {
+    "option": "B",
+    "name": "Local corrections",
+    "tested": false,
+    "works": null,
+    "reason": "Not necessary after option A meets target routes; no fabricated experiment",
+    "recommendation": false
+  },
+  {
+    "option": "C",
+    "name": "Local stair reconstruction",
+    "tested": false,
+    "works": null,
+    "reason": "Not necessary after option A meets target routes; no fabricated experiment",
+    "recommendation": false
+  },
+  {
+    "option": "D",
+    "name": "Architectural adapter",
+    "tested": false,
+    "works": null,
+    "reason": "Not necessary after option A meets target routes; no fabricated experiment",
+    "recommendation": false
+  },
+  {
+    "option": "E",
+    "name": "Alternative circulation architecture",
+    "tested": false,
+    "works": null,
+    "reason": "Not necessary after option A meets target routes; no fabricated experiment",
+    "recommendation": false
+  }
+]

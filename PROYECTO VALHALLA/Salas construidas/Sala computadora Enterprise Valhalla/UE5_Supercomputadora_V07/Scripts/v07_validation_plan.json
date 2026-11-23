@@ -1,0 +1,1082 @@
+{
+  "cases": [
+    {
+      "name": "ruta_R1_norte",
+      "start": [
+        2268.4833000000003,
+        -1431.4359665,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          -2441.4359664999997,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R1_sur",
+      "start": [
+        2268.4833000000003,
+        -1431.4359665,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          -421.4359665,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R1_este",
+      "start": [
+        2268.4833000000003,
+        -1431.4359665,
+        37
+      ],
+      "points": [
+        [
+          3278.4833,
+          -1431.4359665,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R1_oeste",
+      "start": [
+        2268.4833000000003,
+        -1431.4359665,
+        37
+      ],
+      "points": [
+        [
+          1258.4833,
+          -1431.4359665,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R2_norte",
+      "start": [
+        2268.4833000000003,
+        1926.1851072,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          916.1851072,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R2_sur",
+      "start": [
+        2268.4833000000003,
+        1926.1851072,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          2936.1851072,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R2_este",
+      "start": [
+        2268.4833000000003,
+        1926.1851072,
+        37
+      ],
+      "points": [
+        [
+          3278.4833,
+          1926.1851072,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_R2_oeste",
+      "start": [
+        2268.4833000000003,
+        1926.1851072,
+        37
+      ],
+      "points": [
+        [
+          1258.4833,
+          1926.1851072,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_conexion_hub_superior_vestibulo",
+      "start": [
+        2268.4833000000003,
+        -1431.4359665,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          -232.07620000000003,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_conexion_hub_inferior_vestibulo",
+      "start": [
+        2268.4833000000003,
+        1926.1851072,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          726.826,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_vestibulos_bloque_central",
+      "start": [
+        2268.4833000000003,
+        726.826,
+        37
+      ],
+      "points": [
+        [
+          2268.4833000000003,
+          -232.07620000000003,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "ruta_bloque_corredor_exterior",
+      "start": [
+        2268.4833000000003,
+        247.37490000000003,
+        37
+      ],
+      "points": [
+        [
+          5500,
+          247.37490000000003,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "escalera_sur_ida_vuelta",
+      "start": [
+        3204,
+        10,
+        37
+      ],
+      "points": [
+        [
+          3204,
+          -335,
+          214.635
+        ],
+        [
+          3353,
+          -340,
+          214.635
+        ],
+        [
+          3353,
+          -135,
+          335.94
+        ],
+        [
+          3353,
+          -340,
+          214.635
+        ],
+        [
+          3204,
+          -340,
+          214.635
+        ],
+        [
+          3204,
+          10,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "escalera_norte_ida_vuelta",
+      "start": [
+        3204,
+        490,
+        37
+      ],
+      "points": [
+        [
+          3204,
+          835,
+          214.635
+        ],
+        [
+          3353,
+          835,
+          214.635
+        ],
+        [
+          3353,
+          630,
+          335.94
+        ],
+        [
+          3353,
+          835,
+          214.635
+        ],
+        [
+          3204,
+          835,
+          214.635
+        ],
+        [
+          3204,
+          490,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "escalera_inferior_ida_vuelta",
+      "start": [
+        3353,
+        520,
+        37
+      ],
+      "points": [
+        [
+          3353,
+          835,
+          -128
+        ],
+        [
+          3204,
+          835,
+          -128
+        ],
+        [
+          3204,
+          630,
+          -249.14
+        ],
+        [
+          3204,
+          835,
+          -128
+        ],
+        [
+          3353,
+          835,
+          -128
+        ],
+        [
+          3353,
+          520,
+          37
+        ]
+      ],
+      "seconds": 18
+    },
+    {
+      "name": "D01_entrada",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3400,
+          248,
+          37
+        ]
+      ],
+      "seconds": 8
+    },
+    {
+      "name": "D01_salida",
+      "start": [
+        3400,
+        248,
+        37
+      ],
+      "points": [
+        [
+          2900,
+          248,
+          37
+        ]
+      ],
+      "seconds": 8
+    },
+    {
+      "name": "D01_ocupacion_y_bloqueo",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3121.58,
+          248,
+          37
+        ]
+      ],
+      "hold": true,
+      "seconds": 5,
+      "commands": [
+        {
+          "t": 3,
+          "lock": true,
+          "close": true
+        }
+      ],
+      "door_min": 0.99
+    },
+    {
+      "name": "D01_reapertura",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3500,
+          248,
+          37
+        ],
+        [
+          3121.58,
+          248,
+          37
+        ],
+        [
+          3400,
+          248,
+          37
+        ]
+      ],
+      "waypoint_waits": [
+        1.7,
+        2,
+        0
+      ],
+      "seconds": 12,
+      "require_close_reopen": true
+    },
+    {
+      "name": "D01_bloqueo_seguridad",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3400,
+          248,
+          37
+        ]
+      ],
+      "locked": true,
+      "expect_blocked": true,
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_actor_prefix": "D01"
+    },
+    {
+      "name": "D01_emergencia_construido",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3400,
+          248,
+          37
+        ]
+      ],
+      "locked": true,
+      "emergency": true,
+      "seconds": 8
+    },
+    {
+      "name": "D01_emergencia_no_construido",
+      "start": [
+        2900,
+        248,
+        37
+      ],
+      "points": [
+        [
+          3400,
+          248,
+          37
+        ]
+      ],
+      "locked": true,
+      "constructed": false,
+      "emergency": true,
+      "expect_blocked": true,
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_actor_prefix": "D01"
+    },
+    {
+      "name": "limite_B01",
+      "start": [
+        1277.2106431027225,
+        1925.0518826213536,
+        37
+      ],
+      "points": [
+        [
+          1122.2106823984882,
+          1925.1622532960143,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B01"
+    },
+    {
+      "name": "limite_B01_salto",
+      "start": [
+        1277.2106431027225,
+        1925.0518826213536,
+        37
+      ],
+      "points": [
+        [
+          1122.2106823984882,
+          1925.1622532960143,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B01",
+      "jump_at": 1.0
+    },
+    {
+      "name": "limite_B02",
+      "start": [
+        3529.91108078838,
+        2250.1723586781295,
+        37
+      ],
+      "points": [
+        [
+          3448.557414366134,
+          2382.1063609658563,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B02"
+    },
+    {
+      "name": "limite_B02_salto",
+      "start": [
+        3529.91108078838,
+        2250.1723586781295,
+        37
+      ],
+      "points": [
+        [
+          3448.557414366134,
+          2382.1063609658563,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B02",
+      "jump_at": 1.0
+    },
+    {
+      "name": "limite_B03",
+      "start": [
+        5511.03581237793,
+        245.5762298607796,
+        37
+      ],
+      "points": [
+        [
+          5666.03581237793,
+          245.5762298607796,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B03"
+    },
+    {
+      "name": "limite_B03_salto",
+      "start": [
+        5511.03581237793,
+        245.5762298607796,
+        37
+      ],
+      "points": [
+        [
+          5666.03581237793,
+          245.5762298607796,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B03",
+      "jump_at": 1.0
+    },
+    {
+      "name": "limite_B04",
+      "start": [
+        3548.1483536293076,
+        -1766.6953922550147,
+        37
+      ],
+      "points": [
+        [
+          3466.7946797080103,
+          -1898.6293899186464,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B04"
+    },
+    {
+      "name": "limite_B04_salto",
+      "start": [
+        3548.1483536293076,
+        -1766.6953922550147,
+        37
+      ],
+      "points": [
+        [
+          3466.7946797080103,
+          -1898.6293899186464,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 5,
+      "expect_actor_prefix": "V06_B04",
+      "jump_at": 1.0
+    },
+    {
+      "name": "limite_B05",
+      "start": [
+        3353,
+        -340,
+        214.635
+      ],
+      "points": [
+        [
+          3353,
+          10,
+          379.635
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 7,
+      "expect_actor_prefix": "V06_B05"
+    },
+    {
+      "name": "limite_B06",
+      "start": [
+        3353,
+        835,
+        214.635
+      ],
+      "points": [
+        [
+          3353,
+          520,
+          379.635
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 7,
+      "expect_actor_prefix": "V06_B06"
+    },
+    {
+      "name": "limite_B07",
+      "start": [
+        3204,
+        835,
+        -128
+      ],
+      "points": [
+        [
+          3204,
+          520,
+          -305.635
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 7,
+      "expect_actor_prefix": "V06_B07"
+    },
+    {
+      "name": "teclado_W",
+      "start": [
+        2268,
+        248,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          248,
+          37
+        ]
+      ],
+      "key": "W",
+      "seconds": 5
+    },
+    {
+      "name": "teclado_A",
+      "start": [
+        2268,
+        248,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          248,
+          37
+        ]
+      ],
+      "key": "A",
+      "seconds": 5
+    },
+    {
+      "name": "teclado_S",
+      "start": [
+        2268,
+        248,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          248,
+          37
+        ]
+      ],
+      "key": "S",
+      "seconds": 5
+    },
+    {
+      "name": "teclado_D",
+      "start": [
+        2268,
+        248,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          248,
+          37
+        ]
+      ],
+      "key": "D",
+      "seconds": 5
+    },
+    {
+      "name": "raton_EnhancedInput",
+      "start": [
+        2268,
+        248,
+        37
+      ],
+      "points": [],
+      "hold": true,
+      "seconds": 2,
+      "mouse_test": true
+    },
+    {
+      "name": "colision_banco_C01",
+      "start": [
+        2268,
+        -1431,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          -1250,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 4,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "colision_banco_C02",
+      "start": [
+        2268,
+        1926,
+        37
+      ],
+      "points": [
+        [
+          2450,
+          2100,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 4,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "corredor_curvo_sur_ida_vuelta",
+      "start": [
+        4000,
+        248,
+        37
+      ],
+      "points": [
+        [
+          4000,
+          -250,
+          37
+        ],
+        [
+          3975,
+          -500,
+          37
+        ],
+        [
+          3950,
+          -750,
+          37
+        ],
+        [
+          3862,
+          -1000,
+          37
+        ],
+        [
+          3788,
+          -1250,
+          37
+        ],
+        [
+          3675,
+          -1500,
+          37
+        ],
+        [
+          3562,
+          -1750,
+          37
+        ],
+        [
+          3675,
+          -1500,
+          37
+        ],
+        [
+          3788,
+          -1250,
+          37
+        ],
+        [
+          3862,
+          -1000,
+          37
+        ],
+        [
+          3950,
+          -750,
+          37
+        ],
+        [
+          3975,
+          -500,
+          37
+        ],
+        [
+          4000,
+          248,
+          37
+        ]
+      ],
+      "seconds": 40
+    },
+    {
+      "name": "corredor_curvo_norte_ida_vuelta",
+      "start": [
+        4000,
+        248,
+        37
+      ],
+      "points": [
+        [
+          4000,
+          750,
+          37
+        ],
+        [
+          3975,
+          1000,
+          37
+        ],
+        [
+          3950,
+          1250,
+          37
+        ],
+        [
+          3862,
+          1500,
+          37
+        ],
+        [
+          3788,
+          1750,
+          37
+        ],
+        [
+          3675,
+          2000,
+          37
+        ],
+        [
+          3562,
+          2225,
+          37
+        ],
+        [
+          3675,
+          2000,
+          37
+        ],
+        [
+          3788,
+          1750,
+          37
+        ],
+        [
+          3862,
+          1500,
+          37
+        ],
+        [
+          3950,
+          1250,
+          37
+        ],
+        [
+          3975,
+          1000,
+          37
+        ],
+        [
+          4000,
+          248,
+          37
+        ]
+      ],
+      "seconds": 40
+    },
+    {
+      "name": "ruta_exterior_extremo_original_cerrado",
+      "start": [
+        5400,
+        247.37,
+        37
+      ],
+      "points": [
+        [
+          5550,
+          247.37,
+          37
+        ]
+      ],
+      "expect_blocked": true,
+      "seconds": 4,
+      "expect_actor_prefix": "V06_B03"
+    },
+    {
+      "name": "D02_locked",
+      "door_id": "V07_D02",
+      "start": [
+        1780,
+        249.27,
+        37
+      ],
+      "points": [
+        [
+          1300,
+          249.27,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D02",
+      "emergency": false
+    },
+    {
+      "name": "D02_emergency_unbuilt",
+      "door_id": "V07_D02",
+      "start": [
+        1780,
+        249.27,
+        37
+      ],
+      "points": [
+        [
+          1300,
+          249.27,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D02",
+      "emergency": true
+    },
+    {
+      "name": "D03_locked",
+      "door_id": "V07_D03",
+      "start": [
+        5220,
+        247,
+        37
+      ],
+      "points": [
+        [
+          5220,
+          -100,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D03",
+      "emergency": false
+    },
+    {
+      "name": "D03_emergency_unbuilt",
+      "door_id": "V07_D03",
+      "start": [
+        5220,
+        247,
+        37
+      ],
+      "points": [
+        [
+          5220,
+          -100,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D03",
+      "emergency": true
+    },
+    {
+      "name": "D04_locked",
+      "door_id": "V07_D04",
+      "start": [
+        5220,
+        247,
+        37
+      ],
+      "points": [
+        [
+          5220,
+          600,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D04",
+      "emergency": false
+    },
+    {
+      "name": "D04_emergency_unbuilt",
+      "door_id": "V07_D04",
+      "start": [
+        5220,
+        247,
+        37
+      ],
+      "points": [
+        [
+          5220,
+          600,
+          37
+        ]
+      ],
+      "seconds": 5,
+      "door_max": 0.001,
+      "expect_blocked": true,
+      "expect_actor_prefix": "D04",
+      "emergency": true
+    }
+  ]
+}

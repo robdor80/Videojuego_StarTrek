@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "implementation_commit": "1d26889fe5ea5b3390f7ba129c1fb7441c8881e8",
+  "core_revision": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "historical_core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "run_id": 43003893957,
+  "run_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/43003893957",
+  "jobs": [
+    {
+      "job_id": 130466472304,
+      "platform": "ubuntu-latest",
+      "compiler": "GNU",
+      "tests": 13,
+      "result": "PASS",
+      "summary_at_utc": "2026-11-11T10:29:38.4150412Z",
+      "artifact": "f11-a02-01-native-ubuntu-latest"
+    },
+    {
+      "job_id": 130466472326,
+      "platform": "windows-latest",
+      "compiler": "MSVC",
+      "tests": 13,
+      "result": "PASS",
+      "summary_at_utc": "2026-11-11T10:30:09.1027641Z",
+      "artifact": "f11-a02-01-native-windows-latest"
+    }
+  ],
+  "local_regressions": {
+    "f04_historical": {"result": "PASS", "tests": 261},
+    "f04_f05": {"result": "PASS", "tests": 395},
+    "f11_offline": {"result": "PASS", "tests": 340},
+    "roadmap": {"result": "PASS"}
+  },
+  "unreal": "NOT_EXECUTED",
+  "production_institutional_issuer": "OUT_OF_SCOPE_NOT_IMPLEMENTED"
+}

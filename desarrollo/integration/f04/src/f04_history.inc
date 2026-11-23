@@ -20,6 +20,10 @@ HistoryCountRule workload_rule() {
 std::vector<HistorySelection> closed_records(const Campaign& c,U cutoff) {
  const auto& w=c.world;std::map<U,HistorySelection> candidates;
  for(auto entity:projected_ids(w)) {const U id=entity.value();
+#ifdef F11_ENABLE_PROMOTIONS
+  // A02 retains every personnel fact and tombstone; no lossy career reduction.
+  if(has(w,id,F11_VERSION))continue;
+#endif
 #ifdef F05_ENABLE_ORDERS
   // P03 obligations retain their idempotency tombstones and source service.
   if(type(w,id,"f05_scan_need") || type(w,id,"f05_ai_request"))continue;

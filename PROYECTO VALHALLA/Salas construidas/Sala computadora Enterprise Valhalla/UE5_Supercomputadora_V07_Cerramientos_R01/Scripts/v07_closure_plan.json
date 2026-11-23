@@ -1,0 +1,334 @@
+{
+  "cases": [
+    {
+      "name": "MEM_C01_cierre_original",
+      "start": [
+        2977.962909936905,
+        -960.9477686882019,
+        37
+      ],
+      "points": [
+        [
+          3277.4343144893646,
+          -761.1556839942932,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C01_salto",
+      "start": [
+        2977.962909936905,
+        -960.9477686882019,
+        37
+      ],
+      "points": [
+        [
+          3277.4343144893646,
+          -761.1556839942932,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "MEM_C02_cierre_original",
+      "start": [
+        1432.7770805358887,
+        -1598.3457890152931,
+        37
+      ],
+      "points": [
+        [
+          1079.9556159973145,
+          -1669.8791179060936,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C02_salto",
+      "start": [
+        1432.7770805358887,
+        -1598.3457890152931,
+        37
+      ],
+      "points": [
+        [
+          1079.9556159973145,
+          -1669.8791179060936,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "MEM_C03_cierre_original",
+      "start": [
+        3104.1894125938416,
+        -1598.3459535241127,
+        37
+      ],
+      "points": [
+        [
+          3457.01092004776,
+          -1669.879239499569,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C03_salto",
+      "start": [
+        3104.1894125938416,
+        -1598.3459535241127,
+        37
+      ],
+      "points": [
+        [
+          3457.01092004776,
+          -1669.879239499569,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "MEM_C04_cierre_original",
+      "start": [
+        2977.962899208069,
+        1455.6969571113586,
+        37
+      ],
+      "points": [
+        [
+          3277.4343252182007,
+          1255.90487241745,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C04_salto",
+      "start": [
+        2977.962899208069,
+        1455.6969571113586,
+        37
+      ],
+      "points": [
+        [
+          3277.4343252182007,
+          1255.90487241745,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "MEM_C05_cierre_original",
+      "start": [
+        1432.777054309845,
+        2093.095103800297,
+        37
+      ],
+      "points": [
+        [
+          1079.9555468559265,
+          2164.6281322836876,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C05_salto",
+      "start": [
+        1432.777054309845,
+        2093.095103800297,
+        37
+      ],
+      "points": [
+        [
+          1079.9555468559265,
+          2164.6281322836876,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "MEM_C06_cierre_original",
+      "start": [
+        3104.1894340515137,
+        2093.0948582291603,
+        37
+      ],
+      "points": [
+        [
+          3457.010898590088,
+          2164.628187119961,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E"
+    },
+    {
+      "name": "MEM_C06_salto",
+      "start": [
+        3104.1894340515137,
+        2093.0948582291603,
+        37
+      ],
+      "points": [
+        [
+          3457.010898590088,
+          2164.628187119961,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "Sala V04E",
+      "jump_at": 1
+    },
+    {
+      "name": "B08_X3313_frente",
+      "start": [
+        3313.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3313.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "V07_B08"
+    },
+    {
+      "name": "B08_X3313_salto",
+      "start": [
+        3313.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3313.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "jump_at": 1
+    },
+    {
+      "name": "B08_X3353_frente",
+      "start": [
+        3353.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3353.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "V07_B08"
+    },
+    {
+      "name": "B08_X3353_salto",
+      "start": [
+        3353.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3353.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "jump_at": 1
+    },
+    {
+      "name": "B08_X3393_frente",
+      "start": [
+        3393.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3393.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "expect_actor_prefix": "V07_B08"
+    },
+    {
+      "name": "B08_X3393_salto",
+      "start": [
+        3393.18,
+        40,
+        37
+      ],
+      "points": [
+        [
+          3393.18,
+          -220,
+          37
+        ]
+      ],
+      "seconds": 4,
+      "expect_blocked": true,
+      "jump_at": 1
+    }
+  ]
+}

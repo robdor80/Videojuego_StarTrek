@@ -1,0 +1,59 @@
+name: P2-B10 Background Galactic Evolution Reference
+
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_background_galactic_evolution.py"
+      - "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py"
+      - "desarrollo/validation/fixtures/background_galactic_evolution/**"
+      - "sistemas/universe/generation/background_galactic_evolution_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "desarrollo/tools/validation/test_f13_dynamic_universe_reference.py"
+      - "desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b10-background-galactic-evolution.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_background_galactic_evolution.py"
+      - "desarrollo/tools/generation/test_simulate_background_galactic_evolution.py"
+      - "desarrollo/validation/fixtures/background_galactic_evolution/**"
+      - "sistemas/universe/generation/background_galactic_evolution_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "desarrollo/tools/validation/test_f13_dynamic_universe_reference.py"
+      - "desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b10-background-galactic-evolution.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: B10 scheduler adversarial + B01-B10 + F13 and Academy
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify syntax and versioned JSON
+        run: |
+          python -m py_compile desarrollo/tools/generation/simulate_background_galactic_evolution.py desarrollo/tools/generation/test_simulate_background_galactic_evolution.py
+          python -m json.tool desarrollo/validation/fixtures/background_galactic_evolution/verified_npc_offscreen_catchup_v0.1.json > /dev/null
+          python -m json.tool sistemas/universe/generation/background_galactic_evolution_reference_contract_v0.1.json > /dev/null
+          python -m json.tool proyecto/docs/roadmap/procedural_background_galactic_evolution_status_v0.1.json > /dev/null
+      - name: B10 adversarial tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_background_galactic_evolution.py' -v
+      - name: B01-B10 full dynamic reference regression
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -q
+      - name: F13 and Academy frontier regressions
+        run: |
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -q
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_academy_dynamic_frontier_bridge.py' -q
+      - name: Deterministic CLI smoke
+        run: |
+          python desarrollo/tools/generation/simulate_background_galactic_evolution.py --fixture desarrollo/validation/fixtures/background_galactic_evolution/verified_npc_offscreen_catchup_v0.1.json

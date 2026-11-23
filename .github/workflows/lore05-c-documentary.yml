@@ -1,0 +1,28 @@
+name: LORE-05C — Mundos y colonias documentales
+
+on:
+  push:
+    paths:
+      - 'mundo/lore/astrography/worlds/lore05c_*'
+      - 'proyecto/docs/roadmap/lore_05_c/**'
+      - 'desarrollo/tools/validation/*lore05_c.py'
+      - '.github/workflows/lore05-c-documentary.yml'
+  pull_request:
+    paths:
+      - 'mundo/lore/astrography/worlds/lore05c_*'
+      - 'proyecto/docs/roadmap/lore_05_c/**'
+      - 'desarrollo/tools/validation/*lore05_c.py'
+      - '.github/workflows/lore05-c-documentary.yml'
+
+jobs:
+  documentary-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar 16 localizaciones y 12 casos
+        run: python3 desarrollo/tools/validation/validate_lore05_c.py
+      - name: Adversariales y no-mutacion
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_lore05_c.py' -v

@@ -1,0 +1,12 @@
+{
+  "global_scale_changed": false,
+  "scale_used": 1.1,
+  "mesh_geometry_edits": [],
+  "object_transform_edits": [],
+  "added_helpers": [
+    "route curves",
+    "reference capsules",
+    "cameras"
+  ],
+  "diagnostic_cutaway": "Render memory only after save; not saved in .blend; original colliders always tested"
+}

@@ -95,18 +95,66 @@ def assess_response(profile: dict[str, Any], situation: dict[str, Any]) -> dict[
         "war_objective_refs": copy.deepcopy(situation.get("war_objective_refs", [])),
     }
 
+def _unit_ids(force: dict[str, Any]) -> list[str]:
+    units = force.get("units")
+    if not isinstance(units, list):
+        raise ValueError("force units must be a list")
+    ids = [u.get("unit_id") for u in units]
+    if any(not isinstance(uid, str) or not uid.strip() for uid in ids):
+        raise ValueError("invalid military unit identity")
+    if len(ids) != len(set(ids)):
+        raise ValueError("duplicate military unit identity")
+    return ids
+
+
+def _validate_inventory(attacker: dict[str, Any], defender: dict[str, Any],
+                        inventory_snapshot: dict[str, Any], campaign_id: str) -> None:
+    a_ids, d_ids = _unit_ids(attacker), _unit_ids(defender)
+    if set(a_ids) & set(d_ids):
+        raise ValueError("unit identity appears on both sides")
+    if not isinstance(inventory_snapshot, dict) or not campaign_id:
+        raise ValueError("accepted force inventory snapshot required")
+    if (inventory_snapshot.get("status") != "accepted"
+            or inventory_snapshot.get("source_domain") != "CoreRPG"
+            or inventory_snapshot.get("campaign_id") != campaign_id
+            or type(inventory_snapshot.get("world_revision")) is not int):
+        raise ValueError("force inventory snapshot not accepted")
+    roster = inventory_snapshot.get("roster")
+    if not isinstance(roster, dict):
+        raise ValueError("force inventory roster missing")
+    for side in (attacker, defender):
+        force_id = side.get("force_id")
+        if not isinstance(force_id, str) or not force_id:
+            raise ValueError("force identity missing")
+        for unit in side["units"]:
+            rec = roster.get(unit["unit_id"])
+            if (not isinstance(rec, dict)
+                    or rec.get("force_id") != force_id
+                    or rec.get("owner_ref") != side.get("owner_ref")
+                    or rec.get("campaign_id") != campaign_id
+                    or rec.get("status") == "unavailable"):
+                raise ValueError("force unit absent from accepted owner inventory")
+
+
 def effective_force(force: dict[str, Any]) -> int:
+    _unit_ids(force)
     total = 0
     for unit in force.get("units", []):
         if unit.get("status") == "destroyed":
             continue
-        total += max(0, int(unit["combat_power"])) * clamp(unit.get("readiness", 100)) * clamp(unit.get("logistics", 100)) // 10000
+        integrity = clamp(unit.get("integrity", 100))
+        total += (max(0, int(unit["combat_power"]))
+                  * clamp(unit.get("readiness", 100))
+                  * clamp(unit.get("logistics", 100))
+                  * integrity // 1000000)
     return total
 
 def resolve_operation(*, campaign_seed: str, operation_id: str, attacker: dict[str, Any],
-                      defender: dict[str, Any], objective_ref: str, location_ref: str) -> dict[str, Any]:
+                      defender: dict[str, Any], objective_ref: str, location_ref: str,
+                      campaign_id: str, inventory_snapshot: dict[str, Any]) -> dict[str, Any]:
     if not objective_ref or not location_ref:
         raise ValueError("operation requires objective and location")
+    _validate_inventory(attacker, defender, inventory_snapshot, campaign_id)
     atk, dfn = copy.deepcopy(attacker), copy.deepcopy(defender)
     atk_power, def_power = effective_force(atk), effective_force(dfn)
     if atk_power <= 0 or def_power <= 0:
@@ -150,33 +198,90 @@ def resolve_operation(*, campaign_seed: str, operation_id: str, attacker: dict[s
     }
 
 def apply_conflict_event(state: dict[str, Any], event: dict[str, Any]) -> dict[str, Any]:
+    """Reference projection of accepted legal decisions, never issuance of one."""
     next_state = copy.deepcopy(state)
+    event_id = event.get("event_id")
+    if not isinstance(event_id, str) or not event_id.strip():
+        raise ValueError("conflict event identity required")
+    receipts = next_state.setdefault("conflict_event_receipts", {})
+    payload_hash = hashlib.sha256(json.dumps(event, sort_keys=True).encode("utf-8")).hexdigest()
+    if event_id in receipts:
+        if receipts[event_id] != payload_hash:
+            raise ValueError("divergent conflict event replay")
+        return next_state
     effects = event.get("effects", {})
-    if effects.get("declare_war"):
-        if not event.get("cause_refs") or not effects.get("war_objective_refs") or not effects.get("authority_ref"):
-            raise ValueError("war declaration requires cause, objective and authority")
-        next_state["conflict_state"] = "war"
-        next_state["war_objective_refs"] = list(effects["war_objective_refs"])
-    if effects.get("ceasefire"):
-        next_state["conflict_state"] = "ceasefire"
-    if effects.get("armistice"):
-        next_state["conflict_state"] = "armistice"
-    if effects.get("peace_settlement"):
-        next_state["conflict_state"] = "peace"
+    transition_flags = [name for name in ("declare_war", "ceasefire", "armistice", "peace_settlement")
+                        if effects.get(name)]
+    if len(transition_flags) > 1:
+        raise ValueError("multiple conflict transitions in one event")
+    if transition_flags:
+        transition = transition_flags[0]
+        previous = next_state.get("conflict_state")
+        allowed = {
+            "declare_war": ({"diplomatic_crisis", "peace"}, "war"),
+            "ceasefire": ({"war"}, "ceasefire"),
+            "armistice": ({"war", "ceasefire"}, "armistice"),
+            "peace_settlement": ({"ceasefire", "armistice"}, "peace"),
+        }
+        origin_states, target = allowed[transition]
+        if previous not in origin_states:
+            raise ValueError("illegal conflict transition")
+        decision_ref = event.get("accepted_decision_ref")
+        decision = state.get("accepted_conflict_decisions", {}).get(decision_ref)
+        if (not isinstance(decision_ref, str) or not isinstance(decision, dict)
+                or decision.get("status") != "accepted"
+                or decision.get("source_domain") != "CoreRPG/B03"
+                or decision.get("event_id") != event_id
+                or decision.get("transition") != transition
+                or decision.get("from_state") != previous
+                or decision.get("to_state") != target
+                or not isinstance(decision.get("authority_ref"), str)
+                or not decision["authority_ref"].strip()
+                or not event.get("cause_refs")
+                or not set(event["cause_refs"]).issubset(set(decision.get("cause_refs", [])))
+                or type(decision.get("effective_tick")) is not int
+                or type(event.get("tick")) is not int
+                or event["tick"] < decision["effective_tick"]):
+            raise ValueError("conflict transition lacks accepted legal decision")
+        if transition == "declare_war":
+            if (not effects.get("war_objective_refs")
+                    or effects.get("authority_ref") != decision["authority_ref"]
+                    or sorted(effects["war_objective_refs"]) != sorted(decision.get("war_objective_refs", []))):
+                raise ValueError("war declaration requires accepted objective and authority")
+            next_state["war_objective_refs"] = list(effects["war_objective_refs"])
+        else:
+            signers = decision.get("signer_refs")
+            if not isinstance(signers, list) or len(set(signers)) < 2:
+                raise ValueError("conflict cessation needs both signers")
+            if transition == "peace_settlement" and not decision.get("treaty_ref"):
+                raise ValueError("peace treaty required")
+        next_state["conflict_state"] = target
+        next_state["last_conflict_tick"] = event["tick"]
     if "war_exhaustion_delta" in effects:
         next_state["war_exhaustion"] = clamp(int(next_state.get("war_exhaustion", 0)) + int(effects["war_exhaustion_delta"]))
     if effects.get("occupation_control_ref"):
+        if next_state.get("conflict_state") != "war":
+            raise ValueError("occupation requires active war")
         next_state["effective_control_ref"] = effects["occupation_control_ref"]
         next_state["occupation_state"] = "military_occupation"
+    receipts[event_id] = payload_hash
     return next_state
+
 
 def validate_operation(result: dict[str, Any]) -> list[str]:
     errors = []
-    before_a = set(result["attacker_before_unit_ids"])
-    after_a = {u["unit_id"] for u in result["attacker_after"]["units"]}
-    before_d = set(result["defender_before_unit_ids"])
-    after_d = {u["unit_id"] for u in result["defender_after"]["units"]}
-    if before_a != after_a or before_d != after_d or result.get("spawned_unit_ids"):
+    before_a = result["attacker_before_unit_ids"]
+    before_d = result["defender_before_unit_ids"]
+    after_a = [u["unit_id"] for u in result["attacker_after"]["units"]]
+    after_d = [u["unit_id"] for u in result["defender_after"]["units"]]
+    if (len(set(before_a)) != len(before_a)
+            or len(set(before_d)) != len(before_d)
+            or len(set(after_a)) != len(after_a)
+            or len(set(after_d)) != len(after_d)
+            or set(after_a) & set(after_d)):
+        errors.append("duplicate or cross-side force identity")
+    if (sorted(before_a) != sorted(after_a) or sorted(before_d) != sorted(after_d)
+            or result.get("spawned_unit_ids")):
         errors.append("strategic operation spawned or deleted force identities")
     if result.get("sovereignty_changed"):
         errors.append("operation cannot change sovereignty directly")

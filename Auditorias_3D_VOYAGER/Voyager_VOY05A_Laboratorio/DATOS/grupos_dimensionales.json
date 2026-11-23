@@ -1,0 +1,432 @@
+[
+  {
+    "id": "GD_01",
+    "kind": "abertura_estructural_funcion_no_confirmada",
+    "width": 1.839,
+    "height": 2.359,
+    "members": [
+      "AC_Mesh103_05",
+      "AC_Mesh7_00"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_02",
+    "kind": "acceso_turbolift_sin_hojas",
+    "width": 0.758,
+    "height": 1.776,
+    "members": [
+      "BR_04"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_03",
+    "kind": "boca_vertical",
+    "width": 1.325,
+    "height": 1.524,
+    "members": [
+      "AC_Mesh16_01",
+      "AC_Mesh16_02",
+      "AC_Mesh65_01",
+      "AC_Mesh65_02",
+      "AC_Mesh67_00",
+      "AC_Mesh67_01",
+      "AC_Mesh73_00",
+      "AC_Mesh73_01",
+      "AC_Mesh76_03",
+      "AC_Mesh76_04",
+      "AC_Mesh78_03",
+      "AC_Mesh78_04",
+      "AC_Mesh79_01",
+      "AC_Mesh79_02",
+      "AC_Mesh82_01",
+      "AC_Mesh82_02",
+      "AC_Mesh83_00",
+      "AC_Mesh83_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_04",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 0.877,
+    "height": 0.768,
+    "members": [
+      "AC_Mesh19_02"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_05",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 0.987,
+    "height": 0.878,
+    "members": [
+      "AC_Mesh29_00"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_06",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 1.17,
+    "height": 0.914,
+    "members": [
+      "AC_Mesh20_00",
+      "AC_Mesh20_07"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_07",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 1.171,
+    "height": 0.914,
+    "members": [
+      "AC_Mesh66_00",
+      "AC_Mesh66_03"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_08",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 1.175,
+    "height": 0.914,
+    "members": [
+      "AC_Mesh15_00",
+      "AC_Mesh15_01",
+      "AC_Mesh16_00",
+      "AC_Mesh16_04",
+      "AC_Mesh19_00",
+      "AC_Mesh56_00",
+      "AC_Mesh56_01",
+      "AC_Mesh56_14",
+      "AC_Mesh58_00",
+      "AC_Mesh58_01",
+      "AC_Mesh63_00",
+      "AC_Mesh63_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_09",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 1.176,
+    "height": 0.914,
+    "members": [
+      "AC_Mesh21_00",
+      "AC_Mesh21_07",
+      "AC_Mesh39_00",
+      "AC_Mesh39_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_10",
+    "kind": "conducto_bajo_o_escotilla",
+    "width": 1.267,
+    "height": 1.102,
+    "members": [
+      "AC_Mesh64_01",
+      "AC_Mesh64_02",
+      "AC_Mesh69_01",
+      "AC_Mesh91_01",
+      "AC_Mesh91_02"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_11",
+    "kind": "hueco_o_boca",
+    "width": 1.034,
+    "height": 2.194,
+    "members": [
+      "AC_Mesh16_03",
+      "AC_Mesh17_00",
+      "AC_Mesh37_01",
+      "AC_Mesh42_01",
+      "AC_Mesh67_02",
+      "AC_Mesh73_02",
+      "AC_Mesh81_00",
+      "AC_Mesh83_02",
+      "AC_Mesh94_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_12",
+    "kind": "hueco_o_boca",
+    "width": 1.08,
+    "height": 2.203,
+    "members": [
+      "AC_Mesh10_00",
+      "AC_Mesh10_01",
+      "AC_Mesh103_01",
+      "AC_Mesh103_02",
+      "AC_Mesh11_03",
+      "AC_Mesh4_00",
+      "AC_Mesh5_00",
+      "AC_Mesh6_00",
+      "AC_Mesh7_01",
+      "AC_Mesh7_02",
+      "AC_Mesh7_03",
+      "AC_Mesh7_04",
+      "AC_Mesh9_03",
+      "AC_Mesh9_04"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_13",
+    "kind": "hueco_o_boca",
+    "width": 1.182,
+    "height": 2.203,
+    "members": [
+      "AC_Mesh11_04"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_14",
+    "kind": "hueco_o_boca",
+    "width": 1.323,
+    "height": 2.325,
+    "members": [
+      "AC_Mesh65_00",
+      "AC_Mesh65_03",
+      "AC_Mesh71_02",
+      "AC_Mesh71_03",
+      "AC_Mesh72_01",
+      "AC_Mesh72_03",
+      "AC_Mesh74_01",
+      "AC_Mesh74_03",
+      "AC_Mesh75_01",
+      "AC_Mesh75_04",
+      "AC_Mesh76_01",
+      "AC_Mesh76_06",
+      "AC_Mesh77_01",
+      "AC_Mesh77_04",
+      "AC_Mesh78_01",
+      "AC_Mesh78_06",
+      "AC_Mesh79_00",
+      "AC_Mesh82_00",
+      "AC_Mesh84_01",
+      "AC_Mesh84_04",
+      "AC_Mesh84_06",
+      "AC_Mesh96_02",
+      "AC_Mesh96_03",
+      "AC_Mesh97_02",
+      "AC_Mesh97_04",
+      "AC_Mesh97_07"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_15",
+    "kind": "hueco_o_boca",
+    "width": 2.048,
+    "height": 2.597,
+    "members": [
+      "AC_Mesh50_00",
+      "AC_Mesh59_02"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_16",
+    "kind": "hueco_o_boca",
+    "width": 2.067,
+    "height": 2.597,
+    "members": [
+      "AC_Mesh42_00"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_17",
+    "kind": "hueco_o_boca",
+    "width": 2.221,
+    "height": 2.67,
+    "members": [
+      "AC_Mesh1_00",
+      "AC_Mesh3_00",
+      "AC_Mesh52_06",
+      "AC_Mesh80_07"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_18",
+    "kind": "hueco_o_boca",
+    "width": 2.961,
+    "height": 2.816,
+    "members": [
+      "AC_Mesh12_00",
+      "AC_Mesh12_01",
+      "AC_Mesh13_00",
+      "AC_Mesh13_01",
+      "AC_Mesh14_00",
+      "AC_Mesh14_01",
+      "AC_Mesh18_00",
+      "AC_Mesh18_01",
+      "AC_Mesh2_00",
+      "AC_Mesh2_01",
+      "AC_Mesh2_07",
+      "AC_Mesh25_01",
+      "AC_Mesh27_00",
+      "AC_Mesh28_01",
+      "AC_Mesh28_02",
+      "AC_Mesh29_02",
+      "AC_Mesh29_03",
+      "AC_Mesh35_00",
+      "AC_Mesh37_00",
+      "AC_Mesh38_00",
+      "AC_Mesh38_03",
+      "AC_Mesh38_04",
+      "AC_Mesh38_09",
+      "AC_Mesh40_00",
+      "AC_Mesh40_01",
+      "AC_Mesh40_04",
+      "AC_Mesh41_00",
+      "AC_Mesh41_03",
+      "AC_Mesh51_00",
+      "AC_Mesh52_00",
+      "AC_Mesh52_09",
+      "AC_Mesh54_00",
+      "AC_Mesh54_01",
+      "AC_Mesh57_00",
+      "AC_Mesh57_01",
+      "AC_Mesh59_00",
+      "AC_Mesh59_01",
+      "AC_Mesh64_00",
+      "AC_Mesh68_00",
+      "AC_Mesh69_00",
+      "AC_Mesh70_00",
+      "AC_Mesh80_00",
+      "AC_Mesh80_14",
+      "AC_Mesh91_00",
+      "AC_Mesh92_00",
+      "AC_Mesh92_01",
+      "AC_Mesh92_02",
+      "AC_Mesh94_00",
+      "AC_Mesh95_00"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_19",
+    "kind": "hueco_o_boca",
+    "width": 2.97,
+    "height": 2.816,
+    "members": [
+      "AC_Mesh25_00",
+      "AC_Mesh26_00",
+      "AC_Mesh26_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_20",
+    "kind": "hueco_o_boca",
+    "width": 2.971,
+    "height": 2.816,
+    "members": [
+      "AC_Mesh24_00",
+      "AC_Mesh24_01",
+      "AC_Mesh45_00",
+      "AC_Mesh45_01",
+      "AC_Mesh62_00",
+      "AC_Mesh62_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_21",
+    "kind": "puerta_cerrada",
+    "width": 0.757,
+    "height": 1.776,
+    "members": [
+      "BR_01",
+      "BR_02"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_22",
+    "kind": "puerta_cerrada",
+    "width": 0.758,
+    "height": 1.776,
+    "members": [
+      "BR_03"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_23",
+    "kind": "puerta_cerrada",
+    "width": 1.034,
+    "height": 2.194,
+    "members": [
+      "PT_Mesh14_01",
+      "PT_Mesh14_02",
+      "PT_Mesh25_01",
+      "PT_Mesh26_01",
+      "PT_Mesh54_01",
+      "PT_Mesh54_02",
+      "PT_Mesh51_01",
+      "PT_Mesh51_02",
+      "PT_Mesh52_01",
+      "PT_Mesh52_02",
+      "PT_Mesh80_01",
+      "PT_Mesh80_02",
+      "PT_Mesh93_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_24",
+    "kind": "puerta_cerrada",
+    "width": 1.034,
+    "height": 2.524,
+    "members": [
+      "PT_Mesh28_01",
+      "PT_Mesh28_02",
+      "PT_Mesh57_01",
+      "PT_Mesh57_02"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_25",
+    "kind": "puerta_cerrada",
+    "width": 2.068,
+    "height": 2.525,
+    "members": [
+      "PT_Mesh55_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_26",
+    "kind": "puerta_cerrada",
+    "width": 2.221,
+    "height": 2.526,
+    "members": [
+      "PT_Mesh27_01",
+      "PT_Mesh53_01"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  },
+  {
+    "id": "GD_27",
+    "kind": "registro_techo_con_tapa",
+    "width": 1.081,
+    "height": 1.17,
+    "members": [
+      "AC_Mesh54_TECHO"
+    ],
+    "meaning": "dimensional envelope at 1 mm; NOT complete geometry identity"
+  }
+]

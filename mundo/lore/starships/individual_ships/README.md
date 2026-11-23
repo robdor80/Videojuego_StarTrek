@@ -1,5 +1,7 @@
 # Naves individuales
 
+> **DEC-0020 (13/11/2026):** la nave principal es la **USS Enterprise NCC-1701-D**, `class_id=galaxy`; [Proyecto Valhalla](../../../../proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md) designa la reconstrucción/modernización por Geordi La Forge, no una clase ni una nueva matrícula. [Datos de identidad documental](project_valhalla_enterprise_d_v0.1.json).
+
 ## Identidad
 
 Una nave individual referencia una clase, pero mantiene su propia identidad.

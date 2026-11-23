@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "enterprise_d_s11_astrometrics_360_room",
+  "status": "DESIGN_NOT_RENDERED",
+  "ship": {
+    "ship_id": "uss_enterprise_ncc_1701_d",
+    "class_id": "galaxy",
+    "configuration": "galaxy_refit_a2"
+  },
+  "interior": {
+    "deck": "UNDECIDED_INTERIOR_PHASE",
+    "size_m": "UNDECIDED_INTERIOR_PHASE",
+    "location_graph_ref": "PENDING_INTERIOR_DESIGN",
+    "door_positions": "UNDECIDED",
+    "turbolift_connection": "UNDECIDED"
+  },
+  "visual": {
+    "inspiration": "Star Trek Voyager Astrometrics, modernized",
+    "style": "Galaxy Refit A2 luxury plus science",
+    "finishes": [
+      "pearl_grey",
+      "silver_titanium",
+      "slate_blue"
+    ],
+    "lcars": [
+      "cyan",
+      "blue"
+    ],
+    "lighting": "soft_adaptive",
+    "hologram": "central_volumetric_large_360",
+    "room_walkable": true,
+    "hidden_projectors": true,
+    "meeting_mode": true,
+    "scenic_mode": true
+  },
+  "technical": {
+    "target_hardware": "MSI Raider GE78 HX i9 RTX4070_8GB",
+    "fps_target": 60,
+    "ordinary_query_ms_target_max": 1000,
+    "goals_measured": false,
+    "instanced_stars": true,
+    "stream_on_focus": true,
+    "relative_origin": true,
+    "LOD": true,
+    "fallback_2d": true,
+    "no_raytracing_hard_requirement": true,
+    "no_local_llm_vram_requirement": true,
+    "not_all_stars_loaded": true
+  },
+  "interface_family": "navigation",
+  "cooperates_with": [
+    "science",
+    "sensors",
+    "operations"
+  ],
+  "runtime_implemented": false
+}

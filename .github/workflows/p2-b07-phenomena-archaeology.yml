@@ -1,0 +1,59 @@
+name: P2-B07 Phenomena and Archaeology Reference
+
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_phenomena_archaeology.py"
+      - "desarrollo/tools/generation/test_simulate_phenomena_archaeology.py"
+      - "desarrollo/validation/fixtures/phenomena_archaeology/**"
+      - "sistemas/universe/generation/phenomena_anomalies_archaeology_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_phenomena_archaeology_plan_v0.1.md"
+      - "proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json"
+      - "proyecto/docs/roadmap/P2_B07_ACTA_CIERRE_REFERENCIA_20261112.md"
+      - "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+      - "proyecto/docs/roadmap/procedural_development_master_plan_v0.1.md"
+      - "proyecto/docs/roadmap/master/fases/F13/README.md"
+      - "proyecto/docs/roadmap/README.md"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b07-phenomena-archaeology.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_phenomena_archaeology.py"
+      - "desarrollo/tools/generation/test_simulate_phenomena_archaeology.py"
+      - "desarrollo/validation/fixtures/phenomena_archaeology/**"
+      - "sistemas/universe/generation/phenomena_anomalies_archaeology_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b07-phenomena-archaeology.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: P2-B07 + B01-B06 + F13 (non-authoritative)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax and immutable JSON inputs
+        run: |
+          python -m py_compile desarrollo/tools/generation/simulate_phenomena_archaeology.py desarrollo/tools/generation/test_simulate_phenomena_archaeology.py
+          python -m json.tool sistemas/universe/generation/phenomena_anomalies_archaeology_reference_contract_v0.1.json > /dev/null
+          python -m json.tool desarrollo/validation/fixtures/phenomena_archaeology/phenomena_archaeology_exploration_v0.1.json > /dev/null
+          python -m json.tool proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json > /dev/null
+      - name: P2-B07 adversarial reference tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_phenomena_archaeology.py' -v
+      - name: All dynamic-universe reference regressions B01–B07
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: F13 sequential gate and world reference
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -v
+      - name: Deterministic CLI fixture
+        run: |
+          python desarrollo/tools/generation/simulate_phenomena_archaeology.py --fixture desarrollo/validation/fixtures/phenomena_archaeology/phenomena_archaeology_exploration_v0.1.json

@@ -1,0 +1,1196 @@
+{
+  "zip": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\PAQUETE\\VOY04_Entrega.zip",
+  "bytes": 130321283,
+  "sha256": "7a4d550cddf5eca24dd07814039116853d085895c496585d7320762514ac460a",
+  "CRC_test": "PASS",
+  "all_entry_SHA256_match_manifest": true,
+  "entries": 195,
+  "entry_CRC32": [
+    {
+      "path": "00_RESUMEN_EJECUTIVO.md",
+      "CRC32": "8f442653",
+      "bytes": 5941,
+      "compressed_bytes": 3008
+    },
+    {
+      "path": "01_INVENTARIO_SILLAS.md",
+      "CRC32": "99b45faf",
+      "bytes": 15046,
+      "compressed_bytes": 3983
+    },
+    {
+      "path": "02_SILLA_PILOTO_GEOMETRIA.md",
+      "CRC32": "f3fe1a07",
+      "bytes": 4781,
+      "compressed_bytes": 2474
+    },
+    {
+      "path": "03_ERGONOMIA_PERSONAJES.md",
+      "CRC32": "3d80deec",
+      "bytes": 4714,
+      "compressed_bytes": 2435
+    },
+    {
+      "path": "04_ANIMACIONES_EXPERIMENTALES.md",
+      "CRC32": "ec4b1b30",
+      "bytes": 4095,
+      "compressed_bytes": 2122
+    },
+    {
+      "path": "05_CONSOLA_INTERACTIVA_ESTUDIO.md",
+      "CRC32": "8478cab7",
+      "bytes": 3879,
+      "compressed_bytes": 2012
+    },
+    {
+      "path": "06_COMPARATIVA_PUESTOS.md",
+      "CRC32": "4e7d0919",
+      "bytes": 3452,
+      "compressed_bytes": 1657
+    },
+    {
+      "path": "07_PREPARACION_UE5.md",
+      "CRC32": "b5a6f7a5",
+      "bytes": 4240,
+      "compressed_bytes": 2143
+    },
+    {
+      "path": "08_HOJA_DE_RUTA.md",
+      "CRC32": "c9301388",
+      "bytes": 2802,
+      "compressed_bytes": 1562
+    },
+    {
+      "path": "09_METODOLOGIA_LIMITACIONES.md",
+      "CRC32": "c384d643",
+      "bytes": 6265,
+      "compressed_bytes": 3135
+    },
+    {
+      "path": "ANIMACIONES/VOY04_Ciclo_175.gif",
+      "CRC32": "45b341e9",
+      "bytes": 27535988,
+      "compressed_bytes": 27528551
+    },
+    {
+      "path": "ANIMACIONES/VOY04_Ciclo_175.webp",
+      "CRC32": "d3d36c2e",
+      "bytes": 9279812,
+      "compressed_bytes": 8726804
+    },
+    {
+      "path": "CAPTURAS/A_LATERAL_DER.png",
+      "CRC32": "d52d6c05",
+      "bytes": 1446360,
+      "compressed_bytes": 1442834
+    },
+    {
+      "path": "CAPTURAS/A_LATERAL_DER_AISLADA.png",
+      "CRC32": "ef9fdcf5",
+      "bytes": 961294,
+      "compressed_bytes": 943451
+    },
+    {
+      "path": "CAPTURAS/A_LATERAL_IZQ.png",
+      "CRC32": "817e8edc",
+      "bytes": 1333852,
+      "compressed_bytes": 1325048
+    },
+    {
+      "path": "CAPTURAS/A_LATERAL_IZQ_AISLADA.png",
+      "CRC32": "1d9e549d",
+      "bytes": 986654,
+      "compressed_bytes": 972039
+    },
+    {
+      "path": "CAPTURAS/A_MANDO_DER.png",
+      "CRC32": "cc272c0a",
+      "bytes": 1588707,
+      "compressed_bytes": 1583427
+    },
+    {
+      "path": "CAPTURAS/A_MANDO_DER_AISLADA.png",
+      "CRC32": "f6f86800",
+      "bytes": 1109197,
+      "compressed_bytes": 1097273
+    },
+    {
+      "path": "CAPTURAS/A_MANDO_IZQ.png",
+      "CRC32": "2957bee4",
+      "bytes": 1620118,
+      "compressed_bytes": 1616761
+    },
+    {
+      "path": "CAPTURAS/A_MANDO_IZQ_AISLADA.png",
+      "CRC32": "7a45f82b",
+      "bytes": 1140554,
+      "compressed_bytes": 1129389
+    },
+    {
+      "path": "CAPTURAS/A_NAVEGACION.png",
+      "CRC32": "a5d2d381",
+      "bytes": 1543731,
+      "compressed_bytes": 1538054
+    },
+    {
+      "path": "CAPTURAS/A_NAVEGACION_AISLADA.png",
+      "CRC32": "cb94a1c2",
+      "bytes": 947524,
+      "compressed_bytes": 931690
+    },
+    {
+      "path": "CAPTURAS/B01_PUESTO_PILOTO.png",
+      "CRC32": "7a35b267",
+      "bytes": 1986094,
+      "compressed_bytes": 1986555
+    },
+    {
+      "path": "CAPTURAS/B02_ORIGINAL_FALLO_1.60.png",
+      "CRC32": "d9fd01fa",
+      "bytes": 1718807,
+      "compressed_bytes": 1714839
+    },
+    {
+      "path": "CAPTURAS/B02_ORIGINAL_FALLO_1.75.png",
+      "CRC32": "8349cb02",
+      "bytes": 1732502,
+      "compressed_bytes": 1728763
+    },
+    {
+      "path": "CAPTURAS/B02_ORIGINAL_FALLO_1.90.png",
+      "CRC32": "a9537ed2",
+      "bytes": 1748830,
+      "compressed_bytes": 1744846
+    },
+    {
+      "path": "CAPTURAS/B03_TRABAJO_1.60.png",
+      "CRC32": "383db199",
+      "bytes": 2081680,
+      "compressed_bytes": 2081894
+    },
+    {
+      "path": "CAPTURAS/B03_TRABAJO_1.75.png",
+      "CRC32": "e7b3405c",
+      "bytes": 2086972,
+      "compressed_bytes": 2087144
+    },
+    {
+      "path": "CAPTURAS/B03_TRABAJO_1.90.png",
+      "CRC32": "215212de",
+      "bytes": 2090425,
+      "compressed_bytes": 2090732
+    },
+    {
+      "path": "CAPTURAS/B04_PIERNAS_1.60.png",
+      "CRC32": "9ec9e475",
+      "bytes": 1919247,
+      "compressed_bytes": 1918389
+    },
+    {
+      "path": "CAPTURAS/B04_PIERNAS_1.75.png",
+      "CRC32": "869aa399",
+      "bytes": 1922776,
+      "compressed_bytes": 1922178
+    },
+    {
+      "path": "CAPTURAS/B04_PIERNAS_1.90.png",
+      "CRC32": "80dcde2c",
+      "bytes": 1928331,
+      "compressed_bytes": 1927974
+    },
+    {
+      "path": "CAPTURAS/B05_DESPIECE_REAL.png",
+      "CRC32": "df97ff08",
+      "bytes": 901188,
+      "compressed_bytes": 881541
+    },
+    {
+      "path": "CAPTURAS/B06_PIVOTES_Y_CONTROLES.png",
+      "CRC32": "f7a10cc9",
+      "bytes": 1902741,
+      "compressed_bytes": 1901335
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_001.png",
+      "CRC32": "9e7b0738",
+      "bytes": 2112148,
+      "compressed_bytes": 2112715
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_031.png",
+      "CRC32": "28bb9ebe",
+      "bytes": 2108098,
+      "compressed_bytes": 2108662
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_061.png",
+      "CRC32": "d656c772",
+      "bytes": 2099996,
+      "compressed_bytes": 2100513
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_076.png",
+      "CRC32": "96bd6de6",
+      "bytes": 2126610,
+      "compressed_bytes": 2127191
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_091.png",
+      "CRC32": "9f24daad",
+      "bytes": 2093816,
+      "compressed_bytes": 2094349
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_106.png",
+      "CRC32": "fcb3ad48",
+      "bytes": 2100054,
+      "compressed_bytes": 2100622
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_121.png",
+      "CRC32": "5493252d",
+      "bytes": 2094495,
+      "compressed_bytes": 2095032
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_136.png",
+      "CRC32": "08b31767",
+      "bytes": 2098500,
+      "compressed_bytes": 2099061
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_151.png",
+      "CRC32": "1d67e955",
+      "bytes": 2100608,
+      "compressed_bytes": 2101179
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_181.png",
+      "CRC32": "2c2682f6",
+      "bytes": 2094495,
+      "compressed_bytes": 2095032
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_211.png",
+      "CRC32": "b6efb0cc",
+      "bytes": 2093816,
+      "compressed_bytes": 2094350
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_226.png",
+      "CRC32": "1f3c087b",
+      "bytes": 2126610,
+      "compressed_bytes": 2127191
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_241.png",
+      "CRC32": "e5b3dcd5",
+      "bytes": 2099996,
+      "compressed_bytes": 2100515
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_271.png",
+      "CRC32": "ae9ad62d",
+      "bytes": 2108098,
+      "compressed_bytes": 2108665
+    },
+    {
+      "path": "CAPTURAS/C_SECUENCIA_301.png",
+      "CRC32": "166badcf",
+      "bytes": 2112148,
+      "compressed_bytes": 2112719
+    },
+    {
+      "path": "CAPTURAS/D01_SECCION_PIERNAS_1.60.png",
+      "CRC32": "4337be6a",
+      "bytes": 1804262,
+      "compressed_bytes": 1801954
+    },
+    {
+      "path": "CAPTURAS/D01_SECCION_PIERNAS_1.75.png",
+      "CRC32": "f0d248d8",
+      "bytes": 1815052,
+      "compressed_bytes": 1813403
+    },
+    {
+      "path": "CAPTURAS/D01_SECCION_PIERNAS_1.90.png",
+      "CRC32": "09a2ed64",
+      "bytes": 1814795,
+      "compressed_bytes": 1813216
+    },
+    {
+      "path": "CAPTURAS/D02_FALLO_A1_GUIA.png",
+      "CRC32": "3caeec47",
+      "bytes": 2018794,
+      "compressed_bytes": 2018716
+    },
+    {
+      "path": "CAPTURAS/D02_FALLO_A3_MANOS.png",
+      "CRC32": "b15c3d8a",
+      "bytes": 2040526,
+      "compressed_bytes": 2040464
+    },
+    {
+      "path": "CAPTURAS/D03_COMPARACION_TRES_ALTURAS.png",
+      "CRC32": "bf3416f3",
+      "bytes": 1155294,
+      "compressed_bytes": 1139714
+    },
+    {
+      "path": "CAPTURAS/D04_LCARS_ORIGINALES.png",
+      "CRC32": "a017d3f9",
+      "bytes": 856420,
+      "compressed_bytes": 852686
+    },
+    {
+      "path": "CAPTURAS/E_ADAPTADO_SECCION_1.60.png",
+      "CRC32": "cb0e5a46",
+      "bytes": 1549393,
+      "compressed_bytes": 1542697
+    },
+    {
+      "path": "CAPTURAS/E_ADAPTADO_SECCION_1.75.png",
+      "CRC32": "be308a1d",
+      "bytes": 1558056,
+      "compressed_bytes": 1551597
+    },
+    {
+      "path": "CAPTURAS/E_ADAPTADO_SECCION_1.90.png",
+      "CRC32": "abf9234b",
+      "bytes": 1570378,
+      "compressed_bytes": 1563900
+    },
+    {
+      "path": "CAPTURAS/E_ORIGINAL_SECCION_1.60.png",
+      "CRC32": "27a49112",
+      "bytes": 1577276,
+      "compressed_bytes": 1571406
+    },
+    {
+      "path": "CAPTURAS/E_ORIGINAL_SECCION_1.75.png",
+      "CRC32": "acd3549b",
+      "bytes": 1584225,
+      "compressed_bytes": 1578730
+    },
+    {
+      "path": "CAPTURAS/E_ORIGINAL_SECCION_1.90.png",
+      "CRC32": "a800ccac",
+      "bytes": 1586030,
+      "compressed_bytes": 1580499
+    },
+    {
+      "path": "CAPTURAS/LAMINA_ANTES_DESPUES.png",
+      "CRC32": "1cbc57ac",
+      "bytes": 819433,
+      "compressed_bytes": 816704
+    },
+    {
+      "path": "CAPTURAS/LAMINA_SECUENCIA.png",
+      "CRC32": "403afe5b",
+      "bytes": 1919583,
+      "compressed_bytes": 1910931
+    },
+    {
+      "path": "DATOS/ajustes_busqueda.json",
+      "CRC32": "f16353b7",
+      "bytes": 86089,
+      "compressed_bytes": 4565
+    },
+    {
+      "path": "DATOS/ajustes_elegidos.json",
+      "CRC32": "c80ecef8",
+      "bytes": 1888,
+      "compressed_bytes": 563
+    },
+    {
+      "path": "DATOS/apoyos_bases.json",
+      "CRC32": "a9be718a",
+      "bytes": 1379,
+      "compressed_bytes": 307
+    },
+    {
+      "path": "DATOS/baseline.json",
+      "CRC32": "2e23b08c",
+      "bytes": 1188143,
+      "compressed_bytes": 212633
+    },
+    {
+      "path": "DATOS/busqueda_recorrido.json",
+      "CRC32": "18f46b7b",
+      "bytes": 35367,
+      "compressed_bytes": 4520
+    },
+    {
+      "path": "DATOS/comparacion_puestos.csv",
+      "CRC32": "7f4fc1a9",
+      "bytes": 819,
+      "compressed_bytes": 352
+    },
+    {
+      "path": "DATOS/comparacion_puestos.json",
+      "CRC32": "4b80bae3",
+      "bytes": 1521,
+      "compressed_bytes": 409
+    },
+    {
+      "path": "DATOS/componentes_clasificados.json",
+      "CRC32": "7d41bb67",
+      "bytes": 51370,
+      "compressed_bytes": 9464
+    },
+    {
+      "path": "DATOS/consola_superficies.json",
+      "CRC32": "dc0c8bd8",
+      "bytes": 3684,
+      "compressed_bytes": 1113
+    },
+    {
+      "path": "DATOS/contactos_internos_originales.json",
+      "CRC32": "46668244",
+      "bytes": 21492,
+      "compressed_bytes": 1588
+    },
+    {
+      "path": "DATOS/copias.json",
+      "CRC32": "fb29f288",
+      "bytes": 10088,
+      "compressed_bytes": 2125
+    },
+    {
+      "path": "DATOS/ergonomia_resultados.json",
+      "CRC32": "b3fd598c",
+      "bytes": 4141,
+      "compressed_bytes": 795
+    },
+    {
+      "path": "DATOS/exploracion_posturas.json",
+      "CRC32": "2ed0763e",
+      "bytes": 70837,
+      "compressed_bytes": 2100
+    },
+    {
+      "path": "DATOS/fuentes_contextuales.json",
+      "CRC32": "51d47ead",
+      "bytes": 731,
+      "compressed_bytes": 468
+    },
+    {
+      "path": "DATOS/geometria.npz",
+      "CRC32": "794d7bd9",
+      "bytes": 2638710,
+      "compressed_bytes": 2471458
+    },
+    {
+      "path": "DATOS/holguras_piernas_consola.json",
+      "CRC32": "5069d870",
+      "bytes": 2136,
+      "compressed_bytes": 370
+    },
+    {
+      "path": "DATOS/integridad_final.json",
+      "CRC32": "7eaabd55",
+      "bytes": 1188579,
+      "compressed_bytes": 211616
+    },
+    {
+      "path": "DATOS/integridad_metadata_cierre.json",
+      "CRC32": "55fb24e8",
+      "bytes": 128,
+      "compressed_bytes": 100
+    },
+    {
+      "path": "DATOS/interferencias.csv",
+      "CRC32": "c9ade804",
+      "bytes": 8255,
+      "compressed_bytes": 1197
+    },
+    {
+      "path": "DATOS/interferencias_silla.json",
+      "CRC32": "18278a13",
+      "bytes": 90106,
+      "compressed_bytes": 1234
+    },
+    {
+      "path": "DATOS/inventario_medidas.json",
+      "CRC32": "d9440ebe",
+      "bytes": 157429,
+      "compressed_bytes": 22171
+    },
+    {
+      "path": "DATOS/leyendas_capturas.json",
+      "CRC32": "a13595c8",
+      "bytes": 918,
+      "compressed_bytes": 547
+    },
+    {
+      "path": "DATOS/manifest_blender.json",
+      "CRC32": "4fcacf8d",
+      "bytes": 700483,
+      "compressed_bytes": 122005
+    },
+    {
+      "path": "DATOS/marcadores_interaccion.json",
+      "CRC32": "7e92e1a2",
+      "bytes": 11474,
+      "compressed_bytes": 1087
+    },
+    {
+      "path": "DATOS/materiales_lcars.json",
+      "CRC32": "bb96a513",
+      "bytes": 793,
+      "compressed_bytes": 177
+    },
+    {
+      "path": "DATOS/medidas_sillas.csv",
+      "CRC32": "0cd4a269",
+      "bytes": 793,
+      "compressed_bytes": 431
+    },
+    {
+      "path": "DATOS/modificaciones_experimentales.json",
+      "CRC32": "3e9dd9fb",
+      "bytes": 1775,
+      "compressed_bytes": 380
+    },
+    {
+      "path": "DATOS/objetos.json",
+      "CRC32": "cb70ad51",
+      "bytes": 569981,
+      "compressed_bytes": 53115
+    },
+    {
+      "path": "DATOS/objetos_sillas.csv",
+      "CRC32": "7d224c9b",
+      "bytes": 11367,
+      "compressed_bytes": 3101
+    },
+    {
+      "path": "DATOS/orientacion_contraste.json",
+      "CRC32": "fe622003",
+      "bytes": 2120,
+      "compressed_bytes": 531
+    },
+    {
+      "path": "DATOS/original_1.60.json",
+      "CRC32": "d19ffd96",
+      "bytes": 10016,
+      "compressed_bytes": 1267
+    },
+    {
+      "path": "DATOS/original_1.75.json",
+      "CRC32": "3211c700",
+      "bytes": 8727,
+      "compressed_bytes": 1164
+    },
+    {
+      "path": "DATOS/original_1.90.json",
+      "CRC32": "28aae316",
+      "bytes": 7043,
+      "compressed_bytes": 904
+    },
+    {
+      "path": "DATOS/pivotes_jerarquias.csv",
+      "CRC32": "47a9c81c",
+      "bytes": 12074,
+      "compressed_bytes": 656
+    },
+    {
+      "path": "DATOS/proporciones_maniqui.json",
+      "CRC32": "c7bfaf75",
+      "bytes": 951,
+      "compressed_bytes": 507
+    },
+    {
+      "path": "DATOS/recorridos.csv",
+      "CRC32": "55260e09",
+      "bytes": 90433,
+      "compressed_bytes": 7488
+    },
+    {
+      "path": "DATOS/recursos_guardados.json",
+      "CRC32": "d8e69213",
+      "bytes": 9672,
+      "compressed_bytes": 2957
+    },
+    {
+      "path": "DATOS/resultados_cinematica.json",
+      "CRC32": "27ab7a82",
+      "bytes": 1529,
+      "compressed_bytes": 332
+    },
+    {
+      "path": "DATOS/resultados_cinematica_A1_FALLO_GUIA.json",
+      "CRC32": "dacbc789",
+      "bytes": 18274,
+      "compressed_bytes": 1144
+    },
+    {
+      "path": "DATOS/resultados_cinematica_A3_FALLO_MANOS.json",
+      "CRC32": "9fb7fc69",
+      "bytes": 30765,
+      "compressed_bytes": 2106
+    },
+    {
+      "path": "DATOS/resultados_por_altura.csv",
+      "CRC32": "944aed7f",
+      "bytes": 662,
+      "compressed_bytes": 357
+    },
+    {
+      "path": "DATOS/sondeo_aproximacion.json",
+      "CRC32": "7fe52a3e",
+      "bytes": 100589,
+      "compressed_bytes": 8376
+    },
+    {
+      "path": "DATOS/topologia.json",
+      "CRC32": "07142020",
+      "bytes": 12191,
+      "compressed_bytes": 618
+    },
+    {
+      "path": "DATOS/trayectorias.json",
+      "CRC32": "f4f6843e",
+      "bytes": 8028499,
+      "compressed_bytes": 279921
+    },
+    {
+      "path": "DATOS/trayectorias_A1_FALLO_GUIA.json",
+      "CRC32": "a0e906f7",
+      "bytes": 8036090,
+      "compressed_bytes": 261938
+    },
+    {
+      "path": "DATOS/trayectorias_A3_FALLO_MANOS.json",
+      "CRC32": "743c2206",
+      "bytes": 8060491,
+      "compressed_bytes": 282374
+    },
+    {
+      "path": "DATOS/validacion_entrega.json",
+      "CRC32": "60341c1d",
+      "bytes": 15833,
+      "compressed_bytes": 3265
+    },
+    {
+      "path": "DATOS/verificacion_animacion_guardada.json",
+      "CRC32": "82ebd2e2",
+      "bytes": 5385,
+      "compressed_bytes": 794
+    },
+    {
+      "path": "DATOS/verificacion_animacion_visual.json",
+      "CRC32": "333bfa32",
+      "bytes": 14158,
+      "compressed_bytes": 2809
+    },
+    {
+      "path": "DATOS/verificacion_copias_blender.json",
+      "CRC32": "ed7b6f2a",
+      "bytes": 241302,
+      "compressed_bytes": 5743
+    },
+    {
+      "path": "DATOS/verificacion_secuencia_visual.json",
+      "CRC32": "2d212fd8",
+      "bytes": 37285,
+      "compressed_bytes": 5887
+    },
+    {
+      "path": "GALERIA.html",
+      "CRC32": "1f0b58dc",
+      "bytes": 5189,
+      "compressed_bytes": 1372
+    },
+    {
+      "path": "LOGS/01_inspeccion.log",
+      "CRC32": "409d828e",
+      "bytes": 9563,
+      "compressed_bytes": 2540
+    },
+    {
+      "path": "LOGS/02_medidas.log",
+      "CRC32": "0a7e21ed",
+      "bytes": 4169,
+      "compressed_bytes": 1571
+    },
+    {
+      "path": "LOGS/03_explorar.log",
+      "CRC32": "17cdcba4",
+      "bytes": 14781,
+      "compressed_bytes": 770
+    },
+    {
+      "path": "LOGS/04_buscar_ajuste.log",
+      "CRC32": "85c6a176",
+      "bytes": 7846,
+      "compressed_bytes": 1157
+    },
+    {
+      "path": "LOGS/05_aproximacion.log",
+      "CRC32": "4cacf072",
+      "bytes": 16186,
+      "compressed_bytes": 991
+    },
+    {
+      "path": "LOGS/06_cinematica.log",
+      "CRC32": "a00b04e5",
+      "bytes": 1953,
+      "compressed_bytes": 293
+    },
+    {
+      "path": "LOGS/07_trayectorias.log",
+      "CRC32": "b364a89e",
+      "bytes": 55,
+      "compressed_bytes": 32
+    },
+    {
+      "path": "LOGS/07b_corregir_guia.log",
+      "CRC32": "daa806ec",
+      "bytes": 79,
+      "compressed_bytes": 38
+    },
+    {
+      "path": "LOGS/07c_contacto_controles.log",
+      "CRC32": "589e8436",
+      "bytes": 90,
+      "compressed_bytes": 44
+    },
+    {
+      "path": "LOGS/07d_arco_manos.log",
+      "CRC32": "9e782f46",
+      "bytes": 88,
+      "compressed_bytes": 40
+    },
+    {
+      "path": "LOGS/08_blender.log",
+      "CRC32": "fa9e3b64",
+      "bytes": 18003,
+      "compressed_bytes": 1401
+    },
+    {
+      "path": "LOGS/09_mallas.log",
+      "CRC32": "4d4654b9",
+      "bytes": 155,
+      "compressed_bytes": 117
+    },
+    {
+      "path": "LOGS/10_verificar_blender.log",
+      "CRC32": "180aedee",
+      "bytes": 785,
+      "compressed_bytes": 337
+    },
+    {
+      "path": "LOGS/11_metricas.log",
+      "CRC32": "7500b085",
+      "bytes": 3163,
+      "compressed_bytes": 785
+    },
+    {
+      "path": "LOGS/12_evidencias_marcadores.log",
+      "CRC32": "16947623",
+      "bytes": 1941,
+      "compressed_bytes": 645
+    },
+    {
+      "path": "LOGS/13_capturas_revision.log",
+      "CRC32": "ee9409be",
+      "bytes": 1282,
+      "compressed_bytes": 326
+    },
+    {
+      "path": "LOGS/14_datos_complementarios.log",
+      "CRC32": "ce155968",
+      "bytes": 2690,
+      "compressed_bytes": 622
+    },
+    {
+      "path": "LOGS/15_contactos_internos.log",
+      "CRC32": "52e8bc48",
+      "bytes": 200,
+      "compressed_bytes": 135
+    },
+    {
+      "path": "LOGS/16_visuales_e_integridad.log",
+      "CRC32": "045fd9b7",
+      "bytes": 71,
+      "compressed_bytes": 69
+    },
+    {
+      "path": "LOGS/17_informes.log",
+      "CRC32": "befd5a20",
+      "bytes": 25,
+      "compressed_bytes": 27
+    },
+    {
+      "path": "LOGS/18a_recursos_guardados.log",
+      "CRC32": "f3f6ad3c",
+      "bytes": 414,
+      "compressed_bytes": 246
+    },
+    {
+      "path": "LOGS/19_regenerar_animacion.log",
+      "CRC32": "df8f7b53",
+      "bytes": 13489,
+      "compressed_bytes": 883
+    },
+    {
+      "path": "LOGS/20_verificar_animacion_visual.log",
+      "CRC32": "6a542d9a",
+      "bytes": 84,
+      "compressed_bytes": 68
+    },
+    {
+      "path": "README.md",
+      "CRC32": "1bb422e2",
+      "bytes": 3794,
+      "compressed_bytes": 1084
+    },
+    {
+      "path": "REFERENCIAS/manifest_blender.json",
+      "CRC32": "858a0eaf",
+      "bytes": 515390,
+      "compressed_bytes": 63999
+    },
+    {
+      "path": "REFERENCIAS/obj_objetos.json",
+      "CRC32": "250d031b",
+      "bytes": 308702,
+      "compressed_bytes": 39943
+    },
+    {
+      "path": "REFERENCIAS/prototipo_conjunto.json",
+      "CRC32": "c2d4a090",
+      "bytes": 245480,
+      "compressed_bytes": 11615
+    },
+    {
+      "path": "REFERENCIAS/puestos_revision.json",
+      "CRC32": "886d7b00",
+      "bytes": 105014,
+      "compressed_bytes": 7821
+    },
+    {
+      "path": "REFERENCIAS/SUTHERLAND_INFORME.md",
+      "CRC32": "5113d33b",
+      "bytes": 14432,
+      "compressed_bytes": 5486
+    },
+    {
+      "path": "REFERENCIAS/VOY02_00_RESUMEN_EJECUTIVO.md",
+      "CRC32": "93340d74",
+      "bytes": 5926,
+      "compressed_bytes": 2971
+    },
+    {
+      "path": "REFERENCIAS/VOY02_01_ESCALAS_ERGONOMIA.md",
+      "CRC32": "e7f59559",
+      "bytes": 7679,
+      "compressed_bytes": 3714
+    },
+    {
+      "path": "REFERENCIAS/VOY02_02_MODULARIDAD_PASILLOS.md",
+      "CRC32": "5d830147",
+      "bytes": 5035,
+      "compressed_bytes": 2591
+    },
+    {
+      "path": "REFERENCIAS/VOY02_03_CONEXION_PUENTE_PASILLOS.md",
+      "CRC32": "0943e75b",
+      "bytes": 6031,
+      "compressed_bytes": 2992
+    },
+    {
+      "path": "REFERENCIAS/VOY02_04_CAMAROTE_JUGADOR.md",
+      "CRC32": "809033b5",
+      "bytes": 4716,
+      "compressed_bytes": 2490
+    },
+    {
+      "path": "REFERENCIAS/VOY02_05_PUERTAS_SILLAS_CONSOLAS.md",
+      "CRC32": "97117679",
+      "bytes": 5873,
+      "compressed_bytes": 2928
+    },
+    {
+      "path": "REFERENCIAS/VOY02_06_MATERIALES_RENDIMIENTO.md",
+      "CRC32": "aff76c0d",
+      "bytes": 5656,
+      "compressed_bytes": 2756
+    },
+    {
+      "path": "REFERENCIAS/VOY02_07_HOJA_DE_RUTA_RECOMENDADA.md",
+      "CRC32": "2348408d",
+      "bytes": 5495,
+      "compressed_bytes": 2703
+    },
+    {
+      "path": "REFERENCIAS/VOY02_08_PRUEBAS_Y_LIMITACIONES.md",
+      "CRC32": "2a95479a",
+      "bytes": 8610,
+      "compressed_bytes": 4179
+    },
+    {
+      "path": "REFERENCIAS/VOY02_10_funcional.py",
+      "CRC32": "6c21867e",
+      "bytes": 6112,
+      "compressed_bytes": 2768
+    },
+    {
+      "path": "REFERENCIAS/VOY02_README.md",
+      "CRC32": "f9190308",
+      "bytes": 3302,
+      "compressed_bytes": 1473
+    },
+    {
+      "path": "REFERENCIAS/VOY02_VERIFICACION_ENTREGA.md",
+      "CRC32": "10d88fa8",
+      "bytes": 1142,
+      "compressed_bytes": 665
+    },
+    {
+      "path": "REFERENCIAS/VOY03_00_RESUMEN_EJECUTIVO.md",
+      "CRC32": "498dbfae",
+      "bytes": 4844,
+      "compressed_bytes": 2412
+    },
+    {
+      "path": "REFERENCIAS/VOY03_01_DIAGNOSTICO_CIRCULACION.md",
+      "CRC32": "5d8bef82",
+      "bytes": 4576,
+      "compressed_bytes": 2452
+    },
+    {
+      "path": "REFERENCIAS/VOY03_02_ESCALONES_Y_DESNIVELES.md",
+      "CRC32": "4393db51",
+      "bytes": 5236,
+      "compressed_bytes": 2513
+    },
+    {
+      "path": "REFERENCIAS/VOY03_03_PRUEBAS_CAPSULAS.md",
+      "CRC32": "9a8e0904",
+      "bytes": 4802,
+      "compressed_bytes": 2136
+    },
+    {
+      "path": "REFERENCIAS/VOY03_04_SOLUCIONES_EXPERIMENTALES.md",
+      "CRC32": "173dc729",
+      "bytes": 4025,
+      "compressed_bytes": 2034
+    },
+    {
+      "path": "REFERENCIAS/VOY03_05_RECORRIDOS_COMPLETOS.md",
+      "CRC32": "1e4b50f1",
+      "bytes": 3552,
+      "compressed_bytes": 1864
+    },
+    {
+      "path": "REFERENCIAS/VOY03_06_PREPARACION_UE5.md",
+      "CRC32": "79105614",
+      "bytes": 5063,
+      "compressed_bytes": 2541
+    },
+    {
+      "path": "REFERENCIAS/VOY03_07_RECOMENDACIONES_FUTURAS.md",
+      "CRC32": "8fb3207c",
+      "bytes": 3224,
+      "compressed_bytes": 1669
+    },
+    {
+      "path": "REFERENCIAS/VOY03_08_METODOLOGIA_Y_LIMITACIONES.md",
+      "CRC32": "f99a68fa",
+      "bytes": 6794,
+      "compressed_bytes": 3290
+    },
+    {
+      "path": "REFERENCIAS/VOY03_README.md",
+      "CRC32": "2489bf42",
+      "bytes": 3474,
+      "compressed_bytes": 1797
+    },
+    {
+      "path": "SCRIPTS/00_aislar.py",
+      "CRC32": "aca5857d",
+      "bytes": 2115,
+      "compressed_bytes": 1082
+    },
+    {
+      "path": "SCRIPTS/01_inspeccion.py",
+      "CRC32": "f665f100",
+      "bytes": 3254,
+      "compressed_bytes": 1576
+    },
+    {
+      "path": "SCRIPTS/02_medidas.py",
+      "CRC32": "65f64d53",
+      "bytes": 3742,
+      "compressed_bytes": 1658
+    },
+    {
+      "path": "SCRIPTS/03_explorar.py",
+      "CRC32": "1f260d50",
+      "bytes": 1276,
+      "compressed_bytes": 717
+    },
+    {
+      "path": "SCRIPTS/04_buscar_ajuste.py",
+      "CRC32": "1ceb09a7",
+      "bytes": 1291,
+      "compressed_bytes": 730
+    },
+    {
+      "path": "SCRIPTS/05_aproximacion.py",
+      "CRC32": "6fa0080e",
+      "bytes": 764,
+      "compressed_bytes": 512
+    },
+    {
+      "path": "SCRIPTS/06_cinematica.py",
+      "CRC32": "0f98f58f",
+      "bytes": 2715,
+      "compressed_bytes": 1435
+    },
+    {
+      "path": "SCRIPTS/07_generar_trayectorias.py",
+      "CRC32": "cb1bcff4",
+      "bytes": 1826,
+      "compressed_bytes": 965
+    },
+    {
+      "path": "SCRIPTS/07b_corregir_guia.py",
+      "CRC32": "e86cfc18",
+      "bytes": 1421,
+      "compressed_bytes": 751
+    },
+    {
+      "path": "SCRIPTS/07c_contacto_controles.py",
+      "CRC32": "54b4e8b4",
+      "bytes": 1220,
+      "compressed_bytes": 661
+    },
+    {
+      "path": "SCRIPTS/07d_arco_manos.py",
+      "CRC32": "43f4e964",
+      "bytes": 348,
+      "compressed_bytes": 256
+    },
+    {
+      "path": "SCRIPTS/08_blender.py",
+      "CRC32": "dd504f2c",
+      "bytes": 14056,
+      "compressed_bytes": 5768
+    },
+    {
+      "path": "SCRIPTS/09_mallas.py",
+      "CRC32": "97d1cbf1",
+      "bytes": 3977,
+      "compressed_bytes": 1915
+    },
+    {
+      "path": "SCRIPTS/10_verificar_blender.py",
+      "CRC32": "1be234a2",
+      "bytes": 4752,
+      "compressed_bytes": 2258
+    },
+    {
+      "path": "SCRIPTS/11_metricas.py",
+      "CRC32": "fb1686ea",
+      "bytes": 5687,
+      "compressed_bytes": 2520
+    },
+    {
+      "path": "SCRIPTS/12_evidencias_marcadores.py",
+      "CRC32": "ff49e2cd",
+      "bytes": 7757,
+      "compressed_bytes": 3401
+    },
+    {
+      "path": "SCRIPTS/13_capturas_revision.py",
+      "CRC32": "cbf98684",
+      "bytes": 1557,
+      "compressed_bytes": 918
+    },
+    {
+      "path": "SCRIPTS/14_datos_complementarios.py",
+      "CRC32": "d278295c",
+      "bytes": 3073,
+      "compressed_bytes": 1750
+    },
+    {
+      "path": "SCRIPTS/15_contactos_internos.py",
+      "CRC32": "a144e04f",
+      "bytes": 2166,
+      "compressed_bytes": 1128
+    },
+    {
+      "path": "SCRIPTS/16_visuales_e_integridad.py",
+      "CRC32": "cbb2af11",
+      "bytes": 3332,
+      "compressed_bytes": 1749
+    },
+    {
+      "path": "SCRIPTS/17_informes.py",
+      "CRC32": "0ed42e63",
+      "bytes": 47068,
+      "compressed_bytes": 18694
+    },
+    {
+      "path": "SCRIPTS/18_paquete.py",
+      "CRC32": "18fb159d",
+      "bytes": 6911,
+      "compressed_bytes": 2923
+    },
+    {
+      "path": "SCRIPTS/18a_recursos_guardados.py",
+      "CRC32": "1090c966",
+      "bytes": 1297,
+      "compressed_bytes": 704
+    },
+    {
+      "path": "SCRIPTS/19_regenerar_animacion.py",
+      "CRC32": "778fd7f3",
+      "bytes": 1787,
+      "compressed_bytes": 1020
+    },
+    {
+      "path": "SCRIPTS/20_verificar_animacion_visual.py",
+      "CRC32": "17e23e4d",
+      "bytes": 1355,
+      "compressed_bytes": 767
+    },
+    {
+      "path": "SCRIPTS/bodygeom.py",
+      "CRC32": "40e67172",
+      "bytes": 6826,
+      "compressed_bytes": 3032
+    },
+    {
+      "path": "SCRIPTS/geom.py",
+      "CRC32": "b83095b4",
+      "bytes": 7718,
+      "compressed_bytes": 3122
+    },
+    {
+      "path": "MANIFIESTO_SHA256.json",
+      "CRC32": "b9e65845",
+      "bytes": 34423,
+      "compressed_bytes": 11596
+    }
+  ],
+  "large_files": [
+    {
+      "path": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\ESCENAS\\VOY04_Fallos_y_Comparativa.blend",
+      "bytes": 32692434,
+      "sha256": "e1d2d374770f7b1443bfee8e6f9696e2ed7256fa828d2f437278dd0e413d432a"
+    },
+    {
+      "path": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\ESCENAS\\VOY04_Laboratorio.blend",
+      "bytes": 30355426,
+      "sha256": "79e341381449c7455bd490d35c2205471b71ea58d5dff8464f9e6d82f6c34ded"
+    },
+    {
+      "path": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_Circulacion.blend",
+      "sha256": "b90dc854dfb3ce62ece4cfb60b25a510787592f5abb68236e799647e074287ea"
+    }
+  ]
+}

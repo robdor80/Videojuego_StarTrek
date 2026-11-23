@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0.0",
+  "catalogue_id": "lore_2383_enciclopedia_editorial",
+  "status": "EDITORIAL_REFERENCE_NOT_RUNTIME",
+  "continuity": "star_trek_legends_authorial",
+  "reference_continuities": ["tng", "ds9", "voyager"],
+  "continuity_priority": "AUTHOR_APPROVED_GAME_LORE_OVER_SCREEN_CANON",
+  "continuity_review_status": "PENDING_AUTHORIAL_GAME_CONTINUITY_AUDIT",
+  "continuity_policy_ref": "proyecto/ideas/IDEA-0021_enciclopedia_starfleet_continuidad_propia_lcars_padd.md",
+  "language": "es-ES",
+  "source_policy": "mundo/sources/provenance_policy.md",
+  "runtime_import_allowed": false,
+  "fictional_knowledge_guard": true,
+  "core_rpg_authority": "EXCLUSIVE",
+  "records": [
+    {
+      "entry_id": "hist_dominion_end",
+      "title_es": "Fin de la Guerra del Dominio",
+      "domain": "history",
+      "summary_es": "El Tratado de Bajor en 2375 cerró el conflicto principal; persistieron secuelas sin resultados futuros obligados.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json"
+      ],
+      "not_before_year": 2375,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_voyager",
+      "title_es": "Regreso de la USS Voyager",
+      "domain": "history",
+      "summary_es": "Voyager retornó al Cuadrante Alfa en 2378; su experiencia Delta no es de conocimiento público ilimitado.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/historical_events/lore03_a_yearly_atlas_v0.2.md"
+      ],
+      "not_before_year": 2378,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_enterprise_d",
+      "title_es": "Pérdida de la Enterprise-D",
+      "domain": "history",
+      "summary_es": "La nave sufrió graves daños en Veridian III en 2371; la recuperación y puesta en servicio posteriores requieren otra fuente.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md"
+      ],
+      "not_before_year": 2371,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_data",
+      "title_es": "Data: suceso de 2379",
+      "domain": "history",
+      "summary_es": "Data murió durante los sucesos de Nemesis; sus eventuales reconstrucciones no están consumadas en 2383.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/characters/starfleet/data_lore05b_v0.1.md"
+      ],
+      "not_before_year": 2379,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_sisko",
+      "title_es": "Sisko y los Profetas",
+      "domain": "history",
+      "summary_es": "Benjamin Sisko desapareció de la vida ordinaria al término de DS9 en 2375; su regreso no es un hecho en 2383.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/characters/starfleet/benjamin_sisko_lore05b_v0.1.md"
+      ],
+      "not_before_year": 2375,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_bajor",
+      "title_es": "Bajor y DS9",
+      "domain": "institutions",
+      "summary_es": "Bajor es soberano; la cooperación de la administración de DS9 no implica cesión de soberanía.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/federation/README.md"
+      ],
+      "not_before_year": 2369,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_borg",
+      "title_es": "Borg: antecedentes y peligros",
+      "domain": "factions",
+      "summary_es": "Las incursiones Borg son antecedentes documentados; una ficha no revela información interna del Colectivo a todo usuario.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/historical_events/lore03_a_yearly_atlas_v0.2.md"
+      ],
+      "not_before_year": 2365,
+      "not_after_year": null,
+      "default_visibility": "CONTEXTUAL_KNOWLEDGE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "hist_cardassia",
+      "title_es": "Cardassia tras la guerra",
+      "domain": "institutions",
+      "summary_es": "La destrucción y crisis cardassiana de 2375 son antecedentes; el gobierno vigente en 2383 exige un estado fechado.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/federation/README.md"
+      ],
+      "not_before_year": 2375,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "astro_wormhole",
+      "title_es": "Agujero de gusano bajorano",
+      "domain": "astrography",
+      "summary_es": "Conexión especial Alfa–Gamma conocida desde 2369, no distancia euclidiana ni acceso gratuito.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/astrography/atlas/README.md"
+      ],
+      "not_before_year": 2369,
+      "not_after_year": null,
+      "default_visibility": "CONTEXTUAL_KNOWLEDGE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "astro_veridian",
+      "title_es": "Veridian III",
+      "domain": "astrography",
+      "summary_es": "Ancla del incidente de Enterprise-D de 2371; no implica disponibilidad para recuperar material.",
+      "claim_class": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/astrography/atlas/README.md"
+      ],
+      "not_before_year": 2371,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_HISTORICAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "tech_tricorder",
+      "title_es": "Tricorder y sus límites",
+      "domain": "technology",
+      "summary_es": "Instrumento de observación, no diagnóstico infalible ni evidencia de una lectura todavía no realizada.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/equipment/lore02_b_equipment_catalogue_v0.1.json"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "tech_transporter",
+      "title_es": "Transportador",
+      "domain": "technology",
+      "summary_es": "Uso condicionado por estado del equipo, operador, entorno, patrón, potencia y autorizaciones.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/technology/lore02_a_system_atlas_v0.2.json"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "tech_deflector",
+      "title_es": "Deflector de navegación",
+      "domain": "technology",
+      "summary_es": "Funciones de protección y posibles usos científicos excepcionales, sujetas a configuración y prueba.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/technology/lore02_a_system_atlas_v0.2.json"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "tech_replication",
+      "title_es": "Replicadores",
+      "domain": "technology",
+      "summary_es": "Requieren recursos, energía y habilitación; ningún catálogo concede stock ilimitado.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/technology/README.md"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "med_xenobiology",
+      "title_es": "Medicina interespecie",
+      "domain": "medicine",
+      "summary_es": "Variación individual, pruebas fiables, consentimiento y tratamiento especializado; prohibido extrapolar dosis.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/medicine/lore02_c_species_clinical_atlas_v0.1.json"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "sci_phenomena",
+      "title_es": "Fenómenos por caracterizar",
+      "domain": "science",
+      "summary_es": "La observación puede producir resultados ambiguos y varias hipótesis alternativas sin certidumbre automática.",
+      "claim_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "source_paths": [
+        "mundo/lore/science/lore02_d_phenomena_atlas_v0.1.json"
+      ],
+      "not_before_year": null,
+      "not_after_year": null,
+      "default_visibility": "PUBLIC_REFERENCE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "game_valhalla",
+      "title_es": "Programa Valhalla",
+      "domain": "starships",
+      "summary_es": "La Enterprise NCC-1701-D, clase Galaxy, está en reconstrucción desde 2380 en la continuidad propia; 2387 es un objetivo condicional.",
+      "claim_class": "GAME_ADDITION",
+      "confidence": "HIGH",
+      "source_paths": [
+        "proyecto/docs/decisions/enterprise_d_proyecto_valhalla_2380_2387_2026-11-13.md"
+      ],
+      "not_before_year": 2380,
+      "not_after_year": null,
+      "default_visibility": "CONTEXTUAL_KNOWLEDGE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "game_academy",
+      "title_es": "Candidatura Academia 2383",
+      "domain": "characters",
+      "summary_es": "La historia de un único protagonista híbrido humano-vulcano integra evaluación legítima; el expediente genético no es público.",
+      "claim_class": "GAME_ADDITION",
+      "confidence": "HIGH",
+      "source_paths": [
+        "proyecto/docs/decisions/s04_protagonista_unico_khan_intro_academia_2026-11-17.md"
+      ],
+      "not_before_year": 2383,
+      "not_after_year": null,
+      "default_visibility": "RESTRICTED_PERSONAL",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "game_sensors",
+      "title_es": "Refit avanzado de sensores",
+      "domain": "technology",
+      "summary_es": "Mejoras de sensores previstas para Enterprise-D, nunca capacidades instaladas sin auditoría de ingeniería y pruebas.",
+      "claim_class": "GAME_ADDITION",
+      "confidence": "HIGH",
+      "source_paths": [
+        "proyecto/docs/decisions/enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md"
+      ],
+      "not_before_year": 2383,
+      "not_after_year": null,
+      "default_visibility": "CONTEXTUAL_KNOWLEDGE",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    },
+    {
+      "entry_id": "game_riker",
+      "title_es": "Riker: rango, cargo y mando",
+      "domain": "characters",
+      "summary_es": "La atribución de vicealmirante y dirección de Primera Flota es una decisión propia, distinta del mando efectivo de un buque.",
+      "claim_class": "GAME_ADDITION",
+      "confidence": "HIGH",
+      "source_paths": [
+        "mundo/lore/characters/starfleet/william_t_riker_lore05b_v0.1.md"
+      ],
+      "not_before_year": 2383,
+      "not_after_year": null,
+      "default_visibility": "ROLE_RESTRICTED",
+      "release_gate": "QUERY_CORE_TIME_KNOWLEDGE_PERMISSION_AND_OBSERVATION",
+      "auto_materialize": false
+    }
+  ]
+}

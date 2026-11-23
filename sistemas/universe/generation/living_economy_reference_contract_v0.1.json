@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "living_economy_reference_contract",
+  "status": "REFERENCE_ADAPTER_NOT_CORERPG_RUNTIME",
+  "owner": "Star Trek domain contracts and deterministic tests; authoritative WorldState, atomic events and persistence belong to CoreRPG",
+  "related_contract_refs": [
+    "sistemas/gameplay/economy/replicator_post_scarcity_contract.json",
+    "sistemas/gameplay/economy/civilian_trade_operator_contract.json",
+    "sistemas/universe/generation/procedural_civilization_economy_resource_trade_grammar_v0.1.json",
+    "desarrollo/validation/consistency/movement_logistics_economy_diplomacy_invariants_v0.1.json"
+  ],
+  "world_state_fields": {
+    "stores": [
+      "owner_ref",
+      "location_ref",
+      "stock"
+    ],
+    "facilities": [
+      "store_id",
+      "operational",
+      "power_units",
+      "feedstock",
+      "patterns",
+      "production_recipes",
+      "replicable_items"
+    ],
+    "routes": [
+      "from_location",
+      "to_location",
+      "open",
+      "legal_access",
+      "capacity",
+      "min_travel_ticks"
+    ],
+    "vessels": [
+      "location_ref",
+      "capacity",
+      "available"
+    ],
+    "shipments": [
+      "shipment_id",
+      "from_store",
+      "to_store",
+      "vessel_id",
+      "item",
+      "quantity",
+      "arrival_tick",
+      "status",
+      "cause_event_ref"
+    ],
+    "wallets": [
+      "account_id",
+      "unit",
+      "balance"
+    ],
+    "event_log": [
+      "event_id",
+      "tick",
+      "kind",
+      "digest"
+    ],
+    "last_tick": "nonnegative integer"
+  },
+  "event_types": [
+    "produce",
+    "replicate",
+    "consume",
+    "dispatch",
+    "deliver",
+    "trade",
+    "set_route_access",
+    "loss"
+  ],
+  "invariant_ids": [
+    "CAUSAL_EXISTENCE",
+    "NO_NEGATIVE_STOCK_OR_BALANCE",
+    "NO_TELEPORT",
+    "NO_MAGIC_REPLICATION",
+    "NO_GLOBAL_EXCHANGE",
+    "LEGAL_ROUTE",
+    "MATERIAL_IN_TRANSIT",
+    "NO_CROSS_BLOCK_RULES",
+    "WORLD_KNOWLEDGE_SEPARATION",
+    "DETERMINISTIC_IDEMPOTENCE",
+    "ATOMIC_REJECTION",
+    "LOD_INVARIANCE"
+  ],
+  "unknown_policy": "Missing fact is a validation failure or unresolved candidate, never inferred as free/zero/open",
+  "era_policy": "Campaign-start canon initializes; post-start committed facts are authoritative; do not force later TV events",
+  "ai_policy": "AI can explain and propose; cannot mutate world truth or invent goods, price, passage, policy, authority or completion",
+  "culture_policy": "Economy/incentive derives from law, affiliation, institutions, individual actor, location and era; species alone is forbidden",
+  "no_runtime_claim": true
+}

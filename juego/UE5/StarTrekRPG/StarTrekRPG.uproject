@@ -1,0 +1,18 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.8",
+    "Category": "Games",
+    "Modules": [
+        { "Name": "StarTrekRPG", "Type": "Runtime", "LoadingPhase": "Default" }
+    ],
+    "TargetPlatforms": [ "Windows" ],
+    "DisableEnginePluginsByDefault": true,
+    "Plugins": [
+        { "Name": "WindowsDeviceProfileSelector", "Enabled": true },
+        { "Name": "ContentBrowserAssetDataSource", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "ContentBrowserClassDataSource", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "EngineAssetDefinitions", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "PropertyAccessEditor", "Enabled": true, "TargetAllowList": [ "Editor" ] },
+        { "Name": "PluginBrowser", "Enabled": true, "TargetAllowList": [ "Editor" ] }
+    ]
+}

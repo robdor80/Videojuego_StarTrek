@@ -1,0 +1,316 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05C",
+  "status": "DOCUMENTARY",
+  "campaign_baseline_year": 2383,
+  "authority": "CoreRPG_World_State_ONLY",
+  "existing_anchor_catalogue": "mundo/lore/astrography/systems/anchor_locations.json",
+  "no_new_coordinates": true,
+  "no_new_routes": true,
+  "no_live_mutations": true,
+  "locations": [
+    {
+      "id": "earth",
+      "display_name_es": "Tierra / San Francisco",
+      "type": "PLANET",
+      "anchor_location_id": "earth",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/SOL_EARTH_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Academia, Cuartel General y Gobierno civil son instituciones distintas.",
+      "gameplay_opportunities": "Academia y ciudad; actos de carrera, permisos y vida familiar.",
+      "hard_limits": "No hay acceso irrestricto a mando ni a archivos por ser cadete.",
+      "source_refs": [
+        "MA_EARTH",
+        "MA_STARFLEET_ACADEMY_EARTH"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "mars_utopia",
+      "display_name_es": "Marte / Utopia Planitia",
+      "type": "COLONY_FACILITY_CONTEXT",
+      "anchor_location_id": "sol_system",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/SOL_EARTH_DEPTH_PROFILE_v0.1.json",
+      "facility_id": "canon:facility:utopia_planitia_fleet_yards",
+      "availability": "SOL_CONTEXT_NO_PLANET_ANCHOR",
+      "context_2383": "Colonia humana y astilleros existentes; ubicación exacta de Proyecto Valhalla NO determinada.",
+      "gameplay_opportunities": "Trabajo industrial, visita técnica, logística e ingeniería naval.",
+      "hard_limits": "No atribuir la reconstrucción de la Enterprise-D a este astillero sin evento; no imponer ataques del futuro televisivo.",
+      "source_refs": [
+        "MA_UTOPIA_PLANITIA_FLEET_YARDS",
+        "MA_SOL_SYSTEM"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "vulcan",
+      "display_name_es": "Vulcano",
+      "type": "PLANET",
+      "anchor_location_id": "vulcan",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/VULCAN_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo fundador federativo con ecosistemas áridos y diversidad personal.",
+      "gameplay_opportunities": "Intercambio académico, evaluación científica, diplomacia.",
+      "hard_limits": "Sin rituales ni parentescos inventados; no homogeneizar a los habitantes.",
+      "source_refs": [
+        "MA_VULCAN_PLANET"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "andoria",
+      "display_name_es": "Andoria",
+      "type": "MOON",
+      "anchor_location_id": "andoria",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/ANDORIA_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Luna helada con sociedades andorianas y aenar diferenciadas.",
+      "gameplay_opportunities": "Centros subterráneos, expedición ambiental, cooperación cultural.",
+      "hard_limits": "No atribuir telepatía ilimitada ni tratar comunidades como intercambiables.",
+      "source_refs": [
+        "MA_ANDORIA"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "tellar_prime",
+      "display_name_es": "Tellar Prime",
+      "type": "PLANET",
+      "anchor_location_id": "tellar_prime",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/TELLAR_PRIME_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo fundador con geografía y capital todavía incompletamente documentadas.",
+      "gameplay_opportunities": "Debate y negociación, visita cultural, investigación médica de humedales cuando proceda.",
+      "hard_limits": "No convertir el planeta entero en ciénaga ni generar capital sin fuente.",
+      "source_refs": [
+        "MA_TELLAR_PRIME"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "bajor",
+      "display_name_es": "Bajor",
+      "type": "SOVEREIGN_PLANET",
+      "anchor_location_id": "bajor",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/BAJOR_SYSTEM_WORLD_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo soberano tras la ocupación cardassiana, reconstrucción con instituciones propias.",
+      "gameplay_opportunities": "Misión humanitaria o diplomática, memoria histórica y patrimonio.",
+      "hard_limits": "Bajor no es propiedad de la Federación por administrar DS9; no imponer religión a sus habitantes.",
+      "source_refs": [
+        "MA_BAJOR_WORLD",
+        "DS9_EMISSARY"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "deep_space_9",
+      "display_name_es": "Espacio Profundo 9",
+      "type": "UNIQUE_FACILITY",
+      "anchor_location_id": "deep_space_9",
+      "depth_profile_ref": null,
+      "facility_id": "canon:facility:deep_space_9",
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Estación de identidad única cercana a Bajor/agujero de gusano con jurisdicciones separadas.",
+      "gameplay_opportunities": "Atraque y comercio sujetos a recursos reales, transporte y escala diplomática.",
+      "hard_limits": "No crear copias de la estación ni dar acceso a operaciones por mera visita.",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "MA_TEROK_NOR_TYPE"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "cardassia_prime",
+      "display_name_es": "Cardassia Prime",
+      "type": "SOVEREIGN_PLANET",
+      "anchor_location_id": "cardassia_prime",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/CARDASSIA_PRIME_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Planeta central cardassiano, secuelas del desenlace bélico de 2375; autoridad 2383 sujeta a hechos fechados.",
+      "gameplay_opportunities": "Reconstrucción civil, archivos, reconciliación y diplomacia.",
+      "hard_limits": "No confundir habitantes con afiliación militar o de inteligencia.",
+      "source_refs": [
+        "MA_CARDASSIA_PRIME",
+        "DS9_THE_DOGS_OF_WAR"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "ferenginar",
+      "display_name_es": "Ferenginar",
+      "type": "PLANET",
+      "anchor_location_id": "ferenginar",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/FERENGINAR_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo ferengi húmedo y de intensa actividad comercial, con normas modificables por época.",
+      "gameplay_opportunities": "Negociación contractual, comercio, asuntos civiles.",
+      "hard_limits": "La IA no crea deudas, propiedad ni un Gran Nagus permanente.",
+      "source_refs": [
+        "MA_FERENGINAR"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "trill",
+      "display_name_es": "Trill",
+      "type": "PLANET",
+      "anchor_location_id": "trill",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/TRILL_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo de los trill y simbiontes, con protección de privacidad clínica.",
+      "gameplay_opportunities": "Cavernas de Mak'ala, intercambio médico y cultural.",
+      "hard_limits": "No inventar uniones, historia de huéspedes ni acceso a información confidencial.",
+      "source_refs": [
+        "MA_TRILL_PLANET",
+        "DS9_EQUILIBRIUM"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "qonos",
+      "display_name_es": "Qo'noS",
+      "type": "IMPERIAL_PLANET",
+      "anchor_location_id": "qonos",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/QONOS_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Capital del Imperio Klingon: vida civil y esfera institucional diferenciadas.",
+      "gameplay_opportunities": "Audiencia diplomática, estudios históricos, visitas oficiales.",
+      "hard_limits": "Sin ingreso al Alto Consejo ni afiliación a Casa sin autorización.",
+      "source_refs": [
+        "MA_QONOS"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "romulus",
+      "display_name_es": "Romulus",
+      "type": "IMPERIAL_PLANET",
+      "anchor_location_id": "romulus",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/ROMULUS_PREDESTRUCTION_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Capital romulana existente y habitada en 2383; destrucción posterior no forma parte del arranque.",
+      "gameplay_opportunities": "Negociaciones delicadas, observación política y misiones autorizadas.",
+      "hard_limits": "No imponer destrucción futura ni asignar a todos los civiles a Tal Shiar.",
+      "source_refs": [
+        "MA_ROMULUS_WORLD",
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "betazed",
+      "display_name_es": "Betazed",
+      "type": "FEDERATION_PLANET",
+      "anchor_location_id": "betazed",
+      "depth_profile_ref": "mundo/lore/astrography/worlds/depth/BETAZED_DEPTH_PROFILE_v0.1.json",
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Mundo federativo con historia de guerra previa, ámbito educativo y telepatía variable.",
+      "gameplay_opportunities": "Universidad, investigación y mediación, protegidas por intimidad.",
+      "hard_limits": "No otorgar lectura de pensamientos ni información global por la especie.",
+      "source_refs": [
+        "MA_BETAZED_WORLD"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "badlands",
+      "display_name_es": "Badlands",
+      "type": "SPATIAL_REGION",
+      "anchor_location_id": "badlands",
+      "depth_profile_ref": null,
+      "facility_id": null,
+      "availability": "ANCHORED_DOCUMENTARY",
+      "context_2383": "Región de navegación peligrosa con historia maquis previa; no reactivar automáticamente grupos.",
+      "gameplay_opportunities": "Sensores, búsqueda, navegación y peligros causales.",
+      "hard_limits": "No generar tormentas, amenazas ni misiones por proximidad del jugador.",
+      "source_refs": [
+        "DS9_DEFIANT",
+        "STAR_CHARTS_2002"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "dorvan_v",
+      "display_name_es": "Dorvan V",
+      "type": "SETTLER_COLONY_REFERENCE",
+      "anchor_location_id": null,
+      "depth_profile_ref": null,
+      "facility_id": null,
+      "availability": "HISTORICAL_REFERENCE_ONLY",
+      "context_2383": "Asentamiento que optó en 2370 por permanecer bajo jurisdicción cardassiana; situación exacta de 2383 no confirmada.",
+      "gameplay_opportunities": "Conflicto de soberanía, derechos civiles y diálogo intercultural.",
+      "hard_limits": "No crear colonia viva navegable ni rituales indígenas ficticios; exigir fuentes sobre estado posguerra.",
+      "source_refs": [
+        "TNG_JOURNEYS_END"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    },
+    {
+      "id": "new_bajor",
+      "display_name_es": "Nueva Bajor",
+      "type": "DESTROYED_COLONY_REFERENCE",
+      "anchor_location_id": null,
+      "depth_profile_ref": null,
+      "facility_id": null,
+      "availability": "DESTROYED_REFERENCE_ONLY",
+      "context_2383": "Colonia bajorana del Cuadrante Gamma destruida por los jem'hadar hacia 2370, antes de iniciar el juego.",
+      "gameplay_opportunities": "Memoria histórica, investigación documental y eventuales expediciones autorizadas.",
+      "hard_limits": "No generar residentes/servicios ni restos explorables automáticos; no habilitar viaje Gamma por la ficha.",
+      "source_refs": [
+        "DS9_THE_JEMHADAR"
+      ],
+      "runtime_generation_enabled": false,
+      "automatic_travel_enabled": false,
+      "world_state_mutations": false
+    }
+  ],
+  "nonnegotiable_rules": [
+    "World != government != species != organization != facility != actor knowledge",
+    "Historical document != authorized route or surviving population",
+    "Only CoreRPG accepts mutations and campaign events",
+    "Project Valhalla is a rebuilding program, not a new starship class",
+    "Delta DLC references do not unlock encounters"
+  ]
+}

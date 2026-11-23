@@ -1,0 +1,89 @@
+[
+  {
+    "H": 1.6,
+    "legs": [
+      {
+        "part": "MUSLO_-1",
+        "minimum_console_surface_gap_m": 0.17712692255115486
+      },
+      {
+        "part": "PANTORRILLA_-1",
+        "minimum_console_surface_gap_m": 0.19952692255115487
+      },
+      {
+        "part": "PIE_-1",
+        "minimum_console_surface_gap_m": 0.20086692419775204
+      },
+      {
+        "part": "MUSLO_1",
+        "minimum_console_surface_gap_m": 0.17731648688085042
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "minimum_console_surface_gap_m": 0.19971648688085042
+      },
+      {
+        "part": "PIE_1",
+        "minimum_console_surface_gap_m": 0.2037533658721873
+      }
+    ]
+  },
+  {
+    "H": 1.75,
+    "legs": [
+      {
+        "part": "MUSLO_-1",
+        "minimum_console_surface_gap_m": 0.1264706528378099
+      },
+      {
+        "part": "PANTORRILLA_-1",
+        "minimum_console_surface_gap_m": 0.15098323624244403
+      },
+      {
+        "part": "PIE_-1",
+        "minimum_console_surface_gap_m": 0.14793817877447857
+      },
+      {
+        "part": "MUSLO_1",
+        "minimum_console_surface_gap_m": 0.1264736643662036
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "minimum_console_surface_gap_m": 0.15098488740538013
+      },
+      {
+        "part": "PIE_1",
+        "minimum_console_surface_gap_m": 0.15109522435589212
+      }
+    ]
+  },
+  {
+    "H": 1.9,
+    "legs": [
+      {
+        "part": "MUSLO_-1",
+        "minimum_console_surface_gap_m": 0.07652485456593522
+      },
+      {
+        "part": "PANTORRILLA_-1",
+        "minimum_console_surface_gap_m": 0.10316262459218739
+      },
+      {
+        "part": "PIE_-1",
+        "minimum_console_surface_gap_m": 0.0950094333512052
+      },
+      {
+        "part": "MUSLO_1",
+        "minimum_console_surface_gap_m": 0.07652785758187522
+      },
+      {
+        "part": "PANTORRILLA_1",
+        "minimum_console_surface_gap_m": 0.10316483955563296
+      },
+      {
+        "part": "PIE_1",
+        "minimum_console_surface_gap_m": 0.09843708283959703
+      }
+    ]
+  }
+]

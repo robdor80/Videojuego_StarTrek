@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "system_id": "S18_IDENTITY_AUTH_ACCESS",
+  "number": 18,
+  "title": "Identidad, autenticación y control de accesos",
+  "date": "2026-11-18",
+  "author_approved_number_and_scope": true,
+  "detailed_policy_status": "PROPOSED_FOR_TECHNICAL_IMPLEMENTATION",
+  "design_documented": true,
+  "contracts_documented": true,
+  "existing_ship_computer_rules_preserved": true,
+  "CoreRPG_already_has_persistent_character_ids": true,
+  "authenticated_shared_policy_runtime_implemented": false,
+  "UE5_access_panel_blueprints_integrated": false,
+  "Sutherland_door_artifact_audited": false,
+  "npc_identity_press_runtime_validated": false,
+  "grants_and_revocations_runtime_implemented": false,
+  "full_gameplay_tests_passed": false,
+  "prerequisite_for_S12_private_restricted_doors": true,
+  "design_reference": "sistemas/gameplay/access_control/S18_IDENTIDAD_CONTROL_ACCESOS_DISENO_v1.md",
+  "decision_reference": "proyecto/docs/decisions/s18_identidad_autenticacion_control_accesos_2026-11-18.md"
+}

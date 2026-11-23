@@ -1,0 +1,30 @@
+name: LORE-05D — Entidades documentales
+
+on:
+  push:
+    paths:
+      - 'mundo/lore/operations/lore05d_*'
+      - 'mundo/lore/operations/LORE05D_*'
+      - 'proyecto/docs/roadmap/lore_05_d/**'
+      - 'desarrollo/tools/validation/*lore05_d.py'
+      - '.github/workflows/lore05-d-documentary.yml'
+  pull_request:
+    paths:
+      - 'mundo/lore/operations/lore05d_*'
+      - 'mundo/lore/operations/LORE05D_*'
+      - 'proyecto/docs/roadmap/lore_05_d/**'
+      - 'desarrollo/tools/validation/*lore05_d.py'
+      - '.github/workflows/lore05-d-documentary.yml'
+
+jobs:
+  documentary-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validacion de identidades y contratos
+        run: python3 desarrollo/tools/validation/validate_lore05_d.py
+      - name: Pruebas adversariales
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_lore05_d.py' -v

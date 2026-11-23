@@ -44,3 +44,9 @@ The player discovers reality; the UI and AI do not invent it at observation time
 A console is an interface to an authoritative system. It assembles a structured operation, submits it to the engine and presents the returned structured result.
 
 The same operation may be exposed through different UX layouts in Starfleet Academy, a Galaxy-class ship, an older vessel or a non-Starfleet vessel.
+
+## Addendum autoral 2026-11-17: Enterprise-D modernizada
+
+La regla genérica de lectura parcial sigue vigente para plataformas y situaciones a las que corresponda. **No impone fallos rutinarios al buque insignia Proyecto Valhalla**. Conforme a [DEC-0021](enterprise_d_valhalla_superioridad_sensores_reputacion_2026-11-17.md), cuando esté activa la configuración modernizada autorizada, los contactos ordinarios dentro del contexto operacional deben producir por detección automática **o barrido manual** datos completos, correctos e inmediatos, incluidos subsistemas tácticos. Un resultado rutinario de «no se puede conocer el armamento» o una espera de 90 segundos infringen el requisito.
+
+La superioridad se resuelve mediante el perfil tecnológico del observador y datos auténticos del WorldState, no mediante invención de resultados. Solo excepciones narrativas extraordinarias explícitas pueden apartarse de la garantía; no existe un RNG de fallos ordinarios. Esta es una **decisión de diseño por integrar en CoreRPG/HOST/UE5**, no afirmación de implementación.

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "s04_player_khan_vulcan_male",
+  "status": "FIXED_AUTHOR_BACKSTORY_DESIGN_ONLY",
+  "subject_kind": "one_fixed_player_protagonist_per_campaign",
+  "first_campaign_year": 2383,
+  "identity": {
+    "display_name": "CUSTOMIZABLE_BY_PLAYER",
+    "sex": "male",
+    "species_id": "human_vulcan_hybrid",
+    "age_at_admission_earth_years": 45,
+    "apparent_human_age_years_approx": 30,
+    "birth_year_approx": 2338,
+    "birth_exact_date": null,
+    "place_of_birth": null,
+    "parents_names": null
+  },
+  "family": {
+    "mother": {
+      "species": "vulcan",
+      "role": "mentored_in_mental_discipline",
+      "name": null
+    },
+    "father": {
+      "species": "human",
+      "descendant_of": "khan_noonien_singh",
+      "generations_between": "UNKNOWN_AUTHORED_LATER",
+      "name": null
+    },
+    "gene_expression": {
+      "type": "fictional_rare_atavistic_multigene_reexpression",
+      "genetic_augmentation_performed_on_player": "NOT_ASSERTED",
+      "manifested_childhood": true,
+      "publicly_declared_to_academy": true
+    }
+  },
+  "life_stages": [
+    {
+      "stage": "birth",
+      "year_approx": 2338,
+      "content": "born to human father and Vulcan mother; heritage factual"
+    },
+    {
+      "stage": "childhood",
+      "content": "early extraordinary strength/reflexes are observed; parents investigate and teach care"
+    },
+    {
+      "stage": "adolescence",
+      "content": "awareness of Khan lineage and training; emotional self-command without suppression"
+    },
+    {
+      "stage": "adult_preparation",
+      "content": "decades of martial, Vulcan discipline, sciences and music; chooses not to apply too early"
+    },
+    {
+      "stage": "2383_application",
+      "age": 45,
+      "content": "fully transparent Starfleet Academy application, fit to be assessed on merit"
+    }
+  ],
+  "capability_seeds": {
+    "strength": "EXCEPTIONAL_REAL",
+    "reflexes": "EXCEPTIONAL_REAL",
+    "resilience": "EXCEPTIONAL_REAL",
+    "martial_skills": [
+      "kung_fu_MASTER",
+      "karate_MASTER",
+      "aikido_MASTER",
+      "suus_mahna_MASTER"
+    ],
+    "science_orientation": "HIGH",
+    "astronomy_interest": "HIGH",
+    "musical_practice": "ESTABLISHED",
+    "emotional_mastery": "ADVANCED_LEARNED_NOT_SUPPRESSED",
+    "anger": "POTENTIAL_HIGH_INTENSITY_NOT_DETERMINISTIC_VIOLENCE",
+    "formal_core_values": "PENDING_RULES_AND_EVIDENCE"
+  },
+  "formation": {
+    "starfleet_commission": false,
+    "starfleet_clearance": false,
+    "science_over_combat_identity": true,
+    "university_degrees": null,
+    "music_instruments": null,
+    "certificates": null
+  },
+  "admission": {
+    "initial_assessment_status": "REQUIRES_AUTHORIZED_F10_OUTCOME",
+    "opposition_from_invented_star_fleet_admirals": "NARRATIVE_FUTURE",
+    "picard_and_janeway_support_merit_hearing": "APPROVED_STORY",
+    "personal_meetings": "NOT_IMPLIED_BY_COUNCIL_DOSSIER"
+  },
+  "unknowns_must_remain_unknown": [
+    "parent_names",
+    "birthplace",
+    "exact_birth_date",
+    "specific_martial_teachers",
+    "scientific_degrees",
+    "music_instruments",
+    "genes_markers_and_exact_mutations",
+    "full_speech_and_admiral_names"
+  ],
+  "no_ai_invention": true,
+  "world_state_materialized": false
+}

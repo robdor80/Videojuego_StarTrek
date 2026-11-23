@@ -1,0 +1,65 @@
+[
+  {
+    "H": 1.6,
+    "seat_translation_z_m": -0.2153641328742544,
+    "backrest_forward_m": 0.18,
+    "chair_retreat_m": 0.4,
+    "original_geometry_changed_in_reference": false,
+    "experimental_piece_remapped": "MSB_30191 vertical extent",
+    "new_mechanisms": [
+      "VOY04_GUIA_NUEVA",
+      "VOY04_CARRO_NUEVO"
+    ],
+    "console_geometry_changed": false,
+    "remaining": [
+      "Dorsal support gap",
+      "Head/reading for tall mannequin",
+      "Gait/biomechanics",
+      "Real mechanical design",
+      "Continuous collision",
+      "Unreal"
+    ]
+  },
+  {
+    "H": 1.75,
+    "seat_translation_z_m": -0.1783141328742544,
+    "backrest_forward_m": 0.18,
+    "chair_retreat_m": 0.4,
+    "original_geometry_changed_in_reference": false,
+    "experimental_piece_remapped": "MSB_30191 vertical extent",
+    "new_mechanisms": [
+      "VOY04_GUIA_NUEVA",
+      "VOY04_CARRO_NUEVO"
+    ],
+    "console_geometry_changed": false,
+    "remaining": [
+      "Dorsal support gap",
+      "Head/reading for tall mannequin",
+      "Gait/biomechanics",
+      "Real mechanical design",
+      "Continuous collision",
+      "Unreal"
+    ]
+  },
+  {
+    "H": 1.9,
+    "seat_translation_z_m": -0.14126413287425443,
+    "backrest_forward_m": 0.18,
+    "chair_retreat_m": 0.4,
+    "original_geometry_changed_in_reference": false,
+    "experimental_piece_remapped": "MSB_30191 vertical extent",
+    "new_mechanisms": [
+      "VOY04_GUIA_NUEVA",
+      "VOY04_CARRO_NUEVO"
+    ],
+    "console_geometry_changed": false,
+    "remaining": [
+      "Dorsal support gap",
+      "Head/reading for tall mannequin",
+      "Gait/biomechanics",
+      "Real mechanical design",
+      "Continuous collision",
+      "Unreal"
+    ]
+  }
+]

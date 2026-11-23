@@ -1,0 +1,32 @@
+name: LORE-05A — Reconciliación documental
+
+on:
+  push:
+    paths:
+      - 'proyecto/docs/decisions/**'
+      - 'proyecto/docs/roadmap/lore_05_a/**'
+      - 'proyecto/docs/roadmap/README.md'
+      - 'mundo/lore/**'
+      - 'desarrollo/tools/validation/*lore05_a.py'
+      - '.github/workflows/lore05-a-documentary.yml'
+  pull_request:
+    paths:
+      - 'proyecto/docs/decisions/**'
+      - 'proyecto/docs/roadmap/lore_05_a/**'
+      - 'proyecto/docs/roadmap/README.md'
+      - 'mundo/lore/**'
+      - 'desarrollo/tools/validation/*lore05_a.py'
+      - '.github/workflows/lore05-a-documentary.yml'
+
+jobs:
+  documentary-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Coherencia DEC-0020 y catálogos heredados
+        run: python3 desarrollo/tools/validation/validate_lore05_a.py
+      - name: Mutaciones negativas
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_lore05_a.py' -v

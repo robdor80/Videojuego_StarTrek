@@ -1,0 +1,50 @@
+{
+  "time": "2026-10-21T12:54:26.533414+02:00",
+  "files": [
+    {
+      "name": "COMPROBACION_ENTRADAS.json",
+      "bytes": 73873,
+      "sha256": "d6498ef985c813bb0050b7717abaeb327dbae044906552097985754e73b2ea2c"
+    },
+    {
+      "name": "ESTADO_PARADA.json",
+      "bytes": 17645,
+      "sha256": "d720c191c7a907a5ae78497eca506ef241ebfded7af1c06b170fca0eed1be963"
+    },
+    {
+      "name": "INVENTARIO_ARCHIVOS.csv",
+      "bytes": 49027,
+      "sha256": "219746e176b55b10fd5ff6f742f8edd67322e4f55a50d158a5169c1f9359b510"
+    },
+    {
+      "name": "registrar_estado.py",
+      "bytes": 5545,
+      "sha256": "28fff235d765766686d52c5e5ef46e010821353f47e840a4f67bc7ce628792b1"
+    },
+    {
+      "name": "SUTHERLAND_ESTADO_FINAL.md",
+      "bytes": 11715,
+      "sha256": "e74a7b95cc7588d91c2c5d3c07b88c4a2ab5a487b8a73e16408e0fe667a53252"
+    },
+    {
+      "name": "UE5_ENTORNO_COMPARTIDO.md",
+      "bytes": 8555,
+      "sha256": "8ed8d44d8ccd4bcc04185b0d3849d658cbc9de37ab48bea007ab745e2a9c11af"
+    },
+    {
+      "name": "VERIFICACION_CIERRE_TRASPASO.json",
+      "bytes": 497,
+      "sha256": "28218d2dc2148173d0260a170fdcb3aa1363f943422d64967dd9062c65e6c291"
+    },
+    {
+      "name": "VOYAGER_HANDOFF.md",
+      "bytes": 44631,
+      "sha256": "773258f5009a16811b7031df7c1e7f9825a6f3b42f2414dec662f784f8916203"
+    },
+    {
+      "name": "VOYAGER_NUEVO_HILO.md",
+      "bytes": 7135,
+      "sha256": "89788402cfb9b31fa9e11d531672a34595a0cb7f1de7a09437fb8be4dc6704cd"
+    }
+  ]
+}

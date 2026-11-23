@@ -74,6 +74,10 @@
 *.tif
 *.tiff
 
+# Texturas PBR Galaxy Refit A2 (biblioteca local en el árbol del proyecto).
+# No versionar las imágenes, mapas, ZIP ni ficheros auxiliares de esta biblioteca.
+/PROYECTO VALHALLA/Biblioteca_PBR_Galaxy_Refit_A2/
+
 # Imágenes de bibliotecas 3D, texturas y capturas de auditorías: locales.
 # Documentos y scripts dentro de estas carpetas siguen siendo versionables.
 /assets/**/*.png

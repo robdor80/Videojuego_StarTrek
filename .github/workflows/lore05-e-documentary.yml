@@ -1,0 +1,29 @@
+name: LORE-05E — Idiomas, comunicación y exploración
+
+on:
+  push:
+    paths:
+      - 'mundo/lore/languages/**'
+      - 'mundo/lore/exploration/**'
+      - 'proyecto/docs/roadmap/lore_05_e/**'
+      - 'desarrollo/tools/validation/*lore05_e.py'
+      - '.github/workflows/lore05-e-documentary.yml'
+  pull_request:
+    paths:
+      - 'mundo/lore/languages/**'
+      - 'mundo/lore/exploration/**'
+      - 'proyecto/docs/roadmap/lore_05_e/**'
+      - 'desarrollo/tools/validation/*lore05_e.py'
+      - '.github/workflows/lore05-e-documentary.yml'
+jobs:
+  documentary-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validar contratos heredados y casos
+        run: python3 desarrollo/tools/validation/validate_lore05_e.py
+      - name: Pruebas adversariales
+        run: python3 -m unittest discover -s desarrollo/tools/validation -p 'test_lore05_e.py' -v

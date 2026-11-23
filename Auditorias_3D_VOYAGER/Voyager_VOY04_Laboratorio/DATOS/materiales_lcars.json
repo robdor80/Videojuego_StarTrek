@@ -1,0 +1,48 @@
+[
+  {
+    "name": "scrn10_3",
+    "nodes": [
+      {
+        "type": "ShaderNodeBsdfPrincipled",
+        "image": null
+      },
+      {
+        "type": "ShaderNodeOutputMaterial",
+        "image": null
+      },
+      {
+        "type": "ShaderNodeTexImage",
+        "image": "scn10.3.png"
+      }
+    ],
+    "diffuse": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  {
+    "name": "scrn10_4",
+    "nodes": [
+      {
+        "type": "ShaderNodeBsdfPrincipled",
+        "image": null
+      },
+      {
+        "type": "ShaderNodeOutputMaterial",
+        "image": null
+      },
+      {
+        "type": "ShaderNodeTexImage",
+        "image": "scn10.4.png"
+      }
+    ],
+    "diffuse": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  }
+]

@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F10 · Registro de aspirante — Academia de la Flota Estelar · v0.3</title>
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 850px; padding: 12px 16px 45px; margin: auto; color: #1b1b1b; }
+  fieldset { border: 1px solid #aaa; padding: 14px; margin: 16px 0; }
+  legend { font-weight: 700; padding: 0 6px; }
+  label { display: block; font-weight: 600; margin-top: 12px; margin-bottom: 4px; }
+  input:not([type=checkbox]), select, textarea { font: inherit; width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #888; border-radius: 3px; }
+  input[type=checkbox] { margin-right: 6px; }
+  textarea { resize: vertical; }
+  button { font: inherit; padding: 8px 12px; margin: 6px 6px 6px 0; }
+  small { color: #555; display: block; }
+  p.notice { padding: 10px; background: #f0f0f0; border-left: 3px solid #555; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #f5f5f5; border: 1px solid #bbb; padding: 12px; max-height: 480px; overflow: auto; }
+  #errors { color: #a00000; }
+  .activity { margin: 14px 0; }
+  .buttons { margin-top: 16px; }
+  #status { font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>Registro de aspirante — Academia de la Flota Estelar</h1>
+<p>Rellena los datos de tu personaje antes de ingresar en la Academia en el año 2383. Los antecedentes deben ser coherentes con la edad, la cultura, los estudios y la experiencia adquirida.</p>
+<p class="notice"><strong>Prototipo local:</strong> comprueba campos básicos y permite descargar el borrador JSON. No se conecta a la IA, CoreRPG ni Unreal y no crea todavía ningún personaje.</p>
+<form id="creator" novalidate>
+<fieldset><legend>1. Identidad</legend>
+<label for="nickname">Alias del jugador *</label><input id="nickname" maxlength="64" required placeholder="Ej.: Explorador">
+<small>Este alias identifica al jugador, no es el nombre de su personaje.</small>
+<label for="character_name">Nombre del personaje *</label><input id="character_name" maxlength="120" required placeholder="Ej.: T'Ralen">
+<label for="species_id">Especie *</label>
+<select id="species_id" required><option value="">— Selecciona —</option><option value="human">Humano</option><option value="vulcan">Vulcano puro</option><option value="human_vulcan_hybrid">Híbrido humano-vulcano</option></select>
+<label for="age">Edad al comenzar la campaña, en años terrestres *</label><input type="number" id="age" min="0" step="1" placeholder="Edad" required>
+<small id="age_hint">Selecciona una especie para ver la edad mínima.</small>
+</fieldset>
+<fieldset><legend>2. Origen y familia</legend>
+<label for="birth_place">Lugar de nacimiento *</label><input id="birth_place" maxlength="180" required placeholder="Ej.: Vigo, España, Tierra (no solo el planeta)">
+<small>Indica la localidad si se conoce, además del planeta. Así la biografía y el formulario utilizarán la misma información.</small>
+<label for="upbringing_place">Lugar o lugares de crianza *</label><input id="upbringing_place" maxlength="240" required placeholder="Ej.: Vulcano y Tierra">
+<label for="citizenship">Ciudadanía declarada *</label><select id="citizenship" required><option value="">— Selecciona —</option><option value="federation_claim">Federación (declarada, no acreditada)</option><option value="other">Otra situación (explicar en la biografía)</option><option value="unknown">Por determinar</option></select>
+<label for="languages">Idiomas aprendidos (opcional)</label><input id="languages" maxlength="600" placeholder="Ej.: estándar de la Federación, vulcano básico">
+<label for="family_context">Familia, tutores y entorno familiar (opcional)</label><textarea id="family_context" maxlength="1500" rows="2"></textarea>
+</fieldset>
+<fieldset><legend>3. Cultura, emociones y tradiciones</legend>
+<div id="cultural_fields"><p>Primero selecciona la especie.</p></div>
+</fieldset>
+<fieldset><legend>4. Aspecto físico</legend>
+<label for="physical_appearance">Descripción física *</label><textarea id="physical_appearance" maxlength="1200" rows="2" placeholder="Rasgos, ojos, cabello, constitución..." required></textarea>
+
+</fieldset>
+<fieldset><legend>5. Educación, habilidades y experiencia</legend>
+<label for="education">Formación previa *</label><select id="education" required><option value="">— Selecciona —</option><option value="general">Educación general</option><option value="technical">Estudios técnicos civiles</option><option value="higher">Estudios superiores civiles</option><option value="home_supervised">Formación familiar o supervisada</option><option value="other">Otra formación (describir)</option></select>
+<label for="education_details">Estudios, centros, maestros y duración (opcional)</label><textarea id="education_details" maxlength="2200" rows="2" placeholder="Ej.: astronomía con tutores civiles durante tres años"></textarea>
+<label for="skills_narrative">Habilidades aprendidas y cómo las adquiriste (opcional)</label><textarea id="skills_narrative" maxlength="2200" rows="3" placeholder="Ej.: reparaciones básicas, meditación, navegación civil..."></textarea>
+<small>Las habilidades se describen, no se reparten puntos ni se concede un nivel experto automáticamente.</small>
+<label for="civil_experience">Experiencia profesional civil (opcional)</label><textarea id="civil_experience" maxlength="2200" rows="2" placeholder="Ej.: prácticas supervisadas en un observatorio"></textarea>
+<label for="certifications">Certificaciones y títulos (opcional)</label><textarea id="certifications" maxlength="1200" rows="2" placeholder="Indica centro, duración y título si procede"></textarea>
+</fieldset>
+<fieldset><legend>6. Actividades y aficiones</legend>
+<p>Declara al menos una actividad e indica cuándo empezaste a practicarla. Puedes añadir hasta diez.</p>
+<div id="activities"></div>
+<button id="add_activity" type="button">Añadir otra actividad</button>
+</fieldset>
+<fieldset><legend>7. Personalidad y forma de actuar</legend>
+<p>Esto es <strong>cómo se describe el aspirante</strong>, no un examen psicológico oficial. La Flota Estelar podrá evaluar a tu personaje durante la partida y conservar ambos registros por separado. No otorga ni quita habilidades, permisos o ascensos.</p>
+<label for="personality_description">¿Cómo describirías tu carácter? *</label>
+<textarea id="personality_description" rows="3" maxlength="1700" required placeholder="Ej.: soy tranquilo, curioso y persistente, pero a veces me cuesta pedir ayuda"></textarea>
+<label for="values">¿Qué valor orienta más tus decisiones? *</label>
+<select id="values" required><option value="">— Selecciona —</option><option value="service">Servicio y responsabilidad</option><option value="curiosity">Curiosidad y conocimiento</option><option value="justice">Justicia e integridad</option><option value="loyalty">Lealtad y compañerismo</option><option value="autonomy">Independencia y libertad</option><option value="compassion">Empatía y cuidado de otros</option><option value="truth">Verdad y rigor</option><option value="other">Otros valores (explicar en el texto)</option></select>
+<label for="teamwork_style">¿Cómo sueles trabajar con otras personas? *</label>
+<select id="teamwork_style" required><option value="">— Selecciona —</option><option value="collaborative">Colaboro y comparto decisiones</option><option value="independent">Prefiero tareas autónomas</option><option value="coordinate">Me gusta coordinar equipos</option><option value="support">Prefiero apoyar a otros</option><option value="adaptive">Me adapto a lo que necesita el grupo</option></select>
+<label for="stress_style">Ante la presión, ¿cuál suele ser tu primera reacción? *</label>
+<select id="stress_style" required><option value="">— Selecciona —</option><option value="analyze">Analizo la situación antes de actuar</option><option value="act">Actúo con rapidez y ajusto sobre la marcha</option><option value="consult">Consulto con otros para encontrar soluciones</option><option value="protocol">Me centro en seguir el procedimiento</option><option value="variable">Depende de la situación; necesito contextualizarlo</option></select>
+<label for="leadership_style">Relación con el liderazgo (opcional)</label>
+<select id="leadership_style"><option value="">— Sin declarar —</option><option value="consultative">Prefiero liderar escuchando y consultando</option><option value="decisive">Asumo el mando y tomo decisiones cuando hace falta</option><option value="supportive">Me siento más cómodo apoyando a quien lidera</option><option value="development">Me gustaría aprender a liderar</option><option value="flexible">Cambio de papel según la situación</option></select>
+<label for="conflict_style">Ante un desacuerdo importante (opcional)</label>
+<select id="conflict_style"><option value="">— Sin declarar —</option><option value="dialogue">Busco el diálogo y escuchar las razones</option><option value="evidence">Analizo hechos y argumentos</option><option value="mediate">Intento mediar entre las partes</option><option value="direct">Expongo mi opinión de forma directa</option><option value="superior">Pido ayuda a un superior o mediador</option><option value="variable">Depende de la situación</option></select>
+<label for="emotion_style">¿Cómo expresas habitualmente tus emociones? (opcional)</label>
+<select id="emotion_style"><option value="">— Sin declarar —</option><option value="open">Suelo expresarlas abiertamente</option><option value="reserved">Me reservo lo que siento</option><option value="regulated">Intento regularlas mediante técnicas aprendidas</option><option value="contextual">Depende de la relación y el contexto</option></select>
+<label for="strengths">Fortalezas que reconoces en ti (elige hasta tres; opcional)</label>
+<div id="strengths" role="group" aria-label="Fortalezas autodeclaradas">
+<label><input type="checkbox" name="strength" value="curiosity"> Curiosidad</label>
+<label><input type="checkbox" name="strength" value="empathy"> Empatía</label>
+<label><input type="checkbox" name="strength" value="discipline"> Disciplina</label>
+<label><input type="checkbox" name="strength" value="patience"> Paciencia</label>
+<label><input type="checkbox" name="strength" value="creativity"> Creatividad</label>
+<label><input type="checkbox" name="strength" value="courage"> Valentía</label>
+<label><input type="checkbox" name="strength" value="teamwork"> Trabajo en equipo</label>
+<label><input type="checkbox" name="strength" value="integrity"> Integridad</label>
+<label><input type="checkbox" name="strength" value="adaptability"> Capacidad de adaptación</label>
+<label><input type="checkbox" name="strength" value="persistence"> Perseverancia</label>
+</div>
+<small>Las fortalezas expresan cómo te ves; no equivalen a niveles de habilidad ni certificados.</small>
+<label for="growth_areas">¿Qué te gustaría mejorar de ti mismo? (opcional)</label>
+<textarea id="growth_areas" rows="2" maxlength="1200" placeholder="Ej.: escuchar antes de intervenir, delegar o gestionar mejor la frustración"></textarea>
+<label for="ethical_dilemma">Situación: un compañero incumple un procedimiento para ayudar a civiles en peligro. ¿Qué harías y por qué? (opcional)</label>
+<textarea id="ethical_dilemma" rows="3" maxlength="1500" placeholder="No hay una respuesta automática correcta: explica tu razonamiento y las circunstancias que considerarías"></textarea>
+<small>Esta respuesta puede servir más adelante como referencia narrativa. No es una prueba de aptitud psicológica.</small>
+</fieldset>
+<fieldset><legend>8. Vocación, carrera y biografía</legend>
+<label for="objective">Área de interés en la Flota Estelar *</label><select id="objective" required><option value="">— Selecciona —</option><option value="exploration">Exploración</option><option value="science">Ciencias</option><option value="engineering">Ingeniería</option><option value="navigation">Navegación y pilotaje</option><option value="medicine">Medicina</option><option value="security">Seguridad</option><option value="diplomacy">Diplomacia</option><option value="undecided">Todavía no lo tengo decidido</option><option value="other">Otra aspiración</option></select>
+<label for="career_goal">Objetivo profesional dentro de la Flota Estelar *</label>
+<select id="career_goal" required>
+<option value="">— Selecciona —</option>
+<option value="starship_captain">Capitán/a al mando de una nave</option>
+<option value="first_officer">Primer/a oficial de una nave</option>
+<option value="chief_engineer">Jefe/a de ingeniería</option>
+<option value="chief_science">Jefe/a científico/a</option>
+<option value="chief_medical">Jefe/a médico/a</option>
+<option value="chief_security">Jefe/a de seguridad</option>
+<option value="chief_operations">Jefe/a de operaciones</option>
+<option value="chief_navigation">Responsable de navegación o pilotaje</option>
+<option value="tactical_officer">Oficial táctico</option>
+<option value="exploration_specialist">Especialista en exploración</option>
+<option value="diplomatic_officer">Oficial diplomático</option>
+<option value="academy_instructor">Instructor/a de la Academia</option>
+<option value="undecided">Todavía no lo he decidido</option>
+<option value="other">Otra meta (especificar)</option>
+</select>
+<small>Es una meta personal de futuro, no un rango ni un destino concedido. Puedes cambiarla durante tu carrera.</small>
+<div id="career_other_box" hidden>
+<label for="career_goal_other">¿Qué objetivo profesional tienes? *</label>
+<input id="career_goal_other" maxlength="160" placeholder="Describe la meta con tus palabras">
+</div>
+<label for="motivation">¿Por qué deseas ingresar en la Academia? *</label><textarea id="motivation" maxlength="1400" rows="2" required></textarea>
+<label for="biography">Biografía libre *</label><textarea id="biography" maxlength="6500" rows="6" placeholder="Nací... Mi infancia... A los ... estudié... Aprendí..." required></textarea>
+<small>La IA contrastará más adelante la biografía con el contrato humano, vulcano o híbrido. Una vida excepcional puede ser válida si está bien explicada.</small>
+</fieldset>
+<div id="errors" role="alert" aria-live="polite"></div>
+<div class="buttons"><button type="submit">Comprobar campos y preparar borrador</button><button id="download" type="button" disabled>Descargar borrador JSON</button></div>
+<p><label for="import_json">Cargar un borrador JSON anterior (opcional)</label>
+<input id="import_json" type="file" accept=".json,application/json">
+<small>Puedes recuperar tu ficha anterior sin volver a rellenar todos los campos. La carga es local y no valida el personaje.</small></p>
+<p id="status" role="status">Pendiente de preparar borrador.</p>
+<h2>Vista del borrador para F10</h2>
+<small>El borrador no supone autorización, matrícula en la Academia ni creación de PERSON.</small>
+<pre id="preview">(vacío)</pre>
+</form>
+<script>
+'use strict';
+const species = {
+  human: { label:'Humano', min:18, cultures:[['earth_urban','Tierra: entorno urbano'],['earth_rural','Tierra: entorno rural'],['colony','Colonia humana'],['civil_ship','Nave o estación civil'],['intercultural','Hogar intercultural'],['other','Otro entorno']] },
+  vulcan: { label:'Vulcano puro', min:25, cultures:[['vulcan_traditional','Vulcano: tradición lógica familiar'],['vulcan_nontraditional','Vulcano: hogar heterodoxo'],['vulcan_other','Vulcano: otras costumbres'],['offworld','Fuera de Vulcano']] },
+  human_vulcan_hybrid: { label:'Híbrido humano-vulcano', min:22, cultures:[['vulcan','Predominantemente vulcana'],['earth','Predominantemente terrestre'],['mixed','Costumbres mixtas'],['other','Otra trayectoria de crianza']] }
+};
+const activitiesCategories = [ ['physical_training','Entrenamiento físico'],['martial_art','Arte marcial'],['sport','Deporte'],['academic_interest','Interés académico'],['science','Ciencias'],['technical','Actividad técnica'],['medical','Conocimientos médicos'],['language','Idiomas'],['artistic','Arte o música'],['craft','Oficio o artesanía'],['social_or_cultural','Actividad cultural o social'],['outdoor','Naturaleza y exploración'],['other','Otra'] ];
+const freq = [['occasional','Ocasional'],['regular','Regular'],['intensive','Intensiva'],['historical','Ya no la practico']];
+const careerGoals = [['starship_captain','Capitán/a al mando de una nave'],['first_officer','Primer/a oficial de una nave'],['chief_engineer','Jefe/a de ingeniería'],['chief_science','Jefe/a científico/a'],['chief_medical','Jefe/a médico/a'],['chief_security','Jefe/a de seguridad'],['chief_operations','Jefe/a de operaciones'],['chief_navigation','Responsable de navegación o pilotaje'],['tactical_officer','Oficial táctico'],['exploration_specialist','Especialista en exploración'],['diplomatic_officer','Oficial diplomático'],['academy_instructor','Instructor/a de la Academia'],['undecided','Todavía no lo he decidido'],['other','Otra meta']];
+const ritualFields = [
+ ['emotion_training','Relación con el control emocional y la lógica',[['not_declared','No declarar'],['none','Sin formación vulcana específica'],['basic','Meditación y lógica básica'],['regular','Práctica habitual o guiada'],['advanced','Disciplina avanzada'],['heterodox','Práctica personal o heterodoxa']]],
+ ['kahs_wan','Kahs-wan',[['not_declared','No declarar'],['not_done','No realizado'],['observed','Lo conozco o presencié'],['attempted','Lo intenté'],['completed','Lo completé']]],
+ ['tal_oth','Tal\'oth',[['not_declared','No declarar'],['not_done','No realizado'],['attempted','Lo intenté'],['completed','Lo completé']]],
+ ['kolinahr','Kolinahr',[['not_declared','No declarar'],['not_started','No iniciado'],['studying','Interés o formación'],['attempted','Lo intenté'],['completed','Afirmo haberlo completado (extraordinario)']]],
+ ['telepathy_training','Formación en contacto telepático',[['not_declared','No declarar'],['none','Sin entrenamiento'],['intro','Introducción'],['supervised','Entrenamiento supervisado'],['advanced','Formación avanzada declarada']]]
+];
+let lastPayload = null;
+const $ = id => document.getElementById(id);
+const val = id => ($(id)?.value || '').trim();
+const labelOf = (list, id) => (list.find(item=>item[0]===id)||['','Sin declarar'])[1];
+function el(tag,text) { const item=document.createElement(tag); if(text!==undefined)item.textContent=text; return item; }
+function field(parent,id,title,opts,textarea=false) {
+  parent.appendChild(Object.assign(el('label',title),{htmlFor:id}));
+  const input=el(textarea?'textarea':'select');input.id=id;
+  if(textarea){ input.rows=3; input.maxLength=1600; }
+  else { input.add(new Option('— Selecciona —',''));opts.forEach(x=>input.add(new Option(x[1],x[0]))); }
+  parent.appendChild(input);return input;
+}
+function renderCulture() {
+  const sid=val('species_id'), c=$('cultural_fields'); c.replaceChildren();
+  if(!species[sid]){c.appendChild(el('p','Selecciona primero una especie.'));$('age_hint').textContent='Selecciona una especie para ver la edad mínima.';return;}
+  const d=species[sid];$('age').min=d.min;
+  $('age_hint').textContent='Edad mínima de '+d.label+': '+d.min+' años terrestres. No existe edad máxima automática.';
+  field(c,'upbringing_type','Tipo de crianza *',d.cultures);
+  if(sid!=='human') {
+    c.appendChild(el('p','Estos rituales y disciplinas son opcionales. No todos los vulcanos ni híbridos los practican.'));
+    ritualFields.forEach(([id,title,opts])=>field(c,id,title+' (opcional)',opts));
+    field(c,'ritual_context','Explica los ritos o la formación avanzada que hayas declarado (opcional)',null,true);
+    field(c,'family_customs','Costumbres familiares (opcional)',null,true);
+  } else c.appendChild(el('p','Si tu personaje humano aprendió costumbres vulcanas, puedes explicarlo en su biografía.'));
+  invalidate();
+}
+function makeActivity() {
+  const region=$('activities');if(region.children.length>=10)return;
+  const n=region.children.length+1,box=el('fieldset');box.className='activity';box.appendChild(el('legend','Actividad o afición '+n));
+  function item(name,label,kind,opts) {
+    const wrap=el('div');wrap.appendChild(el('label',label));let input;
+    if(kind==='select'){input=el('select');opts.forEach(o=>input.add(new Option(o[1],o[0])));}
+    else {input=el('input');input.type=kind;if(kind==='number'){input.min='0';input.step='1';}}
+    input.dataset.activity=name;wrap.appendChild(input);box.appendChild(wrap);return input;
+  }
+  item('name','Nombre de la actividad','text').placeholder='Ej.: astronomía, meditación, karate';
+  item('category','Categoría','select',activitiesCategories);
+  item('start_age','Edad a la que comenzaste','number');
+  item('frequency','Frecuencia','select',freq);
+  const current=item('current','Sigo practicándola','checkbox');current.checked=true;
+  const ended=item('end_age','Edad en que la dejé (solo si ya no la practico)','number');ended.disabled=true;
+  current.addEventListener('change',()=>{ended.disabled=current.checked;if(current.checked)ended.value='';invalidate();});
+  const remove=el('button','Quitar actividad');remove.type='button';
+  remove.addEventListener('click',()=>{if(region.children.length>1){box.remove();invalidate();}});box.appendChild(remove);
+  region.appendChild(box);invalidate();
+}
+function collect() {
+  const keys=['nickname','character_name','species_id','age','birth_place','upbringing_place','citizenship','languages','family_context','physical_appearance','education','education_details','skills_narrative','civil_experience','certifications','objective','career_goal','career_goal_other','motivation','biography','personality_description','values','teamwork_style','stress_style','leadership_style','conflict_style','emotion_style','growth_areas','ethical_dilemma','upbringing_type','emotion_training','kahs_wan','tal_oth','kolinahr','telepathy_training','ritual_context','family_customs'];
+  const result={};keys.forEach(k=>result[k]=val(k));
+  result.strengths=Array.from(document.querySelectorAll('input[name="strength"]:checked')).map(node=>node.value);
+  result.activities=Array.from($('activities').children).map(box=>{
+    const get=name=>box.querySelector('[data-activity="'+name+'"]');
+    return {name:get('name').value.trim(),category:get('category').value,start_age:get('start_age').value,frequency:get('frequency').value,current:get('current').checked,end_age:get('end_age').value};
+  });return result;
+}
+function validate(d) {
+  const errors=[];
+  const required=[['nickname','Alias del jugador'],['character_name','Nombre del personaje'],['species_id','Especie'],['age','Edad'],['birth_place','Lugar de nacimiento'],['upbringing_place','Lugar de crianza'],['citizenship','Ciudadanía'],['physical_appearance','Descripción física'],['education','Formación previa'],['objective','Área de interés'],['career_goal','Objetivo profesional'],['personality_description','Descripción de personalidad'],['values','Valor principal'],['teamwork_style','Trabajo en equipo'],['stress_style','Reacción ante presión'],['motivation','Motivación'],['biography','Biografía libre']];
+  for(const [id,label] of required)if(!d[id])errors.push('Debes completar: '+label+'.');
+  const rule=species[d.species_id],age=Number(d.age);
+  if(!rule)errors.push('Debes escoger una de las tres especies disponibles.');
+  else {
+    if(!d.age||!Number.isSafeInteger(age)||age<0||age>=2383)errors.push('La edad debe ser un número entero válido de años terrestres.');
+    else if(age<rule.min)errors.push('La edad mínima de '+rule.label+' es '+rule.min+' años terrestres.');
+    if(!rule.cultures.some(row=>row[0]===d.upbringing_type))errors.push('Debes indicar un tipo de crianza.');
+  }
+  if(d.career_goal==='other'&&!d.career_goal_other)errors.push('Especifica tu objetivo profesional.');
+  if(d.strengths.length>3)errors.push('Elige como máximo tres fortalezas.');
+  if(d.activities.length===0)errors.push('Añade al menos una actividad o afición.');
+  if(d.activities.length>10)errors.push('Máximo diez actividades.');
+  d.activities.forEach((a,i)=>{
+    const start=Number(a.start_age),end=Number(a.end_age),no=i+1;
+    if(!a.name)errors.push('Falta el nombre de la actividad '+no+'.');
+    if(!a.start_age||!Number.isSafeInteger(start)||start<0||start>age)errors.push('Edad de inicio incorrecta en la actividad '+no+'.');
+    if(!a.current&&(!a.end_age||!Number.isSafeInteger(end)||end<start||end>age))errors.push('Edad de finalización incorrecta en la actividad '+no+'.');
+  });
+  if(d.species_id!=='human'&&d.kolinahr==='completed'&&!d.ritual_context)errors.push('Si declaras Kolinahr completado, explica la formación y la trayectoria.');
+  return errors;
+}
+const personalityLabels = {
+  values: [['service','Servicio y responsabilidad'],['curiosity','Curiosidad y conocimiento'],['justice','Justicia e integridad'],['loyalty','Lealtad y compañerismo'],['autonomy','Independencia y libertad'],['compassion','Empatía y cuidado de otros'],['truth','Verdad y rigor'],['other','Otros valores']],
+  teamwork_style: [['collaborative','Colaboración'],['independent','Autonomía'],['coordinate','Coordinación'],['support','Apoyo al equipo'],['adaptive','Adaptación al equipo']],
+  stress_style: [['analyze','Analiza antes de actuar'],['act','Actúa con rapidez'],['consult','Consulta al equipo'],['protocol','Sigue procedimientos'],['variable','Según la situación']],
+  leadership_style: [['consultative','Consulta'],['decisive','Asume decisiones'],['supportive','Apoya'],['development','Desea aprender'],['flexible','Flexible']],
+  conflict_style: [['dialogue','Diálogo'],['evidence','Pruebas y argumentos'],['mediate','Mediación'],['direct','Directo'],['superior','Ayuda de superiores'],['variable','Variable']],
+  emotion_style: [['open','Expresión abierta'],['reserved','Reserva'],['regulated','Regulación aprendida'],['contextual','Según el contexto']]
+};
+const strengthsLabels = {curiosity:'Curiosidad', empathy:'Empatía', discipline:'Disciplina', patience:'Paciencia', creativity:'Creatividad', courage:'Valentía', teamwork:'Trabajo en equipo', integrity:'Integridad', adaptability:'Adaptación', persistence:'Perseverancia'};
+function personalityText(d) {
+  return ['Descripción: '+d.personality_description,
+          'Valor: '+labelOf(personalityLabels.values,d.values),
+          'Equipo: '+labelOf(personalityLabels.teamwork_style,d.teamwork_style),
+          'Presión: '+labelOf(personalityLabels.stress_style,d.stress_style),
+          ...(['leadership_style','conflict_style','emotion_style'].filter(k=>d[k]).map(k=>k+': '+labelOf(personalityLabels[k],d[k]))),
+          ...(d.strengths.length?['Fortalezas: '+d.strengths.map(x=>strengthsLabels[x]||x).join(', ')]:[]),
+          ...(d.growth_areas?['Áreas de mejora: '+d.growth_areas]:[]),
+          ...(d.ethical_dilemma?['Caso de criterio ético: '+d.ethical_dilemma]:[])
+          ].join('; ');
+}
+function personalityRecord(d) {
+  return {
+    source:'SELF_REPORTED_BY_PLAYER_NOT_STARFLEET',
+    description:d.personality_description,
+    values:d.values, teamwork_style:d.teamwork_style, stress_style:d.stress_style,
+    leadership_style:d.leadership_style||null, conflict_style:d.conflict_style||null,
+    emotion_style:d.emotion_style||null, strengths:d.strengths,
+    growth_areas:d.growth_areas||null, ethical_dilemma:d.ethical_dilemma||null,
+    game_effects:'NONE', institutional_conclusion:null
+  };
+}
+function prepare(d) {
+  const sid=d.species_id, s=species[sid];
+  const culture=['Tipo de crianza: '+labelOf(s.cultures,d.upbringing_type),'Lugares: '+d.upbringing_place];
+  if(sid!=='human'){
+    ritualFields.forEach(([id,title,opts])=>{if(d[id]&&d[id]!=='not_declared')culture.push(title+': '+labelOf(opts,d[id]));});
+    if(d.ritual_context)culture.push('Contexto de rituales: '+d.ritual_context);
+    if(d.family_customs)culture.push('Costumbres: '+d.family_customs);
+  }
+  const experiences=[];
+  if(d.skills_narrative)experiences.push('Habilidades y aprendizaje declarados: '+d.skills_narrative);
+  experiences.push(d.civil_experience?'Experiencia civil: '+d.civil_experience:'Sin experiencia civil profesional declarada.');
+  experiences.push('Relato biográfico del aspirante (declaración libre): '+d.biography);
+  experiences.push('Autodescripción de personalidad (no evaluación institucional): '+personalityText(d));
+  const draft={
+    display_name:d.character_name,species_id:sid,age_or_birth_date:Number(d.age),adult_equivalent_status:true,
+    origin:'Lugar de nacimiento: '+d.birth_place+'. Crianza: '+d.upbringing_place+'.',
+    citizenship_context:'Ciudadanía declarada, no acreditada: '+labelOf([['federation_claim','Federación'],['other','Otra situación'],['unknown','Por determinar']],d.citizenship)+'.',
+    culture_context:culture.join('; '),appearance_profile:d.physical_appearance,
+    prior_education:['Formación: '+labelOf([['general','Educación general'],['technical','Estudios técnicos civiles'],['higher','Estudios superiores civiles'],['home_supervised','Formación familiar o supervisada'],['other','Otra formación']],d.education)+(d.education_details?' — '+d.education_details:'')],
+    prior_activities_and_hobbies:d.activities.map(a=>({name:a.name,category:a.category,started_at_or_age:Number(a.start_age),ended_at_or_current:a.current?'current':Number(a.end_age),typical_frequency:a.frequency})),
+    prior_experience:experiences,
+    initial_long_term_objective:'Área de interés: '+labelOf([['exploration','Exploración'],['science','Ciencias'],['engineering','Ingeniería'],['navigation','Navegación y pilotaje'],['medicine','Medicina'],['security','Seguridad'],['diplomacy','Diplomacia'],['undecided','Sin decidir'],['other','Otra']],d.objective)+'. Objetivo profesional (aspiración, no nombramiento): '+(d.career_goal==='other'?d.career_goal_other:labelOf(careerGoals,d.career_goal))+'. Motivación: '+d.motivation
+  };
+  if(d.languages)draft.languages=[d.languages];
+  if(d.family_context)draft.family_context=d.family_context;
+  if(d.certifications)draft.certifications=[d.certifications];
+  return {formulario:'F10/H06 - referencia 0.3',estado:'BORRADOR_PENDIENTE_VALIDACION_F10_Y_REVISION_IA',perfil_jugador_no_autoritativo:{nickname:d.nickname},f10_draft:draft,personalidad_autodeclarada:personalityRecord(d),evaluacion_psicologica_institucional:{estado:'NO_REALIZADA',resultado:null}};
+}
+function invalidate(){ lastPayload=null;$('download').disabled=true;$('preview').textContent='(vacío)';$('status').textContent='Pendiente de preparar borrador.';$('errors').replaceChildren(); }
+function careerGoalChanged() {
+  const isOther=val('career_goal')==='other';
+  $('career_other_box').hidden=!isOther;
+  $('career_goal_other').required=isOther;
+  if(!isOther)$('career_goal_other').value='';
+  invalidate();
+}
+document.querySelectorAll('input[name="strength"]').forEach(node=>node.addEventListener('change',()=>{
+  if(document.querySelectorAll('input[name="strength"]:checked').length>3)node.checked=false;
+  invalidate();
+}));
+$('career_goal').addEventListener('change',careerGoalChanged);
+$('species_id').addEventListener('change',renderCulture);
+$('add_activity').addEventListener('click',makeActivity);
+$('creator').addEventListener('input',invalidate);
+$('creator').addEventListener('change',invalidate);
+$('creator').addEventListener('submit',event=>{
+  event.preventDefault();const d=collect(),errors=validate(d),zone=$('errors');zone.replaceChildren();
+  if(errors.length){zone.appendChild(el('strong','Revisa estos campos:'));const ul=el('ul');errors.forEach(e=>ul.appendChild(el('li',e)));zone.appendChild(ul);$('status').textContent='Borrador incompleto; no se ha creado ningún personaje.';return;}
+  lastPayload=prepare(d);$('preview').textContent=JSON.stringify(lastPayload,null,2);$('status').textContent='Borrador preparado. Pendiente de las validaciones reales F10 y de IA.';$('download').disabled=false;
+});
+$('download').addEventListener('click',()=>{
+  if(!lastPayload)return;
+  const blob=new Blob([JSON.stringify(lastPayload,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='cadete_borrador_f10.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+// Restablecer fichas v0.1, v0.2 y v0.3 sin convertir la importación en aprobación.
+$('import_json').addEventListener('change',async event=>{
+  const file=event.target.files?.[0];if(!file)return;
+  const zone=$('errors');zone.replaceChildren();
+  if(file.size>256000){zone.appendChild(el('p','El archivo supera el límite de 256 KB.'));event.target.value='';return;}
+  try {
+    const wrapper=JSON.parse(await file.text());
+    if(!wrapper||typeof wrapper!=='object'||!wrapper.f10_draft||typeof wrapper.f10_draft!=='object')throw Error('No es un borrador de F10 compatible.');
+    const x=wrapper.f10_draft;
+    const set=(id,v)=>{const node=$(id);if(node&&v!==null&&v!==undefined)node.value=String(v).slice(0,node.maxLength>0?node.maxLength:15000)};
+    set('nickname',wrapper.perfil_jugador_no_autoritativo?.nickname||'');
+    set('character_name',x.display_name);
+    if(!species[x.species_id])throw Error('El archivo usa una especie distinta de las tres disponibles.');
+    set('species_id',x.species_id);renderCulture();
+    set('age',x.age_or_birth_date);
+    const origin=typeof x.origin==='string'?x.origin:'';
+    let m=origin.match(/Lugar de nacimiento:\s*(.*?)\. Crianza:\s*(.*?)\.?$/s);
+    if(!m)m=origin.match(/Lugar de nacimiento:\s*(.*?)\. Crianza en:\s*(.*?)\.?$/s);
+    if(m){set('birth_place',m[1]);set('upbringing_place',m[2]);}
+    const cit=String(x.citizenship_context||'');
+    set('citizenship',cit.includes('Federación')?'federation_claim':cit.includes('Por determinar')?'unknown':'other');
+    set('physical_appearance',x.appearance_profile);
+    const culture=String(x.culture_context||'');
+    const chosen=species[x.species_id].cultures.find(([,label])=>culture.includes(label));
+    if(chosen)set('upbringing_type',chosen[0]);
+    if(x.species_id!=='human')for(const [key,title,opts] of ritualFields){
+      const match=opts.find(([,label])=>culture.includes(title+': '+label));if(match)set(key,match[0]);
+    }
+    if(x.species_id!=='human'){
+      let a=culture.match(/Contexto de rituales:\s*(.*?)(?:; Costumbres:|$)/s);
+      if(a)set('ritual_context',a[1]);
+      a=culture.match(/Costumbres:\s*(.*?)$/s);if(a)set('family_customs',a[1]);
+    }
+    const education=Array.isArray(x.prior_education)?String(x.prior_education[0]||''):'';
+    const eduOptions=[['general','Educación general'],['technical','Estudios técnicos civiles'],['higher','Estudios superiores civiles'],['home_supervised','Formación familiar o supervisada'],['other','Otra formación']];
+    const edu=eduOptions.find(([,label])=>education.includes(label));if(edu)set('education',edu[0]);
+    if(education.includes(' — '))set('education_details',education.split(' — ').slice(1).join(' — '));
+    const self=wrapper.personalidad_autodeclarada||{};
+    for(const id of ['personality_description','values','teamwork_style','stress_style','leadership_style','conflict_style','emotion_style','growth_areas','ethical_dilemma']){
+      const key=id==='personality_description'?'description':id;
+      if(self[key])set(id,self[key]);
+    }
+    document.querySelectorAll('input[name="strength"]').forEach(node=>{node.checked=Array.isArray(self.strengths)&&self.strengths.includes(node.value)});
+    const exp=Array.isArray(x.prior_experience)?x.prior_experience:[];
+    for(const value of exp){if(typeof value!=='string')continue;
+      if(value.startsWith('Habilidades y aprendizaje declarados: '))set('skills_narrative',value.slice('Habilidades y aprendizaje declarados: '.length));
+      if(value.startsWith('Experiencia civil: '))set('civil_experience',value.slice('Experiencia civil: '.length));
+      if(value.startsWith('Relato biográfico del aspirante (declaración libre): '))set('biography',value.slice('Relato biográfico del aspirante (declaración libre): '.length));
+    }
+    set('languages',Array.isArray(x.languages)?x.languages.join(', '):'');
+    set('family_context',x.family_context);
+    set('certifications',Array.isArray(x.certifications)?x.certifications.join(', '):'');
+    $('activities').replaceChildren();
+    const a=Array.isArray(x.prior_activities_and_hobbies)?x.prior_activities_and_hobbies:[];
+    (a.length?a:[{}]).slice(0,10).forEach(entry=>{
+      makeActivity();const last=$('activities').lastElementChild;
+      const setA=(key,v)=>{const node=last.querySelector('[data-activity="'+key+'"]');if(node&&v!==null&&v!==undefined)node.value=String(v)};
+      setA('name',entry.name);setA('category',entry.category);setA('start_age',entry.started_at_or_age);setA('frequency',entry.typical_frequency);
+      const ongoing=entry.ended_at_or_current==='current'||!entry.ended_at_or_current;
+      const on=last.querySelector('[data-activity="current"]');on.checked=ongoing;
+      const end=last.querySelector('[data-activity="end_age"]');end.disabled=ongoing;
+      if(!ongoing)setA('end_age',entry.ended_at_or_current);
+    });
+    const obj=String(x.initial_long_term_objective||'');
+    const interest= obj.startsWith('Área de interés: ')?obj.split('. Objetivo profesional')[0].slice(17):obj.split('. Motivación: ')[0];
+    const objectives=[['exploration','Exploración'],['science','Ciencias'],['engineering','Ingeniería'],['navigation','Navegación y pilotaje'],['medicine','Medicina'],['security','Seguridad'],['diplomacy','Diplomacia'],['undecided','Sin decidir'],['other','Otra']];
+    const o=objectives.find(([,label])=>label===interest);if(o)set('objective',o[0]);
+    const cgoal=obj.match(/Objetivo profesional \(aspiración, no nombramiento\): (.*?)\. Motivación: /s);
+    if(cgoal){const found=careerGoals.find(([,label])=>label===cgoal[1]);set('career_goal',found?found[0]:'other');careerGoalChanged();if(!found)set('career_goal_other',cgoal[1]);}
+    else set('career_goal','undecided');
+    const motivation=obj.split('. Motivación: ').slice(1).join('. Motivación: ');if(motivation)set('motivation',motivation);
+    invalidate();$('status').textContent='Ficha anterior recuperada. Revisa el objetivo profesional y completa la nueva sección de personalidad si hace falta.';
+  } catch(err){zone.appendChild(el('p',String(err.message||err)));}
+  finally{event.target.value='';}
+});
+makeActivity();
+</script>
+</body>
+</html>

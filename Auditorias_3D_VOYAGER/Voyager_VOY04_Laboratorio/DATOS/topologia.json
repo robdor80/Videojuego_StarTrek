@@ -1,0 +1,584 @@
+[
+  {
+    "key": "Armrest_5",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Armrest_6",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Armrest_7",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Armrest_8",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Box_6",
+    "boundary_edges": 67,
+    "nonmanifold_edges": 68,
+    "closed_candidate": false
+  },
+  {
+    "key": "Box_7",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Box_8",
+    "boundary_edges": 62,
+    "nonmanifold_edges": 72,
+    "closed_candidate": false
+  },
+  {
+    "key": "Box_9",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_22",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 40,
+    "closed_candidate": false
+  },
+  {
+    "key": "ChamferBox_23",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_24",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_25",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_26",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_27",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_28",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_29",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_30",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_31",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_32",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_33",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_34",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_35",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_36",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "ChamferBox_37",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 48,
+    "closed_candidate": false
+  },
+  {
+    "key": "ChamferBox_38",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 48,
+    "closed_candidate": false
+  },
+  {
+    "key": "Layer__3",
+    "boundary_edges": 52,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Layer__4",
+    "boundary_edges": 52,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Layer__5",
+    "boundary_edges": 52,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "MSB0030110_MSB_30119",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30120",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30121",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30122",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30123",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30124",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30125",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030110_MSB_30126",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30178",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30179",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30180",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30181",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30182",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30183",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30184",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030116_MSB_30185",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30138",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30139",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30140",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30141",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30142",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30143",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30144",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030117_MSB_30145",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30131",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30132",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30133",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30134",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30135",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30136",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30137",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB0030119_MSB_30138",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30191",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30192",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30193",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30194",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30195",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30196",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30197",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30198",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30199",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30200",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30201",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30202",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30203",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30204",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30205",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30206",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30207",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30208",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30209",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30210",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30211",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30212",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30213",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30214",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30215",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "MSB_30216",
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "closed_candidate": true
+  },
+  {
+    "key": "Object_120",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_121",
+    "boundary_edges": 52,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_122",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_123",
+    "boundary_edges": 52,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_126",
+    "boundary_edges": 144,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_127",
+    "boundary_edges": 30,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_129",
+    "boundary_edges": 545,
+    "nonmanifold_edges": 74,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_76",
+    "boundary_edges": 524,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Object_77",
+    "boundary_edges": 48,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Plane_94",
+    "boundary_edges": 4,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  },
+  {
+    "key": "Plane_95",
+    "boundary_edges": 4,
+    "nonmanifold_edges": 0,
+    "closed_candidate": false
+  }
+]

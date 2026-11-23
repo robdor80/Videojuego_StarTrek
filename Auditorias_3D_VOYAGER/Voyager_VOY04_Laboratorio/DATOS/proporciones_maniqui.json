@@ -1,0 +1,27 @@
+{
+  "definition": "Proportional laboratory mannequin, neither population percentile nor biomechanics standard",
+  "H_m": [
+    1.6,
+    1.75,
+    1.9
+  ],
+  "standing_hip": 0.53,
+  "ankle": 0.045,
+  "femur": 0.245,
+  "tibia": 0.245,
+  "shoulder_above_hip": 0.288,
+  "head_center_above_hip": 0.407,
+  "head_radius": 0.063,
+  "upper_arm": 0.186,
+  "forearm": 0.146,
+  "hand_length": 0.035,
+  "thigh_radius": 0.043,
+  "shin_radius": 0.029,
+  "foot_radius": 0.027,
+  "foot_axis_length": 0.105,
+  "pelvis_half_width": 0.055,
+  "trunk_capsule_radius": 0.055,
+  "maximum_total_standing_height_formula": ".53H + .407H + .063H = H",
+  "rig": "18 independent rigid bones with Armature modifier and weight=1 per body capsule; IK solved analytically; no skin deformation",
+  "limits": "Ellipsoids, musculature, clothing and fingers omitted; capsule envelopes conservatively bound rendered surfaces; limbs fixed length in all keyframes"
+}

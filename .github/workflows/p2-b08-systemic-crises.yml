@@ -1,0 +1,53 @@
+name: P2-B08 Systemic Crises Reference
+
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_systemic_crises.py"
+      - "desarrollo/tools/generation/test_simulate_systemic_crises.py"
+      - "desarrollo/validation/fixtures/systemic_crises/**"
+      - "sistemas/universe/generation/systemic_crises_galactic_consequences_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b08-systemic-crises.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_systemic_crises.py"
+      - "desarrollo/tools/generation/test_simulate_systemic_crises.py"
+      - "desarrollo/validation/fixtures/systemic_crises/**"
+      - "sistemas/universe/generation/systemic_crises_galactic_consequences_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b08-systemic-crises.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: B08 + B01–B07 + F13, no CoreRPG authority
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python syntax, JSON and reference metadata
+        run: |
+          python -m py_compile desarrollo/tools/generation/simulate_systemic_crises.py desarrollo/tools/generation/test_simulate_systemic_crises.py
+          python -m json.tool desarrollo/validation/fixtures/systemic_crises/systemic_crisis_galactic_chain_v0.1.json > /dev/null
+          python -m json.tool sistemas/universe/generation/systemic_crises_galactic_consequences_reference_contract_v0.1.json > /dev/null
+          python -m json.tool proyecto/docs/roadmap/procedural_systemic_crises_status_v0.1.json > /dev/null
+      - name: B08 adversarial tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_systemic_crises.py' -v
+      - name: All dynamic-universe regression tests
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -v
+      - name: F13 world and sequential-gate regressions
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -v
+      - name: Deterministic CLI and non-mutation of fixture
+        run: |
+          python desarrollo/tools/generation/simulate_systemic_crises.py --fixture desarrollo/validation/fixtures/systemic_crises/systemic_crisis_galactic_chain_v0.1.json

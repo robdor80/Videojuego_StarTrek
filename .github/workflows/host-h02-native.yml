@@ -1,0 +1,362 @@
+name: HOST native H02-H06
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'desarrollo/integration/host/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f11_host/**'
+      - 'sistemas/gameplay/character_creation/**'
+      - 'sistemas/gameplay/species/**'
+      - 'sistemas/gameplay/organizations/character_affiliation_citizenship_contract.json'
+      - 'sistemas/gameplay/ship_operations/era_technology_matrix.json'
+      - 'sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json'
+      - 'sistemas/gameplay/careers/academy_path/f10_fixed_candidate_factory_contract_v2.json'
+      - 'proyecto/docs/architecture/host/**'
+      - 'sistemas/ai/**'
+      - 'juego/UE5/StarTrekRPG/**'
+      - 'desarrollo/tools/validation/test_host_h01_contracts.py'
+      - '.github/workflows/host-h02-native.yml'
+  pull_request:
+    paths:
+      - 'desarrollo/integration/host/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - 'desarrollo/integration/f11/**'
+      - 'desarrollo/integration/f11_host/**'
+      - 'sistemas/gameplay/character_creation/**'
+      - 'sistemas/gameplay/species/**'
+      - 'sistemas/gameplay/organizations/character_affiliation_citizenship_contract.json'
+      - 'sistemas/gameplay/ship_operations/era_technology_matrix.json'
+      - 'sistemas/gameplay/careers/academy_path/f10_host_candidate_factory_contract_v0.1.json'
+      - 'sistemas/gameplay/careers/academy_path/f10_fixed_candidate_factory_contract_v2.json'
+      - 'proyecto/docs/architecture/host/**'
+      - 'sistemas/ai/**'
+      - 'juego/UE5/StarTrekRPG/**'
+      - 'desarrollo/tools/validation/test_host_h01_contracts.py'
+      - '.github/workflows/host-h02-native.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            suite: native
+          - os: windows-latest
+            suite: native
+          - os: ubuntu-latest
+            suite: asan-ubsan
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      HOST_CORE_SHA: 76a7b7b485616d8c4994f384a90f123bf333591d
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ env.HOST_CORE_SHA }}
+          path: laboratorios/host/ia03b02/core
+          persist-credentials: false
+      - name: Linux HTTPS build dependencies
+        if: runner.os == 'Linux'
+        shell: bash
+        run: sudo apt-get update -qq && sudo apt-get install -y libcurl4-openssl-dev pkg-config
+      - name: Build and test HOST
+        env:
+          HOST_SUITE: ${{ matrix.suite }}
+          ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $build = Join-Path $lab 'build'
+          $core = Join-Path $lab 'core'
+          $temp = Join-Path $lab 'tmp'
+          New-Item -ItemType Directory -Path $temp -Force | Out-Null
+          $env:TMPDIR = $temp
+          $env:TEMP = $temp
+          $env:TMP = $temp
+          $env:F04_TEST_TEMP_ROOT = $temp
+          $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
+          if ($IsWindows) { $flags += @('-A', 'x64') }
+          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
+                       'host_event_delivery_unit_tests',
+                       'host_abi_tests', 'host_academy_abi_tests', 'host_academy_abi_faults',
+                       'host_academy_feasibility_tests', 'host_academy_candidate_tests',
+                       'host_academy_candidate_faults', 'host_academy_player_tests', 'host_academy_player_faults',
+                       'host_academy_persistence_tests', 'host_academy_persistence_faults',
+                       'host_biography_tests', 'host_ai_tests', 'host_biography_ai_tests', 'host_initial_biography_tests')
+          $selection = '^host\.'
+          if ($env:HOST_SUITE -eq 'asan-ubsan') {
+            $env:CC = 'clang'
+            $env:CXX = 'clang++'
+            $flags += '-DCMAKE_C_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer',
+                      '-DCMAKE_CXX_FLAGS=-fsanitize=address,undefined -fno-omit-frame-pointer'
+          } else {
+            $targets += @('f04_tests', 'f04_population_tests', 'f04_history_faults', 'f05_tests', 'f05_delegation_tests',
+                          'f05_initiative_tests', 'f05_ai_tests', 'f05_integration_audit_tests')
+            $selection = '^(host\.|f05\.|f04\.(history_faults|thread|scope|identity|class|buffers|determinism|population_.*|process_save|process_load)$)'
+          }
+          @("Star Trek: $(git rev-parse HEAD)", "CoreRPG: $(git -C $core rev-parse HEAD)",
+            "System: $([System.Runtime.InteropServices.RuntimeInformation]::OSDescription)",
+            "CXX override: $env:CXX", "CMake flags: $flags", "CTest selection: $selection") |
+            Tee-Object -FilePath "$lab/revisions.log"
+          cmake -S desarrollo/integration/host -B $build @flags 2>&1 |
+            Tee-Object -FilePath "$lab/configure.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $build --config Release --parallel 3 --target @targets 2>&1 |
+            Tee-Object -FilePath "$lab/build.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $build -C Release -j 3 -R $selection --no-tests=error --output-on-failure --output-junit "$lab/native.xml" 2>&1 |
+            Tee-Object -FilePath "$lab/tests.log"
+          exit $LASTEXITCODE
+      - name: H01 documentary contracts
+        if: matrix.suite == 'native' && !cancelled()
+        run: |
+          python desarrollo/tools/validation/test_host_h01_contracts.py 2>&1 |
+            Tee-Object -FilePath laboratorios/host/ia03b02/h01.log
+          exit $LASTEXITCODE
+      - name: Isolated F11 regression
+        if: matrix.suite == 'native' && !cancelled()
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $env:TMPDIR = Join-Path $lab 'tmp'
+          $env:TEMP = $env:TMPDIR
+          $env:TMP = $env:TMPDIR
+          python desarrollo/integration/f11_host/run_native.py --core-source "$lab/core" --output "$lab/f11" --parallel 3 2>&1 |
+            Tee-Object -FilePath "$lab/f11-driver.log"
+          exit $LASTEXITCODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h06-${{ matrix.os }}-${{ matrix.suite }}
+          path: |
+            laboratorios/host/ia03b02/*.log
+            laboratorios/host/ia03b02/native.xml
+            laboratorios/host/ia03b02/build/m0/process/**/*.log
+            laboratorios/host/ia03b02/build/m0/process/**/measurements.json
+            laboratorios/host/ia03b02/build/m0/process/**/processes.json
+            laboratorios/host/ia03b02/build/CMakeCache.txt
+            laboratorios/host/ia03b02/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+            laboratorios/host/ia03b02/build/Testing/Temporary/LastTest.log
+            laboratorios/host/ia03b02/f11/*.log
+            laboratorios/host/ia03b02/f11/run.json
+            laboratorios/host/ia03b02/f11/tests.xml
+            laboratorios/host/ia03b02/f11/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+
+
+  # Independent product-mode smoke build: tests OFF, unlike the native suites.
+  product-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/host/ia03b02/core
+          persist-credentials: false
+      - name: Linux HTTPS build dependencies
+        run: sudo apt-get update -qq && sudo apt-get install -y libcurl4-openssl-dev pkg-config
+      - name: Build and inspect release product (tests OFF)
+        shell: bash
+        run: |
+          set -euo pipefail
+          lab="$PWD/laboratorios/host/ia03b02"
+          build="$lab/product-linux"
+          mkdir -p "$lab"
+          echo "Star Trek $(git rev-parse HEAD)" | tee "$lab/product-linux-manifest.log"
+          echo "CoreRPG $(git -C "$lab/core" rev-parse HEAD)" | tee -a "$lab/product-linux-manifest.log"
+          cmake -S desarrollo/integration/host -B "$build" \
+            -DCORERPG_SOURCE_DIR="$lab/core" \
+            -DTREK_HOST_TESTS=OFF -DCMAKE_BUILD_TYPE=Release \
+            2>&1 | tee "$lab/product-linux-configure.log"
+          grep -Fx 'TREK_HOST_TESTS:BOOL=OFF' "$build/CMakeCache.txt"
+          cmake --build "$build" --config Release --parallel 3 --target TrekHost \
+            2>&1 | tee "$lab/product-linux-build.log"
+          host_so=$(find "$build" -type f -name 'libTrekHost.so' -print -quit)
+          bridge_so=$(find "$build" -type f -name 'libTrekF04Bridge.so' -print -quit)
+          test -n "$host_so" && test -n "$bridge_so"
+          echo "TrekHost=$host_so" | tee -a "$lab/product-linux-manifest.log"
+          echo "TrekF04Bridge=$bridge_so" | tee -a "$lab/product-linux-manifest.log"
+          if find "$build" -type f \( -name host_native_tests -o -name host_fault_tests \
+              -o -name 'host_academy_candidate_*' -o -name host_academy_feasibility_tests -o -name 'libTrekF11TrialHost.so' -o -name TrekF11TrialHost \) | grep -q .; then
+            echo 'FAIL: test executable or F11 trial component in product build'
+            exit 1
+          fi
+          readelf -d "$host_so" | tee "$lab/product-linux-dynamic.log"
+          grep -q 'libTrekF04Bridge.so' "$lab/product-linux-dynamic.log"
+          nm -D -C --defined-only "$host_so" | tee "$lab/product-linux-symbols.log"
+          grep -q 'trek::host::SessionOwner::SessionOwner' "$lab/product-linux-symbols.log"
+          grep -q 'trek::host::SessionOwner::restore' "$lab/product-linux-symbols.log"
+          if grep -q 'storage_test_hook' "$lab/product-linux-symbols.log"; then exit 1; fi
+          nm -D --defined-only "$bridge_so" | tee "$lab/product-bridge-symbols.log"
+          grep -q ' f05_player_binding$' "$lab/product-bridge-symbols.log"
+          grep -q ' f04_history_snapshot$' "$lab/product-bridge-symbols.log"
+          ldd "$host_so" | tee "$lab/product-linux-dependencies.log"
+          if grep -q 'not found' "$lab/product-linux-dependencies.log"; then
+            echo 'FAIL: product has an unresolved runtime dependency'
+            exit 1
+          fi
+          python3 - "$host_so" "$bridge_so" <<'PY'
+          import ctypes
+          import os
+          import sys
+          host, bridge = (os.path.abspath(path) for path in sys.argv[1:])
+          ctypes.CDLL(host)
+          f04 = ctypes.CDLL(bridge)
+          f04.f04_core_sha.restype = ctypes.c_char_p
+          sha = f04.f04_core_sha().decode('ascii')
+          expected = '76a7b7b485616d8c4994f384a90f123bf333591d'
+          assert sha == expected, f'Unexpected loaded CoreRPG pin: {sha}'
+          print(f'PASS: Linux Release product loaded, CoreRPG {sha}, tests OFF')
+          PY
+          python3 desarrollo/integration/host/tests/inspect_product.py "$build" 2>&1 | tee "$lab/product-linux-inspection.log"
+          python3 desarrollo/integration/host/tests/inspect_abi.py "$build" 2>&1 | tee "$lab/product-linux-abi.log"
+          consumer="$lab/product-client-linux"
+          cmake -S desarrollo/integration/host/tests/product_consumer -B "$consumer" \
+            -DTREK_HOST_RUNTIME="$host_so" -DCMAKE_BUILD_TYPE=Release 2>&1 | tee "$lab/product-linux-consumer.log"
+          cmake --build "$consumer" --config Release 2>&1 | tee -a "$lab/product-linux-consumer.log"
+          ctest --test-dir "$consumer" -C Release --no-tests=error --output-on-failure -V \
+            2>&1 | tee -a "$lab/product-linux-consumer.log"
+      - name: Check Unreal's Academy negotiation on Linux
+        shell: bash
+        run: |
+          set -euo pipefail
+          lab="$PWD/laboratorios/host/ia03b02"
+          build="$lab/product-linux"
+          sdk="$lab/unreal-sdk-linux"
+          host_so=$(find "$build" -type f -name 'libTrekHost.so' -print -quit)
+          cmake -S juego/UE5/StarTrekRPG/Build/Tests -B "$sdk" -DCMAKE_BUILD_TYPE=Release \
+            -DHOST_SDK_INCLUDE="$PWD/desarrollo/integration/host/include" -DHOST_LIBRARY="$host_so" \
+            2>&1 | tee "$lab/product-linux-unreal-sdk.log"
+          cmake --build "$sdk" --config Release 2>&1 | tee -a "$lab/product-linux-unreal-sdk.log"
+          ctest --test-dir "$sdk" -C Release --no-tests=error -V \
+            2>&1 | tee -a "$lab/product-linux-unreal-sdk.log"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h06-product-linux
+          path: |
+            laboratorios/host/ia03b02/product-linux-*.log
+            laboratorios/host/ia03b02/product-linux/CMakeCache.txt
+
+  product-windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+          path: laboratorios/host/ia03b02/core
+          persist-credentials: false
+      - name: MSVC x64 Release product without tests
+        shell: pwsh
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $core = Join-Path $lab 'core'
+          $build = Join-Path $lab 'product-windows'
+          cmake -S desarrollo/integration/host -B $build -A x64 "-DCORERPG_SOURCE_DIR=$core" -DTREK_HOST_TESTS=OFF 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-configure.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $build --config Release --parallel 3 --target TrekHost 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-build.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          if (!(Select-String -Path "$build/CMakeCache.txt" -Pattern '^TREK_HOST_TESTS:BOOL=OFF$')) { exit 1 }
+          $dll = Get-ChildItem $build -Recurse -Filter TrekHost.dll | Select-Object -First 1
+          if (!$dll) { throw 'Missing product DLL' }
+          if (Get-ChildItem $build -Recurse -Include '*tests.exe','*TrialHost*') { throw 'Unexpected test or F11 trial binary' }
+          @("Star Trek: $(git rev-parse HEAD)", "CoreRPG: $(git -C $core rev-parse HEAD)", "DLL: $($dll.FullName)") |
+            Set-Content "$lab/product-windows-manifest.log"
+          python desarrollo/integration/host/tests/inspect_product.py $build 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-inspection.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          python desarrollo/integration/host/tests/inspect_abi.py $build 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-abi.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          $import = Get-ChildItem $build -Recurse -Filter TrekHost.lib | Select-Object -First 1
+          if (!$import) { throw 'Missing TrekHost import library' }
+          $consumer = Join-Path $lab 'product-client-windows'
+          cmake -S desarrollo/integration/host/tests/product_consumer -B $consumer -A x64 `
+            "-DTREK_HOST_RUNTIME=$($dll.FullName)" "-DTREK_HOST_LIBRARY=$($import.FullName)" 2>&1 |
+            Tee-Object -FilePath "$lab/product-windows-consumer.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $consumer --config Release 2>&1 |
+            Tee-Object -Append -FilePath "$lab/product-windows-consumer.log"
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $consumer -C Release --no-tests=error --output-on-failure -V 2>&1 |
+            Tee-Object -Append -FilePath "$lab/product-windows-consumer.log"
+          exit $LASTEXITCODE
+      - name: Stage product with Prepare-Host and check Unreal's Academy negotiation
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $build = Join-Path $lab 'product-windows'
+          $project = Join-Path $lab 'sdk-stage'
+          $sourceProject = Join-Path $PWD 'juego/UE5/StarTrekRPG'
+          $log = Join-Path $lab 'product-windows-unreal-sdk.log'
+          New-Item -ItemType Directory -Path $project -Force | Out-Null
+          Copy-Item -LiteralPath (Join-Path $sourceProject 'StarTrekRPG.uproject') -Destination $project
+          $generator = (Select-String -Path "$build/CMakeCache.txt" -Pattern '^CMAKE_GENERATOR:INTERNAL=(.+)$').Matches[0].Groups[1].Value
+          & "$sourceProject/Build/Prepare-Host.ps1" -CoreSource "$lab/core" -BuildRoot $build -ProjectDir $project -Generator $generator 2>&1 |
+            Tee-Object -FilePath $log
+          $stage = Join-Path $project 'Binaries/Host'
+          $headers = Join-Path $PWD 'desarrollo/integration/host/include/trek/host'
+          foreach ($name in @('host_abi.h', 'academy_abi.h')) {
+            if ((Get-FileHash "$headers/$name").Hash -ne (Get-FileHash "$stage/include/trek/host/$name").Hash) {
+              throw "Staged header differs from product source: $name"
+            }
+            Get-FileHash "$stage/include/trek/host/$name" | Tee-Object -Append -FilePath $log
+          }
+          foreach ($name in @('TrekHost.dll', 'TrekF04Bridge.dll')) {
+            if ((Get-FileHash "$build/f05/f04/Release/$name").Hash -ne (Get-FileHash "$stage/$name").Hash) {
+              throw "Staged DLL differs from Release product: $name"
+            }
+            Get-FileHash "$stage/$name" | Tee-Object -Append -FilePath $log
+          }
+          $sdk = Join-Path $lab 'unreal-sdk-windows'
+          cmake -S "$sourceProject/Build/Tests" -B $sdk -G $generator -A x64 `
+            "-DHOST_SDK_INCLUDE=$stage/include" "-DHOST_LIBRARY=$stage/TrekHost.dll" 2>&1 |
+            Tee-Object -Append -FilePath $log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          cmake --build $sdk --config Release 2>&1 | Tee-Object -Append -FilePath $log
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ctest --test-dir $sdk -C Release --no-tests=error -V 2>&1 | Tee-Object -Append -FilePath $log
+          exit $LASTEXITCODE
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: host-h06-product-windows
+          path: |
+            laboratorios/host/ia03b02/product-windows-*.log
+            laboratorios/host/ia03b02/product-windows/CMakeCache.txt

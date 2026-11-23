@@ -1,0 +1,3123 @@
+{
+  "scale": 1.1,
+  "stations": [
+    {
+      "id": "NAVEGACION",
+      "refined_parts": [
+        "ChamferBox_22",
+        "Layer__3",
+        "MSB_30191",
+        "MSB_30192",
+        "MSB_30193",
+        "MSB_30194",
+        "Object_76",
+        "Object_77"
+      ],
+      "forward_xy": [
+        0.016400236786563754,
+        -0.9998655070724985
+      ],
+      "seat_reference_m": [
+        0.0032422509975731373,
+        -3.324818770090739,
+        0.6298899054527283
+      ],
+      "variants": [
+        {
+          "height_m": 1.6,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                0.7048899054527282
+              ],
+              "q_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                1.1418899054527283
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.3658899054527285
+              ],
+              "q_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.4018899054527283
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.09674429970967673,
+                -3.3264587937693952,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.09031540688934374,
+                -3.7184060725418147,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032341559367229225,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.09031540688934374,
+                -3.7184060725418147,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.09031540688934374,
+                -3.7184060725418147,
+                0.3078899054527283
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.012326456968024195,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.103228801704823,
+                -3.3231787464120823,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.10965769452515599,
+                -3.7151260251845017,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032338551425169317,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.10965769452515599,
+                -3.7151260251845017,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.10965769452515599,
+                -3.7151260251845017,
+                0.3078899054527283
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.012324819861367187,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.09031540688934374,
+                -3.7184060725418147,
+                0.3078899054527283
+              ],
+              "predicted_sole_z_m": 0.2378899054527283,
+              "sole_gap_to_reference_floor_m": 0.23788972663879399,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742182138706,
+                "point": [
+                  -0.09031540688934374,
+                  -3.7184060725418147,
+                  0.02332578178612943
+                ],
+                "triangle": 48
+              },
+              "sole_gap_to_local_floor_m": 0.21456412366659888
+            },
+            {
+              "ankle": [
+                0.10965769452515599,
+                -3.7151260251845017,
+                0.3078899054527283
+              ],
+              "predicted_sole_z_m": 0.2378899054527283,
+              "sole_gap_to_reference_floor_m": 0.23788972663879399,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742184525582,
+                "point": [
+                  0.10965769452515599,
+                  -3.7151260251845017,
+                  0.023325781547441804
+                ],
+                "triangle": 50
+              },
+              "sole_gap_to_local_floor_m": 0.2145641239052865
+            }
+          ],
+          "eyes_m": [
+            0.0038162592851028686,
+            -3.3598140628382764,
+            1.3658899054527285
+          ],
+          "head_top_m": 1.4618899054527283,
+          "control_center_candidates": [
+            {
+              "object": "Plane_139",
+              "surface_center_m": [
+                0.7665547917286556,
+                -3.6981688221295683,
+                0.9018726537624996
+              ],
+              "shoulder_distance_m": 0.7345020836069882,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_94",
+              "surface_center_m": [
+                0.2402592446965476,
+                -3.813018961747488,
+                0.9024320443471274
+              ],
+              "shoulder_distance_m": 0.5493853686221182,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_95",
+              "surface_center_m": [
+                -0.23801909868294993,
+                -3.8119297504425056,
+                0.9024380872646969
+              ],
+              "shoulder_distance_m": 0.5436018486786919,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_96",
+              "surface_center_m": [
+                -0.7316820323467255,
+                -3.6270767927169807,
+                1.0231878300507864
+              ],
+              "shoulder_distance_m": 0.6415933924405951,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.75,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                0.7048899054527282
+              ],
+              "q_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                1.1898899054527283
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.4348899054527284
+              ],
+              "q_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.4798899054527284
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.09674429970967673,
+                -3.3264587937693952,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.08971269818743752,
+                -3.755151129926729,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032341559367229225,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.08971269818743752,
+                -3.755151129926729,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.08971269818743752,
+                -3.755151129926729,
+                0.27113990545272837
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.012301948514906201,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.103228801704823,
+                -3.3231787464120823,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.11026040322706221,
+                -3.751871082569416,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032338551425169317,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.11026040322706221,
+                -3.751871082569416,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.11026040322706221,
+                -3.751871082569416,
+                0.27113990545272837
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.012299572094478947,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.08971269818743752,
+                -3.755151129926729,
+                0.27113990545272837
+              ],
+              "predicted_sole_z_m": 0.20113990545272836,
+              "sole_gap_to_reference_floor_m": 0.20113972663879404,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742154263067,
+                "point": [
+                  -0.08971269818743752,
+                  -3.755151129926729,
+                  0.023325784573693276
+                ],
+                "triangle": 48
+              },
+              "sole_gap_to_local_floor_m": 0.1778141208790351
+            },
+            {
+              "ankle": [
+                0.11026040322706221,
+                -3.751871082569416,
+                0.27113990545272837
+              ],
+              "predicted_sole_z_m": 0.20113990545272836,
+              "sole_gap_to_reference_floor_m": 0.20113972663879404,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742156548682,
+                "point": [
+                  0.11026040322706221,
+                  -3.751871082569416,
+                  0.023325784345131773
+                ],
+                "triangle": 50
+              },
+              "sole_gap_to_local_floor_m": 0.1778141211075966
+            }
+          ],
+          "eyes_m": [
+            0.0038162592851028686,
+            -3.3598140628382764,
+            1.4348899054527284
+          ],
+          "head_top_m": 1.5398899054527284,
+          "control_center_candidates": [
+            {
+              "object": "Plane_139",
+              "surface_center_m": [
+                0.7665547917286556,
+                -3.6981688221295683,
+                0.9018726537624996
+              ],
+              "shoulder_distance_m": 0.7515576937170354,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_94",
+              "surface_center_m": [
+                0.2402592446965476,
+                -3.813018961747488,
+                0.9024320443471274
+              ],
+              "shoulder_distance_m": 0.5719407643473216,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_95",
+              "surface_center_m": [
+                -0.23801909868294993,
+                -3.8119297504425056,
+                0.9024380872646969
+              ],
+              "shoulder_distance_m": 0.566387097692861,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_96",
+              "surface_center_m": [
+                -0.7316820323467255,
+                -3.6270767927169807,
+                1.0231878300507864
+              ],
+              "shoulder_distance_m": 0.6521820914913394,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.9,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                0.7048899054527282
+              ],
+              "q_m": [
+                0.0032422509975731373,
+                -3.324818770090739,
+                1.2378899054527284
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.5038899054527284
+              ],
+              "q_m": [
+                0.0038162592851028686,
+                -3.3598140628382764,
+                1.5578899054527282
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.09674429970967673,
+                -3.3264587937693952,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.0891099894855313,
+                -3.7918961873116435,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032341559367229225,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.0891099894855313,
+                -3.7918961873116435,
+                0.6998899054527283
+              ],
+              "q_m": [
+                -0.0891099894855313,
+                -3.7918961873116435,
+                0.23438990545272836
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.012277440061788193,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.103228801704823,
+                -3.3231787464120823,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.11086311192896843,
+                -3.7886161399543306,
+                0.6998899054527283
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.032338551425169317,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.11086311192896843,
+                -3.7886161399543306,
+                0.6998899054527283
+              ],
+              "q_m": [
+                0.11086311192896843,
+                -3.7886161399543306,
+                0.23438990545272836
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": false,
+              "minimum_clearance_m": -0.0122743243275907,
+              "blocking_objects": [
+                "Object_129"
+              ]
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.0891099894855313,
+                -3.7918961873116435,
+                0.23438990545272836
+              ],
+              "predicted_sole_z_m": 0.16438990545272836,
+              "sole_gap_to_reference_floor_m": 0.16438972663879403,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742126387427,
+                "point": [
+                  -0.0891099894855313,
+                  -3.7918961873116435,
+                  0.023325787361257344
+                ],
+                "triangle": 48
+              },
+              "sole_gap_to_local_floor_m": 0.141064118091471
+            },
+            {
+              "ankle": [
+                0.11086311192896843,
+                -3.7886161399543306,
+                0.23438990545272836
+              ],
+              "predicted_sole_z_m": 0.16438990545272836,
+              "sole_gap_to_reference_floor_m": 0.16438972663879403,
+              "actual_floor_under_foot": {
+                "distance": 0.8766742128571783,
+                "point": [
+                  0.11086311192896843,
+                  -3.7886161399543306,
+                  0.02332578714282174
+                ],
+                "triangle": 50
+              },
+              "sole_gap_to_local_floor_m": 0.14106411830990662
+            }
+          ],
+          "eyes_m": [
+            0.0038162592851028686,
+            -3.3598140628382764,
+            1.5038899054527284
+          ],
+          "head_top_m": 1.6178899054527283,
+          "control_center_candidates": [
+            {
+              "object": "Plane_139",
+              "surface_center_m": [
+                0.7665547917286556,
+                -3.6981688221295683,
+                0.9018726537624996
+              ],
+              "shoulder_distance_m": 0.7712279968644364,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_94",
+              "surface_center_m": [
+                0.2402592446965476,
+                -3.813018961747488,
+                0.9024320443471274
+              ],
+              "shoulder_distance_m": 0.5975083200996754,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_95",
+              "surface_center_m": [
+                -0.23801909868294993,
+                -3.8119297504425056,
+                0.9024380872646969
+              ],
+              "shoulder_distance_m": 0.5921939876248268,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_96",
+              "surface_center_m": [
+                -0.7316820323467255,
+                -3.6270767927169807,
+                1.0231878300507864
+              ],
+              "shoulder_distance_m": 0.6660697258550371,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        }
+      ],
+      "grade": "C",
+      "semantic_review": "Navigation excludes fixed platform and 3 console pieces; command adds fabric cushions/back pads omitted by prior four-part shell grouping. No animation rig certified."
+    },
+    {
+      "id": "LATERAL_DER",
+      "refined_parts": [
+        "ChamferBox_37",
+        "Layer__4",
+        "MSB0030110_MSB_30119",
+        "MSB0030110_MSB_30120",
+        "MSB0030110_MSB_30121",
+        "MSB0030110_MSB_30122",
+        "MSB0030116_MSB_30178",
+        "MSB0030116_MSB_30179",
+        "MSB0030116_MSB_30180",
+        "MSB0030116_MSB_30181",
+        "MSB0030117_MSB_30138",
+        "MSB0030117_MSB_30139",
+        "MSB0030117_MSB_30140",
+        "MSB0030117_MSB_30141",
+        "MSB0030119_MSB_30131",
+        "MSB0030119_MSB_30132",
+        "MSB0030119_MSB_30133",
+        "MSB0030119_MSB_30134",
+        "MSB_30195",
+        "MSB_30196",
+        "MSB_30197",
+        "MSB_30198",
+        "MSB_30199",
+        "MSB_30200",
+        "MSB_30201",
+        "MSB_30202",
+        "MSB_30203",
+        "MSB_30204",
+        "MSB_30205",
+        "Object_120",
+        "Object_121"
+      ],
+      "forward_xy": [
+        -0.5208034041144602,
+        -0.8536766450259666
+      ],
+      "seat_reference_m": [
+        5.03149938583374,
+        -3.289867321650187,
+        0.9262728691101074
+      ],
+      "variants": [
+        {
+          "height_m": 1.6,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.0012728691101074
+              ],
+              "q_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.4382728691101074
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.6622728691101076
+              ],
+              "q_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.6982728691101074
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                4.9461317213311435,
+                -3.237786981238741,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.741976786918275,
+                -3.57242822608892,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                4.741976786918275,
+                -3.57242822608892,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.741976786918275,
+                -3.57242822608892,
+                0.6042728691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                5.116867050336337,
+                -3.341947662061633,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.912712115923468,
+                -3.6765889069118116,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                4.912712115923468,
+                -3.6765889069118116,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.912712115923468,
+                -3.6765889069118116,
+                0.6042728691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                4.741976786918275,
+                -3.57242822608892,
+                0.6042728691101075
+              ],
+              "predicted_sole_z_m": 0.5342728691101075,
+              "sole_gap_to_reference_floor_m": 0.20686962175369272,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968067643832,
+                "point": [
+                  4.741976786918275,
+                  -3.57242822608892,
+                  0.32740319323561684
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.20686967587449068
+            },
+            {
+              "ankle": [
+                4.912712115923468,
+                -3.6765889069118116,
+                0.6042728691101075
+              ],
+              "predicted_sole_z_m": 0.5342728691101075,
+              "sole_gap_to_reference_floor_m": 0.20686962175369272,
+              "actual_floor_under_foot": {
+                "distance": 0.5725967986719911,
+                "point": [
+                  4.912712115923468,
+                  -3.6765889069118116,
+                  0.32740320132800893
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.2068696677820986
+            }
+          ],
+          "eyes_m": [
+            5.013271266689734,
+            -3.319746004226096,
+            1.6622728691101076
+          ],
+          "head_top_m": 1.7582728691101075,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2127",
+              "surface_center_m": [
+                5.329797803406695,
+                -4.338439475511424,
+                1.1402361813617443
+              ],
+              "shoulder_distance_m": 1.010663768419671,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2128",
+              "surface_center_m": [
+                4.279939663410187,
+                -3.9388693094253546,
+                1.1972950816154482
+              ],
+              "shoulder_distance_m": 0.9834758446143811,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_117",
+              "surface_center_m": [
+                4.8033098697662355,
+                -4.375319107373556,
+                1.6938793619473775
+              ],
+              "shoulder_distance_m": 1.092990494347345,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_118",
+              "surface_center_m": [
+                4.830747032165528,
+                -4.308784902095795,
+                1.2229119161764783
+              ],
+              "shoulder_distance_m": 1.0138711702084269,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.75,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.0012728691101074
+              ],
+              "q_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.4862728691101075
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.7312728691101076
+              ],
+              "q_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.7762728691101075
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                4.9461317213311435,
+                -3.237786981238741,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.722837261817069,
+                -3.6038008427936243,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                4.722837261817069,
+                -3.6038008427936243,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.722837261817069,
+                -3.6038008427936243,
+                0.5675228691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                5.116867050336337,
+                -3.341947662061633,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.893572590822262,
+                -3.707961523616516,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                4.893572590822262,
+                -3.707961523616516,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.893572590822262,
+                -3.707961523616516,
+                0.5675228691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                4.722837261817069,
+                -3.6038008427936243,
+                0.5675228691101075
+              ],
+              "predicted_sole_z_m": 0.4975228691101075,
+              "sole_gap_to_reference_floor_m": 0.17011962175369272,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968042610622,
+                "point": [
+                  4.722837261817069,
+                  -3.6038008427936243,
+                  0.32740319573893784
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.17011967337116968
+            },
+            {
+              "ankle": [
+                4.893572590822262,
+                -3.707961523616516,
+                0.5675228691101075
+              ],
+              "predicted_sole_z_m": 0.4975228691101075,
+              "sole_gap_to_reference_floor_m": 0.17011962175369272,
+              "actual_floor_under_foot": {
+                "distance": 0.5725967961686701,
+                "point": [
+                  4.893572590822262,
+                  -3.707961523616516,
+                  0.3274032038313299
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.1701196652787776
+            }
+          ],
+          "eyes_m": [
+            5.013271266689734,
+            -3.319746004226096,
+            1.7312728691101076
+          ],
+          "head_top_m": 1.8362728691101076,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2127",
+              "surface_center_m": [
+                5.329797803406695,
+                -4.338439475511424,
+                1.1402361813617443
+              ],
+              "shoulder_distance_m": 1.0258444203777168,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2128",
+              "surface_center_m": [
+                4.279939663410187,
+                -3.9388693094253546,
+                1.1972950816154482
+              ],
+              "shoulder_distance_m": 0.9963245477952741,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_117",
+              "surface_center_m": [
+                4.8033098697662355,
+                -4.375319107373556,
+                1.6938793619473775
+              ],
+              "shoulder_distance_m": 1.0827714428360566,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_118",
+              "surface_center_m": [
+                4.830747032165528,
+                -4.308784902095795,
+                1.2229119161764783
+              ],
+              "shoulder_distance_m": 1.0251406738889222,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.9,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.0012728691101074
+              ],
+              "q_m": [
+                5.03149938583374,
+                -3.289867321650187,
+                1.5342728691101075
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.8002728691101075
+              ],
+              "q_m": [
+                5.013271266689734,
+                -3.319746004226096,
+                1.8542728691101074
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                4.9461317213311435,
+                -3.237786981238741,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.7036977367158626,
+                -3.6351734594983287,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                4.7036977367158626,
+                -3.6351734594983287,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.7036977367158626,
+                -3.6351734594983287,
+                0.5307728691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                5.116867050336337,
+                -3.341947662061633,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.874433065721056,
+                -3.7393341403212204,
+                0.9962728691101075
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                4.874433065721056,
+                -3.7393341403212204,
+                0.9962728691101075
+              ],
+              "q_m": [
+                4.874433065721056,
+                -3.7393341403212204,
+                0.5307728691101075
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                4.7036977367158626,
+                -3.6351734594983287,
+                0.5307728691101075
+              ],
+              "predicted_sole_z_m": 0.46077286911010745,
+              "sole_gap_to_reference_floor_m": 0.13336962175369266,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968017577412,
+                "point": [
+                  4.7036977367158626,
+                  -3.6351734594983287,
+                  0.32740319824225883
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.13336967086784862
+            },
+            {
+              "ankle": [
+                4.874433065721056,
+                -3.7393341403212204,
+                0.5307728691101075
+              ],
+              "predicted_sole_z_m": 0.46077286911010745,
+              "sole_gap_to_reference_floor_m": 0.13336962175369266,
+              "actual_floor_under_foot": {
+                "distance": 0.5725967936653491,
+                "point": [
+                  4.874433065721056,
+                  -3.7393341403212204,
+                  0.3274032063346509
+                ],
+                "triangle": 9912
+              },
+              "sole_gap_to_local_floor_m": 0.13336966277545653
+            }
+          ],
+          "eyes_m": [
+            5.013271266689734,
+            -3.319746004226096,
+            1.8002728691101075
+          ],
+          "head_top_m": 1.9142728691101074,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2127",
+              "surface_center_m": [
+                5.329797803406695,
+                -4.338439475511424,
+                1.1402361813617443
+              ],
+              "shoulder_distance_m": 1.0430150031729823,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2128",
+              "surface_center_m": [
+                4.279939663410187,
+                -3.9388693094253546,
+                1.1972950816154482
+              ],
+              "shoulder_distance_m": 1.0112904983924969,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_117",
+              "surface_center_m": [
+                4.8033098697662355,
+                -4.375319107373556,
+                1.6938793619473775
+              ],
+              "shoulder_distance_m": 1.0746012163164984,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_118",
+              "surface_center_m": [
+                4.830747032165528,
+                -4.308784902095795,
+                1.2229119161764783
+              ],
+              "shoulder_distance_m": 1.0385085713382736,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        }
+      ],
+      "grade": "C",
+      "semantic_review": "Navigation excludes fixed platform and 3 console pieces; command adds fabric cushions/back pads omitted by prior four-part shell grouping. No animation rig certified."
+    },
+    {
+      "id": "LATERAL_IZQ",
+      "refined_parts": [
+        "ChamferBox_38",
+        "Layer__5",
+        "MSB0030110_MSB_30123",
+        "MSB0030110_MSB_30124",
+        "MSB0030110_MSB_30125",
+        "MSB0030110_MSB_30126",
+        "MSB0030116_MSB_30182",
+        "MSB0030116_MSB_30183",
+        "MSB0030116_MSB_30184",
+        "MSB0030116_MSB_30185",
+        "MSB0030117_MSB_30142",
+        "MSB0030117_MSB_30143",
+        "MSB0030117_MSB_30144",
+        "MSB0030117_MSB_30145",
+        "MSB0030119_MSB_30135",
+        "MSB0030119_MSB_30136",
+        "MSB0030119_MSB_30137",
+        "MSB0030119_MSB_30138",
+        "MSB_30206",
+        "MSB_30207",
+        "MSB_30208",
+        "MSB_30209",
+        "MSB_30210",
+        "MSB_30211",
+        "MSB_30212",
+        "MSB_30213",
+        "MSB_30214",
+        "MSB_30215",
+        "MSB_30216",
+        "Object_122",
+        "Object_123"
+      ],
+      "forward_xy": [
+        -0.1871937382998412,
+        -0.9823230142582074
+      ],
+      "seat_reference_m": [
+        -4.665246486663818,
+        -3.1446953614552817,
+        0.9262729287147522
+      ],
+      "variants": [
+        {
+          "height_m": 1.6,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.0012729287147522
+              ],
+              "q_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.4382729287147522
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.6622729287147524
+              ],
+              "q_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.6982729287147522
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -4.763478788089639,
+                -3.1259759876252975,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.836858733503177,
+                -3.5110466092145147,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -4.836858733503177,
+                -3.5110466092145147,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.836858733503177,
+                -3.5110466092145147,
+                0.6042729287147522
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -4.567014185237998,
+                -3.163414735285266,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.6403941306515355,
+                -3.548485356874483,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": 0.34470541051688025,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -4.6403941306515355,
+                -3.548485356874483,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.6403941306515355,
+                -3.548485356874483,
+                0.6042729287147522
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -4.836858733503177,
+                -3.5110466092145147,
+                0.6042729287147522
+              ],
+              "predicted_sole_z_m": 0.5342729287147523,
+              "sole_gap_to_reference_floor_m": 0.20686974096298227,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968118354952,
+                "point": [
+                  -4.836858733503177,
+                  -3.5110466092145147,
+                  0.32740318816450487
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.20686974055024743
+            },
+            {
+              "ankle": [
+                -4.6403941306515355,
+                -3.548485356874483,
+                0.6042729287147522
+              ],
+              "predicted_sole_z_m": 0.5342729287147523,
+              "sole_gap_to_reference_floor_m": 0.20686974096298227,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968086633021,
+                "point": [
+                  -4.6403941306515355,
+                  -3.548485356874483,
+                  0.32740319133669793
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.20686973737805436
+            }
+          ],
+          "eyes_m": [
+            -4.671798267504313,
+            -3.179076666954319,
+            1.6622729287147524
+          ],
+          "head_top_m": 1.7582729287147523,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2133",
+              "surface_center_m": [
+                -4.178721661037868,
+                -3.856650604142083,
+                1.1958652668529088
+              ],
+              "shoulder_distance_m": 0.7840387957827933,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2134",
+              "surface_center_m": [
+                -5.308936616203244,
+                -4.371355308879886,
+                1.1402361992681245
+              ],
+              "shoulder_distance_m": 1.3766951795584894,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_110",
+              "surface_center_m": [
+                -5.757959890365601,
+                -3.8030969500541687,
+                1.6938660740852356
+              ],
+              "shoulder_distance_m": 1.1760907691761813,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_115",
+              "surface_center_m": [
+                -4.791126561164857,
+                -4.375319107373556,
+                1.6938793619473778
+              ],
+              "shoulder_distance_m": 1.2607932369762238,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_116",
+              "surface_center_m": [
+                -5.691061186790466,
+                -3.775512222448985,
+                1.2229071080684664
+              ],
+              "shoulder_distance_m": 1.099433233955601,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_135",
+              "surface_center_m": [
+                -4.818560401598613,
+                -4.308781230449677,
+                1.2229095121224722
+              ],
+              "shoulder_distance_m": 1.197143425267512,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.75,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.0012729287147522
+              ],
+              "q_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.4862729287147523
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.7312729287147524
+              ],
+              "q_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.7762729287147523
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -4.763478788089639,
+                -3.1259759876252975,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.843738103385696,
+                -3.547146979988504,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -4.843738103385696,
+                -3.547146979988504,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.843738103385696,
+                -3.547146979988504,
+                0.5675229287147523
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -4.567014185237998,
+                -3.163414735285266,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.647273500534054,
+                -3.5845857276484723,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": 0.3189516472307526,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -4.647273500534054,
+                -3.5845857276484723,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.647273500534054,
+                -3.5845857276484723,
+                0.5675229287147523
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -4.843738103385696,
+                -3.547146979988504,
+                0.5675229287147523
+              ],
+              "predicted_sole_z_m": 0.4975229287147523,
+              "sole_gap_to_reference_floor_m": 0.17011974096298227,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968089781717,
+                "point": [
+                  -4.843738103385696,
+                  -3.547146979988504,
+                  0.32740319102182835
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.17011973769292393
+            },
+            {
+              "ankle": [
+                -4.647273500534054,
+                -3.5845857276484723,
+                0.5675229287147523
+              ],
+              "predicted_sole_z_m": 0.4975229287147523,
+              "sole_gap_to_reference_floor_m": 0.17011974096298227,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968058059785,
+                "point": [
+                  -4.647273500534054,
+                  -3.5845857276484723,
+                  0.32740319419402153
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.17011973452073076
+            }
+          ],
+          "eyes_m": [
+            -4.671798267504313,
+            -3.179076666954319,
+            1.7312729287147524
+          ],
+          "head_top_m": 1.8362729287147523,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2133",
+              "surface_center_m": [
+                -4.178721661037868,
+                -3.856650604142083,
+                1.1958652668529088
+              ],
+              "shoulder_distance_m": 0.8001824597123269,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2134",
+              "surface_center_m": [
+                -5.308936616203244,
+                -4.371355308879886,
+                1.1402361992681245
+              ],
+              "shoulder_distance_m": 1.3878779281501878,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_110",
+              "surface_center_m": [
+                -5.757959890365601,
+                -3.8030969500541687,
+                1.6938660740852356
+              ],
+              "shoulder_distance_m": 1.1666004266182382,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_115",
+              "surface_center_m": [
+                -4.791126561164857,
+                -4.375319107373556,
+                1.6938793619473778
+              ],
+              "shoulder_distance_m": 1.2519446348839283,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_116",
+              "surface_center_m": [
+                -5.691061186790466,
+                -3.775512222448985,
+                1.2229071080684664
+              ],
+              "shoulder_distance_m": 1.109834471760593,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_135",
+              "surface_center_m": [
+                -4.818560401598613,
+                -4.308781230449677,
+                1.2229095121224722
+              ],
+              "shoulder_distance_m": 1.2067026430128054,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.9,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.0012729287147522
+              ],
+              "q_m": [
+                -4.665246486663818,
+                -3.1446953614552817,
+                1.5342729287147523
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.8002729287147523
+              ],
+              "q_m": [
+                -4.671798267504313,
+                -3.179076666954319,
+                1.8542729287147521
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -4.763478788089639,
+                -3.1259759876252975,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.8506174732682155,
+                -3.583247350762493,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -4.8506174732682155,
+                -3.583247350762493,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.8506174732682155,
+                -3.583247350762493,
+                0.5307729287147522
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -4.567014185237998,
+                -3.163414735285266,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.654152870416574,
+                -3.6206860984224614,
+                0.9962729287147523
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": 0.2932358885648613,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -4.654152870416574,
+                -3.6206860984224614,
+                0.9962729287147523
+              ],
+              "q_m": [
+                -4.654152870416574,
+                -3.6206860984224614,
+                0.5307729287147522
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -4.8506174732682155,
+                -3.583247350762493,
+                0.5307729287147522
+              ],
+              "predicted_sole_z_m": 0.46077292871475223,
+              "sole_gap_to_reference_floor_m": 0.1333697409629822,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968061208477,
+                "point": [
+                  -4.8506174732682155,
+                  -3.583247350762493,
+                  0.3274031938791523
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.13336973483559994
+            },
+            {
+              "ankle": [
+                -4.654152870416574,
+                -3.6206860984224614,
+                0.5307729287147522
+              ],
+              "predicted_sole_z_m": 0.46077292871475223,
+              "sole_gap_to_reference_floor_m": 0.1333697409629822,
+              "actual_floor_under_foot": {
+                "distance": 0.5725968029486547,
+                "point": [
+                  -4.654152870416574,
+                  -3.6206860984224614,
+                  0.32740319705134535
+                ],
+                "triangle": 10311
+              },
+              "sole_gap_to_local_floor_m": 0.13336973166340688
+            }
+          ],
+          "eyes_m": [
+            -4.671798267504313,
+            -3.179076666954319,
+            1.8002729287147523
+          ],
+          "head_top_m": 1.9142729287147522,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2133",
+              "surface_center_m": [
+                -4.178721661037868,
+                -3.856650604142083,
+                1.1958652668529088
+              ],
+              "shoulder_distance_m": 0.8188254419410811,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Mesh_2134",
+              "surface_center_m": [
+                -5.308936616203244,
+                -4.371355308879886,
+                1.1402361992681245
+              ],
+              "shoulder_distance_m": 1.400617245886018,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_110",
+              "surface_center_m": [
+                -5.757959890365601,
+                -3.8030969500541687,
+                1.6938660740852356
+              ],
+              "shoulder_distance_m": 1.1590218347513082,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_115",
+              "surface_center_m": [
+                -4.791126561164857,
+                -4.375319107373556,
+                1.6938793619473778
+              ],
+              "shoulder_distance_m": 1.244885196001752,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_116",
+              "surface_center_m": [
+                -5.691061186790466,
+                -3.775512222448985,
+                1.2229071080684664
+              ],
+              "shoulder_distance_m": 1.1221941336017391,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            },
+            {
+              "object": "Plane_135",
+              "surface_center_m": [
+                -4.818560401598613,
+                -4.308781230449677,
+                1.2229095121224722
+              ],
+              "shoulder_distance_m": 1.2180797004494202,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        }
+      ],
+      "grade": "C",
+      "semantic_review": "Navigation excludes fixed platform and 3 console pieces; command adds fabric cushions/back pads omitted by prior four-part shell grouping. No animation rig certified."
+    },
+    {
+      "id": "MANDO_IZQ",
+      "refined_parts": [
+        "Box_6",
+        "Box_7",
+        "Armrest_5",
+        "Armrest_6",
+        "ChamferBox_23",
+        "ChamferBox_24",
+        "ChamferBox_25",
+        "ChamferBox_26",
+        "ChamferBox_27",
+        "ChamferBox_28",
+        "ChamferBox_29"
+      ],
+      "forward_xy": [
+        0.10291520291979947,
+        -0.9946901331610646
+      ],
+      "seat_reference_m": [
+        -0.6862014532089233,
+        0.8245790600776672,
+        0.9736122488975525
+      ],
+      "variants": [
+        {
+          "height_m": 1.6,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.4856122488975525
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.7096122488975527
+              ],
+              "q_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.7456122488975525
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.7856704665250298,
+                0.8142875397856872,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7453277069804685,
+                0.42436900758654994,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.7453277069804685,
+                0.42436900758654994,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7453277069804685,
+                0.42436900758654994,
+                0.6516122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -0.5867324398928169,
+                0.8348705803696472,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5463896803482555,
+                0.4449520481705098,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -0.5463896803482555,
+                0.4449520481705098,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5463896803482555,
+                0.4449520481705098,
+                0.6516122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.7453277069804685,
+                0.42436900758654994,
+                0.6516122488975525
+              ],
+              "predicted_sole_z_m": 0.5816122488975526,
+              "sole_gap_to_reference_floor_m": 0.10217066574096689,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584133926763,
+                "point": [
+                  -0.7453277069804685,
+                  0.42436900758654994,
+                  0.4794415866073237
+                ],
+                "triangle": 8394
+              },
+              "sole_gap_to_local_floor_m": 0.10217066229022886
+            },
+            {
+              "ankle": [
+                -0.5463896803482555,
+                0.4449520481705098,
+                0.6516122488975525
+              ],
+              "predicted_sole_z_m": 0.5816122488975526,
+              "sole_gap_to_reference_floor_m": 0.10217066574096689,
+              "actual_floor_under_foot": {
+                "distance": 0.42055841381564835,
+                "point": [
+                  -0.5463896803482555,
+                  0.4449520481705098,
+                  0.4794415861843517
+                ],
+                "triangle": 8518
+              },
+              "sole_gap_to_local_floor_m": 0.10217066271320091
+            }
+          ],
+          "eyes_m": [
+            -0.6825994211067303,
+            0.7897649054170299,
+            1.7096122488975527
+          ],
+          "head_top_m": 1.8056122488975526,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.6463511511197537,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.75,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.5336122488975525
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.7786122488975527
+              ],
+              "q_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.8236122488975526
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.7856704665250298,
+                0.8142875397856872,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7415455732731658,
+                0.3878141451928809,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.7415455732731658,
+                0.3878141451928809,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7415455732731658,
+                0.3878141451928809,
+                0.6148622488975526
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -0.5867324398928169,
+                0.8348705803696472,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5426075466409529,
+                0.40839718577684075,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -0.5426075466409529,
+                0.40839718577684075,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5426075466409529,
+                0.40839718577684075,
+                0.6148622488975526
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.7415455732731658,
+                0.3878141451928809,
+                0.6148622488975526
+              ],
+              "predicted_sole_z_m": 0.5448622488975525,
+              "sole_gap_to_reference_floor_m": 0.06542066574096683,
+              "actual_floor_under_foot": {
+                "distance": 0.42055841069877686,
+                "point": [
+                  -0.7415455732731658,
+                  0.3878141451928809,
+                  0.47944158930122316
+                ],
+                "triangle": 8394
+              },
+              "sole_gap_to_local_floor_m": 0.06542065959632937
+            },
+            {
+              "ankle": [
+                -0.5426075466409529,
+                0.40839718577684075,
+                0.6148622488975526
+              ],
+              "predicted_sole_z_m": 0.5448622488975525,
+              "sole_gap_to_reference_floor_m": 0.06542066574096683,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584111843941,
+                "point": [
+                  -0.5426075466409529,
+                  0.40839718577684075,
+                  0.47944158881560595
+                ],
+                "triangle": 8518
+              },
+              "sole_gap_to_local_floor_m": 0.06542066008194658
+            }
+          ],
+          "eyes_m": [
+            -0.6825994211067303,
+            0.7897649054170299,
+            1.7786122488975527
+          ],
+          "head_top_m": 1.8836122488975526,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.6727231490783377,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.9,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                -0.6862014532089233,
+                0.8245790600776672,
+                1.5816122488975526
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.8476122488975526
+              ],
+              "q_m": [
+                -0.6825994211067303,
+                0.7897649054170299,
+                1.9016122488975524
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                -0.7856704665250298,
+                0.8142875397856872,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7377634395658632,
+                0.35125928279921176,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                -0.7377634395658632,
+                0.35125928279921176,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.7377634395658632,
+                0.35125928279921176,
+                0.5781122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                -0.5867324398928169,
+                0.8348705803696472,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5388254129336503,
+                0.37184232338317164,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                -0.5388254129336503,
+                0.37184232338317164,
+                1.0436122488975526
+              ],
+              "q_m": [
+                -0.5388254129336503,
+                0.37184232338317164,
+                0.5781122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                -0.7377634395658632,
+                0.35125928279921176,
+                0.5781122488975525
+              ],
+              "predicted_sole_z_m": 0.5081122488975525,
+              "sole_gap_to_reference_floor_m": 0.028670665740966772,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584080048774,
+                "point": [
+                  -0.7377634395658632,
+                  0.35125928279921176,
+                  0.4794415919951226
+                ],
+                "triangle": 8394
+              },
+              "sole_gap_to_local_floor_m": 0.02867065690242987
+            },
+            {
+              "ankle": [
+                -0.5388254129336503,
+                0.37184232338317164,
+                0.5781122488975525
+              ],
+              "predicted_sole_z_m": 0.5081122488975525,
+              "sole_gap_to_reference_floor_m": 0.028670665740966772,
+              "actual_floor_under_foot": {
+                "distance": 0.42055840855313964,
+                "point": [
+                  -0.5388254129336503,
+                  0.37184232338317164,
+                  0.4794415914468604
+                ],
+                "triangle": 8518
+              },
+              "sole_gap_to_local_floor_m": 0.028670657450692083
+            }
+          ],
+          "eyes_m": [
+            -0.6825994211067303,
+            0.7897649054170299,
+            1.8476122488975526
+          ],
+          "head_top_m": 1.9616122488975525,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.7013922298243117,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        }
+      ],
+      "grade": "C",
+      "semantic_review": "Navigation excludes fixed platform and 3 console pieces; command adds fabric cushions/back pads omitted by prior four-part shell grouping. No animation rig certified."
+    },
+    {
+      "id": "MANDO_DER",
+      "refined_parts": [
+        "Box_8",
+        "Box_9",
+        "Armrest_7",
+        "Armrest_8",
+        "ChamferBox_30",
+        "ChamferBox_31",
+        "ChamferBox_32",
+        "ChamferBox_33",
+        "ChamferBox_34",
+        "ChamferBox_35",
+        "ChamferBox_36"
+      ],
+      "forward_xy": [
+        -0.10291523398899738,
+        -0.9946901299465025
+      ],
+      "seat_reference_m": [
+        0.6968362331390381,
+        0.8245790600776672,
+        0.9736122488975525
+      ],
+      "variants": [
+        {
+          "height_m": 1.6,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.4856122488975525
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.7096122488975527
+              ],
+              "q_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.7456122488975525
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                0.5973672201443878,
+                0.834870583476567,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5570244484207009,
+                0.44495205253753795,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                0.5570244484207009,
+                0.44495205253753795,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5570244484207009,
+                0.44495205253753795,
+                0.6516122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.7963052461336884,
+                0.8142875366787675,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7559624744100014,
+                0.4243690057397385,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.7559624744100014,
+                0.4243690057397385,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7559624744100014,
+                0.4243690057397385,
+                0.6516122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                0.5570244484207009,
+                0.44495205253753795,
+                0.6516122488975525
+              ],
+              "predicted_sole_z_m": 0.5816122488975526,
+              "sole_gap_to_reference_floor_m": 0.10217066574096689,
+              "actual_floor_under_foot": {
+                "distance": 0.42055841319846854,
+                "point": [
+                  0.5570244484207009,
+                  0.44495205253753795,
+                  0.4794415868015315
+                ],
+                "triangle": 8560
+              },
+              "sole_gap_to_local_floor_m": 0.1021706620960211
+            },
+            {
+              "ankle": [
+                0.7559624744100014,
+                0.4243690057397385,
+                0.6516122488975525
+              ],
+              "predicted_sole_z_m": 0.5816122488975526,
+              "sole_gap_to_reference_floor_m": 0.10217066574096689,
+              "actual_floor_under_foot": {
+                "distance": 0.420558412634626,
+                "point": [
+                  0.7559624744100014,
+                  0.4243690057397385,
+                  0.479441587365374
+                ],
+                "triangle": 8578
+              },
+              "sole_gap_to_local_floor_m": 0.10217066153217857
+            }
+          ],
+          "eyes_m": [
+            0.6932341999494231,
+            0.7897649055295396,
+            1.7096122488975527
+          ],
+          "head_top_m": 1.8056122488975526,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.6445964806151684,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.6080000000000001,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.75,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.5336122488975525
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.7786122488975527
+              ],
+              "q_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.8236122488975526
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                0.5973672201443878,
+                0.834870583476567,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5532423135716051,
+                0.40839719026200405,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                0.5532423135716051,
+                0.40839719026200405,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5532423135716051,
+                0.40839719026200405,
+                0.6148622488975526
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.7963052461336884,
+                0.8142875366787675,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7521803395609057,
+                0.3878141434642046,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.7521803395609057,
+                0.3878141434642046,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7521803395609057,
+                0.3878141434642046,
+                0.6148622488975526
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                0.5532423135716051,
+                0.40839719026200405,
+                0.6148622488975526
+              ],
+              "predicted_sole_z_m": 0.5448622488975525,
+              "sole_gap_to_reference_floor_m": 0.06542066574096683,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584106448262,
+                "point": [
+                  0.5532423135716051,
+                  0.40839719026200405,
+                  0.47944158935517384
+                ],
+                "triangle": 8560
+              },
+              "sole_gap_to_local_floor_m": 0.06542065954237869
+            },
+            {
+              "ankle": [
+                0.7521803395609057,
+                0.3878141434642046,
+                0.6148622488975526
+              ],
+              "predicted_sole_z_m": 0.5448622488975525,
+              "sole_gap_to_reference_floor_m": 0.06542066574096683,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584098806444,
+                "point": [
+                  0.7521803395609057,
+                  0.3878141434642046,
+                  0.4794415901193556
+                ],
+                "triangle": 8578
+              },
+              "sole_gap_to_local_floor_m": 0.06542065877819692
+            }
+          ],
+          "eyes_m": [
+            0.6932341999494231,
+            0.7897649055295396,
+            1.7786122488975527
+          ],
+          "head_top_m": 1.8836122488975526,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.6710374412605499,
+              "within_hypothetical_arm_length": false,
+              "arm_length_hypothesis_m": 0.665,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        },
+        {
+          "height_m": 1.9,
+          "limb_tests": [
+            {
+              "part": "TORSO",
+              "p_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.0486122488975524
+              ],
+              "q_m": [
+                0.6968362331390381,
+                0.8245790600776672,
+                1.5816122488975526
+              ],
+              "radius_m": 0.12,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "CABEZA",
+              "p_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.8476122488975526
+              ],
+              "q_m": [
+                0.6932341999494231,
+                0.7897649055295396,
+                1.9016122488975524
+              ],
+              "radius_m": 0.095,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_-1",
+              "p_m": [
+                0.5973672201443878,
+                0.834870583476567,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5494601787225095,
+                0.37184232798647004,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_-1",
+              "p_m": [
+                0.5494601787225095,
+                0.37184232798647004,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.5494601787225095,
+                0.37184232798647004,
+                0.5781122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "MUSLO_1",
+              "p_m": [
+                0.7963052461336884,
+                0.8142875366787675,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7483982047118101,
+                0.3512592811886706,
+                1.0436122488975526
+              ],
+              "radius_m": 0.065,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            },
+            {
+              "part": "PIERNA_1",
+              "p_m": [
+                0.7483982047118101,
+                0.3512592811886706,
+                1.0436122488975526
+              ],
+              "q_m": [
+                0.7483982047118101,
+                0.3512592811886706,
+                0.5781122488975525
+              ],
+              "radius_m": 0.045,
+              "external_surface_clear": true,
+              "minimum_clearance_m": null,
+              "blocking_objects": []
+            }
+          ],
+          "feet": [
+            {
+              "ankle": [
+                0.5494601787225095,
+                0.37184232798647004,
+                0.5781122488975525
+              ],
+              "predicted_sole_z_m": 0.5081122488975525,
+              "sole_gap_to_reference_floor_m": 0.028670665740966772,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584080911838,
+                "point": [
+                  0.5494601787225095,
+                  0.37184232798647004,
+                  0.47944159190881624
+                ],
+                "triangle": 8560
+              },
+              "sole_gap_to_local_floor_m": 0.02867065698873622
+            },
+            {
+              "ankle": [
+                0.7483982047118101,
+                0.3512592811886706,
+                0.5781122488975525
+              ],
+              "predicted_sole_z_m": 0.5081122488975525,
+              "sole_gap_to_reference_floor_m": 0.028670665740966772,
+              "actual_floor_under_foot": {
+                "distance": 0.4205584071266627,
+                "point": [
+                  0.7483982047118101,
+                  0.3512592811886706,
+                  0.4794415928733373
+                ],
+                "triangle": 8578
+              },
+              "sole_gap_to_local_floor_m": 0.028670656024215146
+            }
+          ],
+          "eyes_m": [
+            0.6932341999494231,
+            0.7897649055295396,
+            1.8476122488975526
+          ],
+          "head_top_m": 1.9616122488975525,
+          "control_center_candidates": [
+            {
+              "object": "Mesh_2137",
+              "surface_center_m": [
+                0.006422415688633925,
+                0.6443129194974914,
+                1.1472515743970872
+              ],
+              "shoulder_distance_m": 0.6997755871174348,
+              "within_hypothetical_arm_length": true,
+              "arm_length_hypothesis_m": 0.722,
+              "note": "Center target only; no joint angle, line of sight or hand task certification."
+            }
+          ]
+        }
+      ],
+      "grade": "C",
+      "semantic_review": "Navigation excludes fixed platform and 3 console pieces; command adds fabric cushions/back pads omitted by prior four-part shell grouping. No animation rig certified."
+    }
+  ],
+  "proxy_parameters": {
+    "thigh_length_fraction": 0.245,
+    "lower_leg_length_fraction": 0.245,
+    "hip_above_seat_m": 0.07,
+    "shoulder_height_fraction": 0.32,
+    "seated_eye_height_fraction": 0.46,
+    "seated_top_fraction": 0.52,
+    "arm_length_fraction": 0.38
+  },
+  "method": "Three unvalidated parametric body sizes, separate limb capsules vs all external triangles; own-chair contact excluded explicitly. Hypotheses are not ANSUR percentile values or a validated humanoid rig. Negative contacts and foot gaps identify adaptation needs; clean proxies cannot approve comfort, vision, reach or sit/stand.",
+  "source_review": "OSHA feet/support and adjustability principles; NASA task-specific fit/reach/view principles, no numerical anthropometric percentile claims."
+}

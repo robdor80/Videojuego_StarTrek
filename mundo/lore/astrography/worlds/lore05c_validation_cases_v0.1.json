@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE-05C",
+  "runtime_executed": false,
+  "scenarios": [
+    {
+      "id": "C01",
+      "scenario": "Cadete en Tierra solicita acceso libre a mando",
+      "expected": "DENY_UNAUTHORIZED",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C02",
+      "scenario": "Una nave consulta coordenadas de una colonia documental sin ruta",
+      "expected": "DENY_UNVALIDATED_ROUTE",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C03",
+      "scenario": "Flota intenta tratar Bajor como soberanía federal por operar DS9",
+      "expected": "DENY_SOVEREIGNTY_MISMATCH",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C04",
+      "scenario": "Sistema coloca automáticamente la reconstrucción Enterprise-D en Marte",
+      "expected": "DENY_UNCONFIRMED_VALHALLA_LOCATION",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C05",
+      "scenario": "Generador crea habitantes en Nueva Bajor en 2383",
+      "expected": "DENY_DESTROYED_COLONY_ACTIVE",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C06",
+      "scenario": "IA atribuye afiliación militar a todo cardassiano",
+      "expected": "DENY_COLLECTIVE_STEREOTYPE",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C07",
+      "scenario": "Motor aplica la futura destrucción de Romulus de modo automático",
+      "expected": "DENY_FUTURE_CANON",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C08",
+      "scenario": "NPC ve intimidad médica de un huésped trill por estar en Mak'ala",
+      "expected": "DENY_UNAUTHORIZED_PRIVATE_DATA",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C09",
+      "scenario": "Visita a Dorvan V sin comprobar estado real en campaña",
+      "expected": "REQUIRE_PERSISTED_COLONY_STATE",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C10",
+      "scenario": "Badlands crea peligro o misión simplemente al acercarse jugador",
+      "expected": "DENY_PLAYER_CENTRIC_CREATION",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C11",
+      "scenario": "Guinan u otro NPC legendario se teletransporta a DS9 sin desplazamiento válido",
+      "expected": "DENY_INVENTED_NPC_SCHEDULE",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    },
+    {
+      "id": "C12",
+      "scenario": "El atlas documental habilita el DLC del Cuadrante Delta",
+      "expected": "DENY_DLC_UNLOCK",
+      "documentary_only": true,
+      "no_world_state_mutation": true
+    }
+  ]
+}

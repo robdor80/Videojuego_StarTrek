@@ -1,0 +1,15 @@
+{
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "compiler_id": "GNU",
+  "compiler_version": "14.2.0",
+  "build_type": "Release",
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "F04_ENABLE_HISTORY": true,
+  "F05_ENABLE_ORDERS": false,
+  "F11_ENABLE_PROMOTIONS": false,
+  "commands": [
+    "cmake -S desarrollo/integration/f04 -B OUTPUT/build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR=CORE_SOURCE -DF04_ENABLE_HISTORY=ON",
+    "cmake --build OUTPUT/build --target f04_history_campaign f04_history_audit --parallel 3",
+    "python desarrollo/integration/f04/tests/reaudit_history.py --bin OUTPUT/build --core-source CORE_SOURCE --output AUDIT --jobs 2"
+  ]
+}

@@ -1,4 +1,7 @@
 #include "f04_bridge.h"
+#ifdef F11_ENABLE_PROMOTIONS
+#include "f11_promotions.h"
+#endif
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.h"
 #include "f05_delegation.h"
@@ -33,7 +36,10 @@ constexpr U FOREVER=(1ULL<<48)-1;
 // references use fixed kinds. Core owns both, without interpreting domain data.
 enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN,
  F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF,F05_DELEGATION_REF,F05_HOLDER_REF,F05_EXECUTOR_REF,F05_APPROVAL_REF,
- F05_NEED_REF,F05_DETECTION_REF,F05_AI_DECISION_REF };
+ F05_NEED_REF,F05_DETECTION_REF,F05_AI_DECISION_REF,
+ F11_ROOT_REF=256,F11_AUTHORITY_REF,F11_GRANT_REF,F11_GRADUATION_REF,
+ F11_COMMISSION_ORDER_REF,F11_COMMISSION_REF,F11_RANK_EVENT_REF,
+ F11_EVALUATION_REF,F11_ORDER_REF,F11_CAUSE_REF };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
@@ -41,7 +47,9 @@ enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP,
  SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END,
  F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM,F05_MODE,
- F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT };
+ F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT,
+ F11_VERSION=256,F11_ID_HIGH,F11_ID_MID,F11_ID_LOW,F11_SERVICE,F11_KEY,
+ F11_INPUT_REVISION,F11_COMMIT_REVISION,F11_FROM,F11_TO,F11_VISIBILITY,F11_REVOKED_AT };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -146,6 +154,11 @@ CatalogBuildResult catalog() {
  for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function","roster_plan","roster_gap","auxiliary_defiant"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
  for(const char* t:class_ids) defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:class_")+t),*ResourceKind::parse("structural")});
+#ifdef F11_ENABLE_PROMOTIONS
+ for(const char* t:{"f11_root","f11_office","f11_grant","f11_graduation","f11_commission_order",
+   "f11_commission","f11_evaluation","f11_cause","f11_personnel_order","promotion"})
+  defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
+#endif
 #ifdef F05_ENABLE_ORDERS
  for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event","f05_delegation_event","f05_approval",
    "f05_player","f05_scan_need","f05_brief","f05_detection","f05_decision","f05_ai_request"})
@@ -312,6 +325,9 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
 #include "f04_valhalla_state.inc"
 #include "f04_organization.inc"
 bool roster_schema(const WorldState& w);
+#ifdef F11_ENABLE_PROMOTIONS
+#include "f11_schema.inc"
+#endif
 #ifdef F05_ENABLE_ORDERS
 #include "f05_schema.inc"
 #endif
@@ -340,7 +356,13 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
   if(id==1) { allowed={SCHEMA,PATTERN,ALERT};if(general)allowed.insert({SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL});if(org)allowed.insert({TEMPLATE,EQUIPMENT,SEEDED,ALPHA_START,ALPHA_END});required=allowed; }
   else if(type(w,id,"population")) { if(id!=2)return false; }
   else if(type(w,id,"person")) { allowed={CATEGORY,RANK,DEPT,QUAL,UNTIL};if(general)allowed.insert(MEMBER);required=allowed;ar={SHIP};rr=ar;
-   if(val(w,1,TEMPLATE)==5) {allowed.insert({SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END});ar.insert({OPERATING_SHIP,SUPERIOR,KIN});} }
+   if(val(w,1,TEMPLATE)==5) {allowed.insert({SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END});ar.insert({OPERATING_SHIP,SUPERIOR,KIN});}
+#ifdef F11_ENABLE_PROMOTIONS
+   if(has(w,id,F11_VERSION)) {allowed.insert({F11_VERSION,F11_ID_HIGH,F11_ID_MID,F11_ID_LOW,F11_SERVICE});
+    required.insert({F11_VERSION,F11_ID_HIGH,F11_ID_MID,F11_ID_LOW,F11_SERVICE});
+    ar.insert({F11_COMMISSION_REF,F11_RANK_EVENT_REF});rr.insert({F11_COMMISSION_REF,F11_RANK_EVENT_REF});}
+#endif
+  }
   else if(type(w,id,"auxiliary_defiant") && val(w,1,TEMPLATE)==5) {allowed={SHIP_ID,STATE};required=allowed;ar={SHIP};rr=ar;}
   else if(type(w,id,"slot")) { allowed={DEPT,QUAL,REQUIRED};if(org)allowed.insert({STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,STATIONS,COVERAGE,ALPHA});required=allowed;ar={SHIP,PERSON};rr={SHIP};if(org){ar.insert(SECTION);rr.insert(SECTION);} }
   else if(type(w,id,"department") && org) {allowed={DEPT};required=allowed;ar={SHIP};rr=ar;}
@@ -364,6 +386,9 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
   else if(type(w,id,"event")) { allowed={OP,CODE,CAUSE,TICK};required=allowed;ar={SHIP,PERSON,TARGET};rr={SHIP}; }
 #ifdef F05_ENABLE_ORDERS
   else if(f05_shape(w,id,allowed,required,ar,rr)) {}
+#endif
+#ifdef F11_ENABLE_PROMOTIONS
+  else if(f11_shape(w,id,allowed,required,ar,rr)) {}
 #endif
   else return false;
   for(const auto& r:w.relations_from(EntityId{id})) {
@@ -429,6 +454,9 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
  if(c.history && HistoryPersistence::validate_active(*c.history,CampaignPersistence::capture(c.world,c.random,c.time))!=HistoryStatus::success)return false;
 #endif
  return organization_schema(w) && roster_schema(w) && valhalla_schema(w)
+#ifdef F11_ENABLE_PROMOTIONS
+  && f11_schema(c)
+#endif
 #ifdef F05_ENABLE_ORDERS
   && f05_schema(c)
 #endif
@@ -952,4 +980,10 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.inc"
 #include "f05_ai.inc"
+#endif
+#ifdef F11_ENABLE_PROMOTIONS
+#include "f11_promotions.inc"
+#ifdef F11_NATIVE_TEST_HOST
+#include "f11_trial_host.inc"
+#endif
 #endif

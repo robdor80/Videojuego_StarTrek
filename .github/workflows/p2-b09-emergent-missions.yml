@@ -1,0 +1,59 @@
+name: P2-B09 Emergent Missions Reference
+
+on:
+  push:
+    paths:
+      - "desarrollo/tools/generation/simulate_emergent_missions.py"
+      - "desarrollo/tools/generation/test_simulate_emergent_missions.py"
+      - "desarrollo/validation/fixtures/emergent_missions/**"
+      - "sistemas/universe/generation/emergent_missions_worldstate_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "desarrollo/tools/validation/test_f13_dynamic_universe_reference.py"
+      - "desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b09-emergent-missions.yml"
+  pull_request:
+    paths:
+      - "desarrollo/tools/generation/simulate_emergent_missions.py"
+      - "desarrollo/tools/generation/test_simulate_emergent_missions.py"
+      - "desarrollo/validation/fixtures/emergent_missions/**"
+      - "sistemas/universe/generation/emergent_missions_worldstate_reference_contract_v0.1.json"
+      - "proyecto/docs/roadmap/**"
+      - "desarrollo/tools/validation/test_f13_dynamic_universe_reference.py"
+      - "desarrollo/tools/validation/test_academy_dynamic_frontier_bridge.py"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/p2-b09-emergent-missions.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: B09 adversarial + B01–B09 + F13, no runtime authority
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax and versioned JSON
+        run: |
+          python -m py_compile desarrollo/tools/generation/simulate_emergent_missions.py desarrollo/tools/generation/test_simulate_emergent_missions.py
+          python -m json.tool desarrollo/validation/fixtures/emergent_missions/verified_unmet_need_npc_response_v0.1.json > /dev/null
+          python -m json.tool sistemas/universe/generation/emergent_missions_worldstate_reference_contract_v0.1.json > /dev/null
+          python -m json.tool proyecto/docs/roadmap/procedural_emergent_missions_status_v0.1.json > /dev/null
+      - name: B09 adversarial cases
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_emergent_missions.py' -v
+      - name: Full dynamic universe reference regressions B01-B09
+        run: python -m unittest discover -s desarrollo/tools/generation -p 'test_simulate_*.py' -q
+      - name: F13 and Academy sequential-gate regressions
+        run: |
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -q
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_academy_dynamic_frontier_bridge.py' -q
+      - name: Deterministic and non-mutating CLI
+        run: |
+          python desarrollo/tools/generation/simulate_emergent_missions.py --fixture desarrollo/validation/fixtures/emergent_missions/verified_unmet_need_npc_response_v0.1.json

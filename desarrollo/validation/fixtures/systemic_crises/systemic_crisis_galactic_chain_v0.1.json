@@ -1,0 +1,291 @@
+{
+  "schema_version": "0.1.0",
+  "kind": "SYNTHETIC_NONCANONICAL",
+  "state": {
+    "campaign_id": "demo-2383",
+    "cutoff_tick": 0,
+    "last_tick": 0,
+    "regions": {
+      "orion_reach": {
+        "prewarp": false
+      },
+      "lyra_colony": {
+        "prewarp": false
+      },
+      "beltran_belt": {
+        "prewarp": false
+      },
+      "primitive_world": {
+        "prewarp": true
+      }
+    },
+    "networks": {
+      "orion_subspace": {
+        "region_ref": "orion_reach",
+        "criticality_bps": 9000,
+        "dependencies": []
+      },
+      "lyra_supply": {
+        "region_ref": "lyra_colony",
+        "criticality_bps": 9000,
+        "dependencies": [
+          {
+            "network_ref": "orion_subspace",
+            "weight_bps": 9000
+          }
+        ]
+      },
+      "beltran_medical": {
+        "region_ref": "beltran_belt",
+        "criticality_bps": 9500,
+        "dependencies": [
+          {
+            "network_ref": "lyra_supply",
+            "weight_bps": 8000
+          }
+        ]
+      },
+      "primitive_comms": {
+        "region_ref": "primitive_world",
+        "criticality_bps": 9000,
+        "dependencies": [
+          {
+            "network_ref": "beltran_medical",
+            "weight_bps": 4000
+          }
+        ]
+      }
+    },
+    "authorities": {
+      "agency": {
+        "clearance": "classified",
+        "scopes": [
+          "open",
+          "add_shock",
+          "assess",
+          "mitigate",
+          "contain",
+          "resolve",
+          "communicate"
+        ]
+      },
+      "captain": {
+        "clearance": "restricted",
+        "scopes": [
+          "assess",
+          "communicate"
+        ]
+      },
+      "observer": {
+        "clearance": "public",
+        "scopes": [
+          "assess"
+        ]
+      }
+    },
+    "facts": {
+      "shock_subspace": {
+        "kind": "shock",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 1,
+        "network_ref": "orion_subspace",
+        "family": "subspace",
+        "loss_bps": 8000,
+        "source_ref": "p2b07:demo-2383:physical_ripple"
+      },
+      "shock_beltran": {
+        "kind": "shock",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 4,
+        "network_ref": "beltran_medical",
+        "family": "environmental",
+        "loss_bps": 3500,
+        "source_ref": "external:ecosystem_report"
+      },
+      "auth_orion": {
+        "kind": "authorization",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "region_ref": "orion_reach",
+        "scope": "intervene"
+      },
+      "auth_beltran": {
+        "kind": "authorization",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "region_ref": "beltran_belt",
+        "scope": "intervene"
+      },
+      "mit_orion_a": {
+        "kind": "mitigation",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "network_ref": "orion_subspace",
+        "relief_bps": 7000
+      },
+      "mit_beltran": {
+        "kind": "mitigation",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 6,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "network_ref": "beltran_medical",
+        "relief_bps": 3500
+      },
+      "report_contained": {
+        "kind": "containment_report",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 7,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace"
+      },
+      "mit_orion_b": {
+        "kind": "mitigation",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 8,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "network_ref": "orion_subspace",
+        "relief_bps": 1000
+      },
+      "report_restored": {
+        "kind": "recovery_report",
+        "status": "accepted",
+        "campaign_id": "demo-2383",
+        "tick": 9,
+        "actor_ref": "agency",
+        "crisis_ref": "p2b08:demo-2383:shock_subspace",
+        "all_networks_restored": true
+      }
+    },
+    "crises": {},
+    "knowledge": [],
+    "events": [],
+    "reserved_ids": [
+      "p2b08:demo-2383:canon_protected"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "e01",
+      "kind": "open",
+      "actor_ref": "agency",
+      "tick": 2,
+      "trigger": "world",
+      "shock_ref": "shock_subspace"
+    },
+    {
+      "event_id": "e02",
+      "kind": "communicate",
+      "actor_ref": "agency",
+      "tick": 3,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "recipient_ref": "captain",
+      "classification": "restricted",
+      "arrival_tick": 8
+    },
+    {
+      "event_id": "e03",
+      "kind": "add_shock",
+      "actor_ref": "agency",
+      "tick": 4,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "shock_ref": "shock_beltran"
+    },
+    {
+      "event_id": "e04",
+      "kind": "assess",
+      "actor_ref": "agency",
+      "tick": 5,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace"
+    },
+    {
+      "event_id": "e05",
+      "kind": "mitigate",
+      "actor_ref": "agency",
+      "tick": 6,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "mitigation_ref": "mit_orion_a",
+      "authorization_ref": "auth_orion"
+    },
+    {
+      "event_id": "e06",
+      "kind": "mitigate",
+      "actor_ref": "agency",
+      "tick": 6,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "mitigation_ref": "mit_beltran",
+      "authorization_ref": "auth_beltran"
+    },
+    {
+      "event_id": "e07",
+      "kind": "contain",
+      "actor_ref": "agency",
+      "tick": 7,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "report_ref": "report_contained"
+    },
+    {
+      "event_id": "e08",
+      "kind": "mitigate",
+      "actor_ref": "agency",
+      "tick": 8,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "mitigation_ref": "mit_orion_b",
+      "authorization_ref": "auth_orion"
+    },
+    {
+      "event_id": "e09",
+      "kind": "resolve",
+      "actor_ref": "agency",
+      "tick": 9,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "report_ref": "report_restored"
+    },
+    {
+      "event_id": "e10",
+      "kind": "communicate",
+      "actor_ref": "agency",
+      "tick": 9,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace",
+      "recipient_ref": "captain",
+      "classification": "restricted",
+      "arrival_tick": 12
+    },
+    {
+      "event_id": "e11",
+      "kind": "assess",
+      "actor_ref": "agency",
+      "tick": 12,
+      "trigger": "world",
+      "crisis_ref": "p2b08:demo-2383:shock_subspace"
+    }
+  ],
+  "views": [
+    "captain",
+    "observer"
+  ]
+}

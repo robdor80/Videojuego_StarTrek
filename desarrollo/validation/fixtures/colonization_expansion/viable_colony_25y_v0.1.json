@@ -17,7 +17,30 @@
       "governance_maturity": 35,
       "target_location_id": "sys:haven",
       "effective_controller_ref": "gen:civilization:alpha",
-      "governance_status": "home_administered"
+      "governance_status": "home_administered",
+      "settlement_decision": {
+        "decision_ref": "decision:colony:haven:foundation",
+        "status": "accepted",
+        "source_domain": "CoreRPG",
+        "authority_ref": "fixture:colonial_authority",
+        "world_revision": 1,
+        "campaign_seed": "colonization_fixture_viable",
+        "civilization_id": "gen:civilization:alpha",
+        "project_id": "colony:haven",
+        "target_location_id": "sys:haven",
+        "candidate": {
+          "location_id": "sys:haven",
+          "known": true,
+          "reachable": true,
+          "hazard_prohibited": false,
+          "habitability": 75,
+          "inhabited_state": "uninhabited",
+          "settlement_rights": "none"
+        },
+        "policy": {
+          "min_habitability": 35
+        }
+      }
     },
     "scheduled_events": [
       {

@@ -1,0 +1,6 @@
+﻿id,diametro_m,alto_m,libre,soportes,obstaculos
+CRUCE,1.5,1.35,True,8/8,
+CABINA,1.5,1.35,True,8/8,
+CAMAROTE_CENTRO,1.5,1.35,True,8/8,
+CAMAROTE_JUNTO_CAMA,1.5,1.35,False,8/8,REF_CAMA
+CENTRO_PUENTE,1.5,1.35,True,8/8,

@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "phenomena_anomalies_archaeology_reference",
+  "status": "OFFLINE_REFERENCE_ONLY",
+  "classification": "STAR_TREK_SPECIFIC_NON_RUNTIME",
+  "owner": "Videojuego_StarTrek / Planificacion 2 / B07",
+  "authority": {
+    "ground_truth": "CoreRPG only; offline snapshot is an explicit non-authoritative fixture",
+    "reference": "Star Trek defines generation constraints, rarity, protected canon, ecology, archaeology and presentation gates",
+    "sensors": "F06 and existing detectable_signature_model + observable_entity_model own actual detection resolution",
+    "science": "B06 owns research, validation, review and technology transfer; B07 only provides physical subjects and exploration evidence",
+    "historical": "B05 may consume accepted, attributed events; B07 never writes B05 history directly",
+    "ownership": "B02 political rights and CoreRPG authoritative possessions; excavating does not transfer artifact ownership",
+    "host": "HOST validates sessions and commands only, does not author world phenomena",
+    "renderer": "UE5/NAP only displays accepted state; AI has no direct mutation rights",
+    "future_blocks": "B08 crisis, B09 missions and B10 scheduler remain unimplemented"
+  },
+  "references": [
+    "proyecto/docs/decisions/authoritative_observable_universe.md",
+    "sistemas/universe/generation/anomaly_temporal_state_contract.json",
+    "sistemas/universe/generation/observable_entity_model.json",
+    "sistemas/universe/generation/detectable_signature_model.json",
+    "sistemas/universe/generation/persistent_entity_identity_contract.json",
+    "mundo/lore/science/lore02_d_phenomena_atlas_v0.1.json",
+    "mundo/lore/science/lore02_d_research_cases_v0.1.json",
+    "proyecto/docs/decisions/lore_02_d_author_decisions_v0.1.md",
+    "sistemas/universe/generation/science_technology_discovery_reference_contract_v0.1.json"
+  ],
+  "packages": [
+    "PA001_authorship_authority_and_boundaries",
+    "PA002_canon_era_reservations",
+    "PA003_campaign_seeds_stable_slots_and_rarity",
+    "PA004_astrography_preexisting_anchor",
+    "PA005_natural_astronomical_fields",
+    "PA006_subspace_spatial_gravimetric_radiation",
+    "PA007_extraordinary_temporal_dimensional_wormhole_gate",
+    "PA008_signatures_sensors_uncertainty",
+    "PA009_lifecycle_causal_time_and_offscreen_lod",
+    "PA010_archaeological_sites_cultural_lineage_stratigraphy",
+    "PA011_artifacts_provenance_dating_and_interpretations",
+    "PA012_rights_prime_directive_consent_conservation",
+    "PA013_evidence_hypotheses_and_limited_knowledge",
+    "PA014_npc_teams_access_communication_and_padd",
+    "PA015_downstream_event_candidates_no_crisis_mission_or_tech",
+    "PA016_replay_idempotency_migrations_and_campaign_isolation",
+    "PA017_adversarial_fixtures_reference_ci",
+    "PA018_audit_closure_and_b08_handoff"
+  ],
+  "families": {
+    "natural_allowed": [
+      "astronomical",
+      "spatial",
+      "subspace",
+      "gravimetric",
+      "radiation"
+    ],
+    "archaeological_allowed": [
+      "ruin",
+      "derelict",
+      "artifact_field"
+    ],
+    "extraordinary_prohibited_for_automatic_generation": [
+      "temporal",
+      "wormhole",
+      "dimensional"
+    ],
+    "omega": "special authored mission obligation from LORE-02 D remains open; never a random technology, routine encounter or mission auto-spawn"
+  },
+  "baseline": {
+    "generation_trigger": "authoritative world generation or accepted causal world event, never sensor, proximity, camera, quest or NPC dialogue",
+    "inputs": [
+      "campaign_id",
+      "world_seed",
+      "stable_slot_ref",
+      "location_ref",
+      "era",
+      "canon_reservations",
+      "preexisting accepted physical/historical source"
+    ],
+    "identity": "p2b07:<campaign_id>:<stable_slot_ref> reference-only, versioned migration required for any change",
+    "roll": "SHA-256 of [generator_version,campaign_id,world_seed,subsystem,stable_slot_ref] modulus 10000",
+    "probability": "rarity_bps in [0,10000], using roll < rarity_bps; values synthetic, no galaxy-wide canonical frequencies asserted",
+    "no_reroll": "persist materialization success OR empty-slot decision; no retry when camera loads or player arrives",
+    "slot_constraints": [
+      "existing location",
+      "accepted preexisting formation or archaeological-origin fact",
+      "no canonical overlap",
+      "valid family",
+      "rare exception gates"
+    ],
+    "materialization": "reference snapshot record only; in production CoreRPG accepts/rejects actual creation",
+    "archaeological_integrity": [
+      "historical owner/culture provenance",
+      "actual material strata with stable refs",
+      "no algorithmic assignment of modern ownership",
+      "recovery requires explicit custodian and permit",
+      "no transfer or commercial inventory on discovery"
+    ]
+  },
+  "observation": {
+    "source": "accepted sensor_observation fact and instrument/operator provenance (fixture declares this; runtime must attest)",
+    "sensor_state": [
+      "exists",
+      "installed/in-range (future F06 adapter)",
+      "operational",
+      "calibrated",
+      "effective reading capability"
+    ],
+    "grades": [
+      "trace",
+      "partial",
+      "corroborates",
+      "contradicts"
+    ],
+    "scientific_limit": "2 independent actors and instruments needed to create supported_not_certain interpretation in reference; not universal law of Star Trek physics",
+    "uncertainty": "unknown origin, risk and interpretation may persist forever; false positives and contradictory signals are legitimate"
+  },
+  "states": {
+    "anomaly": "dormant -> active/quiescent/spent via explicitly accepted physical_transition cause only",
+    "archaeology": "stable_ruin -> eroding_ruin -> lost_ruin via accepted cause only",
+    "hazard": "a B07 hazard observation is not hull damage, a B08 crisis, or a B09 mission",
+    "persistence": "CoreRPG must own temporal transitions; reference processes ordered supplied events; no background galaxy scheduler"
+  },
+  "observation_privacy": {
+    "observer": "individual observer or authenticated recipient",
+    "channels": [
+      "direct accepted survey",
+      "authorized communication with arrival tick"
+    ],
+    "clearance": [
+      "public",
+      "restricted",
+      "classified"
+    ],
+    "rule": "public source and authorization do not imply instant propagation; PADD/AI expose filtered projections, not the full truth or undisclosed artifacts"
+  },
+  "forbidden": [
+    "auto-instantiating the Bajoran wormhole, temporal playable travel, new route",
+    "silently replacing a canon anomaly or source timeline",
+    "creating artifacts because a mission needs them",
+    "auto-generating political crisis, war, rescue or quest",
+    "technology unlock, world technology band or ship modification",
+    "artifact seizure, cultural appropriation, excavation without permits",
+    "sensors that create phenomena or omniscient scientist AI",
+    "using user location, player rank or LOD to decide truth",
+    "importing offline simulator into CoreRPG as a second authoritative writer"
+  ],
+  "replay": {
+    "event_fields": [
+      "event_id",
+      "kind",
+      "actor_ref",
+      "tick",
+      "trigger",
+      "entity_ref or slot_ref",
+      "accepted_fact_refs_when_required"
+    ],
+    "event_types": [
+      "materialize",
+      "survey",
+      "excavate",
+      "interpret",
+      "advance",
+      "communicate"
+    ],
+    "invariants": [
+      "atomic rejection",
+      "idempotent identical event",
+      "reject same ID changed payload",
+      "monotonic tick",
+      "sealed pre-campaign prefix",
+      "per-campaign identity",
+      "event digest integrity",
+      "immutable input",
+      "zero-rarity empty-slot persistence"
+    ],
+    "migration": "new generator revisions must not reinterpret already materialized sites, ancient cultures or event history"
+  },
+  "fixture": {
+    "nature": "SYNTHETIC_NONCANONICAL",
+    "sources": "all facts already accepted by fixture author, not verified by CoreRPG",
+    "example": "Lira subspace ripple + Lyra ruins and artifact stratigraphy; two sensors, independent interpretations, custodian consent, lifecycle change, delayed disclosure",
+    "resource_cost": "not modeled; source of truth for resource accounting remains B04 and CoreRPG"
+  },
+  "runtime_gates": [
+    "CoreRPG authoritative event and slot API",
+    "canonical registry and astrography resolver",
+    "F06 verified sensing adapter",
+    "F11/HOST credential and explicit authority",
+    "save/load + replay migration",
+    "B04 resources + custody",
+    "B08/B09 non-mutating consumer interfaces",
+    "B10 offscreen scheduler",
+    "UE5 and NAP production representation"
+  ],
+  "tests": "desarrollo/tools/generation/test_simulate_phenomena_archaeology.py",
+  "simulator": "desarrollo/tools/generation/simulate_phenomena_archaeology.py",
+  "fixture_ref": "desarrollo/validation/fixtures/phenomena_archaeology/phenomena_archaeology_exploration_v0.1.json"
+}

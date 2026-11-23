@@ -1,0 +1,327 @@
+{
+  "schema_version": "0.1.0",
+  "synthetic_noncanonical": true,
+  "notice": "Accepted source facts are fixture assertions, not attested CoreRPG facts.",
+  "initial_state": {
+    "campaign_id": "camp_fixture",
+    "world_seed": "laboratory_fixed_seed",
+    "cutoff_tick": 100,
+    "last_tick": 100,
+    "locations": {
+      "sector_lira": {
+        "exists_tick": 0,
+        "kind": "sector",
+        "reserved": false
+      },
+      "moon_lyra": {
+        "exists_tick": 0,
+        "kind": "moon",
+        "reserved": false
+      }
+    },
+    "actors": {
+      "generator": {
+        "exists_tick": 0,
+        "scopes": [
+          "materialize",
+          "advance"
+        ],
+        "clearance": "classified"
+      },
+      "officer_a": {
+        "exists_tick": 0,
+        "scopes": [
+          "survey",
+          "interpret",
+          "communicate"
+        ],
+        "clearance": "classified"
+      },
+      "officer_b": {
+        "exists_tick": 0,
+        "scopes": [
+          "survey",
+          "interpret",
+          "communicate"
+        ],
+        "clearance": "restricted"
+      },
+      "archaeologist": {
+        "exists_tick": 0,
+        "scopes": [
+          "survey",
+          "interpret",
+          "excavate",
+          "communicate"
+        ],
+        "clearance": "restricted"
+      },
+      "custodian": {
+        "exists_tick": 0,
+        "scopes": [],
+        "clearance": "restricted"
+      },
+      "recipient": {
+        "exists_tick": 0,
+        "scopes": [],
+        "clearance": "restricted"
+      }
+    },
+    "instruments": {
+      "scanner_alpha": {
+        "exists_tick": 0,
+        "calibrated": true,
+        "operational": true
+      },
+      "scanner_beta": {
+        "exists_tick": 0,
+        "calibrated": true,
+        "operational": true
+      }
+    },
+    "slots": {
+      "rift_lira": {
+        "location_ref": "sector_lira",
+        "family": "subspace",
+        "rarity_bps": 10000,
+        "origin_fact_ref": "rift_formed",
+        "classification": "public",
+        "hazard_class": "unknown"
+      },
+      "ruin_lyra": {
+        "location_ref": "moon_lyra",
+        "family": "ruin",
+        "rarity_bps": 10000,
+        "origin_fact_ref": "settlement_vacated",
+        "classification": "restricted",
+        "custodian_ref": "custodian",
+        "site_access": "protected"
+      }
+    },
+    "facts": {
+      "rift_formed": {
+        "kind": "formation",
+        "source_ref": "sector_lira",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 25
+      },
+      "settlement_vacated": {
+        "kind": "archaeological_origin",
+        "source_ref": "moon_lyra",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 40,
+        "culture_ref": "culture_lyra_historical"
+      },
+      "a_obs_1": {
+        "kind": "sensor_observation",
+        "source_ref": "p2b07:camp_fixture:rift_lira",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 101,
+        "actor_ref": "officer_a",
+        "instrument_ref": "scanner_alpha",
+        "result": "corroborates"
+      },
+      "a_obs_2": {
+        "kind": "sensor_observation",
+        "source_ref": "p2b07:camp_fixture:rift_lira",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 102,
+        "actor_ref": "officer_b",
+        "instrument_ref": "scanner_beta",
+        "result": "corroborates"
+      },
+      "rift_shift": {
+        "kind": "physical_transition",
+        "source_ref": "p2b07:camp_fixture:rift_lira",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 104,
+        "from_phase": "dormant",
+        "to_phase": "active"
+      },
+      "r_obs_1": {
+        "kind": "sensor_observation",
+        "source_ref": "p2b07:camp_fixture:ruin_lyra",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 105,
+        "actor_ref": "archaeologist",
+        "instrument_ref": "scanner_alpha",
+        "result": "corroborates"
+      },
+      "r_obs_2": {
+        "kind": "sensor_observation",
+        "source_ref": "p2b07:camp_fixture:ruin_lyra",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 106,
+        "actor_ref": "officer_b",
+        "instrument_ref": "scanner_beta",
+        "result": "corroborates"
+      },
+      "r_exc_1": {
+        "kind": "excavation",
+        "source_ref": "p2b07:camp_fixture:ruin_lyra",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 107,
+        "actor_ref": "archaeologist",
+        "custodian_ref": "custodian",
+        "permit": true,
+        "artifact_ref": "artifact_lyra_001",
+        "stratum_ref": "stratum_02"
+      },
+      "r_comms": {
+        "kind": "communication",
+        "source_ref": "p2b07:camp_fixture:ruin_lyra",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 109,
+        "sender_ref": "archaeologist",
+        "recipient_ref": "recipient"
+      },
+      "a_comms": {
+        "kind": "communication",
+        "source_ref": "p2b07:camp_fixture:rift_lira",
+        "status": "accepted",
+        "campaign_id": "camp_fixture",
+        "tick": 110,
+        "sender_ref": "officer_a",
+        "recipient_ref": "recipient"
+      }
+    },
+    "phenomena": {},
+    "knowledge": [],
+    "events": [],
+    "reserved_ids": [
+      "canon:bajor_wormhole",
+      "canon:protected_temporal_anchor"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "b07:mat_rift",
+      "kind": "materialize",
+      "tick": 100,
+      "actor_ref": "generator",
+      "trigger": "world",
+      "slot_ref": "rift_lira"
+    },
+    {
+      "event_id": "b07:mat_ruin",
+      "kind": "materialize",
+      "tick": 100,
+      "actor_ref": "generator",
+      "trigger": "world",
+      "slot_ref": "ruin_lyra"
+    },
+    {
+      "event_id": "b07:survey_a1",
+      "kind": "survey",
+      "tick": 101,
+      "actor_ref": "officer_a",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:rift_lira",
+      "instrument_ref": "scanner_alpha",
+      "fact_ref": "a_obs_1"
+    },
+    {
+      "event_id": "b07:survey_a2",
+      "kind": "survey",
+      "tick": 102,
+      "actor_ref": "officer_b",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:rift_lira",
+      "instrument_ref": "scanner_beta",
+      "fact_ref": "a_obs_2"
+    },
+    {
+      "event_id": "b07:interpret_rift",
+      "kind": "interpret",
+      "tick": 103,
+      "actor_ref": "officer_a",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:rift_lira",
+      "hypothesis": "subspace fluctuation, tentative"
+    },
+    {
+      "event_id": "b07:advance_rift",
+      "kind": "advance",
+      "tick": 104,
+      "actor_ref": "generator",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:rift_lira",
+      "fact_ref": "rift_shift",
+      "target_phase": "active"
+    },
+    {
+      "event_id": "b07:survey_ruin_1",
+      "kind": "survey",
+      "tick": 105,
+      "actor_ref": "archaeologist",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:ruin_lyra",
+      "instrument_ref": "scanner_alpha",
+      "fact_ref": "r_obs_1"
+    },
+    {
+      "event_id": "b07:survey_ruin_2",
+      "kind": "survey",
+      "tick": 106,
+      "actor_ref": "officer_b",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:ruin_lyra",
+      "instrument_ref": "scanner_beta",
+      "fact_ref": "r_obs_2"
+    },
+    {
+      "event_id": "b07:excavate_ruin",
+      "kind": "excavate",
+      "tick": 107,
+      "actor_ref": "archaeologist",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:ruin_lyra",
+      "permit": true,
+      "custodian_ref": "custodian",
+      "preservation_ref": "plan_lyra_01",
+      "fact_ref": "r_exc_1"
+    },
+    {
+      "event_id": "b07:interpret_ruin",
+      "kind": "interpret",
+      "tick": 108,
+      "actor_ref": "archaeologist",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:ruin_lyra",
+      "hypothesis": "site formerly inhabited, date uncertain"
+    },
+    {
+      "event_id": "b07:share_ruin",
+      "kind": "communicate",
+      "tick": 109,
+      "actor_ref": "archaeologist",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:ruin_lyra",
+      "recipient_ref": "recipient",
+      "classification": "restricted",
+      "arrival_tick": 111,
+      "fact_ref": "r_comms"
+    },
+    {
+      "event_id": "b07:share_rift",
+      "kind": "communicate",
+      "tick": 110,
+      "actor_ref": "officer_a",
+      "trigger": "world",
+      "entity_ref": "p2b07:camp_fixture:rift_lira",
+      "recipient_ref": "recipient",
+      "classification": "public",
+      "arrival_tick": 110,
+      "fact_ref": "a_comms"
+    }
+  ]
+}

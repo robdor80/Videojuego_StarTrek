@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "view_id": "P2_B01_B10_REFERENCE_MATURITY_NORMALIZED_20261119",
+  "generated_from": "source manifests (not replacement)",
+  "source_of_truth": "each source_manifest (historic)",
+  "audit_ref": "proyecto/docs/auditorias/AUDITORIA_PLANIFICACION_2_B01_B10_2026-11-19.md",
+  "sequential_gate": "P2_B01_TO_B10_REFERENCE_CLOSED_RUNTIME_PENDING",
+  "audit_reconciliation_status": "REFERENCE_RECONCILED_OFFLINE_R5_CI_PASS",
+  "total_blocks": 10,
+  "total_packages": 177,
+  "total_reference_packages": 177,
+  "f13_runtime_implemented": false,
+  "blocks": {
+    "B01": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_civilization_evolution_galactic_interaction_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 15,
+      "historical_packages_complete": 15,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B02": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_colonization_expansion_borders_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B03": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_conflict_war_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B04": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_living_economy_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B05": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_history_major_events_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 16,
+      "historical_packages_complete": 16,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B06": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_science_technology_discovery_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "COMPLETE_REFERENCE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B07": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_phenomena_archaeology_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 18,
+      "historical_packages_complete": 18,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B08": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_systemic_crises_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B09": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_emergent_missions_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    },
+    "B10": {
+      "source_manifest": "proyecto/docs/roadmap/procedural_background_galactic_evolution_status_v0.1.json",
+      "source_schema": "0.1.0",
+      "source_status": "REFERENCE_COMPLETE",
+      "historical_packages_total": 20,
+      "historical_packages_complete": 20,
+      "reference_status": "REFERENCE_COMPLETE_HISTORICAL",
+      "runtime_implemented": false
+    }
+  },
+  "reference_certification": {
+    "code_head_sha": "b108a8a9ffc9a13d932f9e0569118c2af9e02a78",
+    "workflow_run_id": 44566769866,
+    "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44566769866",
+    "counts": {
+      "p2_b01_b10_and_new_adversarial": 411,
+      "f13_offline": 30,
+      "academy_boundary": 9
+    },
+    "date": "2026-11-19",
+    "runtime_implemented": false,
+    "postmerge": {
+      "merge_sha": "8a9996fba66c496aa4a8d615caf95ed7b633cc6c",
+      "pull_request": 181,
+      "workflows_success": 10,
+      "workflows_failed": 0,
+      "audit_ci_run_id": 44567650496,
+      "audit_ci_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/44567650496",
+      "date": "2026-11-19",
+      "classification": "OFFLINE_REFERENCE_ONLY"
+    }
+  }
+}

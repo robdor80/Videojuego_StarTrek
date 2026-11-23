@@ -1,0 +1,152 @@
+[
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\ESCENAS\\VOY03_Circulacion.blend",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_Circulacion.blend",
+    "sha256": "b90dc854dfb3ce62ece4cfb60b25a510787592f5abb68236e799647e074287ea"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\puestos_revision.json",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\puestos_revision.json",
+    "sha256": "04467372a9fbcf1d9a457b05b3cef5b1571ba4c611adcec6e4a8351bf8c6d542"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\prototipo_conjunto.json",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\prototipo_conjunto.json",
+    "sha256": "d72685e3e2d4479df96d88f9ae8e68bb703d81110d9f3f5d657bac95a0af2387"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\manifest_blender.json",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\manifest_blender.json",
+    "sha256": "72f30fd09f41c488b674e297036e5e49bf16e9f2f427d239ad9845bf668129eb"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\obj_objetos.json",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\obj_objetos.json",
+    "sha256": "21de9d0f034a4b46059e4b523051d7d2a35deae6ee52f6f43f251e4bb75b4d6d"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\obj_geometria.npz",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\obj_geometria.npz",
+    "sha256": "c1240a8e89993bc371660547a8df7a96c5a659324e11ae24bb3ad989626ccc38"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\DATOS\\puente_abierto.npz",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\puente_abierto.npz",
+    "sha256": "28f550f4dba0f1caf37a1f0a2c15ba05e565ebcc75f11592da1457d65f2c0ad8"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\SCRIPTS\\geom.py",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\SCRIPTS\\geom.py",
+    "sha256": "30a7288a183db81268466f186e9fa4f7943ea48e4e361dfb86f15b0d12c30042"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\StarTrek_3D\\F07_Chair_AutoLab\\Reports\\INFORME_FINAL_F07_CHAIR_01.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\SUTHERLAND_INFORME.md",
+    "sha256": "88173785f073f4824a5351a6382fd070128fc25b71bdd898b8ce709c36aaf68f"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\00_RESUMEN_EJECUTIVO.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_00_RESUMEN_EJECUTIVO.md",
+    "sha256": "13399c85b5e7c2744e06ff8ff5753decc24a517687340fa64e92e7a19fdccbbb"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\01_ESCALAS_ERGONOMIA.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_01_ESCALAS_ERGONOMIA.md",
+    "sha256": "74d60a6a721e61bb5a4f98c9fc27aec766fb3cbdfee7fdb94d8f3a8298bc8317"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\02_MODULARIDAD_PASILLOS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_02_MODULARIDAD_PASILLOS.md",
+    "sha256": "7704b886ac0c075b357b11422bab239f6cc51a6f2629c8eae1b2c5bc1b1d169d"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\03_CONEXION_PUENTE_PASILLOS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_03_CONEXION_PUENTE_PASILLOS.md",
+    "sha256": "803916e3b22a6e38ef21773a551fa4285d920f90b8ce692b8e6fe38fc3b3d0e1"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\04_CAMAROTE_JUGADOR.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_04_CAMAROTE_JUGADOR.md",
+    "sha256": "ce18e78c8c32916b7fa60f1c2041278612da0c50a5784675021ef1a2d9f206fb"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\05_PUERTAS_SILLAS_CONSOLAS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_05_PUERTAS_SILLAS_CONSOLAS.md",
+    "sha256": "62c12655ae7396757b1e84e8bdaddcfc7e529245c2a7e3f02fd2dc1c99e86585"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\06_MATERIALES_RENDIMIENTO.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_06_MATERIALES_RENDIMIENTO.md",
+    "sha256": "26abd6710185235a64ec8fe6d853349e52fe93f1b57b9967630d991a6589893d"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\07_HOJA_DE_RUTA_RECOMENDADA.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_07_HOJA_DE_RUTA_RECOMENDADA.md",
+    "sha256": "1b5ecee9d892b389a901b77ea7f2bc74937672ddbc9d9cf7b5878271ef9f300a"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\08_PRUEBAS_Y_LIMITACIONES.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_08_PRUEBAS_Y_LIMITACIONES.md",
+    "sha256": "1d29739f88a3cf48ff3f4f7199aefa921c75a1e6b49c19adda35833ee605b024"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\README.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_README.md",
+    "sha256": "c7ebfabd0abfafc9c1f74ed77c6ae4171a22f32fff9596ea712acb1f5a5ae9d7"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\VERIFICACION_ENTREGA.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY02_VERIFICACION_ENTREGA.md",
+    "sha256": "99de346106088c9276e5367c194cba81790198316b32bd736133f6cc6821aab1"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\00_RESUMEN_EJECUTIVO.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_00_RESUMEN_EJECUTIVO.md",
+    "sha256": "341084b9e0119e6f0dfd3e06b8baa63c9384883fb8597ad1a532301cb0749583"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\01_DIAGNOSTICO_CIRCULACION.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_01_DIAGNOSTICO_CIRCULACION.md",
+    "sha256": "091d5c3d39159e63af5102e979f914d6df9499e67c3c6576396d19e851e5e165"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\02_ESCALONES_Y_DESNIVELES.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_02_ESCALONES_Y_DESNIVELES.md",
+    "sha256": "3ac7190fbf672e73f572a527683860c2de6000287de3ee74e4dcad72adda1a90"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\03_PRUEBAS_CAPSULAS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_03_PRUEBAS_CAPSULAS.md",
+    "sha256": "6f23eca8e17139d4fe48546de0670f1266a5b9b6566ccf536f23ec14a0780513"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\04_SOLUCIONES_EXPERIMENTALES.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_04_SOLUCIONES_EXPERIMENTALES.md",
+    "sha256": "56b838f3ad5b1f5ac57049ec6fecac674a8bd9c999db485c03288b049e574190"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\05_RECORRIDOS_COMPLETOS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_05_RECORRIDOS_COMPLETOS.md",
+    "sha256": "6c9937026853da8bb593f93ac4e9afe51b65973d436923f3b024e20660173895"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\06_PREPARACION_UE5.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_06_PREPARACION_UE5.md",
+    "sha256": "be1ce525dd4dfcd9afae2ff309ccf7a42db5165dd4718584bee0daf53f69b668"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\07_RECOMENDACIONES_FUTURAS.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_07_RECOMENDACIONES_FUTURAS.md",
+    "sha256": "fc0a9b82db6ee11e419d47e0787214c27d8604427d531d194e63d36b10e0c18b"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\08_METODOLOGIA_Y_LIMITACIONES.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_08_METODOLOGIA_Y_LIMITACIONES.md",
+    "sha256": "9be31fcb6595fcc5a8a56ccbc1b7bcf3e151534c58cecb50ad13421fc8570d16"
+  },
+  {
+    "source": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY03_Laboratorio\\README.md",
+    "copy": "C:\\Users\\andro\\Documents\\Auditorias_3D\\Voyager_VOY04_Laboratorio\\REFERENCIAS\\VOY03_README.md",
+    "sha256": "d66c33a746e9981c1d2533996e9d48ad3c146602b92dc2aa70c5a5294447e32c"
+  }
+]
