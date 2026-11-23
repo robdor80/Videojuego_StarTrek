@@ -250,9 +250,18 @@ struct Watch {
    std::array<F06ScienceReportView,32> reports{};U rn=0,rt=0;
    check(f06_science_reports_page(s,h.captain,0,reports.data(),reports.size(),&rn,&rt),"science evidence");
    for(U i=rn;i>0;--i)if(reports[i-1].contact_id==contact){deliver_source(contact,reports[i-1].report_id,3,recipient);return;}
-   focus(contact);F06ResultView result{};U count=0;
+   F06ResultView result{};U count=0;
    check(f06_results_page(s,h.captain,contact,0,nullptr,0,&n,&count),"position evidence count");
-   check(f06_results_page(s,h.captain,contact,count-1,&result,1,&n,&count),"position evidence");
+   if(count)check(f06_results_page(s,h.captain,contact,count-1,&result,1,&n,&count),"previous position evidence");
+   const auto contacts=visible_contacts();
+   const auto current=std::find_if(contacts.begin(),contacts.end(),[contact](const auto& c){return c.contact_id==contact;});
+   if(current==contacts.end() || current->status!=F06_ACTIVE)throw std::runtime_error("contact not currently observable");
+   if(!count || result.observed_x_milli_au!=current->observed_x_milli_au ||
+      result.observed_y_milli_au!=current->observed_y_milli_au || result.observed_z_milli_au!=current->observed_z_milli_au ||
+      result.class_id!=current->class_id || result.confidence_permille!=current->confidence_permille){
+    focus(contact);
+    check(f06_results_page(s,h.captain,contact,count,&result,1,&n,&count),"new position evidence");
+   }
    deliver_source(contact,result.result_id,2,recipient);return;
   }
   F06EquipmentView observation{};

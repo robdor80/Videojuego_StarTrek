@@ -34,6 +34,10 @@ def run(runner, output):
     assert counts[12] == 1 and counts[13] == 6 and counts[14] == 4 and counts[16] == 1, counts
     assert len(s['science']) == 6 and not s['science_issues']
     assert len(dict(s['chart_labels'])) == 15
+    star=next(c[0] for c in s['contacts'] if c[1]==12)
+    for command in ('REPORT','SCIENCE_SEND'):
+        sent=say(p,f'{command} {star}')
+        assert say(p,f'{command} {star}')['deliveries']==sent['deliveries'], 'identical celestial reports must reuse evidence'
     for r in s['science']:
         before = time.monotonic()
         result = say(p, f'SCAN {r[0]}')
