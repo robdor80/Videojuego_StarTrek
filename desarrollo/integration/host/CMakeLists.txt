@@ -127,6 +127,17 @@ set_target_properties(TrekHost PROPERTIES
 set_target_properties(TrekHost PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
 
 if(TREK_HOST_TESTS)
+  # Source-free, deterministic H08-P02 queue/ack invariants.
+  add_executable(host_event_delivery_unit_tests tests/event_delivery_unit_tests.cpp)
+  target_compile_features(host_event_delivery_unit_tests PRIVATE cxx_std_20)
+  target_include_directories(host_event_delivery_unit_tests PRIVATE src include)
+  foreach(case IN ITEMS causal invalid_gap wrong_order empty_more invalid_ack bounded invalidate read_only)
+    add_test(NAME host.event.unit.${case} COMMAND host_event_delivery_unit_tests ${case})
+    set_tests_properties(host.event.unit.${case} PROPERTIES TIMEOUT 15 LABELS "h08-p02;unit")
+  endforeach()
+endif()
+
+if(TREK_HOST_TESTS)
   add_executable(host_native_tests tests/native_tests.cpp tests/player_native_tests.cpp)
   target_include_directories(host_native_tests PRIVATE src)
   target_link_libraries(host_native_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads ${CMAKE_DL_LIBS})
