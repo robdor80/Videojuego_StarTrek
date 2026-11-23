@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "scenario_id": "aster_f06_qa",
+  "status": "FIXTURE_NON_CANON_NOT_A_PERSISTENT_GALAXY",
+  "description_es": "Sistema Aster: escenario aislado de comprobación de Sensores. No incorpora canon ni misiones definitivas.",
+  "coordinate_unit": "milli_au",
+  "observation_ship": {
+    "label": "USS Enterprise-D modernizada (solo perfil de equipos; sesión de Core actual Miranda para pruebas)",
+    "absolute_position_milli_au": [
+      1000,
+      0,
+      0
+    ],
+    "sensor_profile_id": 5
+  },
+  "time_frames_seconds": [
+    0,
+    3600,
+    7200,
+    14400,
+    28800
+  ],
+  "policy": {
+    "science_truth": "HOST_ONLY; nunca se emite por F06WorldSnapshot ni en el encabezado C++",
+    "planet_classification": "PROVISIONAL_QA; no equivale a identificación confirmada por sensores",
+    "ship_class_id": "0 para cuerpos astronómicos; IDs naves solo del ship_class_registry.json",
+    "visual_asset_id": "null hasta revisar modelos reales del autor en MSI; no importar ni distribuir sin comprobación",
+    "no_real_cloaking": "active=0 representa falta de emisión en la prueba; no simula físicamente camuflaje romulano",
+    "orbital_motion": "posiciones de cuerpos astronómicos fijas durante ocho horas: no es un motor orbital"
+  },
+  "entities": [
+    {
+      "key": 100,
+      "name": "Aster",
+      "kind": "star",
+      "position_milli_au": [
+        0,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "spectral_type": "G",
+        "composition": [
+          "hydrogen",
+          "helium"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 201,
+      "name": "Aster I",
+      "kind": "planet",
+      "position_milli_au": [
+        480,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "H",
+        "description_es": "Rocoso árido, atmósfera tenue",
+        "atmosphere": [
+          "CO2",
+          "N2"
+        ],
+        "surface": [
+          "silicates"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 202,
+      "name": "Aster II",
+      "kind": "planet",
+      "position_milli_au": [
+        1300,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "M",
+        "description_es": "Templado, agua superficial, atmósfera respirable",
+        "atmosphere": [
+          "N2",
+          "O2",
+          "H2O"
+        ],
+        "surface": [
+          "silicates",
+          "water"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 203,
+      "name": "Aster III",
+      "kind": "planet",
+      "position_milli_au": [
+        3100,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "Y",
+        "description_es": "Tóxico y extremo, no apto para humanos",
+        "atmosphere": [
+          "CO2",
+          "SO2"
+        ],
+        "surface": [
+          "basalt"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 204,
+      "name": "Aster IV",
+      "kind": "planet",
+      "position_milli_au": [
+        5800,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "J",
+        "description_es": "Gigante gaseoso",
+        "atmosphere": [
+          "H2",
+          "He",
+          "CH4"
+        ],
+        "surface": []
+      },
+      "updates": []
+    },
+    {
+      "key": 205,
+      "name": "Aster V",
+      "kind": "planet",
+      "position_milli_au": [
+        12000,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "P",
+        "description_es": "Mundo glaciado",
+        "atmosphere": [
+          "N2",
+          "CH4"
+        ],
+        "surface": [
+          "ice",
+          "rock"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 206,
+      "name": "Aster VI",
+      "kind": "planet",
+      "position_milli_au": [
+        23000,
+        0,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "planet_class": "L",
+        "description_es": "Rocoso marginal para habitabilidad",
+        "atmosphere": [
+          "N2",
+          "Ar"
+        ],
+        "surface": [
+          "silicates",
+          "ice"
+        ]
+      },
+      "updates": []
+    },
+    {
+      "key": 301,
+      "name": "Aster II-a",
+      "kind": "moon",
+      "position_milli_au": [
+        1320,
+        18,
+        0
+      ],
+      "strength_permille": 950,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "body": "rocky_moon",
+        "surface": [
+          "silicates"
+        ]
+      },
+      "updates": [],
+      "parent_key": 202
+    },
+    {
+      "key": 302,
+      "name": "Aster IV-a",
+      "kind": "moon",
+      "position_milli_au": [
+        5880,
+        90,
+        0
+      ],
+      "strength_permille": 980,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "body": "ice_moon",
+        "surface": [
+          "water_ice"
+        ]
+      },
+      "updates": [],
+      "parent_key": 204
+    },
+    {
+      "key": 303,
+      "name": "Aster IV-b",
+      "kind": "moon",
+      "position_milli_au": [
+        5750,
+        -120,
+        0
+      ],
+      "strength_permille": 980,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "body": "volcanic_moon",
+        "surface": [
+          "sulfur"
+        ]
+      },
+      "updates": [],
+      "parent_key": 204
+    },
+    {
+      "key": 304,
+      "name": "Aster V-a",
+      "kind": "moon",
+      "position_milli_au": [
+        12050,
+        25,
+        0
+      ],
+      "strength_permille": 920,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "body": "ice_moon",
+        "surface": [
+          "ice"
+        ]
+      },
+      "updates": [],
+      "parent_key": 205
+    },
+    {
+      "key": 401,
+      "name": "Nebulosa Velo de Aster",
+      "kind": "nebula",
+      "position_milli_au": [
+        17500,
+        2600,
+        0
+      ],
+      "strength_permille": 1000,
+      "interference_permille": 100,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "gas": [
+          "H2",
+          "dust"
+        ],
+        "sensor_interference": "regional_only_pending_f13"
+      },
+      "updates": []
+    },
+    {
+      "key": 402,
+      "name": "Cinturón de Aster",
+      "kind": "asteroid",
+      "position_milli_au": [
+        7500,
+        500,
+        0
+      ],
+      "strength_permille": 950,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "materials": [
+          "silicates",
+          "iron"
+        ],
+        "simulation_level": "representative_cluster_only"
+      },
+      "updates": []
+    },
+    {
+      "key": 501,
+      "name": "Estación de investigación Aster",
+      "kind": "station",
+      "position_milli_au": [
+        1750,
+        500,
+        0
+      ],
+      "strength_permille": 930,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "owner": "federation",
+        "description_es": "Instalación ficticia de prueba, no validada como misión"
+      },
+      "updates": []
+    },
+    {
+      "key": 601,
+      "name": "Carguero civil",
+      "kind": "starship",
+      "position_milli_au": [
+        2100,
+        600,
+        0
+      ],
+      "strength_permille": 950,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 86001,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "operator": "civilian",
+        "faction": "federation",
+        "ship_role": "cargo"
+      },
+      "updates": [
+        {
+          "tick": 3600,
+          "position_milli_au": [
+            2400,
+            700,
+            0
+          ]
+        },
+        {
+          "tick": 7200,
+          "position_milli_au": [
+            2800,
+            850,
+            0
+          ]
+        },
+        {
+          "tick": 14400,
+          "position_milli_au": [
+            3300,
+            900,
+            0
+          ]
+        },
+        {
+          "tick": 28800,
+          "position_milli_au": [
+            4100,
+            1200,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "key": 602,
+      "name": "Nave científica Federación (Intrepid)",
+      "kind": "starship",
+      "position_milli_au": [
+        3500,
+        -700,
+        0
+      ],
+      "strength_permille": 980,
+      "interference_permille": 0,
+      "ship_class_id": 6,
+      "transponder_id": 86002,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "faction": "federation",
+        "ship_role": "research"
+      },
+      "updates": [
+        {
+          "tick": 7200,
+          "position_milli_au": [
+            3700,
+            -800,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "key": 603,
+      "name": "Crucero klingon (Vor'cha)",
+      "kind": "starship",
+      "position_milli_au": [
+        35000,
+        1200,
+        0
+      ],
+      "strength_permille": 980,
+      "interference_permille": 0,
+      "ship_class_id": 16,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "faction": "klingon",
+        "ship_role": "cruiser"
+      },
+      "updates": [
+        {
+          "tick": 3600,
+          "position_milli_au": [
+            7300,
+            900,
+            0
+          ]
+        },
+        {
+          "tick": 14400,
+          "position_milli_au": [
+            37000,
+            900,
+            0
+          ],
+          "world_exit_evidence": 3
+        },
+        {
+          "tick": 28800,
+          "position_milli_au": [
+            7800,
+            1000,
+            0
+          ],
+          "world_exit_evidence": 0
+        }
+      ]
+    },
+    {
+      "key": 604,
+      "name": "Nave romulana (D'deridex)",
+      "kind": "starship",
+      "position_milli_au": [
+        4900,
+        -1100,
+        0
+      ],
+      "strength_permille": 970,
+      "interference_permille": 0,
+      "ship_class_id": 8,
+      "transponder_id": 0,
+      "active": 0,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "faction": "romulan",
+        "ship_role": "warbird",
+        "emissions_at_t0": "none_not_literal_cloaking_simulation"
+      },
+      "updates": [
+        {
+          "tick": 7200,
+          "active": 1,
+          "position_milli_au": [
+            4500,
+            -600,
+            0
+          ]
+        },
+        {
+          "tick": 28800,
+          "position_milli_au": [
+            5000,
+            -400,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "key": 605,
+      "name": "Lanzadera científica Federación",
+      "kind": "shuttle",
+      "position_milli_au": [
+        1400,
+        -300,
+        0
+      ],
+      "strength_permille": 900,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "faction": "federation",
+        "ship_role": "shuttle"
+      },
+      "updates": [
+        {
+          "tick": 3600,
+          "position_milli_au": [
+            1800,
+            -350,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "key": 606,
+      "name": "Sonda automatizada",
+      "kind": "probe",
+      "position_milli_au": [
+        9400,
+        200,
+        0
+      ],
+      "strength_permille": 860,
+      "interference_permille": 0,
+      "ship_class_id": 0,
+      "transponder_id": 0,
+      "active": 1,
+      "world_exit_evidence": 0,
+      "visual_asset_id": null,
+      "science_truth": {
+        "faction": "unassigned",
+        "ship_role": "probe"
+      },
+      "updates": [
+        {
+          "tick": 14400,
+          "position_milli_au": [
+            9900,
+            220,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

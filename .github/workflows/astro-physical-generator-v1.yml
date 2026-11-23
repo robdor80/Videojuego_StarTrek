@@ -1,0 +1,41 @@
+name: Astrophysics v1 — physical-first generator
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/tools/generation/astro_physics_v1.py'
+      - 'desarrollo/tools/generation/astro_sector_v1.py'
+      - 'desarrollo/tools/generation/test_astro_sector_v1.py'
+      - 'desarrollo/tools/generation/enrich_aster_f06_v1.py'
+      - 'desarrollo/tools/generation/test_astro_physics_v1.py'
+      - 'desarrollo/integration/f06/CMakeLists.txt'
+      - 'desarrollo/integration/f06/fixtures/aster_f06_qa.json'
+      - 'sistemas/universe/generation/ASTRO_PHYSICAL_GENERATOR_V1.md'
+      - '.github/workflows/astro-physical-generator-v1.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  astrophysics:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test physical invariants, deterministic seeds, F06 confidentiality
+        run: python desarrollo/tools/generation/test_astro_physics_v1.py
+      - name: Test deterministic 3D sector and canon reservations
+        run: python desarrollo/tools/generation/test_astro_sector_v1.py
+      - name: Generate full system and minimal Aster fixture
+        shell: bash
+        run: |
+          python desarrollo/tools/generation/astro_sector_v1.py --seed regression-ci --sector 041 --systems 4 --output "${RUNNER_TEMP:-$TEMP}/astro_sector.json"
+          python desarrollo/tools/generation/astro_physics_v1.py --seed regression-ci --profile game --output "${RUNNER_TEMP:-$TEMP}/astro_game.json"
+          python desarrollo/tools/generation/enrich_aster_f06_v1.py --source desarrollo/integration/f06/fixtures/aster_f06_qa.json --output "${RUNNER_TEMP:-$TEMP}/astro_aster.json"
+          python desarrollo/integration/f06/build_validation_system.py --source "${RUNNER_TEMP:-$TEMP}/astro_aster.json" --out "${RUNNER_TEMP:-$TEMP}/astro_aster_sensor.h"
+          python -c "import json,sys; w=json.load(open(sys.argv[1],encoding='utf-8')); assert w['system']['materialized'] and w['summary']['planets']>=3" "${RUNNER_TEMP:-$TEMP}/astro_game.json"

@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "status": "BALANCE_PROVISIONAL_F06_REQUIRES_MSI",
+  "note": "Comparadores normalizados solo para tests y balance. NO cifras canon de Star Trek, no representan alcance en km ni prestaciones finales aprobadas.",
+  "design_authority": "Enterprise-D Galaxy individual reconstruida por Geordi La Forge: sensores superiores a Sovereign y Odyssey, sin omnisciencia",
+  "provenance": "GAME_ADDITION_USER_DECISION_2026-11-06",
+  "default_when_uninstalled": "legacy_unchanged_no_profile",
+  "profiles": [
+    {
+      "id": 1,
+      "ship_class": "miranda",
+      "display_es": "Miranda (servicio general)",
+      "tier": 1,
+      "short_permille": 930,
+      "long_permille": 870,
+      "focus_permille": 900,
+      "interference_resistance_permille": 0,
+      "tracking_slots": 12,
+      "independent_arrays": false
+    },
+    {
+      "id": 2,
+      "ship_class": "intrepid",
+      "display_es": "Intrepid (exploración)",
+      "tier": 2,
+      "short_permille": 950,
+      "long_permille": 910,
+      "focus_permille": 930,
+      "interference_resistance_permille": 15,
+      "tracking_slots": 13,
+      "independent_arrays": false
+    },
+    {
+      "id": 3,
+      "ship_class": "sovereign",
+      "display_es": "Sovereign (sensores avanzados)",
+      "tier": 3,
+      "short_permille": 970,
+      "long_permille": 950,
+      "focus_permille": 960,
+      "interference_resistance_permille": 30,
+      "tracking_slots": 14,
+      "independent_arrays": false
+    },
+    {
+      "id": 4,
+      "ship_class": "odyssey",
+      "display_es": "Odyssey (tecnología de vanguardia 2383)",
+      "tier": 4,
+      "short_permille": 985,
+      "long_permille": 975,
+      "focus_permille": 980,
+      "interference_resistance_permille": 50,
+      "tracking_slots": 15,
+      "independent_arrays": false
+    },
+    {
+      "id": 5,
+      "ship_class": "galaxy",
+      "configuration": "enterprise_d_geordi_refit",
+      "display_es": "USS Enterprise-D modernizada por Geordi La Forge",
+      "tier": 5,
+      "short_permille": 1000,
+      "long_permille": 1000,
+      "focus_permille": 1000,
+      "interference_resistance_permille": 80,
+      "tracking_slots": 16,
+      "independent_arrays": true,
+      "design_components": [
+        "array_saucer_independent",
+        "array_battle_section_independent",
+        "long_range_deflector",
+        "redundant_subspace",
+        "advanced_astrometrics"
+      ],
+      "actual_section_runtime": "BLOCKED_ON_F04_GALAXY_SEPARATION_WORLD_STATE",
+      "notes": "Aplicable SOLO tras registrar la modernización individual instalada, nunca a todas las Galaxy."
+    }
+  ],
+  "guardrails": [
+    "Host debe validar la instalación efectiva y daño antes de asignar el perfil",
+    "Se requiere un perfil instalado; catalogar una clase no instala equipos",
+    "Un perfil no genera firmas ni descubre contactos nuevos sin observación legítima",
+    "Sin flujo de mundo autorizado no se generan eventos espaciales",
+    "No transferir perfiles de la antigua clase Valhalla a esta Galaxy individual"
+  ]
+}

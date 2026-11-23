@@ -128,6 +128,11 @@ uint32_t f05_execute_order(F04Session* s,F04Ref who,U revision,U order,F05Receip
    f05_validate(*next,request,ref(w,order,ORIGIN));f05_approval_required(*next,order);
    const F04Request op{who,next->world.revision(),F04_SCAN,0,0,0,0,0,val(w,request,CAUSE)};
    performed=true;(void)perform(*next,cat,op,false,&actual);
+#ifdef F06_ENABLE_SENSORS
+   // Same staged Core campaign: an authorized F05_SCAN observes real signatures,
+   // and no additional world truth is fabricated. No work when no signatures exist.
+   f06_poll(*next,cat,0,true);
+#endif
   } catch(const Denial& d){code=d.code;}
   const U result=f05_record(*next,cat,"f05_result",who.id);
   link(*next,result,F05_ORDER_REF,order);link(*next,result,F05_TASK_REF,task);link(*next,result,F05_ATTEMPT_REF,attempt);
