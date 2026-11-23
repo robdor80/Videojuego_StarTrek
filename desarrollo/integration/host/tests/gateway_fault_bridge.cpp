@@ -14,4 +14,10 @@ std::uint32_t events(F04Session*, F04Ref, std::uint64_t, std::uint64_t,
     page = {};
     return F04_INTERNAL;
 }
+// The H02/H03 fake bridge must never make a second clock or invent activity.
+std::uint32_t advance(F04Session*, F04Ref, const ClockIntent&, NativeClockReport& report) noexcept
+{
+    report = {};
+    return F04_INTERNAL;
+}
 }
