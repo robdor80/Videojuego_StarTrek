@@ -89,6 +89,19 @@ def run(runner, output):
     assert all(c[0] not in range(910001,910007) for c in ending['contacts'])
     assert 'world_entity_key' not in json.dumps(ending), 'private keys must not reach public protocol'
     close(p)
+    # A changed observation can be deliberately sent again. Retrying the
+    # same observation keeps its original receipt, even after fresh-process load.
+    p, _ = start()
+    state = say(p, 'STEP 60')
+    target = next(c[0] for c in state['contacts'] if c[6] == 71002)
+    old = say(p, f'TACTICAL_SEND {target}')['deliveries'][0]
+    state = say(p, 'STEP 150')
+    updated = latest(state, target)
+    sent = say(p, f'TACTICAL_SEND {target}')
+    assert len(sent['deliveries']) == 2 and sent['deliveries'][-1][2] == updated['id']
+    assert sent['deliveries'][-1][0] != old[0]
+    assert say(p, f'TACTICAL_SEND {target}')['deliveries'] == sent['deliveries']
+    close(p)
     # Same seed/cadence -> same observed equipment; different seeds -> variety.
     projections=[]
     for seed in (42,42,7,11):

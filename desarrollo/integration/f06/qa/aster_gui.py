@@ -565,6 +565,10 @@ class Panel:
         if len(core_ids) != state.get("attention", 0):
             raise RuntimeError("Incoherencia en los contactos señalados por CoreRPG.")
         observed = {str(c[0]): c for c in state.get("contacts", [])}
+        latest_equipment = {str(e["contact"]): e for e in state.get("equipment", [])}
+        def equipment_severity(cid: str) -> int:
+            e = latest_equipment.get(cid)
+            return max((slot[3] for slot in e["slots"]), default=0) if e else 0
         borg = [str(c[0]) for c in state.get("contacts", [])
                 if c[1] == 1 and c[2] == 1 and c[3] == 10]
         arrival = self.arrival_id if self.arrival_id in observed and (
@@ -579,6 +583,8 @@ class Panel:
             ids = list(dict.fromkeys(
                 ([nav_target] if nav_target else []) +
                 ([arrival] if arrival else []) + core_ids))
+        if self.x1:
+            ids.sort(key=equipment_severity, reverse=True)
         if not ids:
             self.alert_ids = []
             self.alert_bar.grid_remove()
@@ -588,10 +594,13 @@ class Panel:
         self.alert_ids = ids
         self.alert_cursor %= len(ids)
         chosen = ids[self.alert_cursor]
-        severity = "critical" if chosen in borg else "warning"
+        severity = "critical" if chosen in borg or equipment_severity(chosen) == 3 else "warning"
         if chosen in borg:
             title = "ALERTA PRIORITARIA · CONTACTO BORG"
             explanation = "Clase Borg identificada. Evaluación inmediata del oficial."
+        elif equipment_severity(chosen) == 3:
+            title = "ALERTA · EMISIÓN OFENSIVA ACTIVA"
+            explanation = "Emisión ofensiva medida por Core F06. Datos observados disponibles; comunicar y transferir siguen siendo decisiones del oficial."
         elif chosen == nav_target and self.nav_priority:
             nav_kind, _, _, heading, trend, intercept = self.nav_priority
             if intercept:
@@ -1604,8 +1613,11 @@ class Panel:
                 " · ".join(slots) + f" · {e['length_m']} m · {clock(e['tick'])}"))
         else:
             self.auto_brief.configure(text="Vigilancia automática; sin nuevas mediciones navales.")
-        self.shared_report_ids={
-            str(item[0]) for item in state.get("contact_briefs", [])}
+        latest_ids = {e["contact"]: e["id"] for e in readings}
+        self.shared_report_ids = {
+            str(item[0]) for item in state.get("contact_briefs", []) if item[0] not in latest_ids}
+        self.shared_report_ids.update(str(d[1]) for d in state.get("deliveries", [])
+                                      if d[4] == 1 and latest_ids.get(d[1]) == d[2])
         new_arrivals=[]
         if not reset:
             for event in state.get("events", []):

@@ -14,7 +14,7 @@ def run(output):
     assert 'F06_EQUIPMENT_CATALOG' in build()
     cases=[]
     for kind in ('status','version','boolean_version','slot_order','duplicate','zero_class',
-                 'boolean_count','negative','overflow','short_count'):
+                 'boolean_count','negative','overflow','short_count','missing_class'):
         candidate=deepcopy(original)
         if kind=='status':candidate['status']='CANON'
         elif kind=='version':candidate['version']=2
@@ -26,11 +26,12 @@ def run(output):
         elif kind=='negative':candidate['classes'][0]['count'][0]=-1
         elif kind=='overflow':candidate['classes'][0]['count'][0]=65
         elif kind=='short_count':candidate['classes'][0]['count'].pop()
+        elif kind=='missing_class':candidate['classes'].pop()
         path=output/f'{kind}.json';path.write_text(json.dumps(candidate))
         try:build(path)
         except ValueError:cases.append(kind)
         else:raise AssertionError(kind)
-    assert len(cases)==10
+    assert len(cases)==11
     print('PASS equipment catalog integrity: canonical labeling, version, semantic slots, IDs, types and ranges')
 
 if __name__=='__main__':

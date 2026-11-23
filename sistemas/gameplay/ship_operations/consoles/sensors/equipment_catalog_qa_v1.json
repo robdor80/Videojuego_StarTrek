@@ -1,10 +1,231 @@
 {
   "version": 1,
   "status": "QA_FICTION_NON_CANON",
-  "slots": ["offensive_energy_emitters", "launchers", "shield_generators", "armour_layers", "warp_drives", "impulse_drives"],
+  "slots": [
+    "offensive_energy_emitters",
+    "launchers",
+    "shield_generators",
+    "armour_layers",
+    "warp_drives",
+    "impulse_drives"
+  ],
   "classes": [
-    {"class_id": 18, "count": [0, 0, 1, 1, 1, 2]},
-    {"class_id": 8, "count": [6, 2, 2, 1, 1, 2]},
-    {"class_id": 16, "count": [4, 2, 1, 1, 1, 2]}
-  ]
+    {
+      "class_id": 1,
+      "design_code": "galaxy",
+      "count": [
+        12,
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 2,
+      "design_code": "sovereign",
+      "count": [
+        16,
+        3,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 3,
+      "design_code": "odyssey",
+      "count": [
+        20,
+        4,
+        3,
+        2,
+        1,
+        3
+      ]
+    },
+    {
+      "class_id": 4,
+      "design_code": "defiant",
+      "count": [
+        4,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 5,
+      "design_code": "miranda",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 6,
+      "design_code": "intrepid",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 7,
+      "design_code": "akira",
+      "count": [
+        8,
+        3,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 8,
+      "design_code": "dderidex",
+      "count": [
+        6,
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 9,
+      "design_code": "bird_of_prey",
+      "count": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 10,
+      "design_code": "borg_cube",
+      "count": [
+        24,
+        8,
+        4,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 11,
+      "design_code": "danube",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 12,
+      "design_code": "olympic",
+      "count": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 13,
+      "design_code": "type_6_shuttle",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 14,
+      "design_code": "dkyr",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 15,
+      "design_code": "d5",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 16,
+      "design_code": "vorcha",
+      "count": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 17,
+      "design_code": "ktinga",
+      "count": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "class_id": 18,
+      "design_code": "aster_qa_civil_freighter",
+      "count": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "note": "All equipment figures, including small craft, are deliberately fictional QA balance fixtures. Not canon or a claim of a production loadout."
 }

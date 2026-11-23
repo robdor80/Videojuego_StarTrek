@@ -25,6 +25,8 @@ def build(source=SOURCE):
         require(len(counts) == 6 and all(type(n) is int and 0 <= n <= 64 for n in counts), 'Invalid equipment count')
         seen.add(cid)
         rows.append('{' + str(cid) + ', {' + ','.join(map(str, counts)) + '}}')
+    registry = json.loads(SOURCE.with_name('ship_class_registry.json').read_text(encoding='utf-8'))
+    require(seen == {row['id'] for row in registry['classes']}, 'Every registered design needs an explicit QA reference')
     return '#pragma once\nstruct F06EquipmentCatalog { unsigned class_id,count[6]; };\ninline constexpr F06EquipmentCatalog F06_EQUIPMENT_CATALOG[] = {\n' + ',\n'.join(rows) + '\n};\n'
 
 if __name__ == '__main__':

@@ -74,6 +74,7 @@ def run(runner, output, realtime=False):
                 rom=next(c for c in panel.state['contacts'] if c[3]==8)
                 panel.navigate('status');panel._choose_contact(str(rom[0]));root.update()
                 assert 'ROJO' in panel.detail_text.get('1.0','end')
+                assert 'EMISIÓN OFENSIVA ACTIVA' in panel.alert_title.cget('text')
         for geometry in ('1460x825','1150x700'):
             root.geometry(geometry);root.update()
             try:

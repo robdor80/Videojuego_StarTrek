@@ -203,7 +203,12 @@ struct Watch {
   update_navigation(tick);
  }
  void delivery(U contact,uint32_t recipient){
-  F06DeliveryRequest req{stats().revision,(contact%900000000000ULL)*4+recipient,contact,recipient,0};
+  U n=0,total=0;
+  check(f06_equipment_page(s,h.captain,contact,0,nullptr,0,&n,&total),"equipment count for delivery");
+  if(!total)throw std::runtime_error("no observed equipment for delivery");
+  F06EquipmentView observation{};
+  check(f06_equipment_page(s,h.captain,contact,total-1,&observation,1,&n,&total),"latest equipment for delivery");
+  F06DeliveryRequest req{stats().revision,(observation.observation_id%900000000000ULL)*4+recipient,contact,recipient,0};
   F06DeliveryView receipt{};check(f06_deliver(s,h.ensign,&req,&receipt),"deliver QA queue");
   if(recipient==1){
    bool known=false;for(const auto& row:contact_briefs)if(row[0]==contact)known=true;
