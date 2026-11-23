@@ -163,6 +163,30 @@ struct EventBatchResult {
     bool more = false, resync_required = false;
 };
 
+// H08-P03: explicit, bounded campaign-clock intent on the trusted native
+// HOST interface. The timeline and scheduled work belong exclusively to Core.
+struct ClockLimits {
+    static constexpr std::uint64_t max_span_seconds = 600;
+    static constexpr std::uint64_t max_tasks = 128;
+};
+struct ClockIntent {
+    std::uint64_t intent_id = 0; // Monotonic within one session generation; not a credential.
+    std::uint64_t expected_revision = 0;
+    std::uint64_t expected_now = 0;
+    std::uint64_t horizon = 0; // Absolute Core campaign seconds, never wall time.
+    std::uint64_t task_budget = 0; // 1..128; Core's own maximum remains unchanged.
+};
+struct ClockResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t correlation_id = 0;
+    std::uint64_t before_tick = 0, after_tick = 0;
+    std::uint64_t before_revision = 0, after_revision = 0;
+    std::uint64_t processed = 0;
+    bool more_due = false; // F04_CAPACITY: partial committed advance, NOT a failure.
+    bool replayed = false; // Identical intent already observed, Core not called again.
+};
+
 class PlayerBootstrap;
 
 class SessionOwner final {
@@ -206,6 +230,11 @@ public:
         Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
     TREK_HOST_API std::future<Result> ack_order_events(
         Generation, std::uint64_t subscription, std::uint64_t presented_event_id);
+
+    // A single explicit, monotonic, generation-bound request. No automatic
+    // real-time progression, background scheduler or mutation from NPC/AI/UE.
+    TREK_HOST_API std::future<ClockResult> advance_clock(
+        Generation, ClockIntent, std::uint64_t correlation_id = 0);
 
 private:
     friend class PlayerBootstrap;

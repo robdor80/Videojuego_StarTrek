@@ -50,6 +50,12 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 - 13 pruebas integradas con el Core real (`host.event.he01_delivery`…`he13_generation`) y 8 pruebas de cola aislada (`host.event.unit.*`) añadidas a la matriz de Actions nativa.
 - **Alcance:** F05 únicamente, sin cambios ABI C/Unreal; F04/F11 y formateadores de avisos quedan pendientes de sus fases/contratos. Consultar CI de su PR antes de afirmar probado o fusionado.
 
+## H08-P03 — Reloj de campaña y tareas acotadas
+
+- [Especificación y pruebas del avance de reloj Core](H08_P03_RELOJ_ACTIVIDADES_CORE_2026-11-23.md): servicio C++ interno, `f04_advance` en hilo propietario, guardas de identidad y revisión, máximo 600 segundos / 128 tareas por petición.
+- 15 casos `host.clock.*` con el F04/Core real, además de regresiones H02–H06 y producto Linux/Windows. Una ejecución parcial de Core es un recibo con `more_due=true`, **no un error que dispare reintentos**.
+- Estado de este enlace: implementación en PR; la evidencia de CI y el estado de la fusión determinan si queda probado. Sin API C/Unreal nueva ni reloj paralelo.
+
 ## Fases y responsables
 
 H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Codex (identidad). H04: Codex (persistencia). H05: Codex (Core/F04/F05). H06: Codex (UE real). H07: ChatGPT+Codex (lector y pasarela NO emisora de F11). H08-H11: coordinación y sistemas progresivos. H12-H13: estabilidad y certificación.

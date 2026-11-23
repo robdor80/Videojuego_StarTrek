@@ -13,6 +13,7 @@
 
 #include <atomic>
 #include <algorithm>
+#include <array>
 #include <condition_variable>
 #include <cstdio>
 #include <deque>
@@ -211,15 +212,16 @@ struct SessionOwner::Impl {
     struct SubscribeEvents { Generation generation; std::uint64_t order, correlation; std::promise<EventSubscriptionResult> reply; };
     struct PollEvents { Generation generation; std::uint64_t subscription, correlation; std::promise<EventBatchResult> reply; };
     struct AckEvents { Generation generation; std::uint64_t subscription, event_id; std::promise<Result> reply; };
+    struct AdvanceClock { Generation generation; ClockIntent intent; std::uint64_t correlation; std::promise<ClockResult> reply; };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 SubscribeEvents, PollEvents, AckEvents,
+                                 SubscribeEvents, PollEvents, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
-                                 SubscribeEvents, PollEvents, AckEvents,
+                                 SubscribeEvents, PollEvents, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots>;
 #endif
@@ -242,6 +244,16 @@ struct SessionOwner::Impl {
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
     detail::EventDelivery event_delivery;
+    struct ClockReplay { ClockIntent intent{}; ClockResult reply{}; bool valid = false; };
+    std::array<ClockReplay,32> clock_replay{};
+    std::uint64_t last_clock_id = 0;
+    std::size_t clock_replay_position = 0;
+
+    void reset_clock_replay() noexcept {
+        for (auto& entry : clock_replay) entry.valid = false;
+        last_clock_id = 0;
+        clock_replay_position = 0;
+    }
     std::shared_ptr<const detail::AcademyAnchor> academy_player;
     bool stopping = false;
     std::optional<Open> opening;
@@ -280,6 +292,7 @@ struct SessionOwner::Impl {
     void invalidate()
     {
         event_delivery.invalidate();
+        reset_clock_replay();
         reset_catalog();
         academy_player.reset();
         academy_receipt.reset();
@@ -295,6 +308,8 @@ struct SessionOwner::Impl {
             std::visit([](auto& item) {
                 if constexpr (std::is_same_v<std::decay_t<decltype(item)>, Dispatch>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.request.correlation});
+                else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
+                    item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.correlation});
                 else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, SubscribeEvents> ||
                                    std::is_same_v<std::decay_t<decltype(item)>, PollEvents>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, 0, item.correlation});
@@ -330,11 +345,14 @@ struct SessionOwner::Impl {
         std::lock_guard lock(mutex);
         auto reject = [&](Error error) {
             if constexpr (std::is_same_v<Item, Dispatch> ||
-                          std::is_same_v<Item, SubscribeEvents> || std::is_same_v<Item, PollEvents>) {
+                          std::is_same_v<Item, SubscribeEvents> || std::is_same_v<Item, PollEvents> ||
+                          std::is_same_v<Item, AdvanceClock>) {
                 std::promise<Reply> promise;
                 auto future = promise.get_future();
                 if constexpr (std::is_same_v<Item, Dispatch>)
                     promise.set_value({error, {}, request.request.correlation});
+                else if constexpr (std::is_same_v<Item, AdvanceClock>)
+                    promise.set_value({error, {}, request.correlation});
                 else promise.set_value({error, {}, 0, request.correlation});
                 return future;
             } else return ready<Reply>(error);
@@ -345,7 +363,8 @@ struct SessionOwner::Impl {
         if constexpr (std::is_same_v<Item, Dispatch> ||
                       std::is_same_v<Item, SubscribeEvents> ||
                       std::is_same_v<Item, PollEvents> ||
-                      std::is_same_v<Item, AckEvents>) {
+                      std::is_same_v<Item, AckEvents> ||
+                      std::is_same_v<Item, AdvanceClock>) {
             if (binding != Binding::BOUND)
                 return reject(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
         }
@@ -877,6 +896,74 @@ struct SessionOwner::Impl {
                                  ok ? request.generation : Generation{}});
     }
 
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 AdvanceClock& request)
+    {
+        const auto fail = [&](Error error) {
+            request.reply.set_value({error, {}, request.correlation});
+        };
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (binding != Binding::BOUND) {
+            fail(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
+            return;
+        }
+        if (session.academy()) { fail(Error::SERVICE_UNAVAILABLE); return; }
+        const auto& intent = request.intent;
+        if (!intent.intent_id || !intent.task_budget ||
+            intent.task_budget > ClockLimits::max_tasks ||
+            intent.horizon < intent.expected_now ||
+            intent.horizon - intent.expected_now > ClockLimits::max_span_seconds) {
+            fail(Error::INVALID_ARGUMENT);
+            return;
+        }
+        for (const auto& entry : clock_replay) {
+            if (!entry.valid || entry.intent.intent_id != intent.intent_id) continue;
+            const auto& old = entry.intent;
+            if (old.expected_revision != intent.expected_revision ||
+                old.expected_now != intent.expected_now ||
+                old.horizon != intent.horizon || old.task_budget != intent.task_budget) {
+                fail(Error::IDEMPOTENCY_CONFLICT);
+                return;
+            }
+            auto response = entry.reply;
+            response.correlation_id = request.correlation;
+            response.replayed = true;
+            request.reply.set_value(response); // No second Core clock call.
+            return;
+        }
+        // Once a key falls out of the 32-receipt cache it cannot be reused.
+        // New calls must strictly increase the key within this generation.
+        if (intent.intent_id <= last_clock_id) { fail(Error::IDEMPOTENCY_CONFLICT); return; }
+        const auto principal = player;
+        detail::NativeClockReport facts{};
+        lock.unlock();
+        const auto outcome = session.advance(principal, intent, facts);
+        report_failure("advance clock", outcome);
+        lock.lock();
+        if (const auto error = admission(request.generation); error != Error::OK) {
+            fail(error); // CLOSE/RESTORE invalidated the in-flight result.
+            return;
+        }
+        ClockResult response;
+        response.error = outcome.error;
+        response.generation = outcome.error == Error::OK ? request.generation : Generation{};
+        response.correlation_id = request.correlation;
+        if (outcome.error == Error::OK) {
+            response.before_tick = facts.before_tick;
+            response.after_tick = facts.after_tick;
+            response.before_revision = facts.before_revision;
+            response.after_revision = facts.after_revision;
+            response.processed = facts.processed;
+            response.more_due = facts.more_due;
+        }
+        // Fixed-size, allocation-free replay receipts are operational only.
+        // Never persist them as a second timeline or auto-retry partial effects.
+        clock_replay[clock_replay_position] = {intent, response, true};
+        clock_replay_position = (clock_replay_position + 1) % clock_replay.size();
+        last_clock_id = intent.intent_id;
+        request.reply.set_value(response);
+    }
+
 #ifdef TREK_HOST_GATEWAY_TESTING
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, TestVisit& request)
     {
@@ -1105,6 +1192,13 @@ std::future<Result> SessionOwner::ack_order_events(
 {
     return impl_->enqueue<Result>(Impl::AckEvents{generation, subscription, event_id, {}});
 }
+std::future<ClockResult> SessionOwner::advance_clock(
+    Generation generation, ClockIntent intent, std::uint64_t correlation)
+{
+    return impl_->enqueue<ClockResult>(
+        Impl::AdvanceClock{generation, intent, correlation, {}});
+}
+
 #ifdef TREK_HOST_GATEWAY_TESTING
 std::future<Result> GatewayTestAccess::visit(SessionOwner& owner, Generation generation, std::function<void(F04Session*)> visit)
 {

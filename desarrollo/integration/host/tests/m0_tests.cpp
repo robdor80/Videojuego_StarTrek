@@ -20,6 +20,7 @@ namespace fs = std::filesystem;
 namespace {
 using U = std::uint64_t;
 std::atomic_bool pause_dispatch{false};
+std::atomic_bool pause_clock{false};
 std::atomic_bool pause_bind{false};
 std::atomic_uint forced_code{F04_OK};
 std::binary_semaphore entered{0}, resume{0};
@@ -189,9 +190,213 @@ void refusal(Fixture& f,const std::string& name) {
     }
 }
 
+// H08-P03: exercise the real CoreRPG clock through the product HOST worker.
+void clock_case(Fixture& f, const std::string& name)
+{
+    auto intent = [&](U key, U delta, U budget=1) {
+        const auto now=f.view();
+        return ClockIntent{key,now.revision,now.now,now.now+delta,budget};
+    };
+    auto verify = [&](const ClockResult& result, ClockIntent request, U correlation=0) {
+        require(result.error==Error::OK && result.generation==f.generation &&
+                result.correlation_id==correlation && !result.replayed,
+                "H08: invalid clock receipt/generation/correlation");
+        require(result.before_tick==request.expected_now &&
+                result.before_revision==request.expected_revision &&
+                result.after_tick>=result.before_tick &&
+                result.after_tick<=request.horizon &&
+                result.processed<=request.task_budget, "H08: fabricated or out-of-bounds Core clock");
+        const auto live=f.view();
+        require(live.now==result.after_tick && live.revision==result.after_revision,
+                "H08: receipt disagrees with authoritative Core view");
+    };
+    auto create_tasks = [&] {
+        f.visit([&](F04Session* s) {
+            F04Handles h{};check_code(f04_handles(s,&h),F04_OK,"Clock task: handles");
+            F04Stats stats{};check_code(f04_stats(s,&stats),F04_OK,"Clock task: stats");
+            const U due=stats.now+20;
+            for(U i=0;i<2;++i) {
+                check_code(f04_stats(s,&stats),F04_OK,"Clock task: revision");
+                F04Request request{{h.ship.scope,f.recipient},stats.revision,F04_QUEUE,
+                    F04_SCAN,0,0,due,due+120,50501+i};
+                F04Result receipt{};
+                check_code(f04_execute(s,&request,&receipt),F04_OK,"Schedule genuine F04 task");
+            }
+        });
+        F04Stats stats{};
+        f.visit([&](F04Session* s) {check_code(f04_stats(s,&stats),F04_OK,"Scheduled pending");});
+        require(stats.pending==2,"H08 did not schedule two real Core activities");
+    };
+    if(name=="hk06_unbound") {
+        const auto unchanged=f.bytes();
+        auto response=f.owner.advance_clock(f.generation,{1,0,0,5,1},9).get();
+        require(response.error==Error::PRINCIPAL_UNBOUND && response.correlation_id==9 &&
+                response.generation==Generation{} && !response.processed,
+                "H08 permitted clock for an unbound player");
+        require(f.bytes()==unchanged,"Unbound attempt changed Core");
+        return;
+    }
+    if(name=="hk07_limits") {
+        const auto base=f.view();
+        const auto before=f.bytes();
+        const ClockIntent bad[]={
+            {0,base.revision,base.now,base.now+2,1},
+            {1,base.revision,base.now,base.now+2,0},
+            {2,base.revision,base.now,base.now+2,ClockLimits::max_tasks+1},
+            {3,base.revision,base.now,base.now+ClockLimits::max_span_seconds+1,1},
+            {4,base.revision,base.now,base.now-1,1}
+        };
+        for(const auto& invalid:bad)
+            require(f.owner.advance_clock(f.generation,invalid).get().error==Error::INVALID_ARGUMENT,
+                    "H08 admitted an unbounded or malformed clock intent");
+        require(f.bytes()==before,"H08 invalid clock intent mutated Core");
+        return;
+    }
+    if(name=="hk02_partial" || name=="hk12_partial_replay") {
+        create_tasks();
+        const auto request=intent(1,30,1);
+        const auto first=f.owner.advance_clock(f.generation,request,7).get();
+        verify(first,request,7);
+        require(first.more_due && first.processed==1 && first.after_tick==request.expected_now+20,
+                "H08 hid or mishandled F04_CAPACITY partial committed work");
+        auto after=f.bytes();
+        if(name=="hk12_partial_replay") {
+            const auto repeated=f.owner.advance_clock(f.generation,request,8).get();
+            require(repeated.error==Error::OK && repeated.replayed &&
+                    repeated.more_due && repeated.processed==1 &&
+                    repeated.after_tick==first.after_tick && repeated.correlation_id==8,
+                    "H08 replay repeated partially completed Core tasks");
+            require(f.bytes()==after,"H08 partial replay consumed another Core task");
+        }
+        const auto finish=intent(2,10,1);
+        const auto second=f.owner.advance_clock(f.generation,finish).get();
+        verify(second,finish);
+        require(!second.more_due && second.processed==1 && second.after_tick==request.horizon,
+                "H08 explicit continuation did not finish remaining scheduled Core work");
+        F04Stats stats{};
+        f.visit([&](F04Session* s){check_code(f04_stats(s,&stats),F04_OK,"After Core tasks");});
+        require(stats.pending==0,"H08 left scheduled tasks after explicit continuation");
+        return;
+    }
+    if(name=="hk03_stale") {
+        auto request=intent(1,5);
+        const auto unchanged=f.bytes();
+        request.expected_revision++;
+        auto rejected=f.owner.advance_clock(f.generation,request,13).get();
+        require(rejected.error==Error::REVISION_STALE && !rejected.processed &&
+                rejected.generation==Generation{},"H08 did not reject stale revision");
+        require(f.bytes()==unchanged,"H08 stale advance mutated Core");
+        const auto next=intent(2,5);
+        verify(f.owner.advance_clock(f.generation,next).get(),next);
+        return;
+    }
+    if(name=="hk08_restore") {
+        expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+        const auto before=f.view();
+        const auto advance=intent(1,25);
+        verify(f.owner.advance_clock(f.generation,advance).get(),advance);
+        const auto old=f.generation;
+        const auto reloaded=f.owner.restore(old,{f.campaign,"alpha"}).get();
+        expect(reloaded,Error::OK);f.generation=reloaded.generation;
+        require(f.generation!=old && f.view().now==before.now,"H08 restore did not reload Core clock");
+        require(f.owner.advance_clock(old,advance).get().error==Error::GENERATION_EXPIRED,
+                "H08 accepted old generation after RESTORE");
+        const auto again=intent(1,25);
+        const auto result=f.owner.advance_clock(f.generation,again).get();
+        verify(result,again);
+        require(!result.replayed && result.before_tick==before.now,
+                "H08 carried ephemeral replay receipt into restored generation");
+        return;
+    }
+    if(name=="hk10_close" || name=="hk14_queued_close") {
+        const auto request=intent(1,5);
+        pause_clock=true;
+        auto running=f.owner.advance_clock(f.generation,request,25);
+        await_pause();
+        std::future<ClockResult> queued;
+        if(name=="hk14_queued_close")
+            queued=f.owner.advance_clock(f.generation,{2,request.expected_revision,request.expected_now,
+                                               request.horizon,request.task_budget},26);
+        const auto closing=f.owner.close();
+        if(name=="hk14_queued_close") {
+            auto pending=queued.get();
+            require(pending.error==Error::GENERATION_EXPIRED && !pending.processed &&
+                    pending.correlation_id==26,"H08 left a queued clock request after CLOSE");
+        }
+        pause_clock=false;
+        resume.release();
+        const auto expired=running.get();
+        require(expired.error==Error::GENERATION_EXPIRED && !expired.processed &&
+                expired.correlation_id==25,"H08 leaked in-flight clock after CLOSE");
+        expect(closing.get(),Error::OK);
+        return;
+    }
+    if(name=="hk11_events") {
+        const auto issued=f.submit(f.intent());
+        auto sub=f.owner.subscribe_order_events(f.generation,issued.order).get();
+        require(sub.error==Error::OK && sub.subscription,"H08 lost event subscription");
+        auto message=f.owner.poll_order_events(f.generation,sub.subscription).get();
+        require(message.error==Error::OK && message.events.size()==1,"H08 missing F05 order source");
+        expect(f.owner.ack_order_events(f.generation,sub.subscription,message.events[0].id).get(),Error::OK);
+        const auto request=intent(1,5);
+        verify(f.owner.advance_clock(f.generation,request).get(),request);
+        auto after=f.owner.poll_order_events(f.generation,sub.subscription).get();
+        require(after.error==Error::OK && after.events.empty(),
+                "H08 manufactured F05 order transition during clock advance");
+        return;
+    }
+    if(name=="hk09_concurrent") {
+        const auto request=intent(1,10);
+        auto first=f.owner.advance_clock(f.generation,request,61);
+        auto second=f.owner.advance_clock(f.generation,request,62);
+        const auto a=first.get(),b=second.get();
+        verify(a,request,61);
+        require(b.error==Error::OK && b.replayed && b.correlation_id==62 &&
+                a.after_tick==b.after_tick && a.processed==b.processed,
+                "H08 concurrent duplicate clock request advanced twice");
+        return;
+    }
+    if(name=="hk13_worker") {
+        const auto request=intent(1,4);
+        auto remote=std::async(std::launch::async,[&] {
+            return f.owner.advance_clock(f.generation,request,81).get();
+        });
+        verify(remote.get(),request,81);
+        return;
+    }
+    const auto request=intent(1,name=="hk15_same_tick"?0:8);
+    const auto before=f.bytes();
+    const auto first=f.owner.advance_clock(f.generation,request,12).get();
+    verify(first,request,12);
+    require(!first.more_due && first.processed==0 && first.after_tick==request.horizon,
+            "H08 base advance incorrectly created scheduled work");
+    if(name=="hk01_basic") {
+        require(f.bytes()!=before,"H08 clock did not persist Core tick");
+    } else if(name=="hk04_replay" || name=="hk05_conflict") {
+        const auto saved=f.bytes();
+        if(name=="hk04_replay") {
+            const auto replay=f.owner.advance_clock(f.generation,request,13).get();
+            require(replay.error==Error::OK && replay.replayed && replay.correlation_id==13 &&
+                    replay.after_tick==first.after_tick && replay.after_revision==first.after_revision,
+                    "H08 duplicate intent not replayed safely");
+        } else {
+            auto conflict=request;conflict.horizon+=1;
+            const auto error=f.owner.advance_clock(f.generation,conflict,13).get();
+            require(error.error==Error::IDEMPOTENCY_CONFLICT && error.correlation_id==13,
+                    "H08 accepted conflicting reuse of clock id");
+        }
+        require(f.bytes()==saved,"H08 duplicate or conflict changed Core state");
+    } else if(name=="hk15_same_tick") {
+        require(f.bytes()==before,"H08 same-tick/no-task advance changed authoritative state");
+    } else if(name!="hk01_basic") {
+        throw std::runtime_error("Unknown H08-P03 case");
+    }
+}
+
 void run_case(const std::string& name,const fs::path& root) {
-    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound",
+    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound" && name!="hk06_unbound",
               (name=="authority" || name=="observer" || name=="he05_foreign")?4:3);
+    if(name.rfind("hk",0)==0) {clock_case(f,name);return;}
     if(name=="bound") {
         auto v=f.view(); require(v.person==f.captain && v.ship==1,"Projection uses wrong person");
     } else if(name=="readonly") {
@@ -502,6 +707,7 @@ void reader(const fs::path& root,bool pending) {
 namespace trek::host::detail {
 void persistence_test_observe(F04Session*,bool) {}
 void gateway_test_after_bind() { if(pause_bind)wait_pause(); }
+void gateway_test_after_clock(F04Session*) { if(pause_clock)wait_pause(); }
 void gateway_test_after_dispatch(F04Session*,std::uint32_t& code) {
     if(forced_code!=F04_OK)code=forced_code;
     if(pause_dispatch)wait_pause();
