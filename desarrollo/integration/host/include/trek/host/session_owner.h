@@ -148,6 +148,7 @@ struct EventNotice {
     EventSource source = EventSource::F05_ORDER;
     std::uint64_t id = 0, previous = 0, order = 0, tick = 0;
     std::uint32_t state = 0, code = 0;
+    bool operator==(const EventNotice&) const = default;
 };
 struct EventSubscriptionResult {
     Error error = Error::OK;
