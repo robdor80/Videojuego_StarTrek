@@ -138,6 +138,22 @@ if(TREK_HOST_TESTS)
 endif()
 
 if(TREK_HOST_TESTS)
+  # H08-P04 pure Spanish presentation rules, without any Core or F11 runtime.
+  add_executable(host_notification_projection_unit_tests
+    tests/notification_projection_unit_tests.cpp)
+  target_compile_features(host_notification_projection_unit_tests PRIVATE cxx_std_20)
+  target_include_directories(host_notification_projection_unit_tests PRIVATE
+    src include ../f04/include ../f05/include)
+  foreach(case IN ITEMS states unknown foreign malformed metadata idempotent
+      private access_denied resync untrusted)
+    add_test(NAME host.notification.unit.${case}
+      COMMAND host_notification_projection_unit_tests ${case})
+    set_tests_properties(host.notification.unit.${case} PROPERTIES TIMEOUT 15
+      LABELS "h08-p04;unit;presentation")
+  endforeach()
+endif()
+
+if(TREK_HOST_TESTS)
   add_executable(host_native_tests tests/native_tests.cpp tests/player_native_tests.cpp)
   target_include_directories(host_native_tests PRIVATE src)
   target_link_libraries(host_native_tests PRIVATE TrekHost TrekF04Bridge Threads::Threads ${CMAKE_DL_LIBS})
@@ -240,6 +256,16 @@ if(TREK_HOST_TESTS)
     add_test(NAME host.clock.${case} COMMAND host_m0_tests ${case}
       "${CMAKE_CURRENT_BINARY_DIR}/h08-clock/${case}")
     set_tests_properties(host.clock.${case} PROPERTIES TIMEOUT 120 LABELS "h08-p03;native;core-clock")
+  endforeach()
+  # H08-P04 authenticated notification projections, using the F05/Core M0 fixture.
+  foreach(case IN ITEMS hn01_statuses hn02_incremental hn03_repoll
+      hn04_restore hn05_close hn06_foreign hn07_unbound hn08_unknown_token
+      hn09_partial_ack hn10_clock hn11_generation hn12_same_stream
+      hn13_double_observer hn14_ack_no_core)
+    add_test(NAME host.notification.${case} COMMAND host_m0_tests ${case}
+      "${CMAKE_CURRENT_BINARY_DIR}/h08-notification/${case}")
+    set_tests_properties(host.notification.${case} PROPERTIES TIMEOUT 120
+      LABELS "h08-p04;native;f05;presentation")
   endforeach()
   add_test(NAME host.m0.process COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/m0_process.py"
     "$<TARGET_FILE:host_m0_tests>" "${CMAKE_CURRENT_BINARY_DIR}/m0/process")
