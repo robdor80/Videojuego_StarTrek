@@ -119,6 +119,14 @@ Outcome NativeSession::events(F04Ref player, std::uint64_t order, std::uint64_t 
     return normalize_identity(bridge::events(session_, player, order, after, page));
 }
 
+Outcome NativeSession::advance(F04Ref player, const ClockIntent& request,
+                              NativeClockReport& report) noexcept
+{
+    report = {};
+    if (academy_ || !session_) return {Error::SERVICE_UNAVAILABLE};
+    return normalize_identity(bridge::advance(session_, player, request, report));
+}
+
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
 {
     return normalize(bridge::persistent_identity(session_,identity,player));
