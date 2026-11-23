@@ -175,6 +175,10 @@ struct Watch {
   F06ProfileInstall install{stats().revision,5,0};
   F06ProfileView profile{};
   check(f06_host_install_profile(s,&install,&profile),"modernized Enterprise-D equipment");
+  // Explicit trusted QA instrument frame: this controlled scenario starts
+  // clear in all five environmental bands. Zero is measured, not a GUI default.
+  F06EnvironmentInput ambient{stats().revision,1,0,0,0,0,0,0};F06EnvironmentView ambient_view{};
+  check(f06_host_environment(s,&ambient,&ambient_view),"initial environmental instrument frame");
   physical_revisions.clear();latency.clear();world_revision=0;
   if(mode==4){publish_x1(0,true);publish_x1(0);initial_scientific_survey();}else{
    publish(next_frame++);
@@ -213,10 +217,13 @@ struct Watch {
   F06EvidenceDeliveryRequest req{stats().revision,(source%900000000000ULL)*16+kind*4+recipient,
     contact,source,recipient,kind};
   F06DeliveryView receipt{};check(f06_deliver_evidence(s,h.ensign,&req,&receipt),"evidence QA queue");
+  if(recipient==1 && std::none_of(contact_briefs.begin(),contact_briefs.end(),
+      [contact](const auto& row){return row[0]==contact;}))contact_briefs.push_back({contact,receipt.tick,0});
  }
  void share_tracking(){
   // Explicit Core tracking survives process restoration. No Tk dependency.
   // Position evidence every five seconds, equipment changes immediately.
+  if(stats().now>=28800)return; // the eight-hour operator duty has ended
   for(const auto& c:visible_contacts()){
    F06TrackView track{};check(f06_contact_tracking(s,h.captain,c.contact_id,&track),"tracking projection");
    if(!track.mode || c.status!=F06_ACTIVE)continue;
@@ -288,11 +295,12 @@ struct Watch {
   event_cursor=en?events[en-1].event_token:0;
   std::array<F06DeliveryView,512> rows{};U n=0,total=0;
   check(f06_deliveries_page(s,h.captain,0,rows.data(),rows.size(),&n,&total),"restored deliveries");
-  for(U i=0;i<n;++i)if(rows[i].recipient==1)contact_briefs.push_back({rows[i].contact_id,rows[i].tick,0});
+  for(U i=0;i<n;++i)if(rows[i].recipient==1 && std::none_of(contact_briefs.begin(),contact_briefs.end(),
+      [&](const auto& row){return row[0]==rows[i].contact_id;}))contact_briefs.push_back({rows[i].contact_id,rows[i].tick,0});
  }
  void scenario_event(U tick){
   if(mode==2 && (tick==3600 || tick==7200)){
-   F06EnvironmentInput in{stats().revision,tick==3600?1u:2u,
+   F06EnvironmentInput in{stats().revision,tick==3600?2u:3u,
       static_cast<uint32_t>(tick==3600?550:0),0,0,0,0,0};
    F06EnvironmentView v{};check(f06_host_environment(s,&in,&v),"interference");
   }
@@ -508,6 +516,7 @@ struct Watch {
     <<",\"offline\":"<<state.equipment_offline
     <<",\"automatic\":"<<state.autonomous
     <<",\"interference_em\":"<<environment.em_permille
+    <<",\"environment_source\":"<<environment.source_revision
     <<",\"environment\":["<<environment.em_permille<<','<<environment.thermal_permille<<','
       <<environment.gravimetric_permille<<','<<environment.subspace_permille<<','<<environment.biological_permille<<']'
     <<",\"config\":["<<config.sensitivity_permille<<','<<config.resolution_permille

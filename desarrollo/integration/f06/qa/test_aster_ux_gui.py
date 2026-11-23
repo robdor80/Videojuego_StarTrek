@@ -106,6 +106,7 @@ def run(runner,output,realtime=False):
         assert panel.current_view=='tracking' and visible_contacts(panel)==[rom]
         n=len(panel.state['deliveries']);panel.apply(panel.command('STEP 10'));root.update()
         assert len(panel.state['deliveries'])>n and 'Velocidad relativa:' in panel.detail_text.get('1.0','end')
+        assert panel.map_canvas.find_withtag('trajectory'), 'tracking map requires archived position trace'
         assert not panel.tactical_report_button.winfo_manager()
         panel.contact_action('SCAN');root.update();assert 'Extensión angular' in panel.detail_text.get('1.0','end')
         panel.checkpoint('SAVE');panel.apply(panel.command('STEP 5'));panel.checkpoint('LOAD');root.update()
@@ -116,6 +117,15 @@ def run(runner,output,realtime=False):
         panel.checkpoint_file(path,True);root.update()
         assert panel.current_view==view and panel.contacts_table.selection()==(rom,)
         assert rom in panel.followed_ids and planet in panel.analyzed_ids
+        sidecar=path.with_suffix(path.suffix+'.ui.json');original=sidecar.read_text(encoding='utf-8')
+        corrupt=json.loads(original);corrupt['core_sha256']='0'*64
+        sidecar.write_text(json.dumps(corrupt),encoding='utf-8')
+        state_before=panel.state
+        try:panel.checkpoint_file(path,True)
+        except ValueError:pass
+        else:raise AssertionError('mismatched UI/Core pair accepted')
+        assert panel.state is state_before, 'mismatched context must not mutate Core'
+        sidecar.write_text(original,encoding='utf-8')
         panel.apply(panel.command(f'STEP {240-panel.state["tick"]}'));root.update()
         unknown=next(str(c[0]) for c in panel.state['contacts'] if c[1]==1 and c[3]==0)
         assert panel.contacts_table.selection()==(unknown,)
@@ -124,6 +134,13 @@ def run(runner,output,realtime=False):
         assert panel.contacts_table.selection()==(rom,) and 'Emisión ofensiva' in panel.alert_description.cget('text')
         panel.report_contact_to_officer()
         assert len([d for d in panel.state['deliveries'] if d[1]==int(rom) and d[4]==1])==2
+        panel.open_report_dialog();root.update()
+        dialog=next(w for w in root.winfo_children() if isinstance(w,tk.Toplevel))
+        chooser=next(w for w in dialog.winfo_children() if w.winfo_class()=='TCombobox')
+        assert len(chooser.cget('values'))==3
+        chooser.set('Ciencia')
+        next(w for w in dialog.winfo_children() if w.winfo_class()=='TButton').invoke()
+        assert panel.state['deliveries'][-1][4:]==[3,1]
         for geometry in ('1460x825','1150x700'):
             root.geometry(geometry);root.attributes('-topmost',True);root.update();verify_layout(panel,root)
             deadline=time.monotonic()+.25

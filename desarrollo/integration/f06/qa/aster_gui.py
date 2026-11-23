@@ -775,8 +775,12 @@ class Panel:
             offense = bool(e and any(e["mask"] & (1 << k) and e["slots"][k][0]
                                      and e["slots"][k][1] == 3 for k in (0, 1)))
             discrepancy = bool(e and any(s[3] == 2 for s in e["slots"]))
-            severity = 4 if c[1] == 1 and c[3] == 10 else 3 if offense else 2 if (
-                c[1] in (0, 11) or c[1] == 1 and (not c[3] or discrepancy and c[3] != 18)) else 1 if discrepancy else 0
+            ordinary = 2 if (c[1] in (0, 11) or c[1] == 1 and
+                            (not c[3] or discrepancy and c[3] != 18)) else 1 if discrepancy else 0
+            if ordinary:
+                current_causes.add((cid, ordinary))
+                self.incident_started.setdefault((cid, ordinary), state["tick"])
+            severity = 4 if c[1] == 1 and c[3] == 10 else 3 if offense else ordinary
             if not severity: continue
             # Cause identity deliberately excludes later generic position updates.
             key = (cid, severity)
@@ -1229,7 +1233,7 @@ class Panel:
             return "ANÁLISIS\n\nElige Analizar sobre un contacto para consultar conocimiento adicional verificable."
         environment = self.state.get("environment", [])
         lines = ["ENTORNO OBSERVADO", "", "Sensores sin servicio." if self.state.get("offline") else "Vigilancia automática activa."]
-        if environment:
+        if environment and self.state.get("environment_source"):
             names = ("Electromagnetismo", "Banda térmica", "Gravimetría", "Subespacio", "Banda biológica")
             detected = [f"{name}: perturbación medida ({value/10:.1f}%)." for name, value in zip(names, environment) if value]
             lines += detected or ["Sin perturbaciones medidas en las bandas ambientales supervisadas."]
