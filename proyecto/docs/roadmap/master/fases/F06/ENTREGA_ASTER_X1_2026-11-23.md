@@ -4,9 +4,9 @@
 
 ## Integración y procedencia
 
-Se conserva `2a6b5741` de preparación, la historia #91→#96→#97 y sus ramas originales. Un merge local incorpora el HEAD #91 `0f67affe`: la divergencia respecto a la pila solo añadía dos registros de ensayo. Otro merge incorpora `main@7adaf964`; la revisión de main posterior `8edce7bd` solo cambia H08-P04, sin diferencias F04/F05/F06. No se han fusionado PR productivas ni reescrito ramas anteriores.
+Se conserva `2a6b5741` de preparación, la historia #91→#96→#97 y sus ramas originales. Un merge local incorpora el HEAD #91 `0f67affe`: la divergencia respecto a la pila solo añadía dos registros de ensayo. Otros merges incorporan `main@7adaf964` y `main@8edce7bd`; este último solo cambia H08-P04, sin diferencias F04/F05/F06. No se han fusionado PR productivas ni reescrito ramas anteriores.
 
-La transición F04 ya auditada en main cambió los anclajes de ensamblado. El overlay F06 verifica ahora `history_reference_v2.json`, conserva intactos los archivos originales F04/F05 y sus oráculos v1/v2, reserva las extensiones nuevas desde el campo 512 y conserva los ID anteriores F06 y F11 (256). Core permanece fijado a `76a7b7b485616d8c4994f384a90f123bf333591d`. Se consultaron las cuatro PR, la auditoría de Planificación 1 y R2 en `#179@1fb5b0dc`.
+La transición F04 ya auditada en main cambió los anclajes de ensamblado. El overlay F06 verifica ahora `history_reference_v2.json`, conserva intactos el fuente F04 y sus oráculos v1/v2; mantiene el hook F05→F06 de cinco líneas heredado de #91 bajo `F06_ENABLE_SENSORS`, reserva las extensiones nuevas desde el campo 512 y conserva los ID anteriores F06 y F11 (256). Core permanece fijado a `76a7b7b485616d8c4994f384a90f123bf333591d`. Se consultaron las cuatro PR, la auditoría de Planificación 1 y R2 en `#179@1fb5b0dc`.
 
 ## Implementado
 
@@ -22,7 +22,9 @@ La transición F04 ya auditada en main cambió los anclajes de ensamblado. El ov
 
 ## Matriz de comprobación
 
-Los resultados precisos y los SHA se registran en CI del HEAD publicado. Cloud Linux usa compilación Release, Core real, Tk real en Xorg; no mocks de observación ni pruebas MSI.
+Código principal: `3449a6a4`; reconciliación con main: `e8013d06`. Cloud local: **374/374 Core**, **44/44 F06**, **406/406 F04/F05**. La primera ejecución amplia obtuvo 447/448; el único fallo fue la falta de `F04_TEST_TEMP_ROOT` para el ensayo histórico. Se repitió ese contrato con su carpeta desechable y pasó (22 comprobaciones internas), sin cambiar oráculos ni producto F04. Las seis campañas históricas completas `f04.history_campaign_*` no se repitieron; el guard valida los manifiestos/oráculos originales y se ejecutaron las campañas de persistencia F04 de 365/730 días y sus reanudaciones.
+
+Guardia Cloud a tiempo real: **540,180 s**; fichas de las entradas 60/150/240/390 en **0,265 / 0,232 / 0,567 / 0,471 s** desde su vencimiento real hasta Tk. Este ensayo precede al último endurecimiento del parser/guardado; CI repite el recorrido en el SHA publicado. Los resultados precisos y los SHA de CI se registran en Actions del HEAD publicado. Cloud Linux usa compilación Release, Core real, Tk real en Xorg; no mocks de observación ni pruebas MSI.
 
 | Prueba | Verificación automatizada / evidencia | Alcance |
 |---|---|---|
