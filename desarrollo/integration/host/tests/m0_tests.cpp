@@ -190,7 +190,8 @@ void refusal(Fixture& f,const std::string& name) {
 }
 
 void run_case(const std::string& name,const fs::path& root) {
-    Fixture f(root,name!="unbound" && name!="resolving",(name=="authority" || name=="observer")?4:3);
+    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound",
+              (name=="authority" || name=="observer" || name=="he05_foreign")?4:3);
     if(name=="bound") {
         auto v=f.view(); require(v.person==f.captain && v.ship==1,"Projection uses wrong person");
     } else if(name=="readonly") {
