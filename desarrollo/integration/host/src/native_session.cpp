@@ -10,6 +10,7 @@ namespace trek::host::detail {
 #ifdef TREK_HOST_GATEWAY_TESTING
 void gateway_test_after_bind();
 void gateway_test_after_dispatch(F04Session*, std::uint32_t&);
+void gateway_test_after_clock(F04Session*);
 #endif
 namespace {
 
@@ -124,7 +125,11 @@ Outcome NativeSession::advance(F04Ref player, const ClockIntent& request,
 {
     report = {};
     if (academy_ || !session_) return {Error::SERVICE_UNAVAILABLE};
-    return normalize_identity(bridge::advance(session_, player, request, report));
+    const auto outcome = normalize_identity(bridge::advance(session_, player, request, report));
+#ifdef TREK_HOST_GATEWAY_TESTING
+    gateway_test_after_clock(session_);
+#endif
+    return outcome;
 }
 
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
