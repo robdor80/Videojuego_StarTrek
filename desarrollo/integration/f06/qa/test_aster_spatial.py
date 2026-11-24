@@ -14,11 +14,12 @@ class SpatialProjectionTests(unittest.TestCase):
     def test_elevation_and_quadrants(self):
         self.assertEqual(angles(0, 1000, 1000)[1], 45)
         self.assertEqual(angles(0, 1000, -1000)[1], -45)
-        self.assertEqual(angles(0, 0, 1000), (0, 90))
-        self.assertEqual(angles(0, 0, -1000), (0, -90))
+        self.assertEqual(angles(0, 0, 1000), (None, 90))
+        self.assertEqual(angles(0, 0, -1000), (None, -90))
         self.assertAlmostEqual(angles(-1000, -1000, 0)[0], 225)
         self.assertIsNone(angles(0, 0, 0))
         self.assertIsNone(project(0, 0, 0, 40, 50, 50, 30))
+        self.assertEqual(project(0, 0, 1000, 40, 50, 50, 30)[0], (50, 50))
 
     def test_views_share_one_observation_and_ignore_distance(self):
         top, side, bearing, elevation = project(1000, 1000, 1000, 40, 50, 50, 30)

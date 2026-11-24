@@ -9,23 +9,22 @@ from __future__ import annotations
 from math import atan2, cos, degrees, hypot, radians, sin
 
 
-def angles(x: int, y: int, z: int) -> tuple[float, float] | None:
+def angles(x: int, y: int, z: int) -> tuple[float | None, float] | None:
     """Return sensor bearing clockwise from +Y and elevation in degrees.
 
     A zero vector has no resolved direction. Pure vertical readings have
-    a resolved elevation but no horizontal bearing, represented as 0 for
-    drawing on the center line.
+    a resolved elevation but no horizontal bearing.
     """
     if x == y == z == 0:
         return None
     horizontal = hypot(x, y)
-    bearing = (degrees(atan2(x, y)) + 360.0) % 360.0 if horizontal else 0.0
+    bearing = (degrees(atan2(x, y)) + 360.0) % 360.0 if horizontal else None
     return bearing, degrees(atan2(z, horizontal))
 
 
 def project(x: int, y: int, z: int, radius: float,
             center_x: float, center_y: float, elevation_span: float
-            ) -> tuple[tuple[float, float], tuple[float, float], float, float] | None:
+            ) -> tuple[tuple[float, float], tuple[float, float], float | None, float] | None:
     """Return top and profile points for one observed vector.
 
     Top: bow up, starboard right. Profile: bow right, positive elevation up.
@@ -35,7 +34,7 @@ def project(x: int, y: int, z: int, radius: float,
     if result is None:
         return None
     bearing, elevation = result
-    angle = radians(bearing)
+    angle = radians(bearing or 0.0)
     horizontal_radius = radius if x or y else 0.0
     top = (center_x + horizontal_radius * sin(angle),
            center_y - horizontal_radius * cos(angle))

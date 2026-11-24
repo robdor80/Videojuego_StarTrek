@@ -981,7 +981,9 @@ class Panel:
                 cv.create_line(cx, cy, *top, fill="#5c8299", dash=(3, 3))
                 cv.create_line(sx, cy, *profile, fill="#5c8299", dash=(3, 3))
                 name = self._tree_contact_label(c, {}).split(" · SEÑAL PERDIDA")[0]
-                cv.create_text(cx, 29, text=f"{name} · {bearing:03.0f}°",
+                bearing_label = (f"{round(bearing) % 360:03d}°" if bearing is not None
+                                 else "sin marcación horizontal")
+                cv.create_text(cx, 29, text=f"{name} · {bearing_label}",
                                fill=color, font=("Segoe UI", 9, "bold"))
                 cv.create_text(sx, 29, text=f"{name} · {elevation:+.0f}°" +
                                (" · PERDIDO" if lost else ""),
