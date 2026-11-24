@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>F07 · Sensores LCARS</title>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<div id="console" class="lcars">
+  <header class="headline">
+    <div class="elbow" aria-hidden="true"></div>
+    <div class="ship" id="ship-name">SENSORES</div>
+    <div class="line-fill" aria-hidden="true"></div>
+    <div class="station" id="station-name">ESTACIÓN DE SENSORES</div>
+    <div class="phase">F07</div>
+  </header>
+  <div class="workspace">
+    <nav class="navigation" aria-label="Vistas de la consola" id="nav-tabs">
+      <button type="button" data-tab="sensores" class="active">SENSORES</button>
+      <button type="button" data-tab="analisis">ANÁLISIS</button>
+      <button type="button" data-tab="contactos">CONTACTOS</button>
+      <button type="button" data-tab="sectores">SECTORES</button>
+      <button type="button" data-tab="registros">REGISTROS</button>
+    </nav>
+    <main class="panels">
+      <section class="radar-panel" aria-label="Vista de sensores">
+        <div class="panel-heading">
+          <span id="view-label">VISTA ESPACIAL</span>
+          <span id="range-label">ALCANCE —</span>
+        </div>
+        <div id="map-view" class="map-view">
+          <div id="radar-rings" class="radar-rings" aria-hidden="true">
+            <i class="ring ring-1"></i><i class="ring ring-2"></i><i class="ring ring-3"></i><i class="ring ring-4"></i>
+            <i class="axis axis-x"></i><i class="axis axis-y"></i>
+          </div>
+          <button class="ship-marker" id="ship-marker" type="button" title="Centrar en nuestra nave" aria-label="Centrar en nuestra nave">▲</button>
+          <div id="contact-layer"></div>
+          <div class="map-legend" id="map-legend">CONTACTOS —</div>
+        </div>
+        <div id="other-view" class="other-view" hidden></div>
+      </section>
+      <aside class="contact-panel" aria-label="Datos del contacto">
+        <div class="panel-heading"><span id="contact-title">CONTACTO SELECCIONADO</span><span id="contact-state">—</span></div>
+        <div id="contact-info" class="contact-info" aria-live="polite"></div>
+        <div class="preview">
+          <div class="preview-title">VISUALIZACIÓN 3D <span id="preview-state">SIN MODELO</span></div>
+          <div id="model-slot" class="model-slot" role="status" aria-live="polite">
+            Selecciona un contacto.
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <div class="command-strip">
+    <section class="control-group range-controls" aria-label="Modos de visualización">
+      <span class="group-title">MODOS</span>
+      <button type="button" data-mode="general" class="selected">GENERAL</button>
+      <button type="button" data-mode="largo">LARGO ALCANCE</button>
+      <button type="button" data-mode="detalle">DETALLE</button>
+      <button type="button" data-mode="anomalias">ANOMALÍAS</button>
+    </section>
+    <fieldset class="control-group filters">
+      <legend class="group-title">FILTROS</legend>
+      <label><input type="checkbox" data-group="ships" checked> NAVES</label>
+      <label><input type="checkbox" data-group="objects" checked> OBJETOS</label>
+      <label><input type="checkbox" data-group="celestial" checked> CUERPOS</label>
+      <label><input type="checkbox" data-group="energy" checked> ENERGÍA</label>
+    </fieldset>
+    <section class="control-group action-controls" aria-label="Operaciones">
+      <span class="group-title">CONTROLES</span>
+      <button type="button" id="track-btn">SEGUIR</button>
+      <button type="button" id="center-btn">CENTRAR</button>
+      <button type="button" id="analyze-btn">ANALIZAR</button>
+      <button type="button" id="focus-btn">IDENTIFICAR</button>
+    </section>
+  </div>
+  <footer class="statusbar">
+    <div class="status-reading"><span id="source-tag">SIN SESIÓN</span><span id="connection-status">SIN DATOS</span></div>
+    <div class="status-reading" id="tick-label">RELOJ —</div>
+    <div class="message" id="notice-line" role="status" aria-live="polite">Esperando proyección autorizada...</div>
+    <button id="help-btn" type="button" aria-label="Mostrar controles del teclado">TECLAS ?</button>
+  </footer>
+  <dialog id="help-dialog" aria-label="Ayuda del teclado">
+    <h2>Control de sensores</h2>
+    <p>1–5: vistas · ←/→: contacto anterior/siguiente · C: centrar · T: seguir · A: analizar · F: solicitar identificación · Esc: sensores · ? : ayuda</p>
+    <button id="close-help" type="button">CERRAR</button>
+  </dialog>
+</div>
+</body>
+</html>
