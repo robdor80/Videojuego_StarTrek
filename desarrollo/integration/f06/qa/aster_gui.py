@@ -18,6 +18,9 @@ import sys
 import time
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
+from math import ceil, cos, radians, sin
+
+from aster_spatial import project
 
 MODES = (
     "1. Guardia normal",
@@ -274,10 +277,6 @@ class Panel:
         self.map_button = ttk.Button(titlebar, text="Ver todos",
                                       command=self.toggle_map)
         self.map_button.pack(side="right", padx=(4, 0))
-        ttk.Button(titlebar, text="Zoom −", command=lambda: self.zoom_map(0.75)
-                   ).pack(side="right", padx=(4, 0))
-        ttk.Button(titlebar, text="Zoom +", command=lambda: self.zoom_map(1.33)
-                   ).pack(side="right", padx=(4, 0))
         self.auto_brief = ttk.Label(center, text="", wraplength=350,
                                     font=("Segoe UI", 10), justify="left")
         # Compatibility widget retained off screen; context follows selection.
@@ -293,8 +292,12 @@ class Panel:
         self.map_canvas.pack(fill="both", expand=True)
         self.map_canvas.bind("<Configure>", lambda _: self._draw_map())
         self.map_canvas.bind("<Button-1>", self._select_map_contact)
-        self.map_canvas.bind("<MouseWheel>", lambda event:
-                             self.zoom_map(1.2 if event.delta > 0 else 1 / 1.2))
+        asset_dir = Path(__file__).resolve().parent / "assets"
+        self.ship_sources = {
+            "top": tk.PhotoImage(file=str(asset_dir / "zenital_ncc1701d.png")),
+            "side": tk.PhotoImage(file=str(asset_dir / "perfil_ncc1701d.png")),
+        }
+        self.ship_images: dict[tuple[str, int], tk.PhotoImage] = {}
 
         main_box = ttk.Frame(center)
         main_box.pack(fill="both", expand=True)
@@ -679,7 +682,7 @@ class Panel:
         self._draw_map()
 
     def zoom_map(self, factor: float) -> None:
-        self.map_zoom = max(0.35, min(50.0, self.map_zoom * factor))
+        # Kept for callers of the former XY map; angular placement has no zoom.
         self._draw_map()
 
     def open_history(self) -> None:
@@ -896,82 +899,120 @@ class Panel:
         self._update_main_content()
 
     def _draw_map(self) -> None:
-        """Map with selectable contact focus and zoom; only public readings."""
+        """Two angular views of the same public F06 observations."""
         if not hasattr(self, "map_canvas"):
             return
         cv = self.map_canvas
         cv.delete("all")
         w, h = cv.winfo_width(), cv.winfo_height()
-        if w < 60 or h < 60:
+        if w < 180 or h < 130:
             return
-        cx, cy = w / 2, h / 2
-        cv.create_line(12, cy, w - 12, cy, fill="#cbd5e1")
-        cv.create_line(cx, 12, cx, h - 12, fill="#cbd5e1")
-        cv.create_text(14, 13, text="Y+", anchor="w", fill="#64748b")
-        cv.create_text(w-14, cy-12, text="X+", anchor="e", fill="#64748b")
         self.map_positions = []
+        gap, margin, footer = 8, 5, 32
+        card_w = (w - gap - 2 * margin) / 2
+        centers = (margin + card_w / 2, margin + card_w + gap + card_w / 2)
+        cy = (h - footer) / 2 + 8
+        radius = min(card_w * .34, (h - footer) * .31)
+        elev_span = min((h - footer) * .34, radius * 1.18)
+        for i, label in enumerate(("CENITAL · PROA ↑", "PERFIL · PROA →")):
+            x0 = margin + i * (card_w + gap)
+            cv.create_rectangle(x0, 2, x0 + card_w, h - footer,
+                                outline="#b9cbd7", fill="#edf3f6")
+            cv.create_text(x0 + 10, 12, text=label, anchor="w",
+                           fill="#294a60", font=("Segoe UI", 9, "bold"))
+        cx, sx = centers
+        for scale in (.5, 1.0):
+            cv.create_oval(cx-radius*scale, cy-radius*scale,
+                           cx+radius*scale, cy+radius*scale,
+                           outline="#9cb2bf", dash=(3, 3))
+        cv.create_line(cx-radius-7, cy, cx+radius+7, cy, fill="#a9beca")
+        cv.create_line(cx, cy-radius-7, cx, cy+radius+7, fill="#a9beca")
+        for angle, label in ((0,"000°"),(90,"090°"),(180,"180°"),(270,"270°")):
+            a = radians(angle)
+            cv.create_text(cx + (radius+18)*sin(a), cy - (radius+18)*cos(a),
+                           text=label, fill="#344f60", font=("Segoe UI", 8))
+        for elevation in (-90, -45, 0, 45, 90):
+            yy = cy - elev_span * elevation / 90
+            cv.create_line(sx-radius-7, yy, sx+radius+7, yy,
+                           fill="#7b99ab" if elevation == 0 else "#b7c9d2",
+                           dash=() if elevation == 0 else (3, 3))
+            cv.create_text(sx-radius-9, yy, text=f"{elevation:+d}°" if elevation else "0°",
+                           anchor="e", fill="#526b7a", font=("Segoe UI", 8))
+        cv.create_line(sx, cy-elev_span-5, sx, cy+elev_span+5,
+                       fill="#b7c9d2", dash=(3, 3))
+        self._ship_image(cv, "top", cx, cy, card_w * .42, radius * 1.12)
+        self._ship_image(cv, "side", sx, cy, card_w * .58, elev_span * .78)
+        cv.create_text(w/2, h-17,
+                       text="Angular · fuera de escala · proa = +Y (QA)",
+                       fill="#526b7a", font=("Segoe UI", 8))
         if not self.state:
             return
         selection = self.contacts_table.selection()
-        chosen_id = (selection[0] if selection and selection[0] in self.contact_map
-                     else None)
-        focused = chosen_id and not self.map_overview
-        if focused:
-            rows = [self.contact_map[chosen_id]]
-        else:
-            rows = [c for c in self.state["contacts"] if c[2] == 1]
-        if not rows:
-            cv.create_text(cx, h - 20, text="Sin contactos en el alcance actual")
-            return
-        radius = max(100, max(abs(c[8]) for c in rows),
-                     max(abs(c[9]) for c in rows))
-        scale = 0.42 * min(w,h) / radius * self.map_zoom
-        ox, oy = (rows[0][8], rows[0][9]) if focused else (0, 0)
-        ship_x, ship_y = cx-ox*scale, cy+oy*scale
-        if 12 < ship_x < w-12 and 12 < ship_y < h-12:
-            cv.create_polygon(ship_x, ship_y-10, ship_x-7, ship_y+7, ship_x+7, ship_y+7, fill="#2563eb")
-            cv.create_text(ship_x+9, ship_y+12, text="ENTERPRISE-D", anchor="nw", fill="#1d4ed8")
-        if focused and chosen_id in self.followed_ids:
-            points = [r for r in self.state.get("position_evidence", []) if str(r[1]) == chosen_id][-32:]
-            if len(points) >= 2:
-                trace = [coordinate for r in points for coordinate in (cx+(r[3]-ox)*scale, cy-(r[4]-oy)*scale)]
-                cv.create_line(*trace, fill="#7c3aed", width=2, tags="trajectory")
-        cv.create_text(w-10, h-9,
-                       text=f"Escala ±{radius / (1000*self.map_zoom):.2f} UA · XY",
-                       anchor="se", fill="#475569")
+        chosen_id = selection[0] if selection and selection[0] in self.contact_map else None
+        rows = ([self.contact_map[chosen_id]] if chosen_id and not self.map_overview else
+                [c for c in self.state["contacts"] if c[2] == 1])
+        if chosen_id and self.map_overview and chosen_id not in {str(c[0]) for c in rows}:
+            rows.append(self.contact_map[chosen_id])
         for c in rows:
             key = str(c[0])
-            px, py = cx + (c[8]-ox)*scale, cy-(c[9]-oy)*scale
-            sz = 7 if c[1] in (1,2) else 5
-            color = "#155e75" if c[2] == 1 else "#9ca3af"
-            if c[1] in (12,13,14):
-                color = "#64748b"
-            if key == chosen_id:
-                cv.create_line(ship_x,ship_y,px,py,fill="#0891b2",
-                               width=2,dash=(5,4))
-                cv.create_oval(px-10,py-10,px+10,py+10,
-                              outline="#2563eb",width=2)
-            if c[2] != 1:
-                cv.create_line(px-sz,py-sz,px+sz,py+sz,fill=color)
-                cv.create_line(px-sz,py+sz,px+sz,py-sz,fill=color)
-            else:
-                cv.create_oval(px-sz,py-sz,px+sz,py+sz,fill=color,outline="")
-            if focused and key == chosen_id:
-                name = STARSHIP_CLASSES.get(c[3]) if c[1] in (1,2) else None
-                name = name or self.designations.get(c[0],TYPES.get(c[1],"Contacto"))
-                # Move labels left if the object is close to the right edge.
-                anchor = "e" if px > w*0.73 else "w"
-                offset = -12 if anchor == "e" else 12
-                cv.create_text(px+offset,py-18,text=name,anchor=anchor,
-                               fill="#0f172a")
-                cv.create_text(px+offset,py+6,
-                               text=f"{c[5]/1000:.3f} UA",anchor=anchor,
-                               fill="#475569")
-            self.map_positions.append((px,py,key))
-        cv.create_text(12,h-9,
-                       text=(f"{len(rows)} objetos observados" if not focused
-                             else "Vista relativa · contacto seleccionado"),
-                       anchor="sw",fill="#475569")
+            p = project(c[8], c[9], c[10], radius, cx, cy, elev_span)
+            if p is None:
+                continue
+            top, profile, bearing, elevation = p
+            profile = (profile[0] + sx - cx, profile[1])
+            selected, lost = key == chosen_id, c[2] != 1
+            color = ("#8b949b" if lost else "#b45309" if key in self.followed_ids
+                     else "#155e75")
+            for view, point in (("top", top), ("side", profile)):
+                px, py = point
+                size = 6 if selected else 4
+                tags = (f"contact:{key}", f"view:{view}")
+                if lost:
+                    cv.create_line(px-size,py-size,px+size,py+size,fill=color,width=2,tags=tags)
+                    cv.create_line(px-size,py+size,px+size,py-size,fill=color,width=2,tags=tags)
+                else:
+                    cv.create_oval(px-size,py-size,px+size,py+size,
+                                   fill=color,outline="#ffffff",width=1,tags=tags)
+                if selected:
+                    cv.create_oval(px-10,py-10,px+10,py+10,
+                                   outline="#2563eb",width=2,tags=tags)
+                self.map_positions.append((px, py, key))
+            if selected:
+                cv.create_line(cx, cy, *top, fill="#5c8299", dash=(3, 3))
+                cv.create_line(sx, cy, *profile, fill="#5c8299", dash=(3, 3))
+                name = self._tree_contact_label(c, {}).split(" · SEÑAL PERDIDA")[0]
+                bearing_label = (f"{round(bearing) % 360:03d}°" if bearing is not None
+                                 else "sin marcación horizontal")
+                cv.create_text(cx, 29, text=f"{name} · {bearing_label}",
+                               fill=color, font=("Segoe UI", 9, "bold"))
+                cv.create_text(sx, 29, text=f"{name} · {elevation:+.0f}°" +
+                               (" · PERDIDO" if lost else ""),
+                               fill=color, font=("Segoe UI", 9, "bold"))
+                if not lost:
+                    nav = self._navigation_data(c)
+                    if nav and 0 <= nav[2] < 360:
+                        a = radians(nav[2])
+                        self._motion_arrow(cv, top, (top[0]+15*sin(a), top[1]-15*cos(a)))
+                    evidence = [r for r in self.state.get("position_evidence", [])
+                                if str(r[1]) == key]
+                    if len(evidence) >= 2 and tuple(evidence[-1][3:6]) == tuple(c[8:11]):
+                        dz = evidence[-1][5] - evidence[-2][5]
+                        if dz:
+                            self._motion_arrow(cv, profile,
+                                               (profile[0], profile[1]-(15 if dz > 0 else -15)))
+
+    def _ship_image(self, canvas, view, x, y, max_w, max_h):
+        source = self.ship_sources[view]
+        step = max(1, ceil(source.width()/max_w), ceil(source.height()/max_h))
+        key = (view, step)
+        if key not in self.ship_images:
+            self.ship_images[key] = source.subsample(step)
+        canvas.create_image(x, y, image=self.ship_images[key], tags=(f"ship:{view}",))
+
+    @staticmethod
+    def _motion_arrow(canvas, start, end):
+        canvas.create_line(*start, *end, fill="#7c3aed", width=2,
+                           arrow="last", tags="trajectory")
 
     def _select_map_contact(self, event: tk.Event) -> None:
         if not self.map_positions:

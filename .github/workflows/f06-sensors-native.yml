@@ -67,6 +67,7 @@ jobs:
         if: runner.os == 'Linux'
         shell: bash
         run: |
+          python desarrollo/integration/f06/qa/test_aster_spatial.py
           command -v xvfb-run || (sudo apt-get update -qq && sudo apt-get install -y xvfb)
           xvfb-run -a python desarrollo/integration/f06/qa/test_aster_gui_layout.py \
             --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner"
@@ -80,6 +81,8 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
+          python desarrollo/integration/f06/qa/test_aster_spatial.py
+          if ($LASTEXITCODE) { throw "Angular projection failed" }
           $runner = "laboratorios/f06/ci/build/f05/f04/Release/f06_aster_runner.exe"
           python desarrollo/integration/f06/qa/test_aster_gui_layout.py --runner $runner
           if ($LASTEXITCODE) { throw "Tk layout failed" }
@@ -88,7 +91,7 @@ jobs:
       - name: Validate QA Python and Windows launch scripts
         shell: pwsh
         run: |
-          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/test_aster_runner.py desarrollo/integration/f06/qa/test_aster_gui_layout.py
+          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/aster_spatial.py desarrollo/integration/f06/qa/test_aster_spatial.py desarrollo/integration/f06/qa/test_aster_runner.py desarrollo/integration/f06/qa/test_aster_gui_layout.py
           foreach($script in @('run_f06_msi.ps1','INICIAR_PRUEBA_ASTER.ps1')){
             $tokens=$null;$errors=$null
             $path=Join-Path $PWD "desarrollo/integration/f06/$script"
