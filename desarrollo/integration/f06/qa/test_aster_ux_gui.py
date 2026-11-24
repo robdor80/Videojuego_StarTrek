@@ -37,12 +37,31 @@ def layout(runner):
             panel=Panel(root,runner,x1=True);panel.playing=False
             root.geometry(geometry);root.update()
             assert len(visible_contacts(panel))==16 and not panel.contacts_table.selection()
+            canvas=panel.map_canvas
+            assert (panel.ship_sources['top'].width(), panel.ship_sources['top'].height())==(1086,1448)
+            assert (panel.ship_sources['side'].width(), panel.ship_sources['side'].height())==(1672,941)
+            assert len(canvas.find_withtag('ship:top'))==len(canvas.find_withtag('ship:side'))==1
+            assert len(panel.map_positions)>=20, 'overview must show multiple observed contacts in both views'
+            for view in ('top','side'):
+                box=canvas.bbox(canvas.find_withtag('ship:'+view)[0])
+                assert 0<=box[0]<box[2]<=canvas.winfo_width() and 0<=box[1]<box[3]<=canvas.winfo_height()
             assert 'ENTORNO OBSERVADO' in panel.detail_text.get('1.0','end')
             for view in ('status','contacts','tracking','results'):
                 panel.navigate(view);verify_layout(panel,root)
             panel.navigate('contacts')
             planet=next(str(c[0]) for c in panel.state['contacts'] if c[1]==13)
             panel._choose_contact(planet);root.update();verify_layout(panel,root)
+            assert canvas.find_withtag('contact:'+planet)
+            assert {canvas.gettags(item)[1] for item in canvas.find_withtag('contact:'+planet)
+                    if len(canvas.gettags(item))>1}=={'view:top','view:side'}
+            active=panel.contact_map[planet]
+            panel.contact_map[planet]=active.copy();panel.contact_map[planet][2]=2
+            panel._draw_map()
+            assert all(canvas.type(item)=='line' for item in canvas.find_withtag('contact:'+planet)[:2])
+            assert not canvas.find_withtag('trajectory')
+            panel.contact_map[planet]=active
+            panel._draw_map()
+            assert any(canvas.type(item)=='oval' for item in canvas.find_withtag('contact:'+planet))
             assert panel.science_transfer_button.winfo_viewable() and len(visible_contacts(panel))==16
             print(f'PASS actual Tk {geometry}; scaling={scale}',flush=True)
         finally:
