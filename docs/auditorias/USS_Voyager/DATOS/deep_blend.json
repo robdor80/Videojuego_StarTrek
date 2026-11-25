@@ -1,0 +1,5593 @@
+{
+  "label": "blend",
+  "objects": [
+    {
+      "object": "Mesh1",
+      "parent": "Group1",
+      "vertices": 1060,
+      "used_vertices": 1060,
+      "loose_vertices": 0,
+      "faces": 434,
+      "triangles": 962,
+      "zero_area_world": 60,
+      "surface_area": 203.9974072976754,
+      "up_area": 45.64671797616706,
+      "down_area": 37.8995782788531,
+      "side_or_sloped_area": 120.45111104265555,
+      "surface_bounds_min": [
+        78.68106079101562,
+        11.833969116210938,
+        -0.01954861916601658
+      ],
+      "surface_bounds_max": [
+        84.42166137695312,
+        19.912445068359375,
+        4.001526832580566
+      ],
+      "surface_dimensions": [
+        5.7406005859375,
+        8.078475952148438,
+        4.021075451746583
+      ],
+      "material_triangles": {
+        "Color_H04": 962
+      }
+    },
+    {
+      "object": "Mesh2",
+      "parent": "Group2",
+      "vertices": 1621,
+      "used_vertices": 1613,
+      "loose_vertices": 8,
+      "faces": 398,
+      "triangles": 1077,
+      "zero_area_world": 0,
+      "surface_area": 75.46128298750155,
+      "up_area": 20.136345040429234,
+      "down_area": 20.03332241548459,
+      "side_or_sloped_area": 35.29161553158771,
+      "surface_bounds_min": [
+        0.018748044967651367,
+        2.2898874282836914,
+        -0.019550155848264694
+      ],
+      "surface_bounds_max": [
+        5.57414436340332,
+        7.821229934692383,
+        3.093982696533203
+      ],
+      "surface_dimensions": [
+        5.555396318435669,
+        5.531342506408691,
+        3.113532852381468
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 329,
+        "Upper_Border___Lower_Recess": 198,
+        "Ground_Skirting___Lighting": 250,
+        "FrontColor": 300
+      }
+    },
+    {
+      "object": "Mesh3",
+      "parent": "Group3",
+      "vertices": 418,
+      "used_vertices": 418,
+      "loose_vertices": 0,
+      "faces": 94,
+      "triangles": 342,
+      "zero_area_world": 0,
+      "surface_area": 490.2689781438231,
+      "up_area": 109.2594713529375,
+      "down_area": 108.59699292738918,
+      "side_or_sloped_area": 272.4125138634965,
+      "surface_bounds_min": [
+        -11.102787971496582,
+        8.971908569335938,
+        -0.01954691670835018
+      ],
+      "surface_bounds_max": [
+        4.15245246887207,
+        16.896709442138672,
+        5.705928325653076
+      ],
+      "surface_dimensions": [
+        15.255240440368652,
+        7.924800872802734,
+        5.725475242361426
+      ],
+      "material_triangles": {
+        "Color_H04": 342
+      }
+    },
+    {
+      "object": "Mesh4",
+      "parent": "Group4",
+      "vertices": 102,
+      "used_vertices": 102,
+      "loose_vertices": 0,
+      "faces": 19,
+      "triangles": 64,
+      "zero_area_world": 0,
+      "surface_area": 195.5268487623136,
+      "up_area": 56.74459469944844,
+      "down_area": 56.705443550883274,
+      "side_or_sloped_area": 82.07681051198186,
+      "surface_bounds_min": [
+        -19.03207015991211,
+        -3.294044256210327,
+        1.110166072845459
+      ],
+      "surface_bounds_max": [
+        -10.403861999511719,
+        3.382424831390381,
+        3.87327241897583
+      ],
+      "surface_dimensions": [
+        8.62820816040039,
+        6.676469087600708,
+        2.763106346130371
+      ],
+      "material_triangles": {
+        "FrontColor": 64
+      }
+    },
+    {
+      "object": "Mesh5",
+      "parent": "Group5",
+      "vertices": 78,
+      "used_vertices": 78,
+      "loose_vertices": 0,
+      "faces": 27,
+      "triangles": 48,
+      "zero_area_world": 2,
+      "surface_area": 98.05565589439107,
+      "up_area": 20.46139396668769,
+      "down_area": 20.26253506154545,
+      "side_or_sloped_area": 57.331726866157936,
+      "surface_bounds_min": [
+        -25.4287052154541,
+        -6.382606506347656,
+        0.5504980087280273
+      ],
+      "surface_bounds_max": [
+        -20.99090576171875,
+        -1.2341747283935547,
+        3.8732717037200928
+      ],
+      "surface_dimensions": [
+        4.437799453735352,
+        5.148431777954102,
+        3.3227736949920654
+      ],
+      "material_triangles": {
+        "FrontColor": 48
+      }
+    },
+    {
+      "object": "Mesh6",
+      "parent": "Group6",
+      "vertices": 78,
+      "used_vertices": 78,
+      "loose_vertices": 0,
+      "faces": 27,
+      "triangles": 48,
+      "zero_area_world": 2,
+      "surface_area": 98.05559711492151,
+      "up_area": 20.461378856076614,
+      "down_area": 20.262516705502946,
+      "side_or_sloped_area": 57.33170155334194,
+      "surface_bounds_min": [
+        -30.14633560180664,
+        -6.382606506347656,
+        0.5504980087280273
+      ],
+      "surface_bounds_max": [
+        -25.708539962768555,
+        -1.2341747283935547,
+        3.8732717037200928
+      ],
+      "surface_dimensions": [
+        4.437795639038086,
+        5.148431777954102,
+        3.3227736949920654
+      ],
+      "material_triangles": {
+        "FrontColor": 48
+      }
+    },
+    {
+      "object": "Mesh7",
+      "parent": "Group7",
+      "vertices": 1480,
+      "used_vertices": 1480,
+      "loose_vertices": 0,
+      "faces": 260,
+      "triangles": 1024,
+      "zero_area_world": 2,
+      "surface_area": 226.60552106523514,
+      "up_area": 45.26726676460124,
+      "down_area": 45.11065090958245,
+      "side_or_sloped_area": 136.22760339105173,
+      "surface_bounds_min": [
+        -37.604637145996094,
+        -6.677880764007568,
+        1.1101655960083008
+      ],
+      "surface_bounds_max": [
+        -19.03207015991211,
+        1.3225560188293457,
+        3.873272180557251
+      ],
+      "surface_dimensions": [
+        18.572566986083984,
+        8.000436782836914,
+        2.76310658454895
+      ],
+      "material_triangles": {
+        "FrontColor": 1024
+      }
+    },
+    {
+      "object": "Mesh8",
+      "parent": "Group8",
+      "vertices": 109,
+      "used_vertices": 109,
+      "loose_vertices": 0,
+      "faces": 46,
+      "triangles": 87,
+      "zero_area_world": 1,
+      "surface_area": 25.22480954864019,
+      "up_area": 10.03321802704119,
+      "down_area": 8.626224257388063,
+      "side_or_sloped_area": 6.565367264210941,
+      "surface_bounds_min": [
+        -45.218509674072266,
+        -15.296741485595703,
+        0.23797884583473206
+      ],
+      "surface_bounds_max": [
+        -40.45228576660156,
+        -12.672788619995117,
+        1.0075221061706543
+      ],
+      "surface_dimensions": [
+        4.766223907470703,
+        2.623952865600586,
+        0.7695432603359222
+      ],
+      "material_triangles": {
+        "FrontColor": 87
+      }
+    },
+    {
+      "object": "Mesh9",
+      "parent": "ConferenceRoom",
+      "vertices": 520,
+      "used_vertices": 520,
+      "loose_vertices": 0,
+      "faces": 109,
+      "triangles": 380,
+      "zero_area_world": 0,
+      "surface_area": 296.95987710966233,
+      "up_area": 91.11133375032097,
+      "down_area": 78.87350324537564,
+      "side_or_sloped_area": 126.97504011396619,
+      "surface_bounds_min": [
+        -47.498207092285156,
+        -19.144365310668945,
+        0.23797807097434998
+      ],
+      "surface_bounds_max": [
+        -33.799861907958984,
+        -8.736282348632812,
+        3.331597089767456
+      ],
+      "surface_dimensions": [
+        13.698345184326172,
+        10.408082962036133,
+        3.093619018793106
+      ],
+      "material_triangles": {
+        "FrontColor": 380
+      }
+    },
+    {
+      "object": "Mesh10",
+      "parent": "Group9",
+      "vertices": 1446,
+      "used_vertices": 1446,
+      "loose_vertices": 0,
+      "faces": 243,
+      "triangles": 984,
+      "zero_area_world": 0,
+      "surface_area": 358.38221385289495,
+      "up_area": 68.01354974978736,
+      "down_area": 67.77863796462637,
+      "side_or_sloped_area": 222.5900261384813,
+      "surface_bounds_min": [
+        -37.27681350708008,
+        -15.741116523742676,
+        0.23797862231731415
+      ],
+      "surface_bounds_max": [
+        -18.983625411987305,
+        -4.625453472137451,
+        3.0010857582092285
+      ],
+      "surface_dimensions": [
+        18.293188095092773,
+        11.115663051605225,
+        2.7631071358919144
+      ],
+      "material_triangles": {
+        "FrontColor": 984
+      }
+    },
+    {
+      "object": "Mesh11",
+      "parent": "Group10",
+      "vertices": 571,
+      "used_vertices": 571,
+      "loose_vertices": 0,
+      "faces": 229,
+      "triangles": 470,
+      "zero_area_world": 0,
+      "surface_area": 214.7811527561757,
+      "up_area": 65.69759987330006,
+      "down_area": 53.32522445797809,
+      "side_or_sloped_area": 95.75832842489726,
+      "surface_bounds_min": [
+        -47.49966049194336,
+        8.722475051879883,
+        0.2379826009273529
+      ],
+      "surface_bounds_max": [
+        -37.41593933105469,
+        17.55414581298828,
+        3.331601619720459
+      ],
+      "surface_dimensions": [
+        10.083721160888672,
+        8.831670761108398,
+        3.093619018793106
+      ],
+      "material_triangles": {
+        "FrontColor": 470
+      }
+    },
+    {
+      "object": "Mesh12",
+      "parent": "Hallway_Strait_Small1",
+      "vertices": 900,
+      "used_vertices": 900,
+      "loose_vertices": 0,
+      "faces": 232,
+      "triangles": 676,
+      "zero_area_world": 1,
+      "surface_area": 22.406154310622515,
+      "up_area": 4.936241954005591,
+      "down_area": 4.9585951668724535,
+      "side_or_sloped_area": 12.511317189744465,
+      "surface_bounds_min": [
+        13.838969230651855,
+        4.20742130279541,
+        -0.019549597054719925
+      ],
+      "surface_bounds_max": [
+        17.531837463378906,
+        5.523896217346191,
+        3.093982458114624
+      ],
+      "surface_dimensions": [
+        3.692868232727051,
+        1.3164749145507812,
+        3.113532055169344
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 156,
+        "Airway___Upper_Struts": 166,
+        "Ground_Skirting___Lighting": 180,
+        "FrontColor": 174
+      }
+    },
+    {
+      "object": "Mesh13",
+      "parent": "Hallway_Strait_large1",
+      "vertices": 1320,
+      "used_vertices": 1320,
+      "loose_vertices": 0,
+      "faces": 352,
+      "triangles": 1004,
+      "zero_area_world": 2,
+      "surface_area": 69.32632042930416,
+      "up_area": 16.692329602347034,
+      "down_area": 16.893384967171066,
+      "side_or_sloped_area": 35.74060585978621,
+      "surface_bounds_min": [
+        22.718225479125977,
+        4.207420825958252,
+        -0.01954960636794567
+      ],
+      "surface_bounds_max": [
+        26.41109275817871,
+        8.596542358398438,
+        3.0939829349517822
+      ],
+      "surface_dimensions": [
+        3.6928672790527344,
+        4.3891215324401855,
+        3.113532541319728
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 376,
+        "Ground_Skirting___Lighting": 244,
+        "Upper_Border___Lower_Recess": 60,
+        "FrontColor": 324
+      }
+    },
+    {
+      "object": "Mesh14",
+      "parent": "Hallway_Medium_Door_Double1",
+      "vertices": 628,
+      "used_vertices": 628,
+      "loose_vertices": 0,
+      "faces": 210,
+      "triangles": 516,
+      "zero_area_world": 0,
+      "surface_area": 34.26768179029648,
+      "up_area": 7.549149017683932,
+      "down_area": 7.484939474820384,
+      "side_or_sloped_area": 19.233593297792098,
+      "surface_bounds_min": [
+        27.23100471496582,
+        4.228841781616211,
+        -0.019549665972590446
+      ],
+      "surface_bounds_max": [
+        30.777568817138672,
+        6.423402786254883,
+        3.093982458114624
+      ],
+      "surface_dimensions": [
+        3.5465641021728516,
+        2.194561004638672,
+        3.1135321240872145
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 184,
+        "Ground_Skirting___Lighting": 112,
+        "FrontColor": 186,
+        "Upper_Border___Lower_Recess": 34
+      }
+    },
+    {
+      "object": "Mesh15",
+      "parent": "J_Tube_Long1",
+      "vertices": 128,
+      "used_vertices": 128,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 88,
+      "zero_area_world": 0,
+      "surface_area": 8.728362888605286,
+      "up_area": 1.8396809393934839,
+      "down_area": 1.6404590720495282,
+      "side_or_sloped_area": 5.248222877162269,
+      "surface_bounds_min": [
+        50.79664611816406,
+        11.796293258666992,
+        0.4022943675518036
+      ],
+      "surface_bounds_max": [
+        51.97171401977539,
+        13.625092506408691,
+        1.3166946172714233
+      ],
+      "surface_dimensions": [
+        1.1750679016113281,
+        1.8287992477416992,
+        0.9144002497196198
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 18,
+        "Ground_Skirting___Lighting": 10,
+        "FrontColor": 48,
+        "Upper_Border___Lower_Recess": 12
+      }
+    },
+    {
+      "object": "Mesh16",
+      "parent": "G_4_Way_Up_Dn_Lt_Rt_Junction___With_Hallway_access1",
+      "vertices": 3333,
+      "used_vertices": 3333,
+      "loose_vertices": 0,
+      "faces": 1068,
+      "triangles": 2602,
+      "zero_area_world": 6,
+      "surface_area": 38.225461418649594,
+      "up_area": 4.793280734879962,
+      "down_area": 4.974987308894813,
+      "side_or_sloped_area": 28.457193374874812,
+      "surface_bounds_min": [
+        50.00004959106445,
+        19.1506290435791,
+        -0.07034716755151749
+      ],
+      "surface_bounds_max": [
+        53.164146423339844,
+        21.72062873840332,
+        3.0386271476745605
+      ],
+      "surface_dimensions": [
+        3.1640968322753906,
+        2.5699996948242188,
+        3.108974315226078
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 1028,
+        "Airway___Upper_Struts": 488,
+        "Light_Detailing": 132,
+        "FrontColor": 444,
+        "Ground_Skirting___Lighting": 510
+      }
+    },
+    {
+      "object": "Mesh17",
+      "parent": "Turbolift1",
+      "vertices": 3115,
+      "used_vertices": 3115,
+      "loose_vertices": 0,
+      "faces": 1529,
+      "triangles": 3307,
+      "zero_area_world": 1,
+      "surface_area": 48.175496825084686,
+      "up_area": 7.838883010820238,
+      "down_area": 4.122932963627028,
+      "side_or_sloped_area": 36.213680850637445,
+      "surface_bounds_min": [
+        69.55625915527344,
+        13.612089157104492,
+        -0.019548136740922928
+      ],
+      "surface_bounds_max": [
+        72.59886169433594,
+        17.145570755004883,
+        3.080268144607544
+      ],
+      "surface_dimensions": [
+        3.0426025390625,
+        3.5334815979003906,
+        3.099816281348467
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 822,
+        "Ground_Skirting___Lighting": 711,
+        "Airway___Upper_Struts": 1121,
+        "FrontColor": 333,
+        "Light_Detailing": 69,
+        "_cTerminal": 251
+      }
+    },
+    {
+      "object": "Mesh18",
+      "parent": "Hallway_Medium_Single1",
+      "vertices": 940,
+      "used_vertices": 940,
+      "loose_vertices": 0,
+      "faces": 236,
+      "triangles": 684,
+      "zero_area_world": 0,
+      "surface_area": 35.60843520349904,
+      "up_area": 8.30122024024509,
+      "down_area": 8.311639247674192,
+      "side_or_sloped_area": 18.99557571557983,
+      "surface_bounds_min": [
+        18.278596878051758,
+        4.103281021118164,
+        -0.019549667835235596
+      ],
+      "surface_bounds_max": [
+        21.971464157104492,
+        6.297842025756836,
+        3.093982458114624
+      ],
+      "surface_dimensions": [
+        3.6928672790527344,
+        2.194561004638672,
+        3.1135321259498596
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 184,
+        "Ground_Skirting___Lighting": 180,
+        "Upper_Border___Lower_Recess": 146,
+        "FrontColor": 174
+      }
+    },
+    {
+      "object": "Mesh19",
+      "parent": "J_Tube_Access_hatch1",
+      "vertices": 327,
+      "used_vertices": 327,
+      "loose_vertices": 0,
+      "faces": 134,
+      "triangles": 249,
+      "zero_area_world": 0,
+      "surface_area": 1.3638809846213915,
+      "up_area": 0.20378262606772907,
+      "down_area": 0.16019871778800612,
+      "side_or_sloped_area": 0.9998996407656566,
+      "surface_bounds_min": [
+        50.7966423034668,
+        13.853691101074219,
+        0.40229466557502747
+      ],
+      "surface_bounds_max": [
+        51.971710205078125,
+        14.073149681091309,
+        1.316694736480713
+      ],
+      "surface_dimensions": [
+        1.1750679016113281,
+        0.21945858001708984,
+        0.9144000709056854
+      ],
+      "material_triangles": {
+        "Ground_Skirting___Lighting": 96,
+        "Airway___Upper_Struts": 27,
+        "FrontColor": 50,
+        "Upper_Border___Lower_Recess": 76
+      }
+    },
+    {
+      "object": "Mesh20",
+      "parent": "J_tube_90__Turn1",
+      "vertices": 182,
+      "used_vertices": 182,
+      "loose_vertices": 0,
+      "faces": 59,
+      "triangles": 130,
+      "zero_area_world": 0,
+      "surface_area": 5.876015161961521,
+      "up_area": 1.25382714772175,
+      "down_area": 1.127906768783213,
+      "side_or_sloped_area": 3.4942812454565604,
+      "surface_bounds_min": [
+        52.30118942260742,
+        8.509584426879883,
+        0.4022938311100006
+      ],
+      "surface_bounds_max": [
+        53.51951599121094,
+        9.727910041809082,
+        1.3166940212249756
+      ],
+      "surface_dimensions": [
+        1.2183265686035156,
+        1.2183256149291992,
+        0.914400190114975
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 27,
+        "FrontColor": 70,
+        "Upper_Border___Lower_Recess": 18,
+        "Ground_Skirting___Lighting": 15
+      }
+    },
+    {
+      "object": "Mesh21",
+      "parent": "J_tube_4__Degree_Slant_Long1",
+      "vertices": 124,
+      "used_vertices": 124,
+      "loose_vertices": 0,
+      "faces": 41,
+      "triangles": 82,
+      "zero_area_world": 0,
+      "surface_area": 7.557524142475789,
+      "up_area": 1.5863834527238003,
+      "down_area": 1.414101415361806,
+      "side_or_sloped_area": 4.557039274390184,
+      "surface_bounds_min": [
+        49.693565368652344,
+        3.6522703170776367,
+        0.4022931158542633
+      ],
+      "surface_bounds_max": [
+        51.58590316772461,
+        5.62255859375,
+        1.3166934251785278
+      ],
+      "surface_dimensions": [
+        1.8923377990722656,
+        1.9702882766723633,
+        0.9144003093242645
+      ],
+      "material_triangles": {
+        "FrontColor": 42,
+        "Airway___Upper_Struts": 18,
+        "Ground_Skirting___Lighting": 8,
+        "Upper_Border___Lower_Recess": 14
+      }
+    },
+    {
+      "object": "Mesh24",
+      "parent": "Hallway_4__Degree_Circlar_Medium1",
+      "vertices": 802,
+      "used_vertices": 802,
+      "loose_vertices": 0,
+      "faces": 231,
+      "triangles": 586,
+      "zero_area_world": 0,
+      "surface_area": 51.96699978490309,
+      "up_area": 12.313744756746821,
+      "down_area": 12.462389930215963,
+      "side_or_sloped_area": 27.190865097940318,
+      "surface_bounds_min": [
+        62.94524002075195,
+        8.590986251831055,
+        -0.019548920914530754
+      ],
+      "surface_bounds_max": [
+        66.59454345703125,
+        12.2572660446167,
+        3.0939834117889404
+      ],
+      "surface_dimensions": [
+        3.649303436279297,
+        3.6662797927856445,
+        3.113532332703471
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 52,
+        "FrontColor": 217,
+        "Ground_Skirting___Lighting": 94,
+        "Airway___Upper_Struts": 223
+      }
+    },
+    {
+      "object": "Mesh25",
+      "parent": "Hallway_Medium_Door_Single1",
+      "vertices": 792,
+      "used_vertices": 792,
+      "loose_vertices": 0,
+      "faces": 228,
+      "triangles": 616,
+      "zero_area_world": 0,
+      "surface_area": 35.35202319210793,
+      "up_area": 8.07500615662671,
+      "down_area": 8.079527070872338,
+      "side_or_sloped_area": 19.19748996460884,
+      "surface_bounds_min": [
+        27.157854080200195,
+        7.947402477264404,
+        -0.019549068063497543
+      ],
+      "surface_bounds_max": [
+        30.777568817138672,
+        10.141963005065918,
+        3.0939831733703613
+      ],
+      "surface_dimensions": [
+        3.6197147369384766,
+        2.1945605278015137,
+        3.113532241433859
+      ],
+      "material_triangles": {
+        "Ground_Skirting___Lighting": 150,
+        "Airway___Upper_Struts": 185,
+        "Upper_Border___Lower_Recess": 95,
+        "FrontColor": 186
+      }
+    },
+    {
+      "object": "Mesh26",
+      "parent": "Hallway_Small_DoorSingle1",
+      "vertices": 760,
+      "used_vertices": 760,
+      "loose_vertices": 0,
+      "faces": 226,
+      "triangles": 609,
+      "zero_area_world": 3,
+      "surface_area": 22.55014627477587,
+      "up_area": 4.830094030354794,
+      "down_area": 4.809160094231323,
+      "side_or_sloped_area": 12.910892150189751,
+      "surface_bounds_min": [
+        27.089271545410156,
+        11.665961265563965,
+        -0.019548404961824417
+      ],
+      "surface_bounds_max": [
+        30.777568817138672,
+        12.982694625854492,
+        3.0939836502075195
+      ],
+      "surface_dimensions": [
+        3.6882972717285156,
+        1.3167333602905273,
+        3.113532055169344
+      ],
+      "material_triangles": {
+        "Ground_Skirting___Lighting": 146,
+        "Airway___Upper_Struts": 182,
+        "Upper_Border___Lower_Recess": 95,
+        "FrontColor": 186
+      }
+    },
+    {
+      "object": "Mesh27",
+      "parent": "Recessed_Large_Cargo_Type_Door1",
+      "vertices": 426,
+      "used_vertices": 426,
+      "loose_vertices": 0,
+      "faces": 175,
+      "triangles": 318,
+      "zero_area_world": 1,
+      "surface_area": 31.204461593165103,
+      "up_area": 5.25493684776577,
+      "down_area": 4.763063388989514,
+      "side_or_sloped_area": 21.18646135640981,
+      "surface_bounds_min": [
+        45.488258361816406,
+        12.824198722839355,
+        -0.019548192620277405
+      ],
+      "surface_bounds_max": [
+        47.1535530090332,
+        16.0050048828125,
+        3.057408094406128
+      ],
+      "surface_dimensions": [
+        1.6652946472167969,
+        3.1808061599731445,
+        3.0769562870264053
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 203,
+        "FrontColor": 12,
+        "Upper_Border___Lower_Recess": 78,
+        "Ground_Skirting___Lighting": 25
+      }
+    },
+    {
+      "object": "Mesh28",
+      "parent": "Hallway_Residential_Quarters_Asymetrical1",
+      "vertices": 620,
+      "used_vertices": 620,
+      "loose_vertices": 0,
+      "faces": 204,
+      "triangles": 510,
+      "zero_area_world": 0,
+      "surface_area": 43.117186358583645,
+      "up_area": 9.218760879709544,
+      "down_area": 8.55544031368318,
+      "side_or_sloped_area": 25.342985165190903,
+      "surface_bounds_min": [
+        32.15226745605469,
+        4.0976948738098145,
+        -0.019549774006009102
+      ],
+      "surface_bounds_max": [
+        37.661163330078125,
+        6.292255878448486,
+        3.093982219696045
+      ],
+      "surface_dimensions": [
+        5.5088958740234375,
+        2.194561004638672,
+        3.113531993702054
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 154,
+        "Ground_Skirting___Lighting": 136,
+        "Upper_Border___Lower_Recess": 41,
+        "FrontColor": 179
+      }
+    },
+    {
+      "object": "Mesh29",
+      "parent": "Hallway_J_tube_Access_Singlec1",
+      "vertices": 672,
+      "used_vertices": 672,
+      "loose_vertices": 0,
+      "faces": 210,
+      "triangles": 518,
+      "zero_area_world": 0,
+      "surface_area": 33.788437692367786,
+      "up_area": 7.935893613804336,
+      "down_area": 7.610861100044666,
+      "side_or_sloped_area": 18.24168297851878,
+      "surface_bounds_min": [
+        49.260581970214844,
+        35.50794982910156,
+        -0.019544538110494614
+      ],
+      "surface_bounds_max": [
+        52.88029861450195,
+        37.702510833740234,
+        3.0939877033233643
+      ],
+      "surface_dimensions": [
+        3.6197166442871094,
+        2.194561004638672,
+        3.113532241433859
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 90,
+        "Ground_Skirting___Lighting": 116,
+        "FrontColor": 159,
+        "Airway___Upper_Struts": 153
+      }
+    },
+    {
+      "object": "Mesh35",
+      "parent": "Group_31_6",
+      "vertices": 2096,
+      "used_vertices": 2096,
+      "loose_vertices": 0,
+      "faces": 1239,
+      "triangles": 1760,
+      "zero_area_world": 40,
+      "surface_area": 33.385969690763176,
+      "up_area": 5.470002923411038,
+      "down_area": 4.825432417085221,
+      "side_or_sloped_area": 23.090534350266942,
+      "surface_bounds_min": [
+        45.48825454711914,
+        8.119399070739746,
+        -0.01954897865653038
+      ],
+      "surface_bounds_max": [
+        47.08041763305664,
+        11.300200462341309,
+        3.0574073791503906
+      ],
+      "surface_dimensions": [
+        1.5921630859375,
+        3.1808013916015625,
+        3.076956357806921
+      ],
+      "material_triangles": {
+        "FrontColor": 82,
+        "Ground_Skirting___Lighting": 794,
+        "Light_Detailing": 94,
+        "Airway___Upper_Struts": 337,
+        "Upper_Border___Lower_Recess": 453
+      }
+    },
+    {
+      "object": "Mesh37",
+      "parent": "Corridor___Turbolift_access___Large1",
+      "vertices": 547,
+      "used_vertices": 547,
+      "loose_vertices": 0,
+      "faces": 250,
+      "triangles": 447,
+      "zero_area_world": 1,
+      "surface_area": 48.2907338623631,
+      "up_area": 10.614104377951085,
+      "down_area": 9.748366615787086,
+      "side_or_sloped_area": 27.928262868624916,
+      "surface_bounds_min": [
+        69.61909484863281,
+        4.430302143096924,
+        -0.019549626857042313
+      ],
+      "surface_bounds_max": [
+        73.01935577392578,
+        7.575575828552246,
+        3.093982696533203
+      ],
+      "surface_dimensions": [
+        3.4002609252929688,
+        3.1452736854553223,
+        3.1135323233902454
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 235,
+        "Upper_Border___Lower_Recess": 63,
+        "FrontColor": 61,
+        "Light_Detailing": 32,
+        "Ground_Skirting___Lighting": 48,
+        "_cTerminal": 8
+      }
+    },
+    {
+      "object": "Mesh38",
+      "parent": "Hallway_4_Way_Junction1",
+      "vertices": 880,
+      "used_vertices": 880,
+      "loose_vertices": 0,
+      "faces": 326,
+      "triangles": 764,
+      "zero_area_world": 0,
+      "surface_area": 40.21857431626392,
+      "up_area": 12.880995562553187,
+      "down_area": 12.422834618432526,
+      "side_or_sloped_area": 14.914744135278209,
+      "surface_bounds_min": [
+        38.943267822265625,
+        4.0976948738098145,
+        -0.019549665972590446
+      ],
+      "surface_bounds_max": [
+        42.58405685424805,
+        7.738481044769287,
+        3.093982696533203
+      ],
+      "surface_dimensions": [
+        3.640789031982422,
+        3.6407861709594727,
+        3.1135323625057936
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 272,
+        "FrontColor": 420,
+        "Ground_Skirting___Lighting": 40,
+        "Upper_Border___Lower_Recess": 32
+      }
+    },
+    {
+      "object": "Mesh39",
+      "parent": "J_tube_4__Degree_Slant_Short1",
+      "vertices": 112,
+      "used_vertices": 112,
+      "loose_vertices": 0,
+      "faces": 39,
+      "triangles": 76,
+      "zero_area_world": 0,
+      "surface_area": 1.2764912084524578,
+      "up_area": 0.2707046321444206,
+      "down_area": 0.2413423322098071,
+      "side_or_sloped_area": 0.7644442440982303,
+      "surface_bounds_min": [
+        50.780033111572266,
+        7.212798118591309,
+        0.4022935926914215
+      ],
+      "surface_bounds_max": [
+        51.971710205078125,
+        7.634042739868164,
+        1.316693663597107
+      ],
+      "surface_dimensions": [
+        1.1916770935058594,
+        0.42124462127685547,
+        0.9144000709056854
+      ],
+      "material_triangles": {
+        "FrontColor": 40,
+        "Airway___Upper_Struts": 14,
+        "Ground_Skirting___Lighting": 8,
+        "Upper_Border___Lower_Recess": 14
+      }
+    },
+    {
+      "object": "Mesh40",
+      "parent": "Hallway_T_Junction1",
+      "vertices": 978,
+      "used_vertices": 978,
+      "loose_vertices": 0,
+      "faces": 313,
+      "triangles": 812,
+      "zero_area_world": 2,
+      "surface_area": 58.590308947321496,
+      "up_area": 23.30073703590252,
+      "down_area": 12.857484255660049,
+      "side_or_sloped_area": 22.432087655759013,
+      "surface_bounds_min": [
+        38.917232513427734,
+        9.262480735778809,
+        -0.01954871229827404
+      ],
+      "surface_bounds_max": [
+        42.58405685424805,
+        12.903266906738281,
+        3.0939836502075195
+      ],
+      "surface_dimensions": [
+        3.6668243408203125,
+        3.6407861709594727,
+        3.1135323625057936
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 349,
+        "FrontColor": 307,
+        "Upper_Border___Lower_Recess": 46,
+        "Ground_Skirting___Lighting": 110
+      }
+    },
+    {
+      "object": "Mesh41",
+      "parent": "Hallway_90__Degree_Turn1",
+      "vertices": 1278,
+      "used_vertices": 1278,
+      "loose_vertices": 0,
+      "faces": 361,
+      "triangles": 1001,
+      "zero_area_world": 0,
+      "surface_area": 57.06732051553146,
+      "up_area": 13.40106259958775,
+      "down_area": 13.379785103895324,
+      "side_or_sloped_area": 30.286472812048444,
+      "surface_bounds_min": [
+        38.917232513427734,
+        19.592056274414062,
+        -0.019547078758478165
+      ],
+      "surface_bounds_max": [
+        42.58405685424805,
+        23.258882522583008,
+        3.0939853191375732
+      ],
+      "surface_dimensions": [
+        3.6668243408203125,
+        3.6668262481689453,
+        3.1135323978960514
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 296,
+        "Upper_Border___Lower_Recess": 160,
+        "Ground_Skirting___Lighting": 166,
+        "FrontColor": 379
+      }
+    },
+    {
+      "object": "Mesh42",
+      "parent": "Corridor___Turbolift_access___Small1",
+      "vertices": 661,
+      "used_vertices": 661,
+      "loose_vertices": 0,
+      "faces": 280,
+      "triangles": 515,
+      "zero_area_world": 0,
+      "surface_area": 39.78101395528626,
+      "up_area": 7.721931680586648,
+      "down_area": 6.846960851249072,
+      "side_or_sloped_area": 25.212121423450498,
+      "surface_bounds_min": [
+        69.6590576171875,
+        9.227470397949219,
+        -0.019548766314983368
+      ],
+      "surface_bounds_max": [
+        72.14623260498047,
+        12.3727445602417,
+        3.0939834117889404
+      ],
+      "surface_dimensions": [
+        2.4871749877929688,
+        3.1452741622924805,
+        3.113532178103924
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 256,
+        "Upper_Border___Lower_Recess": 80,
+        "FrontColor": 61,
+        "Light_Detailing": 32,
+        "Ground_Skirting___Lighting": 82,
+        "_cTerminal": 4
+      }
+    },
+    {
+      "object": "Mesh45",
+      "parent": "Hallway_4__Degree_Circlar_Large1",
+      "vertices": 802,
+      "used_vertices": 802,
+      "loose_vertices": 0,
+      "faces": 231,
+      "triangles": 586,
+      "zero_area_world": 0,
+      "surface_area": 78.68054337880199,
+      "up_area": 18.99270819475479,
+      "down_area": 19.250021113249083,
+      "side_or_sloped_area": 40.437814070798126,
+      "surface_bounds_min": [
+        62.06741714477539,
+        4.163207530975342,
+        -0.01954963617026806
+      ],
+      "surface_bounds_max": [
+        67.47237396240234,
+        7.829482078552246,
+        3.093982696533203
+      ],
+      "surface_dimensions": [
+        5.404956817626953,
+        3.6662745475769043,
+        3.113532332703471
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 187,
+        "Upper_Border___Lower_Recess": 92,
+        "Ground_Skirting___Lighting": 90,
+        "FrontColor": 217
+      }
+    },
+    {
+      "object": "Mesh50",
+      "parent": "Recessed_Control_Area___Medium1",
+      "vertices": 1800,
+      "used_vertices": 1800,
+      "loose_vertices": 0,
+      "faces": 1036,
+      "triangles": 1462,
+      "zero_area_world": 85,
+      "surface_area": 27.376756442191194,
+      "up_area": 3.903406716117494,
+      "down_area": 3.3183957756369544,
+      "side_or_sloped_area": 20.154953950436813,
+      "surface_bounds_min": [
+        45.48825454711914,
+        4.32768440246582,
+        -0.019549638032913208
+      ],
+      "surface_bounds_max": [
+        47.080421447753906,
+        6.595395088195801,
+        3.0574066638946533
+      ],
+      "surface_dimensions": [
+        1.5921669006347656,
+        2.2677106857299805,
+        3.0769563019275665
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 374,
+        "Light_Detailing": 108,
+        "Ground_Skirting___Lighting": 582,
+        "Upper_Border___Lower_Recess": 340,
+        "FrontColor": 58
+      }
+    },
+    {
+      "object": "Mesh51",
+      "parent": "Recessed_Large___Double_Exits1",
+      "vertices": 1384,
+      "used_vertices": 1384,
+      "loose_vertices": 0,
+      "faces": 337,
+      "triangles": 976,
+      "zero_area_world": 18,
+      "surface_area": 30.796107056287067,
+      "up_area": 4.987776506851606,
+      "down_area": 4.912862297554308,
+      "side_or_sloped_area": 20.895468251881073,
+      "surface_bounds_min": [
+        45.5627555847168,
+        22.306957244873047,
+        -0.019546659663319588
+      ],
+      "surface_bounds_max": [
+        47.062110900878906,
+        25.63406753540039,
+        3.0574097633361816
+      ],
+      "surface_dimensions": [
+        1.4993553161621094,
+        3.3271102905273438,
+        3.0769564229995012
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 336,
+        "Ground_Skirting___Lighting": 150,
+        "Upper_Border___Lower_Recess": 304,
+        "Light_Detailing": 126,
+        "FrontColor": 60
+      }
+    },
+    {
+      "object": "Mesh52",
+      "parent": "Hallway_Primary_Secondary_Location___island___EG__Holodeck_1",
+      "vertices": 3497,
+      "used_vertices": 3497,
+      "loose_vertices": 0,
+      "faces": 1119,
+      "triangles": 2701,
+      "zero_area_world": 45,
+      "surface_area": 213.94374556898245,
+      "up_area": 52.72814966343666,
+      "down_area": 53.55054015589068,
+      "side_or_sloped_area": 107.66505574965554,
+      "surface_bounds_min": [
+        75.11284637451172,
+        4.703686237335205,
+        -0.01954958587884903
+      ],
+      "surface_bounds_max": [
+        87.97721099853516,
+        10.232246398925781,
+        3.0939831733703613
+      ],
+      "surface_dimensions": [
+        12.864364624023438,
+        5.528560161590576,
+        3.1135327592492104
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 240,
+        "Ground_Skirting___Lighting": 811,
+        "FrontColor": 483,
+        "_cTerminal": 79,
+        "Airway___Upper_Struts": 1064,
+        "Light_Detailing": 24
+      }
+    },
+    {
+      "object": "Mesh53",
+      "parent": "Recessed_Large_Cargo_Type_Door_Edge1",
+      "vertices": 293,
+      "used_vertices": 293,
+      "loose_vertices": 0,
+      "faces": 133,
+      "triangles": 227,
+      "zero_area_world": 3,
+      "surface_area": 9.807251458131974,
+      "up_area": 0.16990380417478665,
+      "down_area": 0.2251470280500051,
+      "side_or_sloped_area": 9.412200625907182,
+      "surface_bounds_min": [
+        52.868167877197266,
+        47.06288146972656,
+        -0.019550330936908722
+      ],
+      "surface_bounds_max": [
+        55.82951354980469,
+        47.13603591918945,
+        3.057405710220337
+      ],
+      "surface_dimensions": [
+        2.961345672607422,
+        0.07315444946289062,
+        3.0769560411572456
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 147,
+        "Upper_Border___Lower_Recess": 65,
+        "Ground_Skirting___Lighting": 13,
+        "FrontColor": 2
+      }
+    },
+    {
+      "object": "Mesh54",
+      "parent": "Hallway_Small_Door_Double1",
+      "vertices": 585,
+      "used_vertices": 555,
+      "loose_vertices": 30,
+      "faces": 177,
+      "triangles": 473,
+      "zero_area_world": 3,
+      "surface_area": 22.046036300176308,
+      "up_area": 4.563416268799024,
+      "down_area": 4.238816680826766,
+      "side_or_sloped_area": 13.243803350550463,
+      "surface_bounds_min": [
+        27.23100471496582,
+        14.506698608398438,
+        -0.019548045471310616
+      ],
+      "surface_bounds_max": [
+        30.777568817138672,
+        15.823431968688965,
+        3.0939841270446777
+      ],
+      "surface_dimensions": [
+        3.5465641021728516,
+        1.3167333602905273,
+        3.1135321725159883
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 142,
+        "FrontColor": 190,
+        "Ground_Skirting___Lighting": 112,
+        "Upper_Border___Lower_Recess": 29
+      }
+    },
+    {
+      "object": "Mesh55",
+      "parent": "Recessed_large_Door_Edge1",
+      "vertices": 129,
+      "used_vertices": 129,
+      "loose_vertices": 0,
+      "faces": 22,
+      "triangles": 93,
+      "zero_area_world": 0,
+      "surface_area": 9.520199626122857,
+      "up_area": 0,
+      "down_area": 0.14058302047501184,
+      "side_or_sloped_area": 9.379616605647845,
+      "surface_bounds_min": [
+        44.8785514831543,
+        1.5868891477584839,
+        -0.019550083205103874
+      ],
+      "surface_bounds_max": [
+        47.83989715576172,
+        1.6600390672683716,
+        3.0585641860961914
+      ],
+      "surface_dimensions": [
+        2.961345672607422,
+        0.0731499195098877,
+        3.0781142693012953
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 20,
+        "Upper_Border___Lower_Recess": 14,
+        "Ground_Skirting___Lighting": 37,
+        "FrontColor": 22
+      }
+    },
+    {
+      "object": "Mesh56",
+      "parent": "J_tube_T___Section_Turn1",
+      "vertices": 194,
+      "used_vertices": 194,
+      "loose_vertices": 0,
+      "faces": 59,
+      "triangles": 136,
+      "zero_area_world": 0,
+      "surface_area": 5.298727788979577,
+      "up_area": 1.402022935687437,
+      "down_area": 1.3087892722133363,
+      "side_or_sloped_area": 2.587915581078802,
+      "surface_bounds_min": [
+        50.79664611816406,
+        8.463554382324219,
+        0.4022938311100006
+      ],
+      "surface_bounds_max": [
+        52.017723083496094,
+        9.730644226074219,
+        1.3166940212249756
+      ],
+      "surface_dimensions": [
+        1.2210769653320312,
+        1.26708984375,
+        0.914400190114975
+      ],
+      "material_triangles": {
+        "FrontColor": 74,
+        "Upper_Border___Lower_Recess": 18,
+        "Ground_Skirting___Lighting": 16,
+        "Airway___Upper_Struts": 28
+      }
+    },
+    {
+      "object": "Mesh57",
+      "parent": "Hallway_Residential_Quarters_Symetrical1",
+      "vertices": 620,
+      "used_vertices": 620,
+      "loose_vertices": 0,
+      "faces": 202,
+      "triangles": 506,
+      "zero_area_world": 0,
+      "surface_area": 43.11695794876368,
+      "up_area": 9.218759009196935,
+      "down_area": 8.55520712305399,
+      "side_or_sloped_area": 25.342991816512754,
+      "surface_bounds_min": [
+        32.15226745605469,
+        7.816254615783691,
+        -0.019549068063497543
+      ],
+      "surface_bounds_max": [
+        37.66116714477539,
+        10.010815620422363,
+        3.0939831733703613
+      ],
+      "surface_dimensions": [
+        5.508899688720703,
+        2.194561004638672,
+        3.113532241433859
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 41,
+        "Airway___Upper_Struts": 151,
+        "Ground_Skirting___Lighting": 136,
+        "FrontColor": 178
+      }
+    },
+    {
+      "object": "Mesh58",
+      "parent": "J_Tube_Short1",
+      "vertices": 128,
+      "used_vertices": 128,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 88,
+      "zero_area_world": 0,
+      "surface_area": 2.1820742159817206,
+      "up_area": 0.4599178465812029,
+      "down_area": 0.41011248304874715,
+      "side_or_sloped_area": 1.3120438863517714,
+      "surface_bounds_min": [
+        50.7966423034668,
+        9.908954620361328,
+        0.4022940695285797
+      ],
+      "surface_bounds_max": [
+        51.971710205078125,
+        10.366151809692383,
+        1.3166942596435547
+      ],
+      "surface_dimensions": [
+        1.1750679016113281,
+        0.4571971893310547,
+        0.914400190114975
+      ],
+      "material_triangles": {
+        "Ground_Skirting___Lighting": 10,
+        "Upper_Border___Lower_Recess": 12,
+        "FrontColor": 48,
+        "Airway___Upper_Struts": 18
+      }
+    },
+    {
+      "object": "Mesh59",
+      "parent": "T___Section_Hallway___1x2_1",
+      "vertices": 600,
+      "used_vertices": 600,
+      "loose_vertices": 0,
+      "faces": 174,
+      "triangles": 460,
+      "zero_area_world": 0,
+      "surface_area": 27.899042852561504,
+      "up_area": 7.624793081421204,
+      "down_area": 7.340346952896284,
+      "side_or_sloped_area": 12.933902818244018,
+      "surface_bounds_min": [
+        18.27859878540039,
+        7.0115814208984375,
+        -0.019549189135432243
+      ],
+      "surface_bounds_max": [
+        21.715435028076172,
+        9.20614242553711,
+        3.0939831733703613
+      ],
+      "surface_dimensions": [
+        3.4368362426757812,
+        2.194561004638672,
+        3.1135323625057936
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 134,
+        "Upper_Border___Lower_Recess": 80,
+        "Ground_Skirting___Lighting": 98,
+        "FrontColor": 148
+      }
+    },
+    {
+      "object": "Mesh62",
+      "parent": "Hallway_4__Degree_Circlar_Small1",
+      "vertices": 788,
+      "used_vertices": 788,
+      "loose_vertices": 0,
+      "faces": 227,
+      "triangles": 576,
+      "zero_area_world": 0,
+      "surface_area": 25.2534771490866,
+      "up_area": 5.634780157103845,
+      "down_area": 5.674758663201165,
+      "side_or_sloped_area": 13.943938328781563,
+      "surface_bounds_min": [
+        64.10873413085938,
+        12.555932998657227,
+        -0.0195482075214386
+      ],
+      "surface_bounds_max": [
+        66.00239562988281,
+        16.222211837768555,
+        3.0939841270446777
+      ],
+      "surface_dimensions": [
+        1.8936614990234375,
+        3.666278839111328,
+        3.1135323345661163
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 227,
+        "Upper_Border___Lower_Recess": 44,
+        "FrontColor": 211,
+        "Ground_Skirting___Lighting": 94
+      }
+    },
+    {
+      "object": "Mesh63",
+      "parent": "J_Tube_Medium1",
+      "vertices": 128,
+      "used_vertices": 128,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 88,
+      "zero_area_world": 0,
+      "surface_area": 4.364174417904011,
+      "up_area": 0.9198405628694932,
+      "down_area": 0.820230117860782,
+      "side_or_sloped_area": 2.624103737173736,
+      "surface_bounds_min": [
+        50.79664611816406,
+        10.648719787597656,
+        0.4022941291332245
+      ],
+      "surface_bounds_max": [
+        51.97171401977539,
+        11.563119888305664,
+        1.3166943788528442
+      ],
+      "surface_dimensions": [
+        1.1750679016113281,
+        0.9144001007080078,
+        0.9144002497196198
+      ],
+      "material_triangles": {
+        "FrontColor": 48,
+        "Airway___Upper_Struts": 18,
+        "Ground_Skirting___Lighting": 10,
+        "Upper_Border___Lower_Recess": 12
+      }
+    },
+    {
+      "object": "Mesh64",
+      "parent": "Recessed_Large___Double_JT_Exit1",
+      "vertices": 2041,
+      "used_vertices": 2041,
+      "loose_vertices": 0,
+      "faces": 607,
+      "triangles": 1409,
+      "zero_area_world": 6,
+      "surface_area": 33.645585481474534,
+      "up_area": 5.570326520115139,
+      "down_area": 5.004829879466725,
+      "side_or_sloped_area": 23.070429081892698,
+      "surface_bounds_min": [
+        45.488258361816406,
+        36.05560302734375,
+        -0.019544392824172974
+      ],
+      "surface_bounds_max": [
+        47.06211471557617,
+        39.675323486328125,
+        3.0574119091033936
+      ],
+      "surface_dimensions": [
+        1.5738563537597656,
+        3.619720458984375,
+        3.0769563019275665
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 367,
+        "Upper_Border___Lower_Recess": 493,
+        "Light_Detailing": 126,
+        "Ground_Skirting___Lighting": 274,
+        "FrontColor": 149
+      }
+    },
+    {
+      "object": "Mesh65",
+      "parent": "Vertical_Maintenance_TSEC_1_1",
+      "vertices": 2240,
+      "used_vertices": 2240,
+      "loose_vertices": 0,
+      "faces": 737,
+      "triangles": 1834,
+      "zero_area_world": 8,
+      "surface_area": 32.26488396231997,
+      "up_area": 3.8955066973429937,
+      "down_area": 4.270804836544091,
+      "side_or_sloped_area": 24.09857242843285,
+      "surface_bounds_min": [
+        50.3112678527832,
+        25.907377243041992,
+        1.204763520945562e-05
+      ],
+      "surface_bounds_max": [
+        52.82204055786133,
+        28.46185874938965,
+        3.1229422092437744
+      ],
+      "surface_dimensions": [
+        2.510772705078125,
+        2.5544815063476562,
+        3.122930161608565
+      ],
+      "material_triangles": {
+        "FrontColor": 360,
+        "Ground_Skirting___Lighting": 132,
+        "Upper_Border___Lower_Recess": 850,
+        "Airway___Upper_Struts": 404,
+        "Light_Detailing": 88
+      }
+    },
+    {
+      "object": "Mesh66",
+      "parent": "J_tube_4__Degree_Slant_Medium1",
+      "vertices": 124,
+      "used_vertices": 124,
+      "loose_vertices": 0,
+      "faces": 41,
+      "triangles": 82,
+      "zero_area_world": 0,
+      "surface_area": 3.3743998492495932,
+      "up_area": 0.7089193045141213,
+      "down_area": 0.6319488234118483,
+      "side_or_sloped_area": 2.0335317213236235,
+      "surface_bounds_min": [
+        50.569549560546875,
+        5.7215576171875,
+        0.4022933542728424
+      ],
+      "surface_bounds_max": [
+        51.91364288330078,
+        6.821601390838623,
+        1.3166935443878174
+      ],
+      "surface_dimensions": [
+        1.3440933227539062,
+        1.100043773651123,
+        0.914400190114975
+      ],
+      "material_triangles": {
+        "FrontColor": 42,
+        "Airway___Upper_Struts": 18,
+        "Ground_Skirting___Lighting": 8,
+        "Upper_Border___Lower_Recess": 14
+      }
+    },
+    {
+      "object": "Mesh67",
+      "parent": "G_2_Way_Up_Dn_Junction1",
+      "vertices": 2755,
+      "used_vertices": 2755,
+      "loose_vertices": 0,
+      "faces": 926,
+      "triangles": 2202,
+      "zero_area_world": 8,
+      "surface_area": 36.12569069524556,
+      "up_area": 4.2072136658872195,
+      "down_area": 4.597898047643996,
+      "side_or_sloped_area": 27.32057898171433,
+      "surface_bounds_min": [
+        50.44175720214844,
+        15.3660306930542,
+        -0.07034765183925629
+      ],
+      "surface_bounds_max": [
+        53.03994369506836,
+        17.936031341552734,
+        3.0386264324188232
+      ],
+      "surface_dimensions": [
+        2.598186492919922,
+        2.570000648498535,
+        3.1089740842580795
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 886,
+        "Airway___Upper_Struts": 440,
+        "Light_Detailing": 128,
+        "FrontColor": 444,
+        "Ground_Skirting___Lighting": 304
+      }
+    },
+    {
+      "object": "Mesh68",
+      "parent": "Recessed_Large___No_Exits___Top_Details1",
+      "vertices": 1168,
+      "used_vertices": 1168,
+      "loose_vertices": 0,
+      "faces": 310,
+      "triangles": 824,
+      "zero_area_world": 14,
+      "surface_area": 30.31674421633093,
+      "up_area": 5.0571471274187605,
+      "down_area": 4.039226905839238,
+      "side_or_sloped_area": 21.220370183072852,
+      "surface_bounds_min": [
+        45.48825454711914,
+        45.684669494628906,
+        -0.019542831927537918
+      ],
+      "surface_bounds_max": [
+        47.06211471557617,
+        48.865478515625,
+        3.0574135780334473
+      ],
+      "surface_dimensions": [
+        1.5738601684570312,
+        3.1808090209960938,
+        3.076956409960985
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 351,
+        "Upper_Border___Lower_Recess": 281,
+        "Light_Detailing": 150,
+        "Ground_Skirting___Lighting": 40,
+        "_cTerminal": 2
+      }
+    },
+    {
+      "object": "Mesh69",
+      "parent": "Recessed_Large___Single_JT_Exit1",
+      "vertices": 1594,
+      "used_vertices": 1594,
+      "loose_vertices": 0,
+      "faces": 445,
+      "triangles": 1104,
+      "zero_area_world": 9,
+      "surface_area": 32.29997778725985,
+      "up_area": 5.316873999997731,
+      "down_area": 4.803863670262245,
+      "side_or_sloped_area": 22.179240116999758,
+      "surface_bounds_min": [
+        45.48825454711914,
+        31.570262908935547,
+        -0.019545188173651695
+      ],
+      "surface_bounds_max": [
+        47.062110900878906,
+        34.970516204833984,
+        3.0574114322662354
+      ],
+      "surface_dimensions": [
+        1.5738563537597656,
+        3.4002532958984375,
+        3.076956620439887
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 324,
+        "Upper_Border___Lower_Recess": 392,
+        "Light_Detailing": 126,
+        "Ground_Skirting___Lighting": 170,
+        "FrontColor": 92
+      }
+    },
+    {
+      "object": "Mesh70",
+      "parent": "Recessed_Large___Single_Exit1",
+      "vertices": 1258,
+      "used_vertices": 1258,
+      "loose_vertices": 0,
+      "faces": 318,
+      "triangles": 888,
+      "zero_area_world": 18,
+      "surface_area": 30.33019855578797,
+      "up_area": 4.912153511184407,
+      "down_area": 4.847939901532053,
+      "side_or_sloped_area": 20.570105143071522,
+      "surface_bounds_min": [
+        45.5627555847168,
+        17.529003143310547,
+        -0.019547509029507637
+      ],
+      "surface_bounds_max": [
+        47.062110900878906,
+        20.782958984375,
+        3.0574088096618652
+      ],
+      "surface_dimensions": [
+        1.4993553161621094,
+        3.253955841064453,
+        3.076956318691373
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 330,
+        "Ground_Skirting___Lighting": 108,
+        "Upper_Border___Lower_Recess": 286,
+        "Light_Detailing": 126,
+        "FrontColor": 38
+      }
+    },
+    {
+      "object": "Mesh71",
+      "parent": "Maintenance_Straight_Large",
+      "vertices": 1230,
+      "used_vertices": 1230,
+      "loose_vertices": 0,
+      "faces": 501,
+      "triangles": 914,
+      "zero_area_world": 28,
+      "surface_area": 59.29910229592453,
+      "up_area": 12.78530970228406,
+      "down_area": 10.107431138004811,
+      "side_or_sloped_area": 36.4063614556357,
+      "surface_bounds_min": [
+        61.86725997924805,
+        31.44536590576172,
+        3.2791666984558105
+      ],
+      "surface_bounds_max": [
+        64.20641326904297,
+        37.385860443115234,
+        5.655129909515381
+      ],
+      "surface_dimensions": [
+        2.339153289794922,
+        5.940494537353516,
+        2.3759632110595703
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 256,
+        "Upper_Border___Lower_Recess": 333,
+        "Light_Detailing": 80,
+        "Ground_Skirting___Lighting": 239,
+        "Color_E01": 2,
+        "_cTerminal": 4
+      }
+    },
+    {
+      "object": "Mesh72",
+      "parent": "Group_11_1",
+      "vertices": 145,
+      "used_vertices": 145,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 81,
+      "zero_area_world": 0,
+      "surface_area": 3.722563510357381,
+      "up_area": 0.37524345782986107,
+      "down_area": 0.44438293730438805,
+      "side_or_sloped_area": 2.9029371152231316,
+      "surface_bounds_min": [
+        60.09388732910156,
+        35.144317626953125,
+        3.2791669368743896
+      ],
+      "surface_bounds_max": [
+        60.706092834472656,
+        37.28810501098633,
+        5.604329586029053
+      ],
+      "surface_dimensions": [
+        0.6122055053710938,
+        2.143787384033203,
+        2.325162649154663
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 47,
+        "Airway___Upper_Struts": 24,
+        "Light_Detailing": 4,
+        "Ground_Skirting___Lighting": 6
+      }
+    },
+    {
+      "object": "Mesh73",
+      "parent": "Vertical_Maintenance_TSEC_3_1",
+      "vertices": 1918,
+      "used_vertices": 1918,
+      "loose_vertices": 0,
+      "faces": 644,
+      "triangles": 1550,
+      "zero_area_world": 5,
+      "surface_area": 32.941564409549464,
+      "up_area": 3.1122227242800733,
+      "down_area": 3.3272655599274183,
+      "side_or_sloped_area": 26.502076125341958,
+      "surface_bounds_min": [
+        85.02416229248047,
+        32.8890380859375,
+        -0.26008284091949463
+      ],
+      "surface_bounds_max": [
+        87.43333435058594,
+        35.15882873535156,
+        3.0386292934417725
+      ],
+      "surface_dimensions": [
+        2.4091720581054688,
+        2.2697906494140625,
+        3.298712134361267
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 351,
+        "Upper_Border___Lower_Recess": 639,
+        "Color_E01": 360,
+        "Ground_Skirting___Lighting": 128,
+        "Light_Detailing": 72
+      }
+    },
+    {
+      "object": "Mesh74",
+      "parent": "maintenance_straight",
+      "vertices": 1122,
+      "used_vertices": 1122,
+      "loose_vertices": 0,
+      "faces": 441,
+      "triangles": 834,
+      "zero_area_world": 15,
+      "surface_area": 26.884225233298636,
+      "up_area": 5.305003742471993,
+      "down_area": 3.9037480184816524,
+      "side_or_sloped_area": 17.675473472344972,
+      "surface_bounds_min": [
+        76.14688873291016,
+        33.98895263671875,
+        3.279167413711548
+      ],
+      "surface_bounds_max": [
+        78.58528900146484,
+        36.3281135559082,
+        5.655129909515381
+      ],
+      "surface_dimensions": [
+        2.4384002685546875,
+        2.339160919189453,
+        2.375962495803833
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 325,
+        "Airway___Upper_Struts": 196,
+        "Light_Detailing": 68,
+        "_cTerminal": 4,
+        "Ground_Skirting___Lighting": 239,
+        "Color_E01": 2
+      }
+    },
+    {
+      "object": "Mesh75",
+      "parent": "Maintenance_90Degree",
+      "vertices": 2556,
+      "used_vertices": 2556,
+      "loose_vertices": 0,
+      "faces": 1142,
+      "triangles": 2174,
+      "zero_area_world": 36,
+      "surface_area": 36.526434156326395,
+      "up_area": 7.28038878204449,
+      "down_area": 6.806891072137276,
+      "side_or_sloped_area": 22.439154302144573,
+      "surface_bounds_min": [
+        49.61104202270508,
+        30.839555740356445,
+        1.2638593943847809e-05
+      ],
+      "surface_bounds_max": [
+        52.63279724121094,
+        33.86130905151367,
+        2.4775753021240234
+      ],
+      "surface_dimensions": [
+        3.0217552185058594,
+        3.0217533111572266,
+        2.4775626635300796
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 735,
+        "Light_Detailing": 204,
+        "Upper_Border___Lower_Recess": 1172,
+        "_cTerminal": 4,
+        "Ground_Skirting___Lighting": 24,
+        "FrontColor": 35
+      }
+    },
+    {
+      "object": "Mesh76",
+      "parent": "Vertical_Maintenance_Double1",
+      "vertices": 2382,
+      "used_vertices": 2382,
+      "loose_vertices": 0,
+      "faces": 835,
+      "triangles": 1952,
+      "zero_area_world": 8,
+      "surface_area": 31.74820354359514,
+      "up_area": 3.857291100026029,
+      "down_area": 4.364324632533701,
+      "side_or_sloped_area": 23.52658781103536,
+      "surface_bounds_min": [
+        50.099525451660156,
+        22.682884216308594,
+        -0.2600846290588379
+      ],
+      "surface_bounds_max": [
+        52.71189880371094,
+        25.135766983032227,
+        2.5997157096862793
+      ],
+      "surface_dimensions": [
+        2.6123733520507812,
+        2.452882766723633,
+        2.859800338745117
+      ],
+      "material_triangles": {
+        "FrontColor": 384,
+        "Airway___Upper_Struts": 458,
+        "Upper_Border___Lower_Recess": 886,
+        "Ground_Skirting___Lighting": 136,
+        "Light_Detailing": 88
+      }
+    },
+    {
+      "object": "Mesh77",
+      "parent": "Maintenance_90Degree1",
+      "vertices": 2556,
+      "used_vertices": 2556,
+      "loose_vertices": 0,
+      "faces": 1142,
+      "triangles": 2174,
+      "zero_area_world": 32,
+      "surface_area": 36.526384331979585,
+      "up_area": 7.2803829219851846,
+      "down_area": 6.806881734671244,
+      "side_or_sloped_area": 22.4391196753231,
+      "surface_bounds_min": [
+        80.1828842163086,
+        33.20732116699219,
+        3.2791671752929688
+      ],
+      "surface_bounds_max": [
+        83.20464324951172,
+        36.229068756103516,
+        5.756729602813721
+      ],
+      "surface_dimensions": [
+        3.021759033203125,
+        3.021747589111328,
+        2.477562427520752
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 735,
+        "Light_Detailing": 204,
+        "Upper_Border___Lower_Recess": 1172,
+        "_cTerminal": 4,
+        "Ground_Skirting___Lighting": 24,
+        "Color_E01": 35
+      }
+    },
+    {
+      "object": "Mesh78",
+      "parent": "Vertical_Maintenance_Double2",
+      "vertices": 2382,
+      "used_vertices": 2382,
+      "loose_vertices": 0,
+      "faces": 835,
+      "triangles": 1952,
+      "zero_area_world": 7,
+      "surface_area": 31.748133493978766,
+      "up_area": 3.8572769112184493,
+      "down_area": 4.364329617892053,
+      "side_or_sloped_area": 23.526526964868278,
+      "surface_bounds_min": [
+        66.03707122802734,
+        33.10517883300781,
+        3.0386292934417725
+      ],
+      "surface_bounds_max": [
+        68.64944458007812,
+        35.55805587768555,
+        5.8984293937683105
+      ],
+      "surface_dimensions": [
+        2.6123733520507812,
+        2.4528770446777344,
+        2.859800100326538
+      ],
+      "material_triangles": {
+        "Color_E01": 384,
+        "Airway___Upper_Struts": 458,
+        "Upper_Border___Lower_Recess": 886,
+        "Ground_Skirting___Lighting": 136,
+        "Light_Detailing": 88
+      }
+    },
+    {
+      "object": "Mesh79",
+      "parent": "Vertical_Maintenance_TSEC_2_1",
+      "vertices": 1962,
+      "used_vertices": 1962,
+      "loose_vertices": 0,
+      "faces": 663,
+      "triangles": 1590,
+      "zero_area_world": 6,
+      "surface_area": 29.319568671184584,
+      "up_area": 2.8264126139425803,
+      "down_area": 3.1734343469204127,
+      "side_or_sloped_area": 23.3197217103215,
+      "surface_bounds_min": [
+        53.3769645690918,
+        25.526626586914062,
+        3.0203397274017334
+      ],
+      "surface_bounds_max": [
+        55.786136627197266,
+        27.59088897705078,
+        6.161557674407959
+      ],
+      "surface_dimensions": [
+        2.4091720581054688,
+        2.0642623901367188,
+        3.1412179470062256
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 353,
+        "Upper_Border___Lower_Recess": 604,
+        "FrontColor": 424,
+        "Ground_Skirting___Lighting": 137,
+        "Light_Detailing": 72
+      }
+    },
+    {
+      "object": "Mesh80",
+      "parent": "Hallway_Primary_Secondary_Location___open___EG__Holodeck_1",
+      "vertices": 4007,
+      "used_vertices": 4007,
+      "loose_vertices": 0,
+      "faces": 1018,
+      "triangles": 2945,
+      "zero_area_world": 31,
+      "surface_area": 356.47275377716045,
+      "up_area": 109.54574176652491,
+      "down_area": 112.59212538161883,
+      "side_or_sloped_area": 134.33488662901863,
+      "surface_bounds_min": [
+        88.98175048828125,
+        1.0368605852127075,
+        -0.019550126045942307
+      ],
+      "surface_bounds_max": [
+        102.1879653930664,
+        10.232246398925781,
+        3.0939831733703613
+      ],
+      "surface_dimensions": [
+        13.206214904785156,
+        9.195385813713074,
+        3.1135332994163036
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 278,
+        "Ground_Skirting___Lighting": 853,
+        "FrontColor": 612,
+        "_cTerminal": 179,
+        "Airway___Upper_Struts": 999,
+        "Light_Detailing": 24
+      }
+    },
+    {
+      "object": "Mesh81",
+      "parent": "Room___Head___Single_Restroom1",
+      "vertices": 102,
+      "used_vertices": 102,
+      "loose_vertices": 0,
+      "faces": 19,
+      "triangles": 64,
+      "zero_area_world": 0,
+      "surface_area": 73.4652977412556,
+      "up_area": 12.774588572023758,
+      "down_area": 12.755567112070015,
+      "side_or_sloped_area": 47.935142057161826,
+      "surface_bounds_min": [
+        4.548122406005859,
+        9.092602729797363,
+        -0.019546983763575554
+      ],
+      "surface_bounds_max": [
+        9.507421493530273,
+        14.33926773071289,
+        2.7968058586120605
+      ],
+      "surface_dimensions": [
+        4.959299087524414,
+        5.246665000915527,
+        2.816352842375636
+      ],
+      "material_triangles": {
+        "Color_H04": 64
+      }
+    },
+    {
+      "object": "Mesh82",
+      "parent": "Vertical_Maintenance_TSEC_2_2",
+      "vertices": 1962,
+      "used_vertices": 1962,
+      "loose_vertices": 0,
+      "faces": 663,
+      "triangles": 1590,
+      "zero_area_world": 6,
+      "surface_area": 29.319529257099283,
+      "up_area": 2.8264090240276203,
+      "down_area": 3.1734535380975406,
+      "side_or_sloped_area": 23.31966669497411,
+      "surface_bounds_min": [
+        85.024169921875,
+        33.09457015991211,
+        3.020341157913208
+      ],
+      "surface_bounds_max": [
+        87.43334197998047,
+        35.15882873535156,
+        6.161559104919434
+      ],
+      "surface_dimensions": [
+        2.4091720581054688,
+        2.064258575439453,
+        3.1412179470062256
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 353,
+        "Upper_Border___Lower_Recess": 604,
+        "Color_E01": 424,
+        "Ground_Skirting___Lighting": 137,
+        "Light_Detailing": 72
+      }
+    },
+    {
+      "object": "Mesh83",
+      "parent": "Vertical_Maintenance_TSEC_3_2",
+      "vertices": 1918,
+      "used_vertices": 1918,
+      "loose_vertices": 0,
+      "faces": 644,
+      "triangles": 1550,
+      "zero_area_world": 4,
+      "surface_area": 32.94162005176582,
+      "up_area": 3.1122249457136175,
+      "down_area": 3.327243848666476,
+      "side_or_sloped_area": 26.502151257385727,
+      "surface_bounds_min": [
+        53.37696838378906,
+        25.32109260559082,
+        -0.26008403301239014
+      ],
+      "surface_bounds_max": [
+        55.786136627197266,
+        27.59088706970215,
+        3.038628101348877
+      ],
+      "surface_dimensions": [
+        2.409168243408203,
+        2.269794464111328,
+        3.298712134361267
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 351,
+        "Upper_Border___Lower_Recess": 639,
+        "FrontColor": 360,
+        "Ground_Skirting___Lighting": 128,
+        "Light_Detailing": 72
+      }
+    },
+    {
+      "object": "Mesh84",
+      "parent": "Maintenance_T_Section",
+      "vertices": 2506,
+      "used_vertices": 2506,
+      "loose_vertices": 0,
+      "faces": 1134,
+      "triangles": 2178,
+      "zero_area_world": 18,
+      "surface_area": 32.863398201894924,
+      "up_area": 6.704845037934443,
+      "down_area": 7.109560711695569,
+      "side_or_sloped_area": 19.048992452264855,
+      "surface_bounds_min": [
+        71.08802032470703,
+        33.42902755737305,
+        3.2791671752929688
+      ],
+      "surface_bounds_max": [
+        74.1129379272461,
+        36.349178314208984,
+        5.705929756164551
+      ],
+      "surface_dimensions": [
+        3.0249176025390625,
+        2.9201507568359375,
+        2.426762580871582
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 585,
+        "Upper_Border___Lower_Recess": 1335,
+        "Light_Detailing": 214,
+        "Ground_Skirting___Lighting": 12,
+        "Color_E01": 32
+      }
+    },
+    {
+      "object": "Mesh91",
+      "parent": "Recessed_Large___Double_JT_Exit___Controls1",
+      "vertices": 2527,
+      "used_vertices": 2527,
+      "loose_vertices": 0,
+      "faces": 1292,
+      "triangles": 1985,
+      "zero_area_world": 1,
+      "surface_area": 35.44087121319199,
+      "up_area": 5.807413199015264,
+      "down_area": 5.063191768959698,
+      "side_or_sloped_area": 24.57026624521702,
+      "surface_bounds_min": [
+        45.488258361816406,
+        40.760406494140625,
+        -0.019543679431080818
+      ],
+      "surface_bounds_max": [
+        47.0621337890625,
+        44.380123138427734,
+        3.057412624359131
+      ],
+      "surface_dimensions": [
+        1.5738754272460938,
+        3.6197166442871094,
+        3.0769563037902117
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 427,
+        "Upper_Border___Lower_Recess": 449,
+        "Light_Detailing": 54,
+        "Ground_Skirting___Lighting": 834,
+        "FrontColor": 221
+      }
+    },
+    {
+      "object": "Mesh92",
+      "parent": "Hallway_T_Junction_Doorway1",
+      "vertices": 737,
+      "used_vertices": 737,
+      "loose_vertices": 0,
+      "faces": 275,
+      "triangles": 635,
+      "zero_area_world": 2,
+      "surface_area": 46.86494938085082,
+      "up_area": 12.647632655484776,
+      "down_area": 11.875191479896218,
+      "side_or_sloped_area": 22.342125245469706,
+      "surface_bounds_min": [
+        38.944984436035156,
+        14.427265167236328,
+        -0.019547997042536736
+      ],
+      "surface_bounds_max": [
+        42.58405685424805,
+        18.068056106567383,
+        3.093984365463257
+      ],
+      "surface_dimensions": [
+        3.6390724182128906,
+        3.6407909393310547,
+        3.1135323625057936
+      ],
+      "material_triangles": {
+        "Ground_Skirting___Lighting": 76,
+        "Upper_Border___Lower_Recess": 36,
+        "Airway___Upper_Struts": 241,
+        "FrontColor": 282
+      }
+    },
+    {
+      "object": "Mesh93",
+      "parent": "Recessed_Large_Turbolift_Door_Edge1",
+      "vertices": 119,
+      "used_vertices": 119,
+      "loose_vertices": 0,
+      "faces": 22,
+      "triangles": 93,
+      "zero_area_world": 0,
+      "surface_area": 9.4695384587401,
+      "up_area": 0.07564647594782556,
+      "down_area": 0.06494639671451655,
+      "side_or_sloped_area": 9.32894558607776,
+      "surface_bounds_min": [
+        52.87854766845703,
+        45.932586669921875,
+        -0.01839197613298893
+      ],
+      "surface_bounds_max": [
+        55.83989715576172,
+        46.005741119384766,
+        3.0585639476776123
+      ],
+      "surface_dimensions": [
+        2.9613494873046875,
+        0.07315444946289062,
+        3.0769559238106012
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 10,
+        "Airway___Upper_Struts": 8,
+        "Ground_Skirting___Lighting": 49,
+        "FrontColor": 26
+      }
+    },
+    {
+      "object": "Mesh94",
+      "parent": "Corridor___JT_Access___Large1",
+      "vertices": 547,
+      "used_vertices": 547,
+      "loose_vertices": 0,
+      "faces": 250,
+      "triangles": 447,
+      "zero_area_world": 29,
+      "surface_area": 48.290889234108796,
+      "up_area": 10.614137711754232,
+      "down_area": 9.748420256627563,
+      "side_or_sloped_area": 27.928331265726985,
+      "surface_bounds_min": [
+        68.66021728515625,
+        18.661611557006836,
+        -0.12800541520118713
+      ],
+      "surface_bounds_max": [
+        71.80549621582031,
+        22.061870574951172,
+        2.9855270385742188
+      ],
+      "surface_dimensions": [
+        3.1452789306640625,
+        3.400259017944336,
+        3.113532453775406
+      ],
+      "material_triangles": {
+        "_cTerminal": 4,
+        "Airway___Upper_Struts": 235,
+        "FrontColor": 61,
+        "Ground_Skirting___Lighting": 48,
+        "Upper_Border___Lower_Recess": 63,
+        "Light_Detailing": 32,
+        "Color_E01": 4
+      }
+    },
+    {
+      "object": "Mesh95",
+      "parent": "Recessed_Large___No_Exits1",
+      "vertices": 1062,
+      "used_vertices": 1062,
+      "loose_vertices": 0,
+      "faces": 252,
+      "triangles": 734,
+      "zero_area_world": 7,
+      "surface_area": 30.869337201797034,
+      "up_area": 5.05712883547067,
+      "down_area": 4.596605444735989,
+      "side_or_sloped_area": 21.21560292159032,
+      "surface_bounds_min": [
+        45.48825454711914,
+        26.86545753479004,
+        -0.01954593136906624
+      ],
+      "surface_bounds_max": [
+        47.062110900878906,
+        30.0462589263916,
+        3.057410478591919
+      ],
+      "surface_dimensions": [
+        1.5738563537597656,
+        3.1808013916015625,
+        3.076956409960985
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 261,
+        "Upper_Border___Lower_Recess": 281,
+        "Light_Detailing": 126,
+        "Ground_Skirting___Lighting": 66
+      }
+    },
+    {
+      "object": "Mesh96",
+      "parent": "maintenance_straight1",
+      "vertices": 1122,
+      "used_vertices": 1122,
+      "loose_vertices": 0,
+      "faces": 441,
+      "triangles": 834,
+      "zero_area_world": 9,
+      "surface_area": 26.884231800110918,
+      "up_area": 5.304998098001425,
+      "down_area": 3.9037513138308304,
+      "side_or_sloped_area": 17.675482388278503,
+      "surface_bounds_min": [
+        57.458885192871094,
+        30.937110900878906,
+        -0.01954539865255356
+      ],
+      "surface_bounds_max": [
+        59.79804611206055,
+        33.375511169433594,
+        2.356417179107666
+      ],
+      "surface_dimensions": [
+        2.339160919189453,
+        2.4384002685546875,
+        2.3759625777602196
+      ],
+      "material_triangles": {
+        "Upper_Border___Lower_Recess": 325,
+        "Airway___Upper_Struts": 196,
+        "Light_Detailing": 68,
+        "_cTerminal": 4,
+        "Ground_Skirting___Lighting": 239,
+        "FrontColor": 2
+      }
+    },
+    {
+      "object": "Mesh97",
+      "parent": "Maintenance_T_Section1",
+      "vertices": 2506,
+      "used_vertices": 2506,
+      "loose_vertices": 0,
+      "faces": 1134,
+      "triangles": 2178,
+      "zero_area_world": 22,
+      "surface_area": 32.86334319097617,
+      "up_area": 6.704837283234041,
+      "down_area": 7.109549545805906,
+      "side_or_sloped_area": 19.04895636193617,
+      "surface_bounds_min": [
+        53.56393051147461,
+        30.839553833007812,
+        1.2716776836896315e-05
+      ],
+      "surface_bounds_max": [
+        56.58884811401367,
+        33.75970458984375,
+        2.4267754554748535
+      ],
+      "surface_dimensions": [
+        3.0249176025390625,
+        2.9201507568359375,
+        2.4267627386980166
+      ],
+      "material_triangles": {
+        "Airway___Upper_Struts": 585,
+        "Upper_Border___Lower_Recess": 1335,
+        "Light_Detailing": 214,
+        "Ground_Skirting___Lighting": 12,
+        "FrontColor": 32
+      }
+    },
+    {
+      "object": "Mesh98",
+      "parent": "Group_42_1",
+      "vertices": 274,
+      "used_vertices": 274,
+      "loose_vertices": 0,
+      "faces": 127,
+      "triangles": 184,
+      "zero_area_world": 0,
+      "surface_area": 3.291729164485501,
+      "up_area": 0.23006035672734662,
+      "down_area": 0.35327622454091245,
+      "side_or_sloped_area": 2.708392583217241,
+      "surface_bounds_min": [
+        -40.18143081665039,
+        -3.207429885864258,
+        1.1101661920547485
+      ],
+      "surface_bounds_max": [
+        -39.22698974609375,
+        3.1936213970184326,
+        2.340407133102417
+      ],
+      "surface_dimensions": [
+        0.9544410705566406,
+        6.40105128288269,
+        1.2302409410476685
+      ],
+      "material_triangles": {
+        "FrontColor": 184
+      }
+    },
+    {
+      "object": "Mesh99",
+      "parent": "Group_34_1",
+      "vertices": 120,
+      "used_vertices": 120,
+      "loose_vertices": 0,
+      "faces": 54,
+      "triangles": 80,
+      "zero_area_world": 0,
+      "surface_area": 1.2277445799218973,
+      "up_area": 0.04761171066309956,
+      "down_area": 0.03391850536650891,
+      "side_or_sloped_area": 1.1462143638922886,
+      "surface_bounds_min": [
+        -42.01905822753906,
+        -4.683605670928955,
+        1.1101659536361694
+      ],
+      "surface_bounds_max": [
+        -40.79594421386719,
+        -2.9530322551727295,
+        2.331225872039795
+      ],
+      "surface_dimensions": [
+        1.223114013671875,
+        1.7305734157562256,
+        1.2210599184036255
+      ],
+      "material_triangles": {
+        "FrontColor": 80
+      }
+    },
+    {
+      "object": "Mesh100",
+      "parent": "Group_19_1",
+      "vertices": 120,
+      "used_vertices": 120,
+      "loose_vertices": 0,
+      "faces": 54,
+      "triangles": 80,
+      "zero_area_world": 0,
+      "surface_area": 1.2277438351328678,
+      "up_area": 0.04761169709039249,
+      "down_area": 0.033918512492609534,
+      "side_or_sloped_area": 1.1462136255498658,
+      "surface_bounds_min": [
+        -42.01905822753906,
+        2.9392237663269043,
+        1.110167145729065
+      ],
+      "surface_bounds_max": [
+        -40.79594421386719,
+        4.669797420501709,
+        2.3312270641326904
+      ],
+      "surface_dimensions": [
+        1.223114013671875,
+        1.7305736541748047,
+        1.2210599184036255
+      ],
+      "material_triangles": {
+        "FrontColor": 80
+      }
+    },
+    {
+      "object": "Mesh101",
+      "parent": "Group_35_1",
+      "vertices": 125,
+      "used_vertices": 125,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 77,
+      "zero_area_world": 0,
+      "surface_area": 1.4892265049378524,
+      "up_area": 0.046527319903581665,
+      "down_area": 0.03150771732192746,
+      "side_or_sloped_area": 1.411191467712343,
+      "surface_bounds_min": [
+        -44.802001953125,
+        0.9478071331977844,
+        0.23798134922981262
+      ],
+      "surface_bounds_max": [
+        -43.919586181640625,
+        3.1653711795806885,
+        2.129246950149536
+      ],
+      "surface_dimensions": [
+        0.882415771484375,
+        2.217564046382904,
+        1.8912656009197235
+      ],
+      "material_triangles": {
+        "FrontColor": 77
+      }
+    },
+    {
+      "object": "Mesh102",
+      "parent": "Group_33_1",
+      "vertices": 125,
+      "used_vertices": 125,
+      "loose_vertices": 0,
+      "faces": 40,
+      "triangles": 77,
+      "zero_area_world": 0,
+      "surface_area": 1.4892260673166806,
+      "up_area": 0.046527339182015764,
+      "down_area": 0.03150775436477473,
+      "side_or_sloped_area": 1.41119097376989,
+      "surface_bounds_min": [
+        -44.802001953125,
+        -3.1791791915893555,
+        0.23798100650310516
+      ],
+      "surface_bounds_max": [
+        -43.919586181640625,
+        -0.961615264415741,
+        2.129246234893799
+      ],
+      "surface_dimensions": [
+        0.882415771484375,
+        2.2175639271736145,
+        1.8912652283906937
+      ],
+      "material_triangles": {
+        "FrontColor": 77
+      }
+    },
+    {
+      "object": "Mesh103",
+      "parent": "Group_44_1",
+      "vertices": 2624,
+      "used_vertices": 2624,
+      "loose_vertices": 0,
+      "faces": 688,
+      "triangles": 1950,
+      "zero_area_world": 1,
+      "surface_area": 552.1711924808037,
+      "up_area": 201.8151653875603,
+      "down_area": 57.825796834498746,
+      "side_or_sloped_area": 292.53023025874484,
+      "surface_bounds_min": [
+        -51.06459426879883,
+        -9.127599716186523,
+        0.2379796952009201
+      ],
+      "surface_bounds_max": [
+        -33.047340393066406,
+        9.113791465759277,
+        4.017688751220703
+      ],
+      "surface_dimensions": [
+        18.017253875732422,
+        18.2413911819458,
+        3.779709056019783
+      ],
+      "material_triangles": {
+        "FrontColor": 1950
+      }
+    },
+    {
+      "object": "Mesh104",
+      "parent": "Group_43_1",
+      "vertices": 900,
+      "used_vertices": 900,
+      "loose_vertices": 0,
+      "faces": 238,
+      "triangles": 764,
+      "zero_area_world": 1,
+      "surface_area": 211.20372517474271,
+      "up_area": 2.514570951461792e-08,
+      "down_area": 94.42372076042741,
+      "side_or_sloped_area": 116.78000438916976,
+      "surface_bounds_min": [
+        -49.91796112060547,
+        -6.9746317863464355,
+        3.628422498703003
+      ],
+      "surface_bounds_max": [
+        -35.98250961303711,
+        6.9608235359191895,
+        4.607744216918945
+      ],
+      "surface_dimensions": [
+        13.93545150756836,
+        13.935455322265625,
+        0.9793217182159424
+      ],
+      "material_triangles": {
+        "FrontColor": 764
+      }
+    },
+    {
+      "object": "Mesh105",
+      "parent": "Group_52_1",
+      "vertices": 3,
+      "used_vertices": 3,
+      "loose_vertices": 0,
+      "faces": 1,
+      "triangles": 1,
+      "zero_area_world": 0,
+      "surface_area": 1.6642883387728083e-07,
+      "up_area": 0,
+      "down_area": 1.6642883387728083e-07,
+      "side_or_sloped_area": 0,
+      "surface_bounds_min": [
+        -4.0600786209106445,
+        1.7387468814849854,
+        0.23798146843910217
+      ],
+      "surface_bounds_max": [
+        -4.058772563934326,
+        1.7406163215637207,
+        0.23798146843910217
+      ],
+      "surface_dimensions": [
+        0.0013060569763183594,
+        0.0018694400787353516,
+        0.0
+      ],
+      "material_triangles": {
+        "FrontColor": 1
+      }
+    }
+  ],
+  "note": "Triangles quantized 1e-5 m. Coincident surfaces can be intentional. No exhaustive intersections test.",
+  "corridor_rays": [
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          13.918182373046875,
+          4.33906888961792,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075683832168579,
+          -1.2895836221105128e-07,
+          0.7942673563957214
+        ],
+        "distance": 1.7672216892242432
+      },
+      "right": {
+        "hit": [
+          17.452625274658203,
+          4.33906888961792,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.607570469379425,
+          -1.2137233795783686e-07,
+          0.7942658066749573
+        ],
+        "distance": 1.7672209739685059
+      },
+      "width": 3.534442663192749
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          14.027000427246094,
+          4.33906888961792,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.707108736038208,
+          1.4407092407964228e-07,
+          -0.7071047425270081
+        ],
+        "distance": 1.6584035158157349
+      },
+      "right": {
+        "hit": [
+          17.343807220458984,
+          4.33906888961792,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071041464805603,
+          1.0805390360246747e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584036350250244
+      },
+      "width": 3.3168071508407593
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          14.0218505859375,
+          4.33906888961792,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.663553237915039
+      },
+      "right": {
+        "hit": [
+          17.348957061767578,
+          4.33906888961792,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.6635531187057495
+      },
+      "width": 3.3271063566207886
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          14.095002174377441,
+          4.33906888961792,
+          2.200000047683716
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.5904016494750977
+      },
+      "right": {
+        "hit": [
+          17.27580451965332,
+          4.33906888961792,
+          2.200000047683716
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.5904005765914917
+      },
+      "width": 3.1808022260665894
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          13.918182373046875,
+          4.865658760070801,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075683832168579,
+          -1.283906811977431e-07,
+          0.7942673563957214
+        ],
+        "distance": 1.767221212387085
+      },
+      "right": {
+        "hit": [
+          17.452625274658203,
+          4.865658760070801,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.607570469379425,
+          -1.2137233795783686e-07,
+          0.7942658066749573
+        ],
+        "distance": 1.7672209739685059
+      },
+      "width": 3.534442186355591
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          14.027000427246094,
+          4.865658760070801,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.707108736038208,
+          1.4407092407964228e-07,
+          -0.7071047425270081
+        ],
+        "distance": 1.6584035158157349
+      },
+      "right": {
+        "hit": [
+          17.343807220458984,
+          4.865658760070801,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071038484573364,
+          1.4232516321044386e-07,
+          -0.7071096301078796
+        ],
+        "distance": 1.6584036350250244
+      },
+      "width": 3.3168071508407593
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          14.0218505859375,
+          4.865658760070801,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.663553237915039
+      },
+      "right": {
+        "hit": [
+          17.348957061767578,
+          4.865658760070801,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.663553237915039
+      },
+      "width": 3.327106475830078
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          14.095002174377441,
+          4.865658760070801,
+          2.200000047683716
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "distance": 1.590401530265808
+      },
+      "right": {
+        "hit": [
+          17.27580451965332,
+          4.865658760070801,
+          2.200000047683716
+        ],
+        "normal": [
+          -0.9999999403953552,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.5904006958007812
+      },
+      "width": 3.1808022260665894
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          13.918182373046875,
+          5.392248630523682,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075683832168579,
+          -1.283906811977431e-07,
+          0.7942673563957214
+        ],
+        "distance": 1.7672213315963745
+      },
+      "right": {
+        "hit": [
+          17.452625274658203,
+          5.392248630523682,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.607570469379425,
+          -1.2125828163789265e-07,
+          0.7942658066749573
+        ],
+        "distance": 1.7672208547592163
+      },
+      "width": 3.534442186355591
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          14.026999473571777,
+          5.392248630523682,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7071084976196289,
+          1.0770624214728741e-07,
+          -0.7071050405502319
+        ],
+        "distance": 1.6584041118621826
+      },
+      "right": {
+        "hit": [
+          17.343807220458984,
+          5.392248630523682,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071038484573364,
+          1.4232516321044386e-07,
+          -0.7071096301078796
+        ],
+        "distance": 1.6584038734436035
+      },
+      "width": 3.316807985305786
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          14.0218505859375,
+          5.392248630523682,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.6635531187057495
+      },
+      "right": {
+        "hit": [
+          17.348957061767578,
+          5.392248630523682,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635531187057495
+      },
+      "width": 3.327106237411499
+    },
+    {
+      "object": "Mesh12",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          14.095002174377441,
+          5.392248630523682,
+          2.200000047683716
+        ],
+        "normal": [
+          0.9999999403953552,
+          0.0,
+          0.0
+        ],
+        "distance": 1.5904017686843872
+      },
+      "right": {
+        "hit": [
+          17.27580451965332,
+          5.392248630523682,
+          2.200000047683716
+        ],
+        "normal": [
+          -0.9999999403953552,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.5904006958007812
+      },
+      "width": 3.1808024644851685
+    },
+    {
+      "object": "Mesh12",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            15.685403823852539,
+            4.865658760070801,
+            -0.01954936981201172
+          ],
+          "normal": [
+            0.0,
+            -1.6271047797999927e-07,
+            1.0
+          ],
+          "distance": 1.7195494174957275
+        },
+        "ceiling": {
+          "hit": [
+            15.685403823852539,
+            4.865658760070801,
+            2.796802520751953
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "distance": 1.0968024730682373
+        }
+      }
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          22.79743766784668,
+          4.646332740783691,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075701117515564,
+          -1.2787029390892712e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.7672209739685059
+      },
+      "right": {
+        "hit": [
+          26.331880569458008,
+          4.646332740783691,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075701117515564,
+          -1.2787029390892712e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.7672209739685059
+      },
+      "width": 3.5344419479370117
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          22.9062557220459,
+          4.646332740783691,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7071041464805603,
+          1.1920491260752897e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584035158157349
+      },
+      "right": {
+        "hit": [
+          26.22306251525879,
+          4.646332740783691,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.70711350440979,
+          1.1920336362436501e-07,
+          -0.7071001529693604
+        ],
+        "distance": 1.6584035158157349
+      },
+      "width": 3.3168070316314697
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          22.901105880737305,
+          4.646332740783691,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635533571243286
+      },
+      "right": {
+        "hit": [
+          26.228212356567383,
+          4.646332740783691,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.6635533571243286
+      },
+      "width": 3.3271067142486572
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          22.974258422851562,
+          4.646332740783691,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.5904005765914917
+      },
+      "right": {
+        "hit": [
+          26.155061721801758,
+          4.646332740783691,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.590402603149414
+      },
+      "width": 3.1808031797409058
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          22.79743766784668,
+          6.401981353759766,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075701117515564,
+          -1.2831876006202947e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.7672206163406372
+      },
+      "right": {
+        "hit": [
+          26.331878662109375,
+          6.401981353759766,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075701117515564,
+          -1.2787029390892712e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.7672204971313477
+      },
+      "width": 3.534441113471985
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          22.9062557220459,
+          6.401981353759766,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7071041464805603,
+          1.1920491260752897e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.658403754234314
+      },
+      "right": {
+        "hit": [
+          26.22306251525879,
+          6.401981353759766,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.70711350440979,
+          1.1920336362436501e-07,
+          -0.7071001529693604
+        ],
+        "distance": 1.658403992652893
+      },
+      "width": 3.316807746887207
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          22.901105880737305,
+          6.401981353759766,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635533571243286
+      },
+      "right": {
+        "hit": [
+          26.228212356567383,
+          6.401981353759766,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635533571243286
+      },
+      "width": 3.3271067142486572
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          22.974258422851562,
+          6.401981353759766,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.5904008150100708
+      },
+      "right": {
+        "hit": [
+          26.155061721801758,
+          6.401981353759766,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.590402603149414
+      },
+      "width": 3.180803418159485
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          22.797439575195312,
+          8.15762996673584,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6075701117515564,
+          -1.2831876006202947e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.767220139503479
+      },
+      "right": {
+        "hit": [
+          26.331878662109375,
+          8.15762996673584,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075701117515564,
+          -1.293648352884702e-07,
+          0.7942660450935364
+        ],
+        "distance": 1.767220139503479
+      },
+      "width": 3.534440279006958
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          22.9062557220459,
+          8.15762996673584,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7071041464805603,
+          1.1920491260752897e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584041118621826
+      },
+      "right": {
+        "hit": [
+          26.22306251525879,
+          8.15762996673584,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.70711350440979,
+          1.1920336362436501e-07,
+          -0.7071001529693604
+        ],
+        "distance": 1.6584041118621826
+      },
+      "width": 3.3168082237243652
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          22.901105880737305,
+          8.15762996673584,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635531187057495
+      },
+      "right": {
+        "hit": [
+          26.228212356567383,
+          8.15762996673584,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635531187057495
+      },
+      "width": 3.327106237411499
+    },
+    {
+      "object": "Mesh13",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          22.974258422851562,
+          8.15762996673584,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.5904005765914917
+      },
+      "right": {
+        "hit": [
+          26.155061721801758,
+          8.15762996673584,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.590402603149414
+      },
+      "width": 3.1808031797409058
+    },
+    {
+      "object": "Mesh13",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            24.564659118652344,
+            6.401981353759766,
+            -0.019549250602722168
+          ],
+          "normal": [
+            0.0,
+            -1.629610437703377e-07,
+            1.0
+          ],
+          "distance": 1.719549298286438
+        },
+        "ceiling": {
+          "hit": [
+            24.564659118652344,
+            6.401981353759766,
+            2.7968027591705322
+          ],
+          "normal": [
+            0.0,
+            1.1238704189509008e-07,
+            -1.0
+          ],
+          "distance": 1.0968027114868164
+        }
+      }
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          18.35780906677246,
+          4.322737216949463,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.607570469379425,
+          -1.2577859820339654e-07,
+          0.7942658066749573
+        ],
+        "distance": 1.7672210931777954
+      },
+      "right": {
+        "hit": [
+          21.89225196838379,
+          4.322737216949463,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075745224952698,
+          -1.2928937564993248e-07,
+          0.7942625880241394
+        ],
+        "distance": 1.7672219276428223
+      },
+      "width": 3.5344430208206177
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          18.466625213623047,
+          4.322737216949463,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7070949673652649,
+          1.2525990200629167e-07,
+          -0.707118570804596
+        ],
+        "distance": 1.6584054231643677
+      },
+      "right": {
+        "hit": [
+          21.783435821533203,
+          4.322737216949463,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071041464805603,
+          1.2346205835456203e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584054231643677
+      },
+      "width": 3.3168108463287354
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          18.461475372314453,
+          4.322737216949463,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635551452636719
+      },
+      "right": {
+        "hit": [
+          21.788585662841797,
+          4.322737216949463,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.6635552644729614
+      },
+      "width": 3.3271104097366333
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          18.534629821777344,
+          4.322737216949463,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.5904006958007812
+      },
+      "right": {
+        "hit": [
+          21.71543312072754,
+          4.322737216949463,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.590402603149414
+      },
+      "width": 3.1808032989501953
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          18.35780906677246,
+          5.2005615234375,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.607570469379425,
+          -1.2577859820339654e-07,
+          0.7942658066749573
+        ],
+        "distance": 1.7672209739685059
+      },
+      "right": {
+        "hit": [
+          21.89225196838379,
+          5.2005615234375,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075745820999146,
+          -1.257780866126268e-07,
+          0.7942625880241394
+        ],
+        "distance": 1.7672215700149536
+      },
+      "width": 3.5344425439834595
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          18.466625213623047,
+          5.2005615234375,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7070949673652649,
+          1.2525990200629167e-07,
+          -0.707118570804596
+        ],
+        "distance": 1.6584055423736572
+      },
+      "right": {
+        "hit": [
+          21.783435821533203,
+          5.2005615234375,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071041464805603,
+          1.2346205835456203e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584056615829468
+      },
+      "width": 3.316811203956604
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          18.461475372314453,
+          5.2005615234375,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.6635551452636719
+      },
+      "right": {
+        "hit": [
+          21.788585662841797,
+          5.2005615234375,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.6635550260543823
+      },
+      "width": 3.327110171318054
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          18.534629821777344,
+          5.2005615234375,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.5904006958007812
+      },
+      "right": {
+        "hit": [
+          21.71543312072754,
+          5.2005615234375,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.590402603149414
+      },
+      "width": 3.1808032989501953
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          18.35780906677246,
+          6.078385829925537,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.607570469379425,
+          -1.2928988724070223e-07,
+          0.7942657470703125
+        ],
+        "distance": 1.7672206163406372
+      },
+      "right": {
+        "hit": [
+          21.89225196838379,
+          6.078385829925537,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6075745820999146,
+          -1.257780866126268e-07,
+          0.7942625880241394
+        ],
+        "distance": 1.7672213315963745
+      },
+      "width": 3.5344419479370117
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          18.466625213623047,
+          6.078385829925537,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.7070949673652649,
+          1.2525990200629167e-07,
+          -0.707118570804596
+        ],
+        "distance": 1.6584053039550781
+      },
+      "right": {
+        "hit": [
+          21.783435821533203,
+          6.078385829925537,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.7071041464805603,
+          1.2346205835456203e-07,
+          -0.7071093916893005
+        ],
+        "distance": 1.6584056615829468
+      },
+      "width": 3.316810965538025
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          18.461475372314453,
+          6.078385829925537,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.6635552644729614
+      },
+      "right": {
+        "hit": [
+          21.788585662841797,
+          6.078385829925537,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          -0.0
+        ],
+        "distance": 1.6635551452636719
+      },
+      "width": 3.3271104097366333
+    },
+    {
+      "object": "Mesh18",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          18.534629821777344,
+          6.078385829925537,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 1.5904005765914917
+      },
+      "right": {
+        "hit": [
+          21.71543312072754,
+          6.078385829925537,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 1.5904027223587036
+      },
+      "width": 3.1808032989501953
+    },
+    {
+      "object": "Mesh18",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            20.125030517578125,
+            5.2005615234375,
+            -0.01954948902130127
+          ],
+          "normal": [
+            0.0,
+            -1.629610437703377e-07,
+            1.0
+          ],
+          "distance": 1.719549536705017
+        },
+        "ceiling": {
+          "hit": [
+            20.125030517578125,
+            5.2005615234375,
+            2.796802520751953
+          ],
+          "normal": [
+            0.0,
+            2.328014403474299e-07,
+            -1.0
+          ],
+          "distance": 1.0968024730682373
+        }
+      }
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          11.97917366027832,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193410873413086,
+          7.69427543900747e-08,
+          -0.3934614360332489
+        ],
+        "distance": 0.5009332299232483
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          11.97917366027832,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          7.640414878551383e-08,
+          -0.39346691966056824
+        ],
+        "distance": 0.5009356141090393
+      },
+      "width": 1.0018688440322876
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          12.710693359375,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          6.411895725477734e-08,
+          -0.3934614062309265
+        ],
+        "distance": 0.5009332895278931
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          12.710693359375,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193388223648071,
+          6.41198525386244e-08,
+          -0.39346691966056824
+        ],
+        "distance": 0.5009357333183289
+      },
+      "width": 1.001869022846222
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          13.44221305847168,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          6.411895725477734e-08,
+          -0.3934614062309265
+        ],
+        "distance": 0.5009333491325378
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          13.44221305847168,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193388223648071,
+          6.41198525386244e-08,
+          -0.39346691966056824
+        ],
+        "distance": 0.5009357929229736
+      },
+      "width": 1.0018691420555115
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh15",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            51.384178161621094,
+            12.710693359375,
+            1.3166944980621338
+          ],
+          "normal": [
+            0.0,
+            1.3036891743922752e-07,
+            -1.0
+          ],
+          "distance": 0.38330551981925964
+        },
+        "ceiling": {
+          "hit": null,
+          "normal": null,
+          "distance": null
+        }
+      }
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          10.74015998840332,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          5.1295110381488485e-08,
+          -0.3934614360332489
+        ],
+        "distance": 0.5009331107139587
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          10.74015998840332,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          5.556658777550183e-08,
+          -0.39346686005592346
+        ],
+        "distance": 0.5009354948997498
+      },
+      "width": 1.0018686056137085
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          11.10591983795166,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193410873413086,
+          5.1295106828774806e-08,
+          -0.3934613764286041
+        ],
+        "distance": 0.5009332299232483
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          11.10591983795166,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          5.1295820924224245e-08,
+          -0.39346686005592346
+        ],
+        "distance": 0.5009356141090393
+      },
+      "width": 1.0018688440322876
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.883243560791016,
+          11.4716796875,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193410873413086,
+          5.1295106828774806e-08,
+          -0.3934613764286041
+        ],
+        "distance": 0.5009332299232483
+      },
+      "right": {
+        "hit": [
+          51.88511276245117,
+          11.4716796875,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          5.1295820924224245e-08,
+          -0.39346686005592346
+        ],
+        "distance": 0.5009355545043945
+      },
+      "width": 1.0018687844276428
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh63",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            51.384178161621094,
+            11.10591983795166,
+            1.3166942596435547
+          ],
+          "normal": [
+            0.0,
+            2.607376927699079e-07,
+            -1.0
+          ],
+          "distance": 0.38330578804016113
+        },
+        "ceiling": {
+          "hit": null,
+          "normal": null,
+          "distance": null
+        }
+      }
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.88323974609375,
+          9.95467472076416,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          1.0259087446229387e-07,
+          -0.3934614360332489
+        ],
+        "distance": 0.5009369850158691
+      },
+      "right": {
+        "hit": [
+          51.885108947753906,
+          9.95467472076416,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193388223648071,
+          1.1113389319916678e-07,
+          -0.3934669494628906
+        ],
+        "distance": 0.5009317398071289
+      },
+      "width": 1.001868724822998
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.88323974609375,
+          10.137553215026855,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          5.1295430125719577e-08,
+          -0.3934614062309265
+        ],
+        "distance": 0.5009369850158691
+      },
+      "right": {
+        "hit": [
+          51.885108947753906,
+          10.137553215026855,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          5.1296147773882694e-08,
+          -0.39346688985824585
+        ],
+        "distance": 0.5009317398071289
+      },
+      "width": 1.001868724822998
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          50.88323974609375,
+          10.32043170928955,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9193411469459534,
+          5.1295430125719577e-08,
+          -0.3934614062309265
+        ],
+        "distance": 0.5009369850158691
+      },
+      "right": {
+        "hit": [
+          51.885108947753906,
+          10.32043170928955,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9193387627601624,
+          5.1296147773882694e-08,
+          -0.39346688985824585
+        ],
+        "distance": 0.5009316802024841
+      },
+      "width": 1.0018686652183533
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "right": {
+        "hit": null,
+        "normal": null,
+        "distance": null
+      },
+      "width": null
+    },
+    {
+      "object": "Mesh58",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            51.384178161621094,
+            10.137553215026855,
+            1.3166942596435547
+          ],
+          "normal": [
+            0.0,
+            2.607393128073454e-07,
+            -1.0
+          ],
+          "distance": 0.3833058476448059
+        },
+        "ceiling": {
+          "hit": null,
+          "normal": null,
+          "distance": null
+        }
+      }
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.1,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          70.5029296875,
+          13.965436935424805,
+          0.10000000149011612
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "right": {
+        "hit": [
+          71.65219116210938,
+          13.965436935424805,
+          0.10000000149011612
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "width": 1.149261474609375
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.1,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          70.5029296875,
+          13.965436935424805,
+          0.8999999761581421
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "right": {
+        "hit": [
+          71.65219116210938,
+          13.965436935424805,
+          0.8999999761581421
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 0.5746306777000427
+      },
+      "width": 1.1492614150047302
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.1,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          70.5029296875,
+          13.965436935424805,
+          1.7000000476837158
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "right": {
+        "hit": [
+          71.65219116210938,
+          13.965436935424805,
+          1.7000000476837158
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          0.0
+        ],
+        "distance": 0.5746306777000427
+      },
+      "width": 1.1492614150047302
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.1,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          70.5029296875,
+          13.965436935424805,
+          2.200000047683716
+        ],
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "right": {
+        "hit": [
+          71.65219116210938,
+          13.965436935424805,
+          2.200000047683716
+        ],
+        "normal": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "distance": 0.5746307373046875
+      },
+      "width": 1.149261474609375
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.5,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          69.58673095703125,
+          15.378829956054688,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.9914460182189941,
+          0.13051772117614746,
+          0.0
+        ],
+        "distance": 1.490825891494751
+      },
+      "right": {
+        "hit": [
+          72.5683822631836,
+          15.378829956054688,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.9914435744285583,
+          0.13053567707538605,
+          0.0
+        ],
+        "distance": 1.4908212423324585
+      },
+      "width": 2.9816471338272095
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.5,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          69.61014556884766,
+          15.378829956054688,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.9914441108703613,
+          0.13053211569786072,
+          0.0
+        ],
+        "distance": 1.4674170017242432
+      },
+      "right": {
+        "hit": [
+          72.54497528076172,
+          15.378829956054688,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.9914441704750061,
+          0.1305321305990219,
+          2.138356336445213e-07
+        ],
+        "distance": 1.4674168825149536
+      },
+      "width": 2.9348338842391968
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.5,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          69.57502746582031,
+          15.378829956054688,
+          1.7000000476837158
+        ],
+        "normal": [
+          0.9914331436157227,
+          0.1306149810552597,
+          0.0
+        ],
+        "distance": 1.502530813217163
+      },
+      "right": {
+        "hit": [
+          72.58008575439453,
+          15.378829956054688,
+          1.7000000476837158
+        ],
+        "normal": [
+          -0.9914487600326538,
+          0.13049685955047607,
+          0.0
+        ],
+        "distance": 1.5025252103805542
+      },
+      "width": 3.0050560235977173
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.5,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          69.61014556884766,
+          15.378829956054688,
+          2.200000047683716
+        ],
+        "normal": [
+          0.9914440512657166,
+          0.1305316835641861,
+          0.0
+        ],
+        "distance": 1.4674170017242432
+      },
+      "right": {
+        "hit": [
+          72.54497528076172,
+          15.378829956054688,
+          2.200000047683716
+        ],
+        "normal": [
+          -0.9914451241493225,
+          0.13052451610565186,
+          0.0
+        ],
+        "distance": 1.4674158096313477
+      },
+      "width": 2.934832811355591
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.9,
+      "z": 0.1,
+      "left": {
+        "hit": [
+          70.13719940185547,
+          16.79222297668457,
+          0.10000000149011612
+        ],
+        "normal": [
+          0.6087609529495239,
+          -0.7933536767959595,
+          0.0
+        ],
+        "distance": 0.9403602480888367
+      },
+      "right": {
+        "hit": [
+          72.01791381835938,
+          16.79222297668457,
+          0.10000000149011612
+        ],
+        "normal": [
+          -0.6087730526924133,
+          -0.7933444380760193,
+          -0.0
+        ],
+        "distance": 0.9403546452522278
+      },
+      "width": 1.8807148933410645
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.9,
+      "z": 0.9,
+      "left": {
+        "hit": [
+          70.17532348632812,
+          16.79222297668457,
+          0.8999999761581421
+        ],
+        "normal": [
+          0.6087652444839478,
+          -0.7933503985404968,
+          0.0
+        ],
+        "distance": 0.9022345542907715
+      },
+      "right": {
+        "hit": [
+          71.97979736328125,
+          16.79222297668457,
+          0.8999999761581421
+        ],
+        "normal": [
+          -0.6087652444839478,
+          -0.7933503985404968,
+          0.0
+        ],
+        "distance": 0.9022346138954163
+      },
+      "width": 1.8044691681861877
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.9,
+      "z": 1.7,
+      "left": {
+        "hit": [
+          70.1181411743164,
+          16.79222297668457,
+          1.7000000476837158
+        ],
+        "normal": [
+          0.6087304949760437,
+          -0.7933770418167114,
+          -2.2984813767834567e-06
+        ],
+        "distance": 0.9594200849533081
+      },
+      "right": {
+        "hit": [
+          72.03697967529297,
+          16.79222297668457,
+          1.7000000476837158
+        ],
+        "normal": [
+          -0.6087644100189209,
+          -0.7933509349822998,
+          -2.2984058887232095e-06
+        ],
+        "distance": 0.9594171643257141
+      },
+      "width": 1.9188372492790222
+    },
+    {
+      "object": "Mesh17",
+      "y_fraction": 0.9,
+      "z": 2.2,
+      "left": {
+        "hit": [
+          70.17532348632812,
+          16.79222297668457,
+          2.200000047683716
+        ],
+        "normal": [
+          0.6087652444839478,
+          -0.7933503985404968,
+          0.0
+        ],
+        "distance": 0.9022344946861267
+      },
+      "right": {
+        "hit": [
+          71.97979736328125,
+          16.79222297668457,
+          2.200000047683716
+        ],
+        "normal": [
+          -0.6087652444839478,
+          -0.7933503985404968,
+          -0.0
+        ],
+        "distance": 0.9022346138954163
+      },
+      "width": 1.804469108581543
+    },
+    {
+      "object": "Mesh17",
+      "vertical_center": {
+        "floor": {
+          "hit": [
+            71.07756042480469,
+            15.378829956054688,
+            -0.01954805850982666
+          ],
+          "normal": [
+            0.0,
+            -1.625107302061224e-07,
+            1.0
+          ],
+          "distance": 1.7195481061935425
+        },
+        "ceiling": {
+          "hit": [
+            71.07756042480469,
+            15.378829956054688,
+            2.7873177528381348
+          ],
+          "normal": [
+            0.051440197974443436,
+            -0.10200653970241547,
+            -0.9934529066085815
+          ],
+          "distance": 1.0873178243637085
+        }
+      }
+    }
+  ],
+  "bridge_connected_parts": [
+    {
+      "object": "Mesh98",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 94,
+          "faces": 127,
+          "min": [
+            -40.18143081665039,
+            -3.207429885864258,
+            1.1101661920547485
+          ],
+          "max": [
+            -39.22698974609375,
+            3.1936213970184326,
+            2.340407133102417
+          ],
+          "size": [
+            0.9544410705566406,
+            6.40105128288269,
+            1.2302409410476685
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh99",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 44,
+          "faces": 54,
+          "min": [
+            -42.01905822753906,
+            -4.683605670928955,
+            1.1101659536361694
+          ],
+          "max": [
+            -40.79594421386719,
+            -2.9530322551727295,
+            2.331225872039795
+          ],
+          "size": [
+            1.223114013671875,
+            1.7305734157562256,
+            1.2210599184036255
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh100",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 44,
+          "faces": 54,
+          "min": [
+            -42.01905822753906,
+            2.9392237663269043,
+            1.110167145729065
+          ],
+          "max": [
+            -40.79594421386719,
+            4.669797420501709,
+            2.3312270641326904
+          ],
+          "size": [
+            1.223114013671875,
+            1.7305736541748047,
+            1.2210599184036255
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh101",
+      "components_after_weld": 2,
+      "components": [
+        {
+          "vertices": 33,
+          "faces": 35,
+          "min": [
+            -44.802001953125,
+            0.9478071331977844,
+            0.9081873297691345
+          ],
+          "max": [
+            -43.919586181640625,
+            3.1653711795806885,
+            2.129246950149536
+          ],
+          "size": [
+            0.882415771484375,
+            2.217564046382904,
+            1.2210596203804016
+          ]
+        },
+        {
+          "vertices": 12,
+          "faces": 5,
+          "min": [
+            -44.74394226074219,
+            0.9729782342910767,
+            0.23798134922981262
+          ],
+          "max": [
+            -44.658447265625,
+            1.073968529701233,
+            2.129246711730957
+          ],
+          "size": [
+            0.0854949951171875,
+            0.10099029541015625,
+            1.8912653625011444
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh102",
+      "components_after_weld": 2,
+      "components": [
+        {
+          "vertices": 33,
+          "faces": 35,
+          "min": [
+            -44.802001953125,
+            -3.1791791915893555,
+            0.9081863164901733
+          ],
+          "max": [
+            -43.919586181640625,
+            -0.961615264415741,
+            2.1292459964752197
+          ],
+          "size": [
+            0.882415771484375,
+            2.2175639271736145,
+            1.2210596799850464
+          ]
+        },
+        {
+          "vertices": 12,
+          "faces": 5,
+          "min": [
+            -44.74394226074219,
+            -1.0877764225006104,
+            0.23798100650310516
+          ],
+          "max": [
+            -44.658447265625,
+            -0.9867861270904541,
+            2.129246234893799
+          ],
+          "size": [
+            0.0854949951171875,
+            0.10099029541015625,
+            1.8912652283906937
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh103",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 998,
+          "faces": 688,
+          "min": [
+            -51.06459426879883,
+            -9.127599716186523,
+            0.2379796952009201
+          ],
+          "max": [
+            -33.047340393066406,
+            9.113791465759277,
+            4.017688751220703
+          ],
+          "size": [
+            18.017253875732422,
+            18.2413911819458,
+            3.779709056019783
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh104",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 391,
+          "faces": 238,
+          "min": [
+            -49.91796112060547,
+            -6.9746317863464355,
+            3.628422498703003
+          ],
+          "max": [
+            -35.98250961303711,
+            6.9608235359191895,
+            4.607744216918945
+          ],
+          "size": [
+            13.93545150756836,
+            13.935455322265625,
+            0.9793217182159424
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Mesh105",
+      "components_after_weld": 1,
+      "components": [
+        {
+          "vertices": 3,
+          "faces": 1,
+          "min": [
+            -4.0600786209106445,
+            1.7387468814849854,
+            0.23798146843910217
+          ],
+          "max": [
+            -4.058772563934326,
+            1.7406163215637207,
+            0.23798146843910217
+          ],
+          "size": [
+            0.0013060569763183594,
+            0.0018694400787353516,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "duplicate_world_triangles_summary": {
+    "quantization_meters": 1e-05,
+    "additional_coincidences": 40,
+    "groups": 40,
+    "note": "Las coordenadas de triángulos no se publican; se conservan localmente. Coincidencia no determina intención."
+  }
+}

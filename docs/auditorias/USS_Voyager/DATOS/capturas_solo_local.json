@@ -1,0 +1,497 @@
+[
+  {
+    "file": "blend_01_catalogo_superior.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Conjunto completo desplegado en catálogo; no representa una cubierta ensamblada. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "efe30866a40eec291d18d258f0f8cdb1b4ec5c847976f7dd97a1a35b0e3c3ec7",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_02_puente_completo.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "d6decc09677b655f5848ddef6a7d8f82a4bc5f396654f71bc5ee2020415bdc05",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_03_puente_superior.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "63f2160429b5ac66626c04d105cf9ebc004021d16e90c4712ff8533e3333bfcd",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_04_puente_lateral.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "c5a465a3a81b5412139681015641aaff50a355f552a47bc4b213b306e0965db0",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_05_puente_mobiliario_aislado.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "La selección por jerarquía contiene barandillas y soportes, no sillas; ver informe de arquitectura.",
+    "sha256": "12e2a415306bcb351cce635108fbbb44684653c873f76686fc3c93c1f0b2e2d5",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_06_pasillos.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "78598a923db5b39199ef74e441e39e73b6722975eea207daadf1fbc28a0c4b4b",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_07_turbolift.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "069571ea5f9b45af48c4d61632959de0ae350f99f981e499c9c0e032b4216339",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_08_puerta_marco.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Puertas/marcos aislados; la disposición de catálogo no es ensamblaje certificado. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "b9ff346a422c8091ec1564411da609c4a2f230ec86d7bf7e45c869ef9faca0d0",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_09_puente_corte_z250.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "5ec3f217004e3376366dcde4e51acb82b8edf9e854787e434eb669ecfcacb45a",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_10_puente_corte_planta.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "17ccc62c5a3a3de62acf8256608d74ee48f6c9bb35bc508b833a8b1240fe6ed4",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_01.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "ec52c37fc8e30471a89f785552e376d9bea6bdf26ce8ff37456321f869de2a26",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_02.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "19fa27619414dba93df914af9fb06494952b0d5a369c24be7d05b431cee65902",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_03.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "aff91adeca405d0156f3e9082f32937395eb2e375b8a9949b2a4a827a6d7afc9",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_04.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "0a76cf2c5e114a27d2138bd0d3a3c60637b3c9a96e25615acbb1cfe2a90826eb",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_05.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "59cd54f56b46cfd58f137f57d69d6977ec9ad5133a78184fcefc2fec64b12aba",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_06.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "4f807f5ff298d74f38ee4e562cfe43be893e026977c10d8abd950cee7e44d503",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_07.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "b71a130d3e25ab88b548af9481cd47d5e90a348c5d452ed9a7bca06786f371a9",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_08.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "c9b9d2da7c8b6d6ab3d3378b93b84b55f79e574ce5fee283f0b79829e1141faa",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_09.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "d97fdbc1c7b7758b9c00ff10e03c449e136678613da5b543e5f488b81912e585",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "blend_grupo_10.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "3b3c45882d547dc866c27935a9aa7a161ec921fac72faab0a2142d822692c9fd",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "catalogo_grupos.png",
+    "width": 1200,
+    "height": 720,
+    "description": "Bloques secundarios anónimos de la colección, color de material Workbench; no son habitaciones restauradas.",
+    "sha256": "ed0a47b745dad65b2355a2d81c59d4ed165356858a24d9530ddf2762f29aeeeb",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "comparativa_puentes.png",
+    "width": 1600,
+    "height": 640,
+    "description": "Comparación principal de familias. Cámaras y escalas independientes; dos cortes temporales.",
+    "sha256": "e36ae00ee477e19fc8f7b1368d0d8daa40f0200116be9a74df7428d4efd355be",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "comparativa_suelo_conversion.png",
+    "width": 1600,
+    "height": 640,
+    "description": "Comparación de fuentes: el MAX convertido no conserva todas las superficies del suelo.",
+    "sha256": "39dae2a0beff8361a5c9d77871c75b7b3bb7bf3462ae539952674ba06c5f1e6b",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_01_catalogo_superior.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Conjunto completo desplegado en catálogo; no representa una cubierta ensamblada. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "587f94327624ae597d12df0c241c63b214a4d503564ff1f97a95a115ea9d39c2",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_02_puente_completo.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "7f0fa443cecea0d627ce588ee2c490b60eb8fd457549a28557b32e0111cd9a8e",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_03_puente_superior.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "8a992d941afe2e02c73c5edd1cbead6dc273b2978f1a1b00756f431ffb84c84a",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_04_puente_lateral.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "78afb102138fe5417670c7a836d3bb0c0b4fb8a99b26b9cf99a81ce28890ad92",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_05_puente_mobiliario_aislado.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "La selección por jerarquía contiene barandillas y soportes, no sillas; el nombre de selección no acredita mobiliario.",
+    "sha256": "48a4bcd278d56725205c96d17030d4ceeaa6a2bb727620310b17461d6a489f49",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_06_pasillos.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "a795351fefd557e37626f5521518055dfaea61dd947357451b18848847039b39",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_07_turbolift.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista de diagnóstico de la selección original; consultar manifiesto de objetos/cámara. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "7531c4a08c89512642db6bc2aeacea57ce868c00445451152d98b0c315cc64f2",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_08_puerta_marco.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Puertas/marcos aislados; la disposición de catálogo no es ensamblaje certificado. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "803dc670e1b417f3e03d2d6250bba136346246e93f79aee8cd3bf7c845624b73",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_09_puente_corte_z250.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "dc71dbe67c4017c761f07a5f690878dea9260d7db8899a72b4bcdd9e1bb06cb8",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_10_puente_corte_planta.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "e23934bb05ddd3578de61052713555a418c63b13a17d1611fea9975e2dab2f51",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_01.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "79c70094795aee5689134c2ae62c92c16c62fdc78e00b753eca5d86955ed2860",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_02.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "e346f4377392fe93e3c8a4399c934bb3078aa5c0d48939d6b09f514435c65ccb",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_03.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "da0ae0d92c09359ceb46f608e8410d0d10b66f5558da2cc039ef2807393a58b7",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_04.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "0576601c897f49198eb6104d5561189cb09b009e894bb5b7c21c1d1118e2690a",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_05.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "70c3745c8e1b74105fafdae689ce68ea5474ab27411f48958c62bdb42ac2b338",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_06.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "532691bddcf3f9a587771331cf6e8be8276467d7d39ee5a2e70ac25416e15406",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_07.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "e52f5bc9cf6cf0a3455a341fdd7b2648656c415eaa6d4d1edcc710098e96c792",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_08.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "c387c3f7185b2776a7ec669fa3cebb2929f12d5c4986ef34805915a4730ec321",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_09.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "2f8838b4d5f20c8af41ffea873c0666b54036369cb6bf374449fb023975d8bb4",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "glb_grupo_10.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Grupo secundario aislado; geometría y color difuso originales. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "171ee262b1764b5bb304012583f3a2464dacc2a7da90b9eff653d6dff5caab55",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "obj_texturizado_corte_perspectiva.png",
+    "width": 1400,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo.",
+    "sha256": "87e504c705a1d14a647cd4cc3b9f617b2387fdcf95748cdd55b1618735f1ff3a",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "obj_texturizado_corte_planta.png",
+    "width": 1400,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo.",
+    "sha256": "07edec72bab3cfca465257e7059b0fd4dcdddfe057a77141e2fb111a39002708",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "obj_texturizado_interior.png",
+    "width": 1400,
+    "height": 1000,
+    "description": "Interior completo, sin corte, luz diagnóstica exterior: ausencia de emisión y oscuridad real de este ensayo.",
+    "sha256": "970d22f4bb71225df5886b46ac81a4d161d2c08ab41957c3af779f7b990b6c05",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "obj_texturizado_interior_luz_diagnostico.png",
+    "width": 1400,
+    "height": 1000,
+    "description": "Mismo interior con luz puntual temporal para inspección; shaders originales intactos.",
+    "sha256": "e1986b7fb9810c4a50f075727ac2e66827ce4dceaddd8bfbcd91dd9a4c864115",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_01_completo.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "1b03854cf4ed247b905d8a0ac38505230c6b73b35386baff9dc8fce21532be1b",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_02_superior.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Vista completa de la selección original; los elementos residuales pueden ampliar el encuadre. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "0d8a45f13db354b1169a875316e90b47db72b3798d8fd742b38cac58a5b654d9",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_03_corte_z260.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "f47d29c1cbf9c2c2df0002583e9dcf8e521aca4ed01af5d43cb1bc1f83541358",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_04_corte_planta.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Corte de diagnóstico: omite caras altas en memoria. No muestra el cerramiento completo. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "a93590a630192b4789cbbfa028275c9de7526fb6b712d263fba7304b745ecb9a",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_05_sillones.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Piezas aisladas de Recovery, mostradas por geometría y color de material. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "62155985182d74905a3f285edbdb708822df8b63818acdfa5009ba9bf29f0001",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_06_consolas.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Piezas aisladas de Recovery, mostradas por geometría y color de material. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "6b77a05ab5c146ffa35168c4c4214f8ba6f076d5ee3bc36a42cbe2cfb3d81604",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "recovery_07_puertas.png",
+    "width": 1500,
+    "height": 1000,
+    "description": "Puertas/marcos aislados; la disposición de catálogo no es ensamblaje certificado. Workbench no evalúa texturas; comparar con renders obj_texturizado y lámina de imágenes.",
+    "sha256": "3aa0b1d17a99cdea535e860e4c42b24477762e4739b6beafd72d18a3176848dc",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  },
+  {
+    "file": "texturas_embebidas_OBJ.png",
+    "width": 1400,
+    "height": 1120,
+    "description": "49 imágenes reales extraídas en memoria del GLB; lámina reducida, no nuevos mapas de textura.",
+    "sha256": "2b6caef62f839df82d30abd91950f90453b972ff24000ba236bc1d1778fab9c5",
+    "publication_status": "SOLO_LOCAL",
+    "reason": "Licencia de publicación de capturas no confirmada; no se incluyen píxeles ni miniaturas."
+  }
+]

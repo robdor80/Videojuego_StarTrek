@@ -1,0 +1,1775 @@
+{
+  "original_audit_files_checked": 230,
+  "original_audit_unchanged": 230,
+  "scope": "La auditoría inicial comprobó 230 entradas; esta edición publica metadatos solo de Voyager, omitiendo archivos Sutherland ajenos. No es un snapshot de todo el MSI.",
+  "checks": [
+    {
+      "path": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\metadata.json",
+      "exists": true,
+      "bytes": 2338,
+      "mtime_ns": 1792185506974675300,
+      "sha256": "4c337cd7694bfe767449637fa2603fc7d0d145dcb928562ffbbc3ee074906fd7",
+      "unchanged": true
+    },
+    {
+      "path": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\README.md",
+      "exists": true,
+      "bytes": 1954,
+      "mtime_ns": 1792185506975906500,
+      "sha256": "5b7c75fc9c9b24cb728537c19db668363dba00b5b17eb581b3bcd8636e883311",
+      "unchanged": true
+    },
+    {
+      "path": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star-trek-voyager-collection.zip",
+      "exists": true,
+      "bytes": 7876154,
+      "mtime_ns": 1791588880432921300,
+      "sha256": "e9da08c7b504892ddc6d17fd8542f365aedf67daaccab33050b125ca9ffcc28d",
+      "unchanged": true
+    },
+    {
+      "path": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "exists": true,
+      "bytes": 4262160,
+      "mtime_ns": 1791588883239553400,
+      "sha256": "d1bbe6dabb81327eae77bfdb3d8f170773086f137177d03ef5e7d3a5e87fcbb8",
+      "unchanged": true
+    },
+    {
+      "path": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star-trek-voyager-collection\\source\\StarTrekVoyagerCollection.blend",
+      "exists": true,
+      "bytes": 7875980,
+      "mtime_ns": 1619277862000000000,
+      "sha256": "22a5744ee57f74a02e43798d5d9e8841cca00dbdde3660befde6cf25ccb88992",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\Voyager Bridge Max2011.max",
+      "exists": true,
+      "bytes": 19895548,
+      "mtime_ns": 1308606480091000000,
+      "sha256": "4b06036b6b5fc48d2a0c4859f322065c24275aea2b774917853981928e35a867",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\Voyager Bridge.mc6",
+      "exists": true,
+      "bytes": 941261,
+      "mtime_ns": 1346842588578125000,
+      "sha256": "dadf3052ad4c530ba8e815ad4e6455ca383585b401e5e08fc4087092959e7b84",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\Voyager_Bridge_MAX_Trabajo.blend",
+      "exists": true,
+      "bytes": 15591461,
+      "mtime_ns": 1791503693239917500,
+      "sha256": "912ee7f0b7ffb15517a8fc5b7d5c08b439c1b4ae733e263fd257cd79fffc51ac",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\alumb_t.tga",
+      "exists": true,
+      "bytes": 183474,
+      "mtime_ns": 1309276888377029900,
+      "sha256": "8dfb3d0ee40862c3f4e63dc18b741a06f9325107a60866b900226bdd2897c5b4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\alumin.JPG",
+      "exists": true,
+      "bytes": 89443,
+      "mtime_ns": 885738146000000000,
+      "sha256": "b8e1a231dbab8e283bd2fe31e4040ff39a553e96a4fea49ae567862c423b9ae6",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BM_DISP.tif",
+      "exists": true,
+      "bytes": 1939728,
+      "mtime_ns": 1297541581000271000,
+      "sha256": "f87d74e5aafac030b54dd51e48b9ece12bdb87d77a1ccb081ed5adc49d8d4d5e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BM_NRM.tif",
+      "exists": true,
+      "bytes": 526623,
+      "mtime_ns": 1297541660953844100,
+      "sha256": "5f7007010987e72e1f040b075a0784d2645ddf1c306d8d8d0a973333222297ee",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BNC.png",
+      "exists": true,
+      "bytes": 74507,
+      "mtime_ns": 1306001563594453200,
+      "sha256": "a61203602c75857deddf11abf99aabd3853e9389b82811ef2bea6a402334b7d2",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BURLAP01.JPG",
+      "exists": true,
+      "bytes": 123138,
+      "mtime_ns": 966585112000000000,
+      "sha256": "cf141b6e607616bc00e871a8c7be5894d0bb8ddd8fed912e9c84193fdaea4ba8",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\DP_01.png",
+      "exists": true,
+      "bytes": 69175,
+      "mtime_ns": 1282938264390625000,
+      "sha256": "50181bf297bc9a32cdb108b94e31178fe35bf11fe9a77f5f90802647c44d54b4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\LEATH01.JPG",
+      "exists": true,
+      "bytes": 86019,
+      "mtime_ns": 963011696000000000,
+      "sha256": "4664da12846f548bfebe69fbf48b44223bc2c3bece52e5e26790933915257b8e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Map__2_Gradient.tga",
+      "exists": true,
+      "bytes": 804390,
+      "mtime_ns": 1309824158812500000,
+      "sha256": "abb0e3fe58a534f96bdc18111fe953411b87a2fe5e7a869a6c02dacadae8491b",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Metal_Al.jpg",
+      "exists": true,
+      "bytes": 4240,
+      "mtime_ns": 1287184756796875000,
+      "sha256": "8558a6c74f912a94f323888be3490914311c75a70e89c025a0399011d6cc0116",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Metal_Co.jpg",
+      "exists": true,
+      "bytes": 1591,
+      "mtime_ns": 1284074164640625000,
+      "sha256": "7f6956d352aec593cd5e6d606d41e03026fcb1746ac08081870cfbebb928243d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\MVS.jpg",
+      "exists": true,
+      "bytes": 451289,
+      "mtime_ns": 1292767813000000000,
+      "sha256": "29f25f0e76ead5717ec4d28bf334ac5c62e64d038b224d7baa8d5a5284adbfbd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\n006.jpg",
+      "exists": true,
+      "bytes": 4833,
+      "mtime_ns": 940710286000000000,
+      "sha256": "ec28eca148087913b764a34d92849b7d0968ba618c2362f1b282b15b104c1cd7",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\n011.jpg",
+      "exists": true,
+      "bytes": 3946,
+      "mtime_ns": 940710296000000000,
+      "sha256": "c945013777c2d2e13dfd4d9fea5ec8156a7a964e81d51470dbd8e2703f30584c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_1.png",
+      "exists": true,
+      "bytes": 355270,
+      "mtime_ns": 1298917765024725800,
+      "sha256": "4e4a9bbfb3a5dacccf1e8cea9faf95dd3a8aa23f38fababdaa93508d356e31fe",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_1_i.png",
+      "exists": true,
+      "bytes": 582257,
+      "mtime_ns": 1307568732542765300,
+      "sha256": "5d170336e4f676bb54018f29bde530b67681e6da526b14abd9ac35ee68ea0fa4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_2.png",
+      "exists": true,
+      "bytes": 294112,
+      "mtime_ns": 1298917787355003000,
+      "sha256": "ad68f21c3f2cfd8242a61667081c4e7365cebec2c5d7fe1a75aacec085b985e5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_2_i.png",
+      "exists": true,
+      "bytes": 518845,
+      "mtime_ns": 1307568692574479200,
+      "sha256": "4cfa0608e43618f651103ffb42398bd8119fc6eb77727dd760fe0b048ff1580f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_3.png",
+      "exists": true,
+      "bytes": 305001,
+      "mtime_ns": 1298838459127171400,
+      "sha256": "5a814c8b8166c80db98d7192b27bbe56ef9f27c01f3782d0b213475ce4ba8b11",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_3_i.png",
+      "exists": true,
+      "bytes": 331950,
+      "mtime_ns": 1307568653985272000,
+      "sha256": "83f25c7f8310949c68bf91c43d0cf41dab6887974ddc1122be48d1dcd079b221",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_4.png",
+      "exists": true,
+      "bytes": 384503,
+      "mtime_ns": 1307568062166421900,
+      "sha256": "f3a6399adc0ef908624a511de1c7b6d860c6408784d3da87f76623a2afd0b11a",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_4_i.png",
+      "exists": true,
+      "bytes": 357148,
+      "mtime_ns": 1307568598763113500,
+      "sha256": "885fd0530a33e4023dc21761dc653924d44fec8c25254653b99e42a0fc3e682c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_5.png",
+      "exists": true,
+      "bytes": 202895,
+      "mtime_ns": 1298887802406148500,
+      "sha256": "db31f2aa025aa450e637606f4894608a574f8781333ac41e7428151c774c8ae0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_5_i.png",
+      "exists": true,
+      "bytes": 194520,
+      "mtime_ns": 1307568768688832700,
+      "sha256": "be8b359b43e8bda5457c2594f5fbc365d668f8abd85c453493454036027c10db",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_6.png",
+      "exists": true,
+      "bytes": 371983,
+      "mtime_ns": 1298918689522604100,
+      "sha256": "575df1b7d97b551016da96a319bd0a144c52bb55245e24cb56120b51e978c3e7",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_6_i.png",
+      "exists": true,
+      "bytes": 576321,
+      "mtime_ns": 1307568488957833000,
+      "sha256": "afcf1599f03d65210eabbbe0a0da317b5b825fdfb715440f8f587139d7c94bba",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn12.png",
+      "exists": true,
+      "bytes": 102122,
+      "mtime_ns": 1292784019968750000,
+      "sha256": "2d22f74a16f263e03a7adac7906df0dc245684a915ad560488345fa87fdb09a5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn12_RA.png",
+      "exists": true,
+      "bytes": 56821,
+      "mtime_ns": 1298405335139008000,
+      "sha256": "1c89c2f9a16c283618946fad517a88b65bc9e81da69f11f446e6f88677c1e493",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_1.png",
+      "exists": true,
+      "bytes": 238972,
+      "mtime_ns": 1296669192029527700,
+      "sha256": "85481d027c3c2c35fa86f80897bd720678b16bdfc15bb2e39681c3b084591704",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_1_i.png",
+      "exists": true,
+      "bytes": 137100,
+      "mtime_ns": 1307461045472046400,
+      "sha256": "d6fe3f374b39f5ed3f5aa239beb60f20b9bc3265e7a87b5d7240b14b15a00509",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_2.png",
+      "exists": true,
+      "bytes": 178669,
+      "mtime_ns": 1306357981780073800,
+      "sha256": "fcd8ae4bef1d4285e610fd34275aa684ade3652ff2c73c5559d5920c1ab20ac9",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_2_i.png",
+      "exists": true,
+      "bytes": 213462,
+      "mtime_ns": 1307308895448563300,
+      "sha256": "7caecdb92aca7b8aa2c49a9a67c8dd03a7585210e5c2d58be2a1bf930dc65d9e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_3.png",
+      "exists": true,
+      "bytes": 260765,
+      "mtime_ns": 1299969445572813800,
+      "sha256": "5e7548905b7300e534cab553ae1708383206643486f83793d021f3e1e21a943c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_3_i.png",
+      "exists": true,
+      "bytes": 342944,
+      "mtime_ns": 1307308918833004400,
+      "sha256": "58bdc9a356c608f3effa7f429b260d7c0d4fb091a838beb2a09b2ae8334096ad",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_4.png",
+      "exists": true,
+      "bytes": 282837,
+      "mtime_ns": 1307465142630390400,
+      "sha256": "962ddac109f060ed96a1e1712539d939c67c773a58a46b824d9e98df26f8da66",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_4_i.png",
+      "exists": true,
+      "bytes": 328111,
+      "mtime_ns": 1307465474081348400,
+      "sha256": "7a474b7fa1debb0f8af6cfbdedbda6326351456b8fe4e33d900c09860a8d6c13",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_5.png",
+      "exists": true,
+      "bytes": 1020305,
+      "mtime_ns": 1306346966979063200,
+      "sha256": "25c4e79e3de9aa64f2c05903856617a9079deee886f12f65b4ed000fe663e001",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_5_i.png",
+      "exists": true,
+      "bytes": 189516,
+      "mtime_ns": 1307461114878016200,
+      "sha256": "6ee9e97c2eb48326512944e3b60685add2aee3fef773165b8a1efa34bcae00be",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_6.png",
+      "exists": true,
+      "bytes": 290843,
+      "mtime_ns": 1305980637610434700,
+      "sha256": "ef56a96560ce7a7cf968cc8d67ce6e1a369d843964fe6d464ff67dfcf79f685e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_6_i.png",
+      "exists": true,
+      "bytes": 216457,
+      "mtime_ns": 1307308963121482200,
+      "sha256": "8be2bda4d6c56abc6bd9db97be68c19fdcc01c84ec905a40543800db5bfbdb42",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_7.png",
+      "exists": true,
+      "bytes": 340806,
+      "mtime_ns": 1307386392412947300,
+      "sha256": "5a19c1cb7ef9516253841232e2caf9df5f01627daa2f06de761bc55f7868d2d5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_7_i.png",
+      "exists": true,
+      "bytes": 268326,
+      "mtime_ns": 1307388266728152000,
+      "sha256": "ca356fb45db77606c40dafbc479cf08ca3581e33b14263daff05ecad692ee8e3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_1.png",
+      "exists": true,
+      "bytes": 141718,
+      "mtime_ns": 1307991217813999500,
+      "sha256": "9cf0d9f0a83ffba7577817bdb29a33e8cd511a66dd72740cdb449b69b0dc4ee0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_1_i.png",
+      "exists": true,
+      "bytes": 260800,
+      "mtime_ns": 1307997351172807500,
+      "sha256": "7aa020f577530dc417b2b330998eee9d4c75c379345d7e66f225913bdb1fe225",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_3.png",
+      "exists": true,
+      "bytes": 1421003,
+      "mtime_ns": 1308062720855922600,
+      "sha256": "75056e5b74c2535923eee714fefe5d9342e322ad0dbe47bc2c3cbc1822fab777",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_3_i.png",
+      "exists": true,
+      "bytes": 255705,
+      "mtime_ns": 1307997303108058400,
+      "sha256": "2ef6d3bd8ab65bb56d5b8af1498d7a36de7130f0ebbefbda9901bc80237f31ff",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_5.png",
+      "exists": true,
+      "bytes": 61924,
+      "mtime_ns": 1307995981081442800,
+      "sha256": "776adfeb2c5a8453d068c607a6e7dbeda9d866e61a9657f4b3b3ba8d61b5e0b3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_5_i.png",
+      "exists": true,
+      "bytes": 196948,
+      "mtime_ns": 1307997245730776600,
+      "sha256": "1e890dd9e7c7b000db4d96411e1760a6202ccf3b61122efb8ff18d9cc74cf47d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_7.png",
+      "exists": true,
+      "bytes": 388551,
+      "mtime_ns": 1305495845315573800,
+      "sha256": "249bcf69b32219d92f2cfbd253d479ffbfaa43349ad993d9cc8f82abec936d88",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_7_i.png",
+      "exists": true,
+      "bytes": 100599,
+      "mtime_ns": 1306337592998902300,
+      "sha256": "f7255badeedd0e01994dca17214f716459076f6a6a3ae9425df0c8fe380ae8d4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_8.png",
+      "exists": true,
+      "bytes": 73577,
+      "mtime_ns": 1305495656677784300,
+      "sha256": "201853729422ebca5c082ee278047a35f8389ac93a568633f925f1867e6022e0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_8_i.png",
+      "exists": true,
+      "bytes": 118121,
+      "mtime_ns": 1306513013568570400,
+      "sha256": "5b008429201d8bb5a6d37e7424647e90488b4269a182b4a9e29c512a5eb4e793",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_9.png",
+      "exists": true,
+      "bytes": 336124,
+      "mtime_ns": 1298403161254668900,
+      "sha256": "72d2a52902eb64195b50ad0dd2eb2625cb429fada736412d18b6c2dedf7daf00",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_9_i.png",
+      "exists": true,
+      "bytes": 98247,
+      "mtime_ns": 1307308863203306700,
+      "sha256": "141c1367d2d9bd5485c3ae72c0007a150a4a1c09d583c6df3c6d31cf0f8935fd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_1.png",
+      "exists": true,
+      "bytes": 377092,
+      "mtime_ns": 1299369236931410400,
+      "sha256": "78b71093a9c81ff9861773be5b5ec4af003088c999560fecd6124ae60b44131f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_2.png",
+      "exists": true,
+      "bytes": 175682,
+      "mtime_ns": 1299004257345632500,
+      "sha256": "4a2758c63a368d6ac849d2d7c9329d1fbf1374e9c8bd9fb6c58f3b0228671c58",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_2_i.png",
+      "exists": true,
+      "bytes": 532922,
+      "mtime_ns": 1307654737160615900,
+      "sha256": "1018c06eeabfa3bdc66b83c2c475bf59980b92e5338ca0d6f91fc99002b7c351",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_3.png",
+      "exists": true,
+      "bytes": 123831,
+      "mtime_ns": 1306357333953020200,
+      "sha256": "044f69505c7bf524a3d22cad74bcf22b88a40520927a510c6d61251c72080b89",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_3_i.png",
+      "exists": true,
+      "bytes": 178619,
+      "mtime_ns": 1306357518849595700,
+      "sha256": "612fd71983638ea71f38305b0354b5e90d4b810cd0b890bdc29033d55d0548cb",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_4.png",
+      "exists": true,
+      "bytes": 262888,
+      "mtime_ns": 1299010882404564200,
+      "sha256": "ce2b781740f2b11428e7136b5cd9506332d831a047bff50b284dc9cf4abee7de",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_4_i.png",
+      "exists": true,
+      "bytes": 172770,
+      "mtime_ns": 1307655759062065300,
+      "sha256": "408d3b00ea91d206b5015a266aac8b49d2e40df69c9ed77ed1919f4c899f7451",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_1.png",
+      "exists": true,
+      "bytes": 1555104,
+      "mtime_ns": 1298226238890624300,
+      "sha256": "368c86b73d7a35dca9a9adac439272903489044462b6c9723fe6b62b4a9f529d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_1_i.png",
+      "exists": true,
+      "bytes": 1538878,
+      "mtime_ns": 1298226280624011300,
+      "sha256": "be5e801ed4485d287cd916829e333b3b8bee438684d477b6e92787e1d04475c3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_2.png",
+      "exists": true,
+      "bytes": 332114,
+      "mtime_ns": 1297030047498402900,
+      "sha256": "fdf637766fb768a4059b4e3d4bee512aef1daa8d428dd945c85848753fabc717",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_2_i.png",
+      "exists": true,
+      "bytes": 175835,
+      "mtime_ns": 1307655868463322700,
+      "sha256": "d5376df354cee8b091f19ec3edcbb5b046297fced2b060089856852ba2c5d935",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn5_1.png",
+      "exists": true,
+      "bytes": 112793,
+      "mtime_ns": 1307919205925658700,
+      "sha256": "096a3bbf58b94a7924f56e422fc79ccfd6bf27b979524226bf48f008087c9a50",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn5_1_i.png",
+      "exists": true,
+      "bytes": 177871,
+      "mtime_ns": 1306439667938532400,
+      "sha256": "397c20527d9d028efe377e4f160609cf7c7a0d2a4db9a48db48921b6e000be69",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_1.png",
+      "exists": true,
+      "bytes": 337969,
+      "mtime_ns": 1305654762684542300,
+      "sha256": "e3b03917f99721bee45ddef78cb45f9a5acc265cb208034ffbe99a2c3d588723",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_1_i.png",
+      "exists": true,
+      "bytes": 127347,
+      "mtime_ns": 1307557773457941500,
+      "sha256": "3b9bef71c598933cfb54b8177172d40a150fc13676deb31a3431e64ed98addfa",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_2.png",
+      "exists": true,
+      "bytes": 63921,
+      "mtime_ns": 1305496004135657800,
+      "sha256": "b2e5d20d9b8142668aa5178916d017774753f7630636da8727c6ec17f358d27c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_4.png",
+      "exists": true,
+      "bytes": 464454,
+      "mtime_ns": 1307891783323579100,
+      "sha256": "3bc5467b8ed532d12ec2f7fa8a4200e5a80b50b46353408e044a9cf57e7df0bd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_4_i.png",
+      "exists": true,
+      "bytes": 387072,
+      "mtime_ns": 1307806619236053700,
+      "sha256": "f255d860384d7c6eee863cafb7c3a23b9575910dfd04961657e86d9b502dc485",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_5.png",
+      "exists": true,
+      "bytes": 55337,
+      "mtime_ns": 1307129534854631300,
+      "sha256": "e8f975b0764c12517600f70961eb2b1b52383aa9d81d214f0ba6dff96bdc522f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_5_i.png",
+      "exists": true,
+      "bytes": 209545,
+      "mtime_ns": 1307309055442444300,
+      "sha256": "04b52ad9269dd302e6ad6cf0a60899ec983ead34eda54c5bbbfae20a1a3902b2",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_6.png",
+      "exists": true,
+      "bytes": 451737,
+      "mtime_ns": 1308074054414165100,
+      "sha256": "29c8f139481044e07ac0fa7342d5419eb0c82b2ac1e043f097b6a8b255085a93",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_6_i.png",
+      "exists": true,
+      "bytes": 307429,
+      "mtime_ns": 1308074101141837800,
+      "sha256": "80cf8b07f51ba3c2d482a1c622fe157287e2e82c5d34ee469e481cc7a394c1a8",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_7.png",
+      "exists": true,
+      "bytes": 654855,
+      "mtime_ns": 1307309997591222700,
+      "sha256": "b85a0c68a26e7e25e520d33f28bc3266794069de5ca9655fde41849fce2183e6",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_7_i.png",
+      "exists": true,
+      "bytes": 261484,
+      "mtime_ns": 1307308700244139100,
+      "sha256": "74251f0fa8ec6341a779f2614b17d8ed83bcb6d8744551666277f5798586ed59",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_8.png",
+      "exists": true,
+      "bytes": 504912,
+      "mtime_ns": 1307309589182863100,
+      "sha256": "304c1b407632dbc35f331e6322e7fbe48b5fbc8c12ad6bc780eab54db86e55c4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_8_i.png",
+      "exists": true,
+      "bytes": 356828,
+      "mtime_ns": 1307308674684103300,
+      "sha256": "7161015c78e668c75411426368f3a60d3bdfa059e768090c47bfcb37f18fe2d5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_9.png",
+      "exists": true,
+      "bytes": 143836,
+      "mtime_ns": 1307387098327323300,
+      "sha256": "518d22ad0d589d24933a30a71801ece16be1c33a357780de8d811e694995772c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_9_i.png",
+      "exists": true,
+      "bytes": 275757,
+      "mtime_ns": 1307388134598594600,
+      "sha256": "179665c3473c85e6119c6cd129d1b2ab5670fa8bad69364ff663822095f9f05a",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_1.png",
+      "exists": true,
+      "bytes": 240781,
+      "mtime_ns": 1305980762155558300,
+      "sha256": "e12d7754b8c47d62ff46a6420bd32d06ffb23a400e52eb823d9fa87c780abb16",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_1_i.png",
+      "exists": true,
+      "bytes": 141220,
+      "mtime_ns": 1307309104457730400,
+      "sha256": "12193709da2933b5deafe222cf05a87fa854bc61b12a7f778cf4fd24aa071394",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_2.png",
+      "exists": true,
+      "bytes": 245915,
+      "mtime_ns": 1306615764750255300,
+      "sha256": "e8568fb06ac4f11acfa8a081eccae98530bc0eed4d8f7202c0f6bb54fed331de",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_2_i.png",
+      "exists": true,
+      "bytes": 210441,
+      "mtime_ns": 1307309068203266700,
+      "sha256": "06ae331790153f71226d9b20b5001e99bb27aab0aa6bbd3db082e1b1864dcf16",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_4.png",
+      "exists": true,
+      "bytes": 272150,
+      "mtime_ns": 1306617289792482800,
+      "sha256": "6ef0978ebae47bfd5def91b9948006533040a0a6c62a85bc3458e2f78e07e014",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_4_i.png",
+      "exists": true,
+      "bytes": 293853,
+      "mtime_ns": 1306617063904562700,
+      "sha256": "fd1428725d08f25c3cf6e2f9a141350950fc0a655ba2cf50b902f8dd88af9542",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_5.png",
+      "exists": true,
+      "bytes": 294897,
+      "mtime_ns": 1306617416149710000,
+      "sha256": "3079819b4aeb5b3b996e4cf0afd9d17e83487d4a45bce75068a394297375e709",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_5_i.PNG",
+      "exists": true,
+      "bytes": 180520,
+      "mtime_ns": 1307807008700329800,
+      "sha256": "9a8eed0123da4aa6d79fcb725ed76326b44e818023d0c6984c3425da46a583be",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_6.png",
+      "exists": true,
+      "bytes": 294189,
+      "mtime_ns": 1306773292932596500,
+      "sha256": "089f334c6da4d8672714dfb92d11c9e3c059e0b78b93d53ef02b3e1b06202079",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_6_i.png",
+      "exists": true,
+      "bytes": 210588,
+      "mtime_ns": 1307309150821011800,
+      "sha256": "47fb961dce1a9e45ade69638c7e69f93358d249c1373604110ce1c3a84312693",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_7.png",
+      "exists": true,
+      "bytes": 220450,
+      "mtime_ns": 1306780335479407200,
+      "sha256": "37d60f44f6381e110f64c36d2a564bd8205175dbf78a79078717424b6e83d603",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_7_i.png",
+      "exists": true,
+      "bytes": 269474,
+      "mtime_ns": 1307309167684641500,
+      "sha256": "a407cfb6eb62d8b97d6338d52af464d63420003e7358cf1118141d0289cdd92f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn8.png",
+      "exists": true,
+      "bytes": 177345,
+      "mtime_ns": 1307656505120737400,
+      "sha256": "5c8fcf40142f3c25f6156919bed0c30231ae6fd8ed4a00921bd6d453aa669842",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn8_i.png",
+      "exists": true,
+      "bytes": 167829,
+      "mtime_ns": 1307656739283130800,
+      "sha256": "d098c92b38bfb3519c009a1adccedb8cf4a80049116e238d5b623b21e2787875",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn9.png",
+      "exists": true,
+      "bytes": 227272,
+      "mtime_ns": 1308604125628265900,
+      "sha256": "f0abbbad8c036e1c44efcd2e8231aa085e6096773717e2f157f420333ee70369",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn9_i.png",
+      "exists": true,
+      "bytes": 317139,
+      "mtime_ns": 1308604618142436100,
+      "sha256": "1ccb41286634ccdb353b2afcda1fb5fabd735c42772d5e3edbdd75eeb72ab893",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Voygray.jpg",
+      "exists": true,
+      "bytes": 5377,
+      "mtime_ns": 940710290000000000,
+      "sha256": "038d9bf0469855cdf81f1a85a4879a58b5bdfe548e637a6adee48a457f834d6b",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_bump.png",
+      "exists": true,
+      "bytes": 179639,
+      "mtime_ns": 1310858136843750000,
+      "sha256": "9f2571bc6ef1dc43ab3984564b4de319fd62ef854164ee8e0c12a75def998d79",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_col.png",
+      "exists": true,
+      "bytes": 108356,
+      "mtime_ns": 1305999686183071400,
+      "sha256": "72ddddc4e95213a7c89c1c0247a23a9f4c670131a26748431b01b51eeb822212",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_Spec.png",
+      "exists": true,
+      "bytes": 282036,
+      "mtime_ns": 1346773353265625000,
+      "sha256": "8de7c60e43b5db77d211f21917f642fd138eb781b54f2556cc85d62187a40eb3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\XYT.jpg",
+      "exists": true,
+      "bytes": 158467,
+      "mtime_ns": 1292108696875000000,
+      "sha256": "8abc7e97eb1ffa4dd6d4f4b3051efa3649bc0c9002b5c9aee772da11feec0ff9",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\yale8_desat.jpg",
+      "exists": true,
+      "bytes": 217336,
+      "mtime_ns": 1308605817574039700,
+      "sha256": "06c611525b3589dc6185b072d9527a9df5e977b1e8b9908f191e6b55ecb50f4d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\Voyager Bridge.obj",
+      "exists": true,
+      "bytes": 37746664,
+      "mtime_ns": 1311198716984375000,
+      "sha256": "5e2df918e3837fbb30b70efbdedeb423cac8d29dcd9d6c33ac77cc304351581d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VoyagerB.Mtl",
+      "exists": true,
+      "bytes": 17437,
+      "mtime_ns": 1791499966492986100,
+      "sha256": "0ab640506a753a678419110d4d9e1f6b0f0e3cb8461f5cdea47f52d16d2a2325",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VoyagerB_Informe_reparacion.txt",
+      "exists": true,
+      "bytes": 4192,
+      "mtime_ns": 1791499577894404400,
+      "sha256": "70fa2bc0c463f0efb07c73fd618a9ebdf75add646d64ceab956ecae00290d667",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VoyagerB_original.Mtl",
+      "exists": true,
+      "bytes": 14246,
+      "mtime_ns": 1311198425078125000,
+      "sha256": "278205f875f51ca73596583ac4f01b79ef83f07cba66d0251800349d74b1c3b7",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\Voyager_Bridge_MAX_Trabajo.blend",
+      "exists": true,
+      "bytes": 15591461,
+      "mtime_ns": 1791503693239917500,
+      "sha256": "912ee7f0b7ffb15517a8fc5b7d5c08b439c1b4ae733e263fd257cd79fffc51ac",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.blend",
+      "exists": true,
+      "bytes": 9728783,
+      "mtime_ns": 1791500660325581600,
+      "sha256": "668989aa67fbbdc40e0b4e8e197be429a504009360086cc23a8fd24b323b8ac1",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "exists": true,
+      "bytes": 24583620,
+      "mtime_ns": 1791500823470341600,
+      "sha256": "b35de63e03d7a719558b316889acae35b64c947b2566f6bfe944b9f02d171e96",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumb_t.tga",
+      "exists": true,
+      "bytes": 183474,
+      "mtime_ns": 1309276888377029900,
+      "sha256": "8dfb3d0ee40862c3f4e63dc18b741a06f9325107a60866b900226bdd2897c5b4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumin.JPG",
+      "exists": true,
+      "bytes": 89443,
+      "mtime_ns": 885738146000000000,
+      "sha256": "b8e1a231dbab8e283bd2fe31e4040ff39a553e96a4fea49ae567862c423b9ae6",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_DISP.tif",
+      "exists": true,
+      "bytes": 1939728,
+      "mtime_ns": 1297541581000271000,
+      "sha256": "f87d74e5aafac030b54dd51e48b9ece12bdb87d77a1ccb081ed5adc49d8d4d5e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_NRM.tif",
+      "exists": true,
+      "bytes": 526623,
+      "mtime_ns": 1297541660953844100,
+      "sha256": "5f7007010987e72e1f040b075a0784d2645ddf1c306d8d8d0a973333222297ee",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BNC.png",
+      "exists": true,
+      "bytes": 74507,
+      "mtime_ns": 1306001563594453200,
+      "sha256": "a61203602c75857deddf11abf99aabd3853e9389b82811ef2bea6a402334b7d2",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+      "exists": true,
+      "bytes": 123138,
+      "mtime_ns": 966585112000000000,
+      "sha256": "cf141b6e607616bc00e871a8c7be5894d0bb8ddd8fed912e9c84193fdaea4ba8",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png",
+      "exists": true,
+      "bytes": 69175,
+      "mtime_ns": 1282938264390625000,
+      "sha256": "50181bf297bc9a32cdb108b94e31178fe35bf11fe9a77f5f90802647c44d54b4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+      "exists": true,
+      "bytes": 86019,
+      "mtime_ns": 963011696000000000,
+      "sha256": "4664da12846f548bfebe69fbf48b44223bc2c3bece52e5e26790933915257b8e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Al.jpg",
+      "exists": true,
+      "bytes": 4240,
+      "mtime_ns": 1287184756796875000,
+      "sha256": "8558a6c74f912a94f323888be3490914311c75a70e89c025a0399011d6cc0116",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+      "exists": true,
+      "bytes": 1591,
+      "mtime_ns": 1284074164640625000,
+      "sha256": "7f6956d352aec593cd5e6d606d41e03026fcb1746ac08081870cfbebb928243d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\MVS.jpg",
+      "exists": true,
+      "bytes": 451289,
+      "mtime_ns": 1292767813000000000,
+      "sha256": "29f25f0e76ead5717ec4d28bf334ac5c62e64d038b224d7baa8d5a5284adbfbd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n006.jpg",
+      "exists": true,
+      "bytes": 4833,
+      "mtime_ns": 940710286000000000,
+      "sha256": "ec28eca148087913b764a34d92849b7d0968ba618c2362f1b282b15b104c1cd7",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg",
+      "exists": true,
+      "bytes": 3946,
+      "mtime_ns": 940710296000000000,
+      "sha256": "c945013777c2d2e13dfd4d9fea5ec8156a7a964e81d51470dbd8e2703f30584c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1.png",
+      "exists": true,
+      "bytes": 238972,
+      "mtime_ns": 1296669192029527700,
+      "sha256": "85481d027c3c2c35fa86f80897bd720678b16bdfc15bb2e39681c3b084591704",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1_i.png",
+      "exists": true,
+      "bytes": 137100,
+      "mtime_ns": 1307461045472046400,
+      "sha256": "d6fe3f374b39f5ed3f5aa239beb60f20b9bc3265e7a87b5d7240b14b15a00509",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+      "exists": true,
+      "bytes": 178669,
+      "mtime_ns": 1306357981780073800,
+      "sha256": "fcd8ae4bef1d4285e610fd34275aa684ade3652ff2c73c5559d5920c1ab20ac9",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2_i.png",
+      "exists": true,
+      "bytes": 213462,
+      "mtime_ns": 1307308895448563300,
+      "sha256": "7caecdb92aca7b8aa2c49a9a67c8dd03a7585210e5c2d58be2a1bf930dc65d9e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3.png",
+      "exists": true,
+      "bytes": 260765,
+      "mtime_ns": 1299969445572813800,
+      "sha256": "5e7548905b7300e534cab553ae1708383206643486f83793d021f3e1e21a943c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3_i.png",
+      "exists": true,
+      "bytes": 342944,
+      "mtime_ns": 1307308918833004400,
+      "sha256": "58bdc9a356c608f3effa7f429b260d7c0d4fb091a838beb2a09b2ae8334096ad",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4.png",
+      "exists": true,
+      "bytes": 282837,
+      "mtime_ns": 1307465142630390400,
+      "sha256": "962ddac109f060ed96a1e1712539d939c67c773a58a46b824d9e98df26f8da66",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4_i.png",
+      "exists": true,
+      "bytes": 328111,
+      "mtime_ns": 1307465474081348400,
+      "sha256": "7a474b7fa1debb0f8af6cfbdedbda6326351456b8fe4e33d900c09860a8d6c13",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5.png",
+      "exists": true,
+      "bytes": 1020305,
+      "mtime_ns": 1306346966979063200,
+      "sha256": "25c4e79e3de9aa64f2c05903856617a9079deee886f12f65b4ed000fe663e001",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5_i.png",
+      "exists": true,
+      "bytes": 189516,
+      "mtime_ns": 1307461114878016200,
+      "sha256": "6ee9e97c2eb48326512944e3b60685add2aee3fef773165b8a1efa34bcae00be",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6.png",
+      "exists": true,
+      "bytes": 290843,
+      "mtime_ns": 1305980637610434700,
+      "sha256": "ef56a96560ce7a7cf968cc8d67ce6e1a369d843964fe6d464ff67dfcf79f685e",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6_i.png",
+      "exists": true,
+      "bytes": 216457,
+      "mtime_ns": 1307308963121482200,
+      "sha256": "8be2bda4d6c56abc6bd9db97be68c19fdcc01c84ec905a40543800db5bfbdb42",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7.png",
+      "exists": true,
+      "bytes": 340806,
+      "mtime_ns": 1307386392412947300,
+      "sha256": "5a19c1cb7ef9516253841232e2caf9df5f01627daa2f06de761bc55f7868d2d5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7_i.png",
+      "exists": true,
+      "bytes": 268326,
+      "mtime_ns": 1307388266728152000,
+      "sha256": "ca356fb45db77606c40dafbc479cf08ca3581e33b14263daff05ecad692ee8e3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1.png",
+      "exists": true,
+      "bytes": 355270,
+      "mtime_ns": 1298917765024725800,
+      "sha256": "4e4a9bbfb3a5dacccf1e8cea9faf95dd3a8aa23f38fababdaa93508d356e31fe",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1_i.png",
+      "exists": true,
+      "bytes": 582257,
+      "mtime_ns": 1307568732542765300,
+      "sha256": "5d170336e4f676bb54018f29bde530b67681e6da526b14abd9ac35ee68ea0fa4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2.png",
+      "exists": true,
+      "bytes": 294112,
+      "mtime_ns": 1298917787355003000,
+      "sha256": "ad68f21c3f2cfd8242a61667081c4e7365cebec2c5d7fe1a75aacec085b985e5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2_i.png",
+      "exists": true,
+      "bytes": 518845,
+      "mtime_ns": 1307568692574479200,
+      "sha256": "4cfa0608e43618f651103ffb42398bd8119fc6eb77727dd760fe0b048ff1580f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3.png",
+      "exists": true,
+      "bytes": 305001,
+      "mtime_ns": 1298838459127171400,
+      "sha256": "5a814c8b8166c80db98d7192b27bbe56ef9f27c01f3782d0b213475ce4ba8b11",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3_i.png",
+      "exists": true,
+      "bytes": 331950,
+      "mtime_ns": 1307568653985272000,
+      "sha256": "83f25c7f8310949c68bf91c43d0cf41dab6887974ddc1122be48d1dcd079b221",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4.png",
+      "exists": true,
+      "bytes": 384503,
+      "mtime_ns": 1307568062166421900,
+      "sha256": "f3a6399adc0ef908624a511de1c7b6d860c6408784d3da87f76623a2afd0b11a",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4_i.png",
+      "exists": true,
+      "bytes": 357148,
+      "mtime_ns": 1307568598763113500,
+      "sha256": "885fd0530a33e4023dc21761dc653924d44fec8c25254653b99e42a0fc3e682c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5.png",
+      "exists": true,
+      "bytes": 202895,
+      "mtime_ns": 1298887802406148500,
+      "sha256": "db31f2aa025aa450e637606f4894608a574f8781333ac41e7428151c774c8ae0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5_i.png",
+      "exists": true,
+      "bytes": 194520,
+      "mtime_ns": 1307568768688832700,
+      "sha256": "be8b359b43e8bda5457c2594f5fbc365d668f8abd85c453493454036027c10db",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6.png",
+      "exists": true,
+      "bytes": 371983,
+      "mtime_ns": 1298918689522604100,
+      "sha256": "575df1b7d97b551016da96a319bd0a144c52bb55245e24cb56120b51e978c3e7",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6_i.png",
+      "exists": true,
+      "bytes": 576321,
+      "mtime_ns": 1307568488957833000,
+      "sha256": "afcf1599f03d65210eabbbe0a0da317b5b825fdfb715440f8f587139d7c94bba",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12.png",
+      "exists": true,
+      "bytes": 102122,
+      "mtime_ns": 1292784019968750000,
+      "sha256": "2d22f74a16f263e03a7adac7906df0dc245684a915ad560488345fa87fdb09a5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12_RA.png",
+      "exists": true,
+      "bytes": 56821,
+      "mtime_ns": 1298405335139008000,
+      "sha256": "1c89c2f9a16c283618946fad517a88b65bc9e81da69f11f446e6f88677c1e493",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1.png",
+      "exists": true,
+      "bytes": 141718,
+      "mtime_ns": 1307991217813999500,
+      "sha256": "9cf0d9f0a83ffba7577817bdb29a33e8cd511a66dd72740cdb449b69b0dc4ee0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1_i.png",
+      "exists": true,
+      "bytes": 260800,
+      "mtime_ns": 1307997351172807500,
+      "sha256": "7aa020f577530dc417b2b330998eee9d4c75c379345d7e66f225913bdb1fe225",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3.png",
+      "exists": true,
+      "bytes": 1421003,
+      "mtime_ns": 1308062720855922600,
+      "sha256": "75056e5b74c2535923eee714fefe5d9342e322ad0dbe47bc2c3cbc1822fab777",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3_i.png",
+      "exists": true,
+      "bytes": 255705,
+      "mtime_ns": 1307997303108058400,
+      "sha256": "2ef6d3bd8ab65bb56d5b8af1498d7a36de7130f0ebbefbda9901bc80237f31ff",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5.png",
+      "exists": true,
+      "bytes": 61924,
+      "mtime_ns": 1307995981081442800,
+      "sha256": "776adfeb2c5a8453d068c607a6e7dbeda9d866e61a9657f4b3b3ba8d61b5e0b3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5_i.png",
+      "exists": true,
+      "bytes": 196948,
+      "mtime_ns": 1307997245730776600,
+      "sha256": "1e890dd9e7c7b000db4d96411e1760a6202ccf3b61122efb8ff18d9cc74cf47d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7.png",
+      "exists": true,
+      "bytes": 388551,
+      "mtime_ns": 1305495845315573800,
+      "sha256": "249bcf69b32219d92f2cfbd253d479ffbfaa43349ad993d9cc8f82abec936d88",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7_i.png",
+      "exists": true,
+      "bytes": 100599,
+      "mtime_ns": 1306337592998902300,
+      "sha256": "f7255badeedd0e01994dca17214f716459076f6a6a3ae9425df0c8fe380ae8d4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8.png",
+      "exists": true,
+      "bytes": 73577,
+      "mtime_ns": 1305495656677784300,
+      "sha256": "201853729422ebca5c082ee278047a35f8389ac93a568633f925f1867e6022e0",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8_i.png",
+      "exists": true,
+      "bytes": 118121,
+      "mtime_ns": 1306513013568570400,
+      "sha256": "5b008429201d8bb5a6d37e7424647e90488b4269a182b4a9e29c512a5eb4e793",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9.png",
+      "exists": true,
+      "bytes": 336124,
+      "mtime_ns": 1298403161254668900,
+      "sha256": "72d2a52902eb64195b50ad0dd2eb2625cb429fada736412d18b6c2dedf7daf00",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9_i.png",
+      "exists": true,
+      "bytes": 98247,
+      "mtime_ns": 1307308863203306700,
+      "sha256": "141c1367d2d9bd5485c3ae72c0007a150a4a1c09d583c6df3c6d31cf0f8935fd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.1.png",
+      "exists": true,
+      "bytes": 377092,
+      "mtime_ns": 1299369236931410400,
+      "sha256": "78b71093a9c81ff9861773be5b5ec4af003088c999560fecd6124ae60b44131f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2.png",
+      "exists": true,
+      "bytes": 175682,
+      "mtime_ns": 1299004257345632500,
+      "sha256": "4a2758c63a368d6ac849d2d7c9329d1fbf1374e9c8bd9fb6c58f3b0228671c58",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2_i.png",
+      "exists": true,
+      "bytes": 532922,
+      "mtime_ns": 1307654737160615900,
+      "sha256": "1018c06eeabfa3bdc66b83c2c475bf59980b92e5338ca0d6f91fc99002b7c351",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3.png",
+      "exists": true,
+      "bytes": 123831,
+      "mtime_ns": 1306357333953020200,
+      "sha256": "044f69505c7bf524a3d22cad74bcf22b88a40520927a510c6d61251c72080b89",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3_i.png",
+      "exists": true,
+      "bytes": 178619,
+      "mtime_ns": 1306357518849595700,
+      "sha256": "612fd71983638ea71f38305b0354b5e90d4b810cd0b890bdc29033d55d0548cb",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4.png",
+      "exists": true,
+      "bytes": 262888,
+      "mtime_ns": 1299010882404564200,
+      "sha256": "ce2b781740f2b11428e7136b5cd9506332d831a047bff50b284dc9cf4abee7de",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4_i.png",
+      "exists": true,
+      "bytes": 172770,
+      "mtime_ns": 1307655759062065300,
+      "sha256": "408d3b00ea91d206b5015a266aac8b49d2e40df69c9ed77ed1919f4c899f7451",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+      "exists": true,
+      "bytes": 1555104,
+      "mtime_ns": 1298226238890624300,
+      "sha256": "368c86b73d7a35dca9a9adac439272903489044462b6c9723fe6b62b4a9f529d",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1_i.png",
+      "exists": true,
+      "bytes": 1538878,
+      "mtime_ns": 1298226280624011300,
+      "sha256": "be5e801ed4485d287cd916829e333b3b8bee438684d477b6e92787e1d04475c3",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2.png",
+      "exists": true,
+      "bytes": 332114,
+      "mtime_ns": 1297030047498402900,
+      "sha256": "fdf637766fb768a4059b4e3d4bee512aef1daa8d428dd945c85848753fabc717",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2_i.png",
+      "exists": true,
+      "bytes": 175835,
+      "mtime_ns": 1307655868463322700,
+      "sha256": "d5376df354cee8b091f19ec3edcbb5b046297fced2b060089856852ba2c5d935",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1.png",
+      "exists": true,
+      "bytes": 112793,
+      "mtime_ns": 1307919205925658700,
+      "sha256": "096a3bbf58b94a7924f56e422fc79ccfd6bf27b979524226bf48f008087c9a50",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1_i.png",
+      "exists": true,
+      "bytes": 177871,
+      "mtime_ns": 1306439667938532400,
+      "sha256": "397c20527d9d028efe377e4f160609cf7c7a0d2a4db9a48db48921b6e000be69",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1.png",
+      "exists": true,
+      "bytes": 337969,
+      "mtime_ns": 1305654762684542300,
+      "sha256": "e3b03917f99721bee45ddef78cb45f9a5acc265cb208034ffbe99a2c3d588723",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1_i.png",
+      "exists": true,
+      "bytes": 127347,
+      "mtime_ns": 1307557773457941500,
+      "sha256": "3b9bef71c598933cfb54b8177172d40a150fc13676deb31a3431e64ed98addfa",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.2.png",
+      "exists": true,
+      "bytes": 63921,
+      "mtime_ns": 1305496004135657800,
+      "sha256": "b2e5d20d9b8142668aa5178916d017774753f7630636da8727c6ec17f358d27c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4.png",
+      "exists": true,
+      "bytes": 464454,
+      "mtime_ns": 1307891783323579100,
+      "sha256": "3bc5467b8ed532d12ec2f7fa8a4200e5a80b50b46353408e044a9cf57e7df0bd",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4_i.png",
+      "exists": true,
+      "bytes": 387072,
+      "mtime_ns": 1307806619236053700,
+      "sha256": "f255d860384d7c6eee863cafb7c3a23b9575910dfd04961657e86d9b502dc485",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5.png",
+      "exists": true,
+      "bytes": 55337,
+      "mtime_ns": 1307129534854631300,
+      "sha256": "e8f975b0764c12517600f70961eb2b1b52383aa9d81d214f0ba6dff96bdc522f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5_i.png",
+      "exists": true,
+      "bytes": 209545,
+      "mtime_ns": 1307309055442444300,
+      "sha256": "04b52ad9269dd302e6ad6cf0a60899ec983ead34eda54c5bbbfae20a1a3902b2",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6.png",
+      "exists": true,
+      "bytes": 451737,
+      "mtime_ns": 1308074054414165100,
+      "sha256": "29c8f139481044e07ac0fa7342d5419eb0c82b2ac1e043f097b6a8b255085a93",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6_i.png",
+      "exists": true,
+      "bytes": 307429,
+      "mtime_ns": 1308074101141837800,
+      "sha256": "80cf8b07f51ba3c2d482a1c622fe157287e2e82c5d34ee469e481cc7a394c1a8",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7.png",
+      "exists": true,
+      "bytes": 654855,
+      "mtime_ns": 1307309997591222700,
+      "sha256": "b85a0c68a26e7e25e520d33f28bc3266794069de5ca9655fde41849fce2183e6",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7_i.png",
+      "exists": true,
+      "bytes": 261484,
+      "mtime_ns": 1307308700244139100,
+      "sha256": "74251f0fa8ec6341a779f2614b17d8ed83bcb6d8744551666277f5798586ed59",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8.png",
+      "exists": true,
+      "bytes": 504912,
+      "mtime_ns": 1307309589182863100,
+      "sha256": "304c1b407632dbc35f331e6322e7fbe48b5fbc8c12ad6bc780eab54db86e55c4",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8_i.png",
+      "exists": true,
+      "bytes": 356828,
+      "mtime_ns": 1307308674684103300,
+      "sha256": "7161015c78e668c75411426368f3a60d3bdfa059e768090c47bfcb37f18fe2d5",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9.png",
+      "exists": true,
+      "bytes": 143836,
+      "mtime_ns": 1307387098327323300,
+      "sha256": "518d22ad0d589d24933a30a71801ece16be1c33a357780de8d811e694995772c",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9_i.png",
+      "exists": true,
+      "bytes": 275757,
+      "mtime_ns": 1307388134598594600,
+      "sha256": "179665c3473c85e6119c6cd129d1b2ab5670fa8bad69364ff663822095f9f05a",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1.png",
+      "exists": true,
+      "bytes": 240781,
+      "mtime_ns": 1305980762155558300,
+      "sha256": "e12d7754b8c47d62ff46a6420bd32d06ffb23a400e52eb823d9fa87c780abb16",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1_i.png",
+      "exists": true,
+      "bytes": 141220,
+      "mtime_ns": 1307309104457730400,
+      "sha256": "12193709da2933b5deafe222cf05a87fa854bc61b12a7f778cf4fd24aa071394",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2.png",
+      "exists": true,
+      "bytes": 245915,
+      "mtime_ns": 1306615764750255300,
+      "sha256": "e8568fb06ac4f11acfa8a081eccae98530bc0eed4d8f7202c0f6bb54fed331de",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2_i.png",
+      "exists": true,
+      "bytes": 210441,
+      "mtime_ns": 1307309068203266700,
+      "sha256": "06ae331790153f71226d9b20b5001e99bb27aab0aa6bbd3db082e1b1864dcf16",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4.png",
+      "exists": true,
+      "bytes": 272150,
+      "mtime_ns": 1306617289792482800,
+      "sha256": "6ef0978ebae47bfd5def91b9948006533040a0a6c62a85bc3458e2f78e07e014",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4_i.png",
+      "exists": true,
+      "bytes": 293853,
+      "mtime_ns": 1306617063904562700,
+      "sha256": "fd1428725d08f25c3cf6e2f9a141350950fc0a655ba2cf50b902f8dd88af9542",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5.png",
+      "exists": true,
+      "bytes": 294897,
+      "mtime_ns": 1306617416149710000,
+      "sha256": "3079819b4aeb5b3b996e4cf0afd9d17e83487d4a45bce75068a394297375e709",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5_i.PNG",
+      "exists": true,
+      "bytes": 180520,
+      "mtime_ns": 1307807008700329800,
+      "sha256": "9a8eed0123da4aa6d79fcb725ed76326b44e818023d0c6984c3425da46a583be",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6.png",
+      "exists": true,
+      "bytes": 294189,
+      "mtime_ns": 1306773292932596500,
+      "sha256": "089f334c6da4d8672714dfb92d11c9e3c059e0b78b93d53ef02b3e1b06202079",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6_i.png",
+      "exists": true,
+      "bytes": 210588,
+      "mtime_ns": 1307309150821011800,
+      "sha256": "47fb961dce1a9e45ade69638c7e69f93358d249c1373604110ce1c3a84312693",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7.png",
+      "exists": true,
+      "bytes": 220450,
+      "mtime_ns": 1306780335479407200,
+      "sha256": "37d60f44f6381e110f64c36d2a564bd8205175dbf78a79078717424b6e83d603",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7_i.png",
+      "exists": true,
+      "bytes": 269474,
+      "mtime_ns": 1307309167684641500,
+      "sha256": "a407cfb6eb62d8b97d6338d52af464d63420003e7358cf1118141d0289cdd92f",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8.png",
+      "exists": true,
+      "bytes": 177345,
+      "mtime_ns": 1307656505120737400,
+      "sha256": "5c8fcf40142f3c25f6156919bed0c30231ae6fd8ed4a00921bd6d453aa669842",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8_i.png",
+      "exists": true,
+      "bytes": 167829,
+      "mtime_ns": 1307656739283130800,
+      "sha256": "d098c92b38bfb3519c009a1adccedb8cf4a80049116e238d5b623b21e2787875",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9.png",
+      "exists": true,
+      "bytes": 227272,
+      "mtime_ns": 1308604125628265900,
+      "sha256": "f0abbbad8c036e1c44efcd2e8231aa085e6096773717e2f157f420333ee70369",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9_i.png",
+      "exists": true,
+      "bytes": 317139,
+      "mtime_ns": 1308604618142436100,
+      "sha256": "1ccb41286634ccdb353b2afcda1fb5fabd735c42772d5e3edbdd75eeb72ab893",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+      "exists": true,
+      "bytes": 5377,
+      "mtime_ns": 940710290000000000,
+      "sha256": "038d9bf0469855cdf81f1a85a4879a58b5bdfe548e637a6adee48a457f834d6b",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_bump.png",
+      "exists": true,
+      "bytes": 175710,
+      "mtime_ns": 1292275145671875000,
+      "sha256": "80279864c49d998e18d97ddff37c24ec4dd97088b0339ec34c62e04605b3158a",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png",
+      "exists": true,
+      "bytes": 108356,
+      "mtime_ns": 1305999686183071400,
+      "sha256": "72ddddc4e95213a7c89c1c0247a23a9f4c670131a26748431b01b51eeb822212",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\XYT.jpg",
+      "exists": true,
+      "bytes": 158467,
+      "mtime_ns": 1292108696875000000,
+      "sha256": "8abc7e97eb1ffa4dd6d4f4b3051efa3649bc0c9002b5c9aee772da11feec0ff9",
+      "unchanged": true
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\yale8_desat.jpg",
+      "exists": true,
+      "bytes": 217336,
+      "mtime_ns": 1308605817574039700,
+      "sha256": "06c611525b3589dc6185b072d9527a9df5e977b1e8b9908f191e6b55ecb50f4d",
+      "unchanged": true
+    }
+  ]
+}
