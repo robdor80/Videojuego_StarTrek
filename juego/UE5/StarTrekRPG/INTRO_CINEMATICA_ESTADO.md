@@ -34,10 +34,14 @@ Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida d
 | Bloque | Estado |
 |---|---|
 | 0. Seguridad | Validado. Copia verificada y rama creada. |
-| 1. Mecanismo | Pendiente. |
+| 1. Mecanismo | Implementado y validado por compilación de editor y prueba automatizada de cronología. Integración de nivel pendiente. |
 | 2. Enterprise y Pike | Pendiente. |
 | 3. Otras parejas | Pendiente. |
 | 4. Música y homenaje | MP3 verificado con ffprobe: 148.323250 s, estéreo, 44.1 kHz, 320 kb/s. Se utilizarán los primeros 54 s. |
 | 5. Validación | Pendiente. |
 
-Último commit funcional de la introducción: pendiente.
+Primer bloque funcional: commit `feat(intro): implementar reloj y fundidos de la introducción`.
+
+## Arquitectura
+
+`Source/StarTrekRPG/Private/Intro/IntroTimeline.h` define los tiempos absolutos y las curvas de opacidad. Un actor exclusivo del nivel muestrea el reloj monotónico, aplica opacidad a los elementos UMG por nombre y mantiene un fondo negro común. Las composiciones conservan sus propios elementos, jerarquía y escalado. El actor publica `OnIntroFinished` tras fijar el negro y detener el audio.

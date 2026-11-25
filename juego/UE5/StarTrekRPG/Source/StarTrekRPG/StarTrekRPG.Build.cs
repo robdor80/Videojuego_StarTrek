@@ -9,7 +9,7 @@ public class StarTrekRPG : ModuleRules
             throw new BuildException("StarTrekRPG HOST integration requires Win64.");
 
         PCHUsage = PCHUsageMode.NoPCHs;
-        PrivateDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "Slate", "SlateCore", "RHI" });
+        PrivateDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "Slate", "SlateCore", "RHI", "UMG" });
 
         string ThirdParty = Path.Combine(ProjectDirectory(), "Binaries", "Host");
         string Include = Path.Combine(ThirdParty, "include");
