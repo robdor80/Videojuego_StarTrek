@@ -35,13 +35,24 @@ Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida d
 |---|---|
 | 0. Seguridad | Validado. Copia verificada y rama creada. |
 | 1. Mecanismo | Implementado y validado por compilación de editor y prueba automatizada de cronología. Integración de nivel pendiente. |
-| 2. Enterprise y Pike | Pendiente. |
-| 3. Otras parejas | Pendiente. |
-| 4. Música y homenaje | MP3 verificado con ffprobe: 148.323250 s, estéreo, 44.1 kHz, 320 kb/s. Se utilizarán los primeros 54 s. |
-| 5. Validación | Pendiente. |
+| 2. Enterprise y Pike | Validados en paquetes reabiertos. Se compararon jerarquía, orden, anclajes, alineación, posiciones, tamaños, pinceles, colores, textos y tipografía con la plantilla local. |
+| 3. Otras parejas | Implementadas. Los cinco Widget Blueprints reabrieron y compilaron sin errores. Pendiente comprobación en el diseñador y reproducción completa. |
+| 4. Música y homenaje | Implementados. El MP3 dura 148.323250 s, estéreo, 44.1 kHz, 320 kb/s. Se importó un Sound Wave PCM de 54.000 s con fundido de 53.000 a 54.000 s. |
+| 5. Validación | En curso. La primera reproducción en frío reveló una espera de render en los primeros fotogramas. El fondo negro se prepara antes del arranque sincronizado para evitar saltos al cargar. |
 
-Primer bloque funcional: commit `feat(intro): implementar reloj y fundidos de la introducción`.
+Primer bloque funcional en Git: `caab4344`. La integración de los paquetes de Unreal queda guardada en el directorio local del proyecto.
 
 ## Arquitectura
 
 `Source/StarTrekRPG/Private/Intro/IntroTimeline.h` define los tiempos absolutos y las curvas de opacidad. Un actor exclusivo del nivel muestrea el reloj monotónico, aplica opacidad a los elementos UMG por nombre y mantiene un fondo negro común. Las composiciones conservan sus propios elementos, jerarquía y escalado. El actor publica `OnIntroFinished` tras fijar el negro y detener el audio.
+
+## Recursos locales y edición
+
+- Nivel `/Game/Cinematics/L_Intro_StarTrekLegends`. Abre el nivel en el explorador de contenido y pulsa **Play**. Para repetir la intro, pulsa **Stop** y vuelve a pulsar **Play**.
+- Widgets de composición en `/Game/Cinematics/UI_Intro/`: `WBP_Intro_Pike`, `WBP_Intro_Kirk`, `WBP_Intro_Janeway`, `WBP_Intro_Sisko` y `WBP_Intro_Picard`. Abre cada recurso en **Designer**. Usa el icono de visibilidad del diseñador en **Hierarchy** para aislar la nave o el capitán mientras editas.
+- Selecciona un elemento en **Hierarchy**. En **Details > Slot (Canvas Panel Slot)** edita posición, tamaño, anclaje y alineación. En **Appearance** edita pincel, color o fuente. En **Content** edita el texto.
+- El homenaje provisional se coloca por encima del retrato para que pueda coexistir con él a plena opacidad. En Picard, selecciona `TXT_HomenajePatrickStewart` o `TXT_FechasPatrickStewart` para editar cada bloque por separado. Conserva los nombres de ambos y de `IMG_FondoNegro`, `IMG_Nave`, `TXT_Matricula`, `IMG_LineaNave`, `TXT_NombreNave`, `IMG_Capitan`, `TXT_RangoCapitan`, `IMG_LineaCapitan` y `TXT_NombreCapitan`. El reproductor localiza esos elementos por nombre.
+- Audio local en `/Game/Cinematics/Audio_Intro/SW_Intro_Music`. El fondo negro se muestra durante la preparación. El reloj visual y la orden de reproducción arrancan juntos tras los primeros fotogramas de carga. El fundido de audio está grabado en la muestra y el actor detiene el componente al llegar a 54.000 s.
+- El nivel conserva el actor de la secuencia con **Auto Play** desactivado. Se retiró del nivel la instancia de `BP_IntroController`. El Blueprint, el widget original, su copia de respaldo y el recurso de la secuencia se conservaron.
+
+El commandlet de editor `IntroAssetSetup` abre y verifica los paquetes locales. Con `-Apply -MusicWav="ruta-absoluta-del-WAV"` puede reconstruir los cinco widgets a partir de una copia restaurada del contenido original y conectar el nivel. Conserva los widgets y el audio que ya existan. La reconstrucción desde el respaldo original se probó por separado en un laboratorio. La verificación de diseño inicial usa `-CheckInitialLayout`. Omite ese parámetro una vez que ajustes deliberadamente la composición de Pike.

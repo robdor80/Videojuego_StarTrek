@@ -11,6 +11,9 @@ public class StarTrekRPG : ModuleRules
         PCHUsage = PCHUsageMode.NoPCHs;
         PrivateDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "Slate", "SlateCore", "RHI", "UMG" });
 
+        if (Target.bBuildEditor)
+            PrivateDependencyModuleNames.AddRange(new[] { "UnrealEd", "UMGEditor", "AssetTools", "AssetRegistry", "AudioEditor", "LevelSequence", "MovieScene" });
+
         string ThirdParty = Path.Combine(ProjectDirectory(), "Binaries", "Host");
         string Include = Path.Combine(ThirdParty, "include");
         foreach (string Header in new[] { "host_abi.h", "academy_abi.h" })
