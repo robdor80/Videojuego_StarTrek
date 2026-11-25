@@ -33,6 +33,7 @@ private:
     virtual void EndPlay(const EEndPlayReason::Type Reason) override;
 
     bool PreparePresentation();
+    void StartPlayback();
     void RenderAt(double Time);
     void TraceTimeline(double Time);
 
@@ -59,7 +60,12 @@ private:
     FSceneWidgets Scenes[IntroTimeline::SceneCount];
     UWidget* Tribute[2] = {};
 
+    // Present the black overlay before the playback clock; the first RHI frames may stall.
+    int32 WarmupFramesRemaining = 3;
     double StartTime = 0.0;
     TArray<double> TraceTimes;
     int32 NextTrace = 0;
+    bool bAudioProgressTraced = false;
+    FString CaptureDirectory;
+    int32 NextCapture = 0;
 };

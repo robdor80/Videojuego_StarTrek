@@ -11,6 +11,7 @@
 #include "Styling/CoreStyle.h"
 #include "Widgets/Layout/SBorder.h"
 #include "Widgets/SOverlay.h"
+#include "UnrealClient.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogIntroCinematic, Log, All);
 
@@ -38,6 +39,17 @@ void AIntroCinematicPlayer::BeginPlay()
     if (FParse::Param(FCommandLine::Get(), TEXT("IntroTrace")))
     {
         TraceTimes.Add(0.0);
+        FParse::Value(FCommandLine::Get(), TEXT("IntroCaptureDir="), CaptureDirectory);
+        MusicPlayer->OnAudioPlaybackPercentNative.AddWeakLambda(this,
+            [this](const UAudioComponent*, const USoundWave*, float Percent)
+            {
+                if (!bAudioProgressTraced)
+                {
+                    bAudioProgressTraced = true;
+                    UE_LOG(LogIntroCinematic, Display, TEXT("First mixer playback callback at %.6f s (%.6f through the wave)"),
+                        FPlatformTime::Seconds() - StartTime, Percent);
+                }
+            });
         for (const double Start : IntroTimeline::ImageStart)
         {
             TraceTimes.Append({Start, Start + IntroTimeline::DataDelay, Start + IntroTimeline::SceneFade});
@@ -53,6 +65,11 @@ void AIntroCinematicPlayer::BeginPlay()
     {
         MusicPlayer->SetSound(Music);
     }
+    SetActorTickEnabled(true);
+}
+
+void AIntroCinematicPlayer::StartPlayback()
+{
     StartTime = FPlatformTime::Seconds();
     if (Music)
     {
@@ -60,7 +77,6 @@ void AIntroCinematicPlayer::BeginPlay()
     }
     UE_LOG(LogIntroCinematic, Display, TEXT("Started. Music requested: %d"), Music != nullptr);
     TraceTimeline(0.0);
-    SetActorTickEnabled(true);
 }
 
 bool AIntroCinematicPlayer::PreparePresentation()
@@ -156,9 +172,29 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 
+    if (WarmupFramesRemaining > 0)
+    {
+        if (--WarmupFramesRemaining == 0)
+        {
+            StartPlayback();
+        }
+        return;
+    }
+
     const double Elapsed = FPlatformTime::Seconds() - StartTime;
     RenderAt(FMath::Min(Elapsed, IntroTimeline::End));
     TraceTimeline(Elapsed);
+    if (!CaptureDirectory.IsEmpty())
+    {
+        static constexpr double CaptureTimes[] = {
+            0.2, 3.3, 5.95, 7.8, 12.3, 16.8, 21.3, 25.8, 30.3, 34.8, 39.3, 45.3, 48.3, 53.5, 54.0
+        };
+        if (NextCapture < UE_ARRAY_COUNT(CaptureTimes) && Elapsed >= CaptureTimes[NextCapture])
+        {
+            const FString Filename = CaptureDirectory / FString::Printf(TEXT("Intro_%05.2fs.png"), CaptureTimes[NextCapture++]);
+            FScreenshotRequest::RequestScreenshot(Filename, true, false, false, FIntRect(), true);
+        }
+    }
     if (Elapsed >= IntroTimeline::End)
     {
         MusicPlayer->Stop();
