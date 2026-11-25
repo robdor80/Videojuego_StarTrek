@@ -7,9 +7,10 @@ Reproducir las diez escenas en el nivel propio de la introducción y conservar l
 - Rama de trabajo `feat/intro-cinematic-automation`.
 - HEAD inicial `b2a1d2ab63b0467a904a3097d50d7a1e992ffc99`, rama original `codex/f06-aster-tres-zonas-20261123`.
 - Copia local `laboratorios/cinematics/intro-cinematic-automation/originales-20261125-031839`. Incluye todo el árbol original `Cinematics` y un inventario `SHA256.csv` comprobado contra los originales. También contiene una copia de los cuatro cambios locales preexistentes del proyecto.
-- Recursos protegidos: nivel, secuencia, controlador, widget original, widget de respaldo, fuentes y texturas de la introducción.
-- Unreal Engine 5.8 según la asociación local. La configuración del proyecto y los tres archivos de solución/configuración de VS preexistentes quedan fuera de los commits de esta tarea.
-- Git excluye los paquetes de Unreal. Los recursos de la introducción se guardarán en el proyecto local dentro de Unreal y los commits recogerán código y documentación.
+- Recursos protegidos. Nivel, secuencia, controlador, widget original, widget de respaldo, fuentes y texturas de la introducción. Se verificaron 21 paquetes originales y se confirmó que solo cambió el mapa. El MP3 original y los cuatro archivos locales preexistentes conservan su SHA-256.
+- Copia de entrega en `laboratorios/cinematics/intro-cinematic-automation/entrega-20261125-033728`, con 27 paquetes y `SHA256.csv` verificado. Las dos copias residen en la unidad local C:, el único volumen de datos disponible en el MSI durante la tarea.
+- Unreal Engine 5.8.4 según la asociación local. La configuración del proyecto y los tres archivos de solución/configuración de VS preexistentes quedan fuera de los commits de esta tarea.
+- Git excluye los paquetes de Unreal. Los recursos de la introducción están guardados en el proyecto local y respaldados con SHA-256. No se publicó una PR porque la rama remota quedaría sin el nivel, los widgets y el audio.
 
 ## Cronología aprobada
 
@@ -34,13 +35,13 @@ Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida d
 | Bloque | Estado |
 |---|---|
 | 0. Seguridad | Validado. Copia verificada y rama creada. |
-| 1. Mecanismo | Implementado y validado por compilación de editor y prueba automatizada de cronología. Integración de nivel pendiente. |
+| 1. Mecanismo | Validado. Compilación Win64 de editor y prueba automatizada de cronología. Un único actor inicia la reproducción del nivel. |
 | 2. Enterprise y Pike | Validados en paquetes reabiertos. Se compararon jerarquía, orden, anclajes, alineación, posiciones, tamaños, pinceles, colores, textos y tipografía con la plantilla local. |
-| 3. Otras parejas | Implementadas. Los cinco Widget Blueprints reabrieron y compilaron sin errores. Pendiente comprobación en el diseñador y reproducción completa. |
-| 4. Música y homenaje | Implementados. El MP3 dura 148.323250 s, estéreo, 44.1 kHz, 320 kb/s. Se importó un Sound Wave PCM de 54.000 s con fundido de 53.000 a 54.000 s. |
-| 5. Validación | En curso. La primera reproducción en frío reveló una espera de render en los primeros fotogramas. El fondo negro se prepara antes del arranque sincronizado para evitar saltos al cargar. |
+| 3. Otras parejas | Validadas. Los cinco Widget Blueprints compilaron sin errores y abrieron en sus editores UMG. Las diez escenas se comprobaron en capturas de la ejecución. |
+| 4. Música y homenaje | Validados técnicamente. MP3 de 148.323250 s, estéreo, 44.1 kHz, 320 kb/s. Sound Wave PCM de 54.000 s, sin bucle, con fundido de 53.000 a 54.000 s. Homenaje visible junto a Picard. |
+| 5. Validación | Validado en el MSI a 2560 × 1600 y en dos arranques consecutivos en PIE. Pendientes la escucha humana y la aceptación artística del propietario. |
 
-Primer bloque funcional en Git: `caab4344`. La integración de los paquetes de Unreal queda guardada en el directorio local del proyecto.
+Último commit funcional del reproductor `73fc2b4b`. La integración reproducible de los paquetes está en `8ede64a3` y los paquetes guardados están en el proyecto local.
 
 ## Arquitectura
 
@@ -56,3 +57,19 @@ Primer bloque funcional en Git: `caab4344`. La integración de los paquetes de U
 - El nivel conserva el actor de la secuencia con **Auto Play** desactivado. Se retiró del nivel la instancia de `BP_IntroController`. El Blueprint, el widget original, su copia de respaldo y el recurso de la secuencia se conservaron.
 
 El commandlet de editor `IntroAssetSetup` abre y verifica los paquetes locales. Con `-Apply -MusicWav="ruta-absoluta-del-WAV"` puede reconstruir los cinco widgets a partir de una copia restaurada del contenido original y conectar el nivel. Conserva los widgets y el audio que ya existan. La reconstrucción desde el respaldo original se probó por separado en un laboratorio. La verificación de diseño inicial usa `-CheckInitialLayout`. Omite ese parámetro una vez que ajustes deliberadamente la composición de Pike.
+
+## Resultados y tolerancias
+
+| Prueba | Resultado |
+|---|---|
+| Unreal 5.8.4, Win64 Development Editor | Compilación correcta y cinco Widget Blueprints compilados al reabrir los paquetes. Reconstrucción desde una copia del original con 0 errores. |
+| `StarTrekRPG.Intro.Timeline` | Superada. Horarios absolutos, rampas de imagen y datos, salidas completas, homenaje y negro a 54.000 s. |
+| `StarTrekRPG.Intro.Designers` | Superada. Los cinco editores de Widget Blueprint abrieron. |
+| `StarTrekRPG.Intro.PIERestart` | Superada. Dos arranques PIE en la misma sesión con un único reproductor activo en cada uno. |
+| D3D12, 2560 × 1600 en el MSI | Negro inicial y final verificados píxel a píxel. Capturas de las diez escenas, transición Enterprise–Pike, Picard con homenaje y fundido final. |
+| Cronología durante la reproducción | 35 hitos registrados. Máximo retraso de muestreo de 3.434 ms. Negro final y orden de parada del audio en 54.003017 s. |
+| Salida de audio del MSI | Una orden de inicio y una de parada. Primera confirmación del mezclador a 30.388 ms. El monitor de salida de Windows registró caída a cero después del fundido, con una última lectura superior a 0.0001 en 54.068 s. La salida incorpora el búfer del mezclador y del dispositivo. |
+
+El primer ensayo en frío reveló una espera larga del motor en sus primeros fotogramas. El reproductor prepara el fondo negro antes de iniciar el reloj y el audio. Durante la reproducción, Unreal aplica las opacidades en el primer fotograma disponible a partir de cada hito. El archivo de audio contiene exactamente 54.000 s de muestras.
+
+La fuente Federation recurre al glifo de sustitución de Slate para algunos caracteres acentuados. Se conservaron la fuente y los textos solicitados. Los avisos de carga de ajustes de compresión de animación de ACL son del entorno existente. Queda pendiente la revisión artística de las cuatro parejas provisionales y del homenaje, así como la escucha humana. Las capturas, registros y medición del dispositivo están en el laboratorio de la tarea.
