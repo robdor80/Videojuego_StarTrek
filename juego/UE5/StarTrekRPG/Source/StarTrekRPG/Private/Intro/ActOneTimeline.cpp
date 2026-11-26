@@ -3,6 +3,32 @@
 #include "Engine/Texture2D.h"
 #include "Sound/SoundWave.h"
 
+UActOneTimeline::UActOneTimeline()
+{
+    FRichCurve& Curve = LondonFade.EditorCurveData;
+    const FVector2f Points[] = {{0, 1}, {3, 0.90f}, {5, 0.75f}, {8, 0.50f},
+        {10, 0.30f}, {13, 0.10f}, {static_cast<float>(LondonEnd - OdeStart), 0}};
+    for (const FVector2f& Point : Points)
+    {
+        const FKeyHandle Key = Curve.AddKey(Point.X, Point.Y);
+        Curve.SetKeyInterpMode(Key, RCIM_Cubic, false);
+    }
+    Curve.AutoSetTangents();
+}
+
+float UActOneTimeline::LondonEnvelope(double Time) const
+{
+    if (Time < LondonStart || Time >= LondonEnd)
+    {
+        return 0.0f;
+    }
+    if (Time <= OdeStart)
+    {
+        return 1.0f;
+    }
+    return FMath::Clamp(LondonFade.GetRichCurveConst()->Eval(static_cast<float>(Time - OdeStart)), 0.0f, 1.0f);
+}
+
 bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
 {
     const auto Fail = [&Error](const FString& Message) { Error = Message; return false; };
@@ -117,7 +143,7 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
     {
         return Fail(TEXT("Invalid master timeline or priority markers"));
     }
-    if (bRequireAssets && (!London || London->GetDuration() < OdeStart || !Ode ||
+    if (bRequireAssets && (!London || London->GetDuration() < LondonEnd - LondonStart || !Ode ||
         Ode->GetDuration() < End - OdeStart || !CouncilAmbience || CouncilAmbience->Duration <= 0 ||
         !TitleFont || !DialogueFont || !VoiceClass || !SfxClass))
     {

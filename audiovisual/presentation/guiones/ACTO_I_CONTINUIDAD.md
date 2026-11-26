@@ -40,13 +40,13 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 
 | Tiempo del acto | Reproducción |
 | --- | --- |
-| 0:00–0:03 | Negro, localización y London Calling |
+| 0:00–0:03 | Negro y localización |
 | 0:03–0:07 | Exterior de la sede |
 | 0:07–0:10 | Sala, rótulo del Consejo y entrada ambiental |
-| 0:10–1:56 | V1–V6 |
+| 0:10–1:56 | V1–V6. London Calling entra a 0:15 |
 | 1:56–2:10 | V7, recuerdo de Picard y frase a 2:01,1 |
-| 2:10–2:18 | V7.1, Locutus, entrada de Ode y reducción del ambiente |
-| 2:18–2:27 | V7.2, Enterprise-D y cubo Borg |
+| 2:10–2:18 | V7.1, Locutus, entrada de Ode y comienzo del fundido de London. Se reduce el ambiente |
+| 2:18–2:27 | V7.2, Enterprise-D y cubo Borg. London alcanza el silencio a 2:25 |
 | 2:27–2:56 | V7.3, Picard y regreso del ambiente |
 | 2:56–5:28 | V8–V16 |
 | 5:28–7:09 | V17–V20. Crescendo de Myers a 6:40 |
@@ -57,7 +57,19 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 
 ## Mezcla y doblaje
 
-Las canciones conservan sus grabaciones por separado y sus velocidades originales. Comienzan en los segundos 0 y 130 del acto. Se equilibran en Unreal con ganancias efectivas iniciales de 0,76 y 0,27 respecto a las señales decodificadas. El MP3 de Ode alcanza +1,73 dBFS al decodificarlo en flotante. La conversión reserva margen con un factor lineal fijo de 0,80 antes de escribir PCM y Unreal compensa ese factor en reproducción. Se conservan picos, dinámica y archivos originales. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen. El ambiente usa una ganancia de 0,85 y un bucle de 29,7 s con 300 ms de fundido entre los extremos. Desciende al 22 % de su nivel habitual en el recuerdo y se recupera durante V7.3.
+Las canciones conservan sus grabaciones por separado y sus velocidades originales. London Calling comienza a 0:15 y Ode to Harrison a 2:10. El solapamiento va de 2:10 a 2:25. En ese tramo se oyen London desde 1:55 de su grabación y Ode desde 0:00. Se equilibran en Unreal con ganancias efectivas iniciales de 0,76 y 0,27 respecto a las señales decodificadas. El MP3 de Ode alcanza +1,73 dBFS al decodificarlo en flotante. La conversión reserva margen con un factor lineal fijo de 0,80 antes de escribir PCM y Unreal compensa ese factor en reproducción. Se conservan picos, dinámica y archivos originales. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen. El ambiente usa una ganancia de 0,85 y un bucle de 29,7 s con 300 ms de fundido entre los extremos. Desciende al 22 % de su nivel habitual en el recuerdo y se recupera durante V7.3.
+
+El fundido de London se aplica a su propio componente de audio, con interpolación cúbica. Su curva `LondonFade` se puede editar en el apartado **Audio** de `DA_ActOneTimeline`. El eje horizontal de la curva se mide en segundos desde la entrada de Ode. El valor predeterminado de `LondonFade` restituye los puntos aprobados. La versión aprobada usa estos puntos:
+
+| Tiempo del acto | Ganancia relativa de London | Factor adicional aplicado a Ode |
+| --- | ---: | ---: |
+| 2:10 | 100 % | 100 % |
+| 2:13 | 90 % | 100 % |
+| 2:15 | 75 % | 100 % |
+| 2:18 | 50 % | 100 % |
+| 2:20 | 30 % | 100 % |
+| 2:23 | 10 % | 100 % |
+| 2:25 | 0 % | 100 % |
 
 Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. Cada intervención tiene un campo opcional `Voice`; su reproducción parte de la misma línea temporal que sus bloques. El factor `VoiceDuck` inicial es 0,50 y solo se aplica mientras haya voz. Para sincronizar un doblaje futuro, asigna la onda de la intervención y ajusta los tiempos de sus bloques y pausas. Los campos de voz quedan vacíos.
 
@@ -78,3 +90,5 @@ La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los h
 | Continuidad del material | SHA-256 intacto en los 27 paquetes de la intro y los archivos de origen. El salto máximo del bucle de ambiente en su unión fue de 2 unidades PCM16. |
 
 La comprobación de imagen a resolución nativa usó la primera copia del audio del laboratorio. Tras corregir el margen de PCM, se reabrieron los paquetes, se comprobaron las muestras de la onda final y se repitió el arranque hasta Locutus en D3D12. En esa pasada, la orden de Ode llegó a 130,002 s y el mezclador confirmó su inicio a 130,019 s. El dispositivo de salida registró señal durante la transición. La escucha y la aceptación artística corresponden al propietario. El doblaje, las escenas del Acto II y el empaquetado de distribución quedan fuera de esta entrega.
+
+El ajuste de London se comprobó en D3D12 con salida WASAPI en el MSI. En el tramo 1:50–2:35, Unreal ordenó el inicio de London a 15,006 s y el de Ode a 130,005 s. London se detuvo a 145,006 s, tras 15,000 s de solapamiento. La ganancia de Ode durante el tramo coincidió con la automatización anterior. La suma conservadora de los picos PCM de las dos canciones quedó en −6,5 dBFS, y la salida registró señal antes, durante y después del solapamiento. Las cuatro pruebas de Unreal confirmaron los puntos de la curva y los marcadores posteriores.

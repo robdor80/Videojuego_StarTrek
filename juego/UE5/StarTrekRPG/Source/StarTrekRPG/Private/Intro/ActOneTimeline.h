@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Curves/CurveFloat.h"
 #include "Engine/DataAsset.h"
 #include "ActOneTimeline.generated.h"
 
@@ -110,10 +111,14 @@ class UActOneTimeline final : public UDataAsset
     GENERATED_BODY()
 
 public:
+    UActOneTimeline();
+
     static constexpr const TCHAR* PackagePath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline");
     static constexpr const TCHAR* AssetPath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline.DA_ActOneTimeline");
     static constexpr double Fade = 0.35;
+    static constexpr double LondonStart = 15.0;
     static constexpr double OdeStart = 130.0;
+    static constexpr double LondonEnd = 145.0;
     static constexpr float OdePcmHeadroom = 0.8f;
     static constexpr double FinalFadeStart = 485.0;
     static constexpr double End = 490.0;
@@ -151,6 +156,10 @@ public:
     UPROPERTY(EditAnywhere, Category = "Audio", meta = (ClampMin = "0", ClampMax = "1"))
     float LondonGain = 0.76f;
 
+    // Curve time is measured in seconds from OdeStart.
+    UPROPERTY(EditAnywhere, Category = "Audio")
+    FRuntimeFloatCurve LondonFade;
+
     UPROPERTY(EditAnywhere, Category = "Audio", meta = (ClampMin = "0", ClampMax = "1"))
     float OdeGain = 0.27f;
 
@@ -165,4 +174,5 @@ public:
     static float Ramp(double Time, double Begin, double Duration);
     static float EndOpacity(double Time);
     static float CouncilEnvelope(double Time);
+    float LondonEnvelope(double Time) const;
 };

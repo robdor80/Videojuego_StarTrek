@@ -65,6 +65,9 @@ private:
     TObjectPtr<UAudioComponent> ActOneMusic;
 
     UPROPERTY(Transient)
+    TObjectPtr<UAudioComponent> ActOneLondon;
+
+    UPROPERTY(Transient)
     TObjectPtr<UAudioComponent> ActOneAmbience;
 
     UPROPERTY(Transient)
@@ -74,6 +77,7 @@ private:
     const FActOneIntervention* ActOneVoiceLine = nullptr;
     bool bActOneRunning = false;
     bool bCouncilStarted = false;
+    bool bLondonStarted = false;
     bool bOdeStarted = false;
     float VoiceMusicGain = 1.0f;
     double PreviousActOneTime = 0.0;

@@ -32,14 +32,14 @@ void AIntroCinematicPlayer::PrepareActOne(SOverlay& Overlay)
 
     ActOneView = MakeShared<FActOnePresentation>(*ActOne);
     Overlay.AddSlot()[ActOneView->Widget.ToSharedRef()];
-    ActOneMusic->SetSound(ActOne->London);
+    ActOneLondon->SetSound(ActOne->London);
     ActOneAmbience->SetSound(ActOne->CouncilAmbience);
     ActOneAmbience->SoundClassOverride = ActOne->CouncilAmbience->SoundClassObject;
     ActOneVoice->SoundClassOverride = ActOne->VoiceClass;
 
     if (FParse::Param(FCommandLine::Get(), TEXT("ActOneTrace")))
     {
-        ActOneTraceTimes.Append({0.0, 3.0, 7.0});
+        ActOneTraceTimes.Append({0.0, 3.0, 7.0, UActOneTimeline::LondonStart, 110.0, 133.0, 135.0, 140.0, 143.0, UActOneTimeline::LondonEnd, 155.0});
         for (const FActOneIntervention& Line : ActOne->Interventions)
         {
             for (const FActOneShot& Shot : Line.Shots)
@@ -70,6 +70,7 @@ void AIntroCinematicPlayer::PrepareActOne(SOverlay& Overlay)
                 });
         };
         TraceAudioStart(*ActOneMusic, TEXT("Music"));
+        TraceAudioStart(*ActOneLondon, TEXT("Music"));
         TraceAudioStart(*ActOneAmbience, TEXT("Ambience"));
     }
 }
@@ -110,7 +111,6 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     if (!bOdeStarted && Time >= T::OdeStart && Time < T::End)
     {
         bOdeStarted = true;
-        ActOneMusic->Stop();
         ActOneMusic->SetSound(ActOne->Ode);
         ActOneMusic->SetVolumeMultiplier((ActOne->OdeGain / T::OdePcmHeadroom) * OdeEnvelope * VoiceMusicGain);
         ActOneMusic->Play(Time - T::OdeStart);
@@ -120,10 +120,22 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     {
         ActOneMusic->SetVolumeMultiplier((ActOne->OdeGain / T::OdePcmHeadroom) * OdeEnvelope * VoiceMusicGain);
     }
-    else
+    if (Time >= T::LondonStart && Time < T::LondonEnd)
     {
-        const float LondonEnvelope = 1.0f - T::Ramp(Time, 129.55, 0.45);
-        ActOneMusic->SetVolumeMultiplier(ActOne->LondonGain * LondonEnvelope * VoiceMusicGain);
+        ActOneLondon->SetVolumeMultiplier(ActOne->LondonGain * ActOne->LondonEnvelope(Time) * VoiceMusicGain);
+        if (!bLondonStarted)
+        {
+            bLondonStarted = true;
+            ActOneLondon->Play(Time - T::LondonStart);
+            UE_LOG(LogActOne, Display, TEXT("London Calling requested at %.6f s (offset %.6f s)"), Time, Time - T::LondonStart);
+        }
+    }
+    else if (bLondonStarted)
+    {
+        bLondonStarted = false;
+        ActOneLondon->SetVolumeMultiplier(0.0f);
+        ActOneLondon->Stop();
+        UE_LOG(LogActOne, Display, TEXT("London Calling stopped at %.6f s"), Time);
     }
     ActOneAmbience->SetVolumeMultiplier(ActOne->AmbienceGain * T::CouncilEnvelope(Time));
 
@@ -131,9 +143,10 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     {
         const FActOneCue* Cue = Line ? Line->Cues.FindByPredicate(
             [Time](const FActOneCue& Candidate) { return Candidate.Contains(Time); }) : nullptr;
-        UE_LOG(LogActOne, Display, TEXT("Target %.3f s, frame %.6f s, %s, text %s, music %.3f, ambience %.3f"),
+        UE_LOG(LogActOne, Display, TEXT("Target %.3f s, frame %.6f s, %s, text %s, Ode %.3f (playing %d), London %.3f (playing %d), ambience %.3f"),
             ActOneTraceTimes[ActOneNextTrace++], Time, Line ? *Line->Id : TEXT("-"),
-            Cue ? *Cue->Text : TEXT("-"), ActOneMusic->VolumeMultiplier, ActOneAmbience->VolumeMultiplier);
+            Cue ? *Cue->Text : TEXT("-"), bOdeStarted ? ActOneMusic->VolumeMultiplier : 0.0f, ActOneMusic->IsPlaying(),
+            bLondonStarted ? ActOneLondon->VolumeMultiplier : 0.0f, ActOneLondon->IsPlaying(), ActOneAmbience->VolumeMultiplier);
     }
     if (!ActOneCaptureDirectory.IsEmpty())
     {
@@ -149,6 +162,7 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     if (Time >= T::End)
     {
         ActOneMusic->Stop();
+        ActOneLondon->Stop();
         ActOneAmbience->Stop();
         ActOneVoice->Stop();
         bActOneRunning = false;

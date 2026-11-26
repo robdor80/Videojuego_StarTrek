@@ -38,6 +38,29 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
     TestTrue(TEXT("No caption is selected during the final fade"), Intervention(T::FinalFadeStart).IsEmpty());
     TestEqual(TEXT("Final black exactly at 8:10"), T::EndOpacity(490), 0.0f);
 
+    TestEqual(TEXT("London starts at 0:15"), T::LondonStart, 15.0);
+    TestEqual(TEXT("Ode starts at 2:10"), T::OdeStart, 130.0);
+    TestEqual(TEXT("London ends at 2:25"), T::LondonEnd, 145.0);
+    TestEqual(TEXT("London silent before its entry"), Timeline->LondonEnvelope(14.999), 0.0f);
+    TestEqual(TEXT("London reaches its current gain at entry"), Timeline->LondonEnvelope(15), 1.0f);
+    const FVector2f LondonAnchors[] = {{130, 1}, {133, 0.90f}, {135, 0.75f}, {138, 0.50f},
+        {140, 0.30f}, {143, 0.10f}, {145, 0}};
+    for (const FVector2f& Point : LondonAnchors)
+    {
+        TestEqual(TEXT("London fade anchor"), Timeline->LondonEnvelope(Point.X), Point.Y);
+    }
+    float PreviousGain = 1.0f;
+    for (int32 Step = 1; Step <= 1500; ++Step)
+    {
+        const float Gain = Timeline->LondonEnvelope(T::OdeStart + Step * 0.01);
+        if (Gain < 0.0f || Gain > PreviousGain + 1.e-6f || PreviousGain - Gain > 0.002f)
+        {
+            AddError(TEXT("London fade must decrease smoothly throughout the overlap."));
+            break;
+        }
+        PreviousGain = Gain;
+    }
+
     TestEqual(TEXT("Ambience begins silent at 7 s"), T::CouncilEnvelope(7), 0.0f);
     TestEqual(TEXT("Ambience fully in before V1"), T::CouncilEnvelope(9), 1.0f);
     TestTrue(TEXT("Borg memory ambience attenuated"), FMath::IsNearlyEqual(T::CouncilEnvelope(140), 0.22f, 1.e-5f));

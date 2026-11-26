@@ -39,6 +39,7 @@ AIntroCinematicPlayer::AIntroCinematicPlayer()
         return Player;
     };
     ActOneMusic = CreateActOnePlayer(TEXT("ActOneMusic"));
+    ActOneLondon = CreateActOnePlayer(TEXT("ActOneLondon"));
     ActOneAmbience = CreateActOnePlayer(TEXT("ActOneAmbience"));
     ActOneVoice = CreateActOnePlayer(TEXT("ActOneVoice"));
 }
@@ -222,8 +223,6 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
         if (ActOne)
         {
             bActOneRunning = true;
-            ActOneMusic->SetVolumeMultiplier(ActOne->LondonGain);
-            ActOneMusic->Play(Elapsed - IntroTimeline::End);
             UE_LOG(LogIntroCinematic, Display, TEXT("Act I started at intro time %.6f s"), Elapsed);
             TickActOne(Elapsed - IntroTimeline::End);
         }
@@ -258,6 +257,7 @@ void AIntroCinematicPlayer::EndPlay(const EEndPlayReason::Type Reason)
 {
     MusicPlayer->Stop();
     ActOneMusic->Stop();
+    ActOneLondon->Stop();
     ActOneAmbience->Stop();
     ActOneVoice->Stop();
     if (Presentation.IsValid())
