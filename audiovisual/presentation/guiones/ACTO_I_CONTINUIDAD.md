@@ -67,4 +67,14 @@ Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. 
 
 La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los hitos prioritarios, la alternancia, la continuidad estructural del ambiente, las cuatro clases de mezcla y el formato y margen del PCM de Ode. Las pruebas de intro cubren su cronología, los cinco diseñadores UMG y el reinicio consecutivo de PIE.
 
-La escucha y la aceptación artística corresponden al propietario. El doblaje, las escenas del Acto II y el empaquetado de distribución quedan fuera de esta entrega.
+| Comprobación | Resultado en el MSI |
+| --- | --- |
+| Win64 Development Editor e importación NullRHI | Compilación correcta. Reabiertas 27 texturas, tres ondas y cuatro clases. |
+| Guion V2 | Blob idéntico al de `25edd8a352dc83880c428d1ec59aa3278c3d1edf`. Los bloques reproducen las 760 palabras y excluyen las acotaciones. |
+| Pruebas NullRHI | Superadas `StarTrekRPG.Intro.ActOne.Timeline`, `Designers`, `PIERestart` y `Timeline`. |
+| D3D12 a 2560 × 1600 y Windows al 150 % | Recorrido completo en ventana, con 12 capturas. Revisados la localización, el exterior, el Consejo, V1, V2, V6, V7.1, V7.2, V21, V22 y el negro final. |
+| D3D12 a pantalla completa | Recorrido completo a 1707 × 1067 efectivos al 150 %. |
+| Cronología de la pasada de 2560 × 1600 | Intro 54,002 s. Orden de Ode a 130,005 s. Bloques del voto y el clímax visibles a 450,000 y 475,005 s. Negro total y pistas detenidas a 490,006 s. |
+| Continuidad del material | SHA-256 intacto en los 27 paquetes de la intro y los archivos de origen. El salto máximo del bucle de ambiente en su unión fue de 2 unidades PCM16. |
+
+La comprobación de imagen a resolución nativa usó la primera copia del audio del laboratorio. Tras corregir el margen de PCM, se reabrieron los paquetes, se comprobaron las muestras de la onda final y se repitió el arranque hasta Locutus en D3D12. En esa pasada, la orden de Ode llegó a 130,002 s y el mezclador confirmó su inicio a 130,019 s. El dispositivo de salida registró señal durante la transición. La escucha y la aceptación artística corresponden al propietario. El doblaje, las escenas del Acto II y el empaquetado de distribución quedan fuera de esta entrega.
