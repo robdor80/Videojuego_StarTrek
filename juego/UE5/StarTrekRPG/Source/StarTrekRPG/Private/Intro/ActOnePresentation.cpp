@@ -14,6 +14,7 @@
 namespace
 {
     const FVector2D Design(2560, 1600);
+    constexpr float PortraitCornerRadius = 24.0f;
     const FLinearColor Pearl(FColor(242, 245, 250));
     const FLinearColor Blue(FColor(158, 200, 245));
 
@@ -100,7 +101,7 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
         ];
     for (const FActOneShot& Shot : Timeline.Opening)
     {
-        AddImage(*Canvas, *Shot.Image, FVector2D::ZeroVector, Design, Shot.Start, Shot.End);
+        AddImage(*Canvas, *Shot.Image, FVector2D::ZeroVector, Design, Shot.Start, Shot.End, false);
     }
     for (const FActOneIntervention& Line : Timeline.Interventions)
     {
@@ -110,7 +111,8 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
         const FVector2D Origin = bPanorama ? FVector2D::ZeroVector : FVector2D(bRight ? 1290 : 40, 65);
         for (const FActOneShot& Shot : Line.Shots)
         {
-            AddImage(*Canvas, *Shot.Image, Origin, Area, Shot.Start, bPanorama ? Timeline.End : Shot.End);
+            AddImage(*Canvas, *Shot.Image, Origin, Area, Shot.Start, bPanorama ? Timeline.End : Shot.End,
+                !bPanorama);
         }
     }
 
@@ -146,7 +148,7 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
 }
 
 void FActOnePresentation::AddImage(SConstraintCanvas& Canvas, UTexture2D& Texture,
-    const FVector2D& Position, const FVector2D& Size, double Start, double End)
+    const FVector2D& Position, const FVector2D& Size, double Start, double End, bool bPortraitSlot)
 {
     FImage& Image = *Images.Add_GetRef(MakeUnique<FImage>());
     Image.Start = Start;
@@ -156,6 +158,11 @@ void FActOnePresentation::AddImage(SConstraintCanvas& Canvas, UTexture2D& Textur
     Image.Brush.SetResourceObject(&Texture);
     Image.Brush.SetImageSize(Fit);
     Image.Brush.DrawAs = ESlateBrushDrawType::Image;
+    if (bPortraitSlot && Native.Y > Native.X)
+    {
+        Image.Brush.DrawAs = ESlateBrushDrawType::RoundedBox;
+        Image.Brush.OutlineSettings = FSlateBrushOutlineSettings(PortraitCornerRadius);
+    }
     Image.Widget = SNew(SImage).Image(&Image.Brush);
     Put(Canvas, Position + (Size - Fit) * 0.5, Fit, Image.Widget.ToSharedRef());
 }

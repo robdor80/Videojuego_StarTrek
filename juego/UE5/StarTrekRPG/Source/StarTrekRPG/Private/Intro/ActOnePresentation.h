@@ -27,7 +27,7 @@ private:
     };
 
     void AddImage(SConstraintCanvas& Canvas, UTexture2D& Texture,
-        const FVector2D& Position, const FVector2D& Size, double Start, double End);
+        const FVector2D& Position, const FVector2D& Size, double Start, double End, bool bPortraitSlot);
     static void SetOpacity(const TSharedPtr<SWidget>& Element, float Opacity);
 
     const UActOneTimeline& Timeline;
