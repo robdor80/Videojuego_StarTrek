@@ -6,15 +6,15 @@
 2. En el navegador de contenido abre `/Game/Cinematics/L_Intro_StarTrekLegends`. Pulsa **Play**. La introducción dura 54 segundos y el Acto I comienza automáticamente. Desde el inicio de la intro, el recorrido completo dura 9:04.
 3. Tras el fundido final, pulsa **Stop** para salir de PIE. Pulsa **Play** de nuevo para repetir la secuencia.
 
-Para revisar el viewport nativo a pantalla completa desde PowerShell, ejecuta desde la raíz del repositorio:
+Para reproducir con un viewport D3D12 de 2560 × 1600 al 150 % de Windows, ejecuta desde la raíz del repositorio:
 
 ```powershell
 $project = (Resolve-Path 'juego/UE5/StarTrekRPG/StarTrekRPG.uproject').Path
 $editor = 'C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor.exe'
-& $editor $project /Game/Cinematics/L_Intro_StarTrekLegends -game -d3d12 -fullscreen -ForceRes -ResX=2560 -ResY=1600
+& $editor $project /Game/Cinematics/L_Intro_StarTrekLegends -game -d3d12 -windowed -ForceRes -ResX=2560 -ResY=1600
 ```
 
-Para modo ventana, sustituye los cuatro últimos parámetros por `-windowed -ForceRes -ResX=1440 -ResY=900`. Cierra la ventana para salir.
+Para pantalla completa, cambia `-windowed` por `-fullscreen`. En el MSI al 150 %, ese modo entregó capturas de 1707 × 1067 píxeles efectivos y la composición se ajustó proporcionalmente. La variante en ventana con `-ForceRes` produjo capturas de 2560 × 1600. Cierra la ventana para salir.
 
 ## Recursos e importación
 
@@ -26,7 +26,7 @@ Git excluye los paquetes de Unreal de esta producción. En el MSI se instalan en
     -EditorCmd 'C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
 ```
 
-El importador usa las dos maestras y las 25 imágenes de intervención, incluidas las tres variantes adicionales de V7. Conserva el área completa de cada PNG. Produce 27 texturas, tres Sound Waves PCM, cuatro clases de sonido y `DA_ActOneTimeline`. La segunda ejecución del commandlet vuelve a abrir los paquetes y comprueba dimensiones, referencias y cronología. Los WAV intermedios se eliminan al cerrar el importador.
+El importador usa las dos maestras y las 25 imágenes de intervención, incluidas las tres variantes adicionales de V7. Conserva el área completa de cada PNG. Produce 27 texturas, tres Sound Waves PCM, cuatro clases de sonido y `DA_ActOneTimeline`. La segunda ejecución del commandlet vuelve a abrir los paquetes y comprueba dimensiones, referencias y cronología. Los WAV intermedios se eliminan al cerrar el importador. Si ya tienes los paquetes y necesitas regenerar las tres ondas desde los originales, añade `-RefreshAudio` a la orden.
 
 La fuente de títulos y nombres procede de `TXT_NombreCapitan` en `WBP_Intro_Pike` y corresponde a `/Game/Cinematics/Fonts_Intro/Federation_Wide_Font.Federation_Wide_Font`. El cuerpo usa `/Engine/EngineFonts/Roboto.Roboto`. Slate resuelve las grafías ausentes en la fuente importada mediante su fuente de respaldo.
 
@@ -57,7 +57,7 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 
 ## Mezcla y doblaje
 
-Las canciones conservan sus grabaciones por separado y sus velocidades originales. Comienzan en los segundos 0 y 130 del acto. Se equilibran en Unreal con ganancias iniciales de 0,76 y 0,27. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen. El ambiente usa una ganancia de 0,85 y un bucle de 29,7 s con 300 ms de fundido entre los extremos. Desciende al 22 % de su nivel habitual en el recuerdo y se recupera durante V7.3.
+Las canciones conservan sus grabaciones por separado y sus velocidades originales. Comienzan en los segundos 0 y 130 del acto. Se equilibran en Unreal con ganancias efectivas iniciales de 0,76 y 0,27 respecto a las señales decodificadas. El MP3 de Ode alcanza +1,73 dBFS al decodificarlo en flotante. La conversión reserva margen con un factor lineal fijo de 0,80 antes de escribir PCM y Unreal compensa ese factor en reproducción. Se conservan picos, dinámica y archivos originales. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen. El ambiente usa una ganancia de 0,85 y un bucle de 29,7 s con 300 ms de fundido entre los extremos. Desciende al 22 % de su nivel habitual en el recuerdo y se recupera durante V7.3.
 
 Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. Cada intervención tiene un campo opcional `Voice`; su reproducción parte de la misma línea temporal que sus bloques. El factor `VoiceDuck` inicial es 0,50 y solo se aplica mientras haya voz. Para sincronizar un doblaje futuro, asigna la onda de la intervención y ajusta los tiempos de sus bloques y pausas. Los campos de voz quedan vacíos.
 
@@ -65,6 +65,6 @@ Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. 
 
 ## Verificación
 
-La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los hitos prioritarios, la alternancia, la continuidad estructural del ambiente y las clases de mezcla. Las pruebas de intro cubren su cronología, los cinco diseñadores UMG y el reinicio consecutivo de PIE.
+La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los hitos prioritarios, la alternancia, la continuidad estructural del ambiente, las cuatro clases de mezcla y el formato y margen del PCM de Ode. Las pruebas de intro cubren su cronología, los cinco diseñadores UMG y el reinicio consecutivo de PIE.
 
 La escucha y la aceptación artística corresponden al propietario. El doblaje, las escenas del Acto II y el empaquetado de distribución quedan fuera de esta entrega.

@@ -114,6 +114,7 @@ public:
     static constexpr const TCHAR* AssetPath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline.DA_ActOneTimeline");
     static constexpr double Fade = 0.35;
     static constexpr double OdeStart = 130.0;
+    static constexpr float OdePcmHeadroom = 0.8f;
     static constexpr double FinalFadeStart = 485.0;
     static constexpr double End = 490.0;
 

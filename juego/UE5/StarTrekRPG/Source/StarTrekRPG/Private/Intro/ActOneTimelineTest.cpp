@@ -51,6 +51,22 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
         Timeline->CouncilAmbience->SoundClassObject && Timeline->VoiceClass && Timeline->SfxClass &&
         TSet<USoundClass*>({Timeline->London->SoundClassObject, Timeline->CouncilAmbience->SoundClassObject,
             Timeline->VoiceClass, Timeline->SfxClass}).Num() == 4);
+    TArray<uint8> PCM;
+    uint32 Rate = 0;
+    uint16 Channels = 0;
+    if (TestTrue(TEXT("Ode source PCM available"),
+        Timeline->Ode->GetImportedSoundWaveData(PCM, Rate, Channels)))
+    {
+        TestEqual(TEXT("PCM sample rate"), Rate, 48000u);
+        TestEqual(TEXT("PCM channel count"), Channels, static_cast<uint16>(2));
+        const int16* Samples = reinterpret_cast<const int16*>(PCM.GetData());
+        int32 Peak = 0;
+        for (int32 Sample = 0; Sample < PCM.Num() / sizeof(int16); ++Sample)
+        {
+            Peak = FMath::Max(Peak, FMath::Abs(static_cast<int32>(Samples[Sample])));
+        }
+        TestTrue(TEXT("Converted Ode retains peaks with headroom"), Peak > 30000 && Peak < 32500);
+    }
     return true;
 }
 #endif

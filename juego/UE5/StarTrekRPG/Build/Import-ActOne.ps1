@@ -2,6 +2,7 @@
 param(
     [Parameter(Mandatory)][string]$AssetsRoot,
     [Parameter(Mandatory)][string]$EditorCmd,
+    [switch]$RefreshAudio,
     [string]$Project = (Join-Path $PSScriptRoot '../StarTrekRPG.uproject'),
     [string]$Timeline = (Join-Path $PSScriptRoot '../../../../audiovisual/presentation/guiones/STAR_TREK_LEGENDS_ACTO_I_TIMELINE.json')
 )
@@ -30,7 +31,9 @@ function Convert-ActOneWave {
 
 try {
     Convert-ActOneWave 'London calling.mp3' (Join-Path $run 'London.wav')
-    Convert-ActOneWave 'Ode To Harrison.mp3' (Join-Path $run 'Ode.wav')
+    # The MP3 decoder produces samples above full scale. Fixed linear headroom
+    # preserves those peaks in signed PCM. UE compensates for the scale.
+    Convert-ActOneWave 'Ode To Harrison.mp3' (Join-Path $run 'Ode.wav') @('-af', 'volume=0.8')
     # Join the last and first 300 ms of the approved 30 s recording.
     # The blended section ends exactly where the body begins.
     $loop = '[0:a]asplit=3[main][tail][head];[main]atrim=start=0.3:end=29.7,asetpts=PTS-STARTPTS[body];'
@@ -40,7 +43,8 @@ try {
 
     $common = @($projectPath, '-run=ActOneAssetSetup', '-nullrhi', '-unattended', '-nop4', '-nosplash', '-NoZenAutoLaunch',
         '-ddc=NoZenLocalFallback', "-UserDir=$run", '-stdout', '-FullStdOutLogOutput')
-    & $commandlet @common '-Apply' "-Timeline=$manifestPath" "-AssetsRoot=$sourcePath" "-WavRoot=$run" "-AbsLog=$run/import.log"
+    [string[]]$refresh = if ($RefreshAudio) { @('-RefreshAudio') } else { @() }
+    & $commandlet @common @refresh '-Apply' "-Timeline=$manifestPath" "-AssetsRoot=$sourcePath" "-WavRoot=$run" "-AbsLog=$run/import.log"
     if ($LASTEXITCODE -ne 0) {
         throw "Act I import failed ($LASTEXITCODE). See $run/import.log."
     }

@@ -112,13 +112,13 @@ void AIntroCinematicPlayer::TickActOne(double Time)
         bOdeStarted = true;
         ActOneMusic->Stop();
         ActOneMusic->SetSound(ActOne->Ode);
-        ActOneMusic->SetVolumeMultiplier(ActOne->OdeGain * OdeEnvelope * VoiceMusicGain);
+        ActOneMusic->SetVolumeMultiplier((ActOne->OdeGain / T::OdePcmHeadroom) * OdeEnvelope * VoiceMusicGain);
         ActOneMusic->Play(Time - T::OdeStart);
         UE_LOG(LogActOne, Display, TEXT("Ode to Harrison requested at %.6f s (offset %.6f s)"), Time, Time - T::OdeStart);
     }
     else if (bOdeStarted)
     {
-        ActOneMusic->SetVolumeMultiplier(ActOne->OdeGain * OdeEnvelope * VoiceMusicGain);
+        ActOneMusic->SetVolumeMultiplier((ActOne->OdeGain / T::OdePcmHeadroom) * OdeEnvelope * VoiceMusicGain);
     }
     else
     {

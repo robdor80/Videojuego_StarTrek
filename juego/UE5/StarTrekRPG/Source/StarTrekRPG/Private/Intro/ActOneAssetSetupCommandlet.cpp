@@ -97,10 +97,10 @@ namespace
         return Save(*Class) ? Class : nullptr;
     }
 
-    USoundWave* InstallWave(const TCHAR* Name, const FString& File, USoundClass* Class, bool bLoop)
+    USoundWave* InstallWave(const TCHAR* Name, const FString& File, USoundClass* Class, bool bLoop, bool bRefresh)
     {
         const FString Package = Root + TEXT("Audio/") + Name;
-        if (USoundWave* ExistingWave = Existing<USoundWave>(Package))
+        if (USoundWave* ExistingWave = Existing<USoundWave>(Package); ExistingWave && !bRefresh)
         {
             return ExistingWave;
         }
@@ -211,9 +211,10 @@ int32 UActOneAssetSetupCommandlet::Main(const FString& Params)
     {
         return 1;
     }
-    Parsed->London = InstallWave(TEXT("SW_LondonCalling"), WavRoot / TEXT("London.wav"), Music, false);
-    Parsed->Ode = InstallWave(TEXT("SW_OdeToHarrison"), WavRoot / TEXT("Ode.wav"), Music, false);
-    Parsed->CouncilAmbience = InstallWave(TEXT("SW_CouncilAmbience"), WavRoot / TEXT("CouncilLoop.wav"), Ambience, true);
+    const bool bRefreshAudio = FParse::Param(*Params, TEXT("RefreshAudio"));
+    Parsed->London = InstallWave(TEXT("SW_LondonCalling"), WavRoot / TEXT("London.wav"), Music, false, bRefreshAudio);
+    Parsed->Ode = InstallWave(TEXT("SW_OdeToHarrison"), WavRoot / TEXT("Ode.wav"), Music, false, bRefreshAudio);
+    Parsed->CouncilAmbience = InstallWave(TEXT("SW_CouncilAmbience"), WavRoot / TEXT("CouncilLoop.wav"), Ambience, true, bRefreshAudio);
     if (!Report(Parsed))
     {
         return 1;
