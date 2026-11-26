@@ -6,6 +6,10 @@
 #include "IntroCinematicPlayer.generated.h"
 
 class SWidget;
+class SOverlay;
+class UActOneTimeline;
+class FActOnePresentation;
+struct FActOneIntervention;
 class UAudioComponent;
 class USoundWave;
 class UUserWidget;
@@ -24,6 +28,9 @@ public:
     UPROPERTY(BlueprintAssignable, Category = "Intro")
     FIntroFinished OnIntroFinished;
 
+    UPROPERTY(BlueprintAssignable, Category = "Act I")
+    FIntroFinished OnActOneFinished;
+
     virtual void Tick(float DeltaSeconds) override;
 
 private:
@@ -34,6 +41,8 @@ private:
 
     bool PreparePresentation();
     void StartPlayback();
+    void PrepareActOne(SOverlay& Overlay);
+    void TickActOne(double Time);
     void RenderAt(double Time);
     void TraceTimeline(double Time);
 
@@ -48,6 +57,31 @@ private:
 
     UPROPERTY(Transient)
     TArray<TObjectPtr<UUserWidget>> Compositions;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UActOneTimeline> ActOne;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UAudioComponent> ActOneMusic;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UAudioComponent> ActOneAmbience;
+
+    UPROPERTY(Transient)
+    TObjectPtr<UAudioComponent> ActOneVoice;
+
+    TSharedPtr<FActOnePresentation> ActOneView;
+    const FActOneIntervention* ActOneVoiceLine = nullptr;
+    bool bActOneRunning = false;
+    bool bCouncilStarted = false;
+    bool bOdeStarted = false;
+    float VoiceMusicGain = 1.0f;
+    double PreviousActOneTime = 0.0;
+    TArray<double> ActOneTraceTimes;
+    TSet<FName> ActOneTracedWaves;
+    int32 ActOneNextTrace = 0;
+    int32 ActOneNextCapture = 0;
+    FString ActOneCaptureDirectory;
 
     TSharedPtr<SWidget> Presentation;
 

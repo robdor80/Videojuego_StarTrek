@@ -1,4 +1,6 @@
 #include "IntroCinematicPlayer.h"
+#include "ActOnePresentation.h"
+#include "ActOneTimeline.h"
 
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
@@ -26,6 +28,19 @@ AIntroCinematicPlayer::AIntroCinematicPlayer()
     MusicPlayer->bAutoActivate = false;
     MusicPlayer->bAllowSpatialization = false;
     MusicPlayer->bIsUISound = true;
+
+    const auto CreateActOnePlayer = [this](const TCHAR* Name)
+    {
+        UAudioComponent* Player = CreateDefaultSubobject<UAudioComponent>(Name);
+        Player->SetupAttachment(RootComponent);
+        Player->bAutoActivate = false;
+        Player->bAllowSpatialization = false;
+        Player->bIsUISound = true;
+        return Player;
+    };
+    ActOneMusic = CreateActOnePlayer(TEXT("ActOneMusic"));
+    ActOneAmbience = CreateActOnePlayer(TEXT("ActOneAmbience"));
+    ActOneVoice = CreateActOnePlayer(TEXT("ActOneVoice"));
 }
 
 void AIntroCinematicPlayer::BeginPlay()
@@ -145,6 +160,7 @@ bool AIntroCinematicPlayer::PreparePresentation()
         return false;
     }
 
+    PrepareActOne(*Overlay);
     Presentation = Overlay;
     GetWorld()->GetGameViewport()->AddViewportWidgetContent(Overlay, 100);
     return true;
@@ -182,6 +198,11 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
     }
 
     const double Elapsed = FPlatformTime::Seconds() - StartTime;
+    if (bActOneRunning)
+    {
+        TickActOne(Elapsed - IntroTimeline::End);
+        return;
+    }
     RenderAt(FMath::Min(Elapsed, IntroTimeline::End));
     TraceTimeline(Elapsed);
     if (!CaptureDirectory.IsEmpty())
@@ -198,7 +219,18 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
     if (Elapsed >= IntroTimeline::End)
     {
         MusicPlayer->Stop();
-        SetActorTickEnabled(false);
+        if (ActOne)
+        {
+            bActOneRunning = true;
+            ActOneMusic->SetVolumeMultiplier(ActOne->LondonGain);
+            ActOneMusic->Play(Elapsed - IntroTimeline::End);
+            UE_LOG(LogIntroCinematic, Display, TEXT("Act I started at intro time %.6f s"), Elapsed);
+            TickActOne(Elapsed - IntroTimeline::End);
+        }
+        else
+        {
+            SetActorTickEnabled(false);
+        }
         UE_LOG(LogIntroCinematic, Display, TEXT("Finished at %.6f s. Music playing: %d"),
             Elapsed, MusicPlayer->IsPlaying());
         OnIntroFinished.Broadcast();
@@ -225,6 +257,9 @@ void AIntroCinematicPlayer::TraceTimeline(double Time)
 void AIntroCinematicPlayer::EndPlay(const EEndPlayReason::Type Reason)
 {
     MusicPlayer->Stop();
+    ActOneMusic->Stop();
+    ActOneAmbience->Stop();
+    ActOneVoice->Stop();
     if (Presentation.IsValid())
     {
         if (UGameViewportClient* Viewport = GetWorld()->GetGameViewport())
@@ -233,5 +268,6 @@ void AIntroCinematicPlayer::EndPlay(const EEndPlayReason::Type Reason)
         }
         Presentation.Reset();
     }
+    ActOneView.Reset();
     Super::EndPlay(Reason);
 }
