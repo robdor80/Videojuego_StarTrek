@@ -28,7 +28,23 @@ El [Plan Maestro HOST v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) especifica **H
 | Órdenes nave | `sistemas/gameplay/orders/starship_order_pipeline.md` | Intención ≠ validación ≠ ejecución ≠ consecuencia; un recibo F05 ISSUED no autoriza anunciar movimiento. |
 | Sensores F06 | referencia F06, PR Draft #213 y #215 al 27-11-2026 | Jugabilidad pendiente de aceptación presencial del propietario; H09-P02 **BLOQUEADA**. No asumir observaciones vivas de F06. |
 
-La auditoría de repositorio identifica **superficies de integración**, no inspecciona ni certifica el motor interno de movimiento del checkout externo CoreRPG. Su existencia y contrato deben ser comprobados por Codex **antes de escribir el adaptador**.
+### Auditoría adicional del CoreRPG fijado y de los laboratorios F02/F03
+
+La auditoría se ha extendido directamente al repositorio preexistente [`robdor80/CoreRPG`](https://github.com/robdor80/CoreRPG) en el **commit exacto `76a7b7b485616d8c4994f384a90f123bf333591d`**, consultado por GitHub en modo lectura. Se examinó el árbol completo de nombres (205 rutas, sin truncamiento) y las interfaces públicas relevantes:
+
+| Fuente en CoreRPG fijado | Capacidad realmente publicada | Límite naval |
+| --- | --- | --- |
+| [`include/corerpg/world_state.hpp`](https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/world_state.hpp) | `WorldState`, `container_of`, `place_entity`, `remove_containment`, revisiones, relaciones, conocimiento por observador | La contención entre entidades **no es una posición continua, rumbo, velocidad ni trayecto físico de nave** |
+| [`include/corerpg/action.hpp`](https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/action.hpp) | `ActionEngine::process`; variantes cerradas **PlaceEntity, RemoveContainment, AddRelation, RemoveRelation, StreamRoll** | **No publica operaciones Warp/Impulse/NavRoute/ShipPosition** |
+| [`include/corerpg/timeline.hpp`](https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/timeline.hpp) | `Timeline::schedule`, `advance`, `TimedAction`; eventos genéricos ordenados por tick; agenda limitada a 4.096 registros | El tiempo Core sí es reutilizable, pero **no existe avance automático de segmentos de vuelo** por introducir una `TimedAction` |
+| [`docs/phases/f03-authoritative-timeline.md`](https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/docs/phases/f03-authoritative-timeline.md) | Persiste `WorldState`, RNG, cronología y acciones de tiempo mediante `CampaignPersistence` | El propio documento excluye explícitamente **galactic simulator/travel model** del alcance de esa fase |
+| `desarrollo/integration/f03/include/f03_bridge.h` de Star Trek | `f03_schedule_route` y `f03_marker_state`, en **laboratorio experimental independiente** | Ruta de sectores con llegadas programadas: NO sistema de vuelo warp; no integrarla como motor HOST producto |
+| `desarrollo/integration/f02/include/f02_bridge.h` de Star Trek | `f02_place` de un sujeto en contenedor | Ejemplo de contención Core, NO cambio continuo de posición naval |
+
+**Conclusión demostrada para las API públicas del pin inspeccionado:** CoreRPG ofrece primitivas fiables para hechos, contención, conocimiento, acciones, tiempo y persistencia, **pero no expone una API de vuelo naval, solver espacial, velocidad warp o movimiento progresivo**. Esto no descarta código de dominio aún no publicado fuera de esas superficies; a fecha de auditoría no existe prueba que autorice afirmar su disponibilidad. No confundir `f03_schedule_route` sintética ni `F04_MOVE` de acciones F04 con un motor de vuelo.
+
+**Consecuencia técnica:** la primera tarea de Codex no consiste en reexplorar aleatoriamente el repositorio, sino en evaluar si existe una **ampliación mínima de dominio naval** que use el único WorldState/tick Core, respete el pin y su política de cambios, y no introduzca estado paralelo. Si requiere modificar el Core fijado o ampliar ABI, elevar primero la decisión arquitectónica al propietario. No programar warp por aproximación ni fabricar el cambio de localización.
+
 
 ## 2. Frontera de responsabilidad: un solo universo
 
@@ -106,7 +122,7 @@ N3-01–17 son independientes **de F06**, pero N3-15–17 siguen **condicionados
 
 ## 7. Riesgos, decisiones y prohibiciones
 
-- **R1 — alta:** El pin CoreRPG y las ABI F04/F05 inspeccionadas **no acreditan movimiento naval**. La primera tarea de Codex debe verificar semántica en el checkout limpio; si falta, proponer contrato del dominio y dependencia separada, **sin alterar el Core fijado**.
+- **R1 — alta:** El pin CoreRPG y las ABI F04/F05 inspeccionadas **no acreditan movimiento naval**. Las API públicas del Core fijado se han auditado y **no publican vuelo naval**; Codex debe proponer la extensión de dominio mínima y dependencias, **sin alterar el Core fijado**.
 - **R2 — alta:** Confundir `F04_MOVE` de F04 con traslado de nave, o F05 `F04_SCAN` con una orden de warp. Prohibido.
 - **R3 — alta:** Dos posiciones, avance fantasma por tick UE/H08, duplicados de resultado al reintentar, teletransporte en UI. Prohibido.
 - **R4 — alta:** Rutas y contactos con verdad no descubierta o permiso fabricado. Respuesta filtrada y revisión siempre desde fuente auténtica.
