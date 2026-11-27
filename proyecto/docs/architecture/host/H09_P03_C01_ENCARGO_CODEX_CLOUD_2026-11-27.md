@@ -14,7 +14,7 @@ REPOSITORIO: robdor80/Videojuego_StarTrek
 TRABAJO: Codex Cloud sobre rama propia + PR Draft. No fusionar.
 
 Objetivo de esta primera intervención:
-1. Inspeccionar de verdad el CoreRPG fijado por HOST en 76a7b7b485616d8c4994f384a90f123bf333591d, las costuras F04/F05, HOST H02-H08 y el adaptador UE real. Identificar con ruta/símbolo/contrato si Core ya posee posición naval, solución de ruta, motor de desplazamiento (impulso/warp/segmentos), ticks de viaje, persistencia y control de permisos. No inferir capacidades por nombres como F04_MOVE.
+1. PARTIR DE LA AUDITORÍA YA HECHA por ChatGPT del CoreRPG pin 76a7b7b485616d8c4994f384a90f123bf333591d: include/corerpg/{world_state,action,timeline}.hpp muestra WorldState con contención/relaciones/conocimiento, ActionEngine con cinco operaciones genéricas, y Timeline con acciones persistentes; no se publican acciones de warp/impulso ni un solver naval. F03 f03_schedule_route es un fixture con cambios de sector, NO vuelo físico. NO gastar cuota repitiendo la lectura completa de estos archivos. Profundizar solo en costuras no cubiertas o potenciales implementaciones de dominio externas, señalando ruta/símbolo real y evidencia; confirmar cómo incorporar navegación como dominio sin segundo WorldState o reloj ni romper el pin.
 2. Leer obligatoriamente AGENTS.md y:
    - proyecto/docs/architecture/host/H09_P03_AUDITORIA_ARQUITECTURA_PLAN_2026-11-27.md
    - proyecto/docs/architecture/host/H09_P03_CONTRATO_NAVEGACION_CONN_v1.json
@@ -24,7 +24,7 @@ Objetivo de esta primera intervención:
    - sistemas/gameplay/navigation/navigation_state.json
    - sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_navigation_route_proposal_v0.1.json
    - desarrollo/integration/f05/include/f05_orders.h
-3. Comprobar si la lectura de posición propia y la propuesta de ruta sobre destinos YA CONOCIDOS pueden implementarse directamente mediante una API real del dominio, sin F06 y sin duplicar WorldState. Verificar explícitamente qué datos conocidos están disponibles en tiempo de ejecución y cuáles solo existen como documentos JSON.
+3. Distinguir si la lectura de localización propia discreta (contención Core) y la propuesta de ruta sobre destinos YA CONOCIDOS pueden implementarse mediante una API de dominio de producto ya aprobada; no confundir una ubicación en sector con trayectoria continua. Verificar qué datos están realmente cargados en runtime y cuáles solo aparecen en JSON de autoría.
 4. Si, Y SOLO SI, esas APIs autoritativas ya están disponibles en el pin aprobado y el cambio es aditivo, implementar el adaptador C++ interno mínimo de consulta/propuesta con:
    - sesión/generación/identidad H03, hilo Core dueño, contexto de nave/puesto y lectura por observador;
    - distinción estricta entre propuesta y ejecución;
@@ -33,7 +33,7 @@ Objetivo de esta primera intervención:
    - sin ABI pública/UE nueva en esta primera intervención salvo justificación previa en informe;
    - pruebas nativas independientes de F06, Windows/Linux cuando sea posible.
    No construir un pathfinder ni motor de movimiento provisional, ni cargar JSON de referencia como WorldState de producción.
-5. Si no existe la capacidad real en Core, DETENER la implementación funcional y entregar un INFORME DE BLOQUEO POR DEPENDENCIA con:
+5. Si, como indica la auditoría de API pública, falta la capacidad de rutas/posición naval en el dominio del pin, DETENER la implementación funcional y entregar un INFORME DE BLOQUEO POR DEPENDENCIA con:
    - rutas y símbolos inspeccionados, evidencia positiva/negativa,
    - interfaces mínimas que el Core necesitaría publicar,
    - opciones de integración y consecuencias para el pin de Core, sin modificarlo,
