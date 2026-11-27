@@ -1,42 +1,50 @@
-# H07 — Auditoría independiente de reconciliación con H08 (27-11-2026)
+# HOST H07 — Acta de integración y cierre técnico (27-11-2026)
 
-> **Acta de seguimiento previa al cierre.** No es una certificación, ni un acta de aceptación visual. Se actualizará con SHAs de fusión y resultados concluyentes antes de presentarla como acta de cierre. Ninguna prueba no ejecutada puede pasar a PASS.
+**Estado: IMPLEMENTADO, PROBADO en CI y FUSIONADO en `main`; CERTIFICACIÓN PRESENCIAL PENDIENTE.** La certificación integral de la fase **no** se declara. El presente documento registra exactamente lo que se ha verificado y lo que aún requiere el MSI.
 
-## Alcance y autoridad
+## Alcance cerrado técnicamente
 
-La entrega H07 consume expedientes y ascensos **ya confirmados** por F11/CoreRPG mediante una proyección de lectura privada al HOST y un adaptador C v1 consumido por Unreal. El emisor institucional productivo **no existe todavía**: las operaciones de emisión siguen en `SERVICE_UNAVAILABLE`. Un candidato Academy no se convierte en oficial ni obtiene permiso F05/F11. CoreRPG mantiene la autoridad. La ABI H05 y Academy v2 y el pin CoreRPG `76a7b7b485616d8c4994f384a90f123bf333591d` se conservan en la entrega examinada.
+- **H07-P01:** auditoría de frontera UE/HOST/F11 y contratos.
+- **H07-P02:** admisión de identidad, procedencia y validación negativa de órdenes institucionales no habilitadas.
+- **H07-P03:** lectura del propio expediente profesional y promociones ya confirmadas por F11/CoreRPG, con invalidación tras SAVE/RESTORE/CLOSE.
+- **H07-P04:** matriz de conformidad y comprobaciones de no mutación.
+- **H07-P05:** integración de la consulta autorizada en Unreal 5.8.4, proyección Slate de solo lectura y pruebas automatizadas.
 
-## Evidencia histórica ya auditada (23-11-2026)
+El HOST **no** emite ascensos, rangos, comisiones ni hechos institucionales. El emisor F11 de producto continúa en `SERVICE_UNAVAILABLE` y está fuera del alcance de H07. La autoridad de estado y cronología permanece en CoreRPG; la identidad local y el hilo propietario no se eluden. ABI H05/Academy y pin CoreRPG `76a7b7b485616d8c4994f384a90f123bf333591d` preservados en las comprobaciones de las entregas.
 
-| PR | Entrega | SHA previamente probado | Evidencia |
-| --- | --- | --- | --- |
-| [#203](https://github.com/robdor80/Videojuego_StarTrek/pull/203) | H07-P01/P02/P04 | `94fbd7f593ec3d7d753b753a1200deef40a5f683` | Contratos y frontera estáticos, pruebas negativas P02, CTest nativo y producto |
-| [#204](https://github.com/robdor80/Videojuego_StarTrek/pull/204) | H07-P03 lector nativo | `3eb8ca458f64785741fbb1167ae49422a7c67042` | 26/26 jobs en 7 workflows, CTest 314/314 por SO, 159/159 ASan/UBSan; auditoría independiente |
-| [#205](https://github.com/robdor80/Videojuego_StarTrek/pull/205) | H07-P05 Unreal y corrección H06 | `462d2dbd0447fbe5efd70bf4f0e23e0f484442f6` | 7/7 jobs; 315/315 Linux/Windows, 160/160 sanitizers; manifiesto MSI con 29/29 ejecuciones Automation según Codex; auditoría independiente favorable con reserva visual |
+## Fusiones verificadas
 
-La evidencia del MSI del 23/11 está asociada al **código de aquella fecha**, no automáticamente a la revisión de integración de noviembre 27. La prueba visual humana de la ventana H06 y de H07 seguía pendiente. En H06, el cliente de modo ventana calculado a 150 % es `2538×1472` dentro de la zona de trabajo, no un cliente literal 2560×1600. No se ha acreditado nueva pulsación física del ratón, foco, Escape, Alt+Intro o Alt+F4.
+| Orden | PR | Contenido | HEAD H07 validado en CI | Commit de fusión en `main` |
+| --- | --- | --- | --- | --- |
+| 1 | [#203](https://github.com/robdor80/Videojuego_StarTrek/pull/203) | P01/P02/P04 | `b159019eeb40a39457dbb90e498f233788fef9ec` | `5b3f242639278fbe7b184488a1ba018f3636f4a4` |
+| 2 | [#204](https://github.com/robdor80/Videojuego_StarTrek/pull/204) | P03 | `07bd012422c22a137aff0af0adc0aadec8281342` | `b33a474494ca011b17e8eba6c799fc99a2f745fa` |
+| 3 | [#205](https://github.com/robdor80/Videojuego_StarTrek/pull/205) | P05 y corrección H06 ventana | `9ad935d0976978db6b8463f069834cf04e900018` | `5125d8ace7df655f8a44452d001ab745b37c42fc` |
 
-## Dependencia sobrevenida: H08 ya fusionada
+Las tres PR aparecen en GitHub como **merged**. El orden preserva la dependencia P02 → P03 → P05 y mantiene H08 ya fusionada.
 
-Desde entonces [H08-P01 #207](https://github.com/robdor80/Videojuego_StarTrek/pull/207), [H08-P02 #208](https://github.com/robdor80/Videojuego_StarTrek/pull/208), [H08-P03 #209](https://github.com/robdor80/Videojuego_StarTrek/pull/209) y [H08-P04 #210](https://github.com/robdor80/Videojuego_StarTrek/pull/210) se fusionaron antes de H07. `main` estaba en `e2a3dbe46c6dd395932405abb2abaf0fe9a9b776` al iniciar esta auditoría. La PR #203 no era fusionable directamente por cambios concurrentes en fuentes HOST y CI.
+## Auditoría y resultados contrastados
 
-Para evitar perder eventos, relojes, notificaciones H08 o consultas F11 H07, se han integrado **sin reescribir los pines históricos** en las mismas ramas apiladas, manteniendo `main` intacta hasta CI:
+1. La rama H07 se reconcilió con los cambios previamente fusionados de H08-P01…P04 (PR #207–#210), conservando distribución de eventos F05, notificaciones, reloj Core, respuestas correlacionadas, comprobaciones de identidad, guardado y recuperación.
+2. En la primera integración se detectó un **FAIL** por falta de símbolo `gateway_test_after_clock(F04Session*)` en fixtures nativas independientes; se corrigió solo el adaptador de prueba H07. No se reescribieron reglas del reloj, autoridad institucional, API histórica ni pines Core.
+3. **PR #203 integrada:** 5/5 jobs de `HOST native H02-H06` completados correctamente en el SHA conciliado, más contratos H01/H07.
+4. **PR #204 integrada:** 7/7 workflows de Actions completados correctamente en el SHA `07bd0124…`, con 5/5 jobs del workflow HOST nativo y 10/10 de integración F05.
+5. **PR #205 integrada:** 7/7 workflows de integración (PR temporal #223) completados correctamente en el SHA `9ad935d0…`, más 3/3 workflows específicos de la PR #205; 5/5 jobs del workflow HOST nativo y 10/10 de integración F05. Incluye F04, F11 y pruebas de producto.
+6. Evidencia histórica del MSI para el SHA original `462d2dbd…`: informe Codex de 29/29 ejecuciones automatizadas de Unreal y paquete Win64, documentado en `H07_P05_EVIDENCIAS_MSI_2026-11-23.json`. Esta evidencia **no se atribuye** automáticamente al HEAD fusionado.
+7. Tras las fusiones, las nuevas ejecuciones de Actions de `main` comenzaron automáticamente: contratos estáticos H07 PASS; las regresiones HOST de los commits de fusión #204/#205 **estaban en curso cuando se redactó esta acta**. Consultar su estado definitivo en Actions; no se registran como superadas aquí.
 
-- #203: `b159019eeb40a39457dbb90e498f233788fef9ec`.
-- #204: `07bd012422c22a137aff0af0adc0aadec8281342`.
-- #205: `9ad935d0976978db6b8463f069834cf04e900018`.
+## Corrección asociada de H06
 
-Las verificaciones nuevas se solicitan mediante PR temporales [#221](https://github.com/robdor80/Videojuego_StarTrek/pull/221), [#222](https://github.com/robdor80/Videojuego_StarTrek/pull/222) y [#223](https://github.com/robdor80/Videojuego_StarTrek/pull/223), que **no deben fusionarse**. En la primera ronda combinada, CTest H07-P02 detectó una referencia de enlazado `gateway_test_after_clock(F04Session*)` introducida por H08 en el núcleo: se corrigió en los **fixtures H07 independientes**, sin cambiar el reloj ni la autoridad del producto. Ese primer resultado fue **FAIL**, no PASS. Nuevas ejecuciones CI están solicitadas para los SHAs corregidos y deben verificarse antes de fusionar.
+La PR #205 contiene también la corrección de la geometría de ventana Windows a 150 % DPI. La dimensión física anterior incorrecta era 3840×2400; el cliente ajustado documentado es **2538×1472** dentro del área disponible. Mantiene el modo ventana, sin forzar pantalla completa. **Código FUSIONADO, aceptación visual en MSI PENDIENTE.** No reemplaza retroactivamente el certificado limitado M1 de H06.
 
-## Estado de cierre (pendiente de completar)
+## Pendientes explícitos
 
-| Puerta | Estado previo a fusión |
-| --- | --- |
-| Auditoría original #203–#205 | FAVORABLE dentro de sus SHAs originales |
-| Reconciliación H07+H08 | PREPARADA en ramas, pendiente de CI concluyente |
-| Fusiones en `main` | NO REALIZADAS en esta revisión preliminar |
-| Producto F11 emisor | BLOQUEADO / `SERVICE_UNAVAILABLE` |
-| Aceptación visual/controles MSI actual | **NO EJECUTADA** por indisponibilidad física del usuario |
-| Certificación integral H07 | **NO CERTIFICADA** |
+- **NO EJECUTADO presencialmente:** en el MSI, menú a 1920×1080, modo ventana solicitado a 2560×1600 y pantalla completa, centrado, ratón, teclado, foco, Escape y Alt+Intro.
+- **NO EJECUTADO presencialmente:** vista H07 de expediente propio con los estados permitidos y denegados, y verificación tras guardar, restaurar y cerrar. Usar únicamente guardados de laboratorio; no considerar fixture una comisión real del jugador.
+- **NO CERTIFICADO:** emisor productivo F11 de ascensos ni autoridad institucional de escritura, expresamente fuera del alcance implementado.
+- **NO CERTIFICADO aún:** aceptación visual de H07/H06 ni integración manual final contra el HEAD fusionado `5125d8ac…`.
 
-**Regla de cierre:** comprobar CI verde en la composición, fusionar #203 → #204 → #205 después de corregir sus bases, actualizar SHAs y resultados reales de fusión y concluir expresamente un alcance técnico; dejar H07 pendiente de aceptación humana/Unreal final donde no exista evidencia del SHA fusionado. No transformar el presente informe preliminar en certificación por redacción.
+### Dictamen
+
+**H07 queda integrada y cerrada a nivel de implementación técnica de lectura y denegación, con pruebas CI históricas y conciliadas favorables y fusiones verificadas.** Su **certificación final se mantiene abierta** hasta superar la validación del MSI y registrar evidencia de esa ejecución. No existe autorización para presentar como PASS una prueba física no realizada.
+
+La documentación de este cierre no amplía las competencias institucionales del HOST ni altera CoreRPG.
