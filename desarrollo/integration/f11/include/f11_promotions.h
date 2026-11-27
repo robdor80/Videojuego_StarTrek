@@ -43,7 +43,9 @@ typedef struct {
  * preconditions, not semantic payload. Rebind subject after loading.
  * Denials and exceptions never publish changes, including denial audit events.
  */
+#ifndef F11_HOST_READ_ONLY
 F04_API uint32_t f11_commit_promotion(F04Session*,const F11PromotionRequest*,F11PromotionReceipt*);
+#endif
 /* Subject-only diagnostic projections for the trusted Host. Not NPC knowledge. */
 F04_API uint32_t f11_personnel(F04Session*,F04Ref subject,F11PersonnelView*);
 F04_API uint32_t f11_promotion(F04Session*,F04Ref subject,uint64_t event,F11PromotionView*);

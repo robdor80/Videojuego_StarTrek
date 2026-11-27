@@ -20,4 +20,10 @@ std::uint32_t advance(F04Session*, F04Ref, const ClockIntent&, NativeClockReport
     report = {};
     return F04_INTERNAL;
 }
+Outcome institutional_read(F04Session*, F04Ref, const InstitutionalRequest&,
+                           std::optional<InstitutionalViewV1>& view) noexcept
+{
+    view.reset();
+    return {Error::SERVICE_UNAVAILABLE};
+}
 }

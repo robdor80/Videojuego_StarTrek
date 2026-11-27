@@ -215,14 +215,20 @@ struct SessionOwner::Impl {
     struct PollNotifications { Generation generation; std::uint64_t subscription, correlation; std::promise<NotificationBatchResult> reply; };
     struct AckEvents { Generation generation; std::uint64_t subscription, event_id; std::promise<Result> reply; };
     struct AdvanceClock { Generation generation; ClockIntent intent; std::uint64_t correlation; std::promise<ClockResult> reply; };
+    struct InstitutionalRead {
+        Generation generation;
+        detail::InstitutionalRequest request;
+        std::promise<detail::InstitutionalResult> reply;
+        std::uint64_t epoch = 0;
+    };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead,
                                  SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead,
                                  SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots>;
@@ -267,11 +273,16 @@ struct SessionOwner::Impl {
     struct CatalogCursor { std::uint32_t token; detail::SlotPosition after; };
     std::deque<CatalogCursor> catalog_cursors;
     std::uint64_t catalog_epoch=0;
+    std::uint64_t institutional_epoch=0;
     std::string persistent_id;
     Provenance provenance=Provenance::REJECTED;
     std::thread owner;
 
     explicit Impl(StorageConfig config) : store(std::move(config)),owner([this] { run(); }) {}
+
+    template<class Item>
+    static constexpr bool correlated = std::is_same_v<Item, Dispatch> ||
+                                       std::is_same_v<Item, InstitutionalRead>;
 
     ~Impl()
     {
@@ -308,7 +319,7 @@ struct SessionOwner::Impl {
         provenance=Provenance::REJECTED;
         for (auto& request : requests) {
             std::visit([](auto& item) {
-                if constexpr (std::is_same_v<std::decay_t<decltype(item)>, Dispatch>)
+                if constexpr (correlated<std::decay_t<decltype(item)>>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.request.correlation});
                 else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.correlation});
@@ -350,10 +361,11 @@ struct SessionOwner::Impl {
             if constexpr (std::is_same_v<Item, Dispatch> ||
                           std::is_same_v<Item, SubscribeEvents> || std::is_same_v<Item, PollEvents> ||
                           std::is_same_v<Item, PollNotifications> ||
-                          std::is_same_v<Item, AdvanceClock>) {
+                          std::is_same_v<Item, AdvanceClock> ||
+                          std::is_same_v<Item, InstitutionalRead>) {
                 std::promise<Reply> promise;
                 auto future = promise.get_future();
-                if constexpr (std::is_same_v<Item, Dispatch>)
+                if constexpr (correlated<Item>)
                     promise.set_value({error, {}, request.request.correlation});
                 else if constexpr (std::is_same_v<Item, AdvanceClock>)
                     promise.set_value({error, {}, request.correlation});
@@ -369,14 +381,19 @@ struct SessionOwner::Impl {
                       std::is_same_v<Item, PollEvents> ||
                       std::is_same_v<Item, PollNotifications> ||
                       std::is_same_v<Item, AckEvents> ||
-                      std::is_same_v<Item, AdvanceClock>) {
+                      std::is_same_v<Item, AdvanceClock> ||
+                          std::is_same_v<Item, InstitutionalRead>) {
             if (binding != Binding::BOUND)
                 return reject(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
         }
         if (requests.size() == max_requests) {
             return reject(Error::CAPACITY_LIMIT);
         }
-        if constexpr (std::is_same_v<Item, Save>) reset_catalog();
+        if constexpr (std::is_same_v<Item, Save>) {
+            reset_catalog();
+            ++institutional_epoch;
+        }
+        if constexpr (std::is_same_v<Item, InstitutionalRead>) request.epoch = institutional_epoch;
         auto reply = request.reply.get_future();
         requests.emplace_back(std::move(request));
         work.notify_one();
@@ -989,6 +1006,44 @@ struct SessionOwner::Impl {
         request.reply.set_value(response);
     }
 
+    Error institutional_admission(Generation requested, std::uint64_t epoch) const noexcept
+    {
+        if (const auto error = admission(requested); error != Error::OK) return error;
+        if (epoch != institutional_epoch) return Error::GENERATION_EXPIRED;
+        if (binding != Binding::BOUND)
+            return binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND;
+        if (provenance != Provenance::CREATED_LOCALLY && provenance != Provenance::KNOWN_LOCAL)
+            return Error::SAVE_UNTRUSTED;
+        return Error::OK;
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 InstitutionalRead& request)
+    {
+        const auto fail = [&](Error error) {
+            request.reply.set_value({error, {}, request.request.correlation});
+        };
+        if (const auto error = institutional_admission(request.generation, request.epoch); error != Error::OK) {
+            fail(error);
+            return;
+        }
+        const auto principal = player;
+        std::optional<detail::InstitutionalViewV1> view;
+        lock.unlock();
+        const auto outcome = session.institutional_read(principal, request.request, view);
+        lock.lock();
+        if (const auto error = institutional_admission(request.generation, request.epoch); error != Error::OK) {
+            fail(error);
+            return;
+        }
+        if (outcome.error != Error::OK || !view) {
+            fail(outcome.error == Error::OK ? Error::INTERNAL_ERROR : outcome.error);
+            return;
+        }
+        request.reply.set_value({Error::OK, request.generation, request.request.correlation,
+                                 std::move(view), request.epoch});
+    }
+
 #ifdef TREK_HOST_GATEWAY_TESTING
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, TestVisit& request)
     {
@@ -1230,6 +1285,28 @@ std::future<ClockResult> SessionOwner::advance_clock(
         Impl::AdvanceClock{generation, intent, correlation, {}});
 }
 
+
+std::future<detail::InstitutionalResult> detail::InstitutionalQueries::career(
+    SessionOwner& owner, Generation generation, std::uint64_t correlation)
+{
+    return owner.impl_->enqueue<InstitutionalResult>(
+        SessionOwner::Impl::InstitutionalRead{generation, {InstitutionalKind::CAREER, 0, correlation}, {}});
+}
+
+std::future<detail::InstitutionalResult> detail::InstitutionalQueries::promotion(
+    SessionOwner& owner, Generation generation, std::uint64_t event_id, std::uint64_t correlation)
+{
+    return owner.impl_->enqueue<InstitutionalResult>(
+        SessionOwner::Impl::InstitutionalRead{generation, {InstitutionalKind::PROMOTION, event_id, correlation}, {}});
+}
+
+bool detail::InstitutionalQueries::is_current(const SessionOwner& owner, const InstitutionalResult& result)
+{
+    std::lock_guard lock(owner.impl_->mutex);
+    return result.error == Error::OK && result.view &&
+           owner.impl_->institutional_admission(result.generation, result.persistence_epoch) == Error::OK;
+}
+
 #ifdef TREK_HOST_GATEWAY_TESTING
 std::future<Result> GatewayTestAccess::visit(SessionOwner& owner, Generation generation, std::function<void(F04Session*)> visit)
 {
@@ -1267,6 +1344,7 @@ std::future<Result> SessionOwner::restore(Generation generation,SlotAddress addr
     impl_->academy_intent.reset();
     Impl::Load request{generation,std::move(address),active,{}};auto result=request.reply.get_future();
     impl_->reset_catalog();
+    ++impl_->institutional_epoch;
     impl_->biography_activation.reset();
     impl_->requests.emplace_back(std::move(request));if(!active)impl_->state=State::LOADING;
     impl_->work.notify_one();return result;

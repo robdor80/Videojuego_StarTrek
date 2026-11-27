@@ -82,6 +82,16 @@ jobs:
         if: runner.os == 'Linux'
         shell: bash
         run: sudo apt-get update -qq && sudo apt-get install -y libcurl4-openssl-dev pkg-config
+      - name: Isolated F11 regression and confirmed query fixture
+        run: |
+          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
+          $env:TMPDIR = Join-Path $lab 'tmp'
+          New-Item -ItemType Directory -Path $env:TMPDIR -Force | Out-Null
+          $env:TEMP = $env:TMPDIR
+          $env:TMP = $env:TMPDIR
+          python desarrollo/integration/f11_host/run_native.py --core-source "$lab/core" --output "$lab/f11" --parallel 3 2>&1 |
+            Tee-Object -FilePath "$lab/f11-driver.log"
+          exit $LASTEXITCODE
       - name: Build and test HOST
         env:
           HOST_SUITE: ${{ matrix.suite }}
@@ -97,9 +107,11 @@ jobs:
           $env:TEMP = $temp
           $env:TMP = $temp
           $env:F04_TEST_TEMP_ROOT = $temp
+          $env:TREK_HOST_H07_FIXTURE = Join-Path $lab 'f11/build/f11/process'
           $flags = @('-DTREK_HOST_TESTS=ON', "-DCORERPG_SOURCE_DIR=$core", '-DCMAKE_BUILD_TYPE=Release')
           if ($IsWindows) { $flags += @('-A', 'x64') }
-          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests', 'host_h07_admission_tests',
+          $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
+                       'host_h07_admission_tests', 'host_h07_query_tests',
                        'host_event_delivery_unit_tests', 'host_notification_projection_unit_tests',
                        'host_abi_tests', 'host_academy_abi_tests', 'host_academy_abi_faults',
                        'host_academy_feasibility_tests', 'host_academy_candidate_tests',
@@ -135,16 +147,6 @@ jobs:
         run: |
           python desarrollo/tools/validation/test_host_h01_contracts.py 2>&1 |
             Tee-Object -FilePath laboratorios/host/ia03b02/h01.log
-          exit $LASTEXITCODE
-      - name: Isolated F11 regression
-        if: matrix.suite == 'native' && !cancelled()
-        run: |
-          $lab = Join-Path $PWD 'laboratorios/host/ia03b02'
-          $env:TMPDIR = Join-Path $lab 'tmp'
-          $env:TEMP = $env:TMPDIR
-          $env:TMP = $env:TMPDIR
-          python desarrollo/integration/f11_host/run_native.py --core-source "$lab/core" --output "$lab/f11" --parallel 3 2>&1 |
-            Tee-Object -FilePath "$lab/f11-driver.log"
           exit $LASTEXITCODE
       - uses: actions/upload-artifact@v4
         if: always()

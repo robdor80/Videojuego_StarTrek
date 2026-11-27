@@ -132,6 +132,14 @@ Outcome NativeSession::advance(F04Ref player, const ClockIntent& request,
     return outcome;
 }
 
+Outcome NativeSession::institutional_read(F04Ref player, const InstitutionalRequest& request,
+                                          std::optional<InstitutionalViewV1>& view) const noexcept
+{
+    view.reset();
+    if (!session_) return {Error::SERVICE_UNAVAILABLE};
+    return bridge::institutional_read(session_, player, request, view);
+}
+
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept
 {
     return normalize(bridge::persistent_identity(session_,identity,player));

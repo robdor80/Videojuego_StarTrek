@@ -7,6 +7,7 @@
 #include <optional>
 #include "slot_store.h"
 #include "gateway.h"
+#include "institutional_queries.h"
 
 namespace trek::host::detail {
 
@@ -54,6 +55,8 @@ public:
     Outcome events(F04Ref player, std::uint64_t order, std::uint64_t after,
                    NativeEventPage& page) noexcept;
     Outcome advance(F04Ref player, const ClockIntent& intent, NativeClockReport& report) noexcept;
+    Outcome institutional_read(F04Ref player, const InstitutionalRequest&,
+                               std::optional<InstitutionalViewV1>&) const noexcept;
 #ifdef TREK_HOST_GATEWAY_TESTING
     void test_visit(const std::function<void(F04Session*)>& visit) { visit(session_); }
 #endif
@@ -71,6 +74,8 @@ std::uint32_t dispatch(F04Session*, F04Ref, const GatewayRequest&, OperationResu
 std::uint32_t events(F04Session*, F04Ref, std::uint64_t order,
                      std::uint64_t after, NativeEventPage& page) noexcept;
 std::uint32_t advance(F04Session*, F04Ref, const ClockIntent&, NativeClockReport&) noexcept;
+Outcome institutional_read(F04Session*, F04Ref, const InstitutionalRequest&,
+                           std::optional<InstitutionalViewV1>&) noexcept;
 const char* core_sha() noexcept;
 std::uint32_t persistent_identity(F04Session*,PersistentIdentity&,F04Ref&) noexcept;
 std::uint32_t snapshot(F04Session*,const std::filesystem::path&,const CampaignId&) noexcept;
