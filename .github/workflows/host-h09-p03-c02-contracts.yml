@@ -1,0 +1,39 @@
+name: HOST H09-P03-C02 - domain design contracts
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/H09_P03_C02_*"
+      - "desarrollo/tools/validation/test_host_h09_p03_c02_contract.py"
+      - ".github/workflows/host-h09-p03-c02-contracts.yml"
+      - "proyecto/docs/architecture/host/README.md"
+  push:
+    branches:
+      - "docs/host-h09-p03-c02-ubicacion-carta-20261127"
+    paths:
+      - "proyecto/docs/architecture/host/H09_P03_C02_*"
+      - "desarrollo/tools/validation/test_host_h09_p03_c02_contract.py"
+      - ".github/workflows/host-h09-p03-c02-contracts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  design-contract:
+    name: H09-P03-C02 diseño / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validar C02 documental sin motor naval ni F06
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python desarrollo/tools/validation/test_host_h09_p03_c02_contract.py

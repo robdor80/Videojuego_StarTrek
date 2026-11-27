@@ -74,13 +74,17 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 - Validación estática: `desarrollo/tools/validation/test_host_h09_p01_contract.py` y `.github/workflows/host-h09-p01-contracts.yml`.
 - **H09-P02 no se iniciará ni se considerará desbloqueada antes de la aprobación personal de F06 en el MSI**, y deberá utilizar únicamente la versión finalmente aceptada. Las PR #213 y #215 de F06 continúan Draft a 27-11-2026. La fecha prevista del sábado 28-11-2026 no es una autorización. No se declara F06 jugable, ni H09 operativa/certificada.
 
-## H09-P03 — Navegación y CONN (preparación de ChatGPT)
+## H09-P03 — Navegación y CONN (diseño de producto y dependencias)
 
-- [Auditoría, límites, decisiones y plan P03-A…G](H09_P03_AUDITORIA_ARQUITECTURA_PLAN_2026-11-27.md): separa destinos de carta conocidos de intercepciones dependientes de F06, y diferencia propuesta de orden CONN con resultado Core.
-- [Contrato lógico JSON y 24 escenarios futuros](H09_P03_CONTRATO_NAVEGACION_CONN_v1.json): operaciones `NAVIGATION_ROUTE_PROPOSE` y `CONN_MANEUVER_ORDER` de H09-P01; **no ABI ni runtime**. Incluye 17 escenarios independientes de F06 y 7 supeditados a F06; las pruebas de movimiento también requieren un motor Core verificado.
-- [Primer encargo Codex Cloud — Sol 6.2 Medium](H09_P03_C01_ENCARGO_CODEX_CLOUD_2026-11-27.md): solo preparación, **no ejecutado**; investigar primero la capacidad naval del Core fijado y detenerse si no existe costura autorizada.
-- Validador `desarrollo/tools/validation/test_host_h09_p03_contract.py` y CI `.github/workflows/host-h09-p03-contracts.yml` para coherencia estática en Linux/Windows.
-- **Estado: preparación documental H09-P03-A/B; integración D/E, UE/MSI y certificación P03 pendientes.** H09-P02 sigue BLOQUEADA hasta aprobación presencial de F06; no se inicia H09-P04. El HOST no implementa el movimiento por el mero hecho de que F04 exponga `F04_MOVE`, y F05 nativo solo expone `F04_SCAN` en su primer contrato.
+- [Auditoría y plan P03-A…G](H09_P03_AUDITORIA_ARQUITECTURA_PLAN_2026-11-27.md): propuesta de rutas distinta de orden CONN y movimiento real.
+- [Contrato lógico P03 y 24 escenarios futuros](H09_P03_CONTRATO_NAVEGACION_CONN_v1.json): `NAVIGATION_ROUTE_PROPOSE` y `CONN_MANEUVER_ORDER` siguen **indisponibles en runtime**. Sin ABI nueva ni certificación.
+- [H09-P03-C01 — Informe de factibilidad nativa](H09_P03_C01_FACTIBILIDAD_CORE_2026-11-27.md): **FUSIONADO, PR #231**; pin Core con conocimiento, contención, reloj y persistencia, pero sin ubicación/cartas ni ejecutor naval de producto. Pruebas C01 documentales y de regresión existentes; **no** se probó navegación.
+- [H09-P03-C02 — Diseño de ubicación/carta/propuesta](H09_P03_C02_DISENO_DOMINIO_NAVAL_2026-11-27.md): opción de dominio en composición de producto, sujeta a compatibilidad con esquema y guardado F04.
+- [H09-P03-C02 — Contrato lógico y 14 escenarios **NO EJECUTADOS**](H09_P03_C02_CONTRATO_DOMINIO_NAVAL_v1.json): ubicación discreta Core, conocimiento autorizado, propuesta pura sin mover nave y compatibilidad de partidas viejas.
+- [H09-P03-C02 — Encargo Codex Cloud preparado, Sol 6.2 Medium](H09_P03_C02_ENCARGO_CODEX_CLOUD_2026-11-27.md): P0 de factibilidad; implementar solo dentro de las autorizaciones reales, PR Draft y sin fusión.
+- Validadores de diseño: `desarrollo/tools/validation/test_host_h09_p03_contract.py` y `test_host_h09_p03_c02_contract.py`; CI Linux/Windows. No sustituyen pruebas C++.
+- **Estado:** C01 FUSIONADA; C02 **PREPARACIÓN DOCUMENTAL**. Ubicación y carta no funcionan en HOST; propuestas, órdenes, vuelo y UE pendientes. H09-P02 continúa BLOQUEADA por aceptación F06 en MSI; H09-P04 no iniciada y H09-P03-E/F pendientes.
+
 
 ## Fases y responsables
 

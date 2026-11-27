@@ -1,0 +1,307 @@
+{
+  "spec_version": "1.0.0",
+  "contract_id": "host_h09_p03_c02_authorized_navigation_domain_design",
+  "phase": "H09-P03-C02",
+  "status": "DESIGNED_NOT_RUNTIME",
+  "contract_kind": "INTERNAL_DOMAIN_DESIGN_NO_ABI",
+  "owner": "CoreRPG_CAMPAIGN_PRODUCT_DOMAIN",
+  "pin_core_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "c01_pr": 231,
+  "c01_merged_base": "c65c0a32c4130d9fcf32da1101b975cf8f9c6b26",
+  "scope": {
+    "first_gate": "P0_F04_SCHEMA_SNAPSHOT_COMPATIBILITY",
+    "first_implementation": "READ_OWN_LOCATION_AND_AUTHORIZED_CHART",
+    "next_implementation": "NAVIGATION_ROUTE_PROPOSE_ONLY_IF_DOMAIN_VERIFIED",
+    "out_of_scope": [
+      "CONN_MANEUVER_ORDER",
+      "WARP_IMPULSE_EXECUTION",
+      "SHIP_MOVEMENT_TIMELINE",
+      "F06_INTERCEPTIONS",
+      "UE5_MSI",
+      "H09_P02",
+      "H09_P04",
+      "CORE_PIN_UPDATE"
+    ],
+    "h09_p01_operation": "NAVIGATION_ROUTE_PROPOSE"
+  },
+  "runtime_flags": {
+    "nav_domain_implemented": false,
+    "core_schema_extended": false,
+    "ship_location_persisted": false,
+    "chart_authorization_implemented": false,
+    "route_solver_implemented": false,
+    "conn_order_implemented": false,
+    "motion_implemented": false,
+    "msi_accepted": false,
+    "certified": false
+  },
+  "authority": {
+    "authoritative_location": "CoreRPG.WorldState",
+    "time": "CoreRPG.Campaign.time",
+    "persistent_snapshot": "CoreRPG/F04.HistoryPersistence",
+    "host": "session_owner_admission_dispatch_and_lifecycle_only",
+    "f04_f05": "duty_qualifications_command_gates_not_route_execution",
+    "f11": "institutional_authority_unchanged",
+    "unreal": "non_authoritative_presentation",
+    "authoring_catalogue": "versioned_reference_not_known_to_observer_by_default"
+  },
+  "entities": {
+    "ship_identity": "resolved_server_side_not_hardcoded_core_entity_1",
+    "location_semantics_candidate": "typed_discrete_place_entity_and_ship_containment_pending_P0",
+    "location_absent": "UNKNOWN_WITH_NULL_REF",
+    "legacy_save_without_location": "PRESERVE_UNKNOWN_NO_SILENT_MIGRATION",
+    "bootstrap": "REQUIRES_EXPLICIT_APPROVED_LOCATION_OR_UNKNOWN",
+    "geometry": {
+      "unknown_z_ly": null,
+      "unknown_distance_ly": null,
+      "unknown_eta": null,
+      "wormhole_is_ordinary_warp": false
+    }
+  },
+  "chart": {
+    "versioned_publication_required": true,
+    "observer_scoped_core_knowledge_required": true,
+    "reference_graph_is_automatically_known": false,
+    "political_and_sensor_ground_truth_exposed": false,
+    "homonym_resolution_visible_candidates_only": true,
+    "hidden_and_missing_destination_indistinguishable_publicly": true,
+    "edge_no_distance_not_numeric_eta": true,
+    "profiles_source": "sistemas/gameplay/navigation/route_cost_model.json"
+  },
+  "internal_operations": [
+    {
+      "id": "read_own_location",
+      "kind": "READ",
+      "requires": [
+        "campaign_binding",
+        "resolved_ship",
+        "authorized_observer",
+        "owner_thread",
+        "generation"
+      ],
+      "returns": [
+        "location_status",
+        "location_ref_or_null",
+        "core_revision",
+        "position_revision",
+        "visible_provenance"
+      ],
+      "mutates": false,
+      "runtime_available": false
+    },
+    {
+      "id": "read_authorized_chart",
+      "kind": "READ",
+      "requires": [
+        "campaign_binding",
+        "resolved_ship",
+        "authorized_observer",
+        "published_chart",
+        "knowledge_revision"
+      ],
+      "returns": [
+        "visible_nodes",
+        "visible_edges",
+        "chart_ref",
+        "chart_revision",
+        "knowledge_revision",
+        "visible_provenance"
+      ],
+      "mutates": false,
+      "runtime_available": false
+    },
+    {
+      "id": "propose_known_route",
+      "kind": "PROPOSAL",
+      "requires": [
+        "known_origin",
+        "visible_destination",
+        "published_chart",
+        "authorized_observer",
+        "selected_known_profile",
+        "revision_vector"
+      ],
+      "returns": [
+        "proposal_ref_or_null",
+        "visible_route_legs",
+        "uncertainty",
+        "distance_or_null",
+        "eta_or_null",
+        "status"
+      ],
+      "mutates": false,
+      "runtime_available": false
+    }
+  ],
+  "proposal_token": {
+    "authority_token": false,
+    "persisted_navigation_state": false,
+    "binding": [
+      "campaign",
+      "session_generation",
+      "ship",
+      "observer_scope",
+      "core_revision",
+      "position_revision",
+      "chart_revision",
+      "knowledge_revision"
+    ],
+    "invalidate_on": [
+      "SAVE",
+      "RESTORE",
+      "CLOSE",
+      "SHIP_SWITCH",
+      "OBSERVER_SWITCH",
+      "AUTHORITY_REVOKED",
+      "CORE_OR_POSITION_REVISION_CHANGE",
+      "CHART_OR_KNOWLEDGE_REVISION_CHANGE"
+    ],
+    "automatically_retried": false
+  },
+  "read_only_invariants": {
+    "position_unchanged": true,
+    "core_tick_unchanged": true,
+    "core_rng_unchanged": true,
+    "resource_unchanged": true,
+    "event_history_unchanged": true,
+    "canonical_save_bytes_unchanged": true,
+    "no_worldstate_duplication": true,
+    "no_implicit_earth_start": true,
+    "no_hidden_route_data": true,
+    "no_ue_authoritative_input": true,
+    "no_order_issued_or_executed": true,
+    "no_synthetic_nav_via_f04_move": true
+  },
+  "public_failure_codes_design_only": [
+    "SERVICE_UNAVAILABLE",
+    "NOT_AUTHORIZED",
+    "LOCATION_UNKNOWN",
+    "DESTINATION_UNKNOWN_OR_REDACTED",
+    "CLARIFICATION_REQUIRED",
+    "NO_KNOWN_ROUTE",
+    "STALE_CONTEXT",
+    "INVALID_PROFILE",
+    "INVALID_CHART"
+  ],
+  "gates": [
+    {
+      "id": "P0",
+      "criterion": "F04_catalogue_bootstrap_schema_snapshot_owner_observer_compatibility_verified",
+      "on_fail": "STOP_AND_REPORT",
+      "may_modify_core": false
+    },
+    {
+      "id": "P1",
+      "criterion": "authoritative_location_and_observer_chart_native_tests",
+      "on_fail": "BLOCK_PROPOSAL",
+      "may_modify_core": false
+    },
+    {
+      "id": "P2",
+      "criterion": "proposal_core_unchanged_and_lifecycle_native_tests",
+      "on_fail": "KEEP_RUNTIME_UNAVAILABLE",
+      "may_modify_core": false
+    }
+  ],
+  "future_native_cases": [
+    {
+      "id": "CN2-01",
+      "scenario": "legacy_campaign_location_unknown",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-02",
+      "scenario": "explicit_authoritative_new_campaign_origin",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-03",
+      "scenario": "observer_sees_only_authorized_published_chart",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-04",
+      "scenario": "observer_revocation_and_no_cross_scope_leak",
+      "gate": "P1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-05",
+      "scenario": "homonyms_disambiguate_visible_only",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-06",
+      "scenario": "hidden_equals_missing_public_result",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-07",
+      "scenario": "known_route_and_profile_respect_authorized_edges",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-08",
+      "scenario": "no_known_path_not_world_impossible",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-09",
+      "scenario": "null_distance_z_and_eta_remain_null",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-10",
+      "scenario": "proposal_rejection_core_state_rng_bytes_unchanged",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-11",
+      "scenario": "stale_revision_and_chart_publication_denied",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-12",
+      "scenario": "save_restore_close_switch_invalidates_proposal",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-13",
+      "scenario": "old_save_new_save_and_corruption_restore_atomic",
+      "gate": "P0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CN2-14",
+      "scenario": "no_conn_order_no_movement_no_tick_side_effect",
+      "gate": "P2",
+      "status": "NOT_RUN"
+    }
+  ],
+  "sources": {
+    "c01_report": "proyecto/docs/architecture/host/H09_P03_C01_FACTIBILIDAD_CORE_2026-11-27.md",
+    "p03_contract": "proyecto/docs/architecture/host/H09_P03_CONTRATO_NAVEGACION_CONN_v1.json",
+    "p01_registry": "proyecto/docs/architecture/host/H09_P01_REGISTRO_CONSOLAS_v1.json",
+    "navigation_docs": "sistemas/gameplay/navigation/README.md",
+    "route_graph": "sistemas/gameplay/navigation/anchor_route_graph.json",
+    "route_edges": "sistemas/gameplay/navigation/navigation_distance_edge_model.json",
+    "route_cost": "sistemas/gameplay/navigation/route_cost_model.json",
+    "astrography": "sistemas/gameplay/navigation/astrography_location_model.json",
+    "handoff_s11": "sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_navigation_route_proposal_v0.1.json",
+    "host_build": "desarrollo/integration/host/CMakeLists.txt",
+    "host_gateway": "desarrollo/integration/host/src/gateway_bridge.cpp",
+    "f04_impl": "desarrollo/integration/f04/src/f04_bridge.cpp",
+    "f05_orders": "desarrollo/integration/f05/include/f05_orders.h"
+  }
+}
