@@ -1,0 +1,726 @@
+{
+  "schema_version": 1,
+  "phase": "MENU-04",
+  "status": "DESIGN_ONLY",
+  "note": "IDs lógicos, no endpoints; todos los casos requieren ejecución real, evidencia SHA/entorno/observado y resultado. PUBLIC/CAMPAIGN en EXTRAS solo con autorización vigente; desde MAIN exclusivamente PUBLIC. Ninguna capacidad pendiente se declara implementada.",
+  "systems": [
+    {
+      "id": "federation",
+      "subphase": "MENU-04-P01",
+      "destination": "FEDERATION",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "CATALOG_PENDING"
+    },
+    {
+      "id": "cinematheque",
+      "subphase": "MENU-04-P02",
+      "destination": "EXTRAS",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "MEDIA_PENDING"
+    },
+    {
+      "id": "music",
+      "subphase": "MENU-04-P03",
+      "destination": "EXTRAS",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "MEDIA_PENDING"
+    },
+    {
+      "id": "gallery",
+      "subphase": "MENU-04-P04",
+      "destination": "EXTRAS",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "ASSETS_PENDING"
+    },
+    {
+      "id": "hangar",
+      "subphase": "MENU-04-P05",
+      "destination": "EXTRAS",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "ASSETS_PENDING"
+    },
+    {
+      "id": "record",
+      "subphase": "MENU-04-P06",
+      "destination": "RECORD",
+      "scope": "CAMPAIGN",
+      "capability": "H07_READ_CONDITIONAL"
+    },
+    {
+      "id": "journal",
+      "subphase": "MENU-04-P07",
+      "destination": "JOURNAL",
+      "scope": "CAMPAIGN",
+      "capability": "DOMAIN_PENDING"
+    },
+    {
+      "id": "stats",
+      "subphase": "MENU-04-P08",
+      "destination": "STATS",
+      "scope": "CAMPAIGN",
+      "capability": "DOMAIN_PENDING"
+    },
+    {
+      "id": "honors",
+      "subphase": "MENU-04-P09",
+      "destination": "HONORS",
+      "scope": "CAMPAIGN",
+      "capability": "DOMAIN_PENDING"
+    },
+    {
+      "id": "credits",
+      "subphase": "MENU-04-P10",
+      "destination": "EXTRAS",
+      "scope": "PUBLIC",
+      "capability": "EDITORIAL_PENDING"
+    },
+    {
+      "id": "unlock",
+      "subphase": "MENU-04-P11",
+      "destination": "EXTRAS/FEDERATION/PAUSE",
+      "scope": "PUBLIC/CAMPAIGN",
+      "capability": "POLICY_PENDING"
+    }
+  ],
+  "cases": [
+    {
+      "id": "M04-01-01",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "MAIN sin sesión",
+      "action": "Abrir y buscar",
+      "expected": "Solo registros públicos aprobados; ningún dato de campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-01-02",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "Lore autoral contradice canon externo",
+      "action": "Consultar ficha",
+      "expected": "Prevalece fuente autoral aprobada; conflicto sin resolver se excluye",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-01-03",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "Entrada secreta y alias indexable",
+      "action": "Buscar título, alias y categoría",
+      "expected": "Sin resultado, conteo, miniatura ni texto accesible restringido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-01-04",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "PAUSE con identidad vigente",
+      "action": "Abrir referencia cruzada",
+      "expected": "Solo destino permitido por conocimiento y política",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-01-05",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "Cambio de generación durante búsqueda",
+      "action": "Recibir respuesta vieja",
+      "expected": "Descartada, selección y caché purgadas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-01-06",
+      "subphase": "MENU-04-P01",
+      "system": "federation",
+      "precondition": "Catálogo falla antes de completar",
+      "action": "Abrir lista",
+      "expected": "Error explícito, no vacío falso",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-01",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Escena aprobada y permitida",
+      "action": "Reproducir desde extras",
+      "expected": "Modo espectador; no crea sesión ni reemite entrada de arranque",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-02",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Escena con spoiler no autorizado",
+      "action": "Abrir catálogo",
+      "expected": "No aparece ni se revela miniatura",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-03",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Vídeo con subtítulos disponibles",
+      "action": "Pausar, reanudar y activar subtítulos",
+      "expected": "Control real, pista correcta y volumen coherente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-04",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Media sin soporte de seek",
+      "action": "Solicitar búsqueda de posición",
+      "expected": "Control ausente o deshabilitado con razón",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-05",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Fallo de decodificación",
+      "action": "Abrir escena",
+      "expected": "Error, liberar recursos y restaurar audio/foco",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-02-06",
+      "subphase": "MENU-04-P02",
+      "system": "cinematheque",
+      "precondition": "Replay repetido",
+      "action": "Cerrar y regresar a MAIN",
+      "expected": "Sin hechos, avance Core ni instancias retenidas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-01",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Biblioteca disponible",
+      "action": "Abrir",
+      "expected": "No inicia pista automáticamente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-02",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Pista A en reproducción",
+      "action": "Seleccionar B",
+      "expected": "Una única preescucha; A se detiene",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-03",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Volumen música modificado",
+      "action": "Reproducir y salir",
+      "expected": "Bus MENU-02 respetado; ambiente del menú restaurado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-04",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Referencia de audio rota",
+      "action": "Intentar reproducción",
+      "expected": "Error controlado sin pista ficticia",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-05",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Reproducción activa",
+      "action": "Salir al menú y comenzar juego",
+      "expected": "Preescucha detenida, sin audio superpuesto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-03-06",
+      "subphase": "MENU-04-P03",
+      "system": "music",
+      "precondition": "Pista de escena restringida",
+      "action": "Buscar y consultar metadatos",
+      "expected": "No revela título, duración ni imagen restringidos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-01",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Arte maestro aprobado y variantes no aprobadas",
+      "action": "Abrir colección",
+      "expected": "Solo registros publicados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-02",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Imagen grande aprobada",
+      "action": "Abrir, zoom, restablecer",
+      "expected": "Visor correcto y navegación accesible",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-03",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Miniatura secreta",
+      "action": "Buscar galería",
+      "expected": "No se muestra ni indexa para usuario",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-04",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Asset ausente",
+      "action": "Abrir ficha",
+      "expected": "Fallback neutral; no modificar original",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-05",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Carga en curso",
+      "action": "Regresar y abrir otra imagen",
+      "expected": "Respuesta vieja descartada; recurso liberado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-04-06",
+      "subphase": "MENU-04-P04",
+      "system": "gallery",
+      "precondition": "Abrir/cerrar galería repetidamente",
+      "action": "Medir RAM y VRAM",
+      "expected": "Sin retención creciente atribuible al visor; evidencia MSI",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-01",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Ficha Galaxy y Enterprise-D refit autorizadas",
+      "action": "Consultar ambas",
+      "expected": "Distingue clase y unidad; no atribuye refit a todas las Galaxy",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-02",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Modelo no aprobado",
+      "action": "Abrir ficha",
+      "expected": "No anuncia 3D disponible; fallback 2D si aprobado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-03",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Modelo disponible y capacidad suficiente",
+      "action": "Rotar, zoom y restablecer",
+      "expected": "Un modelo visible, sin spawn de campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-04",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Tecnología de nave restringida",
+      "action": "Consultar ficha pública",
+      "expected": "No revela capacidad secreta ni metadatos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-05",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Memoria insuficiente o carga fallida",
+      "action": "Abrir visor",
+      "expected": "Degradación segura, sin cierre del juego",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-05-06",
+      "subphase": "MENU-04-P05",
+      "system": "hangar",
+      "precondition": "Abrir/cambiar/cerrar modelos",
+      "action": "Medir y volver a MAIN",
+      "expected": "Liberar viewport y referencias; presupuesto MSI medido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-01",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "MAIN sin identidad",
+      "action": "Intentar acceso directo",
+      "expected": "Denegar antes de consultar; sin datos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-02",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "Sesión vinculada y CAREER vigente",
+      "action": "Abrir expediente",
+      "expected": "Campos confirmados del H07, tick sin conversión inventada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-03",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "Hecho inicial de rango",
+      "action": "Consultar expediente",
+      "expected": "No se presenta como ascenso",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-04",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "ID evento ajeno o desconocido",
+      "action": "Consultar PROMOTION",
+      "expected": "Respuesta no distingue existencia y oculta payload",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-05",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "Candidato sin comisión",
+      "action": "Consultar CAREER",
+      "expected": "Explicación neutra, no rango ficticio",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-06",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "SAVE admitido o RESTORE/CLOSE",
+      "action": "Mantener ficha abierta",
+      "expected": "Proyección retirada inmediatamente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-07",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "H07 current RETRY o mundo retirado",
+      "action": "Pintar datos o recibir respuesta tardía",
+      "expected": "No mostrar hechos obsoletos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-06-08",
+      "subphase": "MENU-04-P06",
+      "system": "record",
+      "precondition": "Emisor F11 ausente",
+      "action": "Intentar otorgar mérito",
+      "expected": "No existe acción de emisión UI; servicio no simulado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-01",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Fuente misiones no demostrada",
+      "action": "Abrir destino",
+      "expected": "Oculto o deshabilitado, no lista falsa",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-02",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Misión conocida y estado confirmado",
+      "action": "Abrir ficha",
+      "expected": "Solo objetivos conocidos y estado de fuente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-03",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Notificación F05 sin hecho de misión",
+      "action": "Recibir aviso",
+      "expected": "No crea misión ni objetivo completado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-04",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Misión ajena u objetivo oculto",
+      "action": "Buscar",
+      "expected": "Sin resultado, conteo o datos restringidos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-05",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Misión válida seleccionada",
+      "action": "Fijar seguimiento visual",
+      "expected": "Sin mutación ni aceptación de misión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-07-06",
+      "subphase": "MENU-04-P07",
+      "system": "journal",
+      "precondition": "Restaurar versión anterior",
+      "action": "Consultar diario",
+      "expected": "Solo hechos de revisión restaurada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-01",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Métrica sin fuente",
+      "action": "Abrir panel",
+      "expected": "Sin datos, no cero inventado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-02",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Métrica confirmada cero",
+      "action": "Consultar",
+      "expected": "Muestra cero con unidad y definición",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-03",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Tiempo en menú sin avance Core",
+      "action": "Consultar tiempo de servicio",
+      "expected": "No aumenta por reloj UI",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-04",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Evento duplicado",
+      "action": "Recalcular métrica",
+      "expected": "No doble conteo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-05",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Cambiar campaña o restaurar",
+      "action": "Abrir estadísticas",
+      "expected": "Solo alcance y revisión autorizados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-08-06",
+      "subphase": "MENU-04-P08",
+      "system": "stats",
+      "precondition": "Abrir panel con fuente disponible",
+      "action": "Inspeccionar datos",
+      "expected": "Sin telemetría remota ni exportación por defecto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-01",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "Logro de jugador y mérito institucional",
+      "action": "Consultar registros permitidos",
+      "expected": "Categorías separadas y procedencia visible",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-02",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "F11 sin emisor de producto",
+      "action": "Abrir condecoraciones",
+      "expected": "Sin méritos ficticios ni botones de concesión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-03",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "Evento repetido o replay",
+      "action": "Reabrir panel",
+      "expected": "No concede ni duplica hechos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-04",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "Requisito de logro con spoiler",
+      "action": "Consultar lista",
+      "expected": "No revela requisito ni título restringido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-05",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "Restaurar antes de un hecho",
+      "action": "Consultar panel",
+      "expected": "No conserva logro futuro de campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-09-06",
+      "subphase": "MENU-04-P09",
+      "system": "honors",
+      "precondition": "Métrica alta sin hecho institucional",
+      "action": "Abrir panel",
+      "expected": "No infiere rango o condecoración",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-10-01",
+      "subphase": "MENU-04-P10",
+      "system": "credits",
+      "precondition": "Créditos revisados sin sesión",
+      "action": "Abrir",
+      "expected": "Disponibles, navegación y retorno correctos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-10-02",
+      "subphase": "MENU-04-P10",
+      "system": "credits",
+      "precondition": "Nombre o rol no verificado",
+      "action": "Preparar publicación",
+      "expected": "Registro excluido hasta revisión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-10-03",
+      "subphase": "MENU-04-P10",
+      "system": "credits",
+      "precondition": "Créditos con información personal no autorizada",
+      "action": "Validar catálogo",
+      "expected": "Excluida de publicación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-10-04",
+      "subphase": "MENU-04-P10",
+      "system": "credits",
+      "precondition": "Desplazamiento con teclado",
+      "action": "Pausar y volver",
+      "expected": "Control accesible, no salida bloqueada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-10-05",
+      "subphase": "MENU-04-P10",
+      "system": "credits",
+      "precondition": "Referencia web en créditos",
+      "action": "Abrir pantalla",
+      "expected": "No abre navegador automáticamente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-01",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Contenido público aprobado",
+      "action": "Abrir MAIN sin campaña",
+      "expected": "Disponible según capacidad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-02",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Hecho no confirmado o PENDING",
+      "action": "Evaluar desbloqueo",
+      "expected": "No desbloquea",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-03",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Requisito no satisfecho y revelable",
+      "action": "Evaluar entrada",
+      "expected": "LOCKED con razón no reveladora",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-04",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Existencia no revelable",
+      "action": "Evaluar entrada",
+      "expected": "HIDDEN en listas, búsqueda, conteos y accesibilidad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-05",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Hecho confirmado y política aprobada",
+      "action": "Evaluar con identidad vigente",
+      "expected": "Solo contenido autorizado disponible",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-06",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Cambiar a otra campaña",
+      "action": "Reevaluar",
+      "expected": "Sin flags o caché de primera campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-07",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Restaurar guardado antiguo",
+      "action": "Reevaluar",
+      "expected": "Retirar contenidos futuros de campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-08",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Cambio de política o revisión",
+      "action": "Recibir consulta anterior",
+      "expected": "Invalidar y reconsultar",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-09",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Preferencia local manipulada",
+      "action": "Abrir entrada restringida",
+      "expected": "No concede permiso",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M04-11-10",
+      "subphase": "MENU-04-P11",
+      "system": "unlock",
+      "precondition": "Función no implementada",
+      "action": "Activar por atajo",
+      "expected": "Sin acción ni contenido ficticio",
+      "status": "NOT_RUN"
+    }
+  ]
+}
