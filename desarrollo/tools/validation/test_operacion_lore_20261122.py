@@ -32,13 +32,25 @@ class OperationLoreTests(unittest.TestCase):
     def test_no_borrar_fuente(self):
         self.check_bad(lambda d: d[CATALOGUE]["records"][0].__setitem__("source_paths", ["mundo/lore/NO_SUCH_SOURCE.md"]))
     def test_nombre_del_jugador_editable(self):
-        self.check_bad(lambda d: d[ANNEX]["identity"].__setitem__("public_name", "Naveen Vale"))
+        self.check_bad(lambda d: d[ANNEX]["identity"].__setitem__("public_name", "Nombre bloqueado"))
     def test_edad_fija(self):
         self.check_bad(lambda d: d[ANNEX]["identity"].__setitem__("age_at_academy_entry", 30))
     def test_sin_fecha_falsa(self):
         self.check_bad(lambda d: d[ANNEX]["identity"].__setitem__("exact_birth_date", "2338-02-01"))
-    def test_geneaologia_ordenada(self):
-        self.check_bad(lambda d: d[ANNEX]["lineage"][2].__setitem__("generation", 9))
+    def test_no_regresar_genealogia_inventada(self):
+        self.check_bad(lambda d: d[ANNEX]["lineage"].append({"generation": 1, "name": "Antepasado ficticio"}))
+    def test_apellido_rise(self):
+        self.check_bad(lambda d: d[ANNEX]["identity"].__setitem__("surname", "Vale"))
+    def test_piano_unico(self):
+        self.check_bad(lambda d: d[ANNEX]["skills"].__setitem__("music", ["cello"]))
+    def test_no_recrear_maestros(self):
+        self.check_bad(lambda d: d[ANNEX]["teachers"].append({"name": "Inventado"}))
+    def test_nueve_capacidades(self):
+        self.check_bad(lambda d: d[ANNEX].__setitem__("genetic_traits", ["strength"]))
+    def test_libertad_del_jugador(self):
+        self.check_bad(lambda d: d[ANNEX]["initial_personality"].__setitem__("player_choices_unrestricted", False))
+    def test_padres_civiles(self):
+        self.check_bad(lambda d: d[ANNEX]["identity"]["parentage"]["mother"].__setitem__("starfleet_service", True))
     def test_sin_invencion_suplantando_legacy(self):
         self.check_bad(lambda d: d[LEGACY_TECH].__setitem__("class_identity", "galaxy"))
     def test_no_suplantar_core(self):

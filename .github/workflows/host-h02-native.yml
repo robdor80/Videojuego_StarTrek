@@ -112,6 +112,7 @@ jobs:
           if ($IsWindows) { $flags += @('-A', 'x64') }
           $targets = @('host_native_tests', 'host_fault_tests', 'host_persistence_tests', 'host_m0_tests',
                        'host_h07_admission_tests', 'host_h07_query_tests',
+                       'host_event_delivery_unit_tests', 'host_notification_projection_unit_tests',
                        'host_abi_tests', 'host_academy_abi_tests', 'host_academy_abi_faults',
                        'host_academy_feasibility_tests', 'host_academy_candidate_tests',
                        'host_academy_candidate_faults', 'host_academy_player_tests', 'host_academy_player_faults',

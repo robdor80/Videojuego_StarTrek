@@ -1,66 +1,56 @@
-# C11 — Biografía de origen definitiva del protagonista (anexo narrativo v1)
+# C11 — Biografía ratificada del protagonista (23-11-2026)
 
-**Clasificación de todos los nuevos hechos:** `GAME_ADDITION`, decisión creativa delegada expresamente el 22-11-2026. **Estado:** biografía fija **COMPLETE_DOCUMENTARY** en este anexo, sin modificación de `s04_fixed_protagonist_contract_v2.json`, `s04_protagonist_biography_v1.json`, huellas compiladas ni WorldState. **Precedencia:** DEC-0022 (17-11) + autorización posterior (22-11).
+**Estado:** LORE aprobado por el autor durante la revisión conjunta, puntos 1–6. **Continuidad:** Star Trek Legends / GAME_ADDITION. Esta ficha prevalece sobre la propuesta C11 de 22-11-2026; no altera el contrato bloqueado S04 v2, CoreRPG, HOST ni partidas. El nombre de pila es configurable; **Rise es el apellido fijo**.
 
-**Identidad del jugador:** un único personaje biográfico, varón híbrido humano-vulcano descendiente biológico de Khan Noonien Singh. **El nombre público del protagonista queda deliberadamente libre** (personalización de nueva partida). Que su padre se apellide Vale **no obliga** a usar ese apellido ni a imprimirlo en rótulos de la intro.
+## Identidad y familia
 
-## 1. Familia, lugar y genealogía
+- Varón híbrido humano-vulcano; nacido aproximadamente en **2338 en Vulcano**, en las proximidades de Shi'Kahr; **45 años al comenzar Academia en 2383** y apariencia humana inicial alrededor de 30 años. No se inventa fecha exacta.
+- Madre: **T'Ralis**, vulcana, científica y profesora civil de lógica, ciencia y filosofía. **Nunca perteneció a la Flota Estelar**. Enseñó disciplina mental, meditación y control emocional. Falleció por una **enfermedad cardíaca fulminante**, cuando su hijo ya era adulto, durante la etapa final de preparación.
+- Padre: **Naveen Rise**, humano, historiador científico y archivista civil, **sin servicio en la Flota**. Falleció por causas naturales asociadas a la edad, cuando su hijo era adulto y antes de 2383.
+- El hogar familiar estuvo en Vulcano, en las cercanías de Shi'Kahr; se crió en ambas tradiciones. **Cómo se conocieron los padres, sus edades exactas y los años de sus fallecimientos no han sido ratificados**; no convertir propuestas anteriores en hechos.
+- **Descendencia biológica directa de Khan Noonien Singh por vía paterna**, verdadera y comprobada documentalmente. El apellido actual Rise procede de cambios de apellido en generaciones antiguas. **No enumerar ni crear antepasados intermedios**, y no deducir moralidad por genética.
+- El protagonista conoce esta ascendencia, y la Flota la estudia mediante expediente reservado y evaluación individual; su divulgación sigue limitada por permisos.
 
-**Nacimiento:** año terrestre aproximado **2338**, en un centro sanitario civil de Vulcano, **región próxima a Shi'Kahr**. Día y mes no establecidos: conservar la regla temporal con `age_at_admission=45`, calculando la fecha exacta solo después de resolver el calendario de Academia, sin convertir «aproximado» en fecha inventada.
+## Vocación y preparación previa
 
-**Madre: T'Ralis**, vulcana, profesora civil de lógica aplicada y formación científica. Paciente, severa al corregir errores, cálida en actos y no en proclamaciones. Enseña meditación, disciplina emocional y respeto por la decisión ajena; no ha completado Kolinahr ni pretende imponerlo a su hijo. **Padre: Naveen Vale**, humano, historiador científico y archivista civil, especialista en transmisión de documentos interplanetarios. Ambos residen en Vulcano sin pertenecer por ello al alto mando o tener credenciales Starfleet.
+Desde niño **siempre quiso ingresar en la Flota Estelar**. Rechazó la vía de la Academia de Ciencias de Vulcano para centrarse en ese objetivo, no porque fuera rechazado, discriminado ni indeciso. Eligió voluntariamente incorporarse a la Academia de Flota a los 45 años porque su herencia vulcana y su ritmo de envejecimiento le permitían dedicar décadas a prepararse.
 
-**Cadena biológica privada — `GAME_ADDITION`, no canon televisivo:** el primer vínculo posterior a Khan es una descendiente suya hasta ahora **no documentada en pantalla**, nacida antes de su desaparición de la Tierra de finales del siglo XX. La transmisión familiar no implica mejoría genética continua ni experimentos nuevos. Identidades y años **de referencia genealógica**, no fichas de NPC activos:
+- **Ciencia:** formación civil avanzada, especialmente astronomía, astrofísica y método científico; no inventar doctorados, patentes ni carrera militar previa.
+- **Artes marciales:** maestro avanzado de **Suus Mahna, aikido, kung-fu y kárate**; también domina a nivel avanzado las **armas blancas tradicionales asociadas a esas disciplinas**, según técnica y contexto. No se necesitan personajes ni nombres de maestros.
+- **Música:** **maestro en piano**, su único instrumento establecido. No se reconoce maestría en ningún otro instrumento.
+- **Autodominio:** entrenamiento prolongado para dominar sus capacidades físicas y cognitivas, y manejar responsablemente el legado de Khan. No implica invulnerabilidad, obediencia a un destino ni rango de Flota.
+- Las muertes de ambos padres ocurren antes del ingreso en Academia, ya en su vida adulta. No fijar cronologías de duelo, diagnósticos cardíacos más específicos ni edad exacta sin autorización.
 
-| Generación | Nombre del antepasado | Nacimiento orientativo |
-|---|---|---:|
-| 0 | Khan Noonien Singh | siglo XX (ancla de canon) |
-| 1 | Nadiya Singh | ~1995 |
-| 2 | Arun Singh | ~2023 |
-| 3 | Leena Singh | ~2051 |
-| 4 | Rafi Sen | ~2079 |
-| 5 | Samira Sen | ~2107 |
-| 6 | Dev Sen | ~2135 |
-| 7 | Isha Sen | ~2163 |
-| 8 | Navin Sen | ~2191 |
-| 9 | Maya Sen | ~2219 |
-| 10 | Aren Sen | ~2247 |
-| 11 | Lina Vale | ~2275 |
-| 12 | Naveen Vale | ~2303 |
-| 13 | Protagonista (nombre configurable) | ~2338 |
+## Nueve capacidades excepcionales — perfil a evaluar por Flota
 
-Cada eslabón es **hijo/a biológico/a del anterior** en la ficción del juego; los cambios de apellido reflejan decisiones familiares, no líneas genéticas nuevas. La existencia del linaje y los registros de parentesco en el **expediente de admisión** se aceptan como hechos de ficción autorizados; que una autoridad haya examinado la prueba **no** significa hacer públicos los expedientes privados de trece generaciones. Ninguno de estos nombres debe desplazar una identidad histórica de pantalla.
+Estas cualidades son innatas y proceden de la combinación ficticia de herencia mejorada de Khan y fisiología vulcana. **La Flota debe examinarlas de manera rigurosa para documentar sus límites**, sin cifras inventadas y sin confundir genética con habilidades adquiridas:
 
-La familia no oculta su pasado al hijo. Entiende que el legado de Khan incluye violencia histórica, poder y daño, pero se niega a explicar la responsabilidad de una persona mediante la sangre. Los documentos de los antepasados se conservaron principalmente para conocer el origen y detectar errores, no para fundar una élite.
+1. Fuerza sobrehumana.
+2. Resistencia física extraordinaria.
+3. Inteligencia superior.
+4. Velocidad superior.
+5. Reflejos sobrehumanos.
+6. Sangre con propiedades regenerativas, recuperación acelerada y resistencia a enfermedades; **potencial terapéutico investigable**, no cura universal ni extracción sin consentimiento.
+7. Memoria y aprendizaje excepcionales.
+8. Tolerancia elevada al dolor y traumatismos.
+9. Coordinación neuromuscular superior.
 
-## 2. Vida previa completa (núcleo fijo)
+Puede sufrir daño, enfermar, agotarse, equivocarse y morir. No asimilar estas aptitudes a certeza diagnóstica ni a acceso automático a conocimientos restringidos.
 
-| Periodo | Suceso aprobado aquí | Consecuencia que sí puede heredar la partida |
-|---|---|---|
-| 2338–2346 | Crianza en entorno mixto en Vulcano; interés temprano por el cielo y curiosidad técnica. La madre enseña rituales de concentración sin negar emociones. | origen, idioma/cultura y disciplina inicial |
-| 2347–2353 | Se observan fuerza, reflejos y recuperación inusuales. La familia solicita evaluación médica voluntaria: se registran fenómenos excepcionales pero no «superpoderes». | aptitudes extraordinarias con límites y privacidad médica |
-| 2354–2360 | Conoce íntegramente su parentesco con Khan; elige formarse sin convertir el estigma en rebeldía automática. Aprende autocontrol, escucha y responsabilidad. | vínculo consciente con el legado, nunca predisposición moral determinista |
-| 2358–2370 | Formación prolongada en artes marciales, acompañada de matemáticas, astrofísica, astronomía, filosofía y música. | maestrías biográficas ya aprobadas; no títulos Starfleet |
-| 2371–2379 | Compara las noticias de Enterprise-D, Borg, Guerra del Dominio y Voyager con su deber de servicio. Participa en programas civiles de estudio y observación sin acceso reservado. | vocación de Flota y criterio científico, no experiencia militar fabricada |
-| 2380–2382 | Ensayos personales de disciplina, voluntariado científico civil, preparación de expediente, asesoramiento médico y revisión de documentación familiar. | candidatura sólida, no privilegio genético |
-| 2383 | Presenta expediente completo con ascendencia explícita y solicita evaluación legítima a los 45 años. | arranque de Academia **tras** decisión formal autorizada |
+## Personalidad inicial adulta (45 años)
 
-**Maestros y aprendizaje — personajes originales, no miembros del elenco legendario:** el vulcano **Sorvek** lo instruye en Suus Mahna y disciplina de combate responsable; la humana **Mara Calder**, en aikido y práctica de desescalada; el instructor civil **Imran Chen**, en distintas tradiciones de kung-fu; la instructora **Akira Sato**, en kárate. Son maestros de largo recorrido, no comandantes de Flota ni certificados oficiales; su existencia no crea destinos, locales 3D o agendas reales en CoreRPG. Técnica y maestría no garantizan victoria contra tecnología, especialistas o circunstancias superiores.
+- Analítico, observador, intelectualmente curioso y seguro de sí mismo.
+- Sereno, disciplinado y con fuerte autocontrol; **siente** emociones, afecto y humor aunque puede ser reservado.
+- Empático, responsable, comprometido inicialmente con principios de la Federación y con merecer sus logros.
+- Ambicioso en el sentido de superación profesional, sin aspiración obligatoria a dominar a otros.
+- Consciente de los riesgos de utilizar irresponsablemente su poder.
+- Posibles debilidades: perfeccionismo, exigencia excesiva consigo mismo e impaciencia frente a la incompetencia.
+- Iniciativa y predisposición al liderazgo, **sin experiencia previa como oficial**.
 
-**Música:** práctica personal del **laúd vulcano** y del **violonchelo**; instrumentos para regular la atención y la expresión emocional. No se convierte en concertista famoso por defecto. **Ciencias:** sólida preparación civil en astronomía, física estelar y métodos de investigación; ningún doctorado, patente, habilitación médica o título universal se adjudica sin expediente.
+**Principio jugable innegociable:** son rasgos de partida, **no bloqueos ni penalizaciones a decisiones del jugador**. El jugador puede actuar de manera contraria a ellos, y las relaciones y la personalidad evolucionarán según lo que efectivamente haga. No existe determinismo moral de Khan.
 
-## 3. Capacidades, carácter y límites
+## Límites de integración
 
-- El legado de Khan es una **reexpresión poligénica atávica ficticia** en interacción no cuantificada con la herencia vulcana. No es descripción científica de genética humana real, ni linaje que se repita idénticamente en todos los descendientes.
-- Tiene fuerza, reflejos, resistencia y envejecimiento excepcionalmente favorables; **puede lesionarse, cansarse, equivocarse y morir**. No se fijan daños, multiplicadores, velocidad ni esperanza exacta de vida.
-- **Furia posible, elección libre:** siente rabia, compasión, humor, miedo y cariño; la disciplina busca elegir respuestas, no amputar emociones. No tiene «modo berserker» ni moral genética.
-- Cree en el estudio paciente, pero no es infalible ni conoce de nacimiento la ciencia prohibida. El jugador puede desarrollar amistad, desconfianza, estilo de mando y ética mediante hechos.
-- Puede cooperar en investigación médica solo con consentimiento y condiciones válidas. La hipótesis terapéutica en PR #175 sigue separada y **no define una cura universal**.
+El Consejo de 2383 conoce un expediente autorizado; Picard y Janeway no han conocido todavía personalmente al protagonista. La admisión académica requiere acto legítimo de la autoridad F10/Core y no la escena ilustrada. El nombre de pila se elige en creación, el apellido es **Rise**, y la llegada a la Enterprise-D en 2387 exige destino y nombramiento coherentes con la historia aprobada.
 
-## 4. Institución y secretos
-
-Los padres y maestros son antecedentes **GAME_ADDITION**. La junta de alto mando puede conocer **solo las partes del expediente que su competencia autorice**. Picard y Janeway lo examinan en 2383 y defienden el derecho a una evaluación individual; no han tenido por ello trato personal. La Academia emite una admisión tras pruebas legítimas: no crea grado ni plaza en Enterprise-D. El jugador puede elegir nombre, apariencia y futuro, **nunca** genealogía, especie, sexo, año de entrada ni biografía pre-Academia.
-
-### Compatibilidad HOST
-
-El contrato S04 v2 sigue teniendo `parents_names=UNDECIDED`, `genealogical_chain=UNDECIDED`, `birth_place=UNDECIDED` y `runtime_implemented=false`: **valores históricos de ese artefacto bloqueado**, no verdad actual global. Este anexo **no es payload de creación**. Hasta migración versionada con auditoría de hashes, H06 consume los valores soportados, y ni nombre de padres ni cadena genealógica se exportan de manera espontánea en una consulta UE. No convertir personajes docentes en PERSON sin política F04/Core.
+El anexo documental JSON acompaña esta ficha, pero **no se importa automáticamente** al contrato S04 v2 ni autoriza cambios de ABI, huellas históricas o partidas.

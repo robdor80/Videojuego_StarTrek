@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 OP = "proyecto/docs/roadmap/operacion_lore_20261122"
 DOCUMENTS = (
-    "README.md", "A01_AUDITORIA_PRECEDENCIAS.md", "A02_ENTERPRISE_D_VALHALLA.md",
+    "README.md", "DECISIONES_RATIFICADAS_20261123.md", "A01_AUDITORIA_PRECEDENCIAS.md", "A02_ENTERPRISE_D_VALHALLA.md",
     "A04_TECNOLOGIA_MEDICINA_CIENCIA.md", "B03_CRONOLOGIA_2383_2387.md",
     "B05_MEDICINA_CIENCIA_ESPECIES.md", "B07_INSTITUCIONES_ASTROGRAFIA.md",
     "B09_ENCICLOPEDIA_PADD.md", "C11_BIOGRAFIA_PROTAGONISTA.md",
@@ -40,10 +40,10 @@ LEGACY_TECH = "mundo/lore/technology/valhalla_tech_decisions_v0.1.json"
 CLASSES = {"SCREEN_CANON", "OFFICIAL_REFERENCE", "INFERRED", "GAME_ADDITION"}
 VISIBILITIES = {"PUBLIC_REFERENCE", "PUBLIC_HISTORICAL", "CONTEXTUAL_KNOWLEDGE", "RESTRICTED_PERSONAL", "ROLE_RESTRICTED"}
 DOC_RULES = {
-    "C11_BIOGRAFIA_PROTAGONISTA.md": ("GAME_ADDITION", "Naveen Vale", "T'Ralis", "CONFIGUR"),
-    "C12_LEGENDARIOS_ARCOS.md": ("vicealmirante", "Data", "Sisko"),
-    "C14_HISTORIA_VALHALLA.md": ("Galaxy", "condicional", "2387"),
-    "C15_PROLOGO_ACADEMIA.md": ("JANEWAY", "PICARD", "ROURKE", "Sisko", "F10"),
+    "C11_BIOGRAFIA_PROTAGONISTA.md": ("GAME_ADDITION", "Naveen Rise", "T'Ralis", "piano", "Suus Mahna"),
+    "C12_LEGENDARIOS_ARCOS.md": ("vicealmirante", "Data", "Sisko", "2386", "comandante", "2393"),
+    "C14_HISTORIA_VALHALLA.md": ("Galaxy", "flujo cuántico", "2387", "Defiant"),
+    "C15_PROLOGO_ACADEMIA.md": ("Janeway", "Picard", "Riker", "F10"),
     "B09_ENCICLOPEDIA_PADD.md": ("CoreRPG", "PADD", "permiso"),
 }
 
@@ -92,21 +92,50 @@ def problems(data: dict, root: Path = ROOT) -> list[str]:
         issues.append("fixed protagonist identity")
     if a.get("identity", {}).get("exact_birth_date") is not None:
         issues.append("invented precise birth date")
-    parents = a.get("identity", {}).get("parentage", {})
+    identity = a.get("identity", {})
+    parents = identity.get("parentage", {})
+    if identity.get("surname") != "Rise" or identity.get("given_name_customizable") is not True:
+        issues.append("fixed Rise surname and configurable given name")
+    if identity.get("display_name_policy") != "CUSTOM_GIVEN_NAME_PLUS_RISE":
+        issues.append("display name policy")
     if parents.get("mother", {}).get("species") != "vulcan" or parents.get("father", {}).get("ancestor") != "khan_noonien_singh":
         issues.append("parentage")
-    lineage = a.get("lineage", [])
-    if len(lineage) != 13 or [x.get("generation") for x in lineage] != list(range(13)):
-        issues.append("genealogy count/order")
-    if len({x.get("name") for x in lineage}) != len(lineage):
-        issues.append("duplicate ancestor names")
-    dates = [x.get("birth_year_approx") for x in lineage[1:]]
-    if any(not isinstance(x, int) for x in dates) or dates != sorted(set(dates)):
-        issues.append("genealogical chronology")
-    if a.get("identity", {}).get("parentage", {}).get("father", {}).get("name") != lineage[-1].get("name") if lineage else True:
-        issues.append("lineage father mismatch")
-    if len(a.get("teachers", [])) != 4:
-        issues.append("teacher count")
+    if parents.get("mother", {}).get("name") != "T'Ralis" or parents.get("father", {}).get("name") != "Naveen Rise":
+        issues.append("approved parents")
+    if any(parents.get(p, {}).get("starfleet_service") is not False for p in ("mother", "father")):
+        issues.append("civilian parents")
+    for parent in ("mother", "father"):
+        d = parents.get(parent, {}).get("death", {})
+        if d.get("state") != "DECEASED_BEFORE_2383" or d.get("exact_year") is not None or d.get("protagonist_already_adult") is not True:
+            issues.append("parent death temporal policy: " + parent)
+    if parents.get("mother", {}).get("death", {}).get("cause") != "SUDDEN_FULMINANT_CARDIAC_DISEASE" or parents.get("father", {}).get("death", {}).get("cause") != "AGE_RELATED_NATURAL":
+        issues.append("parent death causes")
+    if a.get("lineage") != [] or a.get("lineage_policy", {}).get("verified") is not True or a.get("lineage_policy", {}).get("intermediate_ancestors") != "NOT_NAMED_NOT_REQUIRED":
+        issues.append("no invented genealogy")
+    if a.get("teachers") != [] or a.get("teachers_policy") != "NAMES_NOT_REQUIRED_BY_GAME":
+        issues.append("no invented martial teachers")
+    skills = a.get("skills", {})
+    if skills.get("music") != ["piano"]:
+        issues.append("piano only")
+    if set(skills.get("martial", [])) != {"kung_fu", "karate", "aikido", "suus_mahna"} or skills.get("martial_mastery") != "ADVANCED_MASTER_ALL_FOUR" or skills.get("associated_blade_weapons_mastery") != "ADVANCED":
+        issues.append("four arts and associated blades mastery")
+    if len(a.get("genetic_traits", [])) != 9 or len(set(a["genetic_traits"])) != 9 or a.get("genetic_traits_require_starfleet_evaluation") is not True:
+        issues.append("nine inherited traits and Flota evaluation")
+    if a.get("blood_therapeutic_scope") != "INVESTIGABLE_NOT_UNIVERSAL_CURE_CONSENT_REQUIRED":
+        issues.append("blood non-universal therapeutic scope")
+    if a.get("academy_vocation", {}).get("since_childhood") is not True or a.get("academy_vocation", {}).get("entry_age_45_planned_voluntary") is not True:
+        issues.append("lifetime Starfleet vocation")
+    personality = a.get("initial_personality", {})
+    if personality.get("player_choices_unrestricted") is not True or personality.get("mutable_by_gameplay") is not True or personality.get("no_genetic_moral_determinism") is not True:
+        issues.append("player agency and evolving personality")
+    if any(k in (root / OP / "C11_BIOGRAFIA_PROTAGONISTA.md").read_text(encoding="utf-8") for k in ("Naveen Vale", "Sorvek", "Mara Calder", "laúd vulcano")):
+        issues.append("discarded biography details")
+    intro = (root / OP / "C15_PROLOGO_ACADEMIA.md").read_text(encoding="utf-8")
+    if "**PICARD:**" in intro or "**JANEWAY:**" in intro or "| S0 " in intro:
+        issues.append("unapproved intro screenplay restored")
+    val_doc = (root / OP / "C14_HISTORIA_VALHALLA.md").read_text(encoding="utf-8")
+    if "| VAL-N" in val_doc:
+        issues.append("invented Valhalla missions restored")
     if s.get("contract_id") != "s04_fixed_player_protagonist" or s.get("selection", {}).get("mode") != "SINGLE_FIXED_CANONICAL_PROTAGONIST":
         issues.append("locked S04 identity changed")
     if v.get("subject", {}).get("class_id") != "galaxy" or v.get("subject", {}).get("ship_id") != "uss_enterprise_ncc_1701_d":
@@ -126,7 +155,7 @@ def main() -> int:
         for problem in found:
             print("FAIL:", problem)
         return 1
-    print(f"PASS: {len(DOCUMENTS)} documentos, 20 entradas, 12 dossiers, 16 VAL-TEC, S04/Valhalla sin importación runtime.")
+    print(f"PASS: {len(DOCUMENTS)} documentos, 20 semillas no aprobadas, 12 dossiers, 16 VAL-TEC, S04/Valhalla intactos.")
     return 0
 
 if __name__ == "__main__":

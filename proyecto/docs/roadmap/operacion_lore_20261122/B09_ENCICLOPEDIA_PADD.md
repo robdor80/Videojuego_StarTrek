@@ -1,6 +1,8 @@
-# B09 — Biblioteca de la computadora principal, LCARS y PADD (preparación documental)
+# B09 — Enciclopedia/PADD: IDEA APLAZADA (sin contenido aprobado)
 
-**Producto:** base consultable por índices/lecturas, **no** IA implementada ni servicio operativo. Catálogo editorial: `mundo/lore/knowledge/lore_2383_enciclopedia_editorial_v1.json`.
+**RATIFICACIÓN 23-11-2026:** concepto conservado **solo como IDEA para otra conversación**. Las **20 entradas son borradores no aprobados**; no deben interpretarse como hechos definitivos ni contenidos publicados. Se mantienen únicamente como material provisional sin importación a runtime.
+
+**Producto inicialmente propuesto:** base consultable por índices/lecturas, **no** IA implementada ni servicio operativo. Catálogo editorial: `mundo/lore/knowledge/lore_2383_enciclopedia_editorial_v1.json`.
 
 ## Precedencia aprobada — enciclopedia de Star Trek Legends, NO canon televisivo automático
 

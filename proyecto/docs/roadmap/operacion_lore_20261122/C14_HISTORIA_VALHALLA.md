@@ -1,49 +1,42 @@
-# C14 — Historia de reconstrucción de la Enterprise-D: cronología narrativa y misiones
+# C14 — Historia aprobada de reconstrucción de la Enterprise-D (23-11-2026)
 
-**Nave:** USS Enterprise NCC-1701-D, clase Galaxy. **Programa:** Proyecto Valhalla, `GAME_ADDITION`. **Director técnico:** Geordi La Forge. **Futuro:** objetivo de disponibilidad 2387, sin garantía. **No es una clase nueva, tampoco es la Enterprise-F.**
+**Identidad:** USS Enterprise **NCC-1701-D**, clase **Galaxy**, modernización Galaxy Refit A2. **Proyecto Valhalla** designa la reconstrucción, no una clase nueva ni otra Enterprise. **GAME_ADDITION** ratificada por el autor.
 
-## Prólogo histórico: no reemplazar un mito por otro
+## Cronología histórica y de campaña
 
-**2371 — SCREEN_CANON.** En Veridian III, la Enterprise-D no desaparece sin restos: el platillo aterriza tras la destrucción de la sección de ingeniería. El daño y la memoria de la tripulación dejan un buque emblemático fuera de servicio. El rescate posterior del platillo y la reconstrucción para la campaña son continuidad propia desde su autorización.
+| Año | Hecho |
+|---|---|
+| **2371** | La Enterprise-D pierde la sección motriz y su platillo queda en Veridian III. |
+| **2379** | Comienza oficialmente el Proyecto Valhalla, dirigido por Geordi La Forge. |
+| **2380** | Arranca la reconstrucción material y modernización de la Enterprise-D. |
+| **2381–2386** | Reconstrucción estructural, modernización, integración y pruebas del programa; no se fijan componentes donantes por cuenta propia. |
+| **2383** | Enterprise-D sigue en reconstrucción. Picard solicita a Riker, en encuentro posterior al Consejo con Janeway presente, asumir su futuro mando y tutelar al alférez Rise tras Academia. La clase Odyssey está en servicio y es referencia tecnológica. |
+| **2386** | Geordi consigue recuperar a Data mediante investigación propia, independiente de la disponibilidad naval. |
+| **2387** | **Enterprise-D entra en servicio** con Riker de oficial al mando (grado vicealmirante), Data como **comandante y primer oficial**, y dotación habilitada. Rise se gradúa de Academia y es destinado conforme al itinerario narrativo aprobado, sin convertirse automáticamente en capitán. |
 
-**2379 — GAME_ADDITION.** Tras los acontecimientos de *Nemesis*, una revisión institucional de conservación naval pregunta si la Enterprise-D puede recuperar utilidad científica y valor moral sin convertirse en un monumento peligroso. La propuesta de Geordi se fundamenta en el casco histórico y en un programa experimental de modernización medible. Se crea una **iniciativa de estudio**, todavía no un buque asignable.
+Estas fechas son la **cronología autoral prevista y aprobada**, no etiquetas que creen automáticamente buques, destinos o pruebas en CoreRPG. El motor del juego deberá reflejar los hechos de inicio/campaña cuando corresponda mediante los procesos técnicos adecuados; no se inventan otros desenlaces al aplicar este documento.
 
-**2380 — GAME_ADDITION.** Comienza trabajo material: recuperación y preservación de elementos originales, examen de fatiga, descontaminación, revisión de arquitectura de casco y subsistemas. La sección motriz destruida debe sustituirse o reconstruirse **con un donante distinto, aún no identificado**. No atribuirle el casco Syracuse de 2401.
+## Dirección y responsabilidades
 
-**2381–2382 — GAME_ADDITION.** Ensayos de compatibilidad de interfaces de navegación, EPS, soporte vital, sensores y seguridad. El equipo discute cuánto conservar: apariencia externa reconocible, interiores Galaxy Refit A2 y nuevas tecnologías que no alteren identidad ni capacidad de evacuar. La comisión técnica rechaza el razonamiento «si cabe en un concepto 3D, funciona».
+- **Geordi La Forge:** **contraalmirante**, director del Proyecto Valhalla; no ocupa el puesto de ingeniero jefe de Enterprise-D.
+- **William T. Riker:** **vicealmirante**, comandante funcional de Enterprise-D tras su entrada en servicio, por designación institucional. Mentor de Rise.
+- **Data:** oficial recuperado en 2386; **comandante y primer oficial** desde 2387.
+- **Flota:** altas administrativas, certificaciones y nombramientos.
+- **CoreRPG:** autoridad exclusiva sobre estado de naves, hechos, dotación, rangos, permisos y persistencia.
 
-**2383 — GAME_ADDITION establecida.** Mientras el protagonista entra en Academia, la Enterprise-D se encuentra aún en obras. La Flota utiliza Odyssey como referente tecnológico, no transfiere automáticamente sus resultados de flujo cuántico. El prestigio del programa puede ser público, mientras planos, riesgos y especificaciones permanecen compartimentados. Geordi sigue siendo capitán en esta fecha.
+## Tecnologías aprobadas para la nave
 
-**2383–2384 — HORIZONTE CONDICIONAL.** Primeras pruebas de sensórica reforzada con objetivos de precisión, discriminación de firmas y robustez ante interferencias; si fallan, quedan en prototipo. Las técnicas de detección **no** conceden omnisciencia, ni permiten descubrir entidades que no emiten firma medible.
+- **Escudos primarios, secundarios y terciarios** (triple capa).
+- **Blindaje ablativo desplegable**.
+- **Torpedos transfásicos**.
+- **Nave auxiliar de clase Defiant** como parte del diseño aprobado; ubicación, logística, disponibilidad real y certificaciones corresponden al proyecto técnico.
+- Modernización general de sensores, reactores, energía, ordenador, ingeniería, transportadores, comunicaciones, soporte vital, ciencia y seguridad conforme a las **16 áreas VAL-TEC** históricas, sin inventar especificaciones ni conceder equipamiento a otras naves por extensión.
+- **Motor de flujo cuántico / quantum slipstream**: **NO se instala al entrar en servicio en 2387**. La investigación comienza en **2383** sobre una o más Odyssey de pruebas; se incorporará a Enterprise-D **posteriormente**, si desarrollo, validación y autorizaciones concluyen satisfactoriamente. No confundir con transwarp ni torpedos cuánticos. Mantener warp modernizado convencional mientras tanto.
 
-**2384–2385 — HORIZONTE CONDICIONAL.** Pruebas de ingeniería y seguridad con evaluación independiente: generación eléctrica, refrigeración, blindajes, campos, seguridad de transportadores, compartimentos, estanqueidad, rutas de evacuación y supervivencia. Los paneles LCARS y la distribución de cubiertas son **activos en producción**, no certificación de ingeniería real.
+**Arquitectura:** identidad exterior Galaxy, interiores Galaxy Refit A2, LCARS azul/cian, distribución de salas/cubiertas y puentes según el diseño especializado de Valhalla; esta ficha no altera planos ni decide geometrías.
 
-**2385–2386 — HORIZONTE CONDICIONAL.** La institución decide cuánto personal embarcar de forma sostenible: el viejo objetivo 1.800+400 no se aprueba por ser un número atractivo. Hangar de lanzaderas, posibilidad de auxiliar Defiant, Ten Forward, holocubiertas y laboratorios se validan por volumen, accesos, mantenimiento, guardias y suministros. El fracaso de un requisito puede reducir o aplazar instalaciones.
+## Frontera editorial firme
 
-**2386–2387 — HORIZONTE CONDICIONAL.** Revisión de disponibilidad, pruebas de mar espacial, designación de oficial al mando y aceptación gradual de subsistemas. Riker es candidato natural a CO **en sentido funcional** de una Enterprise-D ya comisionada tras orden; su rango de vicealmirante y cargo de Primera Flota son separados. Ninguna persona tiene mando por estar en una fotografía de pruebas.
+**Se eliminan íntegramente VAL-N01 a VAL-N08** y cualquier obligación de campaña de reconstrucción que se inventó durante la operación anterior. Son acontecimientos históricos de la vida del universo, **no ocho misiones del jugador**. No reintroducirlas a través de índices, listas o generación automática de misiones.
 
-**2387 — OBJETIVO.** Si y solo si casco, seguridad, presupuesto, dotación, ensayos y orden de alta son favorables, puede entrar en servicio. **Alternativas válidas:** alta parcial restringida; demora; rediseño; pérdida de ensayo; cambio de función; cancelación. El jugador podrá aspirar a destino después de los cuatro años de Academia si existe vacante, no antes por sangre o admiración.
-
-## Misiones de campaña propuestas (no eventos consumados)
-
-| Código | Propuesta | Entrada causal | Resultado abierto |
-|---|---|---|---|
-| VAL-N01 | El archivo perdido | expediente histórico autorizado y misión legítima | reconstrucción documental o laguna |
-| VAL-N02 | Señal fantasma | sensor instalado, anomalía física y autorización | falso positivo, nuevo fenómeno o avería |
-| VAL-N03 | Equilibrio de energía | ingeniería operativa, ensayo y riesgos | mejora, reajuste o suspensión |
-| VAL-N04 | El casco que falta | inventario real de astillero y alternativas de donación | donante viable, diseño nuevo o aplazamiento |
-| VAL-N05 | Dos tripulaciones | dotación propuesta, espacios y convivencia | redimensionamiento o rechazo de aforo |
-| VAL-N06 | El puente de la memoria | modelo validado y presencia de antiguos tripulantes | visita/emotividad, no alta automática |
-| VAL-N07 | Comando y responsabilidad | orden de comisionamiento y Riker disponible | mando funcional Riker, otro CO o espera |
-| VAL-N08 | Primera travesía | alta, pruebas superadas y misión aprobada | misión de exploración, retorno por fallo o desvío |
-
-## Reglas de producción y continuidad
-
-- Rótulos: siempre **USS ENTERPRISE NCC-1701-D**; `Proyecto Valhalla` es el nombre del programa.
-- Estética exterior Galaxy y cabinas Galaxy Refit A2, LCARS azul/cian; las coordenadas de salas y geometrías no se certifican documentalmente.
-- La eventual «sala del ordenador» o Ten Forward E no existe como funcional en 2383: necesita nave, geometría, tripulación, acceso y equipos.
-- Separación de secciones, escudos triples, ablativo, torpedos transfásicos, Defiant auxiliar y flujo cuántico permanecen **candidatos**, sujetos a pruebas, nunca instalados por omisión.
-- Geordi dirige reconstrucción y también podría investigar a Data, sin que el éxito de uno dependa o garantice el otro.
-- Narrativa/IA ofrece opciones, **CoreRPG** registra hechos. UE5 representa lo que exista, sin crear una segunda nave «Valhalla».
-
-**Fuentes:** DEC-0020, DEC-0021, `mundo/lore/starships/individual_ships/project_valhalla_enterprise_d_v0.1.json`; referencia oficial del contraste de 2401: https://www.startrek.com/news/journey-from-generations-to-picard .
+La ingeniería final, instalación física de equipos, plazas y pruebas en Unreal pertenecen a los procesos técnicos correspondientes; este documento registra **decisiones narrativas y de diseño**, no certificación runtime.
