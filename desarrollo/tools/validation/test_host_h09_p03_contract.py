@@ -146,10 +146,10 @@ class H09P03ContractTests(unittest.TestCase):
                   "handoff_executes_motion",
                   "ue_world_position_authoritative",
                   "h08_clock_assumes_ship_movement",
-                  "restore_reuses_old_generation_receipt",
-                  "no_automatic_retry"):
+                  "restore_reuses_old_generation_receipt"):
             with self.subTest(invariant=k):
                 self.assertFalse(rules[k])
+        self.assertTrue(rules["no_automatic_retry"])
         self.assertIn("distance_ly", load(self.source("route_edge"))["fields"])
         self.assertIn("warp_time_calculation",
                       load(self.source("route_edge"))["allowed_derivation_types"])
