@@ -1,5 +1,7 @@
 # A01 — Auditoría de actualidad documental LORE-01–05
 
+> **Nota de vigencia (23-11-2026):** este es un corte histórico anterior a la revisión personal del autor. Las decisiones posteriores de DECISIONES_RATIFICADAS_20261123.md y C11/C12/C14/C15 actualizados **prevalecen**; no reinstaurar genealogía, guion ni misiones VAL-N01–VAL-N08 citados indirectamente en informes antiguos.
+
 **Corte:** 22-11-2026 · **Línea base:** `main@8e9c7064`. Este documento es una **reconciliación focalizada**, no una afirmación de haber leído línea por línea todo el repositorio ni de haber ejecutado todos los validadores anteriores.
 
 ## Hechos de GitHub contrastados

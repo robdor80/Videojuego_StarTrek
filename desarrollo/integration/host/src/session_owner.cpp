@@ -5,6 +5,8 @@
 #include "biography_profile_source.h"
 #include "f10/academy_player_binding.h"
 #include "native_session.h"
+#include "event_delivery.h"
+#include "notification_projection.h"
 #include "player_bootstrap.h"
 #ifdef TREK_HOST_GATEWAY_TESTING
 #include "gateway_test_access.h"
@@ -12,6 +14,7 @@
 
 #include <atomic>
 #include <algorithm>
+#include <array>
 #include <condition_variable>
 #include <cstdio>
 #include <deque>
@@ -207,13 +210,20 @@ struct SessionOwner::Impl {
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
     struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
+    struct SubscribeEvents { Generation generation; std::uint64_t order, correlation; std::promise<EventSubscriptionResult> reply; };
+    struct PollEvents { Generation generation; std::uint64_t subscription, correlation; std::promise<EventBatchResult> reply; };
+    struct PollNotifications { Generation generation; std::uint64_t subscription, correlation; std::promise<NotificationBatchResult> reply; };
+    struct AckEvents { Generation generation; std::uint64_t subscription, event_id; std::promise<Result> reply; };
+    struct AdvanceClock { Generation generation; ClockIntent intent; std::uint64_t correlation; std::promise<ClockResult> reply; };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+                                 SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
     using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch,
+                                 SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots>;
 #endif
@@ -235,6 +245,17 @@ struct SessionOwner::Impl {
     std::weak_ptr<const detail::AcademyCreationIntent> academy_product_intent;
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
+    detail::EventDelivery event_delivery;
+    struct ClockReplay { ClockIntent intent{}; ClockResult reply{}; bool valid = false; };
+    std::array<ClockReplay,32> clock_replay{};
+    std::uint64_t last_clock_id = 0;
+    std::size_t clock_replay_position = 0;
+
+    void reset_clock_replay() noexcept {
+        for (auto& entry : clock_replay) entry.valid = false;
+        last_clock_id = 0;
+        clock_replay_position = 0;
+    }
     std::shared_ptr<const detail::AcademyAnchor> academy_player;
     bool stopping = false;
     std::optional<Open> opening;
@@ -272,6 +293,8 @@ struct SessionOwner::Impl {
     // Caller holds mutex. Complete queued work before the session can be destroyed.
     void invalidate()
     {
+        event_delivery.invalidate();
+        reset_clock_replay();
         reset_catalog();
         academy_player.reset();
         academy_receipt.reset();
@@ -287,6 +310,12 @@ struct SessionOwner::Impl {
             std::visit([](auto& item) {
                 if constexpr (std::is_same_v<std::decay_t<decltype(item)>, Dispatch>)
                     item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.request.correlation});
+                else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, AdvanceClock>)
+                    item.reply.set_value({Error::GENERATION_EXPIRED, {}, item.correlation});
+                else if constexpr (std::is_same_v<std::decay_t<decltype(item)>, SubscribeEvents> ||
+                                   std::is_same_v<std::decay_t<decltype(item)>, PollEvents> ||
+                                   std::is_same_v<std::decay_t<decltype(item)>, PollNotifications>)
+                    item.reply.set_value({Error::GENERATION_EXPIRED, {}, 0, item.correlation});
                 else item.reply.set_value({Error::GENERATION_EXPIRED, {}});
             }, request);
         }
@@ -318,17 +347,29 @@ struct SessionOwner::Impl {
     {
         std::lock_guard lock(mutex);
         auto reject = [&](Error error) {
-            if constexpr (std::is_same_v<Item, Dispatch>) {
+            if constexpr (std::is_same_v<Item, Dispatch> ||
+                          std::is_same_v<Item, SubscribeEvents> || std::is_same_v<Item, PollEvents> ||
+                          std::is_same_v<Item, PollNotifications> ||
+                          std::is_same_v<Item, AdvanceClock>) {
                 std::promise<Reply> promise;
                 auto future = promise.get_future();
-                promise.set_value({error, {}, request.request.correlation});
+                if constexpr (std::is_same_v<Item, Dispatch>)
+                    promise.set_value({error, {}, request.request.correlation});
+                else if constexpr (std::is_same_v<Item, AdvanceClock>)
+                    promise.set_value({error, {}, request.correlation});
+                else promise.set_value({error, {}, 0, request.correlation});
                 return future;
             } else return ready<Reply>(error);
         };
         if (const auto error = admission(request.generation); error != Error::OK) {
             return reject(error);
         }
-        if constexpr (std::is_same_v<Item, Dispatch>) {
+        if constexpr (std::is_same_v<Item, Dispatch> ||
+                      std::is_same_v<Item, SubscribeEvents> ||
+                      std::is_same_v<Item, PollEvents> ||
+                      std::is_same_v<Item, PollNotifications> ||
+                      std::is_same_v<Item, AckEvents> ||
+                      std::is_same_v<Item, AdvanceClock>) {
             if (binding != Binding::BOUND)
                 return reject(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
         }
@@ -776,6 +817,178 @@ struct SessionOwner::Impl {
         request.reply.set_value(std::move(reply));
     }
 
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 SubscribeEvents& request)
+    {
+        auto fail = [&](Error error) { request.reply.set_value({error, {}, 0, request.correlation}); };
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (binding != Binding::BOUND || session.academy()) { fail(Error::ACCESS_DENIED); return; }
+        if (!request.order) { fail(Error::INVALID_ARGUMENT); return; }
+        if (!event_delivery.has_capacity()) { fail(Error::CAPACITY_LIMIT); return; }
+        const auto principal = player;
+        detail::NativeEventPage page{};
+        lock.unlock();
+        const auto outcome = session.events(principal, request.order, 0, page);
+        lock.lock();
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (outcome.error != Error::OK) { report_failure("event subscribe", outcome); fail(outcome.error); return; }
+        try {
+            const auto token = event_delivery.subscribe(request.order);
+            if (!token) { fail(Error::CAPACITY_LIMIT); return; }
+            request.reply.set_value({Error::OK, request.generation, token, request.correlation});
+        } catch (...) { fail(Error::INTERNAL_ERROR); }
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 PollEvents& request)
+    {
+        auto fail = [&](Error error) { request.reply.set_value({error, {}, 0, request.correlation}); };
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (binding != Binding::BOUND || session.academy()) { fail(Error::ACCESS_DENIED); return; }
+        auto* sub = event_delivery.find(request.subscription);
+        if (!sub) { fail(Error::SCOPE_INVALID); return; }
+        if (sub->resync_required) {
+            request.reply.set_value({Error::OK, request.generation, request.subscription,
+                                     request.correlation, {}, false, true});
+            return;
+        }
+        if (sub->pending.empty()) {
+            const auto principal = player;
+            const auto order = sub->order;
+            const auto after = sub->cursor;
+            detail::NativeEventPage page{};
+            lock.unlock();
+            const auto outcome = session.events(principal, order, after, page);
+            lock.lock();
+            if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+            sub = event_delivery.find(request.subscription); // Never retain a pointer across unlock.
+            if (!sub) { fail(Error::GENERATION_EXPIRED); return; }
+            if (outcome.error != Error::OK) { report_failure("event poll", outcome); fail(outcome.error); return; }
+            try {
+                if (!detail::EventDelivery::append(*sub, page.events,
+                                                   static_cast<std::size_t>(page.written), page.more)) {
+                    sub->resync_required = true;
+                    request.reply.set_value({Error::OK, request.generation, request.subscription,
+                                             request.correlation, {}, false, true});
+                    return;
+                }
+            } catch (...) { fail(Error::INTERNAL_ERROR); return; }
+        }
+        try {
+            EventBatchResult result;
+            result.generation = request.generation;
+            result.subscription = request.subscription;
+            result.correlation_id = request.correlation;
+            result.more = sub->source_more;
+            result.events.assign(sub->pending.begin(), sub->pending.end());
+            request.reply.set_value(std::move(result));
+        } catch (...) { fail(Error::INTERNAL_ERROR); }
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 PollNotifications& request)
+    {
+        // Reuse exactly P02's authenticated page, cursor and queue. The nested
+        // request is executed synchronously on this same owner thread, not an
+        // async task or a second F05 subscriber. Never duplicate Core reads.
+        std::promise<EventBatchResult> source_reply;
+        auto ready_source = source_reply.get_future();
+        PollEvents source{request.generation, request.subscription,
+                          request.correlation, std::move(source_reply)};
+        execute(lock, session, source);
+        try {
+            const auto page = ready_source.get();
+            request.reply.set_value(
+                detail::NotificationProjection::from_authorized_f05(page, persistent_id));
+        } catch (...) {
+            request.reply.set_value({Error::INTERNAL_ERROR, {}, 0, request.correlation});
+        }
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>&, detail::NativeSession& session,
+                 AckEvents& request)
+    {
+        if (const auto error = admission(request.generation); error != Error::OK) {
+            request.reply.set_value({error, {}}); return;
+        }
+        if (binding != Binding::BOUND || session.academy()) {
+            request.reply.set_value({Error::ACCESS_DENIED, {}}); return;
+        }
+        auto* sub = event_delivery.find(request.subscription);
+        if (!sub) { request.reply.set_value({Error::SCOPE_INVALID, {}}); return; }
+        const auto ok = detail::EventDelivery::ack(*sub, request.event_id);
+        request.reply.set_value({ok ? Error::OK : Error::INVALID_ARGUMENT,
+                                 ok ? request.generation : Generation{}});
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session,
+                 AdvanceClock& request)
+    {
+        const auto fail = [&](Error error) {
+            request.reply.set_value({error, {}, request.correlation});
+        };
+        if (const auto error = admission(request.generation); error != Error::OK) { fail(error); return; }
+        if (binding != Binding::BOUND) {
+            fail(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
+            return;
+        }
+        if (session.academy()) { fail(Error::SERVICE_UNAVAILABLE); return; }
+        const auto& intent = request.intent;
+        if (!intent.intent_id || !intent.task_budget ||
+            intent.task_budget > ClockLimits::max_tasks ||
+            intent.horizon < intent.expected_now ||
+            intent.horizon - intent.expected_now > ClockLimits::max_span_seconds) {
+            fail(Error::INVALID_ARGUMENT);
+            return;
+        }
+        for (const auto& entry : clock_replay) {
+            if (!entry.valid || entry.intent.intent_id != intent.intent_id) continue;
+            const auto& old = entry.intent;
+            if (old.expected_revision != intent.expected_revision ||
+                old.expected_now != intent.expected_now ||
+                old.horizon != intent.horizon || old.task_budget != intent.task_budget) {
+                fail(Error::IDEMPOTENCY_CONFLICT);
+                return;
+            }
+            auto response = entry.reply;
+            response.correlation_id = request.correlation;
+            response.replayed = true;
+            request.reply.set_value(response); // No second Core clock call.
+            return;
+        }
+        // Once a key falls out of the 32-receipt cache it cannot be reused.
+        // New calls must strictly increase the key within this generation.
+        if (intent.intent_id <= last_clock_id) { fail(Error::IDEMPOTENCY_CONFLICT); return; }
+        const auto principal = player;
+        detail::NativeClockReport facts{};
+        lock.unlock();
+        const auto outcome = session.advance(principal, intent, facts);
+        report_failure("advance clock", outcome);
+        lock.lock();
+        if (const auto error = admission(request.generation); error != Error::OK) {
+            fail(error); // CLOSE/RESTORE invalidated the in-flight result.
+            return;
+        }
+        ClockResult response;
+        response.error = outcome.error;
+        response.generation = outcome.error == Error::OK ? request.generation : Generation{};
+        response.correlation_id = request.correlation;
+        if (outcome.error == Error::OK) {
+            response.before_tick = facts.before_tick;
+            response.after_tick = facts.after_tick;
+            response.before_revision = facts.before_revision;
+            response.after_revision = facts.after_revision;
+            response.processed = facts.processed;
+            response.more_due = facts.more_due;
+        }
+        // Fixed-size, allocation-free replay receipts are operational only.
+        // Never persist them as a second timeline or auto-retry partial effects.
+        clock_replay[clock_replay_position] = {intent, response, true};
+        clock_replay_position = (clock_replay_position + 1) % clock_replay.size();
+        last_clock_id = intent.intent_id;
+        request.reply.set_value(response);
+    }
+
 #ifdef TREK_HOST_GATEWAY_TESTING
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, TestVisit& request)
     {
@@ -989,6 +1202,34 @@ std::future<OperationResult> SessionOwner::institutional_command(Generation gene
 {
     return impl_->enqueue<OperationResult>(Impl::Dispatch{generation,{detail::GatewayOp::INSTITUTIONAL,{},0,0,correlation},{}});
 }
+std::future<EventSubscriptionResult> SessionOwner::subscribe_order_events(
+    Generation generation, std::uint64_t order, std::uint64_t correlation)
+{
+    return impl_->enqueue<EventSubscriptionResult>(Impl::SubscribeEvents{generation, order, correlation, {}});
+}
+std::future<EventBatchResult> SessionOwner::poll_order_events(
+    Generation generation, std::uint64_t subscription, std::uint64_t correlation)
+{
+    return impl_->enqueue<EventBatchResult>(Impl::PollEvents{generation, subscription, correlation, {}});
+}
+std::future<NotificationBatchResult> SessionOwner::poll_order_notifications(
+    Generation generation, std::uint64_t subscription, std::uint64_t correlation)
+{
+    return impl_->enqueue<NotificationBatchResult>(
+        Impl::PollNotifications{generation, subscription, correlation, {}});
+}
+std::future<Result> SessionOwner::ack_order_events(
+    Generation generation, std::uint64_t subscription, std::uint64_t event_id)
+{
+    return impl_->enqueue<Result>(Impl::AckEvents{generation, subscription, event_id, {}});
+}
+std::future<ClockResult> SessionOwner::advance_clock(
+    Generation generation, ClockIntent intent, std::uint64_t correlation)
+{
+    return impl_->enqueue<ClockResult>(
+        Impl::AdvanceClock{generation, intent, correlation, {}});
+}
+
 #ifdef TREK_HOST_GATEWAY_TESTING
 std::future<Result> GatewayTestAccess::visit(SessionOwner& owner, Generation generation, std::function<void(F04Session*)> visit)
 {

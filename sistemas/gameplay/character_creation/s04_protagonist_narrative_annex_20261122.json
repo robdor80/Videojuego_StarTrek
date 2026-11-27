@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "annex_id": "s04_fixed_protagonist_narrative_annex_20261122",
   "status": "APPROVED_GAME_ADDITION_DOCUMENTARY_NOT_HOST_PAYLOAD",
   "provenance": "GAME_ADDITION",
@@ -28,118 +28,37 @@
       "mother": {
         "name": "T'Ralis",
         "species": "vulcan",
-        "profession_es": "profesora civil de lógica aplicada"
+        "profession_es": "profesora civil de lógica aplicada",
+        "starfleet_service": false,
+        "death": {
+          "state": "DECEASED_BEFORE_2383",
+          "cause": "SUDDEN_FULMINANT_CARDIAC_DISEASE",
+          "exact_year": null,
+          "protagonist_already_adult": true
+        }
       },
       "father": {
-        "name": "Naveen Vale",
+        "name": "Naveen Rise",
         "species": "human",
         "profession_es": "historiador científico y archivista civil",
-        "ancestor": "khan_noonien_singh"
+        "ancestor": "khan_noonien_singh",
+        "starfleet_service": false,
+        "death": {
+          "state": "DECEASED_BEFORE_2383",
+          "cause": "AGE_RELATED_NATURAL",
+          "exact_year": null,
+          "protagonist_already_adult": true
+        }
       }
-    }
+    },
+    "surname": "Rise",
+    "given_name_customizable": true,
+    "display_name_policy": "CUSTOM_GIVEN_NAME_PLUS_RISE",
+    "family_residence": "VULCAN_NEAR_SHI_KAHR",
+    "parents_how_met": "NOT_RATIFIED"
   },
-  "lineage": [
-    {
-      "generation": 0,
-      "name": "Khan Noonien Singh",
-      "birth_year_approx": null,
-      "relation_to_previous": "canonical_ancestor"
-    },
-    {
-      "generation": 1,
-      "name": "Nadiya Singh",
-      "birth_year_approx": 1995,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 2,
-      "name": "Arun Singh",
-      "birth_year_approx": 2023,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 3,
-      "name": "Leena Singh",
-      "birth_year_approx": 2051,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 4,
-      "name": "Rafi Sen",
-      "birth_year_approx": 2079,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 5,
-      "name": "Samira Sen",
-      "birth_year_approx": 2107,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 6,
-      "name": "Dev Sen",
-      "birth_year_approx": 2135,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 7,
-      "name": "Isha Sen",
-      "birth_year_approx": 2163,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 8,
-      "name": "Navin Sen",
-      "birth_year_approx": 2191,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 9,
-      "name": "Maya Sen",
-      "birth_year_approx": 2219,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 10,
-      "name": "Aren Sen",
-      "birth_year_approx": 2247,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 11,
-      "name": "Lina Vale",
-      "birth_year_approx": 2275,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    },
-    {
-      "generation": 12,
-      "name": "Naveen Vale",
-      "birth_year_approx": 2303,
-      "relation_to_previous": "direct_biological_child_GAME_ADDITION"
-    }
-  ],
-  "teachers": [
-    {
-      "name": "Sorvek",
-      "field": "suus_mahna",
-      "role": "original_civil_instructor"
-    },
-    {
-      "name": "Mara Calder",
-      "field": "aikido",
-      "role": "original_civil_instructor"
-    },
-    {
-      "name": "Imran Chen",
-      "field": "kung_fu",
-      "role": "original_civil_instructor"
-    },
-    {
-      "name": "Akira Sato",
-      "field": "karate",
-      "role": "original_civil_instructor"
-    }
-  ],
+  "lineage": [],
+  "teachers": [],
   "skills": {
     "martial": [
       "kung_fu",
@@ -152,11 +71,12 @@
       "astrophysics"
     ],
     "music": [
-      "vulcan_lute",
-      "cello"
+      "piano"
     ],
     "formal_starfleet_prior_service": false,
-    "automatic_officer_rank": false
+    "automatic_officer_rank": false,
+    "martial_mastery": "ADVANCED_MASTER_ALL_FOUR",
+    "associated_blade_weapons_mastery": "ADVANCED"
   },
   "science_fiction_genetic_basis": "fictional_exceptional_polygenic_reexpression_no_numeric_mechanics",
   "privacy": "RESTRICTED_BIOGRAPHICAL_AND_MEDICAL_INFORMATION",
@@ -167,5 +87,48 @@
     "new_runtime_contract_required_for_parents_and_teacher_fields": true,
     "migration_policy": "EXPLICIT_VERSIONED_WITH_HASH_AND_SAVE_COMPATIBILITY",
     "world_state_materialized": false
-  }
+  },
+  "approval_date": "2026-11-23",
+  "lineage_policy": {
+    "biological_paternal_descent_from": "khan_noonien_singh",
+    "verified": true,
+    "intermediate_ancestors": "NOT_NAMED_NOT_REQUIRED",
+    "surname_explanation": "GENERATIONAL_SURNAME_CHANGES"
+  },
+  "teachers_policy": "NAMES_NOT_REQUIRED_BY_GAME",
+  "genetic_traits": [
+    "superhuman_strength",
+    "exceptional_endurance",
+    "superior_intelligence",
+    "superior_speed",
+    "superhuman_reflexes",
+    "regenerative_blood_disease_resistance_therapeutic_research",
+    "exceptional_memory_learning",
+    "elevated_pain_trauma_tolerance",
+    "superior_neuromuscular_coordination"
+  ],
+  "genetic_traits_require_starfleet_evaluation": true,
+  "blood_therapeutic_scope": "INVESTIGABLE_NOT_UNIVERSAL_CURE_CONSENT_REQUIRED",
+  "academy_vocation": {
+    "since_childhood": true,
+    "vulcan_science_academy_declined_voluntarily": true,
+    "entry_age_45_planned_voluntary": true
+  },
+  "initial_personality": {
+    "traits": [
+      "analytical_curious",
+      "disciplined_self_control",
+      "serene_confident",
+      "reserved_empathetic_humor",
+      "federation_ethics",
+      "merit_driven_ambition",
+      "responsible_power_use",
+      "perfectionism_possible",
+      "leadership_initiative"
+    ],
+    "player_choices_unrestricted": true,
+    "mutable_by_gameplay": true,
+    "no_genetic_moral_determinism": true
+  },
+  "approved_review_ref": "proyecto/docs/roadmap/operacion_lore_20261122/DECISIONES_RATIFICADAS_20261123.md"
 }

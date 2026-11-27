@@ -1,5 +1,7 @@
 # B05 — Medicina, investigación y especies: guía de ampliación crítica
 
+**RATIFICADO 23-11-2026:** 26 perfiles clínicos, 38 condiciones y 20 fenómenos científicos permanecen como biblioteca del universo. La auditoría ficha por ficha y las pruebas clínicas/runtime siguen pendientes. La sangre regenerativa de Rise es aptitud aprobada de **potencial terapéutico investigable**, nunca cura universal.
+
 **Alcance:** procesos 05 y 06, junto a lectura de LORE-01 especies/culturas y LORE-02C/D. Catálogos anteriores conservados; ampliación cualitativa y criterios para futuras consultas clínicas/científicas, **sin dosis ni cifras ficticias**.
 
 ## 1. Razonamiento médico seguro en Enfermería

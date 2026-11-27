@@ -1,4 +1,4 @@
-# B03 — Cronología galáctica: síntesis 2364–2383 y horizonte abierto 2383–2387
+# B03 — Cronología galáctica y ratificación de hitos 2383–2387
 
 **Función:** ampliación editorial y guía de inicialización, sin duplicar los 40 eventos preexistentes de `mundo/lore/diplomacy/historical_events_v0.1.json` ni las 26 fichas de `mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json`. La tabla no es un flujo ejecutable.
 
@@ -31,22 +31,24 @@ La Guerra del Dominio alteró **instituciones, flotas, suministros, fronteras di
 - **Dominio y Gamma:** final de la guerra no significa desaparición del Dominio ni licencia ilimitada para penetrar espacios soberanos. Tránsitos y acceso tienen condiciones.
 - **Borg:** memoria de incursiones e inteligencia fragmentada. La tecnología/nanoprobes no son equipo ordinario; el acceso Delta no se desbloquea por leer el archivo.
 - **Odyssey:** clase operativa y referencia tecnológica desde 2383 por `GAME_ADDITION`; no materializar automáticamente una Enterprise-F individual ni sus actos del 2401.
-- **Enterprise-D:** en astillero, no comisionada; prioridad científica/sensorial prevista con pruebas por delante.
+- **Enterprise-D:** en astillero en **2383**, todavía no comisionada; su **entrada en servicio está fijada narrativamente en 2387**, sin suplantar eventos CoreRPG.
 - **Protagonista:** 45 años, expediente de ascendencia Khan declarado, candidatura evaluada conforme F10; todavía no ostenta rango de oficial.
 
-## 3. Horizonte 2383–2387: registro de posibilidades, NO historia impuesta
+## 3. Horizonte 2383–2387: continuidad aprobada y condiciones técnicas
 
 | Ventana | Posibilidad o plan | Requisito material | Si no ocurre |
 |---|---|---|---|
 | 2383 | Audiencia de admisión y comienzo de Academia | expediente, pruebas y resolución competente | no crear alta académica por reproducción de vídeo |
 | 2383–2387 | Pruebas de componentes de Enterprise-D | recurso, instalación, aprobación y test | el casco sigue en construcción |
 | 2383–2387 | Investigaciones de flujo cuántico Odyssey | prototipo, datos, riesgo y resultados experimentales | no transferencia a Galaxy |
-| 2383–2387 | Geordi asciende de capitán a contraalmirante | nombramiento y evento de carrera | mantiene el rango registrado en la partida |
-| 2387 (objetivo) | Primera disponibilidad técnica de Enterprise-D | inspecciones, casco, seguridad y mandato de Flota | retraso, rediseño o cancelación posibles |
-| ~2387 | Graduación del protagonista | cuatro años, requisitos académicos completos, acto de nombramiento | no obtiene plaza ni grado automáticamente |
+| 2383–2387 | Geordi ostenta **rango de contraalmirante** y dirige Valhalla | registrar orden administrativa real, sin inventar día/mes del ascenso | no confundir director del programa con ingeniero jefe |
+| **2387 (aprobado)** | **La Enterprise-D entra en servicio** bajo el mando funcional del vicealmirante **Riker** y con **Data, comandante, de primer oficial** | reflejar alta, órdenes y estado de mundo por mecanismo autorizado; no se materializa por lectura | no inventar misiones ni dar la nave a otro jugador automáticamente |
+| **2387** | Rise termina los cuatro años de Academia y se convierte en **alférez**, según el itinerario narrativo aprobado | procedimiento de admisión/graduación legítimo y destino apropiado | no otorga de por sí la capitanía ni implica salto de rangos |
 | 2387 en continuidad televisiva externa | Crisis romulana/colapso y sucesos Kelvin posteriores | **fuera de los hechos impuestos a esta campaña**; posible evento solo si la simulación lo admite | campaña puede divergir |
 
 **Nota:** la destrucción de Rómulo en 2387 forma parte de otras líneas audiovisuales del universo Star Trek, pero el proyecto limita el alcance jugable a TNG/DS9/VOY y su continuación propia; **no** aplicar ese desenlace de una forma predeterminada. Referencia oficial orientativa: https://www.startrek.com/news/everything-you-need-to-know-about-nero (`OFFICIAL_REFERENCE`, no evento ejecutado).
+
+**Cambio de prioridad autoral de 23-11-2026:** el regreso de Data en **2386**, la incorporación como comandante/primer oficial en **2387**, el mando de Riker, el ascenso de Geordi y las edades propias de Siete forman parte de la continuidad ratificada. Las alternativas formuladas antes para dichos hechos han quedado superadas. El **flujo cuántico** se incorporará a Enterprise-D **después de 2387**, no al alta.
 
 ## 4. Regla de consulta y causalidad
 
