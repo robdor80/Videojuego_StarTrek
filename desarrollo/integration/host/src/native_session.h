@@ -38,10 +38,11 @@ public:
     NativeSession(const NativeSession&) = delete;
     NativeSession& operator=(const NativeSession&) = delete;
 
-    Outcome open(const PopulationConfig& config) noexcept;
+    Outcome open(const PopulationConfig&, const NavalBootstrap& = {}) noexcept;
     Outcome close() noexcept;
     Outcome commit_academy(std::unique_ptr<AcademyCampaign>) noexcept;
     const AcademyCampaign* academy() const noexcept { return academy_.get(); }
+    Outcome read_navigation(F04Ref, NavigationView&) const noexcept;
     Outcome persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept;
     Outcome snapshot(const std::filesystem::path&,const CampaignId&) noexcept;
     Outcome stage(const PreparedSlot&,F04Ref& player) noexcept;
@@ -80,7 +81,8 @@ const char* core_sha() noexcept;
 std::uint32_t persistent_identity(F04Session*,PersistentIdentity&,F04Ref&) noexcept;
 std::uint32_t snapshot(F04Session*,const std::filesystem::path&,const CampaignId&) noexcept;
 std::uint32_t restore(const PreparedSlot&,F04Session**,F04Ref&) noexcept;
-std::uint32_t create(const PopulationConfig& config, F04Session** session) noexcept;
+std::uint32_t read_navigation(F04Session*, F04Ref, NavigationView&) noexcept;
+std::uint32_t create(const PopulationConfig&, const NavalBootstrap&, F04Session**) noexcept;
 std::uint32_t probe(F04Session* session) noexcept;
 std::uint32_t destroy(F04Session* session) noexcept;
 std::uint32_t resolve_person(F04Session* session, std::uint64_t person_id,

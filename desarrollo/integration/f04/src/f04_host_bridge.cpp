@@ -1,7 +1,11 @@
-// HOST-only product composition: compile the unchanged bridge exactly once,
+// HOST-only product composition: compile the bridge exactly once,
 // then add native persistence/read APIs in the same private translation unit.
 // Other F04/F05/F11 compositions retain their frozen historical sources.
 #include "f04_host_persistence.h"
+#include "f04_host_navigation.h"
+#include "nav_chart_data.h"
+#include <corerpg/visibility.hpp>
+#define F04_HOST_NAVIGATION 1
 #include "f05_player_binding.h"
 
 #if defined(F11_ENABLE_PROMOTIONS) || defined(F11_NATIVE_TEST_HOST)
@@ -12,6 +16,7 @@
 // F11_HOST_READ_ONLY excludes the commit entry point and its write helpers.
 #define F11_ENABLE_PROMOTIONS 1
 #endif
-#include "f04_bridge.cpp"
+#include "f04_navigation_bridge.inc"
 #include "f04_host_snapshot.inc"
 #include "../../f05/src/f05_player_binding.inc"
+#include "f04_host_navigation.inc"

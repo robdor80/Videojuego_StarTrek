@@ -5,6 +5,7 @@
 #include "biography_profile_source.h"
 #include "f10/academy_player_binding.h"
 #include "native_session.h"
+#include "navigation/route_solver.h"
 #include "event_delivery.h"
 #include "notification_projection.h"
 #include "player_bootstrap.h"
@@ -148,6 +149,7 @@ Error verify_slot(const detail::PreparedSlot& prepared)
 struct SessionOwner::Impl {
     struct Open {
         PopulationConfig config;
+        NavalBootstrap naval;
         std::shared_ptr<const detail::ActiveCampaign> campaign;
         std::promise<Result> reply;
     };
@@ -210,6 +212,14 @@ struct SessionOwner::Impl {
     struct Save { Generation generation;std::string slot;std::promise<Result> reply; };
     struct Load { Generation generation;SlotAddress address;bool had_active;std::promise<Result> reply; };
     struct Dispatch { Generation generation; detail::GatewayRequest request; std::promise<OperationResult> reply; };
+    enum class NavigationOp { READ, PROPOSE, VALIDATE };
+    struct Navigate {
+        Generation generation;
+        NavigationOp operation;
+        RouteIntent intent;
+        std::uint64_t reference;
+        std::promise<NavigationResult> reply;
+    };
     struct SubscribeEvents { Generation generation; std::uint64_t order, correlation; std::promise<EventSubscriptionResult> reply; };
     struct PollEvents { Generation generation; std::uint64_t subscription, correlation; std::promise<EventBatchResult> reply; };
     struct PollNotifications { Generation generation; std::uint64_t subscription, correlation; std::promise<NotificationBatchResult> reply; };
@@ -223,12 +233,12 @@ struct SessionOwner::Impl {
     };
 #ifdef TREK_HOST_GATEWAY_TESTING
     struct TestVisit { Generation generation; std::function<void(F04Session*)> visit; std::promise<Result> reply; };
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead,
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead, Navigate,
                                  SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots, TestVisit>;
 #else
-    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead,
+    using Request = std::variant<Check, PreparePlayer, BindPlayer, Save, Load, Dispatch, InstitutionalRead, Navigate,
                                  SubscribeEvents, PollEvents, PollNotifications, AckEvents, AdvanceClock,
                                  CreateAcademy, InspectAcademy, BindAcademy, InspectBoundAcademy,
                                  CreateBoundAcademy, QueryAcademy, InspectSlots>;
@@ -252,6 +262,12 @@ struct SessionOwner::Impl {
     Binding binding = Binding::UNBOUND;
     F04Ref player{};
     detail::EventDelivery event_delivery;
+    struct IssuedRoute {
+        F04Ref observer;
+        RouteProposal proposal;
+    };
+    std::deque<IssuedRoute> issued_routes;
+    static constexpr std::size_t max_issued_routes = 64;
     struct ClockReplay { ClockIntent intent{}; ClockResult reply{}; bool valid = false; };
     std::array<ClockReplay,32> clock_replay{};
     std::uint64_t last_clock_id = 0;
@@ -305,6 +321,7 @@ struct SessionOwner::Impl {
     void invalidate()
     {
         event_delivery.invalidate();
+        issued_routes.clear();
         reset_clock_replay();
         reset_catalog();
         academy_player.reset();
@@ -377,6 +394,7 @@ struct SessionOwner::Impl {
             return reject(error);
         }
         if constexpr (std::is_same_v<Item, Dispatch> ||
+                      std::is_same_v<Item, Navigate> ||
                       std::is_same_v<Item, SubscribeEvents> ||
                       std::is_same_v<Item, PollEvents> ||
                       std::is_same_v<Item, PollNotifications> ||
@@ -410,7 +428,7 @@ struct SessionOwner::Impl {
         std::string id;
         try {id=detail::new_campaign_id();}catch(...){state=State::CLOSED;request.reply.set_value({Error::INTERNAL_ERROR,{}});return;}
         lock.unlock();
-        auto outcome = session.open(request.config);
+        auto outcome = session.open(request.config, request.naval);
         lock.lock();
         if (outcome.error == Error::OK && state == State::OPENING) {
             const auto next = next_generation();
@@ -768,6 +786,7 @@ struct SessionOwner::Impl {
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Save& request)
     {
+        issued_routes.clear();
         const auto* academy = session.academy();
         if (academy && !store.configured()) { request.reply.set_value({Error::SAVE_INCOMPATIBLE, {}}); return; }
         if(binding!=Binding::BOUND){request.reply.set_value({Error::PRINCIPAL_UNBOUND,{}});return;}
@@ -804,6 +823,74 @@ struct SessionOwner::Impl {
         if(state==State::SAVING)state=State::ACTIVE;
         if(generation!=request.generation)error=Error::GENERATION_EXPIRED;
         request.reply.set_value({error,error==Error::OK?generation:Generation{}});
+    }
+
+    void execute(std::unique_lock<std::recursive_mutex>&, detail::NativeSession& session, Navigate& request)
+    {
+        const auto fail = [&](Error error) { request.reply.set_value(NavigationResult{error, {}}); };
+        if (const auto error = admission(request.generation); error != Error::OK) {
+            fail(error);
+            return;
+        }
+        if (binding != Binding::BOUND) {
+            fail(binding == Binding::INVALID ? Error::ACCESS_DENIED : Error::PRINCIPAL_UNBOUND);
+            return;
+        }
+        if (provenance != Provenance::CREATED_LOCALLY && provenance != Provenance::KNOWN_LOCAL) {
+            fail(Error::SAVE_UNTRUSTED);
+            return;
+        }
+        try {
+            NavigationView view;
+            const auto outcome = session.read_navigation(player, view);
+            if (outcome.error != Error::OK) {
+                fail(outcome.error);
+                return;
+            }
+
+            NavigationResult result;
+            result.generation = request.generation;
+            switch (request.operation) {
+            case NavigationOp::READ:
+                result.view = std::move(view);
+                break;
+            case NavigationOp::PROPOSE: {
+                if (view.revision != request.intent.expected) {
+                    fail(Error::REVISION_STALE);
+                    return;
+                }
+                RouteProposal proposal;
+                result.status = detail::solve_route(view, request.intent, result.candidates, proposal);
+                if (result.status == NavigationStatus::OK) {
+                    proposal.reference = next_generation();
+                    if (proposal.reference == 0) {
+                        fail(Error::CAPACITY_LIMIT);
+                        return;
+                    }
+                    issued_routes.push_back({player, proposal});
+                    if (issued_routes.size() > max_issued_routes) issued_routes.pop_front();
+                    result.proposal = std::move(proposal);
+                }
+                break;
+            }
+            case NavigationOp::VALIDATE: {
+                const auto route = std::ranges::find_if(issued_routes, [&](const auto& issued) {
+                    return issued.proposal.reference == request.reference;
+                });
+                if (route == issued_routes.end() || route->observer.scope != player.scope ||
+                    route->observer.id != player.id || route->proposal.revision != view.revision ||
+                    !view.location || view.revision.chart.empty()) {
+                    fail(Error::REVISION_STALE);
+                    return;
+                }
+                result.proposal = route->proposal;
+                break;
+            }
+            }
+            request.reply.set_value(std::move(result));
+        } catch (...) {
+            fail(Error::INTERNAL_ERROR);
+        }
     }
 
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Dispatch& request)
@@ -1059,6 +1146,7 @@ struct SessionOwner::Impl {
     void execute(std::unique_lock<std::recursive_mutex>& lock, detail::NativeSession& session, Load& request)
     {
         if(state==State::CLOSING){request.reply.set_value({Error::GENERATION_EXPIRED,{}});return;}
+        issued_routes.clear();
         state=State::LOADING;
         lock.unlock();
         Error error=Error::PERSISTENCE_FAILED;F04Ref restored{};
@@ -1186,6 +1274,11 @@ SessionOwner::~SessionOwner() = default;
 
 std::future<Result> SessionOwner::open(PopulationConfig config)
 {
+    return open_naval(std::move(config), {});
+}
+
+std::future<Result> SessionOwner::open_naval(PopulationConfig config, NavalBootstrap bootstrap)
+{
     std::lock_guard lock(impl_->mutex);
     if (impl_->state != State::CLOSED) {
         return ready(Error::BUSY_STATE);
@@ -1196,12 +1289,35 @@ std::future<Result> SessionOwner::open(PopulationConfig config)
     impl_->biography_activation.reset();
     impl_->academy_intent.reset();
     impl_->reset_catalog();
-    Impl::Open request{std::move(config), std::make_shared<const detail::ActiveCampaign>(), {}};
+    Impl::Open request{std::move(config), std::move(bootstrap), std::make_shared<const detail::ActiveCampaign>(), {}};
     auto reply = request.reply.get_future();
     impl_->opening.emplace(std::move(request));
     impl_->state = State::OPENING;
     impl_->work.notify_one();
     return reply;
+}
+
+const char* SessionOwner::naval_chart_publication() noexcept { return detail::chart_publication(); }
+
+std::future<NavigationResult> SessionOwner::query_navigation(Generation generation)
+{
+    return impl_->enqueue<NavigationResult>(Impl::Navigate{generation, Impl::NavigationOp::READ, {}, 0, {}});
+}
+
+std::future<NavigationResult> SessionOwner::propose_route(Generation generation, RouteIntent intent)
+{
+    constexpr std::size_t max_destination_bytes = 256, max_profile_bytes = 64, max_chart_bytes = 128;
+    if (intent.destination.empty() || intent.destination.size() > max_destination_bytes ||
+        intent.profile.size() > max_profile_bytes || intent.expected.chart.size() > max_chart_bytes)
+        return ready<NavigationResult>(Error::INVALID_ARGUMENT);
+    return impl_->enqueue<NavigationResult>(
+        Impl::Navigate{generation, Impl::NavigationOp::PROPOSE, std::move(intent), 0, {}});
+}
+
+std::future<NavigationResult> SessionOwner::validate_route(Generation generation, std::uint64_t reference)
+{
+    if (reference == 0) return ready<NavigationResult>(Error::INVALID_ARGUMENT);
+    return impl_->enqueue<NavigationResult>(Impl::Navigate{generation, Impl::NavigationOp::VALIDATE, {}, reference, {}});
 }
 
 std::shared_future<Result> SessionOwner::close()
