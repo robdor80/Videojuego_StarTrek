@@ -1,0 +1,425 @@
+{
+  "spec_version": "1.0.0",
+  "date": "2026-11-23",
+  "phase": "H09-P01",
+  "status": "DESIGNED_NOT_RUNTIME",
+  "runtime_available": false,
+  "native_core_tests_run": false,
+  "unreal_tests_run": false,
+  "certified": false,
+  "contract_kind": "LOGICAL_NO_NEW_ABI",
+  "host_contract": "1.0",
+  "scope": "single_player_local",
+  "authoritative_state": "CoreRPG",
+  "institutional_authority": "F11_PROJECT",
+  "existing_abi_scan": {
+    "symbol": "TREK_HOST_SUBMIT_SCAN",
+    "underlying_domain": "F04_F05_ORDER",
+    "is_f06_sensor_scan": false,
+    "allowed_as_f06_adapter": false
+  },
+  "ownership": {
+    "host": [
+      "session_admission",
+      "principal_resolution",
+      "authorized_dispatch",
+      "observer_projection",
+      "lifecycle_fencing"
+    ],
+    "core": [
+      "world_state",
+      "time",
+      "knowledge",
+      "operational_effects",
+      "persistence",
+      "resource_commit"
+    ],
+    "f04_f05": [
+      "station_duty",
+      "command_execution",
+      "order_lifecycle"
+    ],
+    "f06": [
+      "sensor_gameplay_rules",
+      "observer_detection"
+    ],
+    "f09": [
+      "console_families",
+      "interconsole_contracts"
+    ],
+    "f11": [
+      "institutional_authority"
+    ],
+    "unreal": [
+      "lcars_presentation"
+    ],
+    "ai": [
+      "optional_verbalization_only"
+    ]
+  },
+  "source_paths": {
+    "h01": "proyecto/docs/architecture/host/H01_REGISTRO_CONTRATOS_v1.json",
+    "host_abi": "desarrollo/integration/host/include/trek/host/host_abi.h",
+    "host_session": "desarrollo/integration/host/include/trek/host/session_owner.h",
+    "f04": "desarrollo/integration/f04/include/f04_bridge.h",
+    "f05": "desarrollo/integration/f05/include/f05_orders.h",
+    "f06_request": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_scan_request_contract.json",
+    "f06_result": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_result_contract.json",
+    "f06_refit": "sistemas/gameplay/ship_operations/sensor_resolution/enterprise_d_valhalla_sensor_superiority_v0.1.json",
+    "f06_reference": "desarrollo/tools/simulation/f06_reference.py",
+    "f09_matrix": "sistemas/gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json",
+    "sensor_ui": "sistemas/gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json",
+    "interconsole": "sistemas/gameplay/ship_operations/interconsole/interconsole_data_package_contract.json",
+    "navigation_order": "sistemas/gameplay/navigation/navigation_order_contract.json",
+    "navigation_state": "sistemas/gameplay/navigation/navigation_state.json",
+    "science": "sistemas/gameplay/ship_operations/consoles/science/incoming_analysis_task_contract.json",
+    "command": "sistemas/gameplay/chain_of_command/README.md",
+    "communications": "sistemas/gameplay/communications/subspace_communication_contract.json",
+    "starship_order": "sistemas/gameplay/orders/starship_order_pipeline.md",
+    "astrometrics_route": "sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_navigation_route_proposal_v0.1.json"
+  },
+  "console_families": [
+    {
+      "id": "command",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "conn",
+      "source_step": "P01",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "navigation",
+      "source_step": "P01",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "operations",
+      "source_step": "P01",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "sensors",
+      "source_step": "BASE",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "science",
+      "source_step": "P01",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "tactical",
+      "source_step": "P02",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "security",
+      "source_step": "P02",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "engineering",
+      "source_step": "P02",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "communications",
+      "source_step": "P02",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "mission_ops",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "transporter",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "medical",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "environmental",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "flight_deck",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    },
+    {
+      "id": "computer",
+      "source_step": "P03",
+      "design_only": true,
+      "source_status": "design_reference"
+    }
+  ],
+  "first_corridor": [
+    "sensors",
+    "science",
+    "navigation",
+    "conn",
+    "operations"
+  ],
+  "operations": [
+    {
+      "id": "SENSOR_STATUS_READ",
+      "family": "sensors",
+      "kind": "READ",
+      "planned_for": "H09-P02",
+      "source_keys": [
+        "f06_request",
+        "f06_result"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SENSOR_CONTACTS_READ",
+      "family": "sensors",
+      "kind": "READ",
+      "planned_for": "H09-P02",
+      "source_keys": [
+        "f06_result"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SENSOR_SCAN_REQUEST",
+      "family": "sensors",
+      "kind": "MUTATION_INTENT",
+      "planned_for": "H09-P02",
+      "source_keys": [
+        "f06_request",
+        "f06_result"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SENSOR_RESULT_READ",
+      "family": "sensors",
+      "kind": "READ",
+      "planned_for": "H09-P02",
+      "source_keys": [
+        "f06_result"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SENSOR_TO_SCIENCE_HANDOFF",
+      "family": "sensors",
+      "kind": "HANDOFF",
+      "planned_for": "H09-P05",
+      "source_keys": [
+        "interconsole",
+        "science"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SCIENCE_ANALYSIS_REQUEST",
+      "family": "science",
+      "kind": "HANDOFF",
+      "planned_for": "H09-P05",
+      "source_keys": [
+        "science",
+        "interconsole"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "NAVIGATION_ROUTE_PROPOSE",
+      "family": "navigation",
+      "kind": "PROPOSAL",
+      "planned_for": "H09-P03",
+      "source_keys": [
+        "navigation_order",
+        "astrometrics_route"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "CONN_MANEUVER_ORDER",
+      "family": "conn",
+      "kind": "MUTATION_INTENT",
+      "planned_for": "H09-P03",
+      "source_keys": [
+        "navigation_order",
+        "navigation_state",
+        "starship_order"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "OPS_POWER_REQUEST",
+      "family": "operations",
+      "kind": "MUTATION_INTENT",
+      "planned_for": "H09-P04",
+      "source_keys": [
+        "f09_matrix"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "ENGINEERING_SUPPORT_REQUEST",
+      "family": "engineering",
+      "kind": "HANDOFF",
+      "planned_for": "H09-P04",
+      "source_keys": [
+        "f09_matrix"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "SHIP_STATUS_READ",
+      "family": "operations",
+      "kind": "READ",
+      "planned_for": "H09-P04",
+      "source_keys": [
+        "f09_matrix"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "COMMUNICATIONS_HAIL_REQUEST",
+      "family": "communications",
+      "kind": "MUTATION_INTENT",
+      "planned_for": "H09-P04/P05",
+      "source_keys": [
+        "communications"
+      ],
+      "available_in_host_runtime": false
+    },
+    {
+      "id": "TACTICAL_ASSESSMENT_READ",
+      "family": "tactical",
+      "kind": "READ",
+      "planned_for": "H09-P05",
+      "source_keys": [
+        "f06_result",
+        "f06_refit"
+      ],
+      "available_in_host_runtime": false
+    }
+  ],
+  "request_required": [
+    "host_contract",
+    "session_generation",
+    "correlation_id",
+    "operation"
+  ],
+  "request_input_optional": [
+    "ship_context",
+    "station_context",
+    "contact_ref",
+    "known_result_ref",
+    "requested_parameters",
+    "expected_core_revision",
+    "idempotency_key"
+  ],
+  "client_untrusted": [
+    "principal",
+    "observer_id",
+    "F04Ref",
+    "authority",
+    "command_rank",
+    "ground_truth",
+    "authoritative_entity_id"
+  ],
+  "admission_gates": [
+    "active_generation_owner_thread",
+    "bound_principal_campaign",
+    "current_station_and_duty_authority",
+    "ship_capability_resources",
+    "observer_knowledge",
+    "revalidate_before_commit",
+    "authorized_projection"
+  ],
+  "forbidden_player_fields": [
+    "authoritative_entity_id",
+    "ground_truth",
+    "unrevealed_hidden_properties",
+    "entities_in_scope",
+    "signatures_evaluated"
+  ],
+  "ui": {
+    "model": "three_logical_panels",
+    "action_states": [
+      "available",
+      "blocked",
+      "irrelevant"
+    ],
+    "prefill_may_execute": false,
+    "change_menu_cancels_job": false,
+    "world_truth_from_ui": false
+  },
+  "mutations": {
+    "require_domain_revalidation": true,
+    "automatic_retry": false,
+    "ui_ack_is_core_commit": false,
+    "model_core_tick_locally": false,
+    "authoritative_world_moved_by_host": false
+  },
+  "enterprise_d_a2": {
+    "source_key": "f06_refit",
+    "activation": "only_if_authoritative_refit_installed_and_operational",
+    "weapons_without_transponder_when_observable": true,
+    "identity_must_not_be_fabricated": true,
+    "target_latency_ms": 1000,
+    "latency_measured": false,
+    "global_ship_override": false,
+    "implementation_available": false
+  },
+  "tests_future": [
+    "H9-01",
+    "H9-02",
+    "H9-03",
+    "H9-04",
+    "H9-05",
+    "H9-06",
+    "H9-07",
+    "H9-08",
+    "H9-09",
+    "H9-10",
+    "H9-11",
+    "H9-12",
+    "H9-13",
+    "H9-14",
+    "H9-15",
+    "H9-16",
+    "H9-17",
+    "H9-18"
+  ],
+  "cross_phase": {
+    "h08_events_are_source_of_truth": false,
+    "restoration_invalidates_ux_generation": true,
+    "f06_final_runtime_must_be_reconciled_before_h09_p02": true
+  },
+  "status_definition": {
+    "planned_or_designed": "no_runtime_claim",
+    "implemented": "requires_real_adapter",
+    "tested": "requires_executed_core_and_unreal_matrix",
+    "certified": "separate_H09_gate"
+  }
+}

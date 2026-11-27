@@ -1,0 +1,45 @@
+name: HOST H09-P01 - inventario y contratos de consola
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/H09_P01_*"
+      - "desarrollo/tools/validation/test_host_h09_p01_contract.py"
+      - ".github/workflows/host-h09-p01-contracts.yml"
+  push:
+    branches:
+      - "docs/host-h09-p01-inventario-consola-20261123"
+    paths:
+      - "proyecto/docs/architecture/host/H09_P01_*"
+      - "desarrollo/tools/validation/test_host_h09_p01_contract.py"
+      - ".github/workflows/host-h09-p01-contracts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: Contratos H09-P01 / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 7
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Preparar laboratorio efimero dentro del repositorio
+        shell: bash
+        run: mkdir -p laboratorios/host/h09/p01/ci
+      - name: Verificar inventario y contrato H09-P01 sin invocar Core ni Unreal
+        shell: bash
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+          TMPDIR: laboratorios/host/h09/p01/ci
+          TEMP: laboratorios/host/h09/p01/ci
+          TMP: laboratorios/host/h09/p01/ci
+        run: python desarrollo/tools/validation/test_host_h09_p01_contract.py
