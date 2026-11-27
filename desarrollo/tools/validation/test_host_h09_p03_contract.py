@@ -58,8 +58,32 @@ class H09P03ContractTests(unittest.TestCase):
         cmake = self.source("host_cmake").read_text(encoding="utf-8")
         self.assertIn(self.spec["pin_core_sha"], cmake)
         self.assertRegex(cmake, r'host_core_sha\s+"[0-9a-f]{40}"')
-        self.assertIn("No se auditó aquí el árbol externo completo de Core", self.plan)
+        self.assertIn("se ha extendido directamente al repositorio preexistente", self.plan)
         self.assertFalse(self.spec["flags"]["core_ship_motion_verified"])
+
+    def test_pinned_core_public_api_and_f03_route_boundary(self):
+        audit = self.spec["pinned_core_api_audit"]
+        self.assertEqual(audit["reference_repo"], "robdor80/CoreRPG")
+        self.assertEqual(audit["reference_sha"], self.spec["pin_core_sha"])
+        self.assertTrue(audit["public_headers_inspected"])
+        self.assertFalse(audit["full_core_implementation_audited"])
+        self.assertFalse(audit["published_ship_motion_api"])
+        self.assertFalse(audit["published_navigation_solver_api"])
+        self.assertEqual(set(audit["action_operation_variants"]), {
+            "PlaceEntityAction", "RemoveContainmentAction", "AddRelationAction",
+            "RemoveRelationAction", "StreamRollAction"
+        })
+        for url in audit["sources"]:
+            self.assertIn(audit["reference_sha"], url)
+            self.assertTrue(url.startswith("https://github.com/robdor80/CoreRPG/blob/"))
+        f03 = self.source("f03_fixture").read_text(encoding="utf-8")
+        f02 = self.source("f02_fixture").read_text(encoding="utf-8")
+        report = self.source("f03_report").read_text(encoding="utf-8")
+        self.assertIn("f03_schedule_route", f03)
+        self.assertIn("f02_place", f02)
+        self.assertIn("no es un modelo de vuelo warp", report)
+        self.assertTrue(audit["f03_demo_is_not_nav_engine"])
+        self.assertIn("Auditoría adicional del CoreRPG fijado", self.plan)
 
     def test_h09_p01_contract_operation_names_unchanged(self):
         source_ops = {
