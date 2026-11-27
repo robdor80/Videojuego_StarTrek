@@ -2,6 +2,8 @@
 
 > **Estado actualizado a 27-11-2026:** H08-P01…P04 están **fusionadas** (PR #207–#210). **H07-P01…P05 se han IMPLEMENTADO, PROBADO técnicamente y FUSIONADO** en `main` mediante PR [#203](https://github.com/robdor80/Videojuego_StarTrek/pull/203), [#204](https://github.com/robdor80/Videojuego_StarTrek/pull/204) y [#205](https://github.com/robdor80/Videojuego_StarTrek/pull/205), culminando en el commit `5125d8ace7df655f8a44452d001ab745b37c42fc`. [Acta de cierre técnico y auditoría](H07_AUDITORIA_RECONCILIACION_2026-11-27.md). **No certificada presencialmente:** faltan la aceptación visual/control de Unreal y la verificación humana de la corrección DPI de H06 (cliente técnico 2538×1472 al 150 %). El emisor F11 de producto sigue `SERVICE_UNAVAILABLE`; no se considera dentro de esta certificación. Los párrafos posteriores conservan estados históricos en su fecha y no sustituyen el presente aviso.
 
+> **Cierre H09-P01 (27-11-2026):** contrato e inventario de consolas **PROBADOS ESTÁTICAMENTE Y FUSIONADOS** mediante [PR #211](https://github.com/robdor80/Videojuego_StarTrek/pull/211), SHA de integración `dd9b51678c85de4d3c33776772d0d305cf497237`. **H09-P02 BLOQUEADA** hasta aceptación expresa del usuario de la jugabilidad F06 en el MSI (prevista, no garantizada, para el sábado 28-11-2026) y reconciliación de la versión F06 aceptada. No hay certificación de H09 global ni nueva operativa sensorial Core/UE. [Acta y CI](H09_P01_ACTA_AUDITORIA_FUSION_2026-11-27.md).
+
 Fecha de creación: 2026-11-11. **Estado revisado: 2026-11-23**. **M1 CERTIFICADO EN ALCANCE LIMITADO** para HOST Academy mínimo en Unreal 5.8.4 y presentación en pantalla completa; [acta de certificación](H06_IA03C05_ACTA_CERTIFICACION_M1_2026-11-23.md). PR #200 fusionada en `main` (`9ab15007ee3cdeb8bf1453069ec327b0012d0a22`).
 
 HOST coordina una campaña local entre Unreal Engine 5, F04/F05/F11 y CoreRPG, que conserva la autoridad sobre el universo. **El hito mínimo M1 está CERTIFICADO CON LIMITACIÓN**, no el HOST integral. H00–H05 están fusionadas en sus respectivos alcances; H06 C-01…C-05 se han cerrado para la integración mínima UE 5.8.4. La presentación Slate a **2560×1600 en modo ventana presenta un defecto de escalado/centrado y NO está certificada**; a esa resolución el menú y «Continuar» fueron aceptados tras Alt+Intro a pantalla completa. Se conserva el límite en el [acta M1](H06_IA03C05_ACTA_CERTIFICACION_M1_2026-11-23.md). Las capacidades institucionales F11 y las fases H07–H13 siguen fuera de este certificado.
@@ -63,6 +65,14 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 - [Contrato, catálogo de mensajes y matriz H08-P04](H08_P04_NOTIFICACIONES_V1_2026-11-23.md): proyección de transiciones F05 en textos seguros en castellano, usando la misma suscripción, hechos y acuses de H08-P02.
 - API **C++ interna** `SessionOwner::poll_order_notifications`; sin nueva ABI C/Unreal, sin emisor F11, sin duplicar reloj ni historial.
 - 14 pruebas con la fuente real F05/Core (`host.notification.hn*`) y 10 puras (`host.notification.unit.*`); la CI de la PR determina su estado de probado. El cierre de P04 no certifica automáticamente Unreal ni H08 integral.
+
+## H09-P01 — Inventario y contrato de consolas (CERRADA EN ALCANCE DOCUMENTAL)
+
+- [Contrato y matriz de 18 escenarios de aceptación](H09_P01_INVENTARIO_CONTRATO_CONSOLA_v1_2026-11-23.md).
+- [Registro estructurado de 16 familias y 13 operaciones](H09_P01_REGISTRO_CONSOLAS_v1.json).
+- [**Acta de cierre H09-P01, auditoría y fusión #211**](H09_P01_ACTA_AUDITORIA_FUSION_2026-11-27.md): evidencia GitHub Actions de 11/11 contratos en Linux y Windows, regresiones nativas y commit exacto fusionado.
+- Validación estática: `desarrollo/tools/validation/test_host_h09_p01_contract.py` y `.github/workflows/host-h09-p01-contracts.yml`.
+- **H09-P02 no se iniciará ni se considerará desbloqueada antes de la aprobación personal de F06 en el MSI**, y deberá utilizar únicamente la versión finalmente aceptada. Las PR #213 y #215 de F06 continúan Draft a 27-11-2026. La fecha prevista del sábado 28-11-2026 no es una autorización. No se declara F06 jugable, ni H09 operativa/certificada.
 
 ## Fases y responsables
 
