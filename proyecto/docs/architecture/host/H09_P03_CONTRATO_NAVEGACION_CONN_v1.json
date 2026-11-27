@@ -1,0 +1,452 @@
+{
+  "spec_version": "1.0.0",
+  "contract_id": "host_h09_p03_navigation_conn_design",
+  "phase": "H09-P03",
+  "baseline_main": "1242f7852f435e59a80ae0eddab9edf968052dc1",
+  "status": "DESIGNED_NOT_RUNTIME",
+  "contract_kind": "LOGICAL_NO_NEW_ABI",
+  "authority": "CoreRPG",
+  "institutional_authority": "F11_PROJECT",
+  "host_contract": "1.0",
+  "pin_core_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "flags": {
+    "host_navigation_api_implemented": false,
+    "host_conn_api_implemented": false,
+    "core_ship_motion_verified": false,
+    "ue_navigation_verified": false,
+    "msi_acceptance_done": false,
+    "f06_accepted": false,
+    "h09_p02_unblocked": false,
+    "h09_p04_started": false,
+    "route_eta_measured": false,
+    "certified": false
+  },
+  "scope": {
+    "console_families": [
+      "navigation",
+      "conn"
+    ],
+    "h09_p01_operations": [
+      "NAVIGATION_ROUTE_PROPOSE",
+      "CONN_MANEUVER_ORDER"
+    ],
+    "first_stage": "chart_known_destinations_without_f06",
+    "service_if_missing": "SERVICE_UNAVAILABLE"
+  },
+  "operations": [
+    {
+      "id": "NAVIGATION_ROUTE_PROPOSE",
+      "kind": "PROPOSAL",
+      "family": "navigation",
+      "nav_intent_reference": "set_course",
+      "mutates_world": false,
+      "available_in_host_runtime": false,
+      "requires_f06": false,
+      "handler_owner": "authoritative_navigation_domain_if_available",
+      "gate": "CORE_NAVIGATION_PROPOSAL_API_VERIFIED"
+    },
+    {
+      "id": "CONN_MANEUVER_ORDER",
+      "kind": "MUTATION_INTENT",
+      "family": "conn",
+      "nav_intent_reference": "engage_warp",
+      "mutates_world_if_committed": true,
+      "available_in_host_runtime": false,
+      "requires_f06": false,
+      "handler_owner": "authoritative_core_movement_domain_if_available",
+      "gate": "CORE_SHIP_MOTION_AND_F05_AUTHORIZATION_VERIFIED"
+    }
+  ],
+  "reference_intents": [
+    "set_course",
+    "set_warp",
+    "engage_warp",
+    "drop_out_of_warp",
+    "intercept",
+    "enter_orbit",
+    "dock",
+    "evade"
+  ],
+  "known_route_profiles": [
+    "fastest",
+    "safest",
+    "avoid_hostile_space",
+    "prefer_starbase_support",
+    "silent_or_low_contact"
+  ],
+  "message_required": [
+    "host_contract",
+    "session_generation",
+    "correlation_id",
+    "operation"
+  ],
+  "ui_intent_allowed": [
+    "destination_location_id",
+    "route_preference",
+    "arrival_profile",
+    "candidate_ref",
+    "proposal_ref",
+    "requested_warp_factor",
+    "requested_maneuver",
+    "expected_core_revision"
+  ],
+  "client_untrusted": [
+    "principal",
+    "observer_id",
+    "F04Ref",
+    "F11Grant",
+    "competence",
+    "station_held",
+    "authoritative_position",
+    "world_state",
+    "ground_truth",
+    "ship_id_authority",
+    "actual_speed",
+    "validated"
+  ],
+  "trusted_context_resolved_by_host": [
+    "campaign_id",
+    "generation",
+    "principal_binding",
+    "ship_identity",
+    "station",
+    "qualification",
+    "duty",
+    "delegation",
+    "knowledge_scope",
+    "core_revision",
+    "core_tick"
+  ],
+  "proposal_fields": [
+    "proposal_ref",
+    "source_chart_ref",
+    "ship_ref",
+    "destination_ref",
+    "knowledge_revision",
+    "core_revision",
+    "position_revision",
+    "candidate_route_refs",
+    "route_profile",
+    "known_hazard_refs",
+    "known_border_refs",
+    "eta_or_null",
+    "distance_or_null",
+    "units",
+    "uncertainty",
+    "provenance",
+    "status"
+  ],
+  "route_statuses": [
+    "proposed",
+    "clarification_required",
+    "unavailable",
+    "rejected",
+    "stale"
+  ],
+  "conn_statuses": [
+    "unavailable",
+    "rejected",
+    "issued",
+    "accepted",
+    "executing",
+    "completed",
+    "failed",
+    "cancelled"
+  ],
+  "route_constraints": {
+    "unknown_coordinate_z_zero_default": false,
+    "unknown_distance_sets_eta_zero": false,
+    "compute_warp_from_universal_formula": false,
+    "route_proposal_moves_ship": false,
+    "handoff_executes_motion": false,
+    "ue_world_position_authoritative": false,
+    "h08_clock_assumes_ship_movement": false,
+    "restore_reuses_old_generation_receipt": false,
+    "ship_capability_comes_from_installed_refit": true,
+    "core_revision_checked_at_commit": true,
+    "command_permissions_rechecked_at_execute": true,
+    "active_ship_and_station_rechecked": true,
+    "no_automatic_retry": true
+  },
+  "independent_f06_capabilities": [
+    "destination_from_authorized_chart",
+    "route_profile_selection",
+    "chart_provenance_and_uncertainty",
+    "route_proposal_without_side_effects",
+    "proposed_to_conn_handoff",
+    "authorization_and_lifecycle_gates"
+  ],
+  "f06_gated_capabilities": [
+    "intercept_live_contact",
+    "tracking_dynamic_contact",
+    "newly_observed_hazard_avoidance",
+    "sensor_provenance_contact_projection",
+    "full_f06_navigation_conn_e2e"
+  ],
+  "core_motion_gated_capabilities": [
+    "ship_position_read_from_core",
+    "route_candidate_computation_if_core_api_missing",
+    "warp_impulse_or_maneuver_execution",
+    "segment_progress",
+    "authoritative_eta",
+    "save_restore_midflight"
+  ],
+  "sequence": [
+    {
+      "id": "P03-A",
+      "owner": "ChatGPT",
+      "kind": "repository_audit",
+      "done_when": "evidence_paths_and_risks_recorded"
+    },
+    {
+      "id": "P03-B",
+      "owner": "ChatGPT",
+      "kind": "logical_contract_and_static_validation",
+      "done_when": "linux_windows_static_ci_pass_and_docs_merged"
+    },
+    {
+      "id": "P03-C",
+      "owner": "CodexCloud",
+      "model": "Sol 6.2",
+      "effort": "Medium",
+      "kind": "pinned_core_feasibility",
+      "done_when": "real_abi_semantics_and_native_move_capability_proven_or_documented_absent"
+    },
+    {
+      "id": "P03-D",
+      "owner": "CodexCloud",
+      "model": "Sol 6.2",
+      "effort": "Medium",
+      "kind": "read_and_propose_adapter_only_if_core_support_exists",
+      "done_when": "native_core_tests_or_dependency_block"
+    },
+    {
+      "id": "P03-E",
+      "owner": "CodexCloud",
+      "model": "Sol 6.2",
+      "effort": "Medium",
+      "kind": "conn_order_movement_after_domain_approval",
+      "done_when": "authoritative_position_tick_resources_and_persistence_tests"
+    },
+    {
+      "id": "P03-F",
+      "owner": "CodexCloud+ChatGPT+Owner",
+      "kind": "unreal_msi_integration",
+      "done_when": "ue_e2e_and_owner_visual_acceptance"
+    },
+    {
+      "id": "P03-G",
+      "owner": "ChatGPT",
+      "kind": "closure_and_audit",
+      "done_when": "evidence_by_commit_then_authorized_merge"
+    }
+  ],
+  "handoff": {
+    "s11_to_navigation_proposal_only": true,
+    "navigation_to_conn_metadata_only": true,
+    "legacy_conn_navigation_must_disambiguate": true,
+    "requires_authorized_receiver": true,
+    "never_auto_executes": true
+  },
+  "tests_future": [
+    {
+      "id": "N3-01",
+      "scenario": "known_destination_chart",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-02",
+      "scenario": "ambiguous_destination_requires_clarification",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-03",
+      "scenario": "unknown_or_forbidden_destination_no_truth_leak",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-04",
+      "scenario": "route_preference_uses_existing_profiles",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-05",
+      "scenario": "missing_distance_or_speed_eta_unknown",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-06",
+      "scenario": "unknown_z_stays_unknown_no_invented_coordinates",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-07",
+      "scenario": "known_border_warning_not_legal_authority",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-08",
+      "scenario": "s11_handoff_is_proposal_only",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-09",
+      "scenario": "navigation_to_conn_transfer_is_metadata_only",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-10",
+      "scenario": "proposal_does_not_mutate_position_or_tick",
+      "owner": "P03-D",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-11",
+      "scenario": "no_helm_station_permission_denied_without_effect",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-12",
+      "scenario": "stale_revision_denied_before_commit",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-13",
+      "scenario": "revoked_authority_fails_at_execute",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-14",
+      "scenario": "restore_close_invalidates_route_and_order_generation",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-15",
+      "scenario": "accepted_order_is_not_executed_movement",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-16",
+      "scenario": "segment_progress_uses_only_core_tick_and_is_durable",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-17",
+      "scenario": "save_restore_during_travel_no_double_progress",
+      "owner": "P03-E",
+      "gate": "INDEPENDENT_F06",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-18",
+      "scenario": "unknown_contact_intercept_denied",
+      "owner": "P03-E",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-19",
+      "scenario": "known_contact_intercept_uses_authorized_observation",
+      "owner": "P03-E",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-20",
+      "scenario": "new_detected_hazard_replanning_without_hidden_truth",
+      "owner": "P03-E",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-21",
+      "scenario": "sensor_update_after_route_proposal_revalidates",
+      "owner": "P03-E",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-22",
+      "scenario": "redacted_contact_fields_not_leaked_to_UE",
+      "owner": "P03-F",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-23",
+      "scenario": "observation_scope_changes_on_ship_or_player_switch",
+      "owner": "P03-F",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "N3-24",
+      "scenario": "f06_navigation_conn_end_to_end_in_MSI",
+      "owner": "P03-F",
+      "gate": "F06_GATE",
+      "status": "NOT_RUN"
+    }
+  ],
+  "source_paths": {
+    "host_plan": "proyecto/docs/architecture/host/PLAN_MAESTRO_HOST_v1.2_2026-11-11.md",
+    "h09_p01": "proyecto/docs/architecture/host/H09_P01_REGISTRO_CONSOLAS_v1.json",
+    "h01": "proyecto/docs/architecture/host/H01_REGISTRO_CONTRATOS_v1.json",
+    "host_cmake": "desarrollo/integration/host/CMakeLists.txt",
+    "host_session": "desarrollo/integration/host/include/trek/host/session_owner.h",
+    "native_session": "desarrollo/integration/host/src/native_session.h",
+    "host_gateway": "desarrollo/integration/host/src/gateway.h",
+    "f04": "desarrollo/integration/f04/include/f04_bridge.h",
+    "f05": "desarrollo/integration/f05/include/f05_orders.h",
+    "ue_project": "juego/UE5/StarTrekRPG/StarTrekRPG.uproject",
+    "ue_subsystem": "juego/UE5/StarTrekRPG/Source/StarTrekRPG/Private/HostSessionSubsystem.h",
+    "f09": "sistemas/gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json",
+    "nav_readme": "sistemas/gameplay/navigation/README.md",
+    "nav_order": "sistemas/gameplay/navigation/navigation_order_contract.json",
+    "nav_state": "sistemas/gameplay/navigation/navigation_state.json",
+    "route_graph": "sistemas/gameplay/navigation/anchor_route_graph.json",
+    "route_edge": "sistemas/gameplay/navigation/navigation_distance_edge_model.json",
+    "route_cost": "sistemas/gameplay/navigation/route_cost_model.json",
+    "route_context": "sistemas/gameplay/navigation/route_context_model.json",
+    "astrolocation": "sistemas/gameplay/navigation/astrography_location_model.json",
+    "interconsole": "sistemas/gameplay/ship_operations/interconsole/interconsole_data_package_contract.json",
+    "s11_handoff": "sistemas/gameplay/ship_operations/interconsole/s11_astrometrics_to_navigation_route_proposal_v0.1.json",
+    "s11_projection": "sistemas/gameplay/astrometrics/s11_projection_contract_v0.1.json",
+    "ship_state": "sistemas/gameplay/ship_operations/starship_state_model.json",
+    "ship_pipeline": "sistemas/gameplay/orders/starship_order_pipeline.md",
+    "h08_clock": "proyecto/docs/architecture/host/H08_P03_RELOJ_ACTIVIDADES_CORE_2026-11-23.md",
+    "f06_contact": "sistemas/gameplay/ship_operations/sensor_resolution/contact_navigation_solution_v0.1.json",
+    "f06_scan": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_scan_request_contract.json",
+    "f06_result": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_result_contract.json"
+  }
+}
