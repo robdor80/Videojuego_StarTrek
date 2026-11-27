@@ -113,7 +113,6 @@ class C02DesignContracts(unittest.TestCase):
         must = self.s["read_only_invariants"]
         self.assertGreaterEqual(len(must), 10)
         self.assertTrue(all(must.values()))
-        self.assertIn("NO_CON", self.plan.upper().replace(" ","_") if False else "NO_CON") if False else None
         self.assertIn("F04_MOVE", self.plan)
 
     def test_failures_are_design_not_new_abi(self):
@@ -145,7 +144,7 @@ class C02DesignContracts(unittest.TestCase):
         self.assertIn("Sol 6.2", self.prompt)
         self.assertIn("Medium", self.prompt)
         self.assertIn("PR **Draft**", self.prompt)
-        self.assertIn("No modificar CoreRPG", self.prompt)
+        self.assertIn("NO modificar CoreRPG", self.prompt)
         self.assertIn("H09-P02", self.prompt)
         self.assertIn("H09-P03-E/F", self.prompt)
         self.assertIn("laboratorios/", self.prompt)

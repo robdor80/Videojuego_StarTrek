@@ -77,12 +77,12 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 ## H09-P03 — Navegación y CONN (diseño de producto y dependencias)
 
 - [Auditoría y plan P03-A…G](H09_P03_AUDITORIA_ARQUITECTURA_PLAN_2026-11-27.md): propuesta de rutas distinta de orden CONN y movimiento real.
-- [Contrato lógico P03 y 24 escenarios futuros](H09_P03_CONTRATO_NAVEGACION_CONN_v1.json): \`NAVIGATION_ROUTE_PROPOSE\` y \`CONN_MANEUVER_ORDER\` siguen **indisponibles en runtime**. Sin ABI nueva ni certificación.
+- [Contrato lógico P03 y 24 escenarios futuros](H09_P03_CONTRATO_NAVEGACION_CONN_v1.json): `NAVIGATION_ROUTE_PROPOSE` y `CONN_MANEUVER_ORDER` siguen **indisponibles en runtime**. Sin ABI nueva ni certificación.
 - [H09-P03-C01 — Informe de factibilidad nativa](H09_P03_C01_FACTIBILIDAD_CORE_2026-11-27.md): **FUSIONADO, PR #231**; pin Core con conocimiento, contención, reloj y persistencia, pero sin ubicación/cartas ni ejecutor naval de producto. Pruebas C01 documentales y de regresión existentes; **no** se probó navegación.
 - [H09-P03-C02 — Diseño de ubicación/carta/propuesta](H09_P03_C02_DISENO_DOMINIO_NAVAL_2026-11-27.md): opción de dominio en composición de producto, sujeta a compatibilidad con esquema y guardado F04.
 - [H09-P03-C02 — Contrato lógico y 14 escenarios **NO EJECUTADOS**](H09_P03_C02_CONTRATO_DOMINIO_NAVAL_v1.json): ubicación discreta Core, conocimiento autorizado, propuesta pura sin mover nave y compatibilidad de partidas viejas.
 - [H09-P03-C02 — Encargo Codex Cloud preparado, Sol 6.2 Medium](H09_P03_C02_ENCARGO_CODEX_CLOUD_2026-11-27.md): P0 de factibilidad; implementar solo dentro de las autorizaciones reales, PR Draft y sin fusión.
-- Validadores de diseño: \`desarrollo/tools/validation/test_host_h09_p03_contract.py\` y \`test_host_h09_p03_c02_contract.py\`; CI Linux/Windows. No sustituyen pruebas C++.
+- Validadores de diseño: `desarrollo/tools/validation/test_host_h09_p03_contract.py` y `test_host_h09_p03_c02_contract.py`; CI Linux/Windows. No sustituyen pruebas C++.
 - **Estado:** C01 FUSIONADA; C02 **PREPARACIÓN DOCUMENTAL**. Ubicación y carta no funcionan en HOST; propuestas, órdenes, vuelo y UE pendientes. H09-P02 continúa BLOQUEADA por aceptación F06 en MSI; H09-P04 no iniciada y H09-P03-E/F pendientes.
 
 
