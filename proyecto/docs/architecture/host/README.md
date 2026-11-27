@@ -74,6 +74,14 @@ La Academia definitiva será un prólogo narrativo ligero, probablemente 2D, no 
 - Validación estática: `desarrollo/tools/validation/test_host_h09_p01_contract.py` y `.github/workflows/host-h09-p01-contracts.yml`.
 - **H09-P02 no se iniciará ni se considerará desbloqueada antes de la aprobación personal de F06 en el MSI**, y deberá utilizar únicamente la versión finalmente aceptada. Las PR #213 y #215 de F06 continúan Draft a 27-11-2026. La fecha prevista del sábado 28-11-2026 no es una autorización. No se declara F06 jugable, ni H09 operativa/certificada.
 
+## H09-P03 — Navegación y CONN (preparación de ChatGPT)
+
+- [Auditoría, límites, decisiones y plan P03-A…G](H09_P03_AUDITORIA_ARQUITECTURA_PLAN_2026-11-27.md): separa destinos de carta conocidos de intercepciones dependientes de F06, y diferencia propuesta de orden CONN con resultado Core.
+- [Contrato lógico JSON y 24 escenarios futuros](H09_P03_CONTRATO_NAVEGACION_CONN_v1.json): operaciones `NAVIGATION_ROUTE_PROPOSE` y `CONN_MANEUVER_ORDER` de H09-P01; **no ABI ni runtime**. Incluye 17 escenarios independientes de F06 y 7 supeditados a F06; las pruebas de movimiento también requieren un motor Core verificado.
+- [Primer encargo Codex Cloud — Sol 6.2 Medium](H09_P03_C01_ENCARGO_CODEX_CLOUD_2026-11-27.md): solo preparación, **no ejecutado**; investigar primero la capacidad naval del Core fijado y detenerse si no existe costura autorizada.
+- Validador `desarrollo/tools/validation/test_host_h09_p03_contract.py` y CI `.github/workflows/host-h09-p03-contracts.yml` para coherencia estática en Linux/Windows.
+- **Estado: preparación documental H09-P03-A/B; integración D/E, UE/MSI y certificación P03 pendientes.** H09-P02 sigue BLOQUEADA hasta aprobación presencial de F06; no se inicia H09-P04. El HOST no implementa el movimiento por el mero hecho de que F04 exponga `F04_MOVE`, y F05 nativo solo expone `F04_SCAN` en su primer contrato.
+
 ## Fases y responsables
 
 H00 y H01: ChatGPT (auditoría y diseño). H02: Codex (núcleo). H03: ChatGPT+Codex (identidad). H04: Codex (persistencia). H05: Codex (Core/F04/F05). H06: Codex (UE real). H07: ChatGPT+Codex (lector y pasarela NO emisora de F11). H08-H11: coordinación y sistemas progresivos. H12-H13: estabilidad y certificación.
