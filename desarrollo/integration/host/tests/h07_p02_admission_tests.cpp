@@ -155,6 +155,7 @@ void run(std::string_view name, const fs::path& root)
 namespace trek::host::detail {
 void gateway_test_after_bind() {}
 void gateway_test_after_dispatch(F04Session*, std::uint32_t&) {}
+void gateway_test_after_clock(F04Session*) {}
 } // namespace trek::host::detail
 
 int main(int argc, char** argv)
