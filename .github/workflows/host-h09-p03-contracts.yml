@@ -1,0 +1,40 @@
+name: HOST H09-P03 - navigation and CONN design contracts
+
+on:
+  pull_request:
+    paths:
+      - "proyecto/docs/architecture/host/H09_P03_*"
+      - "proyecto/docs/architecture/host/README.md"
+      - "desarrollo/tools/validation/test_host_h09_p03_contract.py"
+      - ".github/workflows/host-h09-p03-contracts.yml"
+  push:
+    branches:
+      - "docs/host-h09-p03-nav-conn-preparacion-20261127"
+    paths:
+      - "proyecto/docs/architecture/host/H09_P03_*"
+      - "proyecto/docs/architecture/host/README.md"
+      - "desarrollo/tools/validation/test_host_h09_p03_contract.py"
+      - ".github/workflows/host-h09-p03-contracts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  design-contract:
+    name: H09-P03 contratos / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Revisar contratos H09-P03 sin Core, UE ni F06
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python desarrollo/tools/validation/test_host_h09_p03_contract.py
