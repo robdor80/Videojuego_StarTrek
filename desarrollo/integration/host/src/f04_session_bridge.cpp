@@ -2,6 +2,7 @@
 
 #include "f05_player_binding.h"
 #include "f04_host_persistence.h"
+#include "f04_host_navigation.h"
 #ifdef F11_HOST_READ_ONLY
 #include "f11_host_reader.h"
 #endif
@@ -55,14 +56,20 @@ const char* core_sha() noexcept
     return f04_core_sha();
 }
 
-std::uint32_t create(const PopulationConfig& config, F04Session** session) noexcept
+std::uint32_t create(const PopulationConfig& config, const NavalBootstrap& bootstrap, F04Session** session) noexcept
 {
     const F04PopulationConfig population{
         config.ship_identity, config.seed, config.crew,
         config.residents, config.passengers, config.maximum
     };
-    constexpr std::uint32_t f04_abi = 1;
-    return f04_create_population(f04_abi, config.class_id.c_str(), &population, session);
+    if (!bootstrap.origin && !bootstrap.chart_publication && bootstrap.observers.empty())
+        return f04_create_population(1, config.class_id.c_str(), &population, session);
+    return nav_bridge::create(config.class_id.c_str(), population, bootstrap, session);
+}
+
+std::uint32_t read_navigation(F04Session* session, F04Ref player, NavigationView& view) noexcept
+{
+    return nav_bridge::read(session, player, view);
 }
 
 std::uint32_t probe(F04Session* session) noexcept

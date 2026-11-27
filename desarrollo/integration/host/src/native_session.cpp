@@ -50,7 +50,7 @@ NativeSession::~NativeSession() noexcept
     }
 }
 
-Outcome NativeSession::open(const PopulationConfig& config) noexcept
+Outcome NativeSession::open(const PopulationConfig& config, const NavalBootstrap& bootstrap) noexcept
 {
     bool available = false;
     if (!campaign_reserved.compare_exchange_strong(available, true)) {
@@ -62,7 +62,7 @@ Outcome NativeSession::open(const PopulationConfig& config) noexcept
     if (!sha || std::string_view(sha) != TREK_HOST_CORE_SHA) {
         return {Error::INTERNAL_ERROR};
     }
-    const auto created = normalize(bridge::create(config, &session_));
+    const auto created = normalize(bridge::create(config, bootstrap, &session_));
     if (created.error != Error::OK) {
         return created;
     }
@@ -138,6 +138,20 @@ Outcome NativeSession::institutional_read(F04Ref player, const InstitutionalRequ
     view.reset();
     if (!session_) return {Error::SERVICE_UNAVAILABLE};
     return bridge::institutional_read(session_, player, request, view);
+}
+
+Outcome NativeSession::read_navigation(F04Ref principal, NavigationView& view) const noexcept
+{
+    if (!session_) return {Error::SERVICE_UNAVAILABLE};
+    PersistentIdentity identity{};
+    F04Ref bound{};
+    const auto outcome = persistent_identity(identity, bound);
+    if (outcome.domain_code == F04_DENIED || outcome.domain_code == F04_SAVE)
+        return {Error::ACCESS_DENIED, outcome.domain_code};
+    if (outcome.error != Error::OK) return outcome;
+    if (bound.scope != principal.scope) return {Error::SCOPE_INVALID};
+    if (bound.id != principal.id) return {Error::ACCESS_DENIED};
+    return normalize_identity(bridge::read_navigation(session_, bound, view));
 }
 
 Outcome NativeSession::persistent_identity(PersistentIdentity& identity,F04Ref& player) const noexcept

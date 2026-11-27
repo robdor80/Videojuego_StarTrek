@@ -57,6 +57,9 @@ bool f05_initiative_schema(const Campaign& c) {
  for(U p:all(w,"person")) {
   const auto known=w.knowledge_of(EntityId{p});if(known.size()>4096)return false;
   for(const auto& k:known) {
+#ifdef F04_HOST_NAVIGATION
+   if(nav_knowledge(w,p,k.fact))continue;
+#endif
    if(!allowed[p].contains(k.fact.key) || !k.fact.present)return false;
    if(k.fact.key.kind==FactKind::definition && k.fact.definition_id()!="trek.f04:f05_scan_need")return false;
   }

@@ -60,7 +60,8 @@ endif()
 set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src/f04_host_bridge.cpp")
 
 
-set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp)
+set(host_sources src/session_owner.cpp src/native_session.cpp src/slot_store.cpp
+  $<TARGET_OBJECTS:host_navigation>)
 set(host_adapter_sources src/f04_session_bridge.cpp src/gateway_bridge.cpp)
 if(TREK_HOST_F11_READS)
   set(f11_api "${CMAKE_CURRENT_SOURCE_DIR}/../f11/include")
@@ -81,6 +82,31 @@ file(GENERATE OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/host-bridge-definitions-$<CONF
 ")
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 get_filename_component(star_trek_root "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
+set(nav_chart_dir "${CMAKE_CURRENT_BINARY_DIR}/generated/navigation")
+set(nav_chart_header "${nav_chart_dir}/nav_chart_data.h")
+set(nav_authoring "${star_trek_root}/sistemas/gameplay/navigation")
+add_custom_command(OUTPUT "${nav_chart_header}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/src/navigation/embed_chart.py"
+    "${star_trek_root}" "${nav_chart_header}"
+  DEPENDS src/navigation/embed_chart.py
+    "${nav_authoring}/anchor_route_graph.json"
+    "${nav_authoring}/initial_reference_distance_edges.json"
+    "${nav_authoring}/route_cost_model.json"
+    "${star_trek_root}/mundo/lore/astrography/systems/anchor_locations.json"
+  VERBATIM)
+add_custom_target(host_nav_chart DEPENDS "${nav_chart_header}")
+add_dependencies(TrekF04Bridge host_nav_chart)
+add_library(host_navigation OBJECT src/navigation/route_solver.cpp)
+add_dependencies(host_navigation host_nav_chart)
+target_compile_features(host_navigation PRIVATE cxx_std_20)
+target_include_directories(host_navigation PRIVATE include "${nav_chart_dir}")
+set_target_properties(host_navigation PROPERTIES POSITION_INDEPENDENT_CODE ON
+  CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN YES)
+target_include_directories(TrekF04Bridge PRIVATE "${nav_chart_dir}" "${CMAKE_CURRENT_SOURCE_DIR}/include")
+if(TREK_HOST_TESTS)
+  target_compile_definitions(TrekF04Bridge PRIVATE F04_HOST_NAVIGATION_TESTING)
+endif()
+
 set(f10_authoring "${star_trek_root}/sistemas/gameplay")
 file(GLOB f10_species_profiles CONFIGURE_DEPENDS "${f10_authoring}/species/profiles/*_v0.1.json")
 set(f10_rules_dir "${CMAKE_CURRENT_BINARY_DIR}/generated/f10")
@@ -194,7 +220,8 @@ if(TREK_HOST_TESTS)
 
   # A separate executable replaces only the private bridge bindings to force
   # lifecycle failures. The product library and real bridge are not linked.
-  add_executable(host_fault_tests tests/fault_tests.cpp tests/gateway_fault_bridge.cpp ${host_sources})
+  add_executable(host_fault_tests tests/fault_tests.cpp tests/gateway_fault_bridge.cpp
+    tests/navigation_fault_bridge.cpp ${host_sources})
   target_compile_features(host_fault_tests PRIVATE cxx_std_20)
   target_include_directories(host_fault_tests PRIVATE src include ../f04/include ../f05/include)
   target_compile_definitions(host_fault_tests PRIVATE TREK_HOST_STATIC_TEST TREK_HOST_CORE_SHA="${host_core_sha}")
@@ -534,5 +561,20 @@ if(TREK_HOST_TESTS)
         ${case} "${CMAKE_CURRENT_BINARY_DIR}/a04" "$<TARGET_FILE:host_academy_persistence_tests>"
         "$<TARGET_FILE:host_academy_persistence_faults>")
     set_tests_properties(host.academy.persistence_${case} PROPERTIES TIMEOUT 150 LABELS "h04;ia03b03-03;process")
+  endforeach()
+endif()
+
+if(TREK_HOST_TESTS)
+  add_executable(host_navigation_tests tests/navigation_tests.cpp ${host_sources} ${host_adapter_sources})
+  target_compile_features(host_navigation_tests PRIVATE cxx_std_20)
+  target_compile_definitions(host_navigation_tests PRIVATE TREK_HOST_STATIC_TEST
+    TREK_HOST_GATEWAY_TESTING F04_HOST_NAVIGATION_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_include_directories(host_navigation_tests PRIVATE src tests include)
+  target_link_libraries(host_navigation_tests PRIVATE TrekF04Bridge host_academy_core CoreRPG::CoreRPG Threads::Threads)
+  set_target_properties(host_navigation_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  foreach(case IN ITEMS 01 02 03 04 05 06 07 08 09 10 11 12 13 14)
+    add_test(NAME host.navigation.CN2-${case} COMMAND host_navigation_tests ${case}
+      "${CMAKE_CURRENT_BINARY_DIR}/nav/${case}")
+    set_tests_properties(host.navigation.CN2-${case} PROPERTIES TIMEOUT 60 LABELS "h09-p03-c02;native")
   endforeach()
 endif()

@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 
+#include "trek/host/navigation.h"
+
 #if defined(TREK_HOST_STATIC_TEST)
 # define TREK_HOST_API
 #elif defined(_WIN32)
@@ -66,6 +68,15 @@ struct PopulationConfig {
 struct Result {
     Error error = Error::OK;
     Generation generation;
+};
+
+struct NavigationResult {
+    Error error = Error::OK;
+    Generation generation;
+    NavigationStatus status = NavigationStatus::OK;
+    std::optional<NavigationView> view;
+    std::optional<RouteProposal> proposal;
+    std::vector<ChartPlace> candidates;
 };
 
 struct Snapshot {
@@ -226,6 +237,12 @@ public:
     SessionOwner& operator=(const SessionOwner&) = delete;
 
     TREK_HOST_API std::future<Result> open(PopulationConfig config);
+    // Explicit native bootstrap. The existing open and C ABI use no origin or chart.
+    TREK_HOST_API std::future<Result> open_naval(PopulationConfig config, NavalBootstrap bootstrap);
+    TREK_HOST_API static const char* naval_chart_publication() noexcept;
+    TREK_HOST_API std::future<NavigationResult> query_navigation(Generation);
+    TREK_HOST_API std::future<NavigationResult> propose_route(Generation, RouteIntent);
+    TREK_HOST_API std::future<NavigationResult> validate_route(Generation, std::uint64_t reference);
     TREK_HOST_API std::shared_future<Result> close();
     TREK_HOST_API Snapshot snapshot() const;
     TREK_HOST_API std::string campaign_id(Generation generation) const;
