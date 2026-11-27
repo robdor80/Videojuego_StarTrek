@@ -13,7 +13,7 @@ El [Plan Maestro HOST v1.2](PLAN_MAESTRO_HOST_v1.2_2026-11-11.md) especifica **H
 
 | Área | Artefacto verificado | Evidencia / madurez |
 | --- | --- | --- |
-| Core fijo | `desarrollo/integration/host/CMakeLists.txt` | Fija Core SHA `76a7b7b485616d8c4994f384a90f123bf333591d` y exige checkout limpio. **No cambiar el pin**. No se auditó aquí el árbol externo completo de Core. |
+| Core fijo | `desarrollo/integration/host/CMakeLists.txt` | Fija Core SHA `76a7b7b485616d8c4994f384a90f123bf333591d` y exige checkout limpio. **No cambiar el pin**. El árbol de rutas y las APIs públicas del Core fijado se han inspeccionado directamente (sección adicional); no es una auditoría exhaustiva de cada implementación interna. |
 | HOST real | `desarrollo/integration/host/include/trek/host/session_owner.h`, `src/native_session.h` y `src/gateway.h` | SessionOwner, vista de campaña, cola propietaria y guardado/carga; operaciones nativas de vista, orden F05, reloj H08. **No consta una API nativa de ruta ni de desplazamiento naval** en las superficies inspeccionadas. |
 | F04 | `desarrollo/integration/f04/include/f04_bridge.h` | Existe `F04_ST_HELM`, `F04_Q_HELM`, `F04_Q_ASTROMETRY` y `F04_MOVE`. **El nombre `F04_MOVE` no acredita mover una nave espacial**; corresponde al dominio de acciones F04 y exige auditoría semántica en Core. |
 | F05 | `desarrollo/integration/f05/include/f05_orders.h` | `F05OrderRequest` indica expresamente **P01 soporta solo `F04_SCAN`, sin parámetros**. `f05_submit/receive/execute_order` no permiten afirmar timón, destino, warp, impulso ni ruta. |
