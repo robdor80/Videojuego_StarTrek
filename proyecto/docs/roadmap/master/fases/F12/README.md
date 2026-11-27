@@ -7,6 +7,10 @@
 
 Simular tripulación persistente sin necesidad de cargar simultáneamente todos los actores 3D.
 
+## Investigación prioritaria — F12 LIVING WORLD (24-11-2026)
+
+**Lectura obligatoria al retomar F12:** [Investigación de motores, técnicas y reutilización](INVESTIGACION_LIVING_WORLD_2026-11-24.md). Recoge 15 sistemas externos, referencias de videojuegos, 20 técnicas, brechas de los contratos actuales, arquitectura local sin IA generativa para la simulación, criterios de reutilización y el laboratorio propuesto LW-00–LW-11. El objetivo es priorizar la credibilidad de la vida social sobre el hiperrealismo gráfico. Antes de implementar, auditar Core/HOST, probar candidatos y licencias, y validar autonomía real sin eventos sociales prefabricados. Es investigación y propuesta técnica, no cierre de F12 ni autorización automática de dependencias o cambios del plan maestro.
+
 ## Reserva de planificación aprobada — IDEA-0017 (05-11-2026)
 
 La [IDEA-0017 — Vida personal, sentimental y familiar](../../../../../ideas/IDEA-0017_vida_personal_pareja_matrimonio_familia.md) es una **capacidad aprobada por el autor y pendiente de implementación**, para la que **F12 es la fase propietaria propuesta**: soltería y relaciones opcionales, compromiso y convivencia, matrimonio, descendencia y crianza, con NPC y familias persistentes.

@@ -20,6 +20,7 @@ namespace fs = std::filesystem;
 namespace {
 using U = std::uint64_t;
 std::atomic_bool pause_dispatch{false};
+std::atomic_bool pause_clock{false};
 std::atomic_bool pause_bind{false};
 std::atomic_uint forced_code{F04_OK};
 std::binary_semaphore entered{0}, resume{0};
@@ -189,8 +190,400 @@ void refusal(Fixture& f,const std::string& name) {
     }
 }
 
+// H08-P03: exercise the real CoreRPG clock through the product HOST worker.
+void clock_case(Fixture& f, const std::string& name)
+{
+    auto intent = [&](U key, U delta, U budget=1) {
+        const auto now=f.view();
+        return ClockIntent{key,now.revision,now.now,now.now+delta,budget};
+    };
+    auto verify = [&](const ClockResult& result, ClockIntent request, U correlation=0) {
+        require(result.error==Error::OK && result.generation==f.generation &&
+                result.correlation_id==correlation && !result.replayed,
+                "H08: invalid clock receipt/generation/correlation");
+        require(result.before_tick==request.expected_now &&
+                result.before_revision==request.expected_revision &&
+                result.after_tick>=result.before_tick &&
+                result.after_tick<=request.horizon &&
+                result.processed<=request.task_budget, "H08: fabricated or out-of-bounds Core clock");
+        const auto live=f.view();
+        require(live.now==result.after_tick && live.revision==result.after_revision,
+                "H08: receipt disagrees with authoritative Core view");
+    };
+    auto create_tasks = [&] {
+        f.visit([&](F04Session* s) {
+            F04Handles h{};check_code(f04_handles(s,&h),F04_OK,"Clock task: handles");
+            F04Stats stats{};check_code(f04_stats(s,&stats),F04_OK,"Clock task: stats");
+            const U due=stats.now+20;
+            for(U i=0;i<2;++i) {
+                check_code(f04_stats(s,&stats),F04_OK,"Clock task: revision");
+                F04Request request{{h.ship.scope,f.recipient},stats.revision,F04_QUEUE,
+                    F04_SCAN,0,0,due,due+120,50501+i};
+                F04Result receipt{};
+                check_code(f04_execute(s,&request,&receipt),F04_OK,"Schedule genuine F04 task");
+            }
+        });
+        F04Stats stats{};
+        f.visit([&](F04Session* s) {check_code(f04_stats(s,&stats),F04_OK,"Scheduled pending");});
+        require(stats.pending==2,"H08 did not schedule two real Core activities");
+    };
+    if(name=="hk06_unbound") {
+        const auto unchanged=f.bytes();
+        auto response=f.owner.advance_clock(f.generation,{1,0,0,5,1},9).get();
+        require(response.error==Error::PRINCIPAL_UNBOUND && response.correlation_id==9 &&
+                response.generation==Generation{} && !response.processed,
+                "H08 permitted clock for an unbound player");
+        require(f.bytes()==unchanged,"Unbound attempt changed Core");
+        return;
+    }
+    if(name=="hk07_limits") {
+        const auto base=f.view();
+        const auto before=f.bytes();
+        const ClockIntent bad[]={
+            {0,base.revision,base.now,base.now+2,1},
+            {1,base.revision,base.now,base.now+2,0},
+            {2,base.revision,base.now,base.now+2,ClockLimits::max_tasks+1},
+            {3,base.revision,base.now,base.now+ClockLimits::max_span_seconds+1,1},
+            {4,base.revision,base.now,base.now-1,1}
+        };
+        for(const auto& invalid:bad)
+            require(f.owner.advance_clock(f.generation,invalid).get().error==Error::INVALID_ARGUMENT,
+                    "H08 admitted an unbounded or malformed clock intent");
+        require(f.bytes()==before,"H08 invalid clock intent mutated Core");
+        return;
+    }
+    if(name=="hk02_partial" || name=="hk12_partial_replay") {
+        create_tasks();
+        const auto request=intent(1,30,1);
+        const auto first=f.owner.advance_clock(f.generation,request,7).get();
+        verify(first,request,7);
+        require(first.more_due && first.processed==1 && first.after_tick==request.expected_now+20,
+                "H08 hid or mishandled F04_CAPACITY partial committed work");
+        auto after=f.bytes();
+        if(name=="hk12_partial_replay") {
+            const auto repeated=f.owner.advance_clock(f.generation,request,8).get();
+            require(repeated.error==Error::OK && repeated.replayed &&
+                    repeated.more_due && repeated.processed==1 &&
+                    repeated.after_tick==first.after_tick && repeated.correlation_id==8,
+                    "H08 replay repeated partially completed Core tasks");
+            require(f.bytes()==after,"H08 partial replay consumed another Core task");
+        }
+        const auto finish=intent(2,10,1);
+        const auto second=f.owner.advance_clock(f.generation,finish).get();
+        verify(second,finish);
+        require(!second.more_due && second.processed==1 && second.after_tick==request.horizon,
+                "H08 explicit continuation did not finish remaining scheduled Core work");
+        F04Stats stats{};
+        f.visit([&](F04Session* s){check_code(f04_stats(s,&stats),F04_OK,"After Core tasks");});
+        require(stats.pending==0,"H08 left scheduled tasks after explicit continuation");
+        return;
+    }
+    if(name=="hk03_stale") {
+        auto request=intent(1,5);
+        const auto unchanged=f.bytes();
+        request.expected_revision++;
+        auto rejected=f.owner.advance_clock(f.generation,request,13).get();
+        require(rejected.error==Error::REVISION_STALE && !rejected.processed &&
+                rejected.generation==Generation{},"H08 did not reject stale revision");
+        require(f.bytes()==unchanged,"H08 stale advance mutated Core");
+        const auto next=intent(2,5);
+        verify(f.owner.advance_clock(f.generation,next).get(),next);
+        return;
+    }
+    if(name=="hk08_restore") {
+        expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+        const auto before=f.view();
+        const auto advance=intent(1,25);
+        verify(f.owner.advance_clock(f.generation,advance).get(),advance);
+        const auto old=f.generation;
+        const auto reloaded=f.owner.restore(old,{f.campaign,"alpha"}).get();
+        expect(reloaded,Error::OK);f.generation=reloaded.generation;
+        require(f.generation!=old && f.view().now==before.now,"H08 restore did not reload Core clock");
+        require(f.owner.advance_clock(old,advance).get().error==Error::GENERATION_EXPIRED,
+                "H08 accepted old generation after RESTORE");
+        const auto again=intent(1,25);
+        const auto result=f.owner.advance_clock(f.generation,again).get();
+        verify(result,again);
+        require(!result.replayed && result.before_tick==before.now,
+                "H08 carried ephemeral replay receipt into restored generation");
+        return;
+    }
+    if(name=="hk10_close" || name=="hk14_queued_close") {
+        const auto request=intent(1,5);
+        pause_clock=true;
+        auto running=f.owner.advance_clock(f.generation,request,25);
+        await_pause();
+        std::future<ClockResult> queued;
+        if(name=="hk14_queued_close")
+            queued=f.owner.advance_clock(f.generation,{2,request.expected_revision,request.expected_now,
+                                               request.horizon,request.task_budget},26);
+        const auto closing=f.owner.close();
+        if(name=="hk14_queued_close") {
+            auto pending=queued.get();
+            require(pending.error==Error::GENERATION_EXPIRED && !pending.processed &&
+                    pending.correlation_id==26,"H08 left a queued clock request after CLOSE");
+        }
+        pause_clock=false;
+        resume.release();
+        const auto expired=running.get();
+        require(expired.error==Error::GENERATION_EXPIRED && !expired.processed &&
+                expired.correlation_id==25,"H08 leaked in-flight clock after CLOSE");
+        expect(closing.get(),Error::OK);
+        return;
+    }
+    if(name=="hk11_events") {
+        const auto issued=f.submit(f.intent());
+        auto sub=f.owner.subscribe_order_events(f.generation,issued.order).get();
+        require(sub.error==Error::OK && sub.subscription,"H08 lost event subscription");
+        auto message=f.owner.poll_order_events(f.generation,sub.subscription).get();
+        require(message.error==Error::OK && message.events.size()==1,"H08 missing F05 order source");
+        expect(f.owner.ack_order_events(f.generation,sub.subscription,message.events[0].id).get(),Error::OK);
+        const auto request=intent(1,5);
+        verify(f.owner.advance_clock(f.generation,request).get(),request);
+        auto after=f.owner.poll_order_events(f.generation,sub.subscription).get();
+        require(after.error==Error::OK && after.events.empty(),
+                "H08 manufactured F05 order transition during clock advance");
+        return;
+    }
+    if(name=="hk09_concurrent") {
+        const auto request=intent(1,10);
+        auto first=f.owner.advance_clock(f.generation,request,61);
+        auto second=f.owner.advance_clock(f.generation,request,62);
+        const auto a=first.get(),b=second.get();
+        verify(a,request,61);
+        require(b.error==Error::OK && b.replayed && b.correlation_id==62 &&
+                a.after_tick==b.after_tick && a.processed==b.processed,
+                "H08 concurrent duplicate clock request advanced twice");
+        return;
+    }
+    if(name=="hk13_worker") {
+        const auto request=intent(1,4);
+        auto remote=std::async(std::launch::async,[&] {
+            return f.owner.advance_clock(f.generation,request,81).get();
+        });
+        verify(remote.get(),request,81);
+        return;
+    }
+    const auto request=intent(1,name=="hk15_same_tick"?0:8);
+    const auto before=f.bytes();
+    const auto first=f.owner.advance_clock(f.generation,request,12).get();
+    verify(first,request,12);
+    require(!first.more_due && first.processed==0 && first.after_tick==request.horizon,
+            "H08 base advance incorrectly created scheduled work");
+    if(name=="hk01_basic") {
+        require(f.bytes()!=before,"H08 clock did not persist Core tick");
+    } else if(name=="hk04_replay" || name=="hk05_conflict") {
+        const auto saved=f.bytes();
+        if(name=="hk04_replay") {
+            const auto replay=f.owner.advance_clock(f.generation,request,13).get();
+            require(replay.error==Error::OK && replay.replayed && replay.correlation_id==13 &&
+                    replay.after_tick==first.after_tick && replay.after_revision==first.after_revision,
+                    "H08 duplicate intent not replayed safely");
+        } else {
+            auto conflict=request;conflict.horizon+=1;
+            const auto error=f.owner.advance_clock(f.generation,conflict,13).get();
+            require(error.error==Error::IDEMPOTENCY_CONFLICT && error.correlation_id==13,
+                    "H08 accepted conflicting reuse of clock id");
+        }
+        require(f.bytes()==saved,"H08 duplicate or conflict changed Core state");
+    } else if(name=="hk15_same_tick") {
+        require(f.bytes()==before,"H08 same-tick/no-task advance changed authoritative state");
+    } else if(name!="hk01_basic") {
+        throw std::runtime_error("Unknown H08-P03 case");
+    }
+}
+
+// H08-P04: real authenticated F05 events projected as presentation only.
+void notification_case(Fixture& f, const std::string& name)
+{
+    const auto check = [&](const NotificationBatchResult& b, U token,
+                           std::size_t count, U correlation=0) {
+        require(b.error==Error::OK && b.generation==f.generation &&
+                b.subscription==token && b.correlation_id==correlation &&
+                !b.resync_required && b.campaign_id==f.campaign,
+                "H08-P04: incorrect presentation envelope");
+        require(b.items.size()==count,"H08-P04: wrong notification count");
+        for(const auto& item:b.items)
+            require(item.source==EventSource::F05_ORDER && item.source_event_id &&
+                    item.order && !item.title.empty() && !item.body.empty(),
+                    "H08-P04: fabricated/incomplete source notification");
+    };
+    const auto denied = [&](const NotificationBatchResult& b, Error error, U corr=0) {
+        require(b.error==error && b.correlation_id==corr &&
+                b.generation==Generation{} && b.subscription==0 &&
+                b.items.empty() && b.campaign_id.empty() && !b.more &&
+                !b.resync_required,"H08-P04: error exposed a notification or token");
+    };
+
+    if(name=="hn07_unbound") {
+        const auto before=f.bytes();
+        denied(f.owner.poll_order_notifications(f.generation,1,77).get(),
+               Error::PRINCIPAL_UNBOUND,77);
+        require(f.bytes()==before,"Unbound poll changed Core");
+        return;
+    }
+    if(name=="hn11_generation") {
+        auto issued=f.submit(f.intent());
+        auto sub=f.owner.subscribe_order_events(f.generation,issued.order).get();
+        require(sub.error==Error::OK && sub.subscription,"Failed subscribe");
+        denied(f.owner.poll_order_notifications({},sub.subscription,72).get(),
+               Error::INVALID_ARGUMENT,72);
+        return;
+    }
+    if(name=="hn06_foreign") {
+        U order=0;
+        f.visit([&](F04Session* session) {
+            F04Handles h{};F04Stats st{};
+            check_code(f04_handles(session,&h),F04_OK,"H08-P04 foreign handles");
+            check_code(f04_stats(session,&st),F04_OK,"H08-P04 foreign stats");
+            F05OrderRequest q{h.captain,{h.ship.scope,f.recipient},h.ship,
+                {h.ship.scope,f.station},91602,st.revision,28900,50501,F04_SCAN,0};
+            F05Receipt receipt{};
+            check_code(f05_submit(session,&q,&receipt),F04_OK,
+                       "Create real foreign Core event");
+            order=receipt.order;
+        });
+        const auto before=f.bytes();
+        auto sub=f.owner.subscribe_order_events(f.generation,order).get();
+        require(sub.error!=Error::OK && !sub.subscription,"Foreign subscription permitted");
+        denied(f.owner.poll_order_notifications(f.generation,1,53).get(),
+               Error::SCOPE_INVALID,53);
+        require(f.bytes()==before,"Foreign projection mutated Core");
+        return;
+    }
+
+    auto order=f.submit(f.intent());
+    if(name!="hn02_incremental" && name!="hn10_clock" && name!="hn05_close")
+        f.complete(order.order);
+    auto sub=f.owner.subscribe_order_events(f.generation,order.order,41).get();
+    require(sub.error==Error::OK && sub.subscription,"H08-P04 subscription failed");
+    const auto token=sub.subscription;
+    if(name=="hn08_unknown_token") {
+        denied(f.owner.poll_order_notifications(f.generation,token+500,47).get(),
+               Error::SCOPE_INVALID,47);
+        return;
+    }
+    if(name=="hn05_close") {
+        check(f.owner.poll_order_notifications(f.generation,token).get(),token,1);
+        const auto old=f.generation;
+        expect(f.owner.close().get(),Error::OK);
+        denied(f.owner.poll_order_notifications(old,token,51).get(),
+               Error::GENERATION_EXPIRED,51);
+        return;
+    }
+    if(name=="hn02_incremental") {
+        auto issued=f.owner.poll_order_notifications(f.generation,token).get();
+        check(issued,token,1);
+        require(issued.items[0].kind==NotificationKind::ORDER_ISSUED,
+                "H08-P04 invents acceptance before Core");
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        issued.items[0].source_event_id).get(),Error::OK);
+        f.transition(order.order,false);
+        auto accepted=f.owner.poll_order_notifications(f.generation,token).get();
+        check(accepted,token,1);
+        require(accepted.items[0].kind==NotificationKind::ORDER_ACCEPTED &&
+                accepted.items[0].previous_event_id==issued.items[0].source_event_id,
+                "H08-P04 accepted without causal source");
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        accepted.items[0].source_event_id).get(),Error::OK);
+        f.transition(order.order,true);
+        auto final=f.owner.poll_order_notifications(f.generation,token).get();
+        check(final,token,2);
+        require(final.items[0].kind==NotificationKind::ORDER_EXECUTING &&
+                final.items[1].kind==NotificationKind::ORDER_COMPLETED &&
+                final.items[1].previous_event_id==final.items[0].source_event_id,
+                "H08-P04 invented/out-of-order terminal F05 notification");
+        return;
+    }
+    if(name=="hn10_clock") {
+        const auto first=f.owner.poll_order_notifications(f.generation,token).get();
+        check(first,token,1);
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items[0].source_event_id).get(),Error::OK);
+        const auto old=f.view();
+        auto result=f.owner.advance_clock(f.generation,
+            ClockIntent{1,old.revision,old.now,old.now+5,1}).get();
+        require(result.error==Error::OK,"H08-P04 clock advance failed");
+        check(f.owner.poll_order_notifications(f.generation,token).get(),token,0);
+        return;
+    }
+    auto before=f.bytes();
+    auto first=f.owner.poll_order_notifications(f.generation,token,42).get();
+    check(first,token,4,42);
+    const NotificationKind kinds[]={
+        NotificationKind::ORDER_ISSUED, NotificationKind::ORDER_ACCEPTED,
+        NotificationKind::ORDER_EXECUTING, NotificationKind::ORDER_COMPLETED};
+    for(std::size_t i=0;i<first.items.size();++i) {
+        const auto& item=first.items[i];
+        require(item.kind==kinds[i] && item.order==order.order,
+                "H08-P04 invalid Core F05 state mapping");
+        if(i)require(item.previous_event_id==first.items[i-1].source_event_id &&
+                     item.core_tick>=first.items[i-1].core_tick,
+                     "H08-P04 broke F05 source causality or tick");
+        require(item.body.find("50501")==std::string::npos,
+                "H08-P04 exposed private cause in text");
+    }
+    if(name=="hn01_statuses" || name=="hn03_repoll" || name=="hn12_same_stream") {
+        auto again=f.owner.poll_order_notifications(f.generation,token,43).get();
+        check(again,token,4,43);
+        require(first.items==again.items,"H08-P04 repeated poll changed notifications");
+        if(name=="hn12_same_stream") {
+            const auto raw=f.owner.poll_order_events(f.generation,token).get();
+            require(raw.error==Error::OK && raw.events.size()==first.items.size(),
+                    "H08-P04 created separate source cursor");
+            for(std::size_t i=0;i<raw.events.size();++i)
+                require(raw.events[i].id==first.items[i].source_event_id,
+                        "H08-P04 notification not derived from F05 raw fact");
+        }
+    } else if(name=="hn04_restore") {
+        expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+        auto old=f.generation;
+        auto restored=f.owner.restore(old,{f.campaign,"alpha"}).get();
+        expect(restored,Error::OK); f.generation=restored.generation;
+        denied(f.owner.poll_order_notifications(old,token,49).get(),
+               Error::GENERATION_EXPIRED,49);
+        denied(f.owner.poll_order_notifications(f.generation,token,50).get(),
+               Error::SCOPE_INVALID,50);
+        auto sub2=f.owner.subscribe_order_events(f.generation,order.order).get();
+        require(sub2.error==Error::OK && sub2.subscription!=token,
+                "H08-P04 reused RESTORE token");
+        auto current=f.owner.poll_order_notifications(f.generation,sub2.subscription).get();
+        check(current,sub2.subscription,4);
+        for(std::size_t i=0;i<current.items.size();++i)
+            require(first.items[i]==current.items[i],
+                    "H08-P04 invented changed notification after RESTORE");
+        return;
+    } else if(name=="hn09_partial_ack") {
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items[1].source_event_id).get(),Error::OK);
+        auto remaining=f.owner.poll_order_notifications(f.generation,token).get();
+        check(remaining,token,2);
+        require(remaining.items[0]==first.items[2] && remaining.items[1]==first.items[3],
+                "H08-P04 ACK altered identity or order");
+    } else if(name=="hn13_double_observer") {
+        auto sub2=f.owner.subscribe_order_events(f.generation,order.order).get();
+        require(sub2.error==Error::OK && sub2.subscription!=token,
+                "H08-P04 subscriber collision");
+        auto independent=f.owner.poll_order_notifications(f.generation,sub2.subscription).get();
+        check(independent,sub2.subscription,4);
+        require(independent.items==first.items,"H08-P04 observer-local stream differs");
+    } else if(name=="hn14_ack_no_core") {
+        expect(f.owner.ack_order_events(f.generation,token,
+                                        first.items.back().source_event_id).get(),Error::OK);
+        auto empty=f.owner.poll_order_notifications(f.generation,token).get();
+        check(empty,token,0);
+    } else if(name!="hn01_statuses" && name!="hn03_repoll" &&
+             name!="hn12_same_stream") {
+        throw std::runtime_error("Unknown H08-P04 native case");
+    }
+    require(f.bytes()==before,"H08-P04 notification projection/ack changed Core");
+}
+
 void run_case(const std::string& name,const fs::path& root) {
-    Fixture f(root,name!="unbound" && name!="resolving",(name=="authority" || name=="observer")?4:3);
+    Fixture f(root,name!="unbound" && name!="resolving" && name!="he04_unbound" && name!="hk06_unbound" && name!="hn07_unbound",
+              (name=="authority" || name=="observer" || name=="he05_foreign" || name=="hn06_foreign")?4:3);
+    if(name.rfind("hk",0)==0) {clock_case(f,name);return;}
+    if(name.rfind("hn",0)==0) {notification_case(f,name);return;}
     if(name=="bound") {
         auto v=f.view(); require(v.person==f.captain && v.ship==1,"Projection uses wrong person");
     } else if(name=="readonly") {
@@ -299,6 +692,153 @@ void run_case(const std::string& name,const fs::path& root) {
         if(name=="pending") f.complete(issued.order);
         else { require(f.order(issued.order).execution.has_value(),"Lost result");replay(f); }
         expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+    } else if(name=="he01_delivery" || name=="he02_incremental" || name=="he03_dedup" ||
+              name=="he04_unbound" || name=="he05_foreign" || name=="he06_restore" ||
+              name=="he07_close" || name=="he08_capacity" || name=="he09_errors" ||
+              name=="he10_readonly" || name=="he11_causality" || name=="he12_parallel" ||
+              name=="he13_generation") {
+        const auto check_batch = [&](const EventBatchResult& b, std::size_t count, U correlation=0) {
+            require(b.error==Error::OK && b.generation==f.generation &&
+                    b.correlation_id==correlation && !b.resync_required,
+                    "H08 event delivery leaked wrong generation/correlation or required unexpected resync");
+            require(b.events.size()==count,"H08 wrong number of authorized event projections");
+            U previous=0;
+            for (const auto& e:b.events) {
+                require(e.source==EventSource::F05_ORDER && e.id && e.order &&
+                        e.previous==previous, "H08 event source/order/causal chain invalid");
+                previous=e.id;
+            }
+        };
+        if(name=="he04_unbound") {
+            auto r=f.owner.subscribe_order_events(f.generation,1,19).get();
+            require(r.error==Error::PRINCIPAL_UNBOUND && r.correlation_id==19 &&
+                    !r.subscription,"Unbound subscription was admitted");
+        } else if(name=="he05_foreign") {
+            U order=0;
+            f.visit([&](F04Session* s) {
+                F04Handles h{};F04Stats stats{};
+                check_code(f04_handles(s,&h),F04_OK,"H08 foreign handles");
+                check_code(f04_stats(s,&stats),F04_OK,"H08 foreign revision");
+                F05OrderRequest q{h.captain,{h.ship.scope,f.recipient},h.ship,
+                    {h.ship.scope,f.station},70012,stats.revision,28900,50501,F04_SCAN,0};
+                F05Receipt r{};
+                check_code(f05_submit(s,&q,&r),F04_OK,"H08 create foreign Core event");
+                order=r.order;
+            });
+            const auto before=f.bytes();
+            auto result=f.owner.subscribe_order_events(f.generation,order,32).get();
+            require(result.error!=Error::OK && !result.subscription,"Foreign observer read Core order");
+            require(f.bytes()==before,"Foreign observer rejection modified Core");
+        } else if(name=="he09_errors") {
+            require(f.owner.subscribe_order_events(f.generation,0).get().error==Error::INVALID_ARGUMENT,
+                    "Zero source order admitted");
+            auto q=f.intent();auto issued=f.submit(q);
+            auto sub=f.owner.subscribe_order_events(f.generation,issued.order).get();
+            require(sub.error==Error::OK && sub.subscription,"H08 create subscription failed");
+            auto miss=f.owner.poll_order_events(f.generation,sub.subscription+100,17).get();
+            require(miss.error==Error::SCOPE_INVALID && miss.events.empty() && !miss.subscription &&
+                    miss.correlation_id==17,"Unknown token leaked event");
+            require(f.owner.ack_order_events(f.generation,sub.subscription,99999).get().error==
+                    Error::INVALID_ARGUMENT,"Arbitrary UI ack was accepted");
+        } else if(name=="he13_generation") {
+            auto issued=f.submit(f.intent());
+            require(f.owner.subscribe_order_events({},issued.order,12).get().error==
+                    Error::INVALID_ARGUMENT,"Empty generation subscribed");
+            require(f.owner.poll_order_events({},12,13).get().error==
+                    Error::INVALID_ARGUMENT,"Empty generation polled");
+        } else {
+            auto q=f.intent(); auto issued=f.submit(q);
+            if(name!="he02_incremental" && name!="he07_close" && name!="he08_capacity")
+                f.complete(issued.order);
+            const auto before=f.bytes();
+            auto subscribed=f.owner.subscribe_order_events(f.generation,issued.order,11).get();
+            require(subscribed.error==Error::OK && subscribed.generation==f.generation &&
+                    subscribed.subscription && subscribed.correlation_id==11,
+                    "H08 authorized subscription failed");
+            const auto token=subscribed.subscription;
+            if(name=="he08_capacity") {
+                for(int i=1;i<16;++i)
+                    require(f.owner.subscribe_order_events(f.generation,issued.order).get().error==Error::OK,
+                            "H08 did not admit bounded subscribers");
+                require(f.owner.subscribe_order_events(f.generation,issued.order).get().error==Error::CAPACITY_LIMIT,
+                        "H08 unbounded subscriber list");
+            } else if(name=="he07_close") {
+                auto first=f.owner.poll_order_events(f.generation,token).get();
+                check_batch(first,1);
+                const auto old=f.generation;
+                expect(f.owner.close().get(),Error::OK);
+                require(f.owner.poll_order_events(old,token).get().error==Error::GENERATION_EXPIRED,
+                        "CLOSE kept H08 subscription");
+            } else if(name=="he06_restore") {
+                auto first=f.owner.poll_order_events(f.generation,token).get();
+                check_batch(first,4);
+                expect(f.owner.save(f.generation,"alpha").get(),Error::OK);
+                const auto old=f.generation;
+                auto restored=f.owner.restore(old,{f.campaign,"alpha"}).get();
+                expect(restored,Error::OK);f.generation=restored.generation;
+                require(f.owner.poll_order_events(old,token).get().error==Error::GENERATION_EXPIRED,
+                        "RESTORE kept previous delivery");
+                require(f.owner.poll_order_events(f.generation,token).get().error==Error::SCOPE_INVALID,
+                        "RESTORE reused old subscription token");
+                auto fresh=f.owner.subscribe_order_events(f.generation,issued.order).get();
+                require(fresh.error==Error::OK && fresh.subscription!=token,"RESTORE reused token");
+                auto again=f.owner.poll_order_events(f.generation,fresh.subscription).get();
+                check_batch(again,4);
+                for(std::size_t i=0;i<4;++i)
+                    require(first.events[i].id==again.events[i].id,"RESTORE created different Core facts");
+            } else if(name=="he02_incremental") {
+                auto first=f.owner.poll_order_events(f.generation,token).get();check_batch(first,1);
+                expect(f.owner.ack_order_events(f.generation,token,first.events.back().id).get(),Error::OK);
+                auto empty=f.owner.poll_order_events(f.generation,token).get();check_batch(empty,0);
+                f.transition(issued.order,false);
+                auto accepted=f.owner.poll_order_events(f.generation,token).get();
+                require(accepted.error==Error::OK && accepted.events.size()==1 &&
+                        accepted.events[0].previous==first.events[0].id,"H08 omitted Core ACCEPTED transition");
+                expect(f.owner.ack_order_events(f.generation,token,accepted.events.back().id).get(),Error::OK);
+                f.transition(issued.order,true);
+                auto finished=f.owner.poll_order_events(f.generation,token).get();
+                require(finished.error==Error::OK && finished.events.size()==2 &&
+                        finished.events[0].previous==accepted.events[0].id &&
+                        finished.events[1].previous==finished.events[0].id,
+                        "H08 invented or reordered Core EXECUTING/COMPLETED");
+            } else if(name=="he12_parallel") {
+                auto a=f.owner.poll_order_events(f.generation,token,20);
+                auto b=f.owner.poll_order_events(f.generation,token,21);
+                auto x=a.get(),y=b.get();check_batch(x,4,20);check_batch(y,4,21);
+                require(x.events==y.events,"Concurrent H08 poll duplicated or changed event page");
+            } else {
+                auto first=f.owner.poll_order_events(f.generation,token,12).get();
+                check_batch(first,4,12);
+                auto repeated=f.owner.poll_order_events(f.generation,token,13).get();
+                check_batch(repeated,4,13);
+                require(first.events==repeated.events,"Re-poll mutated H08 pending queue");
+                if(name=="he03_dedup") {
+                    auto other=f.owner.subscribe_order_events(f.generation,issued.order).get();
+                    require(other.error==Error::OK && other.subscription!=token,
+                            "H08 duplicated token");
+                    auto independent=f.owner.poll_order_events(f.generation,other.subscription).get();
+                    check_batch(independent,4);
+                    require(independent.events==first.events,"H08 cross-subscriber inconsistency");
+                    auto repeat=f.owner.submit_order(f.generation,q).get();
+                    operation_error(repeat,Error::OK);
+                    require(repeat.receipt && repeat.receipt->order==issued.order,"F05 replay changed order");
+                }
+                require(f.owner.ack_order_events(f.generation,token,99999).get().error==
+                        Error::INVALID_ARGUMENT,"H08 accepted ack of unseen event");
+                expect(f.owner.ack_order_events(f.generation,token,first.events.back().id).get(),Error::OK);
+                expect(f.owner.ack_order_events(f.generation,token,first.events.back().id).get(),Error::OK);
+                auto after=f.owner.poll_order_events(f.generation,token,14).get();
+                check_batch(after,0,14);
+                if(name=="he11_causality") {
+                    require(first.events[0].state==F05_ISSUED &&
+                            first.events[1].state==F05_ACCEPTED &&
+                            first.events[2].state==F05_EXECUTING &&
+                            first.events[3].state==F05_COMPLETED,"Wrong native F05 state projection");
+                }
+                require(f.bytes()==before,"Subscribe/poll/ack changed Core state, clock or RNG");
+            }
+            if(name=="he10_readonly")require(f.bytes()==before,"H08 read-only path mutated Core");
+        }
     } else throw std::runtime_error("Unknown M0 case");
 }
 
@@ -354,6 +894,7 @@ void reader(const fs::path& root,bool pending) {
 namespace trek::host::detail {
 void persistence_test_observe(F04Session*,bool) {}
 void gateway_test_after_bind() { if(pause_bind)wait_pause(); }
+void gateway_test_after_clock(F04Session*) { if(pause_clock)wait_pause(); }
 void gateway_test_after_dispatch(F04Session*,std::uint32_t& code) {
     if(forced_code!=F04_OK)code=forced_code;
     if(pause_dispatch)wait_pause();

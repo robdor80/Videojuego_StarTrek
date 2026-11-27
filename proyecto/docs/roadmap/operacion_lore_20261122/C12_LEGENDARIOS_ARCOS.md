@@ -1,70 +1,48 @@
-# C12 — Auditoría de los 12 legendarios y futuros narrativos condicionados
+# C12 — Personajes legendarios: continuidad ratificada (23-11-2026)
 
-**Límite cerrado:** EXACTAMENTE los doce personajes de `mundo/lore/characters/lore05b_elenco_cerrado_2026-11-13.md`. No se añaden rostros televisivos ni se reabre la selección. **GAME_ADDITION** para rangos/cargos de continuidad propia y desenlaces nuevos; antecedentes de TNG/DS9/VOY preservados. **Estado documental:** reconciliación y propuestas de arco, no entidades vivas creadas.
+**Estado:** decisiones autorales aprobadas, continuidad propia GAME_ADDITION; no hechos técnicos ya materializados en CoreRPG. El elenco televisivo autorizado sigue siendo **exactamente el de los 12 personajes de LORE-05B**. Las fechas y rangos propios del juego prevalecen sobre una trayectoria televisiva incompatible. No elaborar diálogos ni escenas de la intro aquí.
 
-## 1. Fichas auditadas contra arranque 2383
+## Elenco y responsabilidades
 
-| Personaje | Estado inicial/uso de campaña | Contacto y restricción |
-|---|---|---|
-| Jean-Luc Picard | almirante de flota, presidente del Consejo Estratégico (`GAME_ADDITION`) | conoce expediente en 2383, **no** protagonista personalmente; primer encuentro Academia; entrega galones de capitán solo con ascenso real |
-| Kathryn Janeway | almirante, Mando de Exploración y Operaciones Delta (`GAME_ADDITION`) | argumenta primero a favor de una evaluación justa; no se presume encuentro con el candidato; misiones posteriores escasas |
-| William T. Riker | vicealmirante y comandante de Primera Flota (`GAME_ADDITION`) | **ver resolución de mando Enterprise-D**; presencia frecuente por órdenes, pruebas o servicio real, no teletransporte de agenda |
-| Beverly Crusher | vicealmirante, Cuerpo Médico (`GAME_ADDITION`) | apariciones excepcionales, privacidad y competencia médica; no inferir familiaridad con paciente protagonista |
-| Geordi La Forge | capitán en 2383 y director técnico de Valhalla; posible contraalmirante en 2383–2387 | ascenso requiere orden; mentoría técnica gradual, no concede acceso a astillero ni nave |
-| Worf | comodoro antes de 2383, Seguridad/Cooperación Klingon (`GAME_ADDITION`) | encuentros significativos excepcionales; no tutor de combate automático |
-| Data | muerto en 2379, estado no operativo en 2383 | una investigación posterior **puede** recuperar su identidad, no crear consciencia por restaurar archivos |
-| Deanna Troi | capitana, mediación y psicología (`GAME_ADDITION`) | matrimonio con Riker, independencia profesional; episodios de confianza si hay encuentros válidos |
-| Siete de Nueve | ex-Borg; futura capitana/directora de tecnología Borg según trayectoria divergente | encuentro condicionado con jugador oficial avanzado; edad ~35 orientativa en torno a un encuentro cerca de 2393, **no fecha fija** |
-| Tuvok | capitán desde 2383, contrainteligencia (`GAME_ADDITION`) | apariciones excepcionales, acceso restringido; el rango no le da buque automático |
-| Benjamin Sisko | con los Profetas desde 2375, ausente de servicio convencional en 2383 | **no** participa en el consejo; retorno posible 2388–2392, ascenso futuro independiente |
-| Guinan | civil el-auriana, futura regente Ten Forward | no presta servicio a bordo de Enterprise-D hasta habilitación efectiva de nave/área/contrato y agenda |
+| Personaje | Estado y papel en Star Trek Legends |
+|---|---|
+| Jean-Luc Picard | Almirante de flota y presidente del Consejo Estratégico; conoce expediente de Rise en 2383, no lo ha conocido personalmente todavía. |
+| Kathryn Janeway | Almirante; defiende evaluación justa de Rise ante Consejo y posteriormente facilita su primer encuentro profesional con Siete. |
+| William T. Riker | **Vicealmirante** y comandante de Primera Flota; Picard le encarga en 2383 asumir **la capitanía funcional de la Enterprise-D** cuando quede reconstruida. Será mentor directo de Rise. |
+| Beverly Crusher | Vicealmirante del Cuerpo Médico; apariciones excepcionales y reserva de expedientes. |
+| Geordi La Forge | **Contraalmirante**, director del Proyecto Valhalla; **ya no es ingeniero jefe de la Enterprise-D**. La fecha administrativa precisa del ascenso queda sin fijar; en su función de director tiene supervisión técnica. Responsable principal de la recuperación de Data. |
+| Worf | Comodoro, seguridad y cooperación Klingon, sin tutoría automática de combate. |
+| Data | Falleció en 2379. **Geordi recupera al Data original en 2386**, con recuerdos, personalidad e **imagen juvenil clásica de TNG**. En 2387 se reincorpora oficialmente, asciende a **comandante** y es **primer oficial de la Enterprise-D**, a las órdenes de Riker. |
+| Deanna Troi | Capitana, mediación y psicología; mantiene independencia profesional y matrimonio con Riker. |
+| Siete de Nueve | **Comandante**, **35 años** al conocer a Rise aproximadamente en **2393**, con apariencia joven de Voyager. Su nacimiento se adapta a esta continuidad. Janeway organiza la colaboración en la que se conocen. |
+| Tuvok | Capitán, contrainteligencia, apariciones selectivas y acceso limitado. |
+| Benjamin Sisko | Ausente de servicio convencional en 2383 y vinculado a los Profetas. **Posible regreso 2388–2392**, eventual vicealmirante y director de Operaciones Estratégicas Gamma y Relaciones con Bajor, condicionado al regreso real. No figura en el Consejo de 2383. |
+| Guinan | Civil el-auriana, vinculada al futuro Ten Forward de Enterprise-D con habilitación y presencia efectivas. |
 
-**Precisión:** las edades de ficciones divergentes y los cargos del videojuego no se atribuyen al canon televisivo original. Las ventanas narrativas son horizontes de diseño, no cronómetros inapelables. No conceder conocimiento de expediente genético por ser amigo de Picard.
+## Riker, Picard y la sucesión
 
-## 2. Resolución Riker: rango ≠ cargo ≠ mando ≠ tratamiento
+Tras la reunión del Consejo en **2383**, Picard está con Janeway **en el exterior de la Sede de Flota**, donde se reúnen con Riker. Picard comunica a Riker su confianza para asumir el mando de la Enterprise-D reconstruida por Proyecto Valhalla, **una vez operativa en 2387**. También le expresa que espera recibir entonces a un **alférez especialmente prometedor**, Rise, y le pide que lo acoja bajo su tutela y dirija su formación como oficial.
 
-**Decisión editorial nueva (22-11-2026, GAME_ADDITION):** se conserva **rango militar de vicealmirante** y **cargo orgánico de comandante de la Primera Flota de Exploración y Respuesta Estratégica**, que pueden coexistir con **designación excepcional como oficial al mando de la USS Enterprise-D** durante sus pruebas de aceptación y primera etapa operativa **si llega a comisionarse**. Cuando se diga «Riker es el capitán de la Enterprise-D», **«capitán» designa función de mando del buque, no un nuevo grado ni degradación**.
+La intención a largo plazo es que Riker le dé el relevo en el puente **si Rise progresa legítimamente hasta capitán y recibe el mando por orden formal**. La confianza de Picard no otorga ascensos anticipados ni limita la libertad del jugador.
 
-### Puertas
-1. **2383**: Enterprise-D todavía en obra. Riker puede inspeccionar, revisar simulaciones y participar en la planificación, **nunca** mandar una nave no comisionada en operaciones.
-2. **Después de alta real**: orden expresa establece mandato de Riker como CO de Enterprise-D, duración/relevo y delegación de tareas de Primera Flota (sin desatenderla por magia). Si no hay alta o destino, esta designación **no se materializa**.
-3. **Frecuencia narrativa**: Riker visita el puente, dirige maniobras y supervisa al protagonista cuando la agenda/ubicación y misión lo permitan. Puede seguir presente de manera habitual como voz de mando aun si el jugador no está en su nave.
-4. **Si el jugador asciende y obtiene mando legítimo de Enterprise-D**: se registra relevo de CO; Riker conserva rango y cargo institucional, y pasa a mentor/visitante/supervisor, no co-capitán del mismo buque. La ceremonia de galones por Picard es separada.
-5. **Si Riker no puede aceptar la designación**: otro CO original válido puede servir temporalmente por orden; no se añade personaje legendario ni se fuerza un evento.
+**Rango de Riker ≠ función de capitán de buque**: conserva el grado de vicealmirante, con designación expresa como oficial al mando; sus otras responsabilidades han de delegarse de forma creíble. No mandar una nave aún fuera de servicio. La escena y **todos sus diálogos y composición audiovisual pertenecen exclusivamente a la conversación de la introducción**.
 
-**Justificación:** preserva la presencia frecuente deseada de Riker y el homenaje a la Enterprise-D sin reescribir LORE-05B, crear dos capitanes simultáneos ni garantizar que el jugador herede el buque.
+## Recuperación e identidad legal de Data
 
-## 3. Arcos contingentes con alternativas
+- **2379:** pérdida histórica de Data en Nemesis y conservación de material positrónico relacionado con B-4.
+- **2380–2385:** investigación científica dirigida por Geordi, sin convertir B-4 en objeto sin derechos ni crear copias descartables.
+- **2386:** recuperación efectiva de la continuidad personal de **Data original**, con apariencia clásica, memoria e identidad propias, y cuerpo muy longevo pero vulnerable (no inmortal ni invulnerable). Evaluación científica y reconocimiento individual.
+- **2387:** la autoridad competente acredita identidad, revisa su declaración administrativa de fallecimiento conservando registro histórico, certifica aptitud, acepta su **reincorporación voluntaria**, restituye servicios y méritos documentados sin contabilizar automáticamente el periodo ausente como servicio activo. Junta de ascensos lo promueve de teniente comandante a **comandante**. Nombramiento de **primer oficial** bajo Riker en la Enterprise-D.
+- Sus derechos personales y elección sobre reparaciones/vida no dependen de sus mandos. Su habilidad e inteligencia no sustituyen las decisiones del jugador, ni el estado de CoreRPG.
 
-### DATA — «Continuidad no es una copia» (investigación, posible 2390–2395)
-- **Disparador:** recursos, Geordi disponible, historial positrónico y patrocinio autorizado; valor científico de B-4 sin tratarlo como recipiente descartable.
-- **Tensión:** datos y patrones de memoria no prueban continuidad de experiencia subjetiva. Evaluación por científicos/ética y consentimiento del ser que pudiera emerger.
-- **Ramas:** investigación inconclusa; nueva entidad distinta que merece derechos propios; reconocimiento justificado de la continuidad personal de Data; desastre técnico que detiene el programa.
-- **Sólo en rama de reconocimiento validado:** retorno a operaciones, salud y libre elección; después proceso independiente hacia rango de capitán y cargo científico. **Nada** de esto ha ocurrido en 2383.
+## Siete y Rise
 
-### SISKO — «El tiempo de los Profetas» (posible 2388–2392)
-- **Disparador:** señal/encuentro corroborado y condiciones propias de Profetas; el calendario lineal no impone voluntad extratemporal.
-- **Ramas:** señales sin regreso; aparición breve sin reincorporación; regreso persistente con reencuentro familiar; retorno condicionado por circunstancias de Bajor y Gamma.
-- **Sólo tras regreso y voluntad efectiva:** legitimación, servicio, comisión, eventual vicealmirantazgo y dirección de Operaciones Gamma. Nunca presidente improvisado de Bajor.
+**Hacia 2393:** Rise tiene aproximadamente **55 años**, apariencia humana de unos **35–40** por su herencia vulcana y mejorada, y rango de **teniente comandante o comandante** según carrera. Siete tiene **35 años**, apariencia de Voyager y rango **comandante**, **no capitana**. Janeway propicia una colaboración profesional legítima en la que ambos se conocen.
 
-### SIETE DE NUEVE — «Autonomía y experiencia compartida»
-- **Disparador:** el jugador llega a responsabilidad compatible (referencia: teniente comandante), Janeway necesita cooperación técnica legítima, horarios y misión compatibles.
-- **Ramas:** colaboración distante; respeto profesional; amistad; confianza íntima consentida; desacuerdo o ruptura sin castigo arbitrario.
-- **Edad:** en la continuidad alternativa la fecha de nacimiento se reajusta de forma autoral para orientar **~35 años en un encuentro significativo** (ejemplo **~2358 → ~2393**). Si la carrera altera fecha, la edad cronológica evoluciona naturalmente; no se congela para sostener el romance.
-- **Condiciones:** ni Janeway revela expediente reservado sin permiso, ni Siete entra en camarote sin acceso/consentimiento, ni la tecnología Borg constituye poderes sin límites.
+La relación puede evolucionar hacia respeto, amistad, confianza o **romance opcional** según decisiones del jugador y voluntad de Siete; no está garantizado ni se impone mediante un guion. La relación debe ser consentida, progresiva y respetar agenda, privacidad y ubicación. Sus capacidades Borg no son poderes ilimitados. No predeterminar profesiones futuras más allá del rango aprobado.
 
-### GEORDI — «El peso de un legado»
-- Responsable técnico de Valhalla; necesita equipos, permisos, seguridad, fondos y personal. Su ascenso es un evento separado. Puede colaborar con el héroe en sensores/ciencia y desacordar por razones de seguridad.
-- Investiga a Data por amistad y responsabilidad, no como mecanismo garantizado de éxito.
+## Sisko y resto del reparto
 
-### PICARD / JANEWAY / RIKER
-- **Picard:** evaluación justa en 2383, encuentro personal posterior durante Academia; ceremonial final condicionado al ascenso a capitán y presencia real; puede mostrarse decepcionado si el jugador actúa mal.
-- **Janeway:** mentora de exploración de aparición selectiva; su vínculo con Siete no crea romance ni obligación.
-- **Riker:** servicio a bordo por designación válida, entrenador de mando y modelo de confianza; tiene familia/cargo propio y no acompaña siempre al jugador.
+Las opciones de Sisko (señales sin retorno, aparición temporal o regreso estable) continúan abiertas; el grado de vicealmirante y cargo Gamma solo tendrán sentido tras su reincorporación válida. Picard, Janeway, Beverly, Deanna, Worf, Tuvok y Guinan conservan las funciones y límites ya aprobados, sin obligar a que estén presentes en cualquier misión.
 
-### BEVERLY / DEANNA / WORF / TUVOK / GUINAN
-Intervenciones compatibles con función, relaciones y privacidad: medicina extraordinaria, mediación/vida familiar, crisis de seguridad, inteligencia excepcional y vida social del Ten Forward. Una aparición no revela automáticamente conocimiento privado ni despacha crisis por prestigio.
-
-## 4. Reglas para la ejecución futura
-
-Toda rama tendrá `prerequisites`, `event_id`, `actor_knowledge`, `authorization`, `world_time`, `outcome`, `world_state_mutation` y `relationships_updated`. Si no hay evento, el texto es solo **posibilidad**. Nunca «despertar a Data», «regresar a Sisko», «promover a Geordi», «romance con Siete» ni «alta Enterprise-D» por incluir el arco en el catálogo.
+**Separación técnica:** LORE fija antecedentes y trayectoria de autor; **CoreRPG registra los hechos concretos**, permisos, órdenes, viajes, rangos y relaciones. Esta ficha no crea entidades vivas ni fuerza ascensos al cargar una partida.

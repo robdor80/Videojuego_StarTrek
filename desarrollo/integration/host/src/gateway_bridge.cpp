@@ -67,4 +67,80 @@ std::uint32_t dispatch(F04Session* session, F04Ref player, const GatewayRequest&
     default: return F04_INTERNAL;
     }
 }
+
+// H08-P02: one real F05 source, read by the owning thread only. Never accept
+// actor/scope from the consumer. F05 checks per-order observer access.
+std::uint32_t events(F04Session* session, F04Ref player, std::uint64_t order,
+                     std::uint64_t after, NativeEventPage& page) noexcept
+{
+    page = {};
+    if (!session || !order) return F04_ARGUMENT;
+    F05PlayerBinding binding{};
+    auto code = f05_player_binding(session, &binding);
+    if (code != F04_OK) return code;
+    if (!binding.record || binding.person.id != player.id ||
+        binding.person.scope != player.scope) return F04_DENIED;
+    F04Person person{};
+    code = f04_person(session, binding.person, binding.person.id, &person);
+    if (code != F04_OK) return code;
+    F05OrderView order_view{};
+    code = f05_order(session, binding.person, order, &order_view);
+    if (code != F04_OK) return code;
+    F05EventView source[16]{};
+    std::uint64_t written = 0;
+    std::uint32_t more = 0;
+    code = f05_events_page(session, binding.person, order, after, source, 16, &written, &more);
+    if (code != F04_OK) return code;
+    if (written > 16) return F04_INTERNAL;
+    for (std::uint64_t i = 0; i < written; ++i) {
+        page.events[i] = {EventSource::F05_ORDER, source[i].id, source[i].previous,
+                          source[i].order, source[i].tick, source[i].state, source[i].code};
+    }
+    page.written = written;
+    page.more = more != 0;
+    return F04_OK;
+}
+/* H08-P03: privileged HOST-controlled clock service. This single owner-thread
+ * call, not a gameplay order, delegates ALL timeline/task decisions to F04/Core.
+ * F04_CAPACITY means an already committed partial advance. */
+std::uint32_t advance(F04Session* session, F04Ref player, const ClockIntent& request,
+                      NativeClockReport& report) noexcept
+{
+    report = {};
+    if (!session || !request.intent_id || !request.task_budget ||
+        request.task_budget > ClockLimits::max_tasks) return F04_ARGUMENT;
+    F05PlayerBinding binding{};
+    auto code = f05_player_binding(session, &binding);
+    if (code != F04_OK) return code;
+    if (!binding.record || binding.person.id != player.id ||
+        binding.person.scope != player.scope) return F04_DENIED;
+    F04Person authorized{};
+    code = f04_person(session, binding.person, binding.person.id, &authorized);
+    if (code != F04_OK) return code;
+    F04Stats before{};
+    code = f04_stats(session, &before);
+    if (code != F04_OK) return code;
+    if (request.expected_revision != before.revision ||
+        request.expected_now != before.now) return F04_STALE;
+    if (request.horizon < before.now ||
+        request.horizon - before.now > ClockLimits::max_span_seconds)
+        return F04_ARGUMENT;
+
+    std::uint64_t processed = 0;
+    const auto advanced = f04_advance(session, request.horizon,
+                                      request.task_budget, &processed);
+    // Even F04_CAPACITY can have committed work and advanced to an earlier
+    // clock boundary. A subsequent call MUST be a new, explicit intent.
+    if (advanced != F04_OK && advanced != F04_CAPACITY) return advanced;
+    F04Stats after{};
+    code = f04_stats(session, &after);
+    if (code != F04_OK) return code;
+    if (processed > request.task_budget || after.now < before.now ||
+        after.now > request.horizon || (advanced == F04_OK && after.now != request.horizon))
+        return F04_INTERNAL;
+    report = {before.now,after.now,before.revision,after.revision,processed,
+              advanced == F04_CAPACITY};
+    return F04_OK;
+}
+
 }

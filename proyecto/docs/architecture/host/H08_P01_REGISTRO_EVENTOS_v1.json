@@ -1,0 +1,227 @@
+{
+  "title": "H08-P01 logical event/service contracts; no runtime bus or new ABI",
+  "spec_version": "1.0.0",
+  "date": "2026-11-23",
+  "status": "DESIGNED_NOT_RUNTIME",
+  "runtime_available": false,
+  "scope": "offline-single-player",
+  "host_contract": "1.0",
+  "operation": "SUBSCRIBE_EVENTS",
+  "event_contract": 1,
+  "authoritative_state": "CoreRPG",
+  "institutional_authority": "F11 Star Trek project (not HOST)",
+  "ownership": {
+    "host": [
+      "admission",
+      "projection",
+      "delivery",
+      "deduplication",
+      "presentation_ack"
+    ],
+    "core": [
+      "world_state",
+      "clock",
+      "timeline",
+      "knowledge",
+      "persistence"
+    ],
+    "f05": [
+      "orders",
+      "order_states",
+      "order_events"
+    ],
+    "f11": [
+      "personnel_rules",
+      "issuer",
+      "confirmed_promotions"
+    ]
+  },
+  "service_catalog": [
+    {
+      "name": "SUBSCRIBE_EVENTS",
+      "owner": "HOST",
+      "status": "NOT_IMPLEMENTED",
+      "effect": "READ_ONLY",
+      "existing_api": null
+    },
+    {
+      "name": "READ_F04_FACTS",
+      "owner": "F04/CoreRPG",
+      "status": "CANDIDATE_SOURCE",
+      "effect": "READ_ONLY",
+      "existing_api": "f04_history_page;f04_history_relations"
+    },
+    {
+      "name": "READ_F05_TRANSITIONS",
+      "owner": "F05",
+      "status": "CANDIDATE_SOURCE",
+      "effect": "READ_ONLY",
+      "existing_api": "f05_events_page;f05_order"
+    },
+    {
+      "name": "READ_F11_CONFIRMED_PROMOTION",
+      "owner": "F11",
+      "status": "CANDIDATE_SOURCE",
+      "effect": "READ_ONLY",
+      "existing_api": "trek::f11_host::promotion"
+    },
+    {
+      "name": "ADVANCE_CORE_CLOCK",
+      "owner": "F04/CoreRPG",
+      "status": "OUT_OF_SCOPE_P01",
+      "effect": "CORE_MUTATION",
+      "existing_api": "f04_advance"
+    }
+  ],
+  "source_types": [
+    {
+      "name": "F04_FACT",
+      "event_id_field": "F04HistoryFact.id",
+      "observer_filtered": true,
+      "cursor_kind": "history_generation_and_after",
+      "confirmed_only": true
+    },
+    {
+      "name": "F05_ORDER",
+      "event_id_field": "F05EventView.id",
+      "observer_filtered": true,
+      "cursor_kind": "per_order_after",
+      "confirmed_only": true
+    },
+    {
+      "name": "F11_PROMOTION",
+      "event_id_field": "Promotion.promotion_event",
+      "observer_filtered": true,
+      "cursor_kind": "per_subject_and_event",
+      "confirmed_only": true
+    }
+  ],
+  "message_envelope_required": [
+    "host_contract",
+    "session_generation",
+    "correlation_id",
+    "operation"
+  ],
+  "event_required": [
+    "event_contract",
+    "campaign_id",
+    "session_generation",
+    "source",
+    "source_event_id",
+    "kind",
+    "observer_context",
+    "view_payload"
+  ],
+  "event_conditional": [
+    "core_revision",
+    "core_tick",
+    "causal_parent",
+    "origin_correlation_id"
+  ],
+  "stable_fact_identity": [
+    "campaign_id",
+    "source",
+    "source_event_id",
+    "kind"
+  ],
+  "projection_identity": [
+    "campaign_id",
+    "source",
+    "source_event_id",
+    "kind",
+    "resolved_observer_identity"
+  ],
+  "forbidden_dedup_identity": [
+    "session_generation",
+    "correlation_id",
+    "page_offset",
+    "core_revision",
+    "wall_clock",
+    "presentation_timestamp"
+  ],
+  "observer_policy": {
+    "resolved_by_host": true,
+    "client_selects_observer": false,
+    "filter_before_queue": true,
+    "wrong_observer_output": "EMPTY",
+    "domain_filter_required": true,
+    "raw_facts_public": false
+  },
+  "ordering": {
+    "source_order_must_hold": true,
+    "foreign_sources_total_order": false,
+    "causal_link_must_be_proven": true,
+    "display_sort_is_not_authority": true
+  },
+  "delivery": {
+    "semantics": "AT_LEAST_ONCE",
+    "ack_effect": "PRESENTATION_ONLY",
+    "ack_persisted": false,
+    "mutates_core": false,
+    "capacity_bounded": true,
+    "missing_history": "RESYNC_REQUIRED",
+    "late_generation": "DROP"
+  },
+  "clock": {
+    "authoritative": "CoreRPG",
+    "source": "f04_stats",
+    "advance_api": "f04_advance",
+    "advance_only_in": "H08-P03",
+    "separate_realtime_clock": true,
+    "automatic_retry_mutations": false
+  },
+  "lifecycle": {
+    "allowed_state": "ACTIVE",
+    "blocked_states": [
+      "CLOSED",
+      "OPENING",
+      "SAVING",
+      "LOADING",
+      "FAILED",
+      "CLOSING"
+    ],
+    "flush_on": [
+      "RESTORE",
+      "CLOSE"
+    ],
+    "generation_fence": true,
+    "recover_only_authoritative_events": true
+  },
+  "risks": [
+    "NO_GENERAL_F05_FEED",
+    "HISTORY_RETENTION_LIMITS",
+    "F11_ISSUER_UNAVAILABLE",
+    "NO_PARALLEL_GAME_CLOCK"
+  ],
+  "normalized_errors": [
+    "SESSION_CLOSED",
+    "BUSY_STATE",
+    "WRONG_THREAD",
+    "GENERATION_EXPIRED",
+    "ACCESS_DENIED",
+    "SCOPE_INVALID",
+    "CAPACITY_LIMIT",
+    "SERVICE_UNAVAILABLE"
+  ],
+  "case_ids": [
+    "HE-01",
+    "HE-02",
+    "HE-03",
+    "HE-04",
+    "HE-05",
+    "HE-06",
+    "HE-07",
+    "HE-08",
+    "HE-09",
+    "HE-10",
+    "HE-11",
+    "HE-12",
+    "HE-13",
+    "HE-14",
+    "HE-15",
+    "HE-16"
+  ],
+  "native_tests_run": false,
+  "unreal_tests_run": false,
+  "certified": false
+}

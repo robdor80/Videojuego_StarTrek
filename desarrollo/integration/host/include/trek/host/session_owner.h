@@ -142,6 +142,78 @@ struct OperationResult {
     std::optional<OrderReceipt> receipt;
 };
 
+// H08-P02 native-only events. No C ABI or Unreal client is added here.
+// IDs/state are filtered projections of a real F05 event page, not authority.
+enum class EventSource : std::uint32_t { F05_ORDER = 1 };
+struct EventNotice {
+    EventSource source = EventSource::F05_ORDER;
+    std::uint64_t id = 0, previous = 0, order = 0, tick = 0;
+    std::uint32_t state = 0, code = 0;
+    bool operator==(const EventNotice&) const = default;
+};
+struct EventSubscriptionResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+};
+struct EventBatchResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+    std::vector<EventNotice> events;
+    bool more = false, resync_required = false;
+};
+
+// H08-P04: presentation-only projections. No Core authority, F11 issuer,
+// public C ABI or Unreal endpoint; acknowledgements reuse H08-P02.
+enum class NotificationLevel : std::uint32_t { INFO, SUCCESS, WARNING, ERROR };
+enum class NotificationKind : std::uint32_t {
+    ORDER_ISSUED = 1, ORDER_ACCEPTED, ORDER_EXECUTING, ORDER_COMPLETED,
+    ORDER_FAILED, ORDER_REFUSED, ORDER_CANCELLED
+};
+struct NotificationNotice {
+    EventSource source = EventSource::F05_ORDER;
+    NotificationKind kind = NotificationKind::ORDER_ISSUED;
+    NotificationLevel level = NotificationLevel::INFO;
+    std::uint64_t source_event_id = 0;
+    std::uint64_t previous_event_id = 0;
+    std::uint64_t order = 0, core_tick = 0;
+    std::string title, body; // Safe, localized presentation, no raw Core details.
+    bool operator==(const NotificationNotice&) const = default;
+};
+struct NotificationBatchResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t subscription = 0, correlation_id = 0;
+    std::string campaign_id; // Non-secret H04 identity for stable source deduplication.
+    std::vector<NotificationNotice> items;
+    bool more = false, resync_required = false;
+};
+
+// H08-P03: explicit, bounded campaign-clock intent on the trusted native
+// HOST interface. The timeline and scheduled work belong exclusively to Core.
+struct ClockLimits {
+    static constexpr std::uint64_t max_span_seconds = 600;
+    static constexpr std::uint64_t max_tasks = 128;
+};
+struct ClockIntent {
+    std::uint64_t intent_id = 0; // Monotonic within one session generation; not a credential.
+    std::uint64_t expected_revision = 0;
+    std::uint64_t expected_now = 0;
+    std::uint64_t horizon = 0; // Absolute Core campaign seconds, never wall time.
+    std::uint64_t task_budget = 0; // 1..128; Core's own maximum remains unchanged.
+};
+struct ClockResult {
+    Error error = Error::OK;
+    Generation generation;
+    std::uint64_t correlation_id = 0;
+    std::uint64_t before_tick = 0, after_tick = 0;
+    std::uint64_t before_revision = 0, after_revision = 0;
+    std::uint64_t processed = 0;
+    bool more_due = false; // F04_CAPACITY: partial committed advance, NOT a failure.
+    bool replayed = false; // Identical intent already observed, Core not called again.
+};
+
 class PlayerBootstrap;
 
 class SessionOwner final {
@@ -176,6 +248,24 @@ public:
     TREK_HOST_API std::future<OperationResult> cancel_order(Generation, std::uint64_t order,
                                                         std::uint64_t expected_revision, std::uint64_t correlation_id = 0);
     TREK_HOST_API std::future<OperationResult> institutional_command(Generation, std::uint64_t correlation_id = 0);
+
+    // F05-only initial H08-P02 subscription. HOST resolves the observer;
+    // clients supply no actor or scope. All Core reads run on the owner thread.
+    TREK_HOST_API std::future<EventSubscriptionResult> subscribe_order_events(
+        Generation, std::uint64_t order, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<EventBatchResult> poll_order_events(
+        Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
+    // One-to-one presentation of the SAME authorized F05 source stream.
+    // No new subscriptions, no new acknowledgement semantics, no F11 emission.
+    TREK_HOST_API std::future<NotificationBatchResult> poll_order_notifications(
+        Generation, std::uint64_t subscription, std::uint64_t correlation_id = 0);
+    TREK_HOST_API std::future<Result> ack_order_events(
+        Generation, std::uint64_t subscription, std::uint64_t presented_event_id);
+
+    // A single explicit, monotonic, generation-bound request. No automatic
+    // real-time progression, background scheduler or mutation from NPC/AI/UE.
+    TREK_HOST_API std::future<ClockResult> advance_clock(
+        Generation, ClockIntent, std::uint64_t correlation_id = 0);
 
 private:
     friend class PlayerBootstrap;
