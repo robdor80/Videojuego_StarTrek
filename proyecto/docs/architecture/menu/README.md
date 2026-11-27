@@ -10,6 +10,8 @@
 - [MENU-03 — Matriz de aceptación](MENU_03_SAVE_ACCEPTANCE.json): 75 casos NOT_RUN, 11 subfases. Relectura GitHub: JSON válido, IDs únicos, referencias de subfase y encabezados coherentes. Sin ejecución de runtime. Continuar universal, autoguardado, metadatos y correlación durable requieren capacidades adicionales; no se declaran implementadas.
 - [MENU-04 — Sistemas complementarios](MENU_04_SISTEMAS_COMPLEMENTARIOS_2026-11-27.md): P01–P11 diseño contractual, catálogo, permisos, progresión y límites de integración. Implementación MENU-06-P08, medios MENU-07 y certificación MENU-08 pendientes.
 - [MENU-04 — Matriz de aceptación](MENU_04_EXTRAS_ACCEPTANCE.json): 71 casos NOT_RUN, 11 sistemas/subfases; relectura GitHub: JSON válido, IDs únicos, referencias, encabezados, cobertura y campos obligatorios correctos. Sin ejecución UE. Pendiente inventario de lore/medios, adaptadores de dominio y aprobación de políticas de desbloqueo/visibilidad.
-- Siguiente diseño: MENU-05, sujeto a revisión/fusión ordenada de MENU-00 a MENU-04. Estética, UX final, políticas de pausa/autoguardado/retención y valores efectivos pendientes de aprobación/pruebas.
+- [MENU-05 — Dirección artística](MENU_05_DIRECCION_ARTISTICA_2026-11-27.md): composición y paleta híbrida aprobadas; P01–P12 especificadas; ajustes finales y ejecución pendientes.
+- [MENU-05 — Matriz de aceptación](MENU_05_ART_ACCEPTANCE.json): 30 casos NOT_RUN. Esquema en `audiovisual/ui/menus/MENU_05_COMPOSICION.svg`.
+- Siguiente fase: MENU-06-P01, Codex local con MSI/UE; no iniciada. Mantener pendientes las políticas y capacidades no aprobadas de MENU-01–04, los medios MENU-07 y certificación MENU-08.
 
 Documentación contractual aquí; recursos UI en `audiovisual/ui/menus/`; implementación futura en el proyecto Unreal existente. No crear un proyecto UE paralelo. Aplican AGENTS.md y el gobierno HOST.

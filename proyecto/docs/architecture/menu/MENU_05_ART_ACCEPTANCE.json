@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "phase": "MENU-05",
+  "status": "ART_DIRECTION_APPROVED_RUNTIME_NOT_RUN",
+  "case_count": 30,
+  "cases": [
+    {
+      "id": "ART-P01-01",
+      "phase": "MENU-05-P01",
+      "description": "Referencia conceptual y contraste frío/cálido",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P01-02",
+      "phase": "MENU-05-P01",
+      "description": "Comparar encuadre con boceto aprobado",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P02-01",
+      "phase": "MENU-05-P02",
+      "description": "Asset NCC-1701-D real identificado e importado",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P02-02",
+      "phase": "MENU-05-P02",
+      "description": "Mapa exclusivo no abre sesión HOST",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P03-01",
+      "phase": "MENU-05-P03",
+      "description": "Planeta azul, espacio negro, título frío y botones cobre",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P03-02",
+      "phase": "MENU-05-P03",
+      "description": "Tokens de estilo centralizados",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P03-03",
+      "phase": "MENU-05-P03",
+      "description": "Contraste de estados comprobado",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P04-01",
+      "phase": "MENU-05-P04",
+      "description": "Título y fuente legibles a DPI objetivo",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P04-02",
+      "phase": "MENU-05-P04",
+      "description": "Tildes, Ñ y fallback",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P05-01",
+      "phase": "MENU-05-P05",
+      "description": "Acciones MAIN según MENU-01 y permisos",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P05-02",
+      "phase": "MENU-05-P05",
+      "description": "Hover/focus/pressed/disabled/busy/error distinguibles",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P05-03",
+      "phase": "MENU-05-P05",
+      "description": "Teclado, ratón y foco",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P06-01",
+      "phase": "MENU-05-P06",
+      "description": "Planeta 3D gira de forma continua",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P06-02",
+      "phase": "MENU-05-P06",
+      "description": "Nave no tapa título/botones",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P06-03",
+      "phase": "MENU-05-P06",
+      "description": "Atmósfera y nubes estables",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P07-01",
+      "phase": "MENU-05-P07",
+      "description": "Submenús conservan estilo y navegación",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P07-02",
+      "phase": "MENU-05-P07",
+      "description": "Pausa no carga escena orbital ni altera simulación",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P08-01",
+      "phase": "MENU-05-P08",
+      "description": "Entrada única y botones operativos sin espera artificial",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-07/MENU-08"
+    },
+    {
+      "id": "ART-P08-02",
+      "phase": "MENU-05-P08",
+      "description": "Movimiento reducido efectivo",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-07/MENU-08"
+    },
+    {
+      "id": "ART-P08-03",
+      "phase": "MENU-05-P08",
+      "description": "No repetir entrada al volver",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-07/MENU-08"
+    },
+    {
+      "id": "ART-P09-01",
+      "phase": "MENU-05-P09",
+      "description": "Confirmaciones con cancelar seguro",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P09-02",
+      "phase": "MENU-05-P09",
+      "description": "Errores y éxito conforme a HOST",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P10-01",
+      "phase": "MENU-05-P10",
+      "description": "2560×1600 y Windows 150%",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P10-02",
+      "phase": "MENU-05-P10",
+      "description": "1920×1080 y 2560×1440 sin recorte",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P10-03",
+      "phase": "MENU-05-P10",
+      "description": "Ventana/borderless/fullscreen",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P10-04",
+      "phase": "MENU-05-P10",
+      "description": "Medición FPS/RAM/VRAM",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P11-01",
+      "phase": "MENU-05-P11",
+      "description": "Reutilización H08 y preservación diagnóstico",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P11-02",
+      "phase": "MENU-05-P11",
+      "description": "Modelo real, no duplicación de originales",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-06/MENU-08"
+    },
+    {
+      "id": "ART-P12-01",
+      "phase": "MENU-05-P12",
+      "description": "Aceptación visual humana en MSI",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-08"
+    },
+    {
+      "id": "ART-P12-02",
+      "phase": "MENU-05-P12",
+      "description": "Evidencia Editor y Win64 empaquetado",
+      "status": "NOT_RUN",
+      "execution_phase": "MENU-08"
+    }
+  ]
+}

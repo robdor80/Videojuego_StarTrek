@@ -68,7 +68,7 @@ Responsabilidad: ChatGPT diseño; Codex integración UE. Estado: PLANIFICADO / n
 - MENU-04-P11 — Desbloqueo progresivo
 
 ### MENU-05 — Diseño artístico y UX
-Responsabilidad: Propietario + ChatGPT; aprobación del propietario. Estado: PLANIFICADO / no iniciado.
+Responsabilidad: Propietario + ChatGPT; aprobación del propietario. Estado: diseño principal APROBADO y especificado documentalmente el 2026-11-27; ajustes y certificación UE/MSI pendientes.
 - MENU-05-P01 — Investigación visual
 - MENU-05-P02 — Identidad artística
 - MENU-05-P03 — Paleta LCARS
@@ -135,7 +135,7 @@ Responsabilidad: ChatGPT CI; Codex UE; propietario aceptación. Estado: PLANIFIC
 | 07 | 06 + integración real intro/Actos I y II; transición única, audio separado, recuperación y política de repetición acordada. |
 | 08 | 06–07; CI y pruebas Editor/Win64/MSI, aceptación humana y acta final. |
 
-MENU-01–04 pueden avanzar documentalmente sin MSI ni Codex. H09-P02 bloqueada por F06 no bloquea esos diseños ni configuración o gestión de partidas; sí cualquier opción que prometa una consola sensorial real. H07 permite proyectar expediente propio únicamente con la capacidad efectivamente disponible y permisos válidos; certificación presencial sigue pendiente. F11 emisor no disponible. Actos cinematográficos en ramas separadas: no fusionar ni cambiar sus assets desde MENU-00.
+MENU-01–05 pueden avanzar documentalmente sin MSI ni Codex. H09-P02 bloqueada por F06 no bloquea esos diseños ni configuración o gestión de partidas; sí cualquier opción que prometa una consola sensorial real. H07 permite proyectar expediente propio únicamente con la capacidad efectivamente disponible y permisos válidos; certificación presencial sigue pendiente. F11 emisor no disponible. Actos cinematográficos en ramas separadas: no fusionar ni cambiar sus assets desde MENU-00.
 
 ## Principios de aceptación
 - Nueva partida/Continuar/Cargar nunca confunden admisión de solicitud con éxito; no entrar en juego sin verificación de sesión, generación e identidad. Guardado incierto no se anuncia como confirmado. No destruir automáticamente partida válida ni escribir directamente en su carpeta.
@@ -148,4 +148,4 @@ MENU-01–04 pueden avanzar documentalmente sin MSI ni Codex. H09-P02 bloqueada 
 - Codex: encargos acotados por subfase, modelo indicado explícitamente según disponibilidad y decisión del propietario; registrar SHA, CI, pruebas UE y limitaciones. La revisión técnica no equivale a aceptación visual.
 
 ## Estado operativo
-Este plan no desbloquea H09-P02 ni certifica UE. Siguiente tarea: MENU-01-P01, diseño funcional de botonería, jerarquía y comportamiento, sin congelar apariencia. El propietario conserva aceptación artística y jugabilidad. Ver [auditoría](MENU_00_AUDITORIA_2026-11-27.md).
+Este plan no desbloquea H09-P02 ni certifica UE. MENU-00–05 preparados documentalmente; siguiente tarea MENU-06-P01 en Codex local con UE/MSI, tras integración de las PR. No confundir diseño aprobado con producto implementado. El propietario conserva aceptación artística y jugabilidad. Ver [auditoría](MENU_00_AUDITORIA_2026-11-27.md).
