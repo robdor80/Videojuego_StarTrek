@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "phase": "MENU-03",
+  "base": "1ba3fb2829436076ab4499011b5f8b183373947a",
+  "status": "DESIGN_ONLY",
+  "case_count": 75,
+  "capabilities": {
+    "academy_create": "EXISTING_DIAGNOSTIC",
+    "exact_academy_restore": "EXISTING",
+    "manual_save": "EXISTING_H04",
+    "global_recency": "REQUIRES_CONTRACT",
+    "autosave": "REQUIRES_CONTRACT",
+    "universal_catalog": "REQUIRES_CONTRACT",
+    "durable_mutation_correlation": "REQUIRES_CONTRACT",
+    "migration": "REQUIRES_CONTRACT",
+    "delete": "NOT_AUTHORIZED"
+  },
+  "cases": [
+    {
+      "id": "M03-P01-01",
+      "subphase": "MENU-03-P01",
+      "scenario": "NEW desde CLOSED crea campaña distinta y no toca otra",
+      "expected": "Identidad verificada, primer SAVE OK, GAME",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-02",
+      "subphase": "MENU-03-P01",
+      "scenario": "Cancelar antes de admisión",
+      "expected": "Cero CREATE y ningún guardado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-03",
+      "subphase": "MENU-03-P01",
+      "scenario": "CREATE RETRY con misma clave/nombre",
+      "expected": "Una intención admitida como máximo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-04",
+      "subphase": "MENU-03-P01",
+      "scenario": "CREATE con clave repetida y nombre distinto",
+      "expected": "Rechazo, sin nueva campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-05",
+      "subphase": "MENU-03-P01",
+      "scenario": "F10/protagonista no disponible",
+      "expected": "Creación definitiva bloqueada; diagnóstico intacto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-06",
+      "subphase": "MENU-03-P01",
+      "scenario": "Fallo primer SAVE",
+      "expected": "No entrar GAME; recuperación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P01-07",
+      "subphase": "MENU-03-P01",
+      "scenario": "Muerte proceso antes de SAVE",
+      "expected": "No prometer campaña durable ni reenviar CREATE automáticamente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P02-01",
+      "subphase": "MENU-03-P02",
+      "scenario": "Última publicación elegible con orden durable",
+      "expected": "RESTORE tupla exacta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P02-02",
+      "subphase": "MENU-03-P02",
+      "scenario": "Dos ranuras con versión distinta y mtime engañoso",
+      "expected": "Orden solo por autoridad de publicación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P02-03",
+      "subphase": "MENU-03-P02",
+      "scenario": "Sin orden global fiable",
+      "expected": "Continuar deshabilitado, Cargar disponible",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P02-04",
+      "subphase": "MENU-03-P02",
+      "scenario": "Última publicación dañada",
+      "expected": "Aviso y selección explícita; sin fallback",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P02-05",
+      "subphase": "MENU-03-P02",
+      "scenario": "Recencia cambia antes de confirmar",
+      "expected": "Revalidar y pedir nueva confirmación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-01",
+      "subphase": "MENU-03-P03",
+      "scenario": "Catálogo 66+ versiones",
+      "expected": "Todas paginadas sin duplicados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-02",
+      "subphase": "MENU-03-P03",
+      "scenario": "Página vacía con next_cursor",
+      "expected": "Continuar recorrido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-03",
+      "subphase": "MENU-03-P03",
+      "scenario": "Cursor retirado por SAVE/CLOSE",
+      "expected": "Reiniciar cursor 0",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-04",
+      "subphase": "MENU-03-P03",
+      "scenario": "Error a mitad de catálogo",
+      "expected": "No falso vacío",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-05",
+      "subphase": "MENU-03-P03",
+      "scenario": "Selección versión antigua",
+      "expected": "RESTORE versión positiva exacta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-06",
+      "subphase": "MENU-03-P03",
+      "scenario": "Tipo UNKNOWN/NAVAL no soportado",
+      "expected": "No restaurar",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-07",
+      "subphase": "MENU-03-P03",
+      "scenario": "Carga desde PAUSE cancelar",
+      "expected": "Sesión intacta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-08",
+      "subphase": "MENU-03-P03",
+      "scenario": "Carga desde PAUSE guardando",
+      "expected": "SAVE OK luego CLOSE y reinspección",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-09",
+      "subphase": "MENU-03-P03",
+      "scenario": "CLOSE falla",
+      "expected": "No RESTORE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-10",
+      "subphase": "MENU-03-P03",
+      "scenario": "RESTORE falla tras CLOSE",
+      "expected": "RECOVERY/CATALOG, no GAME antiguo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P03-11",
+      "subphase": "MENU-03-P03",
+      "scenario": "Proyección/identidad no coincidente",
+      "expected": "No GAME",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-01",
+      "subphase": "MENU-03-P04",
+      "scenario": "SAVE manual confirmado",
+      "expected": "Una versión nueva, anteriores intactas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-02",
+      "subphase": "MENU-03-P04",
+      "scenario": "Doble clic/tecla retenida",
+      "expected": "Una solicitud admitida",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-03",
+      "subphase": "MENU-03-P04",
+      "scenario": "SAVE con principal no ligado",
+      "expected": "Rechazo sin mutación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-04",
+      "subphase": "MENU-03-P04",
+      "scenario": "Disco lleno antes de publicación",
+      "expected": "Fallo confirmado; anterior recuperable",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-05",
+      "subphase": "MENU-03-P04",
+      "scenario": "SAVE publicación incierta",
+      "expected": "Sin éxito falso ni reenvío",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-06",
+      "subphase": "MENU-03-P04",
+      "scenario": "Guardar y salir con SAVE fallido",
+      "expected": "No CLOSE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-07",
+      "subphase": "MENU-03-P04",
+      "scenario": "CLOSE concurrente durante SAVE",
+      "expected": "No inferir resultado por expiración",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P04-08",
+      "subphase": "MENU-03-P04",
+      "scenario": "Reinicio después de SAVE OK",
+      "expected": "Recuperación exacta con historia",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-01",
+      "subphase": "MENU-03-P05",
+      "scenario": "Sin capacidad de autosave",
+      "expected": "No programar escrituras",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-02",
+      "subphase": "MENU-03-P05",
+      "scenario": "Hito seguro autorizado",
+      "expected": "Una publicación auto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-03",
+      "subphase": "MENU-03-P05",
+      "scenario": "Múltiples hitos mientras ocupado",
+      "expected": "Coalescer una pendiente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-04",
+      "subphase": "MENU-03-P05",
+      "scenario": "Manual y auto simultáneos",
+      "expected": "Prioridad manual antes de admisión; sin solape",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-05",
+      "subphase": "MENU-03-P05",
+      "scenario": "Cambio generación con auto pendiente",
+      "expected": "Descartar intención obsoleta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-06",
+      "subphase": "MENU-03-P05",
+      "scenario": "Auto en punto inseguro",
+      "expected": "No admitir",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-07",
+      "subphase": "MENU-03-P05",
+      "scenario": "Presupuesto/retención no aprobado",
+      "expected": "No habilitar autosave ilimitado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P05-08",
+      "subphase": "MENU-03-P05",
+      "scenario": "Auto falla o incierto",
+      "expected": "Aviso, no éxito ni reenvío",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P06-01",
+      "subphase": "MENU-03-P06",
+      "scenario": "Dos campañas misma ranura/versión",
+      "expected": "Identidad por tupla completa",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P06-02",
+      "subphase": "MENU-03-P06",
+      "scenario": "Restaurar antigua y guardar",
+      "expected": "Nueva versión; anteriores y posteriores intactas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P06-03",
+      "subphase": "MENU-03-P06",
+      "scenario": "Ranura inválida o dispositivo Windows",
+      "expected": "Rechazo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P06-04",
+      "subphase": "MENU-03-P06",
+      "scenario": "Límite de versiones H04",
+      "expected": "Error visible; no eliminar",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P06-05",
+      "subphase": "MENU-03-P06",
+      "scenario": "Acción borrar/renombrar no soportada",
+      "expected": "No disponible, cero IO directo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P07-01",
+      "subphase": "MENU-03-P07",
+      "scenario": "Metadata ABI actual sin fecha/narrativa",
+      "expected": "Ausentes no inventados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P07-02",
+      "subphase": "MENU-03-P07",
+      "scenario": "Metadata de otra campaña",
+      "expected": "No fuga de datos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P07-03",
+      "subphase": "MENU-03-P07",
+      "scenario": "Metadata opcional inconsistente",
+      "expected": "No autoriza RESTORE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P07-04",
+      "subphase": "MENU-03-P07",
+      "scenario": "Orden global/fecha ausentes",
+      "expected": "No inferir por mtime/tick",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P07-05",
+      "subphase": "MENU-03-P07",
+      "scenario": "Rango/ubicación de versión anterior",
+      "expected": "Solo proyección Core autorizada de esa versión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P08-01",
+      "subphase": "MENU-03-P08",
+      "scenario": "Pin/format incompatible",
+      "expected": "Bloquear SAVE_INCOMPATIBLE",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P08-02",
+      "subphase": "MENU-03-P08",
+      "scenario": "Esquema Core no admitido con F04_SAVE",
+      "expected": "Mostrar código real, no inventar diagnóstico",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P08-03",
+      "subphase": "MENU-03-P08",
+      "scenario": "Paquete importado sin registro",
+      "expected": "SAVE_UNTRUSTED/no activar",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P08-04",
+      "subphase": "MENU-03-P08",
+      "scenario": "Migración sin capacidad oficial",
+      "expected": "No modificar original",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P08-05",
+      "subphase": "MENU-03-P08",
+      "scenario": "Migración futura falla",
+      "expected": "Original preservado y sin publicación parcial",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-01",
+      "subphase": "MENU-03-P09",
+      "scenario": "Último COMMITTED corrupto",
+      "expected": "No fallback automático",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-02",
+      "subphase": "MENU-03-P09",
+      "scenario": "Versión anterior válida elegida explícitamente",
+      "expected": "RESTORE exacto tras revalidación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-03",
+      "subphase": "MENU-03-P09",
+      "scenario": "Preparado sin COMMITTED",
+      "expected": "No declarar confirmado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-04",
+      "subphase": "MENU-03-P09",
+      "scenario": "UNKNOWN_TICKET tras admisión",
+      "expected": "RECOVERY sin reenvío",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-05",
+      "subphase": "MENU-03-P09",
+      "scenario": "Fila nueva sin correlación causal",
+      "expected": "No resolver incertidumbre falsamente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-06",
+      "subphase": "MENU-03-P09",
+      "scenario": "Reinicio con resultado previo desconocido",
+      "expected": "Reinspección, sin garantía falsa",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-07",
+      "subphase": "MENU-03-P09",
+      "scenario": "Link/reparse point o árbol inválido",
+      "expected": "Rechazo HOST, sin seguir enlaces",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P09-08",
+      "subphase": "MENU-03-P09",
+      "scenario": "Registry/vínculo no coincide",
+      "expected": "No activar",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-01",
+      "subphase": "MENU-03-P10",
+      "scenario": "Poll familia incorrecta",
+      "expected": "Ticket intacto, adaptador corrige",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-02",
+      "subphase": "MENU-03-P10",
+      "scenario": "Completion vieja tras World/generación",
+      "expected": "Descartar proyección obsoleta",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-03",
+      "subphase": "MENU-03-P10",
+      "scenario": "CLOSE invalida generación en admisión",
+      "expected": "Verificar CLOSED sin guarda activa errónea",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-04",
+      "subphase": "MENU-03-P10",
+      "scenario": "HOST no disponible",
+      "expected": "Settings accesible, guardados bloqueados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-05",
+      "subphase": "MENU-03-P10",
+      "scenario": "SAVE/RESTORE no usan UE SaveGame",
+      "expected": "Persistencia solo H04",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-06",
+      "subphase": "MENU-03-P10",
+      "scenario": "MAIN no avanza tick Core",
+      "expected": "Estado temporal no mutado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-07",
+      "subphase": "MENU-03-P10",
+      "scenario": "F12/historial/RNG tras restaurar",
+      "expected": "Igualdad según oráculos Core",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P10-08",
+      "subphase": "MENU-03-P10",
+      "scenario": "Catálogo costoso",
+      "expected": "Game Thread no bloqueado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P11-01",
+      "subphase": "MENU-03-P11",
+      "scenario": "Regresión Academy/H06/H07",
+      "expected": "Flujos existentes no degradados",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P11-02",
+      "subphase": "MENU-03-P11",
+      "scenario": "Editor y Win64 reinicio real",
+      "expected": "Guardado/restauración entre procesos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P11-03",
+      "subphase": "MENU-03-P11",
+      "scenario": "MSI 2560x1600/150%",
+      "expected": "Catálogo legible, foco y confirmaciones correctas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P11-04",
+      "subphase": "MENU-03-P11",
+      "scenario": "Raíz aislada de pruebas",
+      "expected": "Guardados personales intactos y limpieza documentada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M03-P11-05",
+      "subphase": "MENU-03-P11",
+      "scenario": "Medición historial y autosave",
+      "expected": "Latencia/disco/estabilidad registrados sin promesa previa",
+      "status": "NOT_RUN"
+    }
+  ]
+}
