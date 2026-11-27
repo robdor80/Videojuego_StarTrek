@@ -1,6 +1,6 @@
 # HOST H09-P03-C02 — Ubicación, carta conocida y propuesta de ruta
 
-**Fecha** 27 de noviembre de 2026. **Base** `main` en `9c8ee562eadce391f09866ca6020f3dcd91d72de`, tras la fusión de la PR #233. **Código probado** `12f36f91bb7b1682dcc876c79b63972e9427bca3`. **CoreRPG** `76a7b7b485616d8c4994f384a90f123bf333591d`.
+**Fecha** 27 de noviembre de 2026. **Base** `main` en `9c8ee562eadce391f09866ca6020f3dcd91d72de`, tras la fusión de la PR #233. **Código funcional probado** `12f36f91bb7b1682dcc876c79b63972e9427bca3`. **Composición aislada** `90f1f7ddea0a45a0025218cc13397d258a75cecd`. **CoreRPG** `76a7b7b485616d8c4994f384a90f123bf333591d`.
 
 ## Capacidad nativa
 
@@ -11,6 +11,8 @@
 - `validate_route` vuelve a comprobar el observador, la generación y el contexto actual. Posición y conocimiento usan la revisión global del Core fijado. Las referencias caducan al cambiar esa revisión, la carta o el tick Core, o al tramitar SAVE, RESTORE o CLOSE. El HOST conserva hasta 64 referencias recientes de la activación en memoria. Cualquier uso posterior depende de una revalidación, y la propuesta carece de autoridad para emitir una orden.
 
 La costura de persistencia usa el formato Core existente. El catálogo F04 admite las definiciones adicionales solo en la composición HOST. `schema` comprueba tipos, cardinalidad, contención, sello y concesiones, y el esquema de conocimiento de F05 acepta únicamente los hechos navales respaldados por dichas concesiones. `HistoryPersistence` verifica el archivo y restaura en una campaña candidata antes del intercambio. La composición naval no registra acciones de navegación en Timeline ni añade un reloj.
+
+La primera ejecución de Actions detectó una dependencia de compilación. Los workflows históricos F04 y F05 validan el hash exacto de `f04_bridge.cpp` antes de ejecutar sus campañas. C02 devuelve ese archivo a los bytes de `main` y aplica la extensión solo a una copia generada para HOST. `compose_f04_bridge.py` aplica un parche contextual a un candidato temporal y publica la copia únicamente si el parche encaja. El resultado coincide byte por byte con la unidad previamente probada, y las otras composiciones siguen compilando el original con sus oráculos intactos. [Primera ejecución F04](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/46037794609)
 
 ## Compatibilidad de guardados
 
@@ -71,8 +73,9 @@ ctest --test-dir "$core_build" -j 3 --no-tests=error --output-on-failure
 | Navegación nativa HOST | **PASS 14/14**, 0,33 s de CTest. |
 | CoreRPG con backend JSON | **PASS 483/483**, 1,56 s de CTest. |
 | H09-C02, H09-P03, H09-P01, H01, S11, F04 referencia y Miranda | **PASS 94/94** documentales y de referencia (15 + 15 + 11 + 11 + 16 + 22 + 4). |
-| Regresión nativa HOST/F04/F05 | **PASS 389/389** en 30,13 s de CTest. Incluye 234 HOST (con los 14 CN2), 21 F04 y 134 F05. |
+| Regresión nativa HOST/F04/F05 | **PASS 389/389** en 30,13 s con el código funcional. La composición aislada recompilada dio **PASS 292/292** en 23,08 s, con 137 HOST (incluidos los 14 CN2), 21 F04 y 134 F05. |
 | Fixture aislado F11 para los lectores históricos del HOST | **PASS 17/17**. |
+| Costura de compilación y oráculos históricos | **PASS**. `cmp` entre la copia generada y la unidad funcional, 21/21 hashes de `contract_files` y 6/6 oráculos verificados con `history_reference.py`. `f04.history_reference_contract` pasó con el comparador nativo. El generador rechazó una copia con contexto alterado sin publicar salida. |
 | Guardado generado por el binario de la base | **PASS**. `host_m0_tests write` de la base generó una ranura con una orden F05 ejecutada. Un proceso de C02 enlazado a `TrekHost` llamó a `restore`, `query_navigation` y `save`. Recuperó ubicación nula y carta vacía, y guardó en una ranura nueva. |
 
 Las advertencias de GCC sobre inicializadores de Core y enlace interno de F04 permitieron completar la compilación.
@@ -83,4 +86,6 @@ La matriz de Actions ejecuta CN2 en Linux, Windows y ASan/UBSan. El estado por S
 
 El laboratorio propio `laboratorios/HOST/H09-P03-C02/` reunió los checkouts de verificación, compilaciones, guardados, herramientas y registros. La medición inmediatamente anterior al borrado fue de 560.833.160 bytes de tamaño aparente (`du -sb`). Las pruebas y la compilación se regeneran desde el código y las fuentes versionadas.
 
-El laboratorio se eliminó por completo y no conserva archivos ni dependencias de producto.
+Se eliminó por completo el primer laboratorio. La comprobación de la composición aislada reutilizó esa ruta. La nueva medición antes de limpiar fue de 266.360.960 bytes aparentes. Las pruebas no requieren archivos de ese directorio tras compilar desde las fuentes versionadas.
+
+El segundo laboratorio también se eliminó por completo. La ruta quedó ausente y ningún artefacto propio quedó retenido.
