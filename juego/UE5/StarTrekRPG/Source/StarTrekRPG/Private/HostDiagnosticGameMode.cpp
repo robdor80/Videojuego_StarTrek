@@ -3,6 +3,8 @@
 #include "HostRuntime.h"
 #include "HostSessionSubsystem.h"
 #include "SHostAcademyMenu.h"
+#include "SHostInstitutionalView.h"
+#include "HostWindowBounds.h"
 #include "Engine/GameInstance.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
@@ -92,6 +94,8 @@ public:
                         [
                             SNew(STextBlock).Text(this, &SHostDiagnostic::ResultText).AutoWrapText(true)
                         ]
+                        + SVerticalBox::Slot().AutoHeight()
+                        [ SNew(SHostInstitutionalView).Host(Args._Host).Projection(Args._Projection) ]
                     ]
                 ]
             ]
@@ -283,6 +287,7 @@ void AHostDiagnosticPlayerController::PlayerTick(float DeltaTime)
 {
     Super::PlayerTick(DeltaTime);
     if (!AcademyPanel) return;
+    if (auto* Viewport = PanelViewport.Get()) FitHostAcademyWindow(*Viewport);
 
     auto* Host = AcademyHost.Get();
     auto* Projection = AcademyProjection.Get();

@@ -1,4 +1,5 @@
 #include "SHostAcademyMenu.h"
+#include "SHostInstitutionalView.h"
 
 #include "Framework/Application/SlateApplication.h"
 #include "HostRuntime.h"
@@ -146,7 +147,7 @@ void SHostAcademyMenu::Construct(const FArguments& Args)
             [
                 SNew(SBox).WidthOverride(856)
                 [
-                    SNew(SBorder).Padding(24).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(Surface)
+                    SNew(SBorder).Tag(TEXT("AcademySurface")).Padding(24).BorderImage(FCoreStyle::Get().GetBrush("WhiteBrush")).BorderBackgroundColor(Surface)
                     [
                         SNew(SVerticalBox)
                         + SVerticalBox::Slot().AutoHeight().Padding(0, 0, 0, 6)
@@ -349,6 +350,8 @@ void SHostAcademyMenu::BuildCandidate(SVerticalBox& Body)
                 FText::AsNumber(Candidate->Revision), FText::AsNumber(Candidate->Tick), FText::FromString(Candidate->SourceDigest)))
         ]
     ];
+    Body.AddSlot().AutoHeight().Padding(0, 8)
+    [ SNew(SHostInstitutionalView).Host(Menu->GetSession()).Projection(Menu->GetProjection()) ];
     const FText SaveLabel = Menu->GetFlow().SaveState() == EAcademySave::Failed
         ? LOCTEXT("RetrySave", "Reintentar guardar") : LOCTEXT("Save", "Guardar");
     const auto Save = Button(EAction::Save, TEXT("AcademySave"), SaveLabel);

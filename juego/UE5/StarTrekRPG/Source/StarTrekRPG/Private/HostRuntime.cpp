@@ -75,6 +75,14 @@ void FStarTrekRPGModule::StartupModule()
             {
                 return FPlatformProcess::GetDllExport(Host, ANSI_TO_TCHAR(Name));
             });
+            const auto InstitutionalVersion = Resolve<decltype(&trek_host_institutional_version)>(Host, TEXT("trek_host_institutional_version"));
+            Loaded->InstitutionalSubmit = Resolve<decltype(Loaded->InstitutionalSubmit)>(Host, TEXT("trek_host_institutional_submit"));
+            Loaded->InstitutionalPoll = Resolve<decltype(Loaded->InstitutionalPoll)>(Host, TEXT("trek_host_institutional_poll"));
+            Loaded->InstitutionalCurrent = Resolve<decltype(Loaded->InstitutionalCurrent)>(Host, TEXT("trek_host_institutional_current"));
+            if (InstitutionalVersion && InstitutionalVersion() == TREK_HOST_INSTITUTIONAL_VERSION &&
+                Loaded->InstitutionalSubmit && Loaded->InstitutionalPoll && Loaded->InstitutionalCurrent)
+                Loaded->InstitutionalAvailability = TREK_HOST_OK;
+            UE_LOG(LogStarTrekHost, Display, TEXT("H07 institutional read v1: %s"), HostCodeName(Loaded->InstitutionalAvailability));
             UE_LOG(LogStarTrekHost, Display, TEXT("H06 HOST ABI %u loaded with TrekF04Bridge; Academy v%u: %s"),
                 TREK_HOST_ABI_VERSION, TREK_HOST_ACADEMY_VERSION, HostCodeName(Loaded->Academy.Availability));
             Api = Loaded;

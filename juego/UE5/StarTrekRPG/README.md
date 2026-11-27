@@ -4,7 +4,7 @@ Proyecto principal C++ Win64 para Unreal Engine **5.8.4** (asociación `5.8`). E
 
 ## Reconstruir desde Git
 
-Requisitos: UE 5.8.4, toolchain Win64 reconocido por UBT, CMake, Python y un checkout limpio de CoreRPG en `76a7b7b485616d8c4994f384a90f123bf333591d`. Usar el checkout Core existente. El script comprueba el pin mediante el CMake de HOST y prepara ambas cabeceras C y las dos DLL de Release. No cambiar el pin ni la arquitectura para abrir el editor. Git conserva el descriptor, configuración, fuentes y commandlet que genera el mapa; los binarios y recursos Unreal generados no están versionados.
+Requisitos: UE 5.8.4, toolchain Win64 reconocido por UBT, CMake, Python y un checkout limpio de CoreRPG en `76a7b7b485616d8c4994f384a90f123bf333591d`. Usar el checkout Core existente. El script comprueba el pin mediante el CMake de HOST y prepara las tres cabeceras C y las dos DLL de Release. No cambiar el pin ni la arquitectura para abrir el editor. Git conserva el descriptor, configuración, fuentes y commandlet que genera el mapa; los binarios y recursos Unreal generados no están versionados.
 
 Desde la raíz del repositorio en PowerShell, definir `$engine` como el directorio de instalación de UE (en este equipo `C:/Program Files/Epic Games/UE_5.8`), `$core` como el checkout limpio y `$work` como una ruta absoluta de salida de la ejecución conforme a `AGENTS.md`. Para ensayos usar una copia aislada del proyecto y hacer que `$project` apunte a esa copia. Invocar siempre el script del proyecto del repositorio: su ubicación determina dónde encontrar las fuentes HOST.
 
@@ -30,7 +30,7 @@ if ($LASTEXITCODE) { throw 'Diagnostic map generation failed.' }
 if ($LASTEXITCODE) { throw 'Game build failed.' }
 ```
 
-Antes de UBT deben existir `host_abi.h` y `academy_abi.h` en `Binaries/Host/include/trek/host/`, además de `Binaries/Host/TrekHost.dll` y `Binaries/Host/TrekF04Bridge.dll` en **el mismo proyecto que se va a abrir**. Una copia creada por la conversión de Unreal puede omitir `Binaries`; volver a ejecutar la preparación con `-ProjectDir` dirigido a esa copia. No copiar DLLs sueltas de procedencia desconocida. Las cabeceras y las DLL deben corresponder a la misma composición Release x64. La ABI base requerida es v1 y el producto actual ofrece la extensión Academy v2. Las herramientas existentes `desarrollo/integration/host/tests/inspect_product.py` e `inspect_abi.py` validan la salida nativa con tests OFF.
+Antes de UBT deben existir `host_abi.h`, `academy_abi.h` e `institutional_abi.h` en `Binaries/Host/include/trek/host/`, además de `Binaries/Host/TrekHost.dll` y `Binaries/Host/TrekF04Bridge.dll` en **el mismo proyecto que se va a abrir**. Una copia creada por la conversión de Unreal puede omitir `Binaries`; volver a ejecutar la preparación con `-ProjectDir` dirigido a esa copia. No copiar DLLs sueltas de procedencia desconocida. Las cabeceras y las DLL deben corresponder a la misma composición Release x64. La ABI base requerida es v1 y el producto actual ofrece la extensión Academy v2. Las herramientas existentes `desarrollo/integration/host/tests/inspect_product.py` e `inspect_abi.py` validan la salida nativa con tests OFF.
 
 El commandlet crea `Content/Diagnostics/HostDiagnostic.umap` si falta, sin sobrescribir uno existente. El mapa tiene un punto de entrada y usa el GameMode configurado. El mapa se regenera con Unreal y queda cubierto por la exclusión general de `*.umap`. UBT prepara las DLLs en `Binaries/Win64`; el empaquetado las conserva como NonUFS. La instalación del motor y las fuentes Core siguen fuera del proyecto.
 
@@ -96,3 +96,10 @@ $academyUser = Join-Path $work 'academy-manual'
 Nueva partida permite elegir el nombre del protagonista. El menú abre su ficha tras verificar la candidatura y recibir el resultado del primer guardado de H04 en `principal`. Continuar permite recorrer el catálogo de Academia y elegir una versión exacta. Usa el mismo `-UserDir` tras reiniciar el proceso para consultar esos guardados.
 
 La secuencia automatizada de dos procesos y las comprobaciones pendientes en MSI se detallan en el [informe de implementación C-04](../../../proyecto/docs/architecture/host/H06_IA03C04_IMPLEMENTACION_MENU_ACADEMIA_2026-11-22.md).
+
+
+## Consulta institucional H07
+
+El diagnóstico y la ficha de Academia ofrecen la vista técnica de consulta profesional propia y de un ascenso por ID. HOST resuelve la identidad desde el vínculo persistido; Unreal no selecciona observador. Sin expediente autorizado la respuesta está vacía y muestra el error tipado. Un cadete Academy sigue sin comisión. No existe botón de emisión institucional.
+
+La extensión C de lectura v1 es aditiva y se negocia separadamente. No cambia ABI H05 v1 ni Academy v2. Ver el [contrato Unreal H07-P05](../../../proyecto/docs/architecture/host/H07_P05_CONTRATO_UNREAL_v1_2026-11-23.md). Los guardados positivos de F11 solo se preparan en laboratorio; no se incluyen fixtures ni emisores experimentales en el producto.

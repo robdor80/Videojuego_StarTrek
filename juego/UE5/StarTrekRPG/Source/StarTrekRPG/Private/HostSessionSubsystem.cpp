@@ -112,6 +112,7 @@ void UHostWorldProjection::Invalidate()
     check(IsInGameThread());
     View.Reset();
     Completion.Reset();
+    for (auto& Result : Institutional) Result.Reset();
     AcademyCandidate.Reset();
     AcademyPage.Reset();
     for (auto& Result : AcademyResults)
@@ -290,6 +291,14 @@ void UHostSessionSubsystem::Detach(UHostWorldProjection& World)
             }
         }
     }
+    for (int32 Index = InstitutionalPending.Num() - 1; Index >= 0; --Index)
+    {
+        if (InstitutionalPending[Index].World.Get() == &World)
+        {
+            Api->Discard(Client, InstitutionalPending[Index].Ticket);
+            InstitutionalPending.RemoveAt(Index);
+        }
+    }
     Worlds.Remove(&World);
     World.Session.Reset();
 }
@@ -347,6 +356,7 @@ void UHostSessionSubsystem::Discard(const FObservation& Entry)
 
 void UHostSessionSubsystem::DiscardObservations()
 {
+    InvalidateInstitutional();
     for (const FObservation& Entry : Pending)
     {
         Discard(Entry);
@@ -532,6 +542,8 @@ bool UHostSessionSubsystem::Tick(float)
         return true;
     }
 
+    PollInstitutional();
+
     // Scan at most the ABI's fixed observation capacity per frame.
     for (int32 Index = 0; Index < Pending.Num();)
     {
@@ -566,7 +578,7 @@ TrekHostCode UHostSessionSubsystem::CheckAdmission(const UHostWorldProjection& W
     {
         return TREK_HOST_SERVICE_UNAVAILABLE;
     }
-    if (!bClosing && Pending.Num() >= TREK_HOST_ABI_MAX_PENDING)
+    if (!bClosing && Pending.Num() + InstitutionalPending.Num() >= TREK_HOST_ABI_MAX_PENDING)
     {
         return TREK_HOST_CAPACITY_LIMIT;
     }
@@ -642,6 +654,7 @@ TrekHostCode UHostSessionSubsystem::Submit(UHostWorldProjection& World, const Tr
     if (Operation == TREK_HOST_SAVE)
     {
         InvalidateCatalog();
+        InvalidateInstitutional();
     }
     Observe(World, Ticket, Operation, Command.generation, false, IsTransition(Operation), Receipt);
     return Code;
@@ -828,4 +841,89 @@ TSharedRef<FHostAcademyMenu> UHostSessionSubsystem::GetAcademyMenu()
         AcademyMenu = MakeShared<FHostAcademyMenu>(this);
     }
     return AcademyMenu.ToSharedRef();
+}
+
+TOptional<TrekHostInstitutionalCompletion> UHostWorldProjection::GetInstitutional(uint32 Operation) const
+{
+    if (Operation < TREK_HOST_CAREER || Operation > TREK_HOST_PROMOTION) return {};
+    const auto& Result = Institutional[Operation - 1];
+    if (!Result.IsSet()) return {};
+    const auto* Host = Session.Get();
+    if (Result->code == TREK_HOST_OK && (!Host || !Host->IsInstitutionalCurrent(*Result))) return {};
+    return Result;
+}
+
+bool UHostSessionSubsystem::IsInstitutionalCurrent(const TrekHostInstitutionalCompletion& Result) const
+{
+    check(IsInGameThread());
+    return Client && Api->InstitutionalAvailability == TREK_HOST_OK && Result.code == TREK_HOST_OK &&
+        Api->InstitutionalCurrent(Client, Result.generation, Result.epoch) == TREK_HOST_OK;
+}
+
+void UHostSessionSubsystem::InvalidateInstitutional()
+{
+    for (const auto& Entry : InstitutionalPending) Api->Discard(Client, Entry.Ticket);
+    InstitutionalPending.Reset();
+    for (const auto& World : Worlds)
+        if (auto* Projection = World.Get())
+            for (auto& Result : Projection->Institutional) Result.Reset();
+}
+
+TrekHostCode UHostSessionSubsystem::QueryInstitutional(UHostWorldProjection& World, uint32 Operation, uint64 Event)
+{
+    check(IsInGameThread());
+    if (Operation < TREK_HOST_CAREER || Operation > TREK_HOST_PROMOTION) return TREK_HOST_INVALID_ARGUMENT;
+    if (World.Session.Get() != this) return TREK_HOST_SERVICE_UNAVAILABLE;
+    World.Institutional[Operation - 1].Reset();
+    TrekHostCode Code = CheckAdmission(World, false);
+    if (Code == TREK_HOST_OK) Code = Api->InstitutionalAvailability;
+    if (Code == TREK_HOST_OK && InstitutionalPending.ContainsByPredicate([&](const FInstitutionalObservation& Entry)
+        { return Entry.World.Get() == &World && Entry.Operation == Operation; })) Code = TREK_HOST_BUSY_STATE;
+    if (Code == TREK_HOST_OK && InstitutionalCorrelation == MAX_uint64) Code = TREK_HOST_CAPACITY_LIMIT;
+    uint64 Ticket = 0;
+    const uint64 Correlation = Code == TREK_HOST_OK ? ++InstitutionalCorrelation : 0;
+    if (Code == TREK_HOST_OK)
+    {
+        TrekHostInstitutionalRequest Command{sizeof(Command), TREK_HOST_INSTITUTIONAL_VERSION, Operation, 0,
+            Status.generation, Correlation, Event};
+        Code = Api->InstitutionalSubmit(Client, &Command, &Ticket);
+    }
+    if (Code == TREK_HOST_OK) InstitutionalPending.Add({Ticket, Correlation, Operation, &World});
+    else
+    {
+        TrekHostInstitutionalCompletion Rejected{};
+        Rejected.size = sizeof(Rejected);
+        Rejected.code = Code;
+        Rejected.operation = Operation;
+        Rejected.correlation = Correlation;
+        World.Institutional[Operation - 1] = Rejected;
+    }
+    return Code;
+}
+
+void UHostSessionSubsystem::PollInstitutional()
+{
+    for (int32 Index = 0; Index < InstitutionalPending.Num();)
+    {
+        const auto Entry = InstitutionalPending[Index];
+        TrekHostInstitutionalCompletion Result{};
+        Result.size = sizeof(Result);
+        const auto Code = Api->InstitutionalPoll(Client, Entry.Ticket, &Result);
+        if (Code == TREK_HOST_PENDING || Code == TREK_HOST_RETRY) { ++Index; continue; }
+        if (Code != TREK_HOST_OK || Result.size != sizeof(Result) || Result.ticket != Entry.Ticket ||
+            Result.operation != Entry.Operation || Result.correlation != Entry.Correlation ||
+            (Result.code == TREK_HOST_OK && !IsInstitutionalCurrent(Result)))
+        {
+            Api->Discard(Client, Entry.Ticket);
+            Result = {};
+            Result.size = sizeof(Result);
+            Result.ticket = Entry.Ticket;
+            Result.operation = Entry.Operation;
+            Result.correlation = Entry.Correlation;
+            Result.code = Code == TREK_HOST_OK ? TREK_HOST_GENERATION_EXPIRED : Code;
+        }
+        if (auto* World = Entry.World.Get(); World && World->Session.Get() == this)
+            World->Institutional[Entry.Operation - 1] = Result;
+        InstitutionalPending.RemoveAt(Index);
+    }
 }

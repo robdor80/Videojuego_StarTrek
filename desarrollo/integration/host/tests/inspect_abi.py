@@ -12,6 +12,17 @@ class Status(c.Structure):
                 ("principal", c.c_uint32), ("institutional", c.c_uint32)]
 
 
+class InstitutionalRequest(c.Structure):
+    _fields_ = [(name, c.c_uint32) for name in ("size", "version", "operation", "reserved")] + [
+        (name, c.c_uint64) for name in ("generation", "correlation", "event_id")]
+
+class InstitutionalCompletion(c.Structure):
+    _fields_ = [(name, c.c_uint32) for name in ("size", "code", "operation", "reserved")] + [
+        (name, c.c_uint64) for name in ("ticket", "correlation", "generation", "epoch", "world_revision",
+                                      "event_id", "effective_tick", "original_revision")] + [
+        (name, c.c_uint32) for name in ("rank", "service_status", "from_rank", "to_rank")]
+
+
 def inspect(host, bridge):
     for name in ("f04_history_test_delta", "f04_history_test_validate_full"):
         assert not hasattr(bridge, name), name
@@ -44,6 +55,26 @@ def inspect(host, bridge):
             time.sleep(0.005)
         assert result == 0
         assert (status.state, status.generation, status.principal, status.institutional) == (0, 0, 2, 21)
+        assert c.sizeof(InstitutionalRequest) == 40 and c.sizeof(InstitutionalCompletion) == 96
+        host.trek_host_institutional_version.restype = code
+        assert host.trek_host_institutional_version() == 1
+        host.trek_host_institutional_submit.argtypes = [handle, c.POINTER(InstitutionalRequest), c.POINTER(c.c_uint64)]
+        host.trek_host_institutional_poll.argtypes = [handle, c.c_uint64, c.POINTER(InstitutionalCompletion)]
+        request = InstitutionalRequest(c.sizeof(InstitutionalRequest), 1, 1, 0, 0, 123, 0)
+        ticket = c.c_uint64()
+        for _ in range(200):
+            result = host.trek_host_institutional_submit(client, c.byref(request), c.byref(ticket))
+            if result != 101: break
+            time.sleep(0.005)
+        assert result == 0 and ticket.value
+        completion = InstitutionalCompletion(c.sizeof(InstitutionalCompletion))
+        for _ in range(200):
+            result = host.trek_host_institutional_poll(client, ticket, c.byref(completion))
+            if result not in (101, 102): break
+            time.sleep(0.005)
+        assert result == 0 and completion.code == 2 and completion.correlation == 123
+        assert bytes(completion)[32:] == bytes(c.sizeof(completion) - 32)
+
     finally:
         host.trek_host_destroy(client)
     print("PASS: loaded C ABI 1 from tests-OFF binary, negotiated version and queried closed client")

@@ -1,8 +1,8 @@
 {
   "phase": "H07",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "date": "2026-11-23",
-  "maturity": "TEST_PLAN_ONLY",
+  "maturity": "TECHNICAL_EVIDENCE_NOT_CERTIFIED",
   "source_main_sha": "d0cae3f9a4165710501ff4a2f4e488fd6a0fa0ac",
   "owner_rules": {
     "host": "Read and route authorized F11 facts, fail closed; no product issuer",
@@ -16,57 +16,82 @@
     "FAIL",
     "SKIP_WITH_REASON"
   ],
-  "overall_status": "NOT_RUN",
+  "overall_status": "PARTIAL_TECHNICAL_EVIDENCE",
   "host_cases": [
     {
       "id": "H07-01",
       "scenario": "Rechazo institucional sin emisor productivo",
       "subphase": "P02",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "CORE_BYTES_UNCHANGED",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-02",
       "scenario": "Solicitud institucional con sesión cerrada",
       "subphase": "P02",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-03",
       "scenario": "Principal sin vínculo o inválido",
       "subphase": "P02",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-04",
       "scenario": "Generación caducada y callback después de LOAD",
       "subphase": "P02",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-05",
       "scenario": "Academia sin F11 comisionado no es oficial",
       "subphase": "P02",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "NO_SYNTHETIC_RANK",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-06",
@@ -76,77 +101,114 @@
       "environment": "Codex Cloud",
       "expected": "DENY_NO_MUTATION",
       "status": "NOT_RUN",
-      "evidence": null
+      "evidence": {
+        "reason": "No direct LLM/NPC actor/verified injection executed in UE. The extension has no such fields."
+      }
     },
     {
       "id": "H07-07",
       "scenario": "Composición de producto no enlaza ni exporta TrekF11TrialHost",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "NO_TRIAL_SYMBOLS",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "product-final.log",
+        "sha256": "c5612eedad182778fb6968202760a4970bea35296beebe306f25af2464cd2f2e",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-08",
       "scenario": "Pin Core y ABI H06 conservados",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "ABI_AND_PIN_UNCHANGED",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "product-final.log",
+        "sha256": "c5612eedad182778fb6968202760a4970bea35296beebe306f25af2464cd2f2e",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-09",
       "scenario": "Lectura de carrera F11 del propio oficial autorizado",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "READ_CANONICAL",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-10",
       "scenario": "Lectura de promoción confirmada F11 del propio sujeto",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "READ_CANONICAL",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-11",
       "scenario": "Sujeto ajeno / evento de otra identidad",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-12",
       "scenario": "Scope F04 ajeno o expirado",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-13",
       "scenario": "Persona legacy o sin comisión",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "NO_SYNTHETIC_RANK",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-14",
@@ -156,137 +218,206 @@
       "environment": "Codex Cloud",
       "expected": "SERVICE_UNAVAILABLE",
       "status": "NOT_RUN",
-      "evidence": null
+      "evidence": {
+        "reason": "Composition TREK_HOST_F11_READS=OFF not rerun in P05."
+      }
     },
     {
       "id": "H07-15",
       "scenario": "Dos lecturas idénticas no alteran revisión, tick, RNG ni guardado",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "CORE_BYTES_UNCHANGED",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-16",
       "scenario": "Error de dominio o identidad deja salida completamente vacía",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-17",
       "scenario": "Sesión SAVING/LOADING/CLOSING y cola de consultas",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "NO_STALE_VIEW",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-18",
       "scenario": "Consulta tras H04 SAVE y RESTORE en nuevo proceso",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "CANONICAL_CONTINUITY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-19",
       "scenario": "Archivo importado no se convierte en origen institucional verificado",
       "subphase": "P03",
       "owner": "Codex implementation; ChatGPT audits",
-      "environment": "Codex Cloud",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "DENY_NO_MUTATION",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-20",
       "scenario": "F04/F05/H02-H06 suites sin regresión",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "CI Linux/MSVC",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "ALL_RELEVANT_PASS",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "native-verified.xml",
+        "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md",
+        "scope": "315 selected HOST/F04/F05 tests in MSI; CI tracked separately"
+      }
     },
     {
       "id": "H07-21",
       "scenario": "F11 lector 17 casos existentes ejecutados en contexto actual",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "CI Linux/MSVC",
+      "environment": "MSI Win64 MSVC Release",
       "expected": "ALL_RELEVANT_PASS",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "work/laboratorios/f11/tests.xml",
+        "sha256": "80834886174c73a158a021b449d2690f5f2dbb14794b3aaf9da56a3495c63401",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-22",
       "scenario": "UE5 interfaz muestra solo el expediente permitido",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "MSI UE 5.8.4",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; technical automation, no human acceptance",
       "expected": "READ_CANONICAL",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "h07-d3d12-final-report/index.json",
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-23",
       "scenario": "UE5 interfaz no filtra datos al cambiar sesión / restaurar",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "MSI UE 5.8.4",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; technical automation, no human acceptance",
       "expected": "DENY_EMPTY",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "h07-d3d12-final-report/index.json",
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-24",
       "scenario": "UE5 institucional no permite emitir rango o comisión sin F11 producto",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "MSI UE 5.8.4",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; technical automation, no human acceptance",
       "expected": "SERVICE_UNAVAILABLE",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "h07-d3d12-final-report/index.json",
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-25",
       "scenario": "UE5 UBT Editor/Game, NullRHI y D3D12 para integración H07",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "MSI UE 5.8.4",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; technical automation, no human acceptance",
       "expected": "UE_PASS",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "h07-d3d12-final-report/index.json",
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     },
     {
       "id": "H07-26",
       "scenario": "Guardados M1 Academy continúan siendo válidos y sin efectos F11",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "CI + MSI",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; copy of the previous M1 isolated save",
       "expected": "BACKWARD_COMPATIBLE",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "academy-m1-compat-report/index.json",
+        "sha256": "cbb5d717bd5bc0c9c138f886a3a67ffb9607d0e3cb333e311b193d5963e9df1d",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md",
+        "scope": "Restored original M1 campaign/PERSON/fact/revision/tick/digest; no personal saves touched"
+      }
     },
     {
       "id": "H07-27",
       "scenario": "Ningún evento leído se interpreta como presented_at o acuse narrativo",
       "subphase": "P05",
       "owner": "Codex tests; ChatGPT audits",
-      "environment": "CI + MSI",
+      "environment": "MSI UE 5.8.4 Win64 D3D12; technical automation, no human acceptance",
       "expected": "NO_SYNTHETIC_EVENT",
-      "status": "NOT_RUN",
-      "evidence": null
+      "status": "PASS",
+      "evidence": {
+        "source_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+        "artifact": "h07-d3d12-final-report/index.json",
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff",
+        "report": "H07_P05_INFORME_TECNICO_2026-11-23.md"
+      }
     }
   ],
   "external_f11_reference": {

@@ -1,0 +1,1050 @@
+{
+  "date_utc": "2026-11-23T11:00:11.420223+00:00",
+  "code_sha": "2e75db5998151719f47933904a8729d9916cbde7",
+  "base_p03_sha": "3eb8ca458f64785741fbb1167ae49422a7c67042",
+  "pr": 205,
+  "branch": "feat/host-h07-p05-ue-h06-windowed",
+  "engine": {
+    "version": "5.8.4",
+    "changelist": 58902052
+  },
+  "core_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "certified": false,
+  "human_visual_acceptance": "PENDING; Windows desktop was locked",
+  "institutional_issuer": "SERVICE_UNAVAILABLE",
+  "local_native": {
+    "host_f04_f05": {
+      "passed": 315,
+      "failed": 0
+    },
+    "f11_isolated": {
+      "passed": 17,
+      "failed": 0
+    },
+    "product_consumer": {
+      "passed": 5,
+      "failed": 0
+    },
+    "sdk": {
+      "passed": 5,
+      "failed": 0
+    },
+    "static_h07": 8,
+    "static_h01": 11,
+    "static_f11_boundary": 15
+  },
+  "automation_primary": [
+    {
+      "name": "h07-nullrhi-verified",
+      "status": "PASS",
+      "test": "StarTrek.H07.Institutional.Roundtrip",
+      "rhi": "",
+      "report": {
+        "artifact": "h07-nullrhi-verified-report/index.json",
+        "bytes": 1890,
+        "sha256": "eca7da20e9501b035297fd0f02767e5abb64ff00e55cfbf0565a8295d218b5e8"
+      },
+      "log": {
+        "artifact": "h07-nullrhi-verified.log",
+        "bytes": 108425,
+        "sha256": "ba8e142cab439b37b724a00f758aebcf93150e5aeb6f0a74994e85ec71ce5475"
+      },
+      "command": {
+        "artifact": "h07-nullrhi-verified.command.json",
+        "bytes": 1050,
+        "sha256": "2fd364fd3a4fa6198e122b407fdaa1b0aecb9a37e98246d26a19e380901b08d7"
+      }
+    },
+    {
+      "name": "h07-d3d12-final",
+      "status": "PASS",
+      "test": "StarTrek.H07.Institutional.Roundtrip",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "h07-d3d12-final-report/index.json",
+        "bytes": 1907,
+        "sha256": "85356e50b95ca38c9f974661c0a9005400fda0fabbb2ff85c6ba3c42909685ff"
+      },
+      "log": {
+        "artifact": "h07-d3d12-final.log",
+        "bytes": 121183,
+        "sha256": "ff1f42b988a2e7dcf7b55046950ab91d59333d8546e3ec8f9616a67e55865782"
+      },
+      "command": {
+        "artifact": "h07-d3d12-final.command.json",
+        "bytes": 1038,
+        "sha256": "ce31a7aac765498aeca4e6040f151f619faa8c573aa7ee8a0c2d6542d903e230"
+      }
+    },
+    {
+      "name": "geometry-1920-final",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Geometry",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "geometry-1920-final-report/index.json",
+        "bytes": 5631,
+        "sha256": "d3e4027e4d23869ddcc870421e8c85f5062edd3651b61b78ad3d58e36ecb295b"
+      },
+      "log": {
+        "artifact": "geometry-1920-final.log",
+        "bytes": 126017,
+        "sha256": "8a62ec82ac9ec1572340d8df04b0425b94f871c65a1f4ba05cece118e8fe5472"
+      },
+      "command": {
+        "artifact": "geometry-1920-final.command.json",
+        "bytes": 920,
+        "sha256": "cc8094673bb90a87cb34d019cb8bfb5c49d07e77830356848811b29723ea9a19"
+      }
+    },
+    {
+      "name": "geometry-2560-final",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Geometry",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "geometry-2560-final-report/index.json",
+        "bytes": 5611,
+        "sha256": "4037df6db0f44038a1d96f6429915902e603f814195f6dc4ce96d32ceb88add7"
+      },
+      "log": {
+        "artifact": "geometry-2560-final.log",
+        "bytes": 123403,
+        "sha256": "4572ea9ba365300a11166c80ac5438d31ea64eca86fdfbf253d04c231b83a616"
+      },
+      "command": {
+        "artifact": "geometry-2560-final.command.json",
+        "bytes": 938,
+        "sha256": "85bdfad2e6059a5f785eb34dc542149f1974930333f509b4adac79327c5fd09e"
+      }
+    },
+    {
+      "name": "geometry-fullscreen-final",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Geometry",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "geometry-fullscreen-final-report/index.json",
+        "bytes": 5604,
+        "sha256": "24030b17cfd9cdc5d036c47bf7844e918e9ddcf815d969c228a2da22d209d95f"
+      },
+      "log": {
+        "artifact": "geometry-fullscreen-final.log",
+        "bytes": 123444,
+        "sha256": "e96fd913c776bd933cba7f83861e0cbef9c9502f192cf85ea7655f69df49660d"
+      },
+      "command": {
+        "artifact": "geometry-fullscreen-final.command.json",
+        "bytes": 940,
+        "sha256": "9b146b923abde53ff532fde80462686f18d61e8b16301ffa7ecaae7cd6398539"
+      }
+    },
+    {
+      "name": "geometry-transitions-final",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Geometry",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "geometry-transitions-final-report/index.json",
+        "bytes": 14616,
+        "sha256": "96fe238a3f53d7688a9a78fecc91a53f3eaa8185824a029209cd6e86272b18bd"
+      },
+      "log": {
+        "artifact": "geometry-transitions-final.log",
+        "bytes": 128310,
+        "sha256": "fd83dfadc45a45c5dc3d34d6aa85bf02fecc1079a93c56a4ac65ded8885679d3"
+      },
+      "command": {
+        "artifact": "geometry-transitions-final.command.json",
+        "bytes": 983,
+        "sha256": "5e8a249079ef05eaf7855de0b57ac37b34f62ee8a102cb940ca4a0dcbe965605"
+      }
+    },
+    {
+      "name": "academy-seed-null",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Seed",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-seed-null-report/index.json",
+        "bytes": 1077,
+        "sha256": "e90f181f483e7617c799083422e20939bbc783e00e45e037f7a855eddb4ca474"
+      },
+      "log": {
+        "artifact": "academy-seed-null.log",
+        "bytes": 113983,
+        "sha256": "59de9cccd227b7d29eec27022ed36976ec08c7635f9a16f3b35d400eaeec4404"
+      },
+      "command": {
+        "artifact": "academy-seed-null.command.json",
+        "bytes": 907,
+        "sha256": "ff5d46c15472439c4dcdf52df1bba9d5d74f13aeeaa31eda0e2c9d3e4ea529c7"
+      }
+    },
+    {
+      "name": "academy-resume-null-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Resume",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-resume-null-verified-report/index.json",
+        "bytes": 1080,
+        "sha256": "d17493c4ee7c60cfc32a3572ebfa36cabbf2f0369499c950bfd01cb48a70213d"
+      },
+      "log": {
+        "artifact": "academy-resume-null-verified.log",
+        "bytes": 108588,
+        "sha256": "b6aa8798a62c88c28a226ee7dfae5f133b31aee44d190bb4c41e4a0685faf12f"
+      },
+      "command": {
+        "artifact": "academy-resume-null-verified.command.json",
+        "bytes": 931,
+        "sha256": "0dcac0b888a1a658ed01c38b1fe14a27e9a82568aea0c6ad4c38fd8c241410de"
+      }
+    },
+    {
+      "name": "academy-navigation-null",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Navigation",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-navigation-null-report/index.json",
+        "bytes": 1092,
+        "sha256": "aed4987d4ff91513404f28228eeb55a0d1e96e1dd1c15defaf83da85f8e4952d"
+      },
+      "log": {
+        "artifact": "academy-navigation-null.log",
+        "bytes": 109910,
+        "sha256": "2ae91c0ded3dc12207d88fbfb632c57788917cce45e79cfd8186cfb4ee615048"
+      },
+      "command": {
+        "artifact": "academy-navigation-null.command.json",
+        "bytes": 936,
+        "sha256": "d779fa57433889c4a18525225984fb8e18d8257746f94ffa1acfa61271d584a9"
+      }
+    },
+    {
+      "name": "academy-failure-null-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.SaveFailure",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-failure-null-verified-report/index.json",
+        "bytes": 1095,
+        "sha256": "fbaaac1f85e8c13c73f87902bc78005a2f63d91019eb3473a0785c50bdc544b7"
+      },
+      "log": {
+        "artifact": "academy-failure-null-verified.log",
+        "bytes": 109637,
+        "sha256": "ab13f374d2b8445d625a0580314dbdb31d0c6a1a96b3ed40207ddf8270848e79"
+      },
+      "command": {
+        "artifact": "academy-failure-null-verified.command.json",
+        "bytes": 955,
+        "sha256": "b540b984936fdc581002a1b3948ef263a5b88cc7cf33eca91ade6ea5bcaaa56a"
+      }
+    },
+    {
+      "name": "academy-seed-d3d12",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Seed",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-seed-d3d12-report/index.json",
+        "bytes": 1092,
+        "sha256": "2634cbefc4dbfa8d68ab7dc3419a480ed21999dc70da4563e5dc6db7dfd0b1d9"
+      },
+      "log": {
+        "artifact": "academy-seed-d3d12.log",
+        "bytes": 125152,
+        "sha256": "6b05eeced2280858d1ab62c43324fdea05627c7501e10f95ed24e14d39b82a1e"
+      },
+      "command": {
+        "artifact": "academy-seed-d3d12.command.json",
+        "bytes": 908,
+        "sha256": "8d93c67017f0b5218158ebf093c82c8e93e8f97d63ef871548a6f993ea8a8839"
+      }
+    },
+    {
+      "name": "academy-resume-d3d12-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Resume",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-resume-d3d12-verified-report/index.json",
+        "bytes": 1100,
+        "sha256": "14cb53a6051c44738f93eefc4505c525a98f02434940e640247aec76653186ef"
+      },
+      "log": {
+        "artifact": "academy-resume-d3d12-verified.log",
+        "bytes": 122604,
+        "sha256": "82055f08fa00e02b5ce07047b59d5c114b184a78066663b8450bc43f61ce5035"
+      },
+      "command": {
+        "artifact": "academy-resume-d3d12-verified.command.json",
+        "bytes": 932,
+        "sha256": "8f6182d2ccc91e3bcf0f40fe03b9cfd447dc34353e2caece5f64d5f8c22dea5b"
+      }
+    },
+    {
+      "name": "academy-navigation-d3d12",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Navigation",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-navigation-d3d12-report/index.json",
+        "bytes": 1104,
+        "sha256": "fc85c7afd66e0fbcc6c2c14d4e9aaea0483610a351174d6047137e7731bc82d7"
+      },
+      "log": {
+        "artifact": "academy-navigation-d3d12.log",
+        "bytes": 121195,
+        "sha256": "96b3f0ccf9117a54512a4853275bb4f2ca2d4bf1b07ec8f829edaef36d2730ac"
+      },
+      "command": {
+        "artifact": "academy-navigation-d3d12.command.json",
+        "bytes": 937,
+        "sha256": "999f3a7c28439896d40c760a19df681a03e5a6237059115b8a34c28a1c028df4"
+      }
+    },
+    {
+      "name": "academy-failure-d3d12-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.SaveFailure",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-failure-d3d12-verified-report/index.json",
+        "bytes": 1112,
+        "sha256": "e09de00ae512a9e6b18aa5ee8898607615b94d0083e0695542f7949bfb77b2ee"
+      },
+      "log": {
+        "artifact": "academy-failure-d3d12-verified.log",
+        "bytes": 124197,
+        "sha256": "54e25f1ecf646d6c732d606ea25ecc75392006c874d8a13af976050178213037"
+      },
+      "command": {
+        "artifact": "academy-failure-d3d12-verified.command.json",
+        "bytes": 956,
+        "sha256": "e3d05b7f6e9ea21c71e30e398d675fb3decfb2d015e6b85f15e3c8e265993544"
+      }
+    },
+    {
+      "name": "academy-resume-null-verified-naval",
+      "status": "PASS",
+      "test": "StarTrek.H06.DiagnosticFlow",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-resume-null-verified-naval-report/index.json",
+        "bytes": 1718,
+        "sha256": "284a46d87242f953494b90951e55c950e7888e0585c278a78fe98736429be398"
+      },
+      "log": {
+        "artifact": "academy-resume-null-verified-naval.log",
+        "bytes": 110272,
+        "sha256": "cfbb78be3e0b09616624d8a0dcc39cda7be4063ff8b4c395b3b1ca56db158ae7"
+      },
+      "command": {
+        "artifact": "academy-resume-null-verified-naval.command.json",
+        "bytes": 979,
+        "sha256": "5f01c5a6248a43bb4995ebcc6a1b9086b132e66a6998821d587af8ff3374834c"
+      }
+    },
+    {
+      "name": "academy-resume-d3d12-verified-naval",
+      "status": "PASS",
+      "test": "StarTrek.H06.DiagnosticFlow",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-resume-d3d12-verified-naval-report/index.json",
+        "bytes": 1736,
+        "sha256": "dd4ea5ba1054ffffd5fddb279c0364c09b0e28028af7f9669db60d5ec5f59d0a"
+      },
+      "log": {
+        "artifact": "academy-resume-d3d12-verified-naval.log",
+        "bytes": 123727,
+        "sha256": "2ee065af1de608fd2f6d099683d5fdf1ea71fd7a0830326ea3419b9cf5bd913d"
+      },
+      "command": {
+        "artifact": "academy-resume-d3d12-verified-naval.command.json",
+        "bytes": 980,
+        "sha256": "7928088e36da5b0718104c6aaaaf614f9afa95dc9985e009b89c7f3c9f87298d"
+      }
+    },
+    {
+      "name": "academy-m1-compat",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Resume",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-m1-compat-report/index.json",
+        "bytes": 1098,
+        "sha256": "cbb5d717bd5bc0c9c138f886a3a67ffb9607d0e3cb333e311b193d5963e9df1d"
+      },
+      "log": {
+        "artifact": "academy-m1-compat.log",
+        "bytes": 122343,
+        "sha256": "a2d98e2e8de270f14a41fb2e94ff976dc6a047378b3658d0651e22bbb7595472"
+      },
+      "command": {
+        "artifact": "academy-m1-compat.command.json",
+        "bytes": 904,
+        "sha256": "4c8650dc02f9c04f40e5994e0e779ae7d2f4e7a13f944ed1777e3121266cd4f8"
+      }
+    },
+    {
+      "name": "academy-m1-compat-naval",
+      "status": "PASS",
+      "test": "StarTrek.H06.DiagnosticFlow",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "academy-m1-compat-naval-report/index.json",
+        "bytes": 1736,
+        "sha256": "fd7d6c8cb4493bdbf8df96fd7a12a64d62d539e3d587161fdb17cee8f26e690f"
+      },
+      "log": {
+        "artifact": "academy-m1-compat-naval.log",
+        "bytes": 121999,
+        "sha256": "3fa70f4364819a90b60763d501f7663762f8b109a20d1c01f7f4ce6351e9ec9d"
+      },
+      "command": {
+        "artifact": "academy-m1-compat-naval.command.json",
+        "bytes": 952,
+        "sha256": "c0399279274b952b477998353cec63fa349454aceb82f24c4c37ab61dbf27b8a"
+      }
+    },
+    {
+      "name": "academy-unavailable-null",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Unavailable",
+      "rhi": "",
+      "report": {
+        "artifact": "academy-unavailable-null-report/index.json",
+        "bytes": 1097,
+        "sha256": "345cbfb4231fabe304eab8e1b825a6141ff37f4c0bbdce1625281187e64cea66"
+      },
+      "log": {
+        "artifact": "academy-unavailable-null.log",
+        "bytes": 112664,
+        "sha256": "1ad8c7e1a84f66e97ed8f18390ee06db2127274d2f00eb3c49219234256836a5"
+      },
+      "command": {
+        "artifact": "academy-unavailable-null.command.json",
+        "bytes": 925,
+        "sha256": "8e4ea44f1d951eedeb737cef150abc76b1478ca52812cb006fd98e1dfbc761dc"
+      }
+    },
+    {
+      "name": "c03-seed-null",
+      "status": "PASS",
+      "test": "StarTrek.H06.Academy.Seed",
+      "rhi": "",
+      "report": {
+        "artifact": "c03-seed-null-report/index.json",
+        "bytes": 1073,
+        "sha256": "eb38ede41650cdc203b9e220cd97c2c3ffad61bc7bc42961be61c941a7d720d5"
+      },
+      "log": {
+        "artifact": "c03-seed-null.log",
+        "bytes": 111818,
+        "sha256": "4f25b3c02c07b0c24e0c2a6dbc98e5ad4b46b18b1909eb2a492ce513b89da0df"
+      },
+      "command": {
+        "artifact": "c03-seed-null.command.json",
+        "bytes": 870,
+        "sha256": "fa45fe33da504889b2762ae8bd30dfcfe2ffe4294c1c6e150f5eead6dff28bde"
+      }
+    },
+    {
+      "name": "c03-resume-null-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.Academy.Resume",
+      "rhi": "",
+      "report": {
+        "artifact": "c03-resume-null-verified-report/index.json",
+        "bytes": 1077,
+        "sha256": "607ae1eef3601648bb21abd7aef08b1a9cf8102e9c97896dcb59daf1a44a64b9"
+      },
+      "log": {
+        "artifact": "c03-resume-null-verified.log",
+        "bytes": 109412,
+        "sha256": "a31d166e701f77369e470436c9dfdc2191e8a723537c8e1b2313c2bf7415c9e7"
+      },
+      "command": {
+        "artifact": "c03-resume-null-verified.command.json",
+        "bytes": 894,
+        "sha256": "67ae7d4adea8a1b5ee9cf94caebc08075ce753e5468c88f1e85d1a4dad7e0520"
+      }
+    },
+    {
+      "name": "c03-seed-d3d12",
+      "status": "PASS",
+      "test": "StarTrek.H06.Academy.Seed",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "c03-seed-d3d12-report/index.json",
+        "bytes": 1090,
+        "sha256": "6cfd865723f8b547ff3f5aac066368413430707e1459fda4866081be08c10828"
+      },
+      "log": {
+        "artifact": "c03-seed-d3d12.log",
+        "bytes": 123117,
+        "sha256": "948bd5a29ded7fcd7d3f8051ebc0351a0bd0edd0bf33c0335f5b8cb065d896ad"
+      },
+      "command": {
+        "artifact": "c03-seed-d3d12.command.json",
+        "bytes": 871,
+        "sha256": "3cec0447260b9e114a1e9e9c65550f4058762730ba0a125dfd3721a014d0753d"
+      }
+    },
+    {
+      "name": "c03-resume-d3d12-verified",
+      "status": "PASS",
+      "test": "StarTrek.H06.Academy.Resume",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "c03-resume-d3d12-verified-report/index.json",
+        "bytes": 1096,
+        "sha256": "50486f04378fa2970290774666b6a351e1bad00b682bdf4137783ad2021ef81c"
+      },
+      "log": {
+        "artifact": "c03-resume-d3d12-verified.log",
+        "bytes": 120887,
+        "sha256": "e2b2874f5dfce0a0ad0c19a4b405e6a49cee711d3ce37965b07291ea75b33933"
+      },
+      "command": {
+        "artifact": "c03-resume-d3d12-verified.command.json",
+        "bytes": 895,
+        "sha256": "3d224f6a13a3aae1d6432f28fca784b8a9e783b2fd414e3c137e875d3647b4f2"
+      }
+    },
+    {
+      "name": "packaged-h07-null",
+      "status": "PASS",
+      "test": "StarTrek.H07.Institutional.Roundtrip",
+      "rhi": "",
+      "report": {
+        "artifact": "packaged-h07-null-report/index.json",
+        "bytes": 1884,
+        "sha256": "702c71406ad92fae071b53273670d5631e4cb3a00c5a01d9b159472fee2b3399"
+      },
+      "log": {
+        "artifact": "packaged-h07-null.log",
+        "bytes": 61260,
+        "sha256": "2ea587741a02ea0cf7ce83769c1ea1401df5153a92ce539ee9611c13b744e88d"
+      },
+      "command": {
+        "artifact": "packaged-h07-null.command.json",
+        "bytes": 1074,
+        "sha256": "6861de51ee6f276063bb93d57a92b0501fce93069d91e29cfd83b8af9f8ed8e3"
+      }
+    },
+    {
+      "name": "packaged-h07-d3d12",
+      "status": "PASS",
+      "test": "StarTrek.H07.Institutional.Roundtrip",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "packaged-h07-d3d12-report/index.json",
+        "bytes": 1901,
+        "sha256": "880615eb5c0045b4df3634cbf665009e9c095bbf3772c040345423a63a1015bd"
+      },
+      "log": {
+        "artifact": "packaged-h07-d3d12.log",
+        "bytes": 76552,
+        "sha256": "8af4be477e328e97fe1daba0d072263479c7361313b091f78b9a59d3a93e9cdc"
+      },
+      "command": {
+        "artifact": "packaged-h07-d3d12.command.json",
+        "bytes": 1074,
+        "sha256": "eb12ee5041e95723b6fa84b65aad8b2318140ca6b37b56fed5fa49f7c43c4612"
+      }
+    },
+    {
+      "name": "packaged-geometry",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Geometry",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "packaged-geometry-report/index.json",
+        "bytes": 14609,
+        "sha256": "6d052e63bdc2b871224df9cfc54b7298270f86d684a4f533d1d7e6adaa0e0b20"
+      },
+      "log": {
+        "artifact": "packaged-geometry.log",
+        "bytes": 83555,
+        "sha256": "1369e19fbfad3a689ae5f134b4722cd9c44607a0222c63a2693c2b29a3a89536"
+      },
+      "command": {
+        "artifact": "packaged-geometry.command.json",
+        "bytes": 978,
+        "sha256": "3550754684c3c1039e657eff934c3659981e92b81c5b3dda687df53139a9a856"
+      }
+    },
+    {
+      "name": "packaged-academy-seed",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Seed",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "packaged-academy-seed-report/index.json",
+        "bytes": 1088,
+        "sha256": "0f62900e30b900459fd502cafc2d64b01600099811902f88122349e5cf52da17"
+      },
+      "log": {
+        "artifact": "packaged-academy-seed.log",
+        "bytes": 80848,
+        "sha256": "d26a2ac0e7979dfa92777dd7f0944d3b9eacb780964f1b314603fc42fb8851ab"
+      },
+      "command": {
+        "artifact": "packaged-academy-seed.command.json",
+        "bytes": 934,
+        "sha256": "ea7f437e5db1af56a5d2fc843a2b3be8c1d596e696f5f983ae2e403dbdced272"
+      }
+    },
+    {
+      "name": "packaged-academy-resume",
+      "status": "PASS",
+      "test": "StarTrek.H06.AcademyMenu.Resume",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "packaged-academy-resume-report/index.json",
+        "bytes": 1092,
+        "sha256": "e3938eefef35d9839c15d8c359c8e302e7cd1a827d9c3acc2b06f0778b022fe0"
+      },
+      "log": {
+        "artifact": "packaged-academy-resume.log",
+        "bytes": 76538,
+        "sha256": "a480897c3714a1ca349447b6c2a5827dd52ede599f0b1d8401b26befbb33954a"
+      },
+      "command": {
+        "artifact": "packaged-academy-resume.command.json",
+        "bytes": 940,
+        "sha256": "5340dbf68936b7532b9029b4868fc746441c5aa71b68a484c8ad6617a438f828"
+      }
+    },
+    {
+      "name": "packaged-academy-resume-naval",
+      "status": "PASS",
+      "test": "StarTrek.H06.DiagnosticFlow",
+      "rhi": "D3D12 (SM6)",
+      "report": {
+        "artifact": "packaged-academy-resume-naval-report/index.json",
+        "bytes": 1730,
+        "sha256": "4ffd447db632c6f338169535f5ceb9305c7cafd5fa5d5fcba5f8a62724a633d0"
+      },
+      "log": {
+        "artifact": "packaged-academy-resume-naval.log",
+        "bytes": 78250,
+        "sha256": "d24fda7da6551236647445ee5d740f9fb4fcee15e5f1b33e5da740bbf74169ef"
+      },
+      "command": {
+        "artifact": "packaged-academy-resume-naval.command.json",
+        "bytes": 988,
+        "sha256": "4a5e776a97e321d326ae1230c7876d7aaff2346d9d93a95000594b1a388fe463"
+      }
+    }
+  ],
+  "automation_primary_count": 29,
+  "automation_historical_failures": [
+    {
+      "name": "academy-failure-null-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "academy-failure-null-report/index.json",
+        "bytes": 4901,
+        "sha256": "0f0ea0580adbcc5e22862804ee39ec980b4129680082ebd8b11921646dc9da96"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "academy-resume-d3d12-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "academy-resume-d3d12-report/index.json",
+        "bytes": 1618,
+        "sha256": "6c74414696eb366fd4cbf129588d319957a88d560b91c35666bd4e4e8d4010b5"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "academy-resume-null-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "academy-resume-null-report/index.json",
+        "bytes": 4887,
+        "sha256": "d96b40cb588cff0b98e4cc3f954c755d6118e55c0298a000850e45c7f7af2ad7"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "c03-resume-d3d12-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "c03-resume-d3d12-report/index.json",
+        "bytes": 1601,
+        "sha256": "4243a9d09afc312a72abf139f6aea256e01b8f91b9e0c61ab0cbae28925f338a"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "c03-resume-null-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "c03-resume-null-report/index.json",
+        "bytes": 1579,
+        "sha256": "55f09e95fea87ecca7c28175866bbcd0a4bdd529aca9e558f06005dcbe1f91f9"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "geometry-fixed-2560-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "geometry-fixed-2560-report/index.json",
+        "bytes": 7567,
+        "sha256": "458fe44495390e260a7629e64d4af50483a97b356823b1ded7c83f85b226fa68"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "geometry-interactive-2560-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "geometry-interactive-2560-report/index.json",
+        "bytes": 6609,
+        "sha256": "52ecb362b0bed557dd9037ce24a5ea33edf13c2739971965772e67c4a8a725cc"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    },
+    {
+      "name": "h07-nullrhi-final-report",
+      "passed": 0,
+      "failed": 1,
+      "not_run": 0,
+      "report": {
+        "artifact": "h07-nullrhi-final-report/index.json",
+        "bytes": 1552,
+        "sha256": "165be3d4cc507a1c8d190758efe15423b1188ad0efe8f28a927a550f18fe5b02"
+      },
+      "superseded_by": "See corresponding verified/primary run and technical report; failure retained."
+    }
+  ],
+  "build_and_test_artifacts": [
+    {
+      "artifact": "native-verified.xml",
+      "bytes": 76175,
+      "sha256": "cb55786bf84b0917107b3d6655700d5f775eaff00ebd75a2f8d83faccb83c77d"
+    },
+    {
+      "artifact": "native-verified.log",
+      "bytes": 41955,
+      "sha256": "40822fa3763b1f6269512245a96694833c02b16989b0931064ae3b2ef85f81da"
+    },
+    {
+      "artifact": "work/laboratorios/f11/tests.xml",
+      "bytes": 3221,
+      "sha256": "80834886174c73a158a021b449d2690f5f2dbb14794b3aaf9da56a3495c63401"
+    },
+    {
+      "artifact": "work/laboratorios/f11/run.json",
+      "bytes": 2067,
+      "sha256": "9b8a1c32a2a6a050d67ffde78b629bed3a943fd121ef1eec72435cae866ad8f4"
+    },
+    {
+      "artifact": "product-final.log",
+      "bytes": 8650,
+      "sha256": "c5612eedad182778fb6968202760a4970bea35296beebe306f25af2464cd2f2e"
+    },
+    {
+      "artifact": "abi-final.log",
+      "bytes": 90,
+      "sha256": "fd2637a0d6cf1643f7ec4ee2e8306b73ca7770491002db8c19b58c016a5a14b7"
+    },
+    {
+      "artifact": "consumer.xml",
+      "bytes": 1809,
+      "sha256": "f0860f039db6b329101f74bafe1371841055b84fbd452551ce40ed7adcd5bc98"
+    },
+    {
+      "artifact": "sdk.xml",
+      "bytes": 1343,
+      "sha256": "5dd4afc21993257fa99a7c892deb0c25b0fd2301dddca1fd332224493216ed8b"
+    },
+    {
+      "artifact": "final-StarTrekRPGEditor.log",
+      "bytes": 17114,
+      "sha256": "6eb30f64cc5d4da1edb71abc4c5dfec297d0fcb4a393fbb879f3db951adfe4bf"
+    },
+    {
+      "artifact": "final-StarTrekRPG.log",
+      "bytes": 10531,
+      "sha256": "4c42c23480fad2fd7cfe7d5c0cb3da54508dbdd8e189c14d211944ca50dbd18b"
+    },
+    {
+      "artifact": "prepare-host-final.log",
+      "bytes": 2443,
+      "sha256": "b5c489c3e22800440677c096169b61a0c62b22fa39cae73d03fb2d3775c84d66"
+    },
+    {
+      "artifact": "map.log",
+      "bytes": 104121,
+      "sha256": "e3e670123f07d496fd6fca3b4f24759dc7451059c80e739fda08b51833de2a67"
+    },
+    {
+      "artifact": "unity-final.log",
+      "bytes": 24094,
+      "sha256": "53cfe414be0fb723b1d6b79401f020b4d647d7992430f26eda0c7bb4c1c35ce2"
+    },
+    {
+      "artifact": "unity-verification.json",
+      "bytes": 9448,
+      "sha256": "d9d0fd40d8a15ddb41d3a1175e555b801e505f671fcd6f0063dd6db1d6f27b70"
+    },
+    {
+      "artifact": "uat-cook.log",
+      "bytes": 83906,
+      "sha256": "f631b58d0952352caeab8a93659441be0446ec690f230f02f2cba7718935543f"
+    },
+    {
+      "artifact": "uat-stage-final.log",
+      "bytes": 26164,
+      "sha256": "3c8e2741763761feef24da14acda51de4ded107450944ac0eaed058ed1b0a3e6"
+    },
+    {
+      "artifact": "original-baseline-metrics.json",
+      "bytes": 614,
+      "sha256": "b7b271bc3ad5609ad0e917fbbd8fe375740e07e7665a06d73cbe0aed46057687"
+    },
+    {
+      "artifact": "original-baseline.log",
+      "bytes": 120638,
+      "sha256": "2d0cf5f59fbf00453c09065970b4d81bfab2298021390b0895081b46f0ea5953"
+    },
+    {
+      "artifact": "boundary-final.log",
+      "bytes": 843,
+      "sha256": "5dc3a73d60898c00a123c82960983e3de529f7bb9fd2fe400c86f566a2af452d"
+    },
+    {
+      "artifact": "contracts-final.log",
+      "bytes": 947,
+      "sha256": "59938d92ab7e61d4c0c856d27fc9f355948940767d3ff1abff69c4ac1ae89d67"
+    },
+    {
+      "artifact": "f11-boundary-final.log",
+      "bytes": 119,
+      "sha256": "c6d57a229407220b348c8d3f46fc121b13c86f2fd8798da9734cc744aa45e6bd"
+    }
+  ],
+  "binaries": [
+    {
+      "artifact": "native-product/f05/f04/Release/TrekHost.dll",
+      "bytes": 1737728,
+      "sha256": "0e2b14aa53f0918d34b8d7e63078c0b229b9884416946d3a89d20c1e0e7340a5"
+    },
+    {
+      "artifact": "native-product/f05/f04/Release/TrekF04Bridge.dll",
+      "bytes": 938496,
+      "sha256": "15d5744ece9c7947fd13be754b403546df815ecc07887202a5d86d454b81fd0e"
+    },
+    {
+      "artifact": "work/juego/UE5/StarTrekRPG/Binaries/Win64/UnrealEditor-StarTrekRPG.dll",
+      "bytes": 833536,
+      "sha256": "bcb10b6157076ceadb85d6866a243436d688755c4c30cad4c0cac022bfb1972b"
+    },
+    {
+      "artifact": "work/juego/UE5/StarTrekRPG/Binaries/Win64/StarTrekRPG.exe",
+      "bytes": 219957760,
+      "sha256": "3cf7e32bc48f03d58df5b93931d45e297a305e085d4cc5f5278f0dd3ff214fa3"
+    },
+    {
+      "artifact": "staged/Windows/StarTrekRPG/Binaries/Win64/StarTrekRPG.exe",
+      "bytes": 219957760,
+      "sha256": "3cf7e32bc48f03d58df5b93931d45e297a305e085d4cc5f5278f0dd3ff214fa3"
+    },
+    {
+      "artifact": "staged/Windows/StarTrekRPG/Binaries/Win64/TrekHost.dll",
+      "bytes": 1737728,
+      "sha256": "0e2b14aa53f0918d34b8d7e63078c0b229b9884416946d3a89d20c1e0e7340a5"
+    },
+    {
+      "artifact": "staged/Windows/StarTrekRPG/Binaries/Win64/TrekF04Bridge.dll",
+      "bytes": 938496,
+      "sha256": "15d5744ece9c7947fd13be754b403546df815ecc07887202a5d86d454b81fd0e"
+    },
+    {
+      "artifact": "unity/Binaries/Win64/UnrealEditor-StarTrekRPG.dll",
+      "bytes": 826880,
+      "sha256": "80c4d84104c2c1ca47df1a288b7664a2e6d0707723149692921d4866d92ad3c4"
+    }
+  ],
+  "sdk_headers": [
+    {
+      "name": "host_abi.h",
+      "sha256": "56cf1beaf757d753d70a847297bb770706596ac296c790efa2c665517f55ca33"
+    },
+    {
+      "name": "academy_abi.h",
+      "sha256": "8ea26ed018880e6e807e25a5f8c3d9f33c5e3a4061f9b6fb7a73eb39ae5b1163"
+    },
+    {
+      "name": "institutional_abi.h",
+      "sha256": "b1419a5466a35b685d8fc9be113b6a53cfd40c7f059701f57f4ea07f67f49b3b"
+    }
+  ],
+  "rendered_captures": [
+    {
+      "artifact": "geometry-1920-final-user/Saved/geometry-0.png",
+      "bytes": 62182,
+      "sha256": "6e87fbb01180ceb61ac835062032620434938e8a39adf7e2338259612942d1a9"
+    },
+    {
+      "artifact": "geometry-1920-final-user/Saved/geometry-1.png",
+      "bytes": 63141,
+      "sha256": "bd9d0b98994ac875cdfaf24811427f3ac3dd577c2ace22fa15e8b053d24d5744"
+    },
+    {
+      "artifact": "geometry-2560-final-user/Saved/geometry-0.png",
+      "bytes": 101770,
+      "sha256": "33a3af2f74194dfbef50b2f2d2966b534c1a6ca3fa21dd97c24617508c3e3b3b"
+    },
+    {
+      "artifact": "geometry-2560-final-user/Saved/geometry-1.png",
+      "bytes": 105765,
+      "sha256": "3472e6a2a981c8a672e5c2457ed1e2052bff231769841161eccbadcbb27942f9"
+    },
+    {
+      "artifact": "geometry-fullscreen-final-user/Saved/geometry-0.png",
+      "bytes": 111985,
+      "sha256": "76b5a0dbfb068569df10db41e7259156dcc0d02fbaf586b199f313972b094b49"
+    },
+    {
+      "artifact": "geometry-fullscreen-final-user/Saved/geometry-1.png",
+      "bytes": 116175,
+      "sha256": "f1e9f2376b2fb671495892cb2d21b183fdfe42b4fd7a7228e4c6f0a8545dd383"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-0.png",
+      "bytes": 101770,
+      "sha256": "33a3af2f74194dfbef50b2f2d2966b534c1a6ca3fa21dd97c24617508c3e3b3b"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-1.png",
+      "bytes": 109084,
+      "sha256": "21fe5d2aa2dfa14350e54d7c1da3dfff4a313b29a0541f80b0508a22e3346d25"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-2.png",
+      "bytes": 111985,
+      "sha256": "76b5a0dbfb068569df10db41e7259156dcc0d02fbaf586b199f313972b094b49"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-3.png",
+      "bytes": 115508,
+      "sha256": "1459598a00bfe8e275dd41a8d08783b8e13b556f44ec3dbfb60e337f381ec69a"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-4.png",
+      "bytes": 101770,
+      "sha256": "33a3af2f74194dfbef50b2f2d2966b534c1a6ca3fa21dd97c24617508c3e3b3b"
+    },
+    {
+      "artifact": "geometry-transitions-final-user/Saved/geometry-5.png",
+      "bytes": 105765,
+      "sha256": "3472e6a2a981c8a672e5c2457ed1e2052bff231769841161eccbadcbb27942f9"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-0.png",
+      "bytes": 102844,
+      "sha256": "7499138aac4f54167d8d26a02dce469df21dc214a66538f0ad65ba1981448bb4"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-1.png",
+      "bytes": 107435,
+      "sha256": "be67fe85809ecfd8f15d13eda4ded9707bd3c100f28855edfed6f575672951f3"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-2.png",
+      "bytes": 111035,
+      "sha256": "a56ca62e5c57ef3b67a1403cac869ea651a5f5aa93b2f06107a77b12e026011d"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-3.png",
+      "bytes": 115989,
+      "sha256": "9d6cee38bc60bffd573a1dfce95085d609802dd69cc845ca634a31af7e69a4ee"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-4.png",
+      "bytes": 102844,
+      "sha256": "7499138aac4f54167d8d26a02dce469df21dc214a66538f0ad65ba1981448bb4"
+    },
+    {
+      "artifact": "packaged-geometry-user/Saved/geometry-5.png",
+      "bytes": 104213,
+      "sha256": "339a856ef372378d47b16af0c499fa39c957c118743bd414cbde9d3c0b37ab37"
+    }
+  ],
+  "windows_geometry": {
+    "physical_monitor": [
+      2560,
+      1600
+    ],
+    "work_area": [
+      2560,
+      1528
+    ],
+    "windows_scale_percent": 150,
+    "old_awareness": 0,
+    "old_physical_client": [
+      3840,
+      2400
+    ],
+    "new_awareness": 2,
+    "new_dpi": 144,
+    "windowed_client": [
+      2538,
+      1472
+    ],
+    "decorations": [
+      22,
+      56
+    ],
+    "fullscreen_mode": "WindowedFullscreen",
+    "transition": "HandleToggleFullscreenCommand; no physical Alt+Enter key test"
+  },
+  "cloud_actions_code_sha": {
+    "sha": "2e75db5998151719f47933904a8729d9916cbde7",
+    "runs": [
+      45158039799,
+      45158039851,
+      45158039832
+    ],
+    "jobs_passed": 7,
+    "jobs_failed": 0,
+    "linux_gcc_tests": 315,
+    "windows_msvc_tests": 315,
+    "clang_asan_ubsan_tests": 160,
+    "f11_isolated_per_native_job": 17
+  },
+  "remaining": [
+    "Independent audit and human visual/physical-input acceptance",
+    "F11 product issuer remains external and unavailable",
+    "H07-06 direct LLM/NPC injection not executed",
+    "H07-14 optional reader-OFF composition not rerun",
+    "33 external F11 acceptance scenarios remain NOT_RUN"
+  ]
+}

@@ -14,6 +14,8 @@ public:
     void AttachView(UHostWorldProjection& World);
     void Tick(UHostSessionSubsystem& Host, UHostWorldProjection& World);
 
+    UHostSessionSubsystem* GetSession() const { return Session.Get(); }
+    UHostWorldProjection* GetProjection() const { return WorldProjection.Get(); }
     void OpenName();
     void OpenCatalog();
     void Back();

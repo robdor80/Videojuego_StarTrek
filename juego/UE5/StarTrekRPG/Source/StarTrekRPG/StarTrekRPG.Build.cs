@@ -13,7 +13,7 @@ public class StarTrekRPG : ModuleRules
 
         string ThirdParty = Path.Combine(ProjectDirectory(), "Binaries", "Host");
         string Include = Path.Combine(ThirdParty, "include");
-        foreach (string Header in new[] { "host_abi.h", "academy_abi.h" })
+        foreach (string Header in new[] { "host_abi.h", "academy_abi.h", "institutional_abi.h" })
         {
             string Source = Path.Combine(Include, "trek", "host", Header);
             if (!File.Exists(Source))
