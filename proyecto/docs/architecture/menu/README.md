@@ -6,6 +6,8 @@
 - [MENU-01 — Grafo y pruebas](MENU_01_NAVIGATION.json): 15 pantallas, 49 aristas condicionales, 40 casos (NOT_RUN). Validación estructural por lectura del blob publicado: JSON válido, IDs/aristas únicos, 15/15 pantallas alcanzables, referencias y cambios de pantalla coherentes, EXIT terminal y guardas explícitas en entrada GAME. Sin errores en estas comprobaciones. No equivale a pruebas UE/HOST.
 - [MENU-02 — Contrato de configuración](MENU_02_CONFIGURACION_2026-11-27.md): P01–P11 diseño; P12 especificación de pruebas, ejecución pendiente.
 - [MENU-02 — Catálogo y pruebas](MENU_02_SETTINGS.json): 48 opciones semánticas, 66 casos NOT_RUN, 11 áreas. Relectura GitHub: JSON parseable, IDs únicos, secciones/rangos válidos, P01–P12 presentes, casos no ejecutados. No constituye validación UE.
-- Siguiente diseño: MENU-03, sujeto a revisión/fusión de MENU-00 a MENU-02. Estética, UX final, política de pausa y valores efectivos pendientes de aprobación/pruebas.
+- [MENU-03 — Gestión de partidas](MENU_03_GESTION_PARTIDAS_2026-11-27.md): P01–P10 diseño, P11 matriz de aceptación; integración MENU-06-P06 y certificación MENU-08-P09 pendientes.
+- [MENU-03 — Matriz de aceptación](MENU_03_SAVE_ACCEPTANCE.json): 75 casos NOT_RUN, 11 subfases. Relectura GitHub: JSON válido, IDs únicos, referencias de subfase y encabezados coherentes. Sin ejecución de runtime. Continuar universal, autoguardado, metadatos y correlación durable requieren capacidades adicionales; no se declaran implementadas.
+- Siguiente diseño: MENU-04, sujeto a revisión/fusión ordenada de MENU-00 a MENU-03. Estética, UX final, políticas de pausa/autoguardado/retención y valores efectivos pendientes de aprobación/pruebas.
 
 Documentación contractual aquí; recursos UI en `audiovisual/ui/menus/`; implementación futura en el proyecto Unreal existente. No crear un proyecto UE paralelo. Aplican AGENTS.md y el gobierno HOST.
