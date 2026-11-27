@@ -16,7 +16,7 @@
 // F11_HOST_READ_ONLY excludes the commit entry point and its write helpers.
 #define F11_ENABLE_PROMOTIONS 1
 #endif
-#include "f04_bridge.cpp"
+#include "f04_navigation_bridge.inc"
 #include "f04_host_snapshot.inc"
 #include "../../f05/src/f05_player_binding.inc"
 #include "f04_host_navigation.inc"

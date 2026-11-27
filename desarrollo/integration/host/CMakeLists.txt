@@ -84,6 +84,15 @@ find_package(Python3 REQUIRED COMPONENTS Interpreter)
 get_filename_component(star_trek_root "${CMAKE_CURRENT_SOURCE_DIR}/../../.." ABSOLUTE)
 set(nav_chart_dir "${CMAKE_CURRENT_BINARY_DIR}/generated/navigation")
 set(nav_chart_header "${nav_chart_dir}/nav_chart_data.h")
+set(nav_bridge_copy "${nav_chart_dir}/f04_navigation_bridge.inc")
+set(f04_source_dir "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src")
+add_custom_command(OUTPUT "${nav_bridge_copy}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/src/navigation/compose_f04_bridge.py"
+    "${GIT_EXECUTABLE}" "${f04_source_dir}/f04_bridge.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/navigation/f04_host_navigation.patch" "${nav_bridge_copy}"
+  DEPENDS src/navigation/compose_f04_bridge.py src/navigation/f04_host_navigation.patch
+    "${f04_source_dir}/f04_bridge.cpp"
+  VERBATIM)
 set(nav_authoring "${star_trek_root}/sistemas/gameplay/navigation")
 add_custom_command(OUTPUT "${nav_chart_header}"
   COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/src/navigation/embed_chart.py"
@@ -95,6 +104,8 @@ add_custom_command(OUTPUT "${nav_chart_header}"
     "${star_trek_root}/mundo/lore/astrography/systems/anchor_locations.json"
   VERBATIM)
 add_custom_target(host_nav_chart DEPENDS "${nav_chart_header}")
+add_custom_target(host_nav_bridge DEPENDS "${nav_bridge_copy}")
+add_dependencies(TrekF04Bridge host_nav_bridge)
 add_dependencies(TrekF04Bridge host_nav_chart)
 add_library(host_navigation OBJECT src/navigation/route_solver.cpp)
 add_dependencies(host_navigation host_nav_chart)
@@ -102,7 +113,8 @@ target_compile_features(host_navigation PRIVATE cxx_std_20)
 target_include_directories(host_navigation PRIVATE include "${nav_chart_dir}")
 set_target_properties(host_navigation PROPERTIES POSITION_INDEPENDENT_CODE ON
   CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN YES)
-target_include_directories(TrekF04Bridge PRIVATE "${nav_chart_dir}" "${CMAKE_CURRENT_SOURCE_DIR}/include")
+target_include_directories(TrekF04Bridge PRIVATE "${nav_chart_dir}" "${f04_source_dir}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/include")
 if(TREK_HOST_TESTS)
   target_compile_definitions(TrekF04Bridge PRIVATE F04_HOST_NAVIGATION_TESTING)
 endif()

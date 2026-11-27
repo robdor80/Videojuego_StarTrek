@@ -39,11 +39,7 @@ enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION
  F05_NEED_REF,F05_DETECTION_REF,F05_AI_DECISION_REF,
  F11_ROOT_REF=256,F11_AUTHORITY_REF,F11_GRANT_REF,F11_GRADUATION_REF,
  F11_COMMISSION_ORDER_REF,F11_COMMISSION_REF,F11_RANK_EVENT_REF,
- F11_EVALUATION_REF,F11_ORDER_REF,F11_CAUSE_REF
-#ifdef F04_HOST_NAVIGATION
- ,NAV_KNOWS=512,NAV_OWN_ORIGIN
-#endif
- };
+ F11_EVALUATION_REF,F11_ORDER_REF,F11_CAUSE_REF };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
@@ -53,11 +49,7 @@ enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM,F05_MODE,
  F05_INPUT,F05_BUDGET,F05_EXAMINED,F05_AI_ROUTE,F05_AI_ERROR,F05_AI_INTENT,
  F11_VERSION=256,F11_ID_HIGH,F11_ID_MID,F11_ID_LOW,F11_SERVICE,F11_KEY,
- F11_INPUT_REVISION,F11_COMMIT_REVISION,F11_FROM,F11_TO,F11_VISIBILITY,F11_REVOKED_AT
-#ifdef F04_HOST_NAVIGATION
- ,NAV_STAMP_0=512,NAV_STAMP_1,NAV_STAMP_2,NAV_STAMP_3,NAV_STAMP_4,NAV_STAMP_5
-#endif
- };
+ F11_INPUT_REVISION,F11_COMMIT_REVISION,F11_FROM,F11_TO,F11_VISIBILITY,F11_REVOKED_AT };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -156,9 +148,6 @@ void link(Campaign& c,U id,Ref field,U target) {
  for(const auto& r:old) erase(c,r);
  if(target) edge(c,id,field,target);
 }
-#ifdef F04_HOST_NAVIGATION
-void nav_catalog(std::vector<ContentDefinitionInput>&);
-#endif
 CatalogBuildResult catalog() {
  const auto p=*PackId::parse("trek.f04"); const auto v=*SemanticVersion::parse("0.1.0");
  std::vector<ContentDefinitionInput> defs;
@@ -174,9 +163,6 @@ CatalogBuildResult catalog() {
  for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event","f05_delegation_event","f05_approval",
    "f05_player","f05_scan_need","f05_brief","f05_detection","f05_decision","f05_ai_request"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
-#endif
-#ifdef F04_HOST_NAVIGATION
- nav_catalog(defs);
 #endif
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
 }
@@ -336,9 +322,6 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
  }
  appointment(c,cat,3,F04_CAPTAIN,F04_COMMAND,0,FOREVER,3,1);
 }
-#ifdef F04_HOST_NAVIGATION
-#include "f04_navigation_state.inc"
-#endif
 #include "f04_valhalla_state.inc"
 #include "f04_organization.inc"
 bool roster_schema(const WorldState& w);
@@ -396,9 +379,6 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
     ar.insert({SLOT,F05_HOLDER_REF,F05_EXECUTOR_REF,F05_PREVIOUS_REF});rr=ar;}
 #endif
   }
-#ifdef F04_HOST_NAVIGATION
-  else if(nav_shape(w,id,allowed)) { required=allowed; }
-#endif
   else if(type(w,id,"task")) { allowed={START,END,STATE,OP,CODE,CAUSE};required={START,END,STATE,OP,CAUSE};ar={SHIP,PERSON};rr=ar; }
   else if(type(w,id,"order")) { allowed={START,END,STATE,D_DOMAIN,CAUSE};required=allowed;ar={SHIP,ISSUER};rr=ar; }
   else if(type(w,id,"mandate")) { allowed={START,END,STATE,D_DOMAIN,CAUSE};required=allowed;ar={SHIP,PERSON};rr=ar; }
@@ -411,23 +391,8 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
   else if(f11_shape(w,id,allowed,required,ar,rr)) {}
 #endif
   else return false;
-#ifdef F04_HOST_NAVIGATION
-  const auto container=w.container_of(entity).container;
-  if(container.is_valid() && (nav_resource(w,id) || (id!=1 && nav_resource(w,container.value()))))return false;
-#endif
   for(const auto& r:w.relations_from(EntityId{id})) {
    const U k=r.kind.value();
-#ifdef F04_HOST_NAVIGATION
-   if(k==NAV_KNOWS || k==NAV_OWN_ORIGIN) {
-    if(!type(w,id,"person") || !member(w,id) || val(w,id,CATEGORY)!=1 ||
-       (k==NAV_KNOWS && !nav_resource(w,r.target.value()))) return false;
-    if(k==NAV_OWN_ORIGIN) {
-     const auto origin=w.container_of(r.target).container;
-     if(r.target!=EntityId{1} || !origin.is_valid() || !nav_granted(w,id,NAV_KNOWS,origin))return false;
-    }
-    continue;
-   }
-#endif
    if(k>>48) { const U f=(k>>48)-0xF000;
     if(!allowed.contains(f) || r.target.value()!=id || !fields.insert(f).second) return false;
    } else if(!ar.contains(k) || !refs.insert(k).second) return false;
@@ -487,9 +452,6 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
  }
 #ifdef F04_HISTORY_CORE
  if(c.history && HistoryPersistence::validate_active(*c.history,CampaignPersistence::capture(c.world,c.random,c.time))!=HistoryStatus::success)return false;
-#endif
-#ifdef F04_HOST_NAVIGATION
- if(!nav_schema(w,1))return false;
 #endif
  return organization_schema(w) && roster_schema(w) && valhalla_schema(w)
 #ifdef F11_ENABLE_PROMOTIONS
@@ -615,9 +577,6 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
     set(c,id,STATE,CANCELLED);
    }
   }
-#ifdef F04_HOST_NAVIGATION
-  nav_revoke_departing_observer(c,target);
-#endif
   set(c,target,MEMBER,0);action(c,target,RemoveContainmentAction{EntityId{target}});return target;
  }
  case F04_ASSIGN: {
