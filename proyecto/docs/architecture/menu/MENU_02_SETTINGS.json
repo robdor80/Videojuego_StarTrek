@@ -1,0 +1,950 @@
+{
+  "schema_version": 1,
+  "status": "DESIGN_ONLY",
+  "source_phase": "MENU-02",
+  "sections": [
+    "pantalla",
+    "graficos",
+    "sonido",
+    "controles",
+    "jugabilidad",
+    "ia",
+    "accesibilidad"
+  ],
+  "notes": [
+    "Identifiers are semantic, not runtime API.",
+    "All controls gated by verified capability and adapter; defaults and exact ranges where unspecified require product validation.",
+    "0 fps limit denotes unlimited. 15 second video rollback proposed.",
+    "Persistence/restore/hardware are cross-cutting functions, not additional SETTINGS screens."
+  ],
+  "options": [
+    {
+      "id": "display.mode",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "section": "pantalla",
+      "type": "enum",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "values": [
+        "windowed",
+        "borderless",
+        "fullscreen"
+      ]
+    },
+    {
+      "id": "display.monitor",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "section": "pantalla",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "display.resolution",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "section": "pantalla",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "display.vsync",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "section": "pantalla",
+      "type": "bool",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "display.fps_limit",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "section": "pantalla",
+      "type": "enum",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "values": [
+        30,
+        60,
+        90,
+        120,
+        144,
+        0
+      ]
+    },
+    {
+      "id": "graphics.preset",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "enum",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "ultra",
+        "custom"
+      ]
+    },
+    {
+      "id": "graphics.textures",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.shadows",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.view_distance",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.effects",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.postprocess",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.foliage",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.lighting",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.reflections",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.aa",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "graphics.internal_resolution",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "upscale.provider",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "upscale.quality",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "upscale.dlaa",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "upscale.frame_generation",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "upscale.latency",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "section": "graficos",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "audio.master",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.music",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.voice",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.effects",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.ambience",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.ui",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "int",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "audio.mute",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "bool",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "audio.output",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "section": "sonido",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "input.bindings",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "section": "controles",
+      "type": "mapping",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "input.sensitivity",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "section": "controles",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "input.invert",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "section": "controles",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "input.hold_toggle",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "section": "controles",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "gameplay.tutorials",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "section": "jugabilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "gameplay.context_hints",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "section": "jugabilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "gameplay.notifications",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "section": "jugabilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "gameplay.camera",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "section": "jugabilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "ai.dynamic_voice",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "section": "ia",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "ai.resource_profile",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "section": "ia",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "ai.provider_model",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "section": "ia",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.subtitles",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "bool",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.speaker",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.subtitle_size",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.subtitle_background",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.sound_cues",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.ui_scale",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.contrast",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    },
+    {
+      "id": "access.reduce_motion",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "section": "accesibilidad",
+      "type": "capability",
+      "availability": "verified_adapter_and_capability",
+      "default_status": "PENDING_PRODUCT_VALIDATION"
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "M02-P01-01",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Cambiar resolución y confirmar: readback físico coincide y persiste",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-02",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Timeout 15 s sin confirmar: restaura modo anterior",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-03",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Esc y pérdida de dispositivo: rollback; foco seguro",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-04",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Crash durante preview: reinicio restaura modo confirmado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-05",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "MSI 2560x1600 al 150%: cliente centrado dentro área útil en ventana",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-06",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "1920x1080 y fullscreen 16:10: sin recorte ni doble DPI",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-07",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Sin bordes: resolución escritorio; no selector ficticio",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P01-08",
+      "phase": "MENU-02-P01",
+      "area": "pantalla",
+      "expected": "Alt+Intro: sincroniza estado efectivo sin persistencia accidental",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P02-01",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "expected": "Preset aplica solo grupos soportados y relee",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P02-02",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "expected": "Cambio individual marca personalizado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P02-03",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "expected": "GI/VSM no disponibles no se activan por Ultra",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P02-04",
+      "phase": "MENU-02-P02",
+      "area": "graficos",
+      "expected": "Fallo de adaptador restaura valores efectivos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-01",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "Plugin ausente: opción no activable",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-02",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "Cambio proveedor excluye doble upscale/AA",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-03",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "Proveedor controla escala: slider no editable",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-04",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "Fallo en plugin/driver: fallback validado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-05",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "FPS generados no cambian reloj Core",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P03-06",
+      "phase": "MENU-02-P03",
+      "area": "rendimiento",
+      "expected": "Win64 confirma proveedor real y compatibilidad",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-01",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "Cada bus afecta solo categoría; maestro multiplica",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-02",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "Mute y desmute conservan nivel",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-03",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "Ducking temporal respeta voz y vuelve a nivel",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-04",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "Cambio de zona y transición Acto II mantienen mezcla",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-05",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "5.1/estéreo solo según dispositivo real",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P04-06",
+      "phase": "MENU-02-P04",
+      "area": "sonido",
+      "expected": "Descartar preview restaura audio",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-01",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Captura no se propaga al juego",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-02",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Conflicto simultáneo exige decisión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-03",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Esc cancela captura y foco regresa",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-04",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Binding corrupto conserva ruta recuperación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-05",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Cambio contexto limpia teclas retenidas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P05-06",
+      "phase": "MENU-02-P05",
+      "area": "controles",
+      "expected": "Migración de acción eliminada recupera default",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P06-01",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "expected": "Opciones locales no mutan campaña",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P06-02",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "expected": "Dificultad/tiempo/XP no se presentan sin contrato",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P06-03",
+      "phase": "MENU-02-P06",
+      "area": "jugabilidad",
+      "expected": "Ayudas no revelan conocimiento no autorizado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-01",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "Servicio ausente: estado explícito y fallback texto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-02",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "Cambiar perfil no modifica estado NPC ni reglas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-03",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "Modelo no autorizado no se selecciona",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-04",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "VRAM insuficiente: degradación sin duplicar mensaje",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-05",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "Cambio seguro libera modelo previo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P07-06",
+      "phase": "MENU-02-P07",
+      "area": "ia",
+      "expected": "Credencial y texto de diálogo ausentes en settings/logs",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P08-01",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "expected": "Subtítulos funcionan con mute",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P08-02",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "expected": "Texto largo 16:10 y 16:9 no corta controles",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P08-03",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "expected": "Navegación teclado y foco visible",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P08-04",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "expected": "Reducción movimiento no cambia tick Core",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P08-05",
+      "phase": "MENU-02-P08",
+      "area": "accesibilidad",
+      "expected": "Aviso crítico no depende solo de color/sonido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-01",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Reinicio reproduce configuración confirmada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-02",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Archivo corrupto recupera último válido/default",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-03",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Versión futura no se sobrescribe sin decisión",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-04",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Migración idempotente y claves inválidas saneadas",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-05",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Disco lleno conserva último válido e informa",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-06",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Fallo en mitad de Apply compensa adaptadores",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-07",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Borrador descartado no escribe",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-08",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "SETTINGS funciona sin HOST y vuelve a origen correcto",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-09",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Override diagnóstico no se consolida",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-10",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Doble Apply no ejecuta dos transacciones",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-11",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Capacidad cambia entre edición y Apply: revalidación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P09-12",
+      "phase": "MENU-02-P09",
+      "area": "persistencia",
+      "expected": "Reinicio requerido distingue pendiente de efectivo",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P10-01",
+      "phase": "MENU-02-P10",
+      "area": "restauracion",
+      "expected": "Restaurar sección no altera otras",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P10-02",
+      "phase": "MENU-02-P10",
+      "area": "restauracion",
+      "expected": "Restaurar todo no toca guardados ni credenciales",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P10-03",
+      "phase": "MENU-02-P10",
+      "area": "restauracion",
+      "expected": "Restauración vídeo pasa por confirmación",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P10-04",
+      "phase": "MENU-02-P10",
+      "area": "restauracion",
+      "expected": "Default incompatible usa fallback informado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-01",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "Detectar GPU real en portátil híbrido",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-02",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "Detectar fallo: recomendación conservadora",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-03",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "Benchmark no corre en campaña ni sobrescribe preferencias",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-04",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "Cambio de GPU/driver revalida capacidades",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-05",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "MSI mide VRAM y frame time con/sin IA",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "M02-P11-06",
+      "phase": "MENU-02-P11",
+      "area": "hardware",
+      "expected": "Cancelar benchmark no deja recursos ni cambio efectivo",
+      "status": "NOT_RUN"
+    }
+  ]
+}
