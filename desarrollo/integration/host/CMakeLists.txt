@@ -272,6 +272,29 @@ if(TREK_HOST_TESTS)
   set_tests_properties(host.m0.process PROPERTIES TIMEOUT 240 LABELS "h05;process")
 endif()
 
+# H07-P02: separate native admission regressions. Keep H05/M0 tests and
+# their historical oracles untouched; the production HOST has no F11 issuer.
+if(TREK_HOST_TESTS)
+  add_executable(host_h07_admission_tests tests/h07_p02_admission_tests.cpp
+    ${host_sources} src/f04_session_bridge.cpp src/gateway_bridge.cpp)
+  target_compile_features(host_h07_admission_tests PRIVATE cxx_std_20)
+  target_include_directories(host_h07_admission_tests PRIVATE src tests include)
+  target_compile_definitions(host_h07_admission_tests PRIVATE
+    TREK_HOST_STATIC_TEST TREK_HOST_GATEWAY_TESTING TREK_HOST_CORE_SHA="${host_core_sha}")
+  target_link_libraries(host_h07_admission_tests PRIVATE TrekF04Bridge host_academy_core Threads::Threads)
+  set_target_properties(host_h07_admission_tests PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
+  if(MSVC)
+    target_compile_options(host_h07_admission_tests PRIVATE /utf-8)
+  endif()
+  foreach(h07_case IN ITEMS unbound repeated expired restore closed)
+    add_test(NAME host.h07.p02.${h07_case} COMMAND host_h07_admission_tests
+      ${h07_case} "${CMAKE_CURRENT_BINARY_DIR}/h07/p02/${h07_case}")
+    set_tests_properties(host.h07.p02.${h07_case} PROPERTIES
+      TIMEOUT 120 LABELS "h07;p02;native;fail-closed")
+  endforeach()
+endif()
+
 if(TREK_HOST_TESTS)
   add_executable(host_abi_tests tests/host_abi_tests.c)
   add_executable(host_academy_abi_tests tests/academy_abi_tests.c)
