@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "status": "design_contract_not_runtime",
+  "source_phase": "MENU-01",
+  "notes": [
+    "Guards are semantic conditions, not existing API names.",
+    "Same-screen cases describe denied, pending or local actions and need not be graph edges.",
+    "Modal/focus/input are orthogonal to screens; SETTINGS and FEDERATION store origin; CATALOG opened from PAUSE after safe close returns MAIN.",
+    "EXTRAS and SETTINGS internal section routes deferred to MENU-04/02; runtime tests pending."
+  ],
+  "screens": [
+    "CINEMATIC",
+    "MAIN",
+    "NEW",
+    "CATALOG",
+    "SETTINGS",
+    "FEDERATION",
+    "EXTRAS",
+    "RECORD",
+    "JOURNAL",
+    "STATS",
+    "HONORS",
+    "GAME",
+    "PAUSE",
+    "RECOVERY",
+    "EXIT"
+  ],
+  "entry": "CINEMATIC",
+  "terminal": "EXIT",
+  "button_states": [
+    "HIDDEN",
+    "BUSY",
+    "LOCKED",
+    "DISABLED",
+    "AVAILABLE"
+  ],
+  "pause_states": [
+    "RUNNING",
+    "PAUSE_REQUESTED",
+    "PAUSED_CONFIRMED",
+    "RESUME_REQUESTED",
+    "PAUSE_UNAVAILABLE"
+  ],
+  "edges": [
+    {
+      "from": "CINEMATIC",
+      "action": "intro_complete",
+      "to": "MAIN",
+      "guard": "menu07_unique_entry_and_session_closed"
+    },
+    {
+      "from": "CINEMATIC",
+      "action": "unsafe_session",
+      "to": "RECOVERY",
+      "guard": "session_unverified"
+    },
+    {
+      "from": "MAIN",
+      "action": "new",
+      "to": "NEW",
+      "guard": "create_capability_and_closed"
+    },
+    {
+      "from": "MAIN",
+      "action": "load",
+      "to": "CATALOG",
+      "guard": "catalog_capability_and_closed"
+    },
+    {
+      "from": "MAIN",
+      "action": "continue",
+      "to": "GAME",
+      "guard": "menu03_recent_policy_and_exact_restore_verified"
+    },
+    {
+      "from": "MAIN",
+      "action": "continue_failed",
+      "to": "RECOVERY",
+      "guard": "session_unverified_or_mutation_uncertain"
+    },
+    {
+      "from": "MAIN",
+      "action": "settings",
+      "to": "SETTINGS",
+      "guard": "local_ui_available"
+    },
+    {
+      "from": "MAIN",
+      "action": "federation",
+      "to": "FEDERATION",
+      "guard": "authorized_public_content"
+    },
+    {
+      "from": "MAIN",
+      "action": "extras",
+      "to": "EXTRAS",
+      "guard": "authorized_extra_available"
+    },
+    {
+      "from": "MAIN",
+      "action": "exit",
+      "to": "EXIT",
+      "guard": "confirmed_and_safe_exit"
+    },
+    {
+      "from": "NEW",
+      "action": "create",
+      "to": "GAME",
+      "guard": "creation_identity_verified_and_initial_save_requirements"
+    },
+    {
+      "from": "NEW",
+      "action": "create_failed",
+      "to": "RECOVERY",
+      "guard": "session_unverified_or_mutation_uncertain"
+    },
+    {
+      "from": "CATALOG",
+      "action": "load",
+      "to": "GAME",
+      "guard": "exact_restore_verified"
+    },
+    {
+      "from": "CATALOG",
+      "action": "load_failed",
+      "to": "RECOVERY",
+      "guard": "session_unverified_or_mutation_uncertain"
+    },
+    {
+      "from": "GAME",
+      "action": "pause",
+      "to": "PAUSE",
+      "guard": "pause_confirmed_or_explicit_nonpausing_overlay_policy"
+    },
+    {
+      "from": "GAME",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "session_unverified"
+    },
+    {
+      "from": "PAUSE",
+      "action": "resume",
+      "to": "GAME",
+      "guard": "resume_confirmed_or_overlay_closed_and_session_verified"
+    },
+    {
+      "from": "PAUSE",
+      "action": "save",
+      "to": "PAUSE",
+      "guard": "save_capability_and_valid_session_and_safe_outcome"
+    },
+    {
+      "from": "PAUSE",
+      "action": "save_failed",
+      "to": "RECOVERY",
+      "guard": "session_unverified_or_mutation_uncertain"
+    },
+    {
+      "from": "PAUSE",
+      "action": "pause_load",
+      "to": "CATALOG",
+      "guard": "menu03_confirmed_progress_decision_and_safe_close_verified"
+    },
+    {
+      "from": "PAUSE",
+      "action": "settings",
+      "to": "SETTINGS",
+      "guard": "local_ui_available"
+    },
+    {
+      "from": "PAUSE",
+      "action": "federation",
+      "to": "FEDERATION",
+      "guard": "authorized_current_content"
+    },
+    {
+      "from": "PAUSE",
+      "action": "record",
+      "to": "RECORD",
+      "guard": "institutional_read_authorized_and_current"
+    },
+    {
+      "from": "PAUSE",
+      "action": "journal",
+      "to": "JOURNAL",
+      "guard": "journal_capability_and_current"
+    },
+    {
+      "from": "PAUSE",
+      "action": "stats",
+      "to": "STATS",
+      "guard": "stats_capability_and_current"
+    },
+    {
+      "from": "PAUSE",
+      "action": "honors",
+      "to": "HONORS",
+      "guard": "honors_capability_and_current"
+    },
+    {
+      "from": "PAUSE",
+      "action": "main_return",
+      "to": "MAIN",
+      "guard": "confirmed_and_safe_close_verified"
+    },
+    {
+      "from": "PAUSE",
+      "action": "exit",
+      "to": "EXIT",
+      "guard": "confirmed_and_safe_exit"
+    },
+    {
+      "from": "PAUSE",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "session_unverified"
+    },
+    {
+      "from": "NEW",
+      "action": "back",
+      "to": "MAIN",
+      "guard": "no_admitted_mutation_and_safe_return"
+    },
+    {
+      "from": "CATALOG",
+      "action": "back",
+      "to": "MAIN",
+      "guard": "no_admitted_mutation_and_safe_return"
+    },
+    {
+      "from": "EXTRAS",
+      "action": "back",
+      "to": "MAIN",
+      "guard": "safe_return"
+    },
+    {
+      "from": "SETTINGS",
+      "action": "back",
+      "to": "MAIN",
+      "guard": "origin_main_and_settings_resolved"
+    },
+    {
+      "from": "SETTINGS",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "origin_pause_and_settings_resolved_and_session_current"
+    },
+    {
+      "from": "FEDERATION",
+      "action": "back",
+      "to": "MAIN",
+      "guard": "origin_main_and_safe_return"
+    },
+    {
+      "from": "FEDERATION",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "origin_pause_and_session_current"
+    },
+    {
+      "from": "RECORD",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "session_current"
+    },
+    {
+      "from": "JOURNAL",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "session_current"
+    },
+    {
+      "from": "STATS",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "session_current"
+    },
+    {
+      "from": "HONORS",
+      "action": "back",
+      "to": "PAUSE",
+      "guard": "session_current"
+    },
+    {
+      "from": "RECOVERY",
+      "action": "recover_game",
+      "to": "GAME",
+      "guard": "session_identity_verified_and_recovery_resolved"
+    },
+    {
+      "from": "RECOVERY",
+      "action": "recover_main",
+      "to": "MAIN",
+      "guard": "safe_close_verified_and_recovery_resolved"
+    },
+    {
+      "from": "RECOVERY",
+      "action": "exit",
+      "to": "EXIT",
+      "guard": "confirmed_and_safe_exit"
+    },
+    {
+      "from": "SETTINGS",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    },
+    {
+      "from": "FEDERATION",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    },
+    {
+      "from": "RECORD",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    },
+    {
+      "from": "JOURNAL",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    },
+    {
+      "from": "STATS",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    },
+    {
+      "from": "HONORS",
+      "action": "session_invalid",
+      "to": "RECOVERY",
+      "guard": "origin_pause_and_session_unverified"
+    }
+  ],
+  "acceptance_cases": [
+    {
+      "id": "MENU-01-N01",
+      "subphase": "MENU-01-P01",
+      "from": "CINEMATIC",
+      "action": "intro_complete",
+      "expected_screen": "MAIN",
+      "setup": "Dos notificaciones de fin de Acto II",
+      "expected": "Una entrada, cero creación/avance de campaña",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N02",
+      "subphase": "MENU-01-P01",
+      "from": "MAIN",
+      "action": "continue",
+      "expected_screen": "MAIN",
+      "setup": "Catálogo vacío confirmado o reciente no elegible",
+      "expected": "No restaurar; Continuar deshabilitado",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N03",
+      "subphase": "MENU-01-P01",
+      "from": "MAIN",
+      "action": "new",
+      "expected_screen": "NEW",
+      "setup": "HOST CLOSED y creación disponible",
+      "expected": "Solo abre preparación; no escribe guardado",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N04",
+      "subphase": "MENU-01-P01",
+      "from": "NEW",
+      "action": "create",
+      "expected_screen": "GAME",
+      "setup": "Creación admitida, verificación identidad OK y requisitos de primer guardado satisfechos",
+      "expected": "Una creación, transición solo al confirmar",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N05",
+      "subphase": "MENU-01-P07",
+      "from": "NEW",
+      "action": "create_failed",
+      "expected_screen": "RECOVERY",
+      "setup": "Creación admitida pero identidad incorrecta",
+      "expected": "No entrada a GAME",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N06",
+      "subphase": "MENU-01-P01",
+      "from": "MAIN",
+      "action": "load",
+      "expected_screen": "CATALOG",
+      "setup": "Catálogo válido sin filas",
+      "expected": "Estado vacío, no inventar filas",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N07",
+      "subphase": "MENU-01-P07",
+      "from": "CATALOG",
+      "action": "load",
+      "expected_screen": "CATALOG",
+      "setup": "Versión incompatible, corrupta, no fiable o fila caducada",
+      "expected": "Cero restore; motivo",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N08",
+      "subphase": "MENU-01-P07",
+      "from": "CATALOG",
+      "action": "load",
+      "expected_screen": "GAME",
+      "setup": "Fila compatible recuperable exacta; identidad y generación verificadas",
+      "expected": "Una restauración de versión seleccionada",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N09",
+      "subphase": "MENU-01-P07",
+      "from": "CATALOG",
+      "action": "load_failed",
+      "expected_screen": "RECOVERY",
+      "setup": "Restore admitido y verificación fallida",
+      "expected": "No mostrar datos anteriores",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N10",
+      "subphase": "MENU-01-P02",
+      "from": "GAME",
+      "action": "pause",
+      "expected_screen": "GAME",
+      "setup": "Sin capacidad ni política overlay aprobada",
+      "expected": "Sin falsa pausa ni reloj paralelo",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N11",
+      "subphase": "MENU-01-P02",
+      "from": "GAME",
+      "action": "pause",
+      "expected_screen": "PAUSE",
+      "setup": "Pausa efectiva confirmada",
+      "expected": "Entradas gameplay inhibidas; polling HOST continúa",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N12",
+      "subphase": "MENU-01-P02",
+      "from": "PAUSE",
+      "action": "resume",
+      "expected_screen": "PAUSE",
+      "setup": "Reanudación aún pendiente",
+      "expected": "No reactivar controles",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N13",
+      "subphase": "MENU-01-P02",
+      "from": "PAUSE",
+      "action": "resume",
+      "expected_screen": "GAME",
+      "setup": "Reanudación confirmada y sesión verificada",
+      "expected": "Restaurar contexto de entrada",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N14",
+      "subphase": "MENU-01-P03",
+      "from": "MAIN",
+      "action": "settings",
+      "expected_screen": "SETTINGS",
+      "setup": "HOST no disponible",
+      "expected": "Opciones locales accesibles",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N15",
+      "subphase": "MENU-01-P03",
+      "from": "SETTINGS",
+      "action": "back",
+      "expected_screen": "MAIN",
+      "setup": "Origen MAIN; edición resuelta",
+      "expected": "Foco vuelve a Opciones",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N16",
+      "subphase": "MENU-01-P03",
+      "from": "SETTINGS",
+      "action": "back",
+      "expected_screen": "PAUSE",
+      "setup": "Origen PAUSE; sesión vigente y edición resuelta",
+      "expected": "No reanudar por error",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N17",
+      "subphase": "MENU-01-P04",
+      "from": "SETTINGS",
+      "action": "back",
+      "expected_screen": "SETTINGS",
+      "setup": "Cambios pendientes, Seguir editando",
+      "expected": "No perder edición",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N18",
+      "subphase": "MENU-01-P04",
+      "from": "MAIN",
+      "action": "exit",
+      "expected_screen": "MAIN",
+      "setup": "Cancelar confirmación de salida",
+      "expected": "Cero cierre y salida; foco restaurado",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N19",
+      "subphase": "MENU-01-P04",
+      "from": "PAUSE",
+      "action": "main_return",
+      "expected_screen": "PAUSE",
+      "setup": "Guardar y volver, SAVE pendiente o fallido conocido",
+      "expected": "No CLOSE; informar estado",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N20",
+      "subphase": "MENU-01-P07",
+      "from": "PAUSE",
+      "action": "save_failed",
+      "expected_screen": "RECOVERY",
+      "setup": "PUBLICATION_UNCERTAIN o resultado admitido desconocido",
+      "expected": "No repetir SAVE ni cerrar ordinariamente",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N21",
+      "subphase": "MENU-01-P07",
+      "from": "PAUSE",
+      "action": "main_return",
+      "expected_screen": "MAIN",
+      "setup": "Guardado requerido confirmado y CLOSE confirmado CLOSED",
+      "expected": "Secuencia SAVE -> CLOSE; no entrada anticipada",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N22",
+      "subphase": "MENU-01-P04",
+      "from": "PAUSE",
+      "action": "exit",
+      "expected_screen": "EXIT",
+      "setup": "Progreso no confirmado; decisión explícita y cierre seguro",
+      "expected": "Solo salir tras cierre",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N23",
+      "subphase": "MENU-01-P05",
+      "from": "MAIN",
+      "action": "new",
+      "expected_screen": "MAIN",
+      "setup": "HOST inicializando o no disponible",
+      "expected": "No enviar; motivo accesible",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N24",
+      "subphase": "MENU-01-P05",
+      "from": "MAIN",
+      "action": "extras",
+      "expected_screen": "MAIN",
+      "setup": "Sin extras publicados",
+      "expected": "Oculto, fuera de foco",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N25",
+      "subphase": "MENU-01-P06",
+      "from": "MAIN",
+      "action": "back",
+      "expected_screen": "MAIN",
+      "setup": "Esc sin modal en raíz",
+      "expected": "No salir ni abrir confirmación automáticamente",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N26",
+      "subphase": "MENU-01-P06",
+      "from": "MAIN",
+      "action": "new",
+      "expected_screen": "NEW",
+      "setup": "Doble click/Enter simultáneo sobre acción disponible",
+      "expected": "Una intención; no propagación",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N27",
+      "subphase": "MENU-01-P06",
+      "from": "MAIN",
+      "action": "exit",
+      "expected_screen": "MAIN",
+      "setup": "Modal de salida y tecla mantenida; Cancelar activo",
+      "expected": "Foco atrapado; no activar fondo",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N28",
+      "subphase": "MENU-01-P07",
+      "from": "NEW",
+      "action": "create",
+      "expected_screen": "NEW",
+      "setup": "RETRY no admitido, luego PENDING de ticket admitido",
+      "expected": "Reintento acotado solo RETRY; PENDING no reenvía",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N29",
+      "subphase": "MENU-01-P07",
+      "from": "CATALOG",
+      "action": "load_failed",
+      "expected_screen": "RECOVERY",
+      "setup": "Cambio de World/generación tras admisión y resultado obsoleto",
+      "expected": "No aplicar payload; observar/reconciliar mutación",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N30",
+      "subphase": "MENU-01-P07",
+      "from": "PAUSE",
+      "action": "record",
+      "expected_screen": "PAUSE",
+      "setup": "Permiso denegado o proyección caducada",
+      "expected": "Cero datos institucionales revelados",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N31",
+      "subphase": "MENU-01-P07",
+      "from": "RECORD",
+      "action": "session_invalid",
+      "expected_screen": "RECOVERY",
+      "setup": "Cambio de identidad o generación durante lectura",
+      "expected": "Limpiar datos y foco sensible",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N32",
+      "subphase": "MENU-01-P03",
+      "from": "RECOVERY",
+      "action": "back",
+      "expected_screen": "RECOVERY",
+      "setup": "Identidad no verificada",
+      "expected": "No escapar a MAIN/GAME inseguro",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N33",
+      "subphase": "MENU-01-P03",
+      "from": "RECOVERY",
+      "action": "recover_main",
+      "expected_screen": "MAIN",
+      "setup": "Reconciliación y CLOSE comprobado",
+      "expected": "Invalidar pila de campaña y proyección",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N34",
+      "subphase": "MENU-01-P02",
+      "from": "PAUSE",
+      "action": "pause_load",
+      "expected_screen": "CATALOG",
+      "setup": "Decisión progreso y cierre confirmado; MENU-03 disponible",
+      "expected": "Consultar catálogo nuevo; Back lleva MAIN, no PAUSE cerrada",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N35",
+      "subphase": "MENU-01-P02",
+      "from": "GAME",
+      "action": "pause",
+      "expected_screen": "PAUSE",
+      "setup": "Overlay no pausante expresamente aprobado, sin pausa real",
+      "expected": "Aviso simulación continúa; restringir acciones",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N36",
+      "subphase": "MENU-01-P05",
+      "from": "MAIN",
+      "action": "continue",
+      "expected_screen": "MAIN",
+      "setup": "Consulta catálogo fallida",
+      "expected": "No confundir fallo con vacío; reintento seguro",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N37",
+      "subphase": "MENU-01-P04",
+      "from": "SETTINGS",
+      "action": "back",
+      "expected_screen": "SETTINGS",
+      "setup": "Vídeo sin confirmar en plazo",
+      "expected": "Revertir valor válido; no avanzar Core",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N38",
+      "subphase": "MENU-01-P03",
+      "from": "EXTRAS",
+      "action": "back",
+      "expected_screen": "MAIN",
+      "setup": "Destino deja de estar publicado",
+      "expected": "Volver al origen válido y avisar",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N39",
+      "subphase": "MENU-01-P07",
+      "from": "PAUSE",
+      "action": "save",
+      "expected_screen": "PAUSE",
+      "setup": "SAVE confirmado y sesión vigente",
+      "expected": "Aviso guardado solo tras resultado; sin CLOSE",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "MENU-01-N40",
+      "subphase": "MENU-01-P03",
+      "from": "PAUSE",
+      "action": "session_invalid",
+      "expected_screen": "RECOVERY",
+      "setup": "HOST pierde estado/identidad durante pausa",
+      "expected": "No reanudar ni exponer datos",
+      "execution": "NOT_RUN"
+    }
+  ]
+}
