@@ -447,6 +447,42 @@
     "h08_clock": "proyecto/docs/architecture/host/H08_P03_RELOJ_ACTIVIDADES_CORE_2026-11-23.md",
     "f06_contact": "sistemas/gameplay/ship_operations/sensor_resolution/contact_navigation_solution_v0.1.json",
     "f06_scan": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_scan_request_contract.json",
-    "f06_result": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_result_contract.json"
+    "f06_result": "sistemas/gameplay/ship_operations/sensor_resolution/sensor_result_contract.json",
+    "f03_fixture": "desarrollo/integration/f03/include/f03_bridge.h",
+    "f03_report": "desarrollo/integration/f03/README.md",
+    "f02_fixture": "desarrollo/integration/f02/include/f02_bridge.h"
+  },
+  "pinned_core_api_audit": {
+    "reference_repo": "robdor80/CoreRPG",
+    "reference_sha": "76a7b7b485616d8c4994f384a90f123bf333591d",
+    "public_headers_inspected": true,
+    "tree_filenames_inspected": true,
+    "full_core_implementation_audited": false,
+    "published_ship_motion_api": false,
+    "published_navigation_solver_api": false,
+    "published_generic_capabilities": [
+      "WorldState::place_entity",
+      "WorldState::container_of",
+      "ActionEngine::process",
+      "Timeline::schedule",
+      "Timeline::advance",
+      "CampaignPersistence"
+    ],
+    "action_operation_variants": [
+      "PlaceEntityAction",
+      "RemoveContainmentAction",
+      "AddRelationAction",
+      "RemoveRelationAction",
+      "StreamRollAction"
+    ],
+    "sources": [
+      "https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/world_state.hpp",
+      "https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/action.hpp",
+      "https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/include/corerpg/timeline.hpp",
+      "https://github.com/robdor80/CoreRPG/blob/76a7b7b485616d8c4994f384a90f123bf333591d/docs/phases/f03-authoritative-timeline.md"
+    ],
+    "f03_demo_is_not_nav_engine": true,
+    "f02_placement_is_not_nav_engine": true,
+    "next_step": "domain_extension_feasibility_without_changing_pin"
   }
 }
