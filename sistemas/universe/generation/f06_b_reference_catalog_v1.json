@@ -16,11 +16,12 @@
     "El efecto es un índice de prueba, no una evaluación de amenaza ni potencia en vatios."
   ],
   "source_refs": [
-    "mundo/lore/technology/technology_capability_contract.json",
     "sistemas/gameplay/technology/technology_capability_contract.json",
     "mundo/lore/starships/classes/depth/ROMULAN_CLASS_DEPTH_PROFILES_v0.1.json",
     "mundo/lore/starships/classes/core_starship_classes.json",
-    "sistemas/universe/generation/procedural_ship_design_contract_v0.1.json"
+    "sistemas/universe/generation/procedural_ship_design_contract_v0.1.json",
+    "mundo/lore/technology/ship_station_catalogue_v0.1.json",
+    "sistemas/gameplay/species/species_biology_contract.json"
   ],
   "technologies": {
     "qa_disruptor": {

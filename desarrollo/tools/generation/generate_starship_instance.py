@@ -88,6 +88,15 @@ def class_is_available(entry: dict[str, Any], era_id: str, year: int) -> bool:
     if retained and era_id not in retained:
         return False
 
+    # Post-Nemesis game additions use explicit service dates. Construction
+    # and target dates do not establish an operational class.
+    if availability.get("gameplay_era") == "post_nemesis":
+        if era_id not in {"tng_ds9_voyager", "post_nemesis"}:
+            return False
+        service = availability.get("entry_into_service_year")
+        if service is None or year < int(service):
+            return False
+
     if year < int(availability.get("operational_class_from_year", -10**9)):
         return False
     if year < int(availability.get("confirmed_active_by_year", -10**9)):

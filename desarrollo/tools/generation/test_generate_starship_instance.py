@@ -26,6 +26,15 @@ class ProceduralStarshipGeneratorTests(unittest.TestCase):
         args.update(overrides)
         return shipgen.generate(**args)
 
+    def test_post_nemesis_service_gate(self):
+        classes = {row["class_id"]: row for row in shipgen.all_classes()}
+        self.assertFalse(shipgen.class_is_available(classes["odyssey"], "tng_ds9_voyager", 2372))
+        self.assertFalse(shipgen.class_is_available(classes["odyssey"], "tng_ds9_voyager", 2382))
+        self.assertTrue(shipgen.class_is_available(classes["odyssey"], "tng_ds9_voyager", 2383))
+        self.assertFalse(shipgen.class_is_available(classes["valhalla"], "tng_ds9_voyager", 2383))
+        self.assertFalse(shipgen.class_is_available(classes["valhalla"], "tng_ds9_voyager", 2387))
+        self.assertFalse(shipgen.class_is_available(classes["odyssey"], "kirk", 2383))
+
     def test_deterministic_same_seed(self):
         self.assertEqual(self.generate(), self.generate())
 
