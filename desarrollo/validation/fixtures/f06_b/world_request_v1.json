@@ -1,0 +1,117 @@
+{
+  "seed": "f06-b-reference-2383-alpha",
+  "sector": "QA-B-041",
+  "era_id": "tng_ds9_voyager",
+  "date": "2383-01-01",
+  "canonical_reserved": false,
+  "locations": [
+    {
+      "location_id": "qa:station:a",
+      "position_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:station:b",
+      "position_m": [
+        10000000,
+        4000000,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:patrol:a",
+      "position_m": [
+        -20000000,
+        10000000,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:patrol:b",
+      "position_m": [
+        20000000,
+        -10000000,
+        0
+      ]
+    }
+  ],
+  "stock": [
+    {
+      "location_id": "qa:station:a",
+      "commodity": "qa_mineral_ore",
+      "mass_kg": 50000
+    },
+    {
+      "location_id": "qa:station:a",
+      "commodity": "qa_repair_parts",
+      "mass_kg": 10000
+    }
+  ],
+  "needs": [
+    {
+      "need_id": "qa:need:convoy:1",
+      "cause_ref": "qa:contract:ore-delivery",
+      "purpose": "Deliver ore requested by station B",
+      "mode": "civilian",
+      "operator": "independent_civilian",
+      "role": "cargo_freighter",
+      "origin": "qa:station:a",
+      "destination": "qa:station:b",
+      "departure_tick": 10,
+      "arrival_tick": 250,
+      "species_weights": {
+        "human": 3,
+        "vulcan": 1
+      },
+      "cargo_orders": [
+        {
+          "order_id": "qa:order:1",
+          "commodity": "qa_mineral_ore",
+          "mass_kg": 10000
+        }
+      ]
+    },
+    {
+      "need_id": "qa:need:convoy:2",
+      "cause_ref": "qa:contract:repair-parts",
+      "purpose": "Deliver requested replacement parts",
+      "mode": "civilian",
+      "operator": "independent_civilian",
+      "role": "cargo_freighter",
+      "origin": "qa:station:a",
+      "destination": "qa:station:b",
+      "departure_tick": 80,
+      "arrival_tick": 480,
+      "species_weights": {
+        "human": 2,
+        "vulcan": 1
+      },
+      "cargo_orders": [
+        {
+          "order_id": "qa:order:2",
+          "commodity": "qa_repair_parts",
+          "mass_kg": 5000
+        }
+      ]
+    },
+    {
+      "need_id": "qa:need:patrol:1",
+      "cause_ref": "qa:order:boundary-patrol",
+      "purpose": "Authorized boundary patrol",
+      "mode": "military",
+      "operator": "romulan",
+      "role": "warbird",
+      "origin": "qa:patrol:a",
+      "destination": "qa:patrol:b",
+      "departure_tick": 0,
+      "arrival_tick": 600,
+      "species_weights": {
+        "romulan": 1
+      },
+      "cargo_orders": []
+    }
+  ]
+}
