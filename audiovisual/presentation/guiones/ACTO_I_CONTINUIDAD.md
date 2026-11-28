@@ -60,7 +60,7 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 | 2:25–2:54 | 3:21–3:50 | V7.3, regreso a Picard |
 | 2:54–5:26 | 3:50–6:22 | V8–V16 |
 | 5:26–7:07 | 6:22–8:03 | V17–V20. Crescendo de Myers a 6:38 |
-| 7:07–7:29 | 8:03–8:25 | V21. Preparación a 7:08 y voto visible a 7:28 (8:24 global) |
+| 7:07–7:29 | 8:03–8:25 | V21. Preparación a 7:08, entrada del texto del voto a 7:25,850 (8:21,850 global) y marcador a 7:28 (8:24 global) |
 | 7:29–8:03 | 8:25–8:59 | V22. Resolución, acta, reflexión, clímax a 7:53 (8:49 global) y cierre |
 | 8:03–8:08 | 8:59–9:04 | Fundido de imagen y audio hacia negro |
 | 8:08 | 9:04 | Negro sostenido y evento `OnActOneFinished` |
@@ -71,13 +71,15 @@ V1 presenta sus cuatro bloques a 0:14,35, 0:16,15, 0:21,30 y 0:29,35. El último
 
 ## Encuadre de retratos verticales
 
-Los 21 planos verticales ocupan un marco 3:4 de 1104 × 1472 px lógicos, con radio de 24 px y márgenes verticales de 64 px. El marco izquierdo está en (103, 64) y el derecho en (1353, 64). El recorte usa una sola escala para los dos ejes y aplica el marco con el escalado existente del lienzo. V2, V4, V7.2, V22 y las dos maestras conservan su ajuste previo.
+Los 23 retratos, incluidas las excepciones V2 y V4, ocupan un marco 3:4 de 1104 × 1472 px lógicos, con radio de 24 px y márgenes verticales de 64 px. El marco izquierdo está en (103, 64) y el derecho en (1353, 64). El recorte usa una sola escala para los dos ejes y aplica el marco con el escalado existente del lienzo. V7.2, V22 y las dos maestras conservan su ajuste previo.
 
 La alineación se aplica al excedente de cada eje. 0 % toma el borde inicial, 50 % centra el recorte y 100 % toma el borde final. Cuando un eje encaja exactamente, su alineación carece de efecto.
 
 | Plano | Alineación horizontal | Alineación vertical | Criterio |
 | --- | ---: | ---: | --- |
+| V2 | 70 % | 50 % | Conserva el rostro y la mano levantada |
 | V3 | 15 % | 50 % | Prioriza la mano extendida a la izquierda. La mano apoyada queda parcialmente fuera del marco. |
+| V4 | 75 % | 50 % | Prioriza la cabeza, los galones y la mano extendida |
 | V5 | 66 % | 50 % | Deja margen al gesto del lado derecho |
 | V7.1 | 50 % | 15 % | Conserva la cabeza y los implantes de Locutus |
 | V10 | 62 % | 50 % | Conserva la mano levantada |

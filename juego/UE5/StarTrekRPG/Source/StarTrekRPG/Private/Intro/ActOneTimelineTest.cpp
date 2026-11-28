@@ -62,7 +62,14 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
     }
     TestFalse(TEXT("Act I ships with voices disabled"), Timeline->bEnableVoices);
     TestEqual(TEXT("V7 stays one intervention through all shots"), Intervention(144), FString(TEXT("V7")));
-    TestEqual(TEXT("Vote at 7:28"), Intervention(448), FString(TEXT("V21")));
+    TestEqual(TEXT("Vote marker remains at 7:28"), Intervention(448), FString(TEXT("V21")));
+    const FActOneIntervention& Picard = Timeline->Interventions[20];
+    const FActOneCue& Vote = Picard.Cues.Last();
+    TestEqual(TEXT("Picard's vote text"), Vote.Text, FString(TEXT("Mi voto es favorable.")));
+    TestEqual(TEXT("Picard's vote starts at 8:21.850 overall"), IntroTimeline::End + Vote.Start, 501.85);
+    TestEqual(TEXT("Picard's vote ends at 8:25 overall"), IntroTimeline::End + Vote.End, 505.0);
+    TestFalse(TEXT("Picard's vote is hidden just before its new entry"), Vote.Contains(445.849));
+    TestTrue(TEXT("Picard's vote is active at its new entry"), Vote.Contains(445.85));
     TestEqual(TEXT("Climax at 7:53"), Intervention(473), FString(TEXT("V22")));
     TestTrue(TEXT("No caption is selected during the final fade"), Intervention(T::FinalFadeStart).IsEmpty());
     TestEqual(TEXT("Final black exactly at 8:08"), T::EndOpacity(488), 0.0f);

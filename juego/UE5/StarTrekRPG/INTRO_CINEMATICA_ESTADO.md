@@ -27,7 +27,7 @@ Reproducir las diez escenas en el nivel propio de la introducción y conservar l
 | Enterprise NCC-1701-D | 37.000 | 39.000 | 42.000 | 43.000 |
 | Picard | 43.000 | 45.000 | 53.000 | 56.000 |
 
-Los tiempos están en segundos desde el inicio de la introducción. Cada imagen y sus propios datos usan la misma opacidad durante todo el plano. Las salidas de un segundo terminan justo al inicio del plano siguiente, cuando ambos están a cero. Picard y el homenaje conservan el fundido final de 53 a 56 s. El homenaje aparece entre 47 y 48 s. El Acto I empieza en 0:56.
+Los tiempos están en segundos desde el inicio de la introducción. Cada imagen y sus propios datos usan la misma opacidad durante todo el plano. Las salidas de un segundo terminan justo al inicio del plano siguiente, cuando ambos están a cero. Picard y el homenaje conservan el fundido final de 53 a 56 s. El homenaje aparece entre 47 y 48 s. El texto principal toma el color del rango de Picard en reproducción. La fecha conserva su blanco. El Acto I empieza en 0:56.
 
 ## Cierre musical
 

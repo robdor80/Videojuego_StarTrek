@@ -17,7 +17,9 @@ namespace
     const FVector2D PortraitSize(1104, 1472);
     constexpr float PortraitCornerRadius = 24.0f;
     const TMap<FString, FVector2D> PortraitAlignment = {
+        {TEXT("V2"), {0.70, 0.50}},
         {TEXT("V3"), {0.15, 0.50}},
+        {TEXT("V4"), {0.75, 0.50}},
         {TEXT("V5"), {0.66, 0.50}},
         {TEXT("V7.1"), {0.50, 0.15}},
         {TEXT("V10"), {0.62, 0.50}},
@@ -147,7 +149,7 @@ void FActOnePresentation::AddImage(SConstraintCanvas& Canvas, const FActOneShot&
     FVector2D Origin = Position + (Size - Fit) * 0.5;
     Image.Brush.SetResourceObject(&Texture);
     Image.Brush.DrawAs = ESlateBrushDrawType::Image;
-    if (bPortraitSlot && Native.Y > Native.X)
+    if (bPortraitSlot && (Native.Y > Native.X || Shot.Id == TEXT("V2") || Shot.Id == TEXT("V4")))
     {
         Fit = PortraitSize;
         Origin = FVector2D(Position.X < Design.X / 2 ? 103 : 1353, 64);

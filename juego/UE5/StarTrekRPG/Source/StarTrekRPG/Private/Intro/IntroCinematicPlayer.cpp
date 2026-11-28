@@ -4,6 +4,7 @@
 
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
+#include "Components/TextBlock.h"
 #include "Components/Widget.h"
 #include "Engine/GameViewportClient.h"
 #include "HAL/PlatformTime.h"
@@ -155,13 +156,16 @@ bool AIntroCinematicPlayer::PreparePresentation()
     }
 
     UUserWidget* Last = Compositions.Last();
-    Tribute[0] = Last->GetWidgetFromName(TEXT("TXT_HomenajePatrickStewart"));
+    UTextBlock* TributeTitle = Cast<UTextBlock>(Last->GetWidgetFromName(TEXT("TXT_HomenajePatrickStewart")));
+    const UTextBlock* PicardRank = Cast<UTextBlock>(Scenes[IntroTimeline::SceneCount - 1].Data[0]);
+    Tribute[0] = TributeTitle;
     Tribute[1] = Last->GetWidgetFromName(TEXT("TXT_FechasPatrickStewart"));
-    if (!Tribute[0] || !Tribute[1])
+    if (!TributeTitle || !Tribute[1] || !PicardRank)
     {
-        UE_LOG(LogIntroCinematic, Error, TEXT("Missing a named tribute text in %s"), *Last->GetName());
+        UE_LOG(LogIntroCinematic, Error, TEXT("Missing the tribute text or Picard rank in %s"), *Last->GetName());
         return false;
     }
+    TributeTitle->SetColorAndOpacity(PicardRank->GetColorAndOpacity());
 
     PrepareActOne(*Overlay);
     Presentation = Overlay;
