@@ -1,0 +1,121 @@
+name: F06 native sensor watch (CoreRPG campaign)
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f06/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/ship_class_registry.json'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/equipment_catalog_qa_v1.json'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/ships_visual_catalog.json'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/sensor_capability_profiles_f06.json'
+      - '.github/workflows/f06-sensors-native.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    env:
+      F04_TEST_TEMP_ROOT: ${{ github.workspace }}/laboratorios/f06/ci/history-reference-temp
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read exact compatible CoreRPG revision
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid Core SHA'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: laboratorios/f06/ci/CoreRPG
+      - name: Verify and generate ship model catalogue from metadata
+        shell: bash
+        run: |
+          mkdir -p laboratorios/f06/ci
+          python3 desarrollo/integration/f06/build_ship_visual_catalog.py --output laboratorios/f06/ci/f06_ship_catalog.json
+          python3 desarrollo/integration/f06/build_ship_visual_catalog.py --check sistemas/gameplay/ship_operations/consoles/sensors/ships_visual_catalog.json
+          python3 -c "import json,sys; c=json.load(open(sys.argv[1],encoding='utf-8')); assert c['models_count']>=20; assert all(not x['ready_for_sensor_viewer'] for x in c['assets']); print('metadata candidates:',c['models_count'])" laboratorios/f06/ci/f06_ship_catalog.json
+      - name: Build F06 on the same F04/F05 Core library
+        shell: bash
+        run: |
+          cmake -S desarrollo/integration/f06 -B laboratorios/f06/ci/build -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/laboratorios/f06/ci/CoreRPG"
+          cmake --build laboratorios/f06/ci/build --config Release --parallel 3
+      - name: Regression suite of the exact Core pin
+        shell: bash
+        run: |
+          cmake -S laboratorios/f06/ci/CoreRPG -B laboratorios/f06/ci/core-tests -DCMAKE_BUILD_TYPE=Release
+          cmake --build laboratorios/f06/ci/core-tests --config Release --parallel 3
+          ctest --test-dir laboratorios/f06/ci/core-tests -C Release --no-tests=error --output-on-failure --output-junit core.xml
+      - name: Native F06 behavior and selected F05 regressions
+        shell: bash
+        run: |
+          ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f06\.' --no-tests=error --output-on-failure --output-junit f06.xml
+          ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f0[45]\.' -E '^f04\.history_campaign_' --no-tests=error --output-on-failure --output-junit f05-regression.xml
+      - name: Verify playable Tk console under virtual display (Linux)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          command -v xvfb-run || (sudo apt-get update -qq && sudo apt-get install -y xvfb)
+          xvfb-run -a python desarrollo/integration/f06/qa/test_aster_gui_layout.py \
+            --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner"
+          xvfb-run -a python desarrollo/integration/f06/qa/test_aster_x1_gui.py \
+            --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner" \
+            --output-dir "laboratorios/f06/ci/build/gui-x1"
+          xvfb-run -a python desarrollo/integration/f06/qa/test_aster_x1_gui.py \
+            --runner "laboratorios/f06/ci/build/f05/f04/f06_aster_runner" \
+            --output-dir "laboratorios/f06/ci/build/gui-realtime" --realtime
+      - name: Validate QA Python and Windows launch scripts
+        shell: pwsh
+        run: |
+          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/test_aster_runner.py desarrollo/integration/f06/qa/test_aster_gui_layout.py
+          foreach($script in @('run_f06_msi.ps1','INICIAR_PRUEBA_ASTER.ps1')){
+            $tokens=$null;$errors=$null
+            $path=Join-Path $PWD "desarrollo/integration/f06/$script"
+            [System.Management.Automation.Language.Parser]::ParseFile($path,[ref]$tokens,[ref]$errors) | Out-Null
+            if($errors){$errors | Format-List;throw "Invalid PowerShell $script"}
+          }
+      - name: Record exact revisions and timings
+        if: always()
+        shell: python
+        run: |
+          import hashlib, json, os, platform, subprocess
+          from pathlib import Path
+          root = Path("laboratorios/f06/ci/build")
+          root.mkdir(parents=True, exist_ok=True)
+          provenance = {
+              "tested_checkout": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+              "core_pin": Path("desarrollo/integration/f05/core-revision.txt").read_text().strip(),
+              "platform": platform.platform(),
+              "historical_fixture_sha256": hashlib.sha256(Path("desarrollo/integration/f06/fixtures/aster_f06_qa.json").read_bytes()).hexdigest(),
+              "catalog_sha256": hashlib.sha256(Path("sistemas/gameplay/ship_operations/consoles/sensors/equipment_catalog_qa_v1.json").read_bytes()).hexdigest(),
+              "MSI_acceptance": "PENDING_OWNER",
+          }
+          (root / "provenance.json").write_text(json.dumps(provenance, indent=2))
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("F06 ASTER_X1; MSI acceptance remains pending.\n\n```json\n" + json.dumps(provenance, indent=2) + "\n```\n")
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f06-core-native-${{ matrix.os }}
+          path: |
+            laboratorios/f06/ci/core-tests/core.xml
+            laboratorios/f06/ci/build/provenance.json
+            laboratorios/f06/ci/build/f06.xml
+            laboratorios/f06/ci/build/f05-regression.xml
+            laboratorios/f06/ci/build/Testing/Temporary/LastTest.log
+            laboratorios/f06/ci/build/x1/acceptance.json
+            laboratorios/f06/ci/build/eight-hours/eight-hours.json
+            laboratorios/f06/ci/build/gui-realtime/*.json*
+            laboratorios/f06/ci/build/gui-x1/*.json*
