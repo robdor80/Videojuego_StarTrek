@@ -1,7 +1,10 @@
 #include "IntroCinematicPlayer.h"
+#include "ActOnePresentation.h"
+#include "ActOneTimeline.h"
 
 #include "Blueprint/UserWidget.h"
 #include "Components/AudioComponent.h"
+#include "Components/TextBlock.h"
 #include "Components/Widget.h"
 #include "Engine/GameViewportClient.h"
 #include "HAL/PlatformTime.h"
@@ -26,6 +29,20 @@ AIntroCinematicPlayer::AIntroCinematicPlayer()
     MusicPlayer->bAutoActivate = false;
     MusicPlayer->bAllowSpatialization = false;
     MusicPlayer->bIsUISound = true;
+
+    const auto CreateActOnePlayer = [this](const TCHAR* Name)
+    {
+        UAudioComponent* Player = CreateDefaultSubobject<UAudioComponent>(Name);
+        Player->SetupAttachment(RootComponent);
+        Player->bAutoActivate = false;
+        Player->bAllowSpatialization = false;
+        Player->bIsUISound = true;
+        return Player;
+    };
+    ActOneMusic = CreateActOnePlayer(TEXT("ActOneMusic"));
+    ActOneLondon = CreateActOnePlayer(TEXT("ActOneLondon"));
+    ActOneAmbience = CreateActOnePlayer(TEXT("ActOneAmbience"));
+    ActOneVoice = CreateActOnePlayer(TEXT("ActOneVoice"));
 }
 
 void AIntroCinematicPlayer::BeginPlay()
@@ -50,13 +67,15 @@ void AIntroCinematicPlayer::BeginPlay()
                         FPlatformTime::Seconds() - StartTime, Percent);
                 }
             });
-        for (const double Start : IntroTimeline::ImageStart)
+        using namespace IntroTimeline;
+        for (int32 Scene = 0; Scene < SceneCount; ++Scene)
         {
-            TraceTimes.Append({Start, Start + IntroTimeline::DataDelay, Start + IntroTimeline::SceneFade});
+            const double Start = ImageStart[Scene];
+            const double Exit = SceneExitStart(Scene);
+            TraceTimes.Append({Start, Start + EntranceFade, Exit, (Exit + SceneEnd(Scene)) / 2.0});
         }
-        TraceTimes.Append({IntroTimeline::TributeStart,
-            IntroTimeline::TributeStart + IntroTimeline::TributeFade,
-            IntroTimeline::FinalFadeStart, IntroTimeline::End});
+        TraceTimes.Append({TributeStart, TributeStart + TributeFade, End});
+        TraceTimes.Sort();
     }
 
     RenderAt(0.0);
@@ -137,14 +156,18 @@ bool AIntroCinematicPlayer::PreparePresentation()
     }
 
     UUserWidget* Last = Compositions.Last();
-    Tribute[0] = Last->GetWidgetFromName(TEXT("TXT_HomenajePatrickStewart"));
+    UTextBlock* TributeTitle = Cast<UTextBlock>(Last->GetWidgetFromName(TEXT("TXT_HomenajePatrickStewart")));
+    const UTextBlock* PicardRank = Cast<UTextBlock>(Scenes[IntroTimeline::SceneCount - 1].Data[0]);
+    Tribute[0] = TributeTitle;
     Tribute[1] = Last->GetWidgetFromName(TEXT("TXT_FechasPatrickStewart"));
-    if (!Tribute[0] || !Tribute[1])
+    if (!TributeTitle || !Tribute[1] || !PicardRank)
     {
-        UE_LOG(LogIntroCinematic, Error, TEXT("Missing a named tribute text in %s"), *Last->GetName());
+        UE_LOG(LogIntroCinematic, Error, TEXT("Missing the tribute text or Picard rank in %s"), *Last->GetName());
         return false;
     }
+    TributeTitle->SetColorAndOpacity(PicardRank->GetColorAndOpacity());
 
+    PrepareActOne(*Overlay);
     Presentation = Overlay;
     GetWorld()->GetGameViewport()->AddViewportWidgetContent(Overlay, 100);
     return true;
@@ -154,12 +177,12 @@ void AIntroCinematicPlayer::RenderAt(double Time)
 {
     for (int32 SceneIndex = 0; SceneIndex < IntroTimeline::SceneCount; ++SceneIndex)
     {
-        const IntroTimeline::FSceneOpacity Opacity = IntroTimeline::SceneOpacity(SceneIndex, Time);
+        const float Opacity = IntroTimeline::SceneOpacity(SceneIndex, Time);
         const FSceneWidgets& Scene = Scenes[SceneIndex];
-        Scene.Image->SetRenderOpacity(Opacity.Image);
+        Scene.Image->SetRenderOpacity(Opacity);
         for (UWidget* Data : Scene.Data)
         {
-            Data->SetRenderOpacity(Opacity.Data);
+            Data->SetRenderOpacity(Opacity);
         }
     }
     for (UWidget* Text : Tribute)
@@ -182,12 +205,18 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
     }
 
     const double Elapsed = FPlatformTime::Seconds() - StartTime;
+    if (bActOneRunning)
+    {
+        TickActOne(Elapsed - IntroTimeline::End);
+        return;
+    }
     RenderAt(FMath::Min(Elapsed, IntroTimeline::End));
     TraceTimeline(Elapsed);
     if (!CaptureDirectory.IsEmpty())
     {
         static constexpr double CaptureTimes[] = {
-            0.2, 3.3, 5.95, 7.8, 12.3, 16.8, 21.3, 25.8, 30.3, 34.8, 39.3, 45.3, 48.3, 53.5, 54.0
+            0.2, 3.3, 5.0, 5.5, 5.95, 7.8, 9.5, 10.0, 10.45, 12.3, 16.8, 21.3, 25.8, 30.3, 34.8, 39.3, 45.3,
+            48.3, 53.5, 55.0, IntroTimeline::End
         };
         if (NextCapture < UE_ARRAY_COUNT(CaptureTimes) && Elapsed >= CaptureTimes[NextCapture])
         {
@@ -198,7 +227,16 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
     if (Elapsed >= IntroTimeline::End)
     {
         MusicPlayer->Stop();
-        SetActorTickEnabled(false);
+        if (ActOne)
+        {
+            bActOneRunning = true;
+            UE_LOG(LogIntroCinematic, Display, TEXT("Act I started at intro time %.6f s"), Elapsed);
+            TickActOne(Elapsed - IntroTimeline::End);
+        }
+        else
+        {
+            SetActorTickEnabled(false);
+        }
         UE_LOG(LogIntroCinematic, Display, TEXT("Finished at %.6f s. Music playing: %d"),
             Elapsed, MusicPlayer->IsPlaying());
         OnIntroFinished.Broadcast();
@@ -212,11 +250,11 @@ void AIntroCinematicPlayer::TraceTimeline(double Time)
         FString Opacities;
         for (const FSceneWidgets& Scene : Scenes)
         {
-            Opacities += FString::Printf(TEXT(" %.3f/%.3f"),
-                Scene.Image->GetRenderOpacity(), Scene.Data[0]->GetRenderOpacity());
+            Opacities += FString::Printf(TEXT(" %.4f/%.4f/%.4f/%.4f"), Scene.Image->GetRenderOpacity(),
+                Scene.Data[0]->GetRenderOpacity(), Scene.Data[1]->GetRenderOpacity(), Scene.Data[2]->GetRenderOpacity());
         }
         UE_LOG(LogIntroCinematic, Display,
-            TEXT("Target %.3f s, frame %.6f s, image/data:%s, tribute %.3f, music playing %d"),
+            TEXT("Target %.3f s, frame %.6f s, image/data[3]:%s, tribute %.3f, music playing %d"),
             TraceTimes[NextTrace++], Time, *Opacities, Tribute[0]->GetRenderOpacity(),
             MusicPlayer->IsPlaying());
     }
@@ -225,6 +263,10 @@ void AIntroCinematicPlayer::TraceTimeline(double Time)
 void AIntroCinematicPlayer::EndPlay(const EEndPlayReason::Type Reason)
 {
     MusicPlayer->Stop();
+    ActOneMusic->Stop();
+    ActOneLondon->Stop();
+    ActOneAmbience->Stop();
+    ActOneVoice->Stop();
     if (Presentation.IsValid())
     {
         if (UGameViewportClient* Viewport = GetWorld()->GetGameViewport())
@@ -233,5 +275,6 @@ void AIntroCinematicPlayer::EndPlay(const EEndPlayReason::Type Reason)
         }
         Presentation.Reset();
     }
+    ActOneView.Reset();
     Super::EndPlay(Reason);
 }

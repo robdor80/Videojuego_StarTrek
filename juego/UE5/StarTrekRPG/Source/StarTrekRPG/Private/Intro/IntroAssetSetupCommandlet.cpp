@@ -234,10 +234,9 @@ namespace
         USoundWave* Music = Cast<USoundWave>(
             Factory->ImportObject(USoundWave::StaticClass(), Package, Name,
                 RF_Public | RF_Standalone, File, nullptr, bCanceled));
-        if (!Music || Music->GetDuration() <= IntroTimeline::FinalFadeStart ||
-            Music->GetDuration() > IntroTimeline::End + 0.001)
+        if (!Music || !FMath::IsNearlyEqual(static_cast<double>(Music->GetDuration()), IntroTimeline::End, 0.001))
         {
-            UE_LOG(LogIntroSetup, Error, TEXT("Music import failed or WAV must cover the fade and end by 54 s"));
+            UE_LOG(LogIntroSetup, Error, TEXT("Music import failed or WAV duration does not match the intro timeline"));
             return nullptr;
         }
 
@@ -402,13 +401,15 @@ int32 UIntroAssetSetupCommandlet::Main(const FString& Params)
     }
 
     USoundWave* Music = LoadAsset<USoundWave>(MusicPath);
-    if (bApply && !Music && !FPackageName::DoesPackageExist(MusicPath))
+    const bool bRefreshMusic = FParse::Param(*Params, TEXT("RefreshMusic"));
+    if (bRefreshMusic || (bApply && !Music && !FPackageName::DoesPackageExist(MusicPath)))
     {
         Music = ImportMusic(AudioFile);
     }
-    if (!Music || Music->bLooping || Music->GetDuration() > IntroTimeline::End + 0.001)
+    if (!Music || Music->bLooping ||
+        !FMath::IsNearlyEqual(static_cast<double>(Music->GetDuration()), IntroTimeline::End, 0.001))
     {
-        return Fail(TEXT("Intro music is missing, looping, or longer than 54 seconds"));
+        return Fail(TEXT("Intro music must be non-looping and match the timeline. Use -RefreshMusic -MusicWav=<WAV>."));
     }
     UE_LOG(LogIntroSetup, Display, TEXT("Music duration %.6f s, looping %d, external source entries %d"),
         Music->GetDuration(), Music->bLooping,

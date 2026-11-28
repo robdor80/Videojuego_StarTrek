@@ -12,7 +12,7 @@ public class StarTrekRPG : ModuleRules
         PrivateDependencyModuleNames.AddRange(new[] { "Core", "CoreUObject", "Engine", "InputCore", "Slate", "SlateCore", "RHI", "UMG" });
 
         if (Target.bBuildEditor)
-            PrivateDependencyModuleNames.AddRange(new[] { "UnrealEd", "UMGEditor", "AssetTools", "AssetRegistry", "AudioEditor", "LevelSequence", "MovieScene" });
+            PrivateDependencyModuleNames.AddRange(new[] { "UnrealEd", "UMGEditor", "AssetTools", "AssetRegistry", "AudioEditor", "Json", "JsonUtilities", "LevelSequence", "MovieScene" });
 
         string ThirdParty = Path.Combine(ProjectDirectory(), "Binaries", "Host");
         string Include = Path.Combine(ThirdParty, "include");
