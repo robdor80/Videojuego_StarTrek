@@ -218,6 +218,18 @@
         5
       ],
       "confidence": "screen_supported"
+    },
+    "sovereign/post_nemesis_reference": {
+      "target_duty_crew": [
+        700,
+        700
+      ],
+      "confidence": "game_addition_estimate",
+      "source_note": "Approved F04-SOVEREIGN-01 reference configuration sovereign_multimission_post_nemesis, 700 identified posts. Not a class-wide canon complement or pre-2383 template.",
+      "source_refs": [
+        "desarrollo/integration/f04/src/f04_sovereign.h",
+        "proyecto/docs/roadmap/master/fases/F04/F04-SOVEREIGN-01_PLANTILLA_700.md"
+      ]
     }
   },
   "procedural_design_size_bands": {

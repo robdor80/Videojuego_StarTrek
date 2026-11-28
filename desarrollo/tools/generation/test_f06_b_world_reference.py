@@ -186,6 +186,8 @@ class WorldReferenceTests(unittest.TestCase):
         w=b.generate(r)
         s=next(s for s in w["ships"] if s["operator"]=="starfleet")
         self.assertEqual(s["design_key"],"sovereign")
+        self.assertEqual(s["reference_baseline"]["ship"]["configuration_id"],"sovereign_multimission_post_nemesis")
+        self.assertEqual(len(s["people"]),700)
         self.assertTrue(any(m["ammo"] and m["ammo"]["type"]=="quantum_torpedo" for m in s["modules"]))
 
     def test_mismatched_refit_authority_rejected(self):
@@ -210,9 +212,36 @@ class WorldReferenceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             b.generate(self.modified(lambda x:x["needs"][0].update(observer_scan=True)))
 
+    def test_physical_generator_seed_matrix(self):
+        for i in range(32):
+            r=copy.deepcopy(self.request);r["seed"]="b-physical-matrix-"+str(i)
+            w=b.physical_system(r)
+            self.assertEqual(astro.validate_system(w),[])
+            for e in w["entities"]:
+                if e["entity_type"]=="planet":
+                    p=e["ground_truth"]["properties"]
+                    self.assertEqual(p["human_atmosphere_screen"],b.human_atmosphere(p))
+
+    def test_catalog_geometry_and_power_for_all_declared_profiles(self):
+        for k,design in self.catalog["designs"].items():
+            geometry=b.geometry(k,design)
+            self.assertTrue(geometry["parts"])
+            rooms=b.make_compartments("qa:"+k,design,100)
+            modules=b.make_modules("qa:"+k,design,self.catalog,rooms,[])
+            self.assertGreaterEqual(b.energy(modules,self.catalog)["reserve_qa_units"],0)
+
     def test_backwards_time_rejected(self):
         with self.assertRaises(ValueError): b.evolve(b.evolve(self.world,100),99)
 
 
 if __name__=="__main__":
+    q=b.load(FIXTURE)
+    w=b.evolve(b.generate(q),540)
+    print("F06-B EVIDENCE", {"stars":w["system"]["summary"]["stars"],
+        "planets":w["system"]["summary"]["planets"],"moons":w["system"]["summary"]["moons"],
+        "ships":len(w["ships"]),"people":sum(len(s["people"]) for s in w["ships"]),
+        "modules":sum(len(s["modules"]) for s in w["ships"]),
+        "compartments":sum(len(s["compartments"]) for s in w["ships"]),
+        "cargo_kg":sum(x["mass_kg"] for s in w["ships"] for x in s["cargo"]),
+        "events":len(w["events"]),"digest":b.digest(w)},flush=True)
     unittest.main(verbosity=2)
