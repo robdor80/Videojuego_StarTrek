@@ -14,19 +14,30 @@
 namespace
 {
     const FVector2D Design(2560, 1600);
+    const FVector2D PortraitSize(1104, 1472);
     constexpr float PortraitCornerRadius = 24.0f;
+    const TMap<FString, FVector2D> PortraitAlignment = {
+        {TEXT("V3"), {0.15, 0.50}},
+        {TEXT("V5"), {0.66, 0.50}},
+        {TEXT("V7.1"), {0.50, 0.15}},
+        {TEXT("V10"), {0.62, 0.50}},
+        {TEXT("V11"), {0.50, 0.38}},
+        {TEXT("V13"), {0.43, 0.50}},
+        {TEXT("V14"), {0.66, 0.50}},
+        {TEXT("V19"), {0.50, 0.36}},
+        {TEXT("V20"), {0.50, 0.26}},
+    };
     const FLinearColor Pearl(FColor(242, 245, 250));
     const FLinearColor Blue(FColor(158, 200, 245));
 
-    // Fade toward the image at both edges of the upper-left caption area.
+    // Protect the dialogue over the final panorama.
     class SCaptionShade : public SLeafWidget
     {
     public:
-        SLATE_BEGIN_ARGS(SCaptionShade) : _Lower(false) {}
-            SLATE_ARGUMENT(bool, Lower)
+        SLATE_BEGIN_ARGS(SCaptionShade) {}
         SLATE_END_ARGS()
 
-        void Construct(const FArguments& Args) { bLower = Args._Lower; }
+        void Construct(const FArguments&) {}
         virtual FVector2D ComputeDesiredSize(float) const override { return FVector2D::ZeroVector; }
 
         virtual int32 OnPaint(const FPaintArgs&, const FGeometry& Geometry, const FSlateRect&,
@@ -34,33 +45,13 @@ namespace
         {
             const FVector2f Size(Geometry.GetLocalSize());
             const float Alpha = Style.GetColorAndOpacityTint().A;
-            if (bLower)
-            {
-                const TArray<FSlateGradientStop> Stops = {
-                    {FVector2f(0, 0), FLinearColor(0, 0, 0, 0)},
-                    {FVector2f(0, Size.Y * 0.55f), FLinearColor(0, 0, 0, Alpha * 0.72f)},
-                    {FVector2f(0, Size.Y), FLinearColor(0, 0, 0, Alpha)}};
-                FSlateDrawElement::MakeGradient(Elements, Layer, Geometry.ToPaintGeometry(), Stops, Orient_Horizontal);
-                return Layer;
-            }
-            constexpr int32 Bands = 28;
-            const float BandHeight = Size.Y / Bands;
-            for (int32 Band = 0; Band < Bands; ++Band)
-            {
-                const float Strength = Alpha * 0.86f * (1.0f - UActOneTimeline::Ramp(Band, 11, 17));
-                const TArray<FSlateGradientStop> Stops = {
-                    {FVector2f(0, 0), FLinearColor(0, 0, 0, Strength)},
-                    {FVector2f(Size.X * 0.65f, 0), FLinearColor(0, 0, 0, Strength)},
-                    {FVector2f(Size.X, 0), FLinearColor(0, 0, 0, 0)}};
-                FSlateDrawElement::MakeGradient(Elements, Layer,
-                    Geometry.ToPaintGeometry(FVector2f(Size.X, BandHeight + 0.5f),
-                        FSlateLayoutTransform(FVector2f(0, Band * BandHeight))), Stops, Orient_Vertical);
-            }
+            const TArray<FSlateGradientStop> Stops = {
+                {FVector2f(0, 0), FLinearColor(0, 0, 0, 0)},
+                {FVector2f(0, Size.Y * 0.55f), FLinearColor(0, 0, 0, Alpha * 0.72f)},
+                {FVector2f(0, Size.Y), FLinearColor(0, 0, 0, Alpha)}};
+            FSlateDrawElement::MakeGradient(Elements, Layer, Geometry.ToPaintGeometry(), Stops, Orient_Horizontal);
             return Layer;
         }
-
-    private:
-        bool bLower = false;
     };
 
     void Put(SConstraintCanvas& Canvas, const FVector2D& Position, const FVector2D& Size,
@@ -101,7 +92,7 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
         ];
     for (const FActOneShot& Shot : Timeline.Opening)
     {
-        AddImage(*Canvas, *Shot.Image, FVector2D::ZeroVector, Design, Shot.Start, Shot.End, false);
+        AddImage(*Canvas, Shot, FVector2D::ZeroVector, Design, Shot.End, false);
     }
     for (const FActOneIntervention& Line : Timeline.Interventions)
     {
@@ -111,16 +102,13 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
         const FVector2D Origin = bPanorama ? FVector2D::ZeroVector : FVector2D(bRight ? 1290 : 40, 65);
         for (const FActOneShot& Shot : Line.Shots)
         {
-            AddImage(*Canvas, *Shot.Image, Origin, Area, Shot.Start, bPanorama ? Timeline.End : Shot.End,
-                !bPanorama);
+            AddImage(*Canvas, Shot, Origin, Area, bPanorama ? Timeline.End : Shot.End, !bPanorama);
         }
     }
 
     const TSharedRef<SConstraintCanvas> Locations = SNew(SConstraintCanvas);
     UFont& TitleFont = *Timeline.TitleFont;
     UFont& DialogueFont = *Timeline.DialogueFont;
-    OpeningShade = SNew(SCaptionShade);
-    Put(*Canvas, FVector2D::ZeroVector, FVector2D(1820, 400), OpeningShade.ToSharedRef());
     Put(*Locations, FVector2D(100, 85), FVector2D(1450, 65),
         MakeText(TitleFont, 48, Pearl, TEXT("San Francisco, 2383")));
     Put(*Locations, FVector2D(100, 153), FVector2D(1820, 54),
@@ -139,7 +127,7 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
         Put(*Canvas, FVector2D(X, 650), FVector2D(1050, 390), Dialogue[Side].ToSharedRef());
     }
 
-    FinalShade = SNew(SCaptionShade).Lower(true);
+    FinalShade = SNew(SCaptionShade);
     Put(*Canvas, FVector2D(0, 1230), FVector2D(2560, 370), FinalShade.ToSharedRef());
     Dialogue[2] = MakeText(DialogueFont, 42, Pearl, FString(), 1660, ETextJustify::Center);
     Put(*Canvas, FVector2D(450, 1310), FVector2D(1660, 230),
@@ -147,24 +135,35 @@ FActOnePresentation::FActOnePresentation(const UActOneTimeline& InTimeline) : Ti
     Render(0.0);
 }
 
-void FActOnePresentation::AddImage(SConstraintCanvas& Canvas, UTexture2D& Texture,
-    const FVector2D& Position, const FVector2D& Size, double Start, double End, bool bPortraitSlot)
+void FActOnePresentation::AddImage(SConstraintCanvas& Canvas, const FActOneShot& Shot,
+    const FVector2D& Position, const FVector2D& Size, double End, bool bPortraitSlot)
 {
     FImage& Image = *Images.Add_GetRef(MakeUnique<FImage>());
-    Image.Start = Start;
+    Image.Start = Shot.Start;
     Image.End = End;
+    UTexture2D& Texture = *Shot.Image;
     const FVector2D Native(Texture.GetImportedSize());
-    const FVector2D Fit = Native * FMath::Min(Size.X / Native.X, Size.Y / Native.Y);
+    FVector2D Fit = Native * FMath::Min(Size.X / Native.X, Size.Y / Native.Y);
+    FVector2D Origin = Position + (Size - Fit) * 0.5;
     Image.Brush.SetResourceObject(&Texture);
-    Image.Brush.SetImageSize(Fit);
     Image.Brush.DrawAs = ESlateBrushDrawType::Image;
     if (bPortraitSlot && Native.Y > Native.X)
     {
+        Fit = PortraitSize;
+        Origin = FVector2D(Position.X < Design.X / 2 ? 103 : 1353, 64);
+        const double Scale = FMath::Max(Fit.X / Native.X, Fit.Y / Native.Y);
+        const FVector2D UVSize = (Fit / Scale / Native).ComponentMin(FVector2D::UnitVector);
+        const FVector2D* Alignment = PortraitAlignment.Find(Shot.Id);
+        // 0 and 1 align to the first and last edge of the available crop, respectively.
+        const FVector2D UVStart = (FVector2D::UnitVector - UVSize) *
+            (Alignment ? *Alignment : FVector2D(0.5, 0.5));
+        Image.Brush.SetUVRegion(FBox2f(FVector2f(UVStart), FVector2f(UVStart + UVSize)));
         Image.Brush.DrawAs = ESlateBrushDrawType::RoundedBox;
         Image.Brush.OutlineSettings = FSlateBrushOutlineSettings(PortraitCornerRadius);
     }
+    Image.Brush.SetImageSize(Fit);
     Image.Widget = SNew(SImage).Image(&Image.Brush);
-    Put(Canvas, Position + (Size - Fit) * 0.5, Fit, Image.Widget.ToSharedRef());
+    Put(Canvas, Origin, Fit, Image.Widget.ToSharedRef());
 }
 
 void FActOnePresentation::SetOpacity(const TSharedPtr<SWidget>& Element, float Opacity)
@@ -186,7 +185,6 @@ void FActOnePresentation::Render(double Time)
     const float LocationOpacity = T::Ramp(Time, T::LocationStart, 0.9) *
         (1.0f - T::Ramp(Time, T::FirstInterventionStart, T::Fade));
     SetOpacity(OpeningText, LocationOpacity);
-    SetOpacity(OpeningShade, LocationOpacity * T::Ramp(Time, T::ExteriorStart, T::Fade));
     SetOpacity(CouncilText, T::Ramp(Time, T::CouncilStart, 0.45));
     SetOpacity(FinalShade, T::Ramp(Time, 449, T::Fade) * T::EndOpacity(Time));
 

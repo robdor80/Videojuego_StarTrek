@@ -7,9 +7,8 @@ namespace IntroTimeline
     inline constexpr int32 PairCount = 5;
     inline constexpr double ImageStart[] = {1.0, 5.5, 10.0, 14.5, 19.0, 23.5, 28.0, 32.5, 37.0, 43.0};
     inline constexpr int32 SceneCount = UE_ARRAY_COUNT(ImageStart);
-    inline constexpr double DataDelay = 0.200;
-    inline constexpr double DataFade = 1.0;
-    inline constexpr double SceneFade = 2.0;
+    inline constexpr double EntranceFade = 2.0;
+    inline constexpr double ExitFade = 1.0;
     inline constexpr double TributeStart = 47.0;
     inline constexpr double TributeFade = 1.0;
     inline constexpr double FinalFadeStart = 53.0;
@@ -17,11 +16,15 @@ namespace IntroTimeline
 
     static_assert(SceneCount == PairCount * 2);
 
-    struct FSceneOpacity
+    inline constexpr double SceneEnd(int32 Scene)
     {
-        float Image;
-        float Data;
-    };
+        return Scene + 1 < SceneCount ? ImageStart[Scene + 1] : End;
+    }
+
+    inline constexpr double SceneExitStart(int32 Scene)
+    {
+        return Scene + 1 < SceneCount ? SceneEnd(Scene) - ExitFade : FinalFadeStart;
+    }
 
     inline float FadeIn(double Time, double Start, double Duration)
     {
@@ -34,17 +37,11 @@ namespace IntroTimeline
         return 1.0f - FadeIn(Time, FinalFadeStart, End - FinalFadeStart);
     }
 
-    inline FSceneOpacity SceneOpacity(int32 Scene, double Time)
+    inline float SceneOpacity(int32 Scene, double Time)
     {
-        const double Start = ImageStart[Scene];
-        const float Out = Scene + 1 < SceneCount
-            ? 1.0f - FadeIn(Time, ImageStart[Scene + 1], SceneFade)
-            : FinalOpacity(Time);
-
-        return {
-            FadeIn(Time, Start, SceneFade) * Out,
-            FadeIn(Time, Start + DataDelay, DataFade) * Out
-        };
+        const double ExitStart = SceneExitStart(Scene);
+        return FadeIn(Time, ImageStart[Scene], EntranceFade) *
+            (1.0f - FadeIn(Time, ExitStart, SceneEnd(Scene) - ExitStart));
     }
 
     inline float TributeOpacity(double Time)

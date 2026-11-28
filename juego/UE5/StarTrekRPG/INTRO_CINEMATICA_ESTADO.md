@@ -14,21 +14,20 @@ Reproducir las diez escenas en el nivel propio de la introducción y conservar l
 
 ## Cronología de reproducción
 
-| Escena | Entrada de imagen | Entrada de datos | Imagen al 100 % |
-|---|---:|---:|---:|
-| Enterprise NCC-1701 | 1.000 | 1.200 | 3.000 |
-| Pike | 5.500 | 5.700 | 7.500 |
-| Enterprise NCC-1701-A | 10.000 | 10.200 | 12.000 |
-| Kirk | 14.500 | 14.700 | 16.500 |
-| Voyager | 19.000 | 19.200 | 21.000 |
-| Janeway | 23.500 | 23.700 | 25.500 |
-| Deep Space Nine | 28.000 | 28.200 | 30.000 |
-| Sisko | 32.500 | 32.700 | 34.500 |
-| Enterprise NCC-1701-D | 37.000 | 37.200 | 39.000 |
-| Picard | 43.000 | 43.200 | 45.000 |
-| Homenaje | — | 47.000 | 48.000 |
+| Plano | Entrada | Opacidad completa | Inicio de salida | Final de salida |
+| --- | ---: | ---: | ---: | ---: |
+| Enterprise NCC-1701 | 1.000 | 3.000 | 4.500 | 5.500 |
+| Pike | 5.500 | 7.500 | 9.000 | 10.000 |
+| Enterprise NCC-1701-A | 10.000 | 12.000 | 13.500 | 14.500 |
+| Kirk | 14.500 | 16.500 | 18.000 | 19.000 |
+| Voyager | 19.000 | 21.000 | 22.500 | 23.500 |
+| Janeway | 23.500 | 25.500 | 27.000 | 28.000 |
+| Deep Space Nine | 28.000 | 30.000 | 31.500 | 32.500 |
+| Sisko | 32.500 | 34.500 | 36.000 | 37.000 |
+| Enterprise NCC-1701-D | 37.000 | 39.000 | 42.000 | 43.000 |
+| Picard | 43.000 | 45.000 | 53.000 | 56.000 |
 
-Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida de dos segundos de la escena anterior. En las diez escenas, los datos empiezan 0,200 s después que la imagen y tardan 1,000 s en alcanzar la opacidad completa. Picard y el homenaje se funden entre 53 y 56 s. El Acto I empieza en 0:56.
+Los tiempos están en segundos desde el inicio de la introducción. Cada imagen y sus propios datos usan la misma opacidad durante todo el plano. Las salidas de un segundo terminan justo al inicio del plano siguiente, cuando ambos están a cero. Picard y el homenaje conservan el fundido final de 53 a 56 s. El homenaje aparece entre 47 y 48 s. El Acto I empieza en 0:56.
 
 ## Cierre musical
 

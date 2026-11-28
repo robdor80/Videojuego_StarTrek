@@ -65,7 +65,29 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 | 8:03–8:08 | 8:59–9:04 | Fundido de imagen y audio hacia negro |
 | 8:08 | 9:04 | Negro sostenido y evento `OnActOneFinished` |
 
+Los rótulos de la apertura se dibujan directamente sobre negro y sobre las maestras, con sus sombras tipográficas. La capa anterior de 28 bandas superpuestas oscurecía la foto a intervalos regulares y generaba líneas horizontales. El degradado de contraste de la panorámica final sigue reservado para los diálogos de V22.
+
 V1 presenta sus cuatro bloques a 0:14,35, 0:16,15, 0:21,30 y 0:29,35. El último termina a 0:34,55 y V2 comienza a 0:35 (1:31 global).
+
+## Encuadre de retratos verticales
+
+Los 21 planos verticales ocupan un marco 3:4 de 1104 × 1472 px lógicos, con radio de 24 px y márgenes verticales de 64 px. El marco izquierdo está en (103, 64) y el derecho en (1353, 64). El recorte usa una sola escala para los dos ejes y aplica el marco con el escalado existente del lienzo. V2, V4, V7.2, V22 y las dos maestras conservan su ajuste previo.
+
+La alineación se aplica al excedente de cada eje. 0 % toma el borde inicial, 50 % centra el recorte y 100 % toma el borde final. Cuando un eje encaja exactamente, su alineación carece de efecto.
+
+| Plano | Alineación horizontal | Alineación vertical | Criterio |
+| --- | ---: | ---: | --- |
+| V3 | 15 % | 50 % | Prioriza la mano extendida a la izquierda. La mano apoyada queda parcialmente fuera del marco. |
+| V5 | 66 % | 50 % | Deja margen al gesto del lado derecho |
+| V7.1 | 50 % | 15 % | Conserva la cabeza y los implantes de Locutus |
+| V10 | 62 % | 50 % | Conserva la mano levantada |
+| V11 | 50 % | 38 % | Conserva el pelo y el gesto de T’Vaen |
+| V13 | 43 % | 50 % | Da margen a la mano del lado izquierdo |
+| V14 | 66 % | 50 % | Conserva el gesto de Rourke |
+| V19 | 50 % | 36 % | Conserva la cabeza y el apoyo de las manos |
+| V20 | 50 % | 26 % | Conserva la cabeza y las manos entrelazadas |
+
+V1, V6, V7, V7.3, V8, V9, V12, V15, V16, V17, V18 y V21 usan 50 % en ambos ejes.
 
 ## Mezcla y doblaje
 
@@ -90,6 +112,8 @@ Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. 
 `NextActPreroll` admite el futuro ambiente de la bahía antes de `OnActOneFinished`. El acto actual libera las pistas y conserva el overlay negro al concluir. Para un eventual empaquetado, incluye el mapa de la introducción y el directorio `/Game/Cinematics/Act_One` en el conjunto de cocción, dado que el actor resuelve el Data Asset por ruta.
 
 ## Verificación
+
+Las cuatro pruebas de Unreal pasaron. El muestreo D3D12 a pantalla completa del MSI, a 2560 × 1600 y con Windows al 150 %, verificó los 21 marcos 3:4 y los rótulos del exterior y del Consejo. La comparación con la referencia dio coincidencia píxel a píxel en V2, V4, V7.2 y V22. Los 62 paquetes audiovisuales, el manifiesto y el código de mezcla coincidieron con la referencia.
 
 En la revisión de 56 segundos pasaron la compilación, la reapertura de ambos paquetes y las cuatro pruebas de Unreal. La comparación confirmó los 334 tiempos absolutos del manifiesto. En D3D12 a pantalla completa se obtuvieron 24 capturas a 2560 × 1600 con Windows al 150 %. La pasada verificó el fundido de la introducción, el negro a 0:56, los rótulos a 0:59, London a 1:09 y el comienzo de V1. Los hitos posteriores se verificaron mediante las pruebas y la comparación de cronologías.
 

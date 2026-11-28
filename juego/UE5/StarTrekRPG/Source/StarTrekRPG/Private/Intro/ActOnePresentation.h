@@ -7,7 +7,7 @@ class SWidget;
 class STextBlock;
 class SConstraintCanvas;
 class UActOneTimeline;
-class UTexture2D;
+struct FActOneShot;
 
 class FActOnePresentation
 {
@@ -26,15 +26,14 @@ private:
         FSlateBrush Brush;
     };
 
-    void AddImage(SConstraintCanvas& Canvas, UTexture2D& Texture,
-        const FVector2D& Position, const FVector2D& Size, double Start, double End, bool bPortraitSlot);
+    void AddImage(SConstraintCanvas& Canvas, const FActOneShot& Shot,
+        const FVector2D& Position, const FVector2D& Size, double End, bool bPortraitSlot);
     static void SetOpacity(const TSharedPtr<SWidget>& Element, float Opacity);
 
     const UActOneTimeline& Timeline;
     TArray<TUniquePtr<FImage>> Images;
     TSharedPtr<SWidget> OpeningText;
     TSharedPtr<SWidget> CouncilText;
-    TSharedPtr<SWidget> OpeningShade;
     TSharedPtr<SWidget> FinalShade;
     TSharedPtr<STextBlock> Name[2];
     TSharedPtr<STextBlock> Dialogue[3];
