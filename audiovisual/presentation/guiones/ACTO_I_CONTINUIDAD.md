@@ -44,13 +44,13 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 | 0:05–0:08 | San Francisco y Cuartel General sobre negro |
 | 0:08–0:12 | Exterior de la sede con los dos rótulos |
 | 0:12–0:16 | Sala del Consejo con los dos rótulos y el del Alto Consejo |
-| 0:15 | Entrada de London Calling y arranque del ambiente, que alcanza su nivel habitual a 0:17 |
+| 0:15 | Entrada de London Calling |
 | 0:16–0:37 | V1. Picard abre la sesión |
 | 0:37–1:56 | V2–V6 |
 | 1:56–2:10 | V7, recuerdo de Picard y frase a 2:01,1 |
-| 2:10–2:18 | V7.1, Locutus, entrada de Ode y comienzo del fundido de London. Se reduce el ambiente |
+| 2:10–2:18 | V7.1, Locutus, entrada de Ode y comienzo del fundido de London |
 | 2:18–2:27 | V7.2, Enterprise-D y cubo Borg. London alcanza el silencio a 2:25 |
-| 2:27–2:56 | V7.3, Picard y regreso del ambiente |
+| 2:27–2:56 | V7.3, regreso a Picard |
 | 2:56–5:28 | V8–V16 |
 | 5:28–7:09 | V17–V20. Crescendo de Myers a 6:40 |
 | 7:09–7:31 | V21. Preparación a 7:10 y voto visible a 7:30 |
@@ -62,7 +62,9 @@ V1 presenta sus cuatro bloques a 0:16,35, 0:18,15, 0:23,30 y 0:31,35. El último
 
 ## Mezcla y doblaje
 
-Las canciones conservan sus grabaciones por separado y sus velocidades originales. London Calling comienza a 0:15 y Ode to Harrison a 2:10. El solapamiento va de 2:10 a 2:25. En ese tramo se oyen London desde 1:55 de su grabación y Ode desde 0:00. Se equilibran en Unreal con ganancias efectivas iniciales de 0,76 y 0,27 respecto a las señales decodificadas. El MP3 de Ode alcanza +1,73 dBFS al decodificarlo en flotante. La conversión reserva margen con un factor lineal fijo de 0,80 antes de escribir PCM y Unreal compensa ese factor en reproducción. Se conservan picos, dinámica y archivos originales. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen. El ambiente usa una ganancia de 0,85 y un bucle de 29,7 s con 300 ms de fundido entre los extremos. Desciende al 22 % de su nivel habitual en el recuerdo y se recupera durante V7.3.
+Las canciones conservan sus grabaciones por separado y sus velocidades originales. London Calling comienza a 0:15 y Ode to Harrison a 2:10. El solapamiento va de 2:10 a 2:25. En ese tramo se oyen London desde 1:55 de su grabación y Ode desde 0:00. Se equilibran en Unreal con ganancias efectivas iniciales de 0,76 y 0,27 respecto a las señales decodificadas. El MP3 de Ode alcanza +1,73 dBFS al decodificarlo en flotante. La conversión reserva margen con un factor lineal fijo de 0,80 antes de escribir PCM y Unreal compensa ese factor en reproducción. Se conservan picos, dinámica y archivos originales. Ode comienza con un factor adicional de 0,92, que sube suavemente a 1,0 durante el tramo del voto y la resolución. El fundido final usa la misma ventana de cinco segundos que la imagen.
+
+El Acto I se reproduce únicamente con London Calling y Ode to Harrison. **Enable Council Ambience** está desactivado por defecto en el apartado **Audio** de `DA_ActOneTimeline`. Al activarlo se recupera la mezcla ambiental anterior. El bucle de 29,7 s, con un fundido de 300 ms entre sus extremos, entra a 0:15, alcanza su ganancia habitual de 0,85 a 0:17 y desciende al 22 % durante el recuerdo de Locutus. Se recupera durante V7.3. `NextActPreroll` funciona de manera independiente.
 
 El fundido de London se aplica a su propio componente de audio, con interpolación cúbica. Su curva `LondonFade` se puede editar en el apartado **Audio** de `DA_ActOneTimeline`. El eje horizontal de la curva se mide en segundos desde la entrada de Ode. El valor predeterminado de `LondonFade` restituye los puntos aprobados. La versión aprobada usa estos puntos:
 
@@ -82,7 +84,9 @@ Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. 
 
 ## Verificación
 
-La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los hitos prioritarios, la alternancia, la continuidad estructural del ambiente, las cuatro clases de mezcla y el formato y margen del PCM de Ode. Las pruebas de intro cubren su cronología, los cinco diseñadores UMG y el reinicio consecutivo de PIE.
+En la revisión sin ambiente pasaron la compilación Win64 Development Editor, la reimportación y la prueba de cronología del Acto I. La pasada técnica D3D12 con WASAPI llegó a 2:25. La traza registró el componente del Consejo detenido y confirmó las entradas de London y Ode, los niveles de la mezcla y los 15 segundos de solapamiento. Los 62 paquetes de la cinemática coincidieron con la referencia.
+
+La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los hitos prioritarios, la alternancia, el ambiente desactivado por defecto y su curva opcional, las cuatro clases de mezcla y el formato y margen del PCM de Ode. Las pruebas de intro cubren su cronología, los cinco diseñadores UMG y el reinicio consecutivo de PIE.
 
 | Comprobación | Resultado en el MSI |
 | --- | --- |

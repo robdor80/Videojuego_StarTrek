@@ -80,7 +80,8 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
         PreviousGain = Gain;
     }
 
-    TestEqual(TEXT("Ambience enters with London"), T::CouncilAmbienceStart, T::LondonStart);
+    TestFalse(TEXT("Act I ships with Council ambience disabled"), Timeline->bEnableCouncilAmbience);
+    TestEqual(TEXT("Optional ambience enters with London"), T::CouncilAmbienceStart, T::LondonStart);
     TestEqual(TEXT("Ambience silent before entry"), T::CouncilEnvelope(14.999), 0.0f);
     TestEqual(TEXT("Ambience starts from silence at 0:15"), T::CouncilEnvelope(15), 0.0f);
     TestEqual(TEXT("Ambience halfway up at 0:16"), T::CouncilEnvelope(16), 0.5f);

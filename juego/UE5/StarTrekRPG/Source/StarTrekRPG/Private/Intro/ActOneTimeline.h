@@ -172,6 +172,9 @@ public:
     UPROPERTY(EditAnywhere, Category = "Audio", meta = (ClampMin = "0", ClampMax = "1"))
     float AmbienceGain = 0.85f;
 
+    UPROPERTY(EditAnywhere, Category = "Audio")
+    bool bEnableCouncilAmbience = false;
+
     UPROPERTY(EditAnywhere, Category = "Audio", meta = (ClampMin = "0", ClampMax = "1"))
     float VoiceDuck = 0.50f;
 

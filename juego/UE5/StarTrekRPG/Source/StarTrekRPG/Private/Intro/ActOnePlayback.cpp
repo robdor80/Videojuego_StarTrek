@@ -83,7 +83,7 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     Time = FMath::Max(0.0, Time);
     ActOneView->Render(FMath::Min(Time, T::End));
 
-    if (!bCouncilStarted && Time >= T::CouncilAmbienceStart && Time < T::End)
+    if (ActOne->bEnableCouncilAmbience && !bCouncilStarted && Time >= T::CouncilAmbienceStart && Time < T::End)
     {
         bCouncilStarted = true;
         ActOneAmbience->SetVolumeMultiplier(ActOne->AmbienceGain * T::CouncilEnvelope(Time));
@@ -142,16 +142,17 @@ void AIntroCinematicPlayer::TickActOne(double Time)
         ActOneLondon->Stop();
         UE_LOG(LogActOne, Display, TEXT("London Calling stopped at %.6f s"), Time);
     }
-    ActOneAmbience->SetVolumeMultiplier(ActOne->AmbienceGain * T::CouncilEnvelope(Time));
+    ActOneAmbience->SetVolumeMultiplier(bCouncilStarted ? ActOne->AmbienceGain * T::CouncilEnvelope(Time) : 0.0f);
 
     while (ActOneTraceTimes.IsValidIndex(ActOneNextTrace) && Time >= ActOneTraceTimes[ActOneNextTrace])
     {
         const FActOneCue* Cue = Line ? Line->Cues.FindByPredicate(
             [Time](const FActOneCue& Candidate) { return Candidate.Contains(Time); }) : nullptr;
-        UE_LOG(LogActOne, Display, TEXT("Target %.3f s, frame %.6f s, %s, text %s, Ode %.3f (playing %d), London %.3f (playing %d), ambience %.3f"),
+        UE_LOG(LogActOne, Display, TEXT("Target %.3f s, frame %.6f s, %s, text %s, Ode %.3f (playing %d), London %.3f (playing %d), ambience %.3f (playing %d)"),
             ActOneTraceTimes[ActOneNextTrace++], Time, Line ? *Line->Id : TEXT("-"),
             Cue ? *Cue->Text : TEXT("-"), bOdeStarted ? ActOneMusic->VolumeMultiplier : 0.0f, ActOneMusic->IsPlaying(),
-            bLondonStarted ? ActOneLondon->VolumeMultiplier : 0.0f, ActOneLondon->IsPlaying(), ActOneAmbience->VolumeMultiplier);
+            bLondonStarted ? ActOneLondon->VolumeMultiplier : 0.0f, ActOneLondon->IsPlaying(),
+            ActOneAmbience->VolumeMultiplier, ActOneAmbience->IsPlaying());
     }
     if (!ActOneCaptureDirectory.IsEmpty())
     {
