@@ -40,7 +40,8 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
     };
 
     if (Opening.Num() != 2 || Interventions.Num() != 22 ||
-        Opening[0].Start != 3 || Opening[0].End != 7 || Opening[1].Start != 7 || Opening[1].End != 10 ||
+        Opening[0].Start != ExteriorStart || Opening[0].End != CouncilStart ||
+        Opening[1].Start != CouncilStart || Opening[1].End != FirstInterventionStart ||
         !ValidShot(Opening[0]) || !ValidShot(Opening[1]))
     {
         return Fail(TEXT("Invalid opening or intervention count"));
@@ -48,7 +49,7 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
 
     double Start = Opening.Last().End;
     TSet<FString> Files = { Opening[0].File, Opening[1].File };
-    const double Starts[] = {10, 37, 60, 65, 69, 93, 116, 176, 182, 200, 226, 234,
+    const double Starts[] = {FirstInterventionStart, 37, 60, 65, 69, 93, 116, 176, 182, 200, 226, 234,
         239, 267, 290, 301, 328, 347, 366, 391, 429, 451};
     for (int32 Index = 0; Index < Interventions.Num(); ++Index)
     {
@@ -170,6 +171,6 @@ float UActOneTimeline::EndOpacity(double Time)
 
 float UActOneTimeline::CouncilEnvelope(double Time)
 {
-    return Ramp(Time, 7.0, 1.35) * FMath::Lerp(1.0f, 0.22f,
+    return Ramp(Time, CouncilAmbienceStart, CouncilAmbienceFade) * FMath::Lerp(1.0f, 0.22f,
         Ramp(Time, OdeStart, 1.1) * (1.0f - Ramp(Time, 147.0, 1.4))) * EndOpacity(Time);
 }

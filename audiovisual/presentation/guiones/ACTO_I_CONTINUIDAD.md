@@ -26,7 +26,7 @@ Git excluye los paquetes de Unreal de esta producción. En el MSI se instalan en
     -EditorCmd 'C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
 ```
 
-El importador usa las dos maestras y las 25 imágenes de intervención, incluidas las tres variantes adicionales de V7. Conserva el área completa de cada PNG. Produce 27 texturas, tres Sound Waves PCM, cuatro clases de sonido y `DA_ActOneTimeline`. La segunda ejecución del commandlet vuelve a abrir los paquetes y comprueba dimensiones, referencias y cronología. Los WAV intermedios se eliminan al cerrar el importador. Si ya tienes los paquetes y necesitas regenerar las tres ondas desde los originales, añade `-RefreshAudio` a la orden.
+El importador usa las dos maestras y las 25 imágenes de intervención, incluidas las tres variantes adicionales de V7. Conserva el área completa de cada PNG. Produce 27 texturas, tres Sound Waves PCM, cuatro clases de sonido y `DA_ActOneTimeline`. La segunda ejecución del commandlet vuelve a abrir los paquetes y comprueba dimensiones, referencias y cronología. Los WAV intermedios se eliminan al cerrar el importador. Si ya tienes los paquetes del montaje anterior, vuelve a importar la cronología para actualizar el Data Asset. Si necesitas regenerar las tres ondas desde los originales, añade `-RefreshAudio` a la orden.
 
 La fuente de títulos y nombres procede de `TXT_NombreCapitan` en `WBP_Intro_Pike` y corresponde a `/Game/Cinematics/Fonts_Intro/Federation_Wide_Font.Federation_Wide_Font`. El cuerpo usa `/Engine/EngineFonts/Roboto.Roboto`. Slate resuelve las grafías ausentes en la fuente importada mediante su fuente de respaldo.
 
@@ -40,10 +40,13 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 
 | Tiempo del acto | Reproducción |
 | --- | --- |
-| 0:00–0:03 | Negro y localización |
-| 0:03–0:07 | Exterior de la sede |
-| 0:07–0:10 | Sala, rótulo del Consejo y entrada ambiental |
-| 0:10–1:56 | V1–V6. London Calling entra a 0:15 |
+| 0:00–0:05 | Negro absoluto y silencio |
+| 0:05–0:08 | San Francisco y Cuartel General sobre negro |
+| 0:08–0:12 | Exterior de la sede con los dos rótulos |
+| 0:12–0:16 | Sala del Consejo con los dos rótulos y el del Alto Consejo |
+| 0:15 | Entrada de London Calling y arranque del ambiente, que alcanza su nivel habitual a 0:17 |
+| 0:16–0:37 | V1. Picard abre la sesión |
+| 0:37–1:56 | V2–V6 |
 | 1:56–2:10 | V7, recuerdo de Picard y frase a 2:01,1 |
 | 2:10–2:18 | V7.1, Locutus, entrada de Ode y comienzo del fundido de London. Se reduce el ambiente |
 | 2:18–2:27 | V7.2, Enterprise-D y cubo Borg. London alcanza el silencio a 2:25 |
@@ -54,6 +57,8 @@ El mismo actor, reloj monotónico y fondo negro de la introducción gobiernan la
 | 7:31–8:05 | V22. Resolución, acta, reflexión, clímax a 7:55 y cierre |
 | 8:05–8:10 | Fundido de imagen y audio hacia negro |
 | 8:10 | Negro sostenido y evento `OnActOneFinished` |
+
+V1 presenta sus cuatro bloques a 0:16,35, 0:18,15, 0:23,30 y 0:31,35. El último termina a 0:36,55 y V2 comienza a 0:37.
 
 ## Mezcla y doblaje
 
@@ -71,7 +76,7 @@ El fundido de London se aplica a su propio componente de audio, con interpolaci�
 | 2:23 | 10 % | 100 % |
 | 2:25 | 0 % | 100 % |
 
-Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. Cada intervención tiene un campo opcional `Voice`; su reproducción parte de la misma línea temporal que sus bloques. El factor `VoiceDuck` inicial es 0,50 y solo se aplica mientras haya voz. Para sincronizar un doblaje futuro, asigna la onda de la intervención y ajusta los tiempos de sus bloques y pausas. Los campos de voz quedan vacíos.
+Las clases `SC_MUSIC`, `SC_AMBIENCE`, `SC_VOICE` y `SC_SFX` son independientes. Cada intervención tiene un campo opcional `Voice`; su reproducción parte de la misma línea temporal que sus bloques. El factor `VoiceDuck` inicial es 0,50 y solo se aplica mientras haya voz. Los actos I y II se conciben sin voces por ahora. En el Acto I, la opción **Enable Voices** del Data Asset queda desactivada. Para incorporar doblaje más adelante, asigna la onda de la intervención, ajusta los tiempos de sus bloques y pausas, y activa esa opción.
 
 `NextActPreroll` admite el futuro ambiente de la bahía antes de `OnActOneFinished`. El acto actual libera las pistas y conserva el overlay negro al concluir. Para un eventual empaquetado, incluye el mapa de la introducción y el directorio `/Game/Cinematics/Act_One` en el conjunto de cocción, dado que el actor resuelve el Data Asset por ruta.
 
@@ -92,3 +97,5 @@ La prueba `StarTrekRPG.Intro.ActOne.Timeline` valida el montaje importado, los h
 La comprobación de imagen a resolución nativa usó la primera copia del audio del laboratorio. Tras corregir el margen de PCM, se reabrieron los paquetes, se comprobaron las muestras de la onda final y se repitió el arranque hasta Locutus en D3D12. En esa pasada, la orden de Ode llegó a 130,002 s y el mezclador confirmó su inicio a 130,019 s. El dispositivo de salida registró señal durante la transición. La escucha y la aceptación artística corresponden al propietario. El doblaje, las escenas del Acto II y el empaquetado de distribución quedan fuera de esta entrega.
 
 El ajuste de London se comprobó en D3D12 con salida WASAPI en el MSI. En el tramo 1:50–2:35, Unreal ordenó el inicio de London a 15,006 s y el de Ode a 130,005 s. London se detuvo a 145,006 s, tras 15,000 s de solapamiento. La ganancia de Ode durante el tramo coincidió con la automatización anterior. La suma conservadora de los picos PCM de las dos canciones quedó en −6,5 dBFS, y la salida registró señal antes, durante y después del solapamiento. Las cuatro pruebas de Unreal confirmaron los puntos de la curva y los marcadores posteriores.
+
+La revisión de la apertura se comprobó en el MSI durante los primeros 45 segundos del acto, en D3D12 a 2560 × 1600 con Windows al 150 %. Las capturas verificaron el negro inicial, los rótulos, las dos maestras y los cuatro bloques de V1. La captura de V2 a 0:40,20 coincidió píxel a píxel con la referencia. Unreal solicitó London y el ambiente a 15,002 s. El mezclador confirmó ambas entradas y la salida WASAPI registró silencio antes de ellas. Pasaron las cuatro pruebas de intro. La comparación del manifiesto confirmó equivalencia exacta de V2–V22.

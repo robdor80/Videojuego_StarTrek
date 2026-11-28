@@ -30,8 +30,27 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
         const FActOneIntervention* Line = Timeline->FindIntervention(Time);
         return Line ? Line->Id : FString();
     };
-    TestTrue(TEXT("Opening holds before V1"), Intervention(9.999).IsEmpty());
-    TestEqual(TEXT("V1 starts at ten seconds"), Intervention(10), FString(TEXT("V1")));
+    TestEqual(TEXT("Location appears at 0:05"), T::LocationStart, 5.0);
+    TestEqual(TEXT("Exterior starts at 0:08"), Timeline->Opening[0].Start, 8.0);
+    TestEqual(TEXT("Council starts at 0:12"), Timeline->Opening[1].Start, 12.0);
+    TestTrue(TEXT("Opening holds before V1"), Intervention(15.999).IsEmpty());
+    TestEqual(TEXT("V1 starts at 0:16"), Intervention(16), FString(TEXT("V1")));
+    TestEqual(TEXT("V2 starts at 0:37"), Intervention(37), FString(TEXT("V2")));
+
+    const FActOneIntervention& First = Timeline->Interventions[0];
+    TArray<FString> Words;
+    First.Dialogue.ParseIntoArrayWS(Words);
+    TestEqual(TEXT("V1 retains the full dialogue"), Words.Num(), 54);
+    if (TestEqual(TEXT("V1 has four reading blocks"), First.Cues.Num(), 4))
+    {
+        const double Boundaries[] = {16.35, 18.15, 23.3, 31.35, 36.55};
+        for (int32 Index = 0; Index < First.Cues.Num(); ++Index)
+        {
+            TestEqual(TEXT("V1 block start"), First.Cues[Index].Start, Boundaries[Index]);
+            TestEqual(TEXT("V1 block end"), First.Cues[Index].End, Boundaries[Index + 1]);
+        }
+    }
+    TestFalse(TEXT("Act I ships with voices disabled"), Timeline->bEnableVoices);
     TestEqual(TEXT("V7 stays one intervention through all shots"), Intervention(146), FString(TEXT("V7")));
     TestEqual(TEXT("Vote at 7:30"), Intervention(450), FString(TEXT("V21")));
     TestEqual(TEXT("Climax at 7:55"), Intervention(475), FString(TEXT("V22")));
@@ -61,8 +80,11 @@ bool FActOneTimelineTest::RunTest(const FString& Parameters)
         PreviousGain = Gain;
     }
 
-    TestEqual(TEXT("Ambience begins silent at 7 s"), T::CouncilEnvelope(7), 0.0f);
-    TestEqual(TEXT("Ambience fully in before V1"), T::CouncilEnvelope(9), 1.0f);
+    TestEqual(TEXT("Ambience enters with London"), T::CouncilAmbienceStart, T::LondonStart);
+    TestEqual(TEXT("Ambience silent before entry"), T::CouncilEnvelope(14.999), 0.0f);
+    TestEqual(TEXT("Ambience starts from silence at 0:15"), T::CouncilEnvelope(15), 0.0f);
+    TestEqual(TEXT("Ambience halfway up at 0:16"), T::CouncilEnvelope(16), 0.5f);
+    TestEqual(TEXT("Ambience reaches its approved level at 0:17"), T::CouncilEnvelope(17), 1.0f);
     TestTrue(TEXT("Borg memory ambience attenuated"), FMath::IsNearlyEqual(T::CouncilEnvelope(140), 0.22f, 1.e-5f));
     TestEqual(TEXT("Council ambience returns"), T::CouncilEnvelope(149), 1.0f);
     TestEqual(TEXT("Council ambience fades to silence"), T::CouncilEnvelope(490), 0.0f);

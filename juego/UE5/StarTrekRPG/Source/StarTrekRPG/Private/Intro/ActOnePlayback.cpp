@@ -39,7 +39,9 @@ void AIntroCinematicPlayer::PrepareActOne(SOverlay& Overlay)
 
     if (FParse::Param(FCommandLine::Get(), TEXT("ActOneTrace")))
     {
-        ActOneTraceTimes.Append({0.0, 3.0, 7.0, UActOneTimeline::LondonStart, 110.0, 133.0, 135.0, 140.0, 143.0, UActOneTimeline::LondonEnd, 155.0});
+        using T = UActOneTimeline;
+        ActOneTraceTimes.Append({0.0, T::LocationStart, T::ExteriorStart, T::CouncilStart, T::LondonStart,
+            T::CouncilAmbienceStart + T::CouncilAmbienceFade, 110.0, 133.0, 135.0, 140.0, 143.0, T::LondonEnd, 155.0});
         for (const FActOneIntervention& Line : ActOne->Interventions)
         {
             for (const FActOneShot& Shot : Line.Shots)
@@ -66,7 +68,7 @@ void AIntroCinematicPlayer::PrepareActOne(SOverlay& Overlay)
                     ActOneTracedWaves.Add(Wave->GetFName());
                     UE_LOG(LogActOne, Display, TEXT("%s mixer first callback %s at %.6f s, offset %.6f s"),
                         Track, *Wave->GetName(), FPlatformTime::Seconds() - StartTime - IntroTimeline::End,
-                        Wave->bLooping ? 0.0f : Percent * Wave->Duration);
+                        Percent * Wave->Duration);
                 });
         };
         TraceAudioStart(*ActOneMusic, TEXT("Music"));
@@ -81,12 +83,15 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     Time = FMath::Max(0.0, Time);
     ActOneView->Render(FMath::Min(Time, T::End));
 
-    if (!bCouncilStarted && Time >= 7.0 && Time < T::End)
+    if (!bCouncilStarted && Time >= T::CouncilAmbienceStart && Time < T::End)
     {
         bCouncilStarted = true;
         ActOneAmbience->SetVolumeMultiplier(ActOne->AmbienceGain * T::CouncilEnvelope(Time));
-        ActOneAmbience->Play(FMath::Fmod(Time - 7.0, ActOne->CouncilAmbience->Duration));
-        UE_LOG(LogActOne, Display, TEXT("Council ambience requested at %.6f s"), Time);
+        // Keep the approved loop phase after the delayed entrance.
+        constexpr double CouncilLoopOrigin = 7.0;
+        const double Offset = FMath::Fmod(Time - CouncilLoopOrigin, ActOne->CouncilAmbience->Duration);
+        ActOneAmbience->Play(Offset);
+        UE_LOG(LogActOne, Display, TEXT("Council ambience requested at %.6f s (offset %.6f s)"), Time, Offset);
     }
 
     const FActOneIntervention* Line = ActOne->FindIntervention(Time);
@@ -94,7 +99,7 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     {
         ActOneVoiceLine = Line;
         ActOneVoice->Stop();
-        if (Line && !Line->Voice.IsNull())
+        if (ActOne->bEnableVoices && Line && !Line->Voice.IsNull())
         {
             if (USoundWave* Voice = Line->Voice.LoadSynchronous())
             {
@@ -150,7 +155,8 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     }
     if (!ActOneCaptureDirectory.IsEmpty())
     {
-        static constexpr double Captures[] = {1.5, 4.3, 8.5, 12.0, 40.2, 94.0, 132.0, 141.0, 450.0, 456.0, 475.0, 490.0};
+        static constexpr double Captures[] = {1.5, 4.95, 6.3, 9.1, 13.1, 15.5, 17.4, 20.4, 27.3, 33.9,
+            40.2, 94.0, 132.0, 141.0, 450.0, 456.0, 475.0, 490.0};
         if (ActOneNextCapture < UE_ARRAY_COUNT(Captures) && Time >= Captures[ActOneNextCapture])
         {
             const double At = Captures[ActOneNextCapture++];

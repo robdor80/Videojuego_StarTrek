@@ -183,10 +183,11 @@ void FActOnePresentation::Render(double Time)
         SetOpacity(Image->Widget, Entrance * Exit);
     }
 
-    const float LocationOpacity = T::Ramp(Time, 0.1, 0.9) * (1.0f - T::Ramp(Time, 10, T::Fade));
+    const float LocationOpacity = T::Ramp(Time, T::LocationStart, 0.9) *
+        (1.0f - T::Ramp(Time, T::FirstInterventionStart, T::Fade));
     SetOpacity(OpeningText, LocationOpacity);
-    SetOpacity(OpeningShade, LocationOpacity * T::Ramp(Time, 3, T::Fade));
-    SetOpacity(CouncilText, T::Ramp(Time, 7.1, 0.45));
+    SetOpacity(OpeningShade, LocationOpacity * T::Ramp(Time, T::ExteriorStart, T::Fade));
+    SetOpacity(CouncilText, T::Ramp(Time, T::CouncilStart, 0.45));
     SetOpacity(FinalShade, T::Ramp(Time, 451, T::Fade) * T::EndOpacity(Time));
 
     const FActOneIntervention* Line = Timeline.FindIntervention(Time);

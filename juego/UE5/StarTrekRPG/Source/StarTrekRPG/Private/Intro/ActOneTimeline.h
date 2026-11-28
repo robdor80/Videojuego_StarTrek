@@ -116,7 +116,13 @@ public:
     static constexpr const TCHAR* PackagePath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline");
     static constexpr const TCHAR* AssetPath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline.DA_ActOneTimeline");
     static constexpr double Fade = 0.35;
+    static constexpr double LocationStart = 5.0;
+    static constexpr double ExteriorStart = 8.0;
+    static constexpr double CouncilStart = 12.0;
     static constexpr double LondonStart = 15.0;
+    static constexpr double CouncilAmbienceStart = 15.0;
+    static constexpr double CouncilAmbienceFade = 2.0;
+    static constexpr double FirstInterventionStart = 16.0;
     static constexpr double OdeStart = 130.0;
     static constexpr double LondonEnd = 145.0;
     static constexpr float OdePcmHeadroom = 0.8f;
@@ -168,6 +174,9 @@ public:
 
     UPROPERTY(EditAnywhere, Category = "Audio", meta = (ClampMin = "0", ClampMax = "1"))
     float VoiceDuck = 0.50f;
+
+    UPROPERTY(EditAnywhere, Category = "Audio")
+    bool bEnableVoices = false;
 
     bool Validate(FString& Error, bool bRequireAssets = true) const;
     const FActOneIntervention* FindIntervention(double Time) const;
