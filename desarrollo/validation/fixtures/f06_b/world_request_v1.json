@@ -72,7 +72,8 @@
           "commodity": "qa_mineral_ore",
           "mass_kg": 10000
         }
-      ]
+      ],
+      "refits": []
     },
     {
       "need_id": "qa:need:convoy:2",
@@ -95,6 +96,13 @@
           "commodity": "qa_repair_parts",
           "mass_kg": 5000
         }
+      ],
+      "refits": [
+        {
+          "technology_id": "qa_civil_defensive_emitter",
+          "count": 1,
+          "cause_ref": "qa:order:civilian-defensive-refit"
+        }
       ]
     },
     {
@@ -111,7 +119,101 @@
       "species_weights": {
         "romulan": 1
       },
-      "cargo_orders": []
+      "cargo_orders": [],
+      "refits": []
+    }
+  ],
+  "causes": [
+    {
+      "cause_ref": "qa:contract:ore-delivery",
+      "kind": "transport_contract",
+      "need_id": "qa:need:convoy:1",
+      "authority_ref": "qa:authoring:qa:need:convoy:1"
+    },
+    {
+      "cause_ref": "qa:contract:repair-parts",
+      "kind": "transport_contract",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authoring:qa:need:convoy:2"
+    },
+    {
+      "cause_ref": "qa:order:boundary-patrol",
+      "kind": "patrol_order",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authoring:qa:need:patrol:1"
+    },
+    {
+      "cause_ref": "qa:order:civilian-defensive-refit",
+      "kind": "authorized_defensive_refit",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authority:civil-licence"
+    },
+    {
+      "cause_ref": "qa:order:readiness",
+      "kind": "readiness_drill",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authority:patrol-command"
+    },
+    {
+      "cause_ref": "qa:order:civilian-self-test",
+      "kind": "readiness_drill",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authority:civil-master"
+    },
+    {
+      "cause_ref": "qa:event:medical-accident",
+      "kind": "medical_incident",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authoring:medical-event"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "qa:action:civilian-emitter",
+      "need_id": "qa:need:convoy:2",
+      "tick": 210,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_civil_defensive_emitter",
+        "ordinal": 0
+      },
+      "value": "energized",
+      "cause_ref": "qa:order:civilian-self-test"
+    },
+    {
+      "action_id": "qa:action:drill-on",
+      "need_id": "qa:need:patrol:1",
+      "tick": 300,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_disruptor",
+        "ordinal": 0
+      },
+      "value": "active",
+      "cause_ref": "qa:order:readiness"
+    },
+    {
+      "action_id": "qa:action:drill-off",
+      "need_id": "qa:need:patrol:1",
+      "tick": 420,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_disruptor",
+        "ordinal": 0
+      },
+      "value": "idle",
+      "cause_ref": "qa:order:readiness"
+    },
+    {
+      "action_id": "qa:action:medical",
+      "need_id": "qa:need:patrol:1",
+      "tick": 320,
+      "kind": "medical_state",
+      "target": {
+        "ordinal": 0
+      },
+      "value": 35,
+      "cause_ref": "qa:event:medical-accident"
     }
   ]
 }

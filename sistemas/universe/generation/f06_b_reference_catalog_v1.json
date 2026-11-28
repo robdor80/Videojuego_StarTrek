@@ -21,7 +21,8 @@
     "mundo/lore/starships/classes/core_starship_classes.json",
     "sistemas/universe/generation/procedural_ship_design_contract_v0.1.json",
     "mundo/lore/technology/ship_station_catalogue_v0.1.json",
-    "sistemas/gameplay/species/species_biology_contract.json"
+    "sistemas/gameplay/species/species_biology_contract.json",
+    "mundo/lore/starships/classes/depth/STARFLEET_CLASS_DEPTH_PROFILES_v0.1.json"
   ],
   "technologies": {
     "qa_disruptor": {
@@ -150,6 +151,27 @@
       "idle": 2,
       "active": 28,
       "effect": 500
+    },
+    "qa_civil_defensive_emitter": {
+      "kind": "energy_weapon",
+      "family": "light_defensive_phaser",
+      "operator": "independent_civilian",
+      "band": "electromagnetic",
+      "idle": 1,
+      "active": 5,
+      "effect": 6,
+      "refit_only": true
+    },
+    "qa_quantum_launcher": {
+      "kind": "launcher",
+      "family": "quantum_torpedo",
+      "operator": "starfleet",
+      "band": "subspace",
+      "idle": 1,
+      "active": 12,
+      "effect": 95,
+      "ammo_kind": "quantum_torpedo",
+      "magazine": 6
     }
   },
   "designs": {
@@ -268,6 +290,175 @@
         "qa_life_support": 2,
         "qa_sensor": 1
       }
+    },
+    "sovereign": {
+      "dimensions_m": [
+        685,
+        250,
+        88
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 24,
+      "cargo_capacity_kg": 1500000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 12,
+        "qa_photon_launcher": 2,
+        "qa_quantum_launcher": 2,
+        "qa_shield": 3,
+        "qa_matter_antimatter": 3,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 3,
+        "qa_sensor": 2
+      }
+    },
+    "miranda": {
+      "dimensions_m": [
+        243,
+        150,
+        62
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy"
+      ],
+      "decks": 12,
+      "cargo_capacity_kg": 400000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 4,
+        "qa_photon_launcher": 1,
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1
+      }
+    },
+    "intrepid": {
+      "dimensions_m": [
+        344,
+        132,
+        55
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 15,
+      "cargo_capacity_kg": 250000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 6,
+        "qa_photon_launcher": 2,
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 2,
+        "qa_sensor": 2
+      }
+    },
+    "galaxy": {
+      "dimensions_m": [
+        642,
+        460,
+        140
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 42,
+      "cargo_capacity_kg": 2000000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 8,
+        "qa_photon_launcher": 2,
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 4,
+        "qa_sensor": 2
+      }
+    },
+    "experimental_small": {
+      "dimensions_m": [
+        65,
+        28,
+        18
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 3,
+      "cargo_capacity_kg": 120000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
+    },
+    "experimental_medium": {
+      "dimensions_m": [
+        220,
+        85,
+        45
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 7,
+      "cargo_capacity_kg": 1200000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 1,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
+    },
+    "experimental_large": {
+      "dimensions_m": [
+        360,
+        135,
+        80
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 12,
+      "cargo_capacity_kg": 5000000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 2,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
     }
   },
   "population_profiles": {
@@ -275,20 +466,30 @@
       "adult_age_years": [
         21,
         65
+      ],
+      "name_pool": [
+        "QA-HUMAN"
       ]
     },
     "romulan": {
       "adult_age_years": [
         25,
         70
+      ],
+      "name_pool": [
+        "QA-ROMULAN"
       ]
     },
     "vulcan": {
       "adult_age_years": [
         25,
         85
+      ],
+      "name_pool": [
+        "QA-VULCAN"
       ]
     }
   },
-  "population_note": "Intervalos de edad de adultos QA exclusivamente, no límites de madurez ni longevidad de especie. Composición de población aportada explícitamente por la necesidad/autoría."
+  "population_note": "Intervalos de edad de adultos QA exclusivamente, no límites de madurez ni longevidad de especie. Composición de población aportada explícitamente por la necesidad/autoría.",
+  "geometry_policy": "Private bounding primitive descriptions in ship-local metres; no exact asset or measured image. Dry mass uses provisional effective density 40 kg/m3, not canon."
 }

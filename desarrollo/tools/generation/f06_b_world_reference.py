@@ -122,6 +122,9 @@ def catalog_checked(c):
                     "operator technology compatibility")
         require(any(c["technologies"][t]["kind"] == "reactor" for t in design["loadout"]),
                 "missing reactor")
+    for ref in c["source_refs"]:
+        require(not Path(ref).is_absolute() and ".." not in Path(ref).parts and (ROOT/ref).is_file(),
+                "unresolved source reference: "+ref)
     return c
 
 
@@ -137,14 +140,45 @@ def instantiate_base(req, need):
         result = military.generate(operator=need["operator"], **common)
         require(not military.validate(result), "military reference invalid")
         design_key = result["ship"]["class_id"]
-    elif need["mode"] == "civilian":
-        require(need["operator"] == "independent_civilian", "civil operator")
+    elif need["mode"] in ("civilian","experimental"):
+        experimental = need["mode"] == "experimental"
+        require(need["operator"] == ("qa_unknown" if experimental else "independent_civilian"),
+                "civil/experimental operator")
+        require(not experimental or need["role"] == "survey","experimental reference role")
         result = civilian.generate(operator_context=need["operator"], **common)
         require(not civilian.validate(result), "civil reference invalid")
-        design_key = "civilian_" + result["design"]["size_band"]
+        design_key = ("experimental_" if experimental else "civilian_") + result["design"]["size_band"]
     else:
         raise ValueError("unsupported vessel source")
     return result, design_key
+
+
+def geometry(design_id, design):
+    """Bounds and primitive envelopes in ship-local metres, never a GLB."""
+    dims = design["dimensions_m"]
+    patterns = {
+        "split_shell":[("upper_hull",[0,0,24],[86,78,30]),("lower_hull",[0,0,-24],[86,78,30]),
+                       ("nacelles",[0,0,0],[60,94,20]),("command_spine",[24,0,0],[46,22,28])],
+        "science_pod":[("command_hull",[18,0,15],[60,85,40]),("science_pod",[-12,0,-22],[70,45,40]),
+                       ("nacelles",[-15,0,18],[62,94,22])],
+        "saucer_nacelles":[("command_saucer",[18,0,10],[60,94,30]),("engineering_hull",[-15,0,-18],[58,38,50]),
+                           ("port_nacelle",[-14,-33,18],[65,20,22]),("starboard_nacelle",[-14,33,18],[65,20,22])],
+        "modular_freighter":[("main_hull",[0,0,0],[90,76,72]),("forward_control",[32,0,0],[28,50,70]),
+                             ("cargo_module",[-12,0,0],[55,94,88])],
+        "unclassified_ring":[("central_body",[0,0,0],[85,26,42]),("field_ring",[0,0,0],[30,94,94]),
+                             ("forward_projector",[35,0,0],[25,35,35])]
+    }
+    require(design["silhouette"] in patterns,"geometry grammar missing")
+    parts=[]
+    for label,centers,sizes in patterns[design["silhouette"]]:
+        center=[d*k//100 for d,k in zip(dims,centers)]
+        size=[max(1,d*k//100) for d,k in zip(dims,sizes)]
+        require(all(2*abs(x)+w<=d for x,w,d in zip(center,size,dims)),"geometry outside hull")
+        parts.append({"part_id":"gen:design_part:"+key(design_id,label),"kind":"bounding_ellipsoid",
+                      "function":label,"center_m":center,"size_m":size})
+    return {"frame":"SHIP_LOCAL_X_FORWARD_Y_STARBOARD_Z_UP","model":"QA_BOUNDING_PRIMITIVES_NOT_ASSET",
+            "envelope_m":dims.copy(),"parts":parts,
+            "dry_mass_estimate_kg":dims[0]*dims[1]*dims[2]*40,"mass_model":"QA_EFFECTIVE_ENVELOPE_DENSITY"}
 
 
 def make_compartments(sid, design, people):
@@ -159,7 +193,16 @@ def make_compartments(sid, design, people):
                     if function == "habitation" else max(1, people//4),
                 "cargo_capacity_kg":design["cargo_capacity_kg"]//design["decks"]
                     if function == "cargo" else 0,
-                "integrity_permille":1000, "pressurized":True})
+                "integrity_permille":1000, "pressurized":True,
+                "center_z_m":-design["dimensions_m"][2]//2 +
+                    design["dimensions_m"][2]*(2*deck-1)//(2*design["decks"])})
+    # Each floor is traversable via command hub; adjacent hubs connect vertically.
+    hubs={room["deck"]:room["id"] for room in compartments if room["function"]=="command"}
+    for room in compartments:
+        deck=room["deck"]
+        room["adjacent_ids"]=sorted([r["id"] for r in compartments if r["deck"]==deck and
+            r["id"]!=room["id"] and (room["function"]=="command" or r["function"]=="command")]+
+            ([hubs[n] for n in (deck-1,deck+1) if n in hubs] if room["function"]=="command" else []))
     # Conserve cargo capacity exactly after integer division.
     cargo = [c for c in compartments if c["function"] == "cargo"]
     cargo[0]["cargo_capacity_kg"] += design["cargo_capacity_kg"] - sum(c["cargo_capacity_kg"] for c in cargo)
@@ -185,19 +228,28 @@ def make_manifest(req, sid, base, need, c, compartments):
             species = stream.weighted_choice(weights)
             lo,hi = c["population_profiles"][species]["adult_age_years"]
             # Synthetic adult profiles only; sex does not determine assignment or loyalty.
-            out.append({"person_id":pid,"designation":"QA-" + key(pid,"designation")[:10].upper(),
+            out.append({"person_id":pid,"designation":c["population_profiles"][species]["name_pool"][0] +
+                        "-" + key(pid,"designation")[:10].upper(),
                         "name_status":"TEMPORARY_REFERENCE_LABEL_NOT_CANON_NAME",
                         "category":category,"species":species,"age_years_at_epoch":stream.randint(lo,hi),
                         "sex_category":stream.choice(["female","male"]),
                         "life_state":"alive","medical_state":"nominal_reference_baseline",
+                        "medical_severity":0,
                         "compartment_id":habitation[len(out)//habitation[0]["capacity_people"]]["id"],
                         "provenance":"QA_POPULATION_CONTEXT_NOT_SPECIES_CANON"})
     return out
 
 
-def make_modules(sid, design, c, compartments):
+def make_modules(sid, design, c, compartments, refits):
     modules=[]
-    for tech_id,count in sorted(design["loadout"].items()):
+    loadout=design["loadout"].copy()
+    for refit in refits:
+        tid=refit["technology_id"]
+        require(tid in c["technologies"] and c["technologies"][tid].get("refit_only")
+                and c["technologies"][tid]["operator"]==design["operator"]
+                and tid not in loadout,"unsupported or duplicated refit")
+        loadout[tid]=integer(refit["count"],1,1,"authorized refit count")
+    for tech_id,count in sorted(loadout.items()):
         tech=c["technologies"][tech_id]
         function = "engineering" if tech["kind"] in ("reactor","propulsion") else "systems"
         rooms=[room for room in compartments if room["function"] == function]
@@ -205,7 +257,9 @@ def make_modules(sid, design, c, compartments):
             mid="gen:module:"+key(sid,tech_id,index)
             m={"module_id":mid,"technology_id":tech_id,"compartment_id":rooms[index%len(rooms)]["id"],
                "state":"idle","integrity_permille":1000,"installation_revision":1,
-               "ammo":None,"modification_refs":[]}
+               "ammo":None,"modification_refs":[r["cause_ref"] for r in refits if r["technology_id"]==tech_id],
+               "signature":{"band":tech["band"],"family":tech["family"],
+                            "active_output_qa_units":tech["active"],"effect_qa_index":tech.get("effect")}}
             if tech["kind"] == "launcher":
                 m["ammo"]={"type":tech["ammo_kind"],"quantity":tech["magazine"],"capacity":tech["magazine"]}
             if tech["kind"] in ("reactor","life_support","sensor"):
@@ -261,7 +315,8 @@ def generate(request, catalog=None):
     require(str(d.year)==c["epoch"] and request["era_id"]==c["era_id"],"unsupported catalog era")
     require(not request.get("canonical_reserved",False),"canonical system reserved")
     # The input is authoring evidence; no observer or scan parameters allowed.
-    require(set(request)=={"seed","sector","era_id","date","locations","stock","needs","canonical_reserved"},
+    require(set(request)=={"seed","sector","era_id","date","locations","stock","needs","canonical_reserved",
+                          "causes","actions"},
             "request fields are closed; no sensor-driven generation")
     locations={}
     for location in request["locations"]:
@@ -274,13 +329,35 @@ def generate(request, catalog=None):
         require(k[0] in locations and k[1] and k not in stock,"invalid source stock")
         stock[k]=integer(row["mass_kg"],0,10**12,"source stock")
     initial_stock=stock.copy()
+    causes={}
+    for cause in request["causes"]:
+        require(set(cause)=={"cause_ref","kind","need_id","authority_ref"} and
+                cause["cause_ref"] and cause["need_id"] and cause["authority_ref"] and
+                cause["kind"] in ("transport_contract","patrol_order","experimental_test",
+                                  "authorized_defensive_refit","readiness_drill","medical_incident"),
+                "invalid authoring cause")
+        require(cause["cause_ref"] not in causes,"duplicate cause")
+        causes[cause["cause_ref"]]=copy.deepcopy(cause)
+    def cause_for(ref,nid,kind):
+        cause=causes.get(ref)
+        require(cause and cause["need_id"]==nid and cause["kind"]==kind,"unresolved or mis-scoped cause")
+        return cause
     system=physical_system(request)
     ships=[]
     seen=set()
     for need in sorted(request["needs"],key=lambda x:x["need_id"]):
+        require(set(need)=={"need_id","cause_ref","purpose","mode","operator","role","origin","destination",
+                           "departure_tick","arrival_tick","species_weights","cargo_orders","refits"},
+                "need fields closed; no observer trigger")
         nid=need["need_id"]
         require(nid and nid not in seen and need["cause_ref"] and need["purpose"],"missing/duplicate causal need")
         seen.add(nid)
+        kinds={"civilian":"transport_contract","military":"patrol_order","experimental":"experimental_test"}
+        require(need["mode"] in kinds,"unsupported need mode")
+        cause_for(need["cause_ref"],nid,kinds[need["mode"]])
+        for refit in need["refits"]:
+            require(set(refit)=={"technology_id","count","cause_ref"},"refit fields")
+            cause_for(refit["cause_ref"],nid,"authorized_defensive_refit")
         require(need["origin"] in locations and need["destination"] in locations
                 and need["origin"]!=need["destination"],"invalid route")
         start=integer(need["departure_tick"],0,10**8,"departure tick")
@@ -294,24 +371,58 @@ def generate(request, catalog=None):
         people=base["population"]["total_people_aboard_initial"]
         compartments=make_compartments(sid,design,people)
         manifest=make_manifest(request,sid,base,need,c,compartments)
-        modules=make_modules(sid,design,c,compartments)
+        modules=make_modules(sid,design,c,compartments,need["refits"])
         cargo=cargo_for(sid,need,stock,compartments)
+        did=base.get("design",{}).get("design_id",design_key)
         ships.append({"ship_id":sid,"designation":base["ship"]["designation"],
             "registry_status":"TEMPORARY_GENERATED_DESIGNATION","design_key":design_key,
-            "design_id":base.get("design",{}).get("design_id",design_key),"operator":operator,
-            "reference_baseline":base,"physical_design":design,"compartments":compartments,
+            "design_id":did,"operator":operator,
+            "reference_baseline":base,"physical_design":design,"geometry":geometry(did,design),
+            "refits":copy.deepcopy(need["refits"]),"compartments":compartments,
             "people":manifest,"modules":modules,"cargo":cargo,"energy":energy(modules,c),
             "mission":{"need_id":nid,"cause_ref":need["cause_ref"],"purpose":need["purpose"],
                        "origin":need["origin"],"destination":need["destination"],
                        "departure_tick":start,"arrival_tick":end},
             "position_m":locations[need["origin"]].copy(),"activity":"waiting" if start else "in_transit",
             "revision":1})
+    require(all(cause["need_id"] in seen for cause in causes.values()),"orphan cause")
+    by_need={ship["mission"]["need_id"]:ship for ship in ships}
+    schedule=[]
+    action_ids=set()
+    for action in request["actions"]:
+        require(set(action)=={"action_id","need_id","tick","kind","target","value","cause_ref"} and
+                action["action_id"] and action["action_id"] not in action_ids,"invalid/duplicate action")
+        action_ids.add(action["action_id"])
+        ship=by_need.get(action["need_id"])
+        require(ship is not None,"action references absent ship")
+        at=integer(action["tick"],1,10**8,"action tick")
+        require(ship["mission"]["departure_tick"]<=at<=ship["mission"]["arrival_tick"],
+                "action outside mission window")
+        kind=action["kind"]
+        if kind=="module_state":
+            cause_for(action["cause_ref"],action["need_id"],"readiness_drill")
+            require(set(action["target"])=={"technology_id","ordinal"},"module target")
+            modules=[m for m in ship["modules"] if m["technology_id"]==action["target"]["technology_id"]]
+            target=modules[integer(action["target"]["ordinal"],0,len(modules)-1,"module ordinal")]["module_id"]
+            require(action["value"] in ("idle","energized","active","offline"),"module state")
+        elif kind=="medical_state":
+            cause_for(action["cause_ref"],action["need_id"],"medical_incident")
+            require(set(action["target"])=={"ordinal"},"medical target")
+            target=ship["people"][integer(action["target"]["ordinal"],0,len(ship["people"])-1,"person ordinal")]["person_id"]
+            integer(action["value"],0,100,"medical severity")
+        else:
+            raise ValueError("unsupported action kind")
+        schedule.append({"event_id":"gen:event:"+key(ship["ship_id"],action["action_id"]),
+            "ship_id":ship["ship_id"],"tick":at,"kind":kind,"target_id":target,
+            "value":action["value"],"cause_ref":action["cause_ref"]})
+    schedule.sort(key=lambda e:(e["tick"],e["event_id"]))
     world={"schema_version":VERSION,"status":STATUS,"epoch":request["date"],
            "system":system,"ships":ships,"locations":locations,"tick":0,"revision":1,
            "catalog_sha256":digest(c),"generation_request_sha256":digest(request),
            "initial_stock":[{"location_id":k[0],"commodity":k[1],"mass_kg":v} for k,v in sorted(initial_stock.items())],
            "remaining_stock":[{"location_id":k[0],"commodity":k[1],"mass_kg":v} for k,v in sorted(stock.items())],
-           "events":[]}
+           "causes":causes,"planned_actions":schedule,
+           "events":route_events(ships,0)}
     validate_world(world,c)
     return world
 
@@ -324,6 +435,34 @@ def position_at(ship, locations, tick):
     return [a+(b-a)*elapsed//duration for a,b in zip(origin,destination)]
 
 
+def route_events(ships,tick):
+    events=[]
+    for ship in ships:
+        m=ship["mission"]
+        for at,kind in [(m["departure_tick"],"departed"),(m["arrival_tick"],"arrived")]:
+            if at<=tick:
+                events.append({"event_id":"gen:event:"+key(ship["ship_id"],kind,at),
+                    "ship_id":ship["ship_id"],"tick":at,"kind":kind,"cause_ref":m["cause_ref"]})
+    return sorted(events,key=lambda e:(e["tick"],e["event_id"]))
+
+
+def apply_action(ship,event,c):
+    if event["kind"]=="module_state":
+        module=next(m for m in ship["modules"] if m["module_id"]==event["target_id"])
+        require(module["integrity_permille"] or event["value"]=="offline","cannot activate destroyed module")
+        module["state"]=event["value"]
+        ship["energy"]=energy(ship["modules"],c)
+    elif event["kind"]=="medical_state":
+        person=next(p for p in ship["people"] if p["person_id"]==event["target_id"])
+        require(person["life_state"]!="dead","cannot resurrect person through health update")
+        severity=event["value"]
+        person["medical_severity"]=severity
+        person["life_state"]="dead" if severity==100 else "alive"
+        person["medical_state"]="deceased" if severity==100 else "injured" if severity else "nominal_reference_baseline"
+    else:
+        raise ValueError("unsupported action")
+
+
 def evolve(world, tick, catalog=None):
     """Offline replay on a copy; not a campaign clock, warp or economy engine."""
     c=catalog_checked(copy.deepcopy(catalog if catalog is not None else load(CATALOG)))
@@ -331,12 +470,14 @@ def evolve(world, tick, catalog=None):
     integer(tick,world["tick"],10**8,"monotonic tick")
     result=copy.deepcopy(world)
     if tick==world["tick"]: return result
+    by_id={ship["ship_id"]:ship for ship in result["ships"]}
+    for event in result["planned_actions"]:
+        if world["tick"]<event["tick"]<=tick:
+            apply_action(by_id[event["ship_id"]],event,c)
+    result["events"]=route_events(result["ships"],tick)+[
+        event for event in result["planned_actions"] if event["tick"]<=tick]
     for ship in result["ships"]:
         m=ship["mission"]
-        for at,kind in [(m["departure_tick"],"departed"),(m["arrival_tick"],"arrived")]:
-            if world["tick"]<at<=tick:
-                result["events"].append({"event_id":"gen:event:"+key(ship["ship_id"],kind,at),
-                    "ship_id":ship["ship_id"],"tick":at,"kind":kind,"cause_ref":m["cause_ref"]})
         ship["position_m"]=position_at(ship,result["locations"],tick)
         ship["activity"]="waiting" if tick<m["departure_tick"] else "arrived" if tick>=m["arrival_tick"] else "in_transit"
         # Revisions depend on elapsed simulation time, not number of replay calls.
@@ -355,6 +496,14 @@ def validate_world(world,catalog=None):
     integer(world["tick"],0,10**8,"world tick")
     require(world["revision"]==1+world["tick"],"revision")
     require(not astro.validate_system(world["system"]),"astronomical consistency")
+    require(len({e["event_id"] for e in world["planned_actions"]})==len(world["planned_actions"]),
+            "duplicate planned action")
+    expected_events=route_events(world["ships"],world["tick"])+[
+        e for e in world["planned_actions"] if e["tick"]<=world["tick"]]
+    expected_events.sort(key=lambda e:(e["tick"],e["event_id"]))
+    require(world["events"]==expected_events,"journal does not match scheduled causal events")
+    for event in world["planned_actions"]:
+        require(event["cause_ref"] in world["causes"],"event has no cause")
     for e in world["system"]["entities"]:
         p=e["ground_truth"]["properties"]
         if e["entity_type"]=="planet":
@@ -367,12 +516,23 @@ def validate_world(world,catalog=None):
         all_ids.add(sid)
         design=c["designs"][ship["design_key"]]
         require(ship["physical_design"]==design and ship["operator"]==design["operator"],"design provenance")
+        require(ship["geometry"]==geometry(ship["design_id"],design),"geometry inconsistent with design")
+        m=ship["mission"]
+        cause=world["causes"].get(m["cause_ref"])
+        require(cause and cause["need_id"]==m["need_id"],"mission cause")
+        require(m["origin"] in world["locations"] and m["destination"] in world["locations"],"mission location")
+        require(ship["activity"]==("waiting" if world["tick"]<m["departure_tick"] else
+            "arrived" if world["tick"]>=m["arrival_tick"] else "in_transit"),"activity disagrees with route")
         rooms={r["id"]:r for r in ship["compartments"]}
         require(len(rooms)==len(ship["compartments"]),"duplicate compartments")
         for rid,r in rooms.items():
             require(rid not in all_ids and rid=="gen:compartment:"+key(sid,r["deck"],r["function"]),
                     "compartment identity")
             all_ids.add(rid)
+            require(all(a in rooms and rid in rooms[a]["adjacent_ids"] for a in r["adjacent_ids"]),
+                    "broken compartment topology")
+        require(sum(r["cargo_capacity_kg"] for r in rooms.values())==design["cargo_capacity_kg"],
+                "compartment cargo capacity")
         baseline=ship["reference_baseline"]["population"]
         expected={"crew":baseline["duty_crew_target"],"resident":baseline["civilian_residents"],"passenger":baseline["passengers"]}
         counts={k:0 for k in expected}; occupancy={}
@@ -385,6 +545,8 @@ def validate_world(world,catalog=None):
             lo,hi=c["population_profiles"][p["species"]]["adult_age_years"]
             integer(p["age_years_at_epoch"],lo,hi,"age")
             require(p["life_state"] in ("alive","dead") and p["sex_category"] in ("male","female"),"biological state")
+            severity=integer(p["medical_severity"],0,100,"medical severity")
+            require((p["life_state"]=="dead")== (severity==100),"vital state mismatch")
             rid=p["compartment_id"];occupancy[rid]=occupancy.get(rid,0)+1
         require(counts==expected,"manifest not reconciled with reference population")
         require(all(n<=rooms[r]["capacity_people"] for r,n in occupancy.items()),"overoccupied compartment")
@@ -402,7 +564,15 @@ def validate_world(world,catalog=None):
                 integer(m["ammo"]["quantity"],0,t["magazine"],"ammo quantity")
             else:
                 require(m["ammo"] is None,"non-launcher ammunition")
-        require(actual==design["loadout"],"installed configuration mismatch")
+        expected_loadout=design["loadout"].copy()
+        for refit in ship["refits"]:
+            cause=world["causes"].get(refit["cause_ref"])
+            tid=refit["technology_id"]
+            require(cause and cause["kind"]=="authorized_defensive_refit" and
+                    cause["need_id"]==ship["mission"]["need_id"] and tid not in expected_loadout and
+                    c["technologies"][tid].get("refit_only"),"refit cause or compatibility")
+            expected_loadout[tid]=integer(refit["count"],1,1,"refit count")
+        require(actual==expected_loadout,"installed configuration mismatch")
         require(ship["energy"]==energy(ship["modules"],c),"energy ledger mismatch")
         room_cargo={}
         for row in ship["cargo"]:
@@ -424,13 +594,22 @@ def validate_world(world,catalog=None):
     return True
 
 
+def verify_candidate(trusted_request,candidate,catalog=None):
+    """B10 proof against independently supplied authoring inputs, not self-authentication."""
+    expected=evolve(generate(trusted_request,catalog),candidate["tick"],catalog)
+    require(digest(expected)==digest(candidate),"candidate differs from deterministic source replay")
+    return True
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--request",type=Path,required=True)
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--tick",type=int,default=0)
     args=parser.parse_args()
-    world=evolve(generate(load(args.request)),args.tick)
+    request=load(args.request)
+    world=evolve(generate(request),args.tick)
+    verify_candidate(request,world)
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(world,indent=2,sort_keys=True,ensure_ascii=False,allow_nan=False)+"\n",encoding="utf-8")
     print("OFFLINE candidate:",len(world["ships"]),"ships;",sum(len(s["people"]) for s in world["ships"]),"individuals; digest",digest(world))

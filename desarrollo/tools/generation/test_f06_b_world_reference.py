@@ -94,11 +94,12 @@ class WorldReferenceTests(unittest.TestCase):
         chunked=b.evolve(b.evolve(b.evolve(self.world,10),250),540)
         self.assertEqual(direct,chunked)
         self.assertEqual(self.world["tick"],0)
-        self.assertEqual(len(direct["events"]),4)
+        self.assertEqual(len(direct["events"]),9)
+        self.assertTrue(b.verify_candidate(self.request,direct))
         self.assertEqual(direct,b.evolve(direct,540))
         for s,old in zip(direct["ships"],self.world["ships"]):
-            self.assertEqual(s["people"],old["people"])
-            self.assertEqual(s["modules"],old["modules"])
+            self.assertEqual([p["person_id"] for p in s["people"]],[p["person_id"] for p in old["people"]])
+            self.assertEqual([m["module_id"] for m in s["modules"]],[m["module_id"] for m in old["modules"]])
 
     def test_no_scan_driven_request(self):
         with self.assertRaises(ValueError):
@@ -143,6 +144,71 @@ class WorldReferenceTests(unittest.TestCase):
     def test_tamper_cargo(self):
         w=copy.deepcopy(self.world);w["remaining_stock"][0]["mass_kg"]+=1
         with self.assertRaises(ValueError): b.validate_world(w)
+
+    def test_civilian_refit_is_individual_and_energizes(self):
+        civil=[s for s in self.world["ships"] if s["operator"]=="independent_civilian"]
+        self.assertEqual([len(s["refits"]) for s in civil],[0,1])
+        armed=next(s for s in b.evolve(self.world,210)["ships"] if s["refits"])
+        emitter=next(m for m in armed["modules"] if m["technology_id"]=="qa_civil_defensive_emitter")
+        self.assertEqual(emitter["state"],"energized")
+        self.assertEqual(emitter["installation_revision"],1)
+
+    def test_readiness_drill_and_medical_event(self):
+        def patrol(at):
+            return next(s for s in b.evolve(self.world,at)["ships"] if s["operator"]=="romulan_military")
+        mid=next(m["module_id"] for m in patrol(300)["modules"] if m["technology_id"]=="qa_disruptor")
+        self.assertEqual(next(m["state"] for m in patrol(300)["modules"] if m["module_id"]==mid),"active")
+        self.assertEqual(next(m["state"] for m in patrol(420)["modules"] if m["module_id"]==mid),"idle")
+        self.assertEqual(patrol(320)["people"][0]["medical_severity"],35)
+        self.assertEqual(patrol(319)["people"][0]["medical_severity"],0)
+
+    def test_unknown_design_has_private_geometry_and_real_technology(self):
+        r=self.modified(lambda x:None)
+        need=copy.deepcopy(r["needs"][0])
+        need.update(need_id="qa:need:experimental",cause_ref="qa:cause:experimental",mode="experimental",
+                    operator="qa_unknown",role="survey",cargo_orders=[],refits=[])
+        r["needs"].append(need)
+        r["causes"].append({"cause_ref":need["cause_ref"],"kind":"experimental_test","need_id":need["need_id"],
+                             "authority_ref":"qa:authoring:experimental"})
+        w=b.generate(r)
+        s=next(s for s in w["ships"] if s["operator"]=="qa_unknown")
+        self.assertTrue(s["geometry"]["parts"])
+        self.assertEqual(len([m for m in s["modules"] if m["technology_id"]=="qa_exotic_projector"]),1)
+        self.assertTrue(b.verify_candidate(r,w))
+
+    def test_quantum_torpedo_configuration(self):
+        r=self.modified(lambda x:None)
+        n=copy.deepcopy(r["needs"][2])
+        n.update(need_id="qa:need:sf",cause_ref="qa:cause:sf",operator="starfleet",role="high_threat_response",
+                 species_weights={"human":1})
+        r["needs"].append(n)
+        r["causes"].append({"cause_ref":n["cause_ref"],"kind":"patrol_order","need_id":n["need_id"],"authority_ref":"qa:sf-command"})
+        w=b.generate(r)
+        s=next(s for s in w["ships"] if s["operator"]=="starfleet")
+        self.assertEqual(s["design_key"],"sovereign")
+        self.assertTrue(any(m["ammo"] and m["ammo"]["type"]=="quantum_torpedo" for m in s["modules"]))
+
+    def test_mismatched_refit_authority_rejected(self):
+        with self.assertRaises(ValueError):
+            b.generate(self.modified(lambda x:x["needs"][1]["refits"][0].update(cause_ref=x["needs"][0]["cause_ref"])))
+
+    def test_action_wrong_scope_rejected(self):
+        with self.assertRaises(ValueError):
+            b.generate(self.modified(lambda x:x["actions"][1].update(cause_ref=x["actions"][0]["cause_ref"])))
+
+    def test_journal_tamper_rejected(self):
+        w=b.evolve(self.world,540);w["events"].pop()
+        with self.assertRaises(ValueError): b.validate_world(w)
+
+    def test_same_count_different_person_rejected_by_source_replay(self):
+        w=copy.deepcopy(self.world)
+        p=w["ships"][0]["people"][0]
+        p["age_years_at_epoch"]=21 if p["age_years_at_epoch"]!=21 else 22
+        with self.assertRaises(ValueError): b.verify_candidate(self.request,w)
+
+    def test_no_action_triggered_by_scan_input(self):
+        with self.assertRaises(ValueError):
+            b.generate(self.modified(lambda x:x["needs"][0].update(observer_scan=True)))
 
     def test_backwards_time_rejected(self):
         with self.assertRaises(ValueError): b.evolve(b.evolve(self.world,100),99)
