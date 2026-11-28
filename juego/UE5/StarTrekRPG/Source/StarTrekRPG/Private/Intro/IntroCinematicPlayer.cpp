@@ -68,7 +68,8 @@ void AIntroCinematicPlayer::BeginPlay()
             });
         for (const double Start : IntroTimeline::ImageStart)
         {
-            TraceTimes.Append({Start, Start + IntroTimeline::DataDelay, Start + IntroTimeline::SceneFade});
+            const double DataStart = Start + IntroTimeline::DataDelay;
+            TraceTimes.Append({Start, DataStart, DataStart + IntroTimeline::DataFade, Start + IntroTimeline::SceneFade});
         }
         TraceTimes.Append({IntroTimeline::TributeStart,
             IntroTimeline::TributeStart + IntroTimeline::TributeFade,
@@ -209,7 +210,7 @@ void AIntroCinematicPlayer::Tick(float DeltaSeconds)
     if (!CaptureDirectory.IsEmpty())
     {
         static constexpr double CaptureTimes[] = {
-            0.2, 3.3, 5.95, 7.8, 12.3, 16.8, 21.3, 25.8, 30.3, 34.8, 39.3, 45.3, 48.3, 53.5, 54.0
+            0.2, 3.3, 5.95, 7.8, 12.3, 16.8, 21.3, 25.8, 30.3, 34.8, 39.3, 45.3, 48.3, 53.5, 55.0, IntroTimeline::End
         };
         if (NextCapture < UE_ARRAY_COUNT(CaptureTimes) && Elapsed >= CaptureTimes[NextCapture])
         {

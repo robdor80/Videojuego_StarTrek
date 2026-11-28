@@ -5,16 +5,16 @@
       "File": "Acto 1/Maestras/Academia Starfleet sobre la bahía de San Francisco.png",
       "Width": 1672,
       "Height": 941,
-      "Start": 8,
-      "End": 12
+      "Start": 6,
+      "End": 10
     },
     {
       "Id": "Consejo",
       "File": "Acto 1/Maestras/Diálogo cordial en el Consejo de la Flota.png",
       "Width": 1672,
       "Height": 941,
-      "Start": 12,
-      "End": 16
+      "Start": 10,
+      "End": 14
     }
   ],
   "Interventions": [
@@ -22,49 +22,49 @@
       "Id": "V1",
       "Speaker": "PICARD",
       "Layout": "Right",
-      "Start": 16,
-      "End": 37,
+      "Start": 14,
+      "End": 35,
       "Shots": [
         {
           "Id": "V1",
           "File": "Acto 1/V1_Picard ante el Consejo Estelar.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 16,
-          "End": 37
+          "Start": 14,
+          "End": 35
         }
       ],
       "Cues": [
         {
           "Text": "Queda abierta la sesión.",
-          "Start": 16.35,
-          "End": 18.15
+          "Start": 14.35,
+          "End": 16.15
         },
         {
           "Text": "Nos reúne una solicitud de ingreso en la Academia que desafía nuestros procedimientos habituales.",
-          "Start": 18.15,
-          "End": 23.3
+          "Start": 16.15,
+          "End": 21.3
         },
         {
           "Text": "El candidato posee una herencia genética extraordinaria: ascendencia humana y vulcana, y un vínculo directo con el linaje de Khan Noonien Singh.",
-          "Start": 23.3,
-          "End": 31.35
+          "Start": 21.3,
+          "End": 29.35
         },
         {
           "Text": "La cuestión que debemos resolver es si su pasado biológico debe determinar su futuro.",
-          "Start": 31.35,
-          "End": 36.55
+          "Start": 29.35,
+          "End": 34.55
         }
       ],
       "Dialogue": "Queda abierta la sesión. Nos reúne una solicitud de ingreso en la Academia que desafía nuestros procedimientos habituales. El candidato posee una herencia genética extraordinaria: ascendencia humana y vulcana, y un vínculo directo con el linaje de Khan Noonien Singh. La cuestión que debemos resolver es si su pasado biológico debe determinar su futuro.",
       "Pauses": [
         {
-          "Start": 16,
-          "End": 16.35
+          "Start": 14,
+          "End": 14.35
         },
         {
-          "Start": 36.55,
-          "End": 37
+          "Start": 34.55,
+          "End": 35
         }
       ],
       "Markers": []
@@ -73,44 +73,44 @@
       "Id": "V2",
       "Speaker": "ROURKE",
       "Layout": "Left",
-      "Start": 37,
-      "End": 60,
+      "Start": 35,
+      "End": 58,
       "Shots": [
         {
           "Id": "V2",
           "File": "Acto 1/V2_Elias Rourke en pleno debate.png",
           "Width": 1302,
           "Height": 1208,
-          "Start": 37,
-          "End": 60
+          "Start": 35,
+          "End": 58
         }
       ],
       "Cues": [
         {
           "Text": "Con el debido respeto, almirante, las normas existen por una razón.",
-          "Start": 37.35,
-          "End": 42.334
+          "Start": 35.35,
+          "End": 40.334
         },
         {
           "Text": "La humanidad pagó un precio terrible por la ambición de quienes creyeron poder crear seres superiores.",
-          "Start": 42.334,
-          "End": 49.583
+          "Start": 40.334,
+          "End": 47.583
         },
         {
           "Text": "¿Vamos a ignorar siglos de historia y abrir las puertas de la Flota Estelar a alguien cuyo potencial ni siquiera comprendemos completamente?",
-          "Start": 49.583,
-          "End": 59.55
+          "Start": 47.583,
+          "End": 57.55
         }
       ],
       "Dialogue": "Con el debido respeto, almirante, las normas existen por una razón. La humanidad pagó un precio terrible por la ambición de quienes creyeron poder crear seres superiores. ¿Vamos a ignorar siglos de historia y abrir las puertas de la Flota Estelar a alguien cuyo potencial ni siquiera comprendemos completamente?",
       "Pauses": [
         {
-          "Start": 37,
-          "End": 37.35
+          "Start": 35,
+          "End": 35.35
         },
         {
-          "Start": 59.55,
-          "End": 60
+          "Start": 57.55,
+          "End": 58
         }
       ],
       "Markers": []
@@ -119,34 +119,34 @@
       "Id": "V3",
       "Speaker": "JANEWAY",
       "Layout": "Right",
-      "Start": 60,
-      "End": 65,
+      "Start": 58,
+      "End": 63,
       "Shots": [
         {
           "Id": "V3",
           "File": "Acto 1/V3_Janeway enérgica ante el consejo.png",
           "Width": 1189,
           "Height": 1323,
-          "Start": 60,
-          "End": 65
+          "Start": 58,
+          "End": 63
         }
       ],
       "Cues": [
         {
           "Text": "No estamos aquí para juzgar a Khan, almirante.",
-          "Start": 60.35,
-          "End": 64.55
+          "Start": 58.35,
+          "End": 62.55
         }
       ],
       "Dialogue": "No estamos aquí para juzgar a Khan, almirante.",
       "Pauses": [
         {
-          "Start": 60,
-          "End": 60.35
+          "Start": 58,
+          "End": 58.35
         },
         {
-          "Start": 64.55,
-          "End": 65
+          "Start": 62.55,
+          "End": 63
         }
       ],
       "Markers": []
@@ -155,34 +155,34 @@
       "Id": "V4",
       "Speaker": "ROURKE",
       "Layout": "Left",
-      "Start": 65,
-      "End": 69,
+      "Start": 63,
+      "End": 67,
       "Shots": [
         {
           "Id": "V4",
           "File": "Acto 1/V4_Debate en el consejo estelar.png",
           "Width": 1302,
           "Height": 1208,
-          "Start": 65,
-          "End": 69
+          "Start": 63,
+          "End": 67
         }
       ],
       "Cues": [
         {
           "Text": "Pero tampoco podemos ignorar su legado, Kathryn.",
-          "Start": 65.35,
-          "End": 68.55
+          "Start": 63.35,
+          "End": 66.55
         }
       ],
       "Dialogue": "Pero tampoco podemos ignorar su legado, Kathryn.",
       "Pauses": [
         {
-          "Start": 65,
-          "End": 65.35
+          "Start": 63,
+          "End": 63.35
         },
         {
-          "Start": 68.55,
-          "End": 69
+          "Start": 66.55,
+          "End": 67
         }
       ],
       "Markers": []
@@ -191,44 +191,44 @@
       "Id": "V5",
       "Speaker": "JANEWAY",
       "Layout": "Right",
-      "Start": 69,
-      "End": 93,
+      "Start": 67,
+      "End": 91,
       "Shots": [
         {
           "Id": "V5",
           "File": "Acto 1/V5_Almirante en la sala de mando.png",
           "Width": 1207,
           "Height": 1303,
-          "Start": 69,
-          "End": 93
+          "Start": 67,
+          "End": 91
         }
       ],
       "Cues": [
         {
           "Text": "Por supuesto que no. Pero estamos hablando de una persona que no ha elegido su ascendencia.",
-          "Start": 69.35,
-          "End": 77.42
+          "Start": 67.35,
+          "End": 75.42
         },
         {
           "Text": "Durante mis años en el Cuadrante Delta aprendí que lo desconocido no siempre representa una amenaza.",
-          "Start": 77.42,
-          "End": 85.489
+          "Start": 75.42,
+          "End": 83.489
         },
         {
           "Text": "Si posee las aptitudes necesarias, merece la oportunidad de demostrarlo. Como cualquier otro candidato.",
-          "Start": 85.489,
-          "End": 92.55
+          "Start": 83.489,
+          "End": 90.55
         }
       ],
       "Dialogue": "Por supuesto que no. Pero estamos hablando de una persona que no ha elegido su ascendencia. Durante mis años en el Cuadrante Delta aprendí que lo desconocido no siempre representa una amenaza. Si posee las aptitudes necesarias, merece la oportunidad de demostrarlo. Como cualquier otro candidato.",
       "Pauses": [
         {
-          "Start": 69,
-          "End": 69.35
+          "Start": 67,
+          "End": 67.35
         },
         {
-          "Start": 92.55,
-          "End": 93
+          "Start": 90.55,
+          "End": 91
         }
       ],
       "Markers": []
@@ -237,49 +237,49 @@
       "Id": "V6",
       "Speaker": "T’VAEN",
       "Layout": "Left",
-      "Start": 93,
-      "End": 116,
+      "Start": 91,
+      "End": 114,
       "Shots": [
         {
           "Id": "V6",
           "File": "Acto 1/V6_T’Vaen en consejo estelar.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 93,
-          "End": 116
+          "Start": 91,
+          "End": 114
         }
       ],
       "Cues": [
         {
           "Text": "La posición de la almirante Janeway es comprensible, pero incompleta.",
-          "Start": 93.35,
-          "End": 98.283
+          "Start": 91.35,
+          "End": 96.283
         },
         {
           "Text": "La lógica exige considerar tanto las posibilidades como las consecuencias.",
-          "Start": 98.283,
-          "End": 103.217
+          "Start": 96.283,
+          "End": 101.217
         },
         {
           "Text": "La combinación de una herencia genética aumentada con características vulcanas introduce variables todavía insuficientemente estudiadas.",
-          "Start": 103.217,
-          "End": 110.617
+          "Start": 101.217,
+          "End": 108.617
         },
         {
           "Text": "Mi objeción no es moral. Es una evaluación del riesgo.",
-          "Start": 110.617,
-          "End": 115.55
+          "Start": 108.617,
+          "End": 113.55
         }
       ],
       "Dialogue": "La posición de la almirante Janeway es comprensible, pero incompleta. La lógica exige considerar tanto las posibilidades como las consecuencias. La combinación de una herencia genética aumentada con características vulcanas introduce variables todavía insuficientemente estudiadas. Mi objeción no es moral. Es una evaluación del riesgo.",
       "Pauses": [
         {
-          "Start": 93,
-          "End": 93.35
+          "Start": 91,
+          "End": 91.35
         },
         {
-          "Start": 115.55,
-          "End": 116
+          "Start": 113.55,
+          "End": 114
         }
       ],
       "Markers": []
@@ -288,119 +288,119 @@
       "Id": "V7",
       "Speaker": "PICARD",
       "Layout": "Right",
-      "Start": 116,
-      "End": 176,
+      "Start": 114,
+      "End": 174,
       "Shots": [
         {
           "Id": "V7",
           "File": "Acto 1/V7_Picard en reflexión ante el emblema Starfleet.png",
           "Width": 1198,
           "Height": 1313,
-          "Start": 116,
-          "End": 130
+          "Start": 114,
+          "End": 128
         },
         {
           "Id": "V7.1",
           "File": "Acto 1/V7.1_Retrato cibernético de Locutus de Borg.png",
           "Width": 941,
           "Height": 1672,
-          "Start": 130,
-          "End": 138
+          "Start": 128,
+          "End": 136
         },
         {
           "Id": "V7.2",
           "File": "Acto 1/V7.2_La Enterprise atrapada por el cubo Borg.png",
           "Width": 1672,
           "Height": 941,
-          "Start": 138,
-          "End": 147
+          "Start": 136,
+          "End": 145
         },
         {
           "Id": "V7.3",
           "File": "Acto 1/V7.3_Picard_ Determinación en la sala de mando.png",
           "Width": 1198,
           "Height": 1313,
-          "Start": 147,
-          "End": 176
+          "Start": 145,
+          "End": 174
         }
       ],
       "Cues": [
         {
           "Text": "Comprendo sus reservas, almirante T’Vaen.",
-          "Start": 116.35,
-          "End": 118.78
+          "Start": 114.35,
+          "End": 116.78
         },
         {
           "Text": "Permítanme, sin embargo, recordarles algo.",
-          "Start": 118.78,
-          "End": 121.1
+          "Start": 116.78,
+          "End": 119.1
         },
         {
           "Text": "Hace años, la Federación también tuvo motivos para temerme.",
-          "Start": 121.1,
-          "End": 129.25
+          "Start": 119.1,
+          "End": 127.25
         },
         {
           "Text": "Fui convertido en Locutus de Borg.",
-          "Start": 130.35,
-          "End": 137.55
+          "Start": 128.35,
+          "End": 135.55
         },
         {
           "Text": "Mis conocimientos fueron utilizados contra la Flota Estelar y miles de personas perdieron la vida.",
-          "Start": 138.35,
-          "End": 146.55
+          "Start": 136.35,
+          "End": 144.55
         },
         {
           "Text": "Cuando regresé, algunos tenían razones más que suficientes para desconfiar de mí.",
-          "Start": 147.35,
-          "End": 154.85
+          "Start": 145.35,
+          "End": 152.85
         },
         {
           "Text": "Sin embargo, la Flota Estelar me permitió volver a ocupar mi puesto.",
-          "Start": 154.85,
-          "End": 161.25
+          "Start": 152.85,
+          "End": 159.25
         },
         {
           "Text": "No olvidó lo sucedido. Pero tampoco permitió que aquello definiera el resto de mi existencia.",
-          "Start": 161.25,
-          "End": 168.55
+          "Start": 159.25,
+          "End": 166.55
         },
         {
           "Text": "Este candidato ni siquiera ha cometido los actos por los que estamos considerando condenarle.",
-          "Start": 168.55,
-          "End": 175.55
+          "Start": 166.55,
+          "End": 173.55
         }
       ],
       "Dialogue": "Comprendo sus reservas, almirante T’Vaen. Permítanme, sin embargo, recordarles algo. Hace años, la Federación también tuvo motivos para temerme. Fui convertido en Locutus de Borg. Mis conocimientos fueron utilizados contra la Flota Estelar y miles de personas perdieron la vida. Cuando regresé, algunos tenían razones más que suficientes para desconfiar de mí. Sin embargo, la Flota Estelar me permitió volver a ocupar mi puesto. No olvidó lo sucedido. Pero tampoco permitió que aquello definiera el resto de mi existencia. Este candidato ni siquiera ha cometido los actos por los que estamos considerando condenarle.",
       "Pauses": [
         {
-          "Start": 116,
-          "End": 116.35
+          "Start": 114,
+          "End": 114.35
         },
         {
-          "Start": 129.25,
-          "End": 130.35
+          "Start": 127.25,
+          "End": 128.35
         },
         {
-          "Start": 137.55,
-          "End": 138.35
+          "Start": 135.55,
+          "End": 136.35
         },
         {
-          "Start": 146.55,
-          "End": 147.35
+          "Start": 144.55,
+          "End": 145.35
         },
         {
-          "Start": 175.55,
-          "End": 176
+          "Start": 173.55,
+          "End": 174
         }
       ],
       "Markers": [
         {
-          "Time": 121.1,
+          "Time": 119.1,
           "Label": "Recuerdo de Picard"
         },
         {
-          "Time": 130,
+          "Time": 128,
           "Label": "Entrada de Ode to Harrison"
         }
       ]
@@ -409,34 +409,34 @@
       "Id": "V8",
       "Speaker": "ROURKE",
       "Layout": "Left",
-      "Start": 176,
-      "End": 182,
+      "Start": 174,
+      "End": 180,
       "Shots": [
         {
           "Id": "V8",
           "File": "Acto 1/V8_Elias Rourke ante el consejo estelar.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 176,
-          "End": 182
+          "Start": 174,
+          "End": 180
         }
       ],
       "Cues": [
         {
           "Text": "Conoce usted mejor que nadie el precio de equivocarnos, almirante.",
-          "Start": 176.35,
-          "End": 181.55
+          "Start": 174.35,
+          "End": 179.55
         }
       ],
       "Dialogue": "Conoce usted mejor que nadie el precio de equivocarnos, almirante.",
       "Pauses": [
         {
-          "Start": 176,
-          "End": 176.35
+          "Start": 174,
+          "End": 174.35
         },
         {
-          "Start": 181.55,
-          "End": 182
+          "Start": 179.55,
+          "End": 180
         }
       ],
       "Markers": []
@@ -445,44 +445,44 @@
       "Id": "V9",
       "Speaker": "PICARD",
       "Layout": "Right",
-      "Start": 182,
-      "End": 200,
+      "Start": 180,
+      "End": 198,
       "Shots": [
         {
           "Id": "V9",
           "File": "Acto 1/V9_Picard_ Discurso Decisivo en el Consejo.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 182,
-          "End": 200
+          "Start": 180,
+          "End": 198
         }
       ],
       "Cues": [
         {
           "Text": "Precisamente, Elias.",
-          "Start": 182.35,
-          "End": 183.46
+          "Start": 180.35,
+          "End": 181.46
         },
         {
           "Text": "Y también conozco el valor de una segunda oportunidad.",
-          "Start": 183.46,
-          "End": 188.453
+          "Start": 181.46,
+          "End": 186.453
         },
         {
           "Text": "Aunque, en el caso que nos ocupa, ni siquiera estamos hablando de una segunda oportunidad. Estamos hablando de la primera.",
-          "Start": 188.453,
-          "End": 199.55
+          "Start": 186.453,
+          "End": 197.55
         }
       ],
       "Dialogue": "Precisamente, Elias. Y también conozco el valor de una segunda oportunidad. Aunque, en el caso que nos ocupa, ni siquiera estamos hablando de una segunda oportunidad. Estamos hablando de la primera.",
       "Pauses": [
         {
-          "Start": 182,
-          "End": 182.35
+          "Start": 180,
+          "End": 180.35
         },
         {
-          "Start": 199.55,
-          "End": 200
+          "Start": 197.55,
+          "End": 198
         }
       ],
       "Markers": []
@@ -491,49 +491,49 @@
       "Id": "V10",
       "Speaker": "JANEWAY",
       "Layout": "Left",
-      "Start": 200,
-      "End": 226,
+      "Start": 198,
+      "End": 224,
       "Shots": [
         {
           "Id": "V10",
           "File": "Acto 1/V10_Janeway en el consejo estelar (1).png",
           "Width": 1195,
           "Height": 1316,
-          "Start": 200,
-          "End": 226
+          "Start": 198,
+          "End": 224
         }
       ],
       "Cues": [
         {
           "Text": "La Academia no es una recompensa reservada a quienes nacieron en circunstancias ideales.",
-          "Start": 200.35,
-          "End": 207.32
+          "Start": 198.35,
+          "End": 205.32
         },
         {
           "Text": "Es el lugar donde aprendemos a convertir nuestras capacidades en responsabilidad.",
-          "Start": 207.32,
-          "End": 213.218
+          "Start": 205.32,
+          "End": 211.218
         },
         {
           "Text": "Quizá este candidato posea habilidades que todavía no comprendemos.",
-          "Start": 213.218,
-          "End": 218.044
+          "Start": 211.218,
+          "End": 216.044
         },
         {
           "Text": "Precisamente por eso necesita orientación, disciplina y una oportunidad para encontrar su propio camino.",
-          "Start": 218.044,
-          "End": 225.55
+          "Start": 216.044,
+          "End": 223.55
         }
       ],
       "Dialogue": "La Academia no es una recompensa reservada a quienes nacieron en circunstancias ideales. Es el lugar donde aprendemos a convertir nuestras capacidades en responsabilidad. Quizá este candidato posea habilidades que todavía no comprendemos. Precisamente por eso necesita orientación, disciplina y una oportunidad para encontrar su propio camino.",
       "Pauses": [
         {
-          "Start": 200,
-          "End": 200.35
+          "Start": 198,
+          "End": 198.35
         },
         {
-          "Start": 225.55,
-          "End": 226
+          "Start": 223.55,
+          "End": 224
         }
       ],
       "Markers": []
@@ -542,34 +542,34 @@
       "Id": "V11",
       "Speaker": "T’VAEN",
       "Layout": "Right",
-      "Start": 226,
-      "End": 234,
+      "Start": 224,
+      "End": 232,
       "Shots": [
         {
           "Id": "V11",
           "File": "Acto 1/V11_La lógica de la responsabilidad.png",
           "Width": 1024,
           "Height": 1536,
-          "Start": 226,
-          "End": 234
+          "Start": 224,
+          "End": 232
         }
       ],
       "Cues": [
         {
           "Text": "La formación no garantiza que un individuo emplee sus capacidades de manera responsable.",
-          "Start": 226.35,
-          "End": 233.55
+          "Start": 224.35,
+          "End": 231.55
         }
       ],
       "Dialogue": "La formación no garantiza que un individuo emplee sus capacidades de manera responsable.",
       "Pauses": [
         {
-          "Start": 226,
-          "End": 226.35
+          "Start": 224,
+          "End": 224.35
         },
         {
-          "Start": 233.55,
-          "End": 234
+          "Start": 231.55,
+          "End": 232
         }
       ],
       "Markers": []
@@ -578,34 +578,34 @@
       "Id": "V12",
       "Speaker": "JANEWAY",
       "Layout": "Left",
-      "Start": 234,
-      "End": 239,
+      "Start": 232,
+      "End": 237,
       "Shots": [
         {
           "Id": "V12",
           "File": "Acto 1/V12_Janeway responde con lógica y experiencia.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 234,
-          "End": 239
+          "Start": 232,
+          "End": 237
         }
       ],
       "Cues": [
         {
           "Text": "Tampoco lo garantiza una genética ordinaria, almirante.",
-          "Start": 234.35,
-          "End": 238.55
+          "Start": 232.35,
+          "End": 236.55
         }
       ],
       "Dialogue": "Tampoco lo garantiza una genética ordinaria, almirante.",
       "Pauses": [
         {
-          "Start": 234,
-          "End": 234.35
+          "Start": 232,
+          "End": 232.35
         },
         {
-          "Start": 238.55,
-          "End": 239
+          "Start": 236.55,
+          "End": 237
         }
       ],
       "Markers": []
@@ -614,49 +614,49 @@
       "Id": "V13",
       "Speaker": "MYERS",
       "Layout": "Right",
-      "Start": 239,
-      "End": 267,
+      "Start": 237,
+      "End": 265,
       "Shots": [
         {
           "Id": "V13",
           "File": "Acto 1/V13_General Myers ante el Consejo.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 239,
-          "End": 267
+          "Start": 237,
+          "End": 265
         }
       ],
       "Cues": [
         {
           "Text": "Ambas posiciones tienen fundamento.",
-          "Start": 239.35,
-          "End": 241.617
+          "Start": 237.35,
+          "End": 239.617
         },
         {
           "Text": "El almirante Rourke tiene razón al recordar las consecuencias de nuestra historia. Y la almirante Janeway tiene razón al recordarnos nuestros principios.",
-          "Start": 241.617,
-          "End": 254.083
+          "Start": 239.617,
+          "End": 252.083
         },
         {
           "Text": "Pero hay algo que me preocupa todavía más.",
-          "Start": 254.083,
-          "End": 258.617
+          "Start": 252.083,
+          "End": 256.617
         },
         {
           "Text": "¿Qué mensaje estaremos enviando si condenamos a alguien por los actos de sus antepasados?",
-          "Start": 258.617,
-          "End": 266.55
+          "Start": 256.617,
+          "End": 264.55
         }
       ],
       "Dialogue": "Ambas posiciones tienen fundamento. El almirante Rourke tiene razón al recordar las consecuencias de nuestra historia. Y la almirante Janeway tiene razón al recordarnos nuestros principios. Pero hay algo que me preocupa todavía más. ¿Qué mensaje estaremos enviando si condenamos a alguien por los actos de sus antepasados?",
       "Pauses": [
         {
-          "Start": 239,
-          "End": 239.35
+          "Start": 237,
+          "End": 237.35
         },
         {
-          "Start": 266.55,
-          "End": 267
+          "Start": 264.55,
+          "End": 265
         }
       ],
       "Markers": []
@@ -665,44 +665,44 @@
       "Id": "V14",
       "Speaker": "ROURKE",
       "Layout": "Left",
-      "Start": 267,
-      "End": 290,
+      "Start": 265,
+      "End": 288,
       "Shots": [
         {
           "Id": "V14",
           "File": "Acto 1/V14_Vicealmirante Rourke en el consejo.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 267,
-          "End": 290
+          "Start": 265,
+          "End": 288
         }
       ],
       "Cues": [
         {
           "Text": "No estamos hablando de prejuicios, Marcus. Estamos hablando de responsabilidad.",
-          "Start": 267.35,
-          "End": 273.192
+          "Start": 265.35,
+          "End": 271.192
         },
         {
           "Text": "Si nos equivocamos, las consecuencias podrían ir mucho más allá de esta sala.",
-          "Start": 273.192,
-          "End": 280.787
+          "Start": 271.192,
+          "End": 278.787
         },
         {
           "Text": "La Flota Estelar no es un laboratorio donde experimentar con el destino de la Federación.",
-          "Start": 280.787,
-          "End": 289.55
+          "Start": 278.787,
+          "End": 287.55
         }
       ],
       "Dialogue": "No estamos hablando de prejuicios, Marcus. Estamos hablando de responsabilidad. Si nos equivocamos, las consecuencias podrían ir mucho más allá de esta sala. La Flota Estelar no es un laboratorio donde experimentar con el destino de la Federación.",
       "Pauses": [
         {
-          "Start": 267,
-          "End": 267.35
+          "Start": 265,
+          "End": 265.35
         },
         {
-          "Start": 289.55,
-          "End": 290
+          "Start": 287.55,
+          "End": 288
         }
       ],
       "Markers": []
@@ -711,39 +711,39 @@
       "Id": "V15",
       "Speaker": "MYERS",
       "Layout": "Right",
-      "Start": 290,
-      "End": 301,
+      "Start": 288,
+      "End": 299,
       "Shots": [
         {
           "Id": "V15",
           "File": "Acto 1/V15_El almirante Myers en el consejo.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 290,
-          "End": 301
+          "Start": 288,
+          "End": 299
         }
       ],
       "Cues": [
         {
           "Text": "Lo sé, Elias.",
-          "Start": 290.35,
-          "End": 292.263
+          "Start": 288.35,
+          "End": 290.263
         },
         {
           "Text": "Pero tampoco debería convertirse en una institución que teme a quienes son diferentes.",
-          "Start": 292.263,
-          "End": 300.55
+          "Start": 290.263,
+          "End": 298.55
         }
       ],
       "Dialogue": "Lo sé, Elias. Pero tampoco debería convertirse en una institución que teme a quienes son diferentes.",
       "Pauses": [
         {
-          "Start": 290,
-          "End": 290.35
+          "Start": 288,
+          "End": 288.35
         },
         {
-          "Start": 300.55,
-          "End": 301
+          "Start": 298.55,
+          "End": 299
         }
       ],
       "Markers": []
@@ -752,49 +752,49 @@
       "Id": "V16",
       "Speaker": "PICARD",
       "Layout": "Left",
-      "Start": 301,
-      "End": 328,
+      "Start": 299,
+      "End": 326,
       "Shots": [
         {
           "Id": "V16",
           "File": "Acto 1/V16_Picard ante el consejo estelar (1).png",
           "Width": 1211,
           "Height": 1299,
-          "Start": 301,
-          "End": 328
+          "Start": 299,
+          "End": 326
         }
       ],
       "Cues": [
         {
           "Text": "La Federación se fundó sobre una convicción: que las diferencias no deben separarnos, sino enriquecernos.",
-          "Start": 301.35,
-          "End": 311.554
+          "Start": 299.35,
+          "End": 309.554
         },
         {
           "Text": "No podemos defender esos principios únicamente cuando resulta sencillo hacerlo.",
-          "Start": 311.554,
-          "End": 318.357
+          "Start": 309.554,
+          "End": 316.357
         },
         {
           "Text": "Creo que todas las posiciones han quedado suficientemente expuestas.",
-          "Start": 318.357,
-          "End": 324.479
+          "Start": 316.357,
+          "End": 322.479
         },
         {
           "Text": "Procedamos a la votación.",
-          "Start": 324.479,
-          "End": 327.2
+          "Start": 322.479,
+          "End": 325.2
         }
       ],
       "Dialogue": "La Federación se fundó sobre una convicción: que las diferencias no deben separarnos, sino enriquecernos. No podemos defender esos principios únicamente cuando resulta sencillo hacerlo. Creo que todas las posiciones han quedado suficientemente expuestas. Procedamos a la votación.",
       "Pauses": [
         {
-          "Start": 301,
-          "End": 301.35
+          "Start": 299,
+          "End": 299.35
         },
         {
-          "Start": 327.2,
-          "End": 328
+          "Start": 325.2,
+          "End": 326
         }
       ],
       "Markers": []
@@ -803,34 +803,34 @@
       "Id": "V17",
       "Speaker": "ROURKE",
       "Layout": "Right",
-      "Start": 328,
-      "End": 347,
+      "Start": 326,
+      "End": 345,
       "Shots": [
         {
           "Id": "V17",
           "File": "Acto 1/V17_El voto solemne de Rourke.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 328,
-          "End": 347
+          "Start": 326,
+          "End": 345
         }
       ],
       "Cues": [
         {
           "Text": "Por la seguridad de la Federación y atendiendo a mi responsabilidad como oficial de la Flota Estelar, mi voto es contrario a su admisión.",
-          "Start": 328.35,
-          "End": 346.55
+          "Start": 326.35,
+          "End": 344.55
         }
       ],
       "Dialogue": "Por la seguridad de la Federación y atendiendo a mi responsabilidad como oficial de la Flota Estelar, mi voto es contrario a su admisión.",
       "Pauses": [
         {
-          "Start": 328,
-          "End": 328.35
+          "Start": 326,
+          "End": 326.35
         },
         {
-          "Start": 346.55,
-          "End": 347
+          "Start": 344.55,
+          "End": 345
         }
       ],
       "Markers": []
@@ -839,44 +839,44 @@
       "Id": "V18",
       "Speaker": "T’VAEN",
       "Layout": "Left",
-      "Start": 347,
-      "End": 366,
+      "Start": 345,
+      "End": 364,
       "Shots": [
         {
           "Id": "V18",
           "File": "Acto 1/V18_Almirante vulcana ante el puente dorado.png",
           "Width": 1199,
           "Height": 1312,
-          "Start": 347,
-          "End": 366
+          "Start": 345,
+          "End": 364
         }
       ],
       "Cues": [
         {
           "Text": "Los datos disponibles no permiten establecer una evaluación satisfactoria del riesgo.",
-          "Start": 347.35,
-          "End": 355.358
+          "Start": 345.35,
+          "End": 353.358
         },
         {
           "Text": "Desde un punto de vista lógico, considero prematura su admisión.",
-          "Start": 355.358,
-          "End": 362.638
+          "Start": 353.358,
+          "End": 360.638
         },
         {
           "Text": "Mi voto es contrario.",
-          "Start": 362.638,
-          "End": 365.55
+          "Start": 360.638,
+          "End": 363.55
         }
       ],
       "Dialogue": "Los datos disponibles no permiten establecer una evaluación satisfactoria del riesgo. Desde un punto de vista lógico, considero prematura su admisión. Mi voto es contrario.",
       "Pauses": [
         {
-          "Start": 347,
-          "End": 347.35
+          "Start": 345,
+          "End": 345.35
         },
         {
-          "Start": 365.55,
-          "End": 366
+          "Start": 363.55,
+          "End": 364
         }
       ],
       "Markers": []
@@ -885,44 +885,44 @@
       "Id": "V19",
       "Speaker": "JANEWAY",
       "Layout": "Right",
-      "Start": 366,
-      "End": 391,
+      "Start": 364,
+      "End": 389,
       "Shots": [
         {
           "Id": "V19",
           "File": "Acto 1/V19_Voto afirmativo de la almirante Janeway.png",
           "Width": 941,
           "Height": 1672,
-          "Start": 366,
-          "End": 391
+          "Start": 364,
+          "End": 389
         }
       ],
       "Cues": [
         {
           "Text": "No considero que la ascendencia de una persona deba privarla del derecho a demostrar quién es.",
-          "Start": 366.35,
-          "End": 378.083
+          "Start": 364.35,
+          "End": 376.083
         },
         {
           "Text": "Confío en la capacidad de la Academia para formarle y evaluar sus acciones.",
-          "Start": 378.083,
-          "End": 387.617
+          "Start": 376.083,
+          "End": 385.617
         },
         {
           "Text": "Mi voto es favorable.",
-          "Start": 387.617,
-          "End": 390.55
+          "Start": 385.617,
+          "End": 388.55
         }
       ],
       "Dialogue": "No considero que la ascendencia de una persona deba privarla del derecho a demostrar quién es. Confío en la capacidad de la Academia para formarle y evaluar sus acciones. Mi voto es favorable.",
       "Pauses": [
         {
-          "Start": 366,
-          "End": 366.35
+          "Start": 364,
+          "End": 364.35
         },
         {
-          "Start": 390.55,
-          "End": 391
+          "Start": 388.55,
+          "End": 389
         }
       ],
       "Markers": []
@@ -931,59 +931,59 @@
       "Id": "V20",
       "Speaker": "MYERS",
       "Layout": "Left",
-      "Start": 391,
-      "End": 429,
+      "Start": 389,
+      "End": 427,
       "Shots": [
         {
           "Id": "V20",
           "File": "Acto 1/V20_Voto decisivo del almirante Myers.png",
           "Width": 941,
           "Height": 1672,
-          "Start": 391,
-          "End": 429
+          "Start": 389,
+          "End": 427
         }
       ],
       "Cues": [
         {
           "Text": "La Academia no existe para fabricar expedientes perfectos.",
-          "Start": 391.35,
-          "End": 397.492
+          "Start": 389.35,
+          "End": 395.492
         },
         {
           "Text": "Existe para formar personas capaces de tomar decisiones extraordinarias cuando las circunstancias lo exigen.",
-          "Start": 397.492,
-          "End": 408.24
+          "Start": 395.492,
+          "End": 406.24
         },
         {
           "Text": "No sabemos qué clase de oficial llegará a ser este candidato.",
-          "Start": 408.24,
-          "End": 416.684
+          "Start": 406.24,
+          "End": 414.684
         },
         {
           "Text": "Pero negarle la oportunidad significaría que ya hemos decidido por él.",
-          "Start": 416.684,
-          "End": 425.129
+          "Start": 414.684,
+          "End": 423.129
         },
         {
           "Text": "Mi voto es favorable.",
-          "Start": 425.129,
-          "End": 428.2
+          "Start": 423.129,
+          "End": 426.2
         }
       ],
       "Dialogue": "La Academia no existe para fabricar expedientes perfectos. Existe para formar personas capaces de tomar decisiones extraordinarias cuando las circunstancias lo exigen. No sabemos qué clase de oficial llegará a ser este candidato. Pero negarle la oportunidad significaría que ya hemos decidido por él. Mi voto es favorable.",
       "Pauses": [
         {
-          "Start": 391,
-          "End": 391.35
+          "Start": 389,
+          "End": 389.35
         },
         {
-          "Start": 428.2,
-          "End": 429
+          "Start": 426.2,
+          "End": 427
         }
       ],
       "Markers": [
         {
-          "Time": 400,
+          "Time": 398,
           "Label": "Crescendo de Myers"
         }
       ]
@@ -992,48 +992,48 @@
       "Id": "V21",
       "Speaker": "PICARD",
       "Layout": "Right",
-      "Start": 429,
-      "End": 451,
+      "Start": 427,
+      "End": 449,
       "Shots": [
         {
           "Id": "V21",
           "File": "Acto 1/V21_El voto decisivo de Picard.png",
           "Width": 1196,
           "Height": 1315,
-          "Start": 429,
-          "End": 451
+          "Start": 427,
+          "End": 449
         }
       ],
       "Cues": [
         {
           "Text": "No debemos confundir aquello que alguien podría llegar a ser con aquello que ha decidido ser.",
-          "Start": 429.35,
-          "End": 442.5
+          "Start": 427.35,
+          "End": 440.5
         },
         {
           "Text": "Mi voto es favorable.",
-          "Start": 447.35,
-          "End": 451
+          "Start": 445.35,
+          "End": 449
         }
       ],
       "Dialogue": "No debemos confundir aquello que alguien podría llegar a ser con aquello que ha decidido ser. Mi voto es favorable.",
       "Pauses": [
         {
-          "Start": 429,
-          "End": 429.35
+          "Start": 427,
+          "End": 427.35
         },
         {
-          "Start": 442.5,
-          "End": 447.35
+          "Start": 440.5,
+          "End": 445.35
         }
       ],
       "Markers": [
         {
-          "Time": 430,
+          "Time": 428,
           "Label": "Preparación del voto"
         },
         {
-          "Time": 450,
+          "Time": 448,
           "Label": "Voto favorable de Picard"
         }
       ]
@@ -1042,64 +1042,64 @@
       "Id": "V22",
       "Speaker": "PICARD",
       "Layout": "Panorama",
-      "Start": 451,
-      "End": 485,
+      "Start": 449,
+      "End": 483,
       "Shots": [
         {
           "Id": "V22",
           "File": "Acto 1/V22_Consejo Estelar sobre la Bahía de San Francisco.png",
           "Width": 1672,
           "Height": 941,
-          "Start": 451,
-          "End": 485
+          "Start": 449,
+          "End": 483
         }
       ],
       "Cues": [
         {
           "Text": "Con tres votos a favor y dos en contra, este Consejo aprueba la admisión extraordinaria del candidato en la Academia de la Flota Estelar.",
-          "Start": 451.35,
-          "End": 463
+          "Start": 449.35,
+          "End": 461
         },
         {
           "Text": "Que conste en acta.",
-          "Start": 463,
-          "End": 465
+          "Start": 461,
+          "End": 463
         },
         {
           "Text": "Hoy no hemos decidido quién será este hombre.",
-          "Start": 465,
-          "End": 469
+          "Start": 463,
+          "End": 467
         },
         {
           "Text": "Hemos decidido darle la oportunidad de descubrirlo.",
-          "Start": 469,
-          "End": 473
+          "Start": 467,
+          "End": 471
         },
         {
           "Text": "Y que sean sus acciones, no su sangre, las que escriban su historia.",
-          "Start": 473,
-          "End": 480
+          "Start": 471,
+          "End": 478
         },
         {
           "Text": "Se levanta la sesión.",
-          "Start": 481,
-          "End": 485
+          "Start": 479,
+          "End": 483
         }
       ],
       "Dialogue": "Con tres votos a favor y dos en contra, este Consejo aprueba la admisión extraordinaria del candidato en la Academia de la Flota Estelar. Que conste en acta. Hoy no hemos decidido quién será este hombre. Hemos decidido darle la oportunidad de descubrirlo. Y que sean sus acciones, no su sangre, las que escriban su historia. Se levanta la sesión.",
       "Pauses": [
         {
-          "Start": 451,
-          "End": 451.35
+          "Start": 449,
+          "End": 449.35
         },
         {
-          "Start": 480,
-          "End": 481
+          "Start": 478,
+          "End": 479
         }
       ],
       "Markers": [
         {
-          "Time": 475,
+          "Time": 473,
           "Label": "Clímax de la resolución"
         }
       ]

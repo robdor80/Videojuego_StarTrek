@@ -188,7 +188,7 @@ void FActOnePresentation::Render(double Time)
     SetOpacity(OpeningText, LocationOpacity);
     SetOpacity(OpeningShade, LocationOpacity * T::Ramp(Time, T::ExteriorStart, T::Fade));
     SetOpacity(CouncilText, T::Ramp(Time, T::CouncilStart, 0.45));
-    SetOpacity(FinalShade, T::Ramp(Time, 451, T::Fade) * T::EndOpacity(Time));
+    SetOpacity(FinalShade, T::Ramp(Time, 449, T::Fade) * T::EndOpacity(Time));
 
     const FActOneIntervention* Line = Timeline.FindIntervention(Time);
     for (int32 Side = 0; Side < 3; ++Side)

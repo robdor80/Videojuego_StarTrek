@@ -41,7 +41,7 @@ void AIntroCinematicPlayer::PrepareActOne(SOverlay& Overlay)
     {
         using T = UActOneTimeline;
         ActOneTraceTimes.Append({0.0, T::LocationStart, T::ExteriorStart, T::CouncilStart, T::LondonStart,
-            T::CouncilAmbienceStart + T::CouncilAmbienceFade, 110.0, 133.0, 135.0, 140.0, 143.0, T::LondonEnd, 155.0});
+            T::CouncilAmbienceStart + T::CouncilAmbienceFade, 108.0, 131.0, 133.0, 138.0, 141.0, T::LondonEnd, 153.0});
         for (const FActOneIntervention& Line : ActOne->Interventions)
         {
             for (const FActOneShot& Shot : Line.Shots)
@@ -88,7 +88,7 @@ void AIntroCinematicPlayer::TickActOne(double Time)
         bCouncilStarted = true;
         ActOneAmbience->SetVolumeMultiplier(ActOne->AmbienceGain * T::CouncilEnvelope(Time));
         // Keep the approved loop phase after the delayed entrance.
-        constexpr double CouncilLoopOrigin = 7.0;
+        constexpr double CouncilLoopOrigin = 5.0;
         const double Offset = FMath::Fmod(Time - CouncilLoopOrigin, ActOne->CouncilAmbience->Duration);
         ActOneAmbience->Play(Offset);
         UE_LOG(LogActOne, Display, TEXT("Council ambience requested at %.6f s (offset %.6f s)"), Time, Offset);
@@ -111,7 +111,7 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     const float DuckTarget = ActOneVoice->IsPlaying() ? ActOne->VoiceDuck : 1.0f;
     VoiceMusicGain = FMath::FInterpTo(VoiceMusicGain, DuckTarget, Time - PreviousActOneTime, 6.0f);
     PreviousActOneTime = Time;
-    const float OdeEnvelope = FMath::Lerp(0.92f, 1.0f, T::Ramp(Time, 400.0, 54.0)) * T::EndOpacity(Time);
+    const float OdeEnvelope = FMath::Lerp(0.92f, 1.0f, T::Ramp(Time, 398.0, 54.0)) * T::EndOpacity(Time);
 
     if (!bOdeStarted && Time >= T::OdeStart && Time < T::End)
     {
@@ -156,8 +156,8 @@ void AIntroCinematicPlayer::TickActOne(double Time)
     }
     if (!ActOneCaptureDirectory.IsEmpty())
     {
-        static constexpr double Captures[] = {1.5, 4.95, 6.3, 9.1, 13.1, 15.5, 17.4, 20.4, 27.3, 33.9,
-            40.2, 94.0, 132.0, 141.0, 450.0, 456.0, 475.0, 490.0};
+        static constexpr double Captures[] = {0.5, 2.95, 4.3, 7.1, 11.1, 13.5, 15.4, 18.4, 25.3, 31.9,
+            38.2, 92.0, 130.0, 139.0, 448.0, 454.0, 473.0, T::End};
         if (ActOneNextCapture < UE_ARRAY_COUNT(Captures) && Time >= Captures[ActOneNextCapture])
         {
             const double At = Captures[ActOneNextCapture++];

@@ -7,12 +7,13 @@ namespace IntroTimeline
     inline constexpr int32 PairCount = 5;
     inline constexpr double ImageStart[] = {1.0, 5.5, 10.0, 14.5, 19.0, 23.5, 28.0, 32.5, 37.0, 43.0};
     inline constexpr int32 SceneCount = UE_ARRAY_COUNT(ImageStart);
-    inline constexpr double DataDelay = 1.0;
+    inline constexpr double DataDelay = 0.200;
+    inline constexpr double DataFade = 1.0;
     inline constexpr double SceneFade = 2.0;
     inline constexpr double TributeStart = 47.0;
     inline constexpr double TributeFade = 1.0;
     inline constexpr double FinalFadeStart = 53.0;
-    inline constexpr double End = 54.0;
+    inline constexpr double End = 56.0;
 
     static_assert(SceneCount == PairCount * 2);
 
@@ -42,7 +43,7 @@ namespace IntroTimeline
 
         return {
             FadeIn(Time, Start, SceneFade) * Out,
-            FadeIn(Time, Start + DataDelay, SceneFade - DataDelay) * Out
+            FadeIn(Time, Start + DataDelay, DataFade) * Out
         };
     }
 

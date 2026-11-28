@@ -116,18 +116,18 @@ public:
     static constexpr const TCHAR* PackagePath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline");
     static constexpr const TCHAR* AssetPath = TEXT("/Game/Cinematics/Act_One/DA_ActOneTimeline.DA_ActOneTimeline");
     static constexpr double Fade = 0.35;
-    static constexpr double LocationStart = 5.0;
-    static constexpr double ExteriorStart = 8.0;
-    static constexpr double CouncilStart = 12.0;
-    static constexpr double LondonStart = 15.0;
-    static constexpr double CouncilAmbienceStart = 15.0;
+    static constexpr double LocationStart = 3.0;
+    static constexpr double ExteriorStart = 6.0;
+    static constexpr double CouncilStart = 10.0;
+    static constexpr double LondonStart = 13.0;
+    static constexpr double CouncilAmbienceStart = 13.0;
     static constexpr double CouncilAmbienceFade = 2.0;
-    static constexpr double FirstInterventionStart = 16.0;
-    static constexpr double OdeStart = 130.0;
-    static constexpr double LondonEnd = 145.0;
+    static constexpr double FirstInterventionStart = 14.0;
+    static constexpr double OdeStart = 128.0;
+    static constexpr double LondonEnd = 143.0;
     static constexpr float OdePcmHeadroom = 0.8f;
-    static constexpr double FinalFadeStart = 485.0;
-    static constexpr double End = 490.0;
+    static constexpr double FinalFadeStart = 483.0;
+    static constexpr double End = 488.0;
 
     UPROPERTY(EditAnywhere, Category = "Act I")
     TArray<FActOneShot> Opening;

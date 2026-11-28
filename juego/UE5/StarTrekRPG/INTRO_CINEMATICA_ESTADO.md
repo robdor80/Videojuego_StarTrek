@@ -12,25 +12,51 @@ Reproducir las diez escenas en el nivel propio de la introducción y conservar l
 - Unreal Engine 5.8.4 según la asociación local. La configuración del proyecto y los tres archivos de solución/configuración de VS preexistentes quedan fuera de los commits de esta tarea.
 - Git excluye los paquetes de Unreal. Los recursos de la introducción están guardados en el proyecto local y respaldados con SHA-256. No se publicó una PR porque la rama remota quedaría sin el nivel, los widgets y el audio.
 
-## Cronología aprobada
+## Cronología de reproducción
 
-| Escena | Imagen | Datos | Opacidad completa |
+| Escena | Entrada de imagen | Entrada de datos | Imagen al 100 % |
 |---|---:|---:|---:|
-| Enterprise NCC-1701 | 1.000 | 2.000 | 3.000 |
-| Pike | 5.500 | 6.500 | 7.500 |
-| Enterprise NCC-1701-A | 10.000 | 11.000 | 12.000 |
-| Kirk | 14.500 | 15.500 | 16.500 |
-| Voyager | 19.000 | 20.000 | 21.000 |
-| Janeway | 23.500 | 24.500 | 25.500 |
-| Deep Space Nine | 28.000 | 29.000 | 30.000 |
-| Sisko | 32.500 | 33.500 | 34.500 |
-| Enterprise NCC-1701-D | 37.000 | 38.000 | 39.000 |
-| Picard | 43.000 | 44.000 | 45.000 |
+| Enterprise NCC-1701 | 1.000 | 1.200 | 3.000 |
+| Pike | 5.500 | 5.700 | 7.500 |
+| Enterprise NCC-1701-A | 10.000 | 10.200 | 12.000 |
+| Kirk | 14.500 | 14.700 | 16.500 |
+| Voyager | 19.000 | 19.200 | 21.000 |
+| Janeway | 23.500 | 23.700 | 25.500 |
+| Deep Space Nine | 28.000 | 28.200 | 30.000 |
+| Sisko | 32.500 | 32.700 | 34.500 |
+| Enterprise NCC-1701-D | 37.000 | 37.200 | 39.000 |
+| Picard | 43.000 | 43.200 | 45.000 |
 | Homenaje | — | 47.000 | 48.000 |
 
-Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida de dos segundos de la escena anterior. Picard y su homenaje se funden entre 53.000 y 54.000 s.
+Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida de dos segundos de la escena anterior. En las diez escenas, los datos empiezan 0,200 s después que la imagen y tardan 1,000 s en alcanzar la opacidad completa. Picard y el homenaje se funden entre 53 y 56 s. El Acto I empieza en 0:56.
 
-## Bloques
+## Cierre musical
+
+El MP3 original dura 148,323 s. Su frase musical decae de forma natural después de 0:54. La versión de 56 segundos usa el material continuo desde el comienzo del original y conserva el PCM de los primeros 53 segundos. La música se funde con un coseno elevado de 0:53 a 0:56.
+
+Para actualizar una copia local ya preparada, usa FFmpeg y el commandlet de Unreal desde la raíz del repositorio. Elige la carpeta de trabajo en `laboratorios/` y conserva una copia de los paquetes previos.
+
+```powershell
+$project = (Resolve-Path 'juego/UE5/StarTrekRPG/StarTrekRPG.uproject').Path
+$editor = 'C:/Program Files/Epic Games/UE_5.8/Engine/Binaries/Win64/UnrealEditor-Cmd.exe'
+$source = 'C:/Users/andro/Pictures/Star Trek intro/Star Trek - Michael Giacchino.mp3'
+$work = (New-Item -ItemType Directory -Force 'laboratorios/cinematics/actualizar-intro-56').FullName
+$wav = Join-Path $work 'SW_Intro_Music.wav'
+ffmpeg -nostdin -v error -xerror -i $source -t 56 -af 'afade=t=out:st=53:d=3:curve=hsin' -map_metadata -1 -vn -c:a pcm_s16le -ar 44100 -ac 2 $wav
+if ($LASTEXITCODE -ne 0) { throw 'No se pudo generar el WAV de la intro.' }
+& $editor $project -run=IntroAssetSetup -RefreshMusic "-MusicWav=$wav" -nullrhi -unattended "-UserDir=$work" "-AbsLog=$work/import.log"
+if ($LASTEXITCODE -ne 0) { throw 'No se pudo actualizar el audio de la intro.' }
+
+$timeline = (Resolve-Path 'audiovisual/presentation/guiones/STAR_TREK_LEGENDS_ACTO_I_TIMELINE.json').Path
+$assets = 'C:/Users/andro/Pictures/Star Trek Acto 1'
+& $editor $project -run=ActOneAssetSetup -Apply "-Timeline=$timeline" "-AssetsRoot=$assets" `
+    "-WavRoot=$work" -nullrhi -unattended "-UserDir=$work" "-AbsLog=$work/acto-i.log"
+if ($LASTEXITCODE -ne 0) { throw 'No se pudo actualizar el Data Asset del Acto I.' }
+```
+
+La actualización del Data Asset reutiliza las ondas instaladas. Los tiempos relativos y el comando de reproducción están en la [guía de continuidad del Acto I](../../../audiovisual/presentation/guiones/ACTO_I_CONTINUIDAD.md).
+
+## Bloques de la versión anterior
 
 | Bloque | Estado |
 |---|---|
@@ -53,12 +79,12 @@ Negro y arranque musical en 0.000 s. El inicio de cada imagen activa la salida d
 - Widgets de composición en `/Game/Cinematics/UI_Intro/`: `WBP_Intro_Pike`, `WBP_Intro_Kirk`, `WBP_Intro_Janeway`, `WBP_Intro_Sisko` y `WBP_Intro_Picard`. Abre cada recurso en **Designer**. Usa el icono de visibilidad del diseñador en **Hierarchy** para aislar la nave o el capitán mientras editas.
 - Selecciona un elemento en **Hierarchy**. En **Details > Slot (Canvas Panel Slot)** edita posición, tamaño, anclaje y alineación. En **Appearance** edita pincel, color o fuente. En **Content** edita el texto.
 - El homenaje provisional se coloca por encima del retrato para que pueda coexistir con él a plena opacidad. En Picard, selecciona `TXT_HomenajePatrickStewart` o `TXT_FechasPatrickStewart` para editar cada bloque por separado. Conserva los nombres de ambos y de `IMG_FondoNegro`, `IMG_Nave`, `TXT_Matricula`, `IMG_LineaNave`, `TXT_NombreNave`, `IMG_Capitan`, `TXT_RangoCapitan`, `IMG_LineaCapitan` y `TXT_NombreCapitan`. El reproductor localiza esos elementos por nombre.
-- Audio local en `/Game/Cinematics/Audio_Intro/SW_Intro_Music`. El fondo negro se muestra durante la preparación. El reloj visual y la orden de reproducción arrancan juntos tras los primeros fotogramas de carga. El fundido de audio está grabado en la muestra y el actor detiene el componente al llegar a 54.000 s.
+- Audio local en `/Game/Cinematics/Audio_Intro/SW_Intro_Music`. El fondo negro se muestra durante la preparación. El reloj visual y la orden de reproducción arrancan juntos tras los primeros fotogramas de carga. El fundido de audio está grabado en la muestra y el actor detiene el componente al llegar a 56.000 s.
 - El nivel conserva el actor de la secuencia con **Auto Play** desactivado. Se retiró del nivel la instancia de `BP_IntroController`. El Blueprint, el widget original, su copia de respaldo y el recurso de la secuencia se conservaron.
 
-El commandlet de editor `IntroAssetSetup` abre y verifica los paquetes locales. Con `-Apply -MusicWav="ruta-absoluta-del-WAV"` puede reconstruir los cinco widgets a partir de una copia restaurada del contenido original y conectar el nivel. Conserva los widgets y el audio que ya existan. La reconstrucción desde el respaldo original se probó por separado en un laboratorio. La verificación de diseño inicial usa `-CheckInitialLayout`. Omite ese parámetro una vez que ajustes deliberadamente la composición de Pike.
+El commandlet de editor `IntroAssetSetup` abre y verifica los paquetes locales. Con `-Apply -MusicWav="ruta-absoluta-del-WAV"` puede reconstruir los cinco widgets a partir de una copia restaurada del contenido original y conectar el nivel. Conserva los widgets y el audio que ya existan, salvo el reemplazo explícito mediante `-RefreshMusic`. La reconstrucción desde el respaldo original se probó por separado en un laboratorio. La verificación de diseño inicial usa `-CheckInitialLayout`. Omite ese parámetro una vez que ajustes deliberadamente la composición de Pike.
 
-## Resultados y tolerancias
+## Resultados y tolerancias de la versión de 54 segundos
 
 | Prueba | Resultado |
 |---|---|

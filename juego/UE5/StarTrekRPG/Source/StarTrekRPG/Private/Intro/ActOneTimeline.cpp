@@ -49,8 +49,8 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
 
     double Start = Opening.Last().End;
     TSet<FString> Files = { Opening[0].File, Opening[1].File };
-    const double Starts[] = {FirstInterventionStart, 37, 60, 65, 69, 93, 116, 176, 182, 200, 226, 234,
-        239, 267, 290, 301, 328, 347, 366, 391, 429, 451};
+    const double Starts[] = {FirstInterventionStart, 35, 58, 63, 67, 91, 114, 174, 180, 198, 224, 232,
+        237, 265, 288, 299, 326, 345, 364, 389, 427, 449};
     for (int32 Index = 0; Index < Interventions.Num(); ++Index)
     {
         const FActOneIntervention& Line = Interventions[Index];
@@ -66,7 +66,7 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
         }
 
         double ShotStart = Start;
-        const double MemoryStarts[] = {116, 130, 138, 147};
+        const double MemoryStarts[] = {114, 128, 136, 145};
         for (int32 ShotIndex = 0; ShotIndex < Line.Shots.Num(); ++ShotIndex)
         {
             const FActOneShot& Shot = Line.Shots[ShotIndex];
@@ -134,11 +134,11 @@ bool UActOneTimeline::Validate(FString& Error, bool bRequireAssets) const
         return Interventions[Index].Cues.FindByPredicate(
             [Time](const FActOneCue& Cue) { return Cue.Contains(Time); });
     };
-    const FActOneCue* Vote = CueAt(20, 450.0);
-    const FActOneCue* Climax = CueAt(21, 475.0);
+    const FActOneCue* Vote = CueAt(20, 448.0);
+    const FActOneCue* Climax = CueAt(21, 473.0);
     if (Start != FinalFadeStart || Files.Num() != 27 ||
-        !HasMarker(6, OdeStart) || !HasMarker(19, 400) || !HasMarker(20, 430) ||
-        !HasMarker(20, 450) || !HasMarker(21, 475) ||
+        !HasMarker(6, OdeStart) || !HasMarker(19, 398) || !HasMarker(20, 428) ||
+        !HasMarker(20, 448) || !HasMarker(21, 473) ||
         !Vote || Vote->Text != TEXT("Mi voto es favorable.") ||
         !Climax || !Climax->Text.StartsWith(TEXT("Y que sean sus acciones")))
     {
@@ -172,5 +172,5 @@ float UActOneTimeline::EndOpacity(double Time)
 float UActOneTimeline::CouncilEnvelope(double Time)
 {
     return Ramp(Time, CouncilAmbienceStart, CouncilAmbienceFade) * FMath::Lerp(1.0f, 0.22f,
-        Ramp(Time, OdeStart, 1.1) * (1.0f - Ramp(Time, 147.0, 1.4))) * EndOpacity(Time);
+        Ramp(Time, OdeStart, 1.1) * (1.0f - Ramp(Time, 145.0, 1.4))) * EndOpacity(Time);
 }

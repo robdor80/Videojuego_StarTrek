@@ -19,19 +19,20 @@ bool FIntroTimelineTest::RunTest(const FString& Parameters)
         TestEqual(Label + TEXT(" starts at the approved time"), ImageStart[Scene], Start);
         TestEqual(Label + TEXT(" starts black"), SceneOpacity(Scene, Start).Image, 0.0f);
         TestEqual(Label + TEXT(" image halfway after one second"), SceneOpacity(Scene, Start + 1.0).Image, 0.5f);
-        TestEqual(Label + TEXT(" data starts one second later"), SceneOpacity(Scene, Start + 1.0).Data, 0.0f);
-        TestEqual(Label + TEXT(" data halfway after 1.5 seconds"), SceneOpacity(Scene, Start + 1.5).Data, 0.5f);
+        TestEqual(Label + TEXT(" data remains hidden until 0.200 s"), SceneOpacity(Scene, Start + 0.200).Data, 0.0f);
+        TestTrue(Label + TEXT(" data starts just after 0.200 s"), SceneOpacity(Scene, Start + 0.201).Data > 0.0f);
+        TestEqual(Label + TEXT(" data halfway after 0.700 s"), SceneOpacity(Scene, Start + 0.700).Data, 0.5f);
+        TestEqual(Label + TEXT(" full data after 1.200 s"), SceneOpacity(Scene, Start + 1.200).Data, 1.0f);
         TestEqual(Label + TEXT(" full image after two seconds"), SceneOpacity(Scene, Start + 2.0).Image, 1.0f);
-        TestEqual(Label + TEXT(" full data after two seconds"), SceneOpacity(Scene, Start + 2.0).Data, 1.0f);
 
         const double Out = Scene + 1 < SceneCount ? ExpectedStarts[Scene + 1] : 53.0;
-        const double OutDuration = Scene + 1 < SceneCount ? 2.0 : 1.0;
+        const double OutDuration = Scene + 1 < SceneCount ? 2.0 : 3.0;
         TestEqual(Label + TEXT(" remains visible until transition"), SceneOpacity(Scene, Out).Image, 1.0f);
         TestEqual(Label + TEXT(" outgoing image halfway"), SceneOpacity(Scene, Out + OutDuration / 2.0).Image, 0.5f);
         TestEqual(Label + TEXT(" outgoing data halfway"), SceneOpacity(Scene, Out + OutDuration / 2.0).Data, 0.5f);
         TestEqual(Label + TEXT(" outgoing image disappears"), SceneOpacity(Scene, Out + OutDuration).Image, 0.0f);
         TestEqual(Label + TEXT(" outgoing data disappears"), SceneOpacity(Scene, Out + OutDuration).Data, 0.0f);
-        TestEqual(Label + TEXT(" stays hidden at the end"), SceneOpacity(Scene, 54.0).Image, 0.0f);
+        TestEqual(Label + TEXT(" stays hidden at the end"), SceneOpacity(Scene, 56.0).Image, 0.0f);
     }
 
     TestEqual(TEXT("Tribute starts at 47 s"), TributeOpacity(47.0), 0.0f);
@@ -39,9 +40,9 @@ bool FIntroTimelineTest::RunTest(const FString& Parameters)
     TestEqual(TEXT("Tribute visible at 48 s"), TributeOpacity(48.0), 1.0f);
     TestEqual(TEXT("Picard remains visible with the tribute"), SceneOpacity(SceneCount - 1, 48.0).Data, 1.0f);
     TestEqual(TEXT("Tribute remains visible at 53 s"), TributeOpacity(53.0), 1.0f);
-    TestEqual(TEXT("Tribute fades out at 53.5 s"), TributeOpacity(53.5), 0.5f);
-    TestEqual(TEXT("Tribute invisible at 54 s"), TributeOpacity(54.0), 0.0f);
-    TestEqual(TEXT("End at 54 s"), End, 54.0);
+    TestEqual(TEXT("Tribute fades out at 54.5 s"), TributeOpacity(54.5), 0.5f);
+    TestEqual(TEXT("Tribute invisible at 56 s"), TributeOpacity(56.0), 0.0f);
+    TestEqual(TEXT("End at 56 s"), End, 56.0);
     return true;
 }
 #endif
