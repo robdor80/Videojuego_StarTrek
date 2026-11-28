@@ -94,7 +94,7 @@ class WorldReferenceTests(unittest.TestCase):
         chunked=b.evolve(b.evolve(b.evolve(self.world,10),250),540)
         self.assertEqual(direct,chunked)
         self.assertEqual(self.world["tick"],0)
-        self.assertEqual(len(direct["events"]),9)
+        self.assertEqual(len(direct["events"]),10)
         self.assertTrue(b.verify_candidate(self.request,direct))
         self.assertEqual(direct,b.evolve(direct,540))
         for s,old in zip(direct["ships"],self.world["ships"]):
@@ -166,7 +166,7 @@ class WorldReferenceTests(unittest.TestCase):
         r=self.modified(lambda x:None)
         need=copy.deepcopy(r["needs"][0])
         need.update(need_id="qa:need:experimental",cause_ref="qa:cause:experimental",mode="experimental",
-                    operator="qa_unknown",role="survey",cargo_orders=[],refits=[])
+                    operator="qa_unknown",role="survey",cargo_orders=[],refits=[],transponder_mode="silent")
         r["needs"].append(need)
         r["causes"].append({"cause_ref":need["cause_ref"],"kind":"experimental_test","need_id":need["need_id"],
                              "authority_ref":"qa:authoring:experimental"})
@@ -229,6 +229,44 @@ class WorldReferenceTests(unittest.TestCase):
             rooms=b.make_compartments("qa:"+k,design,100)
             modules=b.make_modules("qa:"+k,design,self.catalog,rooms,[])
             self.assertGreaterEqual(b.energy(modules,self.catalog)["reserve_qa_units"],0)
+
+    def test_encounter_frame_outside_celestial_bodies(self):
+        frame=self.world["spatial_frame"]
+        for e in self.world["system"]["entities"]:
+            x=e["spatial_state"]["position"]["xyz"][0]*b.AU_M
+            for ship in self.world["ships"]:
+                self.assertGreater(ship["barycentric_position_m"][0]-x,10**11)
+        with self.assertRaises(ValueError):
+            b.generate(self.modified(lambda r:r["locations"][0].update(position_m=[10**10,0,0])))
+
+    def test_transponder_modes_and_unique_private_registry(self):
+        ids=[s["identity"]["transponder"]["hardware_id"] for s in self.world["ships"]]
+        self.assertEqual(len(set(ids)),len(ids))
+        for s in self.world["ships"]:
+            trans=s["identity"]["transponder"]
+            if s["operator"]=="romulan_military":
+                self.assertEqual(trans["mode"],"silent")
+                self.assertIsNone(trans["declared_registry"])
+            else:
+                self.assertEqual(trans["declared_registry"],s["identity"]["registry"])
+
+    def test_patrol_waypoint_changes_velocity_without_scan(self):
+        def patrol(at):
+            return next(s for s in b.evolve(self.world,at)["ships"] if s["operator"]=="romulan_military")
+        before,at=patrol(299),patrol(300)
+        self.assertEqual(at["position_m"],self.world["locations"]["qa:patrol:turn"])
+        self.assertNotEqual(before["velocity"],at["velocity"])
+        self.assertTrue(any(e["kind"]=="waypoint_reached" for e in b.evolve(self.world,300)["events"]))
+
+    def test_death_state_and_biological_count(self):
+        r=self.modified(lambda r:r["actions"][-1].update(value=100))
+        w=b.evolve(b.generate(r),540)
+        s=next(s for s in w["ships"] if s["operator"]=="romulan_military")
+        census=b.private_biological_summary(s)
+        self.assertEqual(census["dead"],1)
+        self.assertEqual(census["alive"]+census["dead"],len(s["people"]))
+        self.assertEqual(s["people"][0]["life_state"],"dead")
+        self.assertTrue(b.verify_candidate(r,w))
 
     def test_backwards_time_rejected(self):
         with self.assertRaises(ValueError): b.evolve(b.evolve(self.world,100),99)

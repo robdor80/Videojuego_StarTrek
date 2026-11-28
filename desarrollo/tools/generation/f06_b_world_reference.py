@@ -133,6 +133,35 @@ def vector(value, field):
     return [integer(x, -10**15, 10**15, field) for x in value]
 
 
+AU_M = 149597870700
+
+
+def encounter_frame(system, locations):
+    # The local scripted encounter is outside the generated celestial system.
+    # The barycentric anchor is at least one AU beyond every body's x position;
+    # local offsets are bounded to 1e9 m. This avoids placing ships inside Aster.
+    entities=system["entities"]
+    max_x=max(abs(round(e["spatial_state"]["position"]["xyz"][0]*AU_M)) for e in entities)
+    for pos in locations.values():
+        require(all(abs(x)<=10**9 for x in pos),"local encounter offset outside supported zone")
+    return {"frame_id":"gen:frame:"+key(system["system"]["system_id"],"encounter"),
+            "parent_frame":"system_barycentric_approx","origin_m":[max_x+AU_M,0,0],
+            "position_unit":"m","tick_unit":"s","celestial_positions":"EPOCH_SNAPSHOT_ONLY"}
+
+
+def barycentric(frame,local):
+    return [a+b for a,b in zip(frame["origin_m"],local)]
+
+
+def private_identity(sid,base,mode):
+    require(mode in ("broadcasting","silent"),"transponder mode")
+    registry=base["ship"]["designation"]
+    return {"display_name":"QA "+registry,"registry":registry,
+            "name_status":"TEMPORARY_REFERENCE_NOT_CANON",
+            "transponder":{"hardware_id":max(1,int(key(sid,"transponder")[:15],16)),
+                           "mode":mode,"declared_registry":registry if mode=="broadcasting" else None}}
+
+
 def instantiate_base(req, need):
     common = dict(campaign_seed=req["seed"], need_id=need["need_id"],
                   era_id=req["era_id"], campaign_date=req["date"], role=need["role"])
@@ -343,11 +372,13 @@ def generate(request, catalog=None):
         require(cause and cause["need_id"]==nid and cause["kind"]==kind,"unresolved or mis-scoped cause")
         return cause
     system=physical_system(request)
+    frame=encounter_frame(system,locations)
     ships=[]
     seen=set()
     for need in sorted(request["needs"],key=lambda x:x["need_id"]):
         require(set(need)=={"need_id","cause_ref","purpose","mode","operator","role","origin","destination",
-                           "departure_tick","arrival_tick","species_weights","cargo_orders","refits"},
+                           "departure_tick","arrival_tick","species_weights","cargo_orders","refits",
+                           "transponder_mode","waypoints"},
                 "need fields closed; no observer trigger")
         nid=need["need_id"]
         require(nid and nid not in seen and need["cause_ref"] and need["purpose"],"missing/duplicate causal need")
@@ -362,6 +393,15 @@ def generate(request, catalog=None):
                 and need["origin"]!=need["destination"],"invalid route")
         start=integer(need["departure_tick"],0,10**8,"departure tick")
         end=integer(need["arrival_tick"],start+1,10**8,"arrival tick")
+        route=[{"tick":start,"location_id":need["origin"]}]
+        for waypoint in need["waypoints"]:
+            require(set(waypoint)=={"tick","location_id"} and waypoint["location_id"] in locations,
+                    "waypoint source")
+            integer(waypoint["tick"],route[-1]["tick"]+1,end-1,"waypoint tick")
+            require(waypoint["location_id"]!=route[-1]["location_id"],"duplicate consecutive waypoint")
+            route.append(copy.deepcopy(waypoint))
+        require(route[-1]["location_id"]!=need["destination"],"duplicate final route point")
+        route.append({"tick":end,"location_id":need["destination"]})
         base,design_key=instantiate_base(request,need)
         require(design_key in c["designs"],"no reviewed reference design: "+design_key)
         design=copy.deepcopy(c["designs"][design_key])
@@ -375,6 +415,7 @@ def generate(request, catalog=None):
         cargo=cargo_for(sid,need,stock,compartments)
         did=base.get("design",{}).get("design_id",design_key)
         ships.append({"ship_id":sid,"designation":base["ship"]["designation"],
+            "identity":private_identity(sid,base,need["transponder_mode"]),
             "registry_status":"TEMPORARY_GENERATED_DESIGNATION","design_key":design_key,
             "design_id":did,"operator":operator,
             "reference_baseline":base,"physical_design":design,"geometry":geometry(did,design),
@@ -382,9 +423,11 @@ def generate(request, catalog=None):
             "people":manifest,"modules":modules,"cargo":cargo,"energy":energy(modules,c),
             "mission":{"need_id":nid,"cause_ref":need["cause_ref"],"purpose":need["purpose"],
                        "origin":need["origin"],"destination":need["destination"],
-                       "departure_tick":start,"arrival_tick":end},
+                       "departure_tick":start,"arrival_tick":end,"route":route},
             "position_m":locations[need["origin"]].copy(),"activity":"waiting" if start else "in_transit",
             "revision":1})
+        ships[-1]["barycentric_position_m"]=barycentric(frame,ships[-1]["position_m"])
+        ships[-1]["velocity"]=velocity_at(ships[-1],locations,0)
     require(all(cause["need_id"] in seen for cause in causes.values()),"orphan cause")
     by_need={ship["mission"]["need_id"]:ship for ship in ships}
     schedule=[]
@@ -417,7 +460,7 @@ def generate(request, catalog=None):
             "value":action["value"],"cause_ref":action["cause_ref"]})
     schedule.sort(key=lambda e:(e["tick"],e["event_id"]))
     world={"schema_version":VERSION,"status":STATUS,"epoch":request["date"],
-           "system":system,"ships":ships,"locations":locations,"tick":0,"revision":1,
+           "system":system,"ships":ships,"locations":locations,"spatial_frame":frame,"tick":0,"revision":1,
            "catalog_sha256":digest(c),"generation_request_sha256":digest(request),
            "initial_stock":[{"location_id":k[0],"commodity":k[1],"mass_kg":v} for k,v in sorted(initial_stock.items())],
            "remaining_stock":[{"location_id":k[0],"commodity":k[1],"mass_kg":v} for k,v in sorted(stock.items())],
@@ -427,19 +470,54 @@ def generate(request, catalog=None):
     return world
 
 
+def active_segment(ship,tick):
+    route=ship["mission"]["route"]
+    for a,b in zip(route,route[1:]):
+        if a["tick"]<=tick<b["tick"]:
+            return a,b
+    return None
+
+
 def position_at(ship, locations, tick):
-    m=ship["mission"]
-    origin=locations[m["origin"]]; destination=locations[m["destination"]]
-    duration=m["arrival_tick"]-m["departure_tick"]
-    elapsed=min(duration,max(0,tick-m["departure_tick"]))
-    return [a+(b-a)*elapsed//duration for a,b in zip(origin,destination)]
+    route=ship["mission"]["route"]
+    segment=active_segment(ship,tick)
+    if segment is None:
+        node=route[0] if tick<route[0]["tick"] else route[-1]
+        return locations[node["location_id"]].copy()
+    a,b=segment
+    duration=b["tick"]-a["tick"]
+    elapsed=tick-a["tick"]
+    return [x+(y-x)*elapsed//duration for x,y in
+            zip(locations[a["location_id"]],locations[b["location_id"]])]
+
+
+def velocity_at(ship,locations,tick):
+    segment=active_segment(ship,tick)
+    if segment is None:
+        return {"delta_m":[0,0,0],"interval_s":1}
+    a,b=segment
+    return {"delta_m":[y-x for x,y in zip(locations[a["location_id"]],locations[b["location_id"]])],
+            "interval_s":b["tick"]-a["tick"]}
+
+
+def private_biological_summary(ship):
+    # A pure projection of the private manifest; not a sensor observation.
+    species={}
+    for p in ship["people"]:
+        row=species.setdefault(p["species"],{"alive":0,"dead":0,"injured":0})
+        row[p["life_state"]]+=1
+        if p["life_state"]=="alive" and p["medical_severity"]>0: row["injured"]+=1
+    return {"aboard":len(ship["people"]),"species":species,
+            "alive":sum(r["alive"] for r in species.values()),"dead":sum(r["dead"] for r in species.values())}
 
 
 def route_events(ships,tick):
     events=[]
     for ship in ships:
         m=ship["mission"]
-        for at,kind in [(m["departure_tick"],"departed"),(m["arrival_tick"],"arrived")]:
+        timeline=[(m["departure_tick"],"departed"),(m["arrival_tick"],"arrived")]+[
+            (node["tick"],"waypoint_reached") for node in m["route"][1:-1]]
+        for at,kind in timeline:
             if at<=tick:
                 events.append({"event_id":"gen:event:"+key(ship["ship_id"],kind,at),
                     "ship_id":ship["ship_id"],"tick":at,"kind":kind,"cause_ref":m["cause_ref"]})
@@ -479,6 +557,8 @@ def evolve(world, tick, catalog=None):
     for ship in result["ships"]:
         m=ship["mission"]
         ship["position_m"]=position_at(ship,result["locations"],tick)
+        ship["barycentric_position_m"]=barycentric(result["spatial_frame"],ship["position_m"])
+        ship["velocity"]=velocity_at(ship,result["locations"],tick)
         ship["activity"]="waiting" if tick<m["departure_tick"] else "arrived" if tick>=m["arrival_tick"] else "in_transit"
         # Revisions depend on elapsed simulation time, not number of replay calls.
         ship["revision"]=1+tick
@@ -496,6 +576,8 @@ def validate_world(world,catalog=None):
     integer(world["tick"],0,10**8,"world tick")
     require(world["revision"]==1+world["tick"],"revision")
     require(not astro.validate_system(world["system"]),"astronomical consistency")
+    require(world["spatial_frame"]==encounter_frame(world["system"],world["locations"]),
+            "encounter frame mismatched")
     require(len({e["event_id"] for e in world["planned_actions"]})==len(world["planned_actions"]),
             "duplicate planned action")
     expected_events=route_events(world["ships"],world["tick"])+[
@@ -509,11 +591,17 @@ def validate_world(world,catalog=None):
         if e["entity_type"]=="planet":
             require(p["human_atmosphere_screen"]==human_atmosphere(p),"incorrect atmospheric assessment")
     all_ids=set()
+    transponders=set()
     cargo_sum={}
     for ship in world["ships"]:
         sid=ship["ship_id"]
         require(sid not in all_ids and sid.startswith("gen:starship:"),"ship identity")
         all_ids.add(sid)
+        transponder=ship["identity"]["transponder"]
+        require(ship["identity"]==private_identity(sid,ship["reference_baseline"],transponder["mode"]),
+                "identity or transponder mismatch")
+        require(transponder["hardware_id"] not in transponders,"transponder collision")
+        transponders.add(transponder["hardware_id"])
         design=c["designs"][ship["design_key"]]
         require(ship["physical_design"]==design and ship["operator"]==design["operator"],"design provenance")
         require(ship["geometry"]==geometry(ship["design_id"],design),"geometry inconsistent with design")
@@ -521,6 +609,12 @@ def validate_world(world,catalog=None):
         cause=world["causes"].get(m["cause_ref"])
         require(cause and cause["need_id"]==m["need_id"],"mission cause")
         require(m["origin"] in world["locations"] and m["destination"] in world["locations"],"mission location")
+        route=m["route"]
+        require(route[0]=={"tick":m["departure_tick"],"location_id":m["origin"]} and
+                route[-1]=={"tick":m["arrival_tick"],"location_id":m["destination"]} and
+                all(node["location_id"] in world["locations"] for node in route) and
+                all(a["tick"]<b["tick"] and a["location_id"]!=b["location_id"] for a,b in zip(route,route[1:])),
+                "route integrity")
         require(ship["activity"]==("waiting" if world["tick"]<m["departure_tick"] else
             "arrived" if world["tick"]>=m["arrival_tick"] else "in_transit"),"activity disagrees with route")
         rooms={r["id"]:r for r in ship["compartments"]}
@@ -585,6 +679,9 @@ def validate_world(world,catalog=None):
             k=(row["source_location"],row["commodity"]);cargo_sum[k]=cargo_sum.get(k,0)+n
         require(all(n<=rooms[r]["cargo_capacity_kg"] for r,n in room_cargo.items()),"cargo over capacity")
         require(ship["position_m"]==position_at(ship,world["locations"],world["tick"]),"position not derived from route")
+        require(ship["barycentric_position_m"]==barycentric(world["spatial_frame"],ship["position_m"]),
+                "barycentric conversion")
+        require(ship["velocity"]==velocity_at(ship,world["locations"],world["tick"]),"velocity mismatch")
         require(ship["revision"]==1+world["tick"],"ship revision")
     original={(x["location_id"],x["commodity"]):x["mass_kg"] for x in world["initial_stock"]}
     remaining={(x["location_id"],x["commodity"]):x["mass_kg"] for x in world["remaining_stock"]}

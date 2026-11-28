@@ -36,6 +36,14 @@
         -10000000,
         0
       ]
+    },
+    {
+      "location_id": "qa:patrol:turn",
+      "position_m": [
+        0,
+        16000000,
+        0
+      ]
     }
   ],
   "stock": [
@@ -73,7 +81,9 @@
           "mass_kg": 10000
         }
       ],
-      "refits": []
+      "refits": [],
+      "transponder_mode": "broadcasting",
+      "waypoints": []
     },
     {
       "need_id": "qa:need:convoy:2",
@@ -103,7 +113,9 @@
           "count": 1,
           "cause_ref": "qa:order:civilian-defensive-refit"
         }
-      ]
+      ],
+      "transponder_mode": "broadcasting",
+      "waypoints": []
     },
     {
       "need_id": "qa:need:patrol:1",
@@ -120,7 +132,14 @@
         "romulan": 1
       },
       "cargo_orders": [],
-      "refits": []
+      "refits": [],
+      "transponder_mode": "silent",
+      "waypoints": [
+        {
+          "tick": 300,
+          "location_id": "qa:patrol:turn"
+        }
+      ]
     }
   ],
   "causes": [
