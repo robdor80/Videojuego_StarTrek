@@ -1,0 +1,41 @@
+name: F06-B world generation reference
+on:
+  push:
+    paths:
+      - 'desarrollo/tools/generation/**'
+      - 'desarrollo/validation/fixtures/f06_b/**'
+      - 'sistemas/universe/generation/**'
+      - 'mundo/lore/starships/**'
+      - '.github/workflows/f06-b-world-reference.yml'
+  pull_request:
+    paths:
+      - 'desarrollo/tools/generation/**'
+      - 'desarrollo/validation/fixtures/f06_b/**'
+      - 'sistemas/universe/generation/**'
+      - 'mundo/lore/starships/**'
+      - '.github/workflows/f06-b-world-reference.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reference:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: F06-B candidate generation and adversarial tests
+        run: python desarrollo/tools/generation/test_f06_b_world_reference.py
+      - name: Military reference regression
+        run: python desarrollo/tools/generation/test_generate_starship_instance.py
+      - name: Civilian reference regression
+        run: python desarrollo/tools/generation/test_generate_civilian_starship.py
+      - name: Legacy sensor-system generation regression
+        run: python desarrollo/tools/generation/test_v0_0_1_generator.py

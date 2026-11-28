@@ -1,0 +1,238 @@
+{
+  "seed": "f06-b-reference-2383-alpha",
+  "sector": "QA-B-041",
+  "era_id": "tng_ds9_voyager",
+  "date": "2383-01-01",
+  "canonical_reserved": false,
+  "locations": [
+    {
+      "location_id": "qa:station:a",
+      "position_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:station:b",
+      "position_m": [
+        10000000,
+        4000000,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:patrol:a",
+      "position_m": [
+        -20000000,
+        10000000,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:patrol:b",
+      "position_m": [
+        20000000,
+        -10000000,
+        0
+      ]
+    },
+    {
+      "location_id": "qa:patrol:turn",
+      "position_m": [
+        0,
+        16000000,
+        0
+      ]
+    }
+  ],
+  "stock": [
+    {
+      "location_id": "qa:station:a",
+      "commodity": "qa_mineral_ore",
+      "mass_kg": 50000
+    },
+    {
+      "location_id": "qa:station:a",
+      "commodity": "qa_repair_parts",
+      "mass_kg": 10000
+    }
+  ],
+  "needs": [
+    {
+      "need_id": "qa:need:convoy:1",
+      "cause_ref": "qa:contract:ore-delivery",
+      "purpose": "Deliver ore requested by station B",
+      "mode": "civilian",
+      "operator": "independent_civilian",
+      "role": "cargo_freighter",
+      "origin": "qa:station:a",
+      "destination": "qa:station:b",
+      "departure_tick": 10,
+      "arrival_tick": 250,
+      "species_weights": {
+        "human": 3,
+        "vulcan": 1
+      },
+      "cargo_orders": [
+        {
+          "order_id": "qa:order:1",
+          "commodity": "qa_mineral_ore",
+          "mass_kg": 10000
+        }
+      ],
+      "refits": [],
+      "transponder_mode": "broadcasting",
+      "waypoints": []
+    },
+    {
+      "need_id": "qa:need:convoy:2",
+      "cause_ref": "qa:contract:repair-parts",
+      "purpose": "Deliver requested replacement parts",
+      "mode": "civilian",
+      "operator": "independent_civilian",
+      "role": "cargo_freighter",
+      "origin": "qa:station:a",
+      "destination": "qa:station:b",
+      "departure_tick": 80,
+      "arrival_tick": 480,
+      "species_weights": {
+        "human": 2,
+        "vulcan": 1
+      },
+      "cargo_orders": [
+        {
+          "order_id": "qa:order:2",
+          "commodity": "qa_repair_parts",
+          "mass_kg": 5000
+        }
+      ],
+      "refits": [
+        {
+          "technology_id": "qa_civil_defensive_emitter",
+          "count": 1,
+          "cause_ref": "qa:order:civilian-defensive-refit"
+        }
+      ],
+      "transponder_mode": "broadcasting",
+      "waypoints": []
+    },
+    {
+      "need_id": "qa:need:patrol:1",
+      "cause_ref": "qa:order:boundary-patrol",
+      "purpose": "Authorized boundary patrol",
+      "mode": "military",
+      "operator": "romulan",
+      "role": "warbird",
+      "origin": "qa:patrol:a",
+      "destination": "qa:patrol:b",
+      "departure_tick": 0,
+      "arrival_tick": 600,
+      "species_weights": {
+        "romulan": 1
+      },
+      "cargo_orders": [],
+      "refits": [],
+      "transponder_mode": "silent",
+      "waypoints": [
+        {
+          "tick": 300,
+          "location_id": "qa:patrol:turn"
+        }
+      ]
+    }
+  ],
+  "causes": [
+    {
+      "cause_ref": "qa:contract:ore-delivery",
+      "kind": "transport_contract",
+      "need_id": "qa:need:convoy:1",
+      "authority_ref": "qa:authoring:qa:need:convoy:1"
+    },
+    {
+      "cause_ref": "qa:contract:repair-parts",
+      "kind": "transport_contract",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authoring:qa:need:convoy:2"
+    },
+    {
+      "cause_ref": "qa:order:boundary-patrol",
+      "kind": "patrol_order",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authoring:qa:need:patrol:1"
+    },
+    {
+      "cause_ref": "qa:order:civilian-defensive-refit",
+      "kind": "authorized_defensive_refit",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authority:civil-licence"
+    },
+    {
+      "cause_ref": "qa:order:readiness",
+      "kind": "readiness_drill",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authority:patrol-command"
+    },
+    {
+      "cause_ref": "qa:order:civilian-self-test",
+      "kind": "readiness_drill",
+      "need_id": "qa:need:convoy:2",
+      "authority_ref": "qa:authority:civil-master"
+    },
+    {
+      "cause_ref": "qa:event:medical-accident",
+      "kind": "medical_incident",
+      "need_id": "qa:need:patrol:1",
+      "authority_ref": "qa:authoring:medical-event"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "qa:action:civilian-emitter",
+      "need_id": "qa:need:convoy:2",
+      "tick": 210,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_civil_defensive_emitter",
+        "ordinal": 0
+      },
+      "value": "energized",
+      "cause_ref": "qa:order:civilian-self-test"
+    },
+    {
+      "action_id": "qa:action:drill-on",
+      "need_id": "qa:need:patrol:1",
+      "tick": 300,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_disruptor",
+        "ordinal": 0
+      },
+      "value": "active",
+      "cause_ref": "qa:order:readiness"
+    },
+    {
+      "action_id": "qa:action:drill-off",
+      "need_id": "qa:need:patrol:1",
+      "tick": 420,
+      "kind": "module_state",
+      "target": {
+        "technology_id": "qa_disruptor",
+        "ordinal": 0
+      },
+      "value": "idle",
+      "cause_ref": "qa:order:readiness"
+    },
+    {
+      "action_id": "qa:action:medical",
+      "need_id": "qa:need:patrol:1",
+      "tick": 320,
+      "kind": "medical_state",
+      "target": {
+        "ordinal": 0
+      },
+      "value": 35,
+      "cause_ref": "qa:event:medical-accident"
+    }
+  ]
+}

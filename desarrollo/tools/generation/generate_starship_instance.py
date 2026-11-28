@@ -88,6 +88,15 @@ def class_is_available(entry: dict[str, Any], era_id: str, year: int) -> bool:
     if retained and era_id not in retained:
         return False
 
+    # Post-Nemesis game additions use explicit service dates. Construction
+    # and target dates do not establish an operational class.
+    if availability.get("gameplay_era") == "post_nemesis":
+        if era_id not in {"tng_ds9_voyager", "post_nemesis"}:
+            return False
+        service = availability.get("entry_into_service_year")
+        if service is None or year < int(service):
+            return False
+
     if year < int(availability.get("operational_class_from_year", -10**9)):
         return False
     if year < int(availability.get("confirmed_active_by_year", -10**9)):
@@ -194,6 +203,8 @@ def staffing_key(class_ref: str, year: int, role: str | None) -> str:
         return "miranda/24c" if year >= 2300 else "miranda/23c"
     if class_ref == "d7":
         return "d7/2250s" if year < 2260 else "d7/2260s_2270s"
+    if class_ref == "sovereign" and year >= 2383:
+        return "sovereign/post_nemesis_reference"
     if class_ref == "galaxy":
         if role in {"fleet_operations", "combat", "troop_transport"}:
             return "galaxy/fleet_or_evacuative_assignment"
@@ -361,6 +372,9 @@ def generate(
 
     class_entry = choose_class(rng, operator, era_id, year, role)
     configuration_id, class_ref = choose_configuration(rng, class_entry, era_id, year)
+    if class_ref == "sovereign" and year >= 2383:
+        # Only the existing F04 post-Nemesis reference template is available.
+        configuration_id = "sovereign_multimission_post_nemesis"
 
     life_profiles = life_profile_index()
     life_profile = life_profiles.get(class_ref)

@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "status": "OFFLINE_REFERENCE_QA_NON_CANON",
+  "epoch": "2383",
+  "era_id": "tng_ds9_voyager",
+  "units": {
+    "dimensions": "m",
+    "mass": "kg",
+    "power": "qa_energy_unit",
+    "effect": "qa_effect_index_not_damage",
+    "cargo": "kg"
+  },
+  "notes": [
+    "Valores de diseño sintéticos para pruebas, no canon ni balance aprobado.",
+    "No extrapolar a clases no incluidas. No importar directamente como verdad de campaña.",
+    "El efecto es un índice de prueba, no una evaluación de amenaza ni potencia en vatios."
+  ],
+  "source_refs": [
+    "sistemas/gameplay/technology/technology_capability_contract.json",
+    "mundo/lore/starships/classes/depth/ROMULAN_CLASS_DEPTH_PROFILES_v0.1.json",
+    "mundo/lore/starships/classes/core_starship_classes.json",
+    "sistemas/universe/generation/procedural_ship_design_contract_v0.1.json",
+    "mundo/lore/technology/ship_station_catalogue_v0.1.json",
+    "sistemas/gameplay/species/species_biology_contract.json",
+    "mundo/lore/starships/classes/depth/STARFLEET_CLASS_DEPTH_PROFILES_v0.1.json"
+  ],
+  "technologies": {
+    "qa_disruptor": {
+      "kind": "energy_weapon",
+      "family": "disruptor",
+      "operator": "romulan_military",
+      "band": "subspace",
+      "idle": 1,
+      "active": 12,
+      "effect": 45
+    },
+    "qa_plasma_launcher": {
+      "kind": "launcher",
+      "family": "plasma_torpedo",
+      "operator": "romulan_military",
+      "band": "thermal",
+      "idle": 1,
+      "active": 8,
+      "effect": 75,
+      "ammo_kind": "plasma_torpedo",
+      "magazine": 8
+    },
+    "qa_phaser": {
+      "kind": "energy_weapon",
+      "family": "phaser",
+      "operator": "starfleet",
+      "band": "electromagnetic",
+      "idle": 1,
+      "active": 8,
+      "effect": 24
+    },
+    "qa_photon_launcher": {
+      "kind": "launcher",
+      "family": "photon_torpedo",
+      "operator": "starfleet",
+      "band": "thermal",
+      "idle": 1,
+      "active": 6,
+      "effect": 42,
+      "ammo_kind": "photon_torpedo",
+      "magazine": 4
+    },
+    "qa_shield": {
+      "kind": "shield",
+      "family": "deflector_shield",
+      "operator": "any",
+      "band": "subspace",
+      "idle": 1,
+      "active": 8,
+      "effect": 30
+    },
+    "qa_singularity": {
+      "kind": "reactor",
+      "family": "artificial_singularity",
+      "operator": "romulan_military",
+      "band": "gravimetric",
+      "idle": 0,
+      "active": 0,
+      "supply": 240
+    },
+    "qa_matter_antimatter": {
+      "kind": "reactor",
+      "family": "matter_antimatter",
+      "operator": "any",
+      "band": "subspace",
+      "idle": 0,
+      "active": 0,
+      "supply": 120
+    },
+    "qa_warp": {
+      "kind": "propulsion",
+      "family": "warp",
+      "operator": "any",
+      "band": "subspace",
+      "idle": 1,
+      "active": 22
+    },
+    "qa_impulse": {
+      "kind": "propulsion",
+      "family": "impulse",
+      "operator": "any",
+      "band": "thermal",
+      "idle": 1,
+      "active": 8
+    },
+    "qa_cloak": {
+      "kind": "cloak",
+      "family": "romulan_cloaking",
+      "operator": "romulan_military",
+      "band": "subspace",
+      "idle": 1,
+      "active": 20
+    },
+    "qa_life_support": {
+      "kind": "life_support",
+      "family": "environmental",
+      "operator": "any",
+      "band": "thermal",
+      "idle": 2,
+      "active": 5
+    },
+    "qa_sensor": {
+      "kind": "sensor",
+      "family": "multiband_sensor",
+      "operator": "any",
+      "band": "electromagnetic",
+      "idle": 1,
+      "active": 4
+    },
+    "qa_primitive_projectile": {
+      "kind": "launcher",
+      "family": "primitive_mechanical_projectile",
+      "operator": "qa_unknown",
+      "band": "mechanical",
+      "idle": 0,
+      "active": 0,
+      "effect": 1,
+      "ammo_kind": "stone",
+      "magazine": 16
+    },
+    "qa_exotic_projector": {
+      "kind": "energy_weapon",
+      "family": "unclassified_field_projector",
+      "operator": "qa_unknown",
+      "band": "subspace",
+      "idle": 2,
+      "active": 28,
+      "effect": 500
+    },
+    "qa_civil_defensive_emitter": {
+      "kind": "energy_weapon",
+      "family": "light_defensive_phaser",
+      "operator": "independent_civilian",
+      "band": "electromagnetic",
+      "idle": 1,
+      "active": 5,
+      "effect": 6,
+      "refit_only": true
+    },
+    "qa_quantum_launcher": {
+      "kind": "launcher",
+      "family": "quantum_torpedo",
+      "operator": "starfleet",
+      "band": "subspace",
+      "idle": 1,
+      "active": 12,
+      "effect": 95,
+      "ammo_kind": "quantum_torpedo",
+      "magazine": 6
+    }
+  },
+  "designs": {
+    "dderidex": {
+      "dimensions_m": [
+        1040,
+        760,
+        300
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 36,
+      "cargo_capacity_kg": 1500000,
+      "silhouette": "split_shell",
+      "operator": "romulan_military",
+      "loadout": {
+        "qa_disruptor": 8,
+        "qa_plasma_launcher": 3,
+        "qa_shield": 2,
+        "qa_singularity": 1,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_cloak": 1,
+        "qa_life_support": 2,
+        "qa_sensor": 1
+      }
+    },
+    "oberth": {
+      "dimensions_m": [
+        120,
+        75,
+        45
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy"
+      ],
+      "decks": 6,
+      "cargo_capacity_kg": 80000,
+      "silhouette": "science_pod",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 2,
+        "qa_photon_launcher": 1,
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1
+      }
+    },
+    "civilian_small": {
+      "dimensions_m": [
+        65,
+        28,
+        18
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 3,
+      "cargo_capacity_kg": 120000,
+      "silhouette": "modular_freighter",
+      "operator": "independent_civilian",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1
+      }
+    },
+    "civilian_medium": {
+      "dimensions_m": [
+        220,
+        85,
+        45
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 7,
+      "cargo_capacity_kg": 1200000,
+      "silhouette": "modular_freighter",
+      "operator": "independent_civilian",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 1,
+        "qa_sensor": 1
+      }
+    },
+    "civilian_large": {
+      "dimensions_m": [
+        360,
+        135,
+        80
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 12,
+      "cargo_capacity_kg": 5000000,
+      "silhouette": "modular_freighter",
+      "operator": "independent_civilian",
+      "loadout": {
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 2,
+        "qa_sensor": 1
+      }
+    },
+    "sovereign": {
+      "dimensions_m": [
+        685,
+        250,
+        88
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 24,
+      "cargo_capacity_kg": 1500000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 12,
+        "qa_photon_launcher": 2,
+        "qa_quantum_launcher": 2,
+        "qa_shield": 3,
+        "qa_matter_antimatter": 3,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 3,
+        "qa_sensor": 2
+      }
+    },
+    "miranda": {
+      "dimensions_m": [
+        243,
+        150,
+        62
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy"
+      ],
+      "decks": 12,
+      "cargo_capacity_kg": 400000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 4,
+        "qa_photon_launcher": 1,
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1
+      }
+    },
+    "intrepid": {
+      "dimensions_m": [
+        344,
+        132,
+        55
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 15,
+      "cargo_capacity_kg": 250000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 6,
+        "qa_photon_launcher": 2,
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 2,
+        "qa_sensor": 2
+      }
+    },
+    "galaxy": {
+      "dimensions_m": [
+        642,
+        460,
+        140
+      ],
+      "hull_materials": [
+        "qa_duranium_alloy",
+        "qa_composite"
+      ],
+      "decks": 42,
+      "cargo_capacity_kg": 2000000,
+      "silhouette": "saucer_nacelles",
+      "operator": "starfleet",
+      "loadout": {
+        "qa_phaser": 8,
+        "qa_photon_launcher": 2,
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 4,
+        "qa_sensor": 2
+      }
+    },
+    "experimental_small": {
+      "dimensions_m": [
+        65,
+        28,
+        18
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 3,
+      "cargo_capacity_kg": 120000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 1,
+        "qa_life_support": 1,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
+    },
+    "experimental_medium": {
+      "dimensions_m": [
+        220,
+        85,
+        45
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 7,
+      "cargo_capacity_kg": 1200000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 1,
+        "qa_matter_antimatter": 1,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 1,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
+    },
+    "experimental_large": {
+      "dimensions_m": [
+        360,
+        135,
+        80
+      ],
+      "hull_materials": [
+        "qa_composite"
+      ],
+      "decks": 12,
+      "cargo_capacity_kg": 5000000,
+      "silhouette": "unclassified_ring",
+      "operator": "qa_unknown",
+      "loadout": {
+        "qa_shield": 2,
+        "qa_matter_antimatter": 2,
+        "qa_warp": 1,
+        "qa_impulse": 2,
+        "qa_life_support": 2,
+        "qa_sensor": 1,
+        "qa_exotic_projector": 1
+      }
+    }
+  },
+  "population_profiles": {
+    "human": {
+      "adult_age_years": [
+        21,
+        65
+      ],
+      "name_pool": [
+        "QA-HUMAN"
+      ]
+    },
+    "romulan": {
+      "adult_age_years": [
+        25,
+        70
+      ],
+      "name_pool": [
+        "QA-ROMULAN"
+      ]
+    },
+    "vulcan": {
+      "adult_age_years": [
+        25,
+        85
+      ],
+      "name_pool": [
+        "QA-VULCAN"
+      ]
+    }
+  },
+  "population_note": "Intervalos de edad de adultos QA exclusivamente, no límites de madurez ni longevidad de especie. Composición de población aportada explícitamente por la necesidad/autoría.",
+  "geometry_policy": "Private bounding primitive descriptions in ship-local metres; no exact asset or measured image. Dry mass uses provisional effective density 40 kg/m3, not canon."
+}
